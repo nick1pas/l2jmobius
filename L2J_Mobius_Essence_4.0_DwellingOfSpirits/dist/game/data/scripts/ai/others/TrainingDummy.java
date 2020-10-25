@@ -14,26 +14,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets;
+package ai.others;
 
-import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.model.actor.Npc;
+
+import ai.AbstractNpcAI;
 
 /**
  * @author Mobius
  */
-public class ExShowTeleportUi implements IClientOutgoingPacket
+public class TrainingDummy extends AbstractNpcAI
 {
-	public static final ExShowTeleportUi STATIC_PACKET = new ExShowTeleportUi();
+	// NPC
+	private static final int TRAINING_DUMMY = 22183;
 	
-	public ExShowTeleportUi()
+	private TrainingDummy()
 	{
+		addSpawnId(TRAINING_DUMMY);
 	}
 	
 	@Override
-	public boolean write(PacketWriter packet)
+	public String onSpawn(Npc npc)
 	{
-		OutgoingPackets.EX_SHOW_TELEPORT_UI.writeId(packet);
-		return true;
+		npc.disableCoreAI(true);
+		npc.setImmobilized(true);
+		return super.onSpawn(npc);
+	}
+	
+	public static void main(String[] args)
+	{
+		new TrainingDummy();
 	}
 }

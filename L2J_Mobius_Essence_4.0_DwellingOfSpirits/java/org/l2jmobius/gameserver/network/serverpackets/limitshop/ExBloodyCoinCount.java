@@ -14,27 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.classchange;
+package org.l2jmobius.gameserver.network.serverpackets.limitshop;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Mobius
  */
-public class ExRequestClassChangeUi implements IClientOutgoingPacket
+public class ExBloodyCoinCount implements IClientOutgoingPacket
 {
-	public static final ExRequestClassChangeUi STATIC_PACKET = new ExRequestClassChangeUi();
+	public final static int LCOIN_ID = 91663;
 	
-	public ExRequestClassChangeUi()
+	private final long _count;
+	
+	public ExBloodyCoinCount(PlayerInstance player)
 	{
+		_count = player.getInventory().getInventoryItemCount(LCOIN_ID, -1);
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_REQUEST_CLASS_CHANGE.writeId(packet);
+		OutgoingPackets.EX_BLOODY_COIN_COUNT.writeId(packet);
+		packet.writeQ(_count);
 		return true;
 	}
 }
