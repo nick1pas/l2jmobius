@@ -24,12 +24,12 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 /**
  * @author UnAfraid
  */
-public class OnPlayerEquipItem implements IBaseEvent
+public class OnPlayerItemEquip implements IBaseEvent
 {
 	private final PlayerInstance _player;
 	private final ItemInstance _item;
 	
-	public OnPlayerEquipItem(PlayerInstance player, ItemInstance item)
+	public OnPlayerItemEquip(PlayerInstance player, ItemInstance item)
 	{
 		_player = player;
 		_item = item;
@@ -48,6 +48,6 @@ public class OnPlayerEquipItem implements IBaseEvent
 	@Override
 	public EventType getType()
 	{
-		return EventType.ON_PLAYER_EQUIP_ITEM;
+		return EventType.ON_PLAYER_ITEM_EQUIP;
 	}
 }
