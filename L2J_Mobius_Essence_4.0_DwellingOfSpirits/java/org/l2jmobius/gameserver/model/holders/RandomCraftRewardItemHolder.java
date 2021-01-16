@@ -14,31 +14,57 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.limitshop;
-
-import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
-import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+package org.l2jmobius.gameserver.model.holders;
 
 /**
- * @author Mobius
+ * @author Mode
  */
-public class ExBloodyCoinCount implements IClientOutgoingPacket
+public class RandomCraftRewardItemHolder
 {
+	private final int _id;
 	private final long _count;
+	private boolean _locked;
+	private int _lockLeft;
 	
-	public ExBloodyCoinCount(PlayerInstance player)
+	public RandomCraftRewardItemHolder(int id, long count, boolean locked, int lockLeft)
 	{
-		_count = player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1);
+		_id = id;
+		_count = count;
+		_locked = locked;
+		_lockLeft = lockLeft;
 	}
 	
-	@Override
-	public boolean write(PacketWriter packet)
+	public int getItemId()
 	{
-		OutgoingPackets.EX_BLOODY_COIN_COUNT.writeId(packet);
-		packet.writeQ(_count);
-		return true;
+		return _id;
+	}
+	
+	public long getItemCount()
+	{
+		return _count;
+	}
+	
+	public boolean isLocked()
+	{
+		return _locked;
+	}
+	
+	public int getLockLeft()
+	{
+		return _lockLeft;
+	}
+	
+	public void lock()
+	{
+		_locked = true;
+	}
+	
+	public void decLock()
+	{
+		_lockLeft--;
+		if (_lockLeft <= 0)
+		{
+			_locked = false;
+		}
 	}
 }

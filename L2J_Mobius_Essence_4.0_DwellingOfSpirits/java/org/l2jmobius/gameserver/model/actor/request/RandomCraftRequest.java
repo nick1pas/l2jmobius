@@ -14,31 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.limitshop;
+package org.l2jmobius.gameserver.model.actor.request;
 
-import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
-import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Mobius
  */
-public class ExBloodyCoinCount implements IClientOutgoingPacket
+public class RandomCraftRequest extends AbstractRequest
 {
-	private final long _count;
-	
-	public ExBloodyCoinCount(PlayerInstance player)
+	public RandomCraftRequest(PlayerInstance player)
 	{
-		_count = player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1);
+		super(player);
 	}
 	
 	@Override
-	public boolean write(PacketWriter packet)
+	public boolean isUsing(int objectId)
 	{
-		OutgoingPackets.EX_BLOODY_COIN_COUNT.writeId(packet);
-		packet.writeQ(_count);
-		return true;
+		return false;
 	}
 }

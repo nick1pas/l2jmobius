@@ -14,31 +14,43 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.limitshop;
-
-import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
-import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+package org.l2jmobius.gameserver.model.holders;
 
 /**
- * @author Mobius
+ * @author Mode
  */
-public class ExBloodyCoinCount implements IClientOutgoingPacket
+public class RandomCraftRewardDataHolder
 {
+	private final int _itemId;
 	private final long _count;
+	private final double _chance;
+	private final boolean _announce;
 	
-	public ExBloodyCoinCount(PlayerInstance player)
+	public RandomCraftRewardDataHolder(int itemId, long count, double chance, boolean announce)
 	{
-		_count = player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1);
+		_itemId = itemId;
+		_count = count;
+		_chance = chance;
+		_announce = announce;
 	}
 	
-	@Override
-	public boolean write(PacketWriter packet)
+	public int getItemId()
 	{
-		OutgoingPackets.EX_BLOODY_COIN_COUNT.writeId(packet);
-		packet.writeQ(_count);
-		return true;
+		return _itemId;
+	}
+	
+	public long getCount()
+	{
+		return _count;
+	}
+	
+	public double getChance()
+	{
+		return _chance;
+	}
+	
+	public boolean isAnnounce()
+	{
+		return _announce;
 	}
 }
