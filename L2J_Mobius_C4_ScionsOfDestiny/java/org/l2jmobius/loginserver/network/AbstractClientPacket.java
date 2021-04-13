@@ -14,20 +14,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.loginserverpackets.login;
+package org.l2jmobius.loginserver.network;
+
+import org.l2jmobius.loginserver.LoginClient;
 
 /**
- * @author -Wooden-
+ * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
-public abstract class LoginServerBasePacket
+public abstract class AbstractClientPacket implements Runnable
 {
+	private final LoginClient _client;
 	private final byte[] _decrypt;
 	private int _off;
 	
-	public LoginServerBasePacket(byte[] decrypt)
+	public AbstractClientPacket(byte[] decrypt, LoginClient client)
 	{
 		_decrypt = decrypt;
 		_off = 1; // skip packet type id
+		_client = client;
+	}
+	
+	@Override
+	public abstract void run();
+	
+	public LoginClient getClient()
+	{
+		return _client;
+	}
+	
+	public byte[] getByteBuffer()
+	{
+		return _decrypt;
 	}
 	
 	public int readD()
