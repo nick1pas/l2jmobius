@@ -23,6 +23,7 @@ public enum ItemSkillType
 {
 	NORMAL,
 	ON_ENCHANT,
+	ON_BLESSING,
 	ON_EQUIP,
 	ON_UNEQUIP,
 	ON_CRITICAL_SKILL,
