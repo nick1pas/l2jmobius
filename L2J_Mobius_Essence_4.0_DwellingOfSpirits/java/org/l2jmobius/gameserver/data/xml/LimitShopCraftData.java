@@ -29,19 +29,19 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author Mobius, GustavoFonseca
  */
-public class LCoinShopSpecialCraftData implements IXmlReader
+public class LimitShopCraftData implements IXmlReader
 {
-	private static final Logger LOGGER = Logger.getLogger(LCoinShopData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(LimitShopData.class.getName());
 	
-	private final List<LCoinShopProductHolder> _products = new ArrayList<>();
+	private final List<LimitShopProductHolder> _products = new ArrayList<>();
 	
-	protected LCoinShopSpecialCraftData()
+	protected LimitShopCraftData()
 	{
 		load();
 	}
@@ -50,7 +50,7 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 	public void load()
 	{
 		_products.clear();
-		parseDatapackFile("data/LCoinShopSpecialCraft.xml");
+		parseDatapackFile("data/LimitShopCraft.xml");
 		
 		if (!_products.isEmpty())
 		{
@@ -90,18 +90,14 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 							final int category = parseInteger(attrs, "category");
 							final int minLevel = parseInteger(attrs, "minLevel", 1);
 							final int maxLevel = parseInteger(attrs, "maxLevel", 999);
-							final int[] ingredientIds = new int[5];
+							final int[] ingredientIds = new int[3];
 							ingredientIds[0] = 0;
 							ingredientIds[1] = 0;
 							ingredientIds[2] = 0;
-							ingredientIds[3] = 0;
-							ingredientIds[4] = 0;
-							final long[] ingredientQuantities = new long[5];
+							final long[] ingredientQuantities = new long[3];
 							ingredientQuantities[0] = 0;
 							ingredientQuantities[1] = 0;
 							ingredientQuantities[2] = 0;
-							ingredientQuantities[3] = 0;
-							ingredientQuantities[4] = 0;
 							int productionId = 0;
 							int productionId2 = 0;
 							int productionId3 = 0;
@@ -136,17 +132,9 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									{
 										ingredientIds[1] = ingredientId;
 									}
-									else if (ingredientIds[2] == 0)
-									{
-										ingredientIds[2] = ingredientId;
-									}
-									else if (ingredientIds[3] == 0)
-									{
-										ingredientIds[3] = ingredientId;
-									}
 									else
 									{
-										ingredientIds[4] = ingredientId;
+										ingredientIds[2] = ingredientId;
 									}
 									
 									if (ingredientQuantities[0] == 0)
@@ -157,17 +145,9 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 									{
 										ingredientQuantities[1] = ingredientQuantity;
 									}
-									else if (ingredientQuantities[2] == 0)
-									{
-										ingredientQuantities[2] = ingredientQuantity;
-									}
-									else if (ingredientQuantities[3] == 0)
-									{
-										ingredientQuantities[3] = ingredientQuantity;
-									}
 									else
 									{
-										ingredientQuantities[4] = ingredientQuantity;
+										ingredientQuantities[2] = ingredientQuantity;
 									}
 								}
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
@@ -192,7 +172,7 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
+							_products.add(new LimitShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, count, chance, productionId2, count2, chance2, productionId3, count3, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}
@@ -200,9 +180,9 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 		}
 	}
 	
-	public LCoinShopProductHolder getProduct(int id)
+	public LimitShopProductHolder getProduct(int id)
 	{
-		for (LCoinShopProductHolder product : _products)
+		for (LimitShopProductHolder product : _products)
 		{
 			if (product.getId() == id)
 			{
@@ -212,18 +192,18 @@ public class LCoinShopSpecialCraftData implements IXmlReader
 		return null;
 	}
 	
-	public Collection<LCoinShopProductHolder> getProducts()
+	public Collection<LimitShopProductHolder> getProducts()
 	{
 		return _products;
 	}
 	
-	public static LCoinShopSpecialCraftData getInstance()
+	public static LimitShopCraftData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final LCoinShopSpecialCraftData INSTANCE = new LCoinShopSpecialCraftData();
+		protected static final LimitShopCraftData INSTANCE = new LimitShopCraftData();
 	}
 }
