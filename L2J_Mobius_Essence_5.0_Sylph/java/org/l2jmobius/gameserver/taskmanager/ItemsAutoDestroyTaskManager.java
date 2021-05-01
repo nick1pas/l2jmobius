@@ -14,27 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
-import java.util.Collection;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
-public class ItemsAutoDestroy
+public class ItemsAutoDestroyTaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroy.class.getName());
+	private final List<ItemInstance> _items = new LinkedList<>();
 	
-	private final Collection<ItemInstance> _items = ConcurrentHashMap.newKeySet();
-	
-	protected ItemsAutoDestroy()
+	protected ItemsAutoDestroyTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
 	}
@@ -53,47 +50,50 @@ public class ItemsAutoDestroy
 		}
 		
 		final long curtime = Chronos.currentTimeMillis();
-		for (ItemInstance item : _items)
+		final Iterator<ItemInstance> itemIterator = _items.iterator();
+		while (itemIterator.hasNext())
 		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemInstance.ItemLocation.VOID))
+			final ItemInstance item = itemIterator.next();
+			if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
 			{
-				_items.remove(item);
+				itemIterator.remove();
 			}
-			else if (item.getItemType() == EtcItemType.HERB)
+			else
 			{
-				if ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME)
+				final long autoDestroyTime;
+				if (item.getItem().getAutoDestroyTime() > 0)
 				{
-					World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-					World.getInstance().removeObject(item);
-					_items.remove(item);
-					
+					autoDestroyTime = item.getItem().getAutoDestroyTime();
+				}
+				else if (item.getItem().hasExImmediateEffect())
+				{
+					autoDestroyTime = Config.HERB_AUTO_DESTROY_TIME;
+				}
+				else
+				{
+					autoDestroyTime = ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000);
+				}
+				
+				if ((curtime - item.getDropTime()) > autoDestroyTime)
+				{
+					item.decayMe();
+					itemIterator.remove();
 					if (Config.SAVE_DROPPED_ITEM)
 					{
 						ItemsOnGroundManager.getInstance().removeObject(item);
 					}
 				}
 			}
-			else if ((curtime - item.getDropTime()) > (Config.AUTODESTROY_ITEM_AFTER * 1000))
-			{
-				World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-				World.getInstance().removeObject(item);
-				_items.remove(item);
-				
-				if (Config.SAVE_DROPPED_ITEM)
-				{
-					ItemsOnGroundManager.getInstance().removeObject(item);
-				}
-			}
 		}
 	}
 	
-	public static ItemsAutoDestroy getInstance()
+	public static ItemsAutoDestroyTaskManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
+		protected static final ItemsAutoDestroyTaskManager INSTANCE = new ItemsAutoDestroyTaskManager();
 	}
 }

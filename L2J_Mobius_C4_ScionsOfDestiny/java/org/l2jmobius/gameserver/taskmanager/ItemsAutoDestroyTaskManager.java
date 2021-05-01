@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.taskmanager;
 
-import java.util.Collection;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
-public class ItemsAutoDestroy
+public class ItemsAutoDestroyTaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroy.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroyTaskManager.class.getName());
 	
-	private final Collection<ItemInstance> _items = ConcurrentHashMap.newKeySet();
+	private final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
-	protected ItemsAutoDestroy()
+	protected ItemsAutoDestroyTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
 	}
@@ -72,13 +72,13 @@ public class ItemsAutoDestroy
 		}
 	}
 	
-	public static ItemsAutoDestroy getInstance()
+	public static ItemsAutoDestroyTaskManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
+		protected static final ItemsAutoDestroyTaskManager INSTANCE = new ItemsAutoDestroyTaskManager();
 	}
 }
