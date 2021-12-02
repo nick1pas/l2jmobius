@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18500" level="85" type="Folk" name="Royal Guard Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -158,7 +158,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="747" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="747" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
@@ -178,7 +178,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane - Not Available - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="889" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="230" />
@@ -197,7 +197,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="665" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="665" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -216,7 +216,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="637" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="637" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -254,7 +254,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="692" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="692" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="20" />
@@ -273,7 +273,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="610" mpRegen="3.6" />
+			<vitals hp="32328" hpRegen="10.5" mp="610" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="110" />
@@ -306,7 +306,7 @@
 			<height normal="174" />
 		</collision>
 	</npc>
-	<npc id="18516" level="85" type="Folk" name="Archangel" title="Guardian of the Tower of Insolence">
+	<npc id="18516" level="85" type="Folk" name="Archangel" title="Tower of Insolence Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1847,7 +1847,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41" hpRegen="10.5" mp="40" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
@@ -1858,7 +1858,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="50" />
-			<height normal="220" />
+			<height normal="202" />
 		</collision>
 	</npc>
 	<npc id="18597" level="85" type="Folk" name="">
@@ -1899,14 +1899,14 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18599" level="85" type="Folk" name="Renewed Treasure Chest">
+	<npc id="18599" level="85" type="Folk" name="Genesis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
 			<speed>
-				<walk ground="30" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1914,8 +1914,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="22" />
-			<height normal="19" />
+			<radius normal="14" />
+			<height normal="53" />
 		</collision>
 	</npc>
 </list>
