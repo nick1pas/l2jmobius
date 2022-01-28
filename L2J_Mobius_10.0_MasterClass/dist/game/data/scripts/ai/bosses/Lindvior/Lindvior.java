@@ -23,7 +23,6 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -946,8 +945,8 @@ public class Lindvior extends AbstractNpcAI
 		int y = loc.getY();
 		if (radius > 0)
 		{
-			x += Rnd.get(-radius, radius);
-			y += Rnd.get(-radius, radius);
+			x += getRandom(-radius, radius);
+			y += getRandom(-radius, radius);
 		}
 		
 		for (int i = 0; i < count; i++)

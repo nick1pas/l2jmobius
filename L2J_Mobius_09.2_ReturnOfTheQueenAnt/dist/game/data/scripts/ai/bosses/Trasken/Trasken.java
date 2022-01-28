@@ -22,7 +22,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -626,7 +625,7 @@ public class Trasken extends AbstractNpcAI
 							_tieTrasken.getSpawn().stopRespawn();
 							_tieTrasken.decayMe();
 							
-							final int[] spawn = TAIL_RANDOM_SPAWN[Rnd.get(TAIL_RANDOM_SPAWN.length)];
+							final int[] spawn = TAIL_RANDOM_SPAWN[getRandom(TAIL_RANDOM_SPAWN.length)];
 							if (SpawnTable.getInstance().getSpawns(TAIL_TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->
@@ -647,7 +646,7 @@ public class Trasken extends AbstractNpcAI
 							_trasken.getSpawn().stopRespawn();
 							_trasken.decayMe();
 							
-							final int[] spawn1 = TRASKEN_RANDOM_SPAWN[Rnd.get(TRASKEN_RANDOM_SPAWN.length)];
+							final int[] spawn1 = TRASKEN_RANDOM_SPAWN[getRandom(TRASKEN_RANDOM_SPAWN.length)];
 							if (SpawnTable.getInstance().getSpawns(TRASKEN) == null)
 							{
 								ThreadPool.schedule(() ->
