@@ -14,43 +14,43 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.script;
+package org.l2jmobius.gameserver.model.holders;
 
 /**
- * @author -Nemesiss-
+ * @author Mobius
  */
-public class ShortList
+public class DropHolder
 {
-	public static short[] parse(String range)
+	private final int _itemId;
+	private final int _min;
+	private final int _max;
+	private final double _chance;
+	
+	public DropHolder(int itemId, int min, int max, double chance)
 	{
-		if (range.contains("-"))
-		{
-			return getShortList(range.split("-"));
-		}
-		else if (range.contains(","))
-		{
-			return getShortList(range.split(","));
-		}
-		
-		final short[] list =
-		{
-			getShort(range)
-		};
-		return list;
+		_itemId = itemId;
+		_min = min;
+		_max = max;
+		_chance = chance;
 	}
 	
-	private static short getShort(String number)
+	public int getItemId()
 	{
-		return Short.parseShort(number);
+		return _itemId;
 	}
 	
-	private static short[] getShortList(String[] numbers)
+	public int getMin()
 	{
-		final short[] list = new short[numbers.length];
-		for (int i = 0; i < list.length; i++)
-		{
-			list[i] = getShort(numbers[i]);
-		}
-		return list;
+		return _min;
+	}
+	
+	public int getMax()
+	{
+		return _max;
+	}
+	
+	public double getChance()
+	{
+		return _chance;
 	}
 }

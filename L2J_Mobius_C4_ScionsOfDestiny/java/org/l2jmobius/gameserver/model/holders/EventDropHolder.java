@@ -14,43 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.script;
+package org.l2jmobius.gameserver.model.holders;
+
+import java.util.Collection;
 
 /**
- * @author Luis Arias
+ * @author Mobius
  */
-public class IntList
+public class EventDropHolder extends DropHolder
 {
-	public static int[] parse(String range)
+	private final int _minLevel;
+	private final int _maxLevel;
+	private final Collection<Integer> _monsterIds;
+	
+	public EventDropHolder(int itemId, int min, int max, double chance, int minLevel, int maxLevel, Collection<Integer> monsterIds)
 	{
-		if (range.contains("-"))
-		{
-			return getIntegerList(range.split("-"));
-		}
-		else if (range.contains(","))
-		{
-			return getIntegerList(range.split(","));
-		}
-		
-		final int[] list =
-		{
-			getInt(range)
-		};
-		return list;
+		super(itemId, min, max, chance);
+		_minLevel = minLevel;
+		_maxLevel = maxLevel;
+		_monsterIds = monsterIds;
 	}
 	
-	private static int getInt(String number)
+	public int getMinLevel()
 	{
-		return Integer.parseInt(number);
+		return _minLevel;
 	}
 	
-	private static int[] getIntegerList(String[] numbers)
+	public int getMaxLevel()
 	{
-		final int[] list = new int[numbers.length];
-		for (int i = 0; i < list.length; i++)
-		{
-			list[i] = getInt(numbers[i]);
-		}
-		return list;
+		return _maxLevel;
+	}
+	
+	public Collection<Integer> getMonsterIds()
+	{
+		return _monsterIds;
 	}
 }
