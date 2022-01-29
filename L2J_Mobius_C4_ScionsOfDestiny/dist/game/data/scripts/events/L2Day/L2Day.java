@@ -99,7 +99,7 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getNpcId()), 2);
+						giveItems(player, MANAGERS.get(npc.getNpcId()), 2);
 					}
 					else
 					{
@@ -107,7 +107,7 @@ public class L2Day extends LongTimeEvent
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}
@@ -128,7 +128,7 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getNpcId()), 1);
+						giveItems(player, MANAGERS.get(npc.getNpcId()), 1);
 					}
 					else
 					{
@@ -136,7 +136,7 @@ public class L2Day extends LongTimeEvent
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}
@@ -157,7 +157,7 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getNpcId()), 1);
+						giveItems(player, MANAGERS.get(npc.getNpcId()), 1);
 					}
 					else
 					{
@@ -165,7 +165,7 @@ public class L2Day extends LongTimeEvent
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}

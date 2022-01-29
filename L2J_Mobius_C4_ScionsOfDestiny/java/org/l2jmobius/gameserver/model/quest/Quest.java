@@ -2166,6 +2166,80 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
+	 * Give item/reward to the player
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 */
+	public static void giveItems(Player player, int itemId, int count)
+	{
+		giveItems(player, itemId, count, 0);
+	}
+	
+	/**
+	 * Give item/reward to the player
+	 * @param player
+	 * @param holder
+	 */
+	protected static void giveItems(Player player, ItemHolder holder)
+	{
+		giveItems(player, holder.getId(), holder.getCount());
+	}
+	
+	/**
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param enchantlevel
+	 */
+	public static void giveItems(Player player, int itemId, int count, int enchantlevel)
+	{
+		if (count <= 0)
+		{
+			return;
+		}
+		
+		// Add items to player's inventory
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		if (item == null)
+		{
+			return;
+		}
+		
+		// set enchant level for item if that item is not adena
+		if ((enchantlevel > 0) && (itemId != 57))
+		{
+			item.setEnchantLevel(enchantlevel);
+		}
+		
+		sendItemGetMessage(player, item, count);
+	}
+	
+	/**
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param attributeId
+	 * @param attributeLevel
+	 */
+	public static void giveItems(Player player, int itemId, int count, byte attributeId, int attributeLevel)
+	{
+		if (count <= 0)
+		{
+			return;
+		}
+		
+		// Add items to player's inventory
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		if (item == null)
+		{
+			return;
+		}
+		
+		sendItemGetMessage(player, item, count);
+	}
+	
+	/**
 	 * Get a random integer from 0 (inclusive) to {@code max} (exclusive).<br>
 	 * Use this method instead of importing {@link org.l2jmobius.commons.util.Rnd} utility.
 	 * @param max the maximum value for randomization
