@@ -285,6 +285,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.network.Disconnection;
@@ -11183,7 +11184,11 @@ public class Player extends Playable
 		getEffectList().stopAllToggles();
 		
 		// Remove from world regions zones
-		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+		if (region != null)
+		{
+			region.removeFromZones(this);
+		}
 		
 		// If a Party is in progress, leave it (and festival party)
 		if (isInParty())
