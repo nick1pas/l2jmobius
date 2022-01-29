@@ -11183,7 +11183,7 @@ public class Player extends Playable
 		// Stop all toggles.
 		getEffectList().stopAllToggles();
 		
-		// Remove from world regions zones
+		// Remove from world regions zones.
 		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
 		if (region != null)
 		{
