@@ -101,18 +101,6 @@ public class Trasken extends AbstractNpcAI
 	// Status
 	private static final int ALIVE = 0;
 	private static final int DEAD = 3;
-	// Others
-	protected double _hpTail;
-	protected double _hpTrasken;
-	private static Npc _tieTrasken;
-	private static Npc _trasken;
-	private static NoSummonFriendZone _zoneLair;
-	private static NoSummonFriendZone _zoneLair2;
-	private int _playersToEnter;
-	protected int _statusZone = 0;
-	protected ScheduledFuture<?> _collapseTask;
-	protected AtomicInteger _killsTie = new AtomicInteger(0);
-	protected AtomicInteger _killsTradjan = new AtomicInteger(0);
 	// Spawns
 	private static final Location HEART_SPAWN = new Location(88292, -173758, -15965);
 	private static final Location[] TIE_SPAWN = new Location[]
@@ -291,6 +279,18 @@ public class Trasken extends AbstractNpcAI
         {81208, -182095, -9896}
     };
 	// @formatter:on
+	// Others
+	protected double _hpTail;
+	protected double _hpTrasken;
+	private static Npc _tieTrasken;
+	private static Npc _trasken;
+	private static NoSummonFriendZone _zoneLair;
+	private static NoSummonFriendZone _zoneLair2;
+	private int _playersToEnter;
+	protected int _statusZone = 0;
+	protected ScheduledFuture<?> _collapseTask;
+	protected AtomicInteger _killsTie = new AtomicInteger(0);
+	protected AtomicInteger _killsTradjan = new AtomicInteger(0);
 	
 	public Trasken()
 	{
@@ -365,7 +365,7 @@ public class Trasken extends AbstractNpcAI
 		}
 	}
 	
-	protected void Clean()
+	protected void clean()
 	{
 		_statusZone = 0;
 		if (_collapseTask != null)
@@ -391,11 +391,11 @@ public class Trasken extends AbstractNpcAI
 		});
 	}
 	
-	private void Fail(boolean clean)
+	private void fail(boolean clean)
 	{
 		if (clean)
 		{
-			Clean();
+			clean();
 		}
 		_zoneLair.oustAllPlayers();
 		_zoneLair2.oustAllPlayers();
@@ -436,12 +436,12 @@ public class Trasken extends AbstractNpcAI
 				final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100.0;
 				if ((percent <= 30) && (_statusZone == 4))
 				{
-					TraskenStay(npc);
+					traskenStay(npc);
 					_statusZone = 5;
 				}
 				if ((percent <= 40) && (_statusZone == 3))
 				{
-					TraskenStay(npc);
+					traskenStay(npc);
 					_statusZone = 4;
 				}
 				if (getRandom(100) < 50)
@@ -760,7 +760,7 @@ public class Trasken extends AbstractNpcAI
 			}
 			final int time = 540000;
 			zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 540, 0, NpcStringId.TIME_LEFT)));
-			_collapseTask = ThreadPool.schedule(() -> Fail(true), time);
+			_collapseTask = ThreadPool.schedule(() -> fail(true), time);
 		}
 		return super.onEnterZone(creature, zone);
 	}
@@ -772,7 +772,7 @@ public class Trasken extends AbstractNpcAI
 		{
 			_collapseTask = ThreadPool.schedule(() ->
 			{
-				Fail(true);
+				fail(true);
 				for (int info : EVENT_TRIGGERS)
 				{
 					creature.broadcastPacket(new OnEventTrigger(info, false));
@@ -864,7 +864,7 @@ public class Trasken extends AbstractNpcAI
 		}
 	}
 	
-	private void TraskenStay(Creature creature)
+	private void traskenStay(Creature creature)
 	{
 		creature.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_EARTH_WYRM_HAS_LOST_CONSCIOUSNESS, 5, 4600, true));
 		creature.doCast(SKILL_TRASKEN_BUFF.getSkill()); // 12 sec combo

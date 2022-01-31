@@ -42,14 +42,14 @@ import ai.AbstractNpcAI;
  */
 public class ScarletVanHalisha extends AbstractNpcAI
 {
+	// NPCs
+	private static final int HALISHA2 = 29046;
+	private static final int HALISHA3 = 29047;
+	
 	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
 	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
-	
-	// NPCs
-	private static final int HALISHA2 = 29046;
-	private static final int HALISHA3 = 29047;
 	
 	public ScarletVanHalisha()
 	{
