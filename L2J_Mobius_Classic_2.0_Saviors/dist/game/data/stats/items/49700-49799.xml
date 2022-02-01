@@ -935,9 +935,20 @@
 	<item id="49766" name="Unidentified Stone" type="EtcItem">
 		<!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
 		<set name="icon" val="icon.etc_magical_stone_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="49759" min="1" max="1" chance="50" /> <!-- Celestial Shard -->
+			<item id="49767" min="1" max="1" chance="50" /> <!-- Celestial Broken Shard -->
+		</capsuled_items>
 	</item>
 	<item id="49767" name="Broken Celestial Shard" type="EtcItem">
 		<!-- Broken Celestial Shard. Take it to the Dimensional Vortex at the 1st floor of the Tower of Insolence. -->
