@@ -122,7 +122,7 @@ public class Q00369_CollectorOfJewels extends Quest
 				final QuestState qs = getQuestState(luckyPlayer, false);
 				final int itemCount = (qs.isMemoState(1) ? 50 : 200);
 				final int cond = (qs.isMemoState(1) ? 2 : 4);
-				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1.0, true) //
+				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1, true) //
 					&& (getQuestItemsCount(luckyPlayer, FLARE_SHARD, FREEZING_SHARD) >= (itemCount * 2)))
 				{
 					qs.setCond(cond);

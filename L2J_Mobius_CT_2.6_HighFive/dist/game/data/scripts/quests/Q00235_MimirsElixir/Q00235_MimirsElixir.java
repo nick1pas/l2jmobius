@@ -237,7 +237,7 @@ public class Q00235_MimirsElixir extends Quest
 			if (luckyPlayer != null)
 			{
 				final ItemChanceHolder item = MOBS.get(npc.getId());
-				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1.0, true))
+				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1, true))
 				{
 					final QuestState qs = luckyPlayer.getQuestState(getName());
 					qs.setMemoState((int) item.getChance());

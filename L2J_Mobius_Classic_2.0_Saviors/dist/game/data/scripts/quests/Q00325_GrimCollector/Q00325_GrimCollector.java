@@ -205,7 +205,7 @@ public class Q00325_GrimCollector extends Quest
 		{
 			if (rnd < drop.getChance())
 			{
-				giveItemRandomly(killer, npc, drop.getId(), 1, 0, 1.0, true);
+				giveItemRandomly(killer, npc, drop.getId(), 1, 0, 1, true);
 				break;
 			}
 		}

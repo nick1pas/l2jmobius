@@ -278,7 +278,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			st.takeItems(i, -1);
 		}
-		st.giveItems(57, (3400 * (int) Math.pow(2.0, bloodCrystalLevel - 2)));
+		st.giveItems(57, (3400 * (int) Math.pow(2, bloodCrystalLevel - 2)));
 		return true;
 	}
 	
@@ -978,7 +978,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 			throw new Exception("Overflow");
 		}
 		int result = 0;
-		final int mval = (int) Math.pow(2.0, bits);
+		final int mval = (int) Math.pow(2, bits);
 		for (int i = 0; i < m; ++i)
 		{
 			result <<= bits;
@@ -1003,7 +1003,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 	private static int[] unpackInt(int value, int bits)
 	{
 		final int m = 32 / bits;
-		final int mval = (int) Math.pow(2.0, bits);
+		final int mval = (int) Math.pow(2, bits);
 		final int[] result = new int[m];
 		int a = value;
 		for (int i = m; i > 0; --i)
