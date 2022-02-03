@@ -4782,11 +4782,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			notifyAttackAvoid(target, false);
 		}
-		else
-		{
-			// If we didn't miss the hit, discharge the shoulshots, if any
-			setChargedShot(ShotType.SOULSHOTS, false);
-		}
+		// else
+		// {
+		// If we didn't miss the hit, discharge the shoulshots, if any
+		// setChargedShot(ShotType.SOULSHOTS, false);
+		// }
 		
 		// Send message about damage/crit or miss
 		int damage = damageValue;
