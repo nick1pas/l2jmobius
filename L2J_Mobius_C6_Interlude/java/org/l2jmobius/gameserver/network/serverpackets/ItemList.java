@@ -54,18 +54,18 @@ public class ItemList implements IClientOutgoingPacket
 		packet.writeH(_items.size());
 		for (Item temp : _items)
 		{
-			if ((temp == null) || (temp.getItem() == null))
+			if ((temp == null) || (temp.getTemplate() == null))
 			{
 				continue;
 			}
-			packet.writeH(temp.getItem().getType1());
+			packet.writeH(temp.getTemplate().getType1());
 			packet.writeD(temp.getObjectId());
 			packet.writeD(temp.getItemId());
 			packet.writeD(temp.getCount());
-			packet.writeH(temp.getItem().getType2());
+			packet.writeH(temp.getTemplate().getType2());
 			packet.writeH(temp.getCustomType1());
 			packet.writeH(temp.isEquipped() ? 1 : 0);
-			packet.writeD(temp.getItem().getBodyPart());
+			packet.writeD(temp.getTemplate().getBodyPart());
 			packet.writeH(temp.getEnchantLevel());
 			// race tickets
 			packet.writeH(temp.getCustomType2());

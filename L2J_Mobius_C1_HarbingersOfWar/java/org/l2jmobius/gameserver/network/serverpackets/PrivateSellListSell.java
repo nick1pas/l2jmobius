@@ -43,7 +43,7 @@ public class PrivateSellListSell extends ServerBasePacket
 		final List<TradeItem> sellList = _seller.getSellList();
 		for (Item item : _seller.getInventory().getItems())
 		{
-			if (item.isEquipped() || (item.getItem().getType2() == 3) || ((item.getItem().getType2() == 4) && (item.getItem().getType1() == 4)) || ((item.getItem().getType2() == 1) && (item.getItem().getType1() == 1)))
+			if (item.isEquipped() || (item.getTemplate().getType2() == 3) || ((item.getTemplate().getType2() == 4) && (item.getTemplate().getType1() == 4)) || ((item.getTemplate().getType2() == 1) && (item.getTemplate().getType1() == 1)))
 			{
 				continue;
 			}

@@ -71,7 +71,7 @@ public class MaxMpFinalizer implements IStatFunction
 			// Add maxMP bonus from items
 			for (Item item : inv.getPaperdollItems())
 			{
-				addItem += item.getItem().getStats(stat, 0);
+				addItem += item.getTemplate().getStats(stat, 0);
 			}
 		}
 		

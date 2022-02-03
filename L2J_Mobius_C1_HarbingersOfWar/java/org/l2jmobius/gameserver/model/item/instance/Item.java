@@ -27,7 +27,7 @@ public class Item extends WorldObject
 {
 	private int _count = 1;
 	private int _itemId;
-	private ItemTemplate _item;
+	private ItemTemplate _itemTemplate;
 	private int _equippedSlot = -1;
 	private int _price;
 	private int _enchantLevel;
@@ -49,7 +49,7 @@ public class Item extends WorldObject
 	
 	public boolean isEquipable()
 	{
-		return (_item.getBodyPart() != ItemTemplate.SLOT_NONE) && !(_item instanceof EtcItem);
+		return (_itemTemplate.getBodyPart() != ItemTemplate.SLOT_NONE) && !(_itemTemplate instanceof EtcItem);
 	}
 	
 	public boolean isEquipped()
@@ -67,15 +67,15 @@ public class Item extends WorldObject
 		return _equippedSlot;
 	}
 	
-	public ItemTemplate getItem()
+	public ItemTemplate getTemplate()
 	{
-		return _item;
+		return _itemTemplate;
 	}
 	
-	public void setItem(ItemTemplate item)
+	public void setItem(ItemTemplate itemTemplate)
 	{
-		_item = item;
-		_itemId = item.getItemId();
+		_itemTemplate = itemTemplate;
+		_itemId = itemTemplate.getItemId();
 	}
 	
 	public int getItemId()
@@ -105,7 +105,7 @@ public class Item extends WorldObject
 	
 	public boolean isStackable()
 	{
-		return _item.isStackable();
+		return _itemTemplate.isStackable();
 	}
 	
 	@Override

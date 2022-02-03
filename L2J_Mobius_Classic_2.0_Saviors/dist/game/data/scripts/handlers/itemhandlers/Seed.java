@@ -91,7 +91,7 @@ public class Seed implements IItemHandler
 		final Player player = playable.getActingPlayer();
 		target.setSeeded(seed, player);
 		
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills != null)
 		{
 			skills.forEach(holder -> player.useMagic(holder.getSkill(), item, false, false));

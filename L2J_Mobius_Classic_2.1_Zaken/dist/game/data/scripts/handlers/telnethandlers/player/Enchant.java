@@ -186,11 +186,11 @@ public class Enchant implements ITelnetCommand
 			player.broadcastUserInfo();
 			
 			// informations
-			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
-			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getTemplate().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getTemplate().getName() + " from " + curEnchant + " to " + ench + ".");
 			
 			// log
-			GMAudit.auditGMAction("TelnetAdmin", "enchant", player.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
+			GMAudit.auditGMAction("TelnetAdmin", "enchant", player.getName(), itemInstance.getTemplate().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
 			return true;
 		}
 		return false;

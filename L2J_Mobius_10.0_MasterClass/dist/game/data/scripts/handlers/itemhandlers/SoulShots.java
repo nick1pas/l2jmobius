@@ -46,7 +46,7 @@ public class SoulShots implements IItemHandler
 		final Player player = playable.getActingPlayer();
 		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");
@@ -66,7 +66,7 @@ public class SoulShots implements IItemHandler
 		}
 		
 		// Check for correct grade
-		if (!item.isEtcItem() || (item.getEtcItem().getDefaultAction() != ActionType.SOULSHOT) || (weaponInst.getItem().getCrystalTypePlus() != item.getItem().getCrystalTypePlus()))
+		if (!item.isEtcItem() || (item.getEtcItem().getDefaultAction() != ActionType.SOULSHOT) || (weaponInst.getTemplate().getCrystalTypePlus() != item.getTemplate().getCrystalTypePlus()))
 		{
 			return false;
 		}

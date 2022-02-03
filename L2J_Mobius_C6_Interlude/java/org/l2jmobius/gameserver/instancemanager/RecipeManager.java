@@ -588,7 +588,7 @@ public class RecipeManager
 				super();
 				_itemId = item.getItemId();
 				_quantity = quantity;
-				_itemName = item.getItem().getName();
+				_itemName = item.getTemplate().getName();
 			}
 			
 			/**

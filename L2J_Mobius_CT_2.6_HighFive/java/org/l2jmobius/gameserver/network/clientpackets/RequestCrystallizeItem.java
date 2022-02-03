@@ -112,9 +112,9 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == CrystalType.NONE))
+		if (!itemToRemove.getTemplate().isCrystallizable() || (itemToRemove.getTemplate().getCrystalCount() <= 0) || (itemToRemove.getTemplate().getCrystalType() == CrystalType.NONE))
 		{
-			PacketLogger.warning(player.getName() + " (" + player.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
+			PacketLogger.warning(player.getName() + " (" + player.getObjectId() + ") tried to crystallize " + itemToRemove.getTemplate().getId());
 			return;
 		}
 		
@@ -127,7 +127,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// Check if the char can crystallize items and return if false;
 		boolean canCrystallize = true;
 		
-		switch (itemToRemove.getItem().getCrystalTypePlus())
+		switch (itemToRemove.getTemplate().getCrystalTypePlus())
 		{
 			case C:
 			{
@@ -204,7 +204,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		player.sendPacket(iu);
 		
 		// add crystals
-		final int crystalId = itemToRemove.getItem().getCrystalItemId();
+		final int crystalId = itemToRemove.getTemplate().getCrystalItemId();
 		final int crystalAmount = itemToRemove.getCrystalCount();
 		final Item createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, player);
 		sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_CRYSTALLIZED);

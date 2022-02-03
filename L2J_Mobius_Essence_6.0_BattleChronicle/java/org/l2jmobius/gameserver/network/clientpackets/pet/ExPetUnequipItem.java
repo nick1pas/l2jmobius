@@ -104,14 +104,14 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 		
 		if (item.isEquipable())
 		{
-			if (pet.getInventory().isItemSlotBlocked(item.getItem().getBodyPart()))
+			if (pet.getInventory().isItemSlotBlocked(item.getTemplate().getBodyPart()))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
-			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
+			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_HAND))
 			{
 				if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
 				{
@@ -119,7 +119,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_DECO)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_DECO)
 			{
 				if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 				{
@@ -127,7 +127,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL)
 			{
 				if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 				{
@@ -137,7 +137,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_AGATHION)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_AGATHION)
 			{
 				if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0))
 				{
@@ -145,7 +145,7 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_ARTIFACT)
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{

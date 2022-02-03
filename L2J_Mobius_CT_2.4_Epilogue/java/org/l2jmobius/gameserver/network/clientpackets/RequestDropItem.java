@@ -183,7 +183,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			}
 		}
 		
-		if ((ItemTemplate.TYPE2_QUEST == item.getItem().getType2()) && !player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS))
+		if ((ItemTemplate.TYPE2_QUEST == item.getTemplate().getType2()) && !player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS))
 		{
 			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;

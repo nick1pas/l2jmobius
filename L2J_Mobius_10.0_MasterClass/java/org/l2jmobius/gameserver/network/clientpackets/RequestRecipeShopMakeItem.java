@@ -198,7 +198,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 				final Item item = player.getInventory().getItemByObjectId(offer.getId());
 				if (player.destroyItem("CraftOffering", item, offer.getCount(), manufacturer, true))
 				{
-					offeredAdenaWorth += (item.getItem().getReferencePrice() * offer.getCount());
+					offeredAdenaWorth += (item.getTemplate().getReferencePrice() * offer.getCount());
 				}
 			}
 			

@@ -142,7 +142,7 @@ public class RequestSellItem implements IClientIncomingPacket
 			// Check Item
 			final int objectId = _items[i * 3];
 			final Item item = player.checkItemManipulation(objectId, count, "sell");
-			if ((item == null) || !item.getItem().isSellable() || (item.getItemLocation() != ItemLocation.INVENTORY))
+			if ((item == null) || !item.getTemplate().isSellable() || (item.getItemLocation() != ItemLocation.INVENTORY))
 			{
 				continue;
 			}

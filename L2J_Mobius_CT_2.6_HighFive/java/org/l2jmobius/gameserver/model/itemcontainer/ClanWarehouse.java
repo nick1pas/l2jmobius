@@ -85,7 +85,7 @@ public class ClanWarehouse extends Warehouse
 		final Item item = super.addItem(process, itemId, count, actor, reference);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getTemplate());
 		return item;
 	}
 	
@@ -93,7 +93,7 @@ public class ClanWarehouse extends Warehouse
 	public Item addItem(String process, Item item, Player actor, Object reference)
 	{
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemAdd(process, actor, item, this), item.getTemplate());
 		return super.addItem(process, item, actor, reference);
 	}
 	
@@ -101,7 +101,7 @@ public class ClanWarehouse extends Warehouse
 	public Item destroyItem(String process, Item item, long count, Player actor, Object reference)
 	{
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemDestroy(process, actor, item, count, this), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemDestroy(process, actor, item, count, this), item.getTemplate());
 		return super.destroyItem(process, item, count, actor, reference);
 	}
 	
@@ -111,7 +111,7 @@ public class ClanWarehouse extends Warehouse
 		final Item item = getItemByObjectId(objectId);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemTransfer(process, actor, item, count, target), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemTransfer(process, actor, item, count, target), item.getTemplate());
 		return super.transferItem(process, objectId, count, target, actor, reference);
 	}
 }

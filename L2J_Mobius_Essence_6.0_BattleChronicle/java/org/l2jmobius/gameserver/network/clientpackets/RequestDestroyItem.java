@@ -155,7 +155,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			count = itemToRemove.getCount();
 		}
 		
-		if (itemToRemove.getItem().isPetItem())
+		if (itemToRemove.getTemplate().isPetItem())
 		{
 			final Summon pet = player.getPet();
 			if ((pet != null) && (pet.getControlObjectId() == _objectId))

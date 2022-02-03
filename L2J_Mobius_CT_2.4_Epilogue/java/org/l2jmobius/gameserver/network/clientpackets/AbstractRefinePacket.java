@@ -225,7 +225,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		
-		final CrystalType grade = item.getItem().getCrystalType();
+		final CrystalType grade = item.getTemplate().getCrystalType();
 		final LifeStone ls = _lifeStones.get(refinerItem.getId());
 		
 		// Check for item id
@@ -273,12 +273,12 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		// weapons can't be augmented with accessory ls
-		if ((item.getItem() instanceof Weapon) && (ls.getGrade() == GRADE_ACC))
+		if ((item.getTemplate() instanceof Weapon) && (ls.getGrade() == GRADE_ACC))
 		{
 			return false;
 		}
 		// and accessory can't be augmented with weapon ls
-		if ((item.getItem() instanceof Armor) && (ls.getGrade() != GRADE_ACC))
+		if ((item.getTemplate() instanceof Armor) && (ls.getGrade() != GRADE_ACC))
 		{
 			return false;
 		}
@@ -337,7 +337,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
-		if (item.getItem().getCrystalType().isLesser(CrystalType.C))
+		if (item.getTemplate().getCrystalType().isLesser(CrystalType.C))
 		{
 			return false;
 		}
@@ -356,9 +356,9 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			}
 		}
 		
-		if (item.getItem() instanceof Weapon)
+		if (item.getTemplate() instanceof Weapon)
 		{
-			switch (((Weapon) item.getItem()).getItemType())
+			switch (((Weapon) item.getTemplate()).getItemType())
 			{
 				case NONE:
 				case FISHINGROD:
@@ -371,10 +371,10 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem() instanceof Armor)
+		else if (item.getTemplate() instanceof Armor)
 		{
 			// only accessories can be augmented
-			switch (item.getItem().getBodyPart())
+			switch (item.getTemplate().getBodyPart())
 			{
 				case ItemTemplate.SLOT_LR_FINGER:
 				case ItemTemplate.SLOT_LR_EAR:

@@ -153,7 +153,7 @@ public class ElementalAttributeData implements IXmlReader
 	{
 		int row = -1;
 		int column = -1;
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case S:
 			{

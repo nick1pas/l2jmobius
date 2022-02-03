@@ -179,7 +179,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// can't enchant rods and shadow items
-		if ((item.getItem().getItemType() == WeaponType.ROD) || item.isShadowItem())
+		if ((item.getTemplate().getItemType() == WeaponType.ROD) || item.isShadowItem())
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.setActiveEnchantItem(null);
@@ -204,14 +204,14 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final int itemType2 = item.getItem().getType2();
+		final int itemType2 = item.getTemplate().getType2();
 		boolean enchantItem = false;
 		boolean blessedScroll = false;
 		boolean crystalScroll = false;
 		int crystalId = 0;
 		
 		/** pretty code ;D */
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case ItemTemplate.CRYSTAL_A:
 			{
@@ -384,7 +384,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		int chance = 0;
 		int maxEnchantLevel = 0;
 		int minEnchantLevel = 0;
-		if (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)
+		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
 		{
 			if (blessedScroll)
 			{
@@ -450,7 +450,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem().getType2() == ItemTemplate.TYPE2_SHIELD_ARMOR)
+		else if (item.getTemplate().getType2() == ItemTemplate.TYPE2_SHIELD_ARMOR)
 		{
 			if (blessedScroll)
 			{
@@ -511,7 +511,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem().getType2() == ItemTemplate.TYPE2_ACCESSORY)
+		else if (item.getTemplate().getType2() == ItemTemplate.TYPE2_ACCESSORY)
 		{
 			if (blessedScroll)
 			{
@@ -595,7 +595,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX) || ((item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL)))
+		if ((item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX) || ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (item.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL)))
 		{
 			chance = 100;
 		}
@@ -692,7 +692,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						player.broadcastUserInfo();
 					}
 					
-					int count = item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2);
+					int count = item.getCrystalCount() - ((item.getTemplate().getCrystalCount() + 1) / 2);
 					if (count < 1)
 					{
 						count = 1;

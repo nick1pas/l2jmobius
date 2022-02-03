@@ -339,7 +339,7 @@ public class Pet extends Summon
 		{
 			for (Item item : _inventory.getItems())
 			{
-				if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
+				if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_HAND))
 				{
 					return item;
 				}
@@ -359,7 +359,7 @@ public class Pet extends Summon
 		{
 			return null;
 		}
-		return (Weapon) weapon.getItem();
+		return (Weapon) weapon.getTemplate();
 	}
 	
 	@Override
@@ -574,7 +574,7 @@ public class Pet extends Summon
 		}
 		
 		// Herbs
-		if (target.getItem().hasExImmediateEffect())
+		if (target.getTemplate().hasExImmediateEffect())
 		{
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
 			if (handler == null)

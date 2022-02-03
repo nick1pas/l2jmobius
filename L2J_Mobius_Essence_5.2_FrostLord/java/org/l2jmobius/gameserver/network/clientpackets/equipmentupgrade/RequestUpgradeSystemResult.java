@@ -86,7 +86,7 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((existingItem.getItem().getId() != upgradeHolder.getRequiredItemId()) || (existingItem.getEnchantLevel() != upgradeHolder.getRequiredItemEnchant()))
+		if ((existingItem.getTemplate().getId() != upgradeHolder.getRequiredItemId()) || (existingItem.getEnchantLevel() != upgradeHolder.getRequiredItemEnchant()))
 		{
 			player.sendPacket(new ExUpgradeSystemResult(0, 0));
 			return;

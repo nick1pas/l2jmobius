@@ -61,7 +61,7 @@ public class FishShots implements IItemHandler
 		}
 		
 		final long count = item.getCount();
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getTemplate().getCrystalTypePlus() == item.getTemplate().getCrystalTypePlus());
 		if (!gradeCheck)
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);
@@ -78,7 +78,7 @@ public class FishShots implements IItemHandler
 		final WorldObject oldTarget = player.getTarget();
 		player.setTarget(player);
 		
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");

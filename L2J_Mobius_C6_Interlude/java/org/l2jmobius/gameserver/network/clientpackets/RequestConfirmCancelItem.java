@@ -57,7 +57,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 		}
 		
 		int price = 0;
-		switch (item.getItem().getItemGrade())
+		switch (item.getTemplate().getItemGrade())
 		{
 			case ItemTemplate.CRYSTAL_C:
 			{

@@ -118,7 +118,7 @@ public final class PaperdollCache
 		double value = 0;
 		for (Item item : _paperdollItems)
 		{
-			value += item.getItem().getStats(stat, 0);
+			value += item.getTemplate().getStats(stat, 0);
 		}
 		
 		_statValues.put(stat, value);

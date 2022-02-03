@@ -326,7 +326,7 @@ public class ClientThread extends Thread
 			{
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
-				out.write(item.getItem().getName() + ";");
+				out.write(item.getTemplate().getName() + ";");
 				out.write(item.getCount() + ";");
 				out.write(item.getPrice() + ";");
 				if ((item.getItemId() == 17) || (item.getItemId() == 1341) || (item.getItemId() == 1342) || (item.getItemId() == 1343) || (item.getItemId() == 1344) || (item.getItemId() == 1345))
@@ -467,7 +467,7 @@ public class ClientThread extends Thread
 				final Item item = items.get(i);
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
-				out.write(item.getItem().getName() + ";");
+				out.write(item.getTemplate().getName() + ";");
 				out.write(item.getCount() + "\n");
 			}
 			out.close();

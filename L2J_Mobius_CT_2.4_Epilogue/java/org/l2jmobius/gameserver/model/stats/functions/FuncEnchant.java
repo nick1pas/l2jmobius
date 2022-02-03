@@ -75,7 +75,7 @@ public class FuncEnchant extends AbstractFunction
 		
 		if (getStat() == Stat.MAGIC_ATTACK)
 		{
-			switch (item.getItem().getCrystalTypePlus())
+			switch (item.getTemplate().getCrystalTypePlus())
 			{
 				case S:
 				{
@@ -108,7 +108,7 @@ public class FuncEnchant extends AbstractFunction
 		if (item.isWeapon())
 		{
 			final WeaponType type = (WeaponType) item.getItemType();
-			switch (item.getItem().getCrystalTypePlus())
+			switch (item.getTemplate().getCrystalTypePlus())
 			{
 				case S:
 				{

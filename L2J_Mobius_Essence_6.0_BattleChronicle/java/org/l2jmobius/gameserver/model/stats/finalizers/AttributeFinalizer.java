@@ -59,7 +59,7 @@ public class AttributeFinalizer implements IStatFunction
 						baseValue += weaponInstanceHolder.getValue();
 					}
 					
-					final AttributeHolder weaponHolder = weapon.getItem().getAttribute(_type);
+					final AttributeHolder weaponHolder = weapon.getTemplate().getAttribute(_type);
 					if (weaponHolder != null)
 					{
 						baseValue += weaponHolder.getValue();
@@ -79,7 +79,7 @@ public class AttributeFinalizer implements IStatFunction
 							baseValue += weaponInstanceHolder.getValue();
 						}
 						
-						final AttributeHolder weaponHolder = item.getItem().getAttribute(_type);
+						final AttributeHolder weaponHolder = item.getTemplate().getAttribute(_type);
 						if (weaponHolder != null)
 						{
 							baseValue += weaponHolder.getValue();

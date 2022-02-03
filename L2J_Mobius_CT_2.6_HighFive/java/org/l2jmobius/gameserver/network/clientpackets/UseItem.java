@@ -103,7 +103,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (item.getItem().getType2() == ItemTemplate.TYPE2_QUEST)
+		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
@@ -126,7 +126,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!item.isEquipped() && !item.getItem().checkCondition(player, player, true))
+		if (!item.isEquipped() && !item.getTemplate().checkCondition(player, player, true))
 		{
 			return;
 		}
@@ -140,7 +140,7 @@ public class UseItem implements IClientIncomingPacket
 		
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getKarma() > 0))
 		{
-			final SkillHolder[] skills = item.getItem().getSkills();
+			final SkillHolder[] skills = item.getTemplate().getSkills();
 			if (skills != null)
 			{
 				for (SkillHolder sHolder : skills)
@@ -198,7 +198,7 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			switch (item.getItem().getBodyPart())
+			switch (item.getTemplate().getBodyPart())
 			{
 				case ItemTemplate.SLOT_LR_HAND:
 				case ItemTemplate.SLOT_L_HAND:
@@ -231,7 +231,7 @@ public class UseItem implements IClientIncomingPacket
 					// Don't allow other Race to Wear Kamael exclusive Weapons.
 					if (!item.isEquipped() && item.isWeapon() && !player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS))
 					{
-						final Weapon wpn = (Weapon) item.getItem();
+						final Weapon wpn = (Weapon) item.getTemplate();
 						
 						switch (player.getRace())
 						{
@@ -277,7 +277,7 @@ public class UseItem implements IClientIncomingPacket
 				case ItemTemplate.SLOT_FULL_ARMOR:
 				case ItemTemplate.SLOT_LEGS:
 				{
-					if ((player.getRace() == Race.KAMAEL) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.MAGIC)))
+					if ((player.getRace() == Race.KAMAEL) && ((item.getTemplate().getItemType() == ArmorType.HEAVY) || (item.getTemplate().getItemType() == ArmorType.MAGIC)))
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;

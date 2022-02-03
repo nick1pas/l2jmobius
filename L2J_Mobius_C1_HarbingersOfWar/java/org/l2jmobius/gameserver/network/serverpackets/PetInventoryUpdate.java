@@ -64,11 +64,11 @@ public class PetInventoryUpdate extends ServerBasePacket
 		{
 			final Item temp = _items.get(i);
 			writeH(temp.getLastChange());
-			writeH(temp.getItem().getType1());
+			writeH(temp.getTemplate().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());
 			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(temp.getTemplate().getType2());
 			writeH(0);
 			if (temp.isEquipped())
 			{
@@ -78,7 +78,7 @@ public class PetInventoryUpdate extends ServerBasePacket
 			{
 				writeH(0);
 			}
-			writeD(temp.getItem().getBodyPart());
+			writeD(temp.getTemplate().getBodyPart());
 			writeH(temp.getEnchantLevel());
 			writeH(0);
 		}

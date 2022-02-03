@@ -81,7 +81,7 @@ public class AuctionItem
 		final Item item = new Item(IdManager.getInstance().getNextId(), _itemId);
 		World.getInstance().addObject(item);
 		item.setCount(_itemCount);
-		item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());
+		item.setEnchantLevel(item.getTemplate().getDefaultEnchantLevel());
 		return item;
 	}
 }

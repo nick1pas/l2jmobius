@@ -60,14 +60,14 @@ public class FishShots implements IItemHandler
 		}
 		
 		final long count = item.getCount();
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final SkillHolder[] skills = item.getTemplate().getSkills();
 		if (skills == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getTemplate().getCrystalTypePlus() == item.getTemplate().getCrystalTypePlus());
 		if (!gradeCheck)
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);

@@ -68,7 +68,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		
 		// get the price
 		int price = 0;
-		switch (targetItem.getItem().getItemGrade())
+		switch (targetItem.getTemplate().getItemGrade())
 		{
 			case ItemTemplate.CRYSTAL_C:
 			{

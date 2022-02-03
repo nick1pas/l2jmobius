@@ -52,7 +52,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		final Player player = playable.getActingPlayer();
-		final EtcItem etcitem = (EtcItem) item.getItem();
+		final EtcItem etcitem = (EtcItem) item.getTemplate();
 		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{
@@ -99,7 +99,7 @@ public class ExtractableItems implements IItemHandler
 						boolean alreadyExtracted = false;
 						for (Item i : extractedItems.keySet())
 						{
-							if (i.getItem().getId() == expi.getId())
+							if (i.getTemplate().getId() == expi.getId())
 							{
 								alreadyExtracted = true;
 								break;
@@ -210,7 +210,7 @@ public class ExtractableItems implements IItemHandler
 	private void addItem(Map<Item, Long> extractedItems, Item newItem, long count)
 	{
 		// Max equipable item grade configuration.
-		final int itemCrystalLevel = newItem.getItem().getCrystalType().getLevel();
+		final int itemCrystalLevel = newItem.getTemplate().getCrystalType().getLevel();
 		if ((itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
 		{
 			return;

@@ -880,11 +880,11 @@ public class GameStatusThread extends Thread
 			player.broadcastUserInfo();
 			
 			// informations
-			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
-			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getTemplate().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getTemplate().getName() + " from " + curEnchant + " to " + ench + ".");
 			
 			// LOGGER
-			GMAudit.auditGMAction("TelnetAdministrator", "enchant", player.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
+			GMAudit.auditGMAction("TelnetAdministrator", "enchant", player.getName(), itemInstance.getTemplate().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
 			return true;
 		}
 		return false;

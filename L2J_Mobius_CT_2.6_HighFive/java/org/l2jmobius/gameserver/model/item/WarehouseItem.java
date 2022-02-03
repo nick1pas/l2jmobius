@@ -64,7 +64,7 @@ public class WarehouseItem
 	
 	public WarehouseItem(Item item)
 	{
-		_item = item.getItem();
+		_item = item.getTemplate();
 		_object = item.getObjectId();
 		_count = item.getCount();
 		_owner = item.getOwnerId();
@@ -72,7 +72,7 @@ public class WarehouseItem
 		_enchant = item.getEnchantLevel();
 		_customType1 = item.getCustomType1();
 		_customType2 = item.getCustomType2();
-		_grade = item.getItem().getCrystalType();
+		_grade = item.getTemplate().getCrystalType();
 		if (item.isAugmented())
 		{
 			_isAugmented = true;

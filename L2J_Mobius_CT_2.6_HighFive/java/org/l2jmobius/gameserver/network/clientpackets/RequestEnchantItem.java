@@ -176,7 +176,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				case SUCCESS:
 				{
 					Skill enchant4Skill = null;
-					final ItemTemplate it = item.getItem();
+					final ItemTemplate it = item.getTemplate();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(player, item) > 0)
 					{
@@ -361,10 +361,10 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							
 							World.getInstance().removeObject(item);
 							
-							final int crystalId = item.getItem().getCrystalItemId();
-							if ((crystalId != 0) && item.getItem().isCrystallizable())
+							final int crystalId = item.getTemplate().getCrystalItemId();
+							if ((crystalId != 0) && item.getTemplate().isCrystallizable())
 							{
-								int count = item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2);
+								int count = item.getCrystalCount() - ((item.getTemplate().getCrystalCount() + 1) / 2);
 								count = count < 1 ? 1 : count;
 								player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								

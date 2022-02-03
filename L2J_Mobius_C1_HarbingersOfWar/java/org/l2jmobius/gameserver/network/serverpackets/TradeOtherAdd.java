@@ -35,14 +35,14 @@ public class TradeOtherAdd extends ServerBasePacket
 	{
 		writeC(0x31);
 		writeH(1);
-		final int type = temp.getItem().getType1();
+		final int type = temp.getTemplate().getType1();
 		writeH(type);
 		writeD(temp.getObjectId());
 		writeD(temp.getItemId());
 		writeD(_amount);
-		writeH(temp.getItem().getType2());
+		writeH(temp.getTemplate().getType2());
 		writeH(0);
-		writeD(temp.getItem().getBodyPart());
+		writeD(temp.getTemplate().getBodyPart());
 		writeH(temp.getEnchantLevel());
 		writeH(0);
 		writeH(0);

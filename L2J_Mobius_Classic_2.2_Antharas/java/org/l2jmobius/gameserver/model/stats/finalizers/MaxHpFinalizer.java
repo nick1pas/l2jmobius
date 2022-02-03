@@ -72,12 +72,12 @@ public class MaxHpFinalizer implements IStatFunction
 			// Add maxHP bonus from items
 			for (Item item : inv.getPaperdollItems())
 			{
-				addItem += item.getItem().getStats(stat, 0);
+				addItem += item.getTemplate().getStats(stat, 0);
 				
 				// Apply enchanted item bonus HP
 				if (item.isArmor() && item.isEnchanted())
 				{
-					final long bodyPart = item.getItem().getBodyPart();
+					final long bodyPart = item.getTemplate().getBodyPart();
 					if ((bodyPart != ItemTemplate.SLOT_NECK) && (bodyPart != ItemTemplate.SLOT_LR_EAR) && (bodyPart != ItemTemplate.SLOT_LR_FINGER))
 					{
 						addItem += EnchantItemHPBonusData.getInstance().getHPBonus(item);

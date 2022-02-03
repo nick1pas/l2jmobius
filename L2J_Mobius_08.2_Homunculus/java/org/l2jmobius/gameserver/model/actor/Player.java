@@ -2244,13 +2244,13 @@ public class Player extends Playable
 				// Consume mana - will start a task if required; returns if item is not a shadow item
 				item.decreaseMana(false);
 				
-				if ((item.getItem().getBodyPart() & ItemTemplate.SLOT_MULTI_ALLWEAPON) != 0)
+				if ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_MULTI_ALLWEAPON) != 0)
 				{
 					rechargeShots(true, true, false);
 				}
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemEquip(this, item), item.getItem());
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemEquip(this, item), item.getTemplate());
 			}
 			else
 			{
@@ -4488,7 +4488,7 @@ public class Player extends Playable
 		}
 		
 		// Auto use herbs - pick up
-		if (target.getItem().hasExImmediateEffect())
+		if (target.getTemplate().hasExImmediateEffect())
 		{
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
 			if (handler == null)
@@ -4759,7 +4759,7 @@ public class Player extends Playable
 		{
 			return _fistsWeaponItem;
 		}
-		return (Weapon) weapon.getItem();
+		return (Weapon) weapon.getTemplate();
 	}
 	
 	public Item getChestArmorInstance()
@@ -4779,7 +4779,7 @@ public class Player extends Playable
 		{
 			return null;
 		}
-		return (Armor) armor.getItem();
+		return (Armor) armor.getTemplate();
 	}
 	
 	public Armor getActiveLegsArmorItem()
@@ -4789,7 +4789,7 @@ public class Player extends Playable
 		{
 			return null;
 		}
-		return (Armor) legs.getItem();
+		return (Armor) legs.getTemplate();
 	}
 	
 	public boolean isWearingHeavyArmor()
@@ -4800,7 +4800,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY));
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY));
 	}
 	
 	public boolean isWearingLightArmor()
@@ -4811,7 +4811,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT));
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT));
 	}
 	
 	public boolean isWearingMagicArmor()
@@ -4822,7 +4822,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC));
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC));
 	}
 	
 	/**
@@ -4844,7 +4844,7 @@ public class Player extends Playable
 		final Item item = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (item != null)
 		{
-			return item.getItem();
+			return item.getTemplate();
 		}
 		return null;
 	}
@@ -5112,7 +5112,7 @@ public class Player extends Playable
 					if (itemDrop.isShadowItem() || // Dont drop Shadow Items
 						itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
 						!itemDrop.isDropable() || (itemDrop.getId() == Inventory.ADENA_ID) || // Adena
-						(itemDrop.getItem().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
+						(itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
 						((_pet != null) && (_pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet
 						(Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_ITEMS, itemDrop.getId()) >= 0) || // Item listed in the non droppable item list
 						(Arrays.binarySearch(Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS, itemDrop.getId()) >= 0 // Item listed in the non droppable pet item list
@@ -5124,7 +5124,7 @@ public class Player extends Playable
 					if (itemDrop.isEquipped())
 					{
 						// Set proper chance according to Item type of equipped Item
-						itemDropPercent = itemDrop.getItem().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+						itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
 						_inventory.unEquipItemInSlot(itemDrop.getLocationSlot());
 					}
 					else
@@ -5917,7 +5917,7 @@ public class Player extends Playable
 		removeAmmunitionSkills();
 		_lastAmmunitionId = currentAmmunitionId;
 		
-		final List<ItemSkillHolder> skills = ammunition.getItem().getAllSkills();
+		final List<ItemSkillHolder> skills = ammunition.getTemplate().getAllSkills();
 		if (skills == null)
 		{
 			return;
@@ -5995,7 +5995,7 @@ public class Player extends Playable
 			return false;
 		}
 		
-		final List<Item> unequipped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final List<Item> unequipped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (Item itm : unequipped)
 		{
@@ -6036,7 +6036,7 @@ public class Player extends Playable
 		final Item sld = _inventory.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (sld != null)
 		{
-			final List<Item> unequipped = _inventory.unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final List<Item> unequipped = _inventory.unEquipItemInBodySlotAndRecord(sld.getTemplate().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (Item itm : unequipped)
 			{
@@ -8970,7 +8970,7 @@ public class Player extends Playable
 				continue;
 			}
 			
-			final ActionType defaultAction = item.getItem().getDefaultAction();
+			final ActionType defaultAction = item.getTemplate().getDefaultAction();
 			if ((magic && (defaultAction == ActionType.SPIRITSHOT)) || (physical && (defaultAction == ActionType.SOULSHOT)) || (fish && (defaultAction == ActionType.FISHINGSHOT)))
 			{
 				handler.useItem(this, item, false);
@@ -11903,7 +11903,7 @@ public class Player extends Playable
 		for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 		{
 			final Item equippedItem = _inventory.getPaperdollItem(i);
-			if ((equippedItem != null) && !equippedItem.getItem().checkCondition(this, this, false))
+			if ((equippedItem != null) && !equippedItem.getTemplate().checkCondition(this, this, false))
 			{
 				_inventory.unEquipItemInSlot(i);
 				
@@ -11912,7 +11912,7 @@ public class Player extends Playable
 				sendInventoryUpdate(iu);
 				
 				SystemMessage sm = null;
-				if (equippedItem.getItem().getBodyPart() == ItemTemplate.SLOT_BACK)
+				if (equippedItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_BACK)
 				{
 					sendPacket(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
 					return;

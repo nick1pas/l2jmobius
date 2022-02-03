@@ -64,7 +64,7 @@ public class EnchantFormatter extends Formatter
 					{
 						StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
 					}
-					StringUtil.append(output, item.getItem().getName(), "(", String.valueOf(item.getCount()), ")");
+					StringUtil.append(output, item.getTemplate().getName(), "(", String.valueOf(item.getCount()), ")");
 					StringUtil.append(output, " [", String.valueOf(item.getObjectId()), "]");
 				}
 				else if (p instanceof Skill)

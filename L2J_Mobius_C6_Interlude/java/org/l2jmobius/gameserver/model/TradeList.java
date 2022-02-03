@@ -58,7 +58,7 @@ public class TradeList
 		public TradeItem(Item item, int count, int price)
 		{
 			_objectId = item.getObjectId();
-			_item = item.getItem();
+			_item = item.getTemplate();
 			_enchant = item.getEnchantLevel();
 			_count = count;
 			_price = price;

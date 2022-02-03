@@ -594,7 +594,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			newItem.setCount(-1);
 			tradeList.addItem(newItem);
 			storeTradeList(itemID, price, tradeListID, order);
-			BuilderUtil.sendSysMessage(activeChar, "Added " + newItem.getItem().getName() + " to Trade List " + tradeList.getListId());
+			BuilderUtil.sendSysMessage(activeChar, "Added " + newItem.getTemplate().getName() + " to Trade List " + tradeList.getListId());
 			showShopList(activeChar, tradeListID, 1);
 			return;
 		}
@@ -647,7 +647,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		final int end = Math.min((((page - 1) * PAGE_LIMIT) + PAGE_LIMIT) - 1, tradeList.getItems().size() - 1);
 		for (Item item : tradeList.getItems(start, end + 1))
 		{
-			replyMSG.append("<tr><td><a action=\"bypass -h admin_editShopItem " + tradeList.getListId() + " " + item.getItemId() + "\">" + item.getItem().getName() + "</a></td>");
+			replyMSG.append("<tr><td><a action=\"bypass -h admin_editShopItem " + tradeList.getListId() + " " + item.getItemId() + "\">" + item.getTemplate().getName() + "</a></td>");
 			replyMSG.append("<td>" + item.getPriceToSell() + "</td>");
 			replyMSG.append("<td><button value=\"Del\" action=\"bypass -h admin_delShopItem " + tradeList.getListId() + " " + item.getItemId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			replyMSG.append("</tr>");

@@ -49,6 +49,6 @@ public class ConditionSlotItemType extends ConditionInventory
 		}
 		
 		final Item itemSlot = effector.getInventory().getPaperdollItem(_slot);
-		return (itemSlot != null) && ((itemSlot.getItem().getItemMask() & _mask) != 0);
+		return (itemSlot != null) && ((itemSlot.getTemplate().getItemMask() & _mask) != 0);
 	}
 }

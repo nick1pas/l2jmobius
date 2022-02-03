@@ -49,9 +49,9 @@ public interface IStatFunction
 		for (int slot : slots)
 		{
 			final Item item = creature.getInventory().getPaperdollItemByItemId(slot);
-			if ((item != null) && (item.getEnchantLevel() >= 4) && (item.getItem().getCrystalTypePlus() == CrystalType.R))
+			if ((item != null) && (item.getEnchantLevel() >= 4) && (item.getTemplate().getCrystalTypePlus() == CrystalType.R))
 			{
-				value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getItem().isBlessed());
+				value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getTemplate().isBlessed());
 			}
 		}
 		return value;
@@ -71,12 +71,12 @@ public interface IStatFunction
 			final Pet pet = (Pet) creature;
 			final Item weapon = pet.getActiveWeaponInstance();
 			final double baseVal = stat == Stat.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stat.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
-			baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
+			baseValue = baseVal + (weapon != null ? weapon.getTemplate().getStats(stat, baseVal) : 0);
 		}
 		else if (creature.isPlayer() && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE)))
 		{
 			final Item weapon = creature.getActiveWeaponInstance();
-			baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
+			baseValue = (weapon != null ? weapon.getTemplate().getStats(stat, baseTemplateValue) : baseTemplateValue);
 		}
 		
 		return baseValue;
@@ -109,7 +109,7 @@ public interface IStatFunction
 		double value = 0;
 		for (Item equippedItem : creature.getInventory().getPaperdollItems(Item::isEnchanted))
 		{
-			final ItemTemplate item = equippedItem.getItem();
+			final ItemTemplate item = equippedItem.getTemplate();
 			final long bodypart = item.getBodyPart();
 			if ((bodypart == ItemTemplate.SLOT_HAIR) || //
 				(bodypart == ItemTemplate.SLOT_HAIR2) || //
@@ -194,7 +194,7 @@ public interface IStatFunction
 	 */
 	static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant)
 	{
-		switch (item.getItem().getCrystalTypePlus()) // Fixed formula for Classic.
+		switch (item.getTemplate().getCrystalTypePlus()) // Fixed formula for Classic.
 		{
 			case S:
 			{

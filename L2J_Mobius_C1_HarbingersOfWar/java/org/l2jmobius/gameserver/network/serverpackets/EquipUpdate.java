@@ -38,7 +38,7 @@ public class EquipUpdate extends ServerBasePacket
 		writeC(0x5E);
 		writeD(_change);
 		writeD(_item.getObjectId());
-		switch (_item.getItem().getBodyPart())
+		switch (_item.getTemplate().getBodyPart())
 		{
 			case ItemTemplate.SLOT_L_EAR:
 			{

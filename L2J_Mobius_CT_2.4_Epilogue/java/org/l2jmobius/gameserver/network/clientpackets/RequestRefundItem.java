@@ -143,7 +143,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			}
 			
 			final Item item = refund[idx];
-			final ItemTemplate template = item.getItem();
+			final ItemTemplate template = item.getTemplate();
 			objectIds[i] = item.getObjectId();
 			
 			// second check for duplicates - object ids

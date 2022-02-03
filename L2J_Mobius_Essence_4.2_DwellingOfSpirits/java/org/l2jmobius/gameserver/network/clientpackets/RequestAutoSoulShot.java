@@ -72,7 +72,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					return;
 				}
 				
-				if (isSummonShot(item.getItem()))
+				if (isSummonShot(item.getTemplate()))
 				{
 					if (player.hasSummon())
 					{
@@ -124,7 +124,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 						if (pet != null)
 						{
 							// Send message
-							if (!pet.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
+							if (!pet.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
@@ -136,7 +136,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 						for (Summon summon : player.getServitors().values())
 						{
 							// Send message
-							if (!summon.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
+							if (!summon.isChargedShot(item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 								sm.addItemName(item);
@@ -151,7 +151,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 					}
 				}
-				else if (isPlayerShot(item.getItem()))
+				else if (isPlayerShot(item.getTemplate()))
 				{
 					final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
 					final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;

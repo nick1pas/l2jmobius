@@ -59,20 +59,20 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{
-			packet.writeH(item.getItem().getType1());
+			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(item.getCustomType1());
-			switch (item.getItem().getType2())
+			switch (item.getTemplate().getType2())
 			{
 				case ItemTemplate.TYPE2_WEAPON:
 				{
-					packet.writeD(item.getItem().getBodyPart());
+					packet.writeD(item.getTemplate().getBodyPart());
 					packet.writeH(item.getEnchantLevel());
-					packet.writeH(((Weapon) item.getItem()).getSoulShotCount());
-					packet.writeH(((Weapon) item.getItem()).getSpiritShotCount());
+					packet.writeH(((Weapon) item.getTemplate()).getSoulShotCount());
+					packet.writeH(((Weapon) item.getTemplate()).getSpiritShotCount());
 					break;
 				}
 				case ItemTemplate.TYPE2_SHIELD_ARMOR:
@@ -82,7 +82,7 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 				case ItemTemplate.TYPE2_PET_STRIDER:
 				case ItemTemplate.TYPE2_PET_BABY:
 				{
-					packet.writeD(item.getItem().getBodyPart());
+					packet.writeD(item.getTemplate().getBodyPart());
 					packet.writeH(item.getEnchantLevel());
 					packet.writeH(0);
 					packet.writeH(0);
@@ -90,7 +90,7 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 				}
 			}
 			packet.writeD(item.getObjectId());
-			switch (item.getItem().getType2())
+			switch (item.getTemplate().getType2())
 			{
 				case ItemTemplate.TYPE2_WEAPON:
 				{

@@ -175,7 +175,7 @@ public abstract class ItemContainer
 	{
 		for (Item item : _items)
 		{
-			if (item.getItem().isAllowSelfResurrection())
+			if (item.getTemplate().isAllowSelfResurrection())
 			{
 				return true;
 			}

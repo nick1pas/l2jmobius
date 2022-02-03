@@ -447,7 +447,7 @@ public class PlayerInventory extends Inventory
 				}
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, addedItem), actor, addedItem.getItem());
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, addedItem), actor, addedItem.getTemplate());
 			}
 		}
 		return addedItem;
@@ -530,7 +530,7 @@ public class PlayerInventory extends Inventory
 			}
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
 		}
 		return item;
 	}
@@ -573,7 +573,7 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getTemplate());
 		
 		return item;
 	}
@@ -637,7 +637,7 @@ public class PlayerInventory extends Inventory
 		// Notify to scripts
 		if (destroyedItem != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, destroyedItem), destroyedItem.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, destroyedItem), destroyedItem.getTemplate());
 		}
 		
 		return destroyedItem;
@@ -718,7 +718,7 @@ public class PlayerInventory extends Inventory
 		// Notify to scripts
 		if (droppedItem != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, droppedItem, droppedItem.getLocation()), droppedItem.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, droppedItem, droppedItem.getLocation()), droppedItem.getTemplate());
 		}
 		
 		return droppedItem;
@@ -761,7 +761,7 @@ public class PlayerInventory extends Inventory
 		// Notify to scripts
 		if (item != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
 		}
 		
 		return item;
@@ -941,7 +941,7 @@ public class PlayerInventory extends Inventory
 	public boolean validateCapacity(Item item)
 	{
 		int slots = 0;
-		if (!item.isStackable() || ((getInventoryItemCount(item.getId(), -1) <= 0) && !item.getItem().hasExImmediateEffect()))
+		if (!item.isStackable() || ((getInventoryItemCount(item.getId(), -1) <= 0) && !item.getTemplate().hasExImmediateEffect()))
 		{
 			slots++;
 		}

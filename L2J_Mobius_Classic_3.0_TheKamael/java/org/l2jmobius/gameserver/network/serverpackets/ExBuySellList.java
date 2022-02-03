@@ -67,7 +67,7 @@ public class ExBuySellList extends AbstractItemPacket
 			for (Item item : _sellList)
 			{
 				writeItem(packet, item);
-				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getTemplate().getReferencePrice() / 2);
 			}
 		}
 		else
@@ -82,7 +82,7 @@ public class ExBuySellList extends AbstractItemPacket
 			{
 				writeItem(packet, item);
 				packet.writeD(i++);
-				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getItem().getReferencePrice() / 2) * item.getCount());
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getTemplate().getReferencePrice() / 2) * item.getCount());
 			}
 		}
 		else

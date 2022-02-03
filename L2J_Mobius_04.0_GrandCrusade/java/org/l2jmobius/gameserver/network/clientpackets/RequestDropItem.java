@@ -148,13 +148,13 @@ public class RequestDropItem implements IClientIncomingPacket
 		}
 		
 		// Cannot discard item that the skill is consuming.
-		if (player.isCastingNow(s -> (s.getSkill().getItemConsumeId() == item.getId()) && (item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS)))
+		if (player.isCastingNow(s -> (s.getSkill().getItemConsumeId() == item.getId()) && (item.getTemplate().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS)))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
 		
-		if ((ItemTemplate.TYPE2_QUEST == item.getItem().getType2()) && !player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS))
+		if ((ItemTemplate.TYPE2_QUEST == item.getTemplate().getType2()) && !player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS))
 		{
 			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;

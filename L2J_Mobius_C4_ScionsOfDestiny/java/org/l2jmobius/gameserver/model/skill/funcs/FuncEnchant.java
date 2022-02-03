@@ -39,7 +39,7 @@ public class FuncEnchant extends Func
 			return;
 		}
 		final Item item = (Item) funcOwner;
-		final int cristall = item.getItem().getCrystalType();
+		final int cristall = item.getTemplate().getCrystalType();
 		final Enum<?> itemType = item.getItemType();
 		if (cristall == ItemTemplate.CRYSTAL_NONE)
 		{
@@ -78,7 +78,7 @@ public class FuncEnchant extends Func
 		
 		if (stat == Stat.MAGIC_ATTACK)
 		{
-			switch (item.getItem().getCrystalType())
+			switch (item.getTemplate().getCrystalType())
 			{
 				case ItemTemplate.CRYSTAL_S:
 				{
@@ -109,7 +109,7 @@ public class FuncEnchant extends Func
 			return;
 		}
 		
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case ItemTemplate.CRYSTAL_A:
 			{
@@ -117,7 +117,7 @@ public class FuncEnchant extends Func
 				{
 					env.value += (8 * enchant) + (16 * overenchant);
 				}
-				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getTemplate().getBodyPart() == 16384)))
 				{
 					env.value += (5 * enchant) + (10 * overenchant);
 				}
@@ -133,7 +133,7 @@ public class FuncEnchant extends Func
 				{
 					env.value += (6 * enchant) + (12 * overenchant);
 				}
-				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getTemplate().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 				}
@@ -149,7 +149,7 @@ public class FuncEnchant extends Func
 				{
 					env.value += (6 * enchant) + (12 * overenchant);
 				}
-				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getTemplate().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 				}
@@ -177,7 +177,7 @@ public class FuncEnchant extends Func
 				{
 					env.value += (10 * enchant) + (20 * overenchant);
 				}
-				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getTemplate().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (12 * overenchant);
 				}

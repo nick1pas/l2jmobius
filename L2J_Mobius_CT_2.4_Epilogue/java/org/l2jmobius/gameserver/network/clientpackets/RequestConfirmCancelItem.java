@@ -73,7 +73,7 @@ public class RequestConfirmCancelItem implements IClientIncomingPacket
 		}
 		
 		int price = 0;
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case C:
 			{

@@ -42,7 +42,7 @@ public class RequestSellItem extends ClientBasePacket
 				continue;
 			}
 			final Item item = activeChar.getInventory().getItem(objectId);
-			activeChar.addAdena((item.getItem().getReferencePrice() / 2) * cnt);
+			activeChar.addAdena((item.getTemplate().getReferencePrice() / 2) * cnt);
 			activeChar.getInventory().destroyItem(objectId, cnt);
 		}
 		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());

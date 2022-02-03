@@ -43,8 +43,8 @@ public class SellList implements IClientOutgoingPacket
 		{
 			if ((item != null) && !item.isEquipped() && // Not equipped
 				(item.getItemLocation() == ItemLocation.INVENTORY) && // exploit fix
-				item.getItem().isSellable() && // Item is sellable
-				(item.getItem().getItemId() != 57) && // Adena is not sellable
+				item.getTemplate().isSellable() && // Item is sellable
+				(item.getTemplate().getItemId() != 57) && // Adena is not sellable
 				((_player.getPet() == null) || // Pet not summoned or
 					(item.getObjectId() != _player.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
 			{
@@ -62,17 +62,17 @@ public class SellList implements IClientOutgoingPacket
 		packet.writeH(_selllist.size());
 		for (Item item : _selllist)
 		{
-			packet.writeH(item.getItem().getType1());
+			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(0);
-			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getTemplate().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(0);
 			packet.writeH(0);
-			packet.writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
+			packet.writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getTemplate().getReferencePrice() / 2);
 		}
 		return true;
 	}

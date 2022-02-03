@@ -235,7 +235,7 @@ public class Inventory
 	public List<Item> equipItem(Item item)
 	{
 		final List<Item> changedItems = new ArrayList<>();
-		final int targetSlot = item.getItem().getBodyPart();
+		final int targetSlot = item.getTemplate().getBodyPart();
 		switch (targetSlot)
 		{
 			case ItemTemplate.SLOT_LR_HAND:
@@ -255,7 +255,7 @@ public class Inventory
 				}
 				setPaperdollItem(PAPERDOLL_RHAND, item);
 				setPaperdollItem(PAPERDOLL_LRHAND, item);
-				if ((((Weapon) item.getItem()).getWeaponType() != Weapon.WEAPON_TYPE_BOW) || ((arrow = findArrowForBow(item.getItem())) == null))
+				if ((((Weapon) item.getTemplate()).getWeaponType() != Weapon.WEAPON_TYPE_BOW) || ((arrow = findArrowForBow(item.getTemplate())) == null))
 				{
 					break;
 				}
@@ -347,7 +347,7 @@ public class Inventory
 			case ItemTemplate.SLOT_LEGS:
 			{
 				final Item chest = getPaperdollItem(10);
-				if ((chest != null) && (chest.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
+				if ((chest != null) && (chest.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
 				{
 					unEquipSlot(changedItems, PAPERDOLL_CHEST);
 				}
@@ -536,7 +536,7 @@ public class Inventory
 		}
 		if (oldItem.isEquipped())
 		{
-			unEquipItemInBodySlot(oldItem.getItem().getBodyPart());
+			unEquipItemInBodySlot(oldItem.getTemplate().getBodyPart());
 		}
 		if (oldItem.getItemId() == 57)
 		{
@@ -565,7 +565,7 @@ public class Inventory
 		int weight = 0;
 		for (Item item : _items)
 		{
-			weight += item.getItem().getWeight() * item.getCount();
+			weight += item.getTemplate().getWeight() * item.getCount();
 		}
 		_totalWeight = weight;
 	}

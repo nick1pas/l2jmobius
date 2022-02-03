@@ -63,7 +63,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!item.getItem().isForNpc())
+		if (!item.getTemplate().isForNpc())
 		{
 			player.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return;
@@ -89,7 +89,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			}
 		}
 		
-		if (!item.isEquipped() && !item.getItem().checkCondition(pet, pet, true))
+		if (!item.isEquipped() && !item.getTemplate().checkCondition(pet, pet, true))
 		{
 			return;
 		}
@@ -101,7 +101,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 	{
 		if (item.isEquipable())
 		{
-			if (!item.getItem().isConditionAttached())
+			if (!item.getTemplate().isConditionAttached())
 			{
 				player.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 				return;

@@ -59,7 +59,7 @@ public class MDefenseFinalizer implements IStatFunction
 		{
 			for (Item item : inv.getPaperdollItems())
 			{
-				baseValue += item.getItem().getStats(stat, 0);
+				baseValue += item.getTemplate().getStats(stat, 0);
 			}
 		}
 		

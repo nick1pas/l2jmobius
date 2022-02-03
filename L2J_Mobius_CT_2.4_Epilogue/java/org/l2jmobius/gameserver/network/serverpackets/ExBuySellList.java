@@ -134,17 +134,17 @@ public class ExBuySellList implements IClientOutgoingPacket
 			packet.writeH(_sellList.size());
 			for (Item item : _sellList)
 			{
-				packet.writeH(item.getItem().getType1());
+				packet.writeH(item.getTemplate().getType1());
 				packet.writeD(item.getObjectId());
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
-				packet.writeH(item.getItem().getType2());
+				packet.writeH(item.getTemplate().getType2());
 				packet.writeH(0);
-				packet.writeD(item.getItem().getBodyPart());
+				packet.writeD(item.getTemplate().getBodyPart());
 				packet.writeH(item.getEnchantLevel());
 				packet.writeH(0);
 				packet.writeH(0);
-				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getTemplate().getReferencePrice() / 2);
 				// T1
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());
@@ -170,11 +170,11 @@ public class ExBuySellList implements IClientOutgoingPacket
 				packet.writeD(idx++);
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
-				packet.writeH(item.getItem().getType2());
+				packet.writeH(item.getTemplate().getType2());
 				packet.writeH(0); // ?
 				packet.writeH(item.getEnchantLevel());
 				packet.writeH(0); // ?
-				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getItem().getReferencePrice() / 2) * item.getCount());
+				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getTemplate().getReferencePrice() / 2) * item.getCount());
 				// T1
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());

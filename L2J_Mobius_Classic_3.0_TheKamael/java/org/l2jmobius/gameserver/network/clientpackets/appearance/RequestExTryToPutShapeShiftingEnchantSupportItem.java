@@ -80,7 +80,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 			return;
 		}
 		
-		if (!extractItem.getItem().isAppearanceable())
+		if (!extractItem.getTemplate().isAppearanceable())
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 			player.sendPacket(ExPutShapeShiftingExtractionItemResult.FAILED);
@@ -133,14 +133,14 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 			return;
 		}
 		
-		if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_CHEST)))
+		if ((extractItem.getTemplate().getBodyPart() != targetItem.getTemplate().getBodyPart()) && ((extractItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_CHEST)))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 			player.sendPacket(ExPutShapeShiftingExtractionItemResult.FAILED);
 			return;
 		}
 		
-		if (extractItem.getItem().getCrystalType().isGreater(targetItem.getItem().getCrystalType()))
+		if (extractItem.getTemplate().getCrystalType().isGreater(targetItem.getTemplate().getCrystalType()))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_EXTRACT_FROM_ITEMS_THAT_ARE_HIGHER_GRADE_THAN_ITEMS_TO_BE_MODIFIED);
 			player.sendPacket(ExPutShapeShiftingExtractionItemResult.FAILED);

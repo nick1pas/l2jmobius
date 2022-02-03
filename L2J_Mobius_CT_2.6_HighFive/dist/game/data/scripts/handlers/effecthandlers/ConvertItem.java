@@ -87,7 +87,7 @@ public class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final Elementals elementals = wpn.getElementals() == null ? null : wpn.getElementals()[0];
-		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final List<Item> unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (Item item : unequipped)
 		{
@@ -103,7 +103,7 @@ public class ConvertItem extends AbstractEffect
 		byte count = 0;
 		for (Item item : unequipped)
 		{
-			if (!(item.getItem() instanceof Weapon))
+			if (!(item.getTemplate() instanceof Weapon))
 			{
 				count++;
 				continue;

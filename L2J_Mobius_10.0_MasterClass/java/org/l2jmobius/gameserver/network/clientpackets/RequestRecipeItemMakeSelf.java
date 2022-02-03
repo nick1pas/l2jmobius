@@ -155,7 +155,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 				final Item item = player.getInventory().getItemByObjectId(offer.getId());
 				if (player.destroyItem("CraftOffering", item, offer.getCount(), null, true))
 				{
-					offeredAdenaWorth += (item.getItem().getReferencePrice() * offer.getCount());
+					offeredAdenaWorth += (item.getTemplate().getReferencePrice() * offer.getCount());
 				}
 			}
 			

@@ -136,7 +136,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			count = itemToRemove.getCount();
 		}
 		
-		if (itemToRemove.getItem().isPetItem())
+		if (itemToRemove.getTemplate().isPetItem())
 		{
 			if (player.hasSummon() && (player.getSummon().getControlObjectId() == _objectId))
 			{

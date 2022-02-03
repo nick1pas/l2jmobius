@@ -402,7 +402,7 @@ public class Pet extends Creature
 			final Inventory petInventory = getInventory();
 			for (Item giveit : petInventory.getItems())
 			{
-				if (((giveit.getItem().getWeight() * giveit.getCount()) + _owner.getInventory().getTotalWeight()) < _owner.getMaxLoad())
+				if (((giveit.getTemplate().getWeight() * giveit.getCount()) + _owner.getInventory().getTotalWeight()) < _owner.getMaxLoad())
 				{
 					giveItemToOwner(giveit);
 					continue;

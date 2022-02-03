@@ -68,8 +68,8 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 			return;
 		}
 		
-		final int refinerItemId = refinerItem.getItem().getId();
-		final CrystalType grade = targetItem.getItem().getCrystalType();
+		final int refinerItemId = refinerItem.getTemplate().getId();
+		final CrystalType grade = targetItem.getTemplate().getCrystalType();
 		final LifeStone ls = getLifeStone(refinerItemId);
 		final int gemStoneId = getGemStoneId(grade);
 		final int gemStoneCount = getGemStoneCount(grade, ls.getGrade());

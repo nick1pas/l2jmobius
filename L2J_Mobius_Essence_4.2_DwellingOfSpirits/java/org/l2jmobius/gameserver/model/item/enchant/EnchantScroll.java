@@ -161,7 +161,7 @@ public class EnchantScroll extends AbstractEnchantItem
 		}
 		if (_items == null)
 		{
-			if (isActionBlessed() && itemToEnchant.isWeapon() && (itemToEnchant.getItem().getCrystalType() == getGrade()))
+			if (isActionBlessed() && itemToEnchant.isWeapon() && (itemToEnchant.getTemplate().getCrystalType() == getGrade()))
 			{
 				return true;
 			}
@@ -194,7 +194,7 @@ public class EnchantScroll extends AbstractEnchantItem
 			return -1;
 		}
 		
-		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
+		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getTemplate(), _scrollGroupId);
 		if (group == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
@@ -228,7 +228,7 @@ public class EnchantScroll extends AbstractEnchantItem
 			return EnchantResultType.ERROR;
 		}
 		
-		final int crystalLevel = enchantItem.getItem().getCrystalType().getLevel();
+		final int crystalLevel = enchantItem.getTemplate().getCrystalType().getLevel();
 		final double enchantRateStat = (crystalLevel > CrystalType.NONE.getLevel()) && (crystalLevel < CrystalType.EVENT.getLevel()) ? player.getStat().getValue(Stat.ENCHANT_RATE) : 0;
 		final double bonusRate = getBonusRate();
 		final double supportBonusRate = (supportItem != null) ? supportItem.getBonusRate() : 0;

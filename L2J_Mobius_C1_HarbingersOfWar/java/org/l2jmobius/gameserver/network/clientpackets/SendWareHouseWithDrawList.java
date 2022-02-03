@@ -43,7 +43,7 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			final Item inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(count);
 			items[i] = inst;
-			weight += items[i].getItem().getWeight() * count;
+			weight += items[i].getTemplate().getWeight() * count;
 		}
 		if ((activeChar.getMaxLoad() - activeChar.getCurrentLoad()) >= weight)
 		{

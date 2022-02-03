@@ -45,7 +45,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		final Player player = playable.getActingPlayer();
-		final EtcItem etcitem = (EtcItem) item.getItem();
+		final EtcItem etcitem = (EtcItem) item.getTemplate();
 		final List<ExtractableProduct> exitem = etcitem.getExtractableItems();
 		if (exitem == null)
 		{

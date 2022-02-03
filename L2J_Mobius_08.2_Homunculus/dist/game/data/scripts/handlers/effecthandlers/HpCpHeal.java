@@ -95,7 +95,7 @@ public class HpCpHeal extends AbstractEffect
 			final Item weaponInst = effector.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
-				mAtkMul = weaponInst.getItem().getCrystalTypePlus() == CrystalType.R ? 4 : weaponInst.getItem().getCrystalTypePlus() == CrystalType.S ? 2 : 1;
+				mAtkMul = weaponInst.getTemplate().getCrystalTypePlus() == CrystalType.R ? 4 : weaponInst.getTemplate().getCrystalTypePlus() == CrystalType.S ? 2 : 1;
 			}
 			// shot dynamic bonus
 			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;

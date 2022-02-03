@@ -48,13 +48,13 @@ public class TradeStart implements IClientOutgoingPacket
 		packet.writeH(_itemList.size());
 		for (Item item : _itemList)
 		{
-			packet.writeH(item.getItem().getType1()); // item type1
+			packet.writeH(item.getTemplate().getType1()); // item type1
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
 			packet.writeQ(item.getCount());
-			packet.writeH(item.getItem().getType2()); // item type2
+			packet.writeH(item.getTemplate().getType2()); // item type2
 			packet.writeH(0); // ?
-			packet.writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+			packet.writeD(item.getTemplate().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 			packet.writeH(item.getEnchantLevel()); // enchant level
 			packet.writeH(0);
 			packet.writeH(item.getCustomType2());

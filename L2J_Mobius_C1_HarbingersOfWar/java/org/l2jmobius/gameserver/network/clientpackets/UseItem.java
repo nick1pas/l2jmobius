@@ -44,16 +44,16 @@ public class UseItem extends ClientBasePacket
 		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
 		{
 			final List<Item> items = activeChar.getInventory().equipItem(item);
-			if (item.getItem().getType2() == 0)
+			if (item.getTemplate().getType2() == 0)
 			{
 				activeChar.updatePAtk();
 				activeChar.updateMAtk();
 			}
-			else if (item.getItem().getType2() == 1)
+			else if (item.getTemplate().getType2() == 1)
 			{
 				activeChar.updatePDef();
 			}
-			else if (item.getItem().getType2() == 2)
+			else if (item.getTemplate().getType2() == 2)
 			{
 				activeChar.updateMDef();
 			}

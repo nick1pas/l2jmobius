@@ -267,7 +267,7 @@ public class CharacterCreate implements IClientIncomingPacket
 				newChar.registerShortCut(new ShortCut(11, 0, 1, itemInstance.getObjectId(), -1)); // Tutorial Book shortcut
 			}
 			
-			if (itemInstance.isEquipable() && ((newChar.getActiveWeaponItem() == null) || (itemInstance.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)))
+			if (itemInstance.isEquipable() && ((newChar.getActiveWeaponItem() == null) || (itemInstance.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)))
 			{
 				newChar.getInventory().equipItemAndRecord(itemInstance);
 			}

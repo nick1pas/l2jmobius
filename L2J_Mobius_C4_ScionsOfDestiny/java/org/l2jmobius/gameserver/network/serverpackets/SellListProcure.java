@@ -64,11 +64,11 @@ public class SellListProcure implements IClientOutgoingPacket
 		for (Entry<Item, Integer> entry : _sellList.entrySet())
 		{
 			final Item item = entry.getKey();
-			packet.writeH(item.getItem().getType1());
+			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeD(entry.getValue()); // count
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(0); // unknown
 			packet.writeD(0); // price, you shouldnt get any adena for crops, only raw materials
 		}

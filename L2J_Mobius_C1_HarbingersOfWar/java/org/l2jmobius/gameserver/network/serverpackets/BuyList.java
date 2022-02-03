@@ -45,16 +45,16 @@ public class BuyList extends ServerBasePacket
 		for (int i = 0; i < count; ++i)
 		{
 			final Item temp = items.get(i);
-			final int type = temp.getItem().getType1();
+			final int type = temp.getTemplate().getType1();
 			writeH(type);
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());
 			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(temp.getTemplate().getType2());
 			writeH(0);
 			if (type < 4)
 			{
-				writeD(temp.getItem().getBodyPart());
+				writeD(temp.getTemplate().getBodyPart());
 				writeH(temp.getEnchantLevel());
 				writeH(0);
 				writeH(0);

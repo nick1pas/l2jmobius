@@ -276,7 +276,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				final Item arrow = inventory.findArrowForBow(item.getItem());
+				final Item arrow = inventory.findArrowForBow(item.getTemplate());
 				if (arrow != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
@@ -284,7 +284,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			else if ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.TWOHANDCROSSBOW))
 			{
-				final Item bolts = inventory.findBoltForCrossBow(item.getItem());
+				final Item bolts = inventory.findBoltForCrossBow(item.getTemplate());
 				if (bolts != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
@@ -333,7 +333,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final Player player = (Player) inventory.getOwner();
-			final ItemTemplate it = item.getItem();
+			final ItemTemplate it = item.getTemplate();
 			final Map<Integer, Skill> addedSkills = new HashMap<>(1);
 			final Map<Integer, Skill> removedSkills = new HashMap<>(1);
 			boolean update = false;
@@ -398,7 +398,7 @@ public abstract class Inventory extends ItemContainer
 							continue;
 						}
 						
-						final List<ItemSkillHolder> otherNormalSkills = itm.getItem().getSkills(ItemSkillType.NORMAL);
+						final List<ItemSkillHolder> otherNormalSkills = itm.getTemplate().getSkills(ItemSkillType.NORMAL);
 						if (otherNormalSkills == null)
 						{
 							continue;
@@ -449,12 +449,12 @@ public abstract class Inventory extends ItemContainer
 			// Must check all equipped items for enchant conditions.
 			for (Item equipped : inventory.getPaperdollItems())
 			{
-				if (!equipped.getItem().hasSkills())
+				if (!equipped.getTemplate().hasSkills())
 				{
 					continue;
 				}
 				
-				final List<ItemSkillHolder> otherEnchantSkills = equipped.getItem().getSkills(ItemSkillType.ON_ENCHANT);
+				final List<ItemSkillHolder> otherEnchantSkills = equipped.getTemplate().getSkills(ItemSkillType.ON_ENCHANT);
 				if (otherEnchantSkills == null)
 				{
 					continue;
@@ -552,9 +552,9 @@ public abstract class Inventory extends ItemContainer
 			// Apply SA skill
 			item.applySpecialAbilities();
 			
-			if (item.getItem().hasSkills())
+			if (item.getTemplate().hasSkills())
 			{
-				final List<ItemSkillHolder> onEnchantSkills = item.getItem().getSkills(ItemSkillType.ON_ENCHANT);
+				final List<ItemSkillHolder> onEnchantSkills = item.getTemplate().getSkills(ItemSkillType.ON_ENCHANT);
 				if (onEnchantSkills != null)
 				{
 					for (ItemSkillHolder holder : onEnchantSkills)
@@ -596,7 +596,7 @@ public abstract class Inventory extends ItemContainer
 					}
 				}
 				
-				final List<ItemSkillHolder> normalSkills = item.getItem().getSkills(ItemSkillType.NORMAL);
+				final List<ItemSkillHolder> normalSkills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 				if (normalSkills != null)
 				{
 					for (ItemSkillHolder holder : normalSkills)
@@ -648,12 +648,12 @@ public abstract class Inventory extends ItemContainer
 			// Must check all equipped items for enchant conditions.
 			for (Item equipped : inventory.getPaperdollItems())
 			{
-				if (!equipped.getItem().hasSkills())
+				if (!equipped.getTemplate().hasSkills())
 				{
 					continue;
 				}
 				
-				final List<ItemSkillHolder> otherEnchantSkills = equipped.getItem().getSkills(ItemSkillType.ON_ENCHANT);
+				final List<ItemSkillHolder> otherEnchantSkills = equipped.getTemplate().getSkills(ItemSkillType.ON_ENCHANT);
 				if (otherEnchantSkills == null)
 				{
 					continue;
@@ -701,7 +701,7 @@ public abstract class Inventory extends ItemContainer
 			// Apply skill, if item has "skills on equip" and it is not a secondary agathion.
 			if ((slot < PAPERDOLL_AGATHION2) || (slot > PAPERDOLL_AGATHION5))
 			{
-				item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
+				item.getTemplate().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
 			}
 			
 			if (!addedSkills.isEmpty())
@@ -763,7 +763,7 @@ public abstract class Inventory extends ItemContainer
 				player.sendSkillList();
 			}
 			
-			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH))
+			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH))
 			{
 				player.updateActiveBroochJewel();
 			}
@@ -908,7 +908,7 @@ public abstract class Inventory extends ItemContainer
 				player.sendSkillList();
 			}
 			
-			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH))
+			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH))
 			{
 				player.updateActiveBroochJewel();
 			}
@@ -933,7 +933,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			if (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_BRACELET)
+			if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_BRACELET)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_DECO1);
 				inventory.unEquipItemInSlot(PAPERDOLL_DECO2);
@@ -969,7 +969,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH)
+			if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL1);
 				inventory.unEquipItemInSlot(PAPERDOLL_BROOCH_JEWEL2);
@@ -1005,7 +1005,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			if (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_BRACELET)
+			if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_L_BRACELET)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
 				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION2);
@@ -1039,7 +1039,7 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT_BOOK)
+			if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_ARTIFACT_BOOK)
 			{
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT1);
 				inventory.unEquipItemInSlot(PAPERDOLL_ARTIFACT2);
@@ -1456,7 +1456,7 @@ public abstract class Inventory extends ItemContainer
 			if (old != null)
 			{
 				// Prevent flood from using items with skills.
-				if (old.getItem().hasSkills())
+				if (old.getTemplate().hasSkills())
 				{
 					checkEquipTask();
 				}
@@ -1475,7 +1475,7 @@ public abstract class Inventory extends ItemContainer
 					final Item pi = _paperdoll[i];
 					if (pi != null)
 					{
-						mask |= pi.getItem().getItemMask();
+						mask |= pi.getTemplate().getItemMask();
 					}
 				}
 				_wearedMask = mask;
@@ -1521,7 +1521,7 @@ public abstract class Inventory extends ItemContainer
 			if (item != null)
 			{
 				// Prevent flood from using items with skills.
-				if (item.getItem().hasSkills())
+				if (item.getTemplate().hasSkills())
 				{
 					checkEquipTask();
 				}
@@ -1534,7 +1534,7 @@ public abstract class Inventory extends ItemContainer
 				item.setLastChange(Item.MODIFIED);
 				
 				// Notify all paperdoll listener in order to equip item in slot
-				_wearedMask |= item.getItem().getItemMask();
+				_wearedMask |= item.getTemplate().getItemMask();
 				for (PaperdollListener listener : _paperdollListeners)
 				{
 					if (listener == null)
@@ -1597,7 +1597,7 @@ public abstract class Inventory extends ItemContainer
 			final Creature owner = getOwner();
 			if ((owner != null) && owner.isPlayer())
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemUnequip(owner.getActingPlayer(), old), old.getItem());
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemUnequip(owner.getActingPlayer(), old), old.getTemplate());
 			}
 		}
 		
@@ -1699,7 +1699,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			case PAPERDOLL_CHEST:
 			{
-				slot = item.getItem().getBodyPart();
+				slot = item.getTemplate().getBodyPart();
 				break;
 			}
 			case PAPERDOLL_LEGS:
@@ -2018,7 +2018,7 @@ public abstract class Inventory extends ItemContainer
 					final ItemType weaponItemType = weapon.getItemType();
 					if ((((weaponItemType == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) //
 						|| (((weaponItemType == WeaponType.CROSSBOW) || (weaponItemType == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT))) //
-						&& (weapon.getItem().getCrystalTypePlus() != item.getItem().getCrystalTypePlus()))
+						&& (weapon.getTemplate().getCrystalTypePlus() != item.getTemplate().getCrystalTypePlus()))
 					{
 						return;
 					}
@@ -2032,11 +2032,11 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
-		final long targetSlot = item.getItem().getBodyPart();
+		final long targetSlot = item.getTemplate().getBodyPart();
 		
 		// Check if player is using Formal Wear and item isn't Wedding Bouquet.
 		final Item formal = getPaperdollItem(PAPERDOLL_CHEST);
-		if ((item.getId() != 21163) && (formal != null) && (formal.getItem().getBodyPart() == ItemTemplate.SLOT_ALLDRESS))
+		if ((item.getId() != 21163) && (formal != null) && (formal.getTemplate().getBodyPart() == ItemTemplate.SLOT_ALLDRESS))
 		{
 			// only chest target can pass this
 			if ((targetSlot == ItemTemplate.SLOT_LR_HAND) || (targetSlot == ItemTemplate.SLOT_L_HAND) || (targetSlot == ItemTemplate.SLOT_R_HAND) || (targetSlot == ItemTemplate.SLOT_LEGS) || (targetSlot == ItemTemplate.SLOT_FEET) || (targetSlot == ItemTemplate.SLOT_GLOVES) || (targetSlot == ItemTemplate.SLOT_HEAD))
@@ -2056,7 +2056,7 @@ public abstract class Inventory extends ItemContainer
 		else if (targetSlot == ItemTemplate.SLOT_L_HAND)
 		{
 			final Item rh = getPaperdollItem(PAPERDOLL_RHAND);
-			if ((rh != null) && (rh.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+			if ((rh != null) && (rh.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
 			{
 				setPaperdollItem(PAPERDOLL_RHAND, null);
 			}
@@ -2112,7 +2112,7 @@ public abstract class Inventory extends ItemContainer
 		else if (targetSlot == ItemTemplate.SLOT_LEGS)
 		{
 			final Item chest = getPaperdollItem(PAPERDOLL_CHEST);
-			if ((chest != null) && (chest.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
+			if ((chest != null) && (chest.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
 			{
 				setPaperdollItem(PAPERDOLL_CHEST, null);
 			}
@@ -2133,7 +2133,7 @@ public abstract class Inventory extends ItemContainer
 		else if (targetSlot == ItemTemplate.SLOT_HAIR)
 		{
 			final Item hair = getPaperdollItem(PAPERDOLL_HAIR);
-			if ((hair != null) && (hair.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL))
+			if ((hair != null) && (hair.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIRALL))
 			{
 				setPaperdollItem(PAPERDOLL_HAIR2, null);
 			}
@@ -2146,7 +2146,7 @@ public abstract class Inventory extends ItemContainer
 		else if (targetSlot == ItemTemplate.SLOT_HAIR2)
 		{
 			final Item hair2 = getPaperdollItem(PAPERDOLL_HAIR);
-			if ((hair2 != null) && (hair2.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL))
+			if ((hair2 != null) && (hair2.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIRALL))
 			{
 				setPaperdollItem(PAPERDOLL_HAIR, null);
 			}
@@ -2230,9 +2230,9 @@ public abstract class Inventory extends ItemContainer
 		long weight = 0;
 		for (Item item : _items)
 		{
-			if ((item != null) && (item.getItem() != null))
+			if ((item != null) && (item.getTemplate() != null))
 			{
-				weight += item.getItem().getWeight() * item.getCount();
+				weight += item.getTemplate().getWeight() * item.getCount();
 			}
 		}
 		_totalWeight = (int) Math.min(weight, Integer.MAX_VALUE);
@@ -2261,7 +2261,7 @@ public abstract class Inventory extends ItemContainer
 		Item arrow = null;
 		for (Item item : _items)
 		{
-			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.ARROW) && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()))
+			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.ARROW) && (item.getTemplate().getCrystalTypePlus() == bow.getCrystalTypePlus()))
 			{
 				arrow = item;
 				break;
@@ -2282,7 +2282,7 @@ public abstract class Inventory extends ItemContainer
 		Item bolt = null;
 		for (Item item : _items)
 		{
-			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.BOLT) && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()))
+			if (item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.BOLT) && (item.getTemplate().getCrystalTypePlus() == crossbow.getCrystalTypePlus()))
 			{
 				bolt = item;
 				break;
@@ -2394,7 +2394,7 @@ public abstract class Inventory extends ItemContainer
 			return;
 		}
 		
-		switch (item.getItem().getArtifactSlot())
+		switch (item.getTemplate().getArtifactSlot())
 		{
 			case 1: // Attack
 			{

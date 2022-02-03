@@ -86,7 +86,7 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 			return;
 		}
 		
-		final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getItem().getCrystalType());
+		final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getTemplate().getCrystalType());
 		if (removalFee.isEmpty())
 		{
 			return;

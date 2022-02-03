@@ -123,7 +123,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 						}
 						else
 						{
-							if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getItem().getCrystalType() == player.getActiveWeaponItem().getCrystalType()))
+							if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getTemplate().getCrystalType() == player.getActiveWeaponItem().getCrystalType()))
 							{
 								if ((_itemId >= 3947) && (_itemId <= 3952) && player.isInOlympiadMode())
 								{

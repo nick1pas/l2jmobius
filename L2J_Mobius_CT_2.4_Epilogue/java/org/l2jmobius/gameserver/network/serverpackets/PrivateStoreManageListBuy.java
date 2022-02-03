@@ -55,8 +55,8 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 			packet.writeQ(item.getCount());
 			packet.writeQ(item.getReferencePrice());
 			packet.writeH(0);
-			packet.writeD(item.getItem().getBodyPart());
-			packet.writeH(item.getItem().getType2());
+			packet.writeD(item.getTemplate().getBodyPart());
+			packet.writeH(item.getTemplate().getType2());
 			// T1
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());

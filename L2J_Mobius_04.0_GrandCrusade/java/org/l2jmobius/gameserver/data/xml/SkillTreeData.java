@@ -1573,7 +1573,7 @@ public class SkillTreeData implements IXmlReader
 				boolean isItemSkill = false;
 				SEARCH: for (Item item : player.getInventory().getItems())
 				{
-					final List<ItemSkillHolder> itemSkills = item.getItem().getAllSkills();
+					final List<ItemSkillHolder> itemSkills = item.getTemplate().getAllSkills();
 					if (itemSkills != null)
 					{
 						for (ItemSkillHolder itemSkillHolder : itemSkills)

@@ -105,7 +105,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		}
 		
 		// Quest Q10579_ContainingTheAttributePower check.
-		if ((item.getItem().getId() == 48168) && (stone.getItem().getId() != 48169))
+		if ((item.getTemplate().getId() == 48168) && (stone.getTemplate().getId() != 48169))
 		{
 			player.removeRequest(request.getClass());
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);

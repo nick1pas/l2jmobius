@@ -45,7 +45,7 @@ public class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final SkillHolder[] skills = item.getTemplate().getSkills();
 		if (skills == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");

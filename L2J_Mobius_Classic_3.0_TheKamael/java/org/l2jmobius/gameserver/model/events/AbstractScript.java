@@ -2934,7 +2934,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		if (item.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (Item itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			for (Item itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart()))
 			{
 				iu.addModifiedItem(itm);
 			}

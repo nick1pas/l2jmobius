@@ -228,7 +228,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				final Item arrow = findArrowForBow(item.getItem());
+				final Item arrow = findArrowForBow(item.getTemplate());
 				if (arrow != null)
 				{
 					setPaperdollItem(PAPERDOLL_LHAND, arrow);
@@ -291,7 +291,7 @@ public abstract class Inventory extends ItemContainer
 			Skill passiveSkill = null;
 			Skill enchant4Skill = null;
 			
-			final ItemTemplate it = item.getItem();
+			final ItemTemplate it = item.getTemplate();
 			if (it instanceof Weapon)
 			{
 				passiveSkill = ((Weapon) it).getSkill();
@@ -334,7 +334,7 @@ public abstract class Inventory extends ItemContainer
 			Skill passiveSkill = null;
 			Skill enchant4Skill = null;
 			
-			final ItemTemplate it = item.getItem();
+			final ItemTemplate it = item.getTemplate();
 			if (it instanceof Weapon)
 			{
 				// Check for Penality
@@ -878,7 +878,7 @@ public abstract class Inventory extends ItemContainer
 					final Item pi = _paperdoll[i];
 					if (pi != null)
 					{
-						mask |= pi.getItem().getItemMask();
+						mask |= pi.getTemplate().getItemMask();
 					}
 				}
 				
@@ -904,7 +904,7 @@ public abstract class Inventory extends ItemContainer
 				_paperdoll[slot] = item;
 				item.setLocation(getEquipLocation(), slot);
 				item.setLastChange(Item.MODIFIED);
-				_wearedMask |= item.getItem().getItemMask();
+				_wearedMask |= item.getTemplate().getItemMask();
 				for (PaperdollListener listener : _paperdollListeners)
 				{
 					listener.notifyEquiped(slot, item);
@@ -1249,7 +1249,7 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
-		final int targetSlot = item.getItem().getBodyPart();
+		final int targetSlot = item.getTemplate().getBodyPart();
 		switch (targetSlot)
 		{
 			case ItemTemplate.SLOT_LR_HAND:
@@ -1270,7 +1270,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			case ItemTemplate.SLOT_L_HAND:
 			{
-				if (!(item.getItem() instanceof EtcItem) || (item.getItem().getItemType() != EtcItemType.ARROW))
+				if (!(item.getTemplate() instanceof EtcItem) || (item.getTemplate().getItemType() != EtcItemType.ARROW))
 				{
 					final Item old1 = setPaperdollItem(PAPERDOLL_LRHAND, null);
 					if (old1 != null)
@@ -1356,7 +1356,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				// handle full armor
 				final Item chest = getPaperdollItem(PAPERDOLL_CHEST);
-				if ((chest != null) && (chest.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
+				if ((chest != null) && (chest.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
 				}
@@ -1449,9 +1449,9 @@ public abstract class Inventory extends ItemContainer
 		int weight = 0;
 		for (Item item : _items)
 		{
-			if ((item != null) && (item.getItem() != null))
+			if ((item != null) && (item.getTemplate() != null))
 			{
-				weight += item.getItem().getWeight() * item.getCount();
+				weight += item.getTemplate().getWeight() * item.getCount();
 			}
 		}
 		

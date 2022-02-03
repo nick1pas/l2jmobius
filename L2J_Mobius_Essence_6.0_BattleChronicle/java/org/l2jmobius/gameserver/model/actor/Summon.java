@@ -1080,7 +1080,7 @@ public abstract class Summon extends Playable
 			item = _owner.getInventory().getItemByItemId(itemId);
 			if (item != null)
 			{
-				if (magic && (item.getItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT))
+				if (magic && (item.getTemplate().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT))
 				{
 					handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
 					if (handler != null)
@@ -1089,7 +1089,7 @@ public abstract class Summon extends Playable
 					}
 				}
 				
-				if (physical && (item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT))
+				if (physical && (item.getTemplate().getDefaultAction() == ActionType.SUMMON_SOULSHOT))
 				{
 					handler = ItemHandler.getInstance().getHandler(item.getEtcItem());
 					if (handler != null)

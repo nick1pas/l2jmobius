@@ -516,7 +516,7 @@ public class AugmentationData
 		int stat34 = 0;
 		if (Config.RETAIL_LIKE_AUGMENTATION)
 		{
-			if (item.getItem().isMagicWeapon())
+			if (item.getTemplate().isMagicWeapon())
 			{
 				final List<AugmentationChance> selectedChances12 = new ArrayList<>();
 				final List<AugmentationChance> selectedChances34 = new ArrayList<>();

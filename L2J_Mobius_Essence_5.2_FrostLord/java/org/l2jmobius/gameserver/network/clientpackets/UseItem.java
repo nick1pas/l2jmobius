@@ -118,7 +118,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (item.isQuestItem() && (item.getItem().getDefaultAction() != ActionType.NONE))
+		if (item.isQuestItem() && (item.getTemplate().getDefaultAction() != ActionType.NONE))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
@@ -139,7 +139,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!item.isEquipped() && !item.getItem().checkCondition(player, player, true))
+		if (!item.isEquipped() && !item.getTemplate().checkCondition(player, player, true))
 		{
 			return;
 		}
@@ -154,7 +154,7 @@ public class UseItem implements IClientIncomingPacket
 		
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0))
 		{
-			final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+			final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 			if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(EffectType.TELEPORT)))
 			{
 				return;
@@ -205,7 +205,7 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (player.getInventory().isItemSlotBlocked(item.getItem().getBodyPart()))
+			if (player.getInventory().isItemSlotBlocked(item.getTemplate().getBodyPart()))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
@@ -227,7 +227,7 @@ public class UseItem implements IClientIncomingPacket
 			
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
-			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
+			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_HAND))
 			{
 				if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
 				{
@@ -244,7 +244,7 @@ public class UseItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_DECO)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_DECO)
 			{
 				if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 				{
@@ -252,7 +252,7 @@ public class UseItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL)
 			{
 				if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 				{
@@ -262,7 +262,7 @@ public class UseItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_AGATHION)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_AGATHION)
 			{
 				if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0))
 				{
@@ -270,7 +270,7 @@ public class UseItem implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT)
+			else if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_ARTIFACT)
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{

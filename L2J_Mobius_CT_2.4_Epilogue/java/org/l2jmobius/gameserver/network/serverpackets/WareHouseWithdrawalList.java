@@ -64,13 +64,13 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{
-			packet.writeH(item.getItem().getType1());
+			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
 			packet.writeQ(item.getCount());
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(item.getCustomType1());
-			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getTemplate().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(0);
 			packet.writeH(item.getCustomType2());

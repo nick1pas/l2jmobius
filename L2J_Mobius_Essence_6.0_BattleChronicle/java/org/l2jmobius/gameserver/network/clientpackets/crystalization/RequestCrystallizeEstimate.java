@@ -93,10 +93,10 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
+		if (!item.getTemplate().isCrystallizable() || (item.getTemplate().getCrystalCount() <= 0) || (item.getTemplate().getCrystalType() == CrystalType.NONE))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			PacketLogger.warning(player + ": tried to crystallize " + item.getItem());
+			PacketLogger.warning(player + ": tried to crystallize " + item.getTemplate());
 			return;
 		}
 		
@@ -114,7 +114,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		// Check if the char can crystallize items and return if false;
 		boolean canCrystallize = true;
 		
-		switch (item.getItem().getCrystalTypePlus())
+		switch (item.getTemplate().getCrystalTypePlus())
 		{
 			case D:
 			{

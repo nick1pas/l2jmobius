@@ -53,7 +53,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 			for (Item item : _itemList)
 			{
 				writeItem(packet, item);
-				packet.writeQ(item.getItem().getReferencePrice() * 2);
+				packet.writeQ(item.getTemplate().getReferencePrice() * 2);
 			}
 		}
 		else
@@ -64,7 +64,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 			for (Item item : _itemList)
 			{
 				writeItem(packet, item);
-				packet.writeQ(item.getItem().getReferencePrice() * 2);
+				packet.writeQ(item.getTemplate().getReferencePrice() * 2);
 			}
 			packet.writeD(0);
 			for (TradeItem item2 : _buyList)

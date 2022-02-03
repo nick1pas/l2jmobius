@@ -57,8 +57,8 @@ public class RequestConfirmTargetItem implements IClientIncomingPacket
 		}
 		
 		// check if the item is augmentable
-		final int itemGrade = item.getItem().getItemGrade();
-		final int itemType = item.getItem().getType2();
+		final int itemGrade = item.getTemplate().getItemGrade();
+		final int itemType = item.getTemplate().getType2();
 		if (item.isAugmented())
 		{
 			player.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);

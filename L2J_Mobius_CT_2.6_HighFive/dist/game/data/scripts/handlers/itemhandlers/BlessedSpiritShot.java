@@ -44,7 +44,7 @@ public class BlessedSpiritShot implements IItemHandler
 		final Player player = (Player) playable;
 		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final SkillHolder[] skills = item.getTemplate().getSkills();
 		final int itemId = item.getId();
 		if (skills == null)
 		{
@@ -69,7 +69,7 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Check for correct grade
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getTemplate().getCrystalTypePlus() == item.getTemplate().getCrystalTypePlus());
 		if (!gradeCheck)
 		{
 			if (!player.getAutoSoulShot().contains(itemId))

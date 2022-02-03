@@ -44,7 +44,7 @@ public class SpiritShot implements IItemHandler
 		final Player player = playable.getActingPlayer();
 		final Item weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");

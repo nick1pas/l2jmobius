@@ -172,11 +172,11 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (!itemToEnchant.isEnchantable() || (!(itemToEnchant.getItem().getEnchantLimit() == 0) && (itemToEnchant.getEnchantLevel() == itemToEnchant.getItem().getEnchantLimit())))
+		else if (!itemToEnchant.isEnchantable() || (!(itemToEnchant.getTemplate().getEnchantLimit() == 0) && (itemToEnchant.getEnchantLevel() == itemToEnchant.getTemplate().getEnchantLimit())))
 		{
 			return false;
 		}
-		else if (!isValidItemType(itemToEnchant.getItem().getType2()))
+		else if (!isValidItemType(itemToEnchant.getTemplate().getType2()))
 		{
 			return false;
 		}
@@ -184,7 +184,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (_grade != itemToEnchant.getItem().getCrystalTypePlus())
+		else if (_grade != itemToEnchant.getTemplate().getCrystalTypePlus())
 		{
 			return false;
 		}

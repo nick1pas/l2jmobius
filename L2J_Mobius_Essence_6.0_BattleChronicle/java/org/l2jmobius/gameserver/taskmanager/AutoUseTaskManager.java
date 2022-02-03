@@ -103,7 +103,7 @@ public class AutoUseTaskManager implements Runnable
 						continue ITEMS;
 					}
 					
-					final ItemTemplate it = item.getItem();
+					final ItemTemplate it = item.getTemplate();
 					if (it != null)
 					{
 						if (!it.checkCondition(player, player, false))

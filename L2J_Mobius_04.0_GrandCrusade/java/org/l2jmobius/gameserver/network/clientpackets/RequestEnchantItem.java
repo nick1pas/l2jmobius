@@ -118,7 +118,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// first validation check - also over enchant check
-		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getItem().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getItem().getEnchantLimit())))))
+		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getTemplate().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getTemplate().getEnchantLimit())))))
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.removeRequest(request.getClass());
@@ -179,7 +179,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				}
 				case SUCCESS:
 				{
-					final ItemTemplate it = item.getItem();
+					final ItemTemplate it = item.getTemplate();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(player, item) > 0)
 					{
@@ -385,13 +385,13 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							World.getInstance().removeObject(item);
 							
 							int count = 0;
-							if (item.getItem().isCrystallizable())
+							if (item.getTemplate().isCrystallizable())
 							{
-								count = Math.max(0, item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2));
+								count = Math.max(0, item.getCrystalCount() - ((item.getTemplate().getCrystalCount() + 1) / 2));
 							}
 							
 							Item crystals = null;
-							final int crystalId = item.getItem().getCrystalItemId();
+							final int crystalId = item.getTemplate().getCrystalItemId();
 							if (count > 0)
 							{
 								crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);

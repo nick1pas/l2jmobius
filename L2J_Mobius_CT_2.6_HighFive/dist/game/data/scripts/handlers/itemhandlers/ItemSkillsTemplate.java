@@ -111,7 +111,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					playable.sendPacket(sm);
 				}
 				
-				if (itemSkill.isSimultaneousCast() || ((item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect()) && itemSkill.isStatic()))
+				if (itemSkill.isSimultaneousCast() || ((item.getTemplate().hasImmediateEffect() || item.getTemplate().hasExImmediateEffect()) && itemSkill.isStatic()))
 				{
 					playable.doSimultaneousCast(itemSkill);
 				}
@@ -147,12 +147,12 @@ public class ItemSkillsTemplate implements IItemHandler
 	 */
 	private boolean checkConsume(Item item, boolean hasConsumeSkill)
 	{
-		switch (item.getItem().getDefaultAction())
+		switch (item.getTemplate().getDefaultAction())
 		{
 			case CAPSULE:
 			case SKILL_REDUCE:
 			{
-				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
+				if (!hasConsumeSkill && item.getTemplate().hasImmediateEffect())
 				{
 					return true;
 				}

@@ -305,7 +305,7 @@ public class ItemTable
 				LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
 					+ ", item " + item.getObjectId() //
 					+ ":+" + item.getEnchantLevel() //
-					+ " " + item.getItem().getName() //
+					+ " " + item.getTemplate().getName() //
 					+ "(" + item.getCount() //
 					+ "), " + String.valueOf(actor) // in case of null
 					+ ", " + String.valueOf(reference)); // in case of null
@@ -314,7 +314,7 @@ public class ItemTable
 			{
 				LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
 					+ ", item " + item.getObjectId() //
-					+ ":" + item.getItem().getName() //
+					+ ":" + item.getTemplate().getName() //
 					+ "(" + item.getCount() //
 					+ "), " + String.valueOf(actor) // in case of null
 					+ ", " + String.valueOf(reference)); // in case of null
@@ -347,7 +347,7 @@ public class ItemTable
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getItem());
+		EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getTemplate());
 		return item;
 	}
 	
@@ -392,7 +392,7 @@ public class ItemTable
 						LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
 							+ ", item " + item.getObjectId() //
 							+ ":+" + item.getEnchantLevel() //
-							+ " " + item.getItem().getName() //
+							+ " " + item.getTemplate().getName() //
 							+ "(" + item.getCount() //
 							+ "), PrevCount(" + old //
 							+ "), " + String.valueOf(actor) // in case of null
@@ -402,7 +402,7 @@ public class ItemTable
 					{
 						LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
 							+ ", item " + item.getObjectId() //
-							+ ":" + item.getItem().getName() //
+							+ ":" + item.getTemplate().getName() //
 							+ "(" + item.getCount() //
 							+ "), PrevCount(" + old //
 							+ "), " + String.valueOf(actor) // in case of null
@@ -437,7 +437,7 @@ public class ItemTable
 			}
 			
 			// if it's a pet control item, delete the pet as well
-			if (item.getItem().isPetItem())
+			if (item.getTemplate().isPetItem())
 			{
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))

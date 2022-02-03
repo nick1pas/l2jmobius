@@ -179,7 +179,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			}
 		}
 		
-		if ((ItemTemplate.TYPE2_QUEST == item.getItem().getType2()) && !player.isGM())
+		if ((ItemTemplate.TYPE2_QUEST == item.getTemplate().getType2()) && !player.isGM())
 		{
 			player.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;
@@ -194,7 +194,7 @@ public class RequestDropItem implements IClientIncomingPacket
 		if (item.isEquipped())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (Item element : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			for (Item element : player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart()))
 			{
 				player.checkSSMatch(null, element);
 				iu.addModifiedItem(element);

@@ -47,13 +47,13 @@ public class PackageSendableList implements IClientOutgoingPacket
 		packet.writeD(_items.size());
 		for (Item item : _items) // format inside the for taken from SellList part use should be about the same
 		{
-			packet.writeH(item.getItem().getType1());
+			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(0);
-			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getTemplate().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(0);
 			packet.writeH(0);

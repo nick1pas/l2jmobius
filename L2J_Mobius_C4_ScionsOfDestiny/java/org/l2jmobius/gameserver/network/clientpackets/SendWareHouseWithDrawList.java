@@ -145,7 +145,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 				return;
 			}
 			
-			weight += count * item.getItem().getWeight();
+			weight += count * item.getTemplate().getWeight();
 			if (!item.isStackable())
 			{
 				slots += count;

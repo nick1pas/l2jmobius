@@ -130,9 +130,9 @@ public class PlayerStat extends PlayableStat
 			{
 				// rod fishing skills
 				final Item rod = player.getActiveWeaponInstance();
-				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null))
+				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getTemplate().getAllSkills() != null))
 				{
-					for (ItemSkillHolder s : rod.getItem().getAllSkills())
+					for (ItemSkillHolder s : rod.getTemplate().getAllSkills())
 					{
 						if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL)
 						{

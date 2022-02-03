@@ -40,11 +40,11 @@ public class PetItemList extends ServerBasePacket
 		writeH(_items.size());
 		for (Item item : _items)
 		{
-			writeH(item.getItem().getType1());
+			writeH(item.getTemplate().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getItemId());
 			writeD(item.getCount());
-			writeH(item.getItem().getType2());
+			writeH(item.getTemplate().getType2());
 			writeH(255);
 			if (item.isEquipped())
 			{
@@ -54,7 +54,7 @@ public class PetItemList extends ServerBasePacket
 			{
 				writeH(0);
 			}
-			writeD(item.getItem().getBodyPart());
+			writeD(item.getTemplate().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(0);
 		}

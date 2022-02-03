@@ -2108,7 +2108,7 @@ public class Player extends Playable
 		{
 			for (Item item : getInventory().getItems())
 			{
-				if ((item != null) && item.isEquipped() && (item.getItem() instanceof Armor))
+				if ((item != null) && item.isEquipped() && (item.getTemplate() instanceof Armor))
 				{
 					// No penality for formal wear
 					if (item.getItemId() == 6408)
@@ -2116,7 +2116,7 @@ public class Player extends Playable
 						continue;
 					}
 					
-					final Armor armorItem = (Armor) item.getItem();
+					final Armor armorItem = (Armor) item.getTemplate();
 					switch (armorItem.getItemType())
 					{
 						case HEAVY:
@@ -2254,7 +2254,7 @@ public class Player extends Playable
 		{
 			for (Item item : getInventory().getItems())
 			{
-				if ((item != null) && item.isEquipped() && (item.getItem() instanceof Weapon))
+				if ((item != null) && item.isEquipped() && (item.getTemplate() instanceof Weapon))
 				{
 					// No penality for cupid's bow
 					if (item.isCupidBow())
@@ -2262,7 +2262,7 @@ public class Player extends Playable
 						continue;
 					}
 					
-					final Weapon weaponItem = (Weapon) item.getItem();
+					final Weapon weaponItem = (Weapon) item.getTemplate();
 					
 					switch (weaponItem.getItemType())
 					{
@@ -2371,7 +2371,7 @@ public class Player extends Playable
 		{
 			if ((item != null) && item.isEquipped()) // Checks if items equipped
 			{
-				final int crystaltype = item.getItem().getCrystalType(); // Gets grade of item
+				final int crystaltype = item.getTemplate().getCrystalType(); // Gets grade of item
 				// Checks if item crystal levels is above character levels and also if last penalty for weapon was lower.
 				if ((crystaltype > getExpertiseIndex()) && item.isWeapon() && (crystaltype > intensityW))
 				{
@@ -2457,12 +2457,12 @@ public class Player extends Playable
 			return;
 		}
 		
-		if ((unequipped.getItem().getType2() == ItemTemplate.TYPE2_WEAPON) && ((equipped == null) || (equipped.getItem().getCrystalType() != unequipped.getItem().getCrystalType())))
+		if ((unequipped.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON) && ((equipped == null) || (equipped.getTemplate().getCrystalType() != unequipped.getTemplate().getCrystalType())))
 		{
 			for (Item ss : getInventory().getItems())
 			{
 				final int itemId = ss.getItemId();
-				if ((((itemId >= 2509) && (itemId <= 2514)) || ((itemId >= 3947) && (itemId <= 3952)) || ((itemId <= 1804) && (itemId >= 1808)) || (itemId == 5789) || (itemId == 5790) || (itemId == 1835)) && (ss.getItem().getCrystalType() == unequipped.getItem().getCrystalType()))
+				if ((((itemId >= 2509) && (itemId <= 2514)) || ((itemId >= 3947) && (itemId <= 3952)) || ((itemId <= 1804) && (itemId >= 1808)) || (itemId == 5789) || (itemId == 5790) || (itemId == 1835)) && (ss.getTemplate().getCrystalType() == unequipped.getTemplate().getCrystalType()))
 				{
 					sendPacket(new ExAutoSoulShot(itemId, 0));
 					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
@@ -3432,7 +3432,7 @@ public class Player extends Playable
 		}
 		
 		// If you pickup arrows.
-		if (item.getItem().getItemType() == EtcItemType.ARROW)
+		if (item.getTemplate().getItemType() == EtcItemType.ARROW)
 		{
 			// If a bow is equipped, try to equip them if no arrows is currently equipped.
 			final Weapon currentWeapon = getActiveWeaponItem();
@@ -5016,7 +5016,7 @@ public class Player extends Playable
 			}
 			
 			// Fixed it's not possible pick up the object if you exceed the maximum weight.
-			if ((_inventory.getTotalWeight() + (target.getItem().getWeight() * target.getCount())) > getMaxLoad())
+			if ((_inventory.getTotalWeight() + (target.getTemplate().getWeight() * target.getCount())) > getMaxLoad())
 			{
 				sendMessage("You have reached the maximun weight.");
 				return;
@@ -5051,7 +5051,7 @@ public class Player extends Playable
 		else
 		{
 			// if item is instance of ArmorType or WeaponType broadcast an "Attention" system message
-			if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType) || (target.getItem() instanceof Armor) || (target.getItem() instanceof Weapon))
+			if ((target.getItemType() instanceof ArmorType) || (target.getItemType() instanceof WeaponType) || (target.getTemplate() instanceof Armor) || (target.getTemplate() instanceof Weapon))
 			{
 				if (target.getEnchantLevel() > 0)
 				{
@@ -5086,7 +5086,7 @@ public class Player extends Playable
 				addItem("Pickup", target, null, true);
 				
 				// Like L2OFF Auto-Equip arrows if player has a bow and player picks up arrows.
-				if ((target.getItem() != null) && (target.getItem().getItemType() == EtcItemType.ARROW))
+				if ((target.getTemplate() != null) && (target.getTemplate().getItemType() == EtcItemType.ARROW))
 				{
 					checkAndEquipArrows();
 				}
@@ -5196,7 +5196,7 @@ public class Player extends Playable
 		{
 			return getFistsWeaponItem();
 		}
-		return (Weapon) weapon.getItem();
+		return (Weapon) weapon.getTemplate();
 	}
 	
 	/**
@@ -5228,7 +5228,7 @@ public class Player extends Playable
 		{
 			return null;
 		}
-		return (Armor) armor.getItem();
+		return (Armor) armor.getTemplate();
 	}
 	
 	/**
@@ -5242,7 +5242,7 @@ public class Player extends Playable
 		{
 			return null;
 		}
-		return (Armor) legs.getItem();
+		return (Armor) legs.getTemplate();
 	}
 	
 	/**
@@ -5257,7 +5257,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY)))
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY)))
 		{
 			return true;
 		}
@@ -5276,7 +5276,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT)))
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT)))
 		{
 			return true;
 		}
@@ -5295,7 +5295,7 @@ public class Player extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC)))
+		if ((armor != null) && ((getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC)))
 		{
 			return true;
 		}
@@ -5507,7 +5507,7 @@ public class Player extends Playable
 			return getFistsWeaponItem();
 		}
 		
-		final ItemTemplate item = weapon.getItem();
+		final ItemTemplate item = weapon.getTemplate();
 		if (item instanceof Weapon)
 		{
 			return (Weapon) item;
@@ -5677,8 +5677,8 @@ public class Player extends Playable
 					// Don't drop
 					if (itemDrop.isShadowItem() || // Dont drop Shadow Items
 						(itemDrop.getItemId() == 57) || // Adena
-						(itemDrop.getItem().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
-						(itemDrop.getItem().isDropable() == false) || // Non-dropable item
+						(itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
+						(itemDrop.getTemplate().isDropable() == false) || // Non-dropable item
 						Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable item list
 						Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable pet item list
 						((getPet() != null) && (getPet().getControlItemId() == itemDrop.getItemId() // Control Item of active pet
@@ -5690,7 +5690,7 @@ public class Player extends Playable
 					if (itemDrop.isEquipped())
 					{
 						// Set proper chance according to Item type of equipped Item
-						itemDropPercent = itemDrop.getItem().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
+						itemDropPercent = itemDrop.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
 						getInventory().unEquipItemInSlotAndRecord(itemDrop.getEquipSlot());
 					}
 					else
@@ -6819,7 +6819,7 @@ public class Player extends Playable
 				return false;
 			}
 			
-			final List<Item> unequipped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+			final List<Item> unequipped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (Item element : unequipped)
 			{
@@ -6859,7 +6859,7 @@ public class Player extends Playable
 				return false;
 			}
 			
-			final List<Item> unequipped = getInventory().unEquipItemInBodySlotAndRecord(sld.getItem().getBodyPart());
+			final List<Item> unequipped = getInventory().unEquipItemInBodySlotAndRecord(sld.getTemplate().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (Item element : unequipped)
 			{
@@ -11185,7 +11185,7 @@ public class Player extends Playable
 			if (rhand != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -11200,7 +11200,7 @@ public class Player extends Playable
 			if (chest != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(chest.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -11215,7 +11215,7 @@ public class Player extends Playable
 			if (legs != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(legs.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -11523,7 +11523,7 @@ public class Player extends Playable
 			if (rhand != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(rhand.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -11538,7 +11538,7 @@ public class Player extends Playable
 			if (chest != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(chest.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(chest.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}
@@ -11553,7 +11553,7 @@ public class Player extends Playable
 			if (legs != null)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(legs.getItem().getBodyPart()))
+				for (Item element : getInventory().unEquipItemInBodySlotAndRecord(legs.getTemplate().getBodyPart()))
 				{
 					iu.addModifiedItem(element);
 				}

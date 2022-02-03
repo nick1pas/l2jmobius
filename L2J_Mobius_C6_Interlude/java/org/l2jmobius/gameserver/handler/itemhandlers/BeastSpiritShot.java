@@ -151,7 +151,7 @@ public class BeastSpiritShot implements IItemHandler
 				activeOwner.removeAutoSoulShot(itemId);
 				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
 				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
-				sm.addString(item.getItem().getName());
+				sm.addString(item.getTemplate().getName());
 				activeOwner.sendPacket(sm);
 				
 				return;

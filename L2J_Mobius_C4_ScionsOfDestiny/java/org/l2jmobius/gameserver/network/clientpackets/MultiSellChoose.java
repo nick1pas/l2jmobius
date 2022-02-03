@@ -468,7 +468,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// If it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getTemplate();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -495,7 +495,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			{
 				// If it is an armor/weapon, modify the enchantment level appropriately
 				// (note, if maintain enchantment is "false" this modification will result to a +0)
-				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getTemplate();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					if ((level == 0) && maintainEnchantment)

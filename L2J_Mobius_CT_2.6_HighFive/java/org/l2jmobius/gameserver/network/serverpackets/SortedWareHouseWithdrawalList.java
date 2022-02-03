@@ -436,7 +436,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if ((item.isWeapon() || (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isWeapon() || (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -456,7 +456,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if ((item.isArmor() || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isArmor() || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -476,7 +476,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if ((item.isEtcItem() || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if ((item.isEtcItem() || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -496,7 +496,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -516,7 +516,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -536,7 +536,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -556,7 +556,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -576,7 +576,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -596,7 +596,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -616,7 +616,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -636,7 +636,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}
@@ -656,7 +656,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		final List<WarehouseItem> list = new ArrayList<>();
 		for (Item item : items)
 		{
-			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
+			if (((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_MONEY)) && (list.size() < MAX_SORT_LIST_ITEMS))
 			{
 				list.add(new WarehouseItem(item));
 			}

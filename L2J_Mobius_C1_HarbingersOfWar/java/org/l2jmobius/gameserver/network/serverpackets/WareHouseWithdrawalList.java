@@ -44,11 +44,11 @@ public class WareHouseWithdrawalList extends ServerBasePacket
 		for (int i = 0; i < count; ++i)
 		{
 			final Item temp = items.get(i);
-			writeH(temp.getItem().getType1());
+			writeH(temp.getTemplate().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());
 			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(temp.getTemplate().getType2());
 			writeH(100);
 			writeD(400);
 			writeH(temp.getEnchantLevel());

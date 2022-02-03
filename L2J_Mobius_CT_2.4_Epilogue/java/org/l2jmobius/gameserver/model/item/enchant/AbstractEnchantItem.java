@@ -127,7 +127,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (!isValidItemType(itemToEnchant.getItem().getType2()))
+		else if (!isValidItemType(itemToEnchant.getTemplate().getType2()))
 		{
 			return false;
 		}
@@ -135,7 +135,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (_grade != itemToEnchant.getItem().getCrystalTypePlus())
+		else if (_grade != itemToEnchant.getTemplate().getCrystalTypePlus())
 		{
 			return false;
 		}

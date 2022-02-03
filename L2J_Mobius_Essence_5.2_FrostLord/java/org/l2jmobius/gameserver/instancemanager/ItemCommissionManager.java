@@ -502,7 +502,7 @@ public class ItemCommissionManager
 	{
 		for (CommissionItem item : _commissionItems.values())
 		{
-			if ((item.getItemInstance().getOwnerId() == player.getObjectId()) && (item.getItemInstance().getItem().getId() == itemId))
+			if ((item.getItemInstance().getOwnerId() == player.getObjectId()) && (item.getItemInstance().getTemplate().getId() == itemId))
 			{
 				return true;
 			}

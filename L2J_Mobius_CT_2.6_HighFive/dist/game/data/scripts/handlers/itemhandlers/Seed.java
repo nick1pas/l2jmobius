@@ -86,7 +86,7 @@ public class Seed implements IItemHandler
 		final Player player = playable.getActingPlayer();
 		target.setSeeded(seed, player);
 		
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final SkillHolder[] skills = item.getTemplate().getSkills();
 		if (skills != null)
 		{
 			for (SkillHolder sk : skills)

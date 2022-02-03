@@ -87,7 +87,7 @@ public class RequestRefine extends AbstractRefinePacket
 		
 		final int lifeStoneLevel = ls.getLevel();
 		final int lifeStoneGrade = ls.getGrade();
-		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getCrystalType(), lifeStoneGrade))
+		if (_gemStoneCount != getGemStoneCount(targetItem.getTemplate().getCrystalType(), lifeStoneGrade))
 		{
 			player.sendPacket(new ExVariationResult(0, 0, 0));
 			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
@@ -118,7 +118,7 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		final Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
+		final Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getTemplate().getBodyPart(), refinerItem.getId(), targetItem);
 		targetItem.setAugmentation(aug);
 		
 		final int stat12 = 0x0000FFFF & aug.getAugmentationId();

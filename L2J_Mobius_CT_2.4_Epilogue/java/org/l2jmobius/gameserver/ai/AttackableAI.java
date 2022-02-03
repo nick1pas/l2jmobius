@@ -509,9 +509,9 @@ public class AttackableAI extends CreatureAI
 								{
 									ItemsOnGroundManager.getInstance().removeObject(droppedItem);
 								}
-								if (droppedItem.getItem().hasExImmediateEffect())
+								if (droppedItem.getTemplate().hasExImmediateEffect())
 								{
-									for (SkillHolder skillHolder : droppedItem.getItem().getSkills())
+									for (SkillHolder skillHolder : droppedItem.getTemplate().getSkills())
 									{
 										npc.doSimultaneousCast(skillHolder.getSkill());
 									}

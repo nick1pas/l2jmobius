@@ -60,7 +60,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	 */
 	private long getPrice(Item item)
 	{
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case S:
 			{

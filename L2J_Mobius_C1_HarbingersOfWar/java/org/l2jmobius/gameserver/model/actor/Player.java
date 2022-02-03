@@ -858,7 +858,7 @@ public class Player extends Creature
 		{
 			return getFistsWeaponItem();
 		}
-		return (Weapon) weapon.getItem();
+		return (Weapon) weapon.getTemplate();
 	}
 	
 	@Override
@@ -1282,37 +1282,37 @@ public class Player extends Creature
 		Item dummy = getInventory().getPaperdollItem(13);
 		if (dummy != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(10)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(12)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(9)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(6)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(11)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(0)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getPDef();
 		}
 		final double pDef = totalItemDef * lvlmod;
@@ -1380,27 +1380,27 @@ public class Player extends Creature
 		Item dummy = getInventory().getPaperdollItem(1);
 		if (dummy != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(4)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(3)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(2)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(5)) != null)
 		{
-			armorPiece = (Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getTemplate();
 			totalItemDef += armorPiece.getMDef();
 		}
 		final double mDef = totalItemDef * lvlBonus * menBonus;

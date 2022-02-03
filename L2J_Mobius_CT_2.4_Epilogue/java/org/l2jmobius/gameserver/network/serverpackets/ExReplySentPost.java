@@ -65,7 +65,7 @@ public class ExReplySentPost implements IClientOutgoingPacket
 			packet.writeD(_items.size());
 			for (Item item : _items)
 			{
-				packet.writeH(item.getItem().getType2());
+				packet.writeH(item.getTemplate().getType2());
 				packet.writeD(0); // unknown
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());

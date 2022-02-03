@@ -44,7 +44,7 @@ public class EquipUpdate implements IClientOutgoingPacket
 		OutgoingPackets.EQUIP_UPDATE.writeId(packet);
 		packet.writeD(_change);
 		packet.writeD(_item.getObjectId());
-		switch (_item.getItem().getBodyPart())
+		switch (_item.getTemplate().getBodyPart())
 		{
 			case ItemTemplate.SLOT_L_EAR:
 			{

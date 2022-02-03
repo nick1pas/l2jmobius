@@ -88,11 +88,11 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	
 	private long getPrice(Item item)
 	{
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case S:
 			{
-				if (item.getItem() instanceof Weapon)
+				if (item.getTemplate() instanceof Weapon)
 				{
 					_price = 50000;
 				}
@@ -104,7 +104,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S80:
 			{
-				if (item.getItem() instanceof Weapon)
+				if (item.getTemplate() instanceof Weapon)
 				{
 					_price = 100000;
 				}
@@ -116,7 +116,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S84:
 			{
-				if (item.getItem() instanceof Weapon)
+				if (item.getTemplate() instanceof Weapon)
 				{
 					_price = 200000;
 				}

@@ -47,9 +47,9 @@ public class ExReplyPostItemList implements IClientOutgoingPacket
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
 			packet.writeQ(item.getCount());
-			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(item.getCustomType1());
-			packet.writeD(item.getItem().getBodyPart());
+			packet.writeD(item.getTemplate().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(item.getCustomType2());
 			packet.writeH(item.getAttackElementType());

@@ -66,13 +66,13 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{
-			packet.writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
+			packet.writeH(item.getTemplate().getType1()); // item type1 //unconfirmed, works
 			packet.writeD(0); // unconfirmed, works
 			packet.writeD(item.getItemId()); // unconfirmed, works
 			packet.writeD(item.getCount()); // unconfirmed, works
-			packet.writeH(item.getItem().getType2()); // item type2 //unconfirmed, works
+			packet.writeH(item.getTemplate().getType2()); // item type2 //unconfirmed, works
 			packet.writeH(0); // ?
-			packet.writeD(item.getItem().getBodyPart()); // ?
+			packet.writeD(item.getTemplate().getBodyPart()); // ?
 			packet.writeH(item.getEnchantLevel()); // enchant level -confirmed
 			packet.writeH(0); // ?
 			packet.writeH(0); // ?

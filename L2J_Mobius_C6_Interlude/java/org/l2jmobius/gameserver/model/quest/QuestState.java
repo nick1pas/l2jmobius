@@ -716,7 +716,7 @@ public class QuestState
 			// Fix for destroyed quest items
 			if (item.isEquipped())
 			{
-				_player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
+				_player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart());
 			}
 			
 			_player.destroyItemByItemId("Quest", itemId, count, _player, true);

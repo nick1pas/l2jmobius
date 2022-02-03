@@ -288,7 +288,7 @@ public class ItemTable
 			// this can happen if the item templates were not initialized
 		}
 		
-		if (temp.getItem() == null)
+		if (temp.getTemplate() == null)
 		{
 			LOGGER.warning("ItemTable: Item Template missing for Id: " + itemId);
 		}

@@ -162,8 +162,8 @@ public class RequestRefine implements IClientIncomingPacket
 			return false;
 		}
 		
-		final int itemGrade = targetItem.getItem().getItemGrade();
-		final int itemType = targetItem.getItem().getType2();
+		final int itemGrade = targetItem.getTemplate().getItemGrade();
+		final int itemType = targetItem.getTemplate().getType2();
 		final int lifeStoneId = refinerItem.getItemId();
 		final int gemstoneItemId = gemstoneItem.getItemId();
 		

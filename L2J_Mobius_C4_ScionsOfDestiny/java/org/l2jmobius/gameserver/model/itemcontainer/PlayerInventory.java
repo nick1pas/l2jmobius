@@ -120,7 +120,7 @@ public class PlayerInventory extends Inventory
 					break;
 				}
 			}
-			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
+			if (!isDuplicate && (!onlyAvailable || (item.getTemplate().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
 			{
 				list.add(item);
 			}
@@ -165,7 +165,7 @@ public class PlayerInventory extends Inventory
 				}
 			}
 			
-			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
+			if (!isDuplicate && (!onlyAvailable || (item.getTemplate().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
 			{
 				list.add(item);
 			}

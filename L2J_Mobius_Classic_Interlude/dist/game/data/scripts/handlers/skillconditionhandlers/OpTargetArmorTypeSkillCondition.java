@@ -65,10 +65,10 @@ public class OpTargetArmorTypeSkillCondition implements ISkillCondition
 		}
 		
 		// Get the chest item type.
-		final ItemType chestType = chest.getItem().getItemType();
+		final ItemType chestType = chest.getTemplate().getItemType();
 		
 		// Get the chest body part.
-		final long chestBodyPart = chest.getItem().getBodyPart();
+		final long chestBodyPart = chest.getTemplate().getBodyPart();
 		
 		// Get the legs armor.
 		final Item legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
@@ -77,7 +77,7 @@ public class OpTargetArmorTypeSkillCondition implements ISkillCondition
 		ItemType legsType = null;
 		if (legs != null)
 		{
-			legsType = legs.getItem().getItemType();
+			legsType = legs.getTemplate().getItemType();
 		}
 		
 		for (ArmorType armorType : _armorTypes)

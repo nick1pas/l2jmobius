@@ -46,7 +46,7 @@ public class TradeItem
 	public TradeItem(Item item, long count, long price)
 	{
 		_objectId = item.getObjectId();
-		_item = item.getItem();
+		_item = item.getTemplate();
 		_location = item.getLocationSlot();
 		_enchant = item.getEnchantLevel();
 		_type1 = item.getCustomType1();

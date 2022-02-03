@@ -2593,10 +2593,10 @@ public class Attackable extends Npc
 						{
 							try
 							{
-								if (item.getItem().getName().contains("Grade"))
+								if (item.getTemplate().getName().contains("Grade"))
 								{
 									// Split the name of the crystal into 'name' & 'level'
-									crystalNFO = item.getItem().getName().trim().replace(" Grade ", "-").split("-");
+									crystalNFO = item.getTemplate().getName().trim().replace(" Grade ", "-").split("-");
 									// Set Level to 13
 									crystalLVL = 13;
 									// Get Name
@@ -2605,7 +2605,7 @@ public class Attackable extends Npc
 								else
 								{
 									// Split the name of the crystal into 'name' & 'level'
-									crystalNFO = item.getItem().getName().trim().replace(" Stage ", "").split("-");
+									crystalNFO = item.getTemplate().getName().trim().replace(" Stage ", "").split("-");
 									// Get Level
 									crystalLVL = Integer.parseInt(crystalNFO[1].trim());
 									// Get Name
@@ -2644,7 +2644,7 @@ public class Attackable extends Npc
 						}
 						else
 						{
-							crystalNME = item.getItem().getName().toLowerCase().trim();
+							crystalNME = item.getTemplate().getName().toLowerCase().trim();
 							crystalNEW = id + 1;
 						}
 						

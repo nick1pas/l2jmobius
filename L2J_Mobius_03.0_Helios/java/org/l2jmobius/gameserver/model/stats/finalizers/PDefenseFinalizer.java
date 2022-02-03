@@ -63,7 +63,7 @@ public class PDefenseFinalizer implements IStatFunction
 		{
 			for (Item item : inv.getPaperdollItems())
 			{
-				baseValue += item.getItem().getStats(stat, 0);
+				baseValue += item.getTemplate().getStats(stat, 0);
 			}
 			
 			if (creature.isPlayer())
@@ -72,7 +72,7 @@ public class PDefenseFinalizer implements IStatFunction
 				for (int slot : SLOTS)
 				{
 					if (!inv.isPaperdollSlotEmpty(slot) || //
-						((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)))
+						((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)))
 					{
 						final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);

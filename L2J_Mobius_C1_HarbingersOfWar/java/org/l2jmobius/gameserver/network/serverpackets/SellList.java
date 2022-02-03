@@ -43,7 +43,7 @@ public class SellList extends ServerBasePacket
 		writeD(0);
 		for (Item item : _char.getInventory().getItems())
 		{
-			if (item.isEquipped() || (item.getItemId() == 57) || (item.getItem().getType2() == 3))
+			if (item.isEquipped() || (item.getItemId() == 57) || (item.getTemplate().getType2() == 3))
 			{
 				continue;
 			}
@@ -52,20 +52,20 @@ public class SellList extends ServerBasePacket
 		writeH(_selllist.size());
 		for (Item item : _selllist)
 		{
-			writeH(item.getItem().getType1());
+			writeH(item.getTemplate().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getItemId());
 			writeD(item.getCount());
-			writeH(item.getItem().getType2());
+			writeH(item.getTemplate().getType2());
 			writeH(0);
-			if (item.getItem().getType1() < 4)
+			if (item.getTemplate().getType1() < 4)
 			{
-				writeD(item.getItem().getBodyPart());
+				writeD(item.getTemplate().getBodyPart());
 				writeH(item.getEnchantLevel());
 				writeH(0);
 				writeH(0);
 			}
-			writeD(item.getItem().getReferencePrice() / 2);
+			writeD(item.getTemplate().getReferencePrice() / 2);
 		}
 	}
 }

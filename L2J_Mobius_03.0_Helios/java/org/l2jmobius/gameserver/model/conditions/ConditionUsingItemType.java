@@ -65,7 +65,7 @@ public class ConditionUsingItemType extends Condition
 			{
 				return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
 			}
-			final int chestMask = chest.getItem().getItemMask();
+			final int chestMask = chest.getTemplate().getItemMask();
 			
 			// If chest armor is different from the condition one return false
 			if ((_mask & chestMask) == 0)
@@ -75,7 +75,7 @@ public class ConditionUsingItemType extends Condition
 			
 			// So from here, chest armor matches conditions
 			
-			final int chestBodyPart = chest.getItem().getBodyPart();
+			final int chestBodyPart = chest.getTemplate().getBodyPart();
 			// return True if chest armor is a Full Armor
 			if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR)
 			{
@@ -87,7 +87,7 @@ public class ConditionUsingItemType extends Condition
 			{
 				return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
 			}
-			final int legMask = legs.getItem().getItemMask();
+			final int legMask = legs.getTemplate().getItemMask();
 			// return true if legs armor matches too
 			return (_mask & legMask) != 0;
 		}

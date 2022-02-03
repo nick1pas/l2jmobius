@@ -109,7 +109,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					}
 					else
 					{
-						if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getItem().getCrystalType() == player.getActiveWeaponItem().getCrystalTypePlus()))
+						if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getTemplate().getCrystalType() == player.getActiveWeaponItem().getCrystalTypePlus()))
 						{
 							player.addAutoSoulShot(_itemId);
 							player.sendPacket(new ExAutoSoulShot(_itemId, _type));

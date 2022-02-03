@@ -70,7 +70,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		}
 		
 		// Arrows and bolts.
-		if ((_slot == ItemTemplate.SLOT_L_HAND) && (item.getItem() instanceof EtcItem))
+		if ((_slot == ItemTemplate.SLOT_L_HAND) && (item.getTemplate() instanceof EtcItem))
 		{
 			return;
 		}

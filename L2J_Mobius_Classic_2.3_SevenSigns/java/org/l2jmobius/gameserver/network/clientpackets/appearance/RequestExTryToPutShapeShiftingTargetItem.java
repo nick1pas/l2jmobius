@@ -77,7 +77,7 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 			return;
 		}
 		
-		if (!targetItem.getItem().isAppearanceable())
+		if (!targetItem.getTemplate().isAppearanceable())
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_MODIFIED_OR_RESTORED);
 			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);

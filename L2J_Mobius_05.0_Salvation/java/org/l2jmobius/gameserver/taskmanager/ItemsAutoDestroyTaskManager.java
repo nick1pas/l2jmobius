@@ -53,11 +53,11 @@ public class ItemsAutoDestroyTaskManager implements Runnable
 			else
 			{
 				final long autoDestroyTime;
-				if (item.getItem().getAutoDestroyTime() > 0)
+				if (item.getTemplate().getAutoDestroyTime() > 0)
 				{
-					autoDestroyTime = item.getItem().getAutoDestroyTime();
+					autoDestroyTime = item.getTemplate().getAutoDestroyTime();
 				}
-				else if (item.getItem().hasExImmediateEffect())
+				else if (item.getTemplate().hasExImmediateEffect())
 				{
 					autoDestroyTime = Config.HERB_AUTO_DESTROY_TIME;
 				}

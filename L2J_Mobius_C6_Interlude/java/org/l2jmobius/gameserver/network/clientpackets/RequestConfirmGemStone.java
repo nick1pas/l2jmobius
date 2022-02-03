@@ -59,7 +59,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 		}
 		
 		// Make sure the item is a gemstone
-		final int gemstoneItemId = gemstoneItem.getItem().getItemId();
+		final int gemstoneItemId = gemstoneItem.getTemplate().getItemId();
 		if ((gemstoneItemId != 2130) && (gemstoneItemId != 2131))
 		{
 			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
@@ -67,7 +67,7 @@ public class RequestConfirmGemStone implements IClientIncomingPacket
 		}
 		
 		// Check if the gemstoneCount is sufficant
-		final int itemGrade = targetItem.getItem().getItemGrade();
+		final int itemGrade = targetItem.getTemplate().getItemGrade();
 		
 		switch (itemGrade)
 		{

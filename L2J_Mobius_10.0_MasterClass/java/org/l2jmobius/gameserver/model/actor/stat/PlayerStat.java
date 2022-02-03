@@ -127,8 +127,8 @@ public class PlayerStat extends PlayableStat
 				final Item rod = player.getActiveWeaponInstance();
 				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD))
 				{
-					bonusExp *= FishingData.getInstance().getRodData(rod.getItem().getId()).getXpMultiplier();
-					bonusSp *= FishingData.getInstance().getRodData(rod.getItem().getId()).getSpMultiplier();
+					bonusExp *= FishingData.getInstance().getRodData(rod.getTemplate().getId()).getXpMultiplier();
+					bonusSp *= FishingData.getInstance().getRodData(rod.getTemplate().getId()).getSpMultiplier();
 				}
 			}
 			else

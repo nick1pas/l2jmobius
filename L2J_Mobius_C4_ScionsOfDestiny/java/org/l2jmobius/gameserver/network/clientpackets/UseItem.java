@@ -143,7 +143,7 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (item.getItem().getType2() == ItemTemplate.TYPE2_QUEST)
+		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS));
 			return;
@@ -264,7 +264,7 @@ public class UseItem implements IClientIncomingPacket
 		}
 		
 		// Char cannot use pet items
-		if (item.getItem().isForWolf() || item.getItem().isForHatchling() || item.getItem().isForStrider() || item.getItem().isForBabyPet())
+		if (item.getTemplate().isForWolf() || item.getTemplate().isForHatchling() || item.getTemplate().isForStrider() || item.getTemplate().isForBabyPet())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_A_PET_ITEM); // You cannot equip a pet item.
 			sm.addItemName(itemId);
@@ -298,7 +298,7 @@ public class UseItem implements IClientIncomingPacket
 			}
 			
 			// Over enchant protection
-			int bodyPart = item.getItem().getBodyPart();
+			int bodyPart = item.getTemplate().getBodyPart();
 			if (Config.PROTECTED_ENCHANT)
 			{
 				switch (bodyPart)
@@ -379,7 +379,7 @@ public class UseItem implements IClientIncomingPacket
 			List<Item> items = null;
 			final boolean isEquiped = item.isEquipped();
 			SystemMessage sm = null;
-			if (item.getItem().getType2() == ItemTemplate.TYPE2_WEAPON)
+			if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
 			{
 				// if used item is a weapon
 				Item wep = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
@@ -455,7 +455,7 @@ public class UseItem implements IClientIncomingPacket
 			else
 			{
 				// Restrict bow weapon for class except Cupid bow.
-				if ((item.getItem() instanceof Weapon) && (((Weapon) item.getItem()).getItemType() == WeaponType.BOW) && !item.isCupidBow())
+				if ((item.getTemplate() instanceof Weapon) && (((Weapon) item.getTemplate()).getItemType() == WeaponType.BOW) && !item.isCupidBow())
 				{
 					// Restriction not valid on Olympiad matches
 					if (Config.DISABLE_BOW_CLASSES.contains(player.getClassId().getId()) && !player.isInOlympiadMode())
@@ -466,7 +466,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 				}
 				
-				final int tempBodyPart = item.getItem().getBodyPart();
+				final int tempBodyPart = item.getTemplate().getBodyPart();
 				Item tempItem = player.getInventory().getPaperdollItemByItemId(tempBodyPart);
 				
 				// check if the item replaces a wear-item
@@ -537,7 +537,7 @@ public class UseItem implements IClientIncomingPacket
 				items = player.getInventory().equipItemAndRecord(item);
 				
 				// Charge Soulshot/Spiritshot like L2OFF
-				if (item.getItem() instanceof Weapon)
+				if (item.getTemplate() instanceof Weapon)
 				{
 					player.rechargeAutoSoulShot(true, true, false);
 				}
@@ -549,14 +549,14 @@ public class UseItem implements IClientIncomingPacket
 			player.abortAttack();
 			
 			// If an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users.
-			if ((((item.getItem().getBodyPart() & ItemTemplate.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & ItemTemplate.SLOT_R_FINGER) <= 0)))
+			if ((((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_HEAD) <= 0) && ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_NECK) <= 0) && ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_L_EAR) <= 0) && ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_R_EAR) <= 0) && ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_L_FINGER) <= 0) && ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_R_FINGER) <= 0)))
 			{
 				player.broadcastUserInfo();
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItems(items);
 				player.sendPacket(iu);
 			}
-			else if ((item.getItem().getBodyPart() & ItemTemplate.SLOT_HEAD) > 0)
+			else if ((item.getTemplate().getBodyPart() & ItemTemplate.SLOT_HEAD) > 0)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addItems(items);

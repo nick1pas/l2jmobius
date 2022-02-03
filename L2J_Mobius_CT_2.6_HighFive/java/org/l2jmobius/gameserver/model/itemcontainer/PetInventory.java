@@ -66,7 +66,7 @@ public class PetInventory extends Inventory
 	public boolean validateCapacity(Item item)
 	{
 		int slots = 0;
-		if ((!item.isStackable() || (getItemByItemId(item.getId()) == null)) && !item.getItem().hasExImmediateEffect())
+		if ((!item.isStackable() || (getItemByItemId(item.getId()) == null)) && !item.getTemplate().hasExImmediateEffect())
 		{
 			slots++;
 		}
@@ -116,7 +116,7 @@ public class PetInventory extends Inventory
 		// check for equipped items from other pets
 		for (Item item : _items)
 		{
-			if (item.isEquipped() && !item.getItem().checkCondition(_owner, _owner, false))
+			if (item.isEquipped() && !item.getTemplate().checkCondition(_owner, _owner, false))
 			{
 				unEquipItemInSlot(item.getLocationSlot());
 			}

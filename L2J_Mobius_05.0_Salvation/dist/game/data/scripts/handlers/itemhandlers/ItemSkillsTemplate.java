@@ -58,7 +58,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			LOGGER.info("Item " + item + " does not have registered any skill for handler.");
@@ -122,7 +122,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					playable.doCast(itemSkill);
 					successfulUse = true;
 				}
-				else if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect())
+				else if (itemSkill.isWithoutAction() || item.getTemplate().hasImmediateEffect() || item.getTemplate().hasExImmediateEffect())
 				{
 					SkillCaster.triggerCast(playable, null, itemSkill, item, false);
 					successfulUse = true;
@@ -166,12 +166,12 @@ public class ItemSkillsTemplate implements IItemHandler
 	 */
 	private boolean checkConsume(Item item, boolean hasConsumeSkill)
 	{
-		switch (item.getItem().getDefaultAction())
+		switch (item.getTemplate().getDefaultAction())
 		{
 			case CAPSULE:
 			case SKILL_REDUCE:
 			{
-				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
+				if (!hasConsumeSkill && item.getTemplate().hasImmediateEffect())
 				{
 					return true;
 				}

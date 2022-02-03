@@ -285,13 +285,13 @@ public class AppearanceStone
 					return false;
 				}
 				
-				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR) && !((targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL))) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
+				if ((targetItem.isWeapon() && !getTargetTypes().contains(AppearanceTargetType.WEAPON)) || (targetItem.isArmor() && !getTargetTypes().contains(AppearanceTargetType.ARMOR) && !((targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIRALL))) || (targetItem.isEtcItem() && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY)))
 				{
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
 				}
 				
-				if (((targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getItem().getBodyPart() == ItemTemplate.SLOT_HAIRALL)) && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
+				if (((targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIR) || (targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIR2) || (targetItem.getTemplate().getBodyPart() == ItemTemplate.SLOT_HAIRALL)) && !getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
 				{
 					player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return false;
@@ -317,7 +317,7 @@ public class AppearanceStone
 							return false;
 						}
 						
-						if (targetItem.getItem().getCrystalType() == CrystalType.NONE)
+						if (targetItem.getTemplate().getCrystalType() == CrystalType.NONE)
 						{
 							player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NO_GRADE_ITEMS);
 							return false;
@@ -332,7 +332,7 @@ public class AppearanceStone
 							return false;
 						}
 						
-						if (targetItem.getItem().getCrystalType() == CrystalType.NONE)
+						if (targetItem.getTemplate().getCrystalType() == CrystalType.NONE)
 						{
 							player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NO_GRADE_ITEMS);
 							return false;
@@ -341,7 +341,7 @@ public class AppearanceStone
 					}
 					case ACCESSORY:
 					{
-						if ((targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIR) && (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIR2) && (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_HAIRALL))
+						if ((targetItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_HAIR) && (targetItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_HAIR2) && (targetItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_HAIRALL))
 						{
 							player.sendPacket(SystemMessageId.HAIR_ACCESSORIES_ONLY);
 							return false;
@@ -350,7 +350,7 @@ public class AppearanceStone
 					}
 					case ALL:
 					{
-						if (!getCrystalTypes().isEmpty() && !getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
+						if (!getCrystalTypes().isEmpty() && !getCrystalTypes().contains(targetItem.getTemplate().getCrystalType()))
 						{
 							player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 							return false;
@@ -368,13 +368,13 @@ public class AppearanceStone
 			}
 		}
 		
-		if (!getCrystalTypes().isEmpty() && !getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
+		if (!getCrystalTypes().isEmpty() && !getCrystalTypes().contains(targetItem.getTemplate().getCrystalType()))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 			return false;
 		}
 		
-		if (targetItem.isArmor() && !getBodyParts().isEmpty() && !getBodyParts().contains(targetItem.getItem().getBodyPart()))
+		if (targetItem.isArmor() && !getBodyParts().isEmpty() && !getBodyParts().contains(targetItem.getTemplate().getBodyPart()))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 			return false;
@@ -400,7 +400,7 @@ public class AppearanceStone
 			{
 				case ONE_HANDED:
 				{
-					if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
+					if ((targetItem.getTemplate().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -409,7 +409,7 @@ public class AppearanceStone
 				}
 				case TWO_HANDED:
 				{
-					if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
+					if ((targetItem.getTemplate().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -422,7 +422,7 @@ public class AppearanceStone
 			{
 				case MAGICAL:
 				{
-					if (!targetItem.getItem().isMagicWeapon())
+					if (!targetItem.getTemplate().isMagicWeapon())
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -431,7 +431,7 @@ public class AppearanceStone
 				}
 				case PHYISICAL:
 				{
-					if (targetItem.getItem().isMagicWeapon())
+					if (targetItem.getTemplate().isMagicWeapon())
 					{
 						player.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 						return false;
@@ -471,7 +471,7 @@ public class AppearanceStone
 	{
 		for (AppearanceHolder holder : _allVisualIds)
 		{
-			if (targetItem.isArmor() && (holder.getBodyPart() != 0) && (targetItem.getItem().getBodyPart() != holder.getBodyPart()))
+			if (targetItem.isArmor() && (holder.getBodyPart() != 0) && (targetItem.getTemplate().getBodyPart() != holder.getBodyPart()))
 			{
 				continue;
 			}
@@ -494,7 +494,7 @@ public class AppearanceStone
 				{
 					case ONE_HANDED:
 					{
-						if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
+						if ((targetItem.getTemplate().getBodyPart() & ItemTemplate.SLOT_R_HAND) != ItemTemplate.SLOT_R_HAND)
 						{
 							continue;
 						}
@@ -502,7 +502,7 @@ public class AppearanceStone
 					}
 					case TWO_HANDED:
 					{
-						if ((targetItem.getItem().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
+						if ((targetItem.getTemplate().getBodyPart() & ItemTemplate.SLOT_LR_HAND) != ItemTemplate.SLOT_LR_HAND)
 						{
 							continue;
 						}
@@ -514,7 +514,7 @@ public class AppearanceStone
 				{
 					case MAGICAL:
 					{
-						if (!targetItem.getItem().isMagicWeapon())
+						if (!targetItem.getTemplate().isMagicWeapon())
 						{
 							continue;
 						}
@@ -522,7 +522,7 @@ public class AppearanceStone
 					}
 					case PHYISICAL:
 					{
-						if (targetItem.getItem().isMagicWeapon())
+						if (targetItem.getTemplate().isMagicWeapon())
 						{
 							continue;
 						}

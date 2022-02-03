@@ -92,14 +92,14 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 */
 	public int getHPBonus(Item item)
 	{
-		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
+		final List<Integer> values = _armorHPBonuses.get(item.getTemplate().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))
 		{
 			return 0;
 		}
 		
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-		if (item.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)
+		if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)
 		{
 			return (int) (bonus * FULL_ARMOR_MODIFIER);
 		}

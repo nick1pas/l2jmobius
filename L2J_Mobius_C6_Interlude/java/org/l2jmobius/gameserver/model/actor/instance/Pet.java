@@ -337,7 +337,7 @@ public class Pet extends Summon
 	{
 		for (Item item : _inventory.getItems())
 		{
-			if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
+			if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_HAND))
 			{
 				return item;
 			}
@@ -357,7 +357,7 @@ public class Pet extends Summon
 		{
 			return null;
 		}
-		return (Weapon) weapon.getItem();
+		return (Weapon) weapon.getTemplate();
 	}
 	
 	@Override
@@ -674,7 +674,7 @@ public class Pet extends Summon
 			for (Item item : _inventory.getItems())
 			{
 				final Item giveit = item;
-				if (((giveit.getItem().getWeight() * giveit.getCount()) + getOwner().getInventory().getTotalWeight()) < getOwner().getMaxLoad())
+				if (((giveit.getTemplate().getWeight() * giveit.getCount()) + getOwner().getInventory().getTotalWeight()) < getOwner().getMaxLoad())
 				{
 					// If the owner can carry it give it to them
 					giveItemToOwner(giveit);

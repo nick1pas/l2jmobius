@@ -125,7 +125,7 @@ public class MultisellData
 			for (Item item : items)
 			{
 				// Only do the matchup on equipable items that are not currently equipped so for each appropriate item, produce a set of entries for the multisell list.
-				if (!item.isWear() && ((item.getItem() instanceof Armor) || (item.getItem() instanceof Weapon)))
+				if (!item.isWear() && ((item.getTemplate() instanceof Armor) || (item.getTemplate() instanceof Weapon)))
 				{
 					enchantLevel = listTemplate.getMaintainEnchantment() ? item.getEnchantLevel() : 0;
 					// loop through the entries to see which ones we wish to include
@@ -196,7 +196,7 @@ public class MultisellData
 			// if it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getTemplate();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -221,7 +221,7 @@ public class MultisellData
 			if (maintainEnchantment)
 			{
 				// if it is an armor/weapon, modify the enchantment level appropriately (note, if maintain enchantment is "false" this modification will result to a +0)
-				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
+				final ItemTemplate tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getTemplate();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);

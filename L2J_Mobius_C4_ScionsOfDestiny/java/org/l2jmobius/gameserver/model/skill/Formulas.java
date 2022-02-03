@@ -290,7 +290,7 @@ public class Formulas
 				{
 					env.value -= hasMagePDef ? 15 : 31;
 				}
-				if ((p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS) != null) || ((chest != null) && (chest.getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)))
+				if ((p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS) != null) || ((chest != null) && (chest.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR)))
 				{
 					env.value -= hasMagePDef ? 8 : 18;
 				}

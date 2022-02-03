@@ -51,7 +51,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		for (Item item : _itemList)
 		{
 			writeItem(packet, item);
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeQ(item.getTemplate().getReferencePrice() * 2);
 		}
 		// section 3
 		packet.writeD(_buyList.size()); // count for all items already added for buy

@@ -86,7 +86,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!targetItem.getItem().isAppearanceable())
+		if (!targetItem.getTemplate().isAppearanceable())
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_MODIFIED_OR_RESTORED);
 			player.sendPacket(ExShapeShiftingResult.CLOSE);
@@ -141,7 +141,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (!extractItem.getItem().isAppearanceable())
+			if (!extractItem.getTemplate().isAppearanceable())
 			{
 				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
@@ -155,7 +155,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (extractItem.getItem().getCrystalType().isGreater(targetItem.getItem().getCrystalType()))
+			if (extractItem.getTemplate().getCrystalType().isGreater(targetItem.getTemplate().getCrystalType()))
 			{
 				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);
@@ -176,7 +176,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if ((extractItem.getItem().getBodyPart() != targetItem.getItem().getBodyPart()) && ((extractItem.getItem().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getItem().getBodyPart() != ItemTemplate.SLOT_CHEST)))
+			if ((extractItem.getTemplate().getBodyPart() != targetItem.getTemplate().getBodyPart()) && ((extractItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_FULL_ARMOR) || (targetItem.getTemplate().getBodyPart() != ItemTemplate.SLOT_CHEST)))
 			{
 				player.sendPacket(ExShapeShiftingResult.CLOSE);
 				player.removeRequest(ShapeShiftingItemRequest.class);

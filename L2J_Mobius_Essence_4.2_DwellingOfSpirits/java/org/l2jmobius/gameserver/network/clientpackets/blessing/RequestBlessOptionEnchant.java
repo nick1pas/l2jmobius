@@ -122,7 +122,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		
 		if (Rnd.get(100) < Config.BLESSING_CHANCE) // Success
 		{
-			final ItemTemplate it = item.getItem();
+			final ItemTemplate it = item.getTemplate();
 			// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 			item.setBlessed(true);
 			item.updateDatabase();

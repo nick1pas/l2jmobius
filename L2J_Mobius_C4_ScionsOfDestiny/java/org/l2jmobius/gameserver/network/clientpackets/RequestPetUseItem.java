@@ -85,25 +85,25 @@ public class RequestPetUseItem implements IClientIncomingPacket
 		if (item.isEquipable())
 		{
 			if (PetDataTable.isWolf(pet.getNpcId()) && // wolf
-				item.getItem().isForWolf())
+				item.getTemplate().isForWolf())
 			{
 				useItem(pet, item, player);
 				return;
 			}
 			else if (PetDataTable.isHatchling(pet.getNpcId()) && // hatchlings
-				item.getItem().isForHatchling())
+				item.getTemplate().isForHatchling())
 			{
 				useItem(pet, item, player);
 				return;
 			}
 			else if (PetDataTable.isStrider(pet.getNpcId()) && // striders
-				item.getItem().isForStrider())
+				item.getTemplate().isForStrider())
 			{
 				useItem(pet, item, player);
 				return;
 			}
 			else if (PetDataTable.isBaby(pet.getNpcId()) && // baby pets (buffalo, cougar, kookaboora)
-				item.getItem().isForBabyPet())
+				item.getTemplate().isForBabyPet())
 			{
 				useItem(pet, item, player);
 				return;

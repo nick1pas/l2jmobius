@@ -158,7 +158,7 @@ public class ElementalAttributeData implements IXmlReader
 			return false;
 		}
 		
-		if ((ELEMENTAL_ITEMS.get(stoneId).getType() == ElementalItemType.JEWEL) && (targetItem.getItem().getCrystalType() != CrystalType.R110))
+		if ((ELEMENTAL_ITEMS.get(stoneId).getType() == ElementalItemType.JEWEL) && (targetItem.getTemplate().getCrystalType() != CrystalType.R110))
 		{
 			return false;
 		}
@@ -170,7 +170,7 @@ public class ElementalAttributeData implements IXmlReader
 	{
 		int row = -1;
 		int column = -1;
-		switch (item.getItem().getCrystalType())
+		switch (item.getTemplate().getCrystalType())
 		{
 			case S:
 			{

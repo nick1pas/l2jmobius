@@ -88,7 +88,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemTemplate item = targetItem.getItem();
+		final ItemTemplate item = targetItem.getTemplate();
 		final int artifactSlot = item.getArtifactSlot();
 		if (artifactSlot <= 0)
 		{
@@ -143,7 +143,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 		for (int objectId : _ingridients)
 		{
 			final Item ingridient = player.getInventory().getItemByObjectId(objectId);
-			if ((ingridient == null) || (ingridient.getEnchantLevel() < minIngridientEnchant) || (ingridient.getItem().getArtifactSlot() != artifactSlot))
+			if ((ingridient == null) || (ingridient.getEnchantLevel() < minIngridientEnchant) || (ingridient.getTemplate().getArtifactSlot() != artifactSlot))
 			{
 				player.sendPacket(ExTryEnchantArtifactResult.ERROR_PACKET);
 				return;

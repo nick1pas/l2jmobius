@@ -57,8 +57,8 @@ public class RequestConfirmRefinerItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final int itemGrade = targetItem.getItem().getItemGrade();
-		final int refinerItemId = refinerItem.getItem().getItemId();
+		final int itemGrade = targetItem.getTemplate().getItemGrade();
+		final int refinerItemId = refinerItem.getTemplate().getItemId();
 		
 		// is the item a life stone?
 		if ((refinerItemId < 8723) || (refinerItemId > 8762))
