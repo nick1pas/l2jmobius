@@ -288,6 +288,7 @@ public class Player extends Playable
 	private String _accountName;
 	private long _deleteTimer;
 	private boolean _isOnline = false;
+	private boolean _enteredWorld = false;
 	private long _onlineTime;
 	private long _onlineBeginTime;
 	private long _lastAccess;
@@ -8323,6 +8324,16 @@ public class Player extends Playable
 			return _client.isDetached() ? 2 : 1;
 		}
 		return 0;
+	}
+	
+	public void setEnteredWorld()
+	{
+		_enteredWorld = true;
+	}
+	
+	public boolean hasEnteredWorld()
+	{
+		return _enteredWorld;
 	}
 	
 	/**

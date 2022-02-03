@@ -761,6 +761,9 @@ public class EnterWorld implements IClientIncomingPacket
 				player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
 			}
 		}, 5500);
+		
+		// EnterWorld has finished.
+		player.setEnteredWorld();
 	}
 	
 	/**

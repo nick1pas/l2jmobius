@@ -1517,7 +1517,6 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
-			
 			// Add new item in slot of paperdoll
 			if (item != null)
 			{
@@ -1610,7 +1609,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	private void checkEquipTask()
 	{
-		if ((_skillItemTask == null) && (getOwner() != null) && getOwner().isPlayer() && (getOwner().getActingPlayer().getUptime() > 5000))
+		if ((_skillItemTask == null) && (getOwner() != null) && getOwner().isPlayer() && getOwner().getActingPlayer().hasEnteredWorld())
 		{
 			getOwner().getActingPlayer().setUsingSkillItem(true);
 			_skillItemTask = ThreadPool.schedule(() ->

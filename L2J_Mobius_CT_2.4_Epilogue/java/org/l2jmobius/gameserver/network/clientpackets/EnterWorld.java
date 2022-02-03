@@ -705,6 +705,9 @@ public class EnterWorld implements IClientIncomingPacket
 				}
 			}, 5000);
 		}
+		
+		// EnterWorld has finished.
+		player.setEnteredWorld();
 	}
 	
 	private void engage(Player player)

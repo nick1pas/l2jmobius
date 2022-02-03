@@ -458,6 +458,7 @@ public class Player extends Playable
 	private String _htmlPrefix = "";
 	
 	private volatile boolean _isOnline = false;
+	private boolean _enteredWorld = false;
 	private long _onlineTime;
 	private long _onlineBeginTime;
 	private long _lastAccess;
@@ -6276,8 +6277,10 @@ public class Player extends Playable
 		broadcastPacket(new Ride(this));
 		setMountObjectID(0);
 		storePetFood(petId);
+		
 		// Notify self and others about speed change
 		broadcastUserInfo();
+		
 		return true;
 	}
 	
@@ -7544,6 +7547,16 @@ public class Player extends Playable
 			return _client.isDetached() ? 2 : 1;
 		}
 		return 0;
+	}
+	
+	public void setEnteredWorld()
+	{
+		_enteredWorld = true;
+	}
+	
+	public boolean hasEnteredWorld()
+	{
+		return _enteredWorld;
 	}
 	
 	/**

@@ -624,6 +624,9 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendMessage("SVR time is " + fmt.format(new Date(Chronos.currentTimeMillis())));
 		}
+		
+		// EnterWorld has finished.
+		player.setEnteredWorld();
 	}
 	
 	private void colorSystem(Player player)
