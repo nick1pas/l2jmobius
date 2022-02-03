@@ -683,7 +683,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void recalculateStats(boolean broadcast)
 	{
-		if (!getActiveChar().isChangingClass() && !getActiveChar().isUsingContainerItem())
+		if (!getActiveChar().isChangingClass() && !getActiveChar().isUsingSkillItem())
 		{
 			super.recalculateStats(broadcast);
 		}

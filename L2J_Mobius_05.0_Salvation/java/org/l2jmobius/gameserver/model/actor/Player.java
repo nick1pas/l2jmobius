@@ -567,12 +567,13 @@ public class Player extends Playable
 	private PlayerRefund _refund;
 	private PrivateStoreType _privateStoreType = PrivateStoreType.NONE;
 	private TradeList _activeTradeList;
-	private boolean _isUsingContainerItem;
 	private ItemContainer _activeWarehouse;
 	private Map<Integer, Long> _manufactureItems;
 	private String _storeName = "";
 	private TradeList _sellList;
 	private TradeList _buyList;
+	
+	private boolean _isUsingSkillItem;
 	
 	// Multisell
 	private PreparedMultisellListHolder _currentMultiSell = null;
@@ -4662,6 +4663,23 @@ public class Player extends Playable
 		}
 	}
 	
+	/**
+	 * @return if player is using an item that has skills.
+	 */
+	public boolean isUsingSkillItem()
+	{
+		return _isUsingSkillItem;
+	}
+	
+	/**
+	 * Set value of using an item that has skills.
+	 * @param value : The value to set.
+	 */
+	public void setUsingSkillItem(boolean value)
+	{
+		_isUsingSkillItem = value;
+	}
+	
 	public PreparedMultisellListHolder getMultiSell()
 	{
 		return _currentMultiSell;
@@ -5610,16 +5628,6 @@ public class Player extends Playable
 	public ItemContainer getActiveWarehouse()
 	{
 		return _activeWarehouse;
-	}
-	
-	public boolean isUsingContainerItem()
-	{
-		return _isUsingContainerItem;
-	}
-	
-	public void setUsingContainerItem(boolean value)
-	{
-		_isUsingContainerItem = value;
 	}
 	
 	/**

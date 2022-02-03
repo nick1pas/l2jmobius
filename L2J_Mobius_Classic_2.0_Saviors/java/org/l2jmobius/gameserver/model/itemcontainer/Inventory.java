@@ -75,7 +75,7 @@ public abstract class Inventory extends ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
 	
-	private ScheduledFuture<?> _containerItemTask;
+	private ScheduledFuture<?> _skillItemTask;
 	
 	public interface PaperdollListener
 	{
@@ -1338,12 +1338,19 @@ public abstract class Inventory extends ItemContainer
 		{
 			if (old != null)
 			{
+				// Prevent flood from using items with skills.
+				if (old.getItem().hasSkills())
+				{
+					checkEquipTask();
+				}
+				
 				_paperdoll[slot] = null;
 				_paperdollCache.getPaperdollItems().remove(old);
 				
 				// Put old item from paperdoll slot to base location
 				old.setItemLocation(getBaseLocation());
 				old.setLastChange(Item.MODIFIED);
+				
 				// Get the mask for paperdoll
 				int mask = 0;
 				for (int i = 0; i < PAPERDOLL_TOTALSLOTS; i++)
@@ -1355,6 +1362,7 @@ public abstract class Inventory extends ItemContainer
 					}
 				}
 				_wearedMask = mask;
+				
 				// Notify all paperdoll listener in order to unequip old item in slot
 				for (PaperdollListener listener : _paperdollListeners)
 				{
@@ -1367,14 +1375,24 @@ public abstract class Inventory extends ItemContainer
 				}
 				old.updateDatabase();
 			}
+			
 			// Add new item in slot of paperdoll
 			if (item != null)
 			{
+				// Prevent flood from using items with skills.
+				if (item.getItem().hasSkills())
+				{
+					checkEquipTask();
+				}
+				
 				_paperdoll[slot] = item;
 				_paperdollCache.getPaperdollItems().add(item);
 				
+				// Put item to equip location
 				item.setItemLocation(getEquipLocation(), slot);
 				item.setLastChange(Item.MODIFIED);
+				
+				// Notify all paperdoll listener in order to equip item in slot
 				_wearedMask |= item.getItem().getItemMask();
 				for (PaperdollListener listener : _paperdollListeners)
 				{
@@ -1408,6 +1426,25 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		return old;
+	}
+	
+	/**
+	 * Prevent flood from using items with skills.
+	 */
+	private void checkEquipTask()
+	{
+		if ((_skillItemTask == null) && (getOwner() != null) && getOwner().isPlayer() && (getOwner().getActingPlayer().getUptime() > 5000))
+		{
+			getOwner().getActingPlayer().setUsingSkillItem(true);
+			_skillItemTask = ThreadPool.schedule(() ->
+			{
+				getOwner().getActingPlayer().setUsingSkillItem(false);
+				getOwner().getStat().recalculateStats(true);
+				getOwner().updateAbnormalVisualEffects();
+				getOwner().getActingPlayer().sendSkillList();
+				_skillItemTask = null;
+			}, 100);
+		}
 	}
 	
 	/**
@@ -1710,7 +1747,6 @@ public abstract class Inventory extends ItemContainer
 			case ItemTemplate.SLOT_R_BRACELET:
 			{
 				pdollSlot = PAPERDOLL_RBRACELET;
-				containerItemCheck();
 				break;
 			}
 			case ItemTemplate.SLOT_DECO:
@@ -1726,7 +1762,6 @@ public abstract class Inventory extends ItemContainer
 			case ItemTemplate.SLOT_BROOCH:
 			{
 				pdollSlot = PAPERDOLL_BROOCH;
-				containerItemCheck();
 				break;
 			}
 			case ItemTemplate.SLOT_BROOCH_JEWEL:
@@ -1750,26 +1785,6 @@ public abstract class Inventory extends ItemContainer
 			return old;
 		}
 		return null;
-	}
-	
-	/**
-	 * Avoid flood from container items.
-	 */
-	private void containerItemCheck()
-	{
-		final Creature owner = getOwner();
-		if ((owner != null) && owner.isPlayer() && (_containerItemTask == null))
-		{
-			owner.getActingPlayer().setUsingContainerItem(true);
-			_containerItemTask = ThreadPool.schedule(() ->
-			{
-				owner.getActingPlayer().setUsingContainerItem(false);
-				owner.getStat().recalculateStats(true);
-				owner.updateAbnormalVisualEffects();
-				owner.getActingPlayer().sendSkillList();
-				_containerItemTask = null;
-			}, 100);
-		}
 	}
 	
 	/**
