@@ -229,8 +229,8 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		
 		if (_player != null)
 		{
-			// Avoid flood from class change.
-			if (_player.isChangingClass() && ((packet instanceof SkillList) || (packet instanceof AcquireSkillList) || (packet instanceof ExUserInfoAbnormalVisualEffect) || (packet instanceof AbnormalStatusUpdate) || (packet instanceof ExAbnormalStatusUpdateFromTarget)))
+			// Avoid flood from class change or container items.
+			if ((_player.isChangingClass() || _player.isUsingContainerItem()) && ((packet instanceof SkillList) || (packet instanceof AcquireSkillList) || (packet instanceof ExUserInfoAbnormalVisualEffect) || (packet instanceof AbnormalStatusUpdate) || (packet instanceof ExAbnormalStatusUpdateFromTarget)))
 			{
 				return;
 			}

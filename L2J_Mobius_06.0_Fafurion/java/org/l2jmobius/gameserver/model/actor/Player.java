@@ -565,10 +565,9 @@ public class Player extends Playable
 	private final PlayerFreight _freight = new PlayerFreight(this);
 	private PlayerWarehouse _warehouse;
 	private PlayerRefund _refund;
-	
 	private PrivateStoreType _privateStoreType = PrivateStoreType.NONE;
-	
 	private TradeList _activeTradeList;
+	private boolean _isUsingContainerItem;
 	private ItemContainer _activeWarehouse;
 	private Map<Integer, Long> _manufactureItems;
 	private String _storeName = "";
@@ -5612,6 +5611,16 @@ public class Player extends Playable
 	public ItemContainer getActiveWarehouse()
 	{
 		return _activeWarehouse;
+	}
+	
+	public boolean isUsingContainerItem()
+	{
+		return _isUsingContainerItem;
+	}
+	
+	public void setUsingContainerItem(boolean value)
+	{
+		_isUsingContainerItem = value;
 	}
 	
 	/**

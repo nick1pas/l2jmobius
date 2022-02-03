@@ -53,7 +53,6 @@ import org.l2jmobius.gameserver.util.Util;
 public class PlayerStat extends PlayableStat
 {
 	private long _startingXp;
-	/** Player's maximum talisman count. */
 	private final AtomicInteger _talismanSlots = new AtomicInteger();
 	private boolean _cloakSlot = false;
 	private int _vitalityPoints = 0;
@@ -706,7 +705,7 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void recalculateStats(boolean broadcast)
 	{
-		if (!getActiveChar().isChangingClass())
+		if (!getActiveChar().isChangingClass() && !getActiveChar().isUsingContainerItem())
 		{
 			super.recalculateStats(broadcast);
 		}

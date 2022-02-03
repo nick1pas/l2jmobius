@@ -26,6 +26,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.ScheduledFuture;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.logging.Level;
@@ -33,6 +34,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.cache.PaperdollCache;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -74,6 +76,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 public abstract class Inventory extends ItemContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
+	
+	private ScheduledFuture<?> _containerItemTask;
 	
 	public interface PaperdollListener
 	{
@@ -1882,10 +1886,12 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == ItemTemplate.SLOT_L_BRACELET)
 		{
 			pdollSlot = PAPERDOLL_LBRACELET;
+			containerItemCheck();
 		}
 		else if (slot == ItemTemplate.SLOT_R_BRACELET)
 		{
 			pdollSlot = PAPERDOLL_RBRACELET;
+			containerItemCheck();
 		}
 		else if (slot == ItemTemplate.SLOT_DECO)
 		{
@@ -1898,6 +1904,7 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == ItemTemplate.SLOT_BROOCH)
 		{
 			pdollSlot = PAPERDOLL_BROOCH;
+			containerItemCheck();
 		}
 		else if (slot == ItemTemplate.SLOT_BROOCH_JEWEL)
 		{
@@ -1910,6 +1917,7 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == ItemTemplate.SLOT_ARTIFACT_BOOK)
 		{
 			pdollSlot = PAPERDOLL_ARTIFACT_BOOK;
+			containerItemCheck();
 		}
 		else if (slot == ItemTemplate.SLOT_ARTIFACT)
 		{
@@ -1925,6 +1933,26 @@ public abstract class Inventory extends ItemContainer
 			return setPaperdollItem(pdollSlot, null);
 		}
 		return null;
+	}
+	
+	/**
+	 * Avoid flood from container items.
+	 */
+	private void containerItemCheck()
+	{
+		final Creature owner = getOwner();
+		if ((owner != null) && owner.isPlayer() && (_containerItemTask == null))
+		{
+			owner.getActingPlayer().setUsingContainerItem(true);
+			_containerItemTask = ThreadPool.schedule(() ->
+			{
+				owner.getActingPlayer().setUsingContainerItem(false);
+				owner.getStat().recalculateStats(true);
+				owner.updateAbnormalVisualEffects();
+				owner.getActingPlayer().sendSkillList();
+				_containerItemTask = null;
+			}, 100);
+		}
 	}
 	
 	/**
