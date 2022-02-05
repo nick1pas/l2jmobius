@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
@@ -1458,7 +1459,7 @@ public abstract class Inventory extends ItemContainer
 			if (old != null)
 			{
 				// Prevent flood from using items with skills.
-				if (old.getTemplate().hasSkills())
+				if (old.getTemplate().hasSkills() || EnchantItemOptionsData.getInstance().hasOptions(old.getId()))
 				{
 					checkEquipTask();
 				}
@@ -1523,7 +1524,7 @@ public abstract class Inventory extends ItemContainer
 			if (item != null)
 			{
 				// Prevent flood from using items with skills.
-				if (item.getTemplate().hasSkills())
+				if (item.getTemplate().hasSkills() || EnchantItemOptionsData.getInstance().hasOptions(item.getId()))
 				{
 					checkEquipTask();
 				}
@@ -1621,7 +1622,7 @@ public abstract class Inventory extends ItemContainer
 				getOwner().updateAbnormalVisualEffects();
 				getOwner().getActingPlayer().sendSkillList();
 				_skillItemTask = null;
-			}, 100);
+			}, 50);
 		}
 	}
 	

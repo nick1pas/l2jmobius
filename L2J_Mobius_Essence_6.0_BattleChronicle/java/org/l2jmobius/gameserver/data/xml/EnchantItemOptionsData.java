@@ -94,6 +94,15 @@ public class EnchantItemOptionsData implements IXmlReader
 	
 	/**
 	 * @param itemId
+	 * @return if specified item id has available enchant effects.
+	 */
+	public boolean hasOptions(int itemId)
+	{
+		return _data.containsKey(itemId);
+	}
+	
+	/**
+	 * @param itemId
 	 * @param enchantLevel
 	 * @return enchant effects information.
 	 */
