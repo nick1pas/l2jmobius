@@ -1200,14 +1200,32 @@
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>H_Y_ROLLING_DICEA_AVE</abnormalVisualEffect>
 		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
-				<amount>55</amount>
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalRate">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatBonusSkillCritical">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<!-- Skill Effect Rolling Dice - Haste -->
 			<effect name="PhysicalAttackSpeed">
 				<amount>55</amount>
 				<mode>PER</mode>
@@ -1223,14 +1241,33 @@
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>H_Y_ROLLING_DICEB_AVE</abnormalVisualEffect>
 		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<!-- Main Effects -->
 			<effect name="PAtk">
-				<amount>55</amount>
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalRate">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatBonusSkillCritical">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<!-- Skill Effect Rolling Dice - Wind Walk -->
 			<effect name="Speed">
 				<amount>30</amount>
 				<mode>DIFF</mode>
@@ -1246,14 +1283,33 @@
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>H_Y_ROLLING_DICEC_AVE</abnormalVisualEffect>
 		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<!-- Main Effects -->
 			<effect name="PAtk">
-				<amount>55</amount>
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalRate">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatBonusSkillCritical">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<!-- Skill Effect Rolling Dice - Resilience -->
 			<effect name="MaxHp">
 				<amount>55</amount>
 				<mode>PER</mode>

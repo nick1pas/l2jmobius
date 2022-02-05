@@ -1,9 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="47201" toLevel="1" name="Fortune Time">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +20% P. Skill Power +5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>84</magicLevel>
+		<mpConsume>82</mpConsume>
+		<mpInitialConsume>20</mpInitialConsume>
+		<itemConsumeCount>250</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47202" toLevel="1" name="">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -51,9 +77,74 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47216" toLevel="8" name="Crushing Leap">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-770</value>
+			<value level="2">-790</value>
+			<value level="3">-810</value>
+			<value level="4">-830</value>
+			<value level="5">-850</value>
+			<value level="6">-870</value>
+			<value level="7">-890</value>
+			<value level="8">-910</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1200</hitTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">88</value>
+			<value level="8">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">65</value>
+			<value level="2">66</value>
+			<value level="3">68</value>
+			<value level="4">69</value>
+			<value level="5">71</value>
+			<value level="6">72</value>
+			<value level="7">73</value>
+			<value level="8">75</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">5545</value>
+					<value level="2">5702</value>
+					<value level="3">5860</value>
+					<value level="4">6020</value>
+					<value level="5">6179</value>
+					<value level="6">6337</value>
+					<value level="7">6496</value>
+					<value level="8">6657</value>
+				</power>
+				<pDefMod>0.90</pDefMod>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>25</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47217" toLevel="8" name="">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -66,9 +157,82 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47219" toLevel="6" name="Adena Stun">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.coin_stun</icon>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>500</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-15000</value>
+			<value level="2">-15100</value>
+			<value level="3">-15200</value>
+			<value level="4">-15300</value>
+			<value level="5">-15400</value>
+			<value level="6">-15500</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<itemConsumeCount>500</itemConsumeCount>
+		<itemConsumeId>57</itemConsumeId> <!-- Adena -->
+		<magicLevel>
+			<value level="1">81</value>
+			<value level="2">83</value>
+			<value level="3">85</value>
+			<value level="4">87</value>
+			<value level="5">89</value>
+			<value level="6">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">56</value>
+			<value level="3">58</value>
+			<value level="4">60</value>
+			<value level="5">62</value>
+			<value level="6">63</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">5018</value>
+					<value level="2">5152</value>
+					<value level="3">5287</value>
+					<value level="4">5421</value>
+					<value level="5">5557</value>
+					<value level="6">5624</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47234</skillId> <!-- Adena Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>BUFF</slot>
+				<rate>25</rate>
+				<max>3</max>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47221" toLevel="1" name="Mechanical Hero">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -131,9 +295,35 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47234" toLevel="6" name="Adena Stun">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.coin_stun</icon>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>
+			<value level="1">-15000</value>
+			<value level="2">-15100</value>
+			<value level="3">-15200</value>
+			<value level="4">-15300</value>
+			<value level="5">-15400</value>
+			<value level="6">-15500</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47235" toLevel="15" name="Dwarven Weapon Mastery">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
