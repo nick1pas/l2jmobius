@@ -1438,7 +1438,7 @@ public class Siege implements Siegable
 	private void setNextSiegeDate()
 	{
 		final SiegeScheduleDate holder = SiegeScheduleData.getInstance().getScheduleDateForCastleId(_castle.getResidenceId());
-		if (!holder.siegeEnabled())
+		if ((holder == null) || !holder.siegeEnabled())
 		{
 			return;
 		}
