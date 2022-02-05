@@ -43,6 +43,7 @@ public class EffectZone extends ZoneType
 	private int _reuse;
 	boolean _enabled;
 	private boolean _isShowDangerIcon;
+	private boolean _removeEffectsOnExit;
 	protected Map<Integer, Integer> _skills;
 	protected volatile Future<?> _task;
 	
@@ -54,6 +55,7 @@ public class EffectZone extends ZoneType
 		_reuse = 30000;
 		_enabled = true;
 		_isShowDangerIcon = true;
+		_removeEffectsOnExit = false;
 	}
 	
 	@Override
@@ -114,6 +116,11 @@ public class EffectZone extends ZoneType
 				}
 				break;
 			}
+			case "removeEffectsOnExit":
+			{
+				_removeEffectsOnExit = Boolean.parseBoolean(value);
+				break;
+			}
 			default:
 			{
 				super.setParameter(name, value);
@@ -152,6 +159,18 @@ public class EffectZone extends ZoneType
 		if (creature.isPlayer() && _isShowDangerIcon)
 		{
 			creature.setInsideZone(ZoneId.DANGER_AREA, false);
+		}
+		
+		if (_removeEffectsOnExit && (_skills != null))
+		{
+			for (Entry<Integer, Integer> e : _skills.entrySet())
+			{
+				final Skill skill = SkillTable.getInstance().getSkill(e.getKey().intValue(), e.getValue().intValue());
+				if (skill != null)
+				{
+					creature.stopSkillEffects(skill.getId());
+				}
+			}
 		}
 		
 		if (getCharactersInside().isEmpty() && (_task != null))

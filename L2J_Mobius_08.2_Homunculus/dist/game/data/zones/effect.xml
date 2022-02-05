@@ -2298,7 +2298,7 @@
 		<stat name="showDangerIcon" val="true" />
 		<stat name="initialDelay" val="3000" />
 		<!-- <stat name="unitTick" val="20" /> -->
-		<stat name="skillIdLvl" val="16734-1;" /> <!-- eaking Magic - Eradication -->
+		<stat name="skillIdLvl" val="16734-1;" /> <!-- Leaking Magic - Eradication -->
 		<node X="78023" Y="172262" />
 	</zone>
 	<zone name="gm_punish" id="100100" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="10150" rad="600">
@@ -2308,5 +2308,41 @@
 		<stat name="initialDelay" val="1000" />
 		<stat name="skillIdLvl" val="55031-1;" /> <!-- GM Punish -->
 		<node X="-113088" Y="-251088" />
+	</zone>
+	<!-- Primordial River - Elf Memory -->									
+	<zone name="primordial_river_elf" type="EffectZone" shape="NPoly" minZ="-3880" maxZ="-4125">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="skillIdLvl" val="2994-1;" /> <!-- Aqua Elf Transformation -->
+		<stat name="removeEffectsOnExit" val="true" />
+		<node X="-8947" Y="-188486" />
+		<node X="-8946" Y="-188116" />
+		<node X="-13481" Y="-188135" />
+		<node X="-13502" Y="-188485" />
+	</zone>
+	<!-- Primordial River - Dark Elf - Kamael Memory -->							
+	<zone name="primordial_river_delf_kamael" type="EffectZone" shape="NPoly" minZ="-4921" maxZ="-3950">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="skillIdLvl" val="2994-1;" /> <!-- Aqua Elf Transformation -->
+		<stat name="removeEffectsOnExit" val="true" />
+		<node X="-14270" Y="-185558" />
+		<node X="-13989" Y="-185944" />
+		<node X="-10107" Y="-183203" />
+		<node X="-10383" Y="-182826" />
+	</zone>
+	<!-- Primordial River - Dwarf - Human - Orc Memory -->							   
+	<zone name="primordial_river_delf_human_orc" type="EffectZone" shape="NPoly" minZ="-4000" maxZ="-2420">
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="showDangerIcon" val="false" />
+		<stat name="skillIdLvl" val="2994-1;" /> <!-- Aqua Elf Transformation -->
+		<stat name="removeEffectsOnExit" val="true" />
+		<node X="-16228" Y="-180440" />
+		<node X="-16589" Y="-180386" />
+		<node X="-16542" Y="-184948" />
+		<node X="-16241" Y="-184940" />
 	</zone>
 </list>

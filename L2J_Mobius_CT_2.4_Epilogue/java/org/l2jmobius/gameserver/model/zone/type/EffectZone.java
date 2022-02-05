@@ -25,6 +25,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -42,6 +43,7 @@ public class EffectZone extends ZoneType
 	private int _reuse;
 	protected boolean _bypassConditions;
 	private boolean _isShowDangerIcon;
+	private boolean _removeEffectsOnExit;
 	protected Map<Integer, Integer> _skills;
 	protected volatile Future<?> _task;
 	
@@ -54,6 +56,7 @@ public class EffectZone extends ZoneType
 		setTargetType(InstanceType.Playable); // default only playable
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
+		_removeEffectsOnExit = false;
 	}
 	
 	@Override
@@ -119,6 +122,11 @@ public class EffectZone extends ZoneType
 				}
 				break;
 			}
+			case "removeEffectsOnExit":
+			{
+				_removeEffectsOnExit = Boolean.parseBoolean(value);
+				break;
+			}
 			default:
 			{
 				super.setParameter(name, value);
@@ -168,6 +176,17 @@ public class EffectZone extends ZoneType
 				if (!creature.isInsideZone(ZoneId.DANGER_AREA))
 				{
 					creature.sendPacket(new EtcStatusUpdate(creature.getActingPlayer()));
+				}
+			}
+			if (_removeEffectsOnExit && (_skills != null))
+			{
+				for (Entry<Integer, Integer> e : _skills.entrySet())
+				{
+					final Skill skill = SkillData.getInstance().getSkill(e.getKey().intValue(), e.getValue().intValue());
+					if ((skill != null) && creature.isAffectedBySkill(skill.getId()))
+					{
+						creature.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
+					}
 				}
 			}
 		}
