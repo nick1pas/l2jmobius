@@ -22,8 +22,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.management.ManagementFactory;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.logging.Level;
@@ -112,7 +110,6 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
@@ -128,6 +125,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -470,24 +468,6 @@ public class GameServer
 		LoginServerThread.getInstance().start();
 		
 		Toolkit.getDefaultToolkit().beep();
-		
-		// TODO: Remove this.
-		// Old dualclass system adjustment.
-		if (!GlobalVariablesManager.getInstance().getBoolean("DUALCLASS_SYSTEM_UPDATED", false))
-		{
-			GlobalVariablesManager.getInstance().set("DUALCLASS_SYSTEM_UPDATED", true);
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps1 = con.prepareStatement("DELETE from character_variables WHERE var='KNOWN_DUAL_SKILLS'");
-				PreparedStatement ps2 = con.prepareStatement("DELETE from character_skills WHERE skill_id in (19222, 19223, 19224, 19225, 19226, 19229, 19290)"))
-			{
-				ps1.execute();
-				ps2.execute();
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning(e.getMessage());
-			}
-		}
 	}
 	
 	public long getStartedTime()
