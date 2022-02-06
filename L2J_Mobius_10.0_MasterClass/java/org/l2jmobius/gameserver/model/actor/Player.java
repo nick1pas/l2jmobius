@@ -5209,11 +5209,15 @@ public class Player extends Playable
 		return droppedItems;
 	}
 	
-	public void onPlayerKill(Playable killedPlayable)
+	public void onPlayerKill(Playable target)
 	{
-		final Player killedPlayer = killedPlayable.getActingPlayer();
+		if ((target == null) || !target.isPlayable())
+		{
+			return;
+		}
 		
 		// Avoid nulls && check if player != killedPlayer
+		final Player killedPlayer = target.getActingPlayer();
 		if ((killedPlayer == null) || (this == killedPlayer))
 		{
 			return;
@@ -5223,6 +5227,12 @@ public class Player extends Playable
 		if (isCursedWeaponEquipped() && killedPlayer.isPlayer())
 		{
 			CursedWeaponsManager.getInstance().increaseKills(getCursedWeaponEquippedId());
+			return;
+		}
+		
+		// Olympiad support
+		if (isInOlympiadMode() || killedPlayer.isInOlympiadMode())
+		{
 			return;
 		}
 		
@@ -5281,14 +5291,14 @@ public class Player extends Playable
 			{
 				if ((_isGood && killedPlayer.isGood()) || (_isEvil && killedPlayer.isEvil()))
 				{
-					setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
+					setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), target.isSummon()));
 					setPkKills(getPkKills() + 1);
 					setTotalKills(getTotalKills() + 1);
 				}
 			}
 			else
 			{
-				setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
+				setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), target.isSummon()));
 				setPkKills(getPkKills() + 1);
 				setTotalKills(getTotalKills() + 1);
 				

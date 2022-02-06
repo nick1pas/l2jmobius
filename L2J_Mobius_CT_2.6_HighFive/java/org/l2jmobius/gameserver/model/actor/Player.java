@@ -5323,30 +5323,38 @@ public class Player extends Playable
 			return;
 		}
 		
-		final Player targetPlayer = target.getActingPlayer();
-		if ((targetPlayer == null) || (targetPlayer == this))
+		// Avoid nulls && check if player != killedPlayer
+		final Player killedPlayer = target.getActingPlayer();
+		if ((killedPlayer == null) || (killedPlayer == this))
 		{
 			return;
 		}
 		
+		// Cursed weapons progress
 		if (isCursedWeaponEquipped() && target.isPlayer())
 		{
 			CursedWeaponsManager.getInstance().increaseKills(_cursedWeaponEquippedId);
 			return;
 		}
 		
-		// If in duel and you kill (only can kill l2summon), do nothing
-		if (isInDuel() && targetPlayer.isInDuel())
+		// Olympiad support
+		if (isInOlympiadMode() || killedPlayer.isInOlympiadMode())
+		{
+			return;
+		}
+		
+		// Duel support
+		if (isInDuel() && killedPlayer.isInDuel())
 		{
 			return;
 		}
 		
 		// If in Arena, do nothing
-		if (isInsideZone(ZoneId.PVP) || targetPlayer.isInsideZone(ZoneId.PVP))
+		if (isInsideZone(ZoneId.PVP) || killedPlayer.isInsideZone(ZoneId.PVP))
 		{
-			if ((getSiegeState() > 0) && (targetPlayer.getSiegeState() > 0) && (getSiegeState() != targetPlayer.getSiegeState()))
+			if ((getSiegeState() > 0) && (killedPlayer.getSiegeState() > 0) && (getSiegeState() != killedPlayer.getSiegeState()))
 			{
-				final Clan targetClan = targetPlayer.getClan();
+				final Clan targetClan = killedPlayer.getClan();
 				if ((_clan != null) && (targetClan != null))
 				{
 					_clan.addSiegeKill();
@@ -5357,7 +5365,7 @@ public class Player extends Playable
 		}
 		
 		// Check if it's pvp
-		if ((checkIfPvP(target) && (targetPlayer.getPvpFlag() != 0)) || (isInsideZone(ZoneId.PVP) && targetPlayer.isInsideZone(ZoneId.PVP)))
+		if ((checkIfPvP(target) && (killedPlayer.getPvpFlag() != 0)) || (isInsideZone(ZoneId.PVP) && killedPlayer.isInsideZone(ZoneId.PVP)))
 		{
 			increasePvpKills(target);
 		}
@@ -5365,7 +5373,7 @@ public class Player extends Playable
 		{
 			// Target player doesn't have pvp flag set
 			// check about wars
-			if ((targetPlayer.getClan() != null) && (getClan() != null) && getClan().isAtWarWith(targetPlayer.getClanId()) && targetPlayer.getClan().isAtWarWith(getClanId()) && (targetPlayer.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
+			if ((killedPlayer.getClan() != null) && (getClan() != null) && getClan().isAtWarWith(killedPlayer.getClanId()) && killedPlayer.getClan().isAtWarWith(getClanId()) && (killedPlayer.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
 			{
 				// 'Both way war' -> 'PvP Kill'
 				increasePvpKills(target);
@@ -5373,18 +5381,18 @@ public class Player extends Playable
 			}
 			
 			// 'No war' or 'One way war' -> 'Normal PK'
-			if (targetPlayer.getKarma() > 0) // Target player has karma
+			if (killedPlayer.getKarma() > 0) // Target player has karma
 			{
 				if (Config.KARMA_AWARD_PK_KILL)
 				{
 					increasePvpKills(target);
 				}
 			}
-			else if (targetPlayer.getPvpFlag() == 0) // Target player doesn't have karma
+			else if (killedPlayer.getPvpFlag() == 0) // Target player doesn't have karma
 			{
 				if (Config.FACTION_SYSTEM_ENABLED)
 				{
-					if ((_isGood && targetPlayer.isGood()) || (_isEvil && targetPlayer.isEvil()))
+					if ((_isGood && killedPlayer.isGood()) || (_isEvil && killedPlayer.isEvil()))
 					{
 						increasePkKillsAndKarma(target);
 					}

@@ -164,6 +164,7 @@ public abstract class Playable extends Creature
 				qs.getQuest().notifyDeath(killer == null ? this : killer, this, qs);
 			}
 		}
+		
 		// Notify instance
 		if ((getInstanceId() > 0) && isPlayer())
 		{
@@ -176,10 +177,10 @@ public abstract class Playable extends Creature
 		
 		if (killer != null)
 		{
-			final Player player = killer.getActingPlayer();
-			if (player != null)
+			final Player killerPlayer = killer.getActingPlayer();
+			if (killerPlayer != null)
 			{
-				player.onKillUpdatePvPKarma(this);
+				killerPlayer.onKillUpdatePvPKarma(this);
 			}
 		}
 		
