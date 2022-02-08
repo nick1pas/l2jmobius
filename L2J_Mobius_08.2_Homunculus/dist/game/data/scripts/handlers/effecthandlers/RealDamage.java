@@ -86,9 +86,9 @@ public class RealDamage extends AbstractEffect
 				return;
 			}
 			
-			if ((levelDifference >= 3) && (levelDifference < 6))
+			if (levelDifference >= 3)
 			{
-				damage = ((effected.getCurrentHp() * _power) / 100) / 4;
+				damage = ((effected.getCurrentHp() * _power) / 100) / levelDifference;
 			}
 			else
 			{
