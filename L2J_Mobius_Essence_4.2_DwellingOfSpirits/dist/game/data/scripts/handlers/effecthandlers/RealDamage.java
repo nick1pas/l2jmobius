@@ -79,7 +79,21 @@ public class RealDamage extends AbstractEffect
 				return;
 			}
 			
-			damage = (effected.getCurrentHp() * _power) / 100;
+			// Percent Level check https://eu.4game.com/patchnotes/lineage2/270/ Changed Skills
+			final int levelDifference = Math.abs(effector.getLevel() - effected.getLevel());
+			if (levelDifference >= 6)
+			{
+				return;
+			}
+			
+			if ((levelDifference >= 3) && (levelDifference < 6))
+			{
+				damage = ((effected.getCurrentHp() * _power) / 100) / 4;
+			}
+			else
+			{
+				damage = (effected.getCurrentHp() * _power) / 100;
+			}
 		}
 		
 		// Do damage.
