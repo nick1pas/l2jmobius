@@ -81,6 +81,7 @@ public class Castle extends AbstractResidence
 	private final List<Artefact> _artefacts = new ArrayList<>(1);
 	private final Map<Integer, CastleFunction> _function;
 	private int _ticketBuyCount = 0;
+	private boolean _isFirstMidVictory = false;
 	
 	/** Castle Functions */
 	public static final int FUNC_TELEPORT = 1;
@@ -395,6 +396,16 @@ public class Castle extends AbstractResidence
 			}
 		}
 		return _zone;
+	}
+	
+	public boolean isFirstMidVictory()
+	{
+		return _isFirstMidVictory;
+	}
+	
+	public void setFirstMidVictory(boolean value)
+	{
+		_isFirstMidVictory = value;
 	}
 	
 	@Override

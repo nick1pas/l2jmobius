@@ -340,6 +340,7 @@ public class Siege implements Siegable
 				SiegeGuardManager.getInstance().removeSiegeGuards(getCastle());
 			}
 			_castle.spawnDoor(); // Respawn door to castle
+			_castle.setFirstMidVictory(false);
 			_castle.getZone().setActive(false);
 			_castle.getZone().updateZoneStatusForCharactersInside();
 			_castle.getZone().setSiegeInstance(null);
@@ -454,6 +455,7 @@ public class Siege implements Siegable
 						addDefender(sc, SiegeClanType.DEFENDER);
 					}
 				}
+				_castle.setFirstMidVictory(true);
 				teleportPlayer(SiegeTeleportWhoType.Attacker, TeleportWhereType.SIEGEFLAG); // Teleport to the second closest town
 				teleportPlayer(SiegeTeleportWhoType.Spectator, TeleportWhereType.TOWN); // Teleport to the second closest town
 				removeDefenderFlags(); // Removes defenders' flags

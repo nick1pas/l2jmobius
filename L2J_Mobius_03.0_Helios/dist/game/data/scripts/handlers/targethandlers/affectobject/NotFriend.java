@@ -85,6 +85,13 @@ public class NotFriend implements IAffectObjectHandler
 				return false;
 			}
 			
+			// Siege.
+			if (target.isInsideZone(ZoneId.SIEGE))
+			{
+				// Players in the same siege side at the same castle are considered friends.
+				return !player.isSiegeFriend(targetPlayer);
+			}
+			
 			// Arena.
 			if (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE) && target.isInsideZone(ZoneId.PVP) && !target.isInsideZone(ZoneId.SIEGE))
 			{
@@ -124,13 +131,6 @@ public class NotFriend implements IAffectObjectHandler
 			if ((player.getAllyId() != 0) && (player.getAllyId() == targetPlayer.getAllyId()))
 			{
 				return false;
-			}
-			
-			// Siege.
-			if (target.isInsideZone(ZoneId.SIEGE))
-			{
-				// Players in the same siege side at the same castle are considered friends.
-				return !player.isSiegeFriend(targetPlayer);
 			}
 			
 			// At this point summon should be prevented from attacking friendly targets.

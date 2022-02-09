@@ -84,6 +84,13 @@ public class NotFriendPc implements IAffectObjectHandler
 				return false;
 			}
 			
+			// Siege.
+			if (target.isInsideZone(ZoneId.SIEGE))
+			{
+				// Players in the same siege side at the same castle are considered friends.
+				return !player.isSiegeFriend(targetPlayer);
+			}
+			
 			// Arena.
 			if (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE) && target.isInsideZone(ZoneId.PVP) && !target.isInsideZone(ZoneId.SIEGE))
 			{
@@ -123,13 +130,6 @@ public class NotFriendPc implements IAffectObjectHandler
 			if ((player.getAllyId() != 0) && (player.getAllyId() == targetPlayer.getAllyId()))
 			{
 				return false;
-			}
-			
-			// Siege.
-			if (target.isInsideZone(ZoneId.SIEGE))
-			{
-				// Players in the same siege side at the same castle are considered friends.
-				return !player.isSiegeFriend(targetPlayer);
 			}
 			
 			// By default any flagged/PK player is considered enemy.

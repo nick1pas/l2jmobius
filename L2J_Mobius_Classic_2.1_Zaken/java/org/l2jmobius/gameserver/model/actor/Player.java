@@ -1644,6 +1644,13 @@ public class Player extends Playable
 			return false;
 		}
 		
+		// Check first castle mid victory.
+		final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+		if ((castle != null) && !castle.isFirstMidVictory())
+		{
+			return true;
+		}
+		
 		// If target isn't a player, is self, isn't on same siege or not on same state, not friends.
 		final Player targetPlayer = target.getActingPlayer();
 		if ((targetPlayer == null) || (targetPlayer == this) || (targetPlayer.getSiegeSide() != _siegeSide) || (_siegeState != targetPlayer.getSiegeState()))
@@ -1654,7 +1661,6 @@ public class Player extends Playable
 		// Attackers are considered friends only if castle has no owner.
 		if (_siegeState == 1)
 		{
-			final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
 			if (castle == null)
 			{
 				return false;
@@ -8168,16 +8174,17 @@ public class Player extends Playable
 				final Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
 				if (siege != null)
 				{
-					// Check if a siege is in progress and if attacker and the Player aren't in the Defender clan
+					// Check if a siege is in progress and if attacker and the Player aren't in the Defender clan.
 					if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan))
 					{
 						return false;
 					}
 					
-					// Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan
+					// Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan.
 					if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan))
 					{
-						return false;
+						// If first mid victory is achieved, attackers can attack attackers.
+						return CastleManager.getInstance().getCastleById(_siegeSide).isFirstMidVictory();
 					}
 				}
 				
