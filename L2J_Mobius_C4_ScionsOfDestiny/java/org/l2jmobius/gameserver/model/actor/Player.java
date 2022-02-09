@@ -3742,7 +3742,8 @@ public class Player extends Playable
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item item = _inventory.getItemByItemId(itemId);
-		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null))
+		final int quantity = (count < 0) && (item != null) ? item.getCount() : count;
+		if ((item == null) || (item.getCount() < quantity) || (quantity <= 0) || (_inventory.destroyItemByItemId(process, itemId, quantity, this, reference) == null))
 		{
 			if (sendMessage)
 			{
@@ -3771,11 +3772,11 @@ public class Player extends Playable
 		// Sends message to client if requested
 		if (sendMessage)
 		{
-			if (count > 1)
+			if (quantity > 1)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getItemId());
-				sm.addNumber(count);
+				sm.addNumber(quantity);
 				sendPacket(sm);
 			}
 			else

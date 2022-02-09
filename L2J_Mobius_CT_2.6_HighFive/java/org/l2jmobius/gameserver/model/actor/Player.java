@@ -3494,13 +3494,13 @@ public class Player extends Playable
 		}
 		
 		final Item item = _inventory.getItemByItemId(itemId);
-		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null))
+		final long quantity = (count < 0) && (item != null) ? item.getCount() : count;
+		if ((item == null) || (item.getCount() < quantity) || (quantity <= 0) || (_inventory.destroyItemByItemId(process, itemId, quantity, this, reference) == null))
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -3525,7 +3525,7 @@ public class Player extends Playable
 		if (sendMessage)
 		{
 			final SystemMessage sm;
-			if (count > 1)
+			if (quantity > 1)
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(itemId);
