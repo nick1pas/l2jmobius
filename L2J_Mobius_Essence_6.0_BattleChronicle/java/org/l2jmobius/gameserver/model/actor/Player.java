@@ -73,6 +73,7 @@ import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
+import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
 import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
@@ -251,9 +252,10 @@ import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.item.Armor;
-import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
+import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.ActionType;
 import org.l2jmobius.gameserver.model.item.type.ArmorType;
@@ -437,7 +439,9 @@ public class Player extends Playable
 	private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
 	private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 	private static final String DELETE_CHAR_HENNA = "DELETE FROM character_hennas WHERE charId=? AND slot=? AND class_index=?";
-	private static final String DELETE_CHAR_HENNAS = "DELETE FROM character_hennas WHERE charId=? AND class_index=?";
+	private static final String ADD_CHAR_HENNA_POTENS = "REPLACE INTO character_potens (charId,enchant_level,enchant_exp,poten_id) VALUES (?,?,?,?)";
+	// private static final String RESTORE_CHAR_HENNAS_POTENS = "SELECT poten_id,enchant_level,enchant_exp FROM character_potens WHERE charId=?";
+	// private static final String UPDATE_CHAR_HENNAS_POTENS = "UPDATE character_potens SET enchant_level=?,enchant_exp=?,poten_id=?,class_id=?,dual_class=? WHERE charId=?";
 	
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
@@ -675,9 +679,11 @@ public class Player extends Playable
 	private final Set<Player> _snoopedPlayer = ConcurrentHashMap.newKeySet();
 	
 	/** Hennas */
-	private final Henna[] _henna = new Henna[3];
+	private final HennaPoten[] _hennaPoten = new HennaPoten[4];
 	private final Map<BaseStat, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
 	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(3);
+	
+	/** Hennas Potential */
 	
 	/** The Pet of the Player */
 	private Pet _pet = null;
@@ -2470,7 +2476,7 @@ public class Player extends Playable
 			for (int slot = 1; slot < 4; slot++)
 			{
 				final Henna henna = getHenna(slot);
-				if ((henna != null) && !henna.isAllowedClass(getClassId()))
+				if ((henna != null) && !henna.isAllowedClass(getActingPlayer()))
 				{
 					removeHenna(slot);
 				}
@@ -7208,6 +7214,8 @@ public class Player extends Playable
 		storeCharSub();
 		storeEffect(storeActiveEffects);
 		storeItemReuseDelay();
+		storeDyePoten();
+		
 		if (Config.STORE_RECIPE_SHOPLIST)
 		{
 			storeRecipeShopList();
@@ -7911,9 +7919,9 @@ public class Player extends Playable
 	 */
 	private void restoreHenna()
 	{
-		for (int i = 1; i < 4; i++)
+		for (int i = 1; i < 5; i++)
 		{
-			_henna[i - 1] = null;
+			_hennaPoten[i - 1] = new HennaPoten();
 		}
 		
 		// Cancel and remove existing running tasks.
@@ -7940,7 +7948,7 @@ public class Player extends Playable
 				while (rset.next())
 				{
 					slot = rset.getInt("slot");
-					if ((slot < 1) || (slot > 3))
+					if ((slot < 1) || (slot > getAvailableHennaSlots()))
 					{
 						continue;
 					}
@@ -7951,7 +7959,8 @@ public class Player extends Playable
 						continue;
 					}
 					
-					final Henna henna = HennaData.getInstance().getHenna(symbolId);
+					// retail mobius final Henna henna = HennaData.getInstance().getHenna(symbolId);
+					final Henna henna = HennaData.getInstance().getHennaByDyeId(symbolId);
 					
 					// Task for henna duration
 					if (henna.getDuration() > 0)
@@ -7967,7 +7976,7 @@ public class Player extends Playable
 						_hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
 					}
 					
-					_henna[slot - 1] = henna;
+					_hennaPoten[slot - 1].setHenna(henna);
 					
 					// Reward henna skills
 					for (Skill skill : henna.getSkills())
@@ -7998,12 +8007,12 @@ public class Player extends Playable
 		}
 		else if (getClassId().level() > 1)
 		{
-			totalSlots = 3;
+			totalSlots = getAvailableHennaSlots();
 		}
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < _hennaPoten.length; i++)
 		{
-			if (_henna[i] != null)
+			if (_hennaPoten[i].getHenna() != null)
 			{
 				totalSlots--;
 			}
@@ -8024,18 +8033,18 @@ public class Player extends Playable
 	 */
 	public boolean removeHenna(int slot)
 	{
-		if ((slot < 1) || (slot > 3))
+		if ((slot < 1) || (slot > _hennaPoten.length))
 		{
 			return false;
 		}
 		
-		final Henna henna = _henna[slot - 1];
+		final Henna henna = _hennaPoten[slot - 1].getHenna();
 		if (henna == null)
 		{
 			return false;
 		}
 		
-		_henna[slot - 1] = null;
+		_hennaPoten[slot - 1].setHenna(null);
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA))
@@ -8052,9 +8061,6 @@ public class Player extends Playable
 		
 		// Calculate Henna modifiers of this Player
 		recalcHennaStats();
-		
-		// Send Server->Client HennaInfo packet to this Player
-		sendPacket(new HennaInfo(this));
 		
 		// Send Server->Client UserInfo packet to this Player
 		broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.STAT_POINTS, UserInfoType.STAT_ABILITIES, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
@@ -8102,16 +8108,20 @@ public class Player extends Playable
 	
 	/**
 	 * Add a Henna to the Player, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this Player.
+	 * @param slotId
 	 * @param henna the henna to add to the player.
 	 * @return {@code true} if the henna is added to the player, {@code false} otherwise.
 	 */
-	public boolean addHenna(Henna henna)
+	public boolean addHenna(int slotId, Henna henna)
 	{
-		for (int i = 1; i < 4; i++)
+		if (slotId > getAvailableHennaSlots())
 		{
-			if (_henna[i - 1] == null)
+			return false;
+		}
+		{
+			if (_hennaPoten[slotId - 1].getHenna() == null)
 			{
-				_henna[i - 1] = henna;
+				_hennaPoten[slotId - 1].setHenna(henna);
 				
 				// Calculate Henna modifiers of this Player
 				recalcHennaStats();
@@ -8121,7 +8131,7 @@ public class Player extends Playable
 				{
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, henna.getDyeId());
-					statement.setInt(3, i);
+					statement.setInt(3, slotId);
 					statement.setInt(4, _classIndex);
 					statement.execute();
 				}
@@ -8133,18 +8143,19 @@ public class Player extends Playable
 				// Task for henna duration
 				if (henna.getDuration() > 0)
 				{
-					getVariables().set("HennaDuration" + i, Chronos.currentTimeMillis() + (henna.getDuration() * 60000));
-					_hennaRemoveSchedules.put(i, ThreadPool.schedule(new HennaDurationTask(this, i), Chronos.currentTimeMillis() + (henna.getDuration() * 60000)));
+					getVariables().set("HennaDuration" + slotId, Chronos.currentTimeMillis() + (henna.getDuration() * 60000));
+					_hennaRemoveSchedules.put(slotId, ThreadPool.schedule(new HennaDurationTask(this, slotId), Chronos.currentTimeMillis() + (henna.getDuration() * 60000)));
 				}
 				
 				// Reward henna skills
 				for (Skill skill : henna.getSkills())
 				{
-					addSkill(skill, false);
+					if (skill.getLevel() > getSkillLevel(skill.getId()))
+					
+					{
+						addSkill(skill, false);
+					}
 				}
-				
-				// Send Server->Client HennaInfo packet to this Player
-				sendPacket(new HennaInfo(this));
 				
 				// Send Server->Client UserInfo packet to this Player
 				broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.STAT_ABILITIES, UserInfoType.STAT_POINTS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
@@ -8154,6 +8165,7 @@ public class Player extends Playable
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -8163,8 +8175,9 @@ public class Player extends Playable
 	private void recalcHennaStats()
 	{
 		_hennaBaseStats.clear();
-		for (Henna henna : _henna)
+		for (HennaPoten hennaPoten : _hennaPoten)
 		{
+			final Henna henna = hennaPoten.getHenna();
 			if (henna == null)
 			{
 				continue;
@@ -8177,17 +8190,71 @@ public class Player extends Playable
 		}
 	}
 	
+	private void storeDyePoten()
+	{
+		if (_hennaPoten[0] == null)
+		{
+			return;
+		}
+		
+		final HennaPoten hennaPoten = new HennaPoten();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA_POTENS))
+		{
+			statement.setInt(1, getObjectId());
+			statement.setInt(2, hennaPoten.getEnchantLevel());
+			statement.setInt(3, hennaPoten.getEnchantExp());
+			statement.setInt(4, hennaPoten.getPotenId());
+			statement.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Failed saving character henna Potential.", e);
+		}
+	}
+	
+	public void applyDyePotenSkills()
+	{
+		for (int i = 1; i <= _hennaPoten.length; i++)
+		{
+			final HennaPoten hennaPoten = _hennaPoten[i - 1];
+			for (int skillId : HennaPatternPotentialData.getInstance().getSkillIdsBySlotId(i))
+			{
+				removeSkill(skillId);
+			}
+			if ((hennaPoten.getPotenId() > 0) && hennaPoten.isPotentialAvailable() && (hennaPoten.getActiveStep() > 0))
+			{
+				final Skill hennaSkill = HennaPatternPotentialData.getInstance().getPotentialSkill(hennaPoten.getPotenId(), i, hennaPoten.getActiveStep());
+				if (hennaSkill.getLevel() > getSkillLevel(hennaSkill.getId()))
+				{
+					addSkill(hennaSkill, false);
+				}
+			}
+		}
+	}
+	
+	public HennaPoten getHennaPoten(int slot)
+	{
+		if ((slot < 1) || (slot > _hennaPoten.length))
+		{
+			return null;
+		}
+		
+		return _hennaPoten[slot - 1];
+	}
+	
 	/**
 	 * @param slot the character inventory henna slot.
 	 * @return the Henna of this Player corresponding to the selected slot.
 	 */
 	public Henna getHenna(int slot)
 	{
-		if ((slot < 1) || (slot > 3))
+		if ((slot < 1) || (slot > getAvailableHennaSlots()))
 		{
 			return null;
 		}
-		return _henna[slot - 1];
+		
+		return _hennaPoten[slot - 1].getHenna();
 	}
 	
 	/**
@@ -8195,8 +8262,9 @@ public class Player extends Playable
 	 */
 	public boolean hasHennas()
 	{
-		for (Henna henna : _henna)
+		for (HennaPoten hennaPoten : _hennaPoten)
 		{
+			final Henna henna = hennaPoten.getHenna();
 			if (henna != null)
 			{
 				return true;
@@ -8208,9 +8276,9 @@ public class Player extends Playable
 	/**
 	 * @return the henna holder for this player.
 	 */
-	public Henna[] getHennaList()
+	public HennaPoten[] getHennaPotenList()
 	{
-		return _henna;
+		return _hennaPoten;
 	}
 	
 	/**
@@ -8220,6 +8288,51 @@ public class Player extends Playable
 	public int getHennaValue(BaseStat stat)
 	{
 		return _hennaBaseStats.getOrDefault(stat, 0);
+	}
+	
+	public int getAvailableHennaSlots()
+	{
+		return (int) getStat().getValue(Stat.HENNA_SLOTS_AVAILABLE, 3);
+	}
+	
+	public void setDyePotentialDailyStep(int dailyStep)
+	{
+		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_STEP, dailyStep);
+	}
+	
+	public void setDyePotentialDailyCount(int dailyCount)
+	{
+		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_COUNT, dailyCount);
+	}
+	
+	public int getDyePotentialDailyStep()
+	{
+		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_STEP, 1);
+	}
+	
+	public int getDyePotentialDailyCount()
+	{
+		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_COUNT, 5);
+	}
+	
+	public void setDyePotentialDailyExp(int dailyExp)
+	{
+		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_EXP, dailyExp);
+	}
+	
+	public int getDyePotentialDailyExp()
+	{
+		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_EXP, 0);
+	}
+	
+	public void setDyePotentialenchantStep(int enchantlvl)
+	{
+		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_LVL, enchantlvl);
+	}
+	
+	public int getDyePotentialenchantStep()
+	{
+		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_LVL, 0);
 	}
 	
 	/**
@@ -9788,7 +9901,7 @@ public class Player extends Playable
 		getSubClasses().remove(classIndex);
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
+			PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNA);
 			PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
 			PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
 			PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
@@ -10062,7 +10175,7 @@ public class Player extends Playable
 			sendPacket(new EtcStatusUpdate(this));
 			for (int i = 0; i < 3; i++)
 			{
-				_henna[i] = null;
+				_hennaPoten[i] = null;
 			}
 			
 			restoreHenna();

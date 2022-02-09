@@ -14,43 +14,36 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets;
+package org.l2jmobius.gameserver.network.serverpackets.newhenna;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Zoey76
+ * @author Index, Serenitty
  */
-public class HennaRemoveList implements IClientOutgoingPacket
+public class NewHennaEquip implements IClientOutgoingPacket
 {
-	@SuppressWarnings("unused")
-	private final Player _player;
+	private final int _slotId;
+	private final int _hennaId;
+	private final boolean _success;
 	
-	public HennaRemoveList(Player player)
+	public NewHennaEquip(int slotId, int hennaId, boolean success)
 	{
-		_player = player;
+		_slotId = slotId;
+		_hennaId = hennaId;
+		_success = success;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.HENNA_UNEQUIP_LIST.writeId(packet);
-		// packet.writeQ(_player.getAdena());
-		// packet.writeD(3); // seems to be max size
-		// packet.writeD(3 - _player.getHennaEmptySlots());
-		// for (Henna henna : _player.getHennaList())
-		// {
-		// if (henna != null)
-		// {
-		// packet.writeD(henna.getDyeId());
-		// packet.writeD(henna.getDyeItemId());
-		// packet.writeQ(henna.getCancelCount());
-		// packet.writeQ(henna.getCancelFee());
-		// packet.writeD(0);
-		// }
-		// }
+		OutgoingPackets.EX_NEW_HENNA_EQUIP.writeId(packet);
+		packet.writeC(_slotId);
+		packet.writeD(_hennaId);
+		packet.writeD(_success ? 1 : 0);
 		return true;
+		
 	}
 }

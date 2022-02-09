@@ -14,40 +14,47 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.events.impl.creature.player;
+package org.l2jmobius.gameserver.model.item.henna;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
+import java.util.Map;
+
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
- * @author UnAfraid
+ * @author Serenitty
  */
-public class OnPlayerHennaAdd implements IBaseEvent
+public class DyePotentialFee
 {
-	private final Player _player;
-	private final Henna _henna;
+	private final int _step;
+	private final ItemHolder _item;
+	private final int _dailyCount;
+	private final Map<Integer, Double> _enchantExp;
 	
-	public OnPlayerHennaAdd(Player player, Henna henna)
+	public DyePotentialFee(int step, ItemHolder item, int dailyCount, Map<Integer, Double> enchantExp)
 	{
-		_player = player;
-		_henna = henna;
+		_step = step;
+		_item = item;
+		_dailyCount = dailyCount;
+		_enchantExp = enchantExp;
 	}
 	
-	public Player getPlayer()
+	public int getStep()
 	{
-		return _player;
+		return _step;
 	}
 	
-	public Henna getHenna()
+	public ItemHolder getItem()
 	{
-		return _henna;
+		return _item;
 	}
 	
-	@Override
-	public EventType getType()
+	public int getDailyCount()
 	{
-		return EventType.ON_PLAYER_HENNA_ADD;
+		return _dailyCount;
+	}
+	
+	public Map<Integer, Double> getEnchantExp()
+	{
+		return _enchantExp;
 	}
 }

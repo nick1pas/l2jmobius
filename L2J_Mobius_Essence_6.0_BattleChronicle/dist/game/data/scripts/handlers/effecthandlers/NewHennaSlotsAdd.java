@@ -14,40 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.events.impl.creature.player;
+package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
+import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * @author UnAfraid
+ * @author Serenitty
  */
-public class OnPlayerHennaAdd implements IBaseEvent
+public class NewHennaSlotsAdd extends AbstractStatPercentEffect
 {
-	private final Player _player;
-	private final Henna _henna;
-	
-	public OnPlayerHennaAdd(Player player, Henna henna)
+	public NewHennaSlotsAdd(StatSet params)
 	{
-		_player = player;
-		_henna = henna;
-	}
-	
-	public Player getPlayer()
-	{
-		return _player;
-	}
-	
-	public Henna getHenna()
-	{
-		return _henna;
-	}
-	
-	@Override
-	public EventType getType()
-	{
-		return EventType.ON_PLAYER_HENNA_ADD;
+		super(params, Stat.HENNA_SLOTS_AVAILABLE);
 	}
 }

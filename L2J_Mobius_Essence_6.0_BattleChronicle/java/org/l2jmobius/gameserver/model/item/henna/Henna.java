@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.item;
+package org.l2jmobius.gameserver.model.item.henna;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 
@@ -34,6 +34,7 @@ public class Henna
 {
 	private final int _dyeId;
 	private final int _dyeItemId;
+	private final int _patternLevel;
 	private final Map<BaseStat, Integer> _baseStats = new HashMap<>();
 	private final int _wearFee;
 	private final int _wearCount;
@@ -41,12 +42,13 @@ public class Henna
 	private final int _cancelCount;
 	private final int _duration;
 	private final List<Skill> _skills;
-	private final List<ClassId> _wearClass;
+	private final List<Integer> _wearClass;
 	
 	public Henna(StatSet set)
 	{
 		_dyeId = set.getInt("dyeId");
 		_dyeItemId = set.getInt("dyeItemId");
+		_patternLevel = set.getInt("patternLevel", -1);
 		_baseStats.put(BaseStat.STR, set.getInt("str", 0));
 		_baseStats.put(BaseStat.CON, set.getInt("con", 0));
 		_baseStats.put(BaseStat.DEX, set.getInt("dex", 0));
@@ -147,25 +149,30 @@ public class Henna
 	/**
 	 * @return the list with the allowed classes to wear this dye.
 	 */
-	public List<ClassId> getAllowedWearClass()
+	public List<Integer> getAllowedWearClass()
 	{
 		return _wearClass;
 	}
 	
 	/**
-	 * @param classId the class trying to wear this dye.
+	 * @param c the class trying to wear this dye.
 	 * @return {@code true} if the player is allowed to wear this dye, {@code false} otherwise.
 	 */
-	public boolean isAllowedClass(ClassId classId)
+	public boolean isAllowedClass(Player c)
 	{
-		return _wearClass.contains(classId);
+		return _wearClass.contains(c.getClassId().level());
 	}
 	
 	/**
 	 * @param wearClassIds the list of classes that can wear this dye.
 	 */
-	public void setWearClassIds(List<ClassId> wearClassIds)
+	public void setWearClassIds(List<Integer> wearClassIds)
 	{
 		_wearClass.addAll(wearClassIds);
+	}
+	
+	public int getPatternLevel()
+	{
+		return _patternLevel;
 	}
 }

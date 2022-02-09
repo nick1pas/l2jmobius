@@ -14,40 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.events.impl.creature.player;
+package org.l2jmobius.gameserver.network.serverpackets.newhenna;
 
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author UnAfraid
+ * @author Index, Serenitty
  */
-public class OnPlayerHennaAdd implements IBaseEvent
+public class NewHennaUnequip implements IClientOutgoingPacket
 {
-	private final Player _player;
-	private final Henna _henna;
+	private final int _slotId;
+	private final int _success;
 	
-	public OnPlayerHennaAdd(Player player, Henna henna)
+	public NewHennaUnequip(int slotId, int success)
 	{
-		_player = player;
-		_henna = henna;
-	}
-	
-	public Player getPlayer()
-	{
-		return _player;
-	}
-	
-	public Henna getHenna()
-	{
-		return _henna;
+		_slotId = slotId;
+		_success = success;
 	}
 	
 	@Override
-	public EventType getType()
+	public boolean write(PacketWriter packet)
 	{
-		return EventType.ON_PLAYER_HENNA_ADD;
+		OutgoingPackets.EX_NEW_HENNA_UNEQUIP.writeId(packet);
+		packet.writeC(_slotId);
+		packet.writeC(_success);
+		return true;
 	}
 }

@@ -136,7 +136,7 @@ Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
 -Frost Lord castle
 
 Battle Chronicle: https://eu.4game.com/patchnotes/lineage2essence/353/
--Client support
+-New henna pattern potential system
 
 Customs:
 -Newbie Helper NPC location info

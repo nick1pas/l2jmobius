@@ -43,10 +43,7 @@
 							</xs:element>
 							<xs:element name="classId" minOccurs="0" maxOccurs="unbounded">
 								<xs:simpleType>
-									<xs:restriction base="xs:nonNegativeInteger">
-										<xs:minInclusive value="0" />
-										<xs:maxInclusive value="211" />
-									</xs:restriction>
+									<xs:restriction base="xs:string"/>
 								</xs:simpleType>
 							</xs:element>
 						</xs:sequence>
@@ -54,6 +51,7 @@
 						<xs:attribute name="dyeName" type="xs:token" />
 						<xs:attribute name="dyeItemId" type="xs:positiveInteger" />
 						<xs:attribute name="dyeLevel" type="xs:positiveInteger" />
+						<xs:attribute name="patternLevel" type="xs:nonNegativeInteger" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

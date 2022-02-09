@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,7 +35,7 @@ public class HennaEquipList implements IClientOutgoingPacket
 	public HennaEquipList(Player player)
 	{
 		_player = player;
-		_hennaEquipList = HennaData.getInstance().getHennaList(player.getClassId());
+		_hennaEquipList = HennaData.getInstance().getHennaList(player);
 	}
 	
 	public HennaEquipList(Player player, List<Henna> list)
@@ -61,7 +61,7 @@ public class HennaEquipList implements IClientOutgoingPacket
 				packet.writeD(henna.getDyeItemId()); // item Id of the dye
 				packet.writeQ(henna.getWearCount()); // amount of dyes required
 				packet.writeQ(henna.getWearFee()); // amount of Adena required
-				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // meet the requirement or not
+				packet.writeD(henna.isAllowedClass(_player) ? 1 : 0); // meet the requirement or not
 				// packet.writeD(0); // Does not exist in Classic.
 			}
 		}

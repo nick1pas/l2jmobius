@@ -273,6 +273,9 @@ public enum Stat
 	// Magic Lamp
 	MAGIC_LAMP_EXP_RATE("magicLampExpRate"),
 	
+	// Henna
+	HENNA_SLOTS_AVAILABLE("hennaSlots"),
+	
 	// Souls
 	MAX_SOULS("maxSouls"),
 	

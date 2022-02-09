@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -44,7 +44,7 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
 		packet.writeQ(_henna.getCancelCount()); // total amount of dye require
 		packet.writeQ(_henna.getCancelFee()); // total amount of Adena require to remove symbol
-		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to remove or not
+		packet.writeD(_henna.isAllowedClass(_player) ? 1 : 0); // able to remove or not
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeH(_player.getINT() - _player.getHennaValue(BaseStat.INT)); // equip INT

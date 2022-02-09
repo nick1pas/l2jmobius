@@ -28,9 +28,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
@@ -44,7 +44,8 @@ public class HennaData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(HennaData.class.getName());
 	
-	private final Map<Integer, Henna> _hennaList = new HashMap<>();
+	private final Map<Integer, Henna> _hennaDyeIdList = new HashMap<>();
+	private final Map<Integer, Henna> _hennaItemIdList = new HashMap<>();
 	
 	/**
 	 * Instantiates a new henna data.
@@ -57,9 +58,10 @@ public class HennaData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_hennaList.clear();
+		_hennaItemIdList.clear();
+		_hennaDyeIdList.clear();
 		parseDatapackFile("data/stats/hennaList.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _hennaList.size() + " henna data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _hennaDyeIdList.size() + " henna data.");
 	}
 	
 	@Override
@@ -82,12 +84,12 @@ public class HennaData implements IXmlReader
 	
 	/**
 	 * Parses the henna.
-	 * @param d the d
+	 * @param d the node
 	 */
 	private void parseHenna(Node d)
 	{
 		final StatSet set = new StatSet();
-		final List<ClassId> wearClassIds = new ArrayList<>();
+		final List<Integer> wearClassIds = new ArrayList<>();
 		final List<Skill> skills = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;
@@ -141,15 +143,20 @@ public class HennaData implements IXmlReader
 				}
 				case "classId":
 				{
-					wearClassIds.add(ClassId.getClassId(Integer.parseInt(c.getTextContent())));
+					for (String s : c.getTextContent().split(","))
+					{
+						wearClassIds.add(Integer.parseInt(s));
+					}
 					break;
 				}
 			}
 		}
+		
 		final Henna henna = new Henna(set);
 		henna.setSkills(skills);
 		henna.setWearClassIds(wearClassIds);
-		_hennaList.put(henna.getDyeId(), henna);
+		_hennaDyeIdList.put(henna.getDyeId(), henna);
+		_hennaItemIdList.put(henna.getDyeItemId(), henna);
 	}
 	
 	/**
@@ -159,20 +166,30 @@ public class HennaData implements IXmlReader
 	 */
 	public Henna getHenna(int id)
 	{
-		return _hennaList.get(id);
+		return _hennaDyeIdList.get(id);
+	}
+	
+	public Henna getHennaByDyeId(int id)
+	{
+		return _hennaDyeIdList.get(id);
+	}
+	
+	public Henna getHennaByItemId(int id)
+	{
+		return _hennaItemIdList.get(id);
 	}
 	
 	/**
 	 * Gets the henna list.
-	 * @param classId the player's class Id.
+	 * @param player the player's class Id.
 	 * @return the list with all the allowed dyes.
 	 */
-	public List<Henna> getHennaList(ClassId classId)
+	public List<Henna> getHennaList(Player player)
 	{
 		final List<Henna> list = new ArrayList<>();
-		for (Henna henna : _hennaList.values())
+		for (Henna henna : _hennaDyeIdList.values())
 		{
-			if (henna.isAllowedClass(classId))
+			if (henna.isAllowedClass(player))
 			{
 				list.add(henna);
 			}

@@ -78,6 +78,14 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_WIT = "STAT_WIT";
 	public static final String STAT_MEN = "STAT_MEN";
 	public static final String CLAN_JOIN_TIME = "CLAN_JOIN_TIME";
+	public static final String HENNA1_DURATION = "HENNA1_DURATION";
+	public static final String HENNA2_DURATION = "HENNA2_DURATION";
+	public static final String HENNA3_DURATION = "HENNA3_DURATION";
+	public static final String HENNA4_DURATION = "HENNA4_DURATION";
+	public static final String DYE_POTENTIAL_DAILY_STEP = "DYE_POTENTIAL_DAILY_STEP";
+	public static final String DYE_POTENTIAL_DAILY_COUNT = "DYE_POTENTIAL_DAILY_COUNT";
+	public static final String DYE_POTENTIAL_DAILY_EXP = "DYE_POTENTIAL_DAILY_EXP";
+	public static final String DYE_POTENTIAL_DAILY_LVL = "DYE_POTENTIAL_DAILY_LVL";
 	
 	private final int _objectId;
 	

@@ -99,6 +99,12 @@ import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorList;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaCompose;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaEquip;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaList;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaPotenEnchant;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaPotenSelect;
+import org.l2jmobius.gameserver.network.clientpackets.newhenna.RequestNewHennaUnequip;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExEvolvePet;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetEquipItem;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetUnequipItem;
@@ -707,12 +713,12 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_WORLDCASTLEWAR_HOST_CASTLE_SIEGE_RANKING_INFO(0x215, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_CASTLE_SIEGE_RANKING_INFO(0x216, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_SIEGE_MAINBATTLE_HUD_INFO(0x217, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_LIST(0x218, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_EQUIP(0x219, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_UNEQUIP(0x21A, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_POTEN_SELECT(0x21B, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_POTEN_ENCHANT(0x21C, null, ConnectionState.IN_GAME),
-	EX_NEW_HENNA_COMPOSE(0x21D, null, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_LIST(0x218, RequestNewHennaList::new, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_EQUIP(0x219, RequestNewHennaEquip::new, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_UNEQUIP(0x21A, RequestNewHennaUnequip::new, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_POTEN_SELECT(0x21B, RequestNewHennaPotenSelect::new, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_POTEN_ENCHANT(0x21C, RequestNewHennaPotenEnchant::new, ConnectionState.IN_GAME),
+	EX_NEW_HENNA_COMPOSE(0x21D, RequestNewHennaCompose::new, ConnectionState.IN_GAME),
 	EX_REQUEST_INVITE_PARTY(0x21E, null, ConnectionState.IN_GAME),
 	EX_ITEM_USABLE_LIST(0x21F, null, ConnectionState.IN_GAME),
 	EX_PACKETREADCOUNTPERSECOND(0x220, null, ConnectionState.IN_GAME),

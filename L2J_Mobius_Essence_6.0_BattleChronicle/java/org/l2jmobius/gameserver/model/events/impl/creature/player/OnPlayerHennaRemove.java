@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.events.impl.creature.player;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
 
 /**
  * @author UnAfraid

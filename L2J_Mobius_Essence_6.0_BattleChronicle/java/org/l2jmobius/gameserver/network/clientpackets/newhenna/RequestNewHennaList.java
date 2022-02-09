@@ -14,28 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
+package org.l2jmobius.gameserver.network.clientpackets.newhenna;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.henna.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.PacketLogger;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.HennaItemDrawInfo;
+import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaList;
 
 /**
- * @author Zoey76
+ * @author Index, Serenitty
  */
-public class RequestHennaItemInfo implements IClientIncomingPacket
+public class RequestNewHennaList implements IClientIncomingPacket
 {
-	private int _symbolId;
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_symbolId = packet.readD();
 		return true;
 	}
 	
@@ -48,17 +42,6 @@ public class RequestHennaItemInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final Henna henna = HennaData.getInstance().getHennaByDyeId(_symbolId);
-		if (henna == null)
-		{
-			if (_symbolId != 0)
-			{
-				PacketLogger.warning(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from " + player);
-			}
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		player.sendPacket(new HennaItemDrawInfo(henna, player));
+		player.sendPacket(new NewHennaList(player));
 	}
 }

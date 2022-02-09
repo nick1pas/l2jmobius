@@ -21,7 +21,8 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
+import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -37,8 +38,9 @@ public class HennaInfo implements IClientOutgoingPacket
 	public HennaInfo(Player player)
 	{
 		_player = player;
-		for (Henna henna : _player.getHennaList())
+		for (HennaPoten hennaPoten : _player.getHennaPotenList())
 		{
+			final Henna henna = hennaPoten.getHenna();
 			if (henna != null)
 			{
 				_hennas.add(henna);
@@ -63,7 +65,7 @@ public class HennaInfo implements IClientOutgoingPacket
 		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
-			packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 1 : 0);
+			packet.writeD(henna.isAllowedClass(_player) ? 1 : 0);
 		}
 		packet.writeD(0); // Premium Slot Dye ID
 		packet.writeD(0); // Premium Slot Dye Time Left

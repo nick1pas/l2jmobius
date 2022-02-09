@@ -14,27 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
+package org.l2jmobius.gameserver.network.clientpackets.newhenna;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.Henna;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaUnequip;
 
 /**
- * @author Zoey76
+ * @author Index, Serenitty
  */
-public class RequestHennaRemove implements IClientIncomingPacket
+public class RequestNewHennaUnequip implements IClientIncomingPacket
 {
-	private int _symbolId;
+	private int _slotId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_symbolId = packet.readD();
+		_slotId = packet.readC();
 		return true;
 	}
 	
@@ -50,34 +52,31 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		if (!client.getFloodProtectors().canPerformTransaction())
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(new NewHennaUnequip(_slotId, 0));
 			return;
 		}
 		
 		Henna henna;
-		boolean found = false;
-		for (int i = 1; i <= 3; i++)
+		if ((_slotId == 1) || (_slotId == 2) || (_slotId == 3) || (_slotId == 4))
 		{
-			henna = player.getHenna(i);
-			if ((henna != null) && (henna.getDyeId() == _symbolId))
+			henna = player.getHenna(_slotId);
+			if (player.getAdena() >= henna.getCancelFee())
 			{
-				if (player.getAdena() >= henna.getCancelFee())
-				{
-					player.removeHenna(i);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-				}
-				found = true;
-				break;
+				player.removeHenna(_slotId);
+				player.sendPacket(new NewHennaUnequip(_slotId, 1));
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(new NewHennaUnequip(_slotId, 0));
 			}
 		}
-		// TODO: Test.
-		if (!found)
+		else
 		{
 			PacketLogger.warning(getClass().getSimpleName() + ": " + player + " requested Henna Draw remove without any henna.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(new NewHennaUnequip(_slotId, 0));
 		}
 	}
 }

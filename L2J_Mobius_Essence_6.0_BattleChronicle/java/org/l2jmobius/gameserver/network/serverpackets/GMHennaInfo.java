@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.item.Henna;
+import org.l2jmobius.gameserver.model.item.henna.HennaPoten;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,12 +32,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class GMHennaInfo implements IClientOutgoingPacket
 {
 	private final Player _player;
-	private final List<Henna> _hennas = new ArrayList<>();
+	private final List<HennaPoten> _hennas = new ArrayList<>();
 	
 	public GMHennaInfo(Player player)
 	{
 		_player = player;
-		for (Henna henna : _player.getHennaList())
+		for (HennaPoten henna : _player.getHennaPotenList())
 		{
 			if (henna != null)
 			{
@@ -60,9 +60,9 @@ public class GMHennaInfo implements IClientOutgoingPacket
 		packet.writeH(0); // equip CHA
 		packet.writeD(3); // Slots
 		packet.writeD(_hennas.size()); // Size
-		for (Henna henna : _hennas)
+		for (HennaPoten henna : _hennas)
 		{
-			packet.writeD(henna.getDyeId());
+			packet.writeD(henna.getPotenId());
 			packet.writeD(1);
 		}
 		packet.writeD(0);
