@@ -36,6 +36,7 @@ public class PAttackFinalizer implements IStatFunction
 		throwIfPresent(base);
 		
 		double baseValue = calcWeaponBaseValue(creature, stat);
+		baseValue += creature.getStat().getWeaponBonusPAtk();
 		baseValue += calcEnchantedItemBonus(creature, stat);
 		if (creature.isPlayer())
 		{

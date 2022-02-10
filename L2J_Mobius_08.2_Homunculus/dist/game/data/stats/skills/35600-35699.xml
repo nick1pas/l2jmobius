@@ -2045,11 +2045,26 @@
 			<value level="5">icon.agathion_fire_dragon_star_2</value>
 		</icon>
 		<operateType>P</operateType>
-		<!--
 		<effects>
-			Need to find out how to add the "Weapon" P./M. Attack
+			<effect name="WeaponBonusPAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+					<value level="4">70</value>
+					<value level="5">100</value>
+				</amount>
+			</effect>
+			<effect name="WeaponBonusMAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+					<value level="4">70</value>
+					<value level="5">100</value>
+				</amount>
+			</effect>
 		</effects>
-		-->
 	</skill>
 	<skill id="35634" toLevel="1" name="Summon Agathion Fire Dragon">
 		<!-- Summons Agathion Fire Dragon. -->
@@ -2347,7 +2362,21 @@
 	<skill id="35643" toLevel="1" name="Blessed Exalted Ring - Critical Damage">
 		<!-- Infection Atk. Rate and Resistance +20%, P. Critical Damage and P./ M. Skill Critical Damage +15%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35644" toLevel="1" name="Blessed Exalted Seed Bracelet">
 		<!-- Unlocks the agathion's main slot. STR/ DEX/ CON/ INT/ WIT/ MEN +$s1, Attribute Attack +$s2, Attribute Resistance +$s3. Additionally, P./ M. Atk. and P./ M. Def. +$s4. -->

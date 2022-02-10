@@ -574,6 +574,14 @@
 	<skill id="30930" toLevel="5" name="Eraton's Spear">
 		<!-- For 30 min., Eraton's energy makes Weapon P./ M. Atk. +50. Consumes Spirit Ore (250 pcs.) -->
 		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<magicLevel>
+			<value level="1">115</value>
+			<value level="2">116</value>
+			<value level="3">117</value>
+			<value level="4">118</value>
+			<value level="5">119</value>
+		</magicLevel>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -591,28 +599,27 @@
 		<coolTime>3000</coolTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<itemConsumeCount>250</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
-			<effect name="PAtk">
+			<effect name="WeaponBonusPAtk">
 				<amount>
-					<value level="1">1.73</value>
-					<value level="2">2.42</value>
-					<value level="3">3.12</value>
-					<value level="4">4.16</value>
-					<value level="5">5.2</value>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">90</value>
+					<value level="4">120</value>
+					<value level="5">150</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
+			<effect name="WeaponBonusMAtk">
 				<amount>
-					<value level="1">1.73</value>
-					<value level="2">2.42</value>
-					<value level="3">3.12</value>
-					<value level="4">4.16</value>
-					<value level="5">5.2</value>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">90</value>
+					<value level="4">120</value>
+					<value level="5">150</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

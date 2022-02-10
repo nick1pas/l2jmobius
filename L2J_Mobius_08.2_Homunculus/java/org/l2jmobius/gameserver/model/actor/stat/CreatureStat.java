@@ -273,6 +273,11 @@ public class CreatureStat
 		return (int) getValue(Stat.MAGIC_ATTACK);
 	}
 	
+	public int getWeaponBonusMAtk()
+	{
+		return (int) getValue(Stat.WEAPON_BONUS_MAGIC_ATTACK);
+	}
+	
 	/**
 	 * @return the MAtk Speed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
 	 */
@@ -380,6 +385,11 @@ public class CreatureStat
 	public int getPAtk()
 	{
 		return (int) getValue(Stat.PHYSICAL_ATTACK);
+	}
+	
+	public int getWeaponBonusPAtk()
+	{
+		return (int) getValue(Stat.WEAPON_BONUS_PHYSICAL_ATTACK);
 	}
 	
 	/**

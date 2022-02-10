@@ -79,6 +79,8 @@ public enum Stat
 	MAGICAL_DEFENCE("mDef", new MDefenseFinalizer()),
 	PHYSICAL_ATTACK("pAtk", new PAttackFinalizer()),
 	MAGIC_ATTACK("mAtk", new MAttackFinalizer()),
+	WEAPON_BONUS_PHYSICAL_ATTACK("weaponBonusPAtk"),
+	WEAPON_BONUS_MAGIC_ATTACK("weaponBonusMAtk"),
 	MAGIC_ATTACK_BY_PHYSICAL_ATTACK("mAtkByPAtk", Stat::defaultValue, MathUtil::add, MathUtil::mul, 0, 0),
 	PHYSICAL_ATTACK_SPEED("pAtkSpd", new PAttackSpeedFinalizer()),
 	MAGIC_ATTACK_SPEED("mAtkSpd", new MAttackSpeedFinalizer()), // Magic Skill Casting Time Rate

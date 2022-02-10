@@ -36,6 +36,7 @@ public class MAttackFinalizer implements IStatFunction
 		throwIfPresent(base);
 		
 		double baseValue = calcWeaponBaseValue(creature, stat);
+		baseValue += creature.getStat().getWeaponBonusMAtk();
 		baseValue += calcEnchantedItemBonus(creature, stat);
 		if (creature.isPlayer())
 		{
