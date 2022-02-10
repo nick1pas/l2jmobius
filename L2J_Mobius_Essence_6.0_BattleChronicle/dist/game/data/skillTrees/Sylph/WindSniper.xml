@@ -16,10 +16,10 @@
 		<skill skillName="Elemental Wild Magic" skillId="47030" skillLevel="2" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Elemental Berserker Spirit" skillId="47031" skillLevel="2" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Elemental Clarity" skillId="47032" skillLevel="3" getLevel="40" levelUpSp="80000" />
-		<skill skillName="Elemental Wind" skillId="47032" skillLevel="1" getLevel="40" levelUpSp="100000" />
+		<skill skillName="Elemental Wind" skillId="47061" skillLevel="1" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Time Burst" skillId="47062" skillLevel="1" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="2" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="2" getLevel="40" levelUpSp="100000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="2" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="2" getLevel="40" levelUpSp="100000">
 			<item id="90045" count="3" /> <!-- Magical Tablet -->
 		</skill>
@@ -39,20 +39,20 @@
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="8" getLevel="46" levelUpSp="160000" />
 
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="3" getLevel="47" levelUpSp="170000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="3" getLevel="47" levelUpSp="170000" />
 
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="3" getLevel="47" levelUpSp="170000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="9" getLevel="49" levelUpSp="200000" />
 
-		<skill skillName="Freezing Wound" skillId="47011" skillLevel="2" getLevel="50" levelUpSp="220000" />
 		<skill skillName="Quick Step" skillId="169" skillLevel="2" getLevel="50" levelUpSp="220000" />
-		<skill skillName="Recover HP" skillId="45176" skillLevel="2" getLevel="50" levelUpSp="300000">
+		<skill skillName="HP Recovery" skillId="45176" skillLevel="2" getLevel="50" levelUpSp="300000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Recover MP" skillId="45177" skillLevel="2" getLevel="50" levelUpSp="300000">
+		<skill skillName="MP Recovery" skillId="45177" skillLevel="2" getLevel="50" levelUpSp="300000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="2" getLevel="50" levelUpSp="220000" />
 		
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="1" getLevel="52" levelUpSp="300000">
 			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) Lv 1 -->
@@ -60,7 +60,7 @@
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="10" getLevel="52" levelUpSp="300000" />
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="2" getLevel="52" levelUpSp="300000" />
 
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="4" getLevel="53" levelUpSp="400000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="4" getLevel="53" levelUpSp="400000" />
 
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="4" getLevel="54" levelUpSp="400000" />
 
@@ -72,10 +72,10 @@
 		<skill skillName="Elemental Care" skillId="47054" skillLevel="1" getLevel="58" levelUpSp="600000" />
 		<skill skillName="Quick Reload" skillId="47083" skillLevel="2" getLevel="58" levelUpSp="600000" />
 
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="5" getLevel="59" levelUpSp="700000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="5" getLevel="59" levelUpSp="700000" />
 
-		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="5" getLevel="60" levelUpSp="800000" />
 		<skill skillName="Dark Assassin Transformation" skillId="1801" skillLevel="1" getLevel="60" autoGet="true" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="5" getLevel="60" levelUpSp="800000" />
 
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="2" getLevel="61" levelUpSp="900000">
 			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) Lv 2 -->
@@ -89,7 +89,7 @@
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="3" getLevel="64" levelUpSp="1200000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="15" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="6" getLevel="65" levelUpSp="1300000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="6" getLevel="65" levelUpSp="1300000" />
 
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="6" getLevel="66" levelUpSp="1400000" />
 
@@ -103,7 +103,7 @@
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="4" getLevel="70" levelUpSp="1800000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="18" getLevel="71" levelUpSp="1900000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="7" getLevel="71" levelUpSp="1900000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="7" getLevel="71" levelUpSp="1900000" />
 
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="7" getLevel="72" levelUpSp="2000000" />
 
