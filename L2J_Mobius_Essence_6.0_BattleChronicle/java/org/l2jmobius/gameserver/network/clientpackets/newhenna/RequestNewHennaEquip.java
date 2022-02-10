@@ -64,7 +64,7 @@ public class RequestNewHennaEquip implements IClientIncomingPacket
 		
 		if (player.getHennaEmptySlots() == 0)
 		{
-			PacketLogger.warning(player + ": Invalid Henna error 0 Id " + _symbolId + _slotId);
+			PacketLogger.warning(player + ": Invalid Henna error 0 Id " + _symbolId + " " + _slotId);
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MAKE_A_PATTERN);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -81,7 +81,7 @@ public class RequestNewHennaEquip implements IClientIncomingPacket
 		final Henna henna = HennaData.getInstance().getHennaByItemId(item.getId());
 		if (henna == null)
 		{
-			PacketLogger.warning(player + ": Invalid Henna SymbolId " + _symbolId + _slotId + item.getTemplate());
+			PacketLogger.warning(player + ": Invalid Henna SymbolId " + _symbolId + " " + _slotId + " " + item.getTemplate());
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MAKE_A_PATTERN);
 			return;
@@ -105,7 +105,7 @@ public class RequestNewHennaEquip implements IClientIncomingPacket
 			{
 				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
 			}
-			PacketLogger.warning(player + ": Invalid Henna error 2 " + _symbolId + _slotId + item.getTemplate());
+			PacketLogger.warning(player + ": Invalid Henna error 2 " + _symbolId + " " + _slotId + " " + item.getTemplate());
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
