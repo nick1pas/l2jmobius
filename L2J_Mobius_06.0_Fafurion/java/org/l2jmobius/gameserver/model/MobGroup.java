@@ -156,10 +156,7 @@ public class MobGroup
 				getMobs().add((ControllableMob) spawn.doGroupSpawn());
 			}
 		}
-		catch (ClassNotFoundException e)
-		{
-		}
-		catch (NoSuchMethodException e2)
+		catch (ClassNotFoundException | NoSuchMethodException e)
 		{
 		}
 	}
