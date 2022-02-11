@@ -1446,6 +1446,7 @@ public class Formulas
 		damage *= calcAttackTraitBonus(attacker, target);
 		damage *= calcAttributeBonus(attacker, target, null);
 		damage *= calculatePvpPveBonus(attacker, target, null, crit);
+		damage *= attacker.getStat().getMul(Stat.AUTO_ATTACK_DAMAGE_BONUS);
 		
 		return Math.max(0, damage);
 	}

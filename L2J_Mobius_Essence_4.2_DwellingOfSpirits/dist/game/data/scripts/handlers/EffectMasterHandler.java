@@ -50,6 +50,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
 		EffectHandler.getInstance().registerHandler("AttackBehind", AttackBehind::new);
 		EffectHandler.getInstance().registerHandler("AttackTrait", AttackTrait::new);
+		EffectHandler.getInstance().registerHandler("AutoAttackDamageBonus", AutoAttackDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("Backstab", Backstab::new);
 		EffectHandler.getInstance().registerHandler("Betray", Betray::new);
 		EffectHandler.getInstance().registerHandler("Blink", Blink::new);

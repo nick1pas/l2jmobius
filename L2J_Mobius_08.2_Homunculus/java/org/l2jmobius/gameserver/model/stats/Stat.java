@@ -90,6 +90,7 @@ public enum Stat
 	HATE_ATTACK("attackHate"),
 	REAR_DAMAGE_RATE("rearDamage"),
 	DRAGON_WEAPON_DEFENCE("dragonWeaponDefence"),
+	AUTO_ATTACK_DAMAGE_BONUS("autoAttackDamageBonus"),
 	
 	// PVP BONUS
 	PVP_PHYSICAL_ATTACK_DAMAGE("pvpPhysDmg"),

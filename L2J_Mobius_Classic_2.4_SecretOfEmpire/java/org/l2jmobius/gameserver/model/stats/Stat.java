@@ -87,6 +87,7 @@ public enum Stat
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	HATE_ATTACK("attackHate"),
 	REAR_DAMAGE_RATE("rearDamage"),
+	AUTO_ATTACK_DAMAGE_BONUS("autoAttackDamageBonus"),
 	
 	// ELEMENTAL SPIRITS
 	ELEMENTAL_SPIRIT_FIRE_ATTACK("elementalSpiritFireAttack"),

@@ -1504,14 +1504,9 @@
 				<AIRBIND>90</AIRBIND>
 				<AGGRESSION>90</AGGRESSION>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<!-- Damage Up -->
-				<chance>100</chance>
-				<targetType>TARGET</targetType>
-				<affectScope>SINGLE</affectScope>
-				<minDamage>100</minDamage>
-				<skillId>30521</skillId> <!-- Damage Up -->
-				<skillLevel>1</skillLevel>
+			<effect name="AutoAttackDamageBonus">
+				<amount>400</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="IgnoreDeath" />
 			<effect name="PAtk">
