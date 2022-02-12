@@ -8293,7 +8293,8 @@ public class Player extends Playable
 					if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan))
 					{
 						// If first mid victory is achieved, attackers can attack attackers.
-						return CastleManager.getInstance().getCastleById(_siegeSide).isFirstMidVictory();
+						final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+						return (castle != null) && castle.isFirstMidVictory();
 					}
 				}
 				

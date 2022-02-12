@@ -8489,7 +8489,9 @@ public class Player extends Playable
 					// Check if a siege is in progress and if attacker and the Player aren't in the Attacker clan.
 					if (siege.checkIsAttacker(attackerPlayer.getClan()) && siege.checkIsAttacker(getClan()))
 					{
-						return CastleManager.getInstance().getCastleById(_siegeSide).isFirstMidVictory();
+						// If first mid victory is achieved, attackers can attack attackers.
+						final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+						return (castle != null) && castle.isFirstMidVictory();
 					}
 				}
 				

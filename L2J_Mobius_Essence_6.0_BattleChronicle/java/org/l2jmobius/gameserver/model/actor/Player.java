@@ -73,10 +73,10 @@ import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
-import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
 import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
+import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.data.xml.OptionData;
@@ -8482,7 +8482,8 @@ public class Player extends Playable
 					if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan))
 					{
 						// If first mid victory is achieved, attackers can attack attackers.
-						return CastleManager.getInstance().getCastleById(_siegeSide).isFirstMidVictory();
+						final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+						return (castle != null) && castle.isFirstMidVictory();
 					}
 				}
 				
