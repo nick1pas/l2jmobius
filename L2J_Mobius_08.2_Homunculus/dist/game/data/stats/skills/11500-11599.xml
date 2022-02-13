@@ -664,7 +664,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttackWeaponBonus">
+			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">15338</value>
 					<value level="2">15951</value>
@@ -682,7 +682,6 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="13">1</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
@@ -820,7 +819,6 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="13">1</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
@@ -3558,11 +3556,11 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="6">5</value>
+					<value fromLevel="1" toLevel="6">10</value>
 					<value fromLevel="1" toLevel="6" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>

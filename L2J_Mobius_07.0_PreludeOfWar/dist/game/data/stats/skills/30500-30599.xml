@@ -128,7 +128,7 @@
 					<value fromLevel="24" toLevel="30" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="30">15</value>
+					<value fromLevel="1" toLevel="30">10</value>
 					<value fromLevel="24" toLevel="30" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance> <!-- Unconfirmed -->
 				<abnormalType>STUN</abnormalType>
@@ -269,7 +269,7 @@
 				<pDefMod>0.7</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="29">15</value>
+					<value fromLevel="1" toLevel="29">10</value>
 					<value fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 			</effect>
@@ -449,7 +449,7 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">15</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<overHit>true</overHit>
@@ -541,7 +541,7 @@
 				</power>
 				<pDefMod>0.5</pDefMod>
 				<criticalChance>
-					<value fromLevel="1" toLevel="18">15</value>
+					<value fromLevel="1" toLevel="18">10</value>
 					<value fromLevel="12" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<overHit>true</overHit>
@@ -622,7 +622,6 @@
 					<value level="12">45015</value>
 					<value fromLevel="6" toLevel="12" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="PullBack">
 				<type>THROW_UP</type>
@@ -727,7 +726,6 @@
 					<value level="16">56253</value>
 					<value fromLevel="10" toLevel="16" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
 			<effect name="KnockBack">
 				<speed>400</speed>
@@ -1822,7 +1820,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
@@ -2603,7 +2601,7 @@
 				</power>
 				<pDefMod>0.5</pDefMod>
 				<criticalChance>
-					<value fromLevel="1" toLevel="6">15</value> <!-- Guessed -->
+					<value fromLevel="1" toLevel="6">10</value>
 					<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 			</effect>

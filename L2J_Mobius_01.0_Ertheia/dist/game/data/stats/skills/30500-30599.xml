@@ -115,7 +115,6 @@
 					<value level="27">49514</value>
 					<value level="28">51032</value>
 				</power>
-				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 				<abnormalType>STUN</abnormalType>
 				<damageModifier>1.2</damageModifier>
 				<overHit>true</overHit>
@@ -246,7 +245,6 @@
 				</power>
 				<pDefMod>0.7</pDefMod>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -403,7 +401,6 @@
 					<value level="11">94517</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -485,7 +482,6 @@
 					<value level="16">94517</value>
 				</power>
 				<pDefMod>0.5</pDefMod>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -554,7 +550,6 @@
 					<value level="9">41083</value>
 					<value level="10">42343</value>
 				</power>
-				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="PullBack">
 				<type>THROW_UP</type>
@@ -646,7 +641,6 @@
 					<value level="13">51343</value>
 					<value level="14">52917</value>
 				</power>
-				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
 			<effect name="KnockBack">
 				<speed>400</speed>
@@ -1568,7 +1562,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>

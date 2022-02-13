@@ -681,7 +681,6 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -783,7 +782,6 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>60</criticalChance>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-20</amount>
@@ -885,7 +883,6 @@
 					<value level="10">23531</value>
 					<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="10" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -983,7 +980,6 @@
 					<value level="12">25044</value>
 					<value fromLevel="6" toLevel="12" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1089,7 +1085,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1188,7 +1184,6 @@
 					<value level="13">39454</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -5979,12 +5974,12 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">40</value>
+			<value fromLevel="1" toLevel="9">15</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>600</affectRange>
-		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<itemConsumeId>1785</itemConsumeId>
 		<itemConsumeCount>6</itemConsumeCount>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -6114,7 +6109,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceCriticalDamage">
-				<amount>-35</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
@@ -6185,7 +6180,7 @@
 					<value fromLevel="2" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="8">15</value>
+					<value fromLevel="1" toLevel="8">10</value>
 					<value fromLevel="2" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>

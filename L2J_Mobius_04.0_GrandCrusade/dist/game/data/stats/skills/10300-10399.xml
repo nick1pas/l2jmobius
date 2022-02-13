@@ -809,7 +809,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="1" toLevel="7">10</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -969,7 +969,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -1226,7 +1225,6 @@
 					<value level="7">29911</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -1369,7 +1367,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="1" toLevel="7">10</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
@@ -1418,7 +1416,7 @@
 					<item>DUAL</item>
 				</weaponType>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>

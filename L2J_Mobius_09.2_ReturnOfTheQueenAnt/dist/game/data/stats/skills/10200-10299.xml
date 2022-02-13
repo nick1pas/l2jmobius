@@ -803,7 +803,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="AirBind" />
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">14506</value>
@@ -821,7 +820,6 @@
 					<value level="13">33299</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -931,7 +929,7 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">3</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1033,7 +1031,6 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
-				<criticalChance>3</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="KnockBack">
@@ -1267,7 +1264,6 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 				<BLUNT>0.9</BLUNT>
 				<SWORD>0.9</SWORD>
 				<POLE>1.5</POLE>
@@ -1633,7 +1629,6 @@
 					<value level="12">25125</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>3</criticalChance>
 			</effect>
 			<effect name="Speed">
 				<amount>-180</amount>
@@ -1981,7 +1976,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="6">5</value>
+					<value fromLevel="1" toLevel="6">10</value>
 					<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -2327,7 +2322,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="7">5</value>
+					<value fromLevel="1" toLevel="7">10</value>
 					<value fromLevel="1" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -2731,7 +2726,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>

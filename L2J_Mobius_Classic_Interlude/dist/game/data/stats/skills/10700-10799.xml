@@ -80,7 +80,7 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">11</value>
@@ -1131,7 +1131,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1231,7 +1231,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="KnockBack">
 				<speed>500</speed>
@@ -1325,7 +1324,7 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1641,7 +1640,7 @@
 					<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="4" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
@@ -1742,7 +1741,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
@@ -1838,7 +1837,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1930,7 +1929,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -2378,7 +2377,7 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="7" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
@@ -2431,7 +2430,7 @@
 					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="4">5</value>
+					<value fromLevel="1" toLevel="4">10</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>

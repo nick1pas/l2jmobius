@@ -644,7 +644,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="Speed">
 				<amount>-70</amount>
@@ -748,7 +747,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
@@ -843,7 +841,6 @@
 					<value level="8">20253</value>
 					<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -939,7 +936,6 @@
 					<value level="10">16349</value>
 					<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1038,7 +1034,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1128,7 +1124,6 @@
 					<value level="11">25756</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="HealEffect">
 				<amount>-90</amount>
@@ -5428,7 +5423,7 @@
 					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="6">15</value>
+					<value fromLevel="1" toLevel="6">10</value>
 					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>

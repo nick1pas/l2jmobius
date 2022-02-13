@@ -57,7 +57,7 @@ public class PhysicalAttack extends AbstractEffect
 		_power = params.getDouble("power", 0);
 		_pAtkMod = params.getDouble("pAtkMod", 1.0);
 		_pDefMod = params.getDouble("pDefMod", 1.0);
-		_criticalChance = params.getDouble("criticalChance", 0);
+		_criticalChance = params.getDouble("criticalChance", 10);
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
 		_overHit = params.getBoolean("overHit", false);
 		final String abnormals = params.getString("abnormalType", null);
@@ -134,7 +134,7 @@ public class PhysicalAttack extends AbstractEffect
 		}
 		
 		double damage = 1;
-		final boolean critical = Formulas.calcCrit(_criticalChance, effected, effector, skill);
+		final boolean critical = Formulas.calcCrit(_criticalChance, effector, effected, skill);
 		
 		if (defence != -1)
 		{

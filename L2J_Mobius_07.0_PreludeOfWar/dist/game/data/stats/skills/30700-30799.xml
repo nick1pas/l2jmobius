@@ -3066,7 +3066,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">15</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="1" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -3140,7 +3140,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">15</value>
+					<value fromLevel="1" toLevel="13">10</value>
 					<value fromLevel="1" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -3209,7 +3209,7 @@
 					<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">15</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
@@ -3699,7 +3699,6 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
-				<criticalChance>15</criticalChance>
 				<pDefMod>30</pDefMod>
 				<overHit>true</overHit>
 			</effect>
@@ -3930,7 +3929,6 @@
 					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-23</amount>
@@ -4044,7 +4042,6 @@
 					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>

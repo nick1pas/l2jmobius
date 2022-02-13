@@ -261,7 +261,7 @@ public class Formulas
 				statBonus = BaseStat.STR.calcBonus(creature);
 			}
 			
-			final double rateBonus = creature.getStat().getValue(Stat.CRITICAL_RATE_SKILL, 1);
+			final double rateBonus = creature.getStat().getMul(Stat.CRITICAL_RATE_SKILL, 1);
 			
 			double balanceMod = 1;
 			if (creature.isPlayable())
@@ -269,7 +269,7 @@ public class Formulas
 				balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()] : Config.PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()];
 			}
 			
-			return (rate * statBonus * rateBonus * balanceMod) > Rnd.get(100);
+			return CommonUtil.constrain(rate * statBonus * rateBonus * balanceMod, 5, 90) > Rnd.get(100);
 		}
 		
 		// Autoattack critical rate.

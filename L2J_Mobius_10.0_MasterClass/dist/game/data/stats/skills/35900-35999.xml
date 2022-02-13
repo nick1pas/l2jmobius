@@ -973,6 +973,16 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<effects>
+			<effect name="SkillMasteryRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>42</amount>
 				<mode>DIFF</mode>
@@ -1875,7 +1885,7 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2080,7 +2090,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>

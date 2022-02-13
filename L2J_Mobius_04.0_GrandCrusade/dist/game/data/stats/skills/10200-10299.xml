@@ -718,7 +718,6 @@
 					<value level="11">22603</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -820,7 +819,7 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">3</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -915,7 +914,6 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
-				<criticalChance>3</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="KnockBack">
@@ -1133,7 +1131,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 				<BLUNT>0.9</BLUNT>
 				<SWORD>0.9</SWORD>
 				<POLE>1.5</POLE>
@@ -1477,7 +1474,6 @@
 					<value level="10">17055</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>3</criticalChance>
 				<chargeConsume>3</chargeConsume>
 			</effect>
 			<effect name="Speed">
@@ -1851,7 +1847,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="4">5</value>
+					<value fromLevel="1" toLevel="4">10</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -2197,7 +2193,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="5">5</value>
+					<value fromLevel="1" toLevel="5">10</value>
 					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
@@ -2568,7 +2564,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="1" toLevel="11">10</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>

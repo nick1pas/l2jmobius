@@ -825,7 +825,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">15</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -991,7 +991,6 @@
 					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -1273,7 +1272,7 @@
 				</power>
 				<chargeConsume>3</chargeConsume>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
@@ -1360,41 +1359,33 @@
 		<icon>icon.skill10329</icon>
 		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</passiveConditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>30</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>30</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -1466,7 +1457,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">15</value>
+					<value fromLevel="1" toLevel="9">10</value>
 					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
@@ -1518,7 +1509,7 @@
 					<item>DUAL</item>
 				</weaponType>
 			</effect>
-			<effect name="SkillMasteryRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>

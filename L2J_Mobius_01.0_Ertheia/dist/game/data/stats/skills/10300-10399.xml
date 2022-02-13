@@ -785,7 +785,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="1" toLevel="7">10</value>
 				</criticalChance>
 				<chargeConsume>3</chargeConsume>
 			</effect>
@@ -938,7 +938,6 @@
 					<value level="7">39060</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -1182,7 +1181,6 @@
 					<value level="7">29911</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -1324,7 +1322,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="1" toLevel="7">10</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
 			</effect>
@@ -1371,7 +1369,7 @@
 					<item>DUAL</item>
 				</weaponType>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>

@@ -259,6 +259,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("PhysicalEvasion", PhysicalEvasion::new);
 		EffectHandler.getInstance().registerHandler("PhysicalMute", PhysicalMute::new);
 		EffectHandler.getInstance().registerHandler("PhysicalShieldAngleAll", PhysicalShieldAngleAll::new);
+		EffectHandler.getInstance().registerHandler("PhysicalSkillCriticalRate", PhysicalSkillCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("PhysicalSkillPower", PhysicalSkillPower::new);
 		EffectHandler.getInstance().registerHandler("PhysicalSoulAttack", PhysicalSoulAttack::new);
 		EffectHandler.getInstance().registerHandler("PkCount", PkCount::new);
