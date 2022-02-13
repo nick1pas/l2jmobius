@@ -103,7 +103,7 @@ public class FishingData implements IXmlReader
 									final int itemId = parseInteger(attrs, "itemId");
 									final int level = parseInteger(attrs, "level", 1);
 									final int minPlayerLevel = parseInteger(attrs, "minPlayerLevel");
-									final int maxPlayerLevel = parseInteger(attrs, "minPlayerLevel", Config.PLAYER_MAXIMUM_LEVEL);
+									final int maxPlayerLevel = parseInteger(attrs, "maxPlayerLevel", Config.PLAYER_MAXIMUM_LEVEL);
 									final double chance = parseDouble(attrs, "chance");
 									final int timeMin = parseInteger(attrs, "timeMin");
 									final int timeMax = parseInteger(attrs, "timeMax", timeMin);

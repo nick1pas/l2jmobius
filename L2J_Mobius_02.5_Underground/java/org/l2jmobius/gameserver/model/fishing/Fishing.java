@@ -172,7 +172,7 @@ public class Fishing
 		
 		final int minPlayerLevel = baitData.getMinPlayerLevel();
 		final int maxPLayerLevel = baitData.getMaxPlayerLevel();
-		if ((_player.getLevel() < minPlayerLevel) && (_player.getLevel() > maxPLayerLevel))
+		if ((_player.getLevel() < minPlayerLevel) || (_player.getLevel() > maxPLayerLevel))
 		{
 			_player.sendMessage("You do not meet the fishing level requirements.");
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
