@@ -227,7 +227,7 @@ public class CreatureStat
 	{
 		if (skill != null)
 		{
-			return (int) getValue(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange());
+			return skill.getCastRange() + (int) getValue(Stat.MAGIC_ATTACK_RANGE, 0);
 		}
 		return _creature.getTemplate().getBaseAttackRange();
 	}

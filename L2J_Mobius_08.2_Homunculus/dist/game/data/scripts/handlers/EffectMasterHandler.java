@@ -328,6 +328,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ShieldDefenceRate", ShieldDefenceRate::new);
 		EffectHandler.getInstance().registerHandler("ShotsBonus", ShotsBonus::new);
 		EffectHandler.getInstance().registerHandler("SilentMove", SilentMove::new);
+		EffectHandler.getInstance().registerHandler("SkillBonusRange", SkillBonusRange::new);
 		EffectHandler.getInstance().registerHandler("SkillCriticalDamage", SkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("SkillEvasion", SkillEvasion::new);
 		EffectHandler.getInstance().registerHandler("SkillMastery", SkillMastery::new);

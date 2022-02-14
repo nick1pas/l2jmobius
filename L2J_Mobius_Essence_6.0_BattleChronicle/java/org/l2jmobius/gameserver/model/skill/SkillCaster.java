@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -176,7 +177,7 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
-		if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange(), caster, target, false))
+		if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange() + (int) caster.getStat().getValue(Stat.MAGIC_ATTACK_RANGE, 0), caster, target, false))
 		{
 			return null;
 		}

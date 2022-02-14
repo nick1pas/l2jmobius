@@ -1587,6 +1587,10 @@
 				<amount>80</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="SkillBonusRange">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
