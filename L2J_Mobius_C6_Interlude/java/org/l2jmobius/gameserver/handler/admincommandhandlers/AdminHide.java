@@ -68,14 +68,14 @@ public class AdminHide implements IAdminCommandHandler
 				default:
 				{
 					BuilderUtil.sendSysMessage(player, "//hide [on|off]");
-					return true;
+					return false;
 				}
 			}
 		}
 		catch (Exception e)
 		{
 			BuilderUtil.sendSysMessage(player, "//hide [on|off]");
-			return true;
+			return false;
 		}
 	}
 	
