@@ -401,7 +401,11 @@ public class PlayerStat extends PlayableStat
 		}
 		if (getActiveChar().isSubClassActive())
 		{
-			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getLevel();
+			final SubClassHolder holder = getActiveChar().getSubClasses().get(getActiveChar().getClassIndex());
+			if (holder != null)
+			{
+				return holder.getLevel();
+			}
 		}
 		return super.getLevel();
 	}

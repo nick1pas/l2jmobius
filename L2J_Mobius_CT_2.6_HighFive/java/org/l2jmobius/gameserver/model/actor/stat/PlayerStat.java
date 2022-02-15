@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.MoveType;
@@ -467,7 +468,11 @@ public class PlayerStat extends PlayableStat
 	{
 		if (getActiveChar().isSubClassActive())
 		{
-			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getLevel();
+			final SubClassHolder holder = getActiveChar().getSubClasses().get(getActiveChar().getClassIndex());
+			if (holder != null)
+			{
+				return holder.getLevel();
+			}
 		}
 		return super.getLevel();
 	}
