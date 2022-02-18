@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -31,6 +32,7 @@ public class StatAddForStat extends AbstractEffect
 	private final int _min;
 	private final int _max;
 	private final double _amount;
+	private final StatModifierType _mode;
 	
 	public StatAddForStat(StatSet params)
 	{
@@ -38,6 +40,7 @@ public class StatAddForStat extends AbstractEffect
 		_min = params.getInt("min", 0);
 		_max = params.getInt("max", 0);
 		_amount = params.getDouble("amount", 0);
+		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 	}
 	
 	@Override
@@ -46,7 +49,14 @@ public class StatAddForStat extends AbstractEffect
 		final int currentValue = (int) effected.getStat().getValue(_stat);
 		if ((currentValue >= _min) && (currentValue <= _max))
 		{
-			effected.getStat().mergeAdd(_stat, _amount);
+			if (_mode == StatModifierType.DIFF)
+			{
+				effected.getStat().mergeAdd(_stat, _amount);
+			}
+			else // Add PER difference.
+			{
+				effected.getStat().mergeAdd(_stat, (currentValue * ((_amount / 100) + 1)) - currentValue);
+			}
 		}
 	}
 }
