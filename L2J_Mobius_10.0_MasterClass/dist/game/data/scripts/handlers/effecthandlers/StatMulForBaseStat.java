@@ -21,42 +21,84 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Mobius
  */
-public class StatAddForStat extends AbstractEffect
+public class StatMulForBaseStat extends AbstractEffect
 {
-	private final Stat _stat;
+	private final BaseStat _baseStat;
 	private final int _min;
 	private final int _max;
+	private final Stat _stat;
 	private final double _amount;
-	private final StatModifierType _mode;
 	
-	public StatAddForStat(StatSet params)
+	public StatMulForBaseStat(StatSet params)
 	{
-		_stat = params.getEnum("stat", Stat.class);
+		_baseStat = params.getEnum("baseStat", BaseStat.class);
 		_min = params.getInt("min", 0);
 		_max = params.getInt("max", 0);
+		_stat = params.getEnum("stat", Stat.class);
 		_amount = params.getDouble("amount", 0);
-		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
+		if (params.getEnum("mode", StatModifierType.class, StatModifierType.PER) != StatModifierType.PER)
+		{
+			LOGGER.warning(getClass().getSimpleName() + " can only use PER mode.");
+		}
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		final int currentValue = (int) effected.getStat().getValue(_stat);
-		if ((currentValue >= _min) && (currentValue <= _max))
+		int currentValue = 0;
+		switch (_baseStat)
 		{
-			if (_mode == StatModifierType.DIFF)
+			case STR:
 			{
-				effected.getStat().mergeAdd(_stat, _amount);
+				currentValue = effected.getSTR();
+				break;
 			}
-			else // Add PER difference.
+			case INT:
 			{
-				effected.getStat().mergeAdd(_stat, (currentValue * ((_amount / 100) + 1)) - currentValue);
+				currentValue = effected.getINT();
+				break;
 			}
+			case DEX:
+			{
+				currentValue = effected.getDEX();
+				break;
+			}
+			case WIT:
+			{
+				currentValue = effected.getWIT();
+				break;
+			}
+			case CON:
+			{
+				currentValue = effected.getCON();
+				break;
+			}
+			case MEN:
+			{
+				currentValue = effected.getMEN();
+				break;
+			}
+			case CHA:
+			{
+				currentValue = effected.getCHA();
+				break;
+			}
+			case LUC:
+			{
+				currentValue = effected.getLUC();
+				break;
+			}
+		}
+		
+		if (((_min == 0) && (_max == 0)) || ((currentValue >= _min) && (currentValue <= _max)))
+		{
+			effected.getStat().mergeMul(_stat, (_amount / 100) + 1);
 		}
 	}
 }
