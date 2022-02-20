@@ -87,7 +87,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		addTalkId(VANGUARDS);
 		for (Entry<Race, Integer> tag : RACE_TAGS.entrySet())
 		{
-			registerQuestItems(tag.getValue().intValue());
+			registerQuestItems(tag.getValue());
 		}
 		//@formatter:off
 		registerQuestItems(
