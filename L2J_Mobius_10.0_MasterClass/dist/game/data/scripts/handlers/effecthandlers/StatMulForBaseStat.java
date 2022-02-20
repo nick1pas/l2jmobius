@@ -39,8 +39,8 @@ public class StatMulForBaseStat extends AbstractEffect
 	{
 		_baseStat = params.getEnum("baseStat", BaseStat.class);
 		_min = params.getInt("min", 0);
-		_max = params.getInt("max", 0);
-		_stat = params.getEnum("stat", Stat.class);
+		_max = params.getInt("max", 2147483647);
+		_stat = params.getEnum("mulStat", Stat.class);
 		_amount = params.getDouble("amount", 0);
 		if (params.getEnum("mode", StatModifierType.class, StatModifierType.PER) != StatModifierType.PER)
 		{
@@ -96,7 +96,7 @@ public class StatMulForBaseStat extends AbstractEffect
 			}
 		}
 		
-		if (((_min == 0) && (_max == 0)) || ((currentValue >= _min) && (currentValue <= _max)))
+		if ((currentValue >= _min) && (currentValue <= _max))
 		{
 			effected.getStat().mergeMul(_stat, (_amount / 100) + 1);
 		}
