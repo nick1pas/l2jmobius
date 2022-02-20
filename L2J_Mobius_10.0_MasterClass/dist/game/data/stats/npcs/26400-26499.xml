@@ -2126,29 +2126,44 @@
 			<height normal="94" />
 		</collision>
 	</npc>
-	<npc id="26461" level="85" type="Folk" name="Noegg" title="Cursed Criminal">
+	<npc id="26461" level="116" type="RaidBoss" name="Noegg" title="Cursed Criminal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7499856" hpRegen="10.5" mp="59126" mpRegen="3.6" />
+		<acquire exp="664348044192" sp="597913189" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="7499856" hpRegen="488.1839242" mp="59126" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
-				<run ground="200" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="52380.9523809524" magical="9243.6974789916" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4074.07407407407" magical="2365.59139784946" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="64.5" />
 			<height normal="72.75" />
 		</collision>
 	</npc>
-	<npc id="26462" level="85" type="Folk" name="Kyshis" title="Trickster">
+	<npc id="26462" level="116" type="RaidBoss" name="Kyshis" title="Trickster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="664348044192" sp="597913189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7499856" hpRegen="10.5" mp="59126" mpRegen="3.6" />
 			<speed>
@@ -2158,16 +2173,30 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="31.5" />
 			<height normal="80.25" />
 		</collision>
 	</npc>
-	<npc id="26463" level="85" type="Folk" name="Ssizz Chronizel" title="Breaker">
+	<npc id="26463" level="116" type="RaidBoss" name="Ssizz Chronizel" title="Breaker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1328696074928" sp="1195826377" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10086013" hpRegen="10.5" mp="59126" mpRegen="3.6" />
 			<speed>
@@ -2177,16 +2206,30 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="42" />
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="26464" level="85" type="Folk" name="Kanan Chronizel" title="Floating Wizard">
+	<npc id="26464" level="116" type="RaidBoss" name="Kanan Chronizel" title="Floating Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1328696074928" sp="1195826377" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10086013" hpRegen="10.5" mp="59126" mpRegen="3.6" />
 			<speed>
@@ -2196,16 +2239,30 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="96" />
 		</collision>
 	</npc>
-	<npc id="26465" level="85" type="Folk" name="Sir Sione Ulaf" title="Vile Knight">
+	<npc id="26465" level="116" type="RaidBoss" name="Sir Sione Ulaf" title="Vile Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2657392149856" sp="2391652889" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14999713" hpRegen="10.5" mp="59126" mpRegen="3.6" />
 			<speed>
@@ -2215,16 +2272,30 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="33.6" />
 			<height normal="73.8" />
 		</collision>
 	</npc>
-	<npc id="26466" level="85" type="Folk" name="Queen Krosha" title="Krofin Queen">
+	<npc id="26466" level="116" type="RaidBoss" name="Queen Krosha" title="Krofin Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="7307827092070" sp="6577044268" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="30300303" hpRegen="10.5" mp="59126" mpRegen="3.6" />
 			<speed>
@@ -2234,7 +2305,20 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Vamp ress -->
+			<skill id="33180" level="1" /> <!-- Party Xp -->
+			<skill id="32660" level="1" /> <!-- Queen Krosha -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct hit Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="46.5" />
 			<height normal="82.02" />
@@ -2242,9 +2326,9 @@
 	</npc>
 	<npc id="26467" level="115" type="RaidBoss" name="Queen Krosha" title="Krofin Queen">
 		<race>BEAST</race>
-		<acquire exp="5160319718400" sp="4644287703" />
+		<acquire exp="0" sp="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="30300303" hpRegen="488.1839242" mp="59126" mpRegen="3.6" />
+			<vitals hp="5215140" hpRegen="488.1839242" mp="59126" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
