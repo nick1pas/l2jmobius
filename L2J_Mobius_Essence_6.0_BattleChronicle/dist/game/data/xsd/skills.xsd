@@ -649,8 +649,8 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="SUPPRESSION">
-																<xs:complexType>
-																	<xs:sequence>
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
@@ -1449,7 +1449,6 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="pAtkSpeedMode" />
 															<xs:element name="transformationId" type="xs:unsignedShort" />
 															<xs:element name="despawnDelay" type="xs:unsignedInt" />
 															<xs:element name="normal" type="xs:unsignedShort" />
@@ -1674,7 +1673,21 @@
 															<xs:element name="percentFrom" type="xs:unsignedByte" />
 															<xs:element name="closeSkill" type="xs:unsignedShort" />
 															<xs:element name="rangeSkill" type="xs:unsignedShort" />
-															<xs:element name="PISTOLS" type="xs:byte" />
+															<xs:element name="PISTOLS">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="existingSkillId" type="xs:unsignedShort" />
 															<xs:element name="replacementSkillId" type="xs:unsignedShort" />
 															<xs:element name="IMPRISON">
@@ -1692,6 +1705,13 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="mdef" type="xs:unsignedShort" />
+															<xs:element name="min" type="xs:unsignedShort" />
+															<xs:element name="addStat" type="xs:string" />
+															<xs:element name="staticChance" type="xs:boolean" />
+															<xs:element name="pAtkMod" type="xs:decimal" />
+															<xs:element name="baseStat" type="xs:string" />
+															<xs:element name="mulStat" type="xs:string" />
 															<xs:element name="damage">
 																<xs:complexType>
 																	<xs:sequence>
@@ -2184,7 +2204,7 @@
 								<xs:element name="endEffects">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="effect">
+											<xs:element maxOccurs="unbounded" name="effect">
 												<xs:complexType>
 													<xs:sequence>
 														<xs:element minOccurs="0" name="power">
@@ -2218,6 +2238,7 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="skillLevelScaleTo" type="xs:unsignedByte" />
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 													<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
