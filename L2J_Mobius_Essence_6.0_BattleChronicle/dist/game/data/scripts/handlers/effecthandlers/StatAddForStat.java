@@ -28,18 +28,18 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class StatAddForStat extends AbstractEffect
 {
-	private final Stat _statCheck;
+	private final Stat _stat;
 	private final int _min;
 	private final int _max;
-	private final Stat _stat;
+	private final Stat _addStat;
 	private final double _amount;
 	
 	public StatAddForStat(StatSet params)
 	{
-		_statCheck = params.getEnum("stat", Stat.class);
+		_stat = params.getEnum("stat", Stat.class);
 		_min = params.getInt("min", 0);
 		_max = params.getInt("max", 2147483647);
-		_stat = params.getEnum("addStat", Stat.class);
+		_addStat = params.getEnum("addStat", Stat.class);
 		_amount = params.getDouble("amount", 0);
 		if (params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF) != StatModifierType.DIFF)
 		{
@@ -50,10 +50,10 @@ public class StatAddForStat extends AbstractEffect
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		final int currentValue = (int) effected.getStat().getValue(_statCheck);
+		final int currentValue = (int) effected.getStat().getValue(_stat);
 		if ((currentValue >= _min) && (currentValue <= _max))
 		{
-			effected.getStat().mergeAdd(_stat, _amount);
+			effected.getStat().mergeAdd(_addStat, _amount);
 		}
 	}
 }
