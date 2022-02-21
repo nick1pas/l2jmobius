@@ -139,7 +139,10 @@ public class Q10890_SaviorsPathHallOfEtina extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "34425-01.htm";
+				if (npc.getId() == LEONA_BLACKBIRD)
+				{
+					htmltext = "34425-01.htm";
+				}
 				break;
 			}
 			case State.STARTED:
