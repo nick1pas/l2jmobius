@@ -620,6 +620,8 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							template.removeDrops();
+							
 							// Add LCoin drop for bosses.
 							if (type.contains("boss"))
 							{

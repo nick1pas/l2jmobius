@@ -624,6 +624,8 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							template.removeDrops();
+							
 							// Drops are sorted by chance (high to low).
 							Collections.sort(dropLists, (d1, d2) -> Double.valueOf(d2.getChance()).compareTo(Double.valueOf(d1.getChance())));
 							for (DropHolder dropHolder : dropLists)

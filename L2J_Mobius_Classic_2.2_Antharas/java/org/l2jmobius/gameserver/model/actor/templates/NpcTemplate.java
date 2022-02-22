@@ -650,6 +650,12 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_ignoreClanNpcIds = ignoreClanNpcIds != null ? Collections.unmodifiableSet(ignoreClanNpcIds) : null;
 	}
 	
+	public void removeDrops()
+	{
+		_dropListDeath = null;
+		_dropListSpoil = null;
+	}
+	
 	public void addDrop(DropHolder dropHolder)
 	{
 		if (_dropListDeath == null)
