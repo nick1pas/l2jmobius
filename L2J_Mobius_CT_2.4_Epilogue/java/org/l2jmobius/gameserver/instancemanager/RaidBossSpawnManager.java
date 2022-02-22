@@ -65,6 +65,14 @@ public class RaidBossSpawnManager
 	 */
 	public void load()
 	{
+		if (!_spawns.isEmpty())
+		{
+			for (Spawn spawn : _spawns.values())
+			{
+				deleteSpawn(spawn, false);
+			}
+		}
+		
 		_bosses.clear();
 		_spawns.clear();
 		_storedInfo.clear();

@@ -76,6 +76,14 @@ public class DBSpawnManager
 			return;
 		}
 		
+		if (!_spawns.isEmpty())
+		{
+			for (Spawn spawn : _spawns.values())
+			{
+				deleteSpawn(spawn, false);
+			}
+		}
+		
 		_npcs.clear();
 		_spawns.clear();
 		_storedInfo.clear();
