@@ -43,6 +43,7 @@ public class GlobalVariablesManager extends AbstractVariables
 	
 	// Public variable names
 	public static final String DAILY_TASK_RESET = "DAILY_TASK_RESET";
+	public static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	
 	protected GlobalVariablesManager()
 	{

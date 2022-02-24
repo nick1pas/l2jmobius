@@ -104,6 +104,7 @@ public class DailyTaskManager
 		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
 		{
 			clanLeaderApply();
+			resetMonsterArenaWeekly();
 			resetTimedHuntingZonesWeekly();
 			resetVitalityWeekly();
 		}
@@ -231,6 +232,14 @@ public class DailyTaskManager
 			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
 		}
 		LOGGER.info("Vitality resetted");
+	}
+	
+	private void resetMonsterArenaWeekly()
+	{
+		for (Clan clan : ClanTable.getInstance().getClans())
+		{
+			GlobalVariablesManager.getInstance().remove(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + clan.getId());
+		}
 	}
 	
 	private void resetClanBonus()

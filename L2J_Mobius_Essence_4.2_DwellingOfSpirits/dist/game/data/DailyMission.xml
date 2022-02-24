@@ -992,43 +992,43 @@
 			<item id="93290" count="1" /> Victory Pack
 		</items>
 	</reward>
+	-->
 	<reward id="9001" reward_id="9001" name="Clan Raid Attack" requiredCompletion="1">
-		Weekly mission. A reward is given for defeating 1 enemy together with your clan members in the Clan Arena.
+		<!-- Weekly mission. A reward is given for defeating 1 enemy together with your clan members in the Clan Arena. -->
 		<handler name="monster">
 			<param name="minLevel">40</param>
 			<param name="maxLevel">99</param>
 		</handler>
 		<items>
-			<item id="3031" count="150" /> Spirit Ore
-			<item id="94481" count="50" /> Clan XP
-			<item id="94269" count="3" /> Scroll: Boost Attack
+			<item id="3031" count="150" /> <!-- Spirit Ore -->
+			<item id="94481" count="50" /> <!-- Clan XP -->
+			<item id="94269" count="3" /> <!-- Scroll: Boost Attack -->
 		</items>
 	</reward>
 	<reward id="9002" reward_id="9002" name="Dwelling of Spirits" requiredCompletion="50">
-		Weekly mission. A reward is given for defeating monsters during a clan raid to the Dwelling of Spirits.
+		<!-- Weekly mission. A reward is given for defeating monsters during a clan raid to the Dwelling of Spirits. -->
 		<handler name="monster">
 			<param name="minLevel">76</param>
 			<param name="maxLevel">99</param>
 		</handler>
 		<items>
-			<item id="91831" count="5" /> Improved Water Attack Potion
-			<item id="91832" count="5" /> Improved Wind Attack Potion
-			<item id="91833" count="5" /> Improved Earth Attack Potion
-			<item id="91830" count="5" /> Improved Fire Attack Potion
+			<item id="91831" count="5" /> <!-- Improved Water Attack Potion -->
+			<item id="91832" count="5" /> <!-- Improved Wind Attack Potion -->
+			<item id="91833" count="5" /> <!-- Improved Earth Attack Potion -->
+			<item id="91830" count="5" /> <!-- Improved Fire Attack Potion -->
 		</items>
 	</reward>
 	<reward id="9003" reward_id="9003" name="Spirit Kings" requiredCompletion="1">
-		Weekly mission. A reward is given for defeating Ignis, Nebula, Procella or Petram during a clan raid to the Dwelling of Spirits.
+		<!-- Weekly mission. A reward is given for defeating Ignis, Nebula, Procella or Petram during a clan raid to the Dwelling of Spirits. -->
 		<handler name="monster">
 			<param name="minLevel">76</param>
 			<param name="maxLevel">99</param>
 		</handler>
 		<items>
-			<item id="91831" count="5" /> Improved Water Attack Potion
-			<item id="91832" count="5" /> Improved Wind Attack Potion
-			<item id="91833" count="5" /> Improved Earth Attack Potion
-			<item id="91830" count="5" /> Improved Fire Attack Potion
+			<item id="91831" count="5" /> <!-- Improved Water Attack Potion -->
+			<item id="91832" count="5" /> <!-- Improved Wind Attack Potion -->
+			<item id="91833" count="5" /> <!-- Improved Earth Attack Potion -->
+			<item id="91830" count="5" /> <!-- Improved Fire Attack Potion -->
 		</items>
 	</reward>
-	-->
 </list>
