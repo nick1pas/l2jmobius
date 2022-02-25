@@ -1065,13 +1065,29 @@
 	<item id="95749" name="Daily Enchant Scroll Pack" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="93977" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant A-grade Armor Imprint-->
+			<item id="93976" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant A-grade Weapon Imprint-->
+			<item id="93411" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant D-grade Armor Imprint-->
+			<item id="93410" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant D-grade Weapon Imprint-->
+			<item id="93409" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant C-grade Armor Imprint-->
+			<item id="93408" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant C-grade Weapon Imprint-->
+			<item id="93407" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant B-grade Armor Imprint-->
+			<item id="93406" min="1" max="1" chance="8.3333333333" /> <!-- Scroll: Enchant B-grade Weapon Imprint-->
+			<item id="93271" min="1" max="1" chance="8.3333333333" /> <!-- Cursed Scroll: Enchant A-grade Armor Imprint-->
+			<item id="93270" min="1" max="1" chance="8.3333333333" /> <!-- Cursed Scroll: Enchant A-grade Weapon Imprint-->
+			<item id="93269" min="1" max="1" chance="8.3333333333" /> <!-- Improved Scroll: Enchant A-grade Armor Imprint-->
+			<item id="93268" min="1" max="1" chance="8.3333333333" /> <!-- Improved Scroll: Enchant A-grade Weapon Imprint-->
+		</capsuled_items>
 	</item>
 	<item id="95750" name="Unpainted Figurine" additionalName="Event" type="EtcItem">
 		<!-- Required for creating Artisan's Figurine Box through the Special Craft. -->
