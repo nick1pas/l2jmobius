@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.model.item.enchant;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.holders.RangeChanceHolder;
@@ -69,7 +68,7 @@ public class EnchantItemGroup
 					return holder.getChance();
 				}
 			}
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name);
+			// LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name);
 			return _chances.get(_chances.size() - 1).getChance();
 		}
 		LOGGER.warning(getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
