@@ -117,6 +117,7 @@ public class DailyTaskManager
 		resetClanBonus();
 		resetClanContributionList();
 		resetClanDonationPoints();
+		resetDailyHennaPattern();
 		resetDailySkills();
 		resetDailyLimitShopData();
 		resetWorldChatPoints();
@@ -560,6 +561,32 @@ public class DailyTaskManager
 			}
 		}
 		LOGGER.info("LimitShopData has been resetted.");
+	}
+	
+	public void resetDailyHennaPattern()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+			{
+				ps.setString(1, PlayerVariables.DYE_POTENTIAL_DAILY_COUNT);
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Daily Henna Count: " + e);
+		}
+		
+		// Update data for online players.
+		for (Player player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove(PlayerVariables.DYE_POTENTIAL_DAILY_COUNT);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Daily Henna Count has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()
