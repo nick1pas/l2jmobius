@@ -17,6 +17,7 @@
 package handlers.itemhandlers;
 
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -79,7 +80,7 @@ public class PetFood implements IItemHandler
 				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					final Set<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
 					if (foodIds.contains(item.getId()) && player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 					{
 						player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));

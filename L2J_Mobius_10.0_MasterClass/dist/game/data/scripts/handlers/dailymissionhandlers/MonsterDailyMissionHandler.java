@@ -16,8 +16,9 @@
  */
 package handlers.dailymissionhandlers;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
@@ -41,7 +42,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 	private final int _amount;
 	private final int _minLevel;
 	private final int _maxLevel;
-	private final List<Integer> _ids = new ArrayList<>();
+	private final Set<Integer> _ids = new HashSet<>();
 	
 	public MonsterDailyMissionHandler(DailyMissionDataHolder holder)
 	{

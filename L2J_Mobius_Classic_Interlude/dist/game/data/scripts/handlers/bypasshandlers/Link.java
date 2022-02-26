@@ -16,7 +16,9 @@
  */
 package handlers.bypasshandlers;
 
-import org.l2jmobius.commons.util.CommonUtil;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -31,32 +33,33 @@ public class Link implements IBypassHandler
 		"Link"
 	};
 	
-	private static final String[] VALID_LINKS =
+	private static final Set<String> VALID_LINKS = new HashSet<>();
+	static
 	{
-		"common/craft_01.htm",
-		"common/craft_02.htm",
-		"common/skill_enchant_help_01.htm",
-		"common/skill_enchant_help_02.htm",
-		"common/skill_enchant_help_03.htm",
-		"common/weapon_sa_01.htm",
-		"default/BlessingOfProtection.htm",
-		"default/SupportMagic.htm",
-		"fisherman/exchange_old_items.htm",
-		"fisherman/fish_appearance_exchange.htm",
-		"fisherman/fishing_manual001.htm",
-		"fisherman/fishing_manual002.htm",
-		"fisherman/fishing_manual003.htm",
-		"fisherman/fishing_manual004.htm",
-		"fisherman/fishing_manual008.htm",
-		"fisherman/fishing_manual009.htm",
-		"fisherman/fishing_manual010.htm",
-		"fortress/foreman.htm",
-		"petmanager/evolve.htm",
-		"petmanager/exchange.htm",
-		"petmanager/instructions.htm",
-		"warehouse/clanwh.htm",
-		"warehouse/privatewh.htm",
-	};
+		VALID_LINKS.add("common/craft_01.htm");
+		VALID_LINKS.add("common/craft_02.htm");
+		VALID_LINKS.add("common/skill_enchant_help_01.htm");
+		VALID_LINKS.add("common/skill_enchant_help_02.htm");
+		VALID_LINKS.add("common/skill_enchant_help_03.htm");
+		VALID_LINKS.add("common/weapon_sa_01.htm");
+		VALID_LINKS.add("default/BlessingOfProtection.htm");
+		VALID_LINKS.add("default/SupportMagic.htm");
+		VALID_LINKS.add("fisherman/exchange_old_items.htm");
+		VALID_LINKS.add("fisherman/fish_appearance_exchange.htm");
+		VALID_LINKS.add("fisherman/fishing_manual001.htm");
+		VALID_LINKS.add("fisherman/fishing_manual002.htm");
+		VALID_LINKS.add("fisherman/fishing_manual003.htm");
+		VALID_LINKS.add("fisherman/fishing_manual004.htm");
+		VALID_LINKS.add("fisherman/fishing_manual008.htm");
+		VALID_LINKS.add("fisherman/fishing_manual009.htm");
+		VALID_LINKS.add("fisherman/fishing_manual010.htm");
+		VALID_LINKS.add("fortress/foreman.htm");
+		VALID_LINKS.add("petmanager/evolve.htm");
+		VALID_LINKS.add("petmanager/exchange.htm");
+		VALID_LINKS.add("petmanager/instructions.htm");
+		VALID_LINKS.add("warehouse/clanwh.htm");
+		VALID_LINKS.add("warehouse/privatewh.htm");
+	}
 	
 	@Override
 	public boolean useBypass(String command, Player player, Creature target)
@@ -74,12 +77,13 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		String content = CommonUtil.contains(VALID_LINKS, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
+		String content = VALID_LINKS.contains(htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
 		// Precaution.
 		if (htmlPath.startsWith("teleporter/") && !(player.getTarget() instanceof Teleporter))
 		{
 			content = null;
 		}
+		
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
 		if (content != null)
 		{

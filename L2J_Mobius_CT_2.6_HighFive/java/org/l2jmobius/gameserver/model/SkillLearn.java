@@ -17,7 +17,10 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ClassId;
@@ -37,13 +40,13 @@ public class SkillLearn
 	private final int _getLevel;
 	private final boolean _autoGet;
 	private final int _levelUpSp;
-	private final List<ItemHolder> _requiredItems = new ArrayList<>();
-	private final List<Race> _races = new ArrayList<>();
-	private final List<SkillHolder> _preReqSkills = new ArrayList<>();
+	private final Set<ItemHolder> _requiredItems = new HashSet<>(1);
+	private final Set<Race> _races = EnumSet.noneOf(Race.class);
+	private final Set<SkillHolder> _preReqSkills = new HashSet<>(1);
 	private SocialClass _socialClass;
 	private final boolean _residenceSkill;
-	private final List<Integer> _residenceIds = new ArrayList<>();
-	private final List<SubClassData> _subClassLvlNumber = new ArrayList<>();
+	private final Set<Integer> _residenceIds = new HashSet<>(1);
+	private final List<SubClassData> _subClassLvlNumber = new ArrayList<>(1);
 	private final boolean _learnedByNpc;
 	private final boolean _learnedByFS;
 	
@@ -141,9 +144,9 @@ public class SkillLearn
 	}
 	
 	/**
-	 * @return the list with the item holders required to acquire this skill.
+	 * @return the set with the item holders required to acquire this skill.
 	 */
-	public List<ItemHolder> getRequiredItems()
+	public Set<ItemHolder> getRequiredItems()
 	{
 		return _requiredItems;
 	}
@@ -158,9 +161,9 @@ public class SkillLearn
 	}
 	
 	/**
-	 * @return a list with the races that can acquire this skill.
+	 * @return a set with the races that can acquire this skill.
 	 */
-	public List<Race> getRaces()
+	public Set<Race> getRaces()
 	{
 		return _races;
 	}
@@ -175,9 +178,9 @@ public class SkillLearn
 	}
 	
 	/**
-	 * @return the list of skill holders required to acquire this skill.
+	 * @return the set of skill holders required to acquire this skill.
 	 */
-	public List<SkillHolder> getPreReqSkills()
+	public Set<SkillHolder> getPreReqSkills()
 	{
 		return _preReqSkills;
 	}
@@ -220,9 +223,9 @@ public class SkillLearn
 	}
 	
 	/**
-	 * @return a list with the Ids where this skill is available.
+	 * @return a set with the Ids where this skill is available.
 	 */
-	public List<Integer> getResidenceIds()
+	public Set<Integer> getResidenceIds()
 	{
 		return _residenceIds;
 	}

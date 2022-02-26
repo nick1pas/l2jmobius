@@ -28,9 +28,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -141,7 +143,7 @@ public class Config
 	public static boolean ALLOW_MANOR;
 	public static int AUTODESTROY_ITEM_AFTER;
 	public static String PROTECTED_ITEMS;
-	public static List<Integer> LIST_PROTECTED_ITEMS = new ArrayList<>();
+	public static Set<Integer> LIST_PROTECTED_ITEMS = new HashSet<>();
 	public static boolean DESTROY_DROPPED_PLAYER_ITEM;
 	public static boolean DESTROY_EQUIPABLE_PLAYER_ITEM;
 	public static boolean SAVE_DROPPED_ITEM;
@@ -207,7 +209,7 @@ public class Config
 	public static boolean ALLOW_WYVERN_UPGRADER;
 	public static boolean CORRECT_PRICES;
 	public static String NONDROPPABLE_ITEMS;
-	public static List<Integer> LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+	public static Set<Integer> LIST_NONDROPPABLE_ITEMS = new HashSet<>();
 	public static String PET_RENT_NPC;
 	public static List<Integer> LIST_PET_RENT_NPC = new ArrayList<>();
 	public static boolean ENABLE_AIO_SYSTEM;
@@ -338,7 +340,7 @@ public class Config
 	public static boolean MASTERY_WEAPON_PENALTY;
 	public static int LEVEL_TO_GET_WEAPON_PENALTY;
 	public static boolean NPC_ATTACKABLE;
-	public static List<Integer> INVUL_NPC_LIST;
+	public static Set<Integer> INVUL_NPC_LIST;
 	public static boolean DISABLE_ATTACK_NPC_TYPE;
 	public static String ALLOWED_NPC_TYPES;
 	public static List<String> LIST_ALLOWED_NPC_TYPES = new ArrayList<>();
@@ -443,7 +445,7 @@ public class Config
 	public static float CHAMPION_ATK;
 	public static float CHAMPION_SPD_ATK;
 	public static int CHAMPION_REWARD;
-	public static List<ItemHolder> CHAMPION_REWARD_ITEMS;
+	public static Set<ItemHolder> CHAMPION_REWARD_ITEMS;
 	public static String CHAMP_TITLE;
 	public static int CHAMPION_AURA;
 	
@@ -456,9 +458,9 @@ public class Config
 	public static int AUTO_CP_PERCENTAGE;
 	public static int AUTO_HP_PERCENTAGE;
 	public static int AUTO_MP_PERCENTAGE;
-	public static List<Integer> AUTO_CP_ITEM_IDS;
-	public static List<Integer> AUTO_HP_ITEM_IDS;
-	public static List<Integer> AUTO_MP_ITEM_IDS;
+	public static Set<Integer> AUTO_CP_ITEM_IDS;
+	public static Set<Integer> AUTO_HP_ITEM_IDS;
+	public static Set<Integer> AUTO_MP_ITEM_IDS;
 	
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
@@ -468,7 +470,7 @@ public class Config
 	public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
 	public static int MOB_MIN_SPAWN_RANGE;
 	public static int MOB_MAX_SPAWN_RANGE;
-	public static List<Integer> MOBS_LIST_NOT_RANDOM;
+	public static Set<Integer> MOBS_LIST_NOT_RANDOM;
 	
 	public static boolean ALLOW_WEDDING;
 	public static int WEDDING_PRICE;
@@ -570,7 +572,7 @@ public class Config
 	public static boolean ALLOW_ONLINE_VIEW;
 	public static boolean WELCOME_HTM;
 	public static String ALLOWED_SKILLS;
-	public static List<Integer> ALLOWED_SKILLS_LIST = new ArrayList<>();
+	public static Set<Integer> ALLOWED_SKILLS_LIST = new HashSet<>();
 	public static boolean PROTECTOR_PLAYER_PK;
 	public static boolean PROTECTOR_PLAYER_PVP;
 	public static int PROTECTOR_RADIUS_ACTION;
@@ -633,8 +635,8 @@ public class Config
 	public static int KARMA_PK_LIMIT;
 	public static String KARMA_NONDROPPABLE_PET_ITEMS;
 	public static String KARMA_NONDROPPABLE_ITEMS;
-	public static List<Integer> KARMA_LIST_NONDROPPABLE_PET_ITEMS = new ArrayList<>();
-	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+	public static Set<Integer> KARMA_LIST_NONDROPPABLE_PET_ITEMS = new HashSet<>();
+	public static Set<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new HashSet<>();
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
 	public static boolean PVP_COLOR_SYSTEM_ENABLED;
@@ -700,7 +702,7 @@ public class Config
 	public static boolean ALT_OLY_LOG_FIGHTS;
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
-	public static List<Integer> LIST_OLY_RESTRICTED_SKILLS = new ArrayList<>();
+	public static Set<Integer> LIST_OLY_RESTRICTED_SKILLS = new HashSet<>();
 	public static int ALT_OLY_TELEPORT_COUNTDOWN;
 	public static int ALT_OLY_START_TIME;
 	public static int ALT_OLY_MIN;
@@ -717,7 +719,7 @@ public class Config
 	public static int ALT_OLY_MIN_POINT_FOR_EXCH;
 	public static int ALT_OLY_HERO_POINTS;
 	public static String ALT_OLY_RESTRICTED_ITEMS;
-	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>();
+	public static Set<Integer> LIST_OLY_RESTRICTED_ITEMS = new HashSet<>();
 	public static boolean ALLOW_EVENTS_DURING_OLY;
 	public static boolean ALT_OLY_RECHARGE_SKILLS;
 	public static int ALT_OLY_COMP_RITEM;
@@ -813,7 +815,7 @@ public class Config
 	
 	public static boolean ALLOW_LETHAL_PROTECTION_MOBS;
 	public static String LETHAL_PROTECTED_MOBS;
-	public static List<Integer> LIST_LETHAL_PROTECTED_MOBS = new ArrayList<>();
+	public static Set<Integer> LIST_LETHAL_PROTECTED_MOBS = new HashSet<>();
 	public static float MAGIC_CRITICAL_POWER;
 	public static float STUN_CHANCE_MODIFIER;
 	public static float BLEED_CHANCE_MODIFIER;
@@ -1281,7 +1283,7 @@ public class Config
 		LEVEL_TO_GET_PENALTY = generalConfig.getInt("LevelToGetPenalty", 20);
 		MASTERY_WEAPON_PENALTY = generalConfig.getBoolean("MasteryWeaponPenality", false);
 		LEVEL_TO_GET_WEAPON_PENALTY = generalConfig.getInt("LevelToGetWeaponPenalty", 20);
-		INVUL_NPC_LIST = new ArrayList<>();
+		INVUL_NPC_LIST = new HashSet<>();
 		final String t = generalConfig.getString("InvulNpcList", "30001-32132,35092-35103,35142-35146,35176-35187,35218-35232,35261-35278,35308-35319,35352-35367,35382-35407,35417-35427,35433-35469,35497-35513,35544-35587,35600-35617,35623-35628,35638-35640,35644,35645,50007,70010,99999");
 		String[] as;
 		final int k = (as = t.split(",")).length;
@@ -1404,7 +1406,7 @@ public class Config
 		ALLOW_GUARDS = generalConfig.getBoolean("AllowGuards", false);
 		AUTODESTROY_ITEM_AFTER = generalConfig.getInt("AutoDestroyDroppedItemAfter", 0);
 		PROTECTED_ITEMS = generalConfig.getString("ListOfProtectedItems", "");
-		LIST_PROTECTED_ITEMS = new ArrayList<>();
+		LIST_PROTECTED_ITEMS = new HashSet<>();
 		for (String id : PROTECTED_ITEMS.split(","))
 		{
 			LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
@@ -1569,7 +1571,7 @@ public class Config
 		CHAMPION_ATK = championConfig.getFloat("ChampionAtk", 1f);
 		CHAMPION_SPD_ATK = championConfig.getFloat("ChampionSpdAtk", 1f);
 		CHAMPION_REWARD = championConfig.getInt("ChampionRewardItem", 0);
-		CHAMPION_REWARD_ITEMS = new ArrayList<>();
+		CHAMPION_REWARD_ITEMS = new HashSet<>();
 		for (String s : championConfig.getString("ChampionRewardItems", "4356,10").split(";"))
 		{
 			if (s.isEmpty())
@@ -1598,17 +1600,17 @@ public class Config
 		AUTO_CP_PERCENTAGE = autoPotionsConfig.getInt("AutoCpPercentage", 70);
 		AUTO_HP_PERCENTAGE = autoPotionsConfig.getInt("AutoHpPercentage", 70);
 		AUTO_MP_PERCENTAGE = autoPotionsConfig.getInt("AutoMpPercentage", 70);
-		AUTO_CP_ITEM_IDS = new ArrayList<>();
+		AUTO_CP_ITEM_IDS = new HashSet<>();
 		for (String s : autoPotionsConfig.getString("AutoCpItemIds", "0").split(","))
 		{
 			AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
 		}
-		AUTO_HP_ITEM_IDS = new ArrayList<>();
+		AUTO_HP_ITEM_IDS = new HashSet<>();
 		for (String s : autoPotionsConfig.getString("AutoHpItemIds", "0").split(","))
 		{
 			AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
 		}
-		AUTO_MP_ITEM_IDS = new ArrayList<>();
+		AUTO_MP_ITEM_IDS = new HashSet<>();
 		for (String s : autoPotionsConfig.getString("AutoMpItemIds", "0").split(","))
 		{
 			AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
@@ -1637,7 +1639,7 @@ public class Config
 		if (ENABLE_RANDOM_MONSTER_SPAWNS)
 		{
 			final String[] mobsIds = randomSpawnsConfig.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
-			MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+			MOBS_LIST_NOT_RANDOM = new HashSet<>(mobsIds.length);
 			for (String id : mobsIds)
 			{
 				MOBS_LIST_NOT_RANDOM.add(Integer.parseInt(id));
@@ -1776,7 +1778,7 @@ public class Config
 		ALLOW_ONLINE_VIEW = customServerConfig.getBoolean("AllowOnlineView", false);
 		KEEP_SUBCLASS_SKILLS = customServerConfig.getBoolean("KeepSubClassSkills", false);
 		ALLOWED_SKILLS = customServerConfig.getString("AllowedSkills", "541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,617,618,619");
-		ALLOWED_SKILLS_LIST = new ArrayList<>();
+		ALLOWED_SKILLS_LIST = new HashSet<>();
 		for (String id : ALLOWED_SKILLS.trim().split(","))
 		{
 			ALLOWED_SKILLS_LIST.add(Integer.parseInt(id.trim()));
@@ -1836,12 +1838,12 @@ public class Config
 		KARMA_PK_LIMIT = pvpConfig.getInt("MinimumPKRequiredToDrop", 5);
 		KARMA_NONDROPPABLE_PET_ITEMS = pvpConfig.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650");
 		KARMA_NONDROPPABLE_ITEMS = pvpConfig.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621");
-		KARMA_LIST_NONDROPPABLE_PET_ITEMS = new ArrayList<>();
+		KARMA_LIST_NONDROPPABLE_PET_ITEMS = new HashSet<>();
 		for (String id : KARMA_NONDROPPABLE_PET_ITEMS.split(","))
 		{
 			KARMA_LIST_NONDROPPABLE_PET_ITEMS.add(Integer.parseInt(id));
 		}
-		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+		KARMA_LIST_NONDROPPABLE_ITEMS = new HashSet<>();
 		for (String id : KARMA_NONDROPPABLE_ITEMS.split(","))
 		{
 			KARMA_LIST_NONDROPPABLE_ITEMS.add(Integer.parseInt(id));
@@ -1934,7 +1936,7 @@ public class Config
 		ALT_OLY_MIN_POINT_FOR_EXCH = olympiadConfig.getInt("AltOlyMinPointForExchange", 50);
 		ALT_OLY_HERO_POINTS = olympiadConfig.getInt("AltOlyHeroPoints", 100);
 		ALT_OLY_RESTRICTED_ITEMS = olympiadConfig.getString("AltOlyRestrictedItems", "0");
-		LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>();
+		LIST_OLY_RESTRICTED_ITEMS = new HashSet<>();
 		for (String id : ALT_OLY_RESTRICTED_ITEMS.split(","))
 		{
 			LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
@@ -1946,7 +1948,7 @@ public class Config
 		ALT_OLY_LOG_FIGHTS = olympiadConfig.getBoolean("AlyOlyLogFights", false);
 		ALT_OLY_SHOW_MONTHLY_WINNERS = olympiadConfig.getBoolean("AltOlyShowMonthlyWinners", true);
 		ALT_OLY_ANNOUNCE_GAMES = olympiadConfig.getBoolean("AltOlyAnnounceGames", true);
-		LIST_OLY_RESTRICTED_SKILLS = new ArrayList<>();
+		LIST_OLY_RESTRICTED_SKILLS = new HashSet<>();
 		for (String id : olympiadConfig.getString("AltOlyRestrictedSkills", "0").split(","))
 		{
 			LIST_OLY_RESTRICTED_SKILLS.add(Integer.parseInt(id));
@@ -2302,7 +2304,7 @@ public class Config
 		ALLOW_RAID_LETHAL = physicsConfig.getBoolean("AllowLethalOnRaids", false);
 		ALLOW_LETHAL_PROTECTION_MOBS = physicsConfig.getBoolean("AllowLethalProtectionMobs", false);
 		LETHAL_PROTECTED_MOBS = physicsConfig.getString("LethalProtectedMobs", "");
-		LIST_LETHAL_PROTECTED_MOBS = new ArrayList<>();
+		LIST_LETHAL_PROTECTED_MOBS = new HashSet<>();
 		for (String id : LETHAL_PROTECTED_MOBS.split(","))
 		{
 			LIST_LETHAL_PROTECTED_MOBS.add(Integer.parseInt(id));

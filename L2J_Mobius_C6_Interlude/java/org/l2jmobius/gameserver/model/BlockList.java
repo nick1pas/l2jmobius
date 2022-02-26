@@ -19,10 +19,11 @@ package org.l2jmobius.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -34,28 +35,29 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class BlockList
 {
 	private static final Logger LOGGER = Logger.getLogger(BlockList.class.getName());
-	private static Map<Integer, List<Integer>> _offlineList = new HashMap<>();
+	
+	private static final Map<Integer, Set<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
 	
 	private final Player _owner;
-	private List<Integer> _blockList;
+	private Set<Integer> _blockList;
 	
 	public BlockList(Player owner)
 	{
 		_owner = owner;
-		_blockList = _offlineList.get(owner.getObjectId());
+		_blockList = OFFLINE_LIST.get(owner.getObjectId());
 		if (_blockList == null)
 		{
 			_blockList = loadList(_owner.getObjectId());
 		}
 	}
 	
-	private synchronized void addToBlockList(int target)
+	private void addToBlockList(int target)
 	{
 		_blockList.add(target);
 		updateInDB(target, true);
 	}
 	
-	private synchronized void removeFromBlockList(int target)
+	private void removeFromBlockList(int target)
 	{
 		_blockList.remove(Integer.valueOf(target));
 		updateInDB(target, false);
@@ -63,36 +65,33 @@ public class BlockList
 	
 	public void playerLogout()
 	{
-		_offlineList.put(_owner.getObjectId(), _blockList);
+		OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static List<Integer> loadList(int objId)
+	private static Set<Integer> loadList(int objId)
 	{
-		final List<Integer> list = new ArrayList<>();
-		
-		try (Connection con = DatabaseFactory.getConnection())
+		final Set<Integer> list = new HashSet<>();
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id=? AND relation=1"))
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
 			statement.setInt(1, objId);
-			final ResultSet rset = statement.executeQuery();
-			int friendId;
-			while (rset.next())
+			try (ResultSet rset = statement.executeQuery())
 			{
-				friendId = rset.getInt("friend_id");
-				if (friendId == objId)
+				int friendId;
+				while (rset.next())
 				{
-					continue;
+					friendId = rset.getInt("friend_id");
+					if (friendId == objId)
+					{
+						continue;
+					}
+					list.add(friendId);
 				}
-				
-				list.add(friendId);
 			}
-			
-			rset.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error found in " + objId + " friendlist while loading BlockList: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error found in " + objId + " FriendList while loading BlockList: " + e.getMessage(), e);
 		}
 		return list;
 	}
@@ -101,25 +100,29 @@ public class BlockList
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement;
-			if (state)
+			if (state) // add
 			{
-				statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id, relation) VALUES (?, ?, 1)");
-				statement.setInt(1, _owner.getObjectId());
-				statement.setInt(2, targetId);
+				try (PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id, relation) VALUES (?, ?, 1)"))
+				{
+					statement.setInt(1, _owner.getObjectId());
+					statement.setInt(2, targetId);
+					statement.execute();
+				}
 			}
 			else
+			// remove
 			{
-				statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id = ? AND friend_id = ? AND relation = 1");
-				statement.setInt(1, _owner.getObjectId());
-				statement.setInt(2, targetId);
+				try (PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id=? AND friend_id=? AND relation=1"))
+				{
+					statement.setInt(1, _owner.getObjectId());
+					statement.setInt(2, targetId);
+					statement.execute();
+				}
 			}
-			statement.execute();
-			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Could not add/remove block player: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Could not add block player: " + e.getMessage(), e);
 		}
 	}
 	
@@ -155,7 +158,7 @@ public class BlockList
 		_owner.setInRefusalMode(value);
 	}
 	
-	public List<Integer> getBlockList()
+	public Set<Integer> getBlockList()
 	{
 		return _blockList;
 	}
@@ -239,12 +242,10 @@ public class BlockList
 	{
 		int i = 1;
 		listOwner.sendPacket(SystemMessageId.IGNORE_LIST);
-		
 		for (int playerId : listOwner.getBlockList().getBlockList())
 		{
 			listOwner.sendMessage((i++) + ". " + CharNameTable.getInstance().getPlayerName(playerId));
 		}
-		
 		listOwner.sendPacket(SystemMessageId.EMPTY_3);
 	}
 	
@@ -260,12 +261,10 @@ public class BlockList
 		{
 			return isBlocked(player, targetId);
 		}
-		
-		if (!_offlineList.containsKey(ownerId))
+		if (!OFFLINE_LIST.containsKey(ownerId))
 		{
-			_offlineList.put(ownerId, loadList(ownerId));
+			OFFLINE_LIST.put(ownerId, loadList(ownerId));
 		}
-		
-		return _offlineList.get(ownerId).contains(targetId);
+		return OFFLINE_LIST.get(ownerId).contains(targetId);
 	}
 }

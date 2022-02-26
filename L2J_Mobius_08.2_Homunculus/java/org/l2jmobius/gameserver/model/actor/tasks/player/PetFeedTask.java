@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -69,11 +69,12 @@ public class PetFeedTask implements Runnable
 					_player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_FEED_MOUNT_STATUS_CANCELED);
 				}
 				
-				final List<Integer> foodIds = _player.getPetData(_player.getMountNpcId()).getFood();
+				final Set<Integer> foodIds = _player.getPetData(_player.getMountNpcId()).getFood();
 				if (foodIds.isEmpty())
 				{
 					return;
 				}
+				
 				Item food = null;
 				for (int id : foodIds)
 				{

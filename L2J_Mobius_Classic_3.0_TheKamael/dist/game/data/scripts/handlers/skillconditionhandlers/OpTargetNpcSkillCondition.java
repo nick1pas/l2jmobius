@@ -16,7 +16,8 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -29,17 +30,17 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class OpTargetNpcSkillCondition implements ISkillCondition
 {
-	private final List<Integer> _npcId;
+	private final Set<Integer> _npcIds = new HashSet<>();
 	
 	public OpTargetNpcSkillCondition(StatSet params)
 	{
-		_npcId = params.getList("npcIds", Integer.class);
+		_npcIds.addAll(params.getList("npcIds", Integer.class));
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final WorldObject actualTarget = (caster == null) || !caster.isPlayer() ? target : caster.getTarget();
-		return (actualTarget != null) && (actualTarget.isNpc() || actualTarget.isDoor()) && _npcId.contains(actualTarget.getId());
+		return (actualTarget != null) && (actualTarget.isNpc() || actualTarget.isDoor()) && _npcIds.contains(actualTarget.getId());
 	}
 }

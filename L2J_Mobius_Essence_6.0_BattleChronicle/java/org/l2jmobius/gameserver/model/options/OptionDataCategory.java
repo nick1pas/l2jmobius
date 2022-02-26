@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.options;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.l2jmobius.commons.util.Rnd;
 
@@ -28,10 +28,10 @@ import org.l2jmobius.commons.util.Rnd;
 public class OptionDataCategory
 {
 	private final Map<Options, Double> _options;
-	private final List<Integer> _itemIds;
+	private final Set<Integer> _itemIds;
 	private final double _chance;
 	
-	public OptionDataCategory(Map<Options, Double> options, List<Integer> itemIds, double chance)
+	public OptionDataCategory(Map<Options, Double> options, Set<Integer> itemIds, double chance)
 	{
 		_options = options;
 		_itemIds = itemIds;
@@ -59,7 +59,7 @@ public class OptionDataCategory
 		return result;
 	}
 	
-	public List<Integer> getItemIds()
+	public Set<Integer> getItemIds()
 	{
 		return _itemIds;
 	}

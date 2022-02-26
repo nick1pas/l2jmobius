@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -172,7 +173,7 @@ public class Pet extends Summon
 				setCurrentFed(_curFed > getFeedConsume() ? _curFed - getFeedConsume() : 0);
 				broadcastStatusUpdate();
 				
-				final List<Integer> foodIds = getPetData().getFood();
+				final Set<Integer> foodIds = getPetData().getFood();
 				if (foodIds.isEmpty())
 				{
 					if (isUncontrollable())

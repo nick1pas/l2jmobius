@@ -18,7 +18,9 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -49,7 +51,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class SellBuffsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SellBuffsManager.class.getName());
-	private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
+	private static final Set<Integer> ALLOWED_BUFFS = new HashSet<>();
 	private static final String HTML_FOLDER = "data/html/mods/SellBuffs/";
 	
 	protected SellBuffsManager()
@@ -76,11 +78,7 @@ public class SellBuffsManager implements IXmlReader
 		{
 			final Element elem = (Element) node.item(i);
 			final int skillId = Integer.parseInt(elem.getAttribute("id"));
-			
-			if (!ALLOWED_BUFFS.contains(skillId))
-			{
-				ALLOWED_BUFFS.add(skillId);
-			}
+			ALLOWED_BUFFS.add(skillId);
 		}
 	}
 	

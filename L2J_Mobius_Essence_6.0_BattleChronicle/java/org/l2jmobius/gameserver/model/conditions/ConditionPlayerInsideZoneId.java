@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -29,9 +29,9 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
  */
 public class ConditionPlayerInsideZoneId extends Condition
 {
-	private final List<Integer> _zones;
+	private final Set<Integer> _zones;
 	
-	public ConditionPlayerInsideZoneId(List<Integer> zones)
+	public ConditionPlayerInsideZoneId(Set<Integer> zones)
 	{
 		_zones = zones;
 	}

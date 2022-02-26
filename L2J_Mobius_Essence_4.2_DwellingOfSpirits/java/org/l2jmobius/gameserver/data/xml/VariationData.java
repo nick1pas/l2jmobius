@@ -20,8 +20,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -114,14 +116,11 @@ public class VariationData implements IXmlReader
 						});
 						
 						// Support for specific item ids.
-						final List<Integer> itemIds = new ArrayList<>();
+						final Set<Integer> itemIds = new HashSet<>();
 						forEach(categoryNode, "item", optionNode ->
 						{
 							final int itemId = parseInteger(optionNode.getAttributes(), "id");
-							if (!itemIds.contains(itemId))
-							{
-								itemIds.add(itemId);
-							}
+							itemIds.add(itemId);
 						});
 						forEach(categoryNode, "items", optionNode ->
 						{
@@ -129,10 +128,7 @@ public class VariationData implements IXmlReader
 							final int toId = parseInteger(optionNode.getAttributes(), "to");
 							for (int id = fromId; id <= toId; id++)
 							{
-								if (!itemIds.contains(id))
-								{
-									itemIds.add(id);
-								}
+								itemIds.add(id);
 							}
 						});
 						

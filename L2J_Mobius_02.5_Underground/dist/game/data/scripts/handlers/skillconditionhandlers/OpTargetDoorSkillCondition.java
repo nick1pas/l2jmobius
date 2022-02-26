@@ -16,7 +16,8 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -29,11 +30,11 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class OpTargetDoorSkillCondition implements ISkillCondition
 {
-	private final List<Integer> _doorIds;
+	private final Set<Integer> _doorIds = new HashSet<>();
 	
 	public OpTargetDoorSkillCondition(StatSet params)
 	{
-		_doorIds = params.getList("doorIds", Integer.class);
+		_doorIds.addAll(params.getList("doorIds", Integer.class));
 	}
 	
 	@Override

@@ -21,8 +21,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -78,8 +80,8 @@ public class Castle extends AbstractResidence
 	private SiegeZone _zone = null;
 	private ResidenceTeleportZone _teleZone;
 	private Clan _formerOwner = null;
-	private final List<Artefact> _artefacts = new ArrayList<>(1);
-	private final Map<Integer, CastleFunction> _function;
+	private final Set<Artefact> _artefacts = new HashSet<>(1);
+	private final Map<Integer, CastleFunction> _function = new ConcurrentHashMap<>();
 	private int _ticketBuyCount = 0;
 	private boolean _isFirstMidVictory = false;
 	
@@ -237,10 +239,6 @@ public class Castle extends AbstractResidence
 	{
 		super(castleId);
 		load();
-		/*
-		 * if (getResidenceId() == 7 || castleId == 9) // Goddard and Schuttgart _nbArtifact = 2;
-		 */
-		_function = new ConcurrentHashMap<>();
 		initResidenceZone();
 		if (_ownerId != 0)
 		{
@@ -1075,7 +1073,7 @@ public class Castle extends AbstractResidence
 		_artefacts.add(artefact);
 	}
 	
-	public List<Artefact> getArtefacts()
+	public Set<Artefact> getArtefacts()
 	{
 		return _artefacts;
 	}

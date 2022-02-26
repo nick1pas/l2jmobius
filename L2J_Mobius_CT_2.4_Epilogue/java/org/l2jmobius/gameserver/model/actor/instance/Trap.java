@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
@@ -57,7 +57,7 @@ public class Trap extends Npc
 	private boolean _isTriggered;
 	private final int _lifeTime;
 	private Player _owner;
-	private final List<Integer> _playersWhoDetectedMe = new ArrayList<>();
+	private final Set<Integer> _playersWhoDetectedMe = new HashSet<>();
 	private final SkillHolder _skill;
 	private int _remainingTime;
 	// Tasks

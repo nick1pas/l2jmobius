@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -42,7 +42,7 @@ public class FakePlayerData implements IXmlReader
 	private final Map<Integer, FakePlayerHolder> _fakePlayerInfos = new HashMap<>();
 	private final Map<String, String> _fakePlayerNames = new HashMap<>();
 	private final Map<String, Integer> _fakePlayerIds = new HashMap<>();
-	private final List<String> _talkableFakePlayerNames = new ArrayList<>();
+	private final Set<String> _talkableFakePlayerNames = new HashSet<>();
 	
 	protected FakePlayerData()
 	{

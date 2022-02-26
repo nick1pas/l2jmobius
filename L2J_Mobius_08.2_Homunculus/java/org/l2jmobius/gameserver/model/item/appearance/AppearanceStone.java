@@ -17,9 +17,10 @@
 package org.l2jmobius.gameserver.model.item.appearance;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
@@ -47,12 +48,12 @@ public class AppearanceStone
 	private final ArmorType _armorType;
 	private final AppearanceHandType _handType;
 	private final AppearanceMagicType _magicType;
-	private List<CrystalType> _crystalTypes;
-	private List<AppearanceTargetType> _targetTypes;
-	private List<Long> _bodyParts;
-	private List<Race> _races;
-	private List<Race> _racesNot;
-	private List<AppearanceHolder> _allVisualIds;
+	private Set<CrystalType> _crystalTypes;
+	private Set<AppearanceTargetType> _targetTypes;
+	private Set<Long> _bodyParts;
+	private Set<Race> _races;
+	private Set<Race> _racesNot;
+	private Set<AppearanceHolder> _allVisualIds;
 	
 	public AppearanceStone(StatSet set)
 	{
@@ -172,35 +173,35 @@ public class AppearanceStone
 	{
 		if (_crystalTypes == null)
 		{
-			_crystalTypes = new ArrayList<>();
+			_crystalTypes = EnumSet.noneOf(CrystalType.class);
 		}
 		_crystalTypes.add(type);
 	}
 	
-	public List<CrystalType> getCrystalTypes()
+	public Set<CrystalType> getCrystalTypes()
 	{
-		return _crystalTypes != null ? _crystalTypes : Collections.emptyList();
+		return _crystalTypes != null ? _crystalTypes : Collections.emptySet();
 	}
 	
 	public void addTargetType(AppearanceTargetType type)
 	{
 		if (_targetTypes == null)
 		{
-			_targetTypes = new ArrayList<>();
+			_targetTypes = EnumSet.noneOf(AppearanceTargetType.class);
 		}
 		_targetTypes.add(type);
 	}
 	
-	public List<AppearanceTargetType> getTargetTypes()
+	public Set<AppearanceTargetType> getTargetTypes()
 	{
-		return _targetTypes != null ? _targetTypes : Collections.emptyList();
+		return _targetTypes != null ? _targetTypes : Collections.emptySet();
 	}
 	
 	public void addBodyPart(long part)
 	{
 		if (_bodyParts == null)
 		{
-			_bodyParts = new ArrayList<>();
+			_bodyParts = new HashSet<>();
 		}
 		_bodyParts.add(part);
 	}
@@ -209,47 +210,47 @@ public class AppearanceStone
 	{
 		if (_allVisualIds == null)
 		{
-			_allVisualIds = new ArrayList<>();
+			_allVisualIds = new HashSet<>();
 		}
 		_allVisualIds.add(appearanceHolder);
 	}
 	
-	public List<AppearanceHolder> getVisualIds()
+	public Set<AppearanceHolder> getVisualIds()
 	{
-		return _allVisualIds != null ? _allVisualIds : Collections.emptyList();
+		return _allVisualIds != null ? _allVisualIds : Collections.emptySet();
 	}
 	
-	public List<Long> getBodyParts()
+	public Set<Long> getBodyParts()
 	{
-		return _bodyParts != null ? _bodyParts : Collections.emptyList();
+		return _bodyParts != null ? _bodyParts : Collections.emptySet();
 	}
 	
 	public void addRace(Race race)
 	{
 		if (_races == null)
 		{
-			_races = new ArrayList<>();
+			_races = EnumSet.noneOf(Race.class);
 		}
 		_races.add(race);
 	}
 	
-	public List<Race> getRaces()
+	public Set<Race> getRaces()
 	{
-		return _races != null ? _races : Collections.emptyList();
+		return _races != null ? _races : Collections.emptySet();
 	}
 	
 	public void addRaceNot(Race race)
 	{
 		if (_racesNot == null)
 		{
-			_racesNot = new ArrayList<>();
+			_racesNot = EnumSet.noneOf(Race.class);
 		}
 		_racesNot.add(race);
 	}
 	
-	public List<Race> getRacesNot()
+	public Set<Race> getRacesNot()
 	{
-		return _racesNot != null ? _racesNot : Collections.emptyList();
+		return _racesNot != null ? _racesNot : Collections.emptySet();
 	}
 	
 	/**
@@ -302,7 +303,7 @@ public class AppearanceStone
 			{
 				// Seems like in retail item with already changed appearance, can be changed again without being restored.
 				
-				final AppearanceTargetType targetType = getTargetTypes().get(0);
+				final AppearanceTargetType targetType = getTargetTypes().stream().findFirst().get();
 				switch (targetType)
 				{
 					case NONE:

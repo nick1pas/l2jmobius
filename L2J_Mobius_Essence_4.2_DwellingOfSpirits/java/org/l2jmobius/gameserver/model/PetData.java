@@ -18,8 +18,10 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.EvolveLevel;
@@ -41,7 +43,7 @@ public class PetData
 	private int _minLevel = Byte.MAX_VALUE;
 	private int _maxLevel = 0;
 	private boolean _syncLevel = false;
-	private final List<Integer> _food = new ArrayList<>();
+	private final Set<Integer> _food = new HashSet<>();
 	private final int _petType;
 	private final int _index;
 	private final int _type;
@@ -158,7 +160,7 @@ public class PetData
 	/**
 	 * @return the pet's food list.
 	 */
-	public List<Integer> getFood()
+	public Set<Integer> getFood()
 	{
 		return _food;
 	}

@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -284,7 +285,7 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 		
 		// Retrieve activeChar's blocklist and selected
-		final List<Integer> list = activeChar.getBlockList().getBlockList();
+		final Set<Integer> list = activeChar.getBlockList().getBlockList();
 		final List<Integer> slist = activeChar.getSelectedBlocksList();
 		final StringBuilder sb = new StringBuilder();
 		

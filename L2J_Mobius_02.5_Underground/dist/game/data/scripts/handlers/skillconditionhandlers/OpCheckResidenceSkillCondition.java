@@ -16,7 +16,8 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -32,12 +33,12 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class OpCheckResidenceSkillCondition implements ISkillCondition
 {
-	private final List<Integer> _residencesId;
+	private final Set<Integer> _residencesId = new HashSet<>();
 	private final boolean _isWithin;
 	
 	public OpCheckResidenceSkillCondition(StatSet params)
 	{
-		_residencesId = params.getList("residencesId", Integer.class);
+		_residencesId.addAll(params.getList("residencesId", Integer.class));
 		_isWithin = params.getBoolean("isWithin");
 	}
 	

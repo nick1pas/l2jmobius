@@ -19,8 +19,10 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
@@ -67,7 +69,7 @@ public class WalkingManager implements IXmlReader
 	public static final byte REPEAT_TELE_FIRST = 2;
 	public static final byte REPEAT_RANDOM = 3;
 	
-	private final List<Integer> _targetedNpcIds = new ArrayList<>();
+	private final Set<Integer> _targetedNpcIds = new HashSet<>();
 	private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
 	private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
 	private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it

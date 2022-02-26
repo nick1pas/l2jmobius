@@ -35,7 +35,7 @@ public class ExChooseShapeShiftingItem implements IClientOutgoingPacket
 	public ExChooseShapeShiftingItem(AppearanceStone stone)
 	{
 		_type = stone.getType();
-		_targetType = stone.getTargetTypes().size() > 1 ? AppearanceTargetType.ALL : stone.getTargetTypes().get(0);
+		_targetType = stone.getTargetTypes().size() > 1 ? AppearanceTargetType.ALL : stone.getTargetTypes().stream().findFirst().get();
 		_itemId = stone.getId();
 	}
 	

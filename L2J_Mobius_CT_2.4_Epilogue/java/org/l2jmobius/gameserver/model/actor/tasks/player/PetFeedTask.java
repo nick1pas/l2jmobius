@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -69,7 +69,7 @@ public class PetFeedTask implements Runnable
 				return;
 			}
 			
-			final List<Integer> foodIds = PetDataTable.getInstance().getPetData(_player.getMountNpcId()).getFood();
+			final Set<Integer> foodIds = PetDataTable.getInstance().getPetData(_player.getMountNpcId()).getFood();
 			if (foodIds.isEmpty())
 			{
 				return;

@@ -24,8 +24,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -184,7 +186,7 @@ public class LongTimeEvent extends Quest
 										final Node maxLevelNode = d.getAttributes().getNamedItem("maxLevel");
 										final int maxLevel = maxLevelNode == null ? Integer.MAX_VALUE : Integer.parseInt(maxLevelNode.getNodeValue());
 										final Node monsterIdsNode = d.getAttributes().getNamedItem("monsterIds");
-										final List<Integer> monsterIds = new ArrayList<>();
+										final Set<Integer> monsterIds = new HashSet<>();
 										if (monsterIdsNode != null)
 										{
 											for (String id : monsterIdsNode.getNodeValue().split(","))

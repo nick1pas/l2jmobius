@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -37,7 +38,7 @@ public class ExAcquireSkillInfo implements IClientOutgoingPacket
 	private final int _dualClassLevel;
 	private final long _spCost;
 	private final int _minLevel;
-	private final List<ItemHolder> _itemReq;
+	private final Set<ItemHolder> _itemReq;
 	private final List<Skill> _skillRem;
 	
 	/**

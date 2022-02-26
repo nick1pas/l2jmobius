@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
@@ -153,7 +152,7 @@ public class Pet extends Summon
 				
 				broadcastStatusUpdate();
 				
-				final List<Integer> foodIds = getPetData().getFood();
+				final Set<Integer> foodIds = getPetData().getFood();
 				if (foodIds.isEmpty())
 				{
 					if (isUncontrollable())

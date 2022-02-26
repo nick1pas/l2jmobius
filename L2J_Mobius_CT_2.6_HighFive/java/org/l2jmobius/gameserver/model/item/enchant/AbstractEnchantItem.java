@@ -16,16 +16,16 @@
  */
 package org.l2jmobius.gameserver.model.item.enchant;
 
+import java.util.EnumSet;
+import java.util.Set;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.model.item.type.ItemType;
 
 /**
  * @author UnAfraid
@@ -34,17 +34,18 @@ public abstract class AbstractEnchantItem
 {
 	protected static final Logger LOGGER = Logger.getLogger(AbstractEnchantItem.class.getName());
 	
-	private static final ItemType[] ENCHANT_TYPES = new ItemType[]
+	private static final Set<EtcItemType> ENCHANT_TYPES = EnumSet.noneOf(EtcItemType.class);
+	static
 	{
-		EtcItemType.ANCIENT_CRYSTAL_ENCHANT_AM,
-		EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP,
-		EtcItemType.BLESS_SCRL_ENCHANT_AM,
-		EtcItemType.BLESS_SCRL_ENCHANT_WP,
-		EtcItemType.SCRL_ENCHANT_AM,
-		EtcItemType.SCRL_ENCHANT_WP,
-		EtcItemType.SCRL_INC_ENCHANT_PROP_AM,
-		EtcItemType.SCRL_INC_ENCHANT_PROP_WP,
-	};
+		ENCHANT_TYPES.add(EtcItemType.ANCIENT_CRYSTAL_ENCHANT_AM);
+		ENCHANT_TYPES.add(EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP);
+		ENCHANT_TYPES.add(EtcItemType.BLESS_SCRL_ENCHANT_AM);
+		ENCHANT_TYPES.add(EtcItemType.BLESS_SCRL_ENCHANT_WP);
+		ENCHANT_TYPES.add(EtcItemType.SCRL_ENCHANT_AM);
+		ENCHANT_TYPES.add(EtcItemType.SCRL_ENCHANT_WP);
+		ENCHANT_TYPES.add(EtcItemType.SCRL_INC_ENCHANT_PROP_AM);
+		ENCHANT_TYPES.add(EtcItemType.SCRL_INC_ENCHANT_PROP_WP);
+	}
 	
 	private final int _id;
 	private final CrystalType _grade;
@@ -58,7 +59,7 @@ public abstract class AbstractEnchantItem
 		{
 			throw new NullPointerException();
 		}
-		else if (!CommonUtil.contains(ENCHANT_TYPES, getItem().getItemType()))
+		else if (!ENCHANT_TYPES.contains(getItem().getItemType()))
 		{
 			throw new IllegalAccessError();
 		}
@@ -146,7 +147,7 @@ public abstract class AbstractEnchantItem
 	 * @param type2
 	 * @return {@code true} if current type2 is valid to be enchanted, {@code false} otherwise
 	 */
-	private final boolean isValidItemType(int type2)
+	private boolean isValidItemType(int type2)
 	{
 		if (type2 == ItemTemplate.TYPE2_WEAPON)
 		{

@@ -263,7 +263,7 @@ public class Pet extends Summon
 				
 				broadcastStatusUpdate();
 				
-				final List<Integer> foodIds = getPetData().getFood();
+				final Set<Integer> foodIds = getPetData().getFood();
 				if (foodIds.isEmpty())
 				{
 					if (isUncontrollable())

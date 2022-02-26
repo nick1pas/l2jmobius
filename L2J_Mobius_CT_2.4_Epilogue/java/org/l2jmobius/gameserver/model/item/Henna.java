@@ -16,8 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.item;
 
-import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -40,7 +41,7 @@ public class Henna
 	private final int _wearCount;
 	private final int _cancelFee;
 	private final int _cancelCount;
-	private final List<ClassId> _wearClass;
+	private final Set<ClassId> _wearClass;
 	
 	public Henna(StatSet set)
 	{
@@ -56,7 +57,7 @@ public class Henna
 		_wearCount = set.getInt("wear_count");
 		_cancelFee = set.getInt("cancel_fee");
 		_cancelCount = set.getInt("cancel_count");
-		_wearClass = new ArrayList<>();
+		_wearClass = EnumSet.noneOf(ClassId.class);
 	}
 	
 	/**
@@ -158,7 +159,7 @@ public class Henna
 	/**
 	 * @return the list with the allowed classes to wear this dye.
 	 */
-	public List<ClassId> getAllowedWearClass()
+	public Set<ClassId> getAllowedWearClass()
 	{
 		return _wearClass;
 	}

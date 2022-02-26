@@ -286,7 +286,7 @@ public class Config
 	public static boolean AUTO_LOOT_SLOT_LIMIT;
 	public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
 	public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
-	public static List<Integer> AUTO_LOOT_ITEM_IDS;
+	public static Set<Integer> AUTO_LOOT_ITEM_IDS;
 	public static boolean ENABLE_KEYBOARD_MOVEMENT;
 	public static int UNSTUCK_INTERVAL;
 	public static int TELEPORT_WATCHDOG_TIMEOUT;
@@ -476,7 +476,7 @@ public class Config
 	public static boolean ALLOW_DISCARDITEM;
 	public static int AUTODESTROY_ITEM_AFTER;
 	public static int HERB_AUTO_DESTROY_TIME;
-	public static List<Integer> LIST_PROTECTED_ITEMS;
+	public static Set<Integer> LIST_PROTECTED_ITEMS;
 	public static boolean DATABASE_CLEAN_UP;
 	public static int CHAR_DATA_STORE_INTERVAL;
 	public static int CLAN_VARIABLES_STORE_INTERVAL;
@@ -567,7 +567,7 @@ public class Config
 	public static boolean ALT_OLY_LOG_FIGHTS;
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
-	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>();
+	public static Set<Integer> LIST_OLY_RESTRICTED_ITEMS = new HashSet<>();
 	public static int ALT_OLY_WEAPON_ENCHANT_LIMIT;
 	public static int ALT_OLY_ARMOR_ENCHANT_LIMIT;
 	public static int ALT_OLY_WAIT_TIME;
@@ -1160,9 +1160,9 @@ public class Config
 	public static int AUTO_CP_PERCENTAGE;
 	public static int AUTO_HP_PERCENTAGE;
 	public static int AUTO_MP_PERCENTAGE;
-	public static List<Integer> AUTO_CP_ITEM_IDS;
-	public static List<Integer> AUTO_HP_ITEM_IDS;
-	public static List<Integer> AUTO_MP_ITEM_IDS;
+	public static Set<Integer> AUTO_CP_ITEM_IDS;
+	public static Set<Integer> AUTO_HP_ITEM_IDS;
+	public static Set<Integer> AUTO_MP_ITEM_IDS;
 	public static boolean CUSTOM_STARTING_LOC;
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
@@ -1172,7 +1172,7 @@ public class Config
 	public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
 	public static int MOB_MIN_SPAWN_RANGE;
 	public static int MOB_MAX_SPAWN_RANGE;
-	public static List<Integer> MOBS_LIST_NOT_RANDOM;
+	public static Set<Integer> MOBS_LIST_NOT_RANDOM;
 	public static boolean FREE_JUMPS_FOR_ALL;
 	public static boolean CUSTOM_CB_ENABLED;
 	public static int COMMUNITYBOARD_CURRENCY;
@@ -1191,7 +1191,7 @@ public class Config
 	public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
 	public static int COMMUNITY_PREMIUM_COIN_ID;
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
-	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
+	public static Set<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	public static boolean CUSTOM_DEPOSITABLE_ENABLED;
 	public static boolean CUSTOM_DEPOSITABLE_QUEST_ITEMS;
@@ -1839,7 +1839,7 @@ public class Config
 			LOOT_RAIDS_PRIVILEGE_INTERVAL = characterConfig.getInt("RaidLootRightsInterval", 900) * 1000;
 			LOOT_RAIDS_PRIVILEGE_CC_SIZE = characterConfig.getInt("RaidLootRightsCCSize", 45);
 			final String[] autoLootItemIds = characterConfig.getString("AutoLootItemIds", "0").split(",");
-			AUTO_LOOT_ITEM_IDS = new ArrayList<>(autoLootItemIds.length);
+			AUTO_LOOT_ITEM_IDS = new HashSet<>(autoLootItemIds.length);
 			for (String item : autoLootItemIds)
 			{
 				Integer itm = 0;
@@ -1959,7 +1959,7 @@ public class Config
 			AUTODESTROY_ITEM_AFTER = generalConfig.getInt("AutoDestroyDroppedItemAfter", 600);
 			HERB_AUTO_DESTROY_TIME = generalConfig.getInt("AutoDestroyHerbTime", 60) * 1000;
 			final String[] split = generalConfig.getString("ListOfProtectedItems", "0").split(",");
-			LIST_PROTECTED_ITEMS = new ArrayList<>(split.length);
+			LIST_PROTECTED_ITEMS = new HashSet<>(split.length);
 			for (String id : split)
 			{
 				LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
@@ -2353,7 +2353,7 @@ public class Config
 			if (!olyRestrictedItems.isEmpty())
 			{
 				final String[] olyRestrictedItemsSplit = olyRestrictedItems.split(",");
-				LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItemsSplit.length);
+				LIST_OLY_RESTRICTED_ITEMS = new HashSet<>(olyRestrictedItemsSplit.length);
 				for (String id : olyRestrictedItemsSplit)
 				{
 					LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
@@ -2467,17 +2467,17 @@ public class Config
 			AUTO_CP_PERCENTAGE = autoPotionsConfig.getInt("AutoCpPercentage", 70);
 			AUTO_HP_PERCENTAGE = autoPotionsConfig.getInt("AutoHpPercentage", 70);
 			AUTO_MP_PERCENTAGE = autoPotionsConfig.getInt("AutoMpPercentage", 70);
-			AUTO_CP_ITEM_IDS = new ArrayList<>();
+			AUTO_CP_ITEM_IDS = new HashSet<>();
 			for (String s : autoPotionsConfig.getString("AutoCpItemIds", "0").split(","))
 			{
 				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
 			}
-			AUTO_HP_ITEM_IDS = new ArrayList<>();
+			AUTO_HP_ITEM_IDS = new HashSet<>();
 			for (String s : autoPotionsConfig.getString("AutoHpItemIds", "0").split(","))
 			{
 				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
 			}
-			AUTO_MP_ITEM_IDS = new ArrayList<>();
+			AUTO_MP_ITEM_IDS = new HashSet<>();
 			for (String s : autoPotionsConfig.getString("AutoMpItemIds", "0").split(","))
 			{
 				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
@@ -3087,7 +3087,7 @@ public class Config
 			COMMUNITY_PREMIUM_COIN_ID = communityBoardConfig.getInt("CommunityPremiumBuyCoinId", 57);
 			COMMUNITY_PREMIUM_PRICE_PER_DAY = communityBoardConfig.getInt("CommunityPremiumPricePerDay", 1000000);
 			final String[] allowedBuffs = communityBoardConfig.getString("CommunityAvailableBuffs", "").split(",");
-			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
+			COMMUNITY_AVAILABLE_BUFFS = new HashSet<>(allowedBuffs.length);
 			for (String s : allowedBuffs)
 			{
 				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
@@ -3407,7 +3407,7 @@ public class Config
 			if (ENABLE_RANDOM_MONSTER_SPAWNS)
 			{
 				final String[] mobsIds = randomSpawnsConfig.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
-				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+				MOBS_LIST_NOT_RANDOM = new HashSet<>(mobsIds.length);
 				for (String id : mobsIds)
 				{
 					MOBS_LIST_NOT_RANDOM.add(Integer.parseInt(id));

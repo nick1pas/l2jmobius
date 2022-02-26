@@ -16,9 +16,9 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -28,18 +28,18 @@ import org.l2jmobius.gameserver.model.skill.ISkillCondition;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class OpNeedSummonOrPetSkillCondition implements ISkillCondition
 {
-	private final List<Integer> _npcIds = new ArrayList<>();
+	private final Set<Integer> _npcIds = new HashSet<>();
 	
 	public OpNeedSummonOrPetSkillCondition(StatSet params)
 	{
-		final List<String> npcIds = params.getList("npcIds", String.class);
+		final List<Integer> npcIds = params.getList("npcIds", Integer.class);
 		if (npcIds != null)
 		{
-			npcIds.stream().map(Integer::valueOf).forEach(_npcIds::add);
+			_npcIds.addAll(npcIds);
 		}
 	}
 	
@@ -47,7 +47,19 @@ public class OpNeedSummonOrPetSkillCondition implements ISkillCondition
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final Summon pet = caster.getPet();
-		final Collection<Summon> summons = caster.getServitors().values();
-		return ((pet != null) && _npcIds.stream().anyMatch(npcId -> npcId == pet.getId())) || summons.stream().anyMatch(summon -> _npcIds.contains(summon.getId()));
+		if ((pet != null) && _npcIds.contains(pet.getId()))
+		{
+			return true;
+		}
+		
+		for (Summon summon : caster.getServitors().values())
+		{
+			if (_npcIds.contains(summon.getId()))
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }

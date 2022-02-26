@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import java.util.Collection;
+import java.util.Set;
 
 /**
  * @author Mobius
@@ -25,9 +25,9 @@ public class EventDropHolder extends DropHolder
 {
 	private final int _minLevel;
 	private final int _maxLevel;
-	private final Collection<Integer> _monsterIds;
+	private final Set<Integer> _monsterIds;
 	
-	public EventDropHolder(int itemId, int min, int max, double chance, int minLevel, int maxLevel, Collection<Integer> monsterIds)
+	public EventDropHolder(int itemId, int min, int max, double chance, int minLevel, int maxLevel, Set<Integer> monsterIds)
 	{
 		super(itemId, min, max, chance);
 		_minLevel = minLevel;
@@ -45,7 +45,7 @@ public class EventDropHolder extends DropHolder
 		return _maxLevel;
 	}
 	
-	public Collection<Integer> getMonsterIds()
+	public Set<Integer> getMonsterIds()
 	{
 		return _monsterIds;
 	}

@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import org.l2jmobius.commons.util.CommonUtil;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -30,13 +31,13 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 public class ConditionPlayerRangeFromSummonedNpc extends Condition
 {
 	/** NPC Ids. */
-	private final int[] _npcIds;
+	private final Set<Integer> _npcIds;
 	/** Radius to check. */
 	private final int _radius;
 	/** Expected value. */
 	private final boolean _value;
 	
-	public ConditionPlayerRangeFromSummonedNpc(int[] npcIds, int radius, boolean value)
+	public ConditionPlayerRangeFromSummonedNpc(Set<Integer> npcIds, int radius, boolean value)
 	{
 		_npcIds = npcIds;
 		_radius = radius;
@@ -47,11 +48,11 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
 		boolean existNpc = false;
-		if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0))
+		if (!_npcIds.isEmpty() && (_radius > 0))
 		{
 			for (Npc target : World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius))
 			{
-				if (CommonUtil.contains(_npcIds, target.getId()) && (effector == target.getSummoner()))
+				if (_npcIds.contains(target.getId()) && (effector == target.getSummoner()))
 				{
 					existNpc = true;
 					break;

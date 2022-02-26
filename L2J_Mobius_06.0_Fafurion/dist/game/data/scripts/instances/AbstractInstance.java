@@ -16,9 +16,10 @@
  */
 package instances;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -40,25 +41,29 @@ import ai.AbstractNpcAI;
  */
 public abstract class AbstractInstance extends AbstractNpcAI
 {
-	private final int[] _templateIds;
+	private final Set<Integer> _templateIds = new HashSet<>();
 	
-	public AbstractInstance(int... templateId)
+	public AbstractInstance(int... templateIds)
 	{
-		if (templateId.length == 0)
+		if (templateIds.length == 0)
 		{
 			throw new IllegalStateException("No template ids were provided!");
 		}
-		_templateIds = templateId;
+		
+		for (int templateId : templateIds)
+		{
+			_templateIds.add(templateId);
+		}
 	}
 	
-	public int[] getTemplateId()
+	public Set<Integer> getTemplateId()
 	{
 		return _templateIds;
 	}
 	
 	public boolean isInInstance(Instance instance)
 	{
-		return (instance != null) && CommonUtil.contains(_templateIds, instance.getTemplateId());
+		return (instance != null) && _templateIds.contains(instance.getTemplateId());
 	}
 	
 	/**

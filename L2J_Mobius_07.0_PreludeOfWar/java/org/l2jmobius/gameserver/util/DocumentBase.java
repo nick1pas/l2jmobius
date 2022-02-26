@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.util;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -391,12 +392,12 @@ public abstract class DocumentBase
 				case "races":
 				{
 					final String[] racesVal = a.getNodeValue().split(",");
-					final Race[] races = new Race[racesVal.length];
+					final Set<Race> races = EnumSet.noneOf(Race.class);
 					for (int r = 0; r < racesVal.length; r++)
 					{
 						if (racesVal[r] != null)
 						{
-							races[r] = Race.valueOf(racesVal[r]);
+							races.add(Race.valueOf(racesVal[r]));
 						}
 					}
 					cond = joinAnd(cond, new ConditionPlayerRace(races));
@@ -672,13 +673,13 @@ public abstract class DocumentBase
 				case "instanceid":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final Set<Integer> set = new HashSet<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						set.add(Integer.decode(getValue(item, template)));
 					}
-					cond = joinAnd(cond, new ConditionPlayerInstanceId(array));
+					cond = joinAnd(cond, new ConditionPlayerInstanceId(set));
 					break;
 				}
 				case "agathionid":
@@ -729,10 +730,10 @@ public abstract class DocumentBase
 					if (st.countTokens() == 3)
 					{
 						final String[] ids = st.nextToken().split(";");
-						final int[] npcIds = new int[ids.length];
+						final Set<Integer> npcIds = new HashSet<>(ids.length);
 						for (int index = 0; index < ids.length; index++)
 						{
-							npcIds[index] = Integer.parseInt(getValue(ids[index], template));
+							npcIds.add(Integer.parseInt(getValue(ids[index], template)));
 						}
 						final int radius = Integer.parseInt(st.nextToken());
 						final boolean val = Boolean.parseBoolean(st.nextToken());
@@ -746,10 +747,10 @@ public abstract class DocumentBase
 					if (st.countTokens() == 3)
 					{
 						final String[] ids = st.nextToken().split(";");
-						final int[] npcIds = new int[ids.length];
+						final Set<Integer> npcIds = new HashSet<>(ids.length);
 						for (int index = 0; index < ids.length; index++)
 						{
-							npcIds[index] = Integer.parseInt(getValue(ids[index], template));
+							npcIds.add(Integer.parseInt(getValue(ids[index], template)));
 						}
 						final int radius = Integer.parseInt(st.nextToken());
 						final boolean val = Boolean.parseBoolean(st.nextToken());
@@ -835,13 +836,13 @@ public abstract class DocumentBase
 				case "insidezoneid":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final List<Integer> array = new ArrayList<>(st.countTokens());
+					final Set<Integer> set = new HashSet<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, template)));
+						set.add(Integer.decode(getValue(item, template)));
 					}
-					cond = joinAnd(cond, new ConditionPlayerInsideZoneId(array));
+					cond = joinAnd(cond, new ConditionPlayerInsideZoneId(set));
 					break;
 				}
 				case "checkabnormal":
@@ -968,13 +969,13 @@ public abstract class DocumentBase
 				case "class_id_restriction":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final List<Integer> array = new ArrayList<>(st.countTokens());
+					final Set<Integer> set = new HashSet<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, null)));
+						set.add(Integer.decode(getValue(item, null)));
 					}
-					cond = joinAnd(cond, new ConditionTargetClassIdRestriction(array));
+					cond = joinAnd(cond, new ConditionTargetClassIdRestriction(set));
 					break;
 				}
 				case "active_effect_id":
@@ -1052,13 +1053,13 @@ public abstract class DocumentBase
 				case "npcid":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final List<Integer> array = new ArrayList<>(st.countTokens());
+					final Set<Integer> set = new HashSet<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
-						array.add(Integer.decode(getValue(item, null)));
+						set.add(Integer.decode(getValue(item, null)));
 					}
-					cond = joinAnd(cond, new ConditionTargetNpcId(array));
+					cond = joinAnd(cond, new ConditionTargetNpcId(set));
 					break;
 				}
 				case "npctype":

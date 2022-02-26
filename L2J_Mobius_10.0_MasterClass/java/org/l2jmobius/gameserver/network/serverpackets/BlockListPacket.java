@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
@@ -27,19 +27,19 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class BlockListPacket implements IClientOutgoingPacket
 {
-	private final List<Integer> _playersId;
+	private final Set<Integer> _playerIds;
 	
-	public BlockListPacket(List<Integer> playersId)
+	public BlockListPacket(Set<Integer> playerIds)
 	{
-		_playersId = playersId;
+		_playerIds = playerIds;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.BLOCK_LIST.writeId(packet);
-		packet.writeD(_playersId.size());
-		for (int playerId : _playersId)
+		packet.writeD(_playerIds.size());
+		for (int playerId : _playerIds)
 		{
 			packet.writeS(CharNameTable.getInstance().getNameById(playerId));
 			packet.writeS(""); // memo ?

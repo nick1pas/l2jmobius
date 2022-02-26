@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,10 +35,11 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class BlockList
 {
 	private static final Logger LOGGER = Logger.getLogger(BlockList.class.getName());
-	private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
+	
+	private static final Map<Integer, Set<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
 	
 	private final Player _owner;
-	private List<Integer> _blockList;
+	private Set<Integer> _blockList;
 	
 	public BlockList(Player owner)
 	{
@@ -67,9 +68,9 @@ public class BlockList
 		OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static List<Integer> loadList(int objId)
+	private static Set<Integer> loadList(int objId)
 	{
-		final List<Integer> list = new ArrayList<>();
+		final Set<Integer> list = new HashSet<>();
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=? AND relation=1"))
 		{
@@ -157,7 +158,7 @@ public class BlockList
 		_owner.setMessageRefusal(value);
 	}
 	
-	private List<Integer> getBlockList()
+	private Set<Integer> getBlockList()
 	{
 		return _blockList;
 	}

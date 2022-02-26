@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -29,13 +29,13 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class ConditionPlayerInstanceId extends Condition
 {
-	private final List<Integer> _instanceIds;
+	private final Set<Integer> _instanceIds;
 	
 	/**
 	 * Instantiates a new condition player instance id.
 	 * @param instanceIds the instance ids
 	 */
-	public ConditionPlayerInstanceId(List<Integer> instanceIds)
+	public ConditionPlayerInstanceId(Set<Integer> instanceIds)
 	{
 		_instanceIds = instanceIds;
 	}

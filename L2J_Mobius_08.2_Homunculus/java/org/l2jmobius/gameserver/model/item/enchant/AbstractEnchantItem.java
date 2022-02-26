@@ -16,16 +16,16 @@
  */
 package org.l2jmobius.gameserver.model.item.enchant;
 
+import java.util.EnumSet;
+import java.util.Set;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.model.item.type.ItemType;
 
 /**
  * @author UnAfraid
@@ -34,28 +34,29 @@ public abstract class AbstractEnchantItem
 {
 	protected static final Logger LOGGER = Logger.getLogger(AbstractEnchantItem.class.getName());
 	
-	private static final ItemType[] ENCHANT_TYPES = new ItemType[]
+	private static final Set<EtcItemType> ENCHANT_TYPES = EnumSet.noneOf(EtcItemType.class);
+	static
 	{
-		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM,
-		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP,
-		EtcItemType.BLESS_ENCHT_AM,
-		EtcItemType.BLESS_ENCHT_AM_DOWN,
-		EtcItemType.BLESS_ENCHT_WP,
-		EtcItemType.ENCHT_AM,
-		EtcItemType.ENCHT_WP,
-		EtcItemType.ENCHT_WP_DOWN,
-		EtcItemType.ENCHT_AM_DOWN,
-		EtcItemType.GIANT_ENCHT_AM,
-		EtcItemType.GIANT_ENCHT_WP,
-		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM,
-		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP,
-		EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM,
-		EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP,
-		EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM,
-		EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP,
-		EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM,
-		EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP,
-	};
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP);
+		ENCHANT_TYPES.add(EtcItemType.BLESS_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.BLESS_ENCHT_AM_DOWN);
+		ENCHANT_TYPES.add(EtcItemType.BLESS_ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_WP_DOWN);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_AM_DOWN);
+		ENCHANT_TYPES.add(EtcItemType.GIANT_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.GIANT_ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		ENCHANT_TYPES.add(EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM);
+		ENCHANT_TYPES.add(EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+	}
 	
 	private final int _id;
 	private final CrystalType _grade;
@@ -73,7 +74,7 @@ public abstract class AbstractEnchantItem
 		{
 			throw new NullPointerException();
 		}
-		else if (!CommonUtil.contains(ENCHANT_TYPES, getItem().getItemType()))
+		else if (!ENCHANT_TYPES.contains(getItem().getItemType()))
 		{
 			throw new IllegalAccessError();
 		}

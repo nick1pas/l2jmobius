@@ -16,7 +16,7 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
+import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
@@ -82,15 +82,12 @@ public class PetFood implements IItemHandler
 				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
-					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (foodIds.contains(item.getId()))
+					final Set<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					if (foodIds.contains(item.getId()) && player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 					{
-						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
-						{
-							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-							player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
-							return true;
-						}
+						player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+						player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
+						return true;
 					}
 				}
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);

@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.model.item.henna;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.EnumMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -35,14 +37,14 @@ public class Henna
 	private final int _dyeId;
 	private final int _dyeItemId;
 	private final int _patternLevel;
-	private final Map<BaseStat, Integer> _baseStats = new HashMap<>();
+	private final Map<BaseStat, Integer> _baseStats = new EnumMap<>(BaseStat.class);
 	private final int _wearFee;
 	private final int _wearCount;
 	private final int _cancelFee;
 	private final int _cancelCount;
 	private final int _duration;
 	private final List<Skill> _skills;
-	private final List<Integer> _wearClass;
+	private final Set<Integer> _wearClass;
 	
 	public Henna(StatSet set)
 	{
@@ -61,7 +63,7 @@ public class Henna
 		_cancelCount = set.getInt("cancel_count");
 		_duration = set.getInt("duration", -1);
 		_skills = new ArrayList<>();
-		_wearClass = new ArrayList<>();
+		_wearClass = new HashSet<>();
 	}
 	
 	/**
@@ -149,7 +151,7 @@ public class Henna
 	/**
 	 * @return the list with the allowed classes to wear this dye.
 	 */
-	public List<Integer> getAllowedWearClass()
+	public Set<Integer> getAllowedWearClass()
 	{
 		return _wearClass;
 	}

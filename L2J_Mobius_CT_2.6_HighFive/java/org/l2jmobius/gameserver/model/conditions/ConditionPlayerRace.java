@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import org.l2jmobius.commons.util.CommonUtil;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -28,13 +29,13 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class ConditionPlayerRace extends Condition
 {
-	private final Race[] _races;
+	private final Set<Race> _races;
 	
 	/**
 	 * Instantiates a new condition player race.
 	 * @param races the list containing the allowed races.
 	 */
-	public ConditionPlayerRace(Race[] races)
+	public ConditionPlayerRace(Set<Race> races)
 	{
 		_races = races;
 	}
@@ -42,6 +43,10 @@ public class ConditionPlayerRace extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
-		return (effector != null) && effector.isPlayer() && CommonUtil.contains(_races, effector.getActingPlayer().getRace());
+		if ((effector == null) || !effector.isPlayer())
+		{
+			return false;
+		}
+		return _races.contains(effector.getActingPlayer().getRace());
 	}
 }

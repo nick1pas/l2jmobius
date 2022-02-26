@@ -23,7 +23,9 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -61,9 +63,9 @@ public class ClanHall extends AbstractResidence
 	private final int _minBid;
 	final int _lease;
 	private final int _deposit;
-	private final List<Integer> _npcs;
-	private final List<Door> _doors;
-	private final List<ClanHallTeleportHolder> _teleports;
+	private final Set<Integer> _npcs = new HashSet<>();
+	private final Set<Door> _doors = new HashSet<>();
+	private final Set<ClanHallTeleportHolder> _teleports = new HashSet<>();
 	private final Location _ownerLocation;
 	private final Location _banishLocation;
 	// Dynamic parameters
@@ -85,9 +87,21 @@ public class ClanHall extends AbstractResidence
 		_minBid = params.getInt("minBid");
 		_lease = params.getInt("lease");
 		_deposit = params.getInt("deposit");
-		_npcs = params.getList("npcList", Integer.class);
-		_doors = params.getList("doorList", Door.class);
-		_teleports = params.getList("teleportList", ClanHallTeleportHolder.class);
+		final List<Integer> npcs = params.getList("npcList", Integer.class);
+		if (npcs != null)
+		{
+			_npcs.addAll(npcs);
+		}
+		final List<Door> doors = params.getList("doorList", Door.class);
+		if (doors != null)
+		{
+			_doors.addAll(doors);
+		}
+		final List<ClanHallTeleportHolder> teleports = params.getList("teleportList", ClanHallTeleportHolder.class);
+		if (teleports != null)
+		{
+			_teleports.addAll(teleports);
+		}
 		_ownerLocation = params.getLocation("owner_loc");
 		_banishLocation = params.getLocation("banish_loc");
 		// Set dynamic parameters (from DB)
@@ -196,7 +210,7 @@ public class ClanHall extends AbstractResidence
 	 * Gets all {@link Door} related to this {@link ClanHall}.
 	 * @return all {@link Door} related to this {@link ClanHall}
 	 */
-	public List<Door> getDoors()
+	public Set<Door> getDoors()
 	{
 		return _doors;
 	}
@@ -205,7 +219,7 @@ public class ClanHall extends AbstractResidence
 	 * Gets all {@link Npc} related to this {@link ClanHall}.
 	 * @return all {@link Npc} related to this {@link ClanHall}
 	 */
-	public List<Integer> getNpcs()
+	public Set<Integer> getNpcs()
 	{
 		return _npcs;
 	}
@@ -324,7 +338,7 @@ public class ClanHall extends AbstractResidence
 		return _banishLocation;
 	}
 	
-	public List<ClanHallTeleportHolder> getTeleportList()
+	public Set<ClanHallTeleportHolder> getTeleportList()
 	{
 		return _teleports;
 	}
