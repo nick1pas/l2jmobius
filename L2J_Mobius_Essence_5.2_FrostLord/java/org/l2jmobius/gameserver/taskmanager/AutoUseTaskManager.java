@@ -60,7 +60,7 @@ public class AutoUseTaskManager implements Runnable
 	
 	protected AutoUseTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+		ThreadPool.scheduleAtFixedRate(this, 500, 500);
 	}
 	
 	@Override
