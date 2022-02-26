@@ -342,7 +342,7 @@ public class DailyTaskManager
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
-	public void resetAttendanceRewards()
+	private void resetAttendanceRewards()
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{

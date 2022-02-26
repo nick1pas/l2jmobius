@@ -388,7 +388,7 @@ public class DailyTaskManager
 		LOGGER.info("Clan contributions has been resetted.");
 	}
 	
-	public void resetAttendanceRewards()
+	private void resetAttendanceRewards()
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{

@@ -400,7 +400,7 @@ public class DailyTaskManager
 		LOGGER.info("Clan contributions has been resetted.");
 	}
 	
-	public void resetThroneOfHeroes()
+	private void resetThroneOfHeroes()
 	{
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
@@ -435,7 +435,7 @@ public class DailyTaskManager
 		LOGGER.info("Throne of Heroes Entry has been resetted.");
 	}
 	
-	public void resetTimedHuntingZones()
+	private void resetTimedHuntingZones()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -471,7 +471,7 @@ public class DailyTaskManager
 		LOGGER.info("Special Hunting Zones has been resetted.");
 	}
 	
-	public void resetTimedHuntingZonesWeekly()
+	private void resetTimedHuntingZonesWeekly()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -507,7 +507,7 @@ public class DailyTaskManager
 		LOGGER.info("Weekly Special Hunting Zones has been resetted.");
 	}
 	
-	public void resetHomunculusResetPoints()
+	private void resetHomunculusResetPoints()
 	{
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
@@ -540,7 +540,7 @@ public class DailyTaskManager
 		LOGGER.info("Homunculus Reset Points has been resetted.");
 	}
 	
-	public void resetAttendanceRewards()
+	private void resetAttendanceRewards()
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
@@ -594,7 +594,7 @@ public class DailyTaskManager
 		}
 	}
 	
-	public void resetDailyLimitShopData()
+	private void resetDailyLimitShopData()
 	{
 		for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
 		{

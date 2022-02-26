@@ -379,7 +379,7 @@ public class DailyTaskManager
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
-	public void resetTimedHuntingZones()
+	private void resetTimedHuntingZones()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -415,7 +415,7 @@ public class DailyTaskManager
 		LOGGER.info("Special Hunting Zones has been resetted.");
 	}
 	
-	public void resetTimedHuntingZonesWeekly()
+	private void resetTimedHuntingZonesWeekly()
 	{
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{
@@ -451,7 +451,7 @@ public class DailyTaskManager
 		LOGGER.info("Weekly Special Hunting Zones has been resetted.");
 	}
 	
-	public void resetAttendanceRewards()
+	private void resetAttendanceRewards()
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
@@ -505,7 +505,7 @@ public class DailyTaskManager
 		}
 	}
 	
-	public void resetDailyLimitShopData()
+	private void resetDailyLimitShopData()
 	{
 		for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
 		{
