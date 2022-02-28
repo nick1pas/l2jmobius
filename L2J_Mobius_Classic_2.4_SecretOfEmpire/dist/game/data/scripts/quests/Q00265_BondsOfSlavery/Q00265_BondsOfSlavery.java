@@ -54,6 +54,7 @@ public class Q00265_BondsOfSlavery extends Quest
 		addTalkId(KRISTIN);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(IMP_SHACKLES);
+		addCondMaxLevel(11, getNoQuestMsg(null));
 	}
 	
 	@Override

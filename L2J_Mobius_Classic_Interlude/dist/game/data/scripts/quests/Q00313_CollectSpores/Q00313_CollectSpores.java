@@ -47,6 +47,7 @@ public class Q00313_CollectSpores extends Quest
 		addTalkId(HERBIEL);
 		addKillId(SPORE_FUNGUS);
 		registerQuestItems(SPORE_SAC);
+		addCondMaxLevel(13, getNoQuestMsg(null));
 	}
 	
 	@Override

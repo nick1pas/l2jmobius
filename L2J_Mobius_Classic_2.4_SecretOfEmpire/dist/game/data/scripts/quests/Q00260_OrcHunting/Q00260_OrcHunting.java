@@ -59,6 +59,7 @@ public class Q00260_OrcHunting extends Quest
 		addTalkId(RAYEN);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

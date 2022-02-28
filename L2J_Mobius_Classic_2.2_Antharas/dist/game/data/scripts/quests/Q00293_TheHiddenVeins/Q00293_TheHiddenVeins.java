@@ -55,6 +55,7 @@ public class Q00293_TheHiddenVeins extends Quest
 		addTalkId(FILAUR, CHICHIRIN);
 		addKillId(MONSTERS);
 		registerQuestItems(CHRYSOLITE_ORE, TORN_MAP_FRAGMENT, HIDDEN_ORE_MAP);
+		addCondMaxLevel(15, getNoQuestMsg(null));
 	}
 	
 	@Override

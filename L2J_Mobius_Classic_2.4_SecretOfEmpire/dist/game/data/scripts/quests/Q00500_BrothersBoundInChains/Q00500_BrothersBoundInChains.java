@@ -62,7 +62,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		addStartNpc(DARK_JUDGE);
 		addTalkId(DARK_JUDGE);
 		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
-		
+		addCondMaxLevel(80, getNoQuestMsg(null));
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> OnPlayerSummonAgathion(event), this));
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> OnPlayerUnsummonAgathion(event), this));
 	}

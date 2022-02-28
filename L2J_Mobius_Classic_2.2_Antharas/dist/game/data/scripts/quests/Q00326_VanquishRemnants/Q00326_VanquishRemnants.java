@@ -65,6 +65,7 @@ public class Q00326_VanquishRemnants extends Quest
 		addTalkId(LEOPOLD);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE);
+		addCondMaxLevel(30, getNoQuestMsg(null));
 	}
 	
 	@Override

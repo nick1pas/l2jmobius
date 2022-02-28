@@ -57,6 +57,7 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest
 		addTalkId(GAUEN);
 		addKillId(ROTTING_TREE, SPORE_ZOMBIE);
 		registerQuestItems(HERBIVOROUS_SPORE, CARNIVORE_SPORE);
+		addCondMaxLevel(51, getNoQuestMsg(null));
 	}
 	
 	@Override

@@ -55,6 +55,7 @@ public class Q00262_TradeWithTheIvoryTower extends Quest
 		addTalkId(VOLLODOS);
 		addKillId(MOBS_SAC.keySet());
 		registerQuestItems(SPORE_SAC);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

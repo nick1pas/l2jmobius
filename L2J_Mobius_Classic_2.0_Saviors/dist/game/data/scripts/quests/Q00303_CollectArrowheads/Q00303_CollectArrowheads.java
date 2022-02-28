@@ -45,6 +45,7 @@ public class Q00303_CollectArrowheads extends Quest
 		addTalkId(MINIA);
 		addKillId(TUNATH_ORC_MARKSMAN);
 		registerQuestItems(ORCISH_ARROWHEAD);
+		addCondMaxLevel(14, getNoQuestMsg(null));
 	}
 	
 	@Override

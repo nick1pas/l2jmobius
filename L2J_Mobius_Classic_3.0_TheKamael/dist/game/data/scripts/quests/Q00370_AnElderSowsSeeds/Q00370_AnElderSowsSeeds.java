@@ -59,6 +59,7 @@ public class Q00370_AnElderSowsSeeds extends Quest
 		addTalkId(CASIAN);
 		addKillId(MOBS1.keySet());
 		addKillId(MOBS2.keySet());
+		addCondMaxLevel(42, getNoQuestMsg(null));
 	}
 	
 	@Override

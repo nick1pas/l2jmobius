@@ -47,6 +47,7 @@ public class Q00277_GatekeepersOffering extends Quest
 		addTalkId(TAMIL);
 		addKillId(GREYSTONE_GOLEM);
 		registerQuestItems(STARSTONE);
+		addCondMaxLevel(21, getNoQuestMsg(null));
 	}
 	
 	@Override

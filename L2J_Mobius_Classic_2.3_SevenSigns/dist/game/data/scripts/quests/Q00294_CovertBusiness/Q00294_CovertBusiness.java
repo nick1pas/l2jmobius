@@ -58,6 +58,7 @@ public class Q00294_CovertBusiness extends Quest
 		addTalkId(KEEF);
 		addKillId(MONSTER_DROP_CHANCE.keySet());
 		registerQuestItems(BAT_FANG);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

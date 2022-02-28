@@ -55,6 +55,7 @@ public class Q00275_DarkWingedSpies extends Quest
 		addKillId(DARKWING_BAT, VARANGKAS_TRACKER);
 		addCreatureSeeId(VARANGKAS_TRACKER);
 		registerQuestItems(DARKWING_BAT_FANG, VARANGKAS_PARASITE);
+		addCondMaxLevel(15, getNoQuestMsg(null));
 	}
 	
 	@Override

@@ -46,6 +46,7 @@ public class Q00267_WrathOfVerdure extends Quest
 		addTalkId(TREANT_BREMEC);
 		addKillId(GOBLIN_RAIDER);
 		registerQuestItems(GOBLIN_CLUB);
+		addCondMaxLevel(9, getNoQuestMsg(null));
 	}
 	
 	@Override

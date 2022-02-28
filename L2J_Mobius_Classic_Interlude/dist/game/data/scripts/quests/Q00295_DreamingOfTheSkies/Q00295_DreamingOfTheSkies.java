@@ -47,6 +47,7 @@ public class Q00295_DreamingOfTheSkies extends Quest
 		addTalkId(ARIN);
 		addKillId(MAGICAL_WEAVER);
 		registerQuestItems(FLOATING_STONE);
+		addCondMaxLevel(15, getNoQuestMsg(null));
 	}
 	
 	@Override

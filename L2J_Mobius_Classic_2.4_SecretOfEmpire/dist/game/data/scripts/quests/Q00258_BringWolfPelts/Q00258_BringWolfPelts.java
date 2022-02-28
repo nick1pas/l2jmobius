@@ -62,6 +62,7 @@ public class Q00258_BringWolfPelts extends Quest
 		addTalkId(LECTOR);
 		addKillId(MONSTERS);
 		registerQuestItems(WOLF_PELT);
+		addCondMaxLevel(9, getNoQuestMsg(null));
 	}
 	
 	@Override

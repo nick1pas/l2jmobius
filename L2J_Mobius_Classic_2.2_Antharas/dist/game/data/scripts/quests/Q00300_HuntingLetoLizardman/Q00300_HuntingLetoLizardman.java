@@ -62,6 +62,7 @@ public class Q00300_HuntingLetoLizardman extends Quest
 		addTalkId(RATH);
 		addKillId(MOBS_SAC.keySet());
 		registerQuestItems(BRACELET_OF_LIZARDMAN);
+		addCondMaxLevel(39, getNoQuestMsg(null));
 	}
 	
 	@Override

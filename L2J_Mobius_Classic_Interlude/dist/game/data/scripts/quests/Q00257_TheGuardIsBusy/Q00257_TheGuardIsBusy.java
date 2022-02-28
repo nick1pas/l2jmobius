@@ -84,6 +84,7 @@ public class Q00257_TheGuardIsBusy extends Quest
 		addTalkId(GILBERT);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(ORC_AMULET, GLUDIO_LORDS_MARK, ORC_NECKLACE, WEREWOLF_FANG);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

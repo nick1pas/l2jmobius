@@ -70,6 +70,7 @@ public class Q00276_TotemOfTheHestui extends Quest
 		addTalkId(TANAPI);
 		addKillId(KASHA_BEAR, KASHA_BEAR_TOTEM);
 		registerQuestItems(KASHA_PARASITE, KASHA_CRYSTAL);
+		addCondMaxLevel(21, getNoQuestMsg(null));
 	}
 	
 	@Override

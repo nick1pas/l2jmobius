@@ -50,6 +50,7 @@ public class Q00272_WrathOfAncestors extends Quest
 		addTalkId(LIVINA);
 		addKillId(MONSTERS);
 		registerQuestItems(GRAVE_ROBBERS_HEAD);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

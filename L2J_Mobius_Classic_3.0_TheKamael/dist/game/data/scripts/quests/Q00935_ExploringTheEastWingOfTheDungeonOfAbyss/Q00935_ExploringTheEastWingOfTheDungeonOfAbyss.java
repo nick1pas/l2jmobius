@@ -123,7 +123,7 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 					{
 						case 0:
 						{
-							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49))
+							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 51))
 							{
 								htmltext = "31776-01.htm";
 							}
@@ -152,7 +152,7 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 					{
 						case 0:
 						{
-							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 49))
+							if ((qs.getPlayer().getLevel() >= 45) && (qs.getPlayer().getLevel() <= 51))
 							{
 								htmltext = "31777-01.htm";
 								qs.startQuest();

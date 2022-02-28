@@ -56,6 +56,7 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 		addKillId(MOB1.keySet());
 		addKillId(MOB2.keySet());
 		registerQuestItems(ALLIGATOR_TOOTH);
+		addCondMaxLevel(49, getNoQuestMsg(null));
 	}
 	
 	@Override

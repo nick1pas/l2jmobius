@@ -56,6 +56,7 @@ public class Q00324_SweetestVenom extends Quest
 		addTalkId(ASTARON);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(VENOM_SAC);
+		addCondMaxLevel(23, getNoQuestMsg(null));
 	}
 	
 	@Override

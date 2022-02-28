@@ -64,6 +64,7 @@ public class Q00264_KeenClaws extends Quest
 		addTalkId(PAINT);
 		addKillId(MONSTER_CHANCES.keySet());
 		registerQuestItems(WOLF_CLAW);
+		addCondMaxLevel(9, getNoQuestMsg(null));
 	}
 	
 	@Override

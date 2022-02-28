@@ -57,6 +57,7 @@ public class Q00263_OrcSubjugation extends Quest
 		addTalkId(KAYLEEN);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
+		addCondMaxLevel(16, getNoQuestMsg(null));
 	}
 	
 	@Override

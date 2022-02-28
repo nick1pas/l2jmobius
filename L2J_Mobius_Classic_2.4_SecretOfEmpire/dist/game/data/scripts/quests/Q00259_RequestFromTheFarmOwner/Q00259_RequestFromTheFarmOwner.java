@@ -66,6 +66,7 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 		addTalkId(EDMOND, MARIUS);
 		addKillId(MONSTERS);
 		registerQuestItems(SPIDER_SKIN);
+		addCondMaxLevel(21, getNoQuestMsg(null));
 	}
 	
 	@Override

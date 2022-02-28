@@ -50,6 +50,7 @@ public class Q00319_ScentOfDeath extends Quest
 		addTalkId(MINALESS);
 		addKillId(MARSH_ZOMBIE, MARSH_ZOMBIE_LORD);
 		registerQuestItems(ZOMBIES_SKIN);
+		addCondMaxLevel(18, getNoQuestMsg(null));
 	}
 	
 	@Override

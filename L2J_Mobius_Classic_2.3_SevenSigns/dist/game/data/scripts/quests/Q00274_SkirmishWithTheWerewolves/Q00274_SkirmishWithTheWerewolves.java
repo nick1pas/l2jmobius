@@ -53,6 +53,7 @@ public class Q00274_SkirmishWithTheWerewolves extends Quest
 		addTalkId(BRUKURSE);
 		addKillId(MONSTERS);
 		registerQuestItems(WEREWOLF_HEAD, WEREWOLF_TOTEM);
+		addCondMaxLevel(18, getNoQuestMsg(null));
 	}
 	
 	@Override

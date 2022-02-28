@@ -51,6 +51,7 @@ public class Q00320_BonesTellTheFuture extends Quest
 		addTalkId(TETRACH_KAITAR);
 		addKillId(MONSTERS);
 		registerQuestItems(BONE_FRAGMENT);
+		addCondMaxLevel(18, getNoQuestMsg(null));
 	}
 	
 	@Override

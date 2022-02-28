@@ -55,6 +55,7 @@ public class Q00360_PlunderTheirSupplies extends Quest
 		addTalkId(COLEMAN);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
 		registerQuestItems(SUPPLY_ITEMS);
+		addCondMaxLevel(59, getNoQuestMsg(null));
 	}
 	
 	@Override

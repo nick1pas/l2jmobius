@@ -61,6 +61,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 		addTalkId(BELTON);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(HARPY_FEATHER, MEDUSA_VENOM, WYRMS_TOOTH);
+		addCondMaxLevel(39, getNoQuestMsg(null));
 	}
 	
 	@Override

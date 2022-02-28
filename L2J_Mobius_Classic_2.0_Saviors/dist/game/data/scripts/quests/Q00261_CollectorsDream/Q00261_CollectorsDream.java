@@ -57,6 +57,7 @@ public class Q00261_CollectorsDream extends Quest
 		addTalkId(ALSHUPES);
 		addKillId(MONSTERS);
 		registerQuestItems(SPIDER_LEG);
+		addCondMaxLevel(21, getNoQuestMsg(null));
 	}
 	
 	@Override

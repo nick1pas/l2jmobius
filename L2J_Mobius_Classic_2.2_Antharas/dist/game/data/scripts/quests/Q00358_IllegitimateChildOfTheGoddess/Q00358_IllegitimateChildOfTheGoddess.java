@@ -53,8 +53,8 @@ public class Q00358_IllegitimateChildOfTheGoddess extends Quest
 	private static final Map<Integer, Double> MOBS = new HashMap<>();
 	static
 	{
-		MOBS.put(20672, 0.71); // trives
-		MOBS.put(20673, 0.74); // falibati
+		MOBS.put(20672, 0.71); // Trives
+		MOBS.put(20673, 0.74); // Falibati
 	}
 	
 	public Q00358_IllegitimateChildOfTheGoddess()
@@ -64,6 +64,7 @@ public class Q00358_IllegitimateChildOfTheGoddess extends Quest
 		addTalkId(OLTRAN);
 		addKillId(MOBS.keySet());
 		registerQuestItems(SNAKE_SCALE);
+		addCondMaxLevel(67, getNoQuestMsg(null));
 	}
 	
 	@Override

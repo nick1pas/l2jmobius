@@ -64,6 +64,7 @@ public class Q00292_BrigandsSweep extends Quest
 		addTalkId(SPIRON, BALANKI);
 		addKillId(MOB_ITEM_DROP.keySet());
 		registerQuestItems(GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT, SUSPICIOUS_MEMO, SUSPICIOUS_CONTRACT);
+		addCondMaxLevel(18, getNoQuestMsg(null));
 	}
 	
 	@Override

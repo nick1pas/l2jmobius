@@ -58,6 +58,7 @@ public class Q00329_CuriosityOfADwarf extends Quest
 		addTalkId(TRADER_ROLENTO);
 		addKillId(MONSTER_DROPS.keySet());
 		registerQuestItems(GOLEM_HEARTSTONE, BROKEN_HEARTSTONE);
+		addCondMaxLevel(38, getNoQuestMsg(null));
 	}
 	
 	@Override

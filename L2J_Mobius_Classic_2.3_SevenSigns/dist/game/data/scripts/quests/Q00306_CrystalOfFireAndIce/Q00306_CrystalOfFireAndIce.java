@@ -61,6 +61,7 @@ public class Q00306_CrystalOfFireAndIce extends Quest
 		addTalkId(KATERINA);
 		addKillId(MONSTER_DROPS.keySet());
 		registerQuestItems(FLAME_SHARD, ICE_SHARD);
+		addCondMaxLevel(23, getNoQuestMsg(null));
 	}
 	
 	@Override

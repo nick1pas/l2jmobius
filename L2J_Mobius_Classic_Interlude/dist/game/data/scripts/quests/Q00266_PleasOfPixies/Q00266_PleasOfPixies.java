@@ -68,6 +68,7 @@ public class Q00266_PleasOfPixies extends Quest
 		addTalkId(PIXY_MURIKA);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(PREDATORS_FANG);
+		addCondMaxLevel(8, getNoQuestMsg(null));
 	}
 	
 	@Override

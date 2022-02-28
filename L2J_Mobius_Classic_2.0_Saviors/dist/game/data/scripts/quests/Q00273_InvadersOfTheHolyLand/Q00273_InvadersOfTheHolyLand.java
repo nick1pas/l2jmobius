@@ -56,6 +56,7 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 		addTalkId(VARKEES);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(BLACK_SOULSTONE, RED_SOULSTONE);
+		addCondMaxLevel(14, getNoQuestMsg(null));
 	}
 	
 	@Override

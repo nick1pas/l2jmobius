@@ -60,6 +60,7 @@ public class Q00316_DestroyPlagueCarriers extends Quest
 		addAttackId(VAROOL_FOULCLAW);
 		addKillId(MONSTER_DROPS.keySet());
 		registerQuestItems(WERERAT_FANG, VAROOL_FOULCLAW_FANG);
+		addCondMaxLevel(24, getNoQuestMsg(null));
 	}
 	
 	@Override

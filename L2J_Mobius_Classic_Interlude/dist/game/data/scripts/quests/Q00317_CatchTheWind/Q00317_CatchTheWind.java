@@ -48,6 +48,7 @@ public class Q00317_CatchTheWind extends Quest
 		addTalkId(RIZRAELL);
 		addKillId(MONSTERS);
 		registerQuestItems(WIND_SHARD);
+		addCondMaxLevel(23, getNoQuestMsg(null));
 	}
 	
 	@Override

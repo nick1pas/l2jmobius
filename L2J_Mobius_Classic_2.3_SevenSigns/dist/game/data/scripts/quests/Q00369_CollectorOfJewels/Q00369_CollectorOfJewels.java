@@ -57,6 +57,7 @@ public class Q00369_CollectorOfJewels extends Quest
 		addTalkId(NELL);
 		addKillId(MOBS_DROP_CHANCES.keySet());
 		registerQuestItems(FLARE_SHARD, FREEZING_SHARD);
+		addCondMaxLevel(37, getNoQuestMsg(null));
 	}
 	
 	@Override

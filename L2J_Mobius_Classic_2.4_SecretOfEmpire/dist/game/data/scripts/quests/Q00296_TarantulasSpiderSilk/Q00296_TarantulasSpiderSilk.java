@@ -52,6 +52,7 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 		addTalkId(TRADER_MION, DEFENDER_NATHAN);
 		addKillId(MONSTERS);
 		registerQuestItems(TARANTULA_SPIDER_SILK, TARANTULA_SPINNERETTE);
+		addCondMaxLevel(21, getNoQuestMsg(null));
 	}
 	
 	@Override

@@ -83,6 +83,7 @@ public class Q00355_FamilyHonor extends Quest
 		addTalkId(GALIBREDO, PATRIN);
 		addKillId(MOBS.keySet());
 		registerQuestItems(GALFREDO_ROMERS_BUST);
+		addCondMaxLevel(49, getNoQuestMsg(null));
 	}
 	
 	@Override
