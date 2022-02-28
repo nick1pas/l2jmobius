@@ -208,12 +208,45 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="53007" toLevel="3" name="Power Stance">
+	<skill id="53007" toLevel="4" name="Power Stance">
 		<!-- P. Atk. +$s1 Atk. Spd. +$s2 -->
 		<icon>icon.skill0232</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<effectRange>900</effectRange>
+		<isMagic>5</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">75</value>
+					<value level="3">100</value>
+					<value level="4">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">8</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="53008" toLevel="1" name="Children of Eva">
 		<!-- M. Atk. +10 M. Critical Rate +5% HP Recovery Rate +5% -->
@@ -256,7 +289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="53010" toLevel="5" name="Knight's Protection">
+	<skill id="53010" toLevel="7" name="Knight's Protection">
 		<!-- The effect lasts for $s1 Shield Defense Rate +$s2 Shield Defense +$s3 -->
 		<icon>icon.skill10012</icon>
 		<abnormalLevel>
@@ -265,6 +298,8 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>KNIGHT_SHIELD</abnormalType>
@@ -276,6 +311,8 @@
 			<value level="3">65</value>
 			<value level="4">70</value>
 			<value level="5">75</value>
+			<value level="6">82</value>
+			<value level="7">88</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">50</value>
@@ -283,6 +320,8 @@
 			<value level="3">65</value>
 			<value level="4">70</value>
 			<value level="5">75</value>
+			<value level="6">80</value>
+			<value level="7">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -291,15 +330,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="ShieldDefenceRate">
+			<effect name="MaxHp">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
-					<value level="4">40</value>
-					<value level="4">50</value>
+					<value level="1">300</value>
+					<value level="2">375</value>
+					<value level="3">450</value>
+					<value level="4">530</value>
+					<value level="5">610</value>
+					<value level="6">900</value>
+					<value level="7">1500</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="ShieldDefence">
 				<amount>
@@ -307,7 +348,9 @@
 					<value level="2">140</value>
 					<value level="3">160</value>
 					<value level="4">180</value>
-					<value level="4">200</value>
+					<value level="5">200</value>
+					<value level="6">250</value>
+					<value level="7">300</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

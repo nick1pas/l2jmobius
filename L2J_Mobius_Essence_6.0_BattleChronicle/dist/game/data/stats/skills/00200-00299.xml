@@ -5050,7 +5050,7 @@
 		<!-- Attacks the target's vital point. Deals P. damage with $s1 power. Critical. -->
 		<icon>icon.skill0263</icon>
 		<castRange>40</castRange>
-		<coolTime>720</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-205</value>
@@ -5109,7 +5109,7 @@
 			<value level="55">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1080</hitTime>
+		<hitTime>1000</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -5226,7 +5226,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

@@ -2587,6 +2587,8 @@
 		<hitTime>1000</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>36</mpConsume>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2594,10 +2596,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>40</amount>
-			</effect>
 			<effect name="Speed">
 				<amount>10</amount>
 				<mode>DIFF</mode>
@@ -2609,6 +2607,10 @@
 			<effect name="FatalBlowRate">
 				<amount>15</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>40</amount>
 			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-90</amount>

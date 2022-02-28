@@ -2763,7 +2763,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="153" toLevel="4" name="Shield Mastery">
+	<skill id="153" toLevel="6" name="Shield Mastery">
 		<!-- Shield Defense +$s1 Shield Defense Rate +$s2 P. Atk. +$s3 -->
 		<icon>icon.skill0153</icon>
 		<magicLevel>
@@ -2771,37 +2771,20 @@
 			<value level="2">28</value>
 			<value level="3">40</value>
 			<value level="4">52</value>
+			<value level="5">76</value>
+			<value level="6">81</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">80</value>
-					<value level="4">120</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">81</value>
-					<value level="4">131</value>
-				</amount>
-				<mode>DIFF</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
-			</effect>
 			<effect name="ShieldDefenceRate">
 				<amount>
-					<value level="1">50</value>
-					<value level="2">70</value>
-					<value level="3">85</value>
-					<value level="4">100</value>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">45</value>
+					<value level="6">50</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2811,8 +2794,35 @@
 					<value level="2">40</value>
 					<value level="3">50</value>
 					<value level="4">60</value>
+					<value level="5">55</value>
+					<value level="6">60</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">100</value>
+					<value level="4">150</value>
+					<value level="5">200</value>
+					<value level="6">250</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">81</value>
+					<value level="4">131</value>
+					<value level="5">180</value>
+					<value level="6">230</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 		</effects>
 	</skill>
@@ -3481,7 +3491,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="191" toLevel="6" name="Focus Mind">
+	<skill id="191" toLevel="8" name="Focus Mind">
 		<!-- MP Recovery Rate +$s1 -->
 		<icon>icon.skill0191</icon>
 		<magicLevel>
@@ -3491,6 +3501,8 @@
 			<value level="4">55</value>
 			<value level="5">64</value>
 			<value level="6">72</value>
+			<value level="7">78</value>
+			<value level="8">86</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3503,6 +3515,8 @@
 					<value level="4">4.3</value>
 					<value level="5">4.7</value>
 					<value level="6">5.1</value>
+					<value level="7">7.1</value>
+					<value level="8">9.5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

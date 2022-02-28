@@ -932,11 +932,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="821" toLevel="10" name="Shadow Step">
+	<skill id="821" toLevel="12" name="Shadow Step">
 		<!-- <Suppression Skill> Teleports behind the target's back. Their Speed $s2 for $s1 -->
 		<icon>icon.skill0821</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>70</activateRate>
 		<castRange>600</castRange>
-		<coolTime>200</coolTime>
 		<effectPoint>
 			<value level="1">-500</value>
 			<value level="2">-540</value>
@@ -948,9 +951,13 @@
 			<value level="8">-780</value>
 			<value level="9">-820</value>
 			<value level="10">-860</value>
+			<value level="11">-880</value>
+			<value level="12">-900</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>100</hitTime>
+		<hitTime>500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">50</value>
 			<value level="2">54</value>
@@ -962,6 +969,8 @@
 			<value level="8">78</value>
 			<value level="9">82</value>
 			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">37</value>
@@ -974,18 +983,14 @@
 			<value level="8">63</value>
 			<value level="9">67</value>
 			<value level="10">71</value>
+			<value level="11">75</value>
+			<value level="12">80</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<lvlBonusRate>20</lvlBonusRate>
-		<trait>SUPPRESSION</trait>
+		<trait>ANOMALY</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

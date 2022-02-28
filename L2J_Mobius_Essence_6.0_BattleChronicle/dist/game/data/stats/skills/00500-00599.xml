@@ -1732,36 +1732,40 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="4" name="Critical Wound">
+	<skill id="531" toLevel="5" name="Critical Wound">
 		<!-- For $s1 Target's Received P. Critical Damage $s2 Target's Received Vital Point Attack Rate $s3 -->
 		<icon>icon.skill0531</icon>
 		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
+		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-671</value>
-			<value level="2">-691</value>
-			<value level="3">-711</value>
-			<value level="4">-731</value>
+			<value level="1">-760</value>
+			<value level="2">-800</value>
+			<value level="3">-830</value>
+			<value level="4">-860</value>
+			<value level="5">-900</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLevel>
-			<value level="1">77</value>
-			<value level="2">81</value>
-			<value level="3">85</value>
-			<value level="4">89</value>
+			<value level="1">76</value>
+			<value level="2">80</value>
+			<value level="3">83</value>
+			<value level="4">86</value>
+			<value level="5">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">47</value>
-			<value level="2">60</value>
-			<value level="3">68</value>
-			<value level="4">75</value>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1781,6 +1785,9 @@
 				<amount>
 					<value level="1">-10</value>
 					<value level="2">-15</value>
+					<value level="3">-16</value>
+					<value level="4">-17</value>
+					<value level="5">-20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1788,6 +1795,9 @@
 				<amount>
 					<value level="1">-10</value>
 					<value level="2">-20</value>
+					<value level="3">-21</value>
+					<value level="4">-22</value>
+					<value level="5">-25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
