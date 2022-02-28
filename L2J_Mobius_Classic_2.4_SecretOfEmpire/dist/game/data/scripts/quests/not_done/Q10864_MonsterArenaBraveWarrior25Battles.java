@@ -16,6 +16,7 @@
  */
 package quests.not_done;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -30,6 +31,6 @@ public class Q10864_MonsterArenaBraveWarrior25Battles extends Quest
 		super(10864);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
-		addCondMinLevel(60, getNoQuestMsg(null));
+		addCondMinLevel(Config.PLAYER_MAXIMUM_LEVEL /* 60 */, getNoQuestMsg(null));
 	}
 }

@@ -16,6 +16,7 @@
  */
 package quests.not_done;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -30,6 +31,6 @@ public class Q10868_TheDarkSideOfPower extends Quest
 		super(10868);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
-		addCondMinLevel(70, getNoQuestMsg(null));
+		addCondMinLevel(Config.PLAYER_MAXIMUM_LEVEL /* 70 */, getNoQuestMsg(null));
 	}
 }

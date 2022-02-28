@@ -16,6 +16,7 @@
  */
 package quests.not_done;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
@@ -30,7 +31,7 @@ public class Q00657_MonsterArenaTrialForWarriors extends Quest
 		super(657);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
-		addCondMinLevel(60, getNoQuestMsg(null));
-		addCondMaxLevel(70, getNoQuestMsg(null));
+		addCondMinLevel(Config.PLAYER_MAXIMUM_LEVEL /* 60 */, getNoQuestMsg(null));
+		// addCondMaxLevel(70, getNoQuestMsg(null));
 	}
 }
