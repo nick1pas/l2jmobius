@@ -242,7 +242,13 @@ public class SkillTreeData implements IXmlReader
 									{
 										case "item":
 										{
-											skillLearn.addRequiredItem(new ItemHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count")));
+											final List<ItemHolder> itemList = new ArrayList<>(1);
+											final int count = parseInteger(attrs, "count");
+											for (String id : parseString(attrs, "id").split(","))
+											{
+												itemList.add(new ItemHolder(Integer.parseInt(id), count));
+											}
+											skillLearn.addRequiredItem(itemList);
 											break;
 										}
 										case "preRequisiteSkill":

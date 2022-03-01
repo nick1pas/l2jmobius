@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -65,10 +66,10 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeC(skill.getDualClassLevel());
 			packet.writeC(_player.getKnownSkill(skill.getSkillId()) != null ? 0 : 1);
 			packet.writeC(skill.getRequiredItems().size());
-			for (ItemHolder item : skill.getRequiredItems())
+			for (List<ItemHolder> item : skill.getRequiredItems())
 			{
-				packet.writeD(item.getId());
-				packet.writeQ(item.getCount());
+				packet.writeD(item.get(0).getId());
+				packet.writeQ(item.get(0).getCount());
 			}
 			final Collection<Skill> removeSkills = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 			packet.writeC(removeSkills.size());

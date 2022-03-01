@@ -143,9 +143,9 @@ public class HealerTrainer extends AbstractNpcAI
 						if (skill != null)
 						{
 							player.removeSkill(skill);
-							for (ItemHolder item : skillLearn.getRequiredItems())
+							for (List<ItemHolder> item : skillLearn.getRequiredItems())
 							{
-								player.addItem("Cleanse", item.getId(), item.getCount(), npc, true);
+								player.addItem("Cleanse", item.get(0).getId(), item.get(0).getCount(), npc, true);
 							}
 							hasSkills = true;
 						}

@@ -186,20 +186,27 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					if (Config.LIFE_CRYSTAL_NEEDED)
 					{
-						for (ItemHolder item : s.getRequiredItems())
+						int count = 0;
+						long playerItemCount = 0;
+						for (List<ItemHolder> items : s.getRequiredItems())
 						{
-							if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false))
+							count = 0;
+							SEARCH: for (ItemHolder item : items)
 							{
-								// Doesn't have required item.
-								player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
-								VillageMaster.showPledgeSkillList(player);
-								return;
+								count++;
+								playerItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+								if ((playerItemCount >= item.getCount()) && player.destroyItemByItemId("PledgeLifeCrystal", item.getId(), item.getCount(), trainer, true))
+								{
+									break SEARCH;
+								}
+								
+								if (count == items.size())
+								{
+									player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
+									VillageMaster.showPledgeSkillList(player);
+									return;
+								}
 							}
-							
-							final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-							sm.addItemName(item.getId());
-							sm.addLong(item.getCount());
-							player.sendPacket(sm);
 						}
 					}
 					
@@ -250,18 +257,26 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					return;
 				}
 				
-				for (ItemHolder item : s.getRequiredItems())
+				int count = 0;
+				long playerItemCount = 0;
+				for (List<ItemHolder> items : s.getRequiredItems())
 				{
-					if (!player.destroyItemByItemId("SubSkills", item.getId(), item.getCount(), trainer, false))
+					count = 0;
+					SEARCH: for (ItemHolder item : items)
 					{
-						player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
-						return;
+						count++;
+						playerItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+						if ((playerItemCount >= item.getCount()) && player.destroyItemByItemId("SubSkills", item.getId(), item.getCount(), trainer, true))
+						{
+							break SEARCH;
+						}
+						
+						if (count == items.size())
+						{
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
+							return;
+						}
 					}
-					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-					sm.addItemName(item.getId());
-					sm.addLong(item.getCount());
-					player.sendPacket(sm);
 				}
 				
 				if (repCost > 0)
@@ -533,25 +548,46 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (!skillLearn.getRequiredItems().isEmpty())
 				{
 					// Then checks that the player has all the items
-					long reqItemCount = 0;
-					for (ItemHolder item : skillLearn.getRequiredItems())
+					int count = 0;
+					long playerItemCount = 0;
+					for (List<ItemHolder> items : skillLearn.getRequiredItems())
 					{
-						reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
-						if (reqItemCount < item.getCount())
+						count = 0;
+						SEARCH: for (ItemHolder item : items)
 						{
-							// Player doesn't have required item.
-							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
-							showSkillList(trainer, player);
-							return false;
+							count++;
+							playerItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+							if (playerItemCount >= item.getCount())
+							{
+								break SEARCH;
+							}
+							
+							if (count == items.size())
+							{
+								player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
+								showSkillList(trainer, player);
+								return false;
+							}
 						}
 					}
 					
 					// If the player has all required items, they are consumed.
-					for (ItemHolder itemIdCount : skillLearn.getRequiredItems())
+					for (List<ItemHolder> items : skillLearn.getRequiredItems())
 					{
-						if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true))
+						count = 0;
+						SEARCH: for (ItemHolder item : items)
 						{
-							Util.handleIllegalPlayerAction(player, "Somehow " + player + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
+							count++;
+							playerItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+							if ((playerItemCount >= item.getCount()) && player.destroyItemByItemId("SkillLearn", item.getId(), item.getCount(), trainer, true))
+							{
+								break SEARCH;
+							}
+							
+							if (count == items.size())
+							{
+								Util.handleIllegalPlayerAction(player, "Somehow " + player + ", level " + player.getLevel() + " lose required item Id: " + item.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
+							}
 						}
 					}
 				}

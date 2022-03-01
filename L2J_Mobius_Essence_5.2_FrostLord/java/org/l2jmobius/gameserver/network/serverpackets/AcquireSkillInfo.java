@@ -76,15 +76,15 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 		_spCost = skillLearn.getLevelUpSp();
 		_type = skillType;
 		_reqs = new ArrayList<>();
-		if ((skillType != AcquireSkillType.PLEDGE) || Config.LIFE_CRYSTAL_NEEDED)
+		if (!skillLearn.getRequiredItems().isEmpty() && ((skillType != AcquireSkillType.PLEDGE) || Config.LIFE_CRYSTAL_NEEDED))
 		{
-			for (ItemHolder item : skillLearn.getRequiredItems())
+			for (List<ItemHolder> item : skillLearn.getRequiredItems())
 			{
 				if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId()))
 				{
 					continue;
 				}
-				_reqs.add(new Req(99, item.getId(), item.getCount(), 50));
+				_reqs.add(new Req(99, item.get(0).getId(), item.get(0).getCount(), 50));
 			}
 		}
 	}
@@ -103,9 +103,12 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 		_spCost = sp;
 		_type = skillType;
 		_reqs = new ArrayList<>();
-		for (ItemHolder item : skillLearn.getRequiredItems())
+		if (!skillLearn.getRequiredItems().isEmpty())
 		{
-			_reqs.add(new Req(99, item.getId(), item.getCount(), 50));
+			for (List<ItemHolder> item : skillLearn.getRequiredItems())
+			{
+				_reqs.add(new Req(99, item.get(0).getId(), item.get(0).getCount(), 50));
+			}
 		}
 	}
 	

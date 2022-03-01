@@ -16,8 +16,10 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -39,7 +41,7 @@ public class SkillLearn
 	private final int _getDualClassLevel;
 	private final boolean _autoGet;
 	private final long _levelUpSp;
-	private final Set<ItemHolder> _requiredItems = new HashSet<>(1);
+	private final List<List<ItemHolder>> _requiredItems = new ArrayList<>(1);
 	private final Set<Race> _races = EnumSet.noneOf(Race.class);
 	private final Set<SkillHolder> _preReqSkills = new HashSet<>(1);
 	private SocialClass _socialClass;
@@ -134,18 +136,18 @@ public class SkillLearn
 	/**
 	 * @return the set with the item holders required to acquire this skill.
 	 */
-	public Set<ItemHolder> getRequiredItems()
+	public List<List<ItemHolder>> getRequiredItems()
 	{
 		return _requiredItems;
 	}
 	
 	/**
-	 * Adds a required item holder to learn this skill.
-	 * @param item the required item holder.
+	 * Adds a required item holder list to learn this skill.
+	 * @param list the required item holder list.
 	 */
-	public void addRequiredItem(ItemHolder item)
+	public void addRequiredItem(List<ItemHolder> list)
 	{
-		_requiredItems.add(item);
+		_requiredItems.add(list);
 	}
 	
 	/**
