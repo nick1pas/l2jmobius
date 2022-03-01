@@ -630,15 +630,11 @@ public class Formulas
 	
 	public static boolean calcMagicAffected(Creature actor, Creature target, Skill skill)
 	{
-		// TODO: CHECK/FIX THIS FORMULA UP!!
 		double defence = 0;
 		if (skill.isActive() && skill.isBad())
 		{
 			defence = target.getMDef();
 		}
-		
-		final double attack = 2 * actor.getMAtk() * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
-		double d = (attack - defence) / (attack + defence);
 		
 		if (skill.isDebuff())
 		{
@@ -647,8 +643,14 @@ public class Formulas
 				target.decrementAbnormalShieldBlocks();
 				return false;
 			}
+			else if (target.isAffected(EffectFlag.DEBUFF_BLOCK))
+			{
+				return false;
+			}
 		}
 		
+		final double attack = 2 * actor.getMAtk() * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
+		double d = (attack - defence) / (attack + defence);
 		d += 0.5 * Rnd.nextGaussian();
 		return d > 0;
 	}
