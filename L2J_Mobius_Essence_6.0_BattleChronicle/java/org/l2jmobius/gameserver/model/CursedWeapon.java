@@ -23,7 +23,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
@@ -42,7 +41,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -109,26 +107,8 @@ public class CursedWeapon implements INamable
 				_player.storeMe();
 				
 				// Destroy
-				final Item removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
-				if (!Config.FORCE_INVENTORY_UPDATE)
-				{
-					final InventoryUpdate iu = new InventoryUpdate();
-					if (removedItem.getCount() == 0)
-					{
-						iu.addRemovedItem(removedItem);
-					}
-					else
-					{
-						iu.addModifiedItem(removedItem);
-					}
-					
-					_player.sendInventoryUpdate(iu);
-				}
-				else
-				{
-					_player.sendItemList();
-				}
-				
+				_player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				_player.sendItemList();
 				_player.broadcastUserInfo();
 			}
 			else
@@ -170,26 +150,8 @@ public class CursedWeapon implements INamable
 			if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
 			{
 				// Destroy
-				final Item removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
-				if (!Config.FORCE_INVENTORY_UPDATE)
-				{
-					final InventoryUpdate iu = new InventoryUpdate();
-					if (removedItem.getCount() == 0)
-					{
-						iu.addRemovedItem(removedItem);
-					}
-					else
-					{
-						iu.addModifiedItem(removedItem);
-					}
-					
-					_player.sendInventoryUpdate(iu);
-				}
-				else
-				{
-					_player.sendItemList();
-				}
-				
+				_player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				_player.sendItemList();
 				_player.broadcastUserInfo();
 			}
 			// is dropped on the ground
@@ -430,7 +392,6 @@ public class CursedWeapon implements INamable
 		
 		// Equip with the weapon
 		_item = item;
-		// Item[] items =
 		_player.getInventory().equipItem(_item);
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1);
 		sm.addItemName(_item);
@@ -441,16 +402,7 @@ public class CursedWeapon implements INamable
 		_player.setCurrentCp(_player.getMaxCp());
 		
 		// Refresh inventory
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItem(_item);
-			_player.sendInventoryUpdate(iu);
-		}
-		else
-		{
-			_player.sendItemList();
-		}
+		_player.sendItemList();
 		
 		// Refresh player stats
 		_player.broadcastUserInfo();
