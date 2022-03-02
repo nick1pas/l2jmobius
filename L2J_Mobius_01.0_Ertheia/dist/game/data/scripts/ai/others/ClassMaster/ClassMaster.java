@@ -470,7 +470,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 				}
 				else
 				{
-					player.getClan().setLevel(player.getClan().getLevel() + 1);
+					player.getClan().changeLevel(player.getClan().getLevel() + 1);
 					player.getClan().broadcastClanStatus();
 				}
 				break;

@@ -735,7 +735,7 @@ public class Clan implements IIdentifiable, INamable
 	 * Sets the clan level and updates the clan forum if it's needed.
 	 * @param level the clan level to be set.
 	 */
-	public void setLevel(int level)
+	private void setLevel(int level)
 	{
 		_level = level;
 		if ((_level >= 2) && (_forum == null) && Config.ENABLE_COMMUNITY_BOARD)

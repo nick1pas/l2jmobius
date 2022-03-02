@@ -694,7 +694,7 @@ public class Clan
 		_hideoutId = hasHideout;
 	}
 	
-	public void setLevel(int level)
+	private void setLevel(int level)
 	{
 		_level = level;
 		if (Config.ENABLE_COMMUNITY_BOARD && (_level >= 2) && (_forum == null))
