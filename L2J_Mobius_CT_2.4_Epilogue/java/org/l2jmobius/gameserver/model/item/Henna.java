@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.item;
 
-import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -57,7 +57,7 @@ public class Henna
 		_wearCount = set.getInt("wear_count");
 		_cancelFee = set.getInt("cancel_fee");
 		_cancelCount = set.getInt("cancel_count");
-		_wearClass = EnumSet.noneOf(ClassId.class);
+		_wearClass = new HashSet<>();
 	}
 	
 	/**

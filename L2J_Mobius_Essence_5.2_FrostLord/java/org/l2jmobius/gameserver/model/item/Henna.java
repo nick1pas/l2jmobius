@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.item;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
-import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -61,7 +61,7 @@ public class Henna
 		_cancelCount = set.getInt("cancel_count");
 		_duration = set.getInt("duration", -1);
 		_skills = new ArrayList<>();
-		_wearClass = EnumSet.noneOf(ClassId.class);
+		_wearClass = new HashSet<>();
 	}
 	
 	/**
