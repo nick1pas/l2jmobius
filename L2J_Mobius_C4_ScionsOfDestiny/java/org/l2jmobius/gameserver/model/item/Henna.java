@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.item;
 
-import org.l2jmobius.commons.util.CommonUtil;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
 
@@ -35,7 +37,7 @@ public class Henna
 	private final int _MEN;
 	private final int _DEX;
 	private final int _WIT;
-	private final int[] _classes;
+	private final Set<Integer> _wearClass;
 	
 	public Henna(StatSet set)
 	{
@@ -48,7 +50,11 @@ public class Henna
 		_MEN = set.getInt("MEN");
 		_DEX = set.getInt("DEX");
 		_WIT = set.getInt("WIT");
-		_classes = set.getIntArray("classes", ";");
+		_wearClass = new HashSet<>();
+		for (int id : set.getIntArray("classes", ";"))
+		{
+			_wearClass.add(id);
+		}
 	}
 	
 	public int getSymbolId()
@@ -108,6 +114,6 @@ public class Henna
 	 */
 	public boolean canBeUsedBy(Player player)
 	{
-		return CommonUtil.contains(_classes, player.getClassId().getId());
+		return _wearClass.contains(player.getClassId().getId());
 	}
 }
