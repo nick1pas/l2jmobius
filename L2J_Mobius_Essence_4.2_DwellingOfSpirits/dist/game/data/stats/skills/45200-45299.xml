@@ -6732,10 +6732,14 @@
 			<value level="30">63</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<staticReuse>
+			<value fromLevel="1" toLevel="25">true</value>
+		</staticReuse>
+		<reuseDelay>
+			<value fromLevel="1" toLevel="25">5000</value>
+			<value fromLevel="26" toLevel="30">1000</value>
+		</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
