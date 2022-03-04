@@ -16,6 +16,10 @@
  */
 package handlers.skillconditionhandlers;
 
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -24,15 +28,23 @@ import org.l2jmobius.gameserver.model.skill.ISkillCondition;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class TargetRaceSkillCondition implements ISkillCondition
 {
-	private final Race _race;
+	private final Set<Race> _races = EnumSet.noneOf(Race.class);
 	
 	public TargetRaceSkillCondition(StatSet params)
 	{
-		_race = params.getEnum("race", Race.class);
+		final List<Race> races = params.getEnumList("race", Race.class);
+		if (races != null)
+		{
+			_races.addAll(races);
+		}
+		else
+		{
+			_races.add(params.getEnum("race", Race.class));
+		}
 	}
 	
 	@Override
@@ -42,7 +54,7 @@ public class TargetRaceSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final Creature targetCreature = (Creature) target;
-		return targetCreature.getRace() == _race;
+		
+		return _races.contains(((Creature) target).getRace());
 	}
 }
