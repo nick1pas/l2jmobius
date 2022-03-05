@@ -54,30 +54,19 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		
-		// GemStones must belong to owner
-		if (feeItem.getOwnerId() != player.getObjectId())
+		if (feeItem != null)
 		{
-			return false;
+			// GemStones must belong to owner
+			if (feeItem.getOwnerId() != player.getObjectId())
+			{
+				return false;
+			}
+			// .. and located in inventory
+			if (feeItem.getItemLocation() != ItemLocation.INVENTORY)
+			{
+				return false;
+			}
 		}
-		// .. and located in inventory
-		if (feeItem.getItemLocation() != ItemLocation.INVENTORY)
-		{
-			return false;
-		}
-		
-		// TODO: Update XMLs.
-		// Check for item id
-		// if (fee.getItemId() != feeItem.getId())
-		// {
-		// return false;
-		// }
-		
-		// TODO: Update XMLs.
-		// Count must be greater or equal of required number
-		// if (fee.getItemCount() > feeItem.getCount())
-		// {
-		// return false;
-		// }
 		
 		return true;
 	}
@@ -101,6 +90,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
+		
 		// Lifestone must be located in inventory
 		if (mineralItem.getItemLocation() != ItemLocation.INVENTORY)
 		{
@@ -128,11 +118,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
-		// Remove the augmentation if any (286).
-		// if (item.isAugmented())
-		// {
-		// return false;
-		// }
+		
 		if (item.isHeroItem())
 		{
 			return false;

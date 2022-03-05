@@ -76,7 +76,7 @@ public class RequestRefine extends AbstractRefinePacket
 		}
 		
 		final Item feeItem = player.getInventory().getItemByItemId(fee.getItemId());
-		if (feeItem == null)
+		if ((feeItem == null) && (fee.getItemId() != 0))
 		{
 			return;
 		}
@@ -156,7 +156,7 @@ public class RequestRefine extends AbstractRefinePacket
 		}
 		
 		// Consume the gemstones.
-		if (!player.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
+		if ((feeItem != null) && !player.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
 		{
 			return;
 		}
