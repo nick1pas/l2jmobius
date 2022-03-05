@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/Variations.xsd">
 	<variations>
-		<!-- Common Life Stone1 -->
+		<!-- Common Life Stone -->
 		<variation mineralId="90012">
 			<optionGroup order="0">
 				<optionCategory chance="100">
@@ -143,7 +143,7 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
-				<!-- Life Stone Lv.2 - Weapons -->
+		<!-- Life Stone Lv.2 - Weapons -->
 		<variation mineralId="94210">
 			<optionGroup order="0">
 				<optionCategory chance="100">
@@ -218,7 +218,7 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
-				<!-- Life Stone Lv.1 - Armor -->
+		<!-- Life Stone Lv.1 - Armor -->
 		<variation mineralId="94211">
 			<optionGroup order="0">
 				<optionCategory chance="100">
@@ -428,8 +428,41 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		<!-- Life Stone Lv.1 - Sigil/Shield -->
+		<variation mineralId="93099">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="33547" to="33609" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="100">
+					<optionRange from="33547" to="33609" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Life Stone Lv.2 - Sigil/Shield -->
 		<variation mineralId="93122">
+			<optionGroup order="0">
+				<optionCategory chance="100">
+					<optionRange from="33547" to="33609" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="55">
+					<optionRange from="33547" to="33609" chance="1.37" />
+				</optionCategory>
+				<optionCategory chance="35">
+					<optionRange from="33547" to="33609" chance="1.37" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="50161" to="50166" chance="1.37" />
+					<optionRange from="50174" to="50179" chance="1.37" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Life Stone Lv.2 - Sigil/Shield -->
+		<variation mineralId="93100">
 			<optionGroup order="0">
 				<optionCategory chance="100">
 					<optionRange from="33547" to="33609" chance="1.37" />
@@ -464,6 +497,80 @@
 				</optionCategory>
 				<optionCategory chance="10">
 					<optionRange from="50194" to="50196" chance="1.85" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Life Stone - Accessories -->
+		<variation mineralId="94423">
+			<optionGroup order="0">
+				<optionCategory chance="70">
+					<optionRange from="37004" to="37243" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37244" to="37303" chance="1.21" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37964" to="38023" chance="1.11" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38524" to="38543" chance="1.05" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="30">
+					<optionRange from="37304" to="37423" chance="3.94" />
+				</optionCategory>
+				<optionCategory chance="30">
+					<optionRange from="37424" to="37543" chance="3.89" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38264" to="38383" chance="1.01" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37544" to="37723" chance="1.75" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38624" to="38663" chance="1.35" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38664" to="38683" chance="1.15" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Life Stone - Accessories -->
+		<variation mineralId="94424">
+			<optionGroup order="0">
+				<optionCategory chance="70">
+					<optionRange from="37004" to="37243" chance="5.89" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37244" to="37303" chance="1.21" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37964" to="38023" chance="1.11" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38524" to="38543" chance="1.05" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup order="1">
+				<optionCategory chance="30">
+					<optionRange from="37304" to="37423" chance="3.94" />
+				</optionCategory>
+				<optionCategory chance="30">
+					<optionRange from="37424" to="37543" chance="3.89" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38264" to="38383" chance="1.01" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="37544" to="37723" chance="1.75" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38624" to="38663" chance="1.35" />
+				</optionCategory>
+				<optionCategory chance="10">
+					<optionRange from="38664" to="38683" chance="1.15" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -935,8 +1042,8 @@
 			<item id="95735" />
 			<item id="95736" />
 			<item id="95737" />
-			
-			
+			<item id="94888" />
+			<item id="95422" />
 		</itemGroup>
 		<!-- Hair Accessory -->
 		<itemGroup id="2">
@@ -1105,7 +1212,6 @@
 			<item id="94842" />
 			<item id="94848" />
 			<item id="94850" />
-			
 		</itemGroup>
 		<!-- Armors 2 - BOOTS -->
 		<itemGroup id="4">
@@ -1542,6 +1648,45 @@
 			<item id="90854" />
 			<item id="94166" />
 		</itemGroup>
+		<!-- Accessories -->
+		<itemGroup id="10">
+			<item id="6660" />
+			<item id="6661" />
+			<item id="6662" />
+			<item id="91952" />
+			<item id="95718" />
+			<item id="893" />
+			<item id="95394" />
+			<item id="902" />
+			<item id="95396" />
+			<item id="94718" />
+			<item id="91953" />
+			<item id="95719" />
+			<item id="862" />
+			<item id="95425" />
+			<item id="871" />
+			<item id="95381" />
+			<item id="924" />
+			<item id="933" />
+			<item id="95409" />
+			<item id="95429" />
+			<item id="95327" />
+			<item id="95329" />
+			<item id="49580" />
+			<item id="95330" />
+			<item id="95328" />
+			<item id="90763" />
+			<item id="95331" />
+			<item id="90992" />
+			<item id="95332" />
+			<item id="91550" />
+			<item id="91117" />
+			<item id="91119" />
+			<item id="91121" />
+			<item id="91123" />
+			<item id="94682" />
+			<item id="95333" />
+		</itemGroup>
 	</itemGroups>
 	<fees>
 		<!-- Weapons From NG to B-A Grade -->
@@ -1622,13 +1767,29 @@
 		<fee itemGroup="8" adenaFee="100000" cancelFee="1000000">
 			<mineral id="93121" /> <!-- Life Stone Lv. 1- Shield/Sigil -->
 		</fee>
+		<!-- Life Stone Lv. 1 - Shield/Sigil -->
+		<fee itemGroup="8" adenaFee="100000" cancelFee="1000000">
+			<mineral id="93099" /> <!-- Life Stone Lv. 1- Shield/Sigil -->
+		</fee>
 		<!-- Life Stone Lv. 2 - Shield/Sigil -->
 		<fee itemGroup="8" adenaFee="300000" cancelFee="1000000">
 			<mineral id="93122" /> <!-- Life Stone Lv. 2 - Shield/Sigil -->
 		</fee>
+		<!-- Life Stone Lv. 2 - Shield/Sigil -->
+		<fee itemGroup="8" adenaFee="300000" cancelFee="1000000">
+			<mineral id="93100" /> <!-- Life Stone Lv. 2 - Shield/Sigil -->
+		</fee>
 		<!-- Life Stone - Circlet -->
 		<fee itemGroup="9" adenaFee="900000" cancelFee="1000000">
 			<mineral id="94303" /> <!-- Life Stone - Circlet -->
+		</fee>
+		<!-- Life Stone - Accessories -->
+		<fee itemGroup="10" adenaFee="900000" cancelFee="1000000">
+			<mineral id="94423" /> <!-- Life Stone - Accessories -->
+		</fee>
+		<!-- Life Stone - Accessories (Sealed) -->
+		<fee itemGroup="10" adenaFee="900000" cancelFee="1000000">
+			<mineral id="94424" /> <!-- Life Stone - Accessories (Sealed) -->
 		</fee>
 	</fees>
 </list>
