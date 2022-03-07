@@ -92,7 +92,6 @@ public class Config
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
 	private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
 	private static final String ATTRIBUTE_SYSTEM_FILE = "./config/AttributeSystem.ini";
-	private static final String BALTHUS_KNIGHTS_CONFIG_FILE = "./config/BalthusKnights.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
@@ -159,12 +158,6 @@ public class Config
 	public static int ATTENDANCE_REWARD_DELAY;
 	public static boolean ATTENDANCE_POPUP_START;
 	public static boolean ATTENDANCE_POPUP_WINDOW;
-	public static boolean BALTHUS_KNIGHTS_ENABLED;
-	public static int BALTHUS_KNIGHTS_LEVEL;
-	public static boolean BALTHUS_KNIGHTS_PREMIUM;
-	public static Location BALTHUS_KNIGHTS_LOCATION;
-	public static List<ItemHolder> BALTHUS_KNIGHTS_REWARDS;
-	public static boolean BALTHUS_KNIGHTS_REWARD_SKILLS;
 	public static boolean PLAYER_DELEVEL;
 	public static int DELEVEL_MINIMUM;
 	public static boolean DECREASE_SKILL_LEVEL;
@@ -1693,24 +1686,6 @@ public class Config
 			R99_ARMOR_JEWEL = attributeConfig.getInt("R99ArmorJewel", 100);
 			// Only R110 is used
 			R110_ARMOR_JEWEL = attributeConfig.getInt("R110ArmorJewel", 100);
-			
-			// Load BalthusKnights config file (if exists)
-			final PropertiesParser balthusKnightsConfig = new PropertiesParser(BALTHUS_KNIGHTS_CONFIG_FILE);
-			BALTHUS_KNIGHTS_ENABLED = balthusKnightsConfig.getBoolean("BalthusKnightsEnabled", true);
-			BALTHUS_KNIGHTS_LEVEL = balthusKnightsConfig.getInt("BalthusKnightsLevel", 85);
-			BALTHUS_KNIGHTS_PREMIUM = balthusKnightsConfig.getBoolean("BalthusKnightsPremium", true);
-			final String[] balthusKnightsLocation = balthusKnightsConfig.getString("BalthusKnightsLocation", "-114371,256483,-1286").split(",");
-			BALTHUS_KNIGHTS_LOCATION = new Location(Integer.parseInt(balthusKnightsLocation[0]), Integer.parseInt(balthusKnightsLocation[1]), Integer.parseInt(balthusKnightsLocation[2]));
-			BALTHUS_KNIGHTS_REWARDS = new ArrayList<>();
-			for (String s : balthusKnightsConfig.getString("BalthusKnightsRewards", "46919;1").split(","))
-			{
-				if (s.isEmpty())
-				{
-					continue;
-				}
-				BALTHUS_KNIGHTS_REWARDS.add(new ItemHolder(Integer.parseInt(s.split(";")[0]), Integer.parseInt(s.split(";")[1])));
-			}
-			BALTHUS_KNIGHTS_REWARD_SKILLS = balthusKnightsConfig.getBoolean("BalthusKnightsRewardSkills", true);
 			
 			// Load Character config file (if exists)
 			final PropertiesParser characterConfig = new PropertiesParser(CHARACTER_CONFIG_FILE);

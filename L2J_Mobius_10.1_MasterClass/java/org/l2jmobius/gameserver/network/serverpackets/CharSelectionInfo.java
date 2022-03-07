@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.World;
@@ -166,30 +165,8 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeC(1); // 0=can't play, 1=can play free until level 85, 2=100% free play
 		packet.writeD(2); // if 1, Korean client
 		packet.writeC(0); // Gift message for inactive accounts // 152
-		// Balthus Knights
-		if (Config.BALTHUS_KNIGHTS_ENABLED)
-		{
-			if (Config.BALTHUS_KNIGHTS_PREMIUM)
-			{
-				if (Config.PREMIUM_SYSTEM_ENABLED)
-				{
-					PremiumManager.getInstance().loadPremiumData(_loginName);
-					packet.writeC(PremiumManager.getInstance().getPremiumExpiration(_loginName) > 0 ? 1 : 0);
-				}
-				else
-				{
-					packet.writeC(0);
-				}
-			}
-			else
-			{
-				packet.writeC(1);
-			}
-		}
-		else
-		{
-			packet.writeC(0);
-		}
+		packet.writeC(0); // Balthus Knights, if 1 suggests premium account
+		
 		long lastAccess = 0;
 		if (_activeId == -1)
 		{
@@ -202,6 +179,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				}
 			}
 		}
+		
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
@@ -260,8 +238,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeC(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND) > 127 ? 127 : charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND));
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
-			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
-			packet.writeD(0); // Currently on retail when you are on character select you don't see your transformation.
+			packet.writeD(0); // Transformation: Currently on retail when you are on character select you don't see your transformation.
 			packet.writeD(0); // Pet NpcId
 			packet.writeD(0); // Pet level
 			packet.writeD(0); // Pet Food

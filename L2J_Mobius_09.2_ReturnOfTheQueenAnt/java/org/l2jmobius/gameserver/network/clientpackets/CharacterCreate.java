@@ -22,15 +22,12 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
-import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.InitialEquipmentData;
 import org.l2jmobius.gameserver.data.xml.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.enums.ClassId;
-import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
@@ -41,7 +38,6 @@ import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.item.PlayerItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -150,7 +146,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		
 		Player newChar = null;
 		PlayerTemplate template = null;
-		boolean balthusKnights = false;
 		
 		/*
 		 * DrHouse: Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
@@ -165,43 +160,6 @@ public class CharacterCreate implements IClientIncomingPacket
 			else if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
-				return;
-			}
-			
-			// Balthus Knights.
-			if (Config.BALTHUS_KNIGHTS_ENABLED && (!Config.BALTHUS_KNIGHTS_PREMIUM || (Config.PREMIUM_SYSTEM_ENABLED && (PremiumManager.getInstance().getPremiumExpiration(client.getAccountName()) > 0))))
-			{
-				if (_classId == 190)
-				{
-					_classId = 188; // Eviscerator
-					balthusKnights = true;
-				}
-				else if (_classId == 191)
-				{
-					_classId = 189; // Sayha Seer
-					balthusKnights = true;
-				}
-				else if ((_classId > 138) && (_classId < 147))
-				{
-					final String properClass = ClassId.getClassId(_classId).toString().split("_")[0];
-					for (ClassId classId : ClassId.values())
-					{
-						if (classId.getRace() == null)
-						{
-							continue;
-						}
-						if ((classId.getRace().ordinal() == _race) && classId.toString().startsWith(properClass))
-						{
-							_classId = classId.getId();
-							balthusKnights = true;
-							break;
-						}
-					}
-				}
-			}
-			if (!balthusKnights && (ClassId.getClassId(_classId).level() > 0))
-			{
-				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
 			
@@ -283,16 +241,6 @@ public class CharacterCreate implements IClientIncomingPacket
 			newChar = Player.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
-		if (balthusKnights)
-		{
-			newChar.setExp(ExperienceData.getInstance().getExpForLevel(Config.BALTHUS_KNIGHTS_LEVEL));
-			newChar.getStat().setLevel(Config.BALTHUS_KNIGHTS_LEVEL);
-			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
-			{
-				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true, Config.AUTO_LEARN_SKILLS_WITHOUT_ITEMS);
-			}
-		}
-		
 		// HP and MP are at maximum and CP is zero by default.
 		newChar.setCurrentHp(newChar.getMaxHp());
 		newChar.setCurrentMp(newChar.getMaxMp());
@@ -314,10 +262,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		else if (Config.FACTION_SYSTEM_ENABLED)
 		{
 			newChar.setXYZInvisible(Config.FACTION_STARTING_LOCATION.getX(), Config.FACTION_STARTING_LOCATION.getY(), Config.FACTION_STARTING_LOCATION.getZ());
-		}
-		else if (balthusKnights)
-		{
-			newChar.setXYZInvisible(Config.BALTHUS_KNIGHTS_LOCATION.getX(), Config.BALTHUS_KNIGHTS_LOCATION.getY(), Config.BALTHUS_KNIGHTS_LOCATION.getZ());
 		}
 		else
 		{
@@ -352,23 +296,6 @@ public class CharacterCreate implements IClientIncomingPacket
 				}
 				
 				if (item.isEquipable() && ie.isEquipped())
-				{
-					newChar.getInventory().equipItem(item);
-				}
-			}
-		}
-		if (balthusKnights)
-		{
-			for (ItemHolder reward : Config.BALTHUS_KNIGHTS_REWARDS)
-			{
-				final Item item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
-				if (item == null)
-				{
-					PacketLogger.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");
-					continue;
-				}
-				
-				if (item.isEquipable())
 				{
 					newChar.getInventory().equipItem(item);
 				}

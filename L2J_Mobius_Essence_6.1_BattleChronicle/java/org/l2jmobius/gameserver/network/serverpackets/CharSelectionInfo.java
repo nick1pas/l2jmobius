@@ -164,6 +164,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeD(2); // if 1, Korean client
 		packet.writeC(0); // Gift message for inactive accounts // 152
 		packet.writeC(0); // Balthus Knights, if 1 suggests premium account
+		
 		long lastAccess = 0;
 		if (_activeId == -1)
 		{
@@ -176,6 +177,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				}
 			}
 		}
+		
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
@@ -234,8 +236,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeC(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND) > 127 ? 127 : charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND));
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
-			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
-			packet.writeD(0); // Currently on retail when you are on character select you don't see your transformation.
+			packet.writeD(0); // Transformation: Currently on retail when you are on character select you don't see your transformation.
 			packet.writeD(0); // Pet NpcId
 			packet.writeD(0); // Pet level
 			packet.writeD(0); // Pet Food
