@@ -322,7 +322,17 @@ public class CreatureStat
 		{
 			baseSpeed = _creature.getTemplate().getBaseValue(_creature.isRunning() ? Stat.RUN_SPEED : Stat.WALK_SPEED, 0);
 		}
-		return getMoveSpeed() * (1. / baseSpeed);
+		return getMoveSpeed() * (1 / baseSpeed);
+	}
+	
+	protected double maxSpeed()
+	{
+		return 99999999;
+	}
+	
+	private double calcValidSpeed(final double val)
+	{
+		return Math.max(Math.min(val, maxSpeed() + getValue(Stat.SPEED_LIMIT)), 0);
 	}
 	
 	/**
@@ -330,7 +340,7 @@ public class CreatureStat
 	 */
 	public double getRunSpeed()
 	{
-		return getValue(_creature.isInsideZone(ZoneId.WATER) ? Stat.SWIM_RUN_SPEED : Stat.RUN_SPEED);
+		return calcValidSpeed(getValue(_creature.isInsideZone(ZoneId.WATER) ? Stat.SWIM_RUN_SPEED : Stat.RUN_SPEED));
 	}
 	
 	/**
@@ -338,7 +348,7 @@ public class CreatureStat
 	 */
 	public double getWalkSpeed()
 	{
-		return getValue(_creature.isInsideZone(ZoneId.WATER) ? Stat.SWIM_WALK_SPEED : Stat.WALK_SPEED);
+		return calcValidSpeed(getValue(_creature.isInsideZone(ZoneId.WATER) ? Stat.SWIM_WALK_SPEED : Stat.WALK_SPEED));
 	}
 	
 	/**
@@ -346,7 +356,7 @@ public class CreatureStat
 	 */
 	public double getSwimRunSpeed()
 	{
-		return getValue(Stat.SWIM_RUN_SPEED);
+		return calcValidSpeed(getValue(Stat.SWIM_RUN_SPEED));
 	}
 	
 	/**
@@ -354,7 +364,7 @@ public class CreatureStat
 	 */
 	public double getSwimWalkSpeed()
 	{
-		return getValue(Stat.SWIM_WALK_SPEED);
+		return calcValidSpeed(getValue(Stat.SWIM_WALK_SPEED));
 	}
 	
 	/**

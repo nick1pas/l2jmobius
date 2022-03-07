@@ -179,6 +179,7 @@ public enum Stat
 	
 	// Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
 	MOVE_SPEED("moveSpeed"),
+	SPEED_LIMIT("speedLimit"),
 	RUN_SPEED("runSpd", new SpeedFinalizer()),
 	WALK_SPEED("walkSpd", new SpeedFinalizer()),
 	SWIM_RUN_SPEED("fastSwimSpd", new SpeedFinalizer()),
