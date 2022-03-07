@@ -6245,6 +6245,7 @@ public class Player extends Playable
 		}
 		
 		// Add karma to attacker and increase its PK counter
+		setKarma(newKarma);
 		setPkKills(getPkKills() + 1);
 		
 		if (Config.PVP_PK_TITLE)
@@ -6258,6 +6259,9 @@ public class Player extends Playable
 		
 		// Send a Server->Client UserInfo packet to attacker with its Karma and PK Counter
 		sendPacket(new UserInfo(this));
+		
+		// Prevent character get stuck.
+		sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	/**
