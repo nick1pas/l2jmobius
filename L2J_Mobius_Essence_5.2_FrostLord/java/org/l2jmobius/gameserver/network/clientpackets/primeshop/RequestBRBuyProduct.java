@@ -73,8 +73,8 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
 		if (validatePlayer(item, _count, player))
 		{
-			final int price = (item.getPrice() * _count);
-			final int paymentId = validatePaymentId(item, price);
+			final int price = item.getPrice() * _count;
+			final int paymentId = validatePaymentId(item);
 			if (paymentId < 0)
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
@@ -208,7 +208,15 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		final long slots = item.getCount() * count;
 		if (player.getInventory().validateWeight(weight))
 		{
-			if (!player.getInventory().validateCapacity(slots))
+			if (item.getCount() == 1)
+			{
+				if (!player.getInventory().validateCapacity(slots))
+				{
+					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
+					return false;
+				}
+			}
+			else if (!player.getInventory().validateCapacity(count))
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
 				return false;
@@ -250,7 +258,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		}
 	}
 	
-	private static int validatePaymentId(PrimeShopGroup item, long amount)
+	private static int validatePaymentId(PrimeShopGroup item)
 	{
 		switch (item.getPaymentType())
 		{

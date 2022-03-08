@@ -78,7 +78,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		{
 			
 			boolean hasItems = true;
-			// First loop to validate all items
+			// First loop to validate all items.
 			for (ItemHolder itemHolder : validatePaymentId(item))
 			{
 				final int paymentId = itemHolder.getId();
@@ -94,8 +94,8 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 						hasItems = false;
 					}
 				}
-				else
-				{ // this is always 0
+				else // This is always 0.
+				{
 					if (player.getPrimePoints() < price)
 					{
 						hasItems = false;
@@ -111,7 +111,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 			}
 			
 			// Second loop, only if all criteria has been met!
-			// this should always be reached if player has all the coins needed for the purchase
+			// This should always be reached if player has all the coins needed for the purchase.
 			for (ItemHolder itemHolder : validatePaymentId(item))
 			{
 				final int paymentId = itemHolder.getId();
@@ -233,7 +233,15 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		final long slots = item.getCount() * count;
 		if (player.getInventory().validateWeight(weight))
 		{
-			if (!player.getInventory().validateCapacity(slots))
+			if (item.getCount() == 1)
+			{
+				if (!player.getInventory().validateCapacity(slots))
+				{
+					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
+					return false;
+				}
+			}
+			else if (!player.getInventory().validateCapacity(count))
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
 				return false;
