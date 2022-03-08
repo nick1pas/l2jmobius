@@ -113,6 +113,17 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 			{
 				player.getAccountVariables().set(AccountVariables.VIP_ITEM_BOUGHT, Calendar.getInstance().getTimeInMillis());
 			}
+			
+			// Update account variables.
+			if (item.getAccountDailyLimit() > 0)
+			{
+				player.getAccountVariables().set(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), 0) + (item.getCount() * _count));
+			}
+			else if (item.getAccountBuyLimit() > 0)
+			{
+				player.getAccountVariables().set(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), 0) + (item.getCount() * _count));
+			}
+			
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
 			player.sendPacket(new ExBRGamePoint(player));
 		}
@@ -176,6 +187,16 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
 			return false;
 		}
+		else if ((item.getAccountDailyLimit() > 0) && ((count + player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), 0)) > item.getAccountDailyLimit()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
+			return false;
+		}
+		else if ((item.getAccountBuyLimit() > 0) && ((count + player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), 0)) > item.getAccountBuyLimit()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
+			return false;
+		}
 		
 		if ((item.getVipTier() > player.getVipTier()) || (item.isVipGift() && !canReceiveGift(player, item)))
 		{
@@ -225,8 +246,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		}
 		else
 		{
-			long timeBought = player.getAccountVariables().getLong(AccountVariables.VIP_ITEM_BOUGHT, 0L);
-			return timeBought <= 0;
+			return player.getAccountVariables().getLong(AccountVariables.VIP_ITEM_BOUGHT, 0) <= 0;
 		}
 	}
 	

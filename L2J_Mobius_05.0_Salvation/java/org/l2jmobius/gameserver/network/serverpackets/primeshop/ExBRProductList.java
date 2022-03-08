@@ -22,6 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -64,15 +65,49 @@ public class ExBRProductList implements IClientOutgoingPacket
 			packet.writeC(brItem.getStartMinute());
 			packet.writeC(brItem.getStopHour());
 			packet.writeC(brItem.getStopMinute());
-			packet.writeD(brItem.getStock());
-			packet.writeD(brItem.getTotal());
+			
+			// Daily account limit.
+			if ((brItem.getAccountDailyLimit() > 0) && (_player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + brItem.getBrId(), 0) >= brItem.getAccountDailyLimit()))
+			{
+				packet.writeD(brItem.getAccountDailyLimit());
+				packet.writeD(brItem.getAccountDailyLimit());
+			}
+			// General account limit.
+			else if ((brItem.getAccountBuyLimit() > 0) && (_player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + brItem.getBrId(), 0) >= brItem.getAccountBuyLimit()))
+			{
+				packet.writeD(brItem.getAccountBuyLimit());
+				packet.writeD(brItem.getAccountBuyLimit());
+			}
+			else
+			{
+				packet.writeD(brItem.getStock());
+				packet.writeD(brItem.getTotal());
+			}
+			
 			packet.writeC(brItem.getSalePercent());
 			packet.writeC(brItem.getMinLevel());
 			packet.writeC(brItem.getMaxLevel());
 			packet.writeD(brItem.getMinBirthday());
 			packet.writeD(brItem.getMaxBirthday());
-			packet.writeD(brItem.getRestrictionDay());
-			packet.writeD(brItem.getAvailableCount());
+			
+			// Daily account limit.
+			if (brItem.getAccountDailyLimit() > 0)
+			{
+				packet.writeD(1); // Days
+				packet.writeD(brItem.getAccountDailyLimit()); // Amount
+			}
+			// General account limit.
+			else if (brItem.getAccountBuyLimit() > 0)
+			{
+				packet.writeD(-1); // Days
+				packet.writeD(brItem.getAccountBuyLimit()); // Amount
+			}
+			else
+			{
+				packet.writeD(0); // Days
+				packet.writeD(0); // Amount
+			}
+			
 			packet.writeC(brItem.getItems().size());
 			for (PrimeShopItem item : brItem.getItems())
 			{

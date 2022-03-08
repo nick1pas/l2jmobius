@@ -41,6 +41,8 @@ public class AccountVariables extends AbstractVariables
 	// Public variable names
 	public static final String HWID = "HWID";
 	public static final String HWIDSLIT_VAR = "	";
+	public static final String PRIME_SHOP_PRODUCT_COUNT = "PSPCount";
+	public static final String PRIME_SHOP_PRODUCT_DAILY_COUNT = "PSPDailyCount";
 	public static final String LCOIN_SHOP_PRODUCT_COUNT = "LCSCount";
 	public static final String LCOIN_SHOP_PRODUCT_DAILY_COUNT = "LCSDailyCount";
 	

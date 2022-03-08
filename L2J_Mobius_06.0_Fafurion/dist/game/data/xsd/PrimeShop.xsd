@@ -32,8 +32,8 @@
 						<xs:attribute type="xs:byte" name="maxLevel" use="optional" />
 						<xs:attribute type="xs:byte" name="minBirthday" use="optional" />
 						<xs:attribute type="xs:byte" name="maxBirthday" use="optional" />
-						<xs:attribute type="xs:byte" name="restrictionDay" use="optional" />
-						<xs:attribute type="xs:byte" name="availableCount" use="optional" />
+						<xs:attribute type="xs:byte" name="accountDailyLimit" use="optional" />
+						<xs:attribute type="xs:byte" name="accountBuyLimit" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

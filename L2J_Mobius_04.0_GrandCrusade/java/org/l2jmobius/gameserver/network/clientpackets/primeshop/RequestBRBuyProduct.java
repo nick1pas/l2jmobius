@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
@@ -105,6 +106,16 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 				player.addItem("PrimeShop", subItem.getId(), subItem.getCount() * _count, player, true);
 			}
 			
+			// Update account variables.
+			if (item.getAccountDailyLimit() > 0)
+			{
+				player.getAccountVariables().set(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), 0) + (item.getCount() * _count));
+			}
+			else if (item.getAccountBuyLimit() > 0)
+			{
+				player.getAccountVariables().set(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), 0) + (item.getCount() * _count));
+			}
+			
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
 			player.sendPacket(new ExBRGamePoint(player));
 		}
@@ -166,6 +177,16 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
+			return false;
+		}
+		else if ((item.getAccountDailyLimit() > 0) && ((count + player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + item.getBrId(), 0)) > item.getAccountDailyLimit()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
+			return false;
+		}
+		else if ((item.getAccountBuyLimit() > 0) && ((count + player.getAccountVariables().getInt(AccountVariables.PRIME_SHOP_PRODUCT_COUNT + item.getBrId(), 0)) > item.getAccountBuyLimit()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SOLD_OUT));
 			return false;
 		}
 		

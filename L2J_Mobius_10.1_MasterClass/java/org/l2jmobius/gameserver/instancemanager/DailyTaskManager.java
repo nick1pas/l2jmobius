@@ -32,6 +32,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
+import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -42,6 +43,7 @@ import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -116,6 +118,7 @@ public class DailyTaskManager
 		// Daily tasks.
 		resetAttendanceRewards();
 		resetDailySkills();
+		resetDailyPrimeShopData();
 		resetDailyLimitShopData();
 		resetHomunculusResetPoints();
 		resetRecommends();
@@ -592,6 +595,32 @@ public class DailyTaskManager
 			
 			LOGGER.info("Attendance Rewards has been resetted.");
 		}
+	}
+	
+	private void resetDailyPrimeShopData()
+	{
+		for (PrimeShopGroup holder : PrimeShopData.getInstance().getPrimeItems().values())
+		{
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var=?"))
+			{
+				ps.setString(1, AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + holder.getBrId());
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset PrimeShopData: " + e);
+			}
+			
+			// Update data for online players.
+			for (Player player : World.getInstance().getPlayers())
+			{
+				player.getVariables().remove(AccountVariables.PRIME_SHOP_PRODUCT_DAILY_COUNT + holder.getBrId());
+				player.getAccountVariables().storeMe();
+			}
+		}
+		LOGGER.info("PrimeShopData has been resetted.");
 	}
 	
 	private void resetDailyLimitShopData()

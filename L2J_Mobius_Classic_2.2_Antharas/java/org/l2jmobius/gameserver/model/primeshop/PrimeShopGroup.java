@@ -45,8 +45,8 @@ public class PrimeShopGroup
 	private final int _maxLevel;
 	private final int _minBirthday;
 	private final int _maxBirthday;
-	private final int _restrictionDay;
-	private final int _availableCount;
+	private final int _accountDailyLimit;
+	private final int _accountBuyLimit;
 	private final boolean _isVipGift;
 	private final int _vipTier;
 	private final int _silverCoin;
@@ -74,8 +74,8 @@ public class PrimeShopGroup
 		_maxLevel = set.getInt("maxLevel", 0);
 		_minBirthday = set.getInt("minBirthday", 0);
 		_maxBirthday = set.getInt("maxBirthday", 0);
-		_restrictionDay = set.getInt("restrictionDay", 0);
-		_availableCount = set.getInt("availableCount", 0);
+		_accountDailyLimit = set.getInt("accountDailyLimit", 0);
+		_accountBuyLimit = set.getInt("accountBuyLimit", 0);
 		_isVipGift = set.getBoolean("isVipGift", false);
 		_vipTier = set.getInt("vipTier", 0);
 		_silverCoin = set.getInt("silverCoin", 0);
@@ -193,14 +193,14 @@ public class PrimeShopGroup
 		return _maxBirthday;
 	}
 	
-	public int getRestrictionDay()
+	public int getAccountDailyLimit()
 	{
-		return _restrictionDay;
+		return _accountDailyLimit;
 	}
 	
-	public int getAvailableCount()
+	public int getAccountBuyLimit()
 	{
-		return _availableCount;
+		return _accountBuyLimit;
 	}
 	
 	public boolean isVipGift()
