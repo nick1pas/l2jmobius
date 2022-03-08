@@ -2755,14 +2755,102 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50561" toLevel="8" name="Beryl">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.etc_bm_jewel_beryl_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">100</value>
+					<value level="3">175</value>
+					<value level="4">250</value>
+					<value level="5">330</value>
+					<value level="6">410</value>
+					<value level="7">490</value>
+					<value level="8">570</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">100</value>
+					<value level="3">175</value>
+					<value level="4">250</value>
+					<value level="5">330</value>
+					<value level="6">410</value>
+					<value level="7">490</value>
+					<value level="8">570</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">125</value>
+					<value level="3">245</value>
+					<value level="4">365</value>
+					<value level="5">495</value>
+					<value level="6">625</value>
+					<value level="7">765</value>
+					<value level="8">905</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">125</value>
+					<value level="3">245</value>
+					<value level="4">365</value>
+					<value level="5">495</value>
+					<value level="6">625</value>
+					<value level="7">765</value>
+					<value level="8">905</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAvoid">
+				<chance>77</chance>
+				<targetType>SELF</targetType>
+				<skillId>50562</skillId>
+				<skillLevel>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50562" toLevel="3" name="Beryl - Barrier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.etc_bm_jewel_beryl_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalType>BARRIER</abnormalType>
+		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
+		<abnormalTime>10</abnormalTime>
+		<castRange>-1</castRange>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AbsorbDamage">
+				<damage>
+					<value level="1">3000</value>
+					<value level="2">4000</value>
+					<value level="3">5000</value>
+				</damage>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50563" toLevel="1" name="Growth Support Rune">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

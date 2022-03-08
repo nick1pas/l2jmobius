@@ -12,6 +12,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="1" /> <!-- Beryl Lv. 1 -->
+		</skills>
 	</item>
 	<item id="96701" name="Beryl Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +100 M. Atk. +100 P. Def. +125 M. Def. +125 Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -25,6 +28,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="2" /> <!-- Beryl Lv. 2 -->
+		</skills>
 	</item>
 	<item id="96702" name="Beryl Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +175 M. Atk. +175 P. Def. +245 M. Def. +245 Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -38,6 +44,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="3" /> <!-- Beryl Lv. 3 -->
+		</skills>
 	</item>
 	<item id="96703" name="Beryl Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +250 M. Atk. +250 P. Def. +365 M. Def. +365 Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -51,6 +60,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="4" /> <!-- Beryl Lv. 4 -->
+		</skills>
 	</item>
 	<item id="96704" name="Beryl Lv. 5" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +330 M. Atk. +330 P. Def. +495 M. Def. +495 Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -64,6 +76,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="5" /> <!-- Beryl Lv. 5 -->
+		</skills>
 	</item>
 	<item id="96705" name="Beryl Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +410 M. Atk. +410 P. Def. +625 M. Def. +625 <Beryl - Barrier> When hit, creates a barrier that absorbs 3000 damage for 10 sec. (Trigger cooldown: 60 sec.) Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -77,6 +92,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="6" /> <!-- Beryl Lv. 6 -->
+		</skills>
 	</item>
 	<item id="96706" name="Beryl Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +490 M. Atk. +490 P. Def. +765 M. Def. +765 <Beryl - Barrier> When hit, creates a barrier that absorbs 4000 damage for 10 sec. (Trigger cooldown: 60 sec.) Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -90,6 +108,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="7" /> <!-- Beryl Lv. 7 -->
+		</skills>
 	</item>
 	<item id="96707" name="Beryl Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties> P. Atk. +570 M. Atk. +570 P. Def. +905 M. Def. +905 <Beryl - Barrier> When hit, creates a barrier that absorbs 5000 damage for 10 sec. (Trigger cooldown: 60 sec.) Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -103,6 +124,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50561" level="8" /> <!-- Beryl Lv. 8 -->
+		</skills>
 	</item>
 	<item id="96708" name="Beryl Jewelry Box Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -112,6 +136,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96700" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="96709" name="Beryl Jewelry Box Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -121,6 +150,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96701" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="96710" name="Beryl Jewelry Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -130,6 +164,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96702" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="96711" name="Beryl Jewelry Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -139,6 +178,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96703" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="96712" name="Beryl Jewelry Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -148,6 +192,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96704" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="96713" name="Beryl Jewelry Box Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -157,6 +206,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96705" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="96714" name="Beryl Jewelry Box Lv. 7" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -166,6 +220,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96706" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 7 -->
+		</capsuled_items>
 	</item>
 	<item id="96715" name="Beryl Jewelry Box Lv. 8" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -175,6 +234,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96707" min="1" max="1" chance="100" /> <!-- Beryl - Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="96716" name="Frintezza Slayer Kit (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
