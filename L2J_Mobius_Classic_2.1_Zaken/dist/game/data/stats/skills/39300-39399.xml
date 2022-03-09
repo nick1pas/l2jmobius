@@ -7,7 +7,25 @@
 	<skill id="39301" toLevel="1" name="My Teleport Book">
 		<!-- Increases number of Unoccupied Teleport Devices by 1. -->
 		<icon>icon.bookmark_book_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90821</itemConsumeId> <!-- My Teleport Book -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanBookmarkAddSlot">
+				<teleportBookmarkSlots>1</teleportBookmarkSlots>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddTeleportBookmarkSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39302" toLevel="1" name="Baium's Doll Spell">
 		<!-- Mental Resistance +40%, Paralysis / Knockdown / Pulling Resistance +20%, P. / M. Def. +12%, Cooldown -3%. -->

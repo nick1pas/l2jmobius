@@ -853,7 +853,25 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39252" toLevel="1" name="My Teleport Book">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90404</itemConsumeId> <!-- My Teleport Book -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanBookmarkAddSlot">
+				<teleportBookmarkSlots>1</teleportBookmarkSlots>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddTeleportBookmarkSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39253" toLevel="1" name="Chef's Fish Stew - Victory">
 		<!-- For 10 min., HP/ MP Recovery Bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Effect remains after death. -->
