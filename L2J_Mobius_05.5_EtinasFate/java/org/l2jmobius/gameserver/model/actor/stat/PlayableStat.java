@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 
 public class PlayableStat extends CreatureStat
@@ -254,11 +253,5 @@ public class PlayableStat extends CreatureStat
 	{
 		final Weapon weapon = getActiveChar().getActiveWeaponItem();
 		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
-	}
-	
-	@Override
-	protected double maxSpeed()
-	{
-		return Config.MAX_RUN_SPEED + getValue(Stat.SPEED_LIMIT);
 	}
 }

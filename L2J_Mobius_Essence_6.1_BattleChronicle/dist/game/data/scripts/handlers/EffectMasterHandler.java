@@ -342,7 +342,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Sow", Sow::new);
 		EffectHandler.getInstance().registerHandler("Speed", Speed::new);
 		EffectHandler.getInstance().registerHandler("SphericBarrier", SphericBarrier::new);
-		EffectHandler.getInstance().registerHandler("SpeedLimit", SpeedLimit::new);
 		EffectHandler.getInstance().registerHandler("SpiritExpModify", SpiritExpModify::new);
 		EffectHandler.getInstance().registerHandler("SpModify", SpModify::new);
 		EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);

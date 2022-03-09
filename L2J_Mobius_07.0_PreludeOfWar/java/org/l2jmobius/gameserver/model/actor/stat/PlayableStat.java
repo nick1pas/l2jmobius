@@ -255,10 +255,4 @@ public class PlayableStat extends CreatureStat
 		final Weapon weapon = getActiveChar().getActiveWeaponItem();
 		return (weapon != null ? weapon.getBaseAttackAngle() + (int) getActiveChar().getStat().getValue(Stat.WEAPON_ATTACK_ANGLE_BONUS, 0) : super.getPhysicalAttackAngle());
 	}
-	
-	@Override
-	protected double maxSpeed()
-	{
-		return Config.MAX_RUN_SPEED + getValue(Stat.SPEED_LIMIT);
-	}
 }
