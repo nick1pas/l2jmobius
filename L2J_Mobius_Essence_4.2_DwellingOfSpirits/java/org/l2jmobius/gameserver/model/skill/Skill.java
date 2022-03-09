@@ -1763,7 +1763,7 @@ public class Skill implements IIdentifiable
 			return null;
 		}
 		
-		return SkillData.getInstance().getSkill(attachedSkill.getSkillId(), getLevel(), getSubLevel());
+		return SkillData.getInstance().getSkill(attachedSkill.getSkillId(), Math.min(SkillData.getInstance().getMaxLevel(attachedSkill.getSkillId()), _level), _subLevel);
 	}
 	
 	public boolean canDoubleCast()
