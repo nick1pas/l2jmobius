@@ -61,7 +61,21 @@ public class SpeedFinalizer implements IStatFunction
 			baseValue += bonusDex;
 		}
 		
-		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, creature.isPlayable() ? Config.MAX_RUN_SPEED : Double.MAX_VALUE);
+		final double maxSpeed;
+		if (creature.isPlayer())
+		{
+			maxSpeed = Config.MAX_RUN_SPEED + creature.getStat().getValue(Stat.SPEED_LIMIT, 0);
+		}
+		else if (creature.isSummon())
+		{
+			maxSpeed = Config.MAX_RUN_SPEED_SUMMON + creature.getStat().getValue(Stat.SPEED_LIMIT, 0);
+		}
+		else
+		{
+			maxSpeed = Double.MAX_VALUE;
+		}
+		
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, maxSpeed);
 	}
 	
 	@Override
@@ -69,7 +83,7 @@ public class SpeedFinalizer implements IStatFunction
 	{
 		if (isBlessed)
 		{
-			return (1 * Math.max(enchantLevel - 3, 0)) + (1 * Math.max(enchantLevel - 6, 0));
+			return Math.max(enchantLevel - 3, 0) + Math.max(enchantLevel - 6, 0);
 		}
 		return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
 	}
