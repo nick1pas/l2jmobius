@@ -85,8 +85,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeC(0); // 270 protocol
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
-		packet.writeC(0); // 140 protocol
-		packet.writeC(0); // 140 protocol
+		packet.writeH(0); // 140 - locked
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -95,10 +94,11 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemElemental(packet, item);
 		}
-		if (containsMask(mask, ItemListType.ENCHANT_EFFECT))
-		{
-			writeItemEnchantEffect(packet, item);
-		}
+		// 362 - Removed
+		// if (containsMask(mask, ItemListType.ENCHANT_EFFECT))
+		// {
+		// writeItemEnchantEffect(packet, item);
+		// }
 		if (containsMask(mask, ItemListType.VISUAL_ID))
 		{
 			packet.writeD(item.getVisualId()); // Item remodel visual ID
@@ -107,6 +107,13 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
+		// TODO:
+		// if (containsMask(mask, ItemListType.REUSE_DELAY))
+		// {
+		// final Player owner = item.getOwner();
+		// packet.writeD(owner == null ? 0 : (int) (owner.getItemRemainingReuseTime(item.getObjectId()) / 1000));
+		// }
+		// Essence
 		// if (containsMask(mask, ItemListType.BLESSED))
 		// {
 		// packet.writeC(1);
@@ -130,8 +137,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeC(0); // 270 protocol
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
-		packet.writeC(0); // 140 protocol
-		packet.writeC(0); // 140 protocol
+		packet.writeH(0); // 140 - locked
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -140,10 +146,11 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemElemental(packet, item);
 		}
-		if (containsMask(mask, ItemListType.ENCHANT_EFFECT))
-		{
-			writeItemEnchantEffect(packet, item);
-		}
+		// 362 - Removed
+		// if (containsMask(mask, ItemListType.ENCHANT_EFFECT))
+		// {
+		// writeItemEnchantEffect(packet, item);
+		// }
 		if (containsMask(mask, ItemListType.VISUAL_ID))
 		{
 			packet.writeD(item.getVisualId()); // Item remodel visual ID
@@ -152,6 +159,13 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			writeItemEnsoulOptions(packet, item);
 		}
+		// TODO:
+		// if (containsMask(mask, ItemListType.REUSE_DELAY))
+		// {
+		// final Player owner = item.getOwner();
+		// packet.writeD(owner == null ? 0 : (int) (owner.getItemRemainingReuseTime(item.getObjectId()) / 1000));
+		// }
+		// Essence
 		// if (containsMask(mask, ItemListType.BLESSED))
 		// {
 		// packet.writeC(1);
@@ -169,17 +183,18 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
 		}
-		if (item.getEnchantOptions() != null)
-		{
-			for (int id : item.getEnchantOptions())
-			{
-				if (id > 0)
-				{
-					mask |= ItemListType.ENCHANT_EFFECT.getMask();
-					break;
-				}
-			}
-		}
+		// 362 - Removed
+		// if (item.getEnchantOptions() != null)
+		// {
+		// for (int id : item.getEnchantOptions())
+		// {
+		// if (id > 0)
+		// {
+		// mask |= ItemListType.ENCHANT_EFFECT.getMask();
+		// break;
+		// }
+		// }
+		// }
 		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
@@ -188,6 +203,12 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
 		}
+		// TODO:
+		// if (item.getReuseDelay() > 0)
+		// {
+		// mask |= ItemListType.REUSE_DELAY.getMask();
+		// }
+		// Essence
 		// if (item.isBlessed())
 		// {
 		// mask |= ItemListType.BLESSED.getMask();

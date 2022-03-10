@@ -1,6 +1,6 @@
-L2J-Mobius Master Class
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1fuTmSa-W-OTFZV1ZnaCv8ql5O39Uw9oL&export=download
-System: https://mega.nz/file/EwdSFZKD#1yIxgst5gzrpc7DQvSm1aokgfan7vfl3tRpMi6nZ51U
+L2J-Mobius Master Class Chapter 2
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1I3nwvFOkuKrq9E_f-8iMiOHxlMvv2CtI&export=download
+System: https://mega.nz/file/AlVFEIhL#dZwVnzxdP2-La3mMsUfnXHkxdl35Iu0ojkjbwriIHnE
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
@@ -124,6 +124,9 @@ Return of the Queen Ant Chapter 2: https://eu.4game.com/patchnotes/lineage2/331/
 
 Master Class: https://eu.4game.com/patchnotes/lineage2/362/
 -Death Knight creation support
+
+Master Class Chapter 2: https://eu.4game.com/patchnotes/lineage2/374/
+-New enchant system
 
 Events:
 -Birth of Draco

@@ -264,6 +264,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(0);
 		packet.writeD(_player.getVisualHairColor() + 1); // 338 - DK color.
 		packet.writeD(0);
+		packet.writeC(0); // 362 - Vanguard mount.
 		return true;
 	}
 	
