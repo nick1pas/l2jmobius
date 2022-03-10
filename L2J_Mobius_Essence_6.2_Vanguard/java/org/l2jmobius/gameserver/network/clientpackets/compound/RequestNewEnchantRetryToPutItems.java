@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;
-import org.l2jmobius.gameserver.network.serverpackets.ExEnchantRetryToPutItemOk;
+import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantRetryToPutItemFail;
+import org.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantRetryToPutItemOk;
 
 /**
  * @author Sdw
@@ -54,13 +54,15 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (player.isInStoreMode())
+		
+		if (player.isInStoreMode())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			return;
 		}
-		else if (player.isProcessingTransaction() || player.isProcessingRequest())
+		
+		if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
@@ -94,15 +96,15 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 			return;
 		}
 		
-		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemOne.getEnchantLevel(), itemTwo.getId());
-		
 		// Not implemented or not able to merge!
+		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemOne.getEnchantLevel(), itemTwo.getId());
 		if (combinationItem == null)
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			player.removeRequest(request.getClass());
 			return;
 		}
+		
 		client.sendPacket(ExEnchantRetryToPutItemOk.STATIC_PACKET);
 	}
 }

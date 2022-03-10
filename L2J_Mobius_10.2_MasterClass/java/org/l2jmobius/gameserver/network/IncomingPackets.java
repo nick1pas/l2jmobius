@@ -25,6 +25,7 @@ import org.l2jmobius.commons.network.IConnectionState;
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.IIncomingPackets;
 import org.l2jmobius.gameserver.network.clientpackets.*;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestEnchantItem;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDel;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendInvite;

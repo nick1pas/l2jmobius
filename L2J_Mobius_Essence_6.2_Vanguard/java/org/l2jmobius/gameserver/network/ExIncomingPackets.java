@@ -82,6 +82,17 @@ import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElement
 import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritExtractInfo;
 import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritInfo;
 import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritSetTalent;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExAddEnchantScrollItem;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExCancelEnchantItem;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExTryToPutEnchantSupportItem;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.RequestExTryToPutEnchantTargetItem;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestFinishMultiEnchantScroll;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestMultiEnchantItemList;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestSetMultiEnchantItemList;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestStartMultiEnchantScroll;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.multi.ExRequestViewMultiEnchantResult;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.single.ExRequestEnchantFailRewardInfo;
+import org.l2jmobius.gameserver.network.clientpackets.enchant.single.ExRequestViewEnchantResult;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
@@ -167,6 +178,7 @@ import org.l2jmobius.gameserver.network.clientpackets.teleports.RequestRaidTelep
 import org.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 import org.l2jmobius.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2jmobius.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
+import org.l2jmobius.gameserver.network.serverpackets.enchant.RequestExRemoveEnchantSupportItem;
 
 /**
  * @author Sdw
@@ -729,16 +741,16 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_L2PASS_BUY_PREMIUM(0x225, null, ConnectionState.IN_GAME),
 	EX_SAYHAS_SUPPORT_TOGGLE(0x226, null, ConnectionState.IN_GAME),
 	// 362
-	EX_REQ_ENCHANT_FAIL_REWARD_INFO(0x227, null, ConnectionState.IN_GAME),
+	EX_REQ_ENCHANT_FAIL_REWARD_INFO(0x227, ExRequestEnchantFailRewardInfo::new, ConnectionState.IN_GAME),
 	EX_SET_ENCHANT_CHALLENGE_POINT(0x228, null, ConnectionState.IN_GAME),
 	EX_RESET_ENCHANT_CHALLENGE_POINT(0x229, null, ConnectionState.IN_GAME),
-	EX_REQ_VIEW_ENCHANT_RESULT(0x22A, null, ConnectionState.IN_GAME),
-	EX_REQ_START_MULTI_ENCHANT_SCROLL(0x22B, null, ConnectionState.IN_GAME),
-	EX_REQ_VIEW_MULTI_ENCHANT_RESULT(0x22C, null, ConnectionState.IN_GAME),
-	EX_REQ_FINISH_MULTI_ENCHANT_SCROLL(0x22D, null, ConnectionState.IN_GAME),
+	EX_REQ_VIEW_ENCHANT_RESULT(0x22A, ExRequestViewEnchantResult::new, ConnectionState.IN_GAME),
+	EX_REQ_START_MULTI_ENCHANT_SCROLL(0x22B, ExRequestStartMultiEnchantScroll::new, ConnectionState.IN_GAME),
+	EX_REQ_VIEW_MULTI_ENCHANT_RESULT(0x22C, ExRequestViewMultiEnchantResult::new, ConnectionState.IN_GAME),
+	EX_REQ_FINISH_MULTI_ENCHANT_SCROLL(0x22D, ExRequestFinishMultiEnchantScroll::new, ConnectionState.IN_GAME),
 	EX_REQ_CHANGE_MULTI_ENCHANT_SCROLL(0x22E, null, ConnectionState.IN_GAME),
-	EX_REQ_SET_MULTI_ENCHANT_ITEM_LIST(0x22F, null, ConnectionState.IN_GAME),
-	EX_REQ_MULTI_ENCHANT_ITEM_LIST(0x230, null, ConnectionState.IN_GAME),
+	EX_REQ_SET_MULTI_ENCHANT_ITEM_LIST(0x22F, ExRequestSetMultiEnchantItemList::new, ConnectionState.IN_GAME),
+	EX_REQ_MULTI_ENCHANT_ITEM_LIST(0x230, ExRequestMultiEnchantItemList::new, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_SUPPORT_PLEDGE_FLAG_SET(0x231, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_SUPPORT_PLEDGE_INFO_SET(0x232, null, ConnectionState.IN_GAME),
 	EX_REQ_HOMUNCULUS_PROB_LIST(0x233, null, ConnectionState.IN_GAME),
