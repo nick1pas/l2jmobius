@@ -7959,8 +7959,11 @@ public class Player extends Playable
 						continue;
 					}
 					
-					// retail mobius final Henna henna = HennaData.getInstance().getHenna(symbolId);
 					final Henna henna = HennaData.getInstance().getHennaByDyeId(symbolId);
+					if (henna == null)
+					{
+						continue;
+					}
 					
 					// Task for henna duration
 					if (henna.getDuration() > 0)
