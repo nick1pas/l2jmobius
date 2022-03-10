@@ -254,6 +254,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD((int) (charInfoPackage.getLastAccess() / 1000)); // 235 - last play time
 			packet.writeC(0); // 338
 			packet.writeD(charInfoPackage.getHairColor() + 1); // 338 - DK color.
+			packet.writeC(charInfoPackage.getClassId() == 217 ? 1 : charInfoPackage.getClassId() == 218 ? 2 : charInfoPackage.getClassId() == 219 ? 3 : charInfoPackage.getClassId() == 220 ? 4 : 0); // 362
 		}
 		return true;
 	}

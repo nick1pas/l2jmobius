@@ -1,6 +1,6 @@
-L2J-Mobius Battle Chronicle
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1fuTmSa-W-OTFZV1ZnaCv8ql5O39Uw9oL&export=download
-System: https://mega.nz/file/kscnkIbZ#c_r8jqFyUebAbH6BKEtkAtnAyJNTfV4cgHmMj5zD5tU
+L2J-Mobius Vanguard
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1I3nwvFOkuKrq9E_f-8iMiOHxlMvv2CtI&export=download
+System: https://mega.nz/file/UsdGhD6J#eaCkzVLI4w21JAZOkZBYtwm4aR_S-G0lYROOPYCi6no
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
@@ -137,6 +137,10 @@ Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
 
 Battle Chronicle: https://eu.4game.com/patchnotes/lineage2essence/353/
 -New henna pattern potential system
+
+Vanguard: https://eu.4game.com/patchnotes/lineage2essence/387/
+-Vanguard creation support
+-New enchant system
 
 Customs:
 -Newbie Helper NPC location info

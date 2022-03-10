@@ -172,7 +172,12 @@ public enum ClassId implements IIdentifiable
 	SYLPH_GUNNER(208, false, Race.SYLPH, null),
 	SHARPSHOOTER(209, false, Race.SYLPH, SYLPH_GUNNER),
 	WIND_SNIPER(210, false, Race.SYLPH, SHARPSHOOTER),
-	STORM_BLASTER(211, false, Race.SYLPH, WIND_SNIPER);
+	STORM_BLASTER(211, false, Race.SYLPH, WIND_SNIPER),
+	
+	ORC_LANCER(217, false, Race.ORC, null),
+	RIDER(218, false, Race.ORC, ORC_LANCER),
+	DRAGOON(219, false, Race.ORC, RIDER),
+	VANGUARD_RIDER(220, false, Race.ORC, DRAGOON);
 	
 	/** The Identifier of the Class */
 	private final int _id;

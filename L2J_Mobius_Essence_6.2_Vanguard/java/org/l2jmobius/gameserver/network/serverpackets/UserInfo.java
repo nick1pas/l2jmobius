@@ -138,7 +138,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		OutgoingPackets.USER_INFO.writeId(packet);
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(28); // 286 - 28
+		packet.writeH(29); // 362 - 29
 		packet.writeB(_masks);
 		if (containsMask(UserInfoType.RELATION))
 		{
@@ -416,8 +416,13 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		}
 		if (containsMask(UserInfoType.ELIXIR_USED)) // 286
 		{
-			packet.writeD(_player.getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0)); // count
+			packet.writeH(_player.getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0)); // count
 			packet.writeH(0);
+		}
+		
+		if (containsMask(UserInfoType.VANGUARD_MOUNT)) // 362
+		{
+			packet.writeC(_player.getClassId().level() + 1); // 362 - Vanguard mount.
 		}
 		
 		// Send exp bonus change.

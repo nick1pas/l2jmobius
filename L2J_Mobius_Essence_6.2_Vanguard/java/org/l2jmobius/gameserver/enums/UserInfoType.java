@@ -56,7 +56,9 @@ public enum UserInfoType implements IUpdateTypeComponent
 	STAT_POINTS(0x19, 16),
 	STAT_ABILITIES(0x1A, 18),
 	
-	ELIXIR_USED(0x1B, 1);
+	ELIXIR_USED(0x1B, 1),
+	
+	VANGUARD_MOUNT(0x1C, 1);
 	
 	/** Int mask. */
 	private final int _mask;
