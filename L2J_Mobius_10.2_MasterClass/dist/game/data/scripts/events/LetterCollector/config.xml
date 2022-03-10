@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="Letter Collector" active="30 06 2021-29 07 2021" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+	<!-- Minimum level (95) also set at ExLetterCollectorUI.java -->
+	<!-- Rewards and items set at ExLetterCollectorTakeReward.java -->
+	<droplist>
+		<add item="3875" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's A -->
+		<add item="3877" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's E -->
+		<add item="3879" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's G -->
+		<add item="3881" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's I -->
+		<add item="3882" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's L -->
+		<add item="3883" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's N -->
+		<add item="3884" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's O -->
+		<add item="3886" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's T -->
+		<add item="3880" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's H -->
+		<add item="3888" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's II -->
+		<add item="22894" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's W -->
+		<add item="29545" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's D -->
+		<add item="29825" min="1" max="1" chance="1%" minLevel="95" /> <!-- Letter Collector's P -->
+	</droplist>
+	<messages>
+		<add type="onEnd" text="Letter Collector: Event end!" />
+		<add type="onEnter" text="Letter Collector: Event ongoing!" />
+	</messages>
+</event>
