@@ -112,7 +112,7 @@ public class MultiSellList extends AbstractItemPacket
 				}
 				packet.writeQ(_list.getProductCount(product));
 				packet.writeH(product.getEnchantmentLevel() > 0 ? product.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
-				packet.writeD((int) Math.ceil(product.getChance())); // chance
+				packet.writeD((int) product.getChance() * 1000000); // chance
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
 				writeItemEnsoulOptions(packet, displayItemEnchantment);
