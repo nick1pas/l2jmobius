@@ -46,26 +46,14 @@
 		<minLevel>99</minLevel>
 		<maxLevel>105</maxLevel>
 	</zone>
-	<zone id="8" name="Tower of Insolence (Lower Floor)">
+	<zone id="20" name="Tower of Insolence (01 - 09 flours)">
 		<enterLocation>-82014,16247,-15416</enterLocation>
 		<initialTime>36000</initialTime> <!-- 10 hours -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
-		<maxAddedTime>36000</maxAddedTime> <!-- 12 hours -->
-		<remainRefillTime>0</remainRefillTime>
+		<maxAddedTime>54000</maxAddedTime> <!-- 15 hours -->
+		<remainRefillTime>18000</remainRefillTime> <!-- 300 mins -->
 		<refillTimeMax>3600</refillTimeMax>
-		<entryFee>150000</entryFee>
-		<minLevel>110</minLevel>
-		<maxLevel>130</maxLevel>
-		<weekly>true</weekly>
-	</zone>
-	<zone id="9" name="Tower of Insolence (Middle Floor)">
-		<enterLocation>-147664,21384,-14517</enterLocation>
-		<initialTime>36000</initialTime> <!-- 10 hours -->
-		<resetDelay>864000</resetDelay> <!-- 10 days -->
-		<maxAddedTime>36000</maxAddedTime> <!-- 12 hours -->
-		<remainRefillTime>0</remainRefillTime>
-		<refillTimeMax>3600</refillTimeMax>
-		<entryFee>150000</entryFee>
+		<entryFee>1500000</entryFee>
 		<minLevel>110</minLevel>
 		<maxLevel>130</maxLevel>
 		<weekly>true</weekly>
@@ -95,14 +83,16 @@
 		<instanceId>1013</instanceId>
 		<soloInstance>false</soloInstance>
 	</zone>
-	<zone id="14" name="Otherworldly Atelia Refinery">
+	<zone id="15" name="Otherworldly Atelia Refinery">
 		<enterLocation>-49013,15351,-8808</enterLocation>
-		<initialTime>3600</initialTime> <!-- 1 hour -->
-		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
-		<remainRefillTime>7200</remainRefillTime>
+		<initialTime>36000</initialTime> <!-- 10 hour -->
+		<resetDelay>864000</resetDelay> <!-- 10 days -->
+		<maxAddedTime>43200</maxAddedTime> <!-- 12 hours -->
+		<remainRefillTime>0</remainRefillTime>
 		<refillTimeMax>3600</refillTimeMax>
-		<entryFee>150000</entryFee>
+		<entryFee>1500000</entryFee>
 		<minLevel>112</minLevel>
 		<maxLevel>130</maxLevel>
+		<weekly>true</weekly>
 	</zone>
 </list>
