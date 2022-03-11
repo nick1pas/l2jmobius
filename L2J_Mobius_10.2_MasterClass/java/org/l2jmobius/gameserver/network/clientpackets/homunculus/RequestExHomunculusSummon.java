@@ -36,11 +36,6 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusSummon implements IClientIncomingPacket
 {
-	private static int _hpPoints;
-	private static int _spPoints;
-	private static int _vpPoints;
-	private static int _homunculusCreateTime;
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -57,12 +52,12 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 			return;
 		}
 		
-		_hpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_HP_POINTS, 0);
-		_spPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
-		_vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
-		_homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
+		final int hpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_HP_POINTS, 0);
+		final int spPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
+		final int vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
+		final int homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
 		
-		if ((_homunculusCreateTime > 0) && ((Chronos.currentTimeMillis() / 1000) >= _homunculusCreateTime) && (_hpPoints == 100) && (_spPoints == 10) && (_vpPoints == 5))
+		if ((homunculusCreateTime > 0) && ((Chronos.currentTimeMillis() / 1000) >= homunculusCreateTime) && (hpPoints == 100) && (spPoints == 10) && (vpPoints == 5))
 		{
 			int chance;
 			int random;
@@ -73,7 +68,7 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				random = Rnd.get(100);
 				
 				// Basic Homunculus
-				if (chance >= 60)
+				if (chance >= 70)
 				{
 					if ((random >= 90) && !player.getHomunculusList().hasHomunculus(1))
 					{
@@ -118,7 +113,7 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				}
 				
 				// Water Homunculus
-				if ((homunculusId == 0) && (chance >= 10))
+				if ((homunculusId == 0) && (chance >= 1))
 				{
 					if ((random >= 90) && !player.getHomunculusList().hasHomunculus(2))
 					{

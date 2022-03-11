@@ -96,6 +96,7 @@ import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUp
 import org.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEvolve;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExRequestHomunculusProbabilityList;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExActivateHomunculus;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExDeleteHomunculusData;
 import org.l2jmobius.gameserver.network.clientpackets.homunculus.RequestExEnchantHomunculusSkill;
@@ -736,7 +737,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_REQ_MULTI_ENCHANT_ITEM_LIST(0x230, ExRequestMultiEnchantItemList::new, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_SUPPORT_PLEDGE_FLAG_SET(0x231, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_SUPPORT_PLEDGE_INFO_SET(0x232, null, ConnectionState.IN_GAME),
-	EX_REQ_HOMUNCULUS_PROB_LIST(0x233, null, ConnectionState.IN_GAME),
+	EX_REQ_HOMUNCULUS_PROB_LIST(0x233, ExRequestHomunculusProbabilityList::new, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_HOST_CASTLE_SIEGE_ALL_RANKING_INFO(0x234, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_CASTLE_SIEGE_ALL_RANKING_INFO(0x235, null, ConnectionState.IN_GAME),
 	EX_MISSION_LEVEL_REWARD_LIST(0x236, null, ConnectionState.IN_GAME),
