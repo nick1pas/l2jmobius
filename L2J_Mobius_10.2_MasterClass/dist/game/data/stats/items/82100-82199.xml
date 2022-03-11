@@ -872,9 +872,14 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39756" level="1" /> <!-- Swift Growth Cookie -->
+		</skills>
 	</item>
 	<item id="82172" name="Swift Attack Cookie" type="EtcItem">
 		<!-- For 30 min., acquired XP/ SP +10%, Vitality bonus +20%, Attribute Attack +70, damage +10%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
