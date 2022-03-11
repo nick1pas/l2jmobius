@@ -14,19 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
+package org.l2jmobius.gameserver.network.clientpackets.variation;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.request.VariationRequest;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Variation;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
-import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * Format:(ch) dddd
@@ -88,8 +89,6 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		// TODO: Update XMLs.
-		// if (_feeCount != fee.getItemCount())
 		if (_feeCount <= 0)
 		{
 			player.sendPacket(new ExVariationResult(0, 0, false));
@@ -138,17 +137,6 @@ public class RequestRefine extends AbstractRefinePacket
 			}
 		}
 		
-		// Unequip item.
-		final InventoryUpdate iu = new InventoryUpdate();
-		if (targetItem.isEquipped())
-		{
-			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
-			{
-				iu.addModifiedItem(itm);
-			}
-			player.broadcastUserInfo();
-		}
-		
 		// Consume the life stone.
 		if (!player.destroyItem("RequestRefine", mineralItem, 1, null, false))
 		{
@@ -167,15 +155,17 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		// Remove the augmentation if any (286).
-		if (targetItem.isAugmented())
+		if (player.getRequest(VariationRequest.class) == null)
 		{
-			targetItem.removeAugmentation();
+			player.addRequest(new VariationRequest(player));
 		}
 		
-		targetItem.setAugmentation(augment, true);
+		VariationRequest request = player.getRequest(VariationRequest.class);
+		request.setAugmentedItem(_targetItemObjId);
+		request.setMineralItem(_mineralItemObjId);
+		request.setAugment(augment);
+		
 		player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
-		iu.addModifiedItem(targetItem);
-		player.sendInventoryUpdate(iu);
+		
 	}
 }

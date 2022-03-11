@@ -14,27 +14,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets;
+package org.l2jmobius.gameserver.network.serverpackets.variation;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * Trigger packet
- * @author KenM
+ * @author Index
  */
-public class ExShowVariationMakeWindow implements IClientOutgoingPacket
+public class ApplyVariationOption implements IClientOutgoingPacket
 {
-	public static final ExShowVariationMakeWindow STATIC_PACKET = new ExShowVariationMakeWindow();
+	private final int _result;
+	private final int _enchantedObjectId;
+	private final int _option1;
+	private final int _option2;
 	
-	private ExShowVariationMakeWindow()
+	public ApplyVariationOption(int result, int enchantedObjectId, int option1, int option2)
 	{
+		_result = result;
+		_enchantedObjectId = enchantedObjectId;
+		_option1 = option1;
+		_option2 = option2;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_SHOW_VARIATION_MAKE_WINDOW.writeId(packet);
+		OutgoingPackets.EX_APPLY_VARIATION_OPTION.writeId(packet);
+		packet.writeC(_result);
+		packet.writeD(_enchantedObjectId);
+		packet.writeD(_option1);
+		packet.writeD(_option2);
 		return true;
 	}
 }

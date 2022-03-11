@@ -14,37 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets;
+package org.l2jmobius.gameserver.network.serverpackets.variation;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-public class ExPutCommissionResultForVariationMake implements IClientOutgoingPacket
+/**
+ * @author KenM
+ */
+public class ExShowVariationCancelWindow implements IClientOutgoingPacket
 {
-	private final int _gemstoneObjId;
-	private final int _itemId;
-	private final long _gemstoneCount;
-	private final int _unk1;
-	private final int _unk2;
-	
-	public ExPutCommissionResultForVariationMake(int gemstoneObjId, long count, int itemId)
+	public static final ExShowVariationCancelWindow STATIC_PACKET = new ExShowVariationCancelWindow();
+
+	public ExShowVariationCancelWindow()
 	{
-		_gemstoneObjId = gemstoneObjId;
-		_itemId = itemId;
-		_gemstoneCount = count;
-		_unk1 = 0;
-		_unk2 = 1;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE.writeId(packet);
-		packet.writeD(_gemstoneObjId);
-		packet.writeD(_itemId);
-		packet.writeQ(_gemstoneCount);
-		packet.writeQ(_unk1);
-		packet.writeD(_unk2);
+		OutgoingPackets.EX_SHOW_VARIATION_CANCEL_WINDOW.writeId(packet);
 		return true;
 	}
 }

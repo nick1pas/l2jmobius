@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets;
+package org.l2jmobius.gameserver.network.serverpackets.variation;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.VariationData;
@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
+import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 
 /**
  * Format:(ch) dddd
@@ -80,7 +80,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		// Check for fee count
+		// Check for fee count.
 		if (_feeCount != fee.getItemCount())
 		{
 			player.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);

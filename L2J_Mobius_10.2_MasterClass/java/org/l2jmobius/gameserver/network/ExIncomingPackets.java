@@ -162,7 +162,12 @@ import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTelepor
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesAddDel;
 import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesUIToggle;
 import org.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
+import org.l2jmobius.gameserver.network.clientpackets.variation.ExApplyVariationOption;
+import org.l2jmobius.gameserver.network.clientpackets.variation.ExVariationCloseUi;
+import org.l2jmobius.gameserver.network.clientpackets.variation.ExVariationOpenUi;
+import org.l2jmobius.gameserver.network.clientpackets.variation.RequestRefine;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.RequestExRemoveEnchantSupportItem;
+import org.l2jmobius.gameserver.network.serverpackets.variation.RequestConfirmGemStone;
 
 /**
  * @author Sdw
@@ -755,9 +760,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_READY_ITEM_AUTO_PEEL(0x242, null, ConnectionState.IN_GAME),
 	EX_REQUEST_ITEM_AUTO_PEEL(0x243, null, ConnectionState.IN_GAME),
 	EX_STOP_ITEM_AUTO_PEEL(0x244, null, ConnectionState.IN_GAME),
-	EX_VARIATION_OPEN_UI(0x245, null, ConnectionState.IN_GAME),
-	EX_VARIATION_CLOSE_UI(0x246, null, ConnectionState.IN_GAME),
-	EX_APPLY_VARIATION_OPTION(0x247, null, ConnectionState.IN_GAME),
+	EX_VARIATION_OPEN_UI(0x245, ExVariationOpenUi::new, ConnectionState.IN_GAME),
+	EX_VARIATION_CLOSE_UI(0x246, ExVariationCloseUi::new, ConnectionState.IN_GAME),
+	EX_APPLY_VARIATION_OPTION(0x247, ExApplyVariationOption::new, ConnectionState.IN_GAME),
 	EX_BR_VERSION(0x248, null, ConnectionState.IN_GAME),
 	EX_MAX(0x249, null, ConnectionState.IN_GAME);
 	

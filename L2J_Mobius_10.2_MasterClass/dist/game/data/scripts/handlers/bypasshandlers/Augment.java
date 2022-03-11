@@ -21,8 +21,8 @@ import java.util.logging.Level;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
+import org.l2jmobius.gameserver.network.serverpackets.variation.ExShowVariationCancelWindow;
+import org.l2jmobius.gameserver.network.serverpackets.variation.ExShowVariationMakeWindow;
 
 public class Augment implements IBypassHandler
 {

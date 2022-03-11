@@ -52,9 +52,9 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.variation.ExShowVariationMakeWindow;
 
 public class UseItem implements IClientIncomingPacket
 {

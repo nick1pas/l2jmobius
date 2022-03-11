@@ -32,13 +32,13 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulExtractionWindow;
 import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExShowUpgradeSystem;
+import org.l2jmobius.gameserver.network.serverpackets.variation.ExShowVariationCancelWindow;
 
 import ai.AbstractNpcAI;
 
