@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -74,6 +75,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							final StatSet player = _playerList.get(id);
 							packet.writeString(player.getString("name"));
 							packet.writeString(player.getString("clanName"));
+							packet.writeD(Config.SERVER_ID);
 							packet.writeD(player.getInt("level"));
 							packet.writeD(player.getInt("classId"));
 							packet.writeD(player.getInt("race"));
@@ -123,6 +125,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									final StatSet plr = _playerList.get(id2);
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
+									packet.writeD(Config.SERVER_ID);
 									packet.writeD(plr.getInt("level"));
 									packet.writeD(plr.getInt("classId"));
 									packet.writeD(plr.getInt("race"));
@@ -172,6 +175,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							{
 								packet.writeString(player.getString("name"));
 								packet.writeString(player.getString("clanName"));
+								packet.writeD(Config.SERVER_ID);
 								packet.writeD(player.getInt("level"));
 								packet.writeD(player.getInt("classId"));
 								packet.writeD(player.getInt("race"));
@@ -245,6 +249,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									final StatSet plr = raceList.get(id2);
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
+									packet.writeD(Config.SERVER_ID);
 									packet.writeD(plr.getInt("level"));
 									packet.writeD(plr.getInt("classId"));
 									packet.writeD(plr.getInt("race"));
@@ -283,6 +288,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							final StatSet player = clanList.get(id);
 							packet.writeString(player.getString("name"));
 							packet.writeString(player.getString("clanName"));
+							packet.writeD(Config.SERVER_ID);
 							packet.writeD(player.getInt("level"));
 							packet.writeD(player.getInt("classId"));
 							packet.writeD(player.getInt("race"));
@@ -341,6 +347,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							{
 								packet.writeString(player.getString("name"));
 								packet.writeString(player.getString("clanName"));
+								packet.writeD(Config.SERVER_ID);
 								packet.writeD(player.getInt("level"));
 								packet.writeD(player.getInt("classId"));
 								packet.writeD(player.getInt("race"));
@@ -379,6 +386,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						{
 							packet.writeString("");
 						}
+						packet.writeD(Config.SERVER_ID);
 						packet.writeD(_player.getStat().getBaseLevel());
 						packet.writeD(_player.getBaseClass());
 						packet.writeD(_player.getRace().ordinal());
@@ -427,6 +435,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							{
 								packet.writeString(player.getString("name"));
 								packet.writeString(player.getString("clanName"));
+								packet.writeD(Config.SERVER_ID);
 								packet.writeD(player.getInt("level"));
 								packet.writeD(player.getInt("classId"));
 								packet.writeD(player.getInt("race"));
@@ -502,6 +511,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									final StatSet plr = classList.get(id2);
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
+									packet.writeD(Config.SERVER_ID);
 									packet.writeD(plr.getInt("level"));
 									packet.writeD(plr.getInt("classId"));
 									packet.writeD(plr.getInt("race"));
