@@ -73,7 +73,7 @@ public class AddHuntingTime extends AbstractEffect
 			return;
 		}
 		
-		final long remainRefill = player.getVariables().getInt(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + _zoneId, holder.getRemainRefillTime());
+		final long remainRefill = player.getVariables().getInt(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, holder.getRemainRefillTime());
 		if ((_time < remainRefill) || (remainRefill == 0))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
@@ -83,7 +83,7 @@ public class AddHuntingTime extends AbstractEffect
 		
 		final long remainTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, holder.getInitialTime());
 		player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime + _time);
-		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + _zoneId, remainRefill - (_time / 1000));
+		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, remainRefill - (_time / 1000));
 		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
