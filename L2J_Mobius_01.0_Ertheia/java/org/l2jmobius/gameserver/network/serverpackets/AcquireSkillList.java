@@ -63,18 +63,20 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
 			packet.writeC(skill.getDualClassLevel());
+			
 			packet.writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
 			}
-			final Collection<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
-			packet.writeC(skillRem.size());
-			for (Skill skillRemove : skillRem)
+			
+			final Collection<Skill> removeSkills = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+			packet.writeC(removeSkills.size());
+			for (Skill removed : removeSkills)
 			{
-				packet.writeD(skillRemove.getId());
-				packet.writeH(skillRemove.getLevel());
+				packet.writeD(removed.getId());
+				packet.writeH(removed.getLevel());
 			}
 		}
 		return true;

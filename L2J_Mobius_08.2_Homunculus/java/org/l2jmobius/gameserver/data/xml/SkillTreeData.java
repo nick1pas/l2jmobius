@@ -689,7 +689,7 @@ public class SkillTreeData implements IXmlReader
 	 */
 	private Collection<SkillLearn> getAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet, boolean includeRequiredItems, ISkillsHolder holder)
 	{
-		final Set<SkillLearn> result = ConcurrentHashMap.newKeySet();
+		final Set<SkillLearn> result = new HashSet<>();
 		final Map<Long, SkillLearn> skills = getCompleteClassSkillTree(classId);
 		if (skills.isEmpty())
 		{
@@ -1500,7 +1500,7 @@ public class SkillTreeData implements IXmlReader
 	public Collection<SkillLearn> getNextAvailableSkills(Player player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet)
 	{
 		final Map<Long, SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
-		final Set<SkillLearn> result = ConcurrentHashMap.newKeySet();
+		final Set<SkillLearn> result = new HashSet<>();
 		if (completeClassSkillTree.isEmpty())
 		{
 			return result;
