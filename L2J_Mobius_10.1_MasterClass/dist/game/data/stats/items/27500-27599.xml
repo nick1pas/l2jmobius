@@ -521,9 +521,17 @@
 	<item id="27538" name="+7 Bloody Helios Pack" type="EtcItem">
 		<!-- Double-click to obtain a Bloody Helios weapon enchanted to +7. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27594" level="1" /> <!-- +7 Bloody Helios Pack -->
+		</skills>
 	</item>
 	<item id="27539" name="Lv. 4 Jewel Bundle" type="EtcItem">
 		<!-- Double-click to get 2 of the following Lv. 4 jewels: Obsidian, Opal, Emerald, Diamond. -->
