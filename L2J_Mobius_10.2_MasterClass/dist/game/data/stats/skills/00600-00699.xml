@@ -1452,7 +1452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="653" toLevel="1" name="Rogue Ability: Critical Chance">
+	<skill id="653" toLevel="1" name="Ability: Critical Rate">
 		<!-- Has a chance to increase Critical Rate while attacking. -->
 		<icon>icon.skill1077</icon>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -2168,7 +2168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="675" toLevel="1" name="Divine Warrior Cross Slash">
+	<skill id="675" toLevel="1" name="Divine Warrior: Cross Slash">
 		<!-- Attacks the enemy with 2904 power. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
@@ -2192,7 +2192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="676" toLevel="1" name="Divine Warrior Sonic Blaster">
+	<skill id="676" toLevel="1" name="Divine Warrior: Sonic Blaster">
 		<!-- Attacks the enemy with 2323 power. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
@@ -2214,7 +2214,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="677" toLevel="1" name="Divine Warrior Transfixion of Earth">
+	<skill id="677" toLevel="1" name="Divine Warrior: Transfixion of Earth">
 		<!-- Cuts with a downward blow to attack nearby enemies with 2323 power. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
@@ -2238,7 +2238,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="678" toLevel="1" name="Divine Warrior War Cry">
+	<skill id="678" toLevel="1" name="Divine Warrior: War Cry">
 		<!-- Increases P. Atk. by 25% for 1 min. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -2300,7 +2300,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="680" toLevel="1" name="Divine Knight Hate">
+	<skill id="680" toLevel="1" name="Divine Knight: Aggression">
 		<!-- Provokes the enemy into attacking you. Power 6752. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2327,7 +2327,7 @@
 			<effect name="TargetMe" />
 		</effects>
 	</skill>
-	<skill id="681" toLevel="1" name="Divine Knight Aggression Aura">
+	<skill id="681" toLevel="1" name="Divine Knight: Aggression Aura">
 		<!-- Provokes nearby enemies into attacking you. Power 6752. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2354,7 +2354,7 @@
 			<effect name="TargetMe" />
 		</effects>
 	</skill>
-	<skill id="682" toLevel="1" name="Divine Knight's Stun Attack">
+	<skill id="682" toLevel="1" name="Divine Knight: Stun Attack">
 		<!-- Attacks and stuns the enemy with 1162 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2389,7 +2389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
+	<skill id="683" toLevel="1" name="Divine Knight: Tempest">
 		<!-- Attacks and stuns nearby enemies with 775 power. Ignores Shield Defense. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2425,7 +2425,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="684" toLevel="1" name="Divine Knight Ultimate Defense">
+	<skill id="684" toLevel="1" name="Divine Knight: Ultimate Defense">
 		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -2497,7 +2497,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
+	<skill id="686" toLevel="1" name="Divine Rogue: Stun Shot">
 		<!-- Shoots arrows with 2323 power that deal damage to the enemy stunning them and making them lose their target. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2534,7 +2534,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="687" toLevel="1" name="Divine Rogue Double Shot">
+	<skill id="687" toLevel="1" name="Divine Rogue: Double Shot">
 		<!-- Shoots 2 arrows in succession with 6195 power. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
@@ -2557,7 +2557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
+	<skill id="688" toLevel="1" name="Divine Rogue: Bleed Attack">
 		<!-- Strikes the enemy with 1549 power making them bleed. Effect 3. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -2594,7 +2594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="689" toLevel="1" name="Divine Rogue Deadly Blow">
+	<skill id="689" toLevel="1" name="Divine Rogue: Deadly Blow">
 		<!-- Attacks the target's vital points with 6969 power. Half-kill. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
@@ -2622,7 +2622,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="690" toLevel="1" name="Divine Rogue Agility">
+	<skill id="690" toLevel="1" name="Divine Rogue: Agility">
 		<!-- Temporarily P. Evasion +4. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -2717,7 +2717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="693" toLevel="1" name="Divine Wizard Holy Strike">
+	<skill id="693" toLevel="1" name="Divine Wizard: Divine Blow">
 		<!-- Unleashes holy attack on enemies with 128 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
@@ -2741,7 +2741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="694" toLevel="1" name="Divine Wizard Divine Curtain">
+	<skill id="694" toLevel="1" name="Divine Wizard: Divine Curtain">
 		<!-- Attack a large number of enemies with divine rainstorm. Power 64. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
@@ -2767,7 +2767,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
+	<skill id="695" toLevel="1" name="Divine Wizard: Divine Cloud">
 		<!-- Summons divine clouds making nearby enemies fall sleep. Decreases probability of additional sleep state while the effect lasts. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2804,7 +2804,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="696" toLevel="1" name="Divine Wizard Surrender to Holy">
+	<skill id="696" toLevel="1" name="Divine Wizard: Surrender to Holy">
 		<!-- Momentarily decrease Holy Attack Resistance, and increase Dark Attack Resistance. Effect 3. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -2877,7 +2877,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="698" toLevel="1" name="Divine Healer Major Heal">
+	<skill id="698" toLevel="1" name="Divine Healer: Major Heal">
 		<!-- Restores HP by 946 power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
@@ -2898,7 +2898,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="699" toLevel="1" name="Divine Healer Battle Heal">
+	<skill id="699" toLevel="1" name="Divine Healer: Battle Heal">
 		<!-- Restores HP by 826 power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>

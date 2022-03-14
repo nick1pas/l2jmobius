@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="700" toLevel="1" name="Divine Healer Group Heal">
+	<skill id="700" toLevel="1" name="Divine Healer: Group Heal">
 		<!-- Restores HP of a party member by 400 power and causes 27 HP recovery every second for 15 sec. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -30,7 +30,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="701" toLevel="1" name="Divine Healer Resurrection">
+	<skill id="701" toLevel="1" name="Divine Healer: Resurrection">
 		<!-- Resurrects a dead character restoring them 70% of the lost XP. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>400</castRange>
@@ -54,7 +54,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="702" toLevel="1" name="Divine Healer Cleanse">
+	<skill id="702" toLevel="1" name="Divine Healer: Cleanse">
 		<!-- Cancel all the debuffs of the target. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="708" toLevel="1" name="Divine Enchanter Mass Binding">
+	<skill id="708" toLevel="1" name="Divine Enchanter: Mass Binding">
 		<!-- Momentarily inflicts Hold on the target. The target cannot be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -528,7 +528,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="710" toLevel="1" name="Divine Summoner Summon Divine Beast">
+	<skill id="710" toLevel="1" name="Divine Summoner: Summon Divine Beast">
 		<!-- Summons a Holy Wild Beast. Requires 2 A-grade Crystals. -->
 		<icon>icon.skill_transform_etc</icon>
 		<hitTime>15000</hitTime>
@@ -556,7 +556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="711" toLevel="1" name="Divine Summoner Transfer Pain">
+	<skill id="711" toLevel="1" name="Divine Summoner: Transfer Pain">
 		<!-- Transfers some of the player's damage to the summoner. Consumes MP continuously. -->
 		<icon>icon.skill_transform_etc</icon>
 		<magicLevel>80</magicLevel>
@@ -574,7 +574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="712" toLevel="1" name="Divine Summoner Final Servitor">
+	<skill id="712" toLevel="1" name="Divine Summoner: Final Servitor">
 		<!-- Temporarily causes the servitor to be possessed with the spirit of an ancient hero. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -648,7 +648,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="713" toLevel="1" name="Divine Summoner Servitor Hill">
+	<skill id="713" toLevel="1" name="Divine Summoner: Servitor Heal">
 		<!-- Restores the servitor's HP by 991 power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
@@ -1266,7 +1266,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="732" toLevel="1" name="Ranku's Stun Attack">
+	<skill id="732" toLevel="1" name="Ranku: Stun Attack">
 		<!-- Attacks and stuns the enemy with 1 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1887,7 +1887,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="749" toLevel="3" name="Oel Mahum's Stun Attack">
+	<skill id="749" toLevel="3" name="Oel Mahum: Stun Attack">
 		<!-- Attacks and stuns the enemy. Power $s1 Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1938,7 +1938,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="750" toLevel="1" name="Oel Mahum Ultimate Defense">
+	<skill id="750" toLevel="1" name="Oel Mahum: Ultimate Defense">
 		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1970,7 +1970,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="751" toLevel="3" name="Oel Mahum Arm Flourish">
+	<skill id="751" toLevel="3" name="Oel Mahum: Arm Flourish">
 		<!-- Flourishes weapons to attack surrounding enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3718,7 +3718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="795" toLevel="1" name="Divine Knight Brandish">
+	<skill id="795" toLevel="1" name="Divine Knight: Brandish">
 		<!-- Attacks the enemies in the front with 2322 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3744,7 +3744,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="796" toLevel="1" name="Divine Knight Explosion Attack">
+	<skill id="796" toLevel="1" name="Divine Knight: Blow Attack">
 		<!-- Detonates the floor by striking it hard. Power 1900. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3766,7 +3766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="797" toLevel="1" name="Divine Rogue Piercing Attack">
+	<skill id="797" toLevel="1" name="Divine Rogue: Piercing Attack">
 		<!-- Attacks all surrounding enemies with 2111 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3792,7 +3792,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="798" toLevel="1" name="Divine Warrior Crippling Attack">
+	<skill id="798" toLevel="1" name="Divine Warrior: Assault">
 		<!-- Poisons the enemy with an unexpected poison attack. Power 1689. Effect 3. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<abnormalLevel>3</abnormalLevel>
