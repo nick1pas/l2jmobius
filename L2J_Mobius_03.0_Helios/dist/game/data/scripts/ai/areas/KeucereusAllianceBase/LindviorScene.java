@@ -23,6 +23,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
+import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -47,10 +48,6 @@ public class LindviorScene extends AbstractNpcAI
 	
 	private static boolean ALT_MODE = false;
 	private static int ALT_MODE_MIN = 60; // schedule delay in minutes if ALT_MODE enabled
-	
-	private Npc _lindviorCamera = null;
-	private Npc _tomaris = null;
-	private Npc _artius = null;
 	
 	public LindviorScene()
 	{
@@ -87,13 +84,26 @@ public class LindviorScene extends AbstractNpcAI
 			}
 			case "start":
 			{
-				_lindviorCamera = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA).getLastSpawn();
-				_tomaris = SpawnTable.getInstance().getAnySpawn(TOMARIS).getLastSpawn();
-				_artius = SpawnTable.getInstance().getAnySpawn(ARTIUS).getLastSpawn();
-				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
-				startQuestTimer("artius_shout", 60000, _artius, null);
-				startQuestTimer("tomaris_shout2", 90000, _tomaris, null);
-				startQuestTimer("lindvior_scene", 120000, _lindviorCamera, null);
+				final Spawn cameraSpawn = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA);
+				final Spawn tomarisSpawn = SpawnTable.getInstance().getAnySpawn(TOMARIS);
+				final Spawn artiusSpawn = SpawnTable.getInstance().getAnySpawn(ARTIUS);
+				if ((cameraSpawn == null) || (tomarisSpawn == null) || (artiusSpawn == null))
+				{
+					break;
+				}
+				
+				final Npc camera = cameraSpawn.getLastSpawn();
+				final Npc tomaris = tomarisSpawn.getLastSpawn();
+				final Npc artius = artiusSpawn.getLastSpawn();
+				if ((camera == null) || (tomaris == null) || (artius == null))
+				{
+					break;
+				}
+				
+				startQuestTimer("tomaris_shout1", 1000, tomaris, null);
+				startQuestTimer("artius_shout", 60000, artius, null);
+				startQuestTimer("tomaris_shout2", 90000, tomaris, null);
+				startQuestTimer("lindvior_scene", 120000, camera, null);
 				scheduleNextLindviorVisit();
 				break;
 			}
