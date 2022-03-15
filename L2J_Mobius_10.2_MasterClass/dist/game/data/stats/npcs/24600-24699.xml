@@ -398,8 +398,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="25" />
-			<height normal="63" />
+			<radius normal="20" />
+			<height normal="49.8" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -484,6 +484,64 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="24614" level="85" type="Folk" name="Dragon Peltast" title="Earth Dragon's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="13843" /> <!-- Dragon Peltast's Weapon -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="89" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32.5" />
+			<height normal="61.35" />
+		</collision>
+	</npc>
+	<npc id="24615" level="85" type="Folk" name="Dragon Officer" title="Earth Dragon's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="92" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="36.4" />
+			<height normal="69.8" />
+		</collision>
+	</npc>
+	<npc id="24616" level="85" type="Folk" name="Dragon Elite Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="55" />
+		</collision>
+	</npc>
 	<npc id="24617" level="85" type="Monster" name="Dragon Peltast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
@@ -509,7 +567,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="92" />
 				<run ground="170" />
@@ -528,7 +586,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="4354362" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -547,7 +605,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="4354362" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2240,5 +2298,272 @@
 				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+	</npc>
+	<npc id="24649" level="85" type="Folk" name="Carnivorous Fungus" title="Sea of Spores Defender">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1278871" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="110" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="48" />
+		</collision>
+	</npc>
+	<npc id="24650" level="85" type="Folk" name="Walking Fungus">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1278871" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="110" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="17.4" />
+		</collision>
+	</npc>
+	<npc id="24651" level="85" type="Folk" name="Red Kookaburra">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="23" />
+				<run ground="119" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="24652" level="85" type="Folk" name="Blue Kookaburra">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="23" />
+				<run ground="119" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="24653" level="85" type="Folk" name="White Cougar">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="178" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="33.6" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="24654" level="85" type="Folk" name="Cougar">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="178" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="33.6" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="24655" level="85" type="Folk" name="Black Buffalo">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="80" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32.4" />
+			<height normal="37.8" />
+		</collision>
+	</npc>
+	<npc id="24656" level="85" type="Folk" name="White Buffalo">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="20" />
+				<run ground="80" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32.4" />
+			<height normal="37.8" />
+		</collision>
+	</npc>
+	<npc id="24657" level="85" type="Folk" name="Grandel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40.8" />
+			<height normal="39.6" />
+		</collision>
+	</npc>
+	<npc id="24658" level="85" type="Folk" name="Black Grandel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="155" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="47.4" />
+		</collision>
+	</npc>
+	<npc id="24659" level="85" type="Folk" name="Beast Devourer" title="Beast Farm Defender">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2012329" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="150" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32.4" />
+			<height normal="37.8" />
+		</collision>
+	</npc>
+	<npc id="24660" level="85" type="Folk" name="Fierce Water Dragon" title="Bare Fang">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8012026" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="210" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="63" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="24661" level="85" type="Folk" name="Temple Zealot" title="Hidden Blade">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8012026" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="72.5" />
+		</collision>
+	</npc>
+	<npc id="24662" level="85" type="Folk" name="Temple Elite Archer" title="Water Dragon Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4006013" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="73" />
+		</collision>
 	</npc>
 </list>

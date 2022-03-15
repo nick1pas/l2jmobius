@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="34600" level="85" type="Folk" name="Chloe" title="Conquest Guide">
+	<npc id="24900" level="85" type="Folk" name="Heaven's Palace Judge">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="8221" /> <!-- Monster Only (Grail Apostle Spear) -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="47" />
+		</collision>
+	</npc>
+	<npc id="24901" level="85" type="Folk" name="Heaven's Palace Archangel" title="Elite Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15748668" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -15,59 +35,134 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="13" />
-			<height normal="40" />
+			<radius normal="30" />
+			<height normal="76" />
 		</collision>
 	</npc>
-	<npc id="34601" level="85" type="Folk" name="Lilly" title="Happy">
+	<npc id="24902" level="85" type="Folk" name="Divine Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="15281" /> <!-- Transparent 2HS (NPC) -->
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="24903" level="85" type="Folk" name="Divine Pilgrim">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
-				<run ground="120" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.75" />
-			<height normal="16.2" />
+			<radius normal="18" />
+			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="34602" level="85" type="Folk" name="Catshi Meow-Meow" title="Conquest Adventurer">
+	<npc id="24904" level="85" type="Folk" name="Divine Protector">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
-				<walk ground="19" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="11.9" />
-			<height normal="24.2" />
+			<radius normal="24" />
+			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="34603" level="85" type="Folk" name="Jenny" title="Secret Shop Keeper">
+	<npc id="24905" level="85" type="Folk" name="Divine Herald">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="17300" /> <!-- Requiem Retributer -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
-				<walk ground="64" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="24906" level="85" type="Folk" name="Divine Judge">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="24907" level="85" type="Folk" name="Divine Archangel" title="Elite Monster">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21401406" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="51" />
+		</collision>
+	</npc>
+	<npc id="24908" level="85" type="Folk" name="Sealed Watcher">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -75,174 +170,37 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="9" />
-			<height normal="21.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="34604" level="85" type="Folk" name="Moon Child" title="Full Moon Keeper">
+	<npc id="24909" level="85" type="Folk" name="Sealed Pilgrim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
-				<walk ground="13" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="16" />
-			<height normal="23" />
+			<radius normal="11" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="34605" level="85" type="Folk" name="Full Moon" title="Harvest Day">
+	<npc id="24910" level="85" type="Folk" name="Sealed Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="150" />
-			<height normal="290" />
-		</collision>
-	</npc>
-	<npc id="34606" level="85" type="Folk" name="Akira" title="BuffToon Event">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="34607" level="85" type="Folk" name="Sentry Scout" title="Tower of Insolence (7th Floor)">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34608" level="85" type="Folk" name="Sentry Scout" title="Tower of Insolence (8th Floor)">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34609" level="85" type="Folk" name="Sentry Scout" title="Tower of Insolence (9th Floor)">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34610" level="85" type="Folk" name="Gableena" title="Nostra">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="21" />
-		</collision>
-	</npc>
-	<npc id="34611" level="85" type="Folk" name="Amora" title="Celebrating 18th Anniversary">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="13539" /> <!-- Master Yogi's Staff  -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="20" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5.4" />
-			<height normal="24.9" />
-		</collision>
-	</npc>
-	<npc id="34612" level="85" type="Folk" name="Anniversary Light" title="Undying">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -250,38 +208,18 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="10" />
-			<height normal="30" />
+			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="34613" level="85" type="Folk" name="Galaxia" title="Earth Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="22" />
-			<height normal="120" />
-		</collision>
-	</npc>
-	<npc id="34614" level="85" type="Folk" name="Galaxia's Herald">
+	<npc id="24911" level="85" type="Folk" name="Sealed Herald">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="100" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -292,23 +230,42 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="34615" level="85" type="Folk" name="Galaxia's Herald">
+	<npc id="24912" level="85" type="Folk" name="Sealed Judge">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="100" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="14" />
-			<height normal="22.5" />
+			<radius normal="15" />
+			<height normal="36.5" />
+		</collision>
+	</npc>
+	<npc id="24913" level="85" type="Folk" name="Sealed Archangel" title="Elite Monster">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="21401406" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<speed>
+				<walk ground="65" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22" />
+			<height normal="62" />
 		</collision>
 	</npc>
 </list>

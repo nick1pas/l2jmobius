@@ -1003,7 +1003,7 @@
 			<height normal="16.3" />
 		</collision>
 	</npc>
-	<npc id="31624" level="70" type="Folk" name="Donath" title="Master Chef">
+	<npc id="31624" level="70" type="Folk" name="Donath" title="Chef">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1088,7 +1088,7 @@
 			<height normal="10.5" />
 		</collision>
 	</npc>
-	<npc id="31626" level="70" type="Folk" name="Duncan" title="Chef">
+	<npc id="31626" level="70" type="Folk" name="Kinbad" title="Springs' Dwarf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1105,7 +1105,7 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="25" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -1126,8 +1126,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="7" />
-			<height normal="16.5" />
+			<radius normal="11" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="31627" level="70" type="Folk" name="Mist" title="Information Broker">
