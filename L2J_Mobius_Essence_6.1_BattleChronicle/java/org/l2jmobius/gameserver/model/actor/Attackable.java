@@ -445,7 +445,7 @@ public class Attackable extends Npc
 				}
 				container.damage = totalMemberDamage;
 				
-				if (partyContainerStream.isEmpty())
+				if (!partyContainerStream.isPresent())
 				{
 					damagingParties.add(container);
 				}
