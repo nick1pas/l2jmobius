@@ -503,7 +503,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25918" level="82" type="Monster" name="Wolf" title="Atingo's Pet">
+	<npc id="25918" level="82" type="Monster" name="Wolf" title="Pet Legion's Master">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
@@ -860,7 +860,7 @@
 			<height normal="102" />
 		</collision>
 	</npc>
-	<npc id="25931" level="85" type="Folk" name="Tigger" title="Bee Hive">
+	<npc id="25931" level="85" type="Folk" name="Baby Tiger" title="Bee Hive">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1042,7 +1042,7 @@
 			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
-				<run ground="140" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1061,7 +1061,7 @@
 			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
 				<walk ground="105" />
-				<run ground="105" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -1306,6 +1306,240 @@
 		<collision>
 			<radius normal="12" />
 			<height normal="29.4" />
+		</collision>
+	</npc>
+	<npc id="25952" level="85" type="Folk" name="Boojudu" title="Tanta Lizardman Chief">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="104387" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="52" />
+			<height normal="70.45" />
+		</collision>
+	</npc>
+	<npc id="25953" level="85" type="Folk" name="Petron" title="Sel Mahum Chief">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="168116" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="210" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19" />
+			<height normal="48" />
+		</collision>
+	</npc>
+	<npc id="25954" level="85" type="Folk" name="Kerion" title="Mighty Turek Orc Warrior">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="38429" /> <!-- Monster Only: Tiger Sword - Not Available - Not Available -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="168116" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="35" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="57" />
+		</collision>
+	</npc>
+	<npc id="25955" level="85" type="Folk" name="Furious Tukhak" title="Mighty Turek Orc Warrior">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="175" /> <!-- Art of Battle Axe -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="168116" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="51" />
+		</collision>
+	</npc>
+	<npc id="25956" level="85" type="Folk" name="Kesma" title="Reaper King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2893616" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="46.2" />
+			<height normal="71.2" />
+		</collision>
+	</npc>
+	<npc id="25957" level="85" type="Folk" name="Prais" title="Scorpion King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2893616" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="86" />
+			<height normal="98" />
+		</collision>
+	</npc>
+	<npc id="25958" level="85" type="Folk" name="Vira" title="Elemental King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2893616" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="36" />
+			<height normal="84.3" />
+		</collision>
+	</npc>
+	<npc id="25959" level="85" type="Folk" name="Heeder" title="Demon Prince">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2893616" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="27.5" />
+			<height normal="72" />
+		</collision>
+	</npc>
+	<npc id="25960" level="85" type="Folk" name="Hearak" title="Skeleton King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97024" /> <!-- For Monsters - Divine Pain - Not Available - Not used -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2893616" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<speed>
+				<walk ground="65" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="27.5" />
+			<height normal="69.5" />
+		</collision>
+	</npc>
+	<npc id="25961" level="85" type="Folk" name="Rilva" title="Insolence's Horror">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="104387" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="174" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="61" />
+		</collision>
+	</npc>
+	<npc id="25962" level="85" type="Folk" name="Ryun" title="Insolence's Abyss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="349681" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="83" />
+		</collision>
+	</npc>
+	<npc id="25963" level="85" type="Folk" name="Chel" title="Insolence's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="76" /> <!-- Sword of Delusion -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="406060" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="174" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="88.2" />
 		</collision>
 	</npc>
 </list>

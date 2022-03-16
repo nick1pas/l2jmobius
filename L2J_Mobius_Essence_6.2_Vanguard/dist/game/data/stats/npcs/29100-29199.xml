@@ -474,7 +474,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -575,7 +575,7 @@
 		<stats str="88" int="79" dex="55" wit="20" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="50" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -767,7 +767,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -862,7 +862,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="50" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -955,7 +955,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="88888888" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="177777776" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -974,7 +974,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170000" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<vitals hp="3400000" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -1031,7 +1031,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="51084444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="30000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
@@ -1050,7 +1050,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="51084444" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="40000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="170" />
@@ -1088,7 +1088,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="666666666" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<vitals hp="366666666" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="279" />
@@ -1107,7 +1107,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="888888888" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<vitals hp="488888888" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="279" />
@@ -1126,7 +1126,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="888888888" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
+			<vitals hp="666666666" hpRegen="10.5" mp="2025740" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="279" />
@@ -1195,6 +1195,348 @@
 		<collision>
 			<radius normal="22" />
 			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="29157" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29158" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29159" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29160" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29161" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29162" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29163" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29164" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29165" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29166" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29167" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29168" level="85" type="Folk" name="Balok">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29169" level="85" type="Folk" name="Lord Balok" title="Flaming">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="16800000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="150" />
+			<height normal="150" />
+		</collision>
+	</npc>
+	<npc id="29170" level="85" type="Folk" name="Chaotic Core" title="Cruma Control Device">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="110" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="140" />
+			<height normal="75" />
+		</collision>
+	</npc>
+	<npc id="29171" level="85" type="Folk" name="Chaotic Orfen" title="Spore Mistress">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="230" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="75" />
+			<height normal="147" />
+		</collision>
+	</npc>
+	<npc id="29172" level="85" type="Folk" name="Chaotic Queen Ant" title="Dungeon Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="24000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="230" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="29173" level="85" type="Folk" name="Chaotic Zaken" title="Pirate Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="29174" level="85" type="Folk" name="Self-destruct Device">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3400000" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="20.4" />
 		</collision>
 	</npc>
 	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">

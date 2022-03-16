@@ -2709,7 +2709,7 @@
 			<vitals hp="3790.75144508671" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
-				<run ground="174" />
+				<run ground="110" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -2746,7 +2746,7 @@
 			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -2784,7 +2784,7 @@
 			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -2815,7 +2815,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22192" level="70" type="Monster" name="Crokian Warrior" title="Savage" element="WATER">
+	<npc id="22192" level="70" type="Monster" name="Crokian Warrior" title="Evolved" element="WATER">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5128" />
@@ -2823,8 +2823,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14126.5895953757" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
-				<walk ground="18" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -2838,8 +2838,8 @@
 			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
 		</skillList>
 		<collision>
-			<radius normal="36" />
-			<height normal="61" />
+			<radius normal="30" />
+			<height normal="51.6" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2858,7 +2858,7 @@
 			<vitals hp="3790.75144508671" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="172.327044025157" magical="95.0661103846234" />
@@ -2886,7 +2886,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22194" level="80" type="Monster" name="Crokian Lad Warrior" element="WATER">
+	<npc id="22194" level="80" type="Monster" name="Krotania" element="WATER">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5128" />
@@ -2894,8 +2894,8 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
-				<walk ground="18" />
-				<run ground="174" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -2909,8 +2909,8 @@
 			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
 		</skillList>
 		<collision>
-			<radius normal="36" />
-			<height normal="61" />
+			<radius normal="24" />
+			<height normal="33.6" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2931,7 +2931,7 @@
 			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -2968,7 +2968,7 @@
 			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -2998,15 +2998,15 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22197" level="80" type="Monster" name="Swamp Tribe" title="Savage" element="WATER">
+	<npc id="22197" level="80" type="Monster" name="Crotian Leader" title="Evolved" element="WATER">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21794" sp="3601" attributeExp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="174" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3020,8 +3020,8 @@
 			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
 		</skillList>
 		<collision>
-			<radius normal="35" />
-			<height normal="60.7" />
+			<radius normal="43.2" />
+			<height normal="67.2" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3031,15 +3031,15 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22198" level="80" type="Monster" name="Swamp Alligator" element="WATER">
+	<npc id="22198" level="80" type="Monster" name="Kropiora" element="WATER">
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12735" sp="3601" attributeExp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3690.75144508671" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
-				<walk ground="70" />
-				<run ground="174" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />
@@ -3053,8 +3053,8 @@
 			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
 		</skillList>
 		<collision>
-			<radius normal="44.8" />
-			<height normal="20.2" />
+			<radius normal="36" />
+			<height normal="24.6" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3062,7 +3062,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22199" level="80" type="Monster" name="Swamp Warrior" element="WATER">
+	<npc id="22199" level="80" type="Monster" name="Dailaon Lad" element="WATER">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5127" />
@@ -3071,7 +3071,7 @@
 			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
-				<run ground="174" />
+				<run ground="150" />
 			</speed>
 			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="208.284023668639" magical="96.8617571816353" />

@@ -1166,7 +1166,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18669" level="85" type="Folk" name="Dummy" title="PvE damage decrease">
+	<npc id="18669" level="85" type="Folk" name="Dummy" title="PvE Damage Decrease">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1185,7 +1185,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18670" level="85" type="Folk" name="Dummy" title="PvE damage decrease">
+	<npc id="18670" level="85" type="Folk" name="Dummy" title="PvP Damage Decrease">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1249,7 +1249,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="23498" hpRegen="10.5" mp="11502" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1257,8 +1257,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30" />
-			<height normal="29" />
+			<radius normal="28" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="18674" level="85" type="Folk" name="Holy Grail">
@@ -1280,12 +1280,12 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="18675" level="85" type="Folk" name="Ballista">
+	<npc id="18675" level="85" type="Folk" name="Broken Ballista">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="23498" hpRegen="10.5" mp="11502" mpRegen="3.6" />
+			<vitals hp="18893" hpRegen="10.5" mp="10664" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
@@ -1342,7 +1342,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="76" />
 				<run ground="190" />
@@ -1356,12 +1356,12 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18679" level="85" type="Folk" name="Gustav's Steward">
+	<npc id="18679" level="85" type="Folk" name="Gustav's Steward" title="Manor Steward">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
@@ -1380,7 +1380,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -1390,16 +1390,16 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="20" />
-			<height normal="36.5" />
+			<radius normal="40" />
+			<height normal="76" />
 		</collision>
 	</npc>
-	<npc id="18681" level="85" type="Folk" name="Gabrielle's Minion">
+	<npc id="18681" level="85" type="Folk" name="Gabrielle's Minion" title="Archangel's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -1418,7 +1418,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
@@ -1432,14 +1432,14 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="18683" level="85" type="Folk" name="Gladiator Captive">
+	<npc id="18683" level="85" type="Folk" name="Rekario" title="Gladiator's Slave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="18" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1447,16 +1447,16 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30" />
-			<height normal="81" />
+			<radius normal="35" />
+			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="18684" level="85" type="Folk" name="Tiat" title="Red Draconid Commander">
+	<npc id="18684" level="85" type="Folk" name="Tiat" title="Red Draconid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="190" />
@@ -1470,12 +1470,12 @@
 			<height normal="104" />
 		</collision>
 	</npc>
-	<npc id="18685" level="85" type="Folk" name="Red Draconid Commander Assistant">
+	<npc id="18685" level="85" type="Folk" name="Baint" title="Deputy Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="190" />
@@ -1489,12 +1489,12 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18686" level="85" type="Folk" name="Feline King" title="Cat Guild's Chief">
+	<npc id="18686" level="85" type="Folk" name="Feline King" title="Cat Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="10" />
 				<run ground="190" />
@@ -1508,12 +1508,12 @@
 			<height normal="16.006" />
 		</collision>
 	</npc>
-	<npc id="18687" level="85" type="Folk" name="Feline Queen">
+	<npc id="18687" level="85" type="Folk" name="Feline Queen" title="Cat Guild's Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5393162" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+			<vitals hp="1681168" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="190" />
@@ -1532,7 +1532,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="70" />
@@ -1551,7 +1551,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
@@ -1565,12 +1565,12 @@
 			<height normal="41.1" />
 		</collision>
 	</npc>
-	<npc id="18690" level="85" type="Folk" name="Tomb Shaman">
+	<npc id="18690" level="85" type="Folk" name="Tomb Shamaness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
@@ -1590,7 +1590,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="96795" /> <!-- Monsters Only_Stone Idol Weapon - One-handed Sword - Not Available - Not Available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="150" />
@@ -1610,7 +1610,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="96794" /> <!-- Monsters Only_Stone Idol Weapon - Spear - Not Available - Not Available -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="150" />
@@ -1629,7 +1629,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="104387" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+			<vitals hp="73071" hpRegen="10.5" mp="3349" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="135" />
@@ -1667,7 +1667,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="70" />
@@ -1686,7 +1686,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+			<vitals hp="5969" hpRegen="10.5" mp="2584" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="110" />
@@ -1698,6 +1698,63 @@
 		<collision>
 			<radius normal="37.5" />
 			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="18697" level="85" type="Folk" name="Watermelon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="18698" level="85" type="Folk" name="Watermelon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="20" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="23" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="18699" level="85" type="Folk" name="Prime Watermelon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8" hpRegen="10.5" mp="40" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="17" />
+			<height normal="35" />
 		</collision>
 	</npc>
 </list>

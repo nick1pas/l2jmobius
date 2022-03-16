@@ -746,9 +746,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<vitals hp="4600" hpRegen="10.5" mp="1778" mpRegen="3.6" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="50" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -756,18 +756,18 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="12" />
+			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="14919" level="85" type="Folk" name="Unicorn Guardian">
+	<npc id="14919" level="85" type="Folk" name="Unicorn Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<vitals hp="3800" hpRegen="10.5" mp="1778" mpRegen="3.6" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="50" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -775,18 +775,18 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="14920" level="85" type="Folk" name="Faceless">
+	<npc id="14920" level="85" type="Folk" name="Lord Raise">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<vitals hp="4300" hpRegen="10.5" mp="1778" mpRegen="3.6" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -794,8 +794,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="11" />
+			<height normal="27" />
 		</collision>
 	</npc>
 </list>
