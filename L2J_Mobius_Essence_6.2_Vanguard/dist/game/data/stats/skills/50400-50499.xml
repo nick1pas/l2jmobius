@@ -1712,7 +1712,14 @@
 		</effects>
 	</skill>
 	<skill id="50444" toLevel="6" name="Queen Ant's Ring">
-		<!-- A ring imbued with Queen Ant's power. <Effect> Max MP $s1 P. Accuracy $s2 M. Accuracy $s3 P. Atk. $s4 M. Atk. $s5 Infection Atk. Rate $s6 Infection Resistance $s7 -->
+		<!-- 
+		Lv. 1 Max MP +9, P.Accuracy +1,  M.Accuracy +1, P.Atk. +4%, M.Atk. +4% Infection Atk. Rate +10%, Infection Resistance +10%
+		Lv. 2 Max MP +15, P.Accuracy +2,  M.Accuracy +2, P.Atk. +6%, M.Atk. +6% Infection Atk. Rate +15%, Infection Resistance +15%
+		Lv. 3 Max MP +21, P.Accuracy +3,  M.Accuracy +3, P.Atk. +7%, M.Atk. +7% P. Critical Damage +10%, M. Skill Critical Damage +5%, Infection Atk. Rate +20%, Infection Resistance +20%
+		Lv. 4 Max MP +30, P.Accuracy +4,  M.Accuracy +4, P.Atk. +9%, M.Atk. +9% All Critical Damage +10%, Infection Atk. Rate +20%, Infection Resistance +20%
+		Lv. 5 Max MP +40, P.Accuracy +6,  M.Accuracy +6, P.Atk. +11%, M.Atk. +11% All Critical Damage +15%, Infection Atk. Rate +20%, Infection Resistance +20%
+		Lv. 6 Max MP +50, P.Accuracy +10,  M.Accuracy +10, P.Atk. +15%, M.Atk. +15% All Critical Damage +20%, Potion Atk. Rate +20%, Infection Atk. Rate +20%, Infection Resistance +20%, Applies the Queen Ant Power buff when hit. (Cooldown: 300 sec.)
+		-->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1725,6 +1732,7 @@
 					<value level="5">40</value>
 					<value level="6">50</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="Accuracy">
 				<amount>
@@ -1735,6 +1743,7 @@
 					<value level="5">6</value>
 					<value level="6">10</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -1745,8 +1754,9 @@
 					<value level="5">6</value>
 					<value level="6">10</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">4</value>
 					<value level="2">6</value>
@@ -1755,8 +1765,9 @@
 					<value level="5">11</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">4</value>
 					<value level="2">6</value>
@@ -1765,6 +1776,7 @@
 					<value level="5">11</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage" fromLevel="3" toLevel="6">
 				<amount>
@@ -1773,6 +1785,7 @@
 					<value level="5">15</value>
 					<value level="6">20</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalDamage" fromLevel="3" toLevel="6">
 				<amount>
@@ -1781,6 +1794,7 @@
 					<value level="5">15</value>
 					<value level="6">20</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
 				<INFECTION>
@@ -1836,6 +1850,7 @@
 					<value level="5">40</value>
 					<value level="6">50</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="Accuracy">
 				<amount>
@@ -1846,6 +1861,7 @@
 					<value level="5">6</value>
 					<value level="6">10</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicAccuracy">
 				<amount>
@@ -1856,6 +1872,7 @@
 					<value level="5">6</value>
 					<value level="6">10</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -1866,6 +1883,7 @@
 					<value level="5">10</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -1876,6 +1894,7 @@
 					<value level="5">10</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
@@ -1960,6 +1979,7 @@
 					<value level="5">100</value>
 					<value level="6">200</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
@@ -1967,12 +1987,13 @@
 					<value level="5">100</value>
 					<value level="6">200</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="6">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY_ONLY</targetType>
 				<isCritical>false</isCritical>
 				<skillId>50452</skillId> <!-- Core Power -->
 				<skillLevel>1</skillLevel>
@@ -1981,7 +2002,7 @@
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY_ONLY</targetType>
 				<isCritical>true</isCritical>
 				<skillId>50452</skillId> <!-- Core Power -->
 				<skillLevel>1</skillLevel>
@@ -2172,6 +2193,24 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value level="4">50</value>
+					<value level="5">100</value>
+					<value level="6">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value level="4">50</value>
+					<value level="5">100</value>
+					<value level="6">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="AttackTrait">
 				<HOLD>
 					<value level="1">10</value>
@@ -2344,6 +2383,22 @@
 					<value level="6">20</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">50</value>
+					<value level="6">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">50</value>
+					<value level="6">200</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="AttackTrait">
 				<INFECTION>
