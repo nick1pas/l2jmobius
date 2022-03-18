@@ -53,52 +53,46 @@
 	<skill id="55003" toLevel="1" name="1st Class Buff Scroll">
 		<!-- For 20 min., grants the following buffs: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>
-		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29011</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
-		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLevel>1</abnormalLevel>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isMagic>2</isMagic> <!-- Item Skill -->
 		<magicLevel>1</magicLevel>
 		<selfEffects>
-			<effect name="CallSkill"> <!-- Shield -->
+			<effect name="CallSkill">
 				<skillId>1040</skillId> <!-- Shield -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Might -->
+			<effect name="CallSkill">
 				<skillId>1068</skillId> <!-- Might -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Concentration -->
+			<effect name="CallSkill">
 				<skillId>1078</skillId> <!-- Concentration -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Acumen -->
+			<effect name="CallSkill">
 				<skillId>1085</skillId> <!-- Acumen -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Wind Walk -->
+			<effect name="CallSkill">
 				<skillId>1204</skillId> <!-- Wind Walk -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Focus -->
-				<skillId>4359</skillId> <!-- Focus -->
+			<effect name="CallSkill">
+				<skillId>1077</skillId> <!-- Focus -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Agility -->
+			<effect name="CallSkill">
 				<skillId>1087</skillId> <!-- Agility -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Empower -->
+			<effect name="CallSkill">
 				<skillId>1059</skillId> <!-- Empower -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -107,76 +101,71 @@
 	<skill id="55004" toLevel="2" name="2nd Class Buff Scroll">
 		<!-- For 20 min., grants the following buffs: Shield Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2. -->
 		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29012</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
-		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<abnormalLevel>1</abnormalLevel>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isMagic>2</isMagic> <!-- Item Skill -->
 		<magicLevel>1</magicLevel>
 		<selfEffects>
-			<effect name="CallSkill"> <!-- Shield -->
+			<effect name="CallSkill">
 				<skillId>1040</skillId> <!-- Shield -->
-				<skillLevel>2</skillLevel>
+				<skillLevel>3</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Might -->
+			<effect name="CallSkill">
 				<skillId>1068</skillId> <!-- Might -->
-				<skillLevel>2</skillLevel>
+				<skillLevel>3</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Acumen -->
+			<effect name="CallSkill">
 				<skillId>1085</skillId> <!-- Acumen -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Wind Walk -->
+			<effect name="CallSkill">
 				<skillId>1204</skillId> <!-- Wind Walk -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Focus -->
-				<skillId>4359</skillId> <!-- Focus -->
+			<effect name="CallSkill">
+				<skillId>1077</skillId> <!-- Focus -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Regeneration -->
+			<effect name="CallSkill">
 				<skillId>1044</skillId> <!-- Regeneration -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Guidance -->
+			<effect name="CallSkill">
 				<skillId>1240</skillId> <!-- Guidance -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Death Whisper -->
+			<effect name="CallSkill">
 				<skillId>1242</skillId> <!-- Death Whisper -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Magic Barrier -->
+			<effect name="CallSkill">
 				<skillId>1036</skillId> <!-- Magic Barrier -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Blessed Body -->
+			<effect name="CallSkill">
 				<skillId>1045</skillId> <!-- Blessed Body -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Blessed Soul -->
+			<effect name="CallSkill">
 				<skillId>1048</skillId> <!-- Blessed Soul -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Haste -->
+			<effect name="CallSkill">
 				<skillId>1086</skillId> <!-- Haste -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Agility -->
+			<effect name="CallSkill">
 				<skillId>1087</skillId> <!-- Agility -->
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Empower -->
+			<effect name="CallSkill">
 				<skillId>1059</skillId> <!-- Empower -->
 				<skillLevel>2</skillLevel>
 			</effect>

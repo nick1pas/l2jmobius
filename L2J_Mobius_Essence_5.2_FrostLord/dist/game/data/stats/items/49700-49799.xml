@@ -1028,6 +1028,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39164" level="1" /> <!-- Scroll of Mood Melody -->
+		</skills>
 	</item>
 	<item id="49773" name="Fighter Pirate Fruit - Attack" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +7%. M. Atk. +7%. P. Def. +10%. M. Def. +10%. Max HP +15%. Max MP +15%. Max CP +15%. HP Recovery Rate +20%. MP Recovery Rate +20%. PvP damage +5%. A chance to absorb 3% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->

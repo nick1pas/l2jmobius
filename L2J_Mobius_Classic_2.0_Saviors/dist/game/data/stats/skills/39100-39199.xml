@@ -1245,8 +1245,53 @@
 		<!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<itemConsumeId>49772</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>2</isMagic> <!-- Item Skill -->
+		<magicLevel>1</magicLevel>
 		<effectPoint>1</effectPoint>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>1068</skillId> <!-- Might -->
+				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1040</skillId> <!-- Shield -->
+				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1077</skillId> <!-- Focus -->
+				<skillLevel>2</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1086</skillId> <!-- Haste -->
+				<skillLevel>2</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1085</skillId> <!-- Acumen -->
+				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1059</skillId> <!-- Empower -->
+				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1204</skillId> <!-- Wind Walk -->
+				<skillLevel>2</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1242</skillId> <!-- Death Whisper -->
+				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>1268</skillId> <!-- Vampiric Rage -->
+				<skillLevel>4</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="39165" toLevel="1" name="Transformation into a Prophet">
 		<!-- Transformation into a Prophet. Attacking is not possible. Can be used once a day. When used during a duel, the Buff is removed after duel ends. -->

@@ -975,6 +975,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39164" level="1" /> <!-- Scroll of Mood Melody -->
+		</skills>
 	</item>
 	<item id="49773" name="Fighter Pirate Fruit - Attack" type="EtcItem">
 		<!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage dealt in PvP +5%. Duration is 20 minutes. Reuse Time is 1 minute. The effect persists through death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. -->

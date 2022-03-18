@@ -41,7 +41,7 @@ public class Q00127_FishingSpecialistsRequest extends Quest
 	private static final Location TELEPORT_LOC = new Location(105276, 162500, -3600);
 	// Misc
 	private static final int MIN_LEVEL = 20;
-	private static final int MAX_LEVEL = 110;
+	private static final int MAX_LEVEL = 75;
 	
 	public Q00127_FishingSpecialistsRequest()
 	{
