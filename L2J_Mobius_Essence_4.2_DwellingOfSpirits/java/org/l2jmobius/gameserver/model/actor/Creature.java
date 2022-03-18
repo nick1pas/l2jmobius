@@ -122,8 +122,8 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
-import org.l2jmobius.gameserver.model.options.OptionsSkillType;
+import org.l2jmobius.gameserver.model.options.OptionSkillHolder;
+import org.l2jmobius.gameserver.model.options.OptionSkillType;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.BuffFinishTask;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
@@ -237,7 +237,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private boolean _lethalable = true;
 	
-	private Map<Integer, OptionsSkillHolder> _triggerSkills;
+	private Map<Integer, OptionSkillHolder> _triggerSkills;
 	
 	private Map<Integer, IgnoreSkillHolder> _ignoreSkillEffects;
 	/** Creatures effect list. */
@@ -3918,9 +3918,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (_triggerSkills != null)
 		{
-			for (OptionsSkillHolder holder : _triggerSkills.values())
+			for (OptionSkillHolder holder : _triggerSkills.values())
 			{
-				if (((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical())) && (Rnd.get(100) < holder.getChance()))
+				if (((!hit.isCritical() && (holder.getSkillType() == OptionSkillType.ATTACK)) || ((holder.getSkillType() == OptionSkillType.CRITICAL) && hit.isCritical())) && (Rnd.get(100) < holder.getChance()))
 				{
 					SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
 				}
@@ -4979,7 +4979,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return (_triggerSkills != null) && !_triggerSkills.isEmpty();
 	}
 	
-	public Map<Integer, OptionsSkillHolder> getTriggerSkills()
+	public Map<Integer, OptionSkillHolder> getTriggerSkills()
 	{
 		if (_triggerSkills == null)
 		{
@@ -4987,21 +4987,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				if (_triggerSkills == null)
 				{
-					_triggerSkills = new ConcurrentHashMap<>();
+					_triggerSkills = new ConcurrentHashMap<>(1);
 				}
 			}
 		}
 		return _triggerSkills;
 	}
 	
-	public void addTriggerSkill(OptionsSkillHolder holder)
+	public void addTriggerSkill(OptionSkillHolder holder)
 	{
-		getTriggerSkills().put(holder.getSkillId(), holder);
+		getTriggerSkills().put(holder.getSkill().getId(), holder);
 	}
 	
-	public void removeTriggerSkill(OptionsSkillHolder holder)
+	public void removeTriggerSkill(OptionSkillHolder holder)
 	{
-		getTriggerSkills().remove(holder.getSkillId());
+		getTriggerSkills().remove(holder.getSkill().getId());
 	}
 	
 	/**

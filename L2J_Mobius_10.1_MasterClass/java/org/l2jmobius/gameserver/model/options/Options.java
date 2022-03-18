@@ -22,7 +22,6 @@ import java.util.List;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
@@ -34,9 +33,9 @@ public class Options
 {
 	private final int _id;
 	private List<AbstractEffect> _effects = null;
-	private List<SkillHolder> _activeSkill = null;
-	private List<SkillHolder> _passiveSkill = null;
-	private List<OptionsSkillHolder> _activationSkills = null;
+	private List<Skill> _activeSkill = null;
+	private List<Skill> _passiveSkill = null;
+	private List<OptionSkillHolder> _activationSkills = null;
 	
 	/**
 	 * @param id
@@ -75,12 +74,12 @@ public class Options
 		return _activeSkill != null;
 	}
 	
-	public List<SkillHolder> getActiveSkills()
+	public List<Skill> getActiveSkills()
 	{
 		return _activeSkill;
 	}
 	
-	public void addActiveSkill(SkillHolder holder)
+	public void addActiveSkill(Skill holder)
 	{
 		if (_activeSkill == null)
 		{
@@ -94,12 +93,12 @@ public class Options
 		return _passiveSkill != null;
 	}
 	
-	public List<SkillHolder> getPassiveSkills()
+	public List<Skill> getPassiveSkills()
 	{
 		return _passiveSkill;
 	}
 	
-	public void addPassiveSkill(SkillHolder holder)
+	public void addPassiveSkill(Skill holder)
 	{
 		if (_passiveSkill == null)
 		{
@@ -113,11 +112,11 @@ public class Options
 		return _activationSkills != null;
 	}
 	
-	public boolean hasActivationSkills(OptionsSkillType type)
+	public boolean hasActivationSkills(OptionSkillType type)
 	{
 		if (_activationSkills != null)
 		{
-			for (OptionsSkillHolder holder : _activationSkills)
+			for (OptionSkillHolder holder : _activationSkills)
 			{
 				if (holder.getSkillType() == type)
 				{
@@ -128,17 +127,17 @@ public class Options
 		return false;
 	}
 	
-	public List<OptionsSkillHolder> getActivationsSkills()
+	public List<OptionSkillHolder> getActivationSkills()
 	{
 		return _activationSkills;
 	}
 	
-	public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type)
+	public List<OptionSkillHolder> getActivationSkills(OptionSkillType type)
 	{
-		final List<OptionsSkillHolder> temp = new ArrayList<>();
+		final List<OptionSkillHolder> temp = new ArrayList<>();
 		if (_activationSkills != null)
 		{
-			for (OptionsSkillHolder holder : _activationSkills)
+			for (OptionSkillHolder holder : _activationSkills)
 			{
 				if (holder.getSkillType() == type)
 				{
@@ -149,7 +148,7 @@ public class Options
 		return temp;
 	}
 	
-	public void addActivationSkill(OptionsSkillHolder holder)
+	public void addActivationSkill(OptionSkillHolder holder)
 	{
 		if (_activationSkills == null)
 		{
@@ -189,21 +188,21 @@ public class Options
 		}
 		if (hasActiveSkills())
 		{
-			for (SkillHolder holder : _activeSkill)
+			for (Skill skill : _activeSkill)
 			{
-				addSkill(player, holder.getSkill());
+				addSkill(player, skill);
 			}
 		}
 		if (hasPassiveSkills())
 		{
-			for (SkillHolder holder : _passiveSkill)
+			for (Skill skill : _passiveSkill)
 			{
-				addSkill(player, holder.getSkill());
+				addSkill(player, skill);
 			}
 		}
 		if (hasActivationSkills())
 		{
-			for (OptionsSkillHolder holder : _activationSkills)
+			for (OptionSkillHolder holder : _activationSkills)
 			{
 				player.addTriggerSkill(holder);
 			}
@@ -227,21 +226,21 @@ public class Options
 		}
 		if (hasActiveSkills())
 		{
-			for (SkillHolder holder : _activeSkill)
+			for (Skill skill : _activeSkill)
 			{
-				player.removeSkill(holder.getSkill(), false, false);
+				player.removeSkill(skill, false, false);
 			}
 		}
 		if (hasPassiveSkills())
 		{
-			for (SkillHolder holder : _passiveSkill)
+			for (Skill skill : _passiveSkill)
 			{
-				player.removeSkill(holder.getSkill(), false, true);
+				player.removeSkill(skill, false, true);
 			}
 		}
 		if (hasActivationSkills())
 		{
-			for (OptionsSkillHolder holder : _activationSkills)
+			for (OptionSkillHolder holder : _activationSkills)
 			{
 				player.removeTriggerSkill(holder);
 			}

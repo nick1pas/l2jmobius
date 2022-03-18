@@ -62,8 +62,8 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.ActionType;
-import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
-import org.l2jmobius.gameserver.model.options.OptionsSkillType;
+import org.l2jmobius.gameserver.model.options.OptionSkillHolder;
+import org.l2jmobius.gameserver.model.options.OptionSkillType;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -603,9 +603,9 @@ public class SkillCaster implements Runnable
 					
 					if (caster.hasTriggerSkills())
 					{
-						for (OptionsSkillHolder holder : caster.getTriggerSkills().values())
+						for (OptionSkillHolder holder : caster.getTriggerSkills().values())
 						{
-							if (((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
+							if (((skill.isMagic() && (holder.getSkillType() == OptionSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
 							{
 								triggerCast(caster, creature, holder.getSkill(), null, false);
 							}

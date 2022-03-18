@@ -28,10 +28,10 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.options.Options;
-import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
-import org.l2jmobius.gameserver.model.options.OptionsSkillType;
+import org.l2jmobius.gameserver.model.options.OptionSkillHolder;
+import org.l2jmobius.gameserver.model.options.OptionSkillType;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author UnAfraid
@@ -88,27 +88,77 @@ public class OptionData implements IXmlReader
 					}
 					case "active_skill":
 					{
-						option.addActiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
+						final int skillId = parseInteger(innerNode.getAttributes(), "id");
+						final int skillLevel = parseInteger(innerNode.getAttributes(), "level");
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+						if (skill != null)
+						{
+							option.addActiveSkill(skill);
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill " + skillId + "(" + skillLevel + ") used by option " + id + ".");
+						}
 						break;
 					}
 					case "passive_skill":
 					{
-						option.addPassiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
+						final int skillId = parseInteger(innerNode.getAttributes(), "id");
+						final int skillLevel = parseInteger(innerNode.getAttributes(), "level");
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+						if (skill != null)
+						{
+							option.addPassiveSkill(skill);
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill " + skillId + "(" + skillLevel + ") used by option " + id + ".");
+						}
 						break;
 					}
 					case "attack_skill":
 					{
-						option.addActivationSkill(new OptionsSkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level"), parseDouble(innerNode.getAttributes(), "chance"), OptionsSkillType.ATTACK));
+						final int skillId = parseInteger(innerNode.getAttributes(), "id");
+						final int skillLevel = parseInteger(innerNode.getAttributes(), "level");
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+						if (skill != null)
+						{
+							option.addActivationSkill(new OptionSkillHolder(skill, parseDouble(innerNode.getAttributes(), "chance"), OptionSkillType.ATTACK));
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill " + skillId + "(" + skillLevel + ") used by option " + id + ".");
+						}
 						break;
 					}
 					case "magic_skill":
 					{
-						option.addActivationSkill(new OptionsSkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level"), parseDouble(innerNode.getAttributes(), "chance"), OptionsSkillType.MAGIC));
+						final int skillId = parseInteger(innerNode.getAttributes(), "id");
+						final int skillLevel = parseInteger(innerNode.getAttributes(), "level");
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+						if (skill != null)
+						{
+							option.addActivationSkill(new OptionSkillHolder(skill, parseDouble(innerNode.getAttributes(), "chance"), OptionSkillType.MAGIC));
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill " + skillId + "(" + skillLevel + ") used by option " + id + ".");
+						}
 						break;
 					}
 					case "critical_skill":
 					{
-						option.addActivationSkill(new OptionsSkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level"), parseDouble(innerNode.getAttributes(), "chance"), OptionsSkillType.CRITICAL));
+						final int skillId = parseInteger(innerNode.getAttributes(), "id");
+						final int skillLevel = parseInteger(innerNode.getAttributes(), "level");
+						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+						if (skill != null)
+						{
+							option.addActivationSkill(new OptionSkillHolder(skill, parseDouble(innerNode.getAttributes(), "chance"), OptionSkillType.CRITICAL));
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill " + skillId + "(" + skillLevel + ") used by option " + id + ".");
+						}
 						break;
 					}
 				}
