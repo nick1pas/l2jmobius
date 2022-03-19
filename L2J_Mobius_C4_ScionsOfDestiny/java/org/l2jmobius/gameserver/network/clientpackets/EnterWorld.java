@@ -282,7 +282,10 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		loadTutorial(player);
+		if (!Config.DISABLE_TUTORIAL)
+		{
+			loadTutorial(player);
+		}
 		
 		// Check for crowns
 		CrownManager.getInstance().checkCrowns(player);
