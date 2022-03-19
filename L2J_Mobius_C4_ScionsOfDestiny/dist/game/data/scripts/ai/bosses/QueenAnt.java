@@ -23,7 +23,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -101,10 +100,6 @@ public class QueenAnt extends Quest
 				else
 				{
 					final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-					{
-						AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
-					}
 					GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 					GrandBossManager.getInstance().addBoss(queen);
 					spawnBoss(queen);
@@ -116,10 +111,6 @@ public class QueenAnt extends Quest
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().addBoss(queen);
 				queen.setCurrentHpMp(hp, mp);
 				spawnBoss(queen);
@@ -128,10 +119,6 @@ public class QueenAnt extends Quest
 			default:
 			{
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);
@@ -165,10 +152,6 @@ public class QueenAnt extends Quest
 			case QUEEN_SPAWN:
 			{
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + queen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);

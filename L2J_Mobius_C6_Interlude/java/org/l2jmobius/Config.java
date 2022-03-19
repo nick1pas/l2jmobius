@@ -96,6 +96,7 @@ public class Config
 	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
 	// custom
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
+	private static final String BOSS_ANNOUNCEMENTS_CONFIG_FILE = "./config/custom/BossAnnouncements.ini";
 	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
 	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/custom/ClassDamage.ini";
@@ -556,6 +557,13 @@ public class Config
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
 	
+	public static boolean RAIDBOSS_SPAWN_ANNOUNCEMENTS;
+	public static boolean RAIDBOSS_DEFEAT_ANNOUNCEMENTS;
+	public static boolean RAIDBOSS_INSTANCE_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_SPAWN_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_DEFEAT_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_INSTANCE_ANNOUNCEMENTS;
+	
 	public static int RESTORE_CANCELLED_BUFFS_SECONDS;
 	
 	public static int BUFFER_MAX_SCHEMES;
@@ -578,7 +586,6 @@ public class Config
 	public static boolean ONLINE_PLAYERS_ON_LOGIN;
 	public static boolean SUBSTUCK_SKILLS;
 	public static boolean ALT_SERVER_NAME_ENABLED;
-	public static boolean ANNOUNCE_TO_ALL_SPAWN_RB;
 	public static boolean ANNOUNCE_TRY_BANNED_ACCOUNT;
 	public static String ALT_Server_Name;
 	public static boolean DONATOR_NAME_COLOR_ENABLED;
@@ -1767,6 +1774,17 @@ public class Config
 		BANKING_SYSTEM_ADENA = bankConfig.getInt("BankingAdenaCount", 500000000);
 	}
 	
+	public static void loadBossAnnouncementsConfig()
+	{
+		final PropertiesParser bossAnnouncementsConfig = new PropertiesParser(BOSS_ANNOUNCEMENTS_CONFIG_FILE);
+		RAIDBOSS_SPAWN_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossSpawnAnnouncements", false);
+		RAIDBOSS_DEFEAT_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossDefeatAnnouncements", false);
+		RAIDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
+		GRANDBOSS_SPAWN_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossSpawnAnnouncements", false);
+		GRANDBOSS_DEFEAT_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossDefeatAnnouncements", false);
+		GRANDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
+	}
+	
 	public static void loadCancelSkillRestoreBuffsConfig()
 	{
 		final PropertiesParser cancelSkillRestoreBuffsConfig = new PropertiesParser(CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE);
@@ -1821,7 +1839,6 @@ public class Config
 		DONATOR_SPOIL_RATE = customServerConfig.getFloat("DonatorSpoilRate", 1.5f);
 		WELCOME_HTM = customServerConfig.getBoolean("WelcomeHtm", false);
 		ALT_SERVER_NAME_ENABLED = customServerConfig.getBoolean("ServerNameEnabled", false);
-		ANNOUNCE_TO_ALL_SPAWN_RB = customServerConfig.getBoolean("AnnounceToAllSpawnRb", false);
 		ANNOUNCE_TRY_BANNED_ACCOUNT = customServerConfig.getBoolean("AnnounceTryBannedAccount", false);
 		ALT_Server_Name = customServerConfig.getString("ServerName", "");
 		DIFFERENT_Z_CHANGE_OBJECT = customServerConfig.getInt("DifferentZchangeObject", 650);
@@ -2929,6 +2946,7 @@ public class Config
 			loadWeddingConfig();
 			loadRebirthConfig();
 			loadBankingConfig();
+			loadBossAnnouncementsConfig();
 			loadBufferConfig();
 			loadPCBPointConfig();
 			loadOfflineConfig();

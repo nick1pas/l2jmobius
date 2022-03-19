@@ -29,7 +29,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -120,10 +119,6 @@ public class Baium extends Quest
 			{
 				// The time has already expired while the server was offline. Delete the saved time and immediately spawn the stone-baium. Also the state need not be changed from ASLEEP.
 				addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
-				}
 				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
 			}
 		}
@@ -136,10 +131,6 @@ public class Baium extends Quest
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
 			final GrandBoss baium = (GrandBoss) addSpawn(LIVE_BAIUM, x, y, z, heading, false, 0);
-			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-			{
-				AnnouncementsTable.getInstance().announceToAll("Raid boss " + baium.getName() + " spawned in world.");
-			}
 			GrandBossManager.getInstance().addBoss(baium);
 			ThreadPool.schedule(() ->
 			{
@@ -160,10 +151,6 @@ public class Baium extends Quest
 		else
 		{
 			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
-			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-			{
-				AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
-			}
 		}
 	}
 	
@@ -174,10 +161,6 @@ public class Baium extends Quest
 		{
 			GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
 			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
-			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-			{
-				AnnouncementsTable.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
-			}
 		}
 		else if (event.equals("skill_range") && (npc != null))
 		{

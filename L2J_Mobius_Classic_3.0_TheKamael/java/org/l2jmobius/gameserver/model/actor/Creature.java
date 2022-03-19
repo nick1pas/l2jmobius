@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.enums.AttributeType;
@@ -82,6 +83,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpc;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
@@ -162,6 +164,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.CreatureSeeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -592,6 +595,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		super.onSpawn();
 		revalidateZone(true);
+		
+		// Custom boss announcements configuration.
+		if (this instanceof GrandBoss)
+		{
+			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			{
+				final String name = NpcData.getInstance().getTemplate(getId()).getName();
+				if (name != null)
+				{
+					Broadcast.toAllOnlinePlayers(name + " has spawned!");
+					Broadcast.toAllOnlinePlayersOnScreen(name + " has spawned!");
+				}
+			}
+		}
+		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		{
+			final String name = NpcData.getInstance().getTemplate(getId()).getName();
+			if (name != null)
+			{
+				Broadcast.toAllOnlinePlayers(name + " has spawned!");
+				Broadcast.toAllOnlinePlayersOnScreen(name + " has spawned!");
+			}
+		}
 	}
 	
 	public synchronized void onTeleported()
@@ -1733,6 +1759,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (isChannelized())
 		{
 			getSkillChannelized().abortChannelization();
+		}
+		
+		// Custom boss announcements configuration.
+		if (this instanceof GrandBoss)
+		{
+			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			{
+				final String name = NpcData.getInstance().getTemplate(getId()).getName();
+				if (name != null)
+				{
+					Broadcast.toAllOnlinePlayers(name + " has been defeated!");
+					Broadcast.toAllOnlinePlayersOnScreen(name + " has been defeated!");
+				}
+			}
+		}
+		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		{
+			final String name = NpcData.getInstance().getTemplate(getId()).getName();
+			if (name != null)
+			{
+				Broadcast.toAllOnlinePlayers(name + " has been defeated!");
+				Broadcast.toAllOnlinePlayersOnScreen(name + " has been defeated!");
+			}
 		}
 		
 		return true;

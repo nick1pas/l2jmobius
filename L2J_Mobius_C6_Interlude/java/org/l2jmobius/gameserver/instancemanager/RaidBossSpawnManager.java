@@ -31,7 +31,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -155,13 +154,9 @@ public class RaidBossSpawnManager
 				info.set("currentMP", raidboss.getCurrentMp());
 				info.set("respawnTime", 0);
 				_storedInfo.put(bossId, info);
+				_bosses.put(bossId, raidboss);
 				
 				AdminData.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName() + ".");
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + raidboss.getName() + " spawned in world.");
-				}
-				_bosses.put(bossId, raidboss);
 			}
 			
 			_schedules.remove(bossId);

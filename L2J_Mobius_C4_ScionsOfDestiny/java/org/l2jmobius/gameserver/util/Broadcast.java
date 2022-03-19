@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
@@ -204,6 +205,11 @@ public class Broadcast
 	public static void toAllOnlinePlayers(String text, boolean isCritical)
 	{
 		toAllOnlinePlayers(new CreatureSay(0, isCritical ? ChatType.CRITICAL_ANNOUNCE : ChatType.ANNOUNCEMENT, null, text));
+	}
+	
+	public static void toAllOnlinePlayersOnScreen(String text)
+	{
+		toAllOnlinePlayers(new ExShowScreenMessage(text, 10000));
 	}
 	
 	/**

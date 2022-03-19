@@ -124,6 +124,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -313,6 +314,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		super.onSpawn();
 		revalidateZone();
+		
+		// Custom boss announcements configuration.
+		if (this instanceof GrandBoss)
+		{
+			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			{
+				final String name = NpcTable.getInstance().getTemplate(((Npc) this).getNpcId()).getName();
+				if (name != null)
+				{
+					Broadcast.toAllOnlinePlayers(name + " has spawned!");
+					Broadcast.toAllOnlinePlayersOnScreen(name + " has spawned!");
+				}
+			}
+		}
+		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		{
+			final String name = NpcTable.getInstance().getTemplate(((Npc) this).getNpcId()).getName();
+			if (name != null)
+			{
+				Broadcast.toAllOnlinePlayers(name + " has spawned!");
+				Broadcast.toAllOnlinePlayersOnScreen(name + " has spawned!");
+			}
+		}
 	}
 	
 	public void onTeleported()
@@ -1854,6 +1878,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
 		updateEffectIcons();
+		
+		// Custom boss announcements configuration.
+		if (this instanceof GrandBoss)
+		{
+			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			{
+				final String name = NpcTable.getInstance().getTemplate(((Npc) this).getNpcId()).getName();
+				if (name != null)
+				{
+					Broadcast.toAllOnlinePlayers(name + " has been defeated!");
+					Broadcast.toAllOnlinePlayersOnScreen(name + " has been defeated!");
+				}
+			}
+		}
+		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		{
+			final String name = NpcTable.getInstance().getTemplate(((Npc) this).getNpcId()).getName();
+			if (name != null)
+			{
+				Broadcast.toAllOnlinePlayers(name + " has been defeated!");
+				Broadcast.toAllOnlinePlayersOnScreen(name + " has been defeated!");
+			}
+		}
 		
 		return true;
 	}

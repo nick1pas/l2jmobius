@@ -114,6 +114,7 @@ public class Config
 	private static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
 	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
 	private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
+	private static final String CUSTOM_BOSS_ANNOUNCEMENTS_CONFIG_FILE = "./config/Custom/BossAnnouncements.ini";
 	private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
 	private static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
 	private static final String CUSTOM_CLASS_BALANCE_CONFIG_FILE = "./config/Custom/ClassBalance.ini";
@@ -1050,6 +1051,12 @@ public class Config
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
+	public static boolean RAIDBOSS_SPAWN_ANNOUNCEMENTS;
+	public static boolean RAIDBOSS_DEFEAT_ANNOUNCEMENTS;
+	public static boolean RAIDBOSS_INSTANCE_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_SPAWN_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_DEFEAT_ANNOUNCEMENTS;
+	public static boolean GRANDBOSS_INSTANCE_ANNOUNCEMENTS;
 	public static boolean ENABLE_NPC_STAT_MULTIPLIERS;
 	public static double MONSTER_HP_MULTIPLIER;
 	public static double MONSTER_MP_MULTIPLIER;
@@ -2555,6 +2562,15 @@ public class Config
 			BANKING_SYSTEM_ENABLED = bankingConfig.getBoolean("BankingEnabled", false);
 			BANKING_SYSTEM_GOLDBARS = bankingConfig.getInt("BankingGoldbarCount", 1);
 			BANKING_SYSTEM_ADENA = bankingConfig.getInt("BankingAdenaCount", 500000000);
+			
+			// Load Boss Announcements config file (if exists)
+			final PropertiesParser bossAnnouncementsConfig = new PropertiesParser(CUSTOM_BOSS_ANNOUNCEMENTS_CONFIG_FILE);
+			RAIDBOSS_SPAWN_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossSpawnAnnouncements", false);
+			RAIDBOSS_DEFEAT_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossDefeatAnnouncements", false);
+			RAIDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
+			GRANDBOSS_SPAWN_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossSpawnAnnouncements", false);
+			GRANDBOSS_DEFEAT_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossDefeatAnnouncements", false);
+			GRANDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
 			
 			// Load BoostNpcStats config file (if exists)
 			final PropertiesParser boostNpcStatConfig = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE);

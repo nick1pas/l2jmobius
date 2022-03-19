@@ -20,7 +20,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -73,10 +72,6 @@ public class Orfen extends Quest
 				else
 				{
 					_orfen = (GrandBoss) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
-					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-					{
-						AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
-					}
 					GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 					GrandBossManager.getInstance().addBoss(_orfen);
 				}
@@ -87,10 +82,6 @@ public class Orfen extends Quest
 				final int hp = info.getInt("currentHP");
 				final int mp = info.getInt("currentMP");
 				_orfen = (GrandBoss) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().addBoss(_orfen);
 				_orfen.setCurrentHpMp(hp, mp);
 				break;
@@ -102,10 +93,6 @@ public class Orfen extends Quest
 				final int loc_z = -5412;
 				final int heading = 0;
 				_orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);
 				break;
@@ -127,10 +114,6 @@ public class Orfen extends Quest
 				final int loc_z = -5412;
 				final int heading = 0;
 				_orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
-				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
-				{
-					AnnouncementsTable.getInstance().announceToAll("Raid boss " + _orfen.getName() + " spawned in world.");
-				}
 				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);
 				break;
