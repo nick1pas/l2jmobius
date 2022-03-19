@@ -26,6 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -128,6 +129,10 @@ public class BlockList
 	
 	public boolean isInBlockList(Player target)
 	{
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_SPECIFIC_CHAT && ((_owner.isGood() && target.isEvil()) || (_owner.isEvil() && target.isGood())))
+		{
+			return true;
+		}
 		return _blockList.contains(target.getObjectId());
 	}
 	

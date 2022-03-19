@@ -82,6 +82,12 @@ public class Escape implements IUserCommandHandler
 			return false;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED && !player.isGood() && !player.isEvil())
+		{
+			player.sendMessage("You cannot use this function while you are neutral.");
+			return false;
+		}
+		
 		// Check player status.
 		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.isInOlympiadMode())
 		{

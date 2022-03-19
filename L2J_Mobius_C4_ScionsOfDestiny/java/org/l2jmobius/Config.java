@@ -41,6 +41,7 @@ import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.GeoType;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
@@ -87,6 +88,7 @@ public class Config
 	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/custom/ClassDamage.ini";
 	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/custom/AutoPotions.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/custom/CustomMailManager.ini";
+	private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/custom/RandomSpawns.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
@@ -465,6 +467,22 @@ public class Config
 	
 	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
+	
+	public static boolean FACTION_SYSTEM_ENABLED;
+	public static Location FACTION_STARTING_LOCATION;
+	public static Location FACTION_MANAGER_LOCATION;
+	public static Location FACTION_GOOD_BASE_LOCATION;
+	public static Location FACTION_EVIL_BASE_LOCATION;
+	public static String FACTION_GOOD_TEAM_NAME;
+	public static String FACTION_EVIL_TEAM_NAME;
+	public static int FACTION_GOOD_NAME_COLOR;
+	public static int FACTION_EVIL_NAME_COLOR;
+	public static boolean FACTION_GUARDS_ENABLED;
+	public static boolean FACTION_RESPAWN_AT_BASE;
+	public static boolean FACTION_AUTO_NOBLESS;
+	public static boolean FACTION_SPECIFIC_CHAT;
+	public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
+	public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
 	
 	public static boolean MERCHANT_ZERO_SELL_PRICE;
 	
@@ -1629,6 +1647,32 @@ public class Config
 		final PropertiesParser customMailManagerConfig = new PropertiesParser(CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE);
 		CUSTOM_MAIL_MANAGER_ENABLED = customMailManagerConfig.getBoolean("CustomMailManagerEnabled", false);
 		CUSTOM_MAIL_MANAGER_DELAY = customMailManagerConfig.getInt("DatabaseQueryDelay", 30) * 1000;
+	}
+	
+	public static void loadFactionSystemConfig()
+	{
+		// Load FactionSystem config file (if exists)
+		final PropertiesParser factionSystemConfig = new PropertiesParser(CUSTOM_FACTION_SYSTEM_CONFIG_FILE);
+		String[] tempString;
+		FACTION_SYSTEM_ENABLED = factionSystemConfig.getBoolean("EnableFactionSystem", false);
+		tempString = factionSystemConfig.getString("StartingLocation", "85332,16199,-1252").split(",");
+		FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+		tempString = factionSystemConfig.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
+		FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
+		tempString = factionSystemConfig.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
+		FACTION_GOOD_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+		tempString = factionSystemConfig.getString("EvilBaseLocation", "-44037,-113283,-237").split(",");
+		FACTION_EVIL_BASE_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
+		FACTION_GOOD_TEAM_NAME = factionSystemConfig.getString("GoodTeamName", "Good");
+		FACTION_EVIL_TEAM_NAME = factionSystemConfig.getString("EvilTeamName", "Evil");
+		FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + factionSystemConfig.getString("GoodNameColor", "00FF00"));
+		FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + factionSystemConfig.getString("EvilNameColor", "0000FF"));
+		FACTION_GUARDS_ENABLED = factionSystemConfig.getBoolean("EnableFactionGuards", true);
+		FACTION_RESPAWN_AT_BASE = factionSystemConfig.getBoolean("RespawnAtFactionBase", true);
+		FACTION_AUTO_NOBLESS = factionSystemConfig.getBoolean("FactionAutoNobless", false);
+		FACTION_SPECIFIC_CHAT = factionSystemConfig.getBoolean("EnableFactionChat", true);
+		FACTION_BALANCE_ONLINE_PLAYERS = factionSystemConfig.getBoolean("BalanceOnlinePlayers", true);
+		FACTION_BALANCE_PLAYER_EXCEED_LIMIT = factionSystemConfig.getInt("BalancePlayerExceedLimit", 20);
 	}
 	
 	public static void loadMerchantZeroPriceConfig()
@@ -2871,6 +2915,7 @@ public class Config
 			loadChampionConfig();
 			loadAutoPotionsConfig();
 			loadCustomMailManagerConfig();
+			loadFactionSystemConfig();
 			loadMerchantZeroPriceConfig();
 			loadRandomSpawnsConfig();
 			loadWeddingConfig();

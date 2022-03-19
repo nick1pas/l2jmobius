@@ -1797,6 +1797,20 @@ public class Clan
 			return false;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if (player.isGood() && target.isEvil())
+			{
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				return false;
+			}
+			if (player.isEvil() && target.isGood())
+			{
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				return false;
+			}
+		}
+		
 		if (_charPenaltyExpiryTime > Chronos.currentTimeMillis())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER);
@@ -1884,6 +1898,20 @@ public class Clan
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
 			return false;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if (player.isGood() && target.isEvil())
+			{
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				return false;
+			}
+			if (player.isEvil() && target.isGood())
+			{
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				return false;
+			}
 		}
 		
 		if (target.getClan() == null)

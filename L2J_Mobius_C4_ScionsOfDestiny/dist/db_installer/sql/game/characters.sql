@@ -71,6 +71,7 @@ CREATE TABLE IF NOT EXISTS characters (
   power_grade decimal(11,0) DEFAULT NULL,
   nobless decimal(1,0) NOT NULL DEFAULT 0,
   subpledge int(1) NOT NULL DEFAULT 0,
+  faction int(1) NOT NULL DEFAULT 0,
   last_recom_date decimal(20,0) NOT NULL DEFAULT 0,
   lvl_joined_academy int(1) NOT NULL DEFAULT 0,
   apprentice int(1) NOT NULL DEFAULT 0,

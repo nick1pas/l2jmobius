@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
@@ -124,10 +125,12 @@ public abstract class Playable extends Creature
 		{
 			return false; // Target is null
 		}
+		
 		if (target == this)
 		{
 			return false; // Target is self
 		}
+		
 		if (!(target instanceof Playable))
 		{
 			return false; // Target is not a PlayableInstance
@@ -147,6 +150,7 @@ public abstract class Playable extends Creature
 		{
 			return false; // Active player is null
 		}
+		
 		if (player.getKarma() != 0)
 		{
 			return false; // Active player has karma
@@ -166,15 +170,23 @@ public abstract class Playable extends Creature
 		{
 			return false; // Target player is null
 		}
+		
 		if (targetPlayer == this)
 		{
 			return false; // Target player is self
 		}
+		
 		if (targetPlayer.getKarma() != 0)
 		{
 			return false; // Target player has karma
 		}
+		
 		if (targetPlayer.getPvpFlag() == 0)
+		{
+			return false;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && ((player.isGood() && targetPlayer.isEvil()) || (player.isEvil() && targetPlayer.isGood())))
 		{
 			return false;
 		}

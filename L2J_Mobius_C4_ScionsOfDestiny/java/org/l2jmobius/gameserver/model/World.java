@@ -25,6 +25,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
@@ -64,6 +65,10 @@ public class World
 	
 	/** HashMap(String Player name, Player) containing all the players in game. */
 	private static Map<String, Player> _allPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Good players in game. */
+	private static final Map<Integer, Player> _allGoodPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Evil players in game. */
+	private static final Map<Integer, Player> _allEvilPlayers = new ConcurrentHashMap<>();
 	
 	/** WorldObjectHashMap(WorldObject) containing all visible objects. */
 	private static final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
@@ -157,6 +162,28 @@ public class World
 	public Collection<Player> getAllPlayers()
 	{
 		return _allPlayers.values();
+	}
+	
+	public Collection<Player> getAllGoodPlayers()
+	{
+		return _allGoodPlayers.values();
+	}
+	
+	public Collection<Player> getAllEvilPlayers()
+	{
+		return _allEvilPlayers.values();
+	}
+	
+	public static void addFactionPlayerToWorld(Player player)
+	{
+		if (player.isGood())
+		{
+			_allGoodPlayers.put(player.getObjectId(), player);
+		}
+		else if (player.isEvil())
+		{
+			_allEvilPlayers.put(player.getObjectId(), player);
+		}
 	}
 	
 	/**
@@ -323,9 +350,11 @@ public class World
 				return;
 			}
 			
-			synchronized (_allPlayers)
+			_allPlayers.put(player.getName().toLowerCase(), player);
+			
+			if (Config.FACTION_SYSTEM_ENABLED)
 			{
-				_allPlayers.put(player.getName().toLowerCase(), player);
+				addFactionPlayerToWorld(player);
 			}
 		}
 		
@@ -373,6 +402,18 @@ public class World
 		if ((player != null) && !player.isTeleporting())
 		{
 			_allPlayers.remove(player.getName().toLowerCase());
+			
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if (player.isGood())
+				{
+					_allGoodPlayers.remove(player.getObjectId());
+				}
+				else if (player.isEvil())
+				{
+					_allEvilPlayers.remove(player.getObjectId());
+				}
+			}
 		}
 	}
 	

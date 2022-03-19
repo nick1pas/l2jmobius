@@ -284,6 +284,27 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new CreatureSay(0, ChatType.WHISPER, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
 		}
 		
+		// Faction System
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			if (player.isGood())
+			{
+				player.getAppearance().setNameColor(Config.FACTION_GOOD_NAME_COLOR);
+				player.getAppearance().setTitleColor(Config.FACTION_GOOD_NAME_COLOR);
+				player.sendMessage("Welcome " + player.getName() + ", you are fighting for the " + Config.FACTION_GOOD_TEAM_NAME + " faction.");
+				player.sendPacket(new ExShowScreenMessage("Welcome " + player.getName() + ", you are fighting for the " + Config.FACTION_GOOD_TEAM_NAME + " faction.", 10000));
+				player.broadcastUserInfo(); // for seeing self name color
+			}
+			else if (player.isEvil())
+			{
+				player.getAppearance().setNameColor(Config.FACTION_EVIL_NAME_COLOR);
+				player.getAppearance().setTitleColor(Config.FACTION_EVIL_NAME_COLOR);
+				player.sendMessage("Welcome " + player.getName() + ", you are fighting for the " + Config.FACTION_EVIL_TEAM_NAME + " faction.");
+				player.sendPacket(new ExShowScreenMessage("Welcome " + player.getName() + ", you are fighting for the " + Config.FACTION_EVIL_TEAM_NAME + " faction.", 10000));
+				player.broadcastUserInfo(); // for seeing self name color
+			}
+		}
+		
 		loadTutorial(player);
 		
 		// Check for crowns

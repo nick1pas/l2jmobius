@@ -21,6 +21,8 @@ import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
@@ -50,19 +52,21 @@ public class GuardKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		// Set home location of the GuardInstance (if not already done)
+		// Set home location of the Guard (if not already done)
 		if (getActiveChar().getHomeX() == 0)
 		{
 			getActiveChar().getHomeLocation();
 		}
 		
-		if (object instanceof Player)
+		if (object instanceof Playable)
 		{
-			// Check if the object added is a Player that owns Karma
-			final Player player = (Player) object;
+			// Check if the object added is a Player that owns Karma.
+			final Player player = object.getActingPlayer();
 			
-			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
-			if ((player.getKarma() > 0) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+			// Set the Guard Intention to AI_INTENTION_ACTIVE
+			if (((player.getKarma() > 0) //
+				|| (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && Config.FACTION_EVIL_TEAM_NAME.equals(((Npc) getActiveChar()).getTemplate().getFactionId())) || (player.isEvil() && Config.FACTION_GOOD_TEAM_NAME.equals(((Npc) getActiveChar()).getTemplate().getFactionId()))))) //
+				&& (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 			{
 				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			}
@@ -72,7 +76,7 @@ public class GuardKnownList extends AttackableKnownList
 			// Check if the object added is an aggressive Monster
 			final Monster mob = (Monster) object;
 			
-			// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
+			// Set the Guard Intention to AI_INTENTION_ACTIVE
 			if (mob.isAggressive() && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 			{
 				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
@@ -90,10 +94,10 @@ public class GuardKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		// Check if the _aggroList of the GuardInstance is Empty
+		// Check if the _aggroList of the Guard is Empty
 		if (getActiveChar().noTarget())
 		{
-			// Set the GuardInstance to AI_INTENTION_IDLE
+			// Set the Guard to AI_INTENTION_IDLE
 			final CreatureAI ai = getActiveChar().getAI();
 			if (ai != null)
 			{

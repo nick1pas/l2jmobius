@@ -231,6 +231,10 @@ public class CharacterCreate implements IClientIncomingPacket
 		{
 			newChar.setXYZInvisible(Config.SPAWN_X, Config.SPAWN_Y, Config.SPAWN_Z);
 		}
+		else if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			newChar.setXYZInvisible(Config.FACTION_STARTING_LOCATION.getX(), Config.FACTION_STARTING_LOCATION.getY(), Config.FACTION_STARTING_LOCATION.getZ());
+		}
 		else
 		{
 			newChar.setXYZInvisible(template.getSpawnX(), template.getSpawnY(), template.getSpawnZ());

@@ -246,8 +246,8 @@ import org.l2jmobius.gameserver.util.Util;
 public class Player extends Playable
 {
 	/** SQL queries */
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,str=?,con=?,dex=?,_int=?,men=?,wit=?,face=?,hairStyle=?,hairColor=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,maxload=?,race=?,classid=?,deletetime=?,title=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,punish_level=?,punish_timer=?,newbie=?,nobless=?,power_grade=?,subpledge=?,last_recom_date=?,lvl_joined_academy=?,apprentice=?,sponsor=?,varka_ketra_ally=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,pc_point=?,name_color=?,title_color=?,aio=?,aio_end=? WHERE charId=?";
-	private static final String RESTORE_CHARACTER = "SELECT account_name, charId, char_name, level, maxHp, curHp, maxCp, curCp, maxMp, curMp, acc, crit, evasion, mAtk, mDef, mSpd, pAtk, pDef, pSpd, runSpd, walkSpd, str, con, dex, _int, men, wit, face, hairStyle, hairColor, sex, heading, x, y, z, movement_multiplier, attack_speed_multiplier, colRad, colHeight, exp, expBeforeDeath, sp, karma, pvpkills, pkkills, clanid, maxload, race, classid, deletetime, cancraft, title, rec_have, rec_left, accesslevel, online, char_slot, lastAccess, clan_privs, wantspeace, base_class, onlinetime, isin7sdungeon,punish_level,punish_timer,newbie, nobless, power_grade, subpledge, last_recom_date, lvl_joined_academy, apprentice, sponsor, varka_ketra_ally,clan_join_expiry_time,clan_create_expiry_time,death_penalty_level,pc_point,name_color,title_color,first_log,aio,aio_end FROM characters WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,str=?,con=?,dex=?,_int=?,men=?,wit=?,face=?,hairStyle=?,hairColor=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,maxload=?,race=?,classid=?,deletetime=?,title=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,punish_level=?,punish_timer=?,newbie=?,nobless=?,power_grade=?,subpledge=?,faction=?,last_recom_date=?,lvl_joined_academy=?,apprentice=?,sponsor=?,varka_ketra_ally=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,pc_point=?,name_color=?,title_color=?,aio=?,aio_end=? WHERE charId=?";
+	private static final String RESTORE_CHARACTER = "SELECT account_name, charId, char_name, level, maxHp, curHp, maxCp, curCp, maxMp, curMp, acc, crit, evasion, mAtk, mDef, mSpd, pAtk, pDef, pSpd, runSpd, walkSpd, str, con, dex, _int, men, wit, face, hairStyle, hairColor, sex, heading, x, y, z, movement_multiplier, attack_speed_multiplier, colRad, colHeight, exp, expBeforeDeath, sp, karma, pvpkills, pkkills, clanid, maxload, race, classid, deletetime, cancraft, title, rec_have, rec_left, accesslevel, online, char_slot, lastAccess, clan_privs, wantspeace, base_class, onlinetime, isin7sdungeon,punish_level,punish_timer,newbie, nobless, power_grade, subpledge, faction, last_recom_date, lvl_joined_academy, apprentice, sponsor, varka_ketra_ally,clan_join_expiry_time,clan_create_expiry_time,death_penalty_level,pc_point,name_color,title_color,first_log,aio,aio_end FROM characters WHERE charId=?";
 	private static final String RESTORE_SKILLS_FOR_CHAR_ALT_SUBCLASS = "SELECT skill_id,skill_level FROM character_skills WHERE char_obj_id=? ORDER BY (skill_level+0)";
 	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,level,class_index FROM character_subclasses WHERE char_obj_id=? ORDER BY class_index ASC";
 	private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (char_obj_id,class_id,exp,sp,level,class_index) VALUES (?,?,?,?,?,?)";
@@ -363,6 +363,8 @@ public class Player extends Playable
 	private boolean _noble = false;
 	private boolean _hero = false;
 	private boolean _donator = false;
+	private boolean _isGood = false;
+	private boolean _isEvil = false;
 	private Folk _lastFolkNpc = null;
 	private int _questNpcObject = 0;
 	private int _partyFind = 0;
@@ -4728,7 +4730,7 @@ public class Player extends Playable
 	 */
 	public void updatePvPColor(int pvpKillAmount)
 	{
-		if (Config.PVP_COLOR_SYSTEM_ENABLED)
+		if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED) // Faction system uses title colors.
 		{
 			// Check if the character has GM access and if so, let them be.
 			if (isGM())
@@ -5974,7 +5976,18 @@ public class Player extends Playable
 				}
 				else if (targetPlayer.getPvpFlag() == 0) // Target player doesn't have karma
 				{
-					increasePkKillsAndKarma(targetPlayer.getLevel());
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						if ((_isGood && targetPlayer.isGood()) || (_isEvil && targetPlayer.isEvil()))
+						{
+							increasePkKillsAndKarma(targetPlayer.getLevel());
+						}
+					}
+					else
+					{
+						increasePkKillsAndKarma(targetPlayer.getLevel());
+					}
+					
 					if ((target instanceof Player) && Config.ANNOUNCE_PK_KILL)
 					{
 						AnnouncementsTable.getInstance().announceToAll("Player " + getName() + " has assassinated Player " + target.getName());
@@ -6344,6 +6357,11 @@ public class Player extends Playable
 		}
 		
 		if (isOnEvent())
+		{
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && targetPlayer.isEvil()) || (isEvil() && targetPlayer.isGood())))
 		{
 			return;
 		}
@@ -7611,6 +7629,17 @@ public class Player extends Playable
 				player.setOnlineTime(rset.getLong("onlinetime"));
 				player.setNewbie(rset.getInt("newbie") == 1);
 				player.setNoble(rset.getInt("nobless") == 1);
+				
+				final int factionId = rset.getInt("faction");
+				if (factionId == 1)
+				{
+					player.setGood();
+				}
+				if (factionId == 2)
+				{
+					player.setEvil();
+				}
+				
 				player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 				player.setFirstLog(rset.getInt("first_log"));
 				player._pcBangPoints = rset.getInt("pc_point");
@@ -8170,21 +8199,31 @@ public class Player extends Playable
 			statement.setInt(45, isNoble() ? 1 : 0);
 			statement.setLong(46, getPowerGrade());
 			statement.setInt(47, getPledgeType());
-			statement.setLong(48, getLastRecomUpdate());
-			statement.setInt(49, getLvlJoinedAcademy());
-			statement.setLong(50, getApprentice());
-			statement.setLong(51, getSponsor());
-			statement.setInt(52, getAllianceWithVarkaKetra());
-			statement.setLong(53, getClanJoinExpiryTime());
-			statement.setLong(54, getClanCreateExpiryTime());
-			statement.setString(55, getName());
-			statement.setLong(56, getDeathPenaltyBuffLevel());
-			statement.setInt(57, getPcBangScore());
-			statement.setString(58, StringToHex(Integer.toHexString(_originalNameColorOffline).toUpperCase()));
-			statement.setString(59, StringToHex(Integer.toHexString(getAppearance().getTitleColor()).toUpperCase()));
-			statement.setInt(60, isAio() ? 1 : 0);
-			statement.setLong(61, getAioEndTime());
-			statement.setInt(62, getObjectId());
+			int factionId = 0;
+			if (_isGood)
+			{
+				factionId = 1;
+			}
+			if (_isEvil)
+			{
+				factionId = 2;
+			}
+			statement.setInt(48, factionId);
+			statement.setLong(49, getLastRecomUpdate());
+			statement.setInt(50, getLvlJoinedAcademy());
+			statement.setLong(51, getApprentice());
+			statement.setLong(52, getSponsor());
+			statement.setInt(53, getAllianceWithVarkaKetra());
+			statement.setLong(54, getClanJoinExpiryTime());
+			statement.setLong(55, getClanCreateExpiryTime());
+			statement.setString(56, getName());
+			statement.setLong(57, getDeathPenaltyBuffLevel());
+			statement.setInt(58, getPcBangScore());
+			statement.setString(59, StringToHex(Integer.toHexString(_originalNameColorOffline).toUpperCase()));
+			statement.setString(60, StringToHex(Integer.toHexString(getAppearance().getTitleColor()).toUpperCase()));
+			statement.setInt(61, isAio() ? 1 : 0);
+			statement.setLong(62, getAioEndTime());
+			statement.setInt(63, getObjectId());
 			statement.execute();
 			statement.close();
 		}
@@ -9174,6 +9213,7 @@ public class Player extends Playable
 			{
 				return true;
 			}
+			
 			// Check if the Player is in an arena or a siege area
 			if (isInsideZone(ZoneId.PVP) && ((Player) attacker).isInsideZone(ZoneId.PVP))
 			{
@@ -9219,6 +9259,15 @@ public class Player extends Playable
 					return true;
 				}
 			}
+			
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				final Player player = attacker.getActingPlayer();
+				if ((player != null) && ((isGood() && player.isEvil()) || (isEvil() && player.isGood())))
+				{
+					return true;
+				}
+			}
 		}
 		else if (attacker instanceof SiegeGuard)
 		{
@@ -9234,6 +9283,13 @@ public class Player extends Playable
 			{
 				final FortSiege fortsiege = FortSiegeManager.getInstance().getSiege(this);
 				return (fortsiege != null) && fortsiege.checkIsAttacker(getClan());
+			}
+		}
+		else if (attacker instanceof Guard)
+		{
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((_isGood && Config.FACTION_EVIL_TEAM_NAME.equals(((Npc) attacker).getTemplate().getFactionId())) || (_isEvil && Config.FACTION_GOOD_TEAM_NAME.equals(((Npc) attacker).getTemplate().getFactionId()))))
+			{
+				return true;
 			}
 		}
 		
@@ -9816,12 +9872,15 @@ public class Player extends Playable
 				if (!checkPvpSkill(target, skill) && !getAccessLevel().allowPeaceAttack() //
 					&& ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */)))
 				{
-					// Send a System Message to the Player
-					sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
-					
-					// Send a Server->Client packet ActionFailed to the Player
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
+					if (!Config.FACTION_SYSTEM_ENABLED || ((!_isGood || !target.getActingPlayer().isEvil()) && (!_isEvil || !target.getActingPlayer().isGood())))
+					{
+						// Send a System Message to the Player
+						sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
+						
+						// Send a Server->Client packet ActionFailed to the Player
+						sendPacket(ActionFailed.STATIC_PACKET);
+						return;
+					}
 				}
 			}
 		}
@@ -10999,6 +11058,28 @@ public class Player extends Playable
 	public boolean isDonator()
 	{
 		return _donator;
+	}
+	
+	public boolean isGood()
+	{
+		return _isGood;
+	}
+	
+	public boolean isEvil()
+	{
+		return _isEvil;
+	}
+	
+	public void setGood()
+	{
+		_isGood = true;
+		_isEvil = false;
+	}
+	
+	public void setEvil()
+	{
+		_isGood = false;
+		_isEvil = true;
 	}
 	
 	/**
@@ -15499,12 +15580,6 @@ public class Player extends Playable
 		}
 	}
 	
-	@Override
-	public Player getActingPlayer()
-	{
-		return this;
-	}
-	
 	public void checkItemRestriction()
 	{
 		for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
@@ -15668,6 +15743,12 @@ public class Player extends Playable
 			return;
 		}
 		_currentPetSkill = new SkillUseHolder(currentSkill, ctrlPressed, shiftPressed);
+	}
+	
+	@Override
+	public Player getActingPlayer()
+	{
+		return this;
 	}
 	
 	@Override

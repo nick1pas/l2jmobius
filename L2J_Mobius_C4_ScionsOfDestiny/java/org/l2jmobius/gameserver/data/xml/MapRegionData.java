@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.Race;
@@ -233,6 +234,18 @@ public class MapRegionData implements IXmlReader
 		if (arena != null)
 		{
 			return arena.getSpawnLoc();
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_RESPAWN_AT_BASE)
+		{
+			if (creature.getActingPlayer().isGood())
+			{
+				return Config.FACTION_GOOD_BASE_LOCATION;
+			}
+			if (creature.getActingPlayer().isEvil())
+			{
+				return Config.FACTION_EVIL_BASE_LOCATION;
+			}
 		}
 		
 		// Retrieve a random spawn location of the nearest town.

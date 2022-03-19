@@ -142,6 +142,12 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED && !player.isGood() && !player.isEvil())
+		{
+			player.sendMessage("You cannot use this item while you are neutral.");
+			return;
+		}
+		
 		// Check if this is a blessed scroll, if it is then shorten the cast time.
 		final int itemId = item.getItemId();
 		final SystemMessage sm3 = new SystemMessage(SystemMessageId.USE_S1);

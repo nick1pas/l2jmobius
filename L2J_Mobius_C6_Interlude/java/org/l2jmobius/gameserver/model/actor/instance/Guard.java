@@ -217,8 +217,7 @@ public class Guard extends Attackable
 			// Set the Player Intention to AI_INTENTION_ATTACK
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
-		else // Calculate the distance between the Player and the Npc
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the Player and the Npc
 		{
 			// Set the Player Intention to AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

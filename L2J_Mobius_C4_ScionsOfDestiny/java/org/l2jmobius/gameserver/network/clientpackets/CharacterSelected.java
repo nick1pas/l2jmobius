@@ -16,13 +16,16 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 @SuppressWarnings("unused")
 public class CharacterSelected implements IClientIncomingPacket
@@ -77,6 +80,28 @@ public class CharacterSelected implements IClientIncomingPacket
 					{
 						cha.deleteMe();
 						return;
+					}
+					
+					if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
+					{
+						if (cha.isGood() && (World.getInstance().getAllGoodPlayers().size() >= (World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage(0);
+							msg.setFile("data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
+						if (cha.isEvil() && (World.getInstance().getAllEvilPlayers().size() >= (World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage(0);
+							msg.setFile("data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
 					}
 					
 					cha.setClient(client);

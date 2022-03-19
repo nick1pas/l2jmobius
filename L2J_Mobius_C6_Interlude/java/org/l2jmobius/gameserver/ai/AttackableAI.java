@@ -89,7 +89,7 @@ public class AttackableAI extends CreatureAI
 	}
 	
 	/**
-	 * <b><u>Actor is a GuardInstance</u>:</b>
+	 * <b><u>Actor is a Guard</u>:</b>
 	 * <ul>
 	 * <li>The target isn't a Folk or a Door</li>
 	 * <li>The target isn't dead, isn't invulnerable, isn't in silent moving mode AND too far (>100)</li>
@@ -233,18 +233,15 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		// Check if the actor is a GuardInstance
+		// Check if the actor is a Guard
 		if (_actor instanceof Guard)
 		{
-			// Check if the Player target has karma (=PK)
-			if ((target instanceof Player) && (((Player) target).getKarma() > 0))
+			if ((target instanceof Playable) && ((target.getActingPlayer().getKarma() > 0) // Check if the Player target has karma (=PK)
+				|| (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((target.getActingPlayer().isGood() && Config.FACTION_EVIL_TEAM_NAME.equals(((Npc) getActiveChar()).getTemplate().getFactionId())) || (target.getActingPlayer().isEvil() && Config.FACTION_GOOD_TEAM_NAME.equals(((Npc) getActiveChar()).getTemplate().getFactionId()))))))
 			{
-				// Los Check
 				return GeoEngine.getInstance().canSeeTarget(me, target);
 			}
 			
-			// if (target instanceof Summon)
-			// return ((Summon)target).getKarma() > 0;
 			// Check if the Monster target is aggressive
 			if (target instanceof Monster)
 			{
@@ -375,7 +372,7 @@ public class AttackableAI extends CreatureAI
 	 * <ul>
 	 * <li>Update every 1s the _globalAggro counter to come close to 0</li>
 	 * <li>If the actor is Aggressive and can attack, add all autoAttackable Creature in its Aggro Range to its _aggroList, chose a target and order to attack it</li>
-	 * <li>If the actor is a GuardInstance that can't attack, order to it to return to its home location</li>
+	 * <li>If the actor is a Guard that can't attack, order to it to return to its home location</li>
 	 * <li>If the actor is a Monster that can't attack, order to it to random walk (1/100)</li>
 	 * </ul>
 	 */
@@ -481,10 +478,10 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		// Check if the actor is a GuardInstance
+		// Check if the actor is a Guard
 		if (_actor instanceof Guard)
 		{
-			// Order to the GuardInstance to return to its home location because there's no target to attack
+			// Order to the Guard to return to its home location because there's no target to attack
 			((Guard) _actor).returnHome();
 		}
 		
@@ -1073,7 +1070,7 @@ public class AttackableAI extends CreatureAI
 	 * <b><u>Actions</u>:</b>
 	 * <ul>
 	 * <li>Add the target to the actor _aggroList or update hate if already present</li>
-	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is GuardInstance check if it isn't too far from its home location)</li>
+	 * <li>Set the actor Intention to AI_INTENTION_ATTACK (if actor is Guard check if it isn't too far from its home location)</li>
 	 * </ul>
 	 * @param target the Creature that attacks
 	 * @param aggro The value of hate to add to the actor against the target
