@@ -115,13 +115,11 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DailyTaskManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
-import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
@@ -129,6 +127,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -304,11 +303,6 @@ public class GameServer
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
 		VipManager.getInstance();
-		
-		if (Config.FACTION_SYSTEM_ENABLED)
-		{
-			FactionManager.getInstance();
-		}
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{

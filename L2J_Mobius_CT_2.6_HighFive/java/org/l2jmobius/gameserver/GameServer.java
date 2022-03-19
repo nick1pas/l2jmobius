@@ -107,7 +107,6 @@ import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
-import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -280,11 +279,6 @@ public class GameServer
 		RaidBossPointsManager.getInstance();
 		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
-		
-		if (Config.FACTION_SYSTEM_ENABLED)
-		{
-			FactionManager.getInstance();
-		}
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{

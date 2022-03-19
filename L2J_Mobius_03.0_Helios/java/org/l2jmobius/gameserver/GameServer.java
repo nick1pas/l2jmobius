@@ -119,7 +119,6 @@ import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DailyTaskManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
-import org.l2jmobius.gameserver.instancemanager.FactionManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -303,11 +302,6 @@ public class GameServer
 		CharSummonTable.getInstance().init();
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
-		
-		if (Config.FACTION_SYSTEM_ENABLED)
-		{
-			FactionManager.getInstance();
-		}
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{
