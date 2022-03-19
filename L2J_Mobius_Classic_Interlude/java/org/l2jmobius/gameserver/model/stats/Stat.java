@@ -58,6 +58,7 @@ import org.l2jmobius.gameserver.util.MathUtil;
 public enum Stat
 {
 	// HP, MP & CP
+	HP_LIMIT("hpLimit"),
 	MAX_HP("maxHp", new MaxHpFinalizer()),
 	MAX_MP("maxMp", new MaxMpFinalizer()),
 	MAX_CP("maxCp", new MaxCpFinalizer()),
@@ -87,6 +88,7 @@ public enum Stat
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	HATE_ATTACK("attackHate"),
 	REAR_DAMAGE_RATE("rearDamage"),
+	DRAGON_WEAPON_DEFENCE("dragonWeaponDefence"),
 	AUTO_ATTACK_DAMAGE_BONUS("autoAttackDamageBonus"),
 	
 	// PVP BONUS

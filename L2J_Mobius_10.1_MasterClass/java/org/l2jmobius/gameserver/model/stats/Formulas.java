@@ -1612,7 +1612,8 @@ public class Formulas
 			
 			// Dragon weapon defence stat.
 			final double dragonDefense;
-			if (attackerPlayer.isDragonWeaponEquipped())
+			final Weapon weapon = attacker.getActiveWeaponItem();
+			if ((weapon != null) && weapon.isDragonWeapon())
 			{
 				dragonDefense = target.getStat().getMul(Stat.DRAGON_WEAPON_DEFENCE, 1);
 			}

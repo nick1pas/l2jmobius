@@ -192,6 +192,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HpCpHeal", HpCpHeal::new);
 		EffectHandler.getInstance().registerHandler("HpCpHealCritical", HpCpHealCritical::new);
 		EffectHandler.getInstance().registerHandler("HpDrain", HpDrain::new);
+		EffectHandler.getInstance().registerHandler("HpLimit", HpLimit::new);
 		EffectHandler.getInstance().registerHandler("HpRegen", HpRegen::new);
 		EffectHandler.getInstance().registerHandler("HpToOwner", HpToOwner::new);
 		EffectHandler.getInstance().registerHandler("Ignition", Ignition::new);

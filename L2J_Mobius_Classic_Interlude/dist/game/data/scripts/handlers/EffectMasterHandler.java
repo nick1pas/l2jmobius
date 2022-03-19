@@ -133,6 +133,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DispelBySlotMyself", DispelBySlotMyself::new);
 		EffectHandler.getInstance().registerHandler("DispelBySlotProbability", DispelBySlotProbability::new);
 		EffectHandler.getInstance().registerHandler("DoubleCast", DoubleCast::new);
+		EffectHandler.getInstance().registerHandler("DragonWeaponDefence", DragonWeaponDefence::new);
 		EffectHandler.getInstance().registerHandler("DuelistFury", DuelistFury::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);
 		EffectHandler.getInstance().registerHandler("EnchantRate", EnchantRate::new);
@@ -181,6 +182,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HpCpHeal", HpCpHeal::new);
 		EffectHandler.getInstance().registerHandler("HpCpHealCritical", HpCpHealCritical::new);
 		EffectHandler.getInstance().registerHandler("HpDrain", HpDrain::new);
+		EffectHandler.getInstance().registerHandler("HpLimit", HpLimit::new);
 		EffectHandler.getInstance().registerHandler("HpRegen", HpRegen::new);
 		EffectHandler.getInstance().registerHandler("HpToOwner", HpToOwner::new);
 		EffectHandler.getInstance().registerHandler("IgnoreDeath", IgnoreDeath::new);

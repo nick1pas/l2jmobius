@@ -219,6 +219,7 @@ public class Config
 	public static int MAX_PATK_SPEED;
 	public static int MAX_MATK_SPEED;
 	public static int MAX_EVASION;
+	public static int MAX_HP;
 	public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
 	public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
 	public static long MAX_SP;
@@ -1783,6 +1784,7 @@ public class Config
 			MAX_PATK_SPEED = characterConfig.getInt("MaxPAtkSpeed", 1500);
 			MAX_MATK_SPEED = characterConfig.getInt("MaxMAtkSpeed", 1999);
 			MAX_EVASION = characterConfig.getInt("MaxEvasion", 250);
+			MAX_HP = characterConfig.getInt("MaxHP", 150000);
 			MIN_ABNORMAL_STATE_SUCCESS_RATE = characterConfig.getInt("MinAbnormalStateSuccessRate", 10);
 			MAX_ABNORMAL_STATE_SUCCESS_RATE = characterConfig.getInt("MaxAbnormalStateSuccessRate", 90);
 			MAX_SP = characterConfig.getLong("MaxSp", 50000000000L) >= 0 ? characterConfig.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;

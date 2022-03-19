@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.OptionalDouble;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -62,30 +63,64 @@ public class MaxHpFinalizer implements IStatFunction
 	
 	private static double defaultValue(Creature creature, Stat stat, double baseValue)
 	{
-		final double mul = creature.getStat().getMul(stat);
-		final double add = creature.getStat().getAdd(stat);
-		double addItem = 0;
+		double mul = creature.getStat().getMul(stat);
+		double add = creature.getStat().getAdd(stat);
+		
+		double maxHp = (mul * baseValue) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
+		final boolean isPlayer = creature.isPlayer();
 		
 		final Inventory inv = creature.getInventory();
-		if (inv != null)
+		if (inv == null)
 		{
-			// Add maxHP bonus from items
-			for (Item item : inv.getPaperdollItems())
+			if (isPlayer)
 			{
-				addItem += item.getTemplate().getStats(stat, 0);
-				
-				// Apply enchanted item bonus HP
-				if (item.isArmor() && item.isEnchanted())
+				if (creature.getActingPlayer().isCursedWeaponEquipped())
 				{
-					final int bodyPart = item.getTemplate().getBodyPart();
-					if ((bodyPart != ItemTemplate.SLOT_NECK) && (bodyPart != ItemTemplate.SLOT_LR_EAR) && (bodyPart != ItemTemplate.SLOT_LR_FINGER))
-					{
-						addItem += EnchantItemHPBonusData.getInstance().getHPBonus(item);
-					}
+					return Double.MAX_VALUE;
 				}
+				
+				mul = creature.getStat().getMul(Stat.HP_LIMIT);
+				add = creature.getStat().getAdd(Stat.HP_LIMIT);
+				return Math.min(maxHp, (Config.MAX_HP * mul) + add);
+			}
+			return maxHp;
+		}
+		
+		boolean shouldLiftLimit = false;
+		
+		// Add maxHP bonus from items
+		for (Item item : inv.getPaperdollItems())
+		{
+			maxHp += item.getTemplate().getStats(stat, 0);
+			
+			// Apply enchanted item bonus HP
+			if (item.isArmor() && item.isEnchanted())
+			{
+				final int bodyPart = item.getTemplate().getBodyPart();
+				if ((bodyPart != ItemTemplate.SLOT_NECK) && (bodyPart != ItemTemplate.SLOT_LR_EAR) && (bodyPart != ItemTemplate.SLOT_LR_FINGER))
+				{
+					maxHp += EnchantItemHPBonusData.getInstance().getHPBonus(item);
+				}
+			}
+			
+			if (item.isWeapon() && item.getWeaponItem().isDragonWeapon())
+			{
+				shouldLiftLimit = true;
 			}
 		}
 		
-		return (mul * baseValue) + add + addItem + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
+		final double hpLimit;
+		if (isPlayer && !shouldLiftLimit && !creature.getActingPlayer().isCursedWeaponEquipped())
+		{
+			mul = creature.getStat().getMul(Stat.HP_LIMIT);
+			add = creature.getStat().getAdd(Stat.HP_LIMIT);
+			hpLimit = (Config.MAX_HP * mul) + add;
+		}
+		else
+		{
+			hpLimit = Double.MAX_VALUE;
+		}
+		
+		return Math.min(maxHp, hpLimit);
 	}
 }

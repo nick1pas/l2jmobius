@@ -38,6 +38,7 @@ public class Weapon extends ItemTemplate
 {
 	private WeaponType _type;
 	private boolean _isMagicWeapon;
+	private boolean _isDragonWeapon;
 	private int _soulShotCount;
 	private int _spiritShotCount;
 	private int _mpConsume;
@@ -73,6 +74,7 @@ public class Weapon extends ItemTemplate
 		_type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
 		_type2 = ItemTemplate.TYPE2_WEAPON;
 		_isMagicWeapon = set.getBoolean("is_magic_weapon", false);
+		_isDragonWeapon = set.getBoolean("is_dragon_weapon", false);
 		_soulShotCount = set.getInt("soulshots", 0);
 		_spiritShotCount = set.getInt("spiritshots", 0);
 		_mpConsume = set.getInt("mp_consume", 0);
@@ -136,6 +138,14 @@ public class Weapon extends ItemTemplate
 	public boolean isMagicWeapon()
 	{
 		return _isMagicWeapon;
+	}
+	
+	/**
+	 * @return {@code true} if the weapon is a dragon weapon, {@code false} otherwise.
+	 */
+	public boolean isDragonWeapon()
+	{
+		return _isDragonWeapon;
 	}
 	
 	/**

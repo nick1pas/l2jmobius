@@ -58,6 +58,7 @@ import org.l2jmobius.gameserver.util.MathUtil;
 public enum Stat
 {
 	// HP, MP & CP
+	HP_LIMIT("hpLimit"),
 	MAX_HP("maxHp", new MaxHpFinalizer()),
 	MAX_MP("maxMp", new MaxMpFinalizer()),
 	MAX_CP("maxCp", new MaxCpFinalizer()),
