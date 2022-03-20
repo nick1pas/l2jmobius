@@ -227,9 +227,9 @@ public class CharacterCreate implements IClientIncomingPacket
 			}
 		}
 		
-		if (Config.SPAWN_CHAR)
+		if (Config.CUSTOM_STARTING_LOC)
 		{
-			newChar.setXYZInvisible(Config.SPAWN_X, Config.SPAWN_Y, Config.SPAWN_Z);
+			newChar.setXYZInvisible(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);
 		}
 		else if (Config.FACTION_SYSTEM_ENABLED)
 		{

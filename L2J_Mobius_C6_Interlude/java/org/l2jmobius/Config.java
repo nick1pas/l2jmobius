@@ -111,6 +111,7 @@ public class Config
 	private static final String PC_BANG_POINT_CONFIG_FILE = "./config/custom/PcBang.ini";
 	private static final String PHYSICS_BALANCE_CONFIG_FILE = "./config/custom/PhysicsBalance.ini";
 	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
+	private static final String STARTING_LOCATION_CONFIG_FILE = "./config/custom/StartingLocation.ini";
 	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/Rebirth.ini";
 	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/Wedding.ini";
 	// login
@@ -587,6 +588,11 @@ public class Config
 	public static int BUFFER_MAX_SCHEMES;
 	public static int BUFFER_STATIC_BUFF_COST;
 	
+	public static boolean CUSTOM_STARTING_LOC;
+	public static int CUSTOM_STARTING_LOC_X;
+	public static int CUSTOM_STARTING_LOC_Y;
+	public static int CUSTOM_STARTING_LOC_Z;
+	
 	public static boolean OFFLINE_TRADE_ENABLE;
 	public static boolean OFFLINE_CRAFT_ENABLE;
 	public static boolean OFFLINE_SET_NAME_COLOR;
@@ -646,10 +652,6 @@ public class Config
 	public static boolean HERO_CUSTOM_ITEMS;
 	public static boolean ALLOW_CREATE_LEVEL;
 	public static int CHAR_CREATE_LEVEL;
-	public static boolean SPAWN_CHAR;
-	public static int SPAWN_X;
-	public static int SPAWN_Y;
-	public static int SPAWN_Z;
 	public static boolean ALLOW_HERO_SUBSKILL;
 	public static int HERO_COUNT;
 	public static int CRUMA_TOWER_LEVEL_RESTRICT;
@@ -1842,6 +1844,15 @@ public class Config
 		BUFFER_STATIC_BUFF_COST = shemeBufferConfig.getInt("BufferStaticCostPerBuff", -1);
 	}
 	
+	public static void loadStartingLocationConfig()
+	{
+		final PropertiesParser startingLocationConfig = new PropertiesParser(STARTING_LOCATION_CONFIG_FILE);
+		CUSTOM_STARTING_LOC = startingLocationConfig.getBoolean("CustomStartingLocation", false);
+		CUSTOM_STARTING_LOC_X = startingLocationConfig.getInt("CustomStartingLocX", 50821);
+		CUSTOM_STARTING_LOC_Y = startingLocationConfig.getInt("CustomStartingLocY", 186527);
+		CUSTOM_STARTING_LOC_Z = startingLocationConfig.getInt("CustomStartingLocZ", -3625);
+	}
+	
 	public static void loadOfflineConfig()
 	{
 		final PropertiesParser offlineConfig = new PropertiesParser(OFFLINE_CONFIG_FILE);
@@ -1912,10 +1923,6 @@ public class Config
 		HERO_CUSTOM_DAY = customServerConfig.getLong("HeroCustomDay", 0);
 		ALLOW_CREATE_LEVEL = customServerConfig.getBoolean("CustomStartingLvl", false);
 		CHAR_CREATE_LEVEL = customServerConfig.getInt("CharLvl", 80);
-		SPAWN_CHAR = customServerConfig.getBoolean("CustomSpawn", false);
-		SPAWN_X = customServerConfig.getInt("SpawnX", 50821);
-		SPAWN_Y = customServerConfig.getInt("SpawnY", 186527);
-		SPAWN_Z = customServerConfig.getInt("SpawnZ", -3625);
 		ALLOW_LOW_LEVEL_TRADE = customServerConfig.getBoolean("AllowLowLevelTrade", true);
 		ALLOW_HERO_SUBSKILL = customServerConfig.getBoolean("CustomHeroSubSkill", false);
 		HERO_COUNT = customServerConfig.getInt("HeroCount", 1);
@@ -2993,6 +3000,7 @@ public class Config
 			loadBankingConfig();
 			loadBossAnnouncementsConfig();
 			loadBufferConfig();
+			loadStartingLocationConfig();
 			loadPCBPointConfig();
 			loadOfflineConfig();
 			
