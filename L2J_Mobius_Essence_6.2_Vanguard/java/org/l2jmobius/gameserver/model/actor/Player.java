@@ -8257,7 +8257,13 @@ public class Player extends Playable
 			return null;
 		}
 		
-		return _hennaPoten[slot - 1].getHenna();
+		final HennaPoten poten = _hennaPoten[slot - 1];
+		if (poten == null)
+		{
+			return null;
+		}
+		
+		return poten.getHenna();
 	}
 	
 	/**
