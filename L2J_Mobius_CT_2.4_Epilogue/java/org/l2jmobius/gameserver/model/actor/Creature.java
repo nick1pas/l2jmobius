@@ -530,7 +530,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Custom boss announcements configuration.
 		if (this instanceof GrandBoss)
 		{
-			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
 			{
 				final String name = NpcData.getInstance().getTemplate(getId()).getName();
 				if (name != null)
@@ -540,7 +540,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
-		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
 		{
 			final String name = NpcData.getInstance().getTemplate(getId()).getName();
 			if (name != null)
@@ -2506,7 +2506,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Custom boss announcements configuration.
 		if (this instanceof GrandBoss)
 		{
-			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS))
+			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
 			{
 				final String name = NpcData.getInstance().getTemplate(getId()).getName();
 				if (name != null)
@@ -2516,7 +2516,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
-		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS))
+		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && ((getInstanceId() == 0) || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
 		{
 			final String name = NpcData.getInstance().getTemplate(getId()).getName();
 			if (name != null)
