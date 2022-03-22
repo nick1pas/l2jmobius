@@ -3087,10 +3087,14 @@ public class Clan implements IIdentifiable, INamable
 	
 	public void addExp(int objId, int value)
 	{
-		_exp += value;
-		broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
+		if ((_exp + value) < EXP_TABLE[EXP_TABLE.length - 1])
+		{
+			_exp += value;
+			broadcastToOnlineMembers(new ExPledgeV3Info(_exp, getRank(), getNotice(), isNoticeEnabled()));
+		}
 		
-		if (((EXP_TABLE[Math.max(0, getLevel() + 1)]) <= _exp))
+		final int nextLevel = getLevel() + 1;
+		if ((nextLevel < EXP_TABLE.length) && ((EXP_TABLE[Math.max(0, nextLevel)]) <= _exp))
 		{
 			changeLevel(_level + 1);
 		}
