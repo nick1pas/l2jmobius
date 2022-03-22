@@ -2,15 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="82200" name="Eva's Fortune Box" additionalName="Lv. 1" type="EtcItem">
 		<!-- A box imbued with the power of the Goddess of Water Eva. Double-click to obtain 1 useful item (excluding Eva's Silver Pack). -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -41,15 +39,13 @@
 	</item>
 	<item id="82201" name="Eva's Silver Pack" additionalName="Lv. 2" type="EtcItem">
 		<!-- A pack imbued with the power of the Goddess of Water Eva. Double-click to obtain 1 useful item (excluding Eva's Golden Pack). -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -87,15 +83,13 @@
 	</item>
 	<item id="82202" name="Eva's Golden Pack" additionalName="Lv. 3" type="EtcItem">
 		<!-- A shining Eva's golden pack. Double-click to obtain 1 rare item. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -280,7 +274,7 @@
 			</and>
 		</cond>
 		<skills>
-			<skill id="39776" level="1" /> <!-- Dignity of the Exalted Lv. 1 -->
+			<skill id="39776" level="1" /> <!-- Spellbook: Elements of the Exalted Lv. 1 -->
 		</skills>
 	</item>
 	<item id="82215" name="Fallen Angel's Earring Pack" type="EtcItem">
@@ -292,8 +286,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="82216" min="1" max="1" chance="100" /> <!-- Fallen Angel's Earring -->
@@ -302,7 +294,7 @@
 	</item>
 	<item id="82216" name="Fallen Angel's Earring" type="Armor">
 		<!-- Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. The item can be changed. <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. <Enhancing> To enhance this item enchanted to +6 a Fallen Angel's Earring Pack is needed. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -311,8 +303,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">171</stat>
@@ -320,7 +310,7 @@
 	</item>
 	<item id="82217" name="Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 1" type="Armor">
 		<!-- Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -1% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. <Enhancing> To enhance this item enchanted to +6 a Fallen Angel's Earring Pack is needed. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -329,8 +319,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="1" /> <!-- Craft Effect - Cooldown Decrease Lv. 1 -->
@@ -341,8 +329,7 @@
 	</item>
 	<item id="82218" name="Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 2" type="Armor">
 		<!-- Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -2% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. <Enhancing> To enhance this item enchanted to +6 a Fallen Angel's Earring Pack is needed. Can be augmented. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -351,8 +338,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="2" /> <!-- Craft Effect - Cooldown Decrease Lv. 2 -->
@@ -363,8 +348,7 @@
 	</item>
 	<item id="82219" name="Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 3" type="Armor">
 		<!-- Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -5% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. <Enhancing> To enhance this item enchanted to +6 a Fallen Angel's Earring Pack is needed. Can be augmented. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -373,8 +357,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="3" /> <!-- Craft Effect - Cooldown Decrease Lv. 3 -->
@@ -385,7 +367,7 @@
 	</item>
 	<item id="82220" name="Blessed Fallen Angel's Earring" type="Armor">
 		<!-- Blessed Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. The item can be changed. <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bless_bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -394,8 +376,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">171</stat>
@@ -403,7 +383,7 @@
 	</item>
 	<item id="82221" name="Blessed Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 1" type="Armor">
 		<!-- Blessed Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -1% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bless_bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -412,8 +392,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="1" /> <!-- Craft Effect - Cooldown Decrease Lv. 1 -->
@@ -424,7 +402,7 @@
 	</item>
 	<item id="82222" name="Blessed Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 2" type="Armor">
 		<!-- Blessed Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -2% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bless_bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -433,8 +411,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="2" /> <!-- Craft Effect - Cooldown Decrease Lv. 2 -->
@@ -445,7 +421,7 @@
 	</item>
 	<item id="82223" name="Blessed Fallen Angel's Earring" additionalName="Cooldown Decrease Lv. 3" type="Armor">
 		<!-- Blessed Fallen Angel's Earring. When enchanted, increases Confusion/ Obstruction Atk. Rate and Resistance, Vitality bonus, acquired XP/ SP, Vampiric Rage effect, Received Healing, P. Critical Damage, P./ M. Skill Critical Damage, Attribute Resistance, P. Def., M. Def. and decreases MP Consumption. Effects of two identical earrings do not stack. <Craft Effect> Skill Cooldown -3% <Enchanting> Use Scroll: Enchant Fallen Angel's Accessory. Can be augmented. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bless_bm_earring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -454,8 +430,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39777" level="3" /> <!-- Craft Effect - Cooldown Decrease Lv. 3 -->
@@ -473,8 +447,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39778" level="1" /> <!-- +9 Fallen Angel's Earring Pack -->
@@ -489,8 +461,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39779" level="1" /> <!-- +10 Fallen Angel's Earring Pack -->
@@ -498,7 +468,6 @@
 	</item>
 	<item id="82226" name="+9 Blessed Fallen Angel's Earring Pack" type="EtcItem">
 		<!-- Double-click to obtain +9 Blessed Fallen Angel's Earring. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -506,8 +475,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39780" level="1" /> <!-- +9 Blessed Fallen Angel's Earring Pack -->
@@ -515,7 +482,6 @@
 	</item>
 	<item id="82227" name="+10 Blessed Fallen Angel's Earring Pack" type="EtcItem">
 		<!-- Double-click to obtain +10 Blessed Fallen Angel's Earring. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -523,8 +489,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39781" level="1" /> <!-- +10 Blessed Fallen Angel's Earring Pack -->
@@ -532,7 +496,6 @@
 	</item>
 	<item id="82228" name="+6 Fallen Angel's Earring Pack" type="EtcItem">
 		<!-- Double-click to obtain +6 Fallen Angel's Earring. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -540,8 +503,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39783" level="1" /> <!-- +6 Fallen Angel's Earring Pack -->
@@ -556,8 +517,6 @@
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39782" level="1" /> <!-- Tower of Insolence's Time Stone -->
@@ -565,16 +524,13 @@
 	</item>
 	<item id="82230" name="Anniversary Cake" additionalName="Event" type="EtcItem">
 		<!-- A cake for the anniversary of Lineage 2 .For 30 min. damage +8%, acquired XP/ SP +8%, received damage -8%. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="branchSys.br_valentine_cake_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39784" level="1" /> <!-- Anniversary Cake -->
@@ -583,80 +539,63 @@
 	<item id="82231" name="+5 Blue Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +5 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
 		<!-- 	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="82232" name="+8 Blue Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +8 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="82233" name="+12 Red Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +12 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="82234" name="+15 Red Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +15 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="82235" name="+18 Golden Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +18 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box3" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="82236" name="+20 Golden Lamp" additionalName="Event" type="EtcItem">
 		<!-- A magic lamp with the mysterious energy of +20 Master Yogi's Staff. Maybe your wish will come true if you rub it? -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_box3" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82237" name="First Gift Box" additionalName="Event" type="EtcItem">
@@ -668,8 +607,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -685,8 +622,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -702,8 +637,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -719,8 +652,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -770,8 +701,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -861,15 +790,13 @@
 	</item>
 	<item id="82244" name="+16 Master Yogi's Staff Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain +16 Master Yogi's Staff. -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -879,124 +806,97 @@
 	<item id="82245" name="Letter L" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
 		<!-- 	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82246" name="Letter O" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82247" name="Letter - V" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_v_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82248" name="Letter E" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82249" name="Letter R" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82250" name="Letter S" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_s_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82251" name="Letter P" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_p_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82252" name="Letter C" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82253" name="Letter T" additionalName="Event" type="EtcItem">
 		<!-- A letter filled with the power of love and respect. Collect letters, combine from them the words LOVE/ RESPECT and take them to NPC Amora to get the reward. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=1	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="82254" name="Letter Collector's Pouch: LOVE" additionalName="Event" type="EtcItem">
 		<!-- A pouch filled with the energy of love. Double-click to obtain one of the following items: Augmenting Stone Kaliel's Bracelet, Dragon Leather Shirt Augmenting Stone, Accessory Augmenting Stone, Superior Weapon Augmenting Stone, Circlet Augmenting Stone, Brooch Augmenting Stone, Emperor's Special Cocktail, Freya's Ice Rose, Glowing Dragon's Attribute Potion (XP), Honey Dark Beer, Anniversary Cake. -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1007,8 +907,7 @@
 	</item>
 	<item id="82255" name="Letter Collector's Pouch: RESPECT" additionalName="Event" type="EtcItem">
 		<!-- A pouch filled with the energy of respect. Double-click to obtain one of the following items: Greater Zodiac Agathion Cube, Sealed Talisman of Insanity, Talisman of Seven Signs, Talisman of Protection Lv. 10, Superior Seed Bracelet Lv. 4, Dragon Rind Leather Shirt, Kaliel's Bracelet Augmenting Stone, Dragon Leather Shirt Augmenting Stone, Shining Nevit's Gold Hourglass, Emperor's Vitality Tonic, Freya's Scroll of Storm, Anniversary Cake. -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1019,8 +918,7 @@
 	</item>
 	<item id="82256" name="Greater Jewel Coupon Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained in the anniversary UI. 2 coupons can be obtained from the Third Gift Box. Can be exchanged for any Jewel by NPC Amora. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1042,7 +940,6 @@
 	</item>
 	<item id="82258" name="Superior Emerald Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- STR +7, DEX +7, CON +7, INT +7, WIT +7, MEN +7, CHA +7, LUC +7. Skill Mastery Rate +40%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=99	name_class=-1	color=5	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_jewel_allstat_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1056,7 +953,6 @@
 	</item>
 	<item id="82259" name="Superior Aquamarine Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- With a 15% chance, recovers 180 MP after using skills. Skill Cooldown -5%, Max HP/ MP +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=99	name_class=-1	color=5	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_jewel_castmpup_lv1_gd35_high2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1070,7 +966,6 @@
 	</item>
 	<item id="82260" name="Superior Diamond Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- P. Def. +6690, received Critical Damage from basic attacks -20%, P. Def. +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=99	name_class=-1	color=5	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_jewel_phydef_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1084,7 +979,6 @@
 	</item>
 	<item id="82261" name="Superior Pearl Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- M. Def. +4210, received M. Skill Critical Damage -20%. Additionally, M. Def. +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<!-- 	popup=-1	default_action=[action_equip]	use_order=99	name_class=-1	color=5	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
 		<set name="icon" val="icon.bm_jewel_magdef_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1098,8 +992,7 @@
 	</item>
 	<item id="82262" name="Akira" additionalName="Event" type="EtcItem">
 		<!-- A collectable item. When added to the collection with items of Darkness, grants an additional effect. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_bufftoon_collect_1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1108,8 +1001,7 @@
 	</item>
 	<item id="82263" name="Fortunes of Battle" additionalName="Event" type="EtcItem">
 		<!-- A collectable item. When added to a collection, grants an additional effect. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_bufftoon_collect_2" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1118,8 +1010,7 @@
 	</item>
 	<item id="82264" name="Dark" additionalName="Event" type="EtcItem">
 		<!-- A collectable item. When added to the collection with items of Akira, grants an additional effect. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ev_18th_bufftoon_collect_3" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1128,8 +1019,7 @@
 	</item>
 	<item id="82265" name="Tersi's Soul Crystal Lv. 1" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1139,8 +1029,7 @@
 	</item>
 	<item id="82266" name="Tersi's Soul Crystal Lv. 2" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1150,8 +1039,7 @@
 	</item>
 	<item id="82267" name="Tersi's Soul Crystal Lv. 3" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1161,8 +1049,7 @@
 	</item>
 	<item id="82268" name="Tersi's Soul Crystal Lv. 4" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1172,8 +1059,7 @@
 	</item>
 	<item id="82269" name="Tersi's Soul Crystal Lv. 5" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1183,8 +1069,7 @@
 	</item>
 	<item id="82270" name="Tersi's Soul Crystal Lv. 6" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=2	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1194,8 +1079,7 @@
 	</item>
 	<item id="82271" name="Tersi's Soul Crystal Lv. 7" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=3	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1205,8 +1089,7 @@
 	</item>
 	<item id="82272" name="Tersi's Soul Crystal Lv. 8" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=4	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1216,8 +1099,7 @@
 	</item>
 	<item id="82273" name="Tersi's Soul Crystal Lv. 9" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting> Compound with Tersi's Soul. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=4	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1227,8 +1109,7 @@
 	</item>
 	<item id="82274" name="Tersi's Soul Crystal Lv. 10" additionalName="Armor" type="EtcItem">
 		<!-- A special Soul Crystal that contains Tersi's soul. Imbues armor with the crystal effect. The higher the crystal's level is, the more powerful effect is granted. <Using> Visit a town blacksmith to imbue your equipment with a crystal effect. -->
-		<!-- 	popup=-1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=5	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.ensoul_stone_tersi" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1238,8 +1119,7 @@
 	</item>
 	<item id="82275" name="Tersi's Soul" type="EtcItem">
 		<!-- A crystal that contains Tersi's soul. Required for upgrading Tersi's Soul Crystal through compounding. In case of failure, the Soul Crystal is destroyed. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=1	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.soul_of_tersi" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1248,8 +1128,7 @@
 	</item>
 	<item id="82276" name="Aden Hero's Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain various items for inserting into weapons (excluding regular Soul Crystals Lv. 6). -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={{2;{{80663;1;0;0;0;0;0};{48667;1;0;0;0;0;0};{48666;1;0;0;0;0;0};{80958;1;0;0;0;0;0};{80959;1;0;0;0;0;0};{47821;1;0;0;0;0;0};{48908;1;0;0;0;0;0};{47820;1;0;0;0;0;0};{48907;1;0;0;0;0;0};{36946;1;0;0;0;0;0};{19464;1;0;0;0;0;0};{19463;1;0;0;0;0;0};{80333;1;0;0;0;0;0};{80334;1;0;0;0;0;0};{80335;1;0;0;0;0;0};{35566;1;0;0;0;0;0};{39573;1;0;0;0;0;0};{37717;1;0;0;0;0;0};{46449;1;0;0;0;0;0};{46464;1;0;0;0;0;0};{46479;1;0;0;0;0;0};{46494;1;0;0;0;0;0};{46509;1;0;0;0;0;0};{48830;4;0;0;0;0;0};{48642;4;0;0;0;0;0};{48497;4;0;0;0;0;0};{80817;2;0;0;0;0;0};{80842;4;0;0;0;0;0};{37560;4;0;0;0;0;0}}}}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1259,8 +1138,7 @@
 	</item>
 	<item id="82277" name="+8 Blessed Angel's Necklace Pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Angel's Necklace enchanted to +8. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1270,8 +1148,7 @@
 	</item>
 	<item id="82278" name="+8 Blessed Angel's Earring Pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Angel's Earring enchanted to +8. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1281,8 +1158,7 @@
 	</item>
 	<item id="82279" name="+8 Blessed Angel's Ring Pack" type="EtcItem">
 		<!-- Double-click to obtain Blessed Angel's Ring enchanted to +8. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1292,8 +1168,7 @@
 	</item>
 	<item id="82280" name="Supply Support Pack" type="EtcItem">
 		<!-- Double-click to obtain Emperor's Special Cocktail, Glowing Dragon's Attribute Potion (2 pcs.), Freya's Ice Rose (2 pcs.), Honey Dark Beer (2 pcs.), Shining Nevit's Gold Hourglass (2 pcs.), Freya's Scroll of Storm (6 pcs.). -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1303,8 +1178,7 @@
 	</item>
 	<item id="82281" name="Anniversary Coin" type="EtcItem">
 		<!-- A coin for the anniversary. -->
-		<!-- 	popup=-1	default_action=[action_none]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.18th_collection_coin" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1313,8 +1187,7 @@
 	</item>
 	<item id="82282" name="Anniversary Box" type="EtcItem">
 		<!-- Double-click to obtain Anniversary Coin and Aden's Blessing (150 pcs.). -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1324,8 +1197,7 @@
 	</item>
 	<item id="82283" name="Master Yogi's Staff Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Master Yogi's Staff. -->
-		<!-- 	popup=-1	default_action=[action_peel]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_alphabet_g_i00" /><!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1335,8 +1207,7 @@
 	</item>
 	<item id="82284" name="+8 Angel's Necklace Pack" type="EtcItem">
 		<!-- Double-click to obtain Angel's Necklace enchanted to +8. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1346,8 +1217,7 @@
 	</item>
 	<item id="82285" name="+8 Angel's Earring Pack" type="EtcItem">
 		<!-- Double-click to obtain +8 Angel's Earring. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1357,8 +1227,7 @@
 	</item>
 	<item id="82286" name="+8 Angel's Ring Pack" type="EtcItem">
 		<!-- Double-click to obtain +8 Angel's Ring. -->
-		<!-- 	popup=-1	default_action=[action_capsule]	use_order=0	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=0	is_drop=0	is_destruct=1	is_private_store=0	keep_type=1	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="icon" val="icon.card_event_black_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1369,24 +1238,26 @@
 	<item id="82287" name="Tersi's Blessing Pack" type="EtcItem">
 		<!-- Double-click to obtain Tersi's Soul Crystal Box (100 pcs.) and Tersi's Seal. -->
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="82288" min="1" max="1" chance="100" /> <!-- Tersi's Soul Crystal Box -->
+			<item id="82289" min="1" max="1" chance="100" /> <!-- Tersi's Seal -->		
+		</capsuled_items>
 	</item>
 	<item id="82288" name="Tersi's Soul Crystal Box" type="EtcItem">
 		<!-- Double-click to obtain Tersi's Soul Crystal Lv. 1 and Tersi's Soul (10 pcs.). -->
 		<set name="icon" val="icon.present_of_destination_event" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -1402,8 +1273,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

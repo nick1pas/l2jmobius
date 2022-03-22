@@ -472,9 +472,61 @@
 		</effects>
 	</skill>
 	<skill id="39757" toLevel="1" name="Swift Attack Cookie">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 30 min., acquired XP/ SP +10%, Vitality bonus +20%, Attribute Attack +70, damage +10%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>70</amount>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39758" toLevel="1" name="Musician's Melody - Elixir">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -557,24 +609,117 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39774" toLevel="1" name="Swift Defense Cookie">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When used for 30 min., acquired XP/ SP +10%, Vitality bonus +20%, Attribute Resistance +70, received damage -10%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+				<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39775" toLevel="1" name="Gran Kain's Scroll: Enchant Artifact Book">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39776" toLevel="1" name="Spellbook: Elements of the Exalted Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>82214</itemConsumeId> <!-- Spellbook: Elements of the Exalted -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>115</minLevel>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>31009</skillId> <!-- Elements of the Exalted Lv. 1 -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>31009</skillId> <!-- Elements of the Exalted Lv. 1 -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39777" toLevel="3" name="Craft Effect - Cooldown Decrease Lv. 1">
 		<!-- Skill Cooldown -1% / 2% / 5%-->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39778" toLevel="1" name="+9 Fallen Angel's Earring Pack">
 		<!-- Double-click to obtain +9 Fallen Angel's Earring. -->
@@ -597,9 +742,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39782" toLevel="1" name="Tower of Insolence's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>82229</itemConsumeId> <!-- Tower of Insolence's Time Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>110</minLevel>
+				<maxLevel>130</maxLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>20</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39783" toLevel="1" name="+6 Fallen Angel's Earring Pack">
 		<!-- Double-click to obtain +6 Fallen Angel's Earring. -->
