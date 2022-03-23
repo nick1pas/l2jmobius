@@ -1387,10 +1387,66 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28170" toLevel="1" name="Mid-grade Zodiac Agathion">
+		<itemConsumeId>29151</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.33333333">
+						<item id="24153" count="1" /> <!-- Mid-grade Agathion Gemini Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24156" count="1" /> <!-- Mid-grade Agathion Libra Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24159" count="1" /> <!-- Mid-grade Agathion Aquarius Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24162" count="1" /> <!-- Mid-grade Agathion Virgo Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24165" count="1" /> <!-- Mid-grade Agathion Capricorn Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24168" count="1" /> <!-- Mid-grade Agathion Leo Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24171" count="1" /> <!-- Mid-grade Agathion Aries Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24174" count="1" /> <!-- Mid-grade Agathion Cancer Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24177" count="1" /> <!-- Mid-grade Agathion Pisces Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24180" count="1" /> <!-- Mid-grade Agathion Scorpio Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24183" count="1" /> <!-- Mid-grade Agathion Sagittarius Box -->
+					</item>
+					<item chance="8.33333333">
+						<item id="24186" count="1" /> <!-- Mid-grade Agathion Taurus Box -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28171" toLevel="1" name="High-grade Zodiac Agathion">
 		<itemConsumeId>29152</itemConsumeId>
