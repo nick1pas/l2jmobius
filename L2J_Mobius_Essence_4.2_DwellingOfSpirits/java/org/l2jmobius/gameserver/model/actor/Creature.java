@@ -4635,7 +4635,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			final boolean isPvP = isPlayable() && target.isPlayable();
 			if (!isPvP || Config.VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
+				if ((skill == null) || Config.VAMPIRIC_ATTACK_WORKS_WITH_SKILLS)
 				{
 					final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
 					if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
@@ -4653,7 +4653,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Absorb MP from the damage inflicted.
 			if (!isPvP || Config.MP_VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				if (skill != null) // Classic: Used to reduce skill MP consumption. See Orfen's Earring.
+				if ((skill != null) || Config.MP_VAMPIRIC_ATTACK_WORKS_WITH_MELEE)
 				{
 					if (Rnd.get(10) < 3) // Classic: Static 30% change.
 					{

@@ -195,6 +195,8 @@ public class Config
 	public static boolean ENABLE_ALTER_SKILLS;
 	public static boolean FAKE_DEATH_UNTARGET;
 	public static boolean FAKE_DEATH_DAMAGE_STAND;
+	public static boolean VAMPIRIC_ATTACK_WORKS_WITH_SKILLS;
+	public static boolean MP_VAMPIRIC_ATTACK_WORKS_WITH_MELEE;
 	public static boolean LIFE_CRYSTAL_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
@@ -1757,6 +1759,8 @@ public class Config
 			ENABLE_ALTER_SKILLS = characterConfig.getBoolean("EnableAlterSkills", true);
 			FAKE_DEATH_UNTARGET = characterConfig.getBoolean("FakeDeathUntarget", true);
 			FAKE_DEATH_DAMAGE_STAND = characterConfig.getBoolean("FakeDeathDamageStand", false);
+			VAMPIRIC_ATTACK_WORKS_WITH_SKILLS = characterConfig.getBoolean("VampiricAttackWorkWithSkills", true);
+			MP_VAMPIRIC_ATTACK_WORKS_WITH_MELEE = characterConfig.getBoolean("MpVampiricAttackWorkWithMelee", false);
 			LIFE_CRYSTAL_NEEDED = characterConfig.getBoolean("LifeCrystalNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = characterConfig.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = characterConfig.getBoolean("AltSubClassWithoutQuests", false);
