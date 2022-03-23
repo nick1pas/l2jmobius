@@ -63,7 +63,7 @@ public class BalthusEventManager implements IXmlReader
 	private final Map<Integer, BalthusEventHolder> _templates = new HashMap<>();
 	private boolean _isEasyMode;
 	private ItemHolder _consolation;
-	private int _minimalLevel = 0;
+	private int _minLevel = 0;
 	private String _mailSubject = null;
 	private String _mailContent = null;
 	private boolean _isRunning = false;
@@ -98,9 +98,9 @@ public class BalthusEventManager implements IXmlReader
 		return _players.contains(player);
 	}
 	
-	public int getMinimalLevel()
+	public int getMinLevel()
 	{
-		return _minimalLevel;
+		return _minLevel;
 	}
 	
 	public int getCurrentProgress()
@@ -136,8 +136,8 @@ public class BalthusEventManager implements IXmlReader
 	protected BalthusEventManager()
 	{
 		load();
-		final long currentTime = Chronos.currentTimeMillis();
 		final Calendar calendar = Calendar.getInstance();
+		final long currentTime = Chronos.currentTimeMillis();
 		final long hours = calendar.get(Calendar.HOUR_OF_DAY);
 		final long mins = calendar.get(Calendar.MINUTE);
 		long startDelay;
@@ -209,10 +209,10 @@ public class BalthusEventManager implements IXmlReader
 		forEach(doc, "list", listNode ->
 		{
 			final StatSet set = new StatSet(parseAttributes(listNode));
-			if (_minimalLevel == 0)
+			if (_minLevel == 0)
 			{
 				_isEasyMode = set.getBoolean("easyMode", false);
-				_minimalLevel = set.getInt("minLevel", 85);
+				_minLevel = set.getInt("minLevel", 85);
 				_consolation = new ItemHolder(set.getInt("id", 49783), set.getInt("count", 100));
 				_mailSubject = set.getString("mailSubject", "Balthus Knight Lottery");
 				_mailContent = set.getString("mailContent", "You win reward in Balthus Event!");
@@ -258,7 +258,7 @@ public class BalthusEventManager implements IXmlReader
 			Collections.shuffle(playerList);
 			for (Player player : playerList)
 			{
-				if (player.getLevel() >= getMinimalLevel())
+				if (player.getLevel() >= getMinLevel())
 				{
 					_winner = player;
 				}

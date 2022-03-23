@@ -160,9 +160,9 @@ public class BalthusFestival extends LongTimeEvent
 		
 		if (event.equals("get_event_bag"))
 		{
-			if (player.getLevel() < BalthusEventManager.getInstance().getMinimalLevel())
+			if (player.getLevel() < BalthusEventManager.getInstance().getMinLevel())
 			{
-				return getHtm(player, "34300-7.htm").replace("%require_level%", String.valueOf(BalthusEventManager.getInstance().getMinimalLevel()));
+				return getHtm(player, "34330-7.htm").replace("%require_level%", String.valueOf(BalthusEventManager.getInstance().getMinLevel()));
 			}
 			else if (player.getVariables().getBoolean(BALTHUS_BAG_VAR, false))
 			{
