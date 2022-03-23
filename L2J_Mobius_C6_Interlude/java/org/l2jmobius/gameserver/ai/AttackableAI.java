@@ -880,6 +880,11 @@ public class AttackableAI extends CreatureAI
 					
 					if (((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL) || inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
 					{
+						if (sk.isSuicideAttack() && ((_actor.getCurrentHp() > (_actor.getMaxHp() / 3)) || (Rnd.get(100) > sk.getMaxChance())))
+						{
+							continue;
+						}
+						
 						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
 							if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
@@ -962,10 +967,16 @@ public class AttackableAI extends CreatureAI
 							_actor.setTarget(_actor);
 						}
 					}
+					
 					// GeoData Los Check here
 					if (!useSkillSelf && !GeoEngine.getInstance().canSeeTarget(_actor, _actor.getTarget()))
 					{
 						return;
+					}
+					
+					if (sk.isSuicideAttack() && ((_actor.getCurrentHp() > (_actor.getMaxHp() / 3)) || (Rnd.get(100) > sk.getMaxChance())))
+					{
+						continue;
 					}
 					
 					final WorldObject oldTarget = _actor.getTarget();

@@ -222,6 +222,7 @@
 		<set name="effectRange" val="120" />
 		<set name="skillTime" val="2000" />
 		<set name="hitTime" val="2000" />
+		<set name="isSuicideAttack" val="true" />
 		<set name="isMagic" val="false" />
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
@@ -1539,6 +1540,7 @@
 		<set name="skillRadius" val="250" />
 		<set name="target" val="AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="isSuicideAttack" val="true" />
 		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 	</skill>
@@ -1574,6 +1576,7 @@
 		<set name="skillRadius" val="100" />
 		<set name="target" val="AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="isSuicideAttack" val="true" />
 		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 	</skill>

@@ -296,12 +296,13 @@
 		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1500" />
-		<!-- test -->
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="maxChance" val="30" />
 	</skill>
 	<skill id="4615" levels="12" name="Bleed">
 		<!-- You suffer a wound that continually reduces HP. Effect 2. -->
