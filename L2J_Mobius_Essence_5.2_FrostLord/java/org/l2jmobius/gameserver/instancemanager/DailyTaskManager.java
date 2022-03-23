@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
@@ -42,8 +43,10 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.vip.VipManager;
@@ -62,6 +65,10 @@ public class DailyTaskManager
 	{
 		2510, // Wondrous Cubic
 		22180, // Wondrous Cubic - 1 time use
+	};
+	private static final int[] RESET_ITEMS =
+	{
+		49782, // Balthus Knights' Supply Box
 	};
 	
 	protected DailyTaskManager()
@@ -120,6 +127,7 @@ public class DailyTaskManager
 		resetClanContributionList();
 		resetClanDonationPoints();
 		resetDailySkills();
+		resetDailyItems();
 		resetDailyPrimeShopData();
 		resetDailyLimitShopData();
 		resetWorldChatPoints();
@@ -263,13 +271,14 @@ public class DailyTaskManager
 	
 	private void resetDailySkills()
 	{
+		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			for (int skill : RESET_SKILLS)
+			for (int skillId : RESET_SKILLS)
 			{
 				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_skills_save WHERE skill_id=?;"))
 				{
-					ps.setInt(1, skill);
+					ps.setInt(1, skillId);
 					ps.execute();
 				}
 			}
@@ -278,7 +287,71 @@ public class DailyTaskManager
 		{
 			LOGGER.log(Level.SEVERE, "Could not reset daily skill reuse: ", e);
 		}
+		
+		// Update data for online players.
+		// final Set<Player> updates = new HashSet<>();
+		for (int skillId : RESET_SKILLS)
+		{
+			final Skill skill = SkillData.getInstance().getSkill(skillId, 1 /* No known need for more levels */);
+			if (skill != null)
+			{
+				for (Player player : World.getInstance().getPlayers())
+				{
+					if (player.hasSkillReuse(skill.getReuseHashCode()))
+					{
+						player.removeTimeStamp(skill);
+						// updates.add(player);
+					}
+				}
+			}
+		}
+		// for (Player player : updates)
+		// {
+		// player.sendSkillList();
+		// }
+		
 		LOGGER.info("Daily skill reuse cleaned.");
+	}
+	
+	private void resetDailyItems()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			for (int itemId : RESET_ITEMS)
+			{
+				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_item_reuse_save WHERE itemId=?;"))
+				{
+					ps.setInt(1, itemId);
+					ps.execute();
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not reset daily item reuse: ", e);
+		}
+		
+		// Update data for online players.
+		boolean update;
+		for (Player player : World.getInstance().getPlayers())
+		{
+			update = false;
+			for (int itemId : RESET_ITEMS)
+			{
+				for (Item item : player.getInventory().getAllItemsByItemId(itemId))
+				{
+					player.getItemReuseTimeStamps().remove(item.getObjectId());
+					update = true;
+				}
+			}
+			if (update)
+			{
+				player.sendItemList();
+			}
+		}
+		
+		LOGGER.info("Daily item reuse cleaned.");
 	}
 	
 	private void resetClanDonationPoints()
