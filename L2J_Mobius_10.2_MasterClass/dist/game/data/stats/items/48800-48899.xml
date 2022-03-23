@@ -740,6 +740,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="39171" level="4" /> <!--Lucky Gift Coupon (8-hour) -->
+		</skills>
 	</item>
 	<item id="48854" name="1 Billion Adena Box" type="EtcItem">
 		<!-- Festival Fairy's gift. Double-click to obtain 1 billion adena. -->

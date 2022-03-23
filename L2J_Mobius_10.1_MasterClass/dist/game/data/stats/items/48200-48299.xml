@@ -402,6 +402,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="39171" level="2" /> <!--Lucky Gift Coupon (3-hour) -->
+		</skills>
 	</item>
 	<item id="48224" name="Lucky Gift Coupon" additionalName="6-hour" type="EtcItem">
 		<!-- For 6 h., changes the appearance of your armor into that of the Hanbok, also allows you to take part in the Lucky Gift Draw. For characters of level 85 or higher. The effect is removed if you switch to a different class. -->
@@ -413,6 +421,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="39171" level="3" /> <!--Lucky Gift Coupon (6-hour) -->
+		</skills>
 	</item>
 	<item id="48225" name="Festival Fairy's Five-colored Sweets" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Vitality bonus +30%. -->

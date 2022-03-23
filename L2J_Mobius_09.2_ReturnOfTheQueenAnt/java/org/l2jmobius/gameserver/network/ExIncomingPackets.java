@@ -48,6 +48,7 @@ import org.l2jmobius.gameserver.network.clientpackets.attributechange.SendChange
 import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
 import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2jmobius.gameserver.network.clientpackets.awakening.RequestCallToChangeClass;
+import org.l2jmobius.gameserver.network.clientpackets.balthusevent.RequestEventBalthusToken;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -435,7 +436,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_CHECK_AGIT_DECO_AVAILABILITY(0x117, null, ConnectionState.IN_GAME),
 	REQUEST_USER_FACTION_INFO(0x118, RequestUserFactionInfo::new, ConnectionState.IN_GAME),
 	EX_EXIT_ARENA(0x119, null, ConnectionState.IN_GAME),
-	REQUEST_EVENT_BALTHUS_TOKEN(0x11A, null, ConnectionState.IN_GAME),
+	REQUEST_EVENT_BALTHUS_TOKEN(0x11A, RequestEventBalthusToken::new, ConnectionState.IN_GAME),
 	REQUEST_PARTY_MATCHING_HISTORY(0x11B, null, ConnectionState.IN_GAME),
 	EX_ARENA_CUSTOM_NOTIFICATION(0x11C, null, ConnectionState.IN_GAME),
 	REQUEST_TODO_LIST(0x11D, null, ConnectionState.IN_GAME),

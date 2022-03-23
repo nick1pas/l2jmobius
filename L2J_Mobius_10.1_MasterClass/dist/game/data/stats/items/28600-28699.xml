@@ -102,12 +102,16 @@
 		<!-- Disguises you as a Balthus Knight for 2 h. Can be used only by characters of level 85 or higher. The effect is removed if you switch to a different class. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="reuse_delay" val="120000" /> <!-- 1 minute -->
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27859" level="1" /> <!-- Lucky Gift Coupon (2-hour) -->
+		</skills>
 	</item>
 	<item id="28610" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
 		<!-- Contains 1 Veteran Duo Bracelet. -->

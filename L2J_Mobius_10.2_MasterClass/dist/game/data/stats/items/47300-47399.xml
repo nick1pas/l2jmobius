@@ -1283,12 +1283,16 @@
 		<!-- Can apply to the Lucky Gift raffle for 2 h. Can be used only by characters of level 85 or higher. The effect is removed if you switch to a different class. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="reuse_delay" val="120000" /> <!-- 1 minute -->
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39171" level="1" /> <!-- Lucky Gift Coupon (2-hour) -->
+		</skills>
 	</item>
 	<item id="47386" name="Sibi's Letter" additionalName="Event" type="EtcItem">
 		<!-- Letter from Sibi, the Balthus Knights Supply Officer. -->

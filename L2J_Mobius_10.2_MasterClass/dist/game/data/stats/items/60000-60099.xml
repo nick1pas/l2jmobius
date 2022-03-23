@@ -86,6 +86,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="5" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="29441" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="60010" name="Pantheon's Protection Box" type="EtcItem">
 		<!-- Double-click to obtain 1 useful item with a certain chance. -->
@@ -98,12 +109,19 @@
 	<item id="60011" name="Festival Fairy's Good Luck Bag" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 3 Festival Fairy's Lucky Tickets (1-hour). -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="86400000" /> <!-- 1 Day -->
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="60009" min="3" max="3" chance="100" /> <!-- Festival Fairy's Lucky Ticket -->
+		</capsuled_items>
 	</item>
 	<item id="60012" name="Barter Package" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
