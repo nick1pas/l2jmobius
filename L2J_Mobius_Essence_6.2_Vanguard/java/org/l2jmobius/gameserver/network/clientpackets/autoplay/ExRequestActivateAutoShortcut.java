@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -76,6 +77,24 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		if (shortcut.getType() == ShortcutType.SKILL)
 		{
 			skill = player.getKnownSkill(shortcut.getId());
+			if (skill == null)
+			{
+				if (player.hasServitors())
+				{
+					for (Summon summon : player.getServitors().values())
+					{
+						skill = summon.getKnownSkill(shortcut.getId());
+						if (skill != null)
+						{
+							break;
+						}
+					}
+				}
+				if ((skill == null) && player.hasPet())
+				{
+					skill = player.getPet().getKnownSkill(shortcut.getId());
+				}
+			}
 		}
 		else
 		{

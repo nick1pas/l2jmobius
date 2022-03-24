@@ -184,27 +184,50 @@ public class AutoUseTaskManager implements Runnable
 						break BUFFS;
 					}
 					
-					final Skill skill = player.getKnownSkill(skillId.intValue());
+					Playable pet = null;
+					Skill skill = player.getKnownSkill(skillId.intValue());
 					if (skill == null)
 					{
-						player.getAutoUseSettings().getAutoBuffs().remove(skillId);
-						continue BUFFS;
+						if (player.hasServitors())
+						{
+							SUMMON_SEARCH: for (Summon summon : player.getServitors().values())
+							{
+								pet = summon;
+								skill = summon.getKnownSkill(skillId.intValue());
+								if (skill != null)
+								{
+									break SUMMON_SEARCH;
+								}
+							}
+						}
+						if ((skill == null) && player.hasPet())
+						{
+							pet = player.getPet();
+							skill = pet.getKnownSkill(skillId.intValue());
+						}
+						if (skill == null)
+						{
+							player.getAutoUseSettings().getAutoBuffs().remove(skillId);
+							continue BUFFS;
+						}
 					}
 					
 					final WorldObject target = player.getTarget();
 					if (canCastBuff(player, target, skill))
 					{
+						final Playable caster = pet != null ? pet : player;
+						
 						// Playable target cast.
 						if ((target != null) && target.isPlayable() && !((Playable) target).isAlikeDead() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0))
 						{
-							player.doCast(skill);
+							caster.doCast(skill);
 						}
 						else // Target self, cast and re-target.
 						{
 							final WorldObject savedTarget = target;
-							player.setTarget(player);
-							player.doCast(skill);
-							player.setTarget(savedTarget);
+							caster.setTarget(caster);
+							caster.doCast(skill);
+							caster.setTarget(savedTarget);
 						}
 					}
 				}
@@ -230,13 +253,34 @@ public class AutoUseTaskManager implements Runnable
 					}
 					
 					// Acquire next skill.
+					Playable pet = null;
 					final Integer skillId = player.getAutoUseSettings().getNextSkillId();
-					final Skill skill = player.getKnownSkill(skillId.intValue());
+					Skill skill = player.getKnownSkill(skillId.intValue());
 					if (skill == null)
 					{
-						player.getAutoUseSettings().getAutoSkills().remove(skillId);
-						player.getAutoUseSettings().resetSkillOrder();
-						break SKILLS;
+						if (player.hasServitors())
+						{
+							SUMMON_SEARCH: for (Summon summon : player.getServitors().values())
+							{
+								pet = summon;
+								skill = summon.getKnownSkill(skillId.intValue());
+								if (skill != null)
+								{
+									break SUMMON_SEARCH;
+								}
+							}
+						}
+						if ((skill == null) && player.hasPet())
+						{
+							pet = player.getPet();
+							skill = pet.getKnownSkill(skillId.intValue());
+						}
+						if (skill == null)
+						{
+							player.getAutoUseSettings().getAutoSkills().remove(skillId);
+							player.getAutoUseSettings().resetSkillOrder();
+							break SKILLS;
+						}
 					}
 					
 					// Casting on self stops movement.
@@ -258,7 +302,7 @@ public class AutoUseTaskManager implements Runnable
 						break SKILLS;
 					}
 					
-					if (!canUseMagic(player, target, skill) || player.useMagic(skill, null, true, false))
+					if (!canUseMagic(player, target, skill) || (pet != null ? pet : player).useMagic(skill, null, true, false))
 					{
 						player.getAutoUseSettings().incrementSkillOrder();
 					}

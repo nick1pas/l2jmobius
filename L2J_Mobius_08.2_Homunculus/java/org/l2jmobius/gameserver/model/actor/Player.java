@@ -5503,7 +5503,6 @@ public class Player extends Playable
 	{
 		final List<Summon> summons = new ArrayList<>();
 		summons.addAll(getServitors().values());
-		
 		if (_pet != null)
 		{
 			summons.add(_pet);
