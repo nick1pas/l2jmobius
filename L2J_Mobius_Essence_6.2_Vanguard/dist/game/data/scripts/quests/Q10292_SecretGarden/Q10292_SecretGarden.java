@@ -120,7 +120,7 @@ public class Q10292_SecretGarden extends Quest
 				if (qs.isStarted())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_GOT_ADVENTURER_S_AGATHION_BRACELET_AND_ADVENTURER_S_AGATHION_GRIFFIN_COMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_AGATHION, 2, 5000));
-					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(35) + 100) - player.getExp(), 135000);
+					addExpAndSp(player, player.getLevel() < MAX_LEVEL ? (ExperienceData.getInstance().getExpForLevel(MAX_LEVEL) + 100) - player.getExp() : 0, 135000);
 					giveItems(player, TRAVELER_AGATHION_SUMMON_BRACELET);
 					giveItems(player, TRAVELER_AGATHION_GRIFFIN);
 					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);

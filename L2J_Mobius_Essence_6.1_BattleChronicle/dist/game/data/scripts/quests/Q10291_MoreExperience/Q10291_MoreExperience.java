@@ -96,7 +96,7 @@ public class Q10291_MoreExperience extends Quest
 			case "30332-06.html":
 			{
 				showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BROOCH_AND_ADVENTURER_S_ROUGH_JEWEL_COMPLETE_THE_TUTORIAL_AND_TRY_TO_ENCHASE_THE_JEWEL, ExShowScreenMessage.TOP_CENTER, 10000);
-				addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(30) + 100) - player.getExp(), 117500);
+				addExpAndSp(player, player.getLevel() < MAX_LEVEL ? (ExperienceData.getInstance().getExpForLevel(MAX_LEVEL) + 100) - player.getExp() : 0, 117500);
 				giveItems(player, ADVENTURERS_BROOCH);
 				giveItems(player, ADVENTURERS_BROOCH_GEMS);
 				giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);

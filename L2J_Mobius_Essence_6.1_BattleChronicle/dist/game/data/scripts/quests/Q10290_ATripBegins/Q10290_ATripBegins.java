@@ -151,7 +151,7 @@ public class Q10290_ATripBegins extends Quest
 				if (qs.isCond(3))
 				{
 					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_ADVENTURER_S_TALISMAN_COMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
-					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(25) + 100) - player.getExp(), 42000);
+					addExpAndSp(player, player.getLevel() < MAX_LEVEL ? (ExperienceData.getInstance().getExpForLevel(MAX_LEVEL) + 100) - player.getExp() : 0, 42000);
 					// TODO: find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
 					if (player.getInventory().getAllItemsByItemId(BSOE_EVENT.getId()).size() <= 20)
 					{

@@ -130,7 +130,7 @@ public class Q10293_DeathMysteries extends Quest
 			{
 				if (qs.isStarted())
 				{
-					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(40) + 100) - player.getExp(), 160000);
+					addExpAndSp(player, player.getLevel() < MAX_LEVEL ? (ExperienceData.getInstance().getExpForLevel(MAX_LEVEL) + 100) - player.getExp() : 0, 160000);
 					giveItems(player, SAYHA_GUST);
 					giveItems(player, MAGIC_LAMP_CHARGING_POTION);
 					giveItems(player, SCROLL_OF_ENCHANT_ADEN_WEAPON);
