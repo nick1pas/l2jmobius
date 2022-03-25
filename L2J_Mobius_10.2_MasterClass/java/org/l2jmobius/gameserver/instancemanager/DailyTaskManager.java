@@ -60,16 +60,18 @@ public class DailyTaskManager
 	private static final Logger LOGGER = Logger.getLogger(DailyTaskManager.class.getName());
 	
 	private static final SimpleDateFormat SDF = new SimpleDateFormat("dd/MM HH:mm");
-	private static final int[] RESET_SKILLS =
+	private static final Set<Integer> RESET_SKILLS = new HashSet<>();
+	static
 	{
-		2510, // Wondrous Cubic
-		22180, // Wondrous Cubic - 1 time use
-	};
-	private static final int[] RESET_ITEMS =
+		RESET_SKILLS.add(2510); // Wondrous Cubic
+		RESET_SKILLS.add(22180); // Wondrous Cubic - 1 time use
+	}
+	public static final Set<Integer> RESET_ITEMS = new HashSet<>();
+	static
 	{
-		47387, // Balthus Knights Supply Items
-		60011, // Festival Fairy's Good Luck Bag
-	};
+		RESET_ITEMS.add(47387); // Balthus Knights Supply Items
+		RESET_ITEMS.add(60011); // Festival Fairy's Good Luck Bag
+	}
 	
 	protected DailyTaskManager()
 	{

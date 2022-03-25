@@ -26,6 +26,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.instancemanager.DailyTaskManager;
 import org.l2jmobius.gameserver.model.ExtractableProduct;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -66,7 +67,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		// destroy item
-		if (!player.destroyItem("Extract", item.getObjectId(), 1, player, true))
+		if (!DailyTaskManager.RESET_ITEMS.contains(item.getId()) && !player.destroyItem("Extract", item.getObjectId(), 1, player, true))
 		{
 			return false;
 		}
