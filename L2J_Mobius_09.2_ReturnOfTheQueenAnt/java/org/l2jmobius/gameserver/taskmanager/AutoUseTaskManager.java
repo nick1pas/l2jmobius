@@ -192,10 +192,10 @@ public class AutoUseTaskManager implements Runnable
 						{
 							SUMMON_SEARCH: for (Summon summon : player.getServitors().values())
 							{
-								pet = summon;
 								skill = summon.getKnownSkill(skillId.intValue());
 								if (skill != null)
 								{
+									pet = summon;
 									break SUMMON_SEARCH;
 								}
 							}
@@ -262,10 +262,10 @@ public class AutoUseTaskManager implements Runnable
 						{
 							SUMMON_SEARCH: for (Summon summon : player.getServitors().values())
 							{
-								pet = summon;
 								skill = summon.getKnownSkill(skillId.intValue());
 								if (skill != null)
 								{
+									pet = summon;
 									break SUMMON_SEARCH;
 								}
 							}
