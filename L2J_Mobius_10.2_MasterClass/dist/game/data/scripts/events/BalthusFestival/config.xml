@@ -17,6 +17,9 @@
 		<add npc="34330" x="117380" y="76684" z="-2672" heading="40961" /> <!-- Hunters Village -->
 		<add npc="34330" x="208499" y="87743" z="-1006" heading="11264" /> <!-- Arcan -->
 	</spawnlist>
+	<destroyItemsOnEnd>
+		<item id="60011" /> <!-- Festival Fairy's Good Luck Bag -->
+	</destroyItemsOnEnd>
 	<messages>
 		<add type="onEnd" text="Balthus Festival: Event end!" />
 		<add type="onEnter" text="Balthus Festival: Event ongoing!" />
