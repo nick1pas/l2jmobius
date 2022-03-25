@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.instancemanager.events;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -26,19 +25,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
-
-import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
-import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
@@ -55,15 +49,15 @@ import org.l2jmobius.gameserver.util.Broadcast;
 /**
  * @author Index
  */
-public class BalthusEventManager implements IXmlReader
+public class BalthusEventManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(BalthusEventManager.class.getName());
 	
 	private final Set<Player> _players = ConcurrentHashMap.newKeySet();
 	private final Map<Integer, BalthusEventHolder> _templates = new HashMap<>();
 	private boolean _isEasyMode;
-	private ItemHolder _consolation;
 	private int _minLevel = 0;
+	private ItemHolder _consolation = null;
 	private String _mailSubject = null;
 	private String _mailContent = null;
 	private boolean _isRunning = false;
@@ -73,69 +67,14 @@ public class BalthusEventManager implements IXmlReader
 	private Player _winner = null;
 	private ItemChanceHolder _rewardItem;
 	
-	public void addPlayer(Player player)
-	{
-		_players.add(player);
-	}
-	
-	public void removePlayer(Player player)
-	{
-		_players.remove(player);
-	}
-	
-	public Set<Player> getPlayers()
-	{
-		return _players;
-	}
-	
-	public void removeParticipant(Player player)
-	{
-		_players.remove(player);
-	}
-	
-	public boolean isPlayerParticipant(Player player)
-	{
-		return _players.contains(player);
-	}
-	
-	public int getMinLevel()
-	{
-		return _minLevel;
-	}
-	
-	public int getCurrentProgress()
-	{
-		return _currProgress;
-	}
-	
-	public int getCurrentState()
-	{
-		return _currState;
-	}
-	
-	public ItemHolder getConsolation()
-	{
-		return _consolation;
-	}
-	
-	public int getCurrRewardItem()
-	{
-		return _rewardItem.getId();
-	}
-	
-	public boolean isRunning()
-	{
-		return _isRunning;
-	}
-	
-	public int getTime()
-	{
-		return Calendar.getInstance().get(Calendar.MINUTE) * 60; // client makes 3600 - time
-	}
-	
 	protected BalthusEventManager()
 	{
-		load();
+	}
+	
+	public void init()
+	{
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " rewards.");
+		
 		final Calendar calendar = Calendar.getInstance();
 		final long currentTime = Chronos.currentTimeMillis();
 		final long hours = calendar.get(Calendar.HOUR_OF_DAY);
@@ -194,53 +133,89 @@ public class BalthusEventManager implements IXmlReader
 		ThreadPool.scheduleAtFixedRate(this::tryToGetWinner, startDelay, 720000);
 	}
 	
-	@Override
-	public synchronized void load()
+	public void addPlayer(Player player)
 	{
-		_templates.clear();
-		parseDatapackFile("data/scripts/events/BalthusFestival/rewards.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " rewards.");
+		_players.add(player);
 	}
 	
-	@Override
-	public void parseDocument(Document doc, File f)
+	public void removePlayer(Player player)
 	{
-		final AtomicInteger i = new AtomicInteger();
-		forEach(doc, "list", listNode ->
-		{
-			final StatSet set = new StatSet(parseAttributes(listNode));
-			if (_minLevel == 0)
-			{
-				_isEasyMode = set.getBoolean("easyMode", false);
-				_minLevel = set.getInt("minLevel", 85);
-				_consolation = new ItemHolder(set.getInt("id", 49783), set.getInt("count", 100));
-				_mailSubject = set.getString("mailSubject", "Balthus Knight Lottery");
-				_mailContent = set.getString("mailContent", "You win reward in Balthus Event!");
-			}
-			
-			forEach(listNode, "reward", reward ->
-			{
-				final AtomicInteger j = new AtomicInteger();
-				final Map<Integer, Map<ItemChanceHolder, Double>> tempRewardList = new HashMap<>();
-				final Map<Integer, Integer> rewardTime = new HashMap<>();
-				final StatSet rewardSet = new StatSet(parseAttributes(reward));
-				rewardTime.put(rewardSet.getInt("from"), rewardSet.getInt("to", rewardSet.getInt("from")));
-				forEach(reward, "items", itemNode ->
-				{
-					forEach(itemNode, "item", item ->
-					{
-						final Map<ItemChanceHolder, Double> tempChanceRewardList = new HashMap<>();
-						j.getAndIncrement();
-						final StatSet itemSet = new StatSet(parseAttributes(item));
-						ItemChanceHolder itemChanceHolder = new ItemChanceHolder(itemSet.getInt("id", 57), itemSet.getDouble("chance", 100), itemSet.getInt("count", 100));
-						tempChanceRewardList.put(itemChanceHolder, itemSet.getDouble("lotteryChance", 0.0));
-						tempRewardList.put(j.intValue(), tempChanceRewardList);
-					});
-					i.getAndIncrement();
-					_templates.put(i.intValue(), new BalthusEventHolder(rewardTime, tempRewardList));
-				});
-			});
-		});
+		_players.remove(player);
+	}
+	
+	public Set<Player> getPlayers()
+	{
+		return _players;
+	}
+	
+	public void removeParticipant(Player player)
+	{
+		_players.remove(player);
+	}
+	
+	public boolean isPlayerParticipant(Player player)
+	{
+		return _players.contains(player);
+	}
+	
+	public void setEasyMode(boolean isEasyMode)
+	{
+		_isEasyMode = isEasyMode;
+	}
+	
+	public int getMinLevel()
+	{
+		return _minLevel;
+	}
+	
+	public void setMinLevel(int minLevel)
+	{
+		_minLevel = minLevel;
+	}
+	
+	public ItemHolder getConsolation()
+	{
+		return _consolation;
+	}
+	
+	public void setConsolation(ItemHolder consolation)
+	{
+		_consolation = consolation;
+	}
+	
+	public void setMailSubject(String mailSubject)
+	{
+		_mailSubject = mailSubject;
+	}
+	
+	public void setMailContent(String mailContent)
+	{
+		_mailContent = mailContent;
+	}
+	
+	public int getCurrentProgress()
+	{
+		return _currProgress;
+	}
+	
+	public int getCurrentState()
+	{
+		return _currState;
+	}
+	
+	public int getCurrRewardItem()
+	{
+		return _rewardItem.getId();
+	}
+	
+	public boolean isRunning()
+	{
+		return _isRunning;
+	}
+	
+	public int getTime()
+	{
+		return Calendar.getInstance().get(Calendar.MINUTE) * 60; // client makes 3600 - time
 	}
 	
 	private void tryToGetWinner()
@@ -258,7 +233,7 @@ public class BalthusEventManager implements IXmlReader
 			Collections.shuffle(playerList);
 			for (Player player : playerList)
 			{
-				if (player.getLevel() >= getMinLevel())
+				if (player.getLevel() >= _minLevel)
 				{
 					_winner = player;
 				}
@@ -369,6 +344,11 @@ public class BalthusEventManager implements IXmlReader
 		final Mail attachments = msg.createAttachments();
 		attachments.addItem("Balthus Knight Lottery", _rewardItem.getId(), _rewardItem.getCount(), null, null);
 		MailManager.getInstance().sendMessage(msg);
+	}
+	
+	public void addTemplate(int value, BalthusEventHolder holder)
+	{
+		_templates.put(value, holder);
 	}
 	
 	public static class BalthusEventHolder

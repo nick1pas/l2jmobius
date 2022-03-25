@@ -16,10 +16,19 @@
  */
 package events.BalthusFestival;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import org.w3c.dom.Document;
+
+import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.events.BalthusEventManager;
+import org.l2jmobius.gameserver.instancemanager.events.BalthusEventManager.BalthusEventHolder;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -29,6 +38,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
@@ -38,7 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEven
 /**
  * @author Index
  */
-public class BalthusFestival extends LongTimeEvent
+public class BalthusFestival extends LongTimeEvent implements IXmlReader
 {
 	// NPC
 	private static final int FESTIVAL_FAIRY = 34330;
@@ -67,81 +77,56 @@ public class BalthusFestival extends LongTimeEvent
 		addTalkId(FESTIVAL_FAIRY);
 		if (isEventPeriod())
 		{
-			BalthusEventManager.getInstance();
+			load();
+			BalthusEventManager.getInstance().init();
 		}
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onPlayerLogin(OnPlayerLogin event)
+	@Override
+	public synchronized void load()
 	{
-		if (!isEventPeriod())
+		parseDatapackFile("data/scripts/events/BalthusFestival/rewards.xml");
+	}
+	
+	@Override
+	public void parseDocument(Document doc, File f)
+	{
+		final AtomicInteger i = new AtomicInteger();
+		forEach(doc, "list", listNode ->
 		{
-			return;
-		}
-		
-		final Player player = event.getPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		
-		for (SkillHolder skill : SKILLS)
-		{
-			final BuffInfo buff = player.getEffectList().getBuffInfoBySkillId(skill.getSkillId());
-			if (buff != null)
+			final StatSet set = new StatSet(parseAttributes(listNode));
+			if (BalthusEventManager.getInstance().getMinLevel() == 0)
 			{
-				cancelQuestTimer("balthusEventBuff" + player.getObjectId(), null, player);
-				startQuestTimer("balthusEventBuff" + player.getObjectId(), buff.getTime() * 1000, null, player);
-				BalthusEventManager.getInstance().addPlayer(player);
+				BalthusEventManager.getInstance().setEasyMode(set.getBoolean("easyMode", false));
+				BalthusEventManager.getInstance().setMinLevel(set.getInt("minLevel", 85));
+				BalthusEventManager.getInstance().setConsolation(new ItemHolder(set.getInt("id", 49783), set.getInt("count", 100)));
+				BalthusEventManager.getInstance().setMailSubject(set.getString("mailSubject", "Balthus Knight Lottery"));
+				BalthusEventManager.getInstance().setMailContent(set.getString("mailContent", "You win reward in Balthus Event!"));
 			}
-		}
-		player.sendPacket(new ExBalthusEvent(player));
-	}
-	
-	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onPlayerLogout(OnPlayerLogout event)
-	{
-		if (!isEventPeriod())
-		{
-			return;
-		}
-		
-		final Player player = event.getPlayer();
-		if ((player == null))
-		{
-			return;
-		}
-		
-		cancelQuestTimer("balthusEventBuff" + player.getObjectId(), null, player);
-		BalthusEventManager.getInstance().removePlayer(player);
-	}
-	
-	@RegisterEvent(EventType.ON_CREATURE_SKILL_FINISH_CAST)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onCreatureSkillFinishCast(OnCreatureSkillFinishCast event)
-	{
-		if (!isEventPeriod())
-		{
-			return;
-		}
-		
-		final Player player = event.getCaster().getActingPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		
-		for (SkillHolder skill : SKILLS)
-		{
-			if (event.getSkill() == skill.getSkill())
+			
+			forEach(listNode, "reward", reward ->
 			{
-				startQuestTimer("balthusEventBuff" + player.getObjectId(), skill.getSkill().getAbnormalTime() * 1000, null, player);
-				BalthusEventManager.getInstance().addPlayer(player);
-				player.sendPacket(new ExBalthusEvent(player));
-			}
-		}
+				final AtomicInteger j = new AtomicInteger();
+				final Map<Integer, Map<ItemChanceHolder, Double>> tempRewardList = new HashMap<>();
+				final Map<Integer, Integer> rewardTime = new HashMap<>();
+				final StatSet rewardSet = new StatSet(parseAttributes(reward));
+				rewardTime.put(rewardSet.getInt("from"), rewardSet.getInt("to", rewardSet.getInt("from")));
+				forEach(reward, "items", itemNode ->
+				{
+					forEach(itemNode, "item", item ->
+					{
+						final Map<ItemChanceHolder, Double> tempChanceRewardList = new HashMap<>();
+						j.getAndIncrement();
+						final StatSet itemSet = new StatSet(parseAttributes(item));
+						ItemChanceHolder itemChanceHolder = new ItemChanceHolder(itemSet.getInt("id", 57), itemSet.getDouble("chance", 100), itemSet.getInt("count", 100));
+						tempChanceRewardList.put(itemChanceHolder, itemSet.getDouble("lotteryChance", 0.0));
+						tempRewardList.put(j.intValue(), tempChanceRewardList);
+					});
+					i.getAndIncrement();
+					BalthusEventManager.getInstance().addTemplate(i.intValue(), new BalthusEventHolder(rewardTime, tempRewardList));
+				});
+			});
+		});
 	}
 	
 	@Override
@@ -227,6 +212,79 @@ public class BalthusFestival extends LongTimeEvent
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		return npc.getId() + ".htm";
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerLogin(OnPlayerLogin event)
+	{
+		if (!isEventPeriod())
+		{
+			return;
+		}
+		
+		final Player player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		for (SkillHolder skill : SKILLS)
+		{
+			final BuffInfo buff = player.getEffectList().getBuffInfoBySkillId(skill.getSkillId());
+			if (buff != null)
+			{
+				cancelQuestTimer("balthusEventBuff" + player.getObjectId(), null, player);
+				startQuestTimer("balthusEventBuff" + player.getObjectId(), buff.getTime() * 1000, null, player);
+				BalthusEventManager.getInstance().addPlayer(player);
+			}
+		}
+		player.sendPacket(new ExBalthusEvent(player));
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerLogout(OnPlayerLogout event)
+	{
+		if (!isEventPeriod())
+		{
+			return;
+		}
+		
+		final Player player = event.getPlayer();
+		if ((player == null))
+		{
+			return;
+		}
+		
+		cancelQuestTimer("balthusEventBuff" + player.getObjectId(), null, player);
+		BalthusEventManager.getInstance().removePlayer(player);
+	}
+	
+	@RegisterEvent(EventType.ON_CREATURE_SKILL_FINISH_CAST)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onCreatureSkillFinishCast(OnCreatureSkillFinishCast event)
+	{
+		if (!isEventPeriod())
+		{
+			return;
+		}
+		
+		final Player player = event.getCaster().getActingPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		for (SkillHolder skill : SKILLS)
+		{
+			if (event.getSkill() == skill.getSkill())
+			{
+				startQuestTimer("balthusEventBuff" + player.getObjectId(), skill.getSkill().getAbnormalTime() * 1000, null, player);
+				BalthusEventManager.getInstance().addPlayer(player);
+				player.sendPacket(new ExBalthusEvent(player));
+			}
+		}
 	}
 	
 	public static void main(String[] args)
