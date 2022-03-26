@@ -55,7 +55,9 @@ public class ResetEnchantItemFailRewardInfo implements IClientOutgoingPacket
 		
 		final EnchantScroll enchantScroll = EnchantItemData.getInstance().getEnchantScroll(request.getEnchantingScroll());
 		final Item enchantItem = request.getEnchantingItem();
-		Item addedItem = enchantItem;
+		Item addedItem = new Item(enchantItem.getId());
+		addedItem.setOwnerId(_player.getObjectId());
+		addedItem.setEnchantLevel(request.getEnchantingItem().getEnchantLevel());
 		EnchantSupportItem enchantSupportItem = null;
 		ItemHolder result = null;
 		if (request.getSupportItem() != null)
