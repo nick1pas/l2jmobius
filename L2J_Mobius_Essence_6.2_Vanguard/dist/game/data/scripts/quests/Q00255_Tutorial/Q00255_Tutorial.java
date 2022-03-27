@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
@@ -162,6 +164,12 @@ public class Q00255_Tutorial extends Quest
 		
 		// Sylph.
 		if (player.getRace() == Race.SYLPH)
+		{
+			return null;
+		}
+		
+		// Vanguard.
+		if (CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId()))
 		{
 			return null;
 		}
