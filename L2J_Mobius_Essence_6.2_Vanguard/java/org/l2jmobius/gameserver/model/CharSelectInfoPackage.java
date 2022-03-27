@@ -167,6 +167,11 @@ public class CharSelectInfoPackage
 		{
 			_baseClassId = 204;
 		}
+		// Vanguard
+		else if ((baseClassId >= 217) && (baseClassId <= 220))
+		{
+			_baseClassId = 217;
+		}
 		// Other Classes
 		else
 		{
