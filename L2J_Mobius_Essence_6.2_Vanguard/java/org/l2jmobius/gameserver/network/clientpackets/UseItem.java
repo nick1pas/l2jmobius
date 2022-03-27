@@ -211,8 +211,8 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			// Prevent equip shields for Death Knight players.
-			if (item.isArmor() && (item.getArmorItem().getItemType() == ArmorType.SHIELD) && CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()))
+			// Prevent equip shields for Death Knight or Vanguard players.
+			if (item.isArmor() && (item.getArmorItem().getItemType() == ArmorType.SHIELD) && (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()) || CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId())))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
