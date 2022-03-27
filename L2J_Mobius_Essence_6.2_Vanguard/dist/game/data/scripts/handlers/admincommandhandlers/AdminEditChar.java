@@ -429,6 +429,13 @@ public class AdminEditChar implements IAdminCommandHandler
 						}
 					}
 					
+					// Vanguard checks.
+					if (CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, classidval))
+					{
+						player.getAppearance().setMale();
+						player.disarmShield();
+					}
+					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.store(false);
 					player.broadcastUserInfo();
