@@ -60,7 +60,7 @@ public class MercTicket extends AbstractNpcAI implements IItemHandler
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if ((castle == null) || (player.getClan() == null) || (castle.getOwnerId() != player.getClanId()) || !player.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_POSITION_MERCENARIES);
 			return false;
 		}
 		

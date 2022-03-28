@@ -128,13 +128,13 @@ public class Q10290_ATripBegins extends Quest
 					htmltext = "34211-03.html";
 				}
 				qs.startQuest();
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TALK_TO_THE_GATEKEEPER));
 				break;
 			}
 			case "30332-03.htm":
 			{
 				qs.startQuest();
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TALK_TO_THE_GATEKEEPER));
 				htmltext = event;
 				break;
 			}

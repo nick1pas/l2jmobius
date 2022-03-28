@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.model.variables.NpcVariables;
 import org.l2jmobius.gameserver.model.zone.type.EffectZone;
 import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
-import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import ai.AbstractNpcAI;
@@ -390,7 +389,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				if (ZONE.getCharactersInside().size() < Config.RAMONA_MIN_PLAYER)
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHAT_S_UP_WITH_YOUR_EYES_YOU_NEED_MORE_ENERGY);
+					npc.broadcastSay(ChatType.NPC_GENERAL, "What's up with your eyes? You need more energy."); // NpcStringId.WHAT_S_UP_WITH_YOUR_EYES_YOU_NEED_MORE_ENERGY
 				}
 				break;
 			}

@@ -3317,7 +3317,7 @@ public class Player extends Playable
 			{
 				if (item.getCount() > 1)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_X_S2);
 					sm.addItemName(item);
 					sm.addLong(item.getCount());
 					sendPacket(sm);
@@ -3390,7 +3390,7 @@ public class Player extends Playable
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_X_S2);
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);

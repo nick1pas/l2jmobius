@@ -52,7 +52,7 @@ public class ConditionTargetMyPartyExceptMe extends Condition
 		}
 		else if (!player.isInParty() || !player.getParty().equals(effected.getParty()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_AS_CERTAIN_REQUIREMENTS_ARE_NOT_MET);
 			sm.addSkillName(skill);
 			player.sendPacket(sm);
 			isPartyMember = false;

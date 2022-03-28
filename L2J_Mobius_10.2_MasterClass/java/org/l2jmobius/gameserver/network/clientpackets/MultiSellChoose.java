@@ -575,7 +575,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else if (addedItem.getEnchantLevel() > 0)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_2);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_S2_2);
 						sm.addLong(addedItem.getEnchantLevel());
 						sm.addItemName(addedItem.getId());
 						player.sendPacket(sm);
@@ -644,7 +644,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 					else if (!player.isClanLeader())
 					{
-						player.sendPacket(SystemMessageId.CAN_BE_USED_ONLY_BY_A_CLAN_LEADER);
+						player.sendPacket(SystemMessageId.AVAILABLE_ONLY_TO_THE_CLAN_LEADER);
 						return false;
 					}
 					else if (clan.getReputationScore() < totalCount)

@@ -54,12 +54,12 @@ public class Apprentice extends AbstractNpcAI
 			}
 			else
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_T_RIDE_A_KUKURI_NOW);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_T_RIDE_KUKURU_NOW);
 			}
 		}
 		else if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TRY_RIDING_A_KUKURI, 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TRY_RIDING_A_KUKURU, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

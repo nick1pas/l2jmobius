@@ -96,7 +96,7 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					showOnScreenMsg(world, NpcStringId.THE_FIGHTING_AGAINST_TAUTI_WILL_BEGIN_IN_10_SECONDS, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					showOnScreenMsg(world, NpcStringId.THE_BATTLE_WITH_TAUTI_STARTS_IN_10_SEC, ExShowScreenMessage.TOP_CENTER, 5000, true);
 					startQuestTimer("ANNOUNCE_5", 10000, null, player);
 				}
 				break;

@@ -62,7 +62,7 @@ public class AllyDismiss implements IClientIncomingPacket
 		}
 		if (!player.isClanLeader() || (leaderClan.getId() != leaderClan.getAllyId()))
 		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.ACCESS_ONLY_FOR_THE_CHANNEL_FOUNDER);
 			return;
 		}
 		final Clan clan = ClanTable.getInstance().getClanByName(_clanName);

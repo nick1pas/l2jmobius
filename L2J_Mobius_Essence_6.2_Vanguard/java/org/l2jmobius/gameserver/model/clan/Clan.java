@@ -2265,7 +2265,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if ((player.getAllyId() == 0) || !player.isClanLeader() || (player.getClanId() != player.getAllyId()))
 		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.ACCESS_ONLY_FOR_THE_CHANNEL_FOUNDER);
 			return false;
 		}
 		final Clan leaderClan = player.getClan();
@@ -2445,7 +2445,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (!player.isClanLeader() || (_clanId != _allyId))
 		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.ACCESS_ONLY_FOR_THE_CHANNEL_FOUNDER);
 			return;
 		}
 		if (player.isInsideZone(ZoneId.SIEGE))

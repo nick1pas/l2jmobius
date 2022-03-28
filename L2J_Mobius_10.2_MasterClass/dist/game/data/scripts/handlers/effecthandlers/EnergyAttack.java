@@ -85,7 +85,7 @@ public class EnergyAttack extends AbstractEffect
 		final int charge = Math.min(_chargeConsume, attacker.getCharges());
 		if (!attacker.decreaseCharges(charge))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_AS_CERTAIN_REQUIREMENTS_ARE_NOT_MET);
 			sm.addSkillName(skill);
 			attacker.sendPacket(sm);
 			return;

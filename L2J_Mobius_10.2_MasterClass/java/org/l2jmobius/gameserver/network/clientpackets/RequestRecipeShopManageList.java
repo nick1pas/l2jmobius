@@ -45,7 +45,7 @@ public class RequestRecipeShopManageList implements IClientIncomingPacket
 		
 		if (player.getCommonRecipeBook().isEmpty() && player.getDwarvenRecipeBook().isEmpty())
 		{
-			player.sendPacket(SystemMessageId.NO_RECIPES_HAVE_BEEN_REGISTERED);
+			player.sendPacket(SystemMessageId.NO_RECIPES_REGISTERED);
 			return;
 		}
 		

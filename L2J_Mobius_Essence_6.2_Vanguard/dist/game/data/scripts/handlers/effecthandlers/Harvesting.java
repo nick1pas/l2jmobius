@@ -78,7 +78,7 @@ public class Harvesting extends AbstractEffect
 					}
 					else
 					{
-						sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+						sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_X_S2);
 						sm.addItemName(item.getId());
 						sm.addLong(harvestedItem.getCount());
 					}

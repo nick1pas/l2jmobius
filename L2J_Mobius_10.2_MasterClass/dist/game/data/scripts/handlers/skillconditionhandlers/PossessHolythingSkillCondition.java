@@ -56,7 +56,7 @@ public class PossessHolythingSkillCondition implements ISkillCondition
 		SystemMessage sm;
 		if ((castle == null) || (castle.getResidenceId() <= 0) || !castle.getSiege().isInProgress() || (castle.getSiege().getAttackerClan(player.getClan()) == null))
 		{
-			sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_AS_CERTAIN_REQUIREMENTS_ARE_NOT_MET);
 			sm.addSkillName(skill);
 			player.sendPacket(sm);
 			canTakeCastle = false;

@@ -60,7 +60,7 @@ public class Q10296_LetsPayRespectsToOurFallenBrethren extends Quest
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 450);
 	// Misc
 	private static final int MIN_LEVEL = 52;
-	private static final int MAX_LEVEL = 58;
+	private static final int MAX_LEVEL = 56;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10296_LetsPayRespectsToOurFallenBrethren()
@@ -72,7 +72,7 @@ public class Q10296_LetsPayRespectsToOurFallenBrethren extends Quest
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_52_58_PAY_RESPECTS_TO_FALLEN_BRETHREN);
+		setQuestNameNpcStringId(NpcStringId.LV_52_56_PAY_RESPECTS_TO_FALLEN_BRETHREN);
 	}
 	
 	@Override

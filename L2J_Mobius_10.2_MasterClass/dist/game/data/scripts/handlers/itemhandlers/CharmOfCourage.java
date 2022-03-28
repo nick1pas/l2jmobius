@@ -68,7 +68,7 @@ public class CharmOfCourage implements IItemHandler
 		
 		if (itemLevel < level)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_AS_CERTAIN_REQUIREMENTS_ARE_NOT_MET);
 			sm.addItemName(item.getId());
 			player.sendPacket(sm);
 			return false;

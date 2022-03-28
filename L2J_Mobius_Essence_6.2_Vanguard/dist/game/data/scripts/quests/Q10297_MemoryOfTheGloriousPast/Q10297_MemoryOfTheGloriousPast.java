@@ -54,7 +54,7 @@ public class Q10297_MemoryOfTheGloriousPast extends Quest
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 450);
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 64;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
@@ -67,7 +67,7 @@ public class Q10297_MemoryOfTheGloriousPast extends Quest
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_58_64_MEMORY_OF_THE_GLORIOUS_PAST);
+		setQuestNameNpcStringId(NpcStringId.LV_56_64_MEMORY_OF_THE_GLORIOUS_PAST);
 	}
 	
 	@Override

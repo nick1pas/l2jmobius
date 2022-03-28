@@ -96,7 +96,7 @@ public class RequestNewHennaEquip implements IClientIncomingPacket
 			iu.addModifiedItem(player.getInventory().getAdenaInstance());
 			player.sendInventoryUpdate(iu);
 			player.sendPacket(new NewHennaEquip(_slotId, henna.getDyeId(), true));
-			player.sendPacket(SystemMessageId.PATTERN_ADDED);
+			player.sendPacket(SystemMessageId.PATTERN_WAS_MADE);
 		}
 		else
 		{

@@ -60,7 +60,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MIN_LEVEL = 40;
-	private static final int MAX_LEVEL = 44;
+	private static final int MAX_LEVEL = 45;
 	
 	public Q10294_SporeInfestedPlace()
 	{
@@ -70,7 +70,7 @@ public class Q10294_SporeInfestedPlace extends Quest
 		addKillId(GIANT_FUNGUS, GIANT_MONSTER_EYE, DIRE_WYRM, ROTTING_TREE, ROTTING_GOLEM, SPIDER_TRISALIM, TRISALIM_TARANTULA, SPORE_ZOMBIE, EARTH_GUARDIAN_WYRM);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_40_44_SPORE_INFESTED_PLACE);
+		setQuestNameNpcStringId(NpcStringId.LV_40_45_SPORE_INFECTED_PLACE);
 	}
 	
 	@Override

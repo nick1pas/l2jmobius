@@ -70,14 +70,14 @@ public class RequestSetAllyCrest implements IClientIncomingPacket
 		
 		if (player.getAllyId() == 0)
 		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.ACCESS_ONLY_FOR_THE_CHANNEL_FOUNDER);
 			return;
 		}
 		
 		final Clan leaderClan = ClanTable.getInstance().getClan(player.getAllyId());
 		if ((player.getClanId() != leaderClan.getId()) || !player.isClanLeader())
 		{
-			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.ACCESS_ONLY_FOR_THE_CHANNEL_FOUNDER);
 			return;
 		}
 		
