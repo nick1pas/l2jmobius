@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
-import org.l2jmobius.gameserver.enums.NpcRace;
 import org.l2jmobius.gameserver.enums.PlayerState;
 import org.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -1538,52 +1537,13 @@ public class Formulas
 			}
 		}
 		
-		if (attacker instanceof Npc)
-		{
-			// Skill Race : Undead
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.UNDEAD)
-			{
-				damage /= attacker.getPDefUndead(target);
-			}
-			
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.PLANT)
-			{
-				damage /= attacker.getPDefPlants(target);
-			}
-			
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.BUG)
-			{
-				damage /= attacker.getPDefInsects(target);
-			}
-			
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.ANIMAL)
-			{
-				damage /= attacker.getPDefAnimals(target);
-			}
-			
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.BEAST)
-			{
-				damage /= attacker.getPDefMonsters(target);
-			}
-			
-			if (((Npc) attacker).getTemplate().getRace() == NpcRace.DRAGON)
-			{
-				damage /= attacker.getPDefDragons(target);
-			}
-		}
-		
 		if (target instanceof Npc)
 		{
 			switch (((Npc) target).getTemplate().getRace())
 			{
-				case UNDEAD:
+				case ANGEL:
 				{
-					damage *= attacker.getPAtkUndead(target);
-					break;
-				}
-				case BEAST:
-				{
-					damage *= attacker.getPAtkMonsters(target);
+					damage *= attacker.getPAtkAngels(target);
 					break;
 				}
 				case ANIMAL:
@@ -1591,19 +1551,9 @@ public class Formulas
 					damage *= attacker.getPAtkAnimals(target);
 					break;
 				}
-				case PLANT:
+				case BEAST:
 				{
-					damage *= attacker.getPAtkPlants(target);
-					break;
-				}
-				case DRAGON:
-				{
-					damage *= attacker.getPAtkDragons(target);
-					break;
-				}
-				case ANGEL:
-				{
-					damage *= attacker.getPAtkAngels(target);
+					damage *= attacker.getPAtkMonsters(target);
 					break;
 				}
 				case BUG:
@@ -1611,9 +1561,19 @@ public class Formulas
 					damage *= attacker.getPAtkInsects(target);
 					break;
 				}
-				default:
+				case DRAGON:
 				{
-					// nothing
+					damage *= attacker.getPAtkDragons(target);
+					break;
+				}
+				case PLANT:
+				{
+					damage *= attacker.getPAtkPlants(target);
+					break;
+				}
+				case UNDEAD:
+				{
+					damage *= attacker.getPAtkUndead(target);
 					break;
 				}
 			}
@@ -1760,7 +1720,6 @@ public class Formulas
 					{
 						attacker.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));
 					}
-					
 					damage /= 2;
 				}
 				else
@@ -1769,7 +1728,6 @@ public class Formulas
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getId());
 					attacker.sendPacket(sm);
-					
 					damage = 1;
 				}
 			}
@@ -3199,11 +3157,6 @@ public class Formulas
 				{
 					multiplier = 1 + ((attacker.getPAtkMagicCreatures(target) - target.getPDefMagicCreatures(target)) / 100);
 					damage *= multiplier;
-					break;
-				}
-				default:
-				{
-					// nothing
 					break;
 				}
 			}
