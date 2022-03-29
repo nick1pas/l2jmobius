@@ -27,6 +27,8 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.enchant.EnchantResult;
+import org.l2jmobius.gameserver.network.serverpackets.enchant.ExPutEnchantScrollItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.ExPutEnchantTargetItemResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.single.ChangedEnchantTargetItemProbabilityList;
 
@@ -70,11 +72,13 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		}
 		
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
+		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null) || (item.getEnchantLevel() >= scrollTemplate.getMaxEnchantLevel()))
 		{
 			player.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
-			player.removeRequest(request.getClass());
+			request.setEnchantingItem(0);
 			player.sendPacket(new ExPutEnchantTargetItemResult(0));
+			player.sendPacket(new EnchantResult(2, 0, 0));
+			player.sendPacket(new ExPutEnchantScrollItemResult(1));
 			if (scrollTemplate == null)
 			{
 				PacketLogger.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
