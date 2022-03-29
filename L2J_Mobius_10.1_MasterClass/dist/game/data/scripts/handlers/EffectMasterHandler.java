@@ -390,6 +390,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Transformation", Transformation::new);
 		EffectHandler.getInstance().registerHandler("TrapDetect", TrapDetect::new);
 		EffectHandler.getInstance().registerHandler("TrapRemove", TrapRemove::new);
+		EffectHandler.getInstance().registerHandler("TriggerHealPercentBySkill", TriggerHealPercentBySkill::new);
 		EffectHandler.getInstance().registerHandler("TriggerSkill", TriggerSkill::new);
 		EffectHandler.getInstance().registerHandler("TriggerSkillByAttack", TriggerSkillByAttack::new);
 		EffectHandler.getInstance().registerHandler("TriggerSkillByAvoid", TriggerSkillByAvoid::new);
