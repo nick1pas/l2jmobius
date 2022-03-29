@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
@@ -1833,7 +1834,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			((Player) this).reviveRequest(((Player) this), null, false);
 		}
 		
-		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
+		// Update active skills in progress (In Use and Not In Use because stacked) icons on client
 		updateEffectIcons();
 		
 		// Custom boss announcements configuration.
@@ -2934,12 +2935,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/** Map 32 bits (0x0000) containing all abnormal effect in progress. */
-	private int _AbnormalEffects;
+	private int _abnormalEffects;
 	
 	/**
-	 * Set containing all active skills effects in progress of a Creature.
+	 * List containing all active skills effects in progress of a Creature.
 	 */
-	private final Set<Effect> _effects = ConcurrentHashMap.newKeySet();
+	private final List<Effect> _effects = new CopyOnWriteArrayList<>();
 	
 	/** The table containing the List of all stacked effect in progress for each Stack group Identifier. */
 	protected Map<String, List<Effect>> _stackedEffects = new HashMap<>();
@@ -2985,7 +2986,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>If this effect doesn't belong to a Stack Group, add its Funcs to the Calculator set of the Creature (remove the old one if necessary)</li>
 	 * <li>If this effect has higher priority in its Stack Group, add its Funcs to the Calculator set of the Creature (remove previous stacked effect Funcs if necessary)</li>
 	 * <li>If this effect has NOT higher priority in its Stack Group, set the effect to Not In Use</li>
-	 * <li>Update active skills in progress icones on player client</li><br>
+	 * <li>Update active skills in progress icons on player client</li><br>
 	 * @param newEffect the new effect
 	 */
 	public synchronized void addEffect(Effect newEffect)
@@ -3035,30 +3036,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Add the Effect to all effect in progress on the Creature
-		// if (!newEffect.getSkill().isToggle())
-		// {
-		// int pos = 0;
-		// for (int i = 0; i < _effects.size(); i++)
-		// {
-		// if (_effects.get(i) != null)
-		// {
-		// final int skillId = _effects.get(i).getSkill().getId();
-		// if (!_effects.get(i).getSkill().isToggle() && ((skillId <= 4360) || (skillId >= 4367)))
-		// {
-		// pos++;
-		// }
-		// }
-		// else
-		// {
-		// break;
-		// }
-		// }
-		// _effects.add(pos, newEffect);
-		// }
-		// else
-		// {
-		_effects.add(newEffect);
-		// }
+		if (!newEffect.getSkill().isToggle())
+		{
+			int pos = 0;
+			for (Effect effect : _effects)
+			{
+				if (effect == null)
+				{
+					break;
+				}
+				
+				final int skillId = effect.getSkill().getId();
+				if (!effect.getSkill().isToggle() && ((skillId <= 4360) || (skillId >= 4367)))
+				{
+					pos++;
+				}
+			}
+			
+			_effects.add(pos, newEffect);
+		}
+		else
+		{
+			_effects.add(newEffect);
+		}
 		
 		// Check if a stack group is defined for this effect
 		if (newEffect.getStackType().equals("none"))
@@ -3069,7 +3069,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			// Add Funcs of this effect to the Calculator set of the Creature
 			addStatFuncs(newEffect.getStatFuncs());
 			
-			// Update active skills in progress icones on player client
+			// Update active skills in progress icons on player client
 			updateEffectIcons();
 			return;
 		}
@@ -3111,7 +3111,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			addStatFuncs(stackQueue.get(0).getStatFuncs());
 		}
 		
-		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
+		// Update active skills in progress (In Use and Not In Use because stacked) icons on client
 		updateEffectIcons();
 	}
 	
@@ -3168,7 +3168,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Remove Func added by this effect from the Creature Calculator (Stop Effect)</li>
 	 * <li>If the Effect belongs to a not empty Stack Group, replace theses Funcs by next stacked effect Funcs</li>
 	 * <li>Remove the Effect from _effects of the Creature</li>
-	 * <li>Update active skills in progress icones on player client</li><br>
+	 * <li>Update active skills in progress icons on player client</li><br>
 	 * @param effect the effect
 	 */
 	public void removeEffect(Effect effect)
@@ -3231,10 +3231,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Remove the active skill L2effect from _effects of the Creature
+		// Remove the active skill effect from _effects of the Creature
 		_effects.remove(effect);
 		
-		// Update active skills in progress (In Use and Not In Use because stacked) icones on client
+		// Update active skills in progress (In Use and Not In Use because stacked) icons on client
 		updateEffectIcons();
 	}
 	
@@ -3244,7 +3244,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void startAbnormalEffect(int mask)
 	{
-		_AbnormalEffects |= mask;
+		_abnormalEffects |= mask;
 		updateAbnormalEffect();
 	}
 	
@@ -3393,7 +3393,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopAbnormalEffect(int mask)
 	{
-		_AbnormalEffects &= ~mask;
+		_abnormalEffects &= ~mask;
 		updateAbnormalEffect();
 	}
 	
@@ -3501,7 +3501,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Actions</u>:</b><br>
 	 * <li>Remove Func added by this effect from the Creature Calculator (Stop Effect)</li>
 	 * <li>Remove the Effect from _effects of the Creature</li>
-	 * <li>Update active skills in progress icones on player client</li><br>
+	 * <li>Update active skills in progress icons on player client</li><br>
 	 * @param type The type of effect to stop ((ex : BUFF, DMG_OVER_TIME...)
 	 */
 	public void stopEffects(EffectType type)
@@ -3747,7 +3747,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public abstract void updateAbnormalEffect();
 	
 	/**
-	 * Update active skills in progress (In Use and Not In Use because stacked) icones on client.<br>
+	 * Update active skills in progress (In Use and Not In Use because stacked) icons on client.<br>
 	 * <br>
 	 * <b><u>Concept</u>:</b><br>
 	 * <br>
@@ -3904,36 +3904,36 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public int getAbnormalEffect()
 	{
-		int ae = _AbnormalEffects;
+		int mask = _abnormalEffects;
 		if (_isStunned)
 		{
-			ae |= ABNORMAL_EFFECT_STUN;
+			mask |= ABNORMAL_EFFECT_STUN;
 		}
 		if (_isRooted)
 		{
-			ae |= ABNORMAL_EFFECT_ROOT;
+			mask |= ABNORMAL_EFFECT_ROOT;
 		}
 		if (_isSleeping)
 		{
-			ae |= ABNORMAL_EFFECT_SLEEP;
+			mask |= ABNORMAL_EFFECT_SLEEP;
 		}
 		if (_isConfused)
 		{
-			ae |= ABNORMAL_EFFECT_CONFUSED;
+			mask |= ABNORMAL_EFFECT_CONFUSED;
 		}
 		if (_isMuted)
 		{
-			ae |= ABNORMAL_EFFECT_MUTED;
+			mask |= ABNORMAL_EFFECT_MUTED;
 		}
 		if (_isAfraid)
 		{
-			ae |= ABNORMAL_EFFECT_AFRAID;
+			mask |= ABNORMAL_EFFECT_AFRAID;
 		}
 		if (_isPhysicalMuted)
 		{
-			ae |= ABNORMAL_EFFECT_MUTED;
+			mask |= ABNORMAL_EFFECT_MUTED;
 		}
-		return ae;
+		return mask;
 	}
 	
 	/**
