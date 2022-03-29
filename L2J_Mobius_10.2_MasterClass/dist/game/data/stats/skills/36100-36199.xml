@@ -281,39 +281,123 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="36156" toLevel="3" name="Kaliel's Bracelet Augmentation: CON">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36157" toLevel="3" name="Kaliel's Bracelet Augmentation: MEN">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36158" toLevel="5" name="Kaliel's Bracelet Augmentation: P. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36159" toLevel="5" name="Kaliel's Bracelet Augmentation: M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36160" toLevel="5" name="Kaliel's Bracelet Augmentation: Attribute Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="36161" toLevel="1" name="Kaliel's Bracelet Augmentation: Received Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36162" toLevel="10" name="Kaliel's Bracelet Augmentation: Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<conditions>
+			<condition name="OpAffectedBySkill">
+				<skillId>8864</skillId> <!-- Talisman of Longing -->
+				<skillLevel>6</skillLevel>
+			</condition>
+			<condition name="OpAffectedBySkill">
+				<skillId>8864</skillId> <!-- Talisman of Longing -->
+				<skillLevel>7</skillLevel>
+			</condition>
+			<condition name="OpAffectedBySkill">
+				<skillId>8864</skillId> <!-- Talisman of Longing -->
+				<skillLevel>8</skillLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36163" toLevel="1" name="Kaliel's Bracelet Augmentation: Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -396,19 +480,63 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="36179" toLevel="1" name="Artifact - Basic Attack Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="AutoAttackDamageBonus">
+				<amount>11</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36180" toLevel="1" name="Artifact - Damage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>11</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>11</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>11</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36181" toLevel="1" name="Artifact - P./ M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36182" toLevel="1" name="Collection_7_2008">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -421,9 +549,351 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="36184" toLevel="12" name="Fallen Angel's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</SLEEP>
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="AttackTrait">
+				<SLEEP>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</SLEEP>
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">16</value>
+					<value level="9">17</value>
+					<value level="10">18</value>
+					<value level="11">20</value>
+					<value level="12">20</value>
+				</amount>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">11</value>
+					<value level="9">12</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">11</value>
+					<value level="9">12</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+				</amount>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+					<value level="12">11</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+					<value level="12">11</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+					<value level="12">11</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">8</value>
+					<value level="12">9</value>
+				</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">13</value>
+					<value level="9">14</value>
+					<value level="10">15</value>
+					<value level="11">17</value>
+					<value level="12">18</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">-5</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-12</value>
+					<value level="12">-13</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">-5</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-12</value>
+					<value level="12">-13</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">-5</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-12</value>
+					<value level="12">-13</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">-5</value>
+					<value level="7">-7</value>
+					<value level="8">-8</value>
+					<value level="9">-9</value>
+					<value level="10">-10</value>
+					<value level="11">-12</value>
+					<value level="12">-13</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value fromLevel="1" toLevel="7">0</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">40</value>
+					<value level="11">50</value>
+					<value level="12">60</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="9">0</value>
+					<value level="10">3</value>
+					<value level="11">5</value>
+					<value level="12">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="9">0</value>
+					<value level="10">3</value>
+					<value level="11">5</value>
+					<value level="12">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36185" toLevel="3" name="Fallen Angel's Earring Augmentation: MP Consumption Decrease">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

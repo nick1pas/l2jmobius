@@ -135,22 +135,21 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>332</mpConsume>
-		<hitTime>8000</hitTime>
-		<coolTime>300</coolTime>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>712</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<startEffects>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</startEffects>
 		<effects>
+			<effect name="TriggerSkill">
+				<skillId>30848</skillId>
+				<skillLevel>1</skillLevel>
+				<targetType>SELF</targetType>
+			</effect>
 			<effect name="CriticalRate">
 				<amount>25</amount>
 				<mode>PER</mode>
@@ -171,11 +170,7 @@
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalSkillPower">
+			<effect name="SkillCriticalDamage">
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
@@ -267,6 +262,10 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
@@ -292,6 +291,34 @@
 			<effect name="CallSkill">
 				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -687,94 +714,11 @@
 		<effectPoint>418</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SUMMON</targetType>
-		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpHaveSummon" />
 		</conditions>
-		<effects>
-		<!-- FIX ME: EFFECT NOT REALIZED -->
-			<effect name="AttackAttributeAdd">
-				<amount>450</amount>
-			</effect>
-			<effect name="MaxHp">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalSkillPower">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="SkillCriticalDamage">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>WATER</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>EARTH</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>300</amount>
-				<attribute>DARK</attribute>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="19221" toLevel="1" name="Power of Darkness">
 		<icon>Icon.skill1050</icon>
@@ -796,7 +740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19222" toLevel="6" name="Dignity of the Exalted">
+	<skill id="19222" toLevel="7" name="Dignity of the Exalted">
 		<!-- STR +$s1, DEX +$s2, CON +$s3, INT +$s4, WIT +$s5, MEN +$s6, CHA +$s7. -->
 		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
@@ -812,6 +756,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -823,6 +768,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -834,6 +780,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -845,6 +792,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -856,6 +804,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -867,6 +816,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -878,6 +828,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 					<value level="6">6</value>
+					<value level="7">7</value>
 				</amount>
 				<stat>CHA</stat>
 			</effect>
@@ -1139,17 +1090,16 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>140</mpConsume>
-		<hitTime>8000</hitTime>
+		<hitTime>5000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>300000</reuseDelay>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</selfEffects>
 		<effects>
+			<effect name="TriggerSkill">
+				<skillId>30848</skillId>
+				<skillLevel>1</skillLevel>
+				<targetType>SELF</targetType>
+			</effect>
 			<effect name="PAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
@@ -1178,24 +1128,24 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
-		<itemConsumeCount>5</itemConsumeCount>
+		<abnormalLevel>1</abnormalLevel>
+		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A3</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>140</mpConsume>
-		<hitTime>8000</hitTime>
+		<hitTime>5000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>300000</reuseDelay>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</selfEffects>
 		<effects>
+			<effect name="TriggerSkill">
+				<skillId>30848</skillId>
+				<skillLevel>1</skillLevel>
+				<targetType>SELF</targetType>
+			</effect>
 			<effect name="PAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
@@ -2665,7 +2615,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<fanRange>0;0;300;150</fanRange>
-		<affectLimit>5-12</affectLimit>
+		<affectLimit>20-30</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>300</castRange>
 		<magicLevel>
