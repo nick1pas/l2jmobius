@@ -441,6 +441,12 @@ public class Q00255_Tutorial extends Quest
 			return;
 		}
 		
+		// Vanguard.
+		if (CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId()))
+		{
+			return;
+		}
+		
 		final QuestState qs = getQuestState(player, true);
 		if ((qs != null) && (qs.getMemoState() < 4) && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
 		{
