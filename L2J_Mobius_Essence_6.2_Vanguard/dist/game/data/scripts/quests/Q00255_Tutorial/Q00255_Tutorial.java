@@ -61,7 +61,6 @@ public class Q00255_Tutorial extends Quest
 		NEWBIE_HELPERS.add(30019); // human mystic
 		NEWBIE_HELPERS.add(30400); // elf
 		NEWBIE_HELPERS.add(30131); // dark elf
-		NEWBIE_HELPERS.add(30575); // orc
 		NEWBIE_HELPERS.add(30530); // dwarf
 		NEWBIE_HELPERS.add(34108); // kamael
 	}
@@ -72,7 +71,6 @@ public class Q00255_Tutorial extends Quest
 		SUPERVISORS.add(30017); // human mystic
 		SUPERVISORS.add(30370); // elf
 		SUPERVISORS.add(30129); // dark elf
-		SUPERVISORS.add(30573); // orc
 		SUPERVISORS.add(30528); // dwarf
 		SUPERVISORS.add(34109); // kamael
 	}
@@ -98,8 +96,6 @@ public class Q00255_Tutorial extends Quest
 		STARTING_VOICE_HTML.put(25, new QuestSoundHtmlHolder("tutorial_voice_001d", "tutorial_elven_mage001.html"));
 		STARTING_VOICE_HTML.put(31, new QuestSoundHtmlHolder("tutorial_voice_001e", "tutorial_delf_fighter001.html"));
 		STARTING_VOICE_HTML.put(38, new QuestSoundHtmlHolder("tutorial_voice_001f", "tutorial_delf_mage001.html"));
-		STARTING_VOICE_HTML.put(44, new QuestSoundHtmlHolder("tutorial_voice_001g", "tutorial_orc_fighter001.html"));
-		STARTING_VOICE_HTML.put(49, new QuestSoundHtmlHolder("tutorial_voice_001h", "tutorial_orc_mage001.html"));
 		STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
 		STARTING_VOICE_HTML.put(192, new QuestSoundHtmlHolder("tutorial_voice_001k", "tutorial_kamael_male001.html"));
 	}
@@ -277,10 +273,6 @@ public class Q00255_Tutorial extends Quest
 						{
 							return "tutorial_05_fighter.html";
 						}
-						else if (player.getRace() == Race.ORC)
-						{
-							return "tutorial_05_mystic_orc.html";
-						}
 						return "tutorial_05_mystic.html";
 					}
 					case 2:
@@ -288,10 +280,6 @@ public class Q00255_Tutorial extends Quest
 						if (!player.isMageClass())
 						{
 							return "tutorial_05_fighter_back.html";
-						}
-						else if (player.getRace() == Race.ORC)
-						{
-							return "tutorial_05_mystic_orc_back.html";
 						}
 						return "tutorial_05_mystic_back.html";
 					}

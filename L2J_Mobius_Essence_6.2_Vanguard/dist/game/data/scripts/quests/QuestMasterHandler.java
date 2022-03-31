@@ -36,6 +36,7 @@ import quests.Q10299_GetIncrediblePower.Q10299_GetIncrediblePower;
 import quests.Q10300_ExploringTheCrumaTower.Q10300_ExploringTheCrumaTower;
 import quests.Q10301_NotSoSilentValley.Q10301_NotSoSilentValley;
 import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
+import quests.Q10950_FiercestFlame.Q10950_FiercestFlame;
 import quests.Q10951_NewFlameOfOrcs.Q10951_NewFlameOfOrcs;
 import quests.Q10952_ProtectAtAllCosts.Q10952_ProtectAtAllCosts;
 import quests.Q10954_SayhaChildren.Q10954_SayhaChildren;
@@ -89,6 +90,7 @@ public class QuestMasterHandler
 		Q10299_GetIncrediblePower.class,
 		Q10300_ExploringTheCrumaTower.class,
 		Q10301_NotSoSilentValley.class,
+		Q10950_FiercestFlame.class,
 		Q10951_NewFlameOfOrcs.class,
 		Q10952_ProtectAtAllCosts.class,
 		Q10954_SayhaChildren.class,
