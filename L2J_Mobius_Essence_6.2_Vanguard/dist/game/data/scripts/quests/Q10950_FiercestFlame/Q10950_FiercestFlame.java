@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * Fiercest Flame (Q10950)
+ * Fiercest Flame (10950)
  * @author A.Yurechko
  * @Notee: Based on NA server on March, 31 2022
  */
