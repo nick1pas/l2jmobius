@@ -88,6 +88,10 @@ public class CastleManager
 	
 	public Castle getCastleByOwner(Clan clan)
 	{
+		if (clan == null)
+		{
+			return null;
+		}
 		for (Castle temp : _castles.values())
 		{
 			if (temp.getOwnerId() == clan.getId())

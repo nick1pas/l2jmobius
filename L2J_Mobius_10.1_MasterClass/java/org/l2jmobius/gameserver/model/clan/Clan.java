@@ -63,6 +63,8 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.ClanVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -446,6 +448,7 @@ public class Clan implements IIdentifiable, INamable
 			LOGGER.warning("Member Object ID: " + objectId + " not found in clan while trying to remove");
 			return;
 		}
+		
 		final int leadssubpledge = getLeaderSubPledge(objectId);
 		if (leadssubpledge != 0)
 		{
@@ -490,10 +493,12 @@ public class Clan implements IIdentifiable, INamable
 			}
 		}
 		exMember.saveApprenticeAndSponsor(0, 0);
+		
 		if (Config.REMOVE_CASTLE_CIRCLETS)
 		{
 			CastleManager.getInstance().removeCirclet(exMember, getCastleId());
 		}
+		
 		if (exMember.isOnline())
 		{
 			final Player player = exMember.getPlayer();
@@ -518,16 +523,23 @@ public class Clan implements IIdentifiable, INamable
 			player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, 19009);
 			
 			// remove Residential skills
-			if (player.getClan().getCastleId() > 0)
+			if (getCastleId() > 0)
 			{
-				CastleManager.getInstance().getCastleByOwner(player.getClan()).removeResidentialSkills(player);
+				final Castle castle = CastleManager.getInstance().getCastleByOwner(this);
+				if (castle != null)
+				{
+					castle.removeResidentialSkills(player);
+				}
 			}
-			if (player.getClan().getFortId() > 0)
+			if (getFortId() > 0)
 			{
-				FortManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
+				final Fort fort = FortManager.getInstance().getFortByOwner(this);
+				if (fort != null)
+				{
+					fort.removeResidentialSkills(player);
+				}
 			}
 			player.sendSkillList();
-			
 			player.setClan(null);
 			
 			// players leaving from clan academy have no penalty

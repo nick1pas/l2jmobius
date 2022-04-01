@@ -74,6 +74,10 @@ public class FortManager
 	
 	public Fort getFortByOwner(Clan clan)
 	{
+		if (clan == null)
+		{
+			return null;
+		}
 		for (Fort f : _forts.values())
 		{
 			if (f.getOwnerClan() == clan)

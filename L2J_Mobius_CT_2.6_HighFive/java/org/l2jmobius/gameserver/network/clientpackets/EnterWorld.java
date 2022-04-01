@@ -61,6 +61,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.residences.AuctionableHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;
@@ -242,14 +243,15 @@ public class EnterWorld implements IClientIncomingPacket
 		boolean showClanNotice = false;
 		
 		// Clan related checks are here
-		if (player.getClan() != null)
+		final Clan clan = player.getClan();
+		if (clan != null)
 		{
-			player.sendPacket(new PledgeSkillList(player.getClan()));
+			player.sendPacket(new PledgeSkillList(clan));
 			notifyClanMembers(player);
 			
 			notifySponsorOrApprentice(player);
 			
-			final AuctionableHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(player.getClan());
+			final AuctionableHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(clan);
 			if (clanHall != null)
 			{
 				if (!clanHall.getPaid())
@@ -265,13 +267,13 @@ public class EnterWorld implements IClientIncomingPacket
 					continue;
 				}
 				
-				if (siege.checkIsAttacker(player.getClan()))
+				if (siege.checkIsAttacker(clan))
 				{
 					player.setSiegeState((byte) 1);
 					player.setSiegeSide(siege.getCastle().getResidenceId());
 				}
 				
-				else if (siege.checkIsDefender(player.getClan()))
+				else if (siege.checkIsDefender(clan))
 				{
 					player.setSiegeState((byte) 2);
 					player.setSiegeSide(siege.getCastle().getResidenceId());
@@ -285,13 +287,13 @@ public class EnterWorld implements IClientIncomingPacket
 					continue;
 				}
 				
-				if (siege.checkIsAttacker(player.getClan()))
+				if (siege.checkIsAttacker(clan))
 				{
 					player.setSiegeState((byte) 1);
 					player.setSiegeSide(siege.getFort().getResidenceId());
 				}
 				
-				else if (siege.checkIsDefender(player.getClan()))
+				else if (siege.checkIsDefender(clan))
 				{
 					player.setSiegeState((byte) 2);
 					player.setSiegeSide(siege.getFort().getResidenceId());
@@ -305,7 +307,7 @@ public class EnterWorld implements IClientIncomingPacket
 					continue;
 				}
 				
-				if (hall.isRegistered(player.getClan()))
+				if (hall.isRegistered(clan))
 				{
 					player.setSiegeState((byte) 1);
 					player.setSiegeSide(hall.getId());
@@ -313,21 +315,29 @@ public class EnterWorld implements IClientIncomingPacket
 				}
 			}
 			
-			player.sendPacket(new PledgeShowMemberListAll(player.getClan(), player));
-			player.sendPacket(new PledgeStatusChanged(player.getClan()));
+			player.sendPacket(new PledgeShowMemberListAll(clan, player));
+			player.sendPacket(new PledgeStatusChanged(clan));
 			
 			// Residential skills support
-			if (player.getClan().getCastleId() > 0)
+			if (clan.getCastleId() > 0)
 			{
-				CastleManager.getInstance().getCastleByOwner(player.getClan()).giveResidentialSkills(player);
+				final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+				if (castle != null)
+				{
+					castle.giveResidentialSkills(player);
+				}
 			}
 			
-			if (player.getClan().getFortId() > 0)
+			if (clan.getFortId() > 0)
 			{
-				FortManager.getInstance().getFortByOwner(player.getClan()).giveResidentialSkills(player);
+				final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+				if (fort != null)
+				{
+					fort.giveResidentialSkills(player);
+				}
 			}
 			
-			showClanNotice = player.getClan().isNoticeEnabled();
+			showClanNotice = clan.isNoticeEnabled();
 		}
 		
 		if (TerritoryWarManager.getInstance().getRegisteredTerritoryId(player) > 0)
