@@ -44,6 +44,7 @@ public class Q10290_ATripBegins extends Quest
 	private static final int MATHORN = 34139;
 	private static final int BELLA = 30256;
 	private static final int EVIA = 34211;
+	private static final int GANTAKI_ZU_URUTU = 30587;
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_TO_RUIN_OF_AGONY = new ItemHolder(91727, 1);
@@ -69,8 +70,8 @@ public class Q10290_ATripBegins extends Quest
 	public Q10290_ATripBegins()
 	{
 		super(10290);
-		addStartNpc(CAPTAIN_BATHIS, MATHORN, EVIA);
-		addTalkId(CAPTAIN_BATHIS, MATHORN, EVIA, BELLA);
+		addStartNpc(CAPTAIN_BATHIS, MATHORN, EVIA, GANTAKI_ZU_URUTU);
+		addTalkId(CAPTAIN_BATHIS, MATHORN, EVIA, GANTAKI_ZU_URUTU, BELLA);
 		addKillId(ARACHNID_PREDATOR, SKELETON_BOWMAN, RUIN_SPARTOI, RAGING_SPARTOI, RAGING_SPARTOI, TUMRAN_BUGBEAR, TUMRAN_BUGBEAR_WARRIOR);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
@@ -106,6 +107,9 @@ public class Q10290_ATripBegins extends Quest
 			case "30332.htm":
 			case "30332-01.htm":
 			case "30332-02.htm":
+			case "30587-01.htm":
+			case "30587-02.htm":
+			case "30587-03.htm":
 			{
 				htmltext = event;
 				break;
@@ -135,6 +139,12 @@ public class Q10290_ATripBegins extends Quest
 			{
 				qs.startQuest();
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TALK_TO_THE_GATEKEEPER));
+				htmltext = event;
+				break;
+			}
+			case "30587-04.htm":
+			{
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -215,6 +225,11 @@ public class Q10290_ATripBegins extends Quest
 					htmltext = "30256-01.html";
 					break;
 				}
+				case GANTAKI_ZU_URUTU:
+				{
+					htmltext = "30587-01.htm";
+					break;
+				}
 				case CAPTAIN_BATHIS:
 				{
 					htmltext = "30332.htm";
@@ -239,6 +254,14 @@ public class Q10290_ATripBegins extends Quest
 					if (qs.isCond(1))
 					{
 						htmltext = "34211-05.html";
+					}
+					break;
+				}
+				case GANTAKI_ZU_URUTU:
+				{
+					if (qs.isCond(1))
+					{
+						htmltext = "30587-05.htm";
 					}
 					break;
 				}

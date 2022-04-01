@@ -60,7 +60,6 @@ import quests.Q10983_TroubledForest.Q10983_TroubledForest;
 import quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb;
 import quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround;
 import quests.Q10986_SwampMonster.Q10986_SwampMonster;
-import quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves;
 import quests.Q10988_Conspiracy.Q10988_Conspiracy;
 import quests.Q10989_DangerousPredators.Q10989_DangerousPredators;
 import quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
@@ -109,7 +108,6 @@ public class QuestMasterHandler
 		Q10984_CollectSpiderweb.class,
 		Q10985_CleaningUpTheGround.class,
 		Q10986_SwampMonster.class,
-		Q10987_PlunderedGraves.class,
 		Q10988_Conspiracy.class,
 		Q10989_DangerousPredators.class,
 		Q10990_PoisonExtraction.class,
