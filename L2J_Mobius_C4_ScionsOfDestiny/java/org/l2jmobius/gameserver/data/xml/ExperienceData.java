@@ -97,7 +97,20 @@ public class ExperienceData
 	
 	public long getExpForLevel(int level)
 	{
-		return _expTable.get(level);
+		if (level <= 0)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Requested exp for level " + level);
+			return 0;
+		}
+		
+		final Long exp = _expTable.get(level);
+		if (exp == null)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Requested exp for level " + level);
+			return _expTable.get((int) MAX_LEVEL);
+		}
+		
+		return exp.longValue();
 	}
 	
 	public byte getMaxLevel()
