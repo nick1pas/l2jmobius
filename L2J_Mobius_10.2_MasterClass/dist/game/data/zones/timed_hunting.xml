@@ -37,11 +37,15 @@
 		<node X="79606" Y="232038" />
 		<node X="99157" Y="221489" />
 	</zone>
-	<zone name="toi" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000"> <!-- TOI 07 - 09 -->
+	<zone name="toi_01-03" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000"> <!-- TOI 01 - 03 -->
 		<node X="-98304" Y="0" /> <!-- TOI 01 - 03 -->
 		<node X="-65537" Y="32767" /> <!-- TOI 01 - 03 -->
+	</zone>
+	<zone name="toi_04-06" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000"> <!-- TOI 04 - 06 -->
 		<node X="-154884" Y="9166" /> <!-- TOI 04 - 06 -->
 		<node X="-139971" Y="23782" /> <!-- TOI 04 - 06 -->
+	</zone>
+	<zone name="toi_07-09" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="10000"> <!-- TOI 07 - 09 -->
 		<node X="-156136" Y="58516" /> <!-- TOI 07 - 09 -->
 		<node X="-139860" Y="41002" /> <!-- TOI 07 - 09 -->
 	</zone>
