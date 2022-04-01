@@ -168,9 +168,9 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 				// Send time icon.
 				player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
 			}
-			else // Transcendent zones.
+			else // Instanced zones.
 			{
-				QuestManager.getInstance().getQuest("TranscendentZone").notifyEvent("ENTER " + _zoneId, null, player);
+				QuestManager.getInstance().getQuest("TimedHunting").notifyEvent("ENTER " + _zoneId, null, player);
 			}
 		}
 		else
