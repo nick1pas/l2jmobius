@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="94300" name="Sigil of Inevitability" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.weapon_karyen_i00" />
+		<set name="icon" val="icon.elos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
@@ -34,7 +34,7 @@
 		</skills>
 	</item>
 	<item id="94301" name="Shield of Vengeance" type="Armor">
-		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
+		<set name="icon" val="icon.shield_of_revenge" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -66,7 +66,7 @@
 		</skills>
 	</item>
 	<item id="94302" name="Shield of Vengeance" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
+		<set name="icon" val="icon.shield_of_revenge" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -101,7 +101,7 @@
 	</item>
 	<item id="94303" name="Life Stone - Circlet" type="EtcItem">
 		<!-- Augments Circlet of Hero. Adena required. -->
-		<set name="icon" val="icon.r_mineral_rare_i00" />
+		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
@@ -363,7 +363,7 @@
 	</item>
 	<item id="94328" name="Elixir Powder" additionalName="Sealed" type="EtcItem">
 		<!-- Powder imbued with power of immortality. Material to make Elixir. -->
-		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
+		<set name="icon" val="icon.etc_powder_of_life_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -845,7 +845,7 @@
 	</item>
 	<item id="94359" name="For Monster only (Crossbow)" type="Weapon">
 		<!-- Monster weapon. Bow -->
-		<set name="icon" val="icon.weapon_falchion_i00" />
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
@@ -870,7 +870,7 @@
 	</item>
 	<item id="94360" name="Forgotten Primeval Garden's Time Stone - Not Available" additionalName="Not used" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
-		<set name="icon" val="icon.timezone_refill_oman_a_60" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />

@@ -458,7 +458,7 @@
 		</capsuled_items>
 	</item>
 	<item id="94132" name="Test - Pet Test Weapon" additionalName="Test" type="Weapon">
-		<set name="icon" val="icon.special_weapon_onehandsword" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
@@ -879,7 +879,7 @@
 	</item>
 	<item id="94166" name="Circlet of Hero" additionalName="Sealed" type="Armor">
 		<!-- Can be enchanted up to +10 with Scroll: Enchant Circlet of Hero. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Uses 2 hair accessory slots. -->
-		<set name="icon" val="BranchSys.icon.br_circlet_of_hero_i00" />
+		<set name="icon" val="icon.accessory_barka_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -921,7 +921,7 @@
 	</item>
 	<item id="94169" name="Scroll: Enchant Circlet of Hero" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Circlet of Hero. The maximum enchant value is +10. -->
-		<set name="icon" val="icon.scroll_of_unidentify_am_c" />
+		<set name="icon" val="icon.bm_blessed_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1144,7 +1144,7 @@
 	</item>
 	<item id="94184" name="Scroll of Blessing" type="EtcItem">
 		<!-- When used, blesses your weapon. -->
-		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="icon" val="icon.bless_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1175,7 +1175,7 @@
 	</item>
 	<item id="94187" name="Life Stone Lv. 1 - Armor" type="EtcItem">
 		<!-- Augments armor. Adena required. -->
-		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
@@ -1183,7 +1183,7 @@
 	</item>
 	<item id="94188" name="Life Stone Lv. 2 - Armor" type="EtcItem">
 		<!-- Augments armor. Adena required. -->
-		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />

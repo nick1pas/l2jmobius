@@ -1281,7 +1281,7 @@
 	</item>
 	<item id="47385" name="Lucky Gift Coupon" additionalName="2-hour" type="EtcItem">
 		<!-- Can apply to the Lucky Gift raffle for 2 h. Can be used only by characters of level 85 or higher. The effect is removed if you switch to a different class. -->
-		<set name="icon" val="icon.ev_balthus_token" />
+		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="reuse_delay" val="120000" /> <!-- 1 minute -->
 		<set name="material" val="PAPER" />
@@ -1307,7 +1307,7 @@
 	</item>
 	<item id="47387" name="Freya's Lucky Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double click to receive 2 Lucky Gift Coupon (8-hr). (Can be used once per day.) -->
-		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1481,7 +1481,7 @@
 	</item>
 	<item id="47399" name="Fairy's Lucky Coin Pack" additionalName="Event" type="EtcItem">
 		<!-- Festival Fairy's gift. Doube-click to obtain 20,000 Lucky Coins. -->
-		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />

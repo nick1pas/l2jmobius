@@ -258,7 +258,7 @@
 	</item>
 	<item id="82214" name="Spellbook: Elements of the Exalted" type="EtcItem">
 		<!-- A spellbook for learning the Elements of the Exalted skill. For the main class only. Required level: 115+. -->
-		<set name="icon" val="icon.giant_book_i02" />
+		<set name="icon" val="icon.sb_s_attribute_of_honors" />
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -524,7 +524,7 @@
 	</item>
 	<item id="82230" name="Anniversary Cake" additionalName="Event" type="EtcItem">
 		<!-- A cake for the anniversary of Lineage 2 .For 30 min. damage +8%, acquired XP/ SP +8%, received damage -8%. -->
-		<set name="icon" val="branchSys.br_valentine_cake_2_i00" />
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -675,7 +675,7 @@
 	</item>
 	<item id="82241" name="Master Yogi's Staff" additionalName="Event" type="Weapon">
 		<!-- Staff for trying your luck. You can make Blue/ Red/ Golden Lamp using +5,+8/ +12,+15/ +18,+20 Master Yogi's Staff respectively. You can buy +0 Master Yogi's Staff from the event NPC Amora in any town. <Enchanting> Scroll: Enchant Master Yogi's Weapon -->
-		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
@@ -684,9 +684,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<stats>
-			<stat type="pAtk">11</stat>
-			<stat type="mAtk">12</stat>
-			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
@@ -918,7 +915,7 @@
 	</item>
 	<item id="82256" name="Greater Jewel Coupon Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- Can be obtained in the anniversary UI. 2 coupons can be obtained from the Third Gift Box. Can be exchanged for any Jewel by NPC Amora. -->
-		<set name="icon" val="BranchSys3.g_luckygame_card_trade_i00" />
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1193,7 +1190,7 @@
 	</item>
 	<item id="82283" name="Master Yogi's Staff Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Master Yogi's Staff. -->
-		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
+		<set name="icon" val="BranchSys3.icon1.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

@@ -379,7 +379,7 @@
 	</item>
 	<item id="91028" name="High-grade Maliss' HP Recovery Potion" type="EtcItem">
 		<!-- Momentarily recovers 1000 HP. If HP is full, CP is recovered. -->
-		<set name="icon" val="icon.bm_melisa_hp_potion" />
+		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -883,7 +883,7 @@
 	</item>
 	<item id="91061" name="Talisman of Authority" additionalName="Sealed" type="Armor">
 		<!-- Contains the energy of a lord. Can be enchanted up to +10 with Scroll: Enchant Talisman of Authority. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.sayhas_talisman_g_Lv1" />
+		<set name="icon" val="icon.sayhas_talisman_new" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="talisman" />
@@ -1048,7 +1048,7 @@
 	</item>
 	<item id="91077" name="Venir's Talisman Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. Can be upgraded to higher level with Venir's Talisman Fragment. Does not disappear in case of failure. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1062,7 +1062,7 @@
 	</item>
 	<item id="91078" name="Venir's Talisman Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1076,7 +1076,7 @@
 	</item>
 	<item id="91079" name="Venir's Talisman Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1090,7 +1090,7 @@
 	</item>
 	<item id="91080" name="Venir's Talisman Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1104,7 +1104,7 @@
 	</item>
 	<item id="91081" name="Venir's Talisman Lv. 5" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. STR +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1118,7 +1118,7 @@
 	</item>
 	<item id="91082" name="Venir's Talisman Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +1. MEN +1. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1132,7 +1132,7 @@
 	</item>
 	<item id="91083" name="Venir's Talisman Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +1. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1146,7 +1146,7 @@
 	</item>
 	<item id="91084" name="Venir's Talisman Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +1. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1160,7 +1160,7 @@
 	</item>
 	<item id="91085" name="Venir's Talisman Lv. 9" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +1. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1174,7 +1174,7 @@
 	</item>
 	<item id="91086" name="Venir's Talisman Lv. 10" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +1. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1188,7 +1188,7 @@
 	</item>
 	<item id="91087" name="Venir's Talisman Lv. 11" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +2. INT +1. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 6. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1202,7 +1202,7 @@
 	</item>
 	<item id="91088" name="Venir's Talisman Lv. 12" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +2. MEN +2. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -2%. P./ M. Skill Cooldown -1%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
+		<set name="icon" val="icon.benir_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1216,7 +1216,7 @@
 	</item>
 	<item id="91089" name="Venir's Talisman Lv. 13" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +2. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -4%. P./ M. Skill Cooldown -3%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1230,7 +1230,7 @@
 	</item>
 	<item id="91090" name="Venir's Talisman Lv. 14" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +3. DEX +2. WIT +2. STR +2. INT +2. All received Critical Rate -6%. P./ M. Skill Cooldown -5%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1244,7 +1244,7 @@
 	</item>
 	<item id="91091" name="Venir's Talisman Lv. 15" additionalName="Sealed" type="Armor">
 		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +2. STR +2. INT +2. All received Critical Rate -8%. P./ M. Skill Cooldown -7%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1258,7 +1258,7 @@
 	</item>
 	<item id="91092" name="Venir's Talisman Lv. 16" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT +3, STR/ INT +2. Has a certain chance to absorb 4% of inflicted damage as HP and 2% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1272,7 +1272,7 @@
 	</item>
 	<item id="91093" name="Venir's Talisman Lv. 17" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR +3, INT +2. Has a certain chance to absorb 4% of inflicted damage as HP and 2% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1286,7 +1286,7 @@
 	</item>
 	<item id="91094" name="Venir's Talisman Lv. 18" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />

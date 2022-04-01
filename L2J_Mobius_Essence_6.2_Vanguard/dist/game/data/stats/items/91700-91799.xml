@@ -199,7 +199,7 @@
 	</item>
 	<item id="91714" name="Sayha's Summoning Stick" additionalName="Not Available" type="EtcItem">
 		<!-- Randomly summons 1 of the 6 monsters. The killer of that monster receives a certain amount of XP that is not affected by any bonus XP effects. Cooldown: 10 sec. -->
-		<set name="icon" val="icon.etc_stick_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
@@ -208,7 +208,7 @@
 	</item>
 	<item id="91715" name="Sayha's Treasure" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item, including rare necklaces and Sayha's Cloak +10. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -218,7 +218,7 @@
 	</item>
 	<item id="91716" name="Sayha's Shining Treasure" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item, incuding S-grade Weapon/ Armor Pack, Enchant Scroll Chest, and Manuscript Chest. -->
-		<set name="icon" val="icon.sayha2017_box_i03" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -292,7 +292,7 @@
 	</item>
 	<item id="91723" name="Talisman Bracelet Lv. 1" additionalName="15-day" type="Armor">
 		<!-- Available for 15 d. Unlocks 1 talisman slot. -->
-		<set name="icon" val="icon.etc_rbracelet_c_i00" />
+		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -557,7 +557,7 @@
 	</item>
 	<item id="91741" name="Einhasad's Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Duration: 60 min. Cooldown: 1 min. The effect remains after death. -->
-		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="icon" val="icon.bm_nebit_bonus_time_up" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +612,7 @@
 	</item>
 	<item id="91745" name="Talisman of Aden" additionalName="Sealed" type="Armor">
 		<!-- Contains the energy of Aden's royal family. Can be enchanted up to +10 with Scroll: Enchant Talisman of Aden. Activates special effects depending on the enchant value. The enchanting is safe up to +1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.bm_ensoul_stone_pvp" />
+		<set name="icon" val="icon.bm_aden_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="talisman" />
@@ -734,7 +734,7 @@
 	</item>
 	<item id="91756" name="Scroll: Enchant Talisman of Aden" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Talisman of Aden. -->
-		<set name="icon" val="icon.bless_scroll_r99" />
+		<set name="icon" val="icon.aden_talisman_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1097,7 +1097,7 @@
 	</item>
 	<item id="91783" name="Einhasad's Spellbook Chest" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of various items. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1112,7 +1112,7 @@
 	</item>
 	<item id="91784" name="Eva's Spellbook Chest" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1127,7 +1127,7 @@
 	</item>
 	<item id="91785" name="Shillien's Spellbook Chest" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1142,7 +1142,7 @@
 	</item>
 	<item id="91786" name="Pa'agrio's Spellbook Chest" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1157,7 +1157,7 @@
 	</item>
 	<item id="91787" name="Maphr's Blueprint Chest" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
-		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1172,7 +1172,7 @@
 	</item>
 	<item id="91788" name="Dragon Belt" type="Armor">
 		<!-- Belt imbued with the dragon's power. Can be enchanted up to +10 with Dragon Belt's Decorations. -->
-		<set name="icon" val="icon.r2_belt_i01" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="waist" />
@@ -1186,7 +1186,7 @@
 	</item>
 	<item id="91789" name="Dragon Belt's Decoration" type="EtcItem">
 		<!-- Required to enchant Dragon Belt. The maximum enchant value is +10. -->
-		<set name="icon" val="icon.etc_piece_belt_blue_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -1195,7 +1195,7 @@
 	</item>
 	<item id="91790" name="Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
-		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1205,7 +1205,7 @@
 	</item>
 	<item id="91791" name="Venir's Talisman Lv. 25" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +6, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Can be upgraded if combined with the identical talisman. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
@@ -1219,7 +1219,7 @@
 	</item>
 	<item id="91792" name="Venir's Talisman Lv. 26" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +8, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />

@@ -108,7 +108,7 @@
 	</item>
 	<item id="81906" name="Prophecy Chest" additionalName="Event" type="EtcItem">
 		<!-- A luxury box made by Shadai in Heine. Double-click to obtain 1 rare item (excluding Blessed Scroll; Enchant Brooch) -->
-		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -124,7 +124,7 @@
 	</item>
 	<item id="81908" name="Gran Kain's Scroll: Enchant La Vie En Rose's Brooch" type="EtcItem">
 		<!-- For Dragon Rind Leather Shirt enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
-		<set name="icon" val="iicon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
+		<set name="icon" val="icon.bm_shilen_scrl_of_brooch_6slot_lavianrose" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
@@ -204,7 +204,7 @@
 	</item>
 	<item id="81914" name="Blessed Fallen Angel's Ring" type="Armor">
 		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
-		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -217,7 +217,7 @@
 	</item>
 	<item id="81915" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 1" type="Armor">
 		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
-		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -233,7 +233,7 @@
 	</item>
 	<item id="81916" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 2" type="Armor">
 		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
-		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -249,7 +249,7 @@
 	</item>
 	<item id="81917" name="Blessed Fallen Angel's Ring" additionalName="Charisma Lv. 3" type="Armor">
 		<!-- When enchanted, increases Obstruction Atk. Rate/ Resistance, Attribute Resistance, P. Critical Damage, P./ M. Skill Critical Damage, and P./ M. Skill Power. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
-		<set name="icon" val="bless_bm_ring_of_fallen_angel" />
+		<set name="icon" val="icon.bless_bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -550,7 +550,7 @@
 	</item>
 	<item id="81940" name="Woeful Sword Eigis" type="Weapon">
 		<!-- Shillien's sword imbued with the power to create and destroy worlds. The embodiment of the goddess' sorrow and despair. It can enslave one's soul by turning it into an evil spirit. The item is not available after the server transfer. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_cutter" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
@@ -574,7 +574,7 @@
 	</item>
 	<item id="81941" name="Woeful Sword Eigis" additionalName="Appearance Modification" type="Armor">
 		<!-- Changes the armor appearance. Available only for those who has taken the 1st place in the Conquest rankings. -->
-		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="icon" val="icon.uq_sword_aegis" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
@@ -595,7 +595,7 @@
 	</item>
 	<item id="81942" name="Eigis Shaper" type="Weapon">
 		<!-- Changes a dagger's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_shaper" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
@@ -618,7 +618,7 @@
 	</item>
 	<item id="81943" name="Eigis Cutter" type="Weapon">
 		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_cutter" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -641,7 +641,7 @@
 	</item>
 	<item id="81944" name="Eigis Slasher" type="Weapon">
 		<!-- Changes a two-handed sword's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_slasher" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
@@ -664,7 +664,7 @@
 	</item>
 	<item id="81945" name="Eigis Avenger" type="Weapon">
 		<!-- Changes a one-handed blunt weapon's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
@@ -687,7 +687,7 @@
 	</item>
 	<item id="81946" name="Eigis Fighter" type="Weapon">
 		<!-- Changes a fist weapon's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_fist" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FIST" />
 		<set name="bodypart" val="lrhand" />
@@ -710,7 +710,7 @@
 	</item>
 	<item id="81947" name="Eigis Stormer" type="Weapon">
 		<!-- Changes a spear's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_spear" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
@@ -736,7 +736,7 @@
 	</item>
 	<item id="81948" name="Eigis Thrower" type="Weapon">
 		<!-- Changes a bow's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_bow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
@@ -759,7 +759,7 @@
 	</item>
 	<item id="81949" name="Eigis Guardian" type="Weapon">
 		<!-- Changes a crossbow's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_crossbow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
@@ -782,7 +782,7 @@
 	</item>
 	<item id="81950" name="Eigis Buster" type="Weapon">
 		<!-- Changes a one-handed magic sword's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_onehane_magic_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -806,7 +806,7 @@
 	</item>
 	<item id="81951" name="Eigis Caster" type="Weapon">
 		<!-- Changes a one-handed staff's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
@@ -830,7 +830,7 @@
 	</item>
 	<item id="81952" name="Eigis Retributer" type="Weapon">
 		<!-- Changes a two-handed staff's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
@@ -854,7 +854,7 @@
 	</item>
 	<item id="81953" name="Eigis Dual Swords" type="Weapon">
 		<!-- Changes dual swords' appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_dual_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
@@ -877,7 +877,7 @@
 	</item>
 	<item id="81954" name="Eigis Dual Daggers" type="Weapon">
 		<!-- Changes dual daggers' appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
@@ -900,7 +900,7 @@
 	</item>
 	<item id="81955" name="Eigis Dual Blunt Weapons" type="Weapon">
 		<!-- Changes dual blunt weapons' appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.aegis_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
@@ -1428,7 +1428,7 @@
 	</item>
 	<item id="81979" name="Usurper's Name Change Coupon" type="EtcItem">
 		<!-- Required for changing a name used in the Conquest. In order to do it, use the Conquest UI before entering a Conquest world. -->
-		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="icon" val="icon.dethrone_name_change" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1440,7 +1440,7 @@
 	</item>
 	<item id="81980" name="Soul Orb" type="EtcItem">
 		<!-- At first glance, looks like an ordinary glass bead. However, if you take a closer look, you will see a soul trapped inside. Listen closely, and you will hear its whisper: 'Here, in the depths of darkness filled with horror and despair, one may acquire special powers, and that will let them rule the world.' It's time to go to the Conquest. -->
-		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="icon" val="icon.soul_bead" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1452,7 +1452,7 @@
 	</item>
 	<item id="81981" name="Dimensional Chain" type="EtcItem">
 		<!-- A chain that connects our world with the Conquest one. Only the Aden Castle lord can open or close the path between the worlds. -->
-		<set name="icon" val="icon.collection_unite_rune_lv0" />
+		<set name="icon" val="icon.dethrone_aden_link" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="60200" name="Freya's Fortune Wand 2022" type="EtcItem">
 		<!-- Double-click to obtain 3 Glittering Freya's Scrolls of Storm and Glittering Freya's Ice Rose. Additionally, you can get one of the following items: Supply Pack/ Enchant Pack/ Treasure Chest. -->
@@ -114,7 +114,7 @@
 	</item>
 	<item id="60204" name="Santa's Lavish Pouch" type="EtcItem">
 		<!-- Double-click to obtain Lush Christmas Tree. There is also a chance to obtain an additional useful item. --> 
-		<set name="icon" val="branchSys.Br_santa_gift_click_i00" />
+		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -183,7 +183,7 @@
 	</item>
 	<item id="60209" name="Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 special item. --> 
-		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -343,7 +343,7 @@
 	</item>
 	<item id="60214" name="Sweet Dalgona" additionalName="Event" type="EtcItem">
 		<!-- P. Atk./ M. Atk./ P. Def./ M. Def. +15%, Attribute Attack/ Resistance +100, acquired XP/ SP +5%. The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. --> 
-		<set name="icon" val="branchIcon.Icon.g_ev_dalgona_i00" />
+		<set name="icon" val="BranchIcon.icon.g_ev_dalgona_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -364,7 +364,7 @@
 	<item id="60216" name="Love Box" type="EtcItem">
 		<!-- Double-click to obtain one of various items. --> 
 		<!-- create_items_list={{2;{{81444;1;0;0;0;0;0};{80663;1;0;0;0;0;0};{29525;1;0;0;0;0;0};{29877;1;0;0;0;0;0};{29524;1;0;0;0;0;0};{29879;1;0;0;0;0;0};{48908;1;0;0;0;0;0};{80958;1;0;0;0;0;0};{80959;1;0;0;0;0;0};{48667;1;0;0;0;0;0};{48577;1;0;0;0;0;0};{29526;1;0;0;0;0;0};{19464;1;0;0;0;0;0};{48862;1;0;0;0;0;0};{29962;1;0;0;0;0;0};{29961;1;0;0;0;0;0};{47821;1;0;0;0;0;0};{29913;1;0;0;0;0;0};{29547;1;0;0;0;0;0};{36414;1;0;0;0;0;0};{29753;1;0;0;0;0;0};{29757;1;0;0;0;0;0};{29878;1;0;0;0;0;0};{48995;1;0;0;0;0;0};{80931;1;0;0;0;0;0};{80837;1;0;0;0;0;0};{17623;1;0;0;0;0;0};{48912;1;0;0;0;0;0};{35570;1;0;0;0;0;0};{29385;1;0;0;0;0;0};{80501;1;0;0;0;0;0};{48418;1;0;0;0;0;0};{37717;1;0;0;0;0;0};{48323;1;0;0;0;0;0};{39573;1;0;0;0;0;0};{80502;1;0;0;0;0;0};{81135;1;0;0;0;0;0};{48910;1;0;0;0;0;0};{35649;1;0;0;0;0;0};{29823;1;0;0;0;0;0};{81752;1;0;0;0;0;0};{48215;1;0;0;0;0;0};{80449;1;0;0;0;0;0};{81453;1;0;0;0;0;0};{29170;1;0;0;0;0;0};{80839;1;0;0;0;0;0};{48831;1;0;0;0;0;0};{80130;1;0;0;0;0;0};{45932;1;0;0;0;0;0};{81729;1;0;0;0;0;0};{80636;1;0;0;0;0;0};{48876;1;0;0;0;0;0};{36515;1;0;0;0;0;0};{81134;1;0;0;0;0;0};{81694;1;0;0;0;0;0};{80838;1;0;0;0;0;0};{39720;1;0;0;0;0;0};{29379;1;0;0;0;0;0};{29676;1;0;0;0;0;0};{81747;1;0;0;0;0;0};{48642;1;0;0;0;0;0};{82172;1;0;0;0;0;0}}}}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_recall_potion3" /> <!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -374,7 +374,7 @@
 	<item id="60217" name="LOVE STRONGBOX" type="EtcItem">
 		<!-- Double-click to obtain one of various items. --> 
 		<!-- create_items_list={{2;{{81444;1;0;0;0;0;0};{80663;1;0;0;0;0;0};{29525;1;0;0;0;0;0};{29877;1;0;0;0;0;0};{29524;1;0;0;0;0;0};{29879;1;0;0;0;0;0};{48908;1;0;0;0;0;0};{80958;1;0;0;0;0;0};{80959;1;0;0;0;0;0};{48667;1;0;0;0;0;0};{48577;1;0;0;0;0;0};{29526;1;0;0;0;0;0};{19464;1;0;0;0;0;0};{48862;1;0;0;0;0;0};{29962;1;0;0;0;0;0};{29961;1;0;0;0;0;0};{47821;1;0;0;0;0;0};{29913;1;0;0;0;0;0};{29547;1;0;0;0;0;0};{36414;1;0;0;0;0;0};{29753;1;0;0;0;0;0};{29757;1;0;0;0;0;0};{29878;1;0;0;0;0;0};{48995;1;0;0;0;0;0};{80931;1;0;0;0;0;0};{80837;1;0;0;0;0;0};{17623;1;0;0;0;0;0};{48912;1;0;0;0;0;0};{35570;1;0;0;0;0;0};{29385;1;0;0;0;0;0};{80501;1;0;0;0;0;0};{48418;1;0;0;0;0;0};{37717;1;0;0;0;0;0};{48323;1;0;0;0;0;0};{39573;1;0;0;0;0;0};{80502;1;0;0;0;0;0};{81135;1;0;0;0;0;0};{48910;1;0;0;0;0;0};{35649;1;0;0;0;0;0};{29823;1;0;0;0;0;0};{81752;1;0;0;0;0;0};{48215;1;0;0;0;0;0};{80449;1;0;0;0;0;0};{81453;1;0;0;0;0;0};{29170;1;0;0;0;0;0};{80839;1;0;0;0;0;0};{48831;1;0;0;0;0;0};{80130;1;0;0;0;0;0};{45932;1;0;0;0;0;0};{81729;1;0;0;0;0;0};{80636;1;0;0;0;0;0};{48876;1;0;0;0;0;0};{36515;1;0;0;0;0;0};{81134;1;0;0;0;0;0};{81694;1;0;0;0;0;0};{80838;1;0;0;0;0;0}}}}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.etc_recall_potion3" /> <!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -383,7 +383,7 @@
 	</item>
 	<item id="60218" name="Attendance Gift Rune: P./ M. Atk." additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, P./ M. Atk. +10%. --> 
-		<set name="icon" val="BranchSys3.Icon.g_rune_of_half_power_2" />
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_half_power" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -405,7 +405,7 @@
 	</item>
 	<item id="60220" name="Attendance Gift Rune: Vitality Bonus" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, Vitality bonus +50%. --> 
-		<set name="icon" val="BranchSys2.icon.br_life_rune_i00" />
+		<set name="icon" val="Branchsys2.icon.br_life_rune_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -416,7 +416,7 @@
 	</item>
 	<item id="60221" name="Attendance Gift Rune: PvE" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, PvE damage +15%, acquired XP/ SP +30%. --> 
-		<set name="icon" val="icon.etc_recall_potion3" /> <!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.gc_rune_of_lucien" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -427,7 +427,7 @@
 	</item>
 	<item id="60222" name="Attendance Gift Rune: P./ M. Def." additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, P./ M. Def. +10%. --> 
-		<set name="icon" val="BranchSys3.Icon.g_rune_of_flint_will" />
+		<set name="icon" val="BranchSys3.icon1.g_rune_of_flint_will" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -438,7 +438,7 @@
 	</item>
 	<item id="60223" name="Attendance Gift Rune: All Stats" additionalName="6-hour" type="EtcItem">
 		<!-- When in inventory, STR/ DEX/ CON/ INT/ WIT/ MEN/ CHA/ LUC +1. --> 
-		<set name="icon" val="BranchSys2.icon.br_spirit_rune_i00" />
+		<set name="icon" val="Branchsys2.icon.br_spirit_rune_i00" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -449,7 +449,7 @@
 	</item>
 	<item id="60224" name="Attendance Gift Rune Craft Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon for adventurers who frequently come to Aden. Can be used for crafting special items. Note! Required level for using Craft Coupons: 105+. --> 
-		<set name="icon" val="icon.bm_payback_ticket_01" />
+		<set name="icon" val="icon.ev_2021_thanksgiving_ticket" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -460,7 +460,7 @@
 	</item>
 	<item id="60225" name="Special Exalted Weapon Coupon" additionalName="Event" type="EtcItem">
 		<!-- Required for crafting Enhanced Exalted and Krishna weapons. Note! Required level for using Craft Coupons: 105+. --> 
-		<set name="icon" val="icon.etc_recall_potion3" /> <!-- TODO: ADD PROPER ICON -->
+		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

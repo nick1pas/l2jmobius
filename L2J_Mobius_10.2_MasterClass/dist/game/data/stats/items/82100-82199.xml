@@ -205,7 +205,7 @@
 	</item>
 	<item id="82118" name="Death Knight's Flame Sword" type="Weapon">
 		<!-- Changes a one-handed sword's appearance to that of Eigis. -->
-		<set name="icon" val="icon.weapon_aka_i00" />
+		<set name="icon" val="icon.fire_sword_aden" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -545,7 +545,7 @@
 	</item>
 	<item id="82147" name="Grace' Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain 1 rare item (excluding Forgotten Spellbook - Chapter 1 and various supplies). -->
-		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -705,7 +705,7 @@
 	</item>
 	<item id="82160" name="+1 Defense Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
-		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -731,7 +731,7 @@
 	</item>
 	<item id="82161" name="+3 Defense Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +3. -->
-		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -757,7 +757,7 @@
 	</item>
 	<item id="82162" name="+1 Support Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
-		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -783,7 +783,7 @@
 	</item>
 	<item id="82163" name="+3 Support Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +3. -->
-		<set name="icon" val="icon.bm_artifact_b_box_i00" />
+		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -841,7 +841,7 @@
 	</item>
 	<item id="82168" name="Sayha's Blessing Potion" type="EtcItem">
 		<!-- For 30 min., Attribute Attack/ Resistance +200, acquired XP/ SP +100%. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
-		<set name="icon" val="icon.etc_potion_of_energy_i01" />
+		<set name="icon" val="BranchSys3.icon1.g_ev_invite_red_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -851,7 +851,7 @@
 	</item>
 	<item id="82169" name="Forgotten Spellbook - Finale" type="EtcItem">
 		<!-- A spellbook for learning the Forgotten Power skills Lv. 31. -->
-		<set name="icon" val="icon.bm_skill_book_base" />
+		<set name="icon" val="BranchSys3.lcon.g_inven_expan_book" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -861,7 +861,7 @@
 	</item>
 	<item id="82170" name="Shining Spellbook Box" type="EtcItem">
 		<!-- Double-click to obtain various items (excluding Forgotten Spellbook - Chapter 1). -->
-		<set name="icon" val="icon.collection_field_rune_lv1" />
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -1005,7 +1005,7 @@
 	</item>
 	<item id="82180" name="Festival Fairy's Refreshing Watermelon" additionalName="Event" type="EtcItem">
 		<!-- A watermelon made by the Festival Fairy in commemoration of the summer's coming. For 30 min., P. Atk./ M. Atk./ P. Def./ M. Def. +7%, Power of basic attacks and P./ M. skills +7%, acquired XP/ SP +10%, All received Critical Damage -7%.The effect remains after death, after switching to a dual class or entering instance zones. Removed when entering the Olympiad or the Ceremony of Chaos. --><!-- -1	default_action=[action_skill_reduce]	use_order=99	name_class=-1	color=1	Tooltip_Texture=[None]	Tooltip_BG_Texture=[None]	Tooltip_BG_Texture_Compare=[None]	Tooltip_BG_Deco_Texture=[None]	is_trade=1	is_drop=1	is_destruct=1	is_private_store=1	keep_type=7	is_npctrade=0	is_commission_store=0	enchant_bless=0	DBdelete=0	create_items_list={}	sort_order=0	item_option2=0	item_name_end -->
-		<set name="icon" val="icon.ev_2020_summer1" />
+		<set name="icon" val="Icon.ev_2020_summer1" />
 		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

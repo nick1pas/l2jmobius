@@ -194,7 +194,7 @@
 	</item>
 	<item id="92017" name="Scroll: Enchant Talisman of Eva" additionalName="Sealed" type="EtcItem">
 		<!-- Required for enchanting Talisman of Eva. -->
-		<set name="icon" val="icon.bless_scroll_r99_armor" />
+		<set name="icon" val="icon.bm_eva_talisman_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -209,7 +209,7 @@
 	</item>
 	<item id="92018" name="Talisman of Eva" additionalName="Sealed" type="Armor">
 		<!-- Contains the energy of Eva. Can be enchanted up to +10 with Scroll: Enchant Talisman of Eva. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.giant_item_equip" />
+		<set name="icon" val="icon.bm_eva_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="talisman" />
@@ -598,7 +598,7 @@
 		</skills>
 	</item>
 	<item id="92043" name="Amber Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -613,7 +613,7 @@
 		</skills>
 	</item>
 	<item id="92044" name="Amber Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -628,7 +628,7 @@
 		</skills>
 	</item>
 	<item id="92045" name="Amber Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_amber_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -756,7 +756,7 @@
 		</skills>
 	</item>
 	<item id="92053" name="Opal Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -768,7 +768,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92054" name="Opal Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -780,7 +780,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92055" name="Opal Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -901,7 +901,7 @@
 		</skills>
 	</item>
 	<item id="92063" name="Coral Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -913,7 +913,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92064" name="Coral Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -925,7 +925,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92065" name="Coral Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_coral_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -938,7 +938,7 @@
 	</item>
 	<item id="92066" name="Onyx Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -953,7 +953,7 @@
 	</item>
 	<item id="92067" name="Onyx Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -968,7 +968,7 @@
 	</item>
 	<item id="92068" name="Onyx Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -983,7 +983,7 @@
 	</item>
 	<item id="92069" name="Onyx Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +999,7 @@
 	</item>
 	<item id="92070" name="Onyx Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +16%. P. Atk. +50. M. Atk. +50. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1015,7 +1015,7 @@
 	</item>
 	<item id="92071" name="Onyx Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +20%. P. Atk. +150. M. Atk. +150. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1031,7 +1031,7 @@
 	</item>
 	<item id="92072" name="Onyx Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +25%. P. Atk. +300. M. Atk. +300. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1046,7 +1046,7 @@
 		</skills>
 	</item>
 	<item id="92073" name="Onyx Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1058,7 +1058,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92074" name="Onyx Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1070,7 +1070,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92075" name="Onyx Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1198,7 +1198,7 @@
 		</skills>
 	</item>
 	<item id="92083" name="Spinel Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1210,7 +1210,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92084" name="Spinel Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1222,7 +1222,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92085" name="Spinel Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1235,7 +1235,7 @@
 	</item>
 	<item id="92086" name="Zircon Lv. 1" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +2%. M. Skill Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1250,7 +1250,7 @@
 	</item>
 	<item id="92087" name="Zircon Lv. 2" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +4%. M. Skill Critical Damage +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1265,7 +1265,7 @@
 	</item>
 	<item id="92088" name="Zircon Lv. 3" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +6%. M. Skill Critical Damage +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1280,7 +1280,7 @@
 	</item>
 	<item id="92089" name="Zircon Lv. 4" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +8%. M. Skill Critical Damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1296,7 +1296,7 @@
 	</item>
 	<item id="92090" name="Zircon Lv. 6" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +15%. P. Skill Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1312,7 +1312,7 @@
 	</item>
 	<item id="92091" name="Zircon Lv. 7" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +19%. P. Skill Critical Damage +5%. Skill Power +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1328,7 +1328,7 @@
 	</item>
 	<item id="92092" name="Zircon Lv. 8" additionalName="Sealed" type="Armor">
 		<!-- <Properties>. P. Critical Damage +15%. M. Skill Critical Damage +23%. P. Skill Critical Damage +9%. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_bm_jewel_bloodstone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1343,7 +1343,7 @@
 		</skills>
 	</item>
 	<item id="92093" name="Zircon Lv. 8" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1355,7 +1355,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92094" name="Zircon Lv. 9" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -1367,7 +1367,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92095" name="Zircon Lv. 10" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
+		<set name="icon" val="icon.etc_ertheia2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />

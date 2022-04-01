@@ -329,7 +329,7 @@
 	</item>
 	<item id="91124" name="Radiant Spirit's Varnish" type="EtcItem">
 		<!-- Enhances characteristics of Spirit's accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +1 and higher. -->
-		<set name="icon" val="icon.ev_charge_scroll" />
+		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -480,7 +480,7 @@
 	</item>
 	<item id="91136" name="Dandy's Golden Ball" additionalName="Sealed" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +100%. Acquired SP +100%. Sayha's Grace +140,000. Magic Lamp points +50,000. Craft points +3250. Duration: 60 min. <font color=eeaa22>Changes the armor appearance to that of NC Dinos Uniform.</font>. <font color=ff6666>The effect remains after death.</font> -->
-		<set name="icon" val="icon.ev_dinos_baseball_gold" />
+		<set name="icon" val="BranchIcon.icon.g_ev_goldenball" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -533,7 +533,7 @@
 	</item>
 	<item id="91140" name="Venir's Talisman Lv. 19" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +4, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -544,7 +544,7 @@
 	</item>
 	<item id="91141" name="Venir's Talisman Lv. 20" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN +4, DEX/ WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -555,7 +555,7 @@
 	</item>
 	<item id="91142" name="Venir's Talisman Lv. 21" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX +4, WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -566,7 +566,7 @@
 	</item>
 	<item id="91143" name="Venir's Talisman Lv. 22" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT +4, STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -577,7 +577,7 @@
 	</item>
 	<item id="91144" name="Venir's Talisman Lv. 23" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR +4, INT +3, P./ M. Skill Cooldown -7%. With a certain chance absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -588,7 +588,7 @@
 	</item>
 	<item id="91145" name="Venir's Talisman Lv. 24" additionalName="Sealed" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +4, P./ M. Skill Cooldown -7%. With a certain chance absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded if combined with the identical talisman. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
+		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1038,7 +1038,7 @@
 	</item>
 	<item id="91184" name="MP Replenishing Potion" type="EtcItem">
 		<!-- Instantly recovers MP. -->
-		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
 		<set name="etcitem_type" val="POTION" />
@@ -1087,7 +1087,7 @@
 	</item>
 	<item id="91187" name="Scroll: Enchant Spirit Accessory" type="EtcItem">
 		<!-- For spirit accessories. When enchant value is higher than +1, additional special effects are applied depending on the accessory type. -->
-		<set name="icon" val="icon.ev_charge_scroll" />
+		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1101,7 +1101,7 @@
 	</item>
 	<item id="91188" name="Blessed Scroll: Enchant Spirit Accessory" type="EtcItem">
 		<!-- For spirit accessories. When enchant value is higher than +1, additional special effects are applied depending on the accessory type. If the enchanting fails, the item is not crystallized but its enchant value is reset to 0. -->
-		<set name="icon" val="icon.ev_charge_scroll" />
+		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1189,7 +1189,7 @@
 	</item>
 	<item id="91194" name="Talisman of Authority Lv. 5" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. P./ M. Def. +24, Max HP +12%, Max MP +8%, P./ M. Atk. +5%. Effects of two identical talismans do not stack. -->
-		<set name="icon" val="icon.sayhas_talisman_g_lv5" />
+		<set name="icon" val="icon.sayhas_talisman_new_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1202,7 +1202,7 @@
 	</item>
 	<item id="91195" name="Talisman Bracelet Lv. 4" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. Unlocks 4 talisman slots. <Special effects>. HP/ MP Recovery Rate +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7000. -->
-		<set name="icon" val="icon.dimension_bracelet_i05" />
+		<set name="icon" val="icon.dimension_bracelet_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
