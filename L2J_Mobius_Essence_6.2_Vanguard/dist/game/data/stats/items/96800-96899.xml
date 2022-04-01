@@ -743,4 +743,347 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="96865" name="Cloak of Archer Appearance" additionalName="Test" type="Armor">
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="96866" name="For monsters_Dream Dungeon_Staff - Not Available" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1280" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">41</stat>
+			<stat type="mAtk">43</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="96867" name="For monsters_Dream Dungeon_Two-handed Sword - Not Available" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2090" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">112</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="96868" name="Ancient Supplies (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96869" name="Package: +1 Beleth' Ring" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.accessary_dynasty_ring_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96870" name="Package: +2 Beleth' Ring" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.accessary_dynasty_ring_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96871" name="Package: +3 Beleth' Ring" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.accessary_dynasty_ring_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96872" name="Package: Talisman of Hellbound Lv. 5" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96873" name="Spellbook: Legendary Archer" type="EtcItem">
+		<!-- A spellbook for learning the Legendary Archer skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel Trickster <Skill effect> - Grants a new appearance unique for each race. - Increases P. Atk. - Increases P. Skill Critical Rate. - Increases P. Skill Critical Damage. - Increases Max HP. - Increases Melee Weapon Resistance. - Temporarily increases the Lethal Shot and Twin Shot skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96874" name="Spellbook: True Aim" type="EtcItem">
+		<!-- A spellbook for learning the True Aim skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel <Skill effect> - Increases P. Atk. when using a bow. - Increases Shock/ Suppression Atk. Rate. - With a certain chance after an attack, applies a debuff that decreases Bow Resistance and Shock Resistance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96875" name="Spellbook: Deadly Shooter" type="EtcItem">
+		<!-- A spellbook for learning the Deadly Shooter skill. <Class> Trickster <Skill effect> - Increases P. Atk. when using a bow. - Increases P. Skill Power. - Increases Fear/ Hold Atk. Rate. - Increases Atk. Spd./ P. Accuracy when using a bow. - With a certain chance after an attack, applies a debuff that decreases Bow Resistance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96876" name="Spellbook: Thorn Shot" type="EtcItem">
+		<!-- A spellbook for learning the Thorn Shot skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel <Skill effect> Shoots the target's leg nailing them to the ground. Decreases the target's Speed and makes them unable to use gap-closing skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96877" name="Spellbook: Chain Arrest" type="EtcItem">
+		<!-- A spellbook for learning the Chain Arrest skill. <Class> Trickster <Skill effect> Attacks the target and enemies around them inflicting Hold on them. The skill affects enemies one by one, starting from the nearest to the target. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96878" name="Spellbook: Flame Arrow" type="EtcItem">
+		<!-- A spellbook for learning the Flame Arrow skill. <Class> Sagittarius <Skill effect> Attacks enemies at the front. Constantly decreases the target's HP. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96879" name="Spellbook: Arrow Shower" type="EtcItem">
+		<!-- A spellbook for learning the Arrow Shower skill. <Class> Moonlight Sentinel <Skill effect> Attacks the target and enemies around them, decreasing their Atk. Spd./ Casting Spd./ Speed. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96880" name="Spellbook: Piercing Arrow" type="EtcItem">
+		<!-- A spellbook for learning the Piercing Arrow skill. <Class> Ghost Sentinel <Skill effect> Attacks enemies in line, decreasing their P. Atk./ M. Atk./ P. Def./ M. Def. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96881" name="Spellbook: Devious Shot" type="EtcItem">
+		<!-- A spellbook for learning the Devious Shot skill. <Class> Trickster <Skill effect> Attacks the target and enemies around them. The skill affects enemies one by one, starting from the nearest to the target. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96882" name="Spellbook: Steady Aim" type="EtcItem">
+		<!-- A spellbook for learning the Steady Aim skill. <Class> Sagittarius <Skill effect> Increases P. Atk./ Critical Rate for basic attacks/ P. Skill Critical Rate/ P. Accuracy. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96883" name="Spellbook: Alacrity" type="EtcItem">
+		<!-- A spellbook for learning the Alacrity skill. <Class> Moonlight Sentinel <Skill effect> Increases P. Atk./ Atk. Spd./ Speed. Decreases P. Skill Cooldown. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96884" name="Spellbook: Eagle Eye" type="EtcItem">
+		<!-- A spellbook for learning the Eagle Eye skill. <Class> Ghost Sentinel <Skill effect> Increases P. Atk./ P. Critical Damage/ P. Skill Critical Damage/ P. Accuracy. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96885" name="Spellbook: Dexterous Body" type="EtcItem">
+		<!-- A spellbook for learning the Dexterous Body skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel Trickster <Skill effect> The skill effect depends on your DEX. - Increases P. Atk. when using a bow. - Enhances the Stun Shot and Mental Panic Shot skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96886" name="Spellbook: Perfect Mastery" type="EtcItem">
+		<!-- A spellbook for learning the Ultimate Evasion Lv. 3/ Ultimate Escape Lv. 3. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel Trickster <Skill effect> Adds new effects to learnt skills. - Decreases Skill Cooldown. - Adds the Debuff/ Anomaly Resistance effect. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96887" name="Spellbook: Legendary Archer" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Legendary Archer skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel Trickster <Skill effect> - Grants a new appearance unique for each race. - Increases P. Atk. - Increases P. Skill Critical Rate. - Increases P. Skill Critical Damage. - Increases Max HP. - Increases Melee Weapon Resistance. - Temporarily increases the Lethal Shot and Twin Shot skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96888" name="Spellbook: True Aim" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the True Aim skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel <Skill effect> - Increases P. Atk. when using a bow. - Increases Shock/ Suppression Atk. Rate. - With a certain chance after an attack, applies a debuff that decreases Bow Resistance and Shock Resistance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96889" name="Spellbook: Deadly Shooter" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Deadly Shooter skill. <Class> Trickster <Skill effect> - Increases P. Atk. when using a bow. - Increases P. Skill Power. - Increases Fear/ Hold Atk. Rate. - Increases Atk. Spd./ P. Accuracy when using a bow. - With a certain chance after an attack, applies a debuff that decreases Bow Resistance. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96890" name="Spellbook: Thorn Shot" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Thorn Shot skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel <Skill effect> Shoots the target's leg nailing them to the ground. Decreases the target's Speed and makes them unable to use gap-closing skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96891" name="Spellbook: Chain Arrest" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Chain Arrest skill. <Class> Trickster <Skill effect> Attacks the target and enemies around them inflicting Hold on them. The skill affects enemies one by one, starting from the nearest to the target. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96892" name="Spellbook: Flame Arrow" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Flame Arrow skill. <Class> Sagittarius <Skill effect> Attacks enemies at the front. Constantly decreases the target's HP. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96893" name="Spellbook: Arrow Shower" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Arrow Shower skill. <Class> Moonlight Sentinel <Skill effect> Attacks the target and enemies around them, decreasing their Atk. Spd./ Casting Spd./ Speed. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96894" name="Spellbook: Piercing Arrow" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Piercing Arrow skill. <Class> Ghost Sentinel <Skill effect> Attacks enemies in line, decreasing their P. Atk./ M. Atk./ P. Def./ M. Def. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96895" name="Spellbook: Devious Shot" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Devious Shot skill. <Class> Trickster <Skill effect> Attacks the target and enemies around them. The skill affects enemies one by one, starting from the nearest to the target. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96896" name="Spellbook: Steady Aim" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Steady Aim skill. <Class> Sagittarius <Skill effect> Increases P. Atk./ Critical Rate for basic attacks/ P. Skill Critical Rate/ P. Accuracy. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96897" name="Spellbook: Alacrity" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Alacrity skill. <Class> Moonlight Sentinel <Skill effect> Increases P. Atk./ Atk. Spd./ Speed. Decreases P. Skill Cooldown. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96898" name="Spellbook: Eagle Eye" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Eagle Eye skill. <Class> Ghost Sentinel <Skill effect> Increases P. Atk./ P. Critical Damage/ P. Skill Critical Damage/ P. Accuracy. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="96899" name="Spellbook: Dexterous Body" additionalName="Sealed" type="EtcItem">
+		<!-- A spellbook for learning the Dexterous Body skill. <Classes> Sagittarius Moonlight Sentinel Ghost Sentinel Trickster <Skill effect> The skill effect depends on your DEX. - Increases P. Atk. when using a bow. - Enhances the Stun Shot and Mental Panic Shot skills. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 </list>

@@ -62,4 +62,365 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="72333" name="Anniversary Firecracker NCJ 20" additionalName="Sealed" type="EtcItem">
+		<!-- A large firecracker for the NCJ 20 Anniversary that illuminates the sky with colorful lights. -->
+		<set name="icon" val="BranchIcon.icon.ev_firecracker_20th_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72334" name="Blue Firecracker" additionalName="Sealed" type="EtcItem">
+		<!-- A large firecracker that illuminates the sky with blue lights. -->
+		<set name="icon" val="BranchSys.icon.br_firecracker_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72335" name="Red Firecracker" additionalName="Sealed" type="EtcItem">
+		<!-- A large firecracker that illuminates the sky with red lights. -->
+		<set name="icon" val="BranchSys.icon.br_firecracker_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72336" name="Green Firecracker" additionalName="Sealed" type="EtcItem">
+		<!-- A large firecracker that illuminates the sky with green lights. -->
+		<set name="icon" val="BranchIcon.icon.ev_firecracker_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72337" name="Package: Queen Ant Doll Lv. 3 (Time-limited)" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72338" name="Package: Baium Doll Lv. 3 (Time-limited)" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72339" name="Package: Orfen Doll Lv. 3 (Time-limited)" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72340" name="Queen Ant Doll Lv. 3" additionalName="7-day" type="EtcItem">
+		<!-- <Queen Ant Doll's Sorcery Lv. 3> P. Atk. +12% P. Critical Damage +10% P. Skill Critical Damage +10% Max HP +15% Boosts stats when in inventory. Cannot be upgraded. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72341" name="Baium Doll Lv. 3" additionalName="7-day" type="EtcItem">
+		<!-- <Baium Doll's Sorcery Lv. 3> Skill Cooldown -4% P. Def. +15% M. Def. +15% Silence Resistance +45% Fear Resistance +45% Paralysis Resistance +25% Knockback Resistance +25% Pull Resistance +25% Boosts stats when in inventory. Cannot be upgraded. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72342" name="Orfen Doll Lv. 3" additionalName="7-day" type="EtcItem">
+		<!-- <Orfen Doll's Sorcery Lv. 3> M. Atk. +15% M. Skill Critical Damage +10% Max MP +15% Boosts stats when in inventory. Cannot be upgraded. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="72343" name="Letter J" additionalName="Sealed" type="EtcItem">
+		<!-- Combine with other letters to create a special word and get a reward! -->
+		<set name="icon" val="BranchIcon.icon.etc_alphabet_j_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72344" name="Numbers 20" additionalName="Sealed" type="EtcItem">
+		<!-- Combine with other letters to create a special word and get a reward! -->
+		<set name="icon" val="BranchIcon.icon.etc_alphabet_20_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="72345" name="NCJ 20 Anniversary Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A gift for the NCJ 20 Anniversary. <Buff effect> P. Atk. +250 M. Atk. +250 P. Def. +150 M. Def. +150 Max HP +300 Max MP +250 Acquired XP +10% Acquired SP +10% Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
+		<set name="icon" val="BranchIcon.icon.ev_ncjapan_20th_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72346" name="Aden's 2nd Anniversary Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72347" name="Music Spirit Kit (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72348" name="L2M Launch Commemoration Coin (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A coin for commemorating the L2M launch. Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="BranchIcon.icon.g_ev_l2coin_ncw_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72349" name="L2M Gift Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72350" name="Black Friday Kit (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72351" name="L2M Blessing Buff (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the L2M Blessing buff. -->
+		<set name="icon" val="BranchIcon.icon.g_ev_l2m_blessing_ncw_00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72352" name="2022 Christmas Gift (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.ev_10th_present2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72353" name="Christmas Gift Kit I (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72354" name="Christmas Gift Kit II (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72355" name="Christmas Gift Kit III (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72359" name="New Year Gift Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.sayha2017_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72360" name="Lucky Pouch (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- A Lucky Pouch to celebrate the New Year. Double-click to obtain the following. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72361" name="Golden Lucky Pouch (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72362" name="Special Festival Spellbook Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72363" name="100,000 Adena Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain 100,000 adena. -->
+		<set name="icon" val="icon.event_hero_treasure_box_blue" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72364" name="Red Lantern" additionalName="Sealed" type="EtcItem">
+		<!-- XP +100,000,000, SP +2,700,000. Cannot be exchanged for the lit lantern. Required level: 85+. -->
+		<set name="icon" val="icon.r99_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72365" name="Great Hunter's Reward (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72366" name="Aden Love Box (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72367" name="Update Supplies" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain the following. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72368" name="Eva’s Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list or one of various items. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72369" name="Package: Eva's Coupon (1,000 pcs.) (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72370" name="Eva's Coupon (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Can be used in the special creation system or via Game Assistant. -->
+		<set name="icon" val="icon.bm_jewel_ticket" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72371" name="Vanguard Support Pack (Time-limited)" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to get more information about the contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 </list>

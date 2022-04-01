@@ -579,4 +579,287 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="60169" name="Chest of New Destiny" type="EtcItem">
+		<!-- Double-click to obtain 1 special item. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60170" name="Anniversary Firecracker NCJ 20" type="EtcItem">
+		<!-- A large firecracker for the NCJ 20 Anniversary that illuminates the sky with colorful lights. -->
+		<set name="icon" val="BranchIcon.icon.ev_firecracker_20th_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60171" name="Red Firecracker" type="EtcItem">
+		<!-- A firecracker that illuminates the sky with red lights. -->
+		<set name="icon" val="BranchSys.icon.br_firecracker_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60172" name="Blue Firecracker" type="EtcItem">
+		<!-- A firecracker that illuminates the sky with blue lights. -->
+		<set name="icon" val="BranchSys.icon.br_firecracker_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60173" name="Green Firecracker" type="EtcItem">
+		<!-- A firecracker that illuminates the sky with green lights. -->
+		<set name="icon" val="BranchIcon.icon.ev_firecracker_green_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60174" name="Letter J" additionalName="Event" type="EtcItem">
+		<!-- If you collect a special combination of letters and numbers, you can get a gift. -->
+		<set name="icon" val="BranchIcon.icon.etc_alphabet_j_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60175" name="Numbers 20" additionalName="Event" type="EtcItem">
+		<!-- If you collect a special combination of letters and numbers, you can get a gift. -->
+		<set name="icon" val="BranchIcon.icon.etc_alphabet_20_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60176" name="NCJ 20 Anniversary Gift" additionalName="Event" type="EtcItem">
+		<!-- A gift for the NCJ 20 Anniversary. Acquired XP/ SP +10%, Critical Damage for basic attacks and P./ M. Skill Critical Damage +5%. The effect is removed when entering the Olympiad or the Ceremony of Chaos. -->
+		<set name="icon" val="BranchIcon.icon.ev_ncjapan_20th_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60177" name="L2M Launch Commemoration Coin" additionalName="Event" type="EtcItem">
+		<!-- A coin for commemorating the L2M launch. Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="BranchIcon.icon.g_ev_l2coin_ncw_00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60178" name="L2M Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A gift box for commemorating the L2M launch. Double-click to obtain one of the following items with a certain chance. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60179" name="Royal Honey Dark Beer" additionalName="Event" type="EtcItem">
+		<!-- For 30 min. all basic stats +3, Vitality bonus +50%, P./ M. Def. +15%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60180" name="Glittering Freya's Scroll of Storm" additionalName="Event" type="EtcItem">
+		<!-- For 10 min., Vitality Consumption +200%, acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
+		<set name="icon" val="icon.bm_freya_storm_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60181" name="Glittering Freya's Ice Rose" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +35%. Atk. Spd./ Casting Spd. +10%, Speed +20. Attribute Attack/ Resistance +200, damage +12%, P./ M. Skill Power +12%, acquired XP/ SP +40%, received damage -15%, Skill MP Consumption -15%, all basic stats +2. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction, Pa'agrio's Blessing and the Freya's Ice Rose effect. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_freya_ice_rose" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60182" name="Glowing Royal Dragon's Attribute Potion" additionalName="Event" type="EtcItem">
+		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_dragon_posion_special" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60183" name="Shining Royal Nevit's Gold Hourglass" additionalName="Event" type="EtcItem">
+		<!-- During hunting, for 30 min., acquired XP/ SP +120%, damage +5%, received damage -7%. Cannot stack with the Shining Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. The effect is removed after entering the Olympiad or the Ceremony of Chaos. Cooldown: 10 sec. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60184" name="Black Friday Mark" additionalName="Event" type="EtcItem">
+		<!-- A special mark for the Black Friday. Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.token_of_oman" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60185" name="Black Friday Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60186" name="Glowing Dragon's Attribute Potion" additionalName="Event" type="EtcItem">
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_dragon_posion_special" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60187" name="Shining Nevit's Gold Hourglass" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., acquired XP/ SP +100%. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball effects. Cooldown: 5 min. -->
+		<set name="icon" val="icon.bm_dragon_breath" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60188" name="L2M Blessing Buff" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the L2M Blessing buff. -->
+		<set name="icon" val="BranchIcon.icon.g_ev_l2m_blessing_ncw_00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60189" name="Golden Safe" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60190" name="Letter U" additionalName="Event" type="EtcItem">
+		<!-- Combine with other letters to create a special word and get a reward! -->
+		<set name="icon" val="icon.etc_alphabet_u_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="60191" name="Greedy Mammon's Chest" type="EtcItem">
+		<!-- Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_2018_special_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60192" name="Ancient Chest of Warrior Heritage" type="EtcItem">
+		<!-- Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60193" name="New Year Tiger's Jewel" additionalName="Event" type="EtcItem">
+		<!-- A special gift from Baby Tiger for celebrating the New Year of 2022. Its additional properties become active after adding to the collection. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60194" name="Mysterious Pack Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain an item from the guaranteed list, an item from the random list or one of various items. Can be used to create Mysterious Chest Lv. 2 with a certain chance through the Special Craft. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60195" name="Mysterious Pack Lv. 2" type="EtcItem">
+		<!-- Can be used to create Mysterious Chest Lv. 3 with a certain chance through the Special Craft, or exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60196" name="Mysterious Pack Lv. 3" type="EtcItem">
+		<!-- Can be used to create Mysterious Chest Lv. 4 with a certain chance through the Special Craft, or exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60197" name="Mysterious Pack Lv. 4" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60198" name="Mysterious Crystal" type="EtcItem">
+		<!-- Can be used for creating many valuable items. -->
+		<set name="icon" val="icon.etc_black_freezing_core_i00" />
+		<set name="default_action" val="NONE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="60199" name="Swift Growth Cookie Pack" type="EtcItem">
+		<!-- Double-click to obtain Swift Growth Cookie (50 pcs.). Note! Received cookies cannot be traded. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
 </list>
