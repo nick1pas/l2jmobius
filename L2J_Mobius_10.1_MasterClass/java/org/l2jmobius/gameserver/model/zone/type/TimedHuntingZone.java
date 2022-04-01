@@ -40,7 +40,7 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (!creature.isPlayer())
+		if (!creature.isPlayer() || creature.isInsideZone(ZoneId.TIMED_HUNTING))
 		{
 			return;
 		}
@@ -82,7 +82,7 @@ public class TimedHuntingZone extends ZoneType
 		}
 		
 		final Player player = creature.getActingPlayer();
-		if (player != null)
+		if ((player != null) && !player.isInTimedHuntingZone(player.getX(), player.getY()))
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, false);
 			player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
