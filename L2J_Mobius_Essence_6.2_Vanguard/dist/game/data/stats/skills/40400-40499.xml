@@ -87,9 +87,30 @@
 		</effects>
 	</skill>
 	<skill id="40413" toLevel="1" name="Scroll of Escape: Gantaki Zu Urutu">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- A magical scroll that relocates you to the Gantaki Zu Urutu in Orc Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>97230</itemConsumeId> <!-- Scroll of Escape: Gantaki Zu Urutu -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-44718</x>
+				<y>-111969</y>
+				<z>-240</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40414" toLevel="1" name="Rare Accessory Challenge Points +50">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

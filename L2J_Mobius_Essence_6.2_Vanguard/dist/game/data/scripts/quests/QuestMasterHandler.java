@@ -39,6 +39,7 @@ import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10950_FiercestFlame.Q10950_FiercestFlame;
 import quests.Q10951_NewFlameOfOrcs.Q10951_NewFlameOfOrcs;
 import quests.Q10952_ProtectAtAllCosts.Q10952_ProtectAtAllCosts;
+import quests.Q10953_ValiantOrcs.Q10953_ValiantOrcs;
 import quests.Q10954_SayhaChildren.Q10954_SayhaChildren;
 import quests.Q10955_NewLifeLessons.Q10955_NewLifeLessons;
 import quests.Q10956_WeSylphs.Q10956_WeSylphs;
@@ -93,6 +94,7 @@ public class QuestMasterHandler
 		Q10950_FiercestFlame.class,
 		Q10951_NewFlameOfOrcs.class,
 		Q10952_ProtectAtAllCosts.class,
+		Q10953_ValiantOrcs.class,
 		Q10954_SayhaChildren.class,
 		Q10955_NewLifeLessons.class,
 		Q10956_WeSylphs.class,

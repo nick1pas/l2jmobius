@@ -326,11 +326,20 @@
 		<!-- A magic scroll that can teleport you to Gantaki Zu Urutu in the Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="30" />
+		<set name="price" val="35000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40413" level="1" /> <!-- Scroll of Escape: Gantaki Zu Urutu -->
+		</skills>
 	</item>
 	<item id="97232" name="Spellbook: Giant's Stomp" additionalName="Sealed" type="EtcItem">
 		<!-- A spellbook for learning the Giant's Stomp skill. <Class> Vanguard Rider <Skill effect> Knocks nearby enemies down. -->
