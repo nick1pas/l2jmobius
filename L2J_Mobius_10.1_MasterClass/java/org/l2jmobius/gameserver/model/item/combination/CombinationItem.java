@@ -30,7 +30,7 @@ public class CombinationItem
 	private final int _enchant;
 	private final int _itemTwo;
 	private final long _commission;
-	private final int _chance;
+	private final float _chance;
 	private final Map<CombinationItemType, CombinationItemReward> _rewards = new EnumMap<>(CombinationItemType.class);
 	
 	public CombinationItem(StatSet set)
@@ -39,7 +39,7 @@ public class CombinationItem
 		_enchant = set.getInt("enchant", 0);
 		_itemTwo = set.getInt("two");
 		_commission = set.getLong("commission", 0);
-		_chance = set.getInt("chance", 33);
+		_chance = set.getFloat("chance", 33);
 	}
 	
 	public int getItemOne()
@@ -62,7 +62,7 @@ public class CombinationItem
 		return _commission;
 	}
 	
-	public int getChance()
+	public float getChance()
 	{
 		return _chance;
 	}
