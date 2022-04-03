@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -39,12 +38,12 @@ public class ItemDeletionInfo implements IClientOutgoingPacket
 		OutgoingPackets.EX_ITEM_DELETION_INFO.writeId(packet);
 		
 		// Items.
-		final Map<Integer, Date> itemInfos = ItemDeletionInfoManager.getInstance().getInfo();
-		packet.writeD(itemInfos.size());
-		for (Entry<Integer, Date> info : itemInfos.entrySet())
+		final Map<Integer, Integer> itemDates = ItemDeletionInfoManager.getInstance().getItemDates();
+		packet.writeD(itemDates.size());
+		for (Entry<Integer, Integer> info : itemDates.entrySet())
 		{
-			packet.writeD(info.getKey()); // item id
-			packet.writeD((int) (info.getValue().getTime() / 1000)); // UNIX TIME
+			packet.writeD(info.getKey()); // item
+			packet.writeD(info.getValue()); // date
 		}
 		
 		// Skills.

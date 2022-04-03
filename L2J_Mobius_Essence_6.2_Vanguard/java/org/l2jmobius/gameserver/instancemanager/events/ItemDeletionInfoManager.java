@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.instancemanager.events;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -28,20 +27,20 @@ public class ItemDeletionInfoManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemDeletionInfoManager.class.getName());
 	
-	private final Map<Integer, Date> _items = new HashMap<>();
+	private final Map<Integer, Integer> _itemDates = new HashMap<>();
 	
 	protected ItemDeletionInfoManager()
 	{
 	}
 	
-	public void addItemInfo(int itemId, Date date)
+	public void addItemDate(int itemId, int date)
 	{
-		_items.put(itemId, date);
+		_itemDates.put(itemId, date);
 	}
 	
-	public Map<Integer, Date> getInfo()
+	public Map<Integer, Integer> getItemDates()
 	{
-		return _items;
+		return _itemDates;
 	}
 	
 	public static ItemDeletionInfoManager getInstance()

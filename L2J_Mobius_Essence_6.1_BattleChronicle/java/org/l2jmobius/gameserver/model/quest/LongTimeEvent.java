@@ -284,6 +284,7 @@ public class LongTimeEvent extends Quest
 				{
 					if (n.getNodeName().equalsIgnoreCase("destroyItemsOnEnd"))
 					{
+						final long endtime = _eventPeriod.getEndDate().getTime();
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							if (d.getNodeName().equalsIgnoreCase("item"))
@@ -299,9 +300,9 @@ public class LongTimeEvent extends Quest
 									_destroyItemsOnEnd.add(itemId);
 									
 									// Add item deletion info to manager.
-									if (_eventPeriod.getEndDate().getTime() > Chronos.currentTimeMillis())
+									if (endtime > Chronos.currentTimeMillis())
 									{
-										ItemDeletionInfoManager.getInstance().addItemInfo(itemId, _eventPeriod.getEndDate());
+										ItemDeletionInfoManager.getInstance().addItemDate(itemId, (int) (endtime / 1000));
 									}
 								}
 								catch (NumberFormatException nfe)
