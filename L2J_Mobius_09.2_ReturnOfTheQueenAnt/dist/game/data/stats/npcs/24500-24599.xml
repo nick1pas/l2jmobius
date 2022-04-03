@@ -4026,9 +4026,10 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24596" level="85" type="Folk" name="Water Dragon's Elite Archer">
+	<npc id="24596" level="114" type="Monster" name="Water Dragon's Elite Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<mpReward value="60" type="DIFF" ticks="20" affects="PARTY" />
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4037,18 +4038,24 @@
 				<walk ground="75" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" type="BOW" range="200" distance="200" width="120" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+			<attribute>
+				<attack type="WATER" value="1530" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="73" />
 		</collision>
 	</npc>
-	<npc id="24597" level="85" type="Folk" name="Water Dragon's Elite Mage">
+	<npc id="24597" level="114" type="Monster" name="Water Dragon's Elite Mage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<mpReward value="60" type="DIFF" ticks="20" affects="PARTY" />
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="305156" hpRegen="10.5" mp="2943" mpRegen="3.6" />
@@ -4056,18 +4063,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+			<attribute>
+				<attack type="WATER" value="1530" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24598" level="85" type="Folk" name="Water Dragon's Elite Raider">
+	<npc id="24598" level="114" type="Monster" name="Water Dragon's Elite Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<mpReward value="60" type="DIFF" ticks="20" affects="PARTY" />
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316618" hpRegen="10.5" mp="2943" mpRegen="3.6" />
@@ -4075,18 +4088,24 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" type="NONE" range="40" distance="80" width="120" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+			<attribute>
+				<attack type="WATER" value="1530" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="30" />
-			<height normal="59" />
+			<radius normal="63" />
+			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="24599" level="85" type="Folk" name="Water Dragon's Elite Swordsman">
+	<npc id="24599" level="114" type="Monster" name="Water Dragon's Elite Swordsman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<mpReward value="60" type="DIFF" ticks="20" affects="PARTY" />
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316618" hpRegen="10.5" mp="2943" mpRegen="3.6" />
@@ -4094,10 +4113,15 @@
 				<walk ground="75" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+			<attribute>
+				<attack type="WATER" value="1530" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="72.5" />
