@@ -79,7 +79,13 @@ public class TriggerSkillByMagicType extends AbstractEffect
 	
 	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
 	{
-		if (!event.getTarget().isCreature())
+		WorldObject target = event.getTarget();
+		if (target == null)
+		{
+			return;
+		}
+		
+		if (!target.isCreature())
 		{
 			return;
 		}
@@ -94,7 +100,7 @@ public class TriggerSkillByMagicType extends AbstractEffect
 			return;
 		}
 		
-		WorldObject target = null;
+		target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), _skill.getSkill(), false, false, false);
