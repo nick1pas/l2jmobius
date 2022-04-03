@@ -12,7 +12,7 @@
  * General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http:// www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.others;
 
@@ -26,6 +26,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 
 import ai.AbstractNpcAI;
 
@@ -256,6 +257,10 @@ public class AetherDrops extends AbstractNpcAI
 			final Calendar calendar = Calendar.getInstance();
 			calendar.set(Calendar.HOUR_OF_DAY, 6);
 			calendar.set(Calendar.MINUTE, 30);
+			if (calendar.getTimeInMillis() < Chronos.currentTimeMillis())
+			{
+				calendar.add(Calendar.DAY_OF_YEAR, 1);
+			}
 			
 			cancelQuestTimers("reset");
 			startQuestTimer("reset", calendar.getTimeInMillis() - Chronos.currentTimeMillis(), null, null);
@@ -291,13 +296,23 @@ public class AetherDrops extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if ((killer.getLevel() >= PLAYER_LEVEL) && (getRandom(100) < CHANCE))
+		final Player player = getRandomPartyMember(killer);
+		if ((player.getLevel() >= PLAYER_LEVEL) && (getRandom(100) < CHANCE))
 		{
-			final int count = killer.getVariables().getInt(AETHER_DROP_COUNT_VAR, 0);
+			final int count = player.getVariables().getInt(AETHER_DROP_COUNT_VAR, 0);
 			if (count < DROP_DAILY)
 			{
-				killer.getVariables().set(AETHER_DROP_COUNT_VAR, count + 1);
-				giveItems(killer, AETHER, getRandom(DROP_MIN, DROP_MAX));
+				player.getVariables().set(AETHER_DROP_COUNT_VAR, count + 1);
+				giveItems(player, AETHER, getRandom(DROP_MIN, DROP_MAX));
+			}
+			else
+			{
+				if (count == DROP_DAILY)
+				{
+					player.getVariables().set(AETHER_DROP_COUNT_VAR, count + 1);
+					player.sendPacket(SystemMessageId.YOU_EXCEEDED_THE_LIMIT_AND_CANNOT_COMPLETE_THE_TASK);
+				}
+				player.sendMessage("You obtained all available Aether for this day!");
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
