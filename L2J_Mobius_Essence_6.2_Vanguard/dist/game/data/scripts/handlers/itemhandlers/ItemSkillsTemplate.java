@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.SkillCaster;
+import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -124,7 +125,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				else if (itemSkill.isWithoutAction() || item.getTemplate().hasImmediateEffect() || item.getTemplate().hasExImmediateEffect())
 				{
-					SkillCaster.triggerCast(playable, null, itemSkill, item, false);
+					SkillCaster.triggerCast(playable, itemSkill.getTargetType() == TargetType.OTHERS ? playable.getTarget() : null, itemSkill, item, false);
 					successfulUse = true;
 				}
 				else
