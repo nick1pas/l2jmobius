@@ -79,11 +79,28 @@
 	<item id="81707" name="Festival Fairy's Gift" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="30297" min="1" max="1" chance="38"/>
+			<item id="30298" min="1" max="1" chance="38"/>
+			<item id="47820" min="1" max="1" chance="2"/>
+			<item id="48861" min="1" max="1" chance="2"/>
+			<item id="81153" min="1" max="1" chance="10"/>
+			<item id="82071" min="1" max="1" chance="5"/>
+			<item id="82072" min="1" max="1" chance="5"/>
+		</capsuled_items>
 	</item>
 	<item id="81708" name="Festival Fairy's Energy Scroll" additionalName="Event" type="EtcItem">
 		<!-- A scroll prepared by Festival Fairy. It is imbued with Aden's energy. For 10 min., acquired XP/ SP +200%. The effect disappears after the main/ dual class change, but remains after death. Cooldown: 9 min. Required level: 1-110. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->

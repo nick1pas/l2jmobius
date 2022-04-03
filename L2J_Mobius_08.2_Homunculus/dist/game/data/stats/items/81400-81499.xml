@@ -295,9 +295,34 @@
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48862" min="1" max="1" chance="1" /> <!-- Fallen Angel +10 Box -->
+			<item id="80334" min="1" max="1" chance="1" /> <!-- Dragon Earring -->
+			<item id="80335" min="1" max="1" chance="1" /> <!-- Dragon Ring -->
+			<item id="80333" min="1" max="1" chance="1" /> <!-- Dragon Neclare -->
+			<item id="48417" min="1" max="1" chance="5" /> <!-- Rule of Authority - Genesis -->
+			<item id="35568" min="1" max="1" chance="30" /> <!-- Bloody Weapon Enhancement Stone -->
+			<item id="81828" min="1" max="1" chance="5" /> <!-- +5 Greater Agathion Charm Box -->
+			<item id="48493" min="1" max="1" chance="5" /> <!-- Dragon Rind Leather Shirt -->
+			<item id="48210" min="1" max="1" chance="3.333333333" /> <!-- Guardian Radiant Circlet -->
+			<item id="48204" min="1" max="1" chance="3.333333333" /> <!-- Warrior Radiant Circlet -->
+			<item id="48207" min="1" max="1" chance="3.333333333" /> <!-- Wizard Radiant Circlet -->
+			<item id="48576" min="1" max="1" chance="5" /> <!-- Superior Seed Bracelet Lv. 3 -->
+			<item id="81660" min="1" max="1" chance="5" /> <!-- Sapphire Jewelry Box Lv. 5 -->
+			<item id="81659" min="1" max="1" chance="5" /> <!-- Ruby Jewelry Box Lv. 5 -->
+			<item id="47916" min="1" max="1" chance="5" /> <!-- Nevit's Cloak of Light Pack -->
+			<item id="80636" min="1" max="1" chance="7" /> <!-- Artifact Crystal -->
+			<item id="81134" min="1" max="1" chance="7" /> <!-- Crystal of Dyes -->
+			<item id="39738" min="1" max="1" chance="7" /> <!-- Rune Stone -->
+		</capsuled_items>
 	</item>
 	<item id="81429" name="Festival Fairy's Superior Talisman Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of many items: Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Heavenly Talisman, Epic Talisman. -->
@@ -305,8 +330,19 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39573" min="1" max="1" chance="30" /> <!-- Sealed Talisman of Insanity -->
+			<item id="37717" min="1" max="1" chance="60" /> <!-- Talisman of Seven Signs -->
+			<item id="80958" min="1" max="1" chance="5" /> <!-- Sealed Heavenly Talisman -->
+			<item id="80959" min="1" max="1" chance="5" /> <!-- Epic Talisman -->
+		</capsuled_items>
 	</item>
 	<item id="81430" name="Artifact - Attribute Attack" additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Attribute Attack. Can be equipped in an attack artifact slot. When enchanted, increases Attribute Attack bonus. Only an attack artifact can be used as a material for upgrade. -->

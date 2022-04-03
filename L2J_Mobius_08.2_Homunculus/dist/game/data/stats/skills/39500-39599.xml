@@ -785,10 +785,59 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39560" toLevel="1" name="Festival Fairy's Crystal Box">
+		<icon>icon.box</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">80934</value>
+		</itemConsumeId>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="58">
+						<item id="17371" count="3" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="20">
+						<item id="17371" count="5" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="10">
+						<item id="17371" count="10" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="5">
+						<item id="17371" count="15" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="3">
+						<item id="17371" count="25" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="2">
+						<item id="17371" count="50" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="1">
+						<item id="17371" count="100" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="0.5">
+						<item id="17371" count="150" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="0.3">
+						<item id="17371" count="250" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="0.19">
+						<item id="17371" count="300" /> <!-- R Grade Crystals -->
+					</item>
+					<item chance="0.01">
+						<item id="17371" count="500" /> <!-- R Grade Crystals -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39561" toLevel="1" name="Effect of Security">
 		<!-- The effect for characters on accaunt using security service. P./ M. Def. +$s1, Attribute Resistance +$s2. -->

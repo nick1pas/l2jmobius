@@ -527,16 +527,21 @@
 	<item id="80934" name="Festival Fairy's Crystal Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 3-500 R-grade crystals. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<capsuled_items>
-			<item id="17371" min="3" max="500" chance="100" /> <!-- R-grade Crystal -->
-		</capsuled_items>
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="0" />
+		<skills>
+			<skill id="39560" level="1"/>	<!-- R-grade Crystal -->
+		</skills>
 	</item>
 	<item id="80935" name="Small Fairy's Lucky Coin Pack" additionalName="Not used" type="EtcItem">
 		<!-- Double-click to obtain 15 Fairy's Lucky Coins. -->

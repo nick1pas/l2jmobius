@@ -465,8 +465,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="true" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="1800000" />
+		<skills>
+			<skill id="39182" level="1"/>
+		</skills>
 	</item>
 	<item id="48230" name="Antharas Transformation Slasher" type="Weapon">
 		<!-- NPC only weapon -->

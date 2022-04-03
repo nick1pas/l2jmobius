@@ -841,22 +841,71 @@
 	<item id="82071" name="Krishna Weapon Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a random Krishna weapon. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80090" min="1" max="1" chance="7.14"/> <!-- Shaper -->
+			<item id="80091" min="1" max="1" chance="7.14"/> <!-- Cutter -->
+			<item id="80092" min="1" max="1" chance="7.14"/> <!-- Slasher -->
+			<item id="80093" min="1" max="1" chance="7.14"/> <!-- Avenger -->
+			<item id="80094" min="1" max="1" chance="7.14"/> <!-- Fighter -->
+			<item id="80095" min="1" max="1" chance="7.14"/> <!-- Stormer -->
+			<item id="80096" min="1" max="1" chance="7.14"/> <!-- Thrower -->
+			<item id="80097" min="1" max="1" chance="7.14"/> <!-- Guardian -->
+			<item id="80098" min="1" max="1" chance="7.14"/> <!-- Buster -->
+			<item id="80099" min="1" max="1" chance="7.14"/> <!-- Caster -->
+			<item id="80100" min="1" max="1" chance="7.14"/> <!-- Retributer -->
+			<item id="80101" min="1" max="1" chance="7.14"/> <!-- Dual Swords -->
+			<item id="80102" min="1" max="1" chance="7.14"/> <!-- Dual Daggers -->
+			<item id="80103" min="1" max="1" chance="7.14"/> <!-- Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="82072" name="Leviathan Armor Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a piece of Leviathan armor. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80120" min="1" max="1" chance="5.88"/> <!-- Sigil -->
+			<item id="80119" min="1" max="1" chance="5.88"/> <!-- Robe Boots -->
+			<item id="80118" min="1" max="1" chance="5.88"/> <!-- Robe Gloves -->
+			<item id="80117" min="1" max="1" chance="5.88"/> <!-- Robe Gaiters -->
+			<item id="80116" min="1" max="1" chance="5.88"/> <!-- Robe Breastplate -->
+			<item id="80115" min="1" max="1" chance="5.88"/> <!-- Robe Helmet -->
+			<item id="80114" min="1" max="1" chance="5.88"/> <!-- Light Boots -->
+			<item id="80113" min="1" max="1" chance="5.88"/> <!-- Light Gloves -->
+			<item id="80112" min="1" max="1" chance="5.88"/> <!-- Light Gaiters -->
+			<item id="80111" min="1" max="1" chance="5.88"/> <!-- Light Breastplate -->
+			<item id="80110" min="1" max="1" chance="5.88"/> <!-- Light Helmet -->
+			<item id="80109" min="1" max="1" chance="5.88"/> <!-- Shield -->
+			<item id="80108" min="1" max="1" chance="5.88"/> <!-- Heavy Boots -->
+			<item id="80107" min="1" max="1" chance="5.88"/> <!-- Heavy Gauntlets (Gloves) -->
+			<item id="80106" min="1" max="1" chance="5.88"/> <!-- Heavy Gaiters -->
+			<item id="80105" min="1" max="1" chance="5.88"/> <!-- Heavy Breastplate -->
+			<item id="80104" min="1" max="1" chance="5.88"/> <!-- Heavy Helmet -->
+		</capsuled_items>
 	</item>
 	<item id="82073" name="Iron Gate's Key" additionalName="Event" type="EtcItem">
 		<!-- Required for accessing the Iron Gate Guild's secret store. -->

@@ -239,10 +239,28 @@
 	<skill id="39182" toLevel="1" name="Festival Fairy's Summon Friend Scroll">
 		<!-- Summons a selected target. Only available while you're in a party. Cooldown 30 min. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>5000</hitTime>
-		<reuseDelay>1800000</reuseDelay>
+		<operateType>A2</operateType>
 		<effectPoint>1000</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>-2</effectRange>
+		<hitTime>10000</hitTime>
+		<targetType>OTHERS</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="39183" toLevel="1" name="Vitality Beer">
 		<!-- Double-click it to recover a certain amount of Vitality. -->

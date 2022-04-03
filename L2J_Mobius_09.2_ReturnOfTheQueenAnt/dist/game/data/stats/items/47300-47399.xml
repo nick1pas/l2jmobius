@@ -1492,8 +1492,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="material" val="LEATHER" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="49783" min="1500" max="1500" chance="75" /> <!-- Fairy's Lucky Coin - Event -->
+			<item id="49783" min="25000" max="25000" chance="100" /> <!-- Fairy's Lucky Coin - Event -->
 		</capsuled_items>
 	</item>
 </list>

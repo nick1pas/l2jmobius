@@ -387,13 +387,30 @@
 	<item id="81828" name="Festival Fairy's Box: +5 Greater Agathion Charm" additionalName="Event" type="EtcItem">
 		<!-- A box prepared by Festival Fairy for Chuseok. Double-click to obtain +5 Enhanced Zodiac Agathion. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80936" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Virgo Charm -->
+			<item id="80937" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Capricorn Charm -->
+			<item id="80938" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Libra Charm -->
+			<item id="80939" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Aries Charm -->
+			<item id="80940" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Taurus Charm -->
+			<item id="80941" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Leo Charm -->
+			<item id="80942" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Gemini Charm -->
+			<item id="80943" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Scorpio Charm -->
+			<item id="80944" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Aquarius Charm -->
+			<item id="80945" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Pisces Charm -->
+			<item id="80946" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Sagittarius Charm -->
+			<item id="80947" min="1" max="1" minEnchant="5" maxEnchant="5" chance="8.333334" /> <!-- Greater Agathion Cancer Charm -->
+		</capsuled_items>
 	</item>
 	<item id="81829" name="Otherworldly Atelia Refinery's Time Stone" additionalName="Event" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time on the Otherworldly Atelia Refinery. Required level: 112+. -->
@@ -743,72 +760,70 @@
 		<!-- Soulshot and Beast Soulshot damage +23%, P. Atk. +25%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="agathion" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18717" level="20" /> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="81870" name="Superior Sapphire Lv. 10" additionalName="Event" type="Armor">
 		<!-- Spiritshot and Blessed Spiritshot damage +23%, M. Atk. +30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="agathion" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18719" level="20" /> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="81871" name="Superior Red Cat's Eye Lv. 10" additionalName="Event" type="Armor">
 		<!-- P. Critical Damage +25%, P. Skill Critical Damage +25%, P. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="agathion" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18713" level="20" /> <!-- Red Cat's Eye -->
+		</skills>
 	</item>
 	<item id="81872" name="Superior Blue Cat's Eye Lv. 10" additionalName="Event" type="Armor">
 		<!-- M. Skill Critical Damage +25%, M. Skill Power +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_lv1_lavianrose_high2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="agathion" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-		</stats>
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18714" level="20" /> <!-- Blue Cat's Eye -->
+		</skills>
 	</item>
 	<item id="81873" name="Heavenly Talisman" additionalName="1-day" type="Armor">
 		<!-- Max HP/ MP/ CP +7%, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage +5%, Atk./ Casting Spd. +70, P. Critical Rate +30, M. Critical Rate +10, P./ M. Atk. +3%, Skill Power +7%, Damage Reflection Resistance +40, Fixed Damage Resistance +15%, P./ M. Def. +750, all stats +3, MP Consumption -3%, Skill Cooldown -3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.accessory_heaven_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="1440" />
-		<stats>
-		</stats>
+		<skills>
+			<skill id="8864" level="8" /> <!-- Heavenly Talisman (Insanity lvl 8) -->
+			<skill id="35552" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Infinity -->
+			<skill id="35553" level="1" type="ON_UNEQUIP" /> <!-- Unequip Heavenly Talisman -->
+		</skills>
 	</item>
 	<item id="81874" name="Heavenly Talisman Safe Pack" additionalName="Event" type="EtcItem">
 		<!-- For characters of Lv. 85+. Double-click to obtain a Heavenly Talisman (1-day). Unsealed Heavenly Talisman cannot be exchanged, dropped or sold. -->
@@ -817,9 +832,16 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player level="85" />
+			</and>
+		</cond>
+		<capsuled_items>
+			<item id="80957" min="1" max="1" chance="100" /> <!-- Heavenly Talisman -->
+		</capsuled_items>
 	</item>
 	<item id="81875" name="Teleportation Cube" type="EtcItem">
 		<!-- Double-click to teleport to the place where you have to complete the accepted quest. -->
@@ -830,6 +852,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="TeleportCube" />
+		<skills>
+			<skill id="2588" level="1"/>
+		</skills>
 	</item>
 	<item id="81876" name="Blessed Atlas' Earring" type="Armor">
 		<!-- A special mentor's earring. When enchanted, Stupor Atk. Rate and Resistance +25%, Attribute Resistance +60, Vampiric Rage effect +6%, Critical Damage for standard attacks and P./ M. Skill Critical Damage +5%, P./ M. Def. +2%, MP Consumption -11%. Effects of two identical earrings do not stack. The item can be changed. Can be augmented. Cannot be enchanted. -->

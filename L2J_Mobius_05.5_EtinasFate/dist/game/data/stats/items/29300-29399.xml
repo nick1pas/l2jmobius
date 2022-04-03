@@ -1564,10 +1564,31 @@
 	<item id="29385" name="Level 5 Box of Gems" type="EtcItem">
 		<!-- Double-click to obtain 1 Level 5 La Vie En Rose Gem. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="38854" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 5 -->
+			<item id="38859" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 5 -->
+			<item id="38931" min="1" max="1" chance="6.25" /> <!-- Sapphire Lv. 5 -->
+			<item id="38879" min="1" max="1" chance="6.25" /> <!-- Opal Lv. 5 -->
+			<item id="38874" min="1" max="1" chance="6.25" /> <!-- Obsidian Lv. 5 -->
+			<item id="38894" min="1" max="1" chance="6.25" /> <!-- Diamond Lv. 5 -->
+			<item id="38884" min="1" max="1" chance="6.25" /> <!-- Emerald Lv. 5 -->
+			<item id="38889" min="1" max="1" chance="6.25" /> <!-- Aquamarine Lv. 5 -->
+			<item id="38899" min="1" max="1" chance="6.25" /> <!-- Pearl Lv. 5 -->
+			<item id="46674" min="1" max="1" chance="6.25" /> <!-- Vital Stone Lv. 5 -->
+			<item id="46679" min="1" max="1" chance="6.25" /> <!-- Garnet Lv. 5 -->
+			<item id="46684" min="1" max="1" chance="6.25" /> <!-- Tanzanite Lv. 5 -->
+			<item id="26501" min="1" max="1" chance="6.25" /> <!-- Cat's Eye Lv. 5 -->
+			<item id="47681" min="1" max="1" chance="6.25" /> <!-- Red Cat's Eye Lv. 5 -->
+			<item id="47686" min="1" max="1" chance="6.25" /> <!-- Blue Cat's Eye Lv. 5 -->
+			<item id="26506" min="1" max="1" chance="6.25" /> <!-- Amethyst Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="29386" name="Honey Rose Beer" type="EtcItem">
 		<!-- Replenishes 1 Vitality slot when used. For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Defense Attribute +100, Damage +10%, P./ M. Skill Power +10%, XP/ SP +30%, Received Damage -10%, Skill MP Consumption -15%. Buffs remains even after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
