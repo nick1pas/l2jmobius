@@ -101,6 +101,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ItemDeletionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -663,6 +664,8 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.updateAbnormalVisualEffects();
 		}
+		
+		player.sendPacket(new ItemDeletionInfo());
 		
 		// Activate first agathion when available.
 		final Item agathion = player.getInventory().unEquipItemInBodySlot(ItemTemplate.SLOT_AGATHION);

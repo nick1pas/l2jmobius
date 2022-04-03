@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.EventShrineManager;
+import org.l2jmobius.gameserver.instancemanager.events.ItemDeletionInfoManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -296,6 +297,12 @@ public class LongTimeEvent extends Quest
 										continue;
 									}
 									_destroyItemsOnEnd.add(itemId);
+									
+									// Add item deletion info to manager.
+									if (_eventPeriod.getEndDate().getTime() > Chronos.currentTimeMillis())
+									{
+										ItemDeletionInfoManager.getInstance().addItemInfo(itemId, _eventPeriod.getEndDate());
+									}
 								}
 								catch (NumberFormatException nfe)
 								{
