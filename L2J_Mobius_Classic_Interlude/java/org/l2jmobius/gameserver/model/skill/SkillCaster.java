@@ -868,6 +868,17 @@ public class SkillCaster implements Runnable
 				
 				// Launch the magic skill and calculate its effects
 				skill.activateSkill(creature, item, targets);
+				
+				// Notify skill is casted.
+				if (creature.onCreatureSkillFinishCast == null)
+				{
+					creature.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+				}
+				creature.onCreatureSkillFinishCast.setCaster(creature);
+				creature.onCreatureSkillFinishCast.setTarget(target);
+				creature.onCreatureSkillFinishCast.setSkill(skill);
+				creature.onCreatureSkillFinishCast.setSimultaneously(skill.isWithoutAction());
+				EventDispatcher.getInstance().notifyEvent(creature.onCreatureSkillFinishCast, creature);
 			}
 		}
 		catch (Exception e)
