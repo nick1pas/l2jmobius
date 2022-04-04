@@ -21,6 +21,8 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.JoinPledge;
@@ -99,13 +101,21 @@ public class RequestAnswerJoinPledge implements IClientIncomingPacket
 				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				
-				if (player.getClan().getCastleId() > 0)
+				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(player.getClan()).giveResidentialSkills(player);
+					final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+					if (castle != null)
+					{
+						castle.giveResidentialSkills(player);
+					}
 				}
-				if (player.getClan().getFortId() > 0)
+				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(player.getClan()).giveResidentialSkills(player);
+					final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+					if (fort != null)
+					{
+						fort.giveResidentialSkills(player);
+					}
 				}
 				player.sendSkillList();
 				

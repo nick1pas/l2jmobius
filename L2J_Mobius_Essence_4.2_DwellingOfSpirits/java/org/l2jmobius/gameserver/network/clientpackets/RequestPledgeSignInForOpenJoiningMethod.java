@@ -24,6 +24,8 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
@@ -97,11 +99,19 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				
 				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
+					final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+					if (castle != null)
+					{
+						castle.giveResidentialSkills(player);
+					}
 				}
 				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
+					final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+					if (fort != null)
+					{
+						fort.giveResidentialSkills(player);
+					}
 				}
 				player.sendSkillList();
 				

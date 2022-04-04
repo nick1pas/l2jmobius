@@ -32,9 +32,12 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
@@ -207,16 +210,25 @@ public abstract class AbstractOlympiadGame
 			player.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			
 			// Remove Clan Skills
-			if (player.getClan() != null)
+			final Clan clan = player.getClan();
+			if (clan != null)
 			{
-				player.getClan().removeSkillEffects(player);
-				if (player.getClan().getCastleId() > 0)
+				clan.removeSkillEffects(player);
+				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(player.getClan()).removeResidentialSkills(player);
+					final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+					if (castle != null)
+					{
+						castle.removeResidentialSkills(player);
+					}
 				}
-				if (player.getClan().getFortId() > 0)
+				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(player.getClan()).removeResidentialSkills(player);
+					final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+					if (fort != null)
+					{
+						fort.removeResidentialSkills(player);
+					}
 				}
 			}
 			// Abort casting if player casting
@@ -363,16 +375,25 @@ public abstract class AbstractOlympiadGame
 			player.sendPacket(new ExOlympiadMode(0));
 			
 			// Add Clan Skills
-			if (player.getClan() != null)
+			final Clan clan = player.getClan();
+			if (clan != null)
 			{
-				player.getClan().addSkillEffects(player);
-				if (player.getClan().getCastleId() > 0)
+				clan.addSkillEffects(player);
+				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(player.getClan()).giveResidentialSkills(player);
+					final Castle castle = CastleManager.getInstance().getCastleByOwner(clan);
+					if (castle != null)
+					{
+						castle.giveResidentialSkills(player);
+					}
 				}
-				if (player.getClan().getFortId() > 0)
+				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(player.getClan()).giveResidentialSkills(player);
+					final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+					if (fort != null)
+					{
+						fort.giveResidentialSkills(player);
+					}
 				}
 				player.sendSkillList();
 			}

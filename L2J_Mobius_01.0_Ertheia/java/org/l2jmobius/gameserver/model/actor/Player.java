@@ -2641,11 +2641,19 @@ public class Player extends Playable
 			}
 			if (_clan.getCastleId() > 0)
 			{
-				CastleManager.getInstance().getCastleByOwner(getClan()).giveResidentialSkills(this);
+				final Castle castle = CastleManager.getInstance().getCastleByOwner(_clan);
+				if (castle != null)
+				{
+					castle.giveResidentialSkills(this);
+				}
 			}
 			if (_clan.getFortId() > 0)
 			{
-				FortManager.getInstance().getFortByOwner(getClan()).giveResidentialSkills(this);
+				final Fort fort = FortManager.getInstance().getFortByOwner(_clan);
+				if (fort != null)
+				{
+					fort.giveResidentialSkills(this);
+				}
 			}
 		}
 		
