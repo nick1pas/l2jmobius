@@ -19,7 +19,7 @@ package events;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.instancemanager.EventShrineManager;
+import org.l2jmobius.gameserver.instancemanager.events.EventShrineManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
