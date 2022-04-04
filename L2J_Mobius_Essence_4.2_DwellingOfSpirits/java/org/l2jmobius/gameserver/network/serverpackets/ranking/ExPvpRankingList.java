@@ -71,7 +71,7 @@ public class ExPvpRankingList implements IClientOutgoingPacket
 		if (!_playerList.isEmpty() && (_type != 255) && (_race != 255))
 		{
 			final RankingCategory category = RankingCategory.values()[_tabId];
-			writeFilteredRankingData(packet, category, category.getScopeByGroup(_type), Race.values()[_race], ClassId.values()[_class]);
+			writeFilteredRankingData(packet, category, category.getScopeByGroup(_type), Race.values()[_race], ClassId.getClassId(_class));
 		}
 		else
 		{
