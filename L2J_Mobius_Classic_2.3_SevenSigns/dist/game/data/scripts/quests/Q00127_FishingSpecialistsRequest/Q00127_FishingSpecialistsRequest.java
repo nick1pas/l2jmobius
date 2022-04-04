@@ -41,14 +41,13 @@ public class Q00127_FishingSpecialistsRequest extends Quest
 	private static final Location TELEPORT_LOC = new Location(105276, 162500, -3600);
 	// Misc
 	private static final int MIN_LEVEL = 20;
-	private static final int MAX_LEVEL = 75;
 	
 	public Q00127_FishingSpecialistsRequest()
 	{
 		super(127);
 		addStartNpc(PIERRE);
 		addTalkId(PIERRE, FERMA, BAIKAL);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30013-00.htm");
+		addCondMinLevel(MIN_LEVEL, "30013-00.htm");
 		registerQuestItems(PIERRE_LETTER, FISH_REPORT, SEALED_BOTTLE);
 	}
 	

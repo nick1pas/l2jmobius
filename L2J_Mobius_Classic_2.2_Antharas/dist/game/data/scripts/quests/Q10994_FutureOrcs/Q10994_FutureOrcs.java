@@ -39,7 +39,7 @@ public class Q10994_FutureOrcs extends Quest
 	private static final int GANTAKAI = 30587;
 	private static final int HESTUI = 30585;
 	// Items
-	private static final int SCROLL_OF_BLOOD_MELODY = 49772;
+	private static final int FIRST_CLASS_BUFF_SCROLL = 29654;
 	private static final int IMPROVED_SOE = 49087;
 	// Misc
 	private static final int MIN_LEVEL = 19;
@@ -103,7 +103,7 @@ public class Q10994_FutureOrcs extends Quest
 			{
 				if (qs.getCond() > 1)
 				{
-					giveItems(player, SCROLL_OF_BLOOD_MELODY, 2);
+					giveItems(player, FIRST_CLASS_BUFF_SCROLL, 5);
 					giveItems(player, IMPROVED_SOE, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
