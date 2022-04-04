@@ -5,7 +5,7 @@ System: https://mega.nz/file/UsdGhD6J#eaCkzVLI4w21JAZOkZBYtwm4aR_S-G0lYROOPYCi6n
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/g9fws86xnz1bgnt/L2J_Mobius_Essence_6.1_BattleChronicle_Geodata.zip
+Geodata: https://www.mediafire.com/file/cjpnxf1l9s82ymn/L2J_Mobius_Essence_6.2_Vanguard_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
