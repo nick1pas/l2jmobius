@@ -1691,13 +1691,13 @@ public class Player extends Playable
 		
 		// Check first castle mid victory.
 		final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
-		if ((castle != null) && !castle.isFirstMidVictory())
+		final Player targetPlayer = target.getActingPlayer();
+		if ((castle != null) && (targetPlayer != null) && !castle.isFirstMidVictory())
 		{
 			return true;
 		}
 		
 		// If target isn't a player, is self, isn't on same siege or not on same state, not friends.
-		final Player targetPlayer = target.getActingPlayer();
 		if ((targetPlayer == null) || (targetPlayer == this) || (targetPlayer.getSiegeSide() != _siegeSide) || (_siegeState != targetPlayer.getSiegeState()))
 		{
 			return false;
