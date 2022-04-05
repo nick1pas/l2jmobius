@@ -141,7 +141,11 @@ public class MinionList
 	 */
 	public void onMinionDie(Monster minion, int respawnTime)
 	{
-		minion.setLeader(null); // prevent memory leaks
+		// Prevent memory leaks.
+		if (respawnTime == 0)
+		{
+			minion.setLeader(null);
+		}
 		_spawnedMinions.remove(minion);
 		
 		final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
