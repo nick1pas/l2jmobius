@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -40,7 +41,7 @@ public class TimedHuntingZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (!creature.isPlayer() || creature.isInsideZone(ZoneId.TIMED_HUNTING))
+		if (!creature.isPlayer())
 		{
 			return;
 		}
@@ -82,11 +83,18 @@ public class TimedHuntingZone extends ZoneType
 		}
 		
 		final Player player = creature.getActingPlayer();
-		if ((player != null) && !player.isInTimedHuntingZone(player.getX(), player.getY()))
+		if (player != null)
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, false);
-			player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-			player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
+			
+			ThreadPool.schedule(() ->
+			{
+				if (!player.isInTimedHuntingZone(player.getX(), player.getY()))
+				{
+					player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+					player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
+				}
+			}, 1000);
 		}
 	}
 }
