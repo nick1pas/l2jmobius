@@ -13633,11 +13633,24 @@ public class Player extends Playable
 	 */
 	public CastleSide getPlayerSide()
 	{
-		if ((_clan == null) || (_clan.getCastleId() == 0))
+		if (_clan == null)
 		{
 			return CastleSide.NEUTRAL;
 		}
-		return CastleManager.getInstance().getCastleById(getClan().getCastleId()).getSide();
+		
+		final int castleId = _clan.getCastleId();
+		if (castleId == 0)
+		{
+			return CastleSide.NEUTRAL;
+		}
+		
+		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
+		if (castle == null)
+		{
+			return CastleSide.NEUTRAL;
+		}
+		
+		return castle.getSide();
 	}
 	
 	/**
