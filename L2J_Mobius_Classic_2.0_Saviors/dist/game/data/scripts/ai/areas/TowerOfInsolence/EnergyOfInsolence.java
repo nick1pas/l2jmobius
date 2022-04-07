@@ -186,11 +186,6 @@ public class EnergyOfInsolence extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	public static AbstractNpcAI provider()
-	{
-		return new EnergyOfInsolence();
-	}
-	
 	public class ScheduleAITask implements Runnable
 	{
 		private final Npc _npc;

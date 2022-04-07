@@ -79,8 +79,8 @@ public class AttributeMaster extends AbstractNpcAI
 		return null;
 	}
 	
-	public static AbstractNpcAI provider()
+	public static void main(String[] args)
 	{
-		return new AttributeMaster();
+		new AttributeMaster();
 	}
 }
