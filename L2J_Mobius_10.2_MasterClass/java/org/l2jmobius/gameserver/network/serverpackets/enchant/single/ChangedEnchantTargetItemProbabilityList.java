@@ -22,7 +22,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -98,20 +98,10 @@ public class ChangedEnchantTargetItemProbabilityList implements IClientOutgoingP
 		return true;
 	}
 	
-	private int getBaseRate(EnchantItemRequest request, int i)
+	private int getBaseRate(EnchantItemRequest request, int iteration)
 	{
-		double baseRate;
-		if (!_isMulti)
-		{
-			baseRate = EnchantItemData.getInstance().getEnchantScroll(request.getEnchantingScroll()).getChance(_player, request.getEnchantingItem());
-		}
-		else
-		{
-			final Item item = _player.getInventory().getItemByObjectId(request.getMultiEnchantingItemsBySlot(i));
-			baseRate = EnchantItemData.getInstance().getEnchantScroll(request.getEnchantingScroll()).getChance(_player, item);
-		}
-		baseRate = baseRate * 100;
-		return (int) baseRate;
+		final EnchantScroll enchantScroll = EnchantItemData.getInstance().getEnchantScroll(request.getEnchantingScroll());
+		return (int) Math.min(100, enchantScroll.getChance(_player, _isMulti ? _player.getInventory().getItemByObjectId(request.getMultiEnchantingItemsBySlot(iteration)) : request.getEnchantingItem()) + enchantScroll.getBonusRate()) * 100;
 	}
 	
 	private int getSupportRate(EnchantItemRequest request)
