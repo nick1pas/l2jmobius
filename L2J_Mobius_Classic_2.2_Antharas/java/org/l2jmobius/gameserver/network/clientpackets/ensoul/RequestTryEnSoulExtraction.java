@@ -120,8 +120,9 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 		{
 			iu.addItem(player.addItem("Rune Extract", runeId, 1, player, true));
 		}
-		
 		player.sendInventoryUpdate(iu);
+		player.sendItemList();
+		
 		player.sendPacket(new ExEnSoulExtractionResult(true, item));
 	}
 }
