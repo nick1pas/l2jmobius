@@ -379,7 +379,10 @@ public class AutoUseTaskManager implements Runnable
 		}
 		
 		final BuffInfo buffInfo = playableTarget.getEffectList().getBuffInfoBySkillId(skill.getId());
-		return (buffInfo == null) || (buffInfo.getTime() <= REUSE_MARGIN_TIME) || (buffInfo.getSkill().getLevel() < skill.getLevel());
+		final BuffInfo abnormalBuffInfo = playableTarget.getEffectList().getFirstBuffInfoByAbnormalType(skill.getAbnormalType());
+		return ((buffInfo == null) && (abnormalBuffInfo == null)) //
+			|| ((buffInfo != null) && (abnormalBuffInfo.getSkill().getId() == buffInfo.getSkill().getId()) && ((buffInfo.getTime() <= REUSE_MARGIN_TIME) || (buffInfo.getSkill().getLevel() < skill.getLevel()))) //
+			|| (abnormalBuffInfo.getSkill().getAbnormalLevel() < skill.getAbnormalLevel());
 	}
 	
 	private boolean canUseMagic(Player player, WorldObject target, Skill skill)
