@@ -22,7 +22,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -227,7 +226,7 @@ public class Lindvior extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_lindvior", time, null, null);
@@ -855,7 +854,7 @@ public class Lindvior extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, DEAD);
 			final long respawnTime = (Config.LINDVIOR_SPAWN_INTERVAL + getRandom(-Config.LINDVIOR_SPAWN_RANDOM, Config.LINDVIOR_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(LINDVIOR_RAID);
-			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(LINDVIOR_RAID, info);
 			startQuestTimer("unlock_lindvior", respawnTime, null, null);
 		}

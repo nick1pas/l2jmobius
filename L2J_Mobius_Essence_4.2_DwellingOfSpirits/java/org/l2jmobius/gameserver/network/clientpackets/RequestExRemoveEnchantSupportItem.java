@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -56,7 +55,7 @@ public class RequestExRemoveEnchantSupportItem implements IClientIncomingPacket
 			request.setSupportItem(Player.ID_NONE);
 		}
 		
-		request.setTimestamp(Chronos.currentTimeMillis());
+		request.setTimestamp(System.currentTimeMillis());
 		player.sendPacket(ExRemoveEnchantSupportItemResult.STATIC_PACKET);
 	}
 }

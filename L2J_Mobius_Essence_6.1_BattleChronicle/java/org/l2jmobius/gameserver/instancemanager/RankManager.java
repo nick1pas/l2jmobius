@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -42,7 +41,7 @@ public class RankManager
 	private static final Logger LOGGER = Logger.getLogger(RankManager.class.getName());
 	
 	public static final Long TIME_LIMIT = 2592000000L; // 30 days in milliseconds
-	public static final long CURRENT_TIME = Chronos.currentTimeMillis();
+	public static final long CURRENT_TIME = System.currentTimeMillis();
 	public static final int PLAYER_LIMIT = 500;
 	
 	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 39 ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;

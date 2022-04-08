@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.ShotType;
@@ -739,7 +738,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	private final void sendInstanceUpdate(Instance instance, boolean hide)
 	{
-		final int startTime = (int) ((Chronos.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
+		final int startTime = (int) ((System.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
 		final int endTime = (int) ((instance.getInstanceEndTime() - instance.getInstanceStartTime()) / 1000);
 		if (instance.isTimerIncrease())
 		{

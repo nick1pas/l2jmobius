@@ -57,7 +57,6 @@ import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import org.l2jmobius.gameserver.network.serverpackets.GetItem;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -65,6 +64,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -84,7 +84,6 @@ import org.l2jmobius.gameserver.templates.CharTemplate;
 import org.l2jmobius.gameserver.templates.ItemTemplate;
 import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.gameserver.threads.ThreadPool;
-import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Rnd;
 
 public class Player extends Creature
@@ -439,7 +438,7 @@ public class Player extends Creature
 			{
 				_pvpTask = ThreadPool.scheduleAtFixedRate(new pvpTask(), 1000, 1000);
 			}
-			_lastPvpTime = Chronos.currentTimeMillis() + 30000;
+			_lastPvpTime = System.currentTimeMillis() + 30000;
 		}
 		if (_pvpFlag == value)
 		{
@@ -456,7 +455,7 @@ public class Player extends Creature
 		@Override
 		public void run()
 		{
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (currentTime > _lastPvpTime)
 			{
 				stopPvPFlag();
@@ -1664,7 +1663,7 @@ public class Player extends Creature
 	
 	public long getUptime()
 	{
-		return Chronos.currentTimeMillis() - _uptime;
+		return System.currentTimeMillis() - _uptime;
 	}
 	
 	public void onMagicUseTimer(Creature target, Skill skill)

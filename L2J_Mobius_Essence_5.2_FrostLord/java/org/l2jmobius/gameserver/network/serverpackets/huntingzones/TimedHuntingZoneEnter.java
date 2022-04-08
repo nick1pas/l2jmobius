@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets.huntingzones;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -42,7 +41,7 @@ public class TimedHuntingZoneEnter implements IClientOutgoingPacket
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ENTER.writeId(packet);
 		packet.writeC(1); // bEnterSuccess
 		packet.writeD(_zoneId);
-		packet.writeD((int) ((Chronos.currentTimeMillis() / 60) / 1000)); // nEnterTimeStamp (current time in minutes)
+		packet.writeD((int) ((System.currentTimeMillis() / 60) / 1000)); // nEnterTimeStamp (current time in minutes)
 		packet.writeD(_player.getTimedHuntingZoneRemainingTime(_zoneId) / 1000); // nRemainTime (zone left time)
 		return true;
 	}

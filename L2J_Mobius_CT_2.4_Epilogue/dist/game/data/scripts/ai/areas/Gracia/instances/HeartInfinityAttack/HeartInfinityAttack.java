@@ -23,7 +23,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -285,7 +284,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				final SystemMessage sm = new SystemMessage(2100);
 				sm.addPcName(partyMember);
@@ -404,7 +403,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		world.ekimus.broadcastPacket(new NpcSay(world.ekimus.getObjectId(), ChatType.SHOUT, world.ekimus.getId(), NpcStringId.I_SHALL_ACCEPT_YOUR_CHALLENGE_S1_COME_AND_DIE_IN_THE_ARMS_OF_IMMORTALITY));
 		world.hounds.add(addSpawn(HOUND, -179224, 209624, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.hounds.add(addSpawn(HOUND, -179880, 209464, -15504, 16384, false, 0, false, world.getInstanceId()));
-		world.startTime = Chronos.currentTimeMillis();
+		world.startTime = System.currentTimeMillis();
 		world.timerTask = ThreadPool.scheduleAtFixedRate(new TimerTask(world), 298 * 1000, 5 * 60 * 1000);
 	}
 	
@@ -667,7 +666,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			final long time = ((_world.startTime + (25 * 60 * 1000)) - Chronos.currentTimeMillis()) / 60000;
+			final long time = ((_world.startTime + (25 * 60 * 1000)) - System.currentTimeMillis()) / 60000;
 			if (time == 0)
 			{
 				broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE, 2, 8000));

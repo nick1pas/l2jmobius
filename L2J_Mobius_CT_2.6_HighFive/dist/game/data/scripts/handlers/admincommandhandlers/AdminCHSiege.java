@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
@@ -164,7 +163,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 							c.set(Calendar.HOUR_OF_DAY, h);
 							c.set(Calendar.MINUTE, min);
 							c.set(Calendar.SECOND, 0);
-							if (c.getTimeInMillis() > Chronos.currentTimeMillis())
+							if (c.getTimeInMillis() > System.currentTimeMillis())
 							{
 								activeChar.sendMessage(hall.getName() + " siege: " + c.getTime());
 								hall.setNextSiegeDate(c.getTimeInMillis());

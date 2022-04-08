@@ -20,7 +20,6 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
@@ -304,7 +303,7 @@ public class TalentShow extends AbstractNpcAI
 		hourDiff *= 3600000;
 		minDiff *= 60000;
 		diff = hourDiff + minDiff;
-		LOGGER.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(Chronos.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
+		LOGGER.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		startQuestTimer("Start", diff, null, null); // first start
 	}
 	

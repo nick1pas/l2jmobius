@@ -21,7 +21,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
@@ -46,7 +45,7 @@ public class ItemLifeTimeTaskManager implements Runnable
 		}
 		_working = true;
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		for (Entry<Item, Long> entry : ITEMS.entrySet())
 		{
 			if (currentTime > entry.getValue().longValue())

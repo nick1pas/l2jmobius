@@ -22,7 +22,6 @@ import java.util.Calendar;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -245,7 +244,7 @@ public class LegendsMark extends LongTimeEvent
 				calendar.set(Calendar.HOUR_OF_DAY, 6);
 				calendar.set(Calendar.MINUTE, 30);
 				cancelQuestTimers("reset");
-				startQuestTimer("reset", calendar.getTimeInMillis() - Chronos.currentTimeMillis(), null, null);
+				startQuestTimer("reset", calendar.getTimeInMillis() - System.currentTimeMillis(), null, null);
 				break;
 			}
 			case "reset":

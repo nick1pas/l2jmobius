@@ -39,7 +39,6 @@ import java.util.stream.Stream;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
@@ -108,7 +107,7 @@ public class Instance implements IIdentifiable, INamable
 		// Set basic instance info
 		_id = id;
 		_template = template;
-		_startTime = Chronos.currentTimeMillis();
+		_startTime = System.currentTimeMillis();
 		_spawns = new ArrayList<>(template.getSpawns().size());
 		
 		// Clone and add the spawn templates
@@ -796,7 +795,7 @@ public class Instance implements IIdentifiable, INamable
 		}
 		
 		// Set new cleanup task
-		_endTime = Chronos.currentTimeMillis() + millis;
+		_endTime = System.currentTimeMillis() + millis;
 		if (minutes < 1) // Destroy instance
 		{
 			destroy();
@@ -900,7 +899,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public long getElapsedTime()
 	{
-		return Chronos.currentTimeMillis() - _startTime;
+		return System.currentTimeMillis() - _startTime;
 	}
 	
 	/**
@@ -909,7 +908,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public long getRemainingTime()
 	{
-		return (_endTime == -1) ? -1 : (_endTime - Chronos.currentTimeMillis());
+		return (_endTime == -1) ? -1 : (_endTime - System.currentTimeMillis());
 	}
 	
 	/**

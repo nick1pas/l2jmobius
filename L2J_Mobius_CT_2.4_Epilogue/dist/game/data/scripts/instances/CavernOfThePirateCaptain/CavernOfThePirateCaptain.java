@@ -19,7 +19,6 @@ package instances.CavernOfThePirateCaptain;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -148,7 +147,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		if (firstEntrance)
 		{
 			world.setParameter("isNight", world.getTemplateId() == TEMPLATE_ID_60_NIGHT);
-			world.setParameter("storeTime", Chronos.currentTimeMillis());
+			world.setParameter("storeTime", System.currentTimeMillis());
 			
 			final List<Player> playersInside = new ArrayList<>();
 			if (!player.isInParty())
@@ -232,7 +231,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), isNight ? TEMPLATE_ID_60_NIGHT : TEMPLATE_ID_60);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
 				return false;

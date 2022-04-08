@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.tasks.player;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Player;
 
@@ -37,7 +36,7 @@ public class LookingForFishTask implements Runnable
 	{
 		_player = player;
 		_fishGutsCheck = fishGutsCheck;
-		_endTaskTime = Chronos.currentTimeMillis() + (startCombatTime * 1000) + 10000;
+		_endTaskTime = System.currentTimeMillis() + (startCombatTime * 1000) + 10000;
 		_fishGroup = fishGroup;
 		_isNoob = isNoob;
 		_isUpperGrade = isUpperGrade;
@@ -48,7 +47,7 @@ public class LookingForFishTask implements Runnable
 	{
 		if (_player != null)
 		{
-			if (Chronos.currentTimeMillis() >= _endTaskTime)
+			if (System.currentTimeMillis() >= _endTaskTime)
 			{
 				_player.endFishing(false);
 				return;

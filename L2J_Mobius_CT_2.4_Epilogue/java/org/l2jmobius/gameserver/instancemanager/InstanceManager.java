@@ -29,7 +29,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -176,7 +175,7 @@ public class InstanceManager implements IXmlReader
 				{
 					final int id = rs.getInt("instanceId");
 					final long time = rs.getLong("time");
-					if (time < Chronos.currentTimeMillis())
+					if (time < System.currentTimeMillis())
 					{
 						deleteInstanceTime(playerObjId, id);
 					}

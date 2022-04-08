@@ -24,7 +24,6 @@ import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -161,7 +160,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			int deletedays = 0;
 			if (deleteTime > 0)
 			{
-				deletedays = (int) ((deleteTime - Chronos.currentTimeMillis()) / 1000);
+				deletedays = (int) ((deleteTime - System.currentTimeMillis()) / 1000);
 			}
 			else if (accesslevels < 0)
 			{
@@ -239,7 +238,7 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		final int objectId = chardata.getInt("charId");
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if ((deletetime > 0) && (Chronos.currentTimeMillis() > deletetime))
+		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
 		{
 			final Player cha = Player.load(objectId);
 			final Clan clan = cha.getClan();

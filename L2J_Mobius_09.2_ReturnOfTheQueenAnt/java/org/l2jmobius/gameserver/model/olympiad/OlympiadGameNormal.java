@@ -27,7 +27,6 @@ import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -545,7 +544,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			String winner = "draw";
 			
 			// Calculate Fight time
-			final long _fightTime = (Chronos.currentTimeMillis() - _startTime);
+			final long _fightTime = (System.currentTimeMillis() - _startTime);
 			
 			double playerOneHp = 0;
 			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())

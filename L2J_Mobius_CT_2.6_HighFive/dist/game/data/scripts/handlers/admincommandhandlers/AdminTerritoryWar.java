@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
@@ -117,11 +116,11 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 		}
 		else if (command.equalsIgnoreCase("admin_territory_war_start"))
 		{
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(Chronos.currentTimeMillis());
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(System.currentTimeMillis());
 		}
 		else if (command.equalsIgnoreCase("admin_territory_war_end"))
 		{
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(Chronos.currentTimeMillis() - TerritoryWarManager.WARLENGTH);
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(System.currentTimeMillis() - TerritoryWarManager.WARLENGTH);
 		}
 		else if (command.equalsIgnoreCase("admin_territory_wards_list"))
 		{

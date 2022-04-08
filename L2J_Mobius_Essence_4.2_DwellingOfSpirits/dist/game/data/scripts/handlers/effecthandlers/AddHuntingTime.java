@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -64,7 +63,7 @@ public class AddHuntingTime extends AbstractEffect
 			return;
 		}
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		final long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= holder.getMaximumAddedTime()))
 		{

@@ -20,7 +20,6 @@ import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
@@ -86,7 +85,7 @@ public class TrainingHolder implements Serializable
 	
 	public long getElapsedTime()
 	{
-		return TimeUnit.SECONDS.convert(Chronos.currentTimeMillis() - _startTime, TimeUnit.MILLISECONDS);
+		return TimeUnit.SECONDS.convert(System.currentTimeMillis() - _startTime, TimeUnit.MILLISECONDS);
 	}
 	
 	public long getRemainingTime()

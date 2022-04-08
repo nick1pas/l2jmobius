@@ -36,7 +36,6 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
@@ -101,7 +100,7 @@ public class Instance
 	public Instance(int id)
 	{
 		_id = id;
-		_instanceStartTime = Chronos.currentTimeMillis();
+		_instanceStartTime = System.currentTimeMillis();
 	}
 	
 	/**
@@ -184,7 +183,7 @@ public class Instance
 		}
 		
 		_checkTimeUpTask = ThreadPool.schedule(new CheckTimeUp(duration), 500);
-		_instanceEndTime = Chronos.currentTimeMillis() + duration + 500;
+		_instanceEndTime = System.currentTimeMillis() + duration + 500;
 	}
 	
 	/**
@@ -226,8 +225,8 @@ public class Instance
 		{
 			return;
 		}
-		_lastLeft = Chronos.currentTimeMillis();
-		setDuration((int) (_instanceEndTime - Chronos.currentTimeMillis() - 500));
+		_lastLeft = System.currentTimeMillis();
+		setDuration((int) (_instanceEndTime - System.currentTimeMillis() - 500));
 	}
 	
 	public void addNpc(Npc npc)
@@ -510,7 +509,7 @@ public class Instance
 					if (a != null)
 					{
 						_checkTimeUpTask = ThreadPool.schedule(new CheckTimeUp(Integer.parseInt(a.getNodeValue()) * 60000), 15000);
-						_instanceEndTime = Chronos.currentTimeMillis() + (Long.parseLong(a.getNodeValue()) * 60000) + 15000;
+						_instanceEndTime = System.currentTimeMillis() + (Long.parseLong(a.getNodeValue()) * 60000) + 15000;
 					}
 					break;
 				}
@@ -774,7 +773,7 @@ public class Instance
 		}
 		else if (_players.isEmpty() && (_emptyDestroyTime > 0))
 		{
-			final Long emptyTimeLeft = (_lastLeft + _emptyDestroyTime) - Chronos.currentTimeMillis();
+			final Long emptyTimeLeft = (_lastLeft + _emptyDestroyTime) - System.currentTimeMillis();
 			if (emptyTimeLeft <= 0)
 			{
 				interval = 0;

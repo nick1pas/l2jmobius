@@ -29,7 +29,6 @@ import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -97,7 +96,7 @@ public class World
 	private static final AtomicInteger _memberInPartyNumber = new AtomicInteger();
 	
 	private static final Set<Player> _pkPlayers = ConcurrentHashMap.newKeySet(30);
-	private static final AtomicInteger _lastPkTime = new AtomicInteger((int) Chronos.currentTimeMillis() / 1000);
+	private static final AtomicInteger _lastPkTime = new AtomicInteger((int) System.currentTimeMillis() / 1000);
 	
 	private static final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 	
@@ -846,13 +845,13 @@ public class World
 			}
 		}
 		_pkPlayers.add(player);
-		_lastPkTime.set((int) Chronos.currentTimeMillis() / 1000);
+		_lastPkTime.set((int) System.currentTimeMillis() / 1000);
 	}
 	
 	public void removePkPlayer(Player player)
 	{
 		_pkPlayers.remove(player);
-		_lastPkTime.set((int) Chronos.currentTimeMillis() / 1000);
+		_lastPkTime.set((int) System.currentTimeMillis() / 1000);
 	}
 	
 	public Set<Player> getPkPlayers()

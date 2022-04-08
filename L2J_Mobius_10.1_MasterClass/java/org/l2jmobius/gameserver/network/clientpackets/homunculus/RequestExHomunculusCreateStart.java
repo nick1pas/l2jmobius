@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -55,7 +54,7 @@ public class RequestExHomunculusCreateStart implements IClientIncomingPacket
 			return;
 		}
 		player.reduceAdena("Homunculus creation", COST, player, true);
-		player.getVariables().set(PlayerVariables.HOMUNCULUS_CREATION_TIME, Chronos.currentTimeMillis() + CREATION_TIME);
+		player.getVariables().set(PlayerVariables.HOMUNCULUS_CREATION_TIME, System.currentTimeMillis() + CREATION_TIME);
 		
 		client.sendPacket(new ExShowHomunculusBirthInfo(player));
 		client.sendPacket(new ExHomunculusCreateStartResult(player));

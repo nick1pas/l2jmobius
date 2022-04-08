@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -241,7 +240,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		{
 			return "FortressWarden-02b.htm";
 		}
-		else if (isEnter && (dungeon.getReEnterTime() > Chronos.currentTimeMillis()))
+		else if (isEnter && (dungeon.getReEnterTime() > System.currentTimeMillis()))
 		{
 			return "FortressWarden-07.htm";
 		}
@@ -294,7 +293,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
 		world.setInstance(instance);
 		instance.setExitLoc(new Location(player));
-		dungeon.setReEnterTime(Chronos.currentTimeMillis() + REENTERTIME);
+		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
 		InstanceManager.getInstance().addWorld(world);
 		final int instanceId = world.getInstanceId();
 		LOGGER.info("Fortress AwlUnderFoot started " + dungeon.getInstanceId() + " Instance: " + instanceId + " created by player: " + player.getName());

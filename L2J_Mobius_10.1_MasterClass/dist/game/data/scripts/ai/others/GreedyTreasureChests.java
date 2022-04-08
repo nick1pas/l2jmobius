@@ -19,7 +19,6 @@ package ai.others;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -208,7 +207,7 @@ public final class GreedyTreasureChests extends AbstractNpcAI
 		else if (getRandom(150) == TREASURE_CHEST_CHANCE)
 		{
 			final int npcId = npc.getId();
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_SV, npcId))
 			{
 				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SV_1", 0))

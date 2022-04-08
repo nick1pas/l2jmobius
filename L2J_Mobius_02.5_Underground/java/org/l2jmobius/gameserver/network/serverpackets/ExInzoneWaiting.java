@@ -21,7 +21,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -50,7 +49,7 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 		packet.writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
 		{
-			final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - Chronos.currentTimeMillis());
+			final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
 			packet.writeD(entry.getKey());
 			packet.writeD((int) instanceTime);
 		}

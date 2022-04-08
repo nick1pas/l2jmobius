@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
@@ -131,7 +130,7 @@ public class DevastatedCastle
 			final RunMessengerSpawn rms = new RunMessengerSpawn();
 			ThreadPool.schedule(rms, milliToSiege);
 			
-			final long total_millis = Chronos.currentTimeMillis() + milliToSiege;
+			final long total_millis = System.currentTimeMillis() + milliToSiege;
 			final GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
 			cal.setTimeInMillis(total_millis);
 			final String next_ch_siege_date = new SimpleDateFormat("yyyy/MM/dd HH:mm").format(cal.getTimeInMillis());
@@ -175,7 +174,7 @@ public class DevastatedCastle
 	
 	private long getMilliToSiege()
 	{
-		final long currTimeMillis = Chronos.currentTimeMillis();
+		final long currTimeMillis = System.currentTimeMillis();
 		final long siegeTimeMillis = _siegetime.getTimeInMillis();
 		return siegeTimeMillis - currTimeMillis;
 	}
@@ -844,7 +843,7 @@ public class DevastatedCastle
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("UPDATE clanhall SET paidUntil=?, paid=? WHERE id=?");
-			statement.setLong(1, Chronos.currentTimeMillis() + 59760000);
+			statement.setLong(1, System.currentTimeMillis() + 59760000);
 			statement.setInt(2, 1);
 			statement.setInt(3, 34);
 			statement.execute();

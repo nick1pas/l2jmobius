@@ -22,7 +22,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
@@ -40,7 +39,7 @@ public class WarehouseCacheManager
 	
 	public void addCacheTask(Player pc)
 	{
-		CACHED_WH.put(pc, Chronos.currentTimeMillis());
+		CACHED_WH.put(pc, System.currentTimeMillis());
 	}
 	
 	public void remCacheTask(Player pc)
@@ -57,7 +56,7 @@ public class WarehouseCacheManager
 		@Override
 		public void run()
 		{
-			final long cTime = Chronos.currentTimeMillis();
+			final long cTime = System.currentTimeMillis();
 			for (Entry<Player, Long> entry : CACHED_WH.entrySet())
 			{
 				if ((cTime - entry.getValue().longValue()) > CACHE_TIME)

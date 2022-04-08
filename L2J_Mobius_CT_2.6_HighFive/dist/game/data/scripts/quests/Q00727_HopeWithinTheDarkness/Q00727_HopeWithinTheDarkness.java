@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -583,7 +582,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			}
 		}
 		
-		if (dungeon.getReEnterTime() > Chronos.currentTimeMillis())
+		if (dungeon.getReEnterTime() > System.currentTimeMillis())
 		{
 			return "CastleWarden-18.html";
 		}
@@ -618,7 +617,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		world.setInstance(instance);
 		instance.setExitLoc(new Location(player));
 		final int instanceId = world.getInstanceId();
-		dungeon.setReEnterTime(Chronos.currentTimeMillis() + REENTER_INTERVAL);
+		dungeon.setReEnterTime(System.currentTimeMillis() + REENTER_INTERVAL);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((CAUWorld) world), INITIAL_SPAWN_DELAY);
 		if (DEBUG)

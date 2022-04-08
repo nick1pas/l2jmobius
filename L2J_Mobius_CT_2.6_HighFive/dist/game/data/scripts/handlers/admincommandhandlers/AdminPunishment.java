@@ -25,7 +25,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -237,7 +236,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				long expirationTime = Integer.parseInt(exp);
 				if (expirationTime > 0)
 				{
-					expirationTime = Chronos.currentTimeMillis() + (expirationTime * 60 * 1000);
+					expirationTime = System.currentTimeMillis() + (expirationTime * 60 * 1000);
 				}
 				
 				final PunishmentAffect affect = PunishmentAffect.getByName(af);

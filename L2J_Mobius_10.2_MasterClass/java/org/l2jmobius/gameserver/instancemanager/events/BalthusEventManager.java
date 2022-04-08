@@ -28,7 +28,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
@@ -76,7 +75,7 @@ public class BalthusEventManager
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " rewards.");
 		
 		final Calendar calendar = Calendar.getInstance();
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		final long hours = calendar.get(Calendar.HOUR_OF_DAY);
 		final long mins = calendar.get(Calendar.MINUTE);
 		long startDelay;

@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
@@ -98,7 +97,7 @@ public class AuctionableHall extends ClanHall
 	public void setOwner(Clan clan)
 	{
 		super.setOwner(clan);
-		_paidUntil = Chronos.currentTimeMillis();
+		_paidUntil = System.currentTimeMillis();
 		initialyzeTask(true);
 	}
 	
@@ -108,20 +107,20 @@ public class AuctionableHall extends ClanHall
 	 */
 	private final void initialyzeTask(boolean forced)
 	{
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		if (_paidUntil > currentTime)
 		{
 			ThreadPool.schedule(new FeeTask(), _paidUntil - currentTime);
 		}
 		else if (!_paid && !forced)
 		{
-			if ((Chronos.currentTimeMillis() + (3600000 * 24)) <= (_paidUntil + CH_RATE))
+			if ((System.currentTimeMillis() + (3600000 * 24)) <= (_paidUntil + CH_RATE))
 			{
-				ThreadPool.schedule(new FeeTask(), Chronos.currentTimeMillis() + (3600000 * 24));
+				ThreadPool.schedule(new FeeTask(), System.currentTimeMillis() + (3600000 * 24));
 			}
 			else
 			{
-				ThreadPool.schedule(new FeeTask(), (_paidUntil + CH_RATE) - Chronos.currentTimeMillis());
+				ThreadPool.schedule(new FeeTask(), (_paidUntil + CH_RATE) - System.currentTimeMillis());
 			}
 		}
 		else
@@ -140,7 +139,7 @@ public class AuctionableHall extends ClanHall
 		{
 			try
 			{
-				final long _time = Chronos.currentTimeMillis();
+				final long _time = System.currentTimeMillis();
 				if (isFree())
 				{
 					return;

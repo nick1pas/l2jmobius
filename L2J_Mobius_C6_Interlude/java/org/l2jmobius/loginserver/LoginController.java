@@ -39,7 +39,6 @@ import javax.crypto.SecretKey;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
@@ -174,7 +173,7 @@ public class LoginController
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(USER_INFO_SELECT))
 			{
-				ps.setString(1, Long.toString(Chronos.currentTimeMillis()));
+				ps.setString(1, Long.toString(System.currentTimeMillis()));
 				ps.setString(2, login);
 				try (ResultSet rset = ps.executeQuery())
 				{
@@ -206,7 +205,7 @@ public class LoginController
 			{
 				ps.setString(1, login);
 				ps.setString(2, hashBase64);
-				ps.setLong(3, Chronos.currentTimeMillis());
+				ps.setLong(3, System.currentTimeMillis());
 				ps.setInt(4, 0);
 				ps.setString(5, addr.getHostAddress());
 				ps.execute();
@@ -271,7 +270,7 @@ public class LoginController
 	 */
 	public void addBanForAddress(InetAddress address, long duration)
 	{
-		_bannedIps.putIfAbsent(address, Chronos.currentTimeMillis() + duration);
+		_bannedIps.putIfAbsent(address, System.currentTimeMillis() + duration);
 	}
 	
 	public boolean isBannedAddress(InetAddress address) throws UnknownHostException
@@ -292,7 +291,7 @@ public class LoginController
 		}
 		if (bi != null)
 		{
-			if ((bi > 0) && (bi < Chronos.currentTimeMillis()))
+			if ((bi > 0) && (bi < System.currentTimeMillis()))
 			{
 				_bannedIps.remove(address);
 				LOGGER.info("Removed expired ip address ban " + address.getHostAddress() + ".");
@@ -444,7 +443,7 @@ public class LoginController
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(ACCOUNT_INFO_UPDATE))
 			{
-				ps.setLong(1, Chronos.currentTimeMillis());
+				ps.setLong(1, System.currentTimeMillis());
 				ps.setString(2, address.getHostAddress());
 				ps.setString(3, info.getLogin());
 				ps.execute();
@@ -516,7 +515,7 @@ public class LoginController
 					{
 						continue;
 					}
-					if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) < Chronos.currentTimeMillis())
+					if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) < System.currentTimeMillis())
 					{
 						client.close(LoginFailReason.REASON_ACCESS_FAILED);
 					}

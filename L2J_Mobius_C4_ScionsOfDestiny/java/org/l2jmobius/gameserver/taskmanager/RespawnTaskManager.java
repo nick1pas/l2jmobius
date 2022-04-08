@@ -21,7 +21,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
@@ -47,7 +46,7 @@ public class RespawnTaskManager implements Runnable
 		}
 		_working = true;
 		
-		final long time = Chronos.currentTimeMillis();
+		final long time = System.currentTimeMillis();
 		for (Entry<Npc, Long> entry : PENDING_RESPAWNS.entrySet())
 		{
 			if (time > entry.getValue().longValue())

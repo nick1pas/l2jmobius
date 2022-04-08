@@ -30,7 +30,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -481,7 +480,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				return false;
 			}
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				party.broadcastPacket(new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(channelMember));
 				return false;

@@ -22,7 +22,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -287,7 +286,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				final SystemMessage sm = new SystemMessage(2100);
 				sm.addPcName(partyMember);
@@ -325,7 +324,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		{
 			world = new HEDWorld();
 			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			((HEDWorld) world).startTime = Chronos.currentTimeMillis();
+			((HEDWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Erosion Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			if (player.isInParty())

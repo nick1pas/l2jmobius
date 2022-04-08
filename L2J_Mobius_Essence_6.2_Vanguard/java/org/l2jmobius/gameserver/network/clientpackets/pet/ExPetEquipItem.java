@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
@@ -183,7 +182,7 @@ public class ExPetEquipItem implements IClientIncomingPacket
 				{
 					Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
 					pet.useEquippableItem(transferedItem, false);
-				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(Chronos.currentTimeMillis()));
+				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{

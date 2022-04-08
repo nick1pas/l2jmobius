@@ -16,7 +16,6 @@
  */
 package instances.ThroneOfHeroes;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -229,7 +228,7 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 				if (!killer.isGM())
 				{
 					// Set clan variable
-					killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
+					killer.getClan().getVariables().set("TOH_DONE", System.currentTimeMillis());
 					killer.getClan().getVariables().storeMe();
 				}
 			}

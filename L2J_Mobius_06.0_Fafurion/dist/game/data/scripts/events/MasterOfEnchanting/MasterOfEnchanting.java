@@ -16,7 +16,6 @@
  */
 package events.MasterOfEnchanting;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -87,7 +86,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
-			final long curTime = Chronos.currentTimeMillis();
+			final long curTime = System.currentTimeMillis();
 			final String value = player.getVariables().getString("MasterOfEnchanting", "");
 			final long reuse = value.equals("") ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(getEventPeriod().getStartDate()))
@@ -101,7 +100,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 				{
 					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
 					giveItems(player, MASTER_YOGI_SCROLL, 24);
-					player.getVariables().set("MasterOfEnchanting", Long.toString(Chronos.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else
@@ -135,7 +134,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 				{
 					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
 					giveItems(player, MASTER_YOGI_SCROLL, 24);
-					player.getVariables().set("MasterOfEnchanting", Long.toString(Chronos.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else

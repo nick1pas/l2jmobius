@@ -32,7 +32,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -160,7 +159,7 @@ public class Castle extends AbstractResidence
 			{
 				return;
 			}
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
@@ -195,7 +194,7 @@ public class Castle extends AbstractResidence
 							fee = _tempFee;
 						}
 						
-						setEndTime(Chronos.currentTimeMillis() + _rate);
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{

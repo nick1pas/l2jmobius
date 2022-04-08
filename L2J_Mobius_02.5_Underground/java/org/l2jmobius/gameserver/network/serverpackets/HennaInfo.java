@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.Henna;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
@@ -72,7 +71,7 @@ public class HennaInfo implements IClientOutgoingPacket
 			int duration = premium.getDuration();
 			if (duration > 0)
 			{
-				final long currentTime = Chronos.currentTimeMillis();
+				final long currentTime = System.currentTimeMillis();
 				duration = (int) Math.max(0, _player.getVariables().getLong("HennaDuration4", currentTime) - currentTime) / 1000;
 			}
 			packet.writeD(premium.getDyeId());

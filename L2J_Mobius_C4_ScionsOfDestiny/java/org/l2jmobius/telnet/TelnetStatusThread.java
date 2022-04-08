@@ -30,7 +30,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 
 public class TelnetStatusThread extends Thread
@@ -125,7 +124,7 @@ public class TelnetStatusThread extends Thread
 		}
 		
 		statusServerSocket = new ServerSocket(_statusPort);
-		_uptime = (int) Chronos.currentTimeMillis();
+		_uptime = (int) System.currentTimeMillis();
 		_loginStatus = new ArrayList<>();
 	}
 	

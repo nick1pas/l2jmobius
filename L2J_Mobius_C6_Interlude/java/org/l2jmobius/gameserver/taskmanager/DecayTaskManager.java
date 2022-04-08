@@ -23,7 +23,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 
@@ -44,7 +43,7 @@ public class DecayTaskManager implements Runnable
 	@Override
 	public void run()
 	{
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		int delay;
 		try
 		{
@@ -78,12 +77,12 @@ public class DecayTaskManager implements Runnable
 	
 	public void addDecayTask(Creature actor)
 	{
-		_decayTasks.put(actor, Chronos.currentTimeMillis());
+		_decayTasks.put(actor, System.currentTimeMillis());
 	}
 	
 	public void addDecayTask(Creature actor, int interval)
 	{
-		_decayTasks.put(actor, Chronos.currentTimeMillis() + interval);
+		_decayTasks.put(actor, System.currentTimeMillis() + interval);
 	}
 	
 	public void cancelDecayTask(Creature actor)
@@ -104,7 +103,7 @@ public class DecayTaskManager implements Runnable
 		ret += "Tasks count: " + _decayTasks.size() + "\r\n";
 		ret += "Tasks dump:\r\n";
 		
-		final Long current = Chronos.currentTimeMillis();
+		final Long current = System.currentTimeMillis();
 		for (Creature actor : _decayTasks.keySet())
 		{
 			ret += "Class/Name: " + actor.getClass().getSimpleName() + "/" + actor.getName() + " decay timer: " + (current - _decayTasks.get(actor)) + "\r\n";

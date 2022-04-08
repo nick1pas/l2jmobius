@@ -20,7 +20,6 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.Chronos;
 
 /**
  * Abstract class for classes that are meant to be implemented by scripts.<br>
@@ -37,7 +36,7 @@ public abstract class ManagedScript
 	public ManagedScript()
 	{
 		_scriptFile = getScriptPath();
-		setLastLoadTime(Chronos.currentTimeMillis());
+		setLastLoadTime(System.currentTimeMillis());
 	}
 	
 	public abstract Path getScriptPath();

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.enums.CrestType;
 import org.l2jmobius.gameserver.model.Crest;
@@ -75,7 +74,7 @@ public class RequestSetPledgeCrest implements IClientIncomingPacket
 			return;
 		}
 		
-		if (clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
+		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOU_CANNOT_REGISTER_OR_DELETE_A_CLAN_CREST);
 			return;

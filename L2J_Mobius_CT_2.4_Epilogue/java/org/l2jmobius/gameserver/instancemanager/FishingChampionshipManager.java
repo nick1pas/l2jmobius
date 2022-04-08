@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -73,14 +72,14 @@ public class FishingChampionshipManager
 		refreshWinResult();
 		recalculateMinLength();
 		
-		if (_enddate <= Chronos.currentTimeMillis())
+		if (_enddate <= System.currentTimeMillis())
 		{
-			_enddate = Chronos.currentTimeMillis();
+			_enddate = System.currentTimeMillis();
 			new finishChamp().run();
 		}
 		else
 		{
-			ThreadPool.schedule(new finishChamp(), _enddate - Chronos.currentTimeMillis());
+			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	
@@ -207,7 +206,7 @@ public class FishingChampionshipManager
 	
 	public long getTimeRemaining()
 	{
-		return (_enddate - Chronos.currentTimeMillis()) / 60000;
+		return (_enddate - System.currentTimeMillis()) / 60000;
 	}
 	
 	public String getWinnerName(int par)
@@ -472,7 +471,7 @@ public class FishingChampionshipManager
 			shutdown();
 			
 			LOGGER.info("FishingChampionshipManager : new event period start.");
-			ThreadPool.schedule(new finishChamp(), _enddate - Chronos.currentTimeMillis());
+			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	

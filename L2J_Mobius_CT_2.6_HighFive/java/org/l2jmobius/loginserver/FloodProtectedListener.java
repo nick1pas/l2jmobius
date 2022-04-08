@@ -26,7 +26,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 
 /**
  * @author -Wooden-
@@ -64,9 +63,9 @@ public abstract class FloodProtectedListener extends Thread
 					if (fConnection != null)
 					{
 						fConnection.connectionNumber += 1;
-						if (((fConnection.connectionNumber > Config.FAST_CONNECTION_LIMIT) && ((Chronos.currentTimeMillis() - fConnection.lastConnection) < Config.NORMAL_CONNECTION_TIME)) || ((Chronos.currentTimeMillis() - fConnection.lastConnection) < Config.FAST_CONNECTION_TIME) || (fConnection.connectionNumber > Config.MAX_CONNECTION_PER_IP))
+						if (((fConnection.connectionNumber > Config.FAST_CONNECTION_LIMIT) && ((System.currentTimeMillis() - fConnection.lastConnection) < Config.NORMAL_CONNECTION_TIME)) || ((System.currentTimeMillis() - fConnection.lastConnection) < Config.FAST_CONNECTION_TIME) || (fConnection.connectionNumber > Config.MAX_CONNECTION_PER_IP))
 						{
-							fConnection.lastConnection = Chronos.currentTimeMillis();
+							fConnection.lastConnection = System.currentTimeMillis();
 							connection.close();
 							fConnection.connectionNumber -= 1;
 							if (!fConnection.isFlooding)
@@ -81,11 +80,11 @@ public abstract class FloodProtectedListener extends Thread
 							fConnection.isFlooding = false;
 							LOGGER.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
 						}
-						fConnection.lastConnection = Chronos.currentTimeMillis();
+						fConnection.lastConnection = System.currentTimeMillis();
 					}
 					else
 					{
-						fConnection = new ForeignConnection(Chronos.currentTimeMillis());
+						fConnection = new ForeignConnection(System.currentTimeMillis());
 						_floodProtection.put(connection.getInetAddress().getHostAddress(), fConnection);
 					}
 				}

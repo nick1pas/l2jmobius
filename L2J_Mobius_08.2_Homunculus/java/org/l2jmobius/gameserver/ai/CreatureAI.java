@@ -32,7 +32,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -313,7 +312,7 @@ public class CreatureAI extends AbstractAI
 		
 		if (_actor.isAttackingNow())
 		{
-			ThreadPool.schedule(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(Chronos.currentTimeMillis()));
+			ThreadPool.schedule(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 		}
 		else
 		{

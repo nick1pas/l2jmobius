@@ -22,7 +22,6 @@ import java.util.Collections;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.commons.time.SchedulingPattern;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -48,9 +47,9 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 	{
 		_player = player;
 		_rewards = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();
-		_dayRemainTime = (int) ((DAILY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
-		_weekRemainTime = (int) ((WEEKLY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
-		_monthRemainTime = (int) ((MONTHLY_REUSE_PATTERN.next(Chronos.currentTimeMillis()) - Chronos.currentTimeMillis()) / 1000);
+		_dayRemainTime = (int) ((DAILY_REUSE_PATTERN.next(System.currentTimeMillis()) - System.currentTimeMillis()) / 1000);
+		_weekRemainTime = (int) ((WEEKLY_REUSE_PATTERN.next(System.currentTimeMillis()) - System.currentTimeMillis()) / 1000);
+		_monthRemainTime = (int) ((MONTHLY_REUSE_PATTERN.next(System.currentTimeMillis()) - System.currentTimeMillis()) / 1000);
 	}
 	
 	@Override

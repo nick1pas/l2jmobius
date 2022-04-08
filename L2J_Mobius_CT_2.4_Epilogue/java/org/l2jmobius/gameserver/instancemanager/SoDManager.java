@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
 import org.l2jmobius.gameserver.model.quest.Quest;
 
@@ -100,7 +99,7 @@ public class SoDManager
 			case 2:
 			{
 				// Conquest Complete state, if too much time is passed than change to defense state
-				final long timePast = Chronos.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
+				final long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
 				if (timePast >= Config.SOD_STAGE_2_LENGTH)
 				{
 					// change to Attack state because Defend statet is not implemented
@@ -168,7 +167,7 @@ public class SoDManager
 	public void setSoDState(int value, boolean doSave)
 	{
 		LOGGER.info(getClass().getSimpleName() + ": New Seed of Destruction state -> " + value + ".");
-		_SoDLastStateChangeDate.setTimeInMillis(Chronos.currentTimeMillis());
+		_SoDLastStateChangeDate.setTimeInMillis(System.currentTimeMillis());
 		_SoDState = value;
 		// reset number of Tiat kills
 		if (_SoDState == 1)
@@ -194,7 +193,7 @@ public class SoDManager
 			}
 			case 2:
 			{
-				return ((_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - Chronos.currentTimeMillis());
+				return ((_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis());
 			}
 			case 3:
 			{

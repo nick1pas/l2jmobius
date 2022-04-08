@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -53,7 +52,7 @@ public class DecreaseWaitingTime extends AbstractEffect
 			return;
 		}
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		long creationTime = player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0);
 		final long waitTime = 0; // 86400 = 24 Hours
 		if (creationTime == 0)

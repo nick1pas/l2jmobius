@@ -17,7 +17,6 @@
 package ai.bosses.Baium;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -137,7 +136,7 @@ public class Baium extends AbstractNpcAI
 				final int heading = info.getInt("heading");
 				_baium = (GrandBoss) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 				_baium.setCurrentHpMp(curr_hp, curr_mp);
-				_lastAttack = Chronos.currentTimeMillis();
+				_lastAttack = System.currentTimeMillis();
 				addBoss(_baium);
 				
 				for (Location loc : ARCHANGEL_LOC)
@@ -150,7 +149,7 @@ public class Baium extends AbstractNpcAI
 			}
 			case DEAD:
 			{
-				final long remain = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+				final long remain = info.getLong("respawn_time") - System.currentTimeMillis();
 				if (remain > 0)
 				{
 					startQuestTimer("CLEAR_STATUS", remain, null, null);
@@ -210,7 +209,7 @@ public class Baium extends AbstractNpcAI
 					_baium.disableCoreAI(true);
 					_baium.setRandomWalking(false);
 					addBoss(_baium);
-					_lastAttack = Chronos.currentTimeMillis();
+					_lastAttack = System.currentTimeMillis();
 					startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
 					startQuestTimer("MANAGE_EARTHQUAKE", 2000, _baium, player);
 					startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
@@ -376,7 +375,7 @@ public class Baium extends AbstractNpcAI
 			}
 			case "CHECK_ATTACK":
 			{
-				if ((npc != null) && ((_lastAttack + 1800000) < Chronos.currentTimeMillis()))
+				if ((npc != null) && ((_lastAttack + 1800000) < System.currentTimeMillis()))
 				{
 					notifyEvent("CLEAR_ZONE", null, null);
 					addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
@@ -384,7 +383,7 @@ public class Baium extends AbstractNpcAI
 				}
 				else if (npc != null)
 				{
-					if (((_lastAttack + 300000) < Chronos.currentTimeMillis()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)))
+					if (((_lastAttack + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)))
 					{
 						npc.setTarget(npc);
 						npc.doCast(HEAL_OF_BAIUM.getSkill());
@@ -485,7 +484,7 @@ public class Baium extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon, Skill skill)
 	{
-		_lastAttack = Chronos.currentTimeMillis();
+		_lastAttack = System.currentTimeMillis();
 		if (npc.getId() == BAIUM)
 		{
 			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
@@ -665,7 +664,7 @@ public class Baium extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatSet(BAIUM).set("respawn_time", (Chronos.currentTimeMillis() + respawnTime));
+		GrandBossManager.getInstance().getStatSet(BAIUM).set("respawn_time", (System.currentTimeMillis() + respawnTime));
 	}
 	
 	private void manageSkills(Npc npc)

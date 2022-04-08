@@ -17,7 +17,6 @@
 package handlers.punishmenthandlers;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
@@ -207,7 +206,7 @@ public class JailHandler implements IPunishmentHandler
 		player.sendPacket(msg);
 		if (task != null)
 		{
-			final long delay = (task.getExpirationTime() - Chronos.currentTimeMillis()) / 1000;
+			final long delay = (task.getExpirationTime() - System.currentTimeMillis()) / 1000;
 			if (delay > 0)
 			{
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));

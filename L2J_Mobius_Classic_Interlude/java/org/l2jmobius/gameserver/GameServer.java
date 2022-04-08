@@ -32,7 +32,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -180,7 +179,7 @@ public class GameServer
 	
 	public GameServer() throws Exception
 	{
-		final long serverLoadStart = Chronos.currentTimeMillis();
+		final long serverLoadStart = System.currentTimeMillis();
 		
 		// GUI
 		final PropertiesParser interfaceConfig = new PropertiesParser(Config.INTERFACE_CONFIG_FILE);
@@ -460,7 +459,7 @@ public class GameServer
 		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
 		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
 		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
-		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
 		ClientNetworkManager.getInstance().start();
 		

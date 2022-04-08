@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
@@ -42,7 +41,7 @@ public class ClanHallAuctionManager
 	
 	protected ClanHallAuctionManager()
 	{
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		
 		// Schedule of the start, next Wednesday at 19:00.
 		final Calendar start = Calendar.getInstance();

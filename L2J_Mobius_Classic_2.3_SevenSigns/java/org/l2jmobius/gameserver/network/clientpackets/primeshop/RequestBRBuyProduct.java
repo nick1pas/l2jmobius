@@ -22,7 +22,6 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.enums.ExBrProductReplyType;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -164,7 +163,7 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 	 */
 	private static boolean validatePlayer(PrimeShopGroup item, int count, Player player)
 	{
-		final long currentTime = Chronos.currentTimeMillis() / 1000;
+		final long currentTime = System.currentTimeMillis() / 1000;
 		if (item == null)
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_PRODUCT));

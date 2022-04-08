@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -182,12 +181,12 @@ public class ItemAuction
 	
 	public long getStartingTimeRemaining()
 	{
-		return Math.max(_endingTime - Chronos.currentTimeMillis(), 0);
+		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
 	public long getFinishingTimeRemaining()
 	{
-		return Math.max(_endingTime - Chronos.currentTimeMillis(), 0);
+		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
 	public void storeMe()
@@ -340,7 +339,7 @@ public class ItemAuction
 			_highestBid = bid;
 		}
 		
-		if ((_endingTime - Chronos.currentTimeMillis()) <= (1000 * 60 * 10)) // 10 minutes
+		if ((_endingTime - System.currentTimeMillis()) <= (1000 * 60 * 10)) // 10 minutes
 		{
 			switch (_auctionEndingExtendState)
 			{
@@ -427,7 +426,7 @@ public class ItemAuction
 			}
 			case FINISHED:
 			{
-				if (_startingTime < (Chronos.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS)))
+				if (_startingTime < (System.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS)))
 				{
 					return false;
 				}

@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets.pledgedonation;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -50,6 +49,6 @@ public class RequestExPledgeDonationInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), (player.getClanJoinTime() + 86400000) < Chronos.currentTimeMillis()));
+		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), (player.getClanJoinTime() + 86400000) < System.currentTimeMillis()));
 	}
 }

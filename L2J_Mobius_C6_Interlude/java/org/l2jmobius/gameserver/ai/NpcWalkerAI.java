@@ -20,7 +20,6 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
@@ -92,7 +91,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 			return;
 		}
 		
-		if (_nextMoveTime < Chronos.currentTimeMillis())
+		if (_nextMoveTime < System.currentTimeMillis())
 		{
 			walkToLocation();
 		}
@@ -155,7 +154,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 				delay = DEFAULT_MOVE_DELAY;
 			}
 			
-			_nextMoveTime = Chronos.currentTimeMillis() + delay;
+			_nextMoveTime = System.currentTimeMillis() + delay;
 			setWalkingToNextPoint(false);
 		}
 	}

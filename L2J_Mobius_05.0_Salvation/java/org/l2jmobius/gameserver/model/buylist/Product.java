@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
@@ -121,7 +120,7 @@ public class Product
 			return false;
 		}
 		
-		BuyListTaskManager.getInstance().add(this, Chronos.currentTimeMillis() + _restockDelay);
+		BuyListTaskManager.getInstance().add(this, System.currentTimeMillis() + _restockDelay);
 		
 		final boolean result = _count.addAndGet(-value) >= 0;
 		save();
@@ -135,7 +134,7 @@ public class Product
 	
 	public void restartRestockTask(long nextRestockTime)
 	{
-		final long remainTime = nextRestockTime - Chronos.currentTimeMillis();
+		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
 			BuyListTaskManager.getInstance().update(this, remainTime);

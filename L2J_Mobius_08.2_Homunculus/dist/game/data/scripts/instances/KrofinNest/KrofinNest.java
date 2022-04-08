@@ -18,7 +18,6 @@ package instances.KrofinNest;
 
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -123,7 +122,7 @@ public class KrofinNest extends AbstractInstance
 						return null;
 					}
 					
-					final long currentTime = Chronos.currentTimeMillis();
+					final long currentTime = System.currentTimeMillis();
 					final List<Player> members = party.getMembers();
 					for (Player member : members)
 					{

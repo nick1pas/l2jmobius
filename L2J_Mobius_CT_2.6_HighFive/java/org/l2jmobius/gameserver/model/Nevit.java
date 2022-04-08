@@ -22,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -67,7 +66,7 @@ public class Nevit implements IUniqueId
 		cal.set(Calendar.MILLISECOND, 0);
 		
 		// Reset Nevit's Blessing
-		if ((_player.getLastAccess() < (cal.getTimeInMillis() / 1000)) && (Chronos.currentTimeMillis() > cal.getTimeInMillis()))
+		if ((_player.getLastAccess() < (cal.getTimeInMillis() / 1000)) && (System.currentTimeMillis() > cal.getTimeInMillis()))
 		{
 			_player.getVariables().set("hunting_time", 0);
 		}

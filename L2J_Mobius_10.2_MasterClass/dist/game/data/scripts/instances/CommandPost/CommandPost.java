@@ -18,7 +18,6 @@ package instances.CommandPost;
 
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -115,7 +114,7 @@ public class CommandPost extends AbstractInstance
 				final Party party = player.getParty();
 				if (player.isInParty())
 				{
-					final long currentTime = Chronos.currentTimeMillis();
+					final long currentTime = System.currentTimeMillis();
 					
 					if (!party.isLeader(player))
 					{

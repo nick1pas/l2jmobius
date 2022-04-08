@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets.huntingzones;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
@@ -44,7 +43,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_LIST.writeId(packet);
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		packet.writeD(TimedHuntingZoneData.getInstance().getSize()); // zone count
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
 		{

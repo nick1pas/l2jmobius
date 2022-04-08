@@ -25,7 +25,6 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -74,7 +73,7 @@ public class PetitionManager
 	
 	private class Petition
 	{
-		private final long _submitTime = Chronos.currentTimeMillis();
+		private final long _submitTime = System.currentTimeMillis();
 		
 		private final int _id;
 		private final PetitionType _type;

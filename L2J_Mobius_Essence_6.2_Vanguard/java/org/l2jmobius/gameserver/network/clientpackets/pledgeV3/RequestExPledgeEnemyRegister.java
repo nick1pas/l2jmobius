@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets.pledgeV3;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -90,7 +89,7 @@ public class RequestExPledgeEnemyRegister implements IClientIncomingPacket
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if (clanDeclaredWar.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
+		else if (clanDeclaredWar.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
 			client.sendPacket(new SystemMessage(SystemMessageId.A_CLAN_WAR_CAN_NOT_BE_DECLARED_AGAINST_A_CLAN_THAT_IS_BEING_DISSOLVED));
 			client.sendPacket(ActionFailed.STATIC_PACKET);

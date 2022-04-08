@@ -22,7 +22,6 @@ import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -153,7 +152,7 @@ public abstract class Chamber extends AbstractInstance
 			{
 				final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 				
-				if (Chronos.currentTimeMillis() < reentertime)
+				if (System.currentTimeMillis() < reentertime)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 					sm.addPcName(partyMember);
@@ -211,7 +210,7 @@ public abstract class Chamber extends AbstractInstance
 		}
 		
 		// Teleport to raid room 10 min or lesser before instance end time for Tower and Square Chambers
-		else if (isBigChamber() && ((inst.getInstanceEndTime() - Chronos.currentTimeMillis()) < 600000))
+		else if (isBigChamber() && ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 600000))
 		{
 			newRoom = ROOM_ENTER_POINTS.length - 1;
 		}
@@ -244,7 +243,7 @@ public abstract class Chamber extends AbstractInstance
 		// Do not schedule room change for Square and Tower Chambers, if raid room is reached
 		if (isBigChamber() && isBossRoom(world))
 		{
-			inst.setDuration((int) ((inst.getInstanceEndTime() - Chronos.currentTimeMillis()) + 1200000)); // Add 20 min to instance time if raid room is reached
+			inst.setDuration((int) ((inst.getInstanceEndTime() - System.currentTimeMillis()) + 1200000)); // Add 20 min to instance time if raid room is reached
 			
 			for (Npc npc : inst.getNpcs())
 			{
@@ -501,7 +500,7 @@ public abstract class Chamber extends AbstractInstance
 			if (isBigChamber())
 			{
 				markRestriction(world); // Set reenter restriction
-				if ((inst.getInstanceEndTime() - Chronos.currentTimeMillis()) > 300000)
+				if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > 300000)
 				{
 					inst.setDuration(300000); // Finish instance in 5 minutes
 				}
@@ -552,7 +551,7 @@ public abstract class Chamber extends AbstractInstance
 		final long nextInterval = bossRoom ? 60000 : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000;
 		
 		// Schedule next room change only if remaining time is enough
-		if ((inst.getInstanceEndTime() - Chronos.currentTimeMillis()) > nextInterval)
+		if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
 		{
 			world.setParameter("roomChangeTask", ThreadPool.schedule(new ChangeRoomTask(world), nextInterval - 5000));
 		}
@@ -589,7 +588,7 @@ public abstract class Chamber extends AbstractInstance
 		public void run()
 		{
 			final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
-			if ((inst == null) || ((inst.getInstanceEndTime() - Chronos.currentTimeMillis()) < 60000))
+			if ((inst == null) || ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
 			{
 				final ScheduledFuture<?> banishTask = _world.getParameters().getObject("banishTask", ScheduledFuture.class);
 				if (banishTask != null)

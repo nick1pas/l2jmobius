@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.network.Connection;
-import org.l2jmobius.util.Chronos;
 
 public class LoginController
 {
@@ -51,7 +50,7 @@ public class LoginController
 	public int assignSessionKeyToLogin(String account, int accessLevel, Socket cSocket)
 	{
 		int key = -1;
-		key = (int) Chronos.currentTimeMillis() & 0xFFFFFF;
+		key = (int) System.currentTimeMillis() & 0xFFFFFF;
 		_logins.put(account, key);
 		_accountsInLoginServer.put(account, cSocket);
 		_accessLevels.put(account, accessLevel);

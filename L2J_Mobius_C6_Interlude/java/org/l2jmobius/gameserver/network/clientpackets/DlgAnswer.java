@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -51,7 +50,7 @@ public class DlgAnswer implements IClientIncomingPacket
 		}
 		
 		final Long answerTime = player.getConfirmDlgRequestTime(_requesterId);
-		if ((_answer == 1) && (answerTime != null) && (Chronos.currentTimeMillis() > answerTime))
+		if ((_answer == 1) && (answerTime != null) && (System.currentTimeMillis() > answerTime))
 		{
 			_answer = 0;
 		}

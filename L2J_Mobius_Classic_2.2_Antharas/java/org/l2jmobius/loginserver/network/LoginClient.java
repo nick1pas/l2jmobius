@@ -27,7 +27,6 @@ import javax.crypto.SecretKey;
 import org.l2jmobius.commons.network.ChannelInboundHandler;
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.IOutgoingPacket;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import org.l2jmobius.loginserver.LoginController;
@@ -83,14 +82,14 @@ public class LoginClient extends ChannelInboundHandler<LoginClient>
 		_addr = address.getAddress();
 		_channel = ctx.channel();
 		_sessionId = Rnd.nextInt();
-		_connectionStartTime = Chronos.currentTimeMillis();
+		_connectionStartTime = System.currentTimeMillis();
 		sendPacket(new Init(_scrambledPair.getScrambledModulus(), _blowfishKey.getEncoded(), _sessionId));
 	}
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx)
 	{
-		if (!_joinedGS || ((_connectionStartTime + LoginController.LOGIN_TIMEOUT) < Chronos.currentTimeMillis()))
+		if (!_joinedGS || ((_connectionStartTime + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
 		{
 			LoginController.getInstance().removeAuthedLoginClient(getAccount());
 		}

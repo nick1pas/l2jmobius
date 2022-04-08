@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
@@ -515,7 +514,7 @@ public class Clan implements IIdentifiable, INamable
 			if (player.isClanLeader())
 			{
 				SiegeManager.getInstance().removeSiegeSkills(player);
-				player.setClanCreateExpiryTime(Chronos.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+				player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 			}
 			
 			// remove Clan skills from Player
@@ -554,7 +553,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		else
 		{
-			removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? Chronos.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000) : 0);
+			removeMemberInDatabase(exMember, clanJoinExpiryTime, getLeaderId() == objectId ? System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000) : 0);
 		}
 		
 		// Notify to scripts
@@ -1004,12 +1003,12 @@ public class Clan implements IIdentifiable, INamable
 					setAllyId(clanData.getInt("ally_id"));
 					setAllyName(clanData.getString("ally_name"));
 					setAllyPenaltyExpiryTime(clanData.getLong("ally_penalty_expiry_time"), clanData.getInt("ally_penalty_type"));
-					if (_allyPenaltyExpiryTime < Chronos.currentTimeMillis())
+					if (_allyPenaltyExpiryTime < System.currentTimeMillis())
 					{
 						setAllyPenaltyExpiryTime(0, 0);
 					}
 					setCharPenaltyExpiryTime(clanData.getLong("char_penalty_expiry_time"));
-					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < Chronos.currentTimeMillis()) // 24*60*60*1000 = 86400000
+					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
 					{
 						setCharPenaltyExpiryTime(0);
 					}
@@ -2056,7 +2055,7 @@ public class Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN);
 			return false;
 		}
-		if (_charPenaltyExpiryTime > Chronos.currentTimeMillis())
+		if (_charPenaltyExpiryTime > System.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
 			return false;
@@ -2068,7 +2067,7 @@ public class Clan implements IIdentifiable, INamable
 			player.sendPacket(sm);
 			return false;
 		}
-		if (target.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
+		if (target.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
 			sm.addString(target.getName());
@@ -2110,7 +2109,7 @@ public class Clan implements IIdentifiable, INamable
 			return false;
 		}
 		final Clan leaderClan = player.getClan();
-		if ((leaderClan.getAllyPenaltyExpiryTime() > Chronos.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
+		if ((leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
 		{
 			player.sendPacket(SystemMessageId.YOU_CAN_ACCEPT_A_NEW_CLAN_IN_THE_ALLIANCE_IN_24_H_AFTER_DISMISSING_ANOTHER_ONE);
 			return false;
@@ -2146,7 +2145,7 @@ public class Clan implements IIdentifiable, INamable
 			player.sendPacket(sm);
 			return false;
 		}
-		if (targetClan.getAllyPenaltyExpiryTime() > Chronos.currentTimeMillis())
+		if (targetClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis())
 		{
 			if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_LEAVED)
 			{
@@ -2240,12 +2239,12 @@ public class Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER);
 			return;
 		}
-		if ((_allyPenaltyExpiryTime > Chronos.currentTimeMillis()) && (_allyPenaltyType == PENALTY_TYPE_DISSOLVE_ALLY))
+		if ((_allyPenaltyExpiryTime > System.currentTimeMillis()) && (_allyPenaltyType == PENALTY_TYPE_DISSOLVE_ALLY))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_OF_DISSOLUTION);
 			return;
 		}
-		if (_dissolvingExpiryTime > Chronos.currentTimeMillis())
+		if (_dissolvingExpiryTime > System.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_NO_ALLIANCE_CAN_BE_CREATED);
 			return;
@@ -2297,7 +2296,7 @@ public class Clan implements IIdentifiable, INamable
 		
 		broadcastToOnlineAllyMembers(new SystemMessage(SystemMessageId.THE_ALLIANCE_IS_DISBANDED));
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))
 		{
 			if (clan.getId() != getId())
@@ -2323,7 +2322,7 @@ public class Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return false;
 		}
-		if (Chronos.currentTimeMillis() < _dissolvingExpiryTime)
+		if (System.currentTimeMillis() < _dissolvingExpiryTime)
 		{
 			player.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOUR_CLAN_LEVEL_CANNOT_BE_INCREASED);
 			return false;
@@ -2708,7 +2707,7 @@ public class Clan implements IIdentifiable, INamable
 	
 	public void addMasterySkill(int id)
 	{
-		getVariables().set(ClanVariables.CLAN_MASTERY_SKILL_TIME + id, Chronos.currentTimeMillis() + 1296000000);
+		getVariables().set(ClanVariables.CLAN_MASTERY_SKILL_TIME + id, System.currentTimeMillis() + 1296000000);
 		final ScheduledFuture<?> task = ThreadPool.schedule(() -> removeMasterySkill(id), 1296000000); // 1296000000 = 15 days
 		masterySkillTasks.add(task);
 		addNewSkill(SkillData.getInstance().getSkill(id, 1));
@@ -2727,7 +2726,7 @@ public class Clan implements IIdentifiable, INamable
 		{
 			return -1;
 		}
-		return (int) (endTime - Chronos.currentTimeMillis());
+		return (int) (endTime - System.currentTimeMillis());
 	}
 	
 	public void setDevelopmentPoints(int count)

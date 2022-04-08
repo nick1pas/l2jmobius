@@ -22,7 +22,6 @@ import java.util.Calendar;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.SiegeClanType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -83,7 +82,7 @@ public class SiegableHall extends ClanHall
 		
 		_nextSiege = Calendar.getInstance();
 		final long nextSiege = set.getLong("nextSiege");
-		if ((nextSiege - Chronos.currentTimeMillis()) < 0)
+		if ((nextSiege - System.currentTimeMillis()) < 0)
 		{
 			updateNextSiege();
 		}

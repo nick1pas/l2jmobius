@@ -19,7 +19,6 @@ package ai.areas.Hellbound;
 import java.util.Calendar;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -65,7 +64,7 @@ public class IvoryTowerTeleportZones extends AbstractNpcAI
 			{
 				disableZones();
 			}
-		}, (calendar.getTimeInMillis() + 86400000) - Chronos.currentTimeMillis(), 86400000); // Check every 24 hours.
+		}, (calendar.getTimeInMillis() + 86400000) - System.currentTimeMillis(), 86400000); // Check every 24 hours.
 	}
 	
 	private void enableZones()

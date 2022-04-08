@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.GroupType;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
@@ -563,7 +562,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		{
 			if (data.getTime() > 0)
 			{
-				time = Chronos.currentTimeMillis() + data.getTime();
+				time = System.currentTimeMillis() + data.getTime();
 				break;
 			}
 			
@@ -573,7 +572,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 			calendar.set(Calendar.SECOND, 0);
 			
 			// If calendar time is lower than current, add one more day
-			if (calendar.getTimeInMillis() <= Chronos.currentTimeMillis())
+			if (calendar.getTimeInMillis() <= System.currentTimeMillis())
 			{
 				calendar.add(Calendar.DAY_OF_MONTH, 1);
 			}
@@ -590,7 +589,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 				
 				// Set exact day. If modified date is before current, add one more week.
 				calendar.set(Calendar.DAY_OF_WEEK, day);
-				if (calendar.getTimeInMillis() <= Chronos.currentTimeMillis())
+				if (calendar.getTimeInMillis() <= System.currentTimeMillis())
 				{
 					calendar.add(Calendar.WEEK_OF_MONTH, 1);
 				}

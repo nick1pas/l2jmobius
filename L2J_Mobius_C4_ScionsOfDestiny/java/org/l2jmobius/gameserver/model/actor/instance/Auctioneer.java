@@ -23,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
@@ -201,7 +200,7 @@ public class Auctioneer extends Folk
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLocation());
 						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
-						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - Chronos.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - Chronos.currentTimeMillis()) / 60000) % 60) + " minutes");
+						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_COUNT%", String.valueOf(a.getBidders().size()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getDesc());
@@ -404,7 +403,7 @@ public class Auctioneer extends Folk
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLocation());
 						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
-						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - Chronos.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - Chronos.currentTimeMillis()) / 60000) % 60) + " minutes");
+						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_MYBID%", String.valueOf(a.getBidders().get(player.getClanId()).getBid()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getDesc());
@@ -435,7 +434,7 @@ public class Auctioneer extends Folk
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getLocation());
 						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
-						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - Chronos.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - Chronos.currentTimeMillis()) / 60000) % 60) + " minutes");
+						html.replace("%AGIT_AUCTION_REMAIN%", ((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_BIDCOUNT%", String.valueOf(a.getBidders().size()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallTable.getInstance().getClanHallById(a.getItemId()).getDesc());

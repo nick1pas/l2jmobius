@@ -27,7 +27,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -799,7 +798,7 @@ public class TowerOfNaia extends AbstractNpcAI
 	
 	private void markElpyRespawn()
 	{
-		final long respawnTime = (getRandom(43200, 216000) * 1000) + Chronos.currentTimeMillis();
+		final long respawnTime = (getRandom(43200, 216000) * 1000) + System.currentTimeMillis();
 		GlobalVariablesManager.getInstance().set("elpy_respawn_time", respawnTime);
 	}
 	
@@ -823,13 +822,13 @@ public class TowerOfNaia extends AbstractNpcAI
 	private void spawnElpy()
 	{
 		final long respawnTime = GlobalVariablesManager.getInstance().getLong("elpy_respawn_time", 0);
-		if (respawnTime <= Chronos.currentTimeMillis())
+		if (respawnTime <= System.currentTimeMillis())
 		{
 			addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false);
 		}
 		else
 		{
-			ThreadPool.schedule(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - Chronos.currentTimeMillis());
+			ThreadPool.schedule(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
 		}
 	}
 	

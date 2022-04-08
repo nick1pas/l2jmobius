@@ -24,7 +24,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -56,7 +55,7 @@ public class AttackStanceTaskManager implements Runnable
 		}
 		_working = true;
 		
-		final long current = Chronos.currentTimeMillis();
+		final long current = System.currentTimeMillis();
 		try
 		{
 			final Iterator<Entry<Creature, Long>> iterator = _attackStanceTasks.entrySet().iterator();
@@ -107,7 +106,7 @@ public class AttackStanceTaskManager implements Runnable
 			return;
 		}
 		
-		_attackStanceTasks.put(creature, Chronos.currentTimeMillis());
+		_attackStanceTasks.put(creature, System.currentTimeMillis());
 	}
 	
 	/**

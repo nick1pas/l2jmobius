@@ -22,7 +22,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -151,7 +150,7 @@ public class Helios extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_helios", time, null, null);
@@ -485,7 +484,7 @@ public class Helios extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, DEAD);
 				final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
 				final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
-				info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 				GrandBossManager.getInstance().setStatSet(HELIOS3, info);
 				startQuestTimer("unlock_helios", respawnTime, null, null);
 				break;

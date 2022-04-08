@@ -19,7 +19,6 @@ package instances.CavernOfThePirateCaptain;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -160,7 +159,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			world.setParameter("is83", world.getTemplateId() == TEMPLATE_ID_83);
 			world.setParameter("isNight", world.getTemplateId() == TEMPLATE_ID_60_NIGHT);
-			world.setParameter("storeTime", Chronos.currentTimeMillis());
+			world.setParameter("storeTime", System.currentTimeMillis());
 			
 			final List<Player> playersInside = new ArrayList<>();
 			if (!player.isInParty())
@@ -245,7 +244,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : isNight ? TEMPLATE_ID_60_NIGHT : TEMPLATE_ID_60));
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
 				return false;
@@ -382,7 +381,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 				{
 					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius3D(npc, 1500)))
 					{
-						final long time = Chronos.currentTimeMillis() - world.getParameters().getLong("storeTime", 0);
+						final long time = System.currentTimeMillis() - world.getParameters().getLong("storeTime", 0);
 						if (time <= 300000) // 5 minutes
 						{
 							if (getRandomBoolean())

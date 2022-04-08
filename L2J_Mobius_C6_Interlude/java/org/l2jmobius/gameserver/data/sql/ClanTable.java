@@ -30,7 +30,6 @@ import java.util.regex.PatternSyntaxException;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
@@ -81,7 +80,7 @@ public class ClanTable
 				clan = getClan(Integer.parseInt(result.getString("clan_id")));
 				if (clan.getDissolvingExpiryTime() != 0)
 				{
-					if (clan.getDissolvingExpiryTime() < Chronos.currentTimeMillis())
+					if (clan.getDissolvingExpiryTime() < System.currentTimeMillis())
 					{
 						destroyClan(clan.getClanId());
 					}
@@ -180,7 +179,7 @@ public class ClanTable
 			return null;
 		}
 		
-		if (Chronos.currentTimeMillis() < player.getClanCreateExpiryTime())
+		if (System.currentTimeMillis() < player.getClanCreateExpiryTime())
 		{
 			player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
 			return null;
@@ -409,7 +408,7 @@ public class ClanTable
 			{
 				destroyClan(clanId);
 			}
-		}, getClan(clanId).getDissolvingExpiryTime() - Chronos.currentTimeMillis());
+		}, getClan(clanId).getDissolvingExpiryTime() - System.currentTimeMillis());
 	}
 	
 	public boolean isAllyExists(String allyName)

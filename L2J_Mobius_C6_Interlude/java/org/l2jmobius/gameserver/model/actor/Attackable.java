@@ -23,7 +23,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -409,7 +408,7 @@ public class Attackable extends Npc
 						if (_firstCommandChannelAttacked != null)
 						{
 							_commandChannelTimer = new CommandChannelTimer(this);
-							_commandChannelLastAttack = Chronos.currentTimeMillis();
+							_commandChannelLastAttack = System.currentTimeMillis();
 							ThreadPool.schedule(_commandChannelTimer, 10000); // check for last attack
 							_firstCommandChannelAttacked.broadcastToChannelMembers(new CreatureSay(0, ChatType.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
 						}
@@ -418,7 +417,7 @@ public class Attackable extends Npc
 			}
 			else if (attacker.getParty().getCommandChannel().equals(_firstCommandChannelAttacked)) // is in same channel
 			{
-				_commandChannelLastAttack = Chronos.currentTimeMillis(); // update last attack time
+				_commandChannelLastAttack = System.currentTimeMillis(); // update last attack time
 			}
 		}
 		
@@ -3053,7 +3052,7 @@ public class Attackable extends Npc
 		@Override
 		public void run()
 		{
-			if ((Chronos.currentTimeMillis() - _monster.getCommandChannelLastAttack()) > 900000)
+			if ((System.currentTimeMillis() - _monster.getCommandChannelLastAttack()) > 900000)
 			{
 				_monster.setCommandChannelTimer(null);
 				_monster.setFirstCommandChannelAttacked(null);

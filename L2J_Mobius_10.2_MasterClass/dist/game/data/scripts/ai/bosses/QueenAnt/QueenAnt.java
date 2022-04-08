@@ -17,7 +17,6 @@
 package ai.bosses.QueenAnt;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -51,7 +50,7 @@ public class QueenAnt extends AbstractNpcAI
 		if (GrandBossManager.getInstance().getBossStatus(QUEEN_ANT) == DEAD)
 		{
 			// Load the unlock date and time for queen ant from DB.
-			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (temp > 0) // If queen ant is locked until a certain time, mark it so and start the unlock timer the unlock time has not yet expired.
 			{
 				startQuestTimer("queen_unlock", temp, null, null);
@@ -107,7 +106,7 @@ public class QueenAnt extends AbstractNpcAI
 		
 		// Also save the respawn time so that the info is maintained past restarts.
 		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN_ANT);
-		info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(QUEEN_ANT, info);
 		
 		return super.onKill(npc, killer, isSummon);

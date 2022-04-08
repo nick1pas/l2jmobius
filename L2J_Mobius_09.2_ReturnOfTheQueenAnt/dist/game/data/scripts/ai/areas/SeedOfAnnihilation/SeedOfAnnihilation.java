@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -230,7 +229,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		
 		int buffsNow = 0;
 		final Long var = GlobalVariablesManager.getInstance().getLong("SeedNextStatusChange", 0);
-		if (var < Chronos.currentTimeMillis())
+		if (var < System.currentTimeMillis())
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
 			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
@@ -255,7 +254,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		reenter.set(Calendar.MINUTE, 0);
 		reenter.set(Calendar.HOUR_OF_DAY, 13);
 		reenter.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-		if (reenter.getTimeInMillis() <= Chronos.currentTimeMillis())
+		if (reenter.getTimeInMillis() <= System.currentTimeMillis())
 		{
 			reenter.add(Calendar.DAY_OF_MONTH, 7);
 		}
@@ -273,7 +272,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 			}
 			ZoneManager.getInstance().getZoneById(a_regionsData.buff_zone, EffectZone.class).addSkill(ZONE_BUFFS[a_regionsData.activeBuff], 1);
 		}
-		startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - Chronos.currentTimeMillis(), null, null);
+		startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - System.currentTimeMillis(), null, null);
 	}
 	
 	private void spawnGroupOfMinion(Monster npc, int[] mobIds)
@@ -318,7 +317,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 				zone.clearSkills();
 				zone.addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
 			}
-			startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - Chronos.currentTimeMillis(), null, null);
+			startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - System.currentTimeMillis(), null, null);
 		}
 		else if (event.equalsIgnoreCase("transform"))
 		{

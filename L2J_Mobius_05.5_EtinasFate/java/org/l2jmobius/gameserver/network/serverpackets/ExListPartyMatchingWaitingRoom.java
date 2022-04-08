@@ -23,7 +23,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
@@ -74,7 +73,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			packet.writeD(instanceTimes.size());
 			for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 			{
-				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - Chronos.currentTimeMillis());
+				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
 				packet.writeD(entry.getKey());
 				packet.writeD((int) instanceTime);
 			}

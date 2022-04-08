@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 
 /**
  * @author Shyla
@@ -163,7 +162,7 @@ public class EventsGlobalTask implements Runnable
 		}
 		
 		final Calendar calendar = Calendar.getInstance();
-		calendar.setTimeInMillis(Chronos.currentTimeMillis());
+		calendar.setTimeInMillis(System.currentTimeMillis());
 		
 		final int hour = calendar.get(Calendar.HOUR_OF_DAY);
 		final int min = calendar.get(Calendar.MINUTE);

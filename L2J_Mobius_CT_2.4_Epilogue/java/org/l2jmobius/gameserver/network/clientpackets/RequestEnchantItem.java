@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -118,7 +117,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// fast auto-enchant cheat check
-		if ((player.getActiveEnchantTimestamp() == 0) || ((Chronos.currentTimeMillis() - player.getActiveEnchantTimestamp()) < 2000))
+		if ((player.getActiveEnchantTimestamp() == 0) || ((System.currentTimeMillis() - player.getActiveEnchantTimestamp()) < 2000))
 		{
 			Util.handleIllegalPlayerAction(player, player + " use autoenchant program ", Config.DEFAULT_PUNISH);
 			player.setActiveEnchantItemId(Player.ID_NONE);

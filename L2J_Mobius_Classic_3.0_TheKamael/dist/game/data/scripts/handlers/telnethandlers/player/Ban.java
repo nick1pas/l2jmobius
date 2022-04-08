@@ -16,7 +16,6 @@
  */
 package handlers.telnethandlers.player;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
@@ -66,7 +65,7 @@ public class Ban implements ITelnetCommand
 				if (Util.isDigit(token))
 				{
 					time = Integer.parseInt(token) * 60 * 1000;
-					time += Chronos.currentTimeMillis();
+					time += System.currentTimeMillis();
 				}
 				if (args.length > 2)
 				{

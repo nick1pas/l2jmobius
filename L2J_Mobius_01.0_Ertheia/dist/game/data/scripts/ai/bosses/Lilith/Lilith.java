@@ -21,7 +21,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -371,7 +370,7 @@ public class Lilith extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(LILITH);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_lilith", time, null, null);
@@ -399,7 +398,7 @@ public class Lilith extends AbstractNpcAI
 			}
 			case "check_activity_task":
 			{
-				if ((_lastAction + 900000) < Chronos.currentTimeMillis())
+				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
 					GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
@@ -576,7 +575,7 @@ public class Lilith extends AbstractNpcAI
 				}
 				_remnants.clear();
 				notifyEvent("spawn_remant", null, null);
-				_lastAction = Chronos.currentTimeMillis();
+				_lastAction = System.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null, true);
 			}
 			else if ((_lilithStatus == WAITING) && (npc.getId() == LILITH_CUBIC))
@@ -594,7 +593,7 @@ public class Lilith extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
-		_lastAction = Chronos.currentTimeMillis();
+		_lastAction = System.currentTimeMillis();
 		if (npc.isMinion() || npc.isRaid()) // Lilith and minions
 		{
 			// Anti BUGGERS
@@ -630,7 +629,7 @@ public class Lilith extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(LILITH, DEAD);
 			final long respawnTime = getRespawnTime();
 			final StatSet info = GrandBossManager.getInstance().getStatSet(LILITH);
-			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(LILITH, info);
 			
 			startQuestTimer("unlock_lilith", respawnTime, null, null);
@@ -702,7 +701,7 @@ public class Lilith extends AbstractNpcAI
 		{
 			reenter = day2;
 		}
-		return reenter.getTimeInMillis() - Chronos.currentTimeMillis();
+		return reenter.getTimeInMillis() - System.currentTimeMillis();
 	}
 	
 	@Override

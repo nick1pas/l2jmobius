@@ -23,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -853,7 +852,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				return false;
 			}
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(channelMember.getObjectId(), INSTANCE_ID);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				final SystemMessage sm = (new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET));
 				sm.addPcName(channelMember);
@@ -901,7 +900,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				return 0;
 			}
 			
-			world = new SODWorld(Chronos.currentTimeMillis() + 5400000);
+			world = new SODWorld(System.currentTimeMillis() + 5400000);
 			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID));
 			InstanceManager.getInstance().addWorld(world);
 			spawnState((SODWorld) world);
@@ -921,7 +920,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			if (player.getParty() == null)
 			{
 				player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
-				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCE_ID, (Chronos.currentTimeMillis()));
+				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 				teleportplayer(player, teleto, (SODWorld) world);
 				if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
 				{
@@ -934,7 +933,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				for (Player channelMember : player.getParty().getCommandChannel().getMembers())
 				{
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
-					InstanceManager.getInstance().setInstanceTime(channelMember.getObjectId(), INSTANCE_ID, (Chronos.currentTimeMillis()));
+					InstanceManager.getInstance().setInstanceTime(channelMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 					teleportplayer(channelMember, teleto, (SODWorld) world);
 					if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
 					{
@@ -948,7 +947,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				for (Player partyMember : player.getParty().getMembers())
 				{
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
-					InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCE_ID, (Chronos.currentTimeMillis()));
+					InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 					teleportplayer(partyMember, teleto, (SODWorld) world);
 					if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
 					{
@@ -1121,7 +1120,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		reenter.set(Calendar.MINUTE, RESET_MIN);
 		reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 		// if time is >= RESET_HOUR - roll to the next day
-		if (reenter.getTimeInMillis() <= Chronos.currentTimeMillis())
+		if (reenter.getTimeInMillis() <= System.currentTimeMillis())
 		{
 			reenter.add(Calendar.DAY_OF_MONTH, 1);
 		}

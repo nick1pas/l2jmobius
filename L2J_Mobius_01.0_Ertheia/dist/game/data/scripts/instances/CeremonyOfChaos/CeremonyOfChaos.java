@@ -28,7 +28,6 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
@@ -118,7 +117,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 	
 	private CeremonyOfChaos()
 	{
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		
 		// Schedule event period end, 1st of next month 00:01.
 		final Calendar periodEnd = Calendar.getInstance();

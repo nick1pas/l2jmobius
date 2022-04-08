@@ -16,7 +16,6 @@
  */
 package ai.areas.Hellbound.Instances.RankuFloor;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -142,7 +141,7 @@ public class RankuFloor extends AbstractInstance
 			}
 			
 			final Long reenterTime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
-			if (Chronos.currentTimeMillis() < reenterTime)
+			if (System.currentTimeMillis() < reenterTime)
 			{
 				party.broadcastPacket(new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(partyMember));
 				return false;

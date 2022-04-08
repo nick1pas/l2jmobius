@@ -22,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
@@ -260,7 +259,7 @@ public class UseItem implements IClientIncomingPacket
 			else if (player.isAttackingNow())
 			{
 				// Equip or unEquip.
-				ThreadPool.schedule(() -> player.useEquippableItem(item, false), player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(Chronos.currentTimeMillis()));
+				ThreadPool.schedule(() -> player.useEquippableItem(item, false), player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{

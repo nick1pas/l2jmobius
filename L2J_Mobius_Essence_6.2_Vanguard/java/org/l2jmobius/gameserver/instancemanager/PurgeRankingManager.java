@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.model.Message;
@@ -70,9 +69,9 @@ public class PurgeRankingManager
 	{
 		// Weekly rewards.
 		final long lastPurgeRewards = GlobalVariablesManager.getInstance().getLong(GlobalVariablesManager.PURGE_REWARD_TIME, 0);
-		if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) && ((Chronos.currentTimeMillis() - lastPurgeRewards) > (604800000 /* 1 week */ - 600000 /* task delay x2 */)))
+		if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) && ((System.currentTimeMillis() - lastPurgeRewards) > (604800000 /* 1 week */ - 600000 /* task delay x2 */)))
 		{
-			GlobalVariablesManager.getInstance().set(GlobalVariablesManager.PURGE_REWARD_TIME, Chronos.currentTimeMillis());
+			GlobalVariablesManager.getInstance().set(GlobalVariablesManager.PURGE_REWARD_TIME, System.currentTimeMillis());
 			for (int category = 1; category <= 7; category++)
 			{
 				if (getTop5(category) != null)

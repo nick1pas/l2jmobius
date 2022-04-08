@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -60,7 +59,7 @@ public class Lottery
 		_prize = Config.ALT_LOTTERY_PRIZE;
 		_isSellingTickets = false;
 		_isStarted = false;
-		_enddate = Chronos.currentTimeMillis();
+		_enddate = System.currentTimeMillis();
 		if (Config.ALLOW_LOTTERY)
 		{
 			new startLottery().run();
@@ -137,7 +136,7 @@ public class Lottery
 					{
 						_prize = rset.getInt("prize");
 						_enddate = rset.getLong("enddate");
-						if (_enddate <= (Chronos.currentTimeMillis() + (2 * MINUTE)))
+						if (_enddate <= (System.currentTimeMillis() + (2 * MINUTE)))
 						{
 							new finishLottery().run();
 							rset.close();
@@ -146,14 +145,14 @@ public class Lottery
 							return;
 						}
 						
-						if (_enddate > Chronos.currentTimeMillis())
+						if (_enddate > System.currentTimeMillis())
 						{
 							_isStarted = true;
-							ThreadPool.schedule(new finishLottery(), _enddate - Chronos.currentTimeMillis());
-							if (_enddate > (Chronos.currentTimeMillis() + (12 * MINUTE)))
+							ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+							if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 							{
 								_isSellingTickets = true;
-								ThreadPool.schedule(new stopSellingTickets(), _enddate - Chronos.currentTimeMillis() - (10 * MINUTE));
+								ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 							}
 							rset.close();
 							statement.close();
@@ -190,8 +189,8 @@ public class Lottery
 				_enddate = finishtime.getTimeInMillis();
 			}
 			
-			ThreadPool.schedule(new stopSellingTickets(), _enddate - Chronos.currentTimeMillis() - (10 * MINUTE));
-			ThreadPool.schedule(new finishLottery(), _enddate - Chronos.currentTimeMillis());
+			ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+			ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{

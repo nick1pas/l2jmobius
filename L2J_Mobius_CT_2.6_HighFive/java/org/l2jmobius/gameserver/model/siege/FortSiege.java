@@ -32,7 +32,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.FortTeleportWhoType;
@@ -714,12 +713,12 @@ public class FortSiege implements Siegable
 				return 1; // Player dont havee enough adena to register
 			}
 			
-			else if ((Chronos.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isRegistrationOver())
+			else if ((System.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isRegistrationOver())
 			{
 				return 2; // Is not right time to register Fortress now
 			}
 			
-			if ((Chronos.currentTimeMillis() > TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isTWChannelOpen())
+			if ((System.currentTimeMillis() > TerritoryWarManager.getInstance().getTWStartTimeInMillis()) && TerritoryWarManager.getInstance().isTWChannelOpen())
 			{
 				return 2; // Is not right time to register Fortress now
 			}

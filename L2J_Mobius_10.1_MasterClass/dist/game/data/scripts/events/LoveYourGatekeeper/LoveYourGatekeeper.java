@@ -16,7 +16,6 @@
  */
 package events.LoveYourGatekeeper;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -59,9 +58,9 @@ public class LoveYourGatekeeper extends LongTimeEvent
 				if (player.getAdena() >= PRICE)
 				{
 					final long reuse = player.getVariables().getLong(REUSE, 0);
-					if (reuse > Chronos.currentTimeMillis())
+					if (reuse > System.currentTimeMillis())
 					{
-						final long remainingTime = (reuse - Chronos.currentTimeMillis()) / 1000;
+						final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
 						final int hours = (int) (remainingTime / 3600);
 						final int minutes = (int) ((remainingTime % 3600) / 60);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_H_S3_MIN);
@@ -74,7 +73,7 @@ public class LoveYourGatekeeper extends LongTimeEvent
 					{
 						takeItems(player, Inventory.ADENA_ID, PRICE);
 						giveItems(player, GATEKEEPER_TRANSFORMATION_STICK, 1);
-						player.getVariables().set(REUSE, Chronos.currentTimeMillis() + (HOURS * 3600000));
+						player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
 					}
 				}
 				else

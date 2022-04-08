@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.TimeStamp;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -36,7 +35,7 @@ public class SkillCoolTime implements IClientOutgoingPacket
 	
 	public SkillCoolTime(Player player)
 	{
-		_currentTime = Chronos.currentTimeMillis();
+		_currentTime = System.currentTimeMillis();
 		for (TimeStamp ts : player.getSkillReuseTimeStamps().values())
 		{
 			if (_currentTime < ts.getStamp())

@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets.teleports;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.RaidTeleportListData;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
@@ -121,9 +120,9 @@ public class ExTeleportToRaidPosition implements IClientIncomingPacket
 		}
 		
 		final int price;
-		if ((Chronos.currentTimeMillis() - player.getVariables().getLong("LastFreeRaidTeleportTime", 0)) > 86400000)
+		if ((System.currentTimeMillis() - player.getVariables().getLong("LastFreeRaidTeleportTime", 0)) > 86400000)
 		{
-			player.getVariables().set("LastFreeRaidTeleportTime", Chronos.currentTimeMillis());
+			player.getVariables().set("LastFreeRaidTeleportTime", System.currentTimeMillis());
 			price = 0;
 		}
 		else

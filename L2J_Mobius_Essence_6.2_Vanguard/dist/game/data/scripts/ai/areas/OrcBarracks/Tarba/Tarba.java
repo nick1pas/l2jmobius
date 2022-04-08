@@ -16,7 +16,6 @@
  */
 package ai.areas.OrcBarracks.Tarba;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -47,7 +46,7 @@ public class Tarba extends AbstractNpcAI
 	{
 		if (event.equals("teleport"))
 		{
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if ((npc.getId() == TARBA) && ((player.getVariables().getLong(TARBA_TIME_VAR, 0) + 86400000) < currentTime))
 			{
 				player.getVariables().set(TARBA_TIME_VAR, currentTime);

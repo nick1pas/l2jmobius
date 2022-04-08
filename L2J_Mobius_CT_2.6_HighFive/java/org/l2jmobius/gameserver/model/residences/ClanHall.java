@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -130,7 +129,7 @@ public abstract class ClanHall
 			{
 				return;
 			}
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
@@ -160,7 +159,7 @@ public abstract class ClanHall
 					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
 						final int fee = _endDate == -1 ? _tempFee : _fee;
-						setEndTime(Chronos.currentTimeMillis() + _rate);
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{

@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -1052,7 +1051,7 @@ public class Item extends WorldObject
 			getWorldRegion().addVisibleObject(this);
 		}
 		
-		setDropTime(Chronos.currentTimeMillis());
+		setDropTime(System.currentTimeMillis());
 		
 		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
 		// Add the Item dropped in the world as a visible object

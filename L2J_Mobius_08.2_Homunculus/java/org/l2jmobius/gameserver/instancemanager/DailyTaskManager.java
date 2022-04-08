@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -73,7 +72,7 @@ public class DailyTaskManager
 	protected DailyTaskManager()
 	{
 		// Schedule reset everyday at 6:30.
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		final Calendar calendar = Calendar.getInstance();
 		calendar.set(Calendar.HOUR_OF_DAY, 6);
 		calendar.set(Calendar.MINUTE, 30);
@@ -106,7 +105,7 @@ public class DailyTaskManager
 	private void onReset()
 	{
 		// Store last reset time.
-		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.DAILY_TASK_RESET, Chronos.currentTimeMillis());
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.DAILY_TASK_RESET, System.currentTimeMillis());
 		
 		// Wednesday weekly tasks.
 		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)

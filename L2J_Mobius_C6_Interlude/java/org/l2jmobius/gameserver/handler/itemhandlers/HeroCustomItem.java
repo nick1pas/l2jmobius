@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -66,7 +65,7 @@ public class HeroCustomItem implements IItemHandler
 				
 				final long heroTime = Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000;
 				player.getVariables().set("CustomHero", true);
-				player.getVariables().set("CustomHeroEnd", heroTime == 0 ? 0 : Chronos.currentTimeMillis() + heroTime);
+				player.getVariables().set("CustomHeroEnd", heroTime == 0 ? 0 : System.currentTimeMillis() + heroTime);
 			}
 		}
 	}

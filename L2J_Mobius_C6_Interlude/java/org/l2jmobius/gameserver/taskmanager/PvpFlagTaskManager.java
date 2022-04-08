@@ -20,7 +20,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
@@ -47,7 +46,7 @@ public class PvpFlagTaskManager implements Runnable
 		
 		if (!PLAYERS.isEmpty())
 		{
-			final long time = Chronos.currentTimeMillis();
+			final long time = System.currentTimeMillis();
 			for (Player player : PLAYERS)
 			{
 				if (time > player.getPvpFlagLasts())

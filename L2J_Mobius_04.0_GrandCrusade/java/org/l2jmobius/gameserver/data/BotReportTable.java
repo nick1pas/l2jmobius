@@ -39,7 +39,6 @@ import org.xml.sax.helpers.DefaultHandler;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -125,7 +124,7 @@ public class BotReportTable
 				final Calendar c = Calendar.getInstance();
 				c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 				c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
-				if (Chronos.currentTimeMillis() < c.getTimeInMillis())
+				if (System.currentTimeMillis() < c.getTimeInMillis())
 				{
 					c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) - 1);
 				}
@@ -291,7 +290,7 @@ public class BotReportTable
 					return false;
 				}
 				
-				final long reuse = (Chronos.currentTimeMillis() - rcdRep.getLastReporTime());
+				final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
@@ -302,7 +301,7 @@ public class BotReportTable
 				}
 			}
 			
-			final long curTime = Chronos.currentTimeMillis();
+			final long curTime = System.currentTimeMillis();
 			if (rcd == null)
 			{
 				rcd = new ReportedCharData();
@@ -419,12 +418,12 @@ public class BotReportTable
 			final Calendar c = Calendar.getInstance();
 			c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 			c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
-			if (Chronos.currentTimeMillis() > c.getTimeInMillis())
+			if (System.currentTimeMillis() > c.getTimeInMillis())
 			{
 				c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) + 1);
 			}
 			
-			ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - Chronos.currentTimeMillis());
+			ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
 		}
 		catch (Exception e)
 		{
@@ -465,7 +464,7 @@ public class BotReportTable
 	{
 		if (map.containsKey(objectId))
 		{
-			return (Chronos.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
+			return (System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
 		}
 		return true;
 	}

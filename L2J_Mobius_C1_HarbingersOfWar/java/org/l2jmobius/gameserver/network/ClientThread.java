@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.templates.ItemTemplate;
 import org.l2jmobius.loginserver.LoginController;
-import org.l2jmobius.util.Chronos;
 
 public class ClientThread extends Thread
 {
@@ -82,17 +81,17 @@ public class ClientThread extends Thread
 	@Override
 	public void run()
 	{
-		long starttime = Chronos.currentTimeMillis();
+		long starttime = System.currentTimeMillis();
 		try
 		{
 			try
 			{
 				do
 				{
-					if ((_activeChar != null) && (_autoSaveTime < (Chronos.currentTimeMillis() - starttime)))
+					if ((_activeChar != null) && (_autoSaveTime < (System.currentTimeMillis() - starttime)))
 					{
 						saveCharToDisk(_activeChar);
-						starttime = Chronos.currentTimeMillis();
+						starttime = System.currentTimeMillis();
 					}
 					final byte[] decrypt = _connection.getPacket();
 					_handler.handlePacket(decrypt);
@@ -596,7 +595,7 @@ public class ClientThread extends Thread
 			oldChar.setTitle(st.nextToken().trim());
 			oldChar.setAllyId(Integer.parseInt(st.nextToken()));
 			World.getInstance().storeObject(oldChar);
-			oldChar.setUptime(Chronos.currentTimeMillis());
+			oldChar.setUptime(System.currentTimeMillis());
 			lnr.close();
 		}
 		catch (Exception e)

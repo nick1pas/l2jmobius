@@ -36,7 +36,6 @@ import org.l2jmobius.commons.network.ChannelInboundHandler;
 import org.l2jmobius.commons.network.ICrypt;
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -308,7 +307,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				else
 				{
 					statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?");
-					statement.setLong(1, Chronos.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+					statement.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 					statement.setInt(2, objectId);
 					statement.execute();
 					statement.close();
@@ -675,7 +674,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 							
 							if (player.getOfflineStartTime() == 0)
 							{
-								player.setOfflineStartTime(Chronos.currentTimeMillis());
+								player.setOfflineStartTime(System.currentTimeMillis());
 							}
 							
 							OfflineTraderTable.getInstance().storeOffliner(player);

@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -108,7 +107,7 @@ public class Baium extends Quest
 		if (status == DEAD)
 		{
 			// Load the unlock date and time for baium from DB.
-			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			if (temp > 0)
 			{
 				// The unlock time has not yet expired. Mark Baium as currently locked (dead).
@@ -178,7 +177,7 @@ public class Baium extends Quest
 				npc.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 5));
 				
 				// Start monitoring baium's inactivity.
-				_lastAttackVsBaiumTime = Chronos.currentTimeMillis();
+				_lastAttackVsBaiumTime = System.currentTimeMillis();
 				startQuestTimer("baium_despawn", 60000, npc, null, true);
 				if (player != null)
 				{
@@ -225,7 +224,7 @@ public class Baium extends Quest
 				{
 					_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 				}
-				if ((_lastAttackVsBaiumTime + (Config.BAIUM_SLEEP * 1000)) < Chronos.currentTimeMillis())
+				if ((_lastAttackVsBaiumTime + (Config.BAIUM_SLEEP * 1000)) < System.currentTimeMillis())
 				{
 					npc.deleteMe(); // Despawn the live-baium.
 					for (Npc minion : _minions)
@@ -242,7 +241,7 @@ public class Baium extends Quest
 					_zone.oustAllPlayers();
 					cancelQuestTimer("baium_despawn", npc, null);
 				}
-				else if (((_lastAttackVsBaiumTime + 300000) < Chronos.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
+				else if (((_lastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4135, 1));
@@ -371,7 +370,7 @@ public class Baium extends Quest
 				}
 			}
 			// Update a variable with the last action against Baium.
-			_lastAttackVsBaiumTime = Chronos.currentTimeMillis();
+			_lastAttackVsBaiumTime = System.currentTimeMillis();
 			callSkillAI(npc);
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -390,7 +389,7 @@ public class Baium extends Quest
 		startQuestTimer("baium_unlock", respawnTime, null, null);
 		// Also save the respawn time so that the info is maintained past reboots.
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
-		info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(LIVE_BAIUM, info);
 		for (Npc minion : _minions)
 		{

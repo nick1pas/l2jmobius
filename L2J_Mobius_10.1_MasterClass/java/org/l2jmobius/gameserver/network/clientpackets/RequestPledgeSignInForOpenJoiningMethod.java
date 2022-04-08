@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanLevelData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
@@ -66,12 +65,12 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 			final Clan clan = pledgeRecruitInfo.getClan();
 			if ((clan != null) && (player.getClan() == null))
 			{
-				if (clan.getCharPenaltyExpiryTime() > Chronos.currentTimeMillis())
+				if (clan.getCharPenaltyExpiryTime() > System.currentTimeMillis())
 				{
 					player.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
 					return;
 				}
-				if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
+				if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
 					sm.addString(player.getName());

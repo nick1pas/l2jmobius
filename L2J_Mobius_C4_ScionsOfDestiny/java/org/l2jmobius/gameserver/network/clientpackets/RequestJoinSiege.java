@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -68,7 +67,7 @@ public class RequestJoinSiege implements IClientIncomingPacket
 			
 			if (_isJoining == 1)
 			{
-				if (Chronos.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
+				if (System.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
 				{
 					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
@@ -100,7 +99,7 @@ public class RequestJoinSiege implements IClientIncomingPacket
 			
 			if (_isJoining == 1)
 			{
-				if (Chronos.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
+				if (System.currentTimeMillis() < player.getClan().getDissolvingExpiryTime())
 				{
 					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;

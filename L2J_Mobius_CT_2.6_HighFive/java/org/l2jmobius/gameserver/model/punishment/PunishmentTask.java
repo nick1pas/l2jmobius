@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
 import org.l2jmobius.gameserver.handler.PunishmentHandler;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
@@ -131,7 +130,7 @@ public class PunishmentTask implements Runnable
 	 */
 	public boolean isExpired()
 	{
-		return (_expirationTime > 0) && (Chronos.currentTimeMillis() > _expirationTime);
+		return (_expirationTime > 0) && (System.currentTimeMillis() > _expirationTime);
 	}
 	
 	/**
@@ -147,7 +146,7 @@ public class PunishmentTask implements Runnable
 		onStart();
 		if (_expirationTime > 0) // Has expiration?
 		{
-			_task = ThreadPool.schedule(this, _expirationTime - Chronos.currentTimeMillis());
+			_task = ThreadPool.schedule(this, _expirationTime - System.currentTimeMillis());
 		}
 	}
 	
@@ -225,7 +224,7 @@ public class PunishmentTask implements Runnable
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
 			{
-				ps.setLong(1, Chronos.currentTimeMillis());
+				ps.setLong(1, System.currentTimeMillis());
 				ps.setLong(2, _id);
 				ps.execute();
 			}

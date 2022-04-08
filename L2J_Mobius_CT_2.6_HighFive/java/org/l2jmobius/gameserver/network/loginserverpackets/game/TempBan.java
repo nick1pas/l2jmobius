@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import org.l2jmobius.commons.network.BaseSendablePacket;
-import org.l2jmobius.commons.util.Chronos;
 
 /**
  * @author mrTJO
@@ -29,7 +28,7 @@ public class TempBan extends BaseSendablePacket
 		writeC(0x0A);
 		writeS(accountName);
 		writeS(ip);
-		writeQ(Chronos.currentTimeMillis() + (time * 60000));
+		writeQ(System.currentTimeMillis() + (time * 60000));
 		// if (reason != null)
 		// {
 		// writeC(0x01);

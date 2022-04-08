@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.TerritoryTable;
 import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
@@ -320,7 +319,7 @@ public class Spawn
 			_scheduledCount++;
 			
 			// Schedule the next respawn.
-			RespawnTaskManager.getInstance().add(oldNpc, Chronos.currentTimeMillis() + _respawnDelay);
+			RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + _respawnDelay);
 		}
 	}
 	

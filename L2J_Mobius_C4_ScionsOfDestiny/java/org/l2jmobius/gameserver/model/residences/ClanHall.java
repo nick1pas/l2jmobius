@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -183,7 +182,7 @@ public class ClanHall
 				return;
 			}
 			
-			final long currentTime = Chronos.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPool.schedule(new FunctionTask(), _endDate - currentTime);
@@ -227,7 +226,7 @@ public class ClanHall
 							newfc = false;
 						}
 						
-						setEndTime(Chronos.currentTimeMillis() + _rate);
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave(newfc);
 						getOwnerClan().getWarehouse().destroyItemByItemId("CH_function_fee", 57, fee, null, null);
 						ThreadPool.schedule(new FunctionTask(), _rate);
@@ -487,7 +486,7 @@ public class ClanHall
 		
 		_ownerId = clan.getClanId();
 		_isFree = false;
-		_paidUntil = Chronos.currentTimeMillis();
+		_paidUntil = System.currentTimeMillis();
 		initialyzeTask(true);
 		
 		// Annonce to Online member new ClanHall
@@ -748,20 +747,20 @@ public class ClanHall
 	 */
 	private void initialyzeTask(boolean forced)
 	{
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		if (_paidUntil > currentTime)
 		{
 			ThreadPool.schedule(new FeeTask(), _paidUntil - currentTime);
 		}
 		else if (!_paid && !forced)
 		{
-			if ((Chronos.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
+			if ((System.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
 			{
-				ThreadPool.schedule(new FeeTask(), Chronos.currentTimeMillis() + (1000 * 60 * 60 * 24));
+				ThreadPool.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
 			}
 			else
 			{
-				ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - Chronos.currentTimeMillis());
+				ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
 			}
 		}
 		else
@@ -790,25 +789,25 @@ public class ClanHall
 				{
 					if (_paidUntil != 0)
 					{
-						while (_paidUntil < Chronos.currentTimeMillis())
+						while (_paidUntil < System.currentTimeMillis())
 						{
 							_paidUntil += _chRate;
 						}
 					}
 					else
 					{
-						_paidUntil = Chronos.currentTimeMillis() + _chRate;
+						_paidUntil = System.currentTimeMillis() + _chRate;
 					}
 					
 					ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_rental_fee", 57, getLease(), null, null);
-					ThreadPool.schedule(new FeeTask(), _paidUntil - Chronos.currentTimeMillis());
+					ThreadPool.schedule(new FeeTask(), _paidUntil - System.currentTimeMillis());
 					_paid = true;
 					updateDb();
 				}
 				else
 				{
 					_paid = false;
-					if (Chronos.currentTimeMillis() > (_paidUntil + _chRate))
+					if (System.currentTimeMillis() > (_paidUntil + _chRate))
 					{
 						if (ClanHallTable.getInstance().loaded())
 						{
@@ -828,13 +827,13 @@ public class ClanHall
 						sm.addNumber(getLease());
 						clan.broadcastToOnlineMembers(sm);
 						
-						if ((Chronos.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
+						if ((System.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
 						{
-							ThreadPool.schedule(new FeeTask(), Chronos.currentTimeMillis() + (1000 * 60 * 60 * 24));
+							ThreadPool.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
 						}
 						else
 						{
-							ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - Chronos.currentTimeMillis());
+							ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
 						}
 					}
 				}

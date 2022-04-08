@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -47,7 +46,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getHideoutId());
 		packet.writeD(0);
 		packet.writeD(_player.getLevel()); // ??
-		packet.writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
+		packet.writeD(_clan.getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);
 		packet.writeD(0);
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());

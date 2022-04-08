@@ -22,7 +22,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 
@@ -48,7 +47,7 @@ public class RandomAnimationTaskManager implements Runnable
 		}
 		_working = true;
 		
-		final long time = Chronos.currentTimeMillis();
+		final long time = System.currentTimeMillis();
 		for (Entry<Npc, Long> entry : PENDING_ANIMATIONS.entrySet())
 		{
 			if (time > entry.getValue().longValue())
@@ -69,7 +68,7 @@ public class RandomAnimationTaskManager implements Runnable
 	{
 		if (npc.hasRandomAnimation())
 		{
-			PENDING_ANIMATIONS.putIfAbsent(npc, Chronos.currentTimeMillis() + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+			PENDING_ANIMATIONS.putIfAbsent(npc, System.currentTimeMillis() + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
 		}
 	}
 	

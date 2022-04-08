@@ -17,7 +17,6 @@
 package ai.bosses;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -64,7 +63,7 @@ public class Orfen extends Quest
 		{
 			case DEAD:
 			{
-				final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+				final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 				if (temp > 0)
 				{
 					startQuestTimer("ORFEN_SPAWN", temp, null, null);
@@ -218,7 +217,7 @@ public class Orfen extends Quest
 			startQuestTimer("ORFEN_SPAWN", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past restarts.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
-			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ORFEN, info);
 		}
 		return super.onKill(npc, killer, isPet);

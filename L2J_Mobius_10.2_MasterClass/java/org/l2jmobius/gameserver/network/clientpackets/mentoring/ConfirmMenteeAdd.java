@@ -21,7 +21,6 @@ import java.sql.PreparedStatement;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.World;
@@ -119,9 +118,9 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 			mentor.sendPacket(SystemMessageId.YOU_CAN_BECOME_A_MENTOR_WHEN_YOUR_MAIN_CLASS_ACHIEVES_LV_105_AND_AWAKENS);
 			return false;
 		}
-		else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > Chronos.currentTimeMillis())
+		else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis())
 		{
-			long remainingTime = (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - Chronos.currentTimeMillis()) / 1000;
+			long remainingTime = (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - System.currentTimeMillis()) / 1000;
 			final int days = (int) (remainingTime / 86400);
 			remainingTime = remainingTime % 86400;
 			final int hours = (int) (remainingTime / 3600);

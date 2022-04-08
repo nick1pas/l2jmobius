@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -294,7 +293,7 @@ public class Frintezza extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		if (status == DEAD)
 		{
-			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			if (temp > 0)
 			{
 				startQuestTimer("frintezza_unlock", temp, null, null);
@@ -1235,7 +1234,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("frintezza_despawn"))
 		{
-			temp = (Chronos.currentTimeMillis() - _lastAction);
+			temp = (System.currentTimeMillis() - _lastAction);
 			if (temp > 900000)
 			{
 				_zone.oustAllPlayers();
@@ -1319,7 +1318,7 @@ public class Frintezza extends AbstractNpcAI
 				startQuestTimer("room1_spawn", 5000, npc, null);
 				startQuestTimer("room_final", 2100000, npc, null);
 				startQuestTimer("frintezza_despawn", 60000, npc, null, true);
-				_lastAction = Chronos.currentTimeMillis();
+				_lastAction = System.currentTimeMillis();
 				_playersInside.add(player);
 				_zone.allowPlayerEntry(player, 300);
 				player.teleToLocation(_invadeLoc[_locCycle][0] + Rnd.get(50), _invadeLoc[_locCycle][1] + Rnd.get(50), _invadeLoc[_locCycle][2]);
@@ -1347,7 +1346,7 @@ public class Frintezza extends AbstractNpcAI
 					startQuestTimer("room1_spawn", 5000, npc, null);
 					startQuestTimer("room_final", 2100000, npc, null);
 					startQuestTimer("frintezza_despawn", 60000, npc, null, true);
-					_lastAction = Chronos.currentTimeMillis();
+					_lastAction = System.currentTimeMillis();
 					for (Party party : cc.getParties())
 					{
 						if (party == null)
@@ -1398,7 +1397,7 @@ public class Frintezza extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		_lastAction = Chronos.currentTimeMillis();
+		_lastAction = System.currentTimeMillis();
 		if (npc.getId() == FRINTEZZA)
 		{
 			npc.setCurrentHpMp(npc.getMaxHp(), 0);
@@ -1473,7 +1472,7 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
-			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(FRINTEZZA, info);
 		}
 		else if (npc.getId() == 18328)

@@ -32,9 +32,9 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
-import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.FinishRotation;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
@@ -46,7 +46,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.gameserver.threads.ThreadPool;
-import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Rnd;
 
 public abstract class Creature extends WorldObject
@@ -193,7 +192,7 @@ public abstract class Creature extends WorldObject
 		{
 			return super.getX();
 		}
-		final long elapsed = Chronos.currentTimeMillis() - _moveStartTime;
+		final long elapsed = System.currentTimeMillis() - _moveStartTime;
 		final int diff = (int) (elapsed * _xAddition);
 		final int remain = Math.abs(getXdestination() - super.getX()) - Math.abs(diff);
 		if (remain > 0)
@@ -210,7 +209,7 @@ public abstract class Creature extends WorldObject
 		{
 			return super.getY();
 		}
-		final long elapsed = Chronos.currentTimeMillis() - _moveStartTime;
+		final long elapsed = System.currentTimeMillis() - _moveStartTime;
 		final int diff = (int) (elapsed * _yAddition);
 		final int remain = Math.abs(getYdestination() - super.getY()) - Math.abs(diff);
 		if (remain > 0)
@@ -929,7 +928,7 @@ public abstract class Creature extends WorldObject
 			setXdestination(destinationX);
 			setYdestination(destinationY);
 			setZdestination(z);
-			_moveStartTime = Chronos.currentTimeMillis();
+			_moveStartTime = System.currentTimeMillis();
 			if (_timeToTarget < 0L)
 			{
 				_timeToTarget = 0L;

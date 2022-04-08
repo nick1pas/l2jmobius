@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -181,7 +180,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-			if (Chronos.currentTimeMillis() < reentertime)
+			if (System.currentTimeMillis() < reentertime)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
@@ -227,7 +226,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		{
 			world = new HSAWorld();
 			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			((HSAWorld) world).storeTime[0] = Chronos.currentTimeMillis();
+			((HSAWorld) world).storeTime[0] = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Suffering Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			runTumors((HSAWorld) world);
@@ -517,7 +516,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 				&& (world.klanikus.isDead() && world.klodekus.isDead()))
 			{
 				world.incStatus();
-				world.storeTime[1] = Chronos.currentTimeMillis();
+				world.storeTime[1] = System.currentTimeMillis();
 				
 				final Long finishDiff = world.storeTime[1] - world.storeTime[0];
 				if (finishDiff < 1260000)

@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -96,7 +95,7 @@ public class ItemsOnGroundManager
 				}
 				
 				final PreparedStatement statement = con.prepareStatement(str);
-				statement.setLong(1, Chronos.currentTimeMillis());
+				statement.setLong(1, System.currentTimeMillis());
 				statement.execute();
 				statement.close();
 			}

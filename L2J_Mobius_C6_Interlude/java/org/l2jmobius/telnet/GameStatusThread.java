@@ -47,7 +47,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -957,7 +956,7 @@ public class GameStatusThread extends Thread
 	
 	private String getUptime(int time)
 	{
-		int uptime = (int) Chronos.currentTimeMillis() - time;
+		int uptime = (int) System.currentTimeMillis() - time;
 		uptime = uptime / 1000;
 		final int h = uptime / 3600;
 		final int m = (uptime - (h * 3600)) / 60;

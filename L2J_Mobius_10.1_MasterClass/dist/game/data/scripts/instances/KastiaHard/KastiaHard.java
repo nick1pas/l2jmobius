@@ -16,7 +16,6 @@
  */
 package instances.KastiaHard;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -65,7 +64,7 @@ public class KastiaHard extends AbstractInstance
 			case "enterInstance":
 			{
 				// Cannot enter if player finished another Kastia instance.
-				final long currentTime = Chronos.currentTimeMillis();
+				final long currentTime = System.currentTimeMillis();
 				if ((currentTime < InstanceManager.getInstance().getInstanceTime(player, 298)) //
 					|| (currentTime < InstanceManager.getInstance().getInstanceTime(player, 299)) //
 					|| (currentTime < InstanceManager.getInstance().getInstanceTime(player, 305)) //

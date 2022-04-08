@@ -22,7 +22,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -49,7 +48,7 @@ public class AntiFeedManager
 	 */
 	public void setLastDeathTime(int objectId)
 	{
-		_lastDeathTimes.put(objectId, Chronos.currentTimeMillis());
+		_lastDeathTimes.put(objectId, System.currentTimeMillis());
 	}
 	
 	/**
@@ -82,7 +81,7 @@ public class AntiFeedManager
 			return false;
 		}
 		
-		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()) && ((Chronos.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL))
+		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()) && ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL))
 		{
 			return false;
 		}

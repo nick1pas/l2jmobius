@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -181,7 +180,7 @@ public class TradeManager
 			{
 				int time = 0;
 				long savetimer = 0;
-				final long currentMillis = Chronos.currentTimeMillis();
+				final long currentMillis = System.currentTimeMillis();
 				final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM merchant_buylists WHERE time <> 0 ORDER BY time");
 				final ResultSet rset2 = statement2.executeQuery();
 				
@@ -342,7 +341,7 @@ public class TradeManager
 				{
 					int time = 0;
 					long savetimer = 0;
-					final long currentMillis = Chronos.currentTimeMillis();
+					final long currentMillis = System.currentTimeMillis();
 					final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM custom_merchant_buylists WHERE time <> 0 ORDER BY time");
 					final ResultSet rset2 = statement2.executeQuery();
 					
@@ -428,7 +427,7 @@ public class TradeManager
 	
 	public void dataTimerSave(int time)
 	{
-		final long timerSave = Chronos.currentTimeMillis() + (time * 60 * 60 * 1000);
+		final long timerSave = System.currentTimeMillis() + (time * 60 * 60 * 1000);
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer=? WHERE time=?");

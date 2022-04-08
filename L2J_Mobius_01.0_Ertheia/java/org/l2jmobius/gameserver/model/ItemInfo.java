@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.Objects;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -145,14 +144,14 @@ public class ItemInfo
 		}
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - Chronos.currentTimeMillis()) / 1000 : 0;
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(Item item, int change)
 	{
 		this(item);
 		_change = change;
-		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - Chronos.currentTimeMillis()) / 1000 : 0;
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(TradeItem item)

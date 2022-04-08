@@ -32,7 +32,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -8626,12 +8625,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public void reduceCurrentHpByDamOverTime(double amount, Creature attacker, boolean awake, int period)
 	{
-		if (_nextReducingHPByOverTime > Chronos.currentTimeMillis())
+		if (_nextReducingHPByOverTime > System.currentTimeMillis())
 		{
 			return;
 		}
 		
-		_nextReducingHPByOverTime = Chronos.currentTimeMillis() + (period * 880);
+		_nextReducingHPByOverTime = System.currentTimeMillis() + (period * 880);
 		reduceCurrentHp(amount, attacker, awake);
 	}
 	
@@ -8639,12 +8638,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public void reduceCurrentMpByDamOverTime(double amount, int period)
 	{
-		if (_nextReducingMPByOverTime > Chronos.currentTimeMillis())
+		if (_nextReducingMPByOverTime > System.currentTimeMillis())
 		{
 			return;
 		}
 		
-		_nextReducingMPByOverTime = Chronos.currentTimeMillis() + (period * 880);
+		_nextReducingMPByOverTime = System.currentTimeMillis() + (period * 880);
 		reduceCurrentMp(amount);
 	}
 	
@@ -8998,7 +8997,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void updateAttackStance()
 	{
-		attackStance = Chronos.currentTimeMillis();
+		attackStance = System.currentTimeMillis();
 	}
 	
 	/**

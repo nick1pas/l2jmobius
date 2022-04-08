@@ -19,7 +19,6 @@ package handlers.admincommandhandlers;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
@@ -210,7 +209,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					{
 						activeChar.addItem("AdminCursedWeaponAdd", id, 1, activeChar, true);
 					}
-					cw.setEndTime(Chronos.currentTimeMillis() + (cw.getDuration() * 60000));
+					cw.setEndTime(System.currentTimeMillis() + (cw.getDuration() * 60000));
 					cw.reActivate();
 				}
 			}

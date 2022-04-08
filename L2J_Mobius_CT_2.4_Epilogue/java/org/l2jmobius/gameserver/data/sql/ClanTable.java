@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
@@ -173,7 +172,7 @@ public class ClanTable
 			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
 			return null;
 		}
-		if (Chronos.currentTimeMillis() < player.getClanCreateExpiryTime())
+		if (System.currentTimeMillis() < player.getClanCreateExpiryTime())
 		{
 			player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
 			return null;
@@ -362,7 +361,7 @@ public class ClanTable
 			{
 				destroyClan(clanId);
 			}
-		}, Math.max(getClan(clanId).getDissolvingExpiryTime() - Chronos.currentTimeMillis(), 300000));
+		}, Math.max(getClan(clanId).getDissolvingExpiryTime() - System.currentTimeMillis(), 300000));
 	}
 	
 	public boolean isAllyExists(String allyName)

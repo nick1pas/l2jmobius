@@ -16,7 +16,6 @@
  */
 package quests.Q10825_ForVictory;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -139,7 +138,7 @@ public class Q10825_ForVictory extends Quest
 			case "mark":
 			{
 				final long TIME_CHECK = Long.parseLong(qs.get("TimeCheck"));
-				final long CURRENT_TIME = Chronos.currentTimeMillis();
+				final long CURRENT_TIME = System.currentTimeMillis();
 				final long SIEGE_LENGTH = 7200000; // 2 hours in milliseconds
 				switch (npc.getId())
 				{

@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -135,7 +134,7 @@ public class Npc extends Creature
 	public void onRandomAnimation(int animationId)
 	{
 		// Send a packet SocialAction to all Player in the _KnownPlayers of the Npc
-		final long now = Chronos.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL)
 		{
 			_lastSocialBroadcast = now;
@@ -578,7 +577,7 @@ public class Npc extends Creature
 	@Override
 	public void onAction(Player player)
 	{
-		if (!canTarget(player) || ((Chronos.currentTimeMillis() - player.getTimerToAttack()) < Config.CLICK_TASK))
+		if (!canTarget(player) || ((System.currentTimeMillis() - player.getTimerToAttack()) < Config.CLICK_TASK))
 		{
 			return;
 		}
@@ -611,7 +610,7 @@ public class Npc extends Creature
 				player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			}
 			
-			player.setTimerToAttack(Chronos.currentTimeMillis());
+			player.setTimerToAttack(System.currentTimeMillis());
 			// Send a Server->Client packet ValidateLocation to correct the Npc position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
@@ -848,7 +847,7 @@ public class Npc extends Creature
 					player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 				}
 				
-				player.setTimerToAttack(Chronos.currentTimeMillis());
+				player.setTimerToAttack(System.currentTimeMillis());
 				player.sendPacket(new ValidateLocation(this));
 			}
 			else

@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -63,7 +62,7 @@ public class AllyLeave implements IClientIncomingPacket
 			return;
 		}
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		clan.setAllyId(0);
 		clan.setAllyName(null);
 		clan.changeAllyCrest(0, true);

@@ -20,7 +20,6 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -289,7 +288,7 @@ public class Frintezza extends Quest
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		if (status == DEAD)
 		{
-			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			if (temp > 0)
 			{
 				startQuestTimer("frintezza_unlock", temp, null, null);
@@ -1375,7 +1374,7 @@ public class Frintezza extends Quest
 			}
 			case "frintezza_despawn":
 			{
-				if ((Chronos.currentTimeMillis() - _lastAction) > 900000)
+				if ((System.currentTimeMillis() - _lastAction) > 900000)
 				{
 					_zone.oustAllPlayers();
 					cancelQuestTimers("waiting");
@@ -1503,7 +1502,7 @@ public class Frintezza extends Quest
 						startQuestTimer("room1_spawn", 5000, npc, null);
 						startQuestTimer("room_final", 2100000, npc, null);
 						startQuestTimer("frintezza_despawn", 60000, npc, null);
-						_lastAction = Chronos.currentTimeMillis();
+						_lastAction = System.currentTimeMillis();
 						if (Config.BYPASS_FRINTEZZA_PARTIES_CHECK)
 						{
 							if (player.getParty() != null)
@@ -1660,7 +1659,7 @@ public class Frintezza extends Quest
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
-		_lastAction = Chronos.currentTimeMillis();
+		_lastAction = System.currentTimeMillis();
 		if (npc.getNpcId() == FRINTEZZA)
 		{
 			npc.setCurrentHpMp(npc.getMaxHp(), 0);
@@ -1743,7 +1742,7 @@ public class Frintezza extends Quest
 						startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 						// Also save the respawn time so that the info is maintained past restarts.
 						final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
-						info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+						info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 						GrandBossManager.getInstance().setStatSet(FRINTEZZA, info);
 					}
 				}

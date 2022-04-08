@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
@@ -203,7 +202,7 @@ public class Item extends WorldObject
 		_type2 = 0;
 		_dropTime = 0;
 		_mana = _itemTemplate.getDuration();
-		_time = _itemTemplate.getTime() == -1 ? -1 : Chronos.currentTimeMillis() + (_itemTemplate.getTime() * 60 * 1000);
+		_time = _itemTemplate.getTime() == -1 ? -1 : System.currentTimeMillis() + (_itemTemplate.getTime() * 60 * 1000);
 		scheduleLifeTimeTask();
 		scheduleVisualLifeTime();
 	}
@@ -226,7 +225,7 @@ public class Item extends WorldObject
 		super.setName(_itemTemplate.getName());
 		_loc = ItemLocation.VOID;
 		_mana = _itemTemplate.getDuration();
-		_time = _itemTemplate.getTime() == -1 ? -1 : Chronos.currentTimeMillis() + (_itemTemplate.getTime() * 60 * 1000);
+		_time = _itemTemplate.getTime() == -1 ? -1 : System.currentTimeMillis() + (_itemTemplate.getTime() * 60 * 1000);
 		scheduleLifeTimeTask();
 		scheduleVisualLifeTime();
 	}
@@ -1573,7 +1572,7 @@ public class Item extends WorldObject
 		setSpawned(true);
 		setXYZ(x, y, z);
 		
-		setDropTime(Chronos.currentTimeMillis());
+		setDropTime(System.currentTimeMillis());
 		setDropperObjectId(dropper != null ? dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 		
 		// Add the Item dropped in the world as a visible object
@@ -1852,7 +1851,7 @@ public class Item extends WorldObject
 	
 	public long getRemainingTime()
 	{
-		return _time - Chronos.currentTimeMillis();
+		return _time - System.currentTimeMillis();
 	}
 	
 	public void endOfLife()
@@ -2506,7 +2505,7 @@ public class Item extends WorldObject
 		if (getVisualLifeTime() > 0)
 		{
 			final long endTime = getVisualLifeTime();
-			if ((endTime - Chronos.currentTimeMillis()) > 0)
+			if ((endTime - System.currentTimeMillis()) > 0)
 			{
 				ItemAppearanceTaskManager.getInstance().add(this, endTime);
 			}

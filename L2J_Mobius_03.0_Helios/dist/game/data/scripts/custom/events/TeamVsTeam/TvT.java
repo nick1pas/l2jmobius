@@ -136,7 +136,7 @@ public class TvT extends Event
 		// calendar.set(Calendar.HOUR_OF_DAY, 20);
 		// calendar.set(Calendar.MINUTE, 0);
 		// calendar.set(Calendar.SECOND, 0);
-		// ThreadPool.scheduleAtFixedRate(() -> eventStart(null), calendar.getTimeInMillis() - Chronos.currentTimeMillis(), 86400000); // 86400000 = 1 day
+		// ThreadPool.scheduleAtFixedRate(() -> eventStart(null), calendar.getTimeInMillis() - System.currentTimeMillis(), 86400000); // 86400000 = 1 day
 	}
 	
 	@Override

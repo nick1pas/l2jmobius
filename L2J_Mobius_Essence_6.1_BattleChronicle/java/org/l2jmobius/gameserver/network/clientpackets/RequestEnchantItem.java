@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
@@ -130,7 +129,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		
 		// fast auto-enchant cheat check
 		// Lowered value to 500 (from 2000) On Essence, some enchantments are much faster than normal ones.
-		if ((request.getTimestamp() == 0) || ((Chronos.currentTimeMillis() - request.getTimestamp()) < 500))
+		if ((request.getTimestamp() == 0) || ((System.currentTimeMillis() - request.getTimestamp()) < 500))
 		{
 			Util.handleIllegalPlayerAction(player, player + " use autoenchant program ", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());

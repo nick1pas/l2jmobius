@@ -18,7 +18,6 @@ package events.CharacterBirthday;
 
 import java.util.Calendar;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -92,7 +91,7 @@ public class CharacterBirthday extends AbstractNpcAI
 		if (event.equalsIgnoreCase("receive_reward"))
 		{
 			final Calendar now = Calendar.getInstance();
-			now.setTimeInMillis(Chronos.currentTimeMillis());
+			now.setTimeInMillis(System.currentTimeMillis());
 			// Check if already received reward
 			final String nextBirthday = st.get("Birthday");
 			if ((nextBirthday != null) && (Integer.parseInt(nextBirthday) > now.get(Calendar.YEAR)))

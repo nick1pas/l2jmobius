@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.HeroSkillTable;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -834,7 +833,7 @@ class OlympiadGame
 		String winner = "draw";
 		
 		// Calculate Fight time
-		final long fightTime = (Chronos.currentTimeMillis() - _startTime);
+		final long fightTime = (System.currentTimeMillis() - _startTime);
 		
 		if ((_playerOne == null) && (_playerTwo == null))
 		{
@@ -1001,7 +1000,7 @@ class OlympiadGame
 	
 	protected boolean makeCompetitionStart()
 	{
-		_startTime = Chronos.currentTimeMillis();
+		_startTime = System.currentTimeMillis();
 		if (_aborted)
 		{
 			return false;

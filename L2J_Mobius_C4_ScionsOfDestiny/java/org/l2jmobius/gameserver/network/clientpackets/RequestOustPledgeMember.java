@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -81,8 +80,8 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		}
 		
 		// this also updates the database
-		clan.removeClanMember(_target, Chronos.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // Like L2OFF also player takes the penality
-		clan.setCharPenaltyExpiryTime(Chronos.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+		clan.removeClanMember(_target, System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // Like L2OFF also player takes the penality
+		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 		clan.updateClanInDB();
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);

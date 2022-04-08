@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.shuttle;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Location;
 
 /**
@@ -30,7 +29,7 @@ public class ShuttleStop
 	private final int _id;
 	private boolean _isOpen = true;
 	private final List<Location> _dimensions = new ArrayList<>(3);
-	private long _lastDoorStatusChanges = Chronos.currentTimeMillis();
+	private long _lastDoorStatusChanges = System.currentTimeMillis();
 	
 	public ShuttleStop(int id)
 	{
@@ -65,7 +64,7 @@ public class ShuttleStop
 		}
 		
 		_isOpen = true;
-		_lastDoorStatusChanges = Chronos.currentTimeMillis();
+		_lastDoorStatusChanges = System.currentTimeMillis();
 	}
 	
 	public void closeDoor()
@@ -76,11 +75,11 @@ public class ShuttleStop
 		}
 		
 		_isOpen = false;
-		_lastDoorStatusChanges = Chronos.currentTimeMillis();
+		_lastDoorStatusChanges = System.currentTimeMillis();
 	}
 	
 	public boolean hasDoorChanged()
 	{
-		return (Chronos.currentTimeMillis() - _lastDoorStatusChanges) <= 1000;
+		return (System.currentTimeMillis() - _lastDoorStatusChanges) <= 1000;
 	}
 }

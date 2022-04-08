@@ -34,7 +34,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.SiegeScheduleData;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
@@ -1414,9 +1413,9 @@ public class Siege implements Siegable
 		}
 		
 		final Calendar calendar = _castle.getSiegeDate();
-		if (calendar.getTimeInMillis() < Chronos.currentTimeMillis())
+		if (calendar.getTimeInMillis() < System.currentTimeMillis())
 		{
-			calendar.setTimeInMillis(Chronos.currentTimeMillis());
+			calendar.setTimeInMillis(System.currentTimeMillis());
 		}
 		
 		calendar.set(Calendar.DAY_OF_WEEK, holder.getDay());

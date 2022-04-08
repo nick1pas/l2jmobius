@@ -24,7 +24,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -196,7 +195,7 @@ public class CursedWeapon
 		@Override
 		public void run()
 		{
-			if (Chronos.currentTimeMillis() >= _endTime)
+			if (System.currentTimeMillis() >= _endTime)
 			{
 				endOfLife();
 			}
@@ -303,7 +302,7 @@ public class CursedWeapon
 	public void reActivate()
 	{
 		_isActivated = true;
-		if ((_endTime - Chronos.currentTimeMillis()) <= 0)
+		if ((_endTime - System.currentTimeMillis()) <= 0)
 		{
 			endOfLife();
 		}
@@ -321,7 +320,7 @@ public class CursedWeapon
 			dropIt(attackable, player);
 			
 			// Start the Life Task
-			_endTime = Chronos.currentTimeMillis() + (_duration * 60000);
+			_endTime = System.currentTimeMillis() + (_duration * 60000);
 			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 			return true;
 		}
@@ -604,7 +603,7 @@ public class CursedWeapon
 	
 	public long getTimeLeft()
 	{
-		return _endTime - Chronos.currentTimeMillis();
+		return _endTime - System.currentTimeMillis();
 	}
 	
 	public int getDuration()

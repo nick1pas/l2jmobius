@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.clientpackets.huntingzones;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -109,7 +108,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		final long currentTime = Chronos.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		final int instanceId = holder.getInstanceId();
 		if ((instanceId > 0) && holder.isSoloInstance())
 		{

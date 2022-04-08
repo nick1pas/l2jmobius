@@ -16,7 +16,6 @@
  */
 package events.DreamMaker;
 
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -170,10 +169,10 @@ public class DreamMaker extends LongTimeEvent
 				{
 					htmltext = "34590-buff-no-level.htm";
 				}
-				else if ((player.getVariables().getLong("DREAM_MAKER_BUFF_DELAY", 0) + 86400000) >= Chronos.currentTimeMillis())
+				else if ((player.getVariables().getLong("DREAM_MAKER_BUFF_DELAY", 0) + 86400000) >= System.currentTimeMillis())
 				{
 					npc.doCast(getRandomEntry(BUFFS).getSkill());
-					player.getVariables().set("DREAM_MAKER_BUFF_DELAY", Chronos.currentTimeMillis());
+					player.getVariables().set("DREAM_MAKER_BUFF_DELAY", System.currentTimeMillis());
 					htmltext = "34590-buff-received.htm";
 				}
 				else

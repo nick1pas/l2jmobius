@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.MountType;
@@ -129,7 +128,7 @@ public class Valakas extends AbstractNpcAI
 		if (status == DEAD)
 		{
 			// load the unlock date and time for valakas from DB
-			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (temp > 0)
 			{
 				// The time has not yet expired. Mark Valakas as currently locked (dead).
@@ -168,7 +167,7 @@ public class Valakas extends AbstractNpcAI
 			if (status == FIGHTING)
 			{
 				// stores current time for inactivity task.
-				_timeTracker = Chronos.currentTimeMillis();
+				_timeTracker = System.currentTimeMillis();
 				
 				startQuestTimer("regen_task", 60000, valakas, null, true);
 				startQuestTimer("skill_task", 2000, valakas, null, true);
@@ -196,7 +195,7 @@ public class Valakas extends AbstractNpcAI
 			if (event.equalsIgnoreCase("beginning"))
 			{
 				// Stores current time
-				_timeTracker = Chronos.currentTimeMillis();
+				_timeTracker = System.currentTimeMillis();
 				
 				// Teleport Valakas to his lair.
 				npc.teleToLocation(VALAKAS_LAIR);
@@ -220,7 +219,7 @@ public class Valakas extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("regen_task"))
 			{
 				// Inactivity task - 15min
-				if ((GrandBossManager.getInstance().getBossStatus(VALAKAS) == FIGHTING) && ((_timeTracker + 900000) < Chronos.currentTimeMillis()))
+				if ((GrandBossManager.getInstance().getBossStatus(VALAKAS) == FIGHTING) && ((_timeTracker + 900000) < System.currentTimeMillis()))
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					npc.teleToLocation(VALAKAS_REGENERATION_LOC);
@@ -416,7 +415,7 @@ public class Valakas extends AbstractNpcAI
 			npc.setTarget(attacker);
 			npc.doCast(SkillData.getInstance().getSkill(4258, 1));
 		}
-		_timeTracker = Chronos.currentTimeMillis();
+		_timeTracker = System.currentTimeMillis();
 		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -447,7 +446,7 @@ public class Valakas extends AbstractNpcAI
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
-		info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(VALAKAS, info);
 		
 		return super.onKill(npc, killer, isSummon);
