@@ -227,7 +227,7 @@ public class AutoUseTaskManager implements Runnable
 						
 						// Playable target cast.
 						final Playable caster = pet != null ? pet : player;
-						if ((target != null) && target.isPlayable() && !((Playable) target).isAlikeDead() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0))
+						if ((target != null) && target.isPlayable() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0))
 						{
 							caster.doCast(skill);
 						}
@@ -379,6 +379,11 @@ public class AutoUseTaskManager implements Runnable
 			{
 				return false;
 			}
+		}
+		
+		if ((target != null) && target.isCreature() && ((Creature) target).isAlikeDead() && (skill.getTargetType() != TargetType.SELF) && (skill.getTargetType() != TargetType.NPC_BODY) && (skill.getTargetType() != TargetType.PC_BODY))
+		{
+			return false;
 		}
 		
 		final Playable playableTarget = (target == null) || !target.isPlayable() || (skill.getTargetType() == TargetType.SELF) ? player : (Playable) target;
