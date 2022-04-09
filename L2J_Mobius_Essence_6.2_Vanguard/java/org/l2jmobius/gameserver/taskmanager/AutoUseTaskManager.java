@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -215,9 +216,17 @@ public class AutoUseTaskManager implements Runnable
 					final WorldObject target = player.getTarget();
 					if (canCastBuff(player, target, skill))
 					{
-						final Playable caster = pet != null ? pet : player;
+						ATTACH_SEARCH: for (AttachSkillHolder holder : skill.getAttachSkills())
+						{
+							if (player.isAffectedBySkill(holder.getRequiredSkillId()))
+							{
+								skill = holder.getSkill();
+								break ATTACH_SEARCH;
+							}
+						}
 						
 						// Playable target cast.
+						final Playable caster = pet != null ? pet : player;
 						if ((target != null) && target.isPlayable() && !((Playable) target).isAlikeDead() && (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0))
 						{
 							caster.doCast(skill);
@@ -380,9 +389,15 @@ public class AutoUseTaskManager implements Runnable
 		
 		final BuffInfo buffInfo = playableTarget.getEffectList().getBuffInfoBySkillId(skill.getId());
 		final BuffInfo abnormalBuffInfo = playableTarget.getEffectList().getFirstBuffInfoByAbnormalType(skill.getAbnormalType());
-		return ((buffInfo == null) && (abnormalBuffInfo == null)) //
-			|| ((buffInfo != null) && (abnormalBuffInfo.getSkill().getId() == buffInfo.getSkill().getId()) && ((buffInfo.getTime() <= REUSE_MARGIN_TIME) || (buffInfo.getSkill().getLevel() < skill.getLevel()))) //
-			|| (abnormalBuffInfo.getSkill().getAbnormalLevel() < skill.getAbnormalLevel());
+		if (abnormalBuffInfo != null)
+		{
+			if (buffInfo != null)
+			{
+				return (abnormalBuffInfo.getSkill().getId() == buffInfo.getSkill().getId()) && ((buffInfo.getTime() <= REUSE_MARGIN_TIME) || (buffInfo.getSkill().getLevel() < skill.getLevel()));
+			}
+			return (abnormalBuffInfo.getSkill().getAbnormalLevel() < skill.getAbnormalLevel()) || abnormalBuffInfo.isAbnormalType(AbnormalType.NONE);
+		}
+		return buffInfo == null;
 	}
 	
 	private boolean canUseMagic(Player player, WorldObject target, Skill skill)
@@ -391,6 +406,16 @@ public class AutoUseTaskManager implements Runnable
 		{
 			return false;
 		}
+		
+		for (AttachSkillHolder holder : skill.getAttachSkills())
+		{
+			if (player.isAffectedBySkill(holder.getRequiredSkillId()) //
+				&& (player.hasSkillReuse(holder.getSkill().getReuseHashCode()) || player.isAffectedBySkill(holder)))
+			{
+				return false;
+			}
+		}
+		
 		return !player.isSkillDisabled(skill) && skill.checkCondition(player, target, false);
 	}
 	
