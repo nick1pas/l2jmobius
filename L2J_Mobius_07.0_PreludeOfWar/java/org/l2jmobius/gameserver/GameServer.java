@@ -156,7 +156,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.votereward.VoteSystem;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -391,8 +390,6 @@ public class GameServer
 		
 		SpawnData.getInstance().init();
 		DBSpawnManager.getInstance();
-		
-		VoteSystem.initialize();
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();

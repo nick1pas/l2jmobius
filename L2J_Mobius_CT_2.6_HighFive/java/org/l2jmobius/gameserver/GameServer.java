@@ -146,7 +146,6 @@ import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
-import org.l2jmobius.gameserver.model.votereward.VoteSystem;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -365,7 +364,6 @@ public class GameServer
 		FourSepulchersManager.getInstance().init();
 		DimensionalRiftManager.getInstance();
 		RaidBossSpawnManager.getInstance();
-		VoteSystem.initialize();
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();

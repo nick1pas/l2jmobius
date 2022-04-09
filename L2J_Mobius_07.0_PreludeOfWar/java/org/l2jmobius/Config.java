@@ -146,7 +146,6 @@ public class Config
 	private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
 	private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
 	private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
-	private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
 	private static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
 	
 	// --------------------------------------------------
@@ -1351,41 +1350,6 @@ public class Config
 	public static long SELLBUFF_MIN_PRICE;
 	public static long SELLBUFF_MAX_PRICE;
 	public static int SELLBUFF_MAX_BUFFS;
-	public static boolean ALLOW_NETWORK_VOTE_REWARD;
-	public static String NETWORK_SERVER_LINK;
-	public static int NETWORK_VOTES_DIFFERENCE;
-	public static int NETWORK_REWARD_CHECK_TIME;
-	public static Map<Integer, Integer> NETWORK_REWARD = new HashMap<>();
-	public static int NETWORK_DUALBOXES_ALLOWED;
-	public static boolean ALLOW_NETWORK_GAME_SERVER_REPORT;
-	public static boolean ALLOW_TOPZONE_VOTE_REWARD;
-	public static String TOPZONE_SERVER_LINK;
-	public static int TOPZONE_VOTES_DIFFERENCE;
-	public static int TOPZONE_REWARD_CHECK_TIME;
-	public static Map<Integer, Integer> TOPZONE_REWARD = new HashMap<>();
-	public static int TOPZONE_DUALBOXES_ALLOWED;
-	public static boolean ALLOW_TOPZONE_GAME_SERVER_REPORT;
-	public static boolean ALLOW_HOPZONE_VOTE_REWARD;
-	public static String HOPZONE_SERVER_LINK;
-	public static int HOPZONE_VOTES_DIFFERENCE;
-	public static int HOPZONE_REWARD_CHECK_TIME;
-	public static Map<Integer, Integer> HOPZONE_REWARD = new HashMap<>();
-	public static int HOPZONE_DUALBOXES_ALLOWED;
-	public static boolean ALLOW_HOPZONE_GAME_SERVER_REPORT;
-	public static boolean ALLOW_L2TOP_VOTE_REWARD;
-	public static String L2TOP_SERVER_LINK;
-	public static int L2TOP_VOTES_DIFFERENCE;
-	public static int L2TOP_REWARD_CHECK_TIME;
-	public static Map<Integer, Integer> L2TOP_REWARD = new HashMap<>();
-	public static int L2TOP_DUALBOXES_ALLOWED;
-	public static boolean ALLOW_L2TOP_GAME_SERVER_REPORT;
-	public static boolean ALLOW_L2JBRASIL_VOTE_REWARD;
-	public static String L2JBRASIL_SERVER_LINK;
-	public static int L2JBRASIL_VOTES_DIFFERENCE;
-	public static int L2JBRASIL_REWARD_CHECK_TIME;
-	public static Map<Integer, Integer> L2JBRASIL_REWARD = new HashMap<>();
-	public static int L2JBRASIL_DUALBOXES_ALLOWED;
-	public static boolean ALLOW_L2JBRASIL_GAME_SERVER_REPORT;
 	
 	public static boolean ENABLE_GUI;
 	public static boolean DARK_THEME;
@@ -3619,78 +3583,6 @@ public class Config
 			CUSTOM_STARTING_LOC_X = startingLocationConfig.getInt("CustomStartingLocX", 50821);
 			CUSTOM_STARTING_LOC_Y = startingLocationConfig.getInt("CustomStartingLocY", 186527);
 			CUSTOM_STARTING_LOC_Z = startingLocationConfig.getInt("CustomStartingLocZ", -3625);
-			
-			// Load VoteReward config file (if exists)
-			final PropertiesParser voteRewardConfig = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);
-			// L2network.eu
-			ALLOW_NETWORK_VOTE_REWARD = voteRewardConfig.getBoolean("AllowNetworkVoteReward", false);
-			NETWORK_SERVER_LINK = voteRewardConfig.getString("NetworkServerLink", "");
-			NETWORK_VOTES_DIFFERENCE = voteRewardConfig.getInt("NetworkVotesDifference", 5);
-			NETWORK_REWARD_CHECK_TIME = voteRewardConfig.getInt("NetworkRewardCheckTime", 5);
-			final String networkSmallRewardValue = voteRewardConfig.getString("NetworkReward", "57,100000000;");
-			final String[] networkSmallRewardSplit1 = networkSmallRewardValue.split(";");
-			for (String i : networkSmallRewardSplit1)
-			{
-				final String[] networkSmallRewardSplit2 = i.split(",");
-				NETWORK_REWARD.put(Integer.parseInt(networkSmallRewardSplit2[0]), Integer.parseInt(networkSmallRewardSplit2[1]));
-			}
-			NETWORK_DUALBOXES_ALLOWED = voteRewardConfig.getInt("NetworkDualboxesAllowed", 1);
-			ALLOW_NETWORK_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowNetworkGameServerReport", false);
-			// Topzone.com
-			ALLOW_TOPZONE_VOTE_REWARD = voteRewardConfig.getBoolean("AllowTopzoneVoteReward", false);
-			TOPZONE_SERVER_LINK = voteRewardConfig.getString("TopzoneServerLink", "");
-			TOPZONE_VOTES_DIFFERENCE = voteRewardConfig.getInt("TopzoneVotesDifference", 5);
-			TOPZONE_REWARD_CHECK_TIME = voteRewardConfig.getInt("TopzoneRewardCheckTime", 5);
-			final String topzoneSmallRewardValue = voteRewardConfig.getString("TopzoneReward", "57,100000000;");
-			final String[] topzoneSmallRewardSplit1 = topzoneSmallRewardValue.split(";");
-			for (String i : topzoneSmallRewardSplit1)
-			{
-				final String[] topzoneSmallRewardSplit2 = i.split(",");
-				TOPZONE_REWARD.put(Integer.parseInt(topzoneSmallRewardSplit2[0]), Integer.parseInt(topzoneSmallRewardSplit2[1]));
-			}
-			TOPZONE_DUALBOXES_ALLOWED = voteRewardConfig.getInt("TopzoneDualboxesAllowed", 1);
-			ALLOW_TOPZONE_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowTopzoneGameServerReport", false);
-			// Hopzone.net
-			ALLOW_HOPZONE_VOTE_REWARD = voteRewardConfig.getBoolean("AllowHopzoneVoteReward", false);
-			HOPZONE_SERVER_LINK = voteRewardConfig.getString("HopzoneServerLink", "");
-			HOPZONE_VOTES_DIFFERENCE = voteRewardConfig.getInt("HopzoneVotesDifference", 5);
-			HOPZONE_REWARD_CHECK_TIME = voteRewardConfig.getInt("HopzoneRewardCheckTime", 5);
-			final String hopzoneSmallRewardValue = voteRewardConfig.getString("HopzoneReward", "57,100000000;");
-			final String[] hopzoneSmallRewardSplit1 = hopzoneSmallRewardValue.split(";");
-			for (String i : hopzoneSmallRewardSplit1)
-			{
-				final String[] hopzoneSmallRewardSplit2 = i.split(",");
-				HOPZONE_REWARD.put(Integer.parseInt(hopzoneSmallRewardSplit2[0]), Integer.parseInt(hopzoneSmallRewardSplit2[1]));
-			}
-			HOPZONE_DUALBOXES_ALLOWED = voteRewardConfig.getInt("HopzoneDualboxesAllowed", 1);
-			ALLOW_HOPZONE_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowHopzoneGameServerReport", false);
-			// L2top.co
-			ALLOW_L2TOP_VOTE_REWARD = voteRewardConfig.getBoolean("AllowL2topVoteReward", false);
-			L2TOP_SERVER_LINK = voteRewardConfig.getString("L2topServerLink", "");
-			L2TOP_VOTES_DIFFERENCE = voteRewardConfig.getInt("L2topVotesDifference", 5);
-			L2TOP_REWARD_CHECK_TIME = voteRewardConfig.getInt("L2topRewardCheckTime", 5);
-			final String l2topSmallRewardValue = voteRewardConfig.getString("L2topReward", "57,100000000;");
-			final String[] l2topSmallRewardsplit1 = l2topSmallRewardValue.split(";");
-			for (String i : l2topSmallRewardsplit1)
-			{
-				final String[] l2topSmallRewardSplit2 = i.split(",");
-				L2TOP_REWARD.put(Integer.parseInt(l2topSmallRewardSplit2[0]), Integer.parseInt(l2topSmallRewardSplit2[1]));
-			}
-			L2TOP_DUALBOXES_ALLOWED = voteRewardConfig.getInt("L2topDualboxesAllowed", 1);
-			ALLOW_L2TOP_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowL2topGameServerReport", false);
-			ALLOW_L2JBRASIL_VOTE_REWARD = voteRewardConfig.getBoolean("AllowL2JBrasilVoteReward", false);
-			L2JBRASIL_SERVER_LINK = voteRewardConfig.getString("L2JBrasilServerLink", "");
-			L2JBRASIL_VOTES_DIFFERENCE = voteRewardConfig.getInt("L2JBrasilVotesDifference", 5);
-			L2JBRASIL_REWARD_CHECK_TIME = voteRewardConfig.getInt("L2JBrasilRewardCheckTime", 5);
-			String l2jbrasilSmallRewardValue = voteRewardConfig.getString("L2JBrasilReward", "57,100000000;");
-			String[] l2jbrasilSmallRewardSplit1 = l2jbrasilSmallRewardValue.split(";");
-			for (String i : l2jbrasilSmallRewardSplit1)
-			{
-				String[] l2jbrasilSmallRewardSplit2 = i.split(",");
-				HOPZONE_REWARD.put(Integer.parseInt(l2jbrasilSmallRewardSplit2[0]), Integer.parseInt(l2jbrasilSmallRewardSplit2[1]));
-			}
-			L2JBRASIL_DUALBOXES_ALLOWED = voteRewardConfig.getInt("L2JBrasilDualboxesAllowed", 1);
-			ALLOW_L2JBRASIL_GAME_SERVER_REPORT = voteRewardConfig.getBoolean("AllowL2JBrasilGameServerReport", false);
 			
 			// Load WalkerBotProtection config file (if exists)
 			final PropertiesParser walkerBotProtectionConfig = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
