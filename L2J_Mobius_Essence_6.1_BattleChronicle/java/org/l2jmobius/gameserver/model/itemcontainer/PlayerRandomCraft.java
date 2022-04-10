@@ -257,7 +257,7 @@ public class PlayerRandomCraft
 			if (RandomCraftData.getInstance().isAnnounce(itemId))
 			{
 				Broadcast.toAllOnlinePlayers(new ExItemAnnounce(_player, item, ExItemAnnounce.RANDOM_CRAFT));
-				LOGGER.log(Level.INFO, _player + " randomly crafted " + item.getTemplate() + " [" + item.getObjectId() + "]");
+				// LOGGER.log(Level.INFO, _player + " randomly crafted " + item.getTemplate() + " [" + item.getObjectId() + "]");
 			}
 			_player.sendPacket(new ExCraftRandomMake(itemId, itemCount));
 			_player.sendPacket(new ExCraftRandomInfo(_player));
