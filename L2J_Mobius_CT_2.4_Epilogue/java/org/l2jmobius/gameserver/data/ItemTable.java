@@ -492,7 +492,11 @@ public class ItemTable
 		@Override
 		public void run()
 		{
-			_item.setOwnerId(0);
+			// Set owner id to 0 only when location is VOID.
+			if (_item.getItemLocation() == ItemLocation.VOID)
+			{
+				_item.setOwnerId(0);
+			}
 			_item.setItemLootShedule(null);
 		}
 	}
