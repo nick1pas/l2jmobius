@@ -66,7 +66,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		23502, // Flame Salamander
 		23503, // Flame Drake
 		23504, // Flame Votis
-		// War-Torn
+		// War-Torn Plains
 		24585, // Vanor Silenos Mercenary
 		24586, // Vanor Silenos Guardian
 		// Abandoned Coal Mines
@@ -104,7 +104,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		23566, // Nymph Rose
 		23567, // Nymph Rose
 		23578, // Nymph Guardian
-		// Ivory Tower
+		// Ivory Tower Crater
 		24422, // Stone Golem
 		24425, // Steel Golem
 		24421, // Stone Gargoyle
@@ -131,7 +131,12 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		20938, // Tanor Silenos Scout
 		20943, // Nightmare Watchman
 		24587, // Tanor Silenos
-		// The Forest of Mirrors
+		// Neutral Zone
+		24641, // Tel Mahum Wizard
+		24642, // Tel Mahum Legionary
+		24643, // Tel Mahum Footman
+		24644, // Tel Mahum Lieutenant
+		// Forest of Mirrors
 		24466, // Demonic Mirror
 		24465, // Forest Evil Spirit
 		24461, // Forest Ghost
@@ -151,6 +156,11 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		24447, // Niasis
 		24445, // Lizardman Rogue
 		24446, // Island Guard
+		// Field of Whispers
+		24304, // Groz Kropiora
+		24305, // Groz Krotania
+		24306, // Groz Krophy
+		24307, // Groz Krotany
 		// Ketra Orc Outpost
 		24631, // Ketra Orc Shaman
 		24632, // Ketra Orc Prophet
@@ -163,7 +173,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		24638, // Varka Silenos Footman
 		24639, // Varka Silenos Sergeant
 		24640, // Varka Silenos Officer
-		// Brekas Stronghold
+		// Breka's Stronghold
 		24420, // Breka Orc Prefect
 		24416, // Breka Orc Scout Captain
 		24419, // Breka Orc Slaughterer
@@ -229,13 +239,6 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		23298, // Royal Quartermaster
 		23299, // Operations Chief of the 7th Division
 		23300, // Commander of Operations
-		// Dragon Valley
-		24480, // Dragon Legionnaire
-		24482, // Dragon Officer
-		24481, // Dragon Peltast
-		24483, // Dragon Centurion
-		24484, // Dragon Elite Guard
-		24485, // Behemoth Dragon
 		// Fafurion Temple
 		24329, // Starving Water Dragon
 		24318, // Temple Guard Captain
@@ -245,11 +248,35 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		24323, // Temple Guard
 		24321, // Temple Patrol Guard
 		24322, // Temple Knight Recruit
-		// Neutral Zone
-		24641, // Tel Mahum Wizard
-		24642, // Tel Mahum Legionary
-		24643, // Tel Mahum Footman
-		24644, // Tel Mahum Lieutenant
+		// Dragon Valley
+		24480, // Dragon Legionnaire
+		24482, // Dragon Officer
+		24481, // Dragon Peltast
+		24483, // Dragon Centurion
+		24484, // Dragon Elite Guard
+		24485, // Behemoth Dragon
+		// Valley of Saints
+		24876, // Guide of Splendor
+		24877, // Herald of Splendor
+		24878, // Believer of Splendor
+		24879, // Observer of Splendor
+		24880, // Wiseman of Splendor
+		// Hot Springs
+		24881, // Springs Dwarf Hero
+		24882, // Springs Scavenger
+		24883, // Springs Dwarf Defender
+		24884, // Springs Dwarf Berserker
+		24885, // Springs Dwarf Priest
+		24886, // Springs Yeti
+		// Beast Farm
+		24651, // Red Kookaburra
+		24652, // Blue Kookaburra
+		24653, // White Cougar
+		24654, // Cougar
+		24655, // Black Buffalo
+		24656, // White Buffalo
+		24657, // Grandel
+		24658, // Black Grandel
 	};
 	
 	public Q10817_ExaltedOneWhoOvercomesTheLimit()
@@ -297,7 +324,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 				{
 					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2, 1);
 					giveItems(player, SPELLBOOK_BELIEF_OF_THE_EXALTED, 1);
-					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1, 1);				
+					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -356,7 +383,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		{
 			if (getQuestItemsCount(player, PROOF_OF_RESISTANCE) < PROOF_OF_RESISTANCE_NEEDED)
 			{
-				giveItems(player, PROOF_OF_RESISTANCE, 1);
+				giveItemRandomly(player, PROOF_OF_RESISTANCE, 1, PROOF_OF_RESISTANCE_NEEDED, 1, true);
 			}
 			if ((getQuestItemsCount(player, PROOF_OF_RESISTANCE) >= PROOF_OF_RESISTANCE_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{
