@@ -62,7 +62,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		addStartNpc(DARK_JUDGE);
 		addTalkId(DARK_JUDGE);
 		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
-		addCondMaxLevel(80, getNoQuestMsg(null));
+		addCondMaxLevel(90, getNoQuestMsg(null));
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> OnPlayerSummonAgathion(event), this));
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> OnPlayerUnsummonAgathion(event), this));
 	}
@@ -113,7 +113,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 			}
 			case "30981-09.html": // not retail html.
 			{
-				if (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35)
+				if (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 50)
 				{
 					takeItems(player, CRUMBS_OF_PENITENCE, -1);
 					takeItems(player, PENITENT_MANACLES, -1);
@@ -260,10 +260,10 @@ public class Q00500_BrothersBoundInChains extends Quest
 		final int killCount = qs.getInt(KILL_COUNT_VAR);
 		if (killCount >= 20)
 		{
-			// Player can drop more than 35 Crumbs of Penitence but there's no point in getting more than 35 (retail).
+			// Player can drop more than 50 Crumbs of Penitence but there's no point in getting more than 50 (retail).
 			giveItems(player, CRUMBS_OF_PENITENCE, 1);
 			qs.set(KILL_COUNT_VAR, 0);
-			if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35))
+			if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 50))
 			{
 				qs.setCond(2, true);
 			}

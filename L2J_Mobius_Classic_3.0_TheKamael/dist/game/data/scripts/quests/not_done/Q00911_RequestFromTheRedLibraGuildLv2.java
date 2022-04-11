@@ -31,6 +31,7 @@ public class Q00911_RequestFromTheRedLibraGuildLv2 extends Quest
 		super(911);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
-		addCondMinLevel(Config.PLAYER_MAXIMUM_LEVEL, getNoQuestMsg(null));
+		addCondMinLevel(Config.PLAYER_MAXIMUM_LEVEL /* 21 */, getNoQuestMsg(null));
+		// addCondMaxLevel(40, getNoQuestMsg(null));
 	}
 }
