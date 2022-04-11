@@ -918,17 +918,23 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="24849" level="116" type="Monster" name="Resurrected Pondus" title="Atelia Protector">
+	<npc id="24849" level="112" type="Monster" name="Resurrected Pondus" title="Atelia Protector">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="105997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10405" magical="6883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="38.4" />
@@ -941,7 +947,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="40000" max="45000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -961,14 +967,20 @@
 	<npc id="24850" level="116" type="Monster" name="Resurrected Excuro" title="Atelia Protector">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="400" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="13052629488" sp="11747357" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="834046" hpRegen="100.5" mp="50000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="105997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10405" magical="6883" />
+			<attribute>
+				<attack type="DARK" value="1800" />
+				<defence fire="1800" water="1800" wind="1800" earth="1800" holy="1600" dark="1800" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="28.8" />
@@ -981,7 +993,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="40000" max="45000" chance="70" /> <!-- Adena -->
+				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -998,17 +1010,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24851" level="116" type="Monster" name="Resurrected Spira" title="Atelia Protector">
+	<npc id="24851" level="112" type="Monster" name="Resurrected Spira" title="Atelia Protector">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="105997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10405" magical="6883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="24" />
@@ -1021,7 +1039,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="40000" max="45000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1038,17 +1056,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24852" level="116" type="Monster" name="Embryo Manchidai">
+	<npc id="24852" level="112" type="Monster" name="Embryo Manchidai">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="22" />
@@ -1061,7 +1085,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1081,14 +1105,20 @@
 	<npc id="24853" level="116" type="Monster" name="Embryo Raven">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="400" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="13052629488" sp="11747357" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="834046" hpRegen="100.5" mp="50000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1800" />
+				<defence fire="1800" water="1800" wind="1800" earth="1800" holy="1500" dark="1800" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="14" />
@@ -1101,7 +1131,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1118,18 +1148,24 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24854" level="116" type="Monster" name="Embryo Bodyguard">
+	<npc id="24854" level="112" type="Monster" name="Embryo Bodyguard">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
 		<equipment rhand="17421" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="15" />
@@ -1142,7 +1178,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1159,17 +1195,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24855" level="116" type="Monster" name="Atelia Yuyurina">
+	<npc id="24855" level="112" type="Monster" name="Atelia Yuyurina">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="14" />
@@ -1182,7 +1224,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1202,14 +1244,20 @@
 	<npc id="24856" level="116" type="Monster" name="Atelia Raven">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<mpReward value="400" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="13052629488" sp="11747357" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="834046" hpRegen="100.5" mp="50000" mpRegen="30.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1800" />
+				<defence fire="1800" water="1800" wind="1800" earth="1800" holy="1500" dark="1800" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="14" />
@@ -1222,7 +1270,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1239,18 +1287,24 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24857" level="116" type="Monster" name="Atelia Wizard">
+	<npc id="24857" level="112" type="Monster" name="Atelia Wizard">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17391" />
+		<mpReward value="300" type="DIFF" ticks="10" affects="PARTY" />
+		<acquire exp="4641443072" sp="4177277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="447704" hpRegen="100.5" mp="15000" mpRegen="30.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="95997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="8405" magical="4883" />
+			<attribute>
+				<attack type="DARK" value="1500" />
+				<defence fire="1500" water="1500" wind="1500" earth="1500" holy="1200" dark="1500" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="11" />
@@ -1263,7 +1317,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
