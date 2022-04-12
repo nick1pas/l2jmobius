@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q10995_MutualBenefit.Q10995_MutualBenefit;
+
 /**
  * Temples Decorations (10996)
  * @author Stayway
@@ -66,6 +68,7 @@ public class Q10996_TemplesDecorations extends Quest
 		addKillId(BARBED_BATS, CRYSTAL_PUMA, GOBLIN_LORD, GOBLIN_BRIGAND_LEADER, WINSTONE_GOLEM, OBSIDIAN_GOLEM);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
+		addCondCompletedQuest(Q10995_MutualBenefit.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(TEMPLE_RECONSTRUCTION_REQUEST, BARBED_BAT_WING_SAC, PUMA_FUR, GOBLIN_JEWEL, GOLEM_ORE);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_TEMPLE_S_DECORATIONS);
 	}

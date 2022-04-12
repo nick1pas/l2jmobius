@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11014_SurpriseGift.Q11014_SurpriseGift;
+
 /**
  * Prepare for Trade (1/3) (11015)
  * @author Stayway
@@ -64,6 +66,7 @@ public class Q11015_PrepareForTrade1 extends Quest
 		addKillId(STONE_GIANT_GUARDIANS, CRYSTALLINE_BEAST, PROWLER, GIANT_VENOMOUS_SPIDER, ARACHNID_TRACKER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DARK_ELF, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11014_SurpriseGift.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(SUPPLIES_CERTIFICATE, STONE_GIANTS_GUARDIANS_CORE, CRYSTALLINE_BEASTS_SHINEDUST, GIANT_SPIDER_SKIN_FRAGMENT);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_PREPARE_FOR_TRADE_1_3);
 	}

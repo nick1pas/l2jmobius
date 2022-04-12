@@ -40,7 +40,7 @@ public class Q11012_FutureElves extends Quest
 	private static final int ROSELLA = 30414;
 	private static final int MANUEL = 30293;
 	// Items
-	private static final int FIRST_CLASS_BUFF_SCROLL = 29654;
+	private static final int SCROLL_OF_BLOOD_MELODY = 49772;
 	private static final int IMPROVED_SOE = 49087;
 	// Misc
 	private static final int MIN_LEVEL = 19;
@@ -113,7 +113,7 @@ public class Q11012_FutureElves extends Quest
 			{
 				if (qs.getCond() > 1)
 				{
-					giveItems(player, FIRST_CLASS_BUFF_SCROLL, 5);
+					giveItems(player, SCROLL_OF_BLOOD_MELODY, 2);
 					giveItems(player, IMPROVED_SOE, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;

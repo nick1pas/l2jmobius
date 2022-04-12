@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
+
 /**
  * Blacksmith's Request (11020)
  * @author Stayway
@@ -64,6 +66,7 @@ public class Q11020_BlacksmithsRequest extends Quest
 		addKillId(BLACKWING_BAT, TOMB_RAIDER_LEADER, GREYSTONE_GOLEM, EVIL_EYE_PATROL);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11019_TribalBenefit.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(REQUIRED_MATERIALS, BLACKWING_BAT_WING, GRAVE_ROBBERS_BELT, GOLEM_ORE, EVIL_EYE_PATROL_HIDE);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_BLACKSMITH_S_REQUEST);
 	}

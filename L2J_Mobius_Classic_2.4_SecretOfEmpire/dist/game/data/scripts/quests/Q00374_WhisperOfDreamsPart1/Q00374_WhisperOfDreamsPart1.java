@@ -44,8 +44,8 @@ public class Q00374_WhisperOfDreamsPart1 extends Quest
 	private static final int ENCHANT_ARMOR_B = 948;
 	private static final int IMPROVED_ENCHANT_ARMOR_B = 29743;
 	// Misc
-	private static final int MIN_LEVEL = 56;
-	private static final int MAX_LEVEL = 66;
+	private static final int MIN_LEVEL = 64;
+	private static final int MAX_LEVEL = 74;
 	
 	public Q00374_WhisperOfDreamsPart1()
 	{

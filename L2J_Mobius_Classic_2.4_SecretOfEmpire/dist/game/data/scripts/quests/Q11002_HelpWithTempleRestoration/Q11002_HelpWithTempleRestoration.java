@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11001_TombsOfAncestors.Q11001_TombsOfAncestors;
+
 /**
  * Help with Temple Restoration (11002)
  * @author Stayway
@@ -65,6 +67,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 		addKillId(ORC_CAPTAIN, ORC_LIEUTENANT, WEREWOLF_HUMTER, WEREWOLF_CHIEFTAIN, STONE_GOLEM, CRASHER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.HUMAN, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11001_TombsOfAncestors.class.getSimpleName(), "30035-01a.html");
 		registerQuestItems(INVENTORY_BOOK, WOODEN_POLE, WOODEN_DOOR_PANEL, STONE_POWDER);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_HELP_WITH_TEMPLE_RESTORATION);
 	}

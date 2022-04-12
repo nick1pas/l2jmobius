@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q10996_TemplesDecorations.Q10996_TemplesDecorations;
+
 /**
  * Loser Priest (1/3) (10997)
  * @author Stayway
@@ -60,6 +62,7 @@ public class Q10997_LoserPriest1 extends Quest
 		addKillId(PLUNDER_TARANTULA, HUNTER_TARANTULA);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
+		addCondCompletedQuest(Q10996_TemplesDecorations.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(MAINTENANCE_REQUEST, HUNTER_TARANTULA_VENOM, PLUNDER_TARANTULA_KIDNEY);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_LOSER_PRIEST_1_3);
 	}

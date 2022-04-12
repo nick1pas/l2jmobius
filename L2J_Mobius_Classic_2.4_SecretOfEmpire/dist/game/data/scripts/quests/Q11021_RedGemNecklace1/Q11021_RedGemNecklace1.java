@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11020_BlacksmithsRequest.Q11020_BlacksmithsRequest;
+
 /**
  * Red Gem Necklace (1/3) (11021)
  * @author Stayway
@@ -62,6 +64,7 @@ public class Q11021_RedGemNecklace1 extends Quest
 		addKillId(KASHA_BEAR, KASHA_SPIDER, KASHA_FANG_SPIDER, KASHA_BLADE_SPIDER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11020_BlacksmithsRequest.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(LIST_OF_MATERIALS, BEARS_SHIN_BONE, SHARP_SPIDER_LEG);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_RED_GEM_NECKLACE_1_3);
 	}

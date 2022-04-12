@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
+
 /**
  * Preparation for Dungeon (11008)
  * @author Stayway
@@ -67,6 +69,7 @@ public class Q11008_PreparationForDungeon extends Quest
 		addKillId(KABOO_ORC_WARRIOR, KABOO_ORC_WARRIOR_CAPTAIN, KABOO_ORC_WARRIOR_LIEUTENANT, DRYAD, DRYAD_ELDER, HOOK_SPIDER, CRIMSON_SPIDER, PINCER_SPIDER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ELF, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11007_NoiseInWoods.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(NOTE_ABOUT_REQUIRED_INGREDIENTS, ORCS_BANDAGE, DRYADS_CRIMSON_HERB, SPIDER_VENOM);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_PREPARATION_FOR_DUNGEON);
 	}

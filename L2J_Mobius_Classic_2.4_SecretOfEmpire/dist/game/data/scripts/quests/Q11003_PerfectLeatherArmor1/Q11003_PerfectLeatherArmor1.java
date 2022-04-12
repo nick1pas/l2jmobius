@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11002_HelpWithTempleRestoration.Q11002_HelpWithTempleRestoration;
+
 /**
  * Perfect Leather Armor (1/3) (11003)
  * @author Stayway
@@ -64,6 +66,7 @@ public class Q11003_PerfectLeatherArmor1 extends Quest
 		addKillId(GIANT_SPIDER, GIANT_FANG_SPIDER, GIANT_BLADE_SPIDER, UNDINE, UNDINE_ELDER, UNDINE_NOBLE);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.HUMAN, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11002_HelpWithTempleRestoration.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(LECTORS_NOTES, COBWEB, ESSENCE_OF_WATER);
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_PERFECT_LEATHER_ARMOR_1_3);
 	}

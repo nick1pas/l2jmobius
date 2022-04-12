@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
+
 /**
  * Surprise Gift (11014)
  * @author Stayway
@@ -67,6 +69,7 @@ public class Q11014_SurpriseGift extends Quest
 		addKillId(ZOMBIE_FOREST_ELF, ZOMBIE_FOREST_ELF_RESEARCHER, FESTERING_BAT, RED_EYE_BAT, GIANT_STONE_GUARDIAN, GIANT_STONE_SOLDIER, DARK_HORROR);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DARK_ELF, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11013_ShilensHunt.class.getSimpleName(), "no-quest.html");
 		registerQuestItems(ARMOR_DESIGN, ZOMBIE_FOREST_ELF_TOOTH, BAT_SKIN, STONE_GIANTS_SHINY_ROCK, OLD_BONE_FRAGMENT);
 		setQuestNameNpcStringId(NpcStringId.LV_11_20_SURPRISE_GIFT);
 	}
