@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance id="224" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time duration="60" empty="0" />
+	<locations>
+		<enter type="FIXED">
+			<location x="-49550" y="17189" z="-3016" />
+		</enter>
+		<exit type="ORIGIN" />
+	</locations>
+	<conditions>
+		<condition type="GroupMin">
+			<param name="limit" value="1" /> 
+		</condition>
+		<condition type="GroupMax">
+			<param name="limit" value="1" />
+		</condition>
+		<condition type="Level">
+			<param name="min" value="80" />
+			<param name="max" value="99" />
+		</condition>
+		<condition type="Reenter" />
+	</conditions>
+	<reenter apply="NONE">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
+		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
+		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
+	</reenter>
+		<spawnlist>
+		<group>
+			<npc id="34305" x="-56631" y="13571" z="-3353" heading="63943" /> <!-- Toka -->
+			<npc id="34310" x="-56690" y="13480" z="-3356" heading="3781" /> <!-- Mercenary -->
+			<npc id="34310" x="-56723" y="13578" z="-3357" heading="63334" /> <!-- Mercenary -->
+			<npc id="34310" x="-56730" y="13671" z="-3357" heading="62980" /> <!-- Mercenary -->
+			<npc id="34308" x="-56206" y="13641" z="-3345" heading="33758" /> <!-- Tind -->
+			<npc id="34310" x="-56114" y="13777" z="-3369" heading="31613" /> <!-- Mercenary -->
+			<npc id="34310" x="-56103" y="13649" z="-3357" heading="34065" /> <!-- Mercenary -->
+			<npc id="34310" x="-56096" y="13541" z="-3360" heading="32767" /> <!-- Mercenary -->
+			<npc id="34306" x="-56307" y="13223" z="-3357" heading="19286" /> <!-- Eri -->
+			<npc id="34310" x="-56214" y="13178" z="-3357" heading="16058" /> <!-- Mercenary -->
+			<npc id="34310" x="-56328" y="13167" z="-3357" heading="11873" /> <!-- Mercenary -->
+			<npc id="34310" x="-56409" y="13185" z="-3357" heading="9672" /> <!-- Mercenary -->
+			<npc id="34307" x="-49336" y="17526" z="-2987" heading="48951" /> <!-- Grown -->
+			<npc id="34308" x="-49423" y="17520" z="-2987" heading="48678" /> <!-- Tind -->
+			<npc id="34305" x="-49855" y="17632" z="-3021" heading="49151" /> <!-- Toka -->
+			<npc id="34306" x="-49969" y="17633" z="-3021" heading="47916" /> <!-- Eri -->
+			<npc id="34309" x="-50080" y="17633" z="-3021" heading="49406" /> <!-- Arbana -->
+			<npc id="34310" x="-49810" y="17465" z="-3021" heading="14903" /> <!-- Mercenary -->
+			<npc id="34310" x="-49821" y="17364" z="-3021" heading="16383" /> <!-- Mercenary -->
+			<npc id="34310" x="-49824" y="17282" z="-3021" heading="8191" /> <!-- Mercenary -->
+			<npc id="34310" x="-49875" y="17473" z="-3021" heading="15562" /> <!-- Mercenary -->
+			<npc id="34310" x="-49894" y="17287" z="-3021" heading="18939" /> <!-- Mercenary -->
+			<npc id="34310" x="-49880" y="17370" z="-3021" heading="13758" /> <!-- Mercenary -->
+			<npc id="34310" x="-49954" y="17472" z="-3021" heading="16770" /> <!-- Mercenary -->
+			<npc id="34310" x="-49959" y="17374" z="-3021" heading="14325" /> <!-- Mercenary -->
+			<npc id="34310" x="-49967" y="17286" z="-3021" heading="15409" /> <!-- Mercenary -->
+			<npc id="34310" x="-50029" y="17472" z="-3021" heading="15544" /> <!-- Mercenary -->
+			<npc id="34310" x="-50037" y="17374" z="-3021" heading="14562" /> <!-- Mercenary -->
+			<npc id="34310" x="-50047" y="17285" z="-3021" heading="15229" /> <!-- Mercenary -->
+			<npc id="34310" x="-50110" y="17476" z="-3021" heading="14080" /> <!-- Mercenary -->
+			<npc id="34310" x="-50119" y="17378" z="-3021" heading="14811" /> <!-- Mercenary -->
+			<npc id="34310" x="-50128" y="17292" z="-3021" heading="18442" /> <!-- Mercenary -->
+			<npc id="34310" x="-49215" y="16541" z="-3201" heading="32767" /> <!-- Mercenary -->
+			<npc id="34310" x="-49114" y="16536" z="-3201" heading="31134" /> <!-- Mercenary -->
+			<npc id="34310" x="-49007" y="16530" z="-3201" heading="32333" /> <!-- Mercenary -->
+			<npc id="34310" x="-48905" y="16524" z="-3201" heading="31613" /> <!-- Mercenary -->
+			<npc id="34310" x="-48786" y="16517" z="-3201" heading="31385" /> <!-- Mercenary -->
+			<npc id="34310" x="-48654" y="16510" z="-3201" heading="31415" /> <!-- Mercenary -->
+			<npc id="34310" x="-48645" y="16602" z="-3201" heading="37604" /> <!-- Mercenary -->
+			<npc id="34310" x="-48770" y="16622" z="-3201" heading="35048" /> <!-- Mercenary -->
+			<npc id="34310" x="-49211" y="16650" z="-3201" heading="33289" /> <!-- Mercenary -->
+			<npc id="34310" x="-49101" y="16645" z="-3201" heading="31569" /> <!-- Mercenary -->
+			<npc id="34310" x="-49012" y="16640" z="-3201" heading="30024" /> <!-- Mercenary -->
+			<npc id="34310" x="-48897" y="16630" z="-3201" heading="31822" /> <!-- Mercenary -->
+			<npc id="34310" x="-49224" y="16755" z="-3201" heading="34490" /> <!-- Mercenary -->
+			<npc id="34310" x="-48890" y="16732" z="-3201" heading="38901" /> <!-- Mercenary -->
+			<npc id="34310" x="-48767" y="16720" z="-3201" heading="31900" /> <!-- Mercenary -->
+			<npc id="34310" x="-48638" y="16698" z="-3201" heading="32767" /> <!-- Mercenary -->
+			<npc id="34310" x="-49109" y="16747" z="-3201" heading="32767" /> <!-- Mercenary -->
+			<npc id="34310" x="-49014" y="16736" z="-3201" heading="31900" /> <!-- Mercenary -->
+			<npc id="34310" x="-49374" y="16660" z="-3201" heading="64668" /> <!-- Mercenary -->
+			<npc id="34310" x="-48760" y="16946" z="-3201" heading="32271" /> <!-- Mercenary -->
+			<npc id="34310" x="-48681" y="16938" z="-3201" heading="34360" /> <!-- Mercenary -->
+			<npc id="34310" x="-48600" y="16930" z="-3201" heading="32073" /> <!-- Mercenary -->
+			<npc id="34310" x="-48513" y="16923" z="-3201" heading="31692" /> <!-- Mercenary -->
+			<npc id="34310" x="-48398" y="16905" z="-3201" heading="31863" /> <!-- Mercenary -->
+			<npc id="34310" x="-48300" y="16896" z="-3201" heading="31546" /> <!-- Mercenary -->
+			<npc id="34310" x="-48759" y="17042" z="-3201" heading="32767" /> <!-- Mercenary -->
+			<npc id="34310" x="-48686" y="17038" z="-3201" heading="31287" /> <!-- Mercenary -->
+			<npc id="34310" x="-48602" y="17026" z="-3201" heading="32219" /> <!-- Mercenary -->
+			<npc id="34310" x="-48511" y="17020" z="-3201" heading="30402" /> <!-- Mercenary -->
+			<npc id="34310" x="-48400" y="17000" z="-3201" heading="31134" /> <!-- Mercenary -->
+			<npc id="34310" x="-48293" y="16986" z="-3201" heading="28693" /> <!-- Mercenary -->
+			<npc id="34310" x="-48764" y="17124" z="-3201" heading="31546" /> <!-- Mercenary -->
+			<npc id="34310" x="-48689" y="17118" z="-3201" heading="31470" /> <!-- Mercenary -->
+			<npc id="34310" x="-48601" y="17111" z="-3201" heading="31385" /> <!-- Mercenary -->
+			<npc id="34310" x="-48505" y="17103" z="-3201" heading="26056" /> <!-- Mercenary -->
+			<npc id="34310" x="-48395" y="17085" z="-3201" heading="27931" /> <!-- Mercenary -->
+			<npc id="34310" x="-48284" y="17070" z="-3201" heading="32767" /> <!-- Mercenary -->
+			<npc id="34310" x="-48911" y="17055" z="-3201" heading="63813" /> <!-- Mercenary -->
+			<npc id="34306" x="-53110" y="5440" z="-246" /> <!-- Eri -->
+			<npc id="34310" x="-53021" y="5615" z="-249" heading="63755" /> <!-- Mercenary -->
+			<npc id="34310" x="-52950" y="5543" z="-249" heading="11273" /> <!-- Mercenary -->
+			<npc id="34310" x="-53002" y="5385" z="-249" heading="57112" /> <!-- Mercenary -->
+			<npc id="34310" x="-53063" y="5334" z="-249" heading="57167" /> <!-- Mercenary -->
+			<npc id="34308" x="-52641" y="5170" z="-244" heading="8856" /> <!-- Tind -->
+			<npc id="34310" x="-52745" y="5236" z="-244" heading="7979" /> <!-- Mercenary -->
+			<npc id="34310" x="-52545" y="5086" z="-244" heading="9198" /> <!-- Mercenary -->
+			<npc id="34310" x="-52748" y="5141" z="-243" heading="9383" /> <!-- Mercenary -->
+			<npc id="34310" x="-52651" y="5066" z="-243" heading="9346" /> <!-- Mercenary -->
+			<npc id="34305" x="-52349" y="4793" z="-246" heading="14661" /> <!-- Toka -->
+			<npc id="34310" x="-52453" y="4829" z="-249" heading="20458" /> <!-- Mercenary -->
+			<npc id="34310" x="-52407" y="4874" z="-249" heading="18939" /> <!-- Mercenary -->
+			<npc id="34310" x="-52309" y="4860" z="-249" heading="6316" /> <!-- Mercenary -->
+			<npc id="34310" x="-52265" y="4818" z="-249" heading="8191" /> <!-- Mercenary -->
+		</group>
+			<group name="PlainsoftheLizardmen" spawnByDefault="false">
+			<npc id="22154" x="-56776" y="12532" z="-3384" heading="33897" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22152" x="-57296" y="13024" z="-3363" heading="36820" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="22154" x="-57384" y="12989" z="-3367" heading="36820" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22154" x="-57601" y="12728" z="-3374" heading="47335" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22152" x="-57980" y="12347" z="-3361" heading="38064" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="22154" x="-57959" y="12312" z="-3361" heading="54505" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22152" x="-57714" y="12144" z="-3366" heading="1710" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="22154" x="-57602" y="12122" z="-3370" heading="62046" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22152" x="-57307" y="12050" z="-3373" heading="63748" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+			<npc id="22154" x="-57178" y="12052" z="-3373" heading="1697" respawnTime="60sec" /> <!-- Tanta Lizardman Archer -->
+			<npc id="22155" x="-57526" y="12561" z="-3391" heading="61250" respawnTime="60sec" /> <!-- Tanta Lizardman Summoner -->
+			<npc id="22153" x="-57419" y="12491" z="-3395" heading="56790" respawnTime="60sec" /> <!-- Tanta Lizardman Berserker -->
+			<npc id="22155" x="-57113" y="12356" z="-3385" heading="62575" respawnTime="60sec" /> <!-- Tanta Lizardman Summoner -->
+			<npc id="22153" x="-56986" y="12345" z="-3377" heading="1449" respawnTime="60sec" /> <!-- Tanta Lizardman Berserker -->
+			<npc id="22155" x="-57367" y="12015" z="-3371" heading="28271" respawnTime="60sec" /> <!-- Tanta Lizardman Summoner -->
+			<npc id="22153" x="-57591" y="12006" z="-3370" heading="65156" respawnTime="60sec" /> <!-- Tanta Lizardman Berserker -->
+			<npc id="22152" x="-57642" y="12976" z="-3363" heading="42158" respawnTime="60sec" /> <!-- Tanta Lizardman Warrior -->
+		</group>
+			<group name="SelMahumBase" spawnByDefault="false">
+			<npc id="22245" x="-57296" y="13024" z="-3363" heading="36820" respawnTime="60sec" /> <!-- bowman -->
+			<npc id="22276" x="-57384" y="12989" z="-3367" heading="36820" respawnTime="60sec" /> <!-- footman -->
+			<npc id="22243" x="-57601" y="12728" z="-3374" heading="47335" respawnTime="60sec" /> <!-- knight -->
+			<npc id="22276" x="-57980" y="12347" z="-3361" heading="38064" respawnTime="60sec" /> 
+			<npc id="22276" x="-57959" y="12312" z="-3361" heading="54505" respawnTime="60sec" /> 
+			<npc id="22276" x="-57714" y="12144" z="-3366" heading="1710" respawnTime="60sec" /> 
+			<npc id="22245" x="-57602" y="12122" z="-3370" heading="62046" respawnTime="60sec" /> 
+			<npc id="22245" x="-57307" y="12050" z="-3373" heading="63748" respawnTime="60sec" /> 
+			<npc id="22276" x="-57178" y="12052" z="-3373" heading="1697" respawnTime="60sec" /> 
+			<npc id="22245" x="-57526" y="12561" z="-3391" heading="61250" respawnTime="60sec" /> 
+			<npc id="22276" x="-57419" y="12491" z="-3395" heading="56790" respawnTime="60sec" /> 
+			<npc id="22242" x="-57113" y="12356" z="-3385" heading="62575" respawnTime="60sec" />
+			<npc id="22243" x="-56986" y="12345" z="-3377" heading="1449" respawnTime="60sec" /> 
+			<npc id="22276" x="-57367" y="12015" z="-3371" heading="28271" respawnTime="60sec" /> 
+			<npc id="22245" x="-57591" y="12006" z="-3370" heading="65156" respawnTime="60sec" /> 
+			<npc id="22242" x="-57642" y="12976" z="-3363" heading="42158" respawnTime="60sec" /> 
+		</group>
+			<group name="OrcBarrackskerrs" spawnByDefault="false">
+			<npc id="22135" x="-56776" y="12532" z="-3384" heading="33897" respawnTime="60sec" /> 
+			<npc id="22135" x="-57296" y="13024" z="-3363" heading="36820" respawnTime="60sec" /> 
+			<npc id="22135" x="-57384" y="12989" z="-3367" heading="36820" respawnTime="60sec" /> 
+			<npc id="22139" x="-57601" y="12728" z="-3374" heading="47335" respawnTime="60sec" /> 
+			<npc id="22139" x="-57980" y="12347" z="-3361" heading="38064" respawnTime="60sec" /> 
+			<npc id="22139" x="-57959" y="12312" z="-3361" heading="54505" respawnTime="60sec" /> 
+			<npc id="22139" x="-57714" y="12144" z="-3366" heading="1710" respawnTime="60sec" /> 
+			<npc id="22138" x="-57602" y="12122" z="-3370" heading="62046" respawnTime="60sec" /> 
+			<npc id="22138" x="-57307" y="12050" z="-3373" heading="63748" respawnTime="60sec" /> 
+			<npc id="22138" x="-57178" y="12052" z="-3373" heading="1697" respawnTime="60sec" /> 
+			<npc id="22135" x="-57526" y="12561" z="-3391" heading="61250" respawnTime="60sec" /> 
+			<npc id="22135" x="-57419" y="12491" z="-3395" heading="56790" respawnTime="60sec" /> 
+			<npc id="22135" x="-57113" y="12356" z="-3385" heading="62575" respawnTime="60sec" /> 
+			<npc id="22139" x="-56986" y="12345" z="-3377" heading="1449" respawnTime="60sec" /> 
+			<npc id="22139" x="-57367" y="12015" z="-3371" heading="28271" respawnTime="60sec" /> 
+			<npc id="22138" x="-57591" y="12006" z="-3370" heading="65156" respawnTime="60sec" /> 
+			<npc id="22135" x="-57642" y="12976" z="-3363" heading="42158" respawnTime="60sec" /> 
+		</group>
+			<group name="OrcBarrackstureks" spawnByDefault="false">
+			<npc id="22141" x="-56776" y="12532" z="-3384" heading="33897" respawnTime="60sec" /> 
+			<npc id="22145" x="-57296" y="13024" z="-3363" heading="36820" respawnTime="60sec" /> 
+			<npc id="22145" x="-57384" y="12989" z="-3367" heading="36820" respawnTime="60sec" /> 
+			<npc id="22145" x="-57601" y="12728" z="-3374" heading="47335" respawnTime="60sec" /> 
+			<npc id="22144" x="-57980" y="12347" z="-3361" heading="38064" respawnTime="60sec" /> 
+			<npc id="22141" x="-57959" y="12312" z="-3361" heading="54505" respawnTime="60sec" /> 
+			<npc id="22141" x="-57714" y="12144" z="-3366" heading="1710" respawnTime="60sec" /> 
+			<npc id="22141" x="-57602" y="12122" z="-3370" heading="62046" respawnTime="60sec" /> 
+			<npc id="22141" x="-57307" y="12050" z="-3373" heading="63748" respawnTime="60sec" /> 
+			<npc id="22144" x="-57178" y="12052" z="-3373" heading="1697" respawnTime="60sec" /> 
+			<npc id="22143" x="-57526" y="12561" z="-3391" heading="61250" respawnTime="60sec" /> 
+			<npc id="22143" x="-57419" y="12491" z="-3395" heading="56790" respawnTime="60sec" /> 
+			<npc id="22143" x="-57113" y="12356" z="-3385" heading="62575" respawnTime="60sec" /> 
+			<npc id="22145" x="-56986" y="12345" z="-3377" heading="1449" respawnTime="60sec" /> 
+			<npc id="22141" x="-57367" y="12015" z="-3371" heading="28271" respawnTime="60sec" /> 
+			<npc id="22141" x="-57591" y="12006" z="-3370" heading="65156" respawnTime="60sec" /> 
+			<npc id="22141" x="-57642" y="12976" z="-3363" heading="42158" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence1" spawnByDefault="false">
+			<npc id="21990" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> <!-- Tower Watchman -->
+			<npc id="21991" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> <!-- Ghastly Warrior -->
+			<npc id="21989" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> <!-- Ghost of the Tower -->
+			<npc id="21990" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> <!-- Tower Watchman -->
+			<npc id="20812" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> <!-- Archer of Despair -->
+			<npc id="21991" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> <!-- Ghastly Warrior -->
+			<npc id="21989" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> <!-- Ghost of the Tower -->
+			<npc id="21990" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> <!-- Tower Watchman -->
+			<npc id="20812" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> <!-- Archer of Despair -->
+			<npc id="21991" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> <!-- Ghastly Warrior -->
+			<npc id="21989" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> <!-- Ghost of the Tower -->
+			<npc id="21990" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> <!-- Tower Watchman -->
+			<npc id="20812" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> <!-- Archer of Despair -->
+			<npc id="21991" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> <!-- Ghastly Warrior -->
+			<npc id="21989" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> <!-- Ghost of the Tower -->
+		</group>
+			<group name="TowerOfinsolence2" spawnByDefault="false">
+			<npc id="21994" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="21994" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="21994" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="21994" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="21995" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="21995" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="21995" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="21996" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="21996" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="21994" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="21994" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="21995" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="21995" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="21996" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="21996" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence3" spawnByDefault="false">
+			<npc id="22000" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22000" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22003" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22000" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22000" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22001" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22001" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22003" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22002" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22002" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22002" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22002" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22003" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22003" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22003" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence4" spawnByDefault="false">
+			<npc id="22025" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22025" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22025" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22025" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22025" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22026" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22026" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22026" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22026" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22027" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22027" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22027" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22025" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22025" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22025" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence5" spawnByDefault="false">
+			<npc id="22010" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22010" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22010" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22011" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22011" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22011" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22012" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22012" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22012" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22013" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22013" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22013" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22011" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22010" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22010" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence6" spawnByDefault="false">
+			<npc id="22016" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22016" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22016" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22016" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22016" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22017" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22017" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22017" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22017" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22017" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22016" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22016" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22016" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22017" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22017" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence7" spawnByDefault="false">
+			<npc id="22021" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22021" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22021" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22021" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22021" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22021" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22022" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22022" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22022" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22021" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22021" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22022" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22022" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22021" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22021" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence8" spawnByDefault="false">
+			<npc id="22024" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22024" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22024" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22024" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22024" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22026" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22026" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22026" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22026" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22026" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22024" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22024" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22024" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22026" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22026" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence9" spawnByDefault="false">
+			<npc id="22028" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22028" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22028" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22028" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22028" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22029" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22029" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22029" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22029" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22030" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22030" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22030" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22030" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22028" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22028" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence10" spawnByDefault="false">
+			<npc id="22032" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22032" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22032" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22032" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22032" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22033" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22033" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22033" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22033" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22032" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22032" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22033" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22033" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22032" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22033" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence11" spawnByDefault="false">
+			<npc id="22035" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22035" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22035" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22035" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22035" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22039" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22039" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22039" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22039" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22039" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22035" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22035" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22035" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22035" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22035" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+			<group name="TowerOfinsolence12" spawnByDefault="false">
+			<npc id="22037" x="-51984" y="5902" z="-249" heading="4492" respawnTime="60sec" /> 
+			<npc id="22038" x="-51245" y="6107" z="-249" heading="63802" respawnTime="60sec" /> 
+			<npc id="22039" x="-51383" y="5837" z="-247" heading="40365" respawnTime="60sec" /> 
+			<npc id="22037" x="-51816" y="6196" z="-245" heading="16267" respawnTime="60sec" /> 
+			<npc id="22038" x="-51512" y="6163" z="-245" heading="61965" respawnTime="60sec" /> 
+			<npc id="22039" x="-51657" y="6404" z="-244" heading="29727" respawnTime="60sec" /> 
+			<npc id="22037" x="-51923" y="6245" z="-245" heading="39617" respawnTime="60sec" /> 
+			<npc id="22038" x="-51038" y="6503" z="-249" heading="36559" respawnTime="60sec" /> 
+			<npc id="22039" x="-51236" y="6496" z="-249" heading="25455" respawnTime="60sec" /> 
+			<npc id="22037" x="-51030" y="6671" z="-248" heading="5721" respawnTime="60sec" /> 
+			<npc id="22038" x="-50697" y="6620" z="-248" heading="58050" respawnTime="60sec" /> 
+			<npc id="22039" x="-51221" y="6151" z="-249" heading="35064" respawnTime="60sec" /> 
+			<npc id="22037" x="-51572" y="5999" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22038" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+			<npc id="22039" x="-51588" y="5945" z="-246" heading="46147" respawnTime="60sec" /> 
+		</group>
+	</spawnlist>
+</instance>
+
