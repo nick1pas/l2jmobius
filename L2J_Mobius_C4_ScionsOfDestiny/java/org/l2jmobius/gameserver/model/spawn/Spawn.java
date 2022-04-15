@@ -453,7 +453,8 @@ public class Spawn
 		{
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-			if (GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()))
+			if (GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) //
+				&& GeoEngine.getInstance().canSee(newlocx, newlocy, newlocz, npc.getCollisionHeight(), randX, randY, newlocz, 0))
 			{
 				newlocx = randX;
 				newlocy = randY;
