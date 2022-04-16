@@ -453,9 +453,7 @@ public class ZoneManager implements IXmlReader
 		_classZones.put(WaterZone.class, new ConcurrentHashMap<>());
 		_spawnTerritories.clear();
 		parseDatapackDirectory("data/zones", false);
-		parseDatapackDirectory("data/zones/spawnZones", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
 		final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
 		LOGGER.info(getClass().getSimpleName() + ": Last static id " + maxId.getAsInt() + ".");
 	}
@@ -680,6 +678,26 @@ public class ZoneManager implements IXmlReader
 			}
 		}
 		return null;
+	}
+	
+	/**
+	 * Addition of new spawn territory, if not already exists.
+	 * @param name name of territory to search.
+	 * @param zone NpcSpawnTerritory zone of territory.
+	 */
+	public void addSpawnTerritory(String name, NpcSpawnTerritory zone)
+	{
+		_spawnTerritories.putIfAbsent(name, zone);
+	}
+	
+	/**
+	 * Check if spawn territory exists.
+	 * @param name name of territory to search.
+	 * @return true, if spawn territory exists.
+	 */
+	public boolean spawnTerritoryExists(String name)
+	{
+		return _spawnTerritories.containsKey(name);
 	}
 	
 	/**

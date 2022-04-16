@@ -226,7 +226,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 		_spawnCount = 0;
 		_spawnList.clear();
 		_spawnZoneList.clear();
-		parseDatapackFile("data/scripts/instances/FinalEmperialTomb/final_emperial_tomb.xml");
+		parseDatapackFile("data/scripts/instances/FinalEmperialTomb/FinalEmperialTomb.xml");
 		LOGGER.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 		LOGGER.info("[Final Emperial Tomb] Loaded " + _spawnCount + " spawns data.");
 	}

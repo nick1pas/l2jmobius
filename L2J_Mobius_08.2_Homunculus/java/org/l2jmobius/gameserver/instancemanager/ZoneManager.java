@@ -463,9 +463,7 @@ public class ZoneManager implements IXmlReader
 		_classZones.put(WaterZone.class, new ConcurrentHashMap<>());
 		_spawnTerritories.clear();
 		parseDatapackDirectory("data/zones", false);
-		parseDatapackDirectory("data/zones/spawnZones", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
 		final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
 		LOGGER.info(getClass().getSimpleName() + ": Last static id " + maxId.getAsInt() + ".");
 	}
