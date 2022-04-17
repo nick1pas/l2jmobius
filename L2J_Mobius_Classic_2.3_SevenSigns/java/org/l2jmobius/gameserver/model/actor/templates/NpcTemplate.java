@@ -871,7 +871,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// finally
-					if (group.getChance() < 100)
+					if (dropItem.getChance() < 100)
 					{
 						dropOccurrenceCounter--;
 					}
