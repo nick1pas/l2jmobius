@@ -790,38 +790,10 @@ INSERT INTO `teleport` VALUES
 ('Goddard -> Forge of the Gods',200926,169018,-116303,-2432,10000,0,57),
 ('Rune -> Stakato Nest',126,89513,-44800,-2136,9100,0,57);
 
--- Freya
+-- Freya? NPC exists in client.
 INSERT INTO `teleport` VALUES
-('Oren -> Sel Mahum Training Grounds (West Gate)',15000,76839,63851,-3648,2400,0,57),
-('Oren -> Sel Mahum Training Grounds (South Gate)',15001,79414,71496,-3448,3700,0,57),
-('Oren -> Sel Mahum Training Grounds (Center)',15002,87448,61460,-3664,1800,0,57),
-('Schuttgart -> Mithril Mines',15003,171946,-173352,3440,5300,0,57),
-('Enter the Seed of Annihilation -> Entrance SOA',15005,-178262,153430,2472,0,0,57),
 ('Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57), -- retail
-('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57), -- retail
-('Seed of Annihilation Dock',15008,-175520,154505,2712,150000,0,57); -- retail
-
--- High Five
-INSERT INTO `teleport` VALUES
-('Starting Village -> The Village of Gludin',16000,-80684,149770,-3040,18000,0,57),
-('Hunters -> Dragon Valley',16001,73024,118485,-3696,1800,0,57),
-('Hunters -> Antharas Lair',16002,131557,114509,-3712,7000,0,57),
-('Hunters -> Ivory Tower',16003,85391,16228,-3672,13000,0,57),
-('Hunters (Noble) -> The Heart of Antharas Lair',16004,154396,121235,-3808,1000,1,57),
-('Hunters (Noble) -> The Heart of Antharas Lair',16005,154396,121235,-3808,1,1,13722),
-('Gludio -> Isle of Souls Harbor',16006,-73983,51956,-3680,9300,0,57),
-('Aden -> Isle of Souls Harbor',16007,-73983,51956,-3680,22000,0,57),
-('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57),
-('Photo Snow - Book Castle',16009,-61926,-59504,-1728,0,0,57),
-('Photo Snow - Clock Tower',16010,-61342,-57686,-1388,0,0,57),
-('Photo Snow - House',16011,-57525,-54523,-1576,0,0,57),
-('Photo Snow - Tuba 1',16012,-55355,-56305,-1112,0,0,57),
-('Photo Snow - Tuba 2',16013,-55545,-56310,-1256,0,0,57),
-('Photo Snow - Tuba 3',16014,-55646,-56314,-1296,0,0,57),
-('Photo Snow - Tuba 4',16015,-55748,-56327,-1336,0,0,57),
-('Photo Snow - Parade Tunnel a',16016,-58151,-53110,-1688,0,0,57),
-('Photo Snow - Parade Tunnel b',16017,-55223,-58832,-1680,0,0,57),
-('Photo Snow - Book House',16018,-59075,-59464,-1464,0,0,57);
+('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57); -- retail
 
 -- Fortress Teleports
 INSERT INTO `teleport` VALUES
