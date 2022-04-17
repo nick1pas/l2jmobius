@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.holders.DropGroupHolder;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -326,12 +327,13 @@ public class NpcViewMod implements IBypassHandler
 	private static String getDropListButtons(Npc npc)
 	{
 		final StringBuilder sb = new StringBuilder();
+		final List<DropGroupHolder> dropListGroups = npc.getTemplate().getDropGroups();
 		final List<DropHolder> dropListDeath = npc.getTemplate().getDropList();
 		final List<DropHolder> dropListSpoil = npc.getTemplate().getSpoilList();
-		if ((dropListDeath != null) || (dropListSpoil != null))
+		if ((dropListGroups != null) || (dropListDeath != null) || (dropListSpoil != null))
 		{
 			sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
-			if (dropListDeath != null)
+			if ((dropListGroups != null) || (dropListDeath != null))
 			{
 				sb.append("<td align=center><button value=\"Show Drop\" width=100 height=25 action=\"bypass NpcViewMod dropList DROP " + npc.getObjectId() + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 			}
@@ -348,13 +350,40 @@ public class NpcViewMod implements IBypassHandler
 	
 	private void sendNpcDropList(Player player, Npc npc, DropType dropType, int pageValue)
 	{
-		final List<DropHolder> templateList = dropType == DropType.SPOIL ? npc.getTemplate().getSpoilList() : npc.getTemplate().getDropList();
-		if (templateList == null)
+		List<DropHolder> dropList = null;
+		if (dropType == DropType.SPOIL)
+		{
+			dropList = new ArrayList<>(npc.getTemplate().getSpoilList());
+		}
+		else
+		{
+			final List<DropHolder> drops = npc.getTemplate().getDropList();
+			if (drops != null)
+			{
+				dropList = new ArrayList<>(drops);
+			}
+			final List<DropGroupHolder> dropGroups = npc.getTemplate().getDropGroups();
+			if (dropGroups != null)
+			{
+				if (dropList == null)
+				{
+					dropList = new ArrayList<>();
+				}
+				for (DropGroupHolder dropGroup : dropGroups)
+				{
+					final double chance = dropGroup.getChance() / 100;
+					for (DropHolder dropHolder : dropGroup.getDropList())
+					{
+						dropList.add(new DropHolder(dropHolder.getDropType(), dropHolder.getItemId(), dropHolder.getMin(), dropHolder.getMax(), dropHolder.getChance() * chance));
+					}
+				}
+			}
+		}
+		if (dropList == null)
 		{
 			return;
 		}
 		
-		final List<DropHolder> dropList = new ArrayList<>(templateList);
 		Collections.sort(dropList, (d1, d2) -> Integer.valueOf(d1.getItemId()).compareTo(Integer.valueOf(d2.getItemId())));
 		
 		int pages = dropList.size() / DROP_LIST_ITEMS_PER_PAGE;

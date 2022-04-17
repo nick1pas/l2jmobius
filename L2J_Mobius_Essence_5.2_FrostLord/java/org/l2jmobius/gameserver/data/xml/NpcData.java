@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.enums.MpRewardType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.holders.DropGroupHolder;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -104,6 +105,7 @@ public class NpcData implements IXmlReader
 						Set<Integer> clans = null;
 						Set<Integer> ignoreClanNpcIds = null;
 						List<DropHolder> dropLists = null;
+						List<DropGroupHolder> dropGroups = null;
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
 						set.set("level", level);
@@ -442,24 +444,66 @@ public class NpcData implements IXmlReader
 										
 										if (dropType != null)
 										{
-											if (dropLists == null)
-											{
-												dropLists = new ArrayList<>();
-											}
-											
 											for (Node dropNode = dropListsNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 											{
-												final NamedNodeMap dropAttrs = dropNode.getAttributes();
-												if ("item".equalsIgnoreCase(dropNode.getNodeName()))
+												final String nodeName = dropNode.getNodeName();
+												if (nodeName.equalsIgnoreCase("group"))
 												{
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(dropAttrs, "id"), parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance"));
-													if (ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id")) == null)
+													if (dropGroups == null)
 													{
-														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(dropAttrs, "id") + ".");
+														dropGroups = new ArrayList<>();
+													}
+													
+													final DropGroupHolder group = new DropGroupHolder(parseDouble(dropNode.getAttributes(), "chance"));
+													for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
+													{
+														if (groupNode.getNodeName().equalsIgnoreCase("item"))
+														{
+															final NamedNodeMap groupAttrs = groupNode.getAttributes();
+															final int itemId = parseInteger(groupAttrs, "id");
+															
+															// Drop materials for random craft configuration.
+															if (!Config.DROP_RANDOM_CRAFT_MATERIALS && (itemId >= 92908) && (itemId <= 92919))
+															{
+																continue;
+															}
+															
+															if (ItemTable.getInstance().getTemplate(itemId) == null)
+															{
+																LOGGER.warning("DropListItem: Could not find item with id " + itemId + ".");
+															}
+															else
+															{
+																group.addDrop(new DropHolder(dropType, itemId, parseLong(groupAttrs, "min"), parseLong(groupAttrs, "max"), parseDouble(groupAttrs, "chance")));
+															}
+														}
+													}
+													
+													dropGroups.add(group);
+												}
+												else if (nodeName.equalsIgnoreCase("item"))
+												{
+													if (dropLists == null)
+													{
+														dropLists = new ArrayList<>();
+													}
+													
+													final NamedNodeMap dropAttrs = dropNode.getAttributes();
+													final int itemId = parseInteger(dropAttrs, "id");
+													
+													// Drop materials for random craft configuration.
+													if (!Config.DROP_RANDOM_CRAFT_MATERIALS && (itemId >= 92908) && (itemId <= 92919))
+													{
+														continue;
+													}
+													
+													if (ItemTable.getInstance().getTemplate(itemId) == null)
+													{
+														LOGGER.warning("DropListItem: Could not find item with id " + itemId + ".");
 													}
 													else
 													{
-														dropLists.add(dropItem);
+														dropLists.add(new DropHolder(dropType, itemId, parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance")));
 													}
 												}
 											}
@@ -618,32 +662,45 @@ public class NpcData implements IXmlReader
 						template.setClans(clans);
 						template.setIgnoreClanNpcIds(ignoreClanNpcIds);
 						
+						// Clean old drop groups.
+						template.removeDropGroups();
+						
+						// Set new drop groups.
+						if (dropGroups != null)
+						{
+							template.setDropGroups(dropGroups);
+						}
+						
+						// Clean old drop lists.
+						template.removeDrops();
+						
+						// Add LCoin drop for bosses.
+						if (type.contains("boss"))
+						{
+							if (dropLists == null)
+							{
+								dropLists = new ArrayList<>();
+							}
+							dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, 1, 1, 100));
+						}
+						
+						// Add configurable LCoin drop for monsters.
+						if ((Config.LCOIN_DROP_ENABLED) && (type.contains("Monster") && !type.contains("boss")) && (level >= Config.LCOIN_MIN_MOB_LV))
+						{
+							if (dropLists == null)
+							{
+								dropLists = new ArrayList<>();
+							}
+							dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, Config.LCOIN_MIN_QUANTITY, Config.LCOIN_MAX_QUANTITY, Config.LCOIN_DROP_CHANCE));
+						}
+						
+						// Set new drop lists.
 						if (dropLists != null)
 						{
-							template.removeDrops();
-							
-							// Add LCoin drop for bosses.
-							if (type.contains("boss"))
-							{
-								dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, 1, 1, 100));
-							}
-							
-							// Add configurable LCoin drop for monsters.
-							if ((Config.LCOIN_DROP_ENABLED) && (type.contains("Monster") && !type.contains("boss")) && (level >= Config.LCOIN_MIN_MOB_LV))
-							{
-								dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, Config.LCOIN_MIN_QUANTITY, Config.LCOIN_MAX_QUANTITY, Config.LCOIN_DROP_CHANCE));
-							}
-							
 							// Drops are sorted by chance (high to low).
 							Collections.sort(dropLists, (d1, d2) -> Double.valueOf(d2.getChance()).compareTo(Double.valueOf(d1.getChance())));
 							for (DropHolder dropHolder : dropLists)
 							{
-								// Drop materials for random craft configuration.
-								if (!Config.DROP_RANDOM_CRAFT_MATERIALS && (dropHolder.getItemId() >= 92908) && (dropHolder.getItemId() <= 92919))
-								{
-									continue;
-								}
-								
 								switch (dropHolder.getDropType())
 								{
 									case DROP:

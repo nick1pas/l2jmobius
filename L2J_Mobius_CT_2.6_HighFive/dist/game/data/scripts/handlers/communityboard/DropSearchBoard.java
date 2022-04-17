@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.handler.IParseBoardHandler;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.holders.DropGroupHolder;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -102,6 +103,17 @@ public class DropSearchBoard implements IParseBoardHandler
 	
 	private void buildDropIndex()
 	{
+		NpcData.getInstance().getTemplates(npc -> npc.getDropGroups() != null).forEach(npcTemplate ->
+		{
+			for (DropGroupHolder dropGroup : npcTemplate.getDropGroups())
+			{
+				final double chance = dropGroup.getChance() / 100;
+				for (DropHolder dropHolder : dropGroup.getDropList())
+				{
+					addToDropList(npcTemplate, new DropHolder(dropHolder.getDropType(), dropHolder.getItemId(), dropHolder.getMin(), dropHolder.getMax(), dropHolder.getChance() * chance));
+				}
+			}
+		});
 		NpcData.getInstance().getTemplates(npc -> npc.getDropList() != null).forEach(npcTemplate ->
 		{
 			for (DropHolder dropHolder : npcTemplate.getDropList())

@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.holders.DropGroupHolder;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
@@ -108,6 +109,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
+	private List<DropGroupHolder> _dropGroups;
 	private List<DropHolder> _dropListDeath;
 	private List<DropHolder> _dropListSpoil;
 	private float _collisionRadiusGrown;
@@ -650,10 +652,20 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_ignoreClanNpcIds = ignoreClanNpcIds != null ? Collections.unmodifiableSet(ignoreClanNpcIds) : null;
 	}
 	
+	public void removeDropGroups()
+	{
+		_dropGroups = null;
+	}
+	
 	public void removeDrops()
 	{
 		_dropListDeath = null;
 		_dropListSpoil = null;
+	}
+	
+	public void setDropGroups(List<DropGroupHolder> groups)
+	{
+		_dropGroups = groups;
 	}
 	
 	public void addDrop(DropHolder dropHolder)
@@ -674,6 +686,11 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_dropListSpoil.add(dropHolder);
 	}
 	
+	public List<DropGroupHolder> getDropGroups()
+	{
+		return _dropGroups;
+	}
+	
 	public List<DropHolder> getDropList()
 	{
 		return _dropListDeath;
@@ -686,11 +703,201 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	
 	public List<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer)
 	{
-		final List<DropHolder> dropList = dropType == DropType.SPOIL ? _dropListSpoil : _dropListDeath;
-		if (dropList == null)
+		if (dropType == DropType.DROP)
 		{
-			return null;
+			// calculate group drops
+			List<ItemHolder> groupDrops = null;
+			if (_dropGroups != null)
+			{
+				groupDrops = calculateGroupDrops(victim, killer);
+			}
+			
+			// calculate ungrouped drops
+			List<ItemHolder> ungroupedDrops = null;
+			if (_dropListDeath != null)
+			{
+				ungroupedDrops = calculateUngroupedDrops(dropType, victim, killer);
+			}
+			
+			// return results
+			if ((groupDrops != null) && (ungroupedDrops != null))
+			{
+				groupDrops.addAll(ungroupedDrops);
+				ungroupedDrops.clear();
+				return groupDrops;
+			}
+			if (groupDrops != null)
+			{
+				return groupDrops;
+			}
+			if (ungroupedDrops != null)
+			{
+				return ungroupedDrops;
+			}
 		}
+		else if ((dropType == DropType.SPOIL) && (_dropListSpoil != null))
+		{
+			return calculateUngroupedDrops(dropType, victim, killer);
+		}
+		
+		// no drops
+		return null;
+	}
+	
+	private List<ItemHolder> calculateGroupDrops(Creature victim, Creature killer)
+	{
+		// level difference calculations
+		final int levelDifference = victim.getLevel() - killer.getLevel();
+		final double levelGapChanceToDropAdena = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100d);
+		final double levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100d);
+		
+		int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
+		List<ItemHolder> calculatedDrops = null;
+		for (DropGroupHolder group : _dropGroups)
+		{
+			if (dropOccurrenceCounter <= 0)
+			{
+				break;
+			}
+			
+			double groupRate = 1;
+			final List<DropHolder> groupDrops = group.getDropList();
+			for (DropHolder dropItem : groupDrops)
+			{
+				final int itemId = dropItem.getItemId();
+				final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+				final boolean champion = victim.isChampion();
+				
+				// chance
+				double rateChance = 1;
+				final Float itemChance = Config.RATE_DROP_CHANCE_BY_ID.get(itemId);
+				if (itemChance != null)
+				{
+					if (itemChance == 0)
+					{
+						continue;
+					}
+					
+					rateChance *= itemChance;
+					if (champion && (itemId == Inventory.ADENA_ID))
+					{
+						rateChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+					}
+				}
+				else if (item.hasExImmediateEffect())
+				{
+					rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
+				}
+				else if (victim.isRaid())
+				{
+					rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
+				}
+				else
+				{
+					rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_CHANCE : 1);
+				}
+				
+				// premium chance
+				if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus())
+				{
+					if (Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(itemId) != null)
+					{
+						rateChance *= Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(itemId);
+					}
+					else if (item.hasExImmediateEffect())
+					{
+						// TODO: Premium herb chance? :)
+					}
+					else if (victim.isRaid())
+					{
+						// TODO: Premium raid chance? :)
+					}
+					else
+					{
+						rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
+					}
+				}
+				
+				// keep lowest to avoid chance by id configuration conflicts
+				groupRate = Math.min(groupRate, rateChance);
+			}
+			
+			if ((Rnd.nextDouble() * 100) < (group.getChance() * groupRate))
+			{
+				double totalChance = 0; // total group chance is 100
+				final double dropChance = Rnd.nextDouble() * 100;
+				GROUP_DROP: for (DropHolder dropItem : groupDrops)
+				{
+					if (dropOccurrenceCounter <= 0)
+					{
+						break;
+					}
+					
+					// calculate if item will drop
+					totalChance += dropItem.getChance();
+					if (dropChance >= totalChance)
+					{
+						continue;
+					}
+					
+					// check level gap that may prevent to drop item
+					if ((Rnd.nextDouble() * 100) > (dropItem.getItemId() == Inventory.ADENA_ID ? levelGapChanceToDropAdena : levelGapChanceToDrop))
+					{
+						continue;
+					}
+					
+					// create the drop
+					final ItemHolder drop = calculateGroupDrop(dropItem, victim, killer);
+					
+					// create list
+					if (calculatedDrops == null)
+					{
+						calculatedDrops = new ArrayList<>(dropOccurrenceCounter);
+					}
+					
+					// finally
+					if (group.getChance() < 100)
+					{
+						dropOccurrenceCounter--;
+					}
+					calculatedDrops.add(drop);
+					
+					// no more drops from this group
+					break GROUP_DROP;
+				}
+			}
+		}
+		
+		// champion extra drop
+		if (victim.isChampion())
+		{
+			if ((victim.getLevel() < killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LEVEL_ITEM_CHANCE))
+			{
+				return calculatedDrops;
+			}
+			if ((victim.getLevel() > killer.getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LEVEL_ITEM_CHANCE))
+			{
+				return calculatedDrops;
+			}
+			
+			// create list
+			if (calculatedDrops == null)
+			{
+				calculatedDrops = new ArrayList<>();
+			}
+			
+			if (!calculatedDrops.containsAll(Config.CHAMPION_REWARD_ITEMS))
+			{
+				calculatedDrops.addAll(Config.CHAMPION_REWARD_ITEMS);
+			}
+		}
+		
+		return calculatedDrops;
+	}
+	
+	private List<ItemHolder> calculateUngroupedDrops(DropType dropType, Creature victim, Creature killer)
+	{
+		final List<DropHolder> dropList = dropType == DropType.SPOIL ? _dropListSpoil : _dropListDeath;
 		
 		// level difference calculations
 		final int levelDifference = victim.getLevel() - killer.getLevel();
@@ -722,7 +929,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				}
 				
 				// calculate chances
-				final ItemHolder drop = calculateDrop(dropItem, victim, killer);
+				final ItemHolder drop = calculateUngroupedDrop(dropItem, victim, killer);
 				if (drop == null)
 				{
 					continue;
@@ -777,7 +984,10 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				calculatedDrops = new ArrayList<>();
 			}
 			
-			calculatedDrops.addAll(Config.CHAMPION_REWARD_ITEMS);
+			if (!calculatedDrops.containsAll(Config.CHAMPION_REWARD_ITEMS))
+			{
+				calculatedDrops.addAll(Config.CHAMPION_REWARD_ITEMS);
+			}
 		}
 		
 		if (Config.VIP_SYSTEM_ENABLED && (dropType == DropType.DROP))
@@ -840,7 +1050,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		{
 			return null;
 		}
-		return calculateDrop(dropItem, victim, killer);
+		return calculateUngroupedDrop(dropItem, victim, killer);
 	}
 	
 	private double calculateLevelGapChanceToDrop(DropHolder dropItem, int levelDifference)
@@ -858,13 +1068,72 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	}
 	
 	/**
-	 * All item drop chance calculations are done by this method.
 	 * @param dropItem
 	 * @param victim
 	 * @param killer
 	 * @return ItemHolder
 	 */
-	private ItemHolder calculateDrop(DropHolder dropItem, Creature victim, Creature killer)
+	private ItemHolder calculateGroupDrop(DropHolder dropItem, Creature victim, Creature killer)
+	{
+		final int itemId = dropItem.getItemId();
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+		final boolean champion = victim.isChampion();
+		
+		// calculate amount
+		double rateAmount = 1;
+		if (Config.RATE_DROP_AMOUNT_BY_ID.get(itemId) != null)
+		{
+			rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(itemId);
+			if (champion && (itemId == Inventory.ADENA_ID))
+			{
+				rateAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+			}
+		}
+		else if (item.hasExImmediateEffect())
+		{
+			rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
+		}
+		else if (victim.isRaid())
+		{
+			rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
+		}
+		else
+		{
+			rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER * (champion ? Config.CHAMPION_REWARDS_AMOUNT : 1);
+		}
+		
+		// premium amount
+		if (Config.PREMIUM_SYSTEM_ENABLED && (killer.getActingPlayer() != null) && killer.getActingPlayer().hasPremiumStatus())
+		{
+			if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(itemId) != null)
+			{
+				rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(itemId);
+			}
+			else if (item.hasExImmediateEffect())
+			{
+				// TODO: Premium herb amount? :)
+			}
+			else if (victim.isRaid())
+			{
+				// TODO: Premium raid amount? :)
+			}
+			else
+			{
+				rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
+			}
+		}
+		
+		// finally
+		return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+	}
+	
+	/**
+	 * @param dropItem
+	 * @param victim
+	 * @param killer
+	 * @return ItemHolder
+	 */
+	private ItemHolder calculateUngroupedDrop(DropHolder dropItem, Creature victim, Creature killer)
 	{
 		switch (dropItem.getDropType())
 		{

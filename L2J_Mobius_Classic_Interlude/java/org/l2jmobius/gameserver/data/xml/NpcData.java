@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.enums.MpRewardType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.holders.DropGroupHolder;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
@@ -102,6 +103,7 @@ public class NpcData implements IXmlReader
 						Set<Integer> clans = null;
 						Set<Integer> ignoreClanNpcIds = null;
 						List<DropHolder> dropLists = null;
+						List<DropGroupHolder> dropGroups = null;
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
 						set.set("level", parseByte(attrs, "level"));
@@ -438,21 +440,59 @@ public class NpcData implements IXmlReader
 										
 										if (dropType != null)
 										{
-											if (dropLists == null)
-											{
-												dropLists = new ArrayList<>();
-											}
-											
 											for (Node dropNode = dropListsNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 											{
-												final NamedNodeMap dropAttrs = dropNode.getAttributes();
-												if ("item".equalsIgnoreCase(dropNode.getNodeName()))
+												final String nodeName = dropNode.getNodeName();
+												if (nodeName.equalsIgnoreCase("group"))
 												{
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(dropAttrs, "id"), parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance"));
-													final ItemTemplate item = ItemTable.getInstance().getTemplate(parseInteger(dropAttrs, "id"));
+													if (dropGroups == null)
+													{
+														dropGroups = new ArrayList<>();
+													}
+													
+													final DropGroupHolder group = new DropGroupHolder(parseDouble(dropNode.getAttributes(), "chance"));
+													for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
+													{
+														if (groupNode.getNodeName().equalsIgnoreCase("item"))
+														{
+															final NamedNodeMap groupAttrs = groupNode.getAttributes();
+															final int itemId = parseInteger(groupAttrs, "id");
+															
+															final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+															if (item == null)
+															{
+																LOGGER.warning("DropListItem: Could not find item with id " + itemId + ".");
+															}
+															else
+															{
+																// Max equipable item grade configuration.
+																final int itemCrystalLevel = item.getCrystalType().getLevel();
+																if ((itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
+																{
+																	continue;
+																}
+																
+																group.addDrop(new DropHolder(dropType, itemId, parseLong(groupAttrs, "min"), parseLong(groupAttrs, "max"), parseDouble(groupAttrs, "chance")));
+															}
+														}
+													}
+													
+													dropGroups.add(group);
+												}
+												else if (nodeName.equalsIgnoreCase("item"))
+												{
+													if (dropLists == null)
+													{
+														dropLists = new ArrayList<>();
+													}
+													
+													final NamedNodeMap dropAttrs = dropNode.getAttributes();
+													final int itemId = parseInteger(dropAttrs, "id");
+													
+													final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 													if (item == null)
 													{
-														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(dropAttrs, "id") + ".");
+														LOGGER.warning("DropListItem: Could not find item with id " + itemId + ".");
 													}
 													else
 													{
@@ -463,7 +503,7 @@ public class NpcData implements IXmlReader
 															continue;
 														}
 														
-														dropLists.add(dropItem);
+														dropLists.add(new DropHolder(dropType, itemId, parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance")));
 													}
 												}
 											}
@@ -622,10 +662,21 @@ public class NpcData implements IXmlReader
 						template.setClans(clans);
 						template.setIgnoreClanNpcIds(ignoreClanNpcIds);
 						
+						// Clean old drop groups.
+						template.removeDropGroups();
+						
+						// Set new drop groups.
+						if (dropGroups != null)
+						{
+							template.setDropGroups(dropGroups);
+						}
+						
+						// Clean old drop lists.
+						template.removeDrops();
+						
+						// Set new drop lists.
 						if (dropLists != null)
 						{
-							template.removeDrops();
-							
 							// Drops are sorted by chance (high to low).
 							Collections.sort(dropLists, (d1, d2) -> Double.valueOf(d2.getChance()).compareTo(Double.valueOf(d1.getChance())));
 							for (DropHolder dropHolder : dropLists)

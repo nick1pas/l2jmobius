@@ -13,7 +13,67 @@
 			<xs:element name="ai" type="aiType" minOccurs="0" maxOccurs="1" />
 			<xs:element name="collision" type="collisionType" minOccurs="0" maxOccurs="1" />
 			<xs:element name="corpseTime" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1" />
-			<xs:element name="dropLists" type="dropListsType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="dropLists" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="drop" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:string">
+													<xs:attribute type="xs:int" name="id" use="required"/>
+													<xs:attribute type="xs:long" name="min" use="required"/>
+													<xs:attribute type="xs:long" name="max" use="required"/>
+													<xs:attribute type="xs:double" name="chance" use="required"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+													<xs:complexType>
+														<xs:simpleContent>
+															<xs:extension base="xs:string">
+																<xs:attribute type="xs:int" name="id" use="required"/>
+																<xs:attribute type="xs:long" name="min" use="required"/>
+																<xs:attribute type="xs:long" name="max" use="required"/>
+																<xs:attribute type="xs:double" name="chance" use="required"/>
+															</xs:extension>
+														</xs:simpleContent>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+											<xs:attribute type="xs:double" name="chance" use="optional"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="spoil" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:string">
+													<xs:attribute type="xs:int" name="id" use="optional"/>
+													<xs:attribute type="xs:long" name="min" use="optional"/>
+													<xs:attribute type="xs:long" name="max" use="optional"/>
+													<xs:attribute type="xs:double" name="chance" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="equipment" type="equipmentType" minOccurs="0" maxOccurs="1" />
 			<xs:element name="exCrtEffect" type="xs:boolean" minOccurs="0" maxOccurs="1" />
 			<xs:element name="parameters" type="parametersType" minOccurs="0" maxOccurs="1" />
