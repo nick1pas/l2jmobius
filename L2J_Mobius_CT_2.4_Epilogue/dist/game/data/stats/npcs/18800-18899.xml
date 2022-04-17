@@ -47,17 +47,21 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="2420" max="4913" chance="70" /> <!-- Adena -->
-				<item id="6680" min="1" max="1" chance="0.0031394823718071" /> <!-- Sealed Draconic Leather Armor -->
-				<item id="6707" min="1" max="1" chance="1.21136046803713" /> <!-- Sealed Draconic Leather Armor Part -->
-				<item id="9628" min="1" max="1" chance="1.27846556744528" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.857917121884346" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.708717236665249" /> <!-- Adamantine -->
+				<group chance="70">
+					<item id="57" min="2420" max="4913" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.2145">
+					<item id="6680" min="1" max="1" chance="0.2585" /> <!-- Sealed Draconic Leather Armor -->
+					<item id="6707" min="1" max="1" chance="99.7415" /> <!-- Sealed Draconic Leather Armor Part -->
+				</group>
+				<group chance="2.8451">
+					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="960" min="1" max="1" chance="0.5298" /> <!-- Scroll: Enchant Armor (S) -->
-				<item id="1894" min="1" max="1" chance="46.4713" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.3694" /> <!-- Sealed Dynasty Tunic Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -112,17 +116,21 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="2420" max="4913" chance="70" /> <!-- Adena -->
-				<item id="6370" min="1" max="1" chance="0.00114364321678877" /> <!-- Saint Spear -->
-				<item id="6694" min="1" max="1" chance="0.538056364698708" /> <!-- Saint Spear Blade -->
-				<item id="9628" min="1" max="1" chance="1.27846556744528" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.857917121884346" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.708717236665249" /> <!-- Adamantine -->
+				<group chance="70">
+					<item id="57" min="2420" max="4913" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.5392">
+					<item id="6370" min="1" max="1" chance="0.2121" /> <!-- Saint Spear -->
+					<item id="6694" min="1" max="1" chance="99.7879" /> <!-- Saint Spear Blade -->
+				</group>
+				<group chance="2.8451">
+					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="960" min="1" max="1" chance="0.5298" /> <!-- Scroll: Enchant Armor (S) -->
-				<item id="1894" min="1" max="1" chance="46.4713" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.3694" /> <!-- Sealed Dynasty Tunic Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -177,19 +185,23 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="2540" max="5000" chance="70" /> <!-- Adena -->
-				<item id="6674" min="1" max="1" chance="0.00196748789584637" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6675" min="1" max="1" chance="0.00314705909335613" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6701" min="1" max="1" chance="0.669263815887094" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="1" max="1" chance="0.861521633881211" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				<item id="9628" min="1" max="1" chance="1.31481863513899" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.882311927659035" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.728869555457592" /> <!-- Adamantine -->
+				<group chance="70">
+					<item id="57" min="2540" max="5000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.5359">
+					<item id="6674" min="1" max="1" chance="0.1281" /> <!-- Sealed Imperial Crusader Breastplate -->
+					<item id="6675" min="1" max="1" chance="0.2049" /> <!-- Sealed Imperial Crusader Gaiters -->
+					<item id="6701" min="1" max="1" chance="43.5747" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+					<item id="6702" min="1" max="1" chance="56.0923" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				</group>
+				<group chance="2.926">
+					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="960" min="1" max="1" chance="0.5448" /> <!-- Scroll: Enchant Armor (S) -->
-				<item id="1894" min="1" max="1" chance="47.7927" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.4368" /> <!-- Sealed Dynasty Tunic Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -244,19 +256,23 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="2540" max="5000" chance="70" /> <!-- Adena -->
-				<item id="6674" min="1" max="1" chance="0.00196748789584637" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6675" min="1" max="1" chance="0.00314705909335613" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6701" min="1" max="1" chance="0.669263815887094" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="1" max="1" chance="0.861521633881211" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				<item id="9628" min="1" max="1" chance="1.31481863513899" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.882311927659035" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.728869555457592" /> <!-- Adamantine -->
+				<group chance="70">
+					<item id="57" min="2540" max="5000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.5359">
+					<item id="6674" min="1" max="1" chance="0.1281" /> <!-- Sealed Imperial Crusader Breastplate -->
+					<item id="6675" min="1" max="1" chance="0.2049" /> <!-- Sealed Imperial Crusader Gaiters -->
+					<item id="6701" min="1" max="1" chance="43.5747" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+					<item id="6702" min="1" max="1" chance="56.0923" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				</group>
+				<group chance="2.926">
+					<item id="9628" min="1" max="1" chance="44.9357" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="30.1542" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="24.9101" /> <!-- Adamantine -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="960" min="1" max="1" chance="0.5448" /> <!-- Scroll: Enchant Armor (S) -->
-				<item id="1894" min="1" max="1" chance="47.7927" /> <!-- Crafted Leather -->
-				<item id="9540" min="1" max="1" chance="2.4368" /> <!-- Sealed Dynasty Tunic Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -402,21 +418,23 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="5311" min="1" max="1" chance="0.000263052209794521" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5522" min="1" max="1" chance="0.0394369492684007" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5316" min="1" max="1" chance="0.000263052209794521" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5523" min="1" max="1" chance="0.0394369492684007" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				<item id="1879" min="1" max="1" chance="1.28618327910995" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.643091639554977" /> <!-- High Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.0605272691745758" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.0406161399803162" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.0335518342533112" /> <!-- Adamantine -->
-				<item id="5282" min="1" max="1" chance="0.00342981656455994" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<group chance="0.0794">
+					<item id="5311" min="1" max="1" chance="0.3313" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5522" min="1" max="1" chance="49.6687" /> <!-- Sealed Armor of Nightmare Pattern -->
+					<item id="5316" min="1" max="1" chance="0.3313" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5523" min="1" max="1" chance="49.6687" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				</group>
+				<group chance="2.0674">
+					<item id="1879" min="1" max="1" chance="62.2126" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="31.1063" /> <!-- High Grade Suede -->
+					<item id="9628" min="1" max="1" chance="2.9277" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.9646" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="1.6229" /> <!-- Adamantine -->
+					<item id="5282" min="1" max="1" chance="0.1659" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="9544" min="1" max="1" chance="0.4497" /> <!-- Sealed Dynasty Shoes Piece -->
-				<item id="9630" min="1" max="1" chance="0.4947" /> <!-- Orichalcum -->
-				<item id="9619" min="1" max="1" chance="0.0526" /> <!-- Dynasty Bow Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -466,14 +484,16 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9628" min="2" max="6" chance="5.92147006482697" /> <!-- Leonard -->
-				<item id="9630" min="3" max="9" chance="2.64905737594986" /> <!-- Orichalcum -->
-				<item id="9629" min="3" max="9" chance="1.87574165052795" /> <!-- Adamantine -->
-				<item id="9573" min="2" max="6" chance="4.19435098045349" /> <!-- Life Stone: level 80 -->
-				<item id="9574" min="1" max="1" chance="5.24293872556686" /> <!-- Mid-Grade Life Stone: level 80 -->
-				<item id="9575" min="1" max="1" chance="0.52431414295578" /> <!-- High-Grade Life Stone: level 80 -->
-				<item id="9550" min="1" max="3" chance="12.0797389318657" /> <!-- Dark Stone -->
-				<item id="9551" min="1" max="3" chance="8.05318631510925" /> <!-- Divine Stone -->
+				<group chance="40.5408">
+					<item id="9628" min="2" max="6" chance="14.6062" /> <!-- Leonard -->
+					<item id="9630" min="3" max="9" chance="6.5343" /> <!-- Orichalcum -->
+					<item id="9629" min="3" max="9" chance="4.6268" /> <!-- Adamantine -->
+					<item id="9573" min="2" max="6" chance="10.346" /> <!-- Life Stone: level 80 -->
+					<item id="9574" min="1" max="1" chance="12.9325" /> <!-- Mid-Grade Life Stone: level 80 -->
+					<item id="9575" min="1" max="1" chance="1.2933" /> <!-- High-Grade Life Stone: level 80 -->
+					<item id="9550" min="1" max="3" chance="29.7965" /> <!-- Dark Stone -->
+					<item id="9551" min="1" max="3" chance="19.8644" /> <!-- Divine Stone -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -815,12 +835,14 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="9546" min="1" max="1" chance="2.505" /> <!-- Fire Stone -->
-				<item id="9547" min="1" max="1" chance="2.505" /> <!-- Water Stone -->
-				<item id="9548" min="1" max="1" chance="2.505" /> <!-- Earth Stone -->
-				<item id="9549" min="1" max="1" chance="2.505" /> <!-- Wind Stone -->
-				<item id="9550" min="1" max="1" chance="2.49" /> <!-- Dark Stone -->
-				<item id="9551" min="1" max="1" chance="2.49" /> <!-- Divine Stone -->
+				<group chance="15">
+					<item id="9546" min="1" max="1" chance="16.7" /> <!-- Fire Stone -->
+					<item id="9547" min="1" max="1" chance="16.7" /> <!-- Water Stone -->
+					<item id="9548" min="1" max="1" chance="16.7" /> <!-- Earth Stone -->
+					<item id="9549" min="1" max="1" chance="16.7" /> <!-- Wind Stone -->
+					<item id="9550" min="1" max="1" chance="16.6" /> <!-- Dark Stone -->
+					<item id="9551" min="1" max="1" chance="16.6" /> <!-- Divine Stone -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>

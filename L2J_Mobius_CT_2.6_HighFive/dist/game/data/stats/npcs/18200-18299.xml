@@ -2928,18 +2928,24 @@
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
 			<drop>
-				<item id="57" min="1370" max="2743" chance="70" /> <!-- Adena -->
-				<item id="81" min="1" max="1" chance="0.000118531599357724" /> <!-- Dragon Slayer -->
-				<item id="5529" min="1" max="1" chance="0.0439078417620808" /> <!-- Dragon Slayer Edge -->
-				<item id="151" min="1" max="1" chance="0.000118531599357724" /> <!-- Sword of Miracles -->
-				<item id="5546" min="1" max="1" chance="0.0482285845386684" /> <!-- Sword of Miracles Edge -->
-				<item id="2500" min="1" max="1" chance="0.000118531599357724" /> <!-- Dark Legion's Edge -->
-				<item id="5545" min="1" max="1" chance="0.0439079781620801" /> <!-- Dark Legion's Edge Blade -->
-				<item id="1895" min="1" max="1" chance="5.48573175260115" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="0.384003886577129" /> <!-- Mold Lubricant -->
-				<item id="4042" min="1" max="1" chance="0.320002100397587" /> <!-- Enria -->
-				<item id="4043" min="1" max="1" chance="0.640004200795174" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.000758185513973236" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<group chance="70">
+					<item id="57" min="1370" max="2743" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.1363999992609024">
+					<item id="81" min="1" max="1" chance="0.0869" /> <!-- Dragon Slayer -->
+					<item id="5529" min="1" max="1" chance="32.1905" /> <!-- Dragon Slayer Edge -->
+					<item id="151" min="1" max="1" chance="0.0869" /> <!-- Sword of Miracles -->
+					<item id="5546" min="1" max="1" chance="35.3582" /> <!-- Sword of Miracles Edge -->
+					<item id="2500" min="1" max="1" chance="0.0869" /> <!-- Dark Legion's Edge -->
+					<item id="5545" min="1" max="1" chance="32.1906" /> <!-- Dark Legion's Edge Blade -->
+				</group>
+				<group chance="6.83050012588501">
+					<item id="1895" min="1" max="1" chance="80.3123" /> <!-- Metallic Fiber -->
+					<item id="4040" min="1" max="1" chance="5.6219" /> <!-- Mold Lubricant -->
+					<item id="4042" min="1" max="1" chance="4.6849" /> <!-- Enria -->
+					<item id="4043" min="1" max="1" chance="9.3698" /> <!-- Asofe -->
+					<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4688,9 +4694,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="186" max="372" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.150718059714437" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="1" max="1" chance="1.25598195535362" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<group chance="70">
+					<item id="57" min="186" max="372" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.4067000150680542">
+					<item id="955" min="1" max="1" chance="10.7143" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+					<item id="956" min="1" max="1" chance="89.2857" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4736,9 +4746,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="207" max="413" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.167957368067026" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="1" max="1" chance="1.39964264375854" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<group chance="70">
+					<item id="57" min="207" max="413" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.5676000118255615">
+					<item id="955" min="1" max="1" chance="10.7143" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+					<item id="956" min="1" max="1" chance="89.2857" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4784,9 +4798,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="308" max="617" chance="70" /> <!-- Adena -->
-				<item id="951" min="1" max="1" chance="0.111875996589661" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.820423974990845" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<group chance="70">
+					<item id="57" min="308" max="617" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.9322999715805054">
+					<item id="951" min="1" max="1" chance="12" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+					<item id="952" min="1" max="1" chance="88" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4832,9 +4850,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="338" max="676" chance="70" /> <!-- Adena -->
-				<item id="951" min="1" max="1" chance="0.120444002151489" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.883256015777588" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<group chance="70">
+					<item id="57" min="338" max="676" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.0037000179290771">
+					<item id="951" min="1" max="1" chance="12" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+					<item id="952" min="1" max="1" chance="88" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4880,9 +4902,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="472" max="944" chance="70" /> <!-- Adena -->
-				<item id="947" min="1" max="1" chance="0.034675852558136" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.216724141338348" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<group chance="70">
+					<item id="57" min="472" max="944" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.2513999938964844">
+					<item id="947" min="1" max="1" chance="13.7931" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="948" min="1" max="1" chance="86.2069" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4928,9 +4954,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="519" max="1010" chance="70" /> <!-- Adena -->
-				<item id="947" min="1" max="1" chance="0.0374620607049465" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.234137947305918" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<group chance="70">
+					<item id="57" min="519" max="1010" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.27160000801086426">
+					<item id="947" min="1" max="1" chance="13.7931" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="948" min="1" max="1" chance="86.2069" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4976,9 +5006,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="681" max="1361" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.0132352871493846" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.0992647098703831" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<group chance="70">
+					<item id="57" min="681" max="1361" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.11249999701976776">
+					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5024,9 +5058,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="728" max="1457" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.0141646984045058" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.106235298233792" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<group chance="70">
+					<item id="57" min="728" max="1457" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.12039999663829803">
+					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5072,9 +5110,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="938" max="1879" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.0182588149385452" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.136941189639091" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<group chance="70">
+					<item id="57" min="938" max="1879" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.15520000457763672">
+					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5120,9 +5162,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="995" max="1993" chance="70" /> <!-- Adena -->
-				<item id="959" min="1" max="1" chance="0.00697272047773004" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0697272814773023" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<group chance="70">
+					<item id="57" min="995" max="1993" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.07670000195503235">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5168,9 +5214,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1239" max="2481" chance="70" /> <!-- Adena -->
-				<item id="959" min="1" max="1" chance="0.0086818094837442" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0868181903374419" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<group chance="70">
+					<item id="57" min="1239" max="2481" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.09549999982118607">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5216,9 +5266,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1301" max="2604" chance="70" /> <!-- Adena -->
-				<item id="959" min="1" max="1" chance="0.00911817261980474" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0911818264980465" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<group chance="70">
+					<item id="57" min="1301" max="2604" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.10029999911785126">
+					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>

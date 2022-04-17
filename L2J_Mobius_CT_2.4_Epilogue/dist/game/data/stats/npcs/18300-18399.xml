@@ -918,11 +918,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6529" min="1" max="1" chance="0.115900002419949" /> <!-- Baby Duck Rod -->
-				<item id="6535" min="12" max="36" chance="12.0767546323357" /> <!-- Fishing Shot (No-Grade) -->
-				<item id="6520" min="1" max="1" chance="8.69526468787766" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="5.79685439688492" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="1" max="1" chance="7.24602572748184" /> <!-- Yellow Colored Lure -->
+				<group chance="0.1159">
+					<item id="6529" min="1" max="1" chance="100" /> <!-- Baby Duck Rod -->
+				</group>
+				<group chance="33.8149">
+					<item id="6535" min="12" max="36" chance="35.7143" /> <!-- Fishing Shot: non-grade -->
+					<item id="6520" min="1" max="1" chance="25.7143" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="17.1429" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="1" max="1" chance="21.4285" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -974,11 +978,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6530" min="1" max="1" chance="0.0527000017464161" /> <!-- Albatross Rod -->
-				<item id="6536" min="12" max="36" chance="10.9759998321533" /> <!-- Fishing Shot (D-Grade) -->
-				<item id="6520" min="1" max="1" chance="13.171199798584" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="8.78079986572266" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="1" max="1" chance="10.9759998321533" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0527">
+					<item id="6530" min="1" max="1" chance="100" /> <!-- Albatross Rod -->
+				</group>
+				<group chance="43.904">
+					<item id="6536" min="12" max="36" chance="25" /> <!-- Fishing Shot: D-grade -->
+					<item id="6520" min="1" max="1" chance="30" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="20" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="1" max="1" chance="25" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1031,11 +1039,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6531" min="1" max="1" chance="0.0199999995529652" /> <!-- Pelican Rod -->
-				<item id="6537" min="12" max="36" chance="11.8752296447754" /> <!-- Fishing Shot (C-Grade) -->
-				<item id="6520" min="2" max="6" chance="3.32506430053711" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="11.083547668457" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="1" max="1" chance="13.3002572021484" /> <!-- Yellow Colored Lure -->
+				<group chance="0.02">
+					<item id="6531" min="1" max="1" chance="100" /> <!-- Pelican Rod -->
+				</group>
+				<group chance="39.5841">
+					<item id="6537" min="12" max="36" chance="30" /> <!-- Fishing Shot: C-grade -->
+					<item id="6520" min="2" max="6" chance="8.4" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="28" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="1" max="1" chance="33.6" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1088,11 +1100,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6532" min="1" max="1" chance="0.0108000002801418" /> <!-- KingFisher Rod -->
-				<item id="6538" min="15" max="45" chance="4.32320019556046" /> <!-- Fishing Shot (B-Grade) -->
-				<item id="6520" min="2" max="6" chance="6.75503504325867" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="18.013383189621" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="3" max="9" chance="3.60268317678452" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0108">
+					<item id="6532" min="1" max="1" chance="100" /> <!-- KingFisher Rod -->
+				</group>
+				<group chance="32.6943">
+					<item id="6538" min="15" max="45" chance="13.2231" /> <!-- Fishing Shot: B-grade -->
+					<item id="6520" min="2" max="6" chance="20.6612" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="55.0964" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="3" max="9" chance="11.0193" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1145,11 +1161,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6533" min="1" max="1" chance="0.00410000002011657" /> <!-- Cygnus Pole -->
-				<item id="6539" min="3" max="9" chance="16.9120008440895" /> <!-- Fishing Shot (A-Grade) -->
-				<item id="6520" min="2" max="6" chance="6.76481003385544" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="20.2944301015663" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="2" max="6" chance="4.50985719553757" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0041">
+					<item id="6533" min="1" max="1" chance="100" /> <!-- Cygnus Pole -->
+				</group>
+				<group chance="48.4811">
+					<item id="6539" min="3" max="9" chance="34.8837" /> <!-- Fishing Shot: A-grade -->
+					<item id="6520" min="2" max="6" chance="13.9535" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="41.8605" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="2" max="6" chance="9.3023" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1201,11 +1221,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6533" min="1" max="1" chance="0.00609999988228083" /> <!-- Cygnus Pole -->
-				<item id="6539" min="3" max="9" chance="20.4003708440895" /> <!-- Fishing Shot (A-Grade) -->
-				<item id="6520" min="2" max="6" chance="8.16016003385544" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="24.4804801015663" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="2" max="6" chance="5.44008719553757" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0061">
+					<item id="6533" min="1" max="1" chance="100" /> <!-- Cygnus Pole -->
+				</group>
+				<group chance="58.4811">
+					<item id="6539" min="3" max="9" chance="34.8837" /> <!-- Fishing Shot: A-grade -->
+					<item id="6520" min="2" max="6" chance="13.9535" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="41.8605" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="2" max="6" chance="9.3023" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1257,11 +1281,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6534" min="1" max="1" chance="0.00170000002253801" /> <!-- Triton Pole -->
-				<item id="6540" min="3" max="9" chance="14.1546604156494" /> <!-- Fishing Shot (S-Grade) -->
-				<item id="6520" min="2" max="6" chance="7.07733020782471" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="21.2319906234741" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="2" max="6" chance="4.71822013854981" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0017">
+					<item id="6534" min="1" max="1" chance="100" /> <!-- Triton Pole -->
+				</group>
+				<group chance="47.1822">
+					<item id="6540" min="3" max="9" chance="30" /> <!-- Fishing Shot: S-grade -->
+					<item id="6520" min="2" max="6" chance="15" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="45" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="2" max="6" chance="10" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1313,11 +1341,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="6534" min="1" max="1" chance="0.00300000002607703" /> <!-- Triton Pole -->
-				<item id="6540" min="3" max="9" chance="17.1546604156494" /> <!-- Fishing Shot (S-Grade) -->
-				<item id="6520" min="2" max="6" chance="8.57733020782471" /> <!-- Green Colored Lure -->
-				<item id="6523" min="1" max="1" chance="25.7319906234741" /> <!-- Purple Colored Lure -->
-				<item id="6526" min="2" max="6" chance="5.71822013854981" /> <!-- Yellow Colored Lure -->
+				<group chance="0.0030">
+					<item id="6534" min="1" max="1" chance="100" /> <!-- Triton Pole -->
+				</group>
+				<group chance="57.1822">
+					<item id="6540" min="3" max="9" chance="30" /> <!-- Fishing Shot: S-grade -->
+					<item id="6520" min="2" max="6" chance="15" /> <!-- Green Colored Lure -->
+					<item id="6523" min="1" max="1" chance="45" /> <!-- Purple Colored Lure -->
+					<item id="6526" min="2" max="6" chance="10" /> <!-- Yellow Colored Lure -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2158,7 +2190,9 @@
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="7" max="13" chance="100" /> <!-- Adena -->
+				<group chance="100">
+					<item id="57" min="7" max="13" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2304,12 +2338,12 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8787" min="1" max="1" chance="39.7599983215332" /> <!-- Sprigant's Fruit -->
+				<group chance="39.76">
+					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
+				</group>
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.0931" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="8.168" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="7.7596" /> <!-- Mold Glue -->
+				<item id="960" min="1" max="1" chance="0.0931" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2360,12 +2394,12 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8787" min="1" max="1" chance="39.7599983215332" /> <!-- Sprigant's Fruit -->
+				<group chance="39.76">
+					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="6701" min="1" max="1" chance="0.6885" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6901" min="1" max="1" chance="0.2328" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6702" min="1" max="1" chance="0.8863" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
 			</spoil>
 		</dropLists>
 		<collision>

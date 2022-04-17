@@ -64,20 +64,28 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="765" max="1528" chance="70" /> <!-- Adena -->
-				<item id="2397" min="1" max="1" chance="0.00114331157708168" /> <!-- Tunic of Zubei -->
-				<item id="4069" min="1" max="1" chance="0.210199847786427" /> <!-- Tunic of Zubei Fabric -->
-				<item id="2402" min="1" max="1" chance="0.00183235476326942" /> <!-- Stockings of Zubei -->
-				<item id="4070" min="1" max="1" chance="0.319156190802336" /> <!-- Stockings of Zubei Fabric -->
-				<item id="2406" min="1" max="1" chance="0.000782119584321976" /> <!-- Avadon Robe -->
-				<item id="4071" min="1" max="1" chance="0.16148616156292" /> <!-- Avadon Robe Fabric -->
-				<item id="1864" min="1" max="1" chance="17.8348517561493" /> <!-- Stem -->
-				<item id="1866" min="1" max="1" chance="5.94496014911652" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="3.56697608946991" /> <!-- Braided Hemp -->
-				<item id="1885" min="1" max="1" chance="0.743130777839661" /> <!-- High-Grade Suede -->
-				<item id="1889" min="1" max="1" chance="0.594481669311523" /> <!-- Compound Braid -->
-				<item id="4197" min="1" max="1" chance="0.00679981446075439" /> <!-- Recipe: Demon's Dagger (100%) -->
-				<item id="1419" min="1" max="1" chance="20" /> <!-- Blood Mark -->
+				<group chance="70">
+					<item id="57" min="765" max="1528" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.694599986076355">
+					<item id="2397" min="1" max="1" chance="0.1646" /> <!-- Tunic of Zubei -->
+					<item id="4069" min="1" max="1" chance="30.262" /> <!-- Tunic of Zubei Fabric -->
+					<item id="2402" min="1" max="1" chance="0.2638" /> <!-- Stockings of Zubei -->
+					<item id="4070" min="1" max="1" chance="45.9482" /> <!-- Stockings of Zubei Fabric -->
+					<item id="2406" min="1" max="1" chance="0.1126" /> <!-- Avadon Robe -->
+					<item id="4071" min="1" max="1" chance="23.2488" /> <!-- Avadon Robe Fabric -->
+				</group>
+				<group chance="28.691200256347656">
+					<item id="1864" min="1" max="1" chance="62.1614" /> <!-- Stem -->
+					<item id="1866" min="1" max="1" chance="20.7205" /> <!-- Suede -->
+					<item id="1878" min="1" max="1" chance="12.4323" /> <!-- Braided Hemp -->
+					<item id="1885" min="1" max="1" chance="2.5901" /> <!-- High-Grade Suede -->
+					<item id="1889" min="1" max="1" chance="2.072" /> <!-- Compound Braid -->
+					<item id="4197" min="1" max="1" chance="0.0237" /> <!-- Recipe: Demon's Dagger (100%) -->
+				</group>
+				<group chance="20">
+					<item id="1419" min="1" max="1" chance="100" /> <!-- Blood Mark -->
+				</group>
 			</drop>
 			<spoil>
 				<item id="1806" min="1" max="1" chance="1.0868" /> <!-- Recipe: Soulshot (B-Grade) -->
@@ -637,7 +645,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="148" max="293" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="148" max="293" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -695,7 +705,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="148" max="293" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="148" max="293" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -751,7 +763,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="228" max="455" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="228" max="455" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -807,7 +821,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="194" max="387" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="194" max="387" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -904,7 +920,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="194" max="387" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="194" max="387" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -959,7 +977,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="253" max="504" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="253" max="504" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1159,7 +1179,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="265" max="529" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="265" max="529" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1217,7 +1239,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="265" max="529" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="265" max="529" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1272,7 +1296,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="381" max="761" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="381" max="761" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1329,7 +1355,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="335" max="669" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="335" max="669" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1426,7 +1454,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="335" max="669" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="335" max="669" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1481,7 +1511,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="414" max="829" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="414" max="829" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1681,7 +1713,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="431" max="863" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="431" max="863" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1739,7 +1773,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="431" max="863" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="431" max="863" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1795,7 +1831,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="585" max="1171" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="585" max="1171" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1852,7 +1890,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="525" max="1049" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="525" max="1049" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1949,7 +1989,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="525" max="1049" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="525" max="1049" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2004,7 +2046,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="629" max="1257" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="629" max="1257" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2204,7 +2248,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="651" max="1302" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="651" max="1302" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2262,7 +2308,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="651" max="1302" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="651" max="1302" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2318,7 +2366,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="848" max="1697" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="848" max="1697" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2375,7 +2425,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="770" max="1541" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="770" max="1541" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2472,7 +2524,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="770" max="1541" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="770" max="1541" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2527,7 +2581,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2727,7 +2783,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2785,7 +2843,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2841,7 +2901,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2898,7 +2960,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2995,7 +3059,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3050,7 +3116,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3250,7 +3318,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="148" max="293" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="148" max="293" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3308,7 +3378,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="148" max="293" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="148" max="293" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3364,7 +3436,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="228" max="455" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="228" max="455" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3421,7 +3495,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="194" max="387" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="194" max="387" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3518,7 +3594,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="194" max="387" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="194" max="387" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3573,7 +3651,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="253" max="504" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="253" max="504" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3773,7 +3853,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="265" max="529" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="265" max="529" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3831,7 +3913,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="265" max="529" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="265" max="529" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3887,7 +3971,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="381" max="761" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="381" max="761" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3944,7 +4030,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="335" max="669" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="335" max="669" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4041,7 +4129,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="335" max="669" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="335" max="669" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4096,7 +4186,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="414" max="829" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="414" max="829" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4296,7 +4388,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="431" max="863" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="431" max="863" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4354,7 +4448,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="431" max="863" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="431" max="863" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4410,7 +4506,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="585" max="1171" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="585" max="1171" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4467,7 +4565,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="525" max="1049" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="525" max="1049" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4564,7 +4664,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="525" max="1049" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="525" max="1049" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4619,7 +4721,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="629" max="1257" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="629" max="1257" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4819,7 +4923,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="651" max="1302" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="651" max="1302" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4877,7 +4983,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="651" max="1302" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="651" max="1302" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4933,7 +5041,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="848" max="1697" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="848" max="1697" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4990,7 +5100,9 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="770" max="1541" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="770" max="1541" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5087,7 +5199,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="770" max="1541" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="770" max="1541" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5142,7 +5256,9 @@
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>

@@ -149,9 +149,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9581" min="1" max="1" chance="9.10180006362534" /> <!-- Scale Shirt -->
-				<item id="9591" min="1" max="1" chance="4.67819966934586" /> <!-- Steel Bracelet -->
-				<item id="9912" min="40" max="200" chance="90" /> <!-- Knight's Epaulette -->
+				<group chance="13.78">
+					<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt -->
+					<item id="9591" min="1" max="1" chance="33.9492" /> <!-- Steel Bracelet -->
+				</group>
+				<group chance="90">
+					<item id="9912" min="20" max="100" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -212,7 +216,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="78.004997253418" /> <!-- Knight's Epaulette -->
+				<group chance="78.005">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -268,7 +274,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="71.9570007324219" /> <!-- Knight's Epaulette -->
+				<group chance="71.957">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -327,7 +335,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="66.2799987792969" /> <!-- Knight's Epaulette -->
+				<group chance="66.28">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -386,7 +396,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="66.2109985351563" /> <!-- Knight's Epaulette -->
+				<group chance="66.211">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -628,8 +640,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="24" max="72" chance="1.93110397338867" /> <!-- Knight's Epaulette -->
-				<item id="10014" min="1" max="1" chance="46.3464953613281" /> <!-- Control Room Card -->
+				<group chance="48.2776">
+					<item id="9912" min="12" max="36" chance="4" /> <!-- Knight's Epaulette -->
+					<item id="10014" min="1" max="1" chance="96" /> <!-- Control Room Card -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -685,7 +699,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="6" chance="46" /> <!-- Knight's Epaulette -->
+				<group chance="46">
+					<item id="9912" min="2" max="3" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -761,7 +777,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.157096862793" /> <!-- Knight's Epaulette -->
+				<group chance="84.1571">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -878,7 +896,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="73.0100021362305" /> <!-- Knight's Epaulette -->
+				<group chance="73.01">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -954,7 +974,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.157096862793" /> <!-- Knight's Epaulette -->
+				<group chance="84.1571">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1022,7 +1044,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="77.5739974975586" /> <!-- Knight's Epaulette -->
+				<group chance="77.574">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1088,7 +1112,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="82.3820037841797" /> <!-- Knight's Epaulette -->
+				<group chance="82.382">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1154,7 +1180,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.223503112793" /> <!-- Knight's Epaulette -->
+				<group chance="84.2235">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1215,7 +1243,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="71" /> <!-- Knight's Epaulette -->
+				<group chance="71">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1281,7 +1311,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="40" max="154" chance="70.4766006469727" /> <!-- Knight's Epaulette -->
+				<group chance="70.4766">
+					<item id="9912" min="20" max="77" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1345,7 +1377,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="40" max="154" chance="70.4766006469727" /> <!-- Knight's Epaulette -->
+				<group chance="70.4766">
+					<item id="9912" min="20" max="77" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1894,9 +1928,13 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9580" min="1" max="1" chance="5.35384883580208" /> <!-- Thin Leather Shirt -->
-				<item id="1538" min="1" max="1" chance="9.28015098872185" /> <!-- Blessed Scroll of Escape -->
-				<item id="9912" min="120" max="240" chance="100" /> <!-- Knight's Epaulette -->
+				<group chance="14.634">
+					<item id="9580" min="1" max="1" chance="36.585" /> <!-- Thin Leather Shirt -->
+					<item id="1538" min="1" max="1" chance="63.415" /> <!-- Blessed Scroll of Escape -->
+				</group>
+				<group chance="100">
+					<item id="9912" min="60" max="120" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2143,9 +2181,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9581" min="1" max="1" chance="9.10180006362534" /> <!-- Scale Shirt -->
-				<item id="9591" min="1" max="1" chance="4.67819966934586" /> <!-- Steel Bracelet -->
-				<item id="9912" min="40" max="200" chance="90" /> <!-- Knight's Epaulette -->
+				<group chance="13.78">
+					<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt -->
+					<item id="9591" min="1" max="1" chance="33.9492" /> <!-- Steel Bracelet -->
+				</group>
+				<group chance="90">
+					<item id="9912" min="20" max="100" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2206,7 +2248,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="78.1650009155273" /> <!-- Knight's Epaulette -->
+				<group chance="78.165">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2262,7 +2306,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="71.8570022583008" /> <!-- Knight's Epaulette -->
+				<group chance="71.857">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2321,7 +2367,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="66.2799987792969" /> <!-- Knight's Epaulette -->
+				<group chance="66.28">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2380,7 +2428,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="67.2109985351563" /> <!-- Knight's Epaulette -->
+				<group chance="67.211">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2481,7 +2531,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="61.7369995117188" /> <!-- Knight's Epaulette -->
+				<group chance="61.737">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2557,7 +2609,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.1370010375977" /> <!-- Knight's Epaulette -->
+				<group chance="84.137">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2674,7 +2728,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="73.0100021362305" /> <!-- Knight's Epaulette -->
+				<group chance="73.01">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2750,7 +2806,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.157096862793" /> <!-- Knight's Epaulette -->
+				<group chance="84.1571">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2818,7 +2876,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="77.5739974975586" /> <!-- Knight's Epaulette -->
+				<group chance="77.574">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2884,7 +2944,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="82.3820037841797" /> <!-- Knight's Epaulette -->
+				<group chance="82.382">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2950,7 +3012,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.223503112793" /> <!-- Knight's Epaulette -->
+				<group chance="84.2235">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3011,7 +3075,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="71" /> <!-- Knight's Epaulette -->
+				<group chance="71">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3600,9 +3666,13 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9580" min="1" max="1" chance="7.13846488180161" /> <!-- Thin Leather Shirt -->
-				<item id="1538" min="1" max="1" chance="12.3735342484474" /> <!-- Blessed Scroll of Escape -->
-				<item id="9912" min="160" max="320" chance="100" /> <!-- Knight's Epaulette -->
+				<group chance="19.512">
+					<item id="9580" min="1" max="1" chance="36.585" /> <!-- Thin Leather Shirt -->
+					<item id="1538" min="1" max="1" chance="63.415" /> <!-- Blessed Scroll of Escape -->
+				</group>
+				<group chance="100">
+					<item id="9912" min="80" max="160" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3849,9 +3919,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9581" min="1" max="1" chance="9.10180006362534" /> <!-- Scale Shirt -->
-				<item id="9591" min="1" max="1" chance="4.67819966934586" /> <!-- Steel Bracelet -->
-				<item id="9912" min="40" max="200" chance="90" /> <!-- Knight's Epaulette -->
+				<group chance="13.78">
+					<item id="9581" min="1" max="1" chance="66.0508" /> <!-- Scale Shirt -->
+					<item id="9591" min="1" max="1" chance="33.9492" /> <!-- Steel Bracelet -->
+				</group>
+				<group chance="90">
+					<item id="9912" min="20" max="100" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3912,7 +3986,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="78.004997253418" /> <!-- Knight's Epaulette -->
+				<group chance="78.005">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3968,7 +4044,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="71.9570007324219" /> <!-- Knight's Epaulette -->
+				<group chance="71.957">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4027,7 +4105,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="66.2799987792969" /> <!-- Knight's Epaulette -->
+				<group chance="66.28">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4086,7 +4166,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="12" chance="66.2109985351563" /> <!-- Knight's Epaulette -->
+				<group chance="66.211">
+					<item id="9912" min="2" max="6" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4328,8 +4410,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="24" max="72" chance="1.93110397338867" /> <!-- Knight's Epaulette -->
-				<item id="10014" min="1" max="1" chance="46.3464953613281" /> <!-- Control Room Card -->
+				<group chance="48.2776">
+					<item id="9912" min="12" max="36" chance="4" /> <!-- Knight's Epaulette -->
+					<item id="10014" min="1" max="1" chance="96" /> <!-- Control Room Card -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4385,7 +4469,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="6" chance="46" /> <!-- Knight's Epaulette -->
+				<group chance="46">
+					<item id="9912" min="2" max="3" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4461,7 +4547,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.157096862793" /> <!-- Knight's Epaulette -->
+				<group chance="84.1571">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4578,7 +4666,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="73.0100021362305" /> <!-- Knight's Epaulette -->
+				<group chance="73.01">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4654,7 +4744,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.157096862793" /> <!-- Knight's Epaulette -->
+				<group chance="84.1571">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4722,7 +4814,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="77.5739974975586" /> <!-- Knight's Epaulette -->
+				<group chance="77.574">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4788,7 +4882,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="82.3820037841797" /> <!-- Knight's Epaulette -->
+				<group chance="82.382">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4854,7 +4950,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="140" max="300" chance="84.223503112793" /> <!-- Knight's Epaulette -->
+				<group chance="84.2235">
+					<item id="9912" min="70" max="150" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4915,7 +5013,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="4" max="16" chance="71" /> <!-- Knight's Epaulette -->
+				<group chance="71">
+					<item id="9912" min="2" max="8" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -4981,7 +5081,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="40" max="154" chance="70.4766006469727" /> <!-- Knight's Epaulette -->
+				<group chance="70.4766">
+					<item id="9912" min="20" max="77" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -5045,7 +5147,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="9912" min="40" max="154" chance="70.4766006469727" /> <!-- Knight's Epaulette -->
+				<group chance="70.4766">
+					<item id="9912" min="20" max="77" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
