@@ -80,7 +80,7 @@ public class DimensionalVortex extends AbstractNpcAI
 				}
 				for (Player partyMember : party.getMembers())
 				{
-					if (player.calculateDistance2D(partyMember) > Config.ALT_PARTY_RANGE)
+					if (player.calculateDistance2D(partyMember) < Config.ALT_PARTY_RANGE)
 					{
 						continue;
 					}
