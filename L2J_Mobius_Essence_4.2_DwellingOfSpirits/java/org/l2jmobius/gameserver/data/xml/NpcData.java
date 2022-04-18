@@ -99,7 +99,7 @@ public class NpcData implements IXmlReader
 						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
 						final int level = parseInteger(attrs, "level", 85);
-						final String type = parseString(attrs, "type");
+						final String type = parseString(attrs, "type", "Folk");
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
 						Set<Integer> clans = null;

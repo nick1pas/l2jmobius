@@ -105,7 +105,7 @@ public class NpcData implements IXmlReader
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
 						set.set("level", parseInteger(attrs, "level"));
-						set.set("type", parseString(attrs, "type"));
+						set.set("type", parseString(attrs, "type", "Folk"));
 						set.set("name", parseString(attrs, "name"));
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
