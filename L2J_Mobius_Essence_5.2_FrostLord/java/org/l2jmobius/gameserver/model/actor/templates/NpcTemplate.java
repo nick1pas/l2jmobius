@@ -787,7 +787,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				final Float itemChance = Config.RATE_DROP_CHANCE_BY_ID.get(itemId);
 				if (itemChance != null)
 				{
-					if (itemChance == 0)
+					if (itemChance <= 0)
 					{
 						continue;
 					}
@@ -856,6 +856,12 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					
 					// check level gap that may prevent to drop item
 					if ((Rnd.nextDouble() * 100) > (dropItem.getItemId() == Inventory.ADENA_ID ? levelGapChanceToDropAdena : levelGapChanceToDrop))
+					{
+						continue;
+					}
+					
+					// skip zero chance drops
+					if ((Config.RATE_DROP_CHANCE_BY_ID.getOrDefault(dropItem.getItemId(), 0f) <= 0))
 					{
 						continue;
 					}
