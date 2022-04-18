@@ -785,7 +785,8 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// skip zero chance drops
-					if ((Config.RATE_DROP_CHANCE_BY_ID.getOrDefault(dropItem.getItemId(), 0f) <= 0))
+					final Float itemChance = Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+					if ((itemChance != null) && (itemChance <= 0))
 					{
 						continue;
 					}
