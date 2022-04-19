@@ -960,7 +960,7 @@ public class VillageMaster extends Folk
 		int charClassId = player.getBaseClass();
 		if (charClassId >= 88)
 		{
-			charClassId = player.getClassId().getParent().ordinal();
+			charClassId = ClassId.getClassId(charClassId).getParent().ordinal();
 		}
 		
 		final Race npcRace = getVillageMasterRace();
