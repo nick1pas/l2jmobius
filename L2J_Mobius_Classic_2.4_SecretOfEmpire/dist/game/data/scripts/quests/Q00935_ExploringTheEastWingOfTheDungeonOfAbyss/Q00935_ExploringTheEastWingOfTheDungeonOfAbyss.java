@@ -209,7 +209,7 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (qs.getCond() == 1)
+		if ((qs != null) && (qs.getCond() == 1))
 		{
 			if (getQuestItemsCount(killer, OSKZLA.getId()) < 50)
 			{
