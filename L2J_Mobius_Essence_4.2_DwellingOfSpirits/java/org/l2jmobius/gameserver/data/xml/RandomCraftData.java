@@ -42,6 +42,9 @@ public class RandomCraftData implements IXmlReader
 	private static final Map<Integer, RandomCraftExtractDataHolder> EXTRACT_DATA = new HashMap<>();
 	private static final Map<Integer, RandomCraftRewardDataHolder> REWARD_DATA = new HashMap<>();
 	
+	private List<RandomCraftRewardDataHolder> _randomRewards = null;
+	private int _randomRewardIndex = 0;
+	
 	protected RandomCraftData()
 	{
 		load();
@@ -70,6 +73,8 @@ public class RandomCraftData implements IXmlReader
 			LOGGER.info(getClass().getSimpleName() + ": Random craft rewards should be more than " + rewardCount + ".");
 			REWARD_DATA.clear();
 		}
+		
+		randomizeRewards();
 	}
 	
 	@Override
@@ -111,24 +116,32 @@ public class RandomCraftData implements IXmlReader
 		return REWARD_DATA.isEmpty();
 	}
 	
-	public RandomCraftRewardItemHolder getNewReward()
+	public synchronized RandomCraftRewardItemHolder getNewReward()
 	{
-		final List<RandomCraftRewardDataHolder> rewards = new ArrayList<>(REWARD_DATA.values());
-		Collections.shuffle(rewards);
-		
-		RandomCraftRewardItemHolder result = null;
-		while (result == null)
+		RandomCraftRewardDataHolder reward = null;
+		final double random = Rnd.get(100d);
+		while (!REWARD_DATA.isEmpty())
 		{
-			SEARCH: for (RandomCraftRewardDataHolder reward : rewards)
+			if (REWARD_DATA.size() == _randomRewardIndex)
 			{
-				if (Rnd.get(100d) < reward.getChance())
-				{
-					result = new RandomCraftRewardItemHolder(reward.getItemId(), reward.getCount(), false, 20);
-					break SEARCH;
-				}
+				randomizeRewards();
+			}
+			_randomRewardIndex++;
+			
+			reward = _randomRewards.get(_randomRewardIndex);
+			if (random < reward.getChance())
+			{
+				return new RandomCraftRewardItemHolder(reward.getItemId(), reward.getCount(), false, 20);
 			}
 		}
-		return result;
+		return null;
+	}
+	
+	private void randomizeRewards()
+	{
+		_randomRewardIndex = -1;
+		_randomRewards = new ArrayList<>(REWARD_DATA.values());
+		Collections.shuffle(_randomRewards);
 	}
 	
 	public boolean isAnnounce(int id)
