@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -59,8 +58,6 @@ public class TrainingZone extends AbstractInstance
 	private static final int CHEL = 25963; // Insolence Boss
 	private static final int RILVA = 25961; // Insolence Boss
 	private static final int RYUN = 25962; // Insolence Boss
-	// Skill
-	private static final SkillHolder SAYHA_BUFF = new SkillHolder(48489, 1); //
 	// Attack buff
 	private static final SkillHolder MENTOR_PATK = new SkillHolder(48490, 1); // P atk +1000 buff
 	private static final SkillHolder MENTOR_MATK = new SkillHolder(48491, 1); // M atk +1000 buff
@@ -152,9 +149,6 @@ public class TrainingZone extends AbstractInstance
 	private static final Location WAITING_AREA = new Location(-49550, 17189, -3016);
 	private static final Location INSOLENCE_TOWER = new Location(-52849, 5272, -240);
 	
-	private static boolean _teleported;
-	private static boolean _summonReady;
-	
 	private static final int TEMPLATE_ID = 224;
 	
 	public TrainingZone()
@@ -206,11 +200,11 @@ public class TrainingZone extends AbstractInstance
 		}
 		switch (event)
 		{
-			case "34307.htm": // Gronw
+			case "34307.htm":
 			{
 				break;
 			}
-			case "GivePatk":
+			case "GivePAtk":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -218,7 +212,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveMatk":
+			case "GiveMAtk":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -234,7 +228,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveCastingSpd":
+			case "GiveCastingSpeed":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -242,7 +236,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GivePskillcriticalrate":
+			case "GivePSkillCriticalRate":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -250,7 +244,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GivePskillcriticalDamage":
+			case "GivePSkillCriticalDamage":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -258,7 +252,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GivePskillcriticalDamage+500":
+			case "GivePSkillCriticalDamage+500":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -266,7 +260,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveSshotsdamage":
+			case "GiveShotsDamage":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -274,7 +268,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GivePskillPower":
+			case "GivePSkillPower":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -282,7 +276,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveAllcriticaldamage":
+			case "GiveAllCriticalDamage":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -290,7 +284,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveAbsorbs3inflictedMp":
+			case "GiveAbsorbs3InflictedMp":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -298,7 +292,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveAbsorbs8inflictedHp":
+			case "GiveAbsorbs8InflictedHp":
 			{
 				if ((npc.getId() == TOKA) && npc.isInInstance())
 				{
@@ -306,7 +300,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GivePdef":
+			case "GivePDef":
 			{
 				if ((npc.getId() == ERI) && npc.isInInstance())
 				{
@@ -314,7 +308,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveMdef":
+			case "GiveMDef":
 			{
 				if ((npc.getId() == ERI) && npc.isInInstance())
 				{
@@ -370,7 +364,7 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "GiveHpPotionRevcovery":
+			case "GiveHpPotionRecovery":
 			{
 				if ((npc.getId() == ERI) && npc.isInInstance())
 				{
@@ -383,13 +377,13 @@ public class TrainingZone extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					npc.broadcastSay(ChatType.NPC_SHOUT, "I can Summon mobs for the training");
+					npc.broadcastSay(ChatType.NPC_SHOUT, "I can summon mobs for the training");
 					startQuestTimer(event, 11500, npc, player);
 				}
 				break;
 			}
 			
-			case "NPC_BUFFSUPPORT":
+			case "NPC_BUFF_SUPPORT":
 			{
 				if (npc.getId() == TOKA)
 				{
@@ -409,460 +403,401 @@ public class TrainingZone extends AbstractInstance
 				}
 				break;
 			}
-			case "BOSS_LOCAL_SPAWN":
-			{
-				final Instance world = npc.getInstanceWorld();
-				if (npc.getVariables().getInt("TRAINIG_AREA_TELEPORT") == 1)
-				{
-					world.spawnGroup("tookhack");
-				}
-				break;
-			}
-			case "DEBUFF":
-			{
-				final Instance world = npc.getInstanceWorld();
-				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 800, closeby ->
-				{
-					if (closeby.isPlayer() && (!world.getParameters().getBoolean("SayhaActive", false)))
-					{
-						world.getParameters().set("SayhaActive", true);
-						npc.setTarget(closeby);
-						npc.doCast(SAYHA_BUFF.getSkill());
-					}
-				});
-				break;
-			}
-			// Last 10 Min < 600000 Boss spawn
 			case "SpawnBossClockList":
 			{
+				// Last 10 Min < 600000 Boss spawn
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
-				if ((areaTeleport == 1) && (world.getRemainingTime() < 600000))
+				if (world.getRemainingTime() > 600000)
+				{
+					break;
+				}
+				
+				final int areaTeleport = world.getParameters().getInt("TRAINIG_AREA_TELEPORT", 0);
+				if (areaTeleport == 1)
 				{
 					addSpawn(BOOJUDU, -56776, 12532, -3384, 33897, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 2) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 2)
 				{
 					addSpawn(PETRON, -56776, 12532, -3384, 33897, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 3) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 3)
 				{
 					addSpawn(KERION, -56776, 12532, -3384, 33897, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 4) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 4)
 				{
 					addSpawn(TUKHAH, -56776, 12532, -3384, 33897, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 5) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 5)
 				{
 					addSpawn(RILVA, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 6) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 6)
 				{
 					addSpawn(RILVA, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 7) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 7)
 				{
 					addSpawn(RILVA, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 8) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 8)
 				{
 					addSpawn(RILVA, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 9) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 9)
 				{
 					addSpawn(RYUN, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 10) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 10)
 				{
 					addSpawn(RYUN, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 11) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 11)
 				{
 					addSpawn(RYUN, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport == 12) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport == 12)
 				{
 					addSpawn(RYUN, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
-				if ((areaTeleport >= 13) && (world.getRemainingTime() < 600000))
+				else if (areaTeleport >= 13)
 				{
 					addSpawn(CHEL, -51725, 6149, -245, 54160, false, 0, true, player.getInstanceId());
 				}
 				break;
 			}
-			case "LIZARMENDSELECT":
+			case "LIZARD_MEN_SELECT":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 					
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					world.spawnGroup("PlainsoftheLizardmen");
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 1);
+					
+					world.spawnGroup("PlainsOfTheLizardmen");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 1);
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "SELMAHUMSELECT":
+			case "SEL_MAHUM_SELECT":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
 					world.spawnGroup("SelMahumBase");
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 2);
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 2);
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "ORCBARRACKSELECT":
+			case "ORC_BARRACKS_SELECT":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					world.spawnGroup("OrcBarrackskerrs");
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 3);
+					world.spawnGroup("OrcBarracksKerrs");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 3);
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "ORCBARRACKTUREKSELECT":
+			case "ORC_BARRACKS_TUREK_SELECT":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					world.spawnGroup("OrcBarrackstureks");
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 4);
+					world.spawnGroup("OrcBarracksTureks");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 4);
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT":
+			case "TOWER_OF_INSOLENCE_SELECT":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 5);
-					world.spawnGroup("TowerOfinsolence1");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 5);
+					world.spawnGroup("TowerOfInsolence1");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT2":
+			case "TOWER_OF_INSOLENCE_SELECT2":
 			{
 				final Instance world = npc.getInstanceWorld();
-				
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 6);
-					world.spawnGroup("TowerOfinsolence2");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 6);
+					world.spawnGroup("TowerOfInsolence2");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT3":
+			case "TOWER_OF_INSOLENCE_SELECT3":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 7);
-					world.spawnGroup("TowerOfinsolence3");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 7);
+					world.spawnGroup("TowerOfInsolence3");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT4":
+			case "TOWER_OF_INSOLENCE_SELECT4":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 8);
-					world.spawnGroup("TowerOfinsolence4");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 8);
+					world.spawnGroup("TowerOfInsolence4");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT5":
+			case "TOWER_OF_INSOLENCE_SELECT5":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 9);
-					world.spawnGroup("TowerOfinsolence5");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 9);
+					world.spawnGroup("TowerOfInsolence5");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT6":
+			case "TOWER_OF_INSOLENCE_SELECT6":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 10);
-					world.spawnGroup("TowerOfinsolence6");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 10);
+					world.spawnGroup("TowerOfInsolence6");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT7":
+			case "TOWER_OF_INSOLENCE_SELECT7":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 11);
-					world.spawnGroup("TowerOfinsolence7");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 11);
+					world.spawnGroup("TowerOfInsolence7");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT8":
+			case "TOWER_OF_INSOLENCE_SELECT8":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 12);
-					world.spawnGroup("TowerOfinsolence8");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 12);
+					world.spawnGroup("TowerOfInsolence8");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT9":
+			case "TOWER_OF_INSOLENCE_SELECT9":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 13);
-					world.spawnGroup("TowerOfinsolence9");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 13);
+					world.spawnGroup("TowerOfInsolence9");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT10":
+			case "TOWER_OF_INSOLENCE_SELECT10":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 					
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 14);
-					world.spawnGroup("TowerOfinsolence10");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 14);
+					world.spawnGroup("TowerOfInsolence10");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT11":
+			case "TOWER_OF_INSOLENCE_SELECT11":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 					
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 15);
-					world.spawnGroup("TowerOfinsolence11");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 15);
+					world.spawnGroup("TowerOfInsolence11");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "TOWEROFINSOLENCESELECT12":
+			case "TOWER_OF_INSOLENCE_SELECT12":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final StatSet worldParameters = world.getParameters();
+				final int areaTeleport = worldParameters.getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport >= 1)
 				{
-					_summonReady = false;
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
 				}
 				else if (areaTeleport == 0)
 				{
-					_summonReady = true;
-					npcVars.set("TRAINIG_AREA_TELEPORT", areaTeleport + 16);
-					world.spawnGroup("TowerOfinsolence12");
+					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 16);
+					world.spawnGroup("TowerOfInsolence12");
 					return npc.getId() + "-Selected.html";
 				}
 				break;
 			}
-			case "LOCALTELEPORT":
+			case "LOCAL_TELEPORT":
 			{
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
+				final Instance world = npc.getInstanceWorld();
+				final int areaTeleport = world.getParameters().getInt("TRAINIG_AREA_TELEPORT", 0);
 				if (areaTeleport <= 4)
 				{
 					player.teleToLocation(LOCAL_AREA);
-					
-					_teleported = true;
+					world.setParameter("BATTLEZONE", true);
 				}
 				if (areaTeleport >= 5)
 				{
 					player.teleToLocation(INSOLENCE_TOWER);
-					_teleported = true;
+					world.setParameter("BATTLEZONE", true);
 				}
 				break;
 			}
-			case "LOCALTELEPORTRETURN":
+			case "LOCAL_TELEPORT_RETURN":
 			{
-				final StatSet npcVars = player.getVariables();
-				final int areaTeleport = npcVars.getInt("TRAINIG_AREA_TELEPORT", 0);
-				if (areaTeleport >= 1)
+				final Instance world = npc.getInstanceWorld();
+				if (world.getParameters().getBoolean("BATTLEZONE", true))
 				{
-					_teleported = false;
 					player.teleToLocation(WAITING_AREA);
-					npcVars.remove("TRAINIG_AREA_TELEPORT");
+					world.setParameter("BATTLEZONE", false);
 				}
 				break;
 			}
@@ -897,11 +832,13 @@ public class TrainingZone extends AbstractInstance
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		if (_teleported && (npc.getId() == TIND))
+		final Instance world = npc.getInstanceWorld();
+		if (world.getParameters().getBoolean("BATTLEZONE", true) && (npc.getId() == TIND))
 		{
 			return npc.getId() + "-waitingzone.html";
 		}
-		if (_summonReady && (npc.getId() == TIND))
+		final int areaTeleport = world.getParameters().getInt("TRAINIG_AREA_TELEPORT", 0);
+		if ((areaTeleport >= 1) && (npc.getId() == TIND))
 		{
 			return npc.getId() + "-teleport.html";
 		}
@@ -939,14 +876,14 @@ public class TrainingZone extends AbstractInstance
 		player.sendPacket(new ExSendUIEvent(player, true, false, 3600, 0, NpcStringId.TIME_LEFT));
 		player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		removeBuffs(player);
-		final StatSet npcVars = player.getVariables();
-		npcVars.remove("TRAINIG_AREA_TELEPORT");
+		instance.getParameters().remove("TRAINIG_AREA_TELEPORT");
 		instance.finishInstance();
 	}
 	
 	private void startEvent(Player player)
 	{
 		final Instance instance = player.getInstanceWorld();
+		instance.setParameter("BATTLEZONE", false);
 		player.sendPacket(new ExSendUIEvent(player, false, false, Math.min(3600, (int) (instance.getRemainingTime() / 1000)), 0, NpcStringId.TIME_LEFT));
 	}
 	
