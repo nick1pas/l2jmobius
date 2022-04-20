@@ -32,6 +32,7 @@ import quests.Q00938_TheFishermansOtherHobby.Q00938_TheFishermansOtherHobby;
 import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10454_FinalEmbryoApostle.Q10454_FinalEmbryoApostle;
 import quests.Q10507_ObtainingNewPower.Q10507_ObtainingNewPower;
+import quests.Q10510_PowerHarmony.Q10510_PowerHarmony;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
@@ -106,6 +107,7 @@ public class QuestMasterHandler
 		Q10423_EmbryoStrongholdRaid.class,
 		Q10454_FinalEmbryoApostle.class,
 		Q10507_ObtainingNewPower.class,
+		Q10510_PowerHarmony.class,
 		Q10566_BestChoice.class,
 		Q10575_LetsGoFishing.class,
 		Q10576_GlitteringWeapons.class,
