@@ -2143,105 +2143,250 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24876" level="85" type="Folk" name="Guide of Splendor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24876" level="120" type="Monster" name="Guide of Splendor">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire exp="5385168000" sp="4846608" />
 		<equipment rhand="193" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="39" />
 		</collision>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Common Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7252" max="16968" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.2123" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.9382" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.9382" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.9382" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.19" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="24877" level="85" type="Folk" name="Herald of Splendor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24877" level="120" type="Monster" name="Herald of Splendor">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
+		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="31.8" />
 		</collision>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Common Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7252" max="16968" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.2123" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.9382" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.9382" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.9382" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.19" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="24878" level="85" type="Folk" name="Believer of Splendor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24878" level="120" type="Monster" name="Believer of Splendor">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
+		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="34.2" />
 		</collision>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Common Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7252" max="16968" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.2123" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.9382" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.9382" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.9382" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.19" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="24879" level="85" type="Folk" name="Observer of Splendor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24879" level="120" type="Monster" name="Observer of Splendor">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
+		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="33" />
 		</collision>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Common Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7252" max="16968" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.2123" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.9382" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.9382" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.9382" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.19" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="24880" level="85" type="Folk" name="Wiseman of Splendor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24880" level="120" type="Monster" name="Wiseman of Splendor">
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="202" /> <!-- Mace of Underworld -->
+		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="30.6" />
 		</collision>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Common Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7252" max="16968" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.2123" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.9382" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.9382" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.9382" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.19" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24881" level="85" type="Folk" name="Springs' Dwarf Hero">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
