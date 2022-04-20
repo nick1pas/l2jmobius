@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24600" level="114" type="Monster" name="Water Dragon's Elite Wyrm">
-		<race>ETC</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3419494524" sp="3077453" />
+		<acquire exp="4857748848" sp="4371854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<vitals hp="443264.7398843931" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
 			<attack physical="471453.767979931" magical="1128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4140.39408866995" magical="1587.73512819262" />
 			<attribute>
-				<attack type="FIRE" value="100" />
-				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
+				<attack type="WATER" value="1680" />
+				<defence fire="1530" water="1530" wind="1530" earth="1530" holy="1530" dark="1530" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="210" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
+		<status attackable="true" />
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clanList>
 				<clan>DRAGON</clan>
@@ -27,12 +33,11 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="24601" level="108" type="Monster" name="Water Dragon's Shaman">
-		<race>ETC</race>
+	<npc id="24601" level="107" type="Monster" name="Water Dragon's Shaman">
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<vitals hp="176235.2601156069" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
@@ -40,18 +45,22 @@
 				<run ground="180" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
 		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24602" level="108" type="Monster" name="Water Dragon's Mage">
-		<race>ETC</race>
+	<npc id="24602" level="107" type="Monster" name="Water Dragon's Mage">
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<vitals hp="176235.2601156069" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
@@ -59,6 +68,11 @@
 				<run ground="180" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
 		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
@@ -66,18 +80,27 @@
 		</collision>
 	</npc>
 	<npc id="24603" level="108" type="Monster" name="Water Dragon's Pikeman">
-		<race>ETC</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1199922336" sp="1079854" />
+		<acquire exp="2905152480" sp="2614602" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<vitals hp="269157.8034682081" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
+			<attribute>
+				<attack type="WATER" value="1230" />
+				<defence fire="1080" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
 		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
@@ -85,43 +108,61 @@
 		</collision>
 	</npc>
 	<npc id="24604" level="108" type="Monster" name="Water Dragon's Swordsman">
-		<race>ETC</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2905152480" sp="2614602" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="269157.8034682081" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attribute>
+				<attack type="WATER" value="1230" />
+				<defence fire="1080" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="62" />
 		</collision>
 	</npc>
 	<npc id="24605" level="108" type="Monster" name="Weakened Krotania">
-		<race>ETC</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1199922336" sp="1079854" />
+		<acquire exp="2905152480" sp="2614602" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<vitals hp="269157.8034682081" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
+			<attribute>
+				<attack type="WATER" value="1230" />
+				<defence fire="1080" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+		</skillList>
 		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="24606" level="124" type="Monster" name="Captive Antelope">
+	<npc id="24606" level="116" type="Monster" name="Captive Antelope">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -135,11 +176,15 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
+		<acquire exp="4222909936" sp="3800513" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
@@ -149,10 +194,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -168,7 +216,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -180,9 +234,12 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24607" level="124" type="Monster" name="Captive Bandersnatch">
+	<npc id="24607" level="116" type="Monster" name="Captive Bandersnatch">
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -197,11 +254,15 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
+		<acquire exp="4222909936" sp="3800513" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -214,7 +275,10 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -230,7 +294,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -242,31 +312,38 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24608" level="124" type="Monster" name="Captive Buffalo">
+	<npc id="24608" level="116" type="Monster" name="Captive Buffalo">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
+		<acquire exp="4222909936" sp="3800513" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="170" />
 			</speed>
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -279,7 +356,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -291,31 +374,38 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24609" level="124" type="Monster" name="Captive Grendel">
+	<npc id="24609" level="116" type="Monster" name="Captive Grendel">
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
+		<acquire exp="4222909936" sp="3800513" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="155" />
 			</speed>
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<collision>
 			<radius normal="15" grown="18" />
@@ -328,7 +418,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -340,9 +436,12 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24610" level="124" type="Monster" name="Eye of Watchman">
+	<npc id="24610" level="116" type="Monster" name="Eye of Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -362,11 +461,15 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
+		<acquire exp="4222909936" sp="3800513" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -381,6 +484,8 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4094" level="7" /> <!-- Cancellation -->
 			<skill id="4098" level="7" /> <!-- Silence -->
@@ -388,6 +493,7 @@
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
 			<skill id="4657" level="7" /> <!-- Hold -->
 			<skill id="4789" level="3" /> <!-- High Lv. -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -403,7 +509,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -415,9 +527,12 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24611" level="124" type="Monster" name="Elder Homunculus">
+	<npc id="24611" level="116" type="Monster" name="Elder Homunculus">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -433,11 +548,15 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="2137140720" sp="1923319" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2305156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="66471453.767979931" magical="91128.47679248958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="13175043" magical="1417634" />
+		<acquire exp="4222909936" sp="3800513" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="556031.2138728324" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="175" />
@@ -452,9 +571,12 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4563" level="7" /> <!-- Solar Flare -->
 			<skill id="4789" level="3" /> <!-- High Lv. -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -470,7 +592,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="139" max="323" chance="70" /> <!-- Adena -->
+				<item id="57" min="4056" max="9473" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.6782" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.0842" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.0842" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.0842" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -482,151 +610,428 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.8163" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24614" level="85" type="Folk" name="Dragon Peltast" title="Earth Dragon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24614" level="124" type="Monster" name="Dragon Peltast" title="Earth Dragon's Guardian">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="13843" /> <!-- Dragon Peltast's Weapon -->
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="89" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="32.5" />
 			<height normal="61.35" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.6835" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.6835" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.6835" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24615" level="85" type="Folk" name="Dragon Officer" title="Earth Dragon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24615" level="124" type="Monster" name="Dragon Officer" title="Earth Dragon's Guardian">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="92" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36.4" />
 			<height normal="69.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.6835" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.6835" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.6835" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24616" level="85" type="Folk" name="Dragon Elite Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24616" level="124" type="Monster" name="Dragon Elite Guard">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.6835" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.6835" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.6835" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24617" level="85" type="Monster" name="Dragon Peltast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24617" level="124" type="Monster" name="Dragon Peltast">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="13843" />
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="89" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="46.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.6835" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.6835" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.6835" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24618" level="85" type="Folk" name="Dragon Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24618" level="124" type="Monster" name="Dragon Officer">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2177181" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="92" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="53" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.6835" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.6835" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.6835" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24619" level="85" type="Folk" name="Behemoth Dragon" title="Daymare">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24619" level="124" type="Monster" name="Behemoth Dragon" title="Daymare">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="107783376720" sp="97005031" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4354362" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="843929.716245079" magical="1700.02433727455" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6438.81278538813" magical="2469.97302469973" />
+			<attribute>
+				<attack type="EARTH" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="75.6" />
 			<height normal="65.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="2" /> <!-- Antharas' Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="32064" max="75026" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.0721" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.714" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.714" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.714" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24620" level="85" type="Folk" name="Soul Hunter" title="Night Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24620" level="124" type="Monster" name="Soul Hunter" title="Night Lord">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="107783376720" sp="97005031" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4354362" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.768786127" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="843929.716245079" magical="1700.02433727455" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6438.81278538813" magical="2469.97302469973" />
+			<attribute>
+				<attack type="DARK" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="74" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="2" /> <!-- Antharas' Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="32064" max="75026" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.0721" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.714" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.714" /> <!-- Dragon Scale -->
+				<item id="81219" min="2" max="6" chance="1.714" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.6646" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24621" level="116" type="Monster" name="Laikel">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1307788" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
@@ -646,15 +1051,48 @@
 			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="14352" max="33516" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="2.3995" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="3.8361" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="3.8361" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="3.8361" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.14" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.35" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="9.9644" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24622" level="116" type="Monster" name="Harane">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1307788" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="140" />
 				<run ground="220" />
@@ -674,15 +1112,48 @@
 			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="14352" max="33516" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="2.3995" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="3.8361" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="3.8361" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="3.8361" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.14" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.35" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="9.9644" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24623" level="116" type="Monster" name="Lesatanas">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1307788" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -703,15 +1174,48 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="14352" max="33516" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="2.3995" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="3.8361" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="3.8361" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="3.8361" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.14" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.35" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="9.9644" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24624" level="116" type="Monster" name="Arbor">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2137140720" sp="1307788" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="913479" hpRegen="10.5" mp="2862" mpRegen="3.6" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -732,21 +1236,54 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="14352" max="33516" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="2.3995" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="3.8361" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="3.8361" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="3.8361" /> <!-- Angel s Feather -->
+				<item id="81343" min="1" max="1" chance="0.14" /> <!-- Aden's Shining Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.35" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="9.9644" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24625" level="116" type="Monster" name="Treant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="12" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -778,17 +1315,21 @@
 	<npc id="24626" level="116" type="Monster" name="Ratel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -820,17 +1361,21 @@
 	<npc id="24627" level="116" type="Monster" name="Kiku">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -862,17 +1407,21 @@
 	<npc id="24628" level="116" type="Monster" name="Honeybee">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -904,17 +1453,21 @@
 	<npc id="24629" level="116" type="Monster" name="Growler">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -946,24 +1499,29 @@
 	<npc id="24630" level="116" type="Monster" name="Evolved Growler">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1546130008" sp="1391465" />
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<attack physical="521192.934242167" magical="1212.14097575999" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
+			<attribute>
+				<attack type="EARTH" value="1830" />
+				<defence fire="1680" water="1680" wind="1680" earth="1680" holy="1680" dark="1680" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
-			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="34029" level="2" /> <!-- Powerful Spirit Energy -->
+			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -994,11 +1552,15 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="130" />
@@ -1013,46 +1575,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33186" level="1" /> <!-- Night in the Outpost -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1065,7 +1602,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1083,11 +1620,15 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="130" />
@@ -1102,46 +1643,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33186" level="1" /> <!-- Night in the Outpost -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1154,7 +1670,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1172,11 +1688,15 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
@@ -1191,46 +1711,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33186" level="1" /> <!-- Night in the Outpost -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1243,7 +1737,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1261,11 +1755,15 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="24" />
 				<run ground="175" />
@@ -1280,46 +1778,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33186" level="1" /> <!-- Night in the Outpost -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1332,7 +1804,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1350,11 +1822,15 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="27" />
 				<run ground="175" />
@@ -1369,46 +1845,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33186" level="1" /> <!-- Night in the Outpost -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1421,7 +1872,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1439,11 +1890,16 @@
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<acquire exp="1453199724" sp="1307788" />
+
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="175" />
@@ -1458,46 +1914,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33185" level="1" /> <!-- Night in the Barracks -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1510,7 +1941,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1528,11 +1959,15 @@
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
 		<equipment rhand="6716" />
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="WIND" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -1547,46 +1982,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33185" level="1" /> <!-- Night in the Barracks -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1599,7 +2009,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1617,11 +2027,15 @@
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
 		<equipment rhand="2504" lhand="6918" />
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="WIND" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -1636,46 +2050,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33185" level="1" /> <!-- Night in the Barracks -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1688,7 +2076,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1706,11 +2094,15 @@
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
 		<equipment rhand="2504" />
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="WIND" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -1725,46 +2117,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33185" level="1" /> <!-- Night in the Barracks -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1777,7 +2143,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1795,11 +2161,15 @@
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
 		<equipment rhand="2500" />
-		<acquire exp="1453199724" sp="1307788" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2905156.069364162" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
-			<attack physical="185997" magical="78431" random="30" critical="4.75" accuracy="5.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="16405" magical="10883" />
+			<vitals hp="858100" hpRegen="9.5" mp="2972.27722772277" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
+			<attribute>
+				<attack type="WIND" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -1814,46 +2184,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33185" level="1" /> <!-- Night in the Barracks -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.173" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="1" chance="1.14" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.102" /> <!-- Dragon Scales -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="11155" max="26004" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.8629" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.9783" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.9783" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.9783" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.1" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.15" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1866,7 +2211,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.843" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="7.7363" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="300" isAggressive="false">
@@ -1877,26 +2222,60 @@
 	</npc>
 	<npc id="24641" level="108" type="Monster" name="Tel Mahum Wizard">
 		<race>HUMANOID</race>
-		<acquire exp="1138774785" sp="1024800" />
 		<equipment rhand="38437" /> <!-- Monster Only: Tiger Staff -->
+		<acquire exp="1936772208" sp="1743068" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="176235.260115607" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<vitals hp="403736.9942196532" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1459.44232423909" />
+			<attribute>
+				<attack type="FIRE" value="1230" />
+				<defence fire="1380" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="289373.080588796" magical="802.669648119492" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="2972.95918367347" magical="1140.29770323971" />
 		</stats>
 		<status attackable="true" randomWalk="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="3" /> <!-- Party Growth Bonus -->
+			<skill id="34027" level="1" /> <!-- Night in Neutral Zone -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="28.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7972" max="18596" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.3328" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.1309" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.1309" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.1309" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.07" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.1" /> <!-- Orb of Bloody Soul -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="5.5349" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24642" level="108" type="Monster" name="Tel Mahum Legionary">
 		<parameters>
@@ -1912,11 +2291,15 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<equipment rhand="38429" />
-		<acquire exp="8399456352" sp="7559439" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1049220.18927445" hpRegen="9.5" mp="32077.0478507705" mpRegen="3.3" />
+		<acquire exp="1936772208" sp="1743068" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="403736.9942196532" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
 			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3093.40101522843" magical="1459.44232423909" />
+			<attribute>
+				<attack type="FIRE" value="1230" />
+				<defence fire="1380" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -1929,54 +2312,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
-			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
-			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
-			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="33104" level="3" /> <!-- Party Growth Bonus -->
+			<skill id="34027" level="1" /> <!-- Night in Neutral Zone -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="4073" level="6" /> <!-- Stun -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="7972" max="18596" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.3328" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.1309" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.1309" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.1309" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.07" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.1" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1989,21 +2342,25 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.109" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="5.5349" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24643" level="109" type="Monster" name="Tel Mahum Footman">
+	<npc id="24643" level="108" type="Monster" name="Tel Mahum Footman">
 		<parameters>
 			<skill name="Skill01_ID" id="32861" level="1" />
 		</parameters>
 		<race>HUMANOID</race>
-		<acquire exp="1199922336" sp="1079854" />
 		<equipment rhand="38434" /> <!-- Monster Only: Tiger Polearm -->
+		<acquire exp="1936772208" sp="1743068" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
+			<vitals hp="403736.9942196532" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1459.44232423909" />
+			<attribute>
+				<attack type="FIRE" value="1230" />
+				<defence fire="1380" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -2017,49 +2374,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="3" /> <!-- Party Growth Bonus -->
+			<skill id="34027" level="1" /> <!-- Night in Neutral Zone -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="32861" level="1" /> <!-- Rapid Throw -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="7972" max="18596" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.3328" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.1309" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.1309" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.1309" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.07" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.1" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2072,17 +2403,21 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.137" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="5.5349" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24644" level="109" type="Monster" name="Tel Mahum Lieutenant">
+	<npc id="24644" level="108" type="Monster" name="Tel Mahum Lieutenant">
 		<race>HUMANOID</race>
-		<acquire exp="1199922336" sp="1079854" />
+		<acquire exp="1936772208" sp="1743068" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
+			<vitals hp="403736.9942196532" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1459.44232423909" />
+			<attribute>
+				<attack type="FIRE" value="1230" />
+				<defence fire="1380" water="1080" wind="1080" earth="1080" holy="1080" dark="1080" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="168" />
@@ -2096,49 +2431,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="3" /> <!-- Party Growth Bonus -->
+			<skill id="34027" level="1" /> <!-- Night in Neutral Zone -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
 			<skill id="32861" level="1" /> <!-- Rapid Throw -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
-				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
-				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
-				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
-				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
-				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
-				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
-				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
-				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
-				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
-				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
-				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
-				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapons -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
-				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
-				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
-				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
-				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<item id="57" min="7972" max="18596" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="1.3328" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="2.1309" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="2.1309" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="2.1309" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.07" /> <!-- Aden's Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.1" /> <!-- Orb of Bloody Soul -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2151,21 +2461,21 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.137" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="5.5349" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="24645" level="112" type="Monster" name="Lirein of the Breeze">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8399456352" sp="457217" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
-			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<vitals hp="858100" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<attribute>
-				<attack type="wind" value="330" />
-				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2178,8 +2488,8 @@
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
 			<skill id="34029" level="1" /> <!-- Spirit Energy -->
-			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
-			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="1" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="11" />
@@ -2187,21 +2497,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+				<item id="57" min="24000" max="32000" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="24646" level="112" type="Monster" name="Undine of the Waves">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8399456352" sp="457217" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
-			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<vitals hp="858100" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<attribute>
-				<attack type="wind" value="330" />
-				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WATER" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2210,12 +2520,12 @@
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
 			<skill id="34029" level="1" /> <!-- Spirit Energy -->
-			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
-			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="1" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -2223,21 +2533,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+				<item id="57" min="24000" max="32000" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="24647" level="112" type="Monster" name="Dryad of the Woods">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8399456352" sp="457217" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
-			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<vitals hp="858100" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<attribute>
-				<attack type="wind" value="330" />
-				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="EARTH" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -2246,12 +2556,12 @@
 		</stats>
 		<skillList>
 			<skill id="4416" level="13" /> <!-- Fairy -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
 			<skill id="34029" level="1" /> <!-- Spirit Energy -->
-			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
-			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="1" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="9" />
@@ -2259,21 +2569,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+				<item id="57" min="24000" max="32000" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="24648" level="112" type="Monster" name="Flame Salamander">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8399456352" sp="457217" />
+		<acquire exp="2730264320" sp="2457119" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="612929" hpRegen="8.5" mp="2862" mpRegen="3" />
-			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<vitals hp="858100" hpRegen="8.5" mp="2862" mpRegen="3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<attribute>
-				<attack type="wind" value="330" />
-				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="FIRE" value="1530" />
+				<defence fire="1380" water="1380" wind="1380" earth="1380" holy="1380" dark="1380" />
 			</attribute>
 			<speed>
 				<walk ground="39" />
@@ -2282,12 +2592,12 @@
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="33104" level="1" /> <!-- Party Bonus -->
 			<skill id="34029" level="1" /> <!-- Spirit Energy -->
-			<skill id="14818" level="1" /> <!-- Instant kill resistance -->
-			<skill id="16547" level="1" /> <!-- Danger zone resistans -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="1" /> <!-- Danger Zone Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -2295,28 +2605,75 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50000" max="65000" chance="70" /> <!-- Adena -->
+				<item id="57" min="24000" max="32000" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24649" level="85" type="Folk" name="Carnivorous Fungus" title="Sea of Spores Defender">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24649" level="116" type="Monster" name="Carnivorous Fungus" title="Sea of Spores Defender">
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1278871" hpRegen="10.5" mp="2862" mpRegen="3.6" />
+			<vitals hp="1278869.942196532" hpRegen="100.5" mp="319000" mpRegen="30.6" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<attribute>
+				<attack type="EARTH" value="2500" />
+				<defence fire="2500" water="2500" wind="2500" earth="2500" holy="2500" dark="2500" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="33112" level="1" /> <!-- Night of Spores -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="48" />
 		</collision>
+		<ai type="FIGHTER" aggroRange="300" isAggressive="true" />
+	</npc>
+	<npc id="24650" level="116" type="Monster" name="Walking Fungus">
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1278869.942196532" hpRegen="100.5" mp="319000" mpRegen="30.6" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="60000" magical="200000" />
+			<attribute>
+				<attack type="EARTH" value="2500" />
+				<defence fire="2500" water="2500" wind="2500" earth="2500" holy="2500" dark="2500" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="110" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="33112" level="1" /> <!-- Night of Spores -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<status attackable="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="17.4" />
+		</collision>
+		<ai type="FIGHTER" aggroRange="300" isAggressive="true" />
 	</npc>
 	<npc id="24651" level="120" type="Monster" name="Red Kookaburra">
 		<race>ANIMAL</race>
@@ -2760,60 +3117,106 @@
 			<radius normal="32.4" />
 			<height normal="37.8" />
 		</collision>
+		<ai type="FIGHTER" aggroRange="300" isAggressive="true" />
 	</npc>
-	<npc id="24660" level="85" type="Folk" name="Fierce Water Dragon" title="Bare Fang">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24660" level="124" type="Monster" name="Fierce Water Dragon" title="Bare Fang">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="7537299824" sp="6783430" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8012026" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="8012030.057803468" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="WATER" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="2" /> <!-- Fafurion's Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="24661" level="85" type="Folk" name="Temple Zealot" title="Hidden Blade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24661" level="124" type="Monster" name="Temple Zealot" title="Hidden Blade">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="7537299824" sp="6783430" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8012026" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="8012030.057803468" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="WATER" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="75" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="2" /> <!-- Fafurion's Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="24662" level="85" type="Folk" name="Temple Elite Archer" title="Water Dragon Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24662" level="124" type="Monster" name="Temple Elite Archer" title="Water Dragon Guardian">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
+		<acquire exp="7537299824" sp="6783430" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4006013" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="4006009.826589595" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="733514.268097518" magical="1543.76790583647" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5757.47663551402" magical="2208.44514357978" />
+			<attribute>
+				<attack type="WATER" value="2430" />
+				<defence fire="2280" water="2280" wind="2280" earth="2280" holy="2280" dark="2280" />
+			</attribute>
 			<speed>
 				<walk ground="75" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="2" /> <!-- Fafurion's Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="73" />
