@@ -91,6 +91,10 @@ public class ExRequestRandomCraftExtract implements IClientIncomingPacket
 				points += RandomCraftData.getInstance().getPoints(item.getId()) * count;
 				fee += RandomCraftData.getInstance().getFee(item.getId()) * count;
 			}
+			else
+			{
+				player.sendPacket(new ExCraftExtract());
+			}
 		}
 		
 		if (player.reduceAdena("RandomCraft Extract", fee, player, true))
