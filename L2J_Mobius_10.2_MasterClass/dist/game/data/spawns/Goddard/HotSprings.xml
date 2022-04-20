@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="HotSpringsNPCs">
+		<group name="NPCs">
+			<npc id="31543" x="157648" y="-115360" z="-1904" heading="33000" respawnTime="60sec" /> <!-- Pulin -->
+			<npc id="31544" x="155616" y="-105696" z="-2752" heading="49000" respawnTime="60sec" /> <!-- Naff -->
+			<npc id="31545" x="140656" y="-105488" z="-3632" heading="49000" respawnTime="60sec" /> <!-- Crocus -->
+			<npc id="31546" x="141632" y="-109424" z="-3584" respawnTime="60sec" /> <!-- Kuber -->
+			<npc id="31547" x="147504" y="-113296" z="-2112" heading="6000" respawnTime="60sec" /> <!-- Beolin -->
+			<npc id="31602" x="157248" y="-109168" z="-2648" heading="49000" respawnTime="60sec" /> <!-- Sharona Artemia -->
+			<npc id="31623" x="157216" y="-109328" z="-2664" respawnTime="60sec" /> <!-- Bavarin -->		
+			<npc id="31626" x="149520" y="-112704" z="-2064" heading="10000" respawnTime="60sec" /> <!-- Kinbad -->
+			<npc id="31627" x="145232" y="-104736" z="-3680" respawnTime="60sec" /> <!-- Mist -->
+			<npc id="31628" x="145043" y="-104577" z="-3664" heading="58000" respawnTime="60sec" /> <!-- Lilly -->
+			</group>
+		<group name="RainbowSpringsNPCs">	
+			<npc id="32007" x="140968" y="-123600" z="-1904" heading="18000" respawnTime="60sec" /> <!-- Galba -->
+			<npc id="35601" x="141152" y="-124272" z="-1864" heading="10000" respawnTime="60sec" /> <!-- Gatekeeper -->
+			<npc id="35602" x="140704" y="-124020" z="-1904" heading="34000" respawnTime="60sec" /> <!-- Gatekeeper -->
+			<npc id="35602" x="140732" y="-123796" z="-1904" heading="2000" respawnTime="60sec" /> <!-- Gatekeeper -->
+			<npc id="35603" x="152924" y="-126604" z="-2304" heading="33000" respawnTime="60sec" /> <!-- Entrance Manager -->
+			<npc id="35604" x="143944" y="-119196" z="-2136" heading="1000" respawnTime="60sec" /> <!-- Herald -->
+			<npc id="35605" x="140824" y="-124844" z="-1764" heading="10000" respawnTime="60sec" /> <!-- Angout -->
+		</group>
+	</spawn>
+	<spawn name="HotSprings">
+		<group name="Monster_Groups_1">
+			<territories>
+				<territory shape="Cylinder" minZ="-3000" maxZ="-1500" rad="300">
+					<node x="150223" y="-110754" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_2">
+			<territories>
+				<territory shape="Cylinder" minZ="-3000" maxZ="-1500" rad="300">
+					<node x="148113" y="-111719" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_3">
+			<territories>
+				<territory shape="Cylinder" minZ="-3000" maxZ="-1500" rad="300">
+					<node x="148611" y="-114103" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_4">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="150475" y="-115917" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_5">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="152519" y="-114349" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_6">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="149737" y="-117871" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_7">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="152298" y="-117918" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_8">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="154753" y="-112590" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_9">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="156400" y="-113946" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_10">
+			<territories>
+				<territory shape="Cylinder" minZ="-3000" maxZ="-1500" rad="300">
+					<node x="158971" y="-114823" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_11">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="154417" y="-115578" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_12">
+			<territories>
+				<territory shape="Cylinder" minZ="-3000" maxZ="-1500" rad="300">
+					<node x="158014" y="-116802" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_13">
+			<territories>
+				<territory shape="Cylinder" minZ="-2500" maxZ="-1000" rad="300">
+					<node x="155571" y="-117717" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_14">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="155074" y="-109864" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_15">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="154082" y="-107752" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_16">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="151692" y="-106777" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_17">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="151993" y="-104274" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_18">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="154215" y="-105210" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_19">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="157557" y="-105283" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_20">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="156422" y="-107460" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_21">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="158573" y="-108359" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_22">
+			<territories>
+				<territory shape="Cylinder" minZ="-3500" maxZ="-1500" rad="300">
+					<node x="153910" y="-107593" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_23">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="145437" y="-108918" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_24">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="143737" y="-111072" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_25">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="142814" y="-108376" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_26">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="140592" y="-107580" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_27">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="145008" y="-106517" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_28">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="142652" y="-105966" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_29">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="140470" y="-107579" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_30">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="141801" y="-103745" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_31">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="144155" y="-103075" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+		<group name="Monster_Groups_32">
+			<territories>
+				<territory shape="Cylinder" minZ="-4500" maxZ="-2500" rad="300">
+					<node x="146595" y="-103648" />
+				</territory>
+			</territories>
+			<npc id="24881" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs' Dwarf Hero -->
+			<npc id="24882" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Scavenger -->
+			<npc id="24883" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Defender -->
+			<npc id="24884" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Berserker -->
+			<npc id="24885" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Dwarf Priest -->
+			<npc id="24886" count="2" respawnTime="30sec" respawnRandom="0sec" /><!-- Springs Yeti -->
+		</group>
+	</spawn>
+</list>
