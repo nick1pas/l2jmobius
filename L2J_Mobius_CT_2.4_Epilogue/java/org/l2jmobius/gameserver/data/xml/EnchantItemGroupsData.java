@@ -92,7 +92,7 @@ public class EnchantItemGroupsData implements IXmlReader
 									min = Integer.parseInt(range);
 									max = min;
 								}
-								if ((min > -1) && (max > 0))
+								if ((min > -1) && (max > -1))
 								{
 									group.addChance(new RangeChanceHolder(min, max, chance));
 								}
