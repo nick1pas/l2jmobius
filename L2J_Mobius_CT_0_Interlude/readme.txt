@@ -98,9 +98,12 @@ What is done
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.
 -Check if quests need adjustments, mainly rewards.
+-Test Olympiad and make adjustments if needed.
 
-TODO: Not important.
+TODO: Not that important.
 -Adjust custom community board htmls.
 -Adjust community board sell buff htmls.
 -Adjust community board announcements admin htmls.
 -Spawn monsters by zones on separate XML files.
+-Update htmls with retail dialogs.
+-Update buylists and multisells with retail data.
