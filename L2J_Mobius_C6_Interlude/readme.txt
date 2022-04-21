@@ -1,6 +1,8 @@
 L2J-Mobius Interlude
+Project concept is to use L2jFrozen as base
+and make improvements, or modernize code, without breaking server functionality.
 
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12GNl8NXeFySVhVcYD1FH2Ab8giFXLh4b&export=download
+Client: https://gameborder.net/file/lineage-ii-interlude-client
 System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
