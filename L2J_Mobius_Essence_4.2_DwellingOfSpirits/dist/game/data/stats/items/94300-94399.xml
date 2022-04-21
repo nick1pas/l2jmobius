@@ -122,19 +122,39 @@
 		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40223" level="1" /> <!-- Scroll: Enchant Stats -->
+		</skills>
 	</item>
 	<item id="94306" name="Scroll: Enchant Stats" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40224" level="1" /> <!-- Scroll: Enchant Stats -->
+		</skills>
 	</item>
 	<item id="94307" name="Gemstone Essence Lv. 4 - Amber" type="EtcItem">
 		<!-- Compound it with Amber Lv. 3 to get Amber Lv. 4. There is a 100% chance of success. -->
@@ -743,6 +763,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4" /> <!-- Talisman of Authority +4 -->
+		</capsuled_items>
 	</item>
 	<item id="94354" name="+5 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -754,6 +778,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="5" maxEnchant="5" /> <!-- Talisman of Authority +5 -->
+		</capsuled_items>
 	</item>
 	<item id="94355" name="+6 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -776,6 +804,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /> <!-- Talisman of Authority +7 -->
+		</capsuled_items>
 	</item>
 	<item id="94357" name="Package: Stun Gauntlets" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1079,14 +1111,18 @@
 	</item>
 	<item id="94383" name="Scroll: Enchant Rare Accessories" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
+		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> <!-- ENCHT_AM -->
+		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40233" level="1" /> <!-- Scroll: Enchant Rare Accessories (Exchangeable) -->
 		</skills>
@@ -1095,13 +1131,16 @@
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
 		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> <!-- ENCHT_AM -->
+		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40234" level="1" /> <!-- Scroll: Enchant Rare Accessories -->
 		</skills>
@@ -1110,13 +1149,16 @@
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" /> <!-- ENCHT_AM -->
+		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40235" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories (Exchangeable) -->
 		</skills>
@@ -1125,22 +1167,7 @@
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" /> <!-- ENCHT_AM -->
-		<set name="handler" val="EnchantScrolls" />
-		<skills>
-			<skill id="40236" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories -->
-		</skills>
-	</item>
-	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
-		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
