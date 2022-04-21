@@ -58,7 +58,7 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CASTLE_SIEGE_DEFENDER_LIST.writeId(packet);
+		OutgoingPackets.SIEGE_DEFENDER_LIST.writeId(packet);
 		packet.writeD(_castle.getResidenceId());
 		packet.writeD(0); // 0
 		packet.writeD(1); // 1

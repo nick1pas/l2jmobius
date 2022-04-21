@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.ai.FortSiegeGuardAI;
 import org.l2jmobius.gameserver.ai.SiegeGuardAI;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -794,7 +793,7 @@ public class Attackable extends Npc
 	
 	public void reduceHate(Creature target, int amount)
 	{
-		if ((getAI() instanceof SiegeGuardAI) || (getAI() instanceof FortSiegeGuardAI))
+		if (getAI() instanceof SiegeGuardAI)
 		{
 			// TODO: this just prevents error until siege guards are handled properly
 			stopHating(target);

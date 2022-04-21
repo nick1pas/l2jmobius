@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 40; // length of the one item
+	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private Item[] _items = null;
 	
@@ -54,11 +54,11 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			packet.readD(); // TODO analyse this
+			packet.readH(); // TODO analyse this
 			
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
-			if ((itemId < 1) || (cnt < 1) || (price < 0))
+			final int cnt = packet.readD();
+			final int price = packet.readD();
+			if ((cnt > Integer.MAX_VALUE) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;

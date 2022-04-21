@@ -36,14 +36,14 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
+import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestBuyItem implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12;
+	private static final int BATCH_LENGTH = 8;
 	private static final int CUSTOM_CB_SELL_LIST = 423;
 	
 	private int _listId;
@@ -63,12 +63,20 @@ public class RequestBuyItem implements IClientIncomingPacket
 		for (int i = 0; i < size; i++)
 		{
 			final int itemId = packet.readD();
-			final long count = packet.readQ();
-			if ((itemId < 1) || (count < 1))
+			final int count = packet.readD();
+			if ((count > Integer.MAX_VALUE) || (itemId < 1) || (count < 1))
 			{
 				_items = null;
 				return false;
 			}
+			
+			if (count > 10000) // Count check.
+			{
+				client.getPlayer().sendMessage("You cannot buy more than 10.000 items.");
+				_items = null;
+				return false;
+			}
+			
 			_items.add(new ItemHolder(itemId, count));
 		}
 		return true;
@@ -273,6 +281,6 @@ public class RequestBuyItem implements IClientIncomingPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-		player.sendPacket(new ExBuySellList(player, buyList, castleTaxRate + baseTaxRate, true));
+		player.sendPacket(new ItemList(player, true));
 	}
 }

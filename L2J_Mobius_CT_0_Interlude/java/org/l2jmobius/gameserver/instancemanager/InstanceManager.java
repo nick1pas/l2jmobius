@@ -68,12 +68,21 @@ public class InstanceManager implements IXmlReader
 	public void load()
 	{
 		_instanceIdNames.clear();
-		parseDatapackFile("data/InstanceNames.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
+		final File nameFile = new File("data/InstanceNames.xml");
+		if (nameFile.exists())
+		{
+			parseDatapackFile("data/InstanceNames.xml");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
+		}
+		
 		// Load instance templates
 		_instanceTemplates.clear();
-		parseDatapackDirectory("data/instances", true);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
+		final File instanceFolder = new File("data/instances");
+		if (instanceFolder.exists())
+		{
+			parseDatapackDirectory("data/instances", true);
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
+		}
 	}
 	
 	/**

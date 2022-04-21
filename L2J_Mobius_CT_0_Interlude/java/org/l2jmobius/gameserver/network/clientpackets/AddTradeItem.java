@@ -41,7 +41,7 @@ public class AddTradeItem implements IClientIncomingPacket
 	{
 		_tradeId = packet.readD();
 		_objectId = packet.readD();
-		_count = packet.readQ();
+		_count = packet.readD();
 		return true;
 	}
 	

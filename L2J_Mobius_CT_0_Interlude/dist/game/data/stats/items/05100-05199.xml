@@ -786,7 +786,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5167" type="EtcItem" name="Recipe: Blessed Spiritshot (S) Compressed Package (100%)">
-		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade S. Requires Create Item Skill Level 8. The success rate is 100%. -->
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade S. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -799,7 +799,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5168" type="EtcItem" name="Food for Strider">
-		<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. -->
+		<!-- When the hunger gauge of a strider reaches 55% or below, its food will be consumed automatically. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -816,7 +816,7 @@
 		</cond>
 	</item>
 	<item id="5169" type="EtcItem" name="Deluxe Food for Strider">
-		<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. Food consumption efficiency improves while riding a Strider. -->
+		<!-- When the hunger gauge of a strider reaches 55% or below, its food will be consumed automatically. Food consumption efficiency improves while riding a strider. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 		</cond>
 	</item>
 	<item id="5170" type="Armor" name="Mithril Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i08" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -852,7 +852,7 @@
 		</for>
 	</item>
 	<item id="5171" type="Armor" name="Brigadine Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -871,7 +871,7 @@
 		</for>
 	</item>
 	<item id="5172" type="Armor" name="Draconic Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -890,7 +890,7 @@
 		</for>
 	</item>
 	<item id="5173" type="Armor" name="Blood Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -909,7 +909,7 @@
 		</for>
 	</item>
 	<item id="5174" type="Armor" name="Ophidian Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -928,7 +928,7 @@
 		</for>
 	</item>
 	<item id="5175" type="Armor" name="Inferno Panzer Coat">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -947,7 +947,7 @@
 		</for>
 	</item>
 	<item id="5176" type="Weapon" name="Serpentine Spike">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i08" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -971,7 +971,7 @@
 		</for>
 	</item>
 	<item id="5177" type="Weapon" name="Drake Horn">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -995,7 +995,7 @@
 		</for>
 	</item>
 	<item id="5178" type="Weapon" name="Assault Alicorn">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1019,7 +1019,7 @@
 		</for>
 	</item>
 	<item id="5179" type="Weapon" name="Draconic Slicer">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1043,7 +1043,7 @@
 		</for>
 	</item>
 	<item id="5180" type="Weapon" name="Ohpdian Lance">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1067,7 +1067,7 @@
 		</for>
 	</item>
 	<item id="5181" type="Weapon" name="Diamond Drill">
-		<!-- Double-click to wear. Exclusively used by a Strider. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1091,7 +1091,7 @@
 		</for>
 	</item>
 	<item id="5182" type="Armor" name="Hatchling's Gorgon Coat">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1110,7 +1110,7 @@
 		</for>
 	</item>
 	<item id="5183" type="Armor" name="Hatchling's Ophidian Plate">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1129,7 +1129,7 @@
 		</for>
 	</item>
 	<item id="5184" type="Armor" name="Hatchling's Crimson Plate">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1148,7 +1148,7 @@
 		</for>
 	</item>
 	<item id="5185" type="Armor" name="Hatchling's Draconic Plate">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1167,7 +1167,7 @@
 		</for>
 	</item>
 	<item id="5186" type="Armor" name="Hatchling's Inferno Plate">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1186,7 +1186,7 @@
 		</for>
 	</item>
 	<item id="5187" type="Weapon" name="Serpentine Grinder">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1210,7 +1210,7 @@
 		</for>
 	</item>
 	<item id="5188" type="Weapon" name="Fang of Dahak">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1234,7 +1234,7 @@
 		</for>
 	</item>
 	<item id="5189" type="Weapon" name="Crimson Blood Fang">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1258,7 +1258,7 @@
 		</for>
 	</item>
 	<item id="5190" type="Weapon" name="Draconic Chopper">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1282,7 +1282,7 @@
 		</for>
 	</item>
 	<item id="5191" type="Weapon" name="Diabolic Grinder">
-		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
+		<!-- Can be worn by double-clicking. Exclusively used by a hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

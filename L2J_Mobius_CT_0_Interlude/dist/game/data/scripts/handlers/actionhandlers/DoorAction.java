@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
@@ -60,25 +59,6 @@ public class DoorAction implements IActionHandler
 				{
 					player.addScript(new DoorRequestHolder(door));
 					if (!door.isOpen())
-					{
-						player.sendPacket(new ConfirmDlg(1140));
-					}
-					else
-					{
-						player.sendPacket(new ConfirmDlg(1141));
-					}
-				}
-			}
-			else if ((player.getClan() != null) && (((Door) target).getFort() != null) && (player.getClan() == ((Door) target).getFort().getOwnerClan()) && ((Door) target).isOpenableBySkill() && !((Door) target).getFort().getSiege().isInProgress())
-			{
-				if (!((Creature) target).isInsideRadius2D(player, Npc.INTERACTION_DISTANCE))
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-				}
-				else
-				{
-					player.addScript(new DoorRequestHolder((Door) target));
-					if (!((Door) target).isOpen())
 					{
 						player.sendPacket(new ConfirmDlg(1140));
 					}

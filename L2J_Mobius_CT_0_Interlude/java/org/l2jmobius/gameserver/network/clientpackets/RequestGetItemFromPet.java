@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestGetItemFromPet implements IClientIncomingPacket
 {
 	private int _objectId;
-	private long _amount;
+	private int _amount;
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
@@ -39,7 +39,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_amount = packet.readQ();
+		_amount = packet.readD();
 		_unknown = packet.readD(); // = 0 for most trades
 		return true;
 	}

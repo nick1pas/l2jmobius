@@ -36,7 +36,7 @@ public class RequestRefine extends AbstractRefinePacket
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemStoneItemObjId;
-	private long _gemStoneCount;
+	private int _gemStoneCount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -44,7 +44,7 @@ public class RequestRefine extends AbstractRefinePacket
 		_targetItemObjId = packet.readD();
 		_refinerItemObjId = packet.readD();
 		_gemStoneItemObjId = packet.readD();
-		_gemStoneCount = packet.readQ();
+		_gemStoneCount = packet.readD();
 		return true;
 	}
 	

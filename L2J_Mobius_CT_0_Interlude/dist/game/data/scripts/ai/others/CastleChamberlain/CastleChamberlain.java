@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.SeedProduction;
 import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -48,11 +47,9 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowCropSetting;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowDominionRegistry;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowSeedInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -441,21 +438,6 @@ public class CastleChamberlain extends AbstractNpcAI
 		return price;
 	}
 	
-	private final boolean isDomainFortressInContractStatus(int castleId)
-	{
-		final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
-		final List<Integer> fortList = FORTRESS.get(castleId);
-		for (int i = 0; i < numFort; i++)
-		{
-			final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
-			if (fortress.getFortState() == 2)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	private final boolean isOwner(Player player, Npc npc)
 	{
 		return player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
@@ -478,50 +460,6 @@ public class CastleChamberlain extends AbstractNpcAI
 				htmltext = event;
 				break;
 			}
-			case "fort_status":
-			{
-				if (npc.isMyLord(player))
-				{
-					final StringBuilder sb = new StringBuilder();
-					final List<Integer> fort = FORTRESS.get(castle.getResidenceId());
-					for (int id : fort)
-					{
-						final Fort fortress = FortManager.getInstance().getFortById(id);
-						final int fortId = fortress.getResidenceId();
-						final String fortType = (fortId < 112) ? "1300133" : "1300134";
-						final String fortStatus;
-						switch (fortress.getFortState())
-						{
-							case 1:
-							{
-								fortStatus = "1300122";
-								break;
-							}
-							case 2:
-							{
-								fortStatus = "1300124";
-								break;
-							}
-							default:
-							{
-								fortStatus = "1300123";
-								break;
-							}
-						}
-						sb.append("<fstring>1300" + fortId + "</fstring>");
-						sb.append(" (<fstring>" + fortType + "</fstring>)");
-						sb.append(" : <font color=\"00FFFF\"><fstring>" + fortStatus + "</fstring></font><br>");
-					}
-					final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-28.html");
-					html.replace("%list%", sb.toString());
-					player.sendPacket(html);
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
 			case "siege_functions":
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
@@ -529,10 +467,6 @@ public class CastleChamberlain extends AbstractNpcAI
 					if (castle.getSiege().isInProgress())
 					{
 						htmltext = "chamberlain-08.html";
-					}
-					else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
-					{
-						htmltext = "chamberlain-27.html";
 					}
 					else if (!SevenSigns.getInstance().isCompResultsPeriod())
 					{
@@ -1212,18 +1146,18 @@ public class CastleChamberlain extends AbstractNpcAI
 				}
 				break;
 			}
-			case "list_territory_clans":
-			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
-				{
-					player.sendPacket(new ExShowDominionRegistry(castle.getResidenceId(), player));
-				}
-				else
-				{
-					htmltext = "chamberlain-21.html";
-				}
-				break;
-			}
+			// case "list_territory_clans":
+			// {
+			// if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
+			// {
+			// player.sendPacket(new ExShowDominionRegistry(castle.getResidenceId(), player));
+			// }
+			// else
+			// {
+			// htmltext = "chamberlain-21.html";
+			// }
+			// break;
+			// }
 			case "manor":
 			{
 				if (Config.ALLOW_MANOR)

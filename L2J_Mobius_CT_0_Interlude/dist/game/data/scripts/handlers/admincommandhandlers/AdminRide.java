@@ -16,10 +16,8 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -29,20 +27,12 @@ public class AdminRide implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_ride_horse",
-		"admin_ride_bike",
 		"admin_ride_wyvern",
 		"admin_ride_strider",
 		"admin_unride_wyvern",
 		"admin_unride_strider",
 		"admin_unride",
-		"admin_ride_wolf",
-		"admin_unride_wolf",
 	};
-	
-	private static final int PURPLE_MANED_HORSE_TRANSFORMATION_ID = 106;
-	
-	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
 	
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)
@@ -70,36 +60,6 @@ public class AdminRide implements IAdminCommandHandler
 			{
 				petRideId = 12526;
 			}
-			else if (command.startsWith("admin_ride_wolf"))
-			{
-				petRideId = 16041;
-			}
-			else if (command.startsWith("admin_ride_horse")) // handled using transformation
-			{
-				if (player.isTransformed() || player.isInStance())
-				{
-					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-				}
-				else
-				{
-					TransformData.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
-				}
-				
-				return true;
-			}
-			else if (command.startsWith("admin_ride_bike")) // handled using transformation
-			{
-				if (player.isTransformed() || player.isInStance())
-				{
-					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-				}
-				else
-				{
-					TransformData.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
-				}
-				
-				return true;
-			}
 			else
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Command '" + command + "' not recognized");
@@ -111,19 +71,7 @@ public class AdminRide implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_unride"))
 		{
-			if (player.getTransformationId() == PURPLE_MANED_HORSE_TRANSFORMATION_ID)
-			{
-				player.untransform();
-			}
-			
-			if (player.getTransformationId() == JET_BIKE_TRANSFORMATION_ID)
-			{
-				player.untransform();
-			}
-			else
-			{
-				player.dismount();
-			}
+			player.dismount();
 		}
 		return true;
 	}

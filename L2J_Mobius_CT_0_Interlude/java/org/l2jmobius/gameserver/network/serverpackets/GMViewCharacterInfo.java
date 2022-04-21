@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewCharacterInfo implements IClientOutgoingPacket
@@ -72,20 +73,76 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getCurrentLoad());
 		packet.writeD(_player.getMaxLoad());
 		packet.writeD(_player.getPkKills());
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollObjectId(slot));
-		}
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot));
-		}
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollAugmentationId(slot));
-		}
-		packet.writeD(_player.getInventory().getTalismanSlots()); // CT2.3
-		packet.writeD(_player.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RFINGER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LFINGER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HEAD));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_GLOVES));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_CHEST));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEGS));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FEET));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_CLOAK));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_NECK));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RFINGER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LFINGER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CLOAK));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
+		// c6 new h's
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		// end of c6 new h's
 		packet.writeD((int) _player.getPAtk(null));
 		packet.writeD((int) _player.getPAtkSpd());
 		packet.writeD((int) _player.getPDef(null));
@@ -136,15 +193,6 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeC(_player.isHero() ? 1 : 0);
 		packet.writeD(_player.getAppearance().getNameColor());
 		packet.writeD(_player.getAppearance().getTitleColor());
-		final byte attackAttribute = _player.getAttackElement();
-		packet.writeH(attackAttribute);
-		packet.writeH(_player.getAttackElementValue(attackAttribute));
-		for (byte i = 0; i < 6; i++)
-		{
-			packet.writeH(_player.getDefenseElementValue(i));
-		}
-		packet.writeD(_player.getFame());
-		packet.writeD(_player.getVitalityPoints());
 		return true;
 	}
 }

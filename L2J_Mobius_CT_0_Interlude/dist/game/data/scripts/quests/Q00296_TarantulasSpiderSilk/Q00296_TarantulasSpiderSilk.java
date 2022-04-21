@@ -23,8 +23,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.util.Util;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Tarantula's Spider Silk (296)
  * @author xban1x
@@ -152,7 +150,6 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 				{
 					giveAdena(talker, (silk * 30) + (silk >= 10 ? 2000 : 0), true);
 					takeItems(talker, TARANTULA_SPIDER_SILK, -1);
-					Q00281_HeadForTheHills.giveNewbieReward(talker); // TODO: It's using wrong bitmask, need to create a general bitmask for this using EnumIntBitmask class inside Quest class for handling Quest rewards.
 					html = "30519-05.html";
 				}
 				else

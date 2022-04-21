@@ -131,11 +131,6 @@ public class Enchant implements ITelnetCommand
 					itemType = Inventory.PAPERDOLL_CLOAK;
 					break;
 				}
-				case 15:
-				{
-					itemType = Inventory.PAPERDOLL_BELT;
-					break;
-				}
 				default:
 				{
 					itemType = 0;

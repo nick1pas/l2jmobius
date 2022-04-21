@@ -114,10 +114,10 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						replyMSG.append(" min.</td></tr>");
 						replyMSG.append("<tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ");
 						replyMSG.append(itemId);
-						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+						replyMSG.append("\" width=73 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 						replyMSG.append("<td><button value=\"Go\" action=\"bypass -h admin_cw_goto ");
 						replyMSG.append(itemId);
-						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						replyMSG.append("\" width=73 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
 					}
 					else if (cw.isDropped())
 					{
@@ -127,16 +127,16 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						replyMSG.append(cw.getNbKills());
 						replyMSG.append("</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ");
 						replyMSG.append(itemId);
-						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+						replyMSG.append("\" width=95 height=21 back=\"bigbutton_over\" fore=\"bigbutton\"></td>");
 						replyMSG.append("<td><button value=\"Go\" action=\"bypass -h admin_cw_goto ");
 						replyMSG.append(itemId);
-						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						replyMSG.append("\" width=95 height=21 back=\"bigbutton_over\" fore=\"bigbutton\"></td></tr>");
 					}
 					else
 					{
 						replyMSG.append("<tr><td>Position:</td><td>Doesn't exist.</td></tr><tr><td><button value=\"Give to Target\" action=\"bypass -h admin_cw_add ");
 						replyMSG.append(itemId);
-						replyMSG.append("\" width=130 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td></td></tr>");
+						replyMSG.append("\" width=95 height=21 back=\"bigbutton_over\" fore=\"bigbutton\"></td><td></td></tr>");
 					}
 					
 					replyMSG.append("</table><br>");

@@ -40,14 +40,12 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.SkillLearn.SubClassData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -77,14 +75,9 @@ public class SkillTreeData implements IXmlReader
 {
 	// ClassId, Map of Skill Hash Code, SkillLearn
 	private final Map<ClassId, Map<Integer, SkillLearn>> _classSkillTrees = new ConcurrentHashMap<>();
-	private final Map<ClassId, Map<Integer, SkillLearn>> _transferSkillTrees = new ConcurrentHashMap<>();
 	// Skill Hash Code, SkillLearn
-	private final Map<Integer, SkillLearn> _collectSkillTree = new ConcurrentHashMap<>();
 	private final Map<Integer, SkillLearn> _fishingSkillTree = new ConcurrentHashMap<>();
 	private final Map<Integer, SkillLearn> _pledgeSkillTree = new ConcurrentHashMap<>();
-	private final Map<Integer, SkillLearn> _subClassSkillTree = new ConcurrentHashMap<>();
-	private final Map<Integer, SkillLearn> _subPledgeSkillTree = new ConcurrentHashMap<>();
-	private final Map<Integer, SkillLearn> _transformSkillTree = new ConcurrentHashMap<>();
 	private final Map<Integer, SkillLearn> _commonSkillTree = new ConcurrentHashMap<>();
 	// Other skill trees
 	private final Map<Integer, SkillLearn> _nobleSkillTree = new ConcurrentHashMap<>();
@@ -115,13 +108,8 @@ public class SkillTreeData implements IXmlReader
 	{
 		_loading = true;
 		_classSkillTrees.clear();
-		_collectSkillTree.clear();
 		_fishingSkillTree.clear();
 		_pledgeSkillTree.clear();
-		_subClassSkillTree.clear();
-		_subPledgeSkillTree.clear();
-		_transferSkillTrees.clear();
-		_transformSkillTree.clear();
 		_nobleSkillTree.clear();
 		_heroSkillTree.clear();
 		_gameMasterSkillTree.clear();
@@ -250,11 +238,6 @@ public class SkillTreeData implements IXmlReader
 										trasferSkillTree.put(skillHashCode, skillLearn);
 										break;
 									}
-									case "collectSkillTree":
-									{
-										_collectSkillTree.put(skillHashCode, skillLearn);
-										break;
-									}
 									case "fishingSkillTree":
 									{
 										_fishingSkillTree.put(skillHashCode, skillLearn);
@@ -263,21 +246,6 @@ public class SkillTreeData implements IXmlReader
 									case "pledgeSkillTree":
 									{
 										_pledgeSkillTree.put(skillHashCode, skillLearn);
-										break;
-									}
-									case "subClassSkillTree":
-									{
-										_subClassSkillTree.put(skillHashCode, skillLearn);
-										break;
-									}
-									case "subPledgeSkillTree":
-									{
-										_subPledgeSkillTree.put(skillHashCode, skillLearn);
-										break;
-									}
-									case "transformSkillTree":
-									{
-										_transformSkillTree.put(skillHashCode, skillLearn);
 										break;
 									}
 									case "nobleSkillTree":
@@ -308,11 +276,7 @@ public class SkillTreeData implements IXmlReader
 							}
 						}
 						
-						if (type.equals("transferSkillTree"))
-						{
-							_transferSkillTrees.put(classId, trasferSkillTree);
-						}
-						else if (type.equals("classSkillTree") && (cId > -1))
+						if (type.equals("classSkillTree") && (cId > -1))
 						{
 							if (!_classSkillTrees.containsKey(classId))
 							{
@@ -362,36 +326,12 @@ public class SkillTreeData implements IXmlReader
 	}
 	
 	/**
-	 * Gets the transfer skill tree.<br>
-	 * If new classes are implemented over 3rd class, we use a recursive call.
-	 * @param classId the transfer skill tree Id
-	 * @return the complete Transfer Skill Tree for a given {@code classId}
-	 */
-	public Map<Integer, SkillLearn> getTransferSkillTree(ClassId classId)
-	{
-		if (classId.level() >= 3)
-		{
-			return getTransferSkillTree(classId.getParent());
-		}
-		return _transferSkillTrees.get(classId);
-	}
-	
-	/**
 	 * Gets the common skill tree.
 	 * @return the complete Common Skill Tree
 	 */
 	public Map<Integer, SkillLearn> getCommonSkillTree()
 	{
 		return _commonSkillTree;
-	}
-	
-	/**
-	 * Gets the collect skill tree.
-	 * @return the complete Collect Skill Tree
-	 */
-	public Map<Integer, SkillLearn> getCollectSkillTree()
-	{
-		return _collectSkillTree;
 	}
 	
 	/**
@@ -410,33 +350,6 @@ public class SkillTreeData implements IXmlReader
 	public Map<Integer, SkillLearn> getPledgeSkillTree()
 	{
 		return _pledgeSkillTree;
-	}
-	
-	/**
-	 * Gets the sub class skill tree.
-	 * @return the complete Sub-Class Skill Tree
-	 */
-	public Map<Integer, SkillLearn> getSubClassSkillTree()
-	{
-		return _subClassSkillTree;
-	}
-	
-	/**
-	 * Gets the sub pledge skill tree.
-	 * @return the complete Sub-Pledge Skill Tree
-	 */
-	public Map<Integer, SkillLearn> getSubPledgeSkillTree()
-	{
-		return _subPledgeSkillTree;
-	}
-	
-	/**
-	 * Gets the transform skill tree.
-	 * @return the complete Transform Skill Tree
-	 */
-	public Map<Integer, SkillLearn> getTransformSkillTree()
-	{
-		return _transformSkillTree;
 	}
 	
 	/**
@@ -677,93 +590,6 @@ public class SkillTreeData implements IXmlReader
 	}
 	
 	/**
-	 * Used in Gracia continent.
-	 * @param player the collecting skill learning player
-	 * @return all the available Collecting skills for a given {@code player}
-	 */
-	public List<SkillLearn> getAvailableCollectSkills(Player player)
-	{
-		final List<SkillLearn> result = new ArrayList<>();
-		for (SkillLearn skill : _collectSkillTree.values())
-		{
-			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-			if (oldSkill != null)
-			{
-				if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
-				{
-					result.add(skill);
-				}
-			}
-			else if (skill.getSkillLevel() == 1)
-			{
-				result.add(skill);
-			}
-		}
-		return result;
-	}
-	
-	/**
-	 * Gets the available transfer skills.
-	 * @param player the transfer skill learning player
-	 * @return all the available Transfer skills for a given {@code player}
-	 */
-	public List<SkillLearn> getAvailableTransferSkills(Player player)
-	{
-		final List<SkillLearn> result = new ArrayList<>();
-		ClassId classId = player.getClassId();
-		// If new classes are implemented over 3rd class, a different way should be implemented.
-		if (classId.level() == 3)
-		{
-			classId = classId.getParent();
-		}
-		
-		if (!_transferSkillTrees.containsKey(classId))
-		{
-			return result;
-		}
-		
-		for (SkillLearn skill : _transferSkillTrees.get(classId).values())
-		{
-			// If player doesn't know this transfer skill:
-			if (player.getKnownSkill(skill.getSkillId()) == null)
-			{
-				result.add(skill);
-			}
-		}
-		return result;
-	}
-	
-	/**
-	 * Some transformations are not available for some races.
-	 * @param player the transformation skill learning player
-	 * @return all the available Transformation skills for a given {@code player}
-	 */
-	public List<SkillLearn> getAvailableTransformSkills(Player player)
-	{
-		final List<SkillLearn> result = new ArrayList<>();
-		final Race race = player.getRace();
-		for (SkillLearn skill : _transformSkillTree.values())
-		{
-			if ((player.getLevel() >= skill.getGetLevel()) && (skill.getRaces().isEmpty() || skill.getRaces().contains(race)))
-			{
-				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-				if (oldSkill != null)
-				{
-					if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
-					{
-						result.add(skill);
-					}
-				}
-				else if (skill.getSkillLevel() == 1)
-				{
-					result.add(skill);
-				}
-			}
-		}
-		return result;
-	}
-	
-	/**
 	 * Gets the available pledge skills.
 	 * @param clan the pledge skill learning clan
 	 * @return all the available Clan skills for a given {@code clan}
@@ -795,10 +621,9 @@ public class SkillTreeData implements IXmlReader
 	/**
 	 * Gets the available pledge skills.
 	 * @param clan the pledge skill learning clan
-	 * @param includeSquad if squad skill will be added too
 	 * @return all the available pledge skills for a given {@code clan}
 	 */
-	public Map<Integer, SkillLearn> getMaxPledgeSkills(Clan clan, boolean includeSquad)
+	public Map<Integer, SkillLearn> getMaxPledgeSkills(Clan clan)
 	{
 		final Map<Integer, SkillLearn> result = new HashMap<>();
 		for (SkillLearn skill : _pledgeSkillTree.values())
@@ -813,75 +638,6 @@ public class SkillTreeData implements IXmlReader
 			}
 		}
 		
-		if (includeSquad)
-		{
-			for (SkillLearn skill : _subPledgeSkillTree.values())
-			{
-				if ((clan.getLevel() >= skill.getGetLevel()))
-				{
-					final Skill oldSkill = clan.getSkills().get(skill.getSkillId());
-					if ((oldSkill == null) || (oldSkill.getLevel() < skill.getSkillLevel()))
-					{
-						result.put(skill.getSkillId(), skill);
-					}
-				}
-			}
-		}
-		return result;
-	}
-	
-	/**
-	 * Gets the available sub pledge skills.
-	 * @param clan the sub-pledge skill learning clan
-	 * @return all the available Sub-Pledge skills for a given {@code clan}
-	 */
-	public List<SkillLearn> getAvailableSubPledgeSkills(Clan clan)
-	{
-		final List<SkillLearn> result = new ArrayList<>();
-		for (SkillLearn skill : _subPledgeSkillTree.values())
-		{
-			if ((clan.getLevel() >= skill.getGetLevel()) && clan.isLearnableSubSkill(skill.getSkillId(), skill.getSkillLevel()))
-			{
-				result.add(skill);
-			}
-		}
-		return result;
-	}
-	
-	/**
-	 * Gets the available sub class skills.
-	 * @param player the sub-class skill learning player
-	 * @return all the available Sub-Class skills for a given {@code player}
-	 */
-	public List<SkillLearn> getAvailableSubClassSkills(Player player)
-	{
-		final List<SkillLearn> result = new ArrayList<>();
-		for (SkillLearn skill : _subClassSkillTree.values())
-		{
-			if (player.getLevel() >= skill.getGetLevel())
-			{
-				List<SubClassData> subClassConds = null;
-				for (SubClassHolder subClass : player.getSubClasses().values())
-				{
-					subClassConds = skill.getSubClassConditions();
-					if (!subClassConds.isEmpty() && (subClass.getClassIndex() <= subClassConds.size()) && (subClass.getClassIndex() == subClassConds.get(subClass.getClassIndex() - 1).getSlot()) && (subClassConds.get(subClass.getClassIndex() - 1).getLvl() <= subClass.getLevel()))
-					{
-						final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-						if (oldSkill != null)
-						{
-							if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
-							{
-								result.add(skill);
-							}
-						}
-						else if (skill.getSkillLevel() == 1)
-						{
-							result.add(skill);
-						}
-					}
-				}
-			}
-		}
 		return result;
 	}
 	
@@ -921,11 +677,6 @@ public class SkillTreeData implements IXmlReader
 				sl = getClassSkill(id, lvl, player.getLearningClass());
 				break;
 			}
-			case TRANSFORM:
-			{
-				sl = getTransformSkill(id, lvl);
-				break;
-			}
 			case FISHING:
 			{
 				sl = getFishingSkill(id, lvl);
@@ -936,39 +687,8 @@ public class SkillTreeData implements IXmlReader
 				sl = getPledgeSkill(id, lvl);
 				break;
 			}
-			case SUBPLEDGE:
-			{
-				sl = getSubPledgeSkill(id, lvl);
-				break;
-			}
-			case TRANSFER:
-			{
-				sl = getTransferSkill(id, lvl, player.getClassId());
-				break;
-			}
-			case SUBCLASS:
-			{
-				sl = getSubClassSkill(id, lvl);
-				break;
-			}
-			case COLLECT:
-			{
-				sl = getCollectSkill(id, lvl);
-				break;
-			}
 		}
 		return sl;
-	}
-	
-	/**
-	 * Gets the transform skill.
-	 * @param id the transformation skill Id
-	 * @param lvl the transformation skill level
-	 * @return the transform skill from the Transform Skill Tree for a given {@code id} and {@code lvl}
-	 */
-	public SkillLearn getTransformSkill(int id, int lvl)
-	{
-		return _transformSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
 	
 	/**
@@ -1006,48 +726,6 @@ public class SkillTreeData implements IXmlReader
 	}
 	
 	/**
-	 * Gets the sub pledge skill.
-	 * @param id the sub-pledge skill Id
-	 * @param lvl the sub-pledge skill level
-	 * @return the sub-pledge skill from the Sub-Pledge Skill Tree for a given {@code id} and {@code lvl}
-	 */
-	public SkillLearn getSubPledgeSkill(int id, int lvl)
-	{
-		return _subPledgeSkillTree.get(SkillData.getSkillHashCode(id, lvl));
-	}
-	
-	/**
-	 * Gets the transfer skill.
-	 * @param id the transfer skill Id
-	 * @param lvl the transfer skill level.
-	 * @param classId the transfer skill tree Id
-	 * @return the transfer skill from the Transfer Skill Trees for a given {@code classId}, {@code id} and {@code lvl}
-	 */
-	public SkillLearn getTransferSkill(int id, int lvl, ClassId classId)
-	{
-		if (classId.getParent() != null)
-		{
-			final ClassId parentId = classId.getParent();
-			if (_transferSkillTrees.get(parentId) != null)
-			{
-				return _transferSkillTrees.get(parentId).get(SkillData.getSkillHashCode(id, lvl));
-			}
-		}
-		return null;
-	}
-	
-	/**
-	 * Gets the sub class skill.
-	 * @param id the sub-class skill Id
-	 * @param lvl the sub-class skill level
-	 * @return the sub-class skill from the Sub-Class Skill Tree for a given {@code id} and {@code lvl}
-	 */
-	public SkillLearn getSubClassSkill(int id, int lvl)
-	{
-		return _subClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
-	}
-	
-	/**
 	 * Gets the common skill.
 	 * @param id the common skill Id.
 	 * @param lvl the common skill level
@@ -1056,17 +734,6 @@ public class SkillTreeData implements IXmlReader
 	public SkillLearn getCommonSkill(int id, int lvl)
 	{
 		return _commonSkillTree.get(SkillData.getSkillHashCode(id, lvl));
-	}
-	
-	/**
-	 * Gets the collect skill.
-	 * @param id the collect skill Id
-	 * @param lvl the collect skill level
-	 * @return the collect skill from the Collect Skill Tree for a given {@code id} and {@code lvl}
-	 */
-	public SkillLearn getCollectSkill(int id, int lvl)
-	{
-		return _collectSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
 	
 	/**
@@ -1145,7 +812,7 @@ public class SkillTreeData implements IXmlReader
 	public boolean isClanSkill(int skillId, int skillLevel)
 	{
 		final int hashCode = SkillData.getSkillHashCode(skillId, skillLevel);
-		return _pledgeSkillTree.containsKey(hashCode) || _subPledgeSkillTree.containsKey(hashCode);
+		return _pledgeSkillTree.containsKey(hashCode);
 	}
 	
 	/**
@@ -1202,14 +869,6 @@ public class SkillTreeData implements IXmlReader
 				}
 			}
 			
-			for (SkillLearn s : _transformSkillTree.values())
-			{
-				if (s.getRaces().contains(r))
-				{
-					list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
-				}
-			}
-			
 			i = 0;
 			array = new int[list.size()];
 			for (int s : list)
@@ -1236,19 +895,6 @@ public class SkillTreeData implements IXmlReader
 			{
 				list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
 			}
-		}
-		
-		for (SkillLearn s : _transformSkillTree.values())
-		{
-			if (s.getRaces().isEmpty())
-			{
-				list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
-			}
-		}
-		
-		for (SkillLearn s : _collectSkillTree.values())
-		{
-			list.add(SkillData.getSkillHashCode(s.getSkillId(), s.getSkillLevel()));
 		}
 		
 		_allSkillsHashCodes = new int[list.size()];
@@ -1302,8 +948,7 @@ public class SkillTreeData implements IXmlReader
 			return true;
 		}
 		
-		// Exclude Transfer Skills from this check.
-		return getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLevel), player.getClassId()) != null;
+		return false;
 	}
 	
 	/**
@@ -1315,12 +960,6 @@ public class SkillTreeData implements IXmlReader
 		for (Map<Integer, SkillLearn> classSkillTree : _classSkillTrees.values())
 		{
 			classSkillTreeCount += classSkillTree.size();
-		}
-		
-		int trasferSkillTreeCount = 0;
-		for (Map<Integer, SkillLearn> trasferSkillTree : _transferSkillTrees.values())
-		{
-			trasferSkillTreeCount += trasferSkillTree.size();
 		}
 		
 		int dwarvenOnlyFishingSkillCount = 0;
@@ -1343,13 +982,8 @@ public class SkillTreeData implements IXmlReader
 		
 		final String className = getClass().getSimpleName();
 		LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " class skill trees.");
-		LOGGER.info(className + ": Loaded " + _subClassSkillTree.size() + " sub-class skills.");
-		LOGGER.info(className + ": Loaded " + trasferSkillTreeCount + " transfer skills for " + _transferSkillTrees.size() + " transfer skill trees.");
 		LOGGER.info(className + ": Loaded " + _fishingSkillTree.size() + " fishing skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only fishing skills.");
-		LOGGER.info(className + ": Loaded " + _collectSkillTree.size() + " collect skills.");
 		LOGGER.info(className + ": Loaded " + _pledgeSkillTree.size() + " clan skills, " + (_pledgeSkillTree.size() - resSkillCount) + " for clan and " + resSkillCount + " residential.");
-		LOGGER.info(className + ": Loaded " + _subPledgeSkillTree.size() + " sub-pledge skills.");
-		LOGGER.info(className + ": Loaded " + _transformSkillTree.size() + " transform skills.");
 		LOGGER.info(className + ": Loaded " + _nobleSkillTree.size() + " noble skills.");
 		LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " hero skills.");
 		LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " game master skills.");

@@ -20,7 +20,6 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 
 /**
  * @author UnAfraid
@@ -42,8 +41,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		packet.writeH(item.getItem().getType1());
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
-		packet.writeD(item.getLocation()); // T1
-		packet.writeQ(item.getCount()); // Quantity
+		packet.writeD((int) item.getCount()); // Quantity
 		packet.writeH(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
 		packet.writeH(item.getCustomType1()); // Filler (always 0)
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
@@ -52,33 +50,5 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		packet.writeH(item.getCustomType2()); // Pet name exists or not shown in control item
 		packet.writeD(item.getAugmentationBonus());
 		packet.writeD(item.getMana());
-		packet.writeH(item.getAttackElementType());
-		packet.writeH(item.getAttackElementPower());
-		for (byte i = 0; i < 6; i++)
-		{
-			packet.writeH(item.getElementDefAttr(i));
-		}
-		packet.writeD(item.getTime());
-		for (int op : item.getEnchantOptions())
-		{
-			packet.writeH(op);
-		}
-	}
-	
-	protected void writeInventoryBlock(PacketWriter packet, PlayerInventory inventory)
-	{
-		if (inventory.hasInventoryBlock())
-		{
-			packet.writeH(inventory.getBlockItems().length);
-			packet.writeC(inventory.getBlockMode());
-			for (int i : inventory.getBlockItems())
-			{
-				packet.writeD(i);
-			}
-		}
-		else
-		{
-			packet.writeH(0);
-		}
 	}
 }

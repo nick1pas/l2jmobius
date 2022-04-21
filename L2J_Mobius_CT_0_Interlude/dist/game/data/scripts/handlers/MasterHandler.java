@@ -70,20 +70,17 @@ import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
 import handlers.admincommandhandlers.AdminEditChar;
 import handlers.admincommandhandlers.AdminEffects;
-import handlers.admincommandhandlers.AdminElement;
 import handlers.admincommandhandlers.AdminEnchant;
 import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFakePlayers;
 import handlers.admincommandhandlers.AdminFence;
 import handlers.admincommandhandlers.AdminFightCalculator;
-import handlers.admincommandhandlers.AdminFortSiege;
 import handlers.admincommandhandlers.AdminGamePoints;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGmSpeed;
-import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminGrandBoss;
 import handlers.admincommandhandlers.AdminHeal;
 import handlers.admincommandhandlers.AdminHide;
@@ -126,9 +123,7 @@ import handlers.admincommandhandlers.AdminSuperHaste;
 import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
-import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
-import handlers.admincommandhandlers.AdminTransform;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.admincommandhandlers.AdminZones;
@@ -140,7 +135,6 @@ import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
-import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.Multisell;
@@ -150,8 +144,6 @@ import handlers.bypasshandlers.PlayerHelp;
 import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.QuestList;
-import handlers.bypasshandlers.ReceivePremium;
-import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
@@ -188,14 +180,10 @@ import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
-import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
 import handlers.itemhandlers.CharmOfCourage;
-import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
-import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
-import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
@@ -203,7 +191,6 @@ import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
-import handlers.itemhandlers.NicknameColor;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
@@ -213,7 +200,6 @@ import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
-import handlers.itemhandlers.TeleportBookmark;
 import handlers.punishmenthandlers.BanHandler;
 import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
@@ -262,7 +248,6 @@ import handlers.telnethandlers.player.GMList;
 import handlers.telnethandlers.player.Give;
 import handlers.telnethandlers.player.Jail;
 import handlers.telnethandlers.player.Kick;
-import handlers.telnethandlers.player.SendMail;
 import handlers.telnethandlers.player.Unban;
 import handlers.telnethandlers.player.UnbanChat;
 import handlers.telnethandlers.player.Unjail;
@@ -282,10 +267,8 @@ import handlers.usercommandhandlers.ClanPenalty;
 import handlers.usercommandhandlers.ClanWarsList;
 import handlers.usercommandhandlers.Dismount;
 import handlers.usercommandhandlers.ExperienceGain;
-import handlers.usercommandhandlers.InstanceZone;
 import handlers.usercommandhandlers.Loc;
 import handlers.usercommandhandlers.Mount;
-import handlers.usercommandhandlers.MyBirthday;
 import handlers.usercommandhandlers.OlympiadStat;
 import handlers.usercommandhandlers.PartyInfo;
 import handlers.usercommandhandlers.SiegeStatus;
@@ -365,20 +348,17 @@ public class MasterHandler
 			AdminDoorControl.class,
 			AdminEditChar.class,
 			AdminEffects.class,
-			AdminElement.class,
 			AdminEnchant.class,
 			AdminEvents.class,
 			AdminExpSp.class,
 			AdminFakePlayers.class,
 			AdminFence.class,
 			AdminFightCalculator.class,
-			AdminFortSiege.class,
 			AdminGamePoints.class,
 			AdminGeodata.class,
 			AdminGm.class,
 			AdminGmChat.class,
 			AdminGmSpeed.class,
-			AdminGraciaSeeds.class,
 			AdminGrandBoss.class,
 			AdminHeal.class,
 			AdminHide.class,
@@ -421,9 +401,7 @@ public class MasterHandler
 			AdminTarget.class,
 			AdminTargetSay.class,
 			AdminTeleport.class,
-			AdminTerritoryWar.class,
 			AdminTest.class,
-			AdminTransform.class,
 			AdminVitality.class,
 			AdminZone.class,
 		},
@@ -437,7 +415,6 @@ public class MasterHandler
 			Festival.class,
 			FindPvP.class,
 			Freight.class,
-			ItemAuctionLink.class,
 			Link.class,
 			Loto.class,
 			Multisell.class,
@@ -447,8 +424,6 @@ public class MasterHandler
 			PlayerHelp.class,
 			PrivateWarehouse.class,
 			QuestList.class,
-			ReceivePremium.class,
-			ReleaseAttribute.class,
 			RentPet.class,
 			Rift.class,
 			SkillList.class,
@@ -494,14 +469,10 @@ public class MasterHandler
 			BeastSpiritShot.class,
 			BlessedSpiritShot.class,
 			Book.class,
-			Bypass.class,
 			Calculator.class,
 			CharmOfCourage.class,
-			Disguise.class,
 			Elixir.class,
-			EnchantAttribute.class,
 			EnchantScrolls.class,
-			EventItem.class,
 			ExtractableItems.class,
 			FishShots.class,
 			Harvester.class,
@@ -509,7 +480,6 @@ public class MasterHandler
 			ItemSkillsTemplate.class,
 			Maps.class,
 			MercTicket.class,
-			NicknameColor.class,
 			PetFood.class,
 			Recipes.class,
 			RollingDice.class,
@@ -519,7 +489,6 @@ public class MasterHandler
 			SpecialXMas.class,
 			SpiritShot.class,
 			SummonItems.class,
-			TeleportBookmark.class,
 		},
 		{
 			// Punishment Handlers
@@ -534,7 +503,6 @@ public class MasterHandler
 			Dismount.class,
 			Unstuck.class,
 			ExperienceGain.class,
-			InstanceZone.class,
 			Loc.class,
 			Mount.class,
 			PartyInfo.class,
@@ -543,7 +511,6 @@ public class MasterHandler
 			ChannelLeave.class,
 			ChannelDelete.class,
 			ChannelInfo.class,
-			MyBirthday.class,
 			SiegeStatus.class,
 		},
 		{
@@ -664,7 +631,6 @@ public class MasterHandler
 			TelnetServer.getInstance().addHandler(new Performance());
 			TelnetServer.getInstance().addHandler(new Purge());
 			TelnetServer.getInstance().addHandler(new Reload());
-			TelnetServer.getInstance().addHandler(new SendMail());
 			TelnetServer.getInstance().addHandler(new ServerAbort());
 			TelnetServer.getInstance().addHandler(new ServerRestart());
 			TelnetServer.getInstance().addHandler(new ServerShutdown());

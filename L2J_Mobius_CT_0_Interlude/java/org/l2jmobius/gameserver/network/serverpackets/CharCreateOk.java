@@ -30,7 +30,7 @@ public class CharCreateOk implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_CREATE_SUCCESS.writeId(packet);
+		OutgoingPackets.CHAR_CREATE_OK.writeId(packet);
 		packet.writeD(1);
 		return true;
 	}

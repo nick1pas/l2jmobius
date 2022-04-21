@@ -30,7 +30,7 @@
 		</for>
 	</item>
 	<item id="8801" type="Weapon" name="Naga Storm - Critical Damage">
-		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 200 during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -88,7 +88,7 @@
 		</for>
 	</item>
 	<item id="8803" type="Weapon" name="Tiphon's Spear - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chance of stun effect by 25% during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -178,7 +178,7 @@
 		</for>
 	</item>
 	<item id="8806" type="Weapon" name="Shyeed's Bow - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Adds a 30% chance to decrease MP consumption by 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Decreases MP consumption by 1 at a 30% probability during an ordinary attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -192,7 +192,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9361" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="10" />
@@ -211,7 +210,7 @@
 		</for>
 	</item>
 	<item id="8807" type="Weapon" name="Shyeed's Bow - Focus">
-		<!-- <Soul Crystal Enhancement> Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement> Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -225,7 +224,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9362" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="10" />
@@ -257,7 +255,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9363" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="10" />
@@ -333,7 +330,7 @@
 		</for>
 	</item>
 	<item id="8811" type="Weapon" name="Sobekk's Hurricane - Critical Drain">
-		<!-- <Soul Crystal Enhancement>. Increases the possibility of absorbing 14 HP on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the possibility of absorbing 14 HP during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -364,7 +361,7 @@
 		</for>
 	</item>
 	<item id="8812" type="Weapon" name="Themis' Tongue - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -393,7 +390,7 @@
 		</for>
 	</item>
 	<item id="8813" type="Weapon" name="Themis' Tongue - Mental Shield">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Mental Shield by 50% when using good magic upon a target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -424,7 +421,7 @@
 		</for>
 	</item>
 	<item id="8814" type="Weapon" name="Themis' Tongue - Magic Focus">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Focus when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Focus by 20% when using good magic upon a target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -455,7 +452,7 @@
 		</for>
 	</item>
 	<item id="8815" type="Weapon" name="Cabrio's Hand - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -485,7 +482,7 @@
 		</for>
 	</item>
 	<item id="8816" type="Weapon" name="Cabrio's Hand - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -515,7 +512,7 @@
 		</for>
 	</item>
 	<item id="8817" type="Weapon" name="Cabrio's Hand - Magic Silence">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Sleep by 10% when using bad magic upon a target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -547,7 +544,7 @@
 		</for>
 	</item>
 	<item id="8818" type="Weapon" name="Daimon Crystal - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -577,7 +574,7 @@
 		</for>
 	</item>
 	<item id="8819" type="Weapon" name="Daimon Crystal - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases casting speed by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -607,7 +604,7 @@
 		</for>
 	</item>
 	<item id="8820" type="Weapon" name="Daimon Crystal - Mental Shield">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chances of causing Mental Shield by 50% when using good magic upon a target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1621,7 +1618,7 @@
 		</for>
 	</item>
 	<item id="8857" type="Weapon" name="Shadow Item: Sword of Delusion*Sword of Delusion">
-		<!-- This Shadow Item contains the mirrored power of Swords of Delusion. It cannot be traded, dropped or given other functions. -->
+		<!-- This Shadow Item contains the mirrored power of a Sword of Delusion. It cannot be traded, dropped or given other functions. -->
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1927,7 +1924,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8869" type="EtcItem" name="Shadow Item Exchange Coupon (D-Grade)">
-		<!-- This exchange coupon allows you to obtain a D-Grade Shadow Item. Take it to a Grand Master for your occupation to exchange it for a shadow item. -->
+		<!-- This exchange coupon allows you to obtain a D-grade Shadow Item. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1937,7 +1934,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8870" type="EtcItem" name="Shadow Item Exchange Coupon (C-Grade)">
-		<!-- This exchange coupon allows you to obtain a C-Grade Shadow Item. Take it to a Grand Master for your occupation to exchange it for a shadow item. -->
+		<!-- This exchange coupon allows you to obtain a C-grade Shadow Item. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -2121,7 +2118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8890" type="EtcItem" name="Spellbook: Summon Attractive Cubic">
-		<!-- Spellbook needed to learn Summon Attractive Cubic. Used by a Temple Knight. Required level: 62 -->
+		<!-- Spellbook needed to learn Summon Attractive Cubic. Used by a Temple Knight. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -2130,7 +2127,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8891" type="EtcItem" name="Spellbook: Aura Flash">
-		<!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. Required level: 58 -->
+		<!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -2184,7 +2181,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8897" type="EtcItem" name="Ancient Tactical Manual: Symbol of the Sniper">
-		<!-- Ancient Tactical Manual needed to master the Symbol of the Sniper. Can be used by a Sagittarius, Ghost Sentinel, and Moonlight Sentinel. -->
+		<!-- Ancient Tactical Manual needed to master the Symbol of the Sniper. Can be used by a Sagittarius and Moonlight Sentinel. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -2193,7 +2190,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8898" type="EtcItem" name="Ancient Tactical Manual: Symbol of the Assassin">
-		<!-- Ancient Tactical Manual needed to master the Symbol of Assassin. Can be used by an Adventurer and a Windrider. -->
+		<!-- Ancient Tactical Manual needed to master the Symbol of Assassin. Can be used by an Adventurer, Windrider, and Ghost Sentinel. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

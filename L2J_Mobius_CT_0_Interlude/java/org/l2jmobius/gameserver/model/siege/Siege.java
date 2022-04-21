@@ -61,7 +61,6 @@ import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeOwn
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
@@ -579,7 +578,7 @@ public class Siege implements Siegable
 					}
 				}
 				member.sendPacket(new UserInfo(member));
-				member.sendPacket(new ExBrExtraUserInfo(member));
+				// member.sendPacket(new ExBrExtraUserInfo(member));
 				World.getInstance().forEachVisibleObject(member, Player.class, player ->
 				{
 					if (!member.isVisibleFor(player))
@@ -628,7 +627,7 @@ public class Siege implements Siegable
 					}
 				}
 				member.sendPacket(new UserInfo(member));
-				member.sendPacket(new ExBrExtraUserInfo(member));
+				// member.sendPacket(new ExBrExtraUserInfo(member));
 				World.getInstance().forEachVisibleObject(member, Player.class, player ->
 				{
 					if (!member.isVisibleFor(player))

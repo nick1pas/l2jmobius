@@ -22,9 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Calculator;
 import org.l2jmobius.gameserver.model.stats.MoveType;
@@ -92,17 +90,6 @@ public class CreatureStat
 		if ((calc == null) || (calc.size() == 0))
 		{
 			return value;
-		}
-		
-		// Apply transformation stats.
-		final Transform transform = _creature.getTransformation();
-		if (transform != null)
-		{
-			final double val = transform.getStat(_creature.getActingPlayer(), stat);
-			if (val > 0)
-			{
-				value = val;
-			}
 		}
 		
 		// Launch the calculation
@@ -545,13 +532,8 @@ public class CreatureStat
 	public int getPhysicalAttackRange()
 	{
 		final Weapon weapon = _creature.getActiveWeaponItem();
-		final Transform transform = _creature.getTransformation();
 		int baseAttackRange;
-		if (transform != null)
-		{
-			baseAttackRange = transform.getBaseAttackRange(_creature.getActingPlayer());
-		}
-		else if (weapon != null)
+		if (weapon != null)
 		{
 			baseAttackRange = weapon.getBaseAttackRange();
 		}
@@ -634,13 +616,6 @@ public class CreatureStat
 	
 	public byte getAttackElement()
 	{
-		final Item weaponInstance = _creature.getActiveWeaponInstance();
-		// 1st order - weapon element
-		if ((weaponInstance != null) && (weaponInstance.getAttackElementType() >= 0))
-		{
-			return weaponInstance.getAttackElementType();
-		}
-		
 		// temp fix starts
 		int tempVal = 0;
 		final int[] stats =
@@ -671,10 +646,6 @@ public class CreatureStat
 		
 		return returnVal;
 		// temp fix ends
-		
-		/*
-		 * uncomment me once deadlocks in getAllEffects() fixed return _creature.getElementIdFromEffects();
-		 */
 	}
 	
 	public int getAttackElementValue(byte attackAttribute)

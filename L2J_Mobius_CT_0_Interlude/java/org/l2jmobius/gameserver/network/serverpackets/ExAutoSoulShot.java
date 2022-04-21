@@ -37,7 +37,7 @@ public class ExAutoSoulShot implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_AUTO_SOULSHOT.writeId(packet);
+		OutgoingPackets.EX_AUTO_SOUL_SHOT.writeId(packet);
 		packet.writeD(_itemId);
 		packet.writeD(_type);
 		return true;

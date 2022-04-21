@@ -355,9 +355,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2040-1" /> <!-- Scroll of Escape: Clan Hall -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="1830" type="EtcItem" name="Scroll of Escape: Castle">
 		<!-- A scroll that relocates you to your castle. If you don't have a castle, it will relocate you to the nearest village. -->
@@ -371,9 +368,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2041-1" /> <!-- Scroll of Escape: Castle -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="1831" type="EtcItem" name="Antidote">
 		<!-- A reagent that neutralizes poison. -->
@@ -669,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1856" type="EtcItem" name="Amulet: Chant of Life">
-		<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans. Required level: 20 -->
+		<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

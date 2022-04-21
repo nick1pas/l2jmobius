@@ -51,7 +51,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 				{
 					packet.writeD(sc.getId());
 					packet.writeD(1);
-					packet.writeD(sc.getSharedReuseGroup());
+					packet.writeD(-1);
 					packet.writeD(0);
 					packet.writeD(0);
 					packet.writeH(0);
@@ -69,7 +69,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 				case ACTION:
 				case MACRO:
 				case RECIPE:
-				case BOOKMARK:
 				{
 					packet.writeD(sc.getId());
 					packet.writeD(1); // C6

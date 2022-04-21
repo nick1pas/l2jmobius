@@ -39,7 +39,6 @@ import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.ListContainer;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -327,7 +326,7 @@ public class MultisellData implements IXmlReader
 			{
 				player.setFame(player.getFame() - (int) amount);
 				player.sendPacket(new UserInfo(player));
-				player.sendPacket(new ExBrExtraUserInfo(player));
+				// player.sendPacket(new ExBrExtraUserInfo(player));
 				return true;
 			}
 		}
@@ -347,7 +346,7 @@ public class MultisellData implements IXmlReader
 			{
 				player.setFame((int) (player.getFame() + amount));
 				player.sendPacket(new UserInfo(player));
-				player.sendPacket(new ExBrExtraUserInfo(player));
+				// player.sendPacket(new ExBrExtraUserInfo(player));
 				break;
 			}
 		}

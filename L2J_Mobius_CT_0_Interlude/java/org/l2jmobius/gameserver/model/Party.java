@@ -46,8 +46,6 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.ExOpenMPCC;
-import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
-import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMemberPosition;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
@@ -274,13 +272,13 @@ public class Party extends AbstractPlayerGroup
 		player.sendPacket(new PartySmallWindowAll(player, this));
 		
 		// sends pets/summons of party members
-		for (Player pMember : _members)
-		{
-			if ((pMember != null) && pMember.hasSummon())
-			{
-				player.sendPacket(new ExPartyPetWindowAdd(pMember.getSummon()));
-			}
-		}
+		// for (Player pMember : _members)
+		// {
+		// if ((pMember != null) && pMember.hasSummon())
+		// {
+		// player.sendPacket(new ExPartyPetWindowAdd(pMember.getSummon()));
+		// }
+		// }
 		
 		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
 		msg.addString(getLeader().getName());
@@ -304,10 +302,10 @@ public class Party extends AbstractPlayerGroup
 		// broadcastToPartyMembers(player, new PartyMemberPosition(this));
 		
 		// if member has pet/summon add it to other as well
-		if (player.hasSummon())
-		{
-			broadcastPacket(new ExPartyPetWindowAdd(player.getSummon()));
-		}
+		// if (player.hasSummon())
+		// {
+		// broadcastPacket(new ExPartyPetWindowAdd(player.getSummon()));
+		// }
 		
 		// adjust party level
 		if (player.getLevel() > _partyLvl)
@@ -435,10 +433,10 @@ public class Party extends AbstractPlayerGroup
 			player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
 			player.setParty(null);
 			broadcastPacket(new PartySmallWindowDelete(player));
-			if (player.hasSummon())
-			{
-				broadcastPacket(new ExPartyPetWindowDelete(player.getSummon()));
-			}
+			// if (player.hasSummon())
+			// {
+			// broadcastPacket(new ExPartyPetWindowDelete(player.getSummon()));
+			// }
 			
 			if (isInDimensionalRift())
 			{

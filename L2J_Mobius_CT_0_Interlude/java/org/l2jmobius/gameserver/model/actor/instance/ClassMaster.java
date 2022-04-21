@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
 import org.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
@@ -97,7 +96,7 @@ public class ClassMaster extends Merchant
 			{
 				player.setNoble(true);
 				player.sendPacket(new UserInfo(player));
-				player.sendPacket(new ExBrExtraUserInfo(player));
+				// player.sendPacket(new ExBrExtraUserInfo(player));
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player, "data/html/classmaster/nobleok.htm");
 				player.sendPacket(html);
@@ -273,10 +272,6 @@ public class ClassMaster extends Merchant
 					final StringBuilder menu = new StringBuilder(100);
 					for (ClassId cid : ClassId.values())
 					{
-						if ((cid == ClassId.INSPECTOR) && (player.getTotalSubClasses() < 2))
-						{
-							continue;
-						}
 						if (validateClassId(currentClassId, cid) && (cid.level() == level))
 						{
 							menu.append("<a action=\"bypass -h npc_%objectId%_change_class " + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getClientCode() + "</a><br>");
@@ -329,10 +324,6 @@ public class ClassMaster extends Merchant
 		final StringBuilder menu = new StringBuilder(100);
 		for (ClassId cid : ClassId.values())
 		{
-			if ((cid == ClassId.INSPECTOR) && (player.getTotalSubClasses() < 2))
-			{
-				continue;
-			}
 			if (validateClassId(currentClassId, cid))
 			{
 				menu.append("<a action=\"link CO" + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getClassName() + "</a><br>"); // getEscapedClientCode());

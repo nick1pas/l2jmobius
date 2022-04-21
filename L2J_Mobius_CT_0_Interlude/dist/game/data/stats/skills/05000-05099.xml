@@ -65,8 +65,8 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5004" levels="1" name="Dimensional Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="5004" levels="1" name="Dimensional Shock">
+		<!-- Shocks and instantly immobilizes. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="FLY_AWAY" />
@@ -86,7 +86,6 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ThrowUp" />
 			<effect name="Stun" />
 		</for>
 	</skill>
@@ -115,7 +114,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5007" levels="5" name="Frintezza's Songs">
+	<skill id="5007" levels="5" name="Frintezza's Healing Rhapsody">
 		<!-- Music to soothe the soul. -->
 		<table name="#hitTime">32000 32000 32000 31000 35000</table>
 		<set name="effectPoint" val="100" />
@@ -125,7 +124,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5008" levels="5" name="Frintezza's Songs">
+	<skill id="5008" levels="5" name="Frintezza's Concert Hall Melody">
 		<!-- Music that makes you feel oh so good inside. -->
 		<table name="#abnormalTypes">NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN</table>
 		<table name="#activateRate">0 0 0 10 10</table>
@@ -467,7 +466,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
+	<skill id="5024" levels="12" name="Decrease Atk.Speed">
 		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -507,7 +506,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5028" levels="1" name="Raid Boss - Level 53">
-		<!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
+		<!-- Once a shaman who worshipped Pa'agrio, he is now consumed by evil and bent on manipulating the powers of the spirit-being Tasha to conquer the world. His growing horde of followers include Ragna Orcs, evil spirits and insects. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -535,7 +534,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5032" levels="1" name="Raid Boss - Level 80">
-		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
+		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Ruler of Splendor. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -556,7 +555,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5035" levels="1" name="Raid Boss - Level 76">
-		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
+		<!-- The result of one of Hardin's magical experiments, he is rather monstrous in appearance, spewing lava from all over his body. Despite his looks, he was in fact a very submissive Golem who followed Hardin like a father. He went mad from the feeling of abandonment after Hardin left the Blazing Swamp. When King Astaire attacked Aden Castle, some of the soldiers of Elmore were caught in the Blazing Swamp, and there they first saw this giant covered in lava. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -569,7 +568,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="5037" levels="3" name="Decrease Casting Spd">
+	<skill id="5037" levels="3" name="Decrease Casting Speed">
 		<!-- Instantly reduces Casting Speed. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
@@ -632,7 +631,7 @@
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">
-		<!-- If you die on the battlefield during a castle siege/fortress siege/hideout siege, you can resurrect from the same stop. -->
+		<!-- Prevents experience value from decreasing if killed during a siege war. -->
 		<set name="icon" val="icon.skill5041" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -993,7 +992,7 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
+	<skill id="5069" levels="12" name="Decrease Atk.Spd.">
 		<!-- Instantly reduces Atk. Spd. Effect 3. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -1029,7 +1028,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="5071" levels="12" name="Decrease P. Atk.">
+	<skill id="5071" levels="12" name="Decrease P.Atk">
 		<!-- Instantly reduces P. Atk. Effect 3. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -1216,7 +1215,7 @@
 			<effect name="PhysicalMute" />
 		</for>
 	</skill>
-	<skill id="5082" levels="4" name="NPC Spinning, Slashing Trick">
+	<skill id="5082" levels="4" name="NPC Spinning Slash Trick">
 		<table name="#mpConsume">60 60 60 5</table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
@@ -1231,8 +1230,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5083" levels="4" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="5083" levels="4" name="Shock">
+		<!-- Temporarily immobilized and in a state of shock. -->
 		<table name="#mpConsume">93 93 93 5</table>
 		<table name="#power">1715 3540 7305 8602</table>
 		<set name="abnormalLevel" val="1" />
@@ -1427,7 +1426,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5094" levels="1" name="Antharas Subordinate Suicide ">
+	<skill id="5094" levels="1" name="Antharas Subordinate Suicide">
 		<set name="affectRange" val="250" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->

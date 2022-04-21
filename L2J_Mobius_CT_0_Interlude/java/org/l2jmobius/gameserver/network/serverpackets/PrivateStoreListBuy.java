@@ -42,31 +42,20 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 	{
 		OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
 		packet.writeD(_objId);
-		packet.writeQ(_playerAdena);
+		packet.writeD((int) _playerAdena);
 		packet.writeD(_items.size());
 		for (TradeItem item : _items)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
 			packet.writeH(item.getEnchant());
-			packet.writeQ(item.getCount()); // give max possible sell amount
-			packet.writeQ(item.getItem().getReferencePrice());
+			packet.writeD((int) item.getCount()); // give max possible sell amount
+			packet.writeD(item.getItem().getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
-			packet.writeQ(item.getPrice()); // buyers price
-			packet.writeQ(item.getStoreCount()); // maximum possible tradecount
-			// T1
-			packet.writeH(item.getAttackElementType());
-			packet.writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
-				packet.writeH(item.getElementDefAttr(i));
-			}
-			for (int op : item.getEnchantOptions())
-			{
-				packet.writeH(op);
-			}
+			packet.writeD((int) item.getPrice()); // buyers price
+			packet.writeD((int) item.getStoreCount()); // maximum possible tradecount
 		}
 		return true;
 	}

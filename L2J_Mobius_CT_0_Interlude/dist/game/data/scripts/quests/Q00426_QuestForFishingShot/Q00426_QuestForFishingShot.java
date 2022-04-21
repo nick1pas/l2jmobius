@@ -56,7 +56,6 @@ public class Q00426_QuestForFishingShot extends Quest
 		31697, // Eindarkner
 		31989, // Batidae
 		32007, // Galba
-		32348, // Burang
 	};
 	private static final Map<Integer, ChanceReward> MOBS = new HashMap<>(250);
 	static
@@ -231,17 +230,6 @@ public class Q00426_QuestForFishingShot extends Quest
 		MOBS.put(21639, new ChanceReward(185, 1)); // Tasaba Lizardman
 		MOBS.put(21641, new ChanceReward(195, 1)); // Ogre
 		MOBS.put(21644, new ChanceReward(170, 1)); // Lienrik
-		MOBS.put(22231, new ChanceReward(10, 1)); // Dominant Grey Keltir
-		MOBS.put(22233, new ChanceReward(20, 1)); // Dominant Black Wolf
-		MOBS.put(22234, new ChanceReward(30, 1)); // Green Goblin
-		MOBS.put(22235, new ChanceReward(35, 1)); // Mountain Werewolf
-		MOBS.put(22237, new ChanceReward(55, 1)); // Mountain Fungus
-		MOBS.put(22238, new ChanceReward(70, 1)); // Mountain Werewolf Chief
-		MOBS.put(22241, new ChanceReward(80, 1)); // Colossus
-		MOBS.put(22244, new ChanceReward(90, 1)); // Crimson Spider
-		MOBS.put(22247, new ChanceReward(90, 1)); // Grotto Golem
-		MOBS.put(22250, new ChanceReward(90, 1)); // Grotto Leopard
-		MOBS.put(22252, new ChanceReward(95, 1)); // Grotto Grizzly
 		MOBS.put(20579, new ChanceReward(420, 2)); // Leto Lizardman Soldier
 		MOBS.put(20639, new ChanceReward(280, 2)); // Mirror
 		MOBS.put(20646, new ChanceReward(145, 2)); // Halingka
@@ -311,13 +299,6 @@ public class Q00426_QuestForFishingShot extends Quest
 		MOBS.put(21390, new ChanceReward(750, 5)); // Ashuras of Destruction
 		MOBS.put(21654, new ChanceReward(400, 5)); // Necromancer of Destruction
 		MOBS.put(21656, new ChanceReward(750, 5)); // Ashuras of Destruction
-		MOBS.put(22634, new ChanceReward(280, 4)); // Scarlet Stakato Worker
-		MOBS.put(22636, new ChanceReward(375, 4)); // Scarlet Stakato Noble
-		MOBS.put(22638, new ChanceReward(375, 4)); // Tepra Scarab
-		MOBS.put(22640, new ChanceReward(125, 5)); // Mercenary of Destruction
-		MOBS.put(22644, new ChanceReward(640, 4)); // Arimanes of Destruction
-		MOBS.put(22646, new ChanceReward(750, 5)); // Ashuras of Destruction
-		MOBS.put(22649, new ChanceReward(935, 4)); // Magma Drake
 	}
 	private static final Map<Integer, ChanceReward> MOBS_SPECIAL = new HashMap<>(5);
 	static

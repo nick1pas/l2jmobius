@@ -44,11 +44,6 @@ public class ShortCutRegister implements IClientOutgoingPacket
 			case ITEM:
 			{
 				packet.writeD(_shortcut.getId());
-				packet.writeD(_shortcut.getCharacterType());
-				packet.writeD(_shortcut.getSharedReuseGroup());
-				packet.writeD(0); // unknown
-				packet.writeD(0); // unknown
-				packet.writeD(0); // item augment id
 				break;
 			}
 			case SKILL:
@@ -56,18 +51,16 @@ public class ShortCutRegister implements IClientOutgoingPacket
 				packet.writeD(_shortcut.getId());
 				packet.writeD(_shortcut.getLevel());
 				packet.writeC(0); // C5
-				packet.writeD(_shortcut.getCharacterType());
 				break;
 			}
 			case ACTION:
 			case MACRO:
 			case RECIPE:
-			case BOOKMARK:
 			{
 				packet.writeD(_shortcut.getId());
-				packet.writeD(_shortcut.getCharacterType());
 			}
 		}
+		packet.writeD(1); // ??
 		return true;
 	}
 }

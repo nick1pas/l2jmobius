@@ -32,7 +32,7 @@ public class ExShowAgitInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_SHOW_AGIT_INFO.writeId(packet);
+		OutgoingPackets.AGIT_DECO_INFO.writeId(packet);
 		final Map<Integer, AuctionableHall> clannhalls = ClanHallTable.getInstance().getAllAuctionableClanHalls();
 		packet.writeD(clannhalls.size());
 		for (AuctionableHall ch : clannhalls.values())

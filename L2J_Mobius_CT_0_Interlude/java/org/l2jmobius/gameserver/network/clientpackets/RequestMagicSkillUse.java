@@ -73,31 +73,9 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 			skill = player.getCustomSkill(_magicId);
 			if (skill == null)
 			{
-				skill = player.getTransformSkill(_magicId);
-				if (skill == null)
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					// if (_magicId > 0)
-					// {
-					// LOGGER.warning("Skill Id " + _magicId + " not found in player: " + player);
-					// }
-					return;
-				}
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
 			}
-		}
-		
-		// Avoid Use of Skills in AirShip.
-		if (player.isPlayable() && player.isInAirShip())
-		{
-			player.sendPacket(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if ((player.isTransformed() || player.isInStance()) && !player.hasTransformSkill(skill.getId()))
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
 		}
 		
 		// If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
@@ -114,8 +92,8 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		
 		player.onActionRequest();
 		
-		// Stop if use self-buff (except if on AirShip or Boat).
-		if ((skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == TargetType.SELF)) && (!player.isInAirShip() || !player.isInBoat()))
+		// Stop if use self-buff (except if on Boat).
+		if ((skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == TargetType.SELF)) && !player.isInBoat())
 		{
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getLocation());
 		}

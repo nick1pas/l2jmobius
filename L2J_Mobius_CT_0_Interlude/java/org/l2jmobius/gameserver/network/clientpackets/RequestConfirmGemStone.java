@@ -32,7 +32,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemstoneItemObjId;
-	private long _gemStoneCount;
+	private int _gemStoneCount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -40,7 +40,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 		_targetItemObjId = packet.readD();
 		_refinerItemObjId = packet.readD();
 		_gemstoneItemObjId = packet.readD();
-		_gemStoneCount = packet.readQ();
+		_gemStoneCount = packet.readD();
 		return true;
 	}
 	
@@ -88,6 +88,6 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		player.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemStoneCount, gemStoneItem.getId()));
+		player.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemStoneCount));
 	}
 }

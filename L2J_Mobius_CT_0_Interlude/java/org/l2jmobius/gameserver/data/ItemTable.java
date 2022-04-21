@@ -67,9 +67,6 @@ public class ItemTable
 	static
 	{
 		SLOTS.put("shirt", ItemTemplate.SLOT_UNDERWEAR);
-		SLOTS.put("lbracelet", ItemTemplate.SLOT_L_BRACELET);
-		SLOTS.put("rbracelet", ItemTemplate.SLOT_R_BRACELET);
-		SLOTS.put("talisman", ItemTemplate.SLOT_DECO);
 		SLOTS.put("chest", ItemTemplate.SLOT_CHEST);
 		SLOTS.put("fullarmor", ItemTemplate.SLOT_FULL_ARMOR);
 		SLOTS.put("head", ItemTemplate.SLOT_HEAD);
@@ -82,7 +79,6 @@ public class ItemTable
 		SLOTS.put("feet", ItemTemplate.SLOT_FEET);
 		SLOTS.put("gloves", ItemTemplate.SLOT_GLOVES);
 		SLOTS.put("chest,legs", ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_LEGS);
-		SLOTS.put("belt", ItemTemplate.SLOT_BELT);
 		SLOTS.put("rhand", ItemTemplate.SLOT_R_HAND);
 		SLOTS.put("lhand", ItemTemplate.SLOT_L_HAND);
 		SLOTS.put("lrhand", ItemTemplate.SLOT_LR_HAND);
@@ -99,8 +95,6 @@ public class ItemTable
 		SLOTS.put("hair2", ItemTemplate.SLOT_HAIR2);
 		SLOTS.put("dhair", ItemTemplate.SLOT_HAIRALL);
 		SLOTS.put("alldress", ItemTemplate.SLOT_ALLDRESS);
-		SLOTS.put("deco1", ItemTemplate.SLOT_DECO);
-		SLOTS.put("waist", ItemTemplate.SLOT_BELT);
 	}
 	private ItemTemplate[] _allTemplates;
 	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();

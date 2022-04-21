@@ -432,7 +432,6 @@
 		<node X="174829" Y="-73822" />
 	</zone>
 	<!-- Hot Springs -->
-	<!-- Hot Fantasy -->
 	<zone name="spa_11" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
 		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
 		<stat name="chance" val="100" />
@@ -1974,90 +1973,6 @@
 		<node X="-45009" Y="247046" />
 		<node X="-45008" Y="247062" />
 		<node X="-45026" Y="247065" />
-	</zone>
-	<!-- Hellbound Anomic Foundry Lava -->
-	<zone name="20_25_factory_lava01" type="EffectZone" shape="NPoly" minZ="-2916" maxZ="-2266">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
-		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="25385" Y="248647" />
-		<node X="25560" Y="248478" />
-		<node X="26089" Y="248776" />
-		<node X="26626" Y="248852" />
-		<node X="26720" Y="249103" />
-		<node X="26634" Y="249333" />
-		<node X="25960" Y="249587" />
-		<node X="25637" Y="249450" />
-	</zone>
-	<zone name="20_25_factory_lava02" type="EffectZone" shape="NPoly" minZ="-2004" maxZ="-1704">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
-		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="24695" Y="249093" />
-		<node X="26502" Y="252842" />
-		<node X="25614" Y="253321" />
-		<node X="23873" Y="252774" />
-		<node X="23275" Y="252071" />
-		<node X="23112" Y="251737" />
-		<node X="23227" Y="250934" />
-		<node X="23533" Y="249958" />
-	</zone>
-	<zone name="20_25_factory_lava03" type="EffectZone" shape="NPoly" minZ="-3220" maxZ="-3120">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
-		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="27681" Y="248719" />
-		<node X="27733" Y="248777" />
-		<node X="27685" Y="248814" />
-		<node X="27638" Y="248758" />
-	</zone>
-	<zone name="20_25_factory_lava04" type="EffectZone" shape="NPoly" minZ="-3212" maxZ="-3112">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
-		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="25946" Y="246597" />
-		<node X="25995" Y="246650" />
-		<node X="25953" Y="246689" />
-		<node X="25907" Y="246642" />
-	</zone>
-	<zone name="20_25_factory_lava05" type="EffectZone" shape="NPoly" minZ="-3704" maxZ="-3604">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
-		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="27167" Y="246294" />
-		<node X="27201" Y="246351" />
-		<node X="27153" Y="246383" />
-		<node X="27116" Y="246329" />
-	</zone>
-	<!-- Hellbound Heat of Desert -->
-	<zone name="area_dehydration" type="EffectZone" shape="NPoly" minZ="-5156" maxZ="1844"> <!-- [19_25] -->
-		<stat name="skillIdLvl" val="5399-1;" /> <!-- s_area_hot_ground1 -->
-		<stat name="chance" val="100" />
-		<!-- stat name="unitTick" val="10" / -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="-19092" Y="247323" />
-		<node X="-1373" Y="247850" />
-		<node X="-2152" Y="260234" />
-		<node X="-24490" Y="260000" />
-		<node X="-22872" Y="251314" />
-		<node X="-19214" Y="251154" />
-	</zone>
-	<zone name="area_dehydration_var" type="EffectZone" shape="NPoly" minZ="-5980" maxZ="1020"> <!-- [20_25] -->
-		<stat name="skillIdLvl" val="5399-1;" /> <!-- s_area_hot_ground1 -->
-		<stat name="chance" val="100" />
-		<!-- stat name="unitTick" val="10" / -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="243" Y="231758" />
-		<node X="13742" Y="233542" />
-		<node X="13620" Y="242495" />
-		<node X="131" Y="242444" />
 	</zone>
 	<!-- Stakato Nest Buff -->
 	<zone name="22_16_stakato_mob_buff" id="200103" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">

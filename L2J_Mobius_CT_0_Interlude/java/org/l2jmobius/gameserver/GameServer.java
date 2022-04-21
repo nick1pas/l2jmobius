@@ -36,7 +36,6 @@ import org.l2jmobius.commons.util.DeadLockDetector;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.AugmentationData;
-import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.MerchantPriceConfigTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
@@ -55,7 +54,6 @@ import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.data.xml.ElementalAttributeData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
@@ -80,7 +78,6 @@ import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.PetSkillData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.PlayerXpPercentLostData;
-import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SiegeScheduleData;
@@ -88,11 +85,8 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillLearnData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.StaticObjectData;
-import org.l2jmobius.gameserver.data.xml.TransformData;
-import org.l2jmobius.gameserver.data.xml.UIData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.EffectHandler;
-import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
@@ -107,16 +101,12 @@ import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
@@ -129,9 +119,6 @@ import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.SoDManager;
-import org.l2jmobius.gameserver.instancemanager.SoIManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.instancemanager.games.Lottery;
@@ -247,7 +234,6 @@ public class GameServer
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();
 		EnchantItemOptionsData.getInstance();
-		ElementalAttributeData.getInstance();
 		OptionData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		MerchantPriceConfigTable.getInstance().loadInstances();
@@ -259,7 +245,6 @@ public class GameServer
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
-		PrimeShopData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -300,7 +285,6 @@ public class GameServer
 		FakePlayerChatManager.getInstance();
 		WalkingManager.getInstance();
 		StaticObjectData.getInstance();
-		ItemAuctionManager.getInstance();
 		CastleManager.getInstance().loadInstances();
 		SchemeBufferTable.getInstance();
 		ZoneManager.getInstance();
@@ -319,14 +303,11 @@ public class GameServer
 		HtmCache.getInstance();
 		CrestTable.getInstance();
 		TeleportLocationTable.getInstance();
-		UIData.getInstance();
 		PartyMatchWaitingList.getInstance();
 		PartyMatchRoomList.getInstance();
 		PetitionManager.getInstance();
 		AugmentationData.getInstance();
 		CursedWeaponsManager.getInstance();
-		TransformData.getInstance();
-		BotReportTable.getInstance();
 		if (Config.SELLBUFF_ENABLED)
 		{
 			SellBuffsManager.getInstance();
@@ -342,9 +323,6 @@ public class GameServer
 		printSection("Scripts");
 		QuestManager.getInstance();
 		BoatManager.getInstance();
-		AirShipManager.getInstance();
-		SoDManager.getInstance();
-		SoIManager.getInstance();
 		
 		try
 		{
@@ -366,13 +344,9 @@ public class GameServer
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
 		CastleManager.getInstance().activateInstances();
-		FortManager.getInstance().loadInstances();
-		FortManager.getInstance().activateInstances();
-		FortSiegeManager.getInstance();
 		SiegeScheduleData.getInstance();
 		
 		MerchantPriceConfigTable.getInstance().updateReferences();
-		TerritoryWarManager.getInstance();
 		CastleManorManager.getInstance();
 		MercTicketManager.getInstance();
 		
@@ -411,10 +385,6 @@ public class GameServer
 		
 		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 		
-		if (Config.ALLOW_MAIL)
-		{
-			MailManager.getInstance();
-		}
 		if (Config.CUSTOM_MAIL_MANAGER_ENABLED)
 		{
 			CustomMailManager.getInstance();

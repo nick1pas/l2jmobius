@@ -35,9 +35,6 @@ public enum WeaponType implements ItemType
 	FIST(TraitType.FIST),
 	DUALFIST(TraitType.DUALFIST),
 	FISHINGROD(TraitType.NONE),
-	RAPIER(TraitType.RAPIER),
-	ANCIENTSWORD(TraitType.ANCIENTSWORD),
-	CROSSBOW(TraitType.CROSSBOW),
 	FLAG(TraitType.NONE),
 	OWNTHING(TraitType.NONE),
 	DUALDAGGER(TraitType.DUALDAGGER);

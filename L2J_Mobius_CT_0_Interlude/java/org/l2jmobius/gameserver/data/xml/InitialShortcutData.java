@@ -223,8 +223,7 @@ public class InitialShortcutData implements IXmlReader
 		final ShortcutType shortcutType = parseEnum(attrs, ShortcutType.class, "shortcutType");
 		final int shortcutId = parseInteger(attrs, "shortcutId");
 		final int shortcutLevel = parseInteger(attrs, "shortcutLevel", 0);
-		final int characterType = parseInteger(attrs, "characterType", 0);
-		return new Shortcut(slotId, pageId, shortcutType, shortcutId, shortcutLevel, characterType);
+		return new Shortcut(slotId, pageId, shortcutType, shortcutId, shortcutLevel);
 	}
 	
 	/**
@@ -304,7 +303,7 @@ public class InitialShortcutData implements IXmlReader
 			}
 			
 			// Register shortcut
-			final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getCharacterType());
+			final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel());
 			player.sendPacket(new ShortCutRegister(newShortcut));
 			player.registerShortCut(newShortcut);
 		}
@@ -347,7 +346,7 @@ public class InitialShortcutData implements IXmlReader
 					}
 				}
 				// Register shortcut
-				final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel(), shortcut.getCharacterType());
+				final Shortcut newShortcut = new Shortcut(shortcut.getSlot(), shortcut.getPage(), shortcut.getType(), shortcutId, shortcut.getLevel());
 				player.sendPacket(new ShortCutRegister(newShortcut));
 				player.registerShortCut(newShortcut);
 			}

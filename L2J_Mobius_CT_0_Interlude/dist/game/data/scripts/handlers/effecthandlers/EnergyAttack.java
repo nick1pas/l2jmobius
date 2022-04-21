@@ -114,7 +114,7 @@ public class EnergyAttack extends AbstractEffect
 			final double ssBoost = ss ? 2 : 1.0;
 			double weaponTypeBoost;
 			final Weapon weapon = attacker.getActiveWeaponItem();
-			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
+			if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 			{
 				weaponTypeBoost = 70;
 			}

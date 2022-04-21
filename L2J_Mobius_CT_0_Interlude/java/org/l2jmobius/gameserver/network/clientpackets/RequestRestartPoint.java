@@ -22,18 +22,14 @@ import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.SiegeClan;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -126,9 +122,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	{
 		Location loc = null;
 		Castle castle = null;
-		Fort fort = null;
 		SiegableHall hall = null;
-		final boolean isInDefense = false;
 		int instanceId = 0;
 		
 		// force jail
@@ -190,40 +184,20 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				}
 				break;
 			}
-			case 3: // to fortress
-			{
-				if (((player.getClan() == null) || (player.getClan().getFortId() == 0)) && !isInDefense)
-				{
-					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
-					return;
-				}
-				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.FORTRESS);
-				if ((FortManager.getInstance().getFortByOwner(player.getClan()) != null) && (FortManager.getInstance().getFortByOwner(player.getClan()).getFunction(Fort.FUNC_RESTORE_EXP) != null))
-				{
-					player.restoreExp(FortManager.getInstance().getFortByOwner(player.getClan()).getFunction(Fort.FUNC_RESTORE_EXP).getLvl());
-				}
-				break;
-			}
-			case 4: // to siege HQ
+			case 3: // to siege HQ
 			{
 				SiegeClan siegeClan = null;
 				castle = CastleManager.getInstance().getCastle(player);
-				fort = FortManager.getInstance().getFort(player);
 				hall = CHSiegeManager.getInstance().getNearbyClanHall(player);
-				final SiegeFlag flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
 				if ((castle != null) && castle.getSiege().isInProgress())
 				{
 					siegeClan = castle.getSiege().getAttackerClan(player.getClan());
-				}
-				else if ((fort != null) && fort.getSiege().isInProgress())
-				{
-					siegeClan = fort.getSiege().getAttackerClan(player.getClan());
 				}
 				else if ((hall != null) && hall.isInSiege())
 				{
 					siegeClan = hall.getSiege().getAttackerClan(player.getClan());
 				}
-				if (((siegeClan == null) || siegeClan.getFlag().isEmpty()) && (flag == null))
+				if ((siegeClan == null) || siegeClan.getFlag().isEmpty())
 				{
 					// Check if clan hall has inner spawns loc
 					if (hall != null)
@@ -241,7 +215,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.SIEGEFLAG);
 				break;
 			}
-			case 5: // Fixed or Player is a festival participant
+			case 4: // Fixed or Player is a festival participant
 			{
 				if (!player.isGM() && !player.isFestivalParticipant() && !player.getInventory().haveItemForSelfResurrection())
 				{
@@ -260,7 +234,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				}
 				break;
 			}
-			case 6: // TODO: agathion ress
+			case 5: // TODO: agathion ress
 			{
 				break;
 			}

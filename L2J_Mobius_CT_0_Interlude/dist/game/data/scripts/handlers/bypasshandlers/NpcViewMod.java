@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -192,14 +191,6 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%evasion%", npc.getEvasionRate(player));
 		html.replace("%accuracy%", npc.getStat().getAccuracy());
 		html.replace("%speed%", (int) npc.getStat().getMoveSpeed());
-		html.replace("%attributeatktype%", Elementals.getElementName(npc.getStat().getAttackElement()));
-		html.replace("%attributeatkvalue%", npc.getStat().getAttackElementValue(npc.getStat().getAttackElement()));
-		html.replace("%attributefire%", npc.getStat().getDefenseElementValue(Elementals.FIRE));
-		html.replace("%attributewater%", npc.getStat().getDefenseElementValue(Elementals.WATER));
-		html.replace("%attributewind%", npc.getStat().getDefenseElementValue(Elementals.WIND));
-		html.replace("%attributeearth%", npc.getStat().getDefenseElementValue(Elementals.EARTH));
-		html.replace("%attributedark%", npc.getStat().getDefenseElementValue(Elementals.DARK));
-		html.replace("%attributeholy%", npc.getStat().getDefenseElementValue(Elementals.HOLY));
 		html.replace("%dropListButtons%", getDropListButtons(npc));
 		player.sendPacket(html);
 	}
@@ -215,12 +206,12 @@ public class NpcViewMod implements IBypassHandler
 			sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
 			if ((dropListGroups != null) || (dropListDeath != null))
 			{
-				sb.append("<td align=center><button value=\"Show Drop\" width=100 height=25 action=\"bypass NpcViewMod dropList DROP " + npc.getObjectId() + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<td align=center><button value=\"Show Drop\" width=95 height=21 action=\"bypass NpcViewMod dropList DROP " + npc.getObjectId() + "\" back=\"bigbutton_over\" fore=\"bigbutton\"></td>");
 			}
 			
 			if (dropListSpoil != null)
 			{
-				sb.append("<td align=center><button value=\"Show Spoil\" width=100 height=25 action=\"bypass NpcViewMod dropList SPOIL " + npc.getObjectId() + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<td align=center><button value=\"Show Spoil\" width=95 height=21 action=\"bypass NpcViewMod dropList SPOIL " + npc.getObjectId() + "\" back=\"bigbutton_over\" fore=\"bigbutton\"></td>");
 			}
 			
 			sb.append("</tr></table>");
@@ -278,7 +269,7 @@ public class NpcViewMod implements IBypassHandler
 			pagesSb.append("<table><tr>");
 			for (int i = 0; i < pages; i++)
 			{
-				pagesSb.append("<td align=center><button value=\"" + (i + 1) + "\" width=20 height=20 action=\"bypass NpcViewMod dropList " + dropType + " " + npc.getObjectId() + " " + i + "\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				pagesSb.append("<td align=center><button value=\"" + (i + 1) + "\" width=20 height=15 action=\"bypass NpcViewMod dropList " + dropType + " " + npc.getObjectId() + " " + i + "\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			}
 			pagesSb.append("</tr></table>");
 		}
@@ -298,15 +289,11 @@ public class NpcViewMod implements IBypassHandler
 		
 		final DecimalFormat amountFormat = new DecimalFormat("#,###");
 		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
-		int leftHeight = 0;
-		int rightHeight = 0;
-		final StringBuilder leftSb = new StringBuilder();
-		final StringBuilder rightSb = new StringBuilder();
+		final StringBuilder totalSb = new StringBuilder();
 		String limitReachedMsg = "";
 		for (int i = start; i < end; i++)
 		{
 			final StringBuilder sb = new StringBuilder();
-			final int height = 64;
 			final DropHolder dropItem = dropList.get(i);
 			final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 			
@@ -400,14 +387,14 @@ public class NpcViewMod implements IBypassHandler
 				}
 			}
 			
-			sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
+			sb.append("<table width=295 cellpadding=2 cellspacing=0 background=\"000000\">");
 			sb.append("<tr><td width=32 valign=top>");
 			sb.append("<img src=\"" + (item.getIcon() == null ? "icon.NOIMAGE" : item.getIcon()) + "\" width=32 height=32>");
-			sb.append("</td><td fixwidth=300 align=center><font name=\"hs9\" color=\"CD9000\">");
+			sb.append("</td><td fixwidth=80 align=left><font name=\"hs9\" color=\"CD9000\">");
 			sb.append(item.getName());
-			sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
+			sb.append("</font></td><td width=0></td><td width=50><table width=150 cellpadding=0 cellspacing=0>");
 			sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
-			sb.append("<td width=247 align=center>");
+			sb.append("<td width=90 align=center>");
 			
 			final long min = (long) (dropItem.getMin() * rateAmount);
 			final long max = (long) (dropItem.getMax() * rateAmount);
@@ -423,21 +410,12 @@ public class NpcViewMod implements IBypassHandler
 			}
 			
 			sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
-			sb.append("<td width=247 align=center>");
+			sb.append("<td width=90 align=center>");
 			sb.append(chanceFormat.format(Math.min(dropItem.getChance() * rateChance, 100)));
-			sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
-			if ((sb.length() + rightSb.length() + leftSb.length()) < 16000) // limit of 32766?
+			sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=95>&nbsp;</td></tr></table>");
+			if ((sb.length() + totalSb.length()) < 16000) // limit of 32766?
 			{
-				if (leftHeight >= (rightHeight + height))
-				{
-					rightSb.append(sb);
-					rightHeight += height;
-				}
-				else
-				{
-					leftSb.append(sb);
-					leftHeight += height;
-				}
+				totalSb.append(sb);
 			}
 			else
 			{
@@ -448,9 +426,7 @@ public class NpcViewMod implements IBypassHandler
 		final StringBuilder bodySb = new StringBuilder();
 		bodySb.append("<table><tr>");
 		bodySb.append("<td>");
-		bodySb.append(leftSb.toString());
-		bodySb.append("</td><td>");
-		bodySb.append(rightSb.toString());
+		bodySb.append(totalSb.toString());
 		bodySb.append("</td>");
 		bodySb.append("</tr></table>");
 		
@@ -464,6 +440,6 @@ public class NpcViewMod implements IBypassHandler
 		html = html.replace("%dropListButtons%", getDropListButtons(npc));
 		html = html.replace("%pages%", pagesSb.toString());
 		html = html.replace("%items%", bodySb.toString() + limitReachedMsg);
-		Util.sendCBHtml(player, html);
+		Util.sendHtml(player, html);
 	}
 }

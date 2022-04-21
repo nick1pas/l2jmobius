@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.FakePlayerHolder;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -97,21 +96,31 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeD(_fpcHolder.getEquipRHand()); // dual hand
 		packet.writeD(_fpcHolder.getEquipHair());
 		packet.writeD(_fpcHolder.getEquipHair2());
-		packet.writeD(0); // Inventory.PAPERDOLL_RBRACELET
-		packet.writeD(0); // Inventory.PAPERDOLL_LBRACELET
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO1
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO2
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO3
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO4
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO5
-		packet.writeD(0); // Inventory.PAPERDOLL_DECO6
-		packet.writeD(0); // Inventory.PAPERDOLL_BELT
-		for (int i = 0; i < 21; i++)
-		{
-			packet.writeD(0);
-		}
-		packet.writeD(0); // getTalismanSlots
-		packet.writeD(1); // canEquipCloak
+		
+		// c6 new h's
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(0); // _player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND)
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(0); // _player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND)
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		
 		packet.writeD(_npc.getScriptValue()); // getPvpFlag()
 		packet.writeD(_npc.getKarma());
 		packet.writeD(_mAtkSpd);
@@ -162,11 +171,11 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		// getCubics().keySet().forEach(packet::writeH);
 		packet.writeC(0); // isInPartyMatchRoom
 		packet.writeD(_npc.getAbnormalVisualEffects());
-		packet.writeC(_npc.isInsideZone(ZoneId.WATER) ? 1 : 0);
+		packet.writeC(0); // _player.getRecomLeft()
 		packet.writeH(_fpcHolder.getRecommends()); // Blue value for name (0 = white, 255 = pure blue)
-		packet.writeD(0); // getMountNpcId() == 0 ? 0 : getMountNpcId() + 1000000
 		packet.writeD(_fpcHolder.getClassId());
 		packet.writeD(0); // ?
+		packet.writeD(0); // _player.getCurrentCp()
 		packet.writeC(_fpcHolder.getWeaponEnchantLevel()); // isMounted() ? 0 : _enchantLevel
 		packet.writeC(_npc.getTeam().getId());
 		packet.writeD(_clan != null ? _clan.getCrestLargeId() : 0);
@@ -182,17 +191,6 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeD(0); // getPledgeType()
 		packet.writeD(_fpcHolder.getTitleColor());
 		packet.writeD(0); // isCursedWeaponEquipped
-		packet.writeD(0); // getClanId() > 0 ? getClan().getReputationScore() : 0
-		// T1
-		packet.writeD(0); // getTransformationDisplayId()
-		packet.writeD(_fpcHolder.getAgathionId());
-		// T2
-		packet.writeD(1);
-		// T2.3
-		packet.writeD(_npc.getAbnormalVisualEffectSpecial());
-		packet.writeD(0); // territory Id
-		packet.writeD(0); // is Disguised
-		packet.writeD(0); // territory Id
 		return true;
 	}
 }

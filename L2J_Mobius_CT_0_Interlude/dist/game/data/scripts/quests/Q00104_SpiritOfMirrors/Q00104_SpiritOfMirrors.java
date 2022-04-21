@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Spirit of Mirrors (104)
  * @author xban1x
@@ -131,7 +129,6 @@ public class Q00104_SpiritOfMirrors extends Quest
 					{
 						if (qs.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 						{
-							Q00281_HeadForTheHills.giveNewbieReward(player);
 							for (ItemHolder reward : REWARDS)
 							{
 								giveItems(player, reward);

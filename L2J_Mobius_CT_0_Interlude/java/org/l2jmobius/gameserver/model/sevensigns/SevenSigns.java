@@ -36,13 +36,12 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SSQInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 
@@ -1579,8 +1578,8 @@ public class SevenSigns
 			
 			teleLosingCabalFromDungeons(getCabalShortName(getCabalHighestScore()));
 			
-			final SSQInfo ss = new SSQInfo();
-			Broadcast.toAllOnlinePlayers(ss);
+			// final SSQInfo ss = new SSQInfo();
+			// Broadcast.toAllOnlinePlayers(ss);
 			spawnSevenSignsNPC();
 			
 			LOGGER.info("SevenSigns: The " + getCurrentPeriodName() + " period has begun!");

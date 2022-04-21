@@ -24,7 +24,7 @@ public class CharDeleteSuccess implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_DELETE_SUCCESS.writeId(packet);
+		OutgoingPackets.CHAR_DELETE_OK.writeId(packet);
 		return true;
 	}
 }

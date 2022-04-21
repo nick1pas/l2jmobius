@@ -37,7 +37,7 @@ public class SendMacroList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.MACRO_LIST.writeId(packet);
+		OutgoingPackets.SEND_MACRO_LIST.writeId(packet);
 		packet.writeD(_rev); // macro change revision (changes after each macro edition)
 		packet.writeC(0); // unknown
 		packet.writeC(_count); // count of Macros

@@ -25,28 +25,23 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.util.Util;
 
-/**
- * Ghosts of Batur (645)
- * @author Zoey76
- */
 public class Q00645_GhostsOfBatur extends Quest
 {
 	// NPC
 	private static final int KARUDA = 32017;
-	// Monsters
-	private static final int CONTAMINATED_MOREK_WARRIOR = 22703;
-	private static final int CONTAMINATED_BATUR_WARRIOR = 22704;
-	private static final int CONTAMINATED_BATUR_COMMANDER = 22705;
-	// Items
-	private static final int CURSED_GRAVE_GOODS = 8089; // Old item
-	private static final int CURSED_BURIAL_ITEMS = 14861; // New item
-	// Misc
-	private static final int MIN_LEVEL = 80;
-	private static final int[] CHANCES =
+	// Item
+	private static final int CURSED_GRAVE_GOODS = 8089;
+	// Rewards
+	private static final int[][] REWARDS =
 	{
-		516,
-		664,
-		686
+		// @formatter:off
+		{1878, 18},
+		{1879, 7},
+		{1880, 4},
+		{1881, 6},
+		{1882, 10},
+		{1883, 2}
+		// @formatter:on
 	};
 	
 	public Q00645_GhostsOfBatur()
@@ -54,44 +49,69 @@ public class Q00645_GhostsOfBatur extends Quest
 		super(645);
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
-		addKillId(CONTAMINATED_MOREK_WARRIOR, CONTAMINATED_BATUR_WARRIOR, CONTAMINATED_BATUR_COMMANDER);
-		registerQuestItems(CURSED_GRAVE_GOODS);
+		addKillId(22007, 22009, 22010, 22011, 22012, 22013, 22014, 22015, 22016);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = null;
-		if (player.getLevel() >= MIN_LEVEL)
+		if (event.equals("32017-03.htm"))
 		{
-			switch (event)
+			st.startQuest();
+		}
+		else if (Util.isDigit(event))
+		{
+			htmltext = "32017-07.htm";
+			takeItems(player, CURSED_GRAVE_GOODS, -1);
+			
+			final int[] reward = REWARDS[Integer.parseInt(event)];
+			giveItems(player, reward[0], reward[1]);
+			
+			st.exitQuest(true, true);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(Npc npc, Player player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case "32017-03.htm":
+				htmltext = (player.getLevel() < 23) ? "32017-02.htm" : "32017-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				final int cond = st.getCond();
+				if (cond == 1)
 				{
-					qs.startQuest();
-					htmltext = event;
-					break;
+					htmltext = "32017-04.htm";
 				}
-				case "32017-06.html":
-				case "32017-08.html":
+				else if (cond == 2)
 				{
-					htmltext = event;
-					break;
+					htmltext = "32017-05.htm";
 				}
-				case "32017-09.html":
-				{
-					qs.exitQuest(true, true);
-					htmltext = event;
-					break;
-				}
+				break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -99,11 +119,11 @@ public class Q00645_GhostsOfBatur extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Player player = getRandomPartyMember(killer, 1);
-		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR]))
+		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (getRandom(100) < 75))
 		{
 			final QuestState qs = getQuestState(player, false);
-			giveItems(killer, CURSED_BURIAL_ITEMS, 1);
-			if (qs.isCond(1) && (getQuestItemsCount(killer, CURSED_BURIAL_ITEMS) >= 500))
+			giveItems(killer, CURSED_GRAVE_GOODS, 1);
+			if (qs.isCond(1) && (getQuestItemsCount(killer, CURSED_GRAVE_GOODS) >= 500))
 			{
 				qs.setCond(2, true);
 			}
@@ -113,38 +133,5 @@ public class Q00645_GhostsOfBatur extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
-	public String onTalk(Npc npc, Player player)
-	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		switch (qs.getState())
-		{
-			case State.CREATED:
-			{
-				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32017-01.htm" : "32017-02.html";
-				break;
-			}
-			case State.STARTED:
-			{
-				// Support for old quest reward.
-				final long count = getQuestItemsCount(player, CURSED_GRAVE_GOODS);
-				if ((count > 0) && (count < 180))
-				{
-					giveAdena(player, 56000 + (count * 64), false);
-					addExpAndSp(player, 138000, 7997);
-					qs.exitQuest(true, true);
-					htmltext = "32017-07.html";
-				}
-				else
-				{
-					htmltext = hasQuestItems(player, CURSED_BURIAL_ITEMS) ? "32017-04.html" : "32017-05.html";
-				}
-				break;
-			}
-		}
-		return htmltext;
 	}
 }

@@ -28,14 +28,12 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 public class FinishRotating implements IClientIncomingPacket
 {
 	private int _degree;
-	@SuppressWarnings("unused")
-	private int _unknown;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_degree = packet.readD();
-		_unknown = packet.readD();
+		packet.readD(); // Unknown.
 		return true;
 	}
 	
@@ -53,17 +51,6 @@ public class FinishRotating implements IClientIncomingPacket
 			return;
 		}
 		
-		StopRotation sr;
-		if (player.isInAirShip() && player.getAirShip().isCaptain(player))
-		{
-			player.getAirShip().setHeading(_degree);
-			sr = new StopRotation(player.getAirShip().getObjectId(), _degree, 0);
-			player.getAirShip().broadcastPacket(sr);
-		}
-		else
-		{
-			sr = new StopRotation(player.getObjectId(), _degree, 0);
-			player.broadcastPacket(sr);
-		}
+		player.broadcastPacket(new StopRotation(player.getObjectId(), _degree, 0));
 	}
 }

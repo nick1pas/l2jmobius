@@ -39,7 +39,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 	{
 		_id = packet.readD();
 		_recipeId = packet.readD();
-		_unknown = packet.readQ();
+		_unknown = packet.readD();
 		return true;
 	}
 	

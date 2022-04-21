@@ -21,7 +21,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -102,7 +101,7 @@ public class RequestEvaluate implements IClientIncomingPacket
 		target.sendPacket(sm);
 		
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
+		// player.sendPacket(new ExBrExtraUserInfo(player));
 		target.broadcastUserInfo();
 	}
 }

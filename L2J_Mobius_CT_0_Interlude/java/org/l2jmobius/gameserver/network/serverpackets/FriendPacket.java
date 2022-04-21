@@ -48,7 +48,7 @@ public class FriendPacket implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.L2_FRIEND.writeId(packet);
+		OutgoingPackets.FRIEND_LIST.writeId(packet);
 		packet.writeD(_action ? 1 : 3); // 1-add 3-remove
 		packet.writeD(_objid);
 		packet.writeS(_name);

@@ -31,7 +31,7 @@ public class LauncherLS extends AbstractDBLauncher
 {
 	public static void main(String[] args) throws Exception
 	{
-		final String defDatabase = "l2jmobiusepilogue";
+		final String defDatabase = "l2jmobiusinterlude";
 		final String dir = "sql/login/";
 		
 		if ((args != null) && (args.length > 0))

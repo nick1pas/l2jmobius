@@ -72,7 +72,7 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 		{
 			case "35627-06.html":
 			{
-				if (qs.isCreated() && (clan != null) && (clan.getLevel() >= REQUIRED_CLAN_LEVEL) && (clan.getFortId() == 0) && player.isClanLeader() && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
+				if (qs.isCreated() && (clan != null) && (clan.getLevel() >= REQUIRED_CLAN_LEVEL) && player.isClanLeader() && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
 				{
 					qs.startQuest();
 					htmltext = event;
@@ -119,7 +119,7 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 			{
 				if (talker.isClanLeader())
 				{
-					if (clan.getFortId() == 0)
+					if (clan.getHideoutId() == 0)
 					{
 						if (clan.getLevel() >= REQUIRED_CLAN_LEVEL)
 						{
@@ -135,7 +135,7 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest
 						htmltext = "35627-04.html";
 					}
 				}
-				else if ((clan.getFortId() == ClanHallSiegeEngine.BEAST_FARM) && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
+				else if ((clan.getHideoutId() == ClanHallSiegeEngine.BEAST_FARM) && (minutesToSiege > 0) && (minutesToSiege < MINUTES_TO_SIEGE))
 				{
 					htmltext = HtmCache.getInstance().getHtm(talker, PATH_TO_HTML);
 				}

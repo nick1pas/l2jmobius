@@ -46,8 +46,8 @@ public class PrimevalIsle extends AbstractNpcAI
 	// NPC
 	private static final int EGG = 18344; // Ancient Egg
 	private static final int SAILREN = 29065; // Sailren
-	private static final int ORNIT = 22742; // Ornithomimus
-	private static final int DEINO = 22743; // Deinonychus
+	private static final int ORNIT = 22202; // Ornithomimus 22742
+	private static final int DEINO = 22205; // Deinonychus 22743
 	private static final int[] SPRIGNANT =
 	{
 		18345, // Sprigant (Anesthesia)
@@ -70,8 +70,8 @@ public class PrimevalIsle extends AbstractNpcAI
 		22225, // Deinonychus
 		22226, // Pachycephalosaurus
 		22227, // Wild Strider
-		22742, // Ornithomimus
-		22743, // Deinonychus
+		// 22742, // Ornithomimus
+		// 22743, // Deinonychus
 	};
 	private static final int[] TREX =
 	{

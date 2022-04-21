@@ -35,7 +35,7 @@ public class CharDeleteFail implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_DELETE_FAIL.writeId(packet);
+		OutgoingPackets.CHAR_DELETE_FAIL.writeId(packet);
 		packet.writeD(_error);
 		return true;
 	}

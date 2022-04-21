@@ -259,12 +259,6 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isCombatFlagEquipped())
-		{
-			activeChar.sendMessage("While you are holding a Combat Flag or Territory Ward you can't go to your love!");
-			return false;
-		}
-		
 		if (activeChar.isCursedWeaponEquipped())
 		{
 			activeChar.sendMessage("While you are holding a Cursed Weapon you can't go to your love!");

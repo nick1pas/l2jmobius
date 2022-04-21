@@ -40,8 +40,6 @@ public class Q00255_Tutorial extends Quest
 		{"44", "tutorial_voice_001g", "tutorial_orc_fighter001.htm"},
 		{"49", "tutorial_voice_001h", "tutorial_orc_mage001.htm"},
 		{"53", "tutorial_voice_001i", "tutorial_dwarven_fighter001.htm"},
-		{"123", "tutorial_voice_001k", "tutorial_kamael_male001.htm"},
-		{"124", "tutorial_voice_001j", "tutorial_kamael_female001.htm"}
 	};
 	// table for Client Event Enable (8) [raceId, html, x, y, z]
 	private static final String[][] CEEa =
@@ -55,8 +53,6 @@ public class Q00255_Tutorial extends Quest
 		{"44", "tutorial_orc007.htm", "-56736", "-113680", "-672"},
 		{"49", "tutorial_orc007.htm", "-56736", "-113680", "-672"},
 		{"53", "tutorial_dwarven_fighter007.htm", "108567", "-173994", "-406"},
-		{"123", "tutorial_kamael007.htm", "-125872", "38016", "1251"},
-		{"124", "tutorial_kamael007.htm", "-125872", "38016", "1251"}
 	};
 	// table for Question Mark Clicked (9 & 11) learning skills [raceId, html, x, y, z]
 	private static final String[][] QMCa =
@@ -70,8 +66,6 @@ public class Q00255_Tutorial extends Quest
 		{"44", "tutorial_fighter017.htm", "-46324", "-114384", "-200"},
 		{"49", "tutorial_fighter017.htm", "-46305", "-112763", "-200"},
 		{"53", "tutorial_fighter017.htm", "115447", "-182672", "-1440"},
-		{"123", "tutorial_fighter017.htm", "-118132", "42788", "723"},
-		{"124", "tutorial_fighter017.htm", "-118132", "42788", "723"},
 	};
 	// @formatter:on
 	// table for Question Mark Clicked (24) newbie lvl [raceId, html]
@@ -87,8 +81,6 @@ public class Q00255_Tutorial extends Quest
 		QMCb.put(44, "tutorial_orc009.htm");
 		QMCb.put(49, "tutorial_orc009.htm");
 		QMCb.put(53, "tutorial_dwarven009.htm");
-		QMCb.put(123, "tutorial_kamael009.htm");
-		QMCb.put(124, "tutorial_kamael009.htm");
 	}
 	// table for Question Mark Clicked (35) 1st class transfer [raceId, html]
 	private static final Map<Integer, String> QMCc = new HashMap<>();

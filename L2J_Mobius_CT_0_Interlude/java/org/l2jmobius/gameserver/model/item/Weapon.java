@@ -49,7 +49,6 @@ public class Weapon extends ItemTemplate
 	 * Skill that activates when item is enchanted +4 (for duals).
 	 */
 	private SkillHolder _enchant4Skill = null;
-	private int _changeWeaponId;
 	
 	// Attached skills for Special Abilities
 	private SkillHolder _skillsOnMagic;
@@ -185,7 +184,6 @@ public class Weapon extends ItemTemplate
 			}
 		}
 		
-		_changeWeaponId = set.getInt("change_weaponId", 0);
 		_isForceEquip = set.getBoolean("isForceEquip", false);
 		_isAttackWeapon = set.getBoolean("isAttackWeapon", true);
 		_useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
@@ -308,14 +306,6 @@ public class Weapon extends ItemTemplate
 	public Skill getEnchant4Skill()
 	{
 		return _enchant4Skill == null ? null : _enchant4Skill.getSkill();
-	}
-	
-	/**
-	 * @return the Id in which weapon this weapon can be changed.
-	 */
-	public int getChangeWeaponId()
-	{
-		return _changeWeaponId;
 	}
 	
 	/**
@@ -444,18 +434,8 @@ public class Weapon extends ItemTemplate
 		}
 	}
 	
-	public boolean isRange()
-	{
-		return isBow() || isCrossBow();
-	}
-	
 	public boolean isBow()
 	{
 		return _type == WeaponType.BOW;
-	}
-	
-	public boolean isCrossBow()
-	{
-		return _type == WeaponType.CROSSBOW;
 	}
 }

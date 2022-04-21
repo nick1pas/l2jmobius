@@ -35,7 +35,7 @@ public class NewCharacterSuccess implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
+		OutgoingPackets.CHAR_TEMPLATES.writeId(packet);
 		packet.writeD(_chars.size());
 		for (PlayerTemplate chr : _chars)
 		{

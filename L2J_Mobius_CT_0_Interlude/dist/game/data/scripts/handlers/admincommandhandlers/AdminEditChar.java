@@ -30,12 +30,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
-import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.enums.ClassId;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.PageResult;
 import org.l2jmobius.gameserver.model.World;
@@ -47,7 +44,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
@@ -235,7 +231,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setPkKills(pk);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
+					// player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PK count to " + pk);
 					activeChar.sendMessage(player.getName() + "'s PK count changed to " + pk);
 				}
@@ -267,7 +263,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.updatePvpTitleAndColor(false);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
+					// player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your PVP count to " + pvp);
 					activeChar.sendMessage(player.getName() + "'s PVP count changed to " + pvp);
 				}
@@ -298,7 +294,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.setFame(fame);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
+					// player.sendPacket(new ExBrExtraUserInfo(player));
 					player.sendMessage("A GM changed your Reputation points to " + fame);
 					activeChar.sendMessage(player.getName() + "'s Fame changed to " + fame);
 				}
@@ -367,49 +363,10 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				if (valid && (player.getClassId().getId() != classidval))
 				{
-					final Race race = player.getRace();
-					final boolean isMage = player.isMageClass();
 					player.setClassId(classidval);
 					if (!player.isSubClassActive())
 					{
 						player.setBaseClass(classidval);
-					}
-					
-					// Sex checks.
-					boolean sexChange = false;
-					if (player.getRace() == Race.KAMAEL)
-					{
-						switch (classidval)
-						{
-							case 123: // Soldier (Male)
-							case 125: // Trooper
-							case 127: // Berserker
-							case 128: // Soul Breaker (Male)
-							case 131: // Doombringer
-							case 132: // Soul Hound (Male)
-							{
-								if (player.getAppearance().isFemale())
-								{
-									sexChange = true;
-									player.getAppearance().setMale();
-								}
-								break;
-							}
-							case 124: // Soldier (Female)
-							case 126: // Warder
-							case 129: // Soul Breaker (Female)
-							case 130: // Arbalester
-							case 133: // Soul Hound (Female)
-							case 134: // Trickster
-							{
-								if (!player.getAppearance().isFemale())
-								{
-									sexChange = true;
-									player.getAppearance().setFemale();
-								}
-								break;
-							}
-						}
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
@@ -417,13 +374,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
-					
-					// If necessary transform-untransform player quickly to force the client to reload the character textures
-					if (sexChange || (race != player.getRace()) || (((race == Race.HUMAN) || (race == Race.ORC)) && (isMage != player.isMageClass())))
-					{
-						TransformData.getInstance().transformPlayer(105, player);
-						ThreadPool.schedule(new Untransform(player), 200);
-					}
 				}
 				else
 				{
@@ -535,9 +485,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
-			// Transform-untransorm player quickly to force the client to reload the character textures
-			TransformData.getInstance().transformPlayer(105, player);
-			ThreadPool.schedule(new Untransform(player), 200);
 		}
 		else if (command.startsWith("admin_setcolor"))
 		{
@@ -1562,7 +1509,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			if (color)
 			{
-				text.append("<tr><td><table width=270 border=0 bgcolor=131210 cellpadding=2><tr><td width=30 align=right>");
+				text.append("<tr><td><table width=270 border=0 bgcolor=000000 cellpadding=2><tr><td width=30 align=right>");
 			}
 			else
 			{
@@ -1575,21 +1522,5 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%player%", target.getName());
 		html.replace("%party%", text.toString());
 		activeChar.sendPacket(html);
-	}
-	
-	private final class Untransform implements Runnable
-	{
-		private final Player _player;
-		
-		protected Untransform(Player player)
-		{
-			_player = player;
-		}
-		
-		@Override
-		public void run()
-		{
-			_player.untransform();
-		}
 	}
 }

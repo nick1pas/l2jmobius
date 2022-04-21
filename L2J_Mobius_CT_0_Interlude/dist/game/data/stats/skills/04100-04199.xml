@@ -39,7 +39,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4102" levels="3" name="Become weak against line of fire">
+	<skill id="4102" levels="3" name="Surrender To Fire">
 		<!-- Instantly decreases resistance to fire attacks and increases resistance to water attacks. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4</table>
 		<table name="#fireRes">15 25 30</table>
@@ -144,8 +144,8 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4106" levels="1" name="Antharas Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4106" levels="1" name="Antharas Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -168,8 +168,8 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4107" levels="1" name="Antharas Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4107" levels="1" name="Antharas Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="FLY_AWAY" />
@@ -192,7 +192,6 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ThrowUp" />
 			<effect name="Stun" />
 		</for>
 	</skill>
@@ -377,7 +376,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4116" levels="10" name="Resist M.Atk">
+	<skill id="4116" levels="10" name="Resist M. Atk.">
 		<!-- Resistant to M. Atk. -->
 		<table name="#mDef">1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10</table>
 		<set name="icon" val="icon.skill4116_new" />
@@ -451,7 +450,7 @@
 			<effect name="Paralyze" />
 		</for>
 	</skill>
-	<skill id="4119" levels="3" name="Fall in accuracy">
+	<skill id="4119" levels="3" name="Decrease Accuracy">
 		<!-- Instantly reduces Accuracy. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">6 9 12</table>
@@ -482,7 +481,7 @@
 		</for>
 	</skill>
 	<skill id="4120" levels="12" name="Shock">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
 		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
@@ -587,7 +586,7 @@
 		</for>
 	</skill>
 	<skill id="4126" levels="1" name="Reduction in recovery time">
-		<!-- Skill reuse time is reduced temporarily. -->
+		<!-- Skill recovery time is reduced temporarily. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -661,8 +660,8 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4131" levels="1" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4131" levels="1" name="Shock">
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -922,7 +921,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4146" levels="3" name="Decrease P.Def">
+	<skill id="4146" levels="3" name="Decrease P. Def.">
 		<!-- Temporarily reduces one's P. Def. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#pDef">0.83 0.8 0.77</table>
@@ -1252,7 +1251,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="4162" levels="3" name="Decrease P. Atk.">
+	<skill id="4162" levels="3" name="Decrease Atk. Speed">
 		<!-- Reduction in Atk. Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#pAtkSpd">0.83 0.8 0.77</table>
@@ -1293,7 +1292,7 @@
 		</for>
 	</skill>
 	<skill id="4164" levels="18" name="Paralysis">
-		<!-- Body is rigid with paralysis. -->
+		<!-- Paralyzes a target, instantly immobilizing it. -->
 		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1322,7 +1321,7 @@
 		</endEffects>
 	</skill>
 	<skill id="4165" levels="17" name="Icy Air">
-		<!-- Continuously damaged by icy air. Effect 5. -->
+		<!-- Inflicts continuous damage by Icy Air. Effect 5. -->
 		<table name="#abnormalLevels">5 5 5 6 6 7 7 8 8 8 8 8 8 8 8 8 8</table>
 		<table name="#dot">102 102 102 125 125 144 144 157 157 157 157 164 164 164 164 164 164</table>
 		<table name="#magicLevel">40 44 48 52 56 62 66 70 74 76 78 80 81 82 83 84 85</table>
@@ -1346,8 +1345,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4166" levels="18" name="Stuns">
-		<!-- Instantly paralyzed from being stunned. -->
+	<skill id="4166" levels="18" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -1367,8 +1366,8 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4167" levels="1" name="Curse of Fairy Mymyu">
-		<!-- Fairy Mimyu's Curse reduces Physical Dmg. and Atk. Speed. -->
+	<skill id="4167" levels="1" name="Curse of Fairy Mimyu">
+		<!-- Fairy Mimyu's Curse reduces Physical Dmg and Atk. Speed. -->
 		<set name="abnormalLevel" val="99" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1386,7 +1385,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4168" levels="12" name="BOSS Power Strike">
+	<skill id="4168" levels="12" name="BOSS Strike">
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">121 325 893 2338 5884 11371 17463 20261 23243 26363 29567 32796</table>
@@ -1404,8 +1403,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4169" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4169" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">61 163 447 1169 2942 5686 8732 10131 11622 13182 14784 16398</table>
@@ -1469,8 +1468,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4172" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4172" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<set name="abnormalLevel" val="1" />
@@ -1590,7 +1589,7 @@
 			<effect name="DispelAll" />
 		</for>
 	</skill>
-	<skill id="4178" levels="12" name="BOSS Flame Strike">
+	<skill id="4178" levels="12" name="BOSS Flamestrike">
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">23 32 44 58 74 89 102 107 112 114 116 118</table>
 		<table name="#power">21 31 43 58 75 92 108 115 121 125 129 132</table>
@@ -1610,7 +1609,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4179" levels="12" name="BOSS Power Strike">
+	<skill id="4179" levels="12" name="BOSS Strike">
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">121 325 893 2338 5884 11371 17463 20261 23243 26363 29567 32796</table>
@@ -1628,8 +1627,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4180" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4180" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#power">61 163 447 1169 2942 5686 8732 10131 11622 13182 14784 16398</table>
@@ -1704,7 +1703,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4183" levels="12" name="Decrease P. Atk.">
+	<skill id="4183" levels="12" name="Decrease P.Atk">
 		<!-- Instantly reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
@@ -1730,7 +1729,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4184" levels="12" name="Decrease Atk. Spd.">
+	<skill id="4184" levels="12" name="Decrease Atk.Speed">
 		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
@@ -1832,7 +1831,7 @@
 		</for>
 	</skill>
 	<skill id="4188" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound, reducing HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">19 28 38 49 60 69 75 75 78 78 79 79</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
@@ -1910,7 +1909,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4191" levels="12" name="BOSS Wind Strike">
+	<skill id="4191" levels="12" name="BOSS Windstrike">
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
 		<table name="#power">21 31 43 58 75 92 108 115 121 125 129 132</table>
@@ -2005,7 +2004,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4196" levels="12" name="Decreases Speed">
+	<skill id="4196" levels="12" name="Decrease Speed">
 		<!-- Instantly reduces Speed. Effect 2. -->
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
@@ -2091,7 +2090,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4199" levels="12" name="Decrease P. Atk.">
+	<skill id="4199" levels="12" name="Decrease P.Atk">
 		<!-- Instantly reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>

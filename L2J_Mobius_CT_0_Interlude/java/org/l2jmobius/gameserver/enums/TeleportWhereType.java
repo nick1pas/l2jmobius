@@ -26,5 +26,4 @@ public enum TeleportWhereType
 	CLANHALL,
 	SIEGEFLAG,
 	TOWN,
-	FORTRESS
 }

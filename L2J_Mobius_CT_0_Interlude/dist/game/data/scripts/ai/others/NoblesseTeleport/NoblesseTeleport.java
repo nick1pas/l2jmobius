@@ -51,7 +51,6 @@ public class NoblesseTeleport extends AbstractNpcAI
 		31275,
 		31320,
 		31964,
-		32163
 	};
 	
 	private NoblesseTeleport()

@@ -94,25 +94,17 @@
 														<xs:attribute name="SiegeZone" type="xs:unsignedByte" use="optional" />
 														<xs:attribute name="flying" type="xs:boolean" use="optional" />
 														<xs:attribute name="Charges" type="xs:string" use="optional" />
-														<xs:attribute name="souls" type="xs:unsignedByte" use="optional" />
 														<xs:attribute name="npcIdRadius" type="xs:string" use="optional" />
 														<xs:attribute name="cp" type="xs:unsignedByte" use="optional" />
-														<xs:attribute name="canTransform" type="xs:boolean" use="optional" />
-														<xs:attribute name="canUntransform" type="xs:boolean" use="optional" />
-														<xs:attribute name="flyMounted" type="xs:boolean" use="optional" />
 														<xs:attribute name="mp" type="xs:unsignedByte" use="optional" />
 														<xs:attribute name="canResurrect" type="xs:boolean" use="optional" />
 														<xs:attribute name="active_effect_id_lvl" type="xs:string" use="optional" />
-														<xs:attribute name="landingZone" type="xs:boolean" use="optional" />
-														<xs:attribute name="canCreateOutpost" type="xs:boolean" use="optional" />
 														<xs:attribute name="callPc" type="xs:boolean" use="optional" />
 														<xs:attribute name="sex" type="xs:unsignedByte" use="optional" />
 														<xs:attribute name="insideZoneId" type="xs:unsignedShort" use="optional" />
 														<xs:attribute name="active_skill_id_lvl" type="xs:string" use="optional" />
 														<xs:attribute name="levelRange" type="xs:string" use="optional" />
 														<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
-														<xs:attribute name="canRefuelAirship" type="xs:unsignedByte" use="optional" />
-														<xs:attribute name="canTakeFort" type="xs:boolean" use="optional" />
 														<xs:attribute name="agathionId" type="xs:unsignedShort" use="optional" />
 														<xs:attribute name="active_effect_id" type="xs:unsignedShort" use="optional" />
 														<xs:attribute name="checkAbnormal" type="xs:string" use="optional" />
@@ -133,9 +125,7 @@
 															<xs:element minOccurs="0" name="player">
 																<xs:complexType>
 																	<xs:attribute name="Charges" type="xs:string" use="optional" />
-																	<xs:attribute name="souls" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="insideZoneId" type="xs:string" use="optional" />
-																	<xs:attribute name="transformationId" type="xs:unsignedByte" use="optional" />
 																</xs:complexType>
 															</xs:element>
 														</xs:sequence>
@@ -169,8 +159,6 @@
 																		<xs:attribute name="invSize" type="xs:unsignedByte" use="optional" />
 																		<xs:attribute name="weight" type="xs:unsignedByte" use="optional" />
 																		<xs:attribute name="hp" type="xs:unsignedByte" use="optional" />
-																		<xs:attribute name="souls" type="xs:unsignedByte" use="optional" />
-																		<xs:attribute name="canTransform" type="xs:boolean" use="optional" />
 																		<xs:attribute name="active_effect_id_lvl" type="xs:string" use="optional" />
 																		<xs:attribute name="canEscape" type="xs:boolean" use="optional" />
 																		<xs:attribute name="cp" type="xs:unsignedByte" use="optional" />
@@ -181,8 +169,6 @@
 																		<xs:attribute name="chaotic" type="xs:boolean" use="optional" />
 																		<xs:attribute name="levelRange" type="xs:string" use="optional" />
 																		<xs:attribute name="instanceId" type="xs:unsignedByte" use="optional" />
-																		<xs:attribute name="flyMounted" type="xs:boolean" use="optional" />
-																		<xs:attribute name="fort" type="xs:byte" use="optional" />
 																		<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
 																		<xs:attribute name="class_id_restriction" type="xs:string" use="optional" />
 																		<xs:attribute name="siegeZone" type="xs:unsignedByte" use="optional" />
@@ -203,7 +189,6 @@
 																				<xs:complexType>
 																					<xs:attribute name="insideZoneId" type="xs:string" use="optional" />
 																					<xs:attribute name="active_skill_id" type="xs:unsignedShort" use="optional" />
-																					<xs:attribute name="transformationId" type="xs:unsignedByte" use="optional" />
 																				</xs:complexType>
 																			</xs:element>
 																		</xs:sequence>
@@ -221,7 +206,6 @@
 												<xs:element name="using">
 													<xs:complexType>
 														<xs:attribute name="kind" type="xs:string" use="optional" />
-														<xs:attribute name="weaponChange" type="xs:boolean" use="optional" />
 													</xs:complexType>
 												</xs:element>
 											</xs:choice>
@@ -411,7 +395,6 @@
 																	<xs:attribute name="PLANT_WEAKNESS" type="xs:string" use="optional" />
 																	<xs:attribute name="HOLD" type="xs:string" use="optional" />
 																	<xs:attribute name="BOW" type="xs:string" use="optional" />
-																	<xs:attribute name="CROSSBOW" type="xs:string" use="optional" />
 																	<xs:attribute name="type" type="xs:string" use="optional" />
 																	<xs:attribute name="heal" type="xs:boolean" use="optional" />
 																	<xs:attribute name="SLEEP" type="xs:string" use="optional" />
@@ -443,8 +426,6 @@
 																	<xs:attribute name="DAGGER" type="xs:string" use="optional" />
 																	<xs:attribute name="DUAL" type="xs:string" use="optional" />
 																	<xs:attribute name="DUALFIST" type="xs:string" use="optional" />
-																	<xs:attribute name="ANCIENTSWORD" type="xs:string" use="optional" />
-																	<xs:attribute name="RAPIER" type="xs:string" use="optional" />
 																	<xs:attribute name="DUALDAGGER" type="xs:string" use="optional" />
 																	<xs:attribute name="time" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="fullLethal" type="xs:string" use="optional" />
@@ -687,7 +668,6 @@
 																	<xs:attribute name="DRAGON_WEAKNESS" type="xs:string" use="optional" />
 																	<xs:attribute name="charge" type="xs:string" use="optional" />
 																	<xs:attribute name="BOW" type="xs:byte" use="optional" />
-																	<xs:attribute name="CROSSBOW" type="xs:byte" use="optional" />
 																	<xs:attribute name="dispel" type="xs:string" use="optional" />
 																	<xs:attribute name="time" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="fullLethal" type="xs:string" use="optional" />
@@ -749,7 +729,6 @@
 																<xs:complexType>
 																	<xs:attribute name="power" type="xs:string" use="optional" />
 																	<xs:attribute name="BOW" type="xs:byte" use="optional" />
-																	<xs:attribute name="CROSSBOW" type="xs:byte" use="optional" />
 																	<xs:attribute name="type" type="xs:string" use="optional" />
 																	<xs:attribute name="heal" type="xs:boolean" use="optional" />
 																	<xs:attribute name="attackerType" type="xs:string" use="optional" />
@@ -781,8 +760,6 @@
 																	<xs:attribute name="DUAL" type="xs:byte" use="optional" />
 																	<xs:attribute name="DUALFIST" type="xs:byte" use="optional" />
 																	<xs:attribute name="POLE" type="xs:byte" use="optional" />
-																	<xs:attribute name="ANCIENTSWORD" type="xs:byte" use="optional" />
-																	<xs:attribute name="RAPIER" type="xs:byte" use="optional" />
 																	<xs:attribute name="DUALDAGGER" type="xs:byte" use="optional" />
 																	<xs:attribute name="time" type="xs:string" use="optional" />
 																	<xs:attribute name="fullLethal" type="xs:string" use="optional" />
@@ -927,13 +904,10 @@
 																	<xs:attribute name="DUAL" type="xs:byte" use="optional" />
 																	<xs:attribute name="DUALFIST" type="xs:byte" use="optional" />
 																	<xs:attribute name="POLE" type="xs:byte" use="optional" />
-																	<xs:attribute name="ANCIENTSWORD" type="xs:byte" use="optional" />
-																	<xs:attribute name="RAPIER" type="xs:byte" use="optional" />
 																	<xs:attribute name="DUALDAGGER" type="xs:byte" use="optional" />
 																	<xs:attribute name="time" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="fullLethal" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="BOW" type="xs:byte" use="optional" />
-																	<xs:attribute name="CROSSBOW" type="xs:byte" use="optional" />
 																	<xs:attribute name="npcId" type="xs:string" use="optional" />
 																	<xs:attribute name="npcCount" type="xs:unsignedByte" use="optional" />
 																	<xs:attribute name="BLEED" type="xs:string" use="optional" />
@@ -995,7 +969,6 @@
 																<xs:attribute name="dispel" type="xs:string" use="optional" />
 																<xs:attribute name="chance" type="xs:unsignedByte" use="optional" />
 																<xs:attribute name="BOW" type="xs:byte" use="optional" />
-																<xs:attribute name="CROSSBOW" type="xs:byte" use="optional" />
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>

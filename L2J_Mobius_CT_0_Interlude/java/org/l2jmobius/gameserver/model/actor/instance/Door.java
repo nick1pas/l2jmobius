@@ -30,9 +30,7 @@ import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -46,7 +44,6 @@ import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -65,8 +62,6 @@ public class Door extends Creature
 	
 	/** The castle index in the array of Castle this Npc belongs to */
 	private int _castleIndex = -2;
-	/** The fort index in the array of Fort this Npc belongs to */
-	private int _fortIndex = -2;
 	private ClanHall _clanHall;
 	boolean _open = false;
 	private boolean _isAttackableDoor = false;
@@ -283,20 +278,6 @@ public class Door extends Creature
 		return CastleManager.getInstance().getCastles().get(_castleIndex);
 	}
 	
-	// TODO: Replace index with the fort id itself.
-	public Fort getFort()
-	{
-		if (_fortIndex < 0)
-		{
-			_fortIndex = FortManager.getInstance().getFortIndex(this);
-		}
-		if (_fortIndex < 0)
-		{
-			return null;
-		}
-		return FortManager.getInstance().getForts().get(_fortIndex);
-	}
-	
 	public void setClanHall(ClanHall clanhall)
 	{
 		_clanHall = clanhall;
@@ -310,10 +291,6 @@ public class Door extends Creature
 	public boolean isEnemy()
 	{
 		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && isShowHp())
-		{
-			return true;
-		}
-		if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && isShowHp())
 		{
 			return true;
 		}
@@ -354,21 +331,7 @@ public class Door extends Creature
 		}
 		// Attackable only during siege by everyone (not owner)
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
-		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
-		final int activeSiegeId = (getFort() != null ? getFort().getResidenceId() : (getCastle() != null ? getCastle().getResidenceId() : 0));
-		if (TerritoryWarManager.getInstance().isTWInProgress())
-		{
-			return !TerritoryWarManager.getInstance().isAllyField(actingPlayer, activeSiegeId);
-		}
-		else if (isFort)
-		{
-			final Clan clan = actingPlayer.getClan();
-			if ((clan != null) && (clan == getFort().getOwnerClan()))
-			{
-				return false;
-			}
-		}
-		else if (isCastle)
+		if (isCastle)
 		{
 			final Clan clan = actingPlayer.getClan();
 			if ((clan != null) && (clan.getId() == getCastle().getOwnerId()))
@@ -376,7 +339,7 @@ public class Door extends Creature
 				return false;
 			}
 		}
-		return (isCastle || isFort);
+		return isCastle;
 	}
 	
 	@Override
@@ -436,7 +399,7 @@ public class Door extends Creature
 				continue;
 			}
 			
-			if (player.isGM() || (((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0))))
+			if (player.isGM() || ((getCastle() != null) && (getCastle().getResidenceId() > 0)))
 			{
 				player.sendPacket(targetableSu);
 			}
@@ -619,10 +582,9 @@ public class Door extends Creature
 			return false;
 		}
 		
-		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
 		final boolean isHall = ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).isInSiege());
-		if (isFort || isCastle || isHall)
+		if (isCastle || isHall)
 		{
 			broadcastPacket(new SystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
 		}

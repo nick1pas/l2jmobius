@@ -25,17 +25,14 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
-import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillResult;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -162,7 +159,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 				}
 				
 				player.addSkill(skill, true);
-				player.sendPacket(ExEnchantSkillResult.valueOf(true));
+				// player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 				sm.addSkillName(_skillId);
@@ -172,7 +169,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			{
 				player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
 				player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
-				player.sendPacket(ExEnchantSkillResult.valueOf(false));
+				// player.sendPacket(ExEnchantSkillResult.valueOf(false));
 				
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
@@ -181,11 +178,11 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			}
 			
 			player.sendPacket(new UserInfo(player));
-			player.sendPacket(new ExBrExtraUserInfo(player));
+			// player.sendPacket(new ExBrExtraUserInfo(player));
 			player.sendSkillList();
 			final int afterEnchantSkillLevel = player.getSkillLevel(_skillId);
 			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
-			player.sendPacket(new ExEnchantSkillInfoDetail(0, _skillId, afterEnchantSkillLevel + 1, player));
+			// player.sendPacket(new ExEnchantSkillInfoDetail(0, _skillId, afterEnchantSkillLevel + 1, player));
 			player.updateShortCuts(_skillId, afterEnchantSkillLevel);
 		}
 		else

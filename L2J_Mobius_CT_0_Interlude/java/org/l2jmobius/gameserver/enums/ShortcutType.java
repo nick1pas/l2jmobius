@@ -28,5 +28,4 @@ public enum ShortcutType
 	ACTION,
 	MACRO,
 	RECIPE,
-	BOOKMARK,
 }

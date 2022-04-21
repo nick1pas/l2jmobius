@@ -44,7 +44,7 @@ public class MoveToLocation implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.MOVE_TO_LOCATION.writeId(packet);
+		OutgoingPackets.CHAR_MOVE_TO_LOCATION.writeId(packet);
 		packet.writeD(_objectId);
 		packet.writeD(_xDst);
 		packet.writeD(_yDst);

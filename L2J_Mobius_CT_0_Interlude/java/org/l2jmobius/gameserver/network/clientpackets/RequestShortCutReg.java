@@ -29,8 +29,8 @@ public class RequestShortCutReg implements IClientIncomingPacket
 	private int _id;
 	private int _slot;
 	private int _page;
+	@SuppressWarnings("unused")
 	private int _level;
-	private int _characterType; // 1 - player, 2 - pet
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -42,7 +42,6 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		_page = slot / 12;
 		_id = packet.readD();
 		_level = packet.readD();
-		_characterType = packet.readD();
 		return true;
 	}
 	
@@ -60,8 +59,29 @@ public class RequestShortCutReg implements IClientIncomingPacket
 			return;
 		}
 		
-		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _level, _characterType);
-		player.registerShortCut(sc);
-		player.sendPacket(new ShortCutRegister(sc));
+		switch (_type)
+		{
+			case ITEM:
+			case ACTION:
+			case MACRO:
+			case RECIPE:
+			{
+				final Shortcut sc = new Shortcut(_slot, _page, _type, _id, -1);
+				player.sendPacket(new ShortCutRegister(sc));
+				player.registerShortCut(sc);
+				break;
+			}
+			case SKILL:
+			{
+				final int level = player.getSkillLevel(_id);
+				if (level > 0)
+				{
+					final Shortcut sc = new Shortcut(_slot, _page, _type, _id, level);
+					player.sendPacket(new ShortCutRegister(sc));
+					player.registerShortCut(sc);
+				}
+				break;
+			}
+		}
 	}
 }

@@ -49,7 +49,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket
 	{
 		OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST.writeId(packet);
 		packet.writeS(_playerName);
-		packet.writeQ(_money);
+		packet.writeD((int) _money);
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{

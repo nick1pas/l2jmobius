@@ -25,7 +25,6 @@ public enum ListenerRegisterType
 	ZONE,
 	ITEM,
 	CASTLE,
-	FORTRESS,
 	OLYMPIAD,
 	GLOBAL,
 	GLOBAL_NPCS,

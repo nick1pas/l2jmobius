@@ -51,7 +51,7 @@ public class Lang implements IVoicedCommandHandler
 			final StringBuilder html = new StringBuilder(100);
 			for (String lang : Config.MULTILANG_ALLOWED)
 			{
-				html.append("<button value=\"" + lang.toUpperCase() + "\" action=\"bypass -h voice .lang " + lang + "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
+				html.append("<button value=\"" + lang.toUpperCase() + "\" action=\"bypass -h voice .lang " + lang + "\" width=65 height=21 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"><br>");
 			}
 			
 			msg.setFile(activeChar, "data/html/mods/Lang/LanguageSelect.htm");

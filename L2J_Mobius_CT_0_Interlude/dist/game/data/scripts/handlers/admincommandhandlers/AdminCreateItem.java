@@ -255,10 +255,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			id = 4358;
 		}
-		else if (name.equalsIgnoreCase("fantasyislecoin"))
-		{
-			id = 13067;
-		}
 		else
 		{
 			id = 0;

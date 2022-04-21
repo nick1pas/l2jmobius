@@ -25,8 +25,7 @@ public enum MountType
 {
 	NONE,
 	STRIDER,
-	WYVERN,
-	WOLF;
+	WYVERN;
 	
 	public static MountType findByNpcId(int npcId)
 	{
@@ -37,10 +36,6 @@ public enum MountType
 		else if (CategoryData.getInstance().isInCategory(CategoryType.WYVERN_GROUP, npcId))
 		{
 			return WYVERN;
-		}
-		else if (CategoryData.getInstance().isInCategory(CategoryType.WOLF_GROUP, npcId))
-		{
-			return WOLF;
 		}
 		return NONE;
 	}

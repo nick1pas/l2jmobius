@@ -97,8 +97,8 @@ public class SSQStatus implements IClientOutgoingPacket
 				}
 				packet.writeC(SevenSigns.getInstance().getPlayerCabal(_objectId));
 				packet.writeC(SevenSigns.getInstance().getPlayerSeal(_objectId));
-				packet.writeQ(SevenSigns.getInstance().getPlayerStoneContrib(_objectId)); // Seal Stones Turned-In
-				packet.writeQ(SevenSigns.getInstance().getPlayerAdenaCollect(_objectId)); // Ancient Adena to Collect
+				packet.writeD(SevenSigns.getInstance().getPlayerStoneContrib(_objectId)); // Seal Stones Turned-In
+				packet.writeD(SevenSigns.getInstance().getPlayerAdenaCollect(_objectId)); // Ancient Adena to Collect
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
 				final double duskStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DUSK);
@@ -123,14 +123,14 @@ public class SSQStatus implements IClientOutgoingPacket
 					duskPercent = Math.round(((float) duskTotalScore / totalOverallScore) * 100);
 				}
 				/* DUSK */
-				packet.writeQ(duskStoneScoreProp); // Seal Stone Score
-				packet.writeQ(duskFestivalScore); // Festival Score
-				packet.writeQ(duskTotalScore); // Total Score
+				packet.writeD(duskStoneScoreProp); // Seal Stone Score
+				packet.writeD(duskFestivalScore); // Festival Score
+				packet.writeD(duskTotalScore); // Total Score
 				packet.writeC(duskPercent); // Dusk %
 				/* DAWN */
-				packet.writeQ(dawnStoneScoreProp); // Seal Stone Score
-				packet.writeQ(dawnFestivalScore); // Festival Score
-				packet.writeQ(dawnTotalScore); // Total Score
+				packet.writeD(dawnStoneScoreProp); // Seal Stone Score
+				packet.writeD(dawnFestivalScore); // Festival Score
+				packet.writeD(dawnTotalScore); // Total Score
 				packet.writeC(dawnPercent); // Dawn %
 				break;
 			}
@@ -146,7 +146,7 @@ public class SSQStatus implements IClientOutgoingPacket
 					final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 					final int dawnScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DAWN, i);
 					// Dusk Score \\
-					packet.writeQ(duskScore);
+					packet.writeD(duskScore);
 					StatSet highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, i);
 					String[] partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
@@ -162,7 +162,7 @@ public class SSQStatus implements IClientOutgoingPacket
 						packet.writeC(0);
 					}
 					// Dawn Score \\
-					packet.writeQ(dawnScore);
+					packet.writeD(dawnScore);
 					highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, i);
 					partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
@@ -223,7 +223,7 @@ public class SSQStatus implements IClientOutgoingPacket
 			}
 			case 4:
 			{
-				// c cc [cc (ccD)] CT 2.3 update
+				// c cc [cc (cchh)]
 				packet.writeC(winningCabal); // Overall predicted winner
 				packet.writeC(3); // Total number of seals
 				for (int i = 1; i < 4; i++)
@@ -243,7 +243,7 @@ public class SSQStatus implements IClientOutgoingPacket
 								case SevenSigns.CABAL_NULL:
 								{
 									packet.writeC(SevenSigns.CABAL_NULL);
-									packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+									packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
 								}
 								case SevenSigns.CABAL_DAWN:
@@ -251,12 +251,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (dawnPercent >= 35)
 									{
 										packet.writeC(SevenSigns.CABAL_DAWN);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -265,12 +265,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (duskPercent >= 35)
 									{
 										packet.writeC(SevenSigns.CABAL_DUSK);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -286,12 +286,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (dawnPercent >= 10)
 									{
 										packet.writeC(SevenSigns.CABAL_DAWN);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+										packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
 								}
@@ -300,12 +300,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (dawnPercent >= 10)
 									{
 										packet.writeC(sealOwner);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -314,17 +314,17 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (duskPercent >= 35)
 									{
 										packet.writeC(SevenSigns.CABAL_DUSK);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else if (dawnPercent >= 10)
 									{
 										packet.writeC(SevenSigns.CABAL_DAWN);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -340,12 +340,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (duskPercent >= 10)
 									{
 										packet.writeC(SevenSigns.CABAL_DUSK);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+										packet.writeH(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
 								}
@@ -354,17 +354,17 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (dawnPercent >= 35)
 									{
 										packet.writeC(SevenSigns.CABAL_DAWN);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else if (duskPercent >= 10)
 									{
 										packet.writeC(sealOwner);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -373,12 +373,12 @@ public class SSQStatus implements IClientOutgoingPacket
 									if (duskPercent >= 10)
 									{
 										packet.writeC(sealOwner);
-										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeH(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
 										packet.writeC(SevenSigns.CABAL_NULL);
-										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeH(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}

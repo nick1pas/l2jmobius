@@ -24,7 +24,6 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 
 import ai.AbstractNpcAI;
@@ -39,7 +38,6 @@ public class WyvernManager extends AbstractNpcAI
 	{
 		CASTLE,
 		CLAN_HALL,
-		FORT,
 	}
 	
 	// Misc
@@ -74,27 +72,6 @@ public class WyvernManager extends AbstractNpcAI
 		MANAGERS.put(35556, ManagerType.CASTLE);
 		MANAGERS.put(35419, ManagerType.CLAN_HALL);
 		MANAGERS.put(35638, ManagerType.CLAN_HALL);
-		MANAGERS.put(36457, ManagerType.FORT);
-		MANAGERS.put(36458, ManagerType.FORT);
-		MANAGERS.put(36459, ManagerType.FORT);
-		MANAGERS.put(36460, ManagerType.FORT);
-		MANAGERS.put(36461, ManagerType.FORT);
-		MANAGERS.put(36462, ManagerType.FORT);
-		MANAGERS.put(36463, ManagerType.FORT);
-		MANAGERS.put(36464, ManagerType.FORT);
-		MANAGERS.put(36465, ManagerType.FORT);
-		MANAGERS.put(36466, ManagerType.FORT);
-		MANAGERS.put(36467, ManagerType.FORT);
-		MANAGERS.put(36468, ManagerType.FORT);
-		MANAGERS.put(36469, ManagerType.FORT);
-		MANAGERS.put(36470, ManagerType.FORT);
-		MANAGERS.put(36471, ManagerType.FORT);
-		MANAGERS.put(36472, ManagerType.FORT);
-		MANAGERS.put(36473, ManagerType.FORT);
-		MANAGERS.put(36474, ManagerType.FORT);
-		MANAGERS.put(36475, ManagerType.FORT);
-		MANAGERS.put(36476, ManagerType.FORT);
-		MANAGERS.put(36477, ManagerType.FORT);
 	}
 	
 	private WyvernManager()
@@ -145,15 +122,6 @@ public class WyvernManager extends AbstractNpcAI
 				}
 				return false;
 			}
-			case FORT:
-			{
-				final Fort fort = npc.getFort();
-				if ((fort != null) && (fort.getOwnerClan() != null))
-				{
-					return player.getClanId() == npc.getFort().getOwnerClan().getId();
-				}
-				return false;
-			}
 			default:
 			{
 				return false;
@@ -175,10 +143,6 @@ public class WyvernManager extends AbstractNpcAI
 				final SiegableHall hall = npc.getConquerableHall();
 				return (hall != null) ? hall.isInSiege() : npc.getCastle().getSiege().isInProgress();
 			}
-			case FORT:
-			{
-				return npc.getFort().getZone().isActive();
-			}
 			default:
 			{
 				return false;
@@ -198,10 +162,6 @@ public class WyvernManager extends AbstractNpcAI
 			case CLAN_HALL:
 			{
 				return npc.getConquerableHall().getName();
-			}
-			case FORT:
-			{
-				return npc.getFort().getName();
 			}
 			default:
 			{

@@ -116,11 +116,6 @@ public class EquipUpdate implements IClientOutgoingPacket
 				bodypart = 0x0f;
 				break;
 			}
-			case ItemTemplate.SLOT_BELT:
-			{
-				bodypart = 0x10;
-				break;
-			}
 		}
 		packet.writeD(bodypart);
 		return true;

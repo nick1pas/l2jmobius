@@ -14,9 +14,6 @@
 			<vitals hp="96596" hpRegen="208" mp="300.8" mpRegen="2.1" />
 			<attack physical="105" magical="8" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1252" magical="229" evasion="-18" />
-			<attribute>
-				<defence fire="-83" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
@@ -47,37 +44,6 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="50">
-					<item id="2499" min="1" max="1" chance="12" /> <!-- Elven Long Sword -->
-					<item id="70" min="1" max="1" chance="12" /> <!-- Claymore -->
-					<item id="159" min="1" max="1" chance="11" /> <!-- Bonebreaker -->
-					<item id="189" min="1" max="1" chance="11" /> <!-- Staff of Life -->
-					<item id="188" min="1" max="1" chance="11" /> <!-- Ghost Staff -->
-					<item id="225" min="1" max="1" chance="11" /> <!-- Mithril Dagger -->
-					<item id="262" min="1" max="1" chance="10" /> <!-- Scallop Jamadhr -->
-					<item id="280" min="1" max="1" chance="11" /> <!-- Light Crossbow -->
-					<item id="297" min="1" max="1" chance="11" /> <!-- Glaive -->
-				</group>
-				<group chance="100">
-					<item id="851" min="1" max="2" chance="35" /> <!-- Omen Beast's Eye Earring -->
-					<item id="914" min="1" max="2" chance="30" /> <!-- Necklace of Darkness -->
-					<item id="882" min="1" max="2" chance="35" /> <!-- Mithril Ring -->
-				</group>
-				<group chance="75">
-					<item id="353" min="1" max="2" chance="50" /> <!-- Half Plate Armor -->
-					<item id="380" min="1" max="2" chance="50" /> <!-- Plate Gaiters -->
-				</group>
-				<group chance="85">
-					<item id="396" min="1" max="2" chance="50" /> <!-- Salamander Skin Mail -->
-					<item id="438" min="1" max="2" chance="50" /> <!-- Sage's Rag -->
-				</group>
-				<group chance="100">
-					<item id="2412" min="1" max="3" chance="20" /> <!-- Plate Helmet -->
-					<item id="1125" min="1" max="3" chance="20" /> <!-- Assault Boots -->
-					<item id="607" min="1" max="3" chance="20" /> <!-- Ogre Power Gauntlets -->
-					<item id="630" min="1" max="3" chance="20" /> <!-- Square Shield -->
-					<item id="955" min="1" max="3" chance="20" /> <!-- Scroll: Enchant Weapon (D) -->
-				</group>
 				<group chance="100">
 					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
 				</group>
@@ -99,8 +65,41 @@
 				<group chance="100">
 					<item id="57" min="120000" max="150000" chance="100" /> <!-- Adena -->
 				</group>
+				<group chance="50">
+					<item id="297" min="1" max="1" chance="11" /> <!-- Glaive -->
+					<item id="280" min="1" max="1" chance="11" /> <!-- Light Crossbow -->
+					<item id="262" min="1" max="1" chance="10" /> <!-- Scallop Jamadhr -->
+					<item id="225" min="1" max="1" chance="11" /> <!-- Mithril Dagger -->
+					<item id="189" min="1" max="1" chance="11" /> <!-- Staff of Life -->
+					<item id="188" min="1" max="1" chance="11" /> <!-- Ghost Staff -->
+					<item id="159" min="1" max="1" chance="11" /> <!-- Bonebreaker -->
+					<item id="70" min="1" max="1" chance="12" /> <!-- Claymore -->
+					<item id="2499" min="1" max="1" chance="12" /> <!-- Elven Long Sword -->
+				</group>
+				<group chance="75">
+					<item id="380" min="1" max="2" chance="50" /> <!-- Plate Gaiters -->
+					<item id="353" min="1" max="2" chance="50" /> <!-- Half Plate Armor -->
+				</group>
+				<group chance="85">
+					<item id="438" min="1" max="2" chance="50" /> <!-- Sage's Rag -->
+					<item id="396" min="1" max="2" chance="50" /> <!-- Salamander Skin Mail -->
+				</group>
+				<group chance="80">
+					<item id="607" min="1" max="3" chance="25" /> <!-- Ogre Power Gauntlets -->
+					<item id="1125" min="1" max="3" chance="25" /> <!-- Assault Boots -->
+					<item id="2412" min="1" max="3" chance="25" /> <!-- Plate Helmet -->
+					<item id="630" min="1" max="3" chance="25" /> <!-- Square Shield -->
+				</group>
+				<group chance="100">
+					<item id="882" min="1" max="2" chance="35" /> <!-- Mithril Ring -->
+					<item id="851" min="1" max="2" chance="35" /> <!-- Omen Beast's Eye Earring -->
+					<item id="914" min="1" max="2" chance="30" /> <!-- Necklace of Darkness -->
+				</group>
 				<group chance="30">
 					<item id="6660" min="1" max="1" chance="100" /> <!-- Ring of Queen Ant -->
+				</group>
+				<group chance="20">
+					<item id="955" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (Grade D) -->
 				</group>
 			</drop>
 		</dropLists>
@@ -117,9 +116,6 @@
 			<vitals hp="591.9" hpRegen="3.5" mp="315.1" mpRegen="1.5" />
 			<attack physical="89.21" magical="59.01" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.72" magical="84.16" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="60" />
@@ -157,9 +153,6 @@
 			<vitals hp="4000" hpRegen="108" mp="402.6" mpRegen="1.8" />
 			<attack physical="637" magical="395" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="547" magical="200" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="130" />
@@ -203,9 +196,6 @@
 			<vitals hp="4343" hpRegen="115" mp="432.7" mpRegen="1.8" />
 			<attack physical="178" magical="27" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578" magical="211" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
@@ -249,9 +239,6 @@
 			<vitals hp="7051" hpRegen="122" mp="463.3" mpRegen="1.8" />
 			<attack physical="1190" magical="1074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="610" magical="223" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
@@ -297,9 +284,6 @@
 			<vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1602" magical="293" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
@@ -327,54 +311,56 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<group chance="100">
+					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
 				<group chance="40">
-					<item id="75" min="1" max="1" chance="12" /> <!-- Caliburs -->
-					<item id="84" min="1" max="1" chance="10" /> <!-- Homunkulus's Sword -->
-					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
-					<item id="174" min="1" max="1" chance="10" /> <!-- Nirvana Axe -->
-					<item id="200" min="1" max="1" chance="10" /> <!-- Sage's Staff -->
-					<item id="233" min="1" max="1" chance="12" /> <!-- Dark Screamer -->
-					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
 					<item id="283" min="1" max="1" chance="12" /> <!-- Akat Long Bow -->
 					<item id="301" min="1" max="1" chance="12" /> <!-- Scorpion -->
+					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
+					<item id="233" min="1" max="1" chance="12" /> <!-- Dark Screamer -->
+					<item id="200" min="1" max="1" chance="10" /> <!-- Sage's Staff -->
+					<item id="174" min="1" max="1" chance="10" /> <!-- Nirvana Axe -->
+					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
+					<item id="84" min="1" max="1" chance="10" /> <!-- Homunkulus's Sword -->
+					<item id="75" min="1" max="1" chance="12" /> <!-- Caliburs -->
 				</group>
-				<group chance="60">
-					<item id="60" min="1" max="1" chance="20" /> <!-- Composite Armor -->
-					<item id="400" min="1" max="1" chance="20" /> <!-- Theca Leather Armor -->
-					<item id="420" min="1" max="1" chance="20" /> <!-- Theca Leather Gaiters -->
-					<item id="441" min="1" max="1" chance="20" /> <!-- Demon's Tunic -->
-					<item id="472" min="1" max="1" chance="20" /> <!-- Demon's Stockings -->
+				<group chance="88">
+					<item id="441" min="1" max="1" chance="13.6364" /> <!-- Demon's Tunic -->
+					<item id="60" min="1" max="1" chance="13.6364" /> <!-- Composite Armor -->
+					<item id="420" min="1" max="1" chance="13.6364" /> <!-- Theca Leather Gaiters -->
+					<item id="400" min="1" max="1" chance="13.6364" /> <!-- Theca Leather Armor -->
+					<item id="472" min="1" max="1" chance="13.6364" /> <!-- Demon's Stockings -->
+					<item id="2459" min="1" max="1" chance="15.9091" /> <!-- Demon's Gloves -->
+					<item id="2435" min="1" max="1" chance="15.9091" /> <!-- Demon's Boots -->
 				</group>
-				<group chance="70">
-					<item id="517" min="1" max="1" chance="20" /> <!-- Composite Helmet -->
-					<item id="2435" min="1" max="1" chance="20" /> <!-- Demon's Boots -->
-					<item id="2459" min="1" max="1" chance="20" /> <!-- Demon's Gloves -->
-					<item id="107" min="1" max="1" chance="20" /> <!-- Composite Shield -->
-					<item id="951" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (C) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 49 -->
-					<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 52 -->
-					<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 49 -->
-					<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 52 -->
+				<group chance="28">
+					<item id="517" min="1" max="1" chance="50" /> <!-- Composite Helmet -->
+					<item id="107" min="1" max="1" chance="50" /> <!-- Composite Shield -->
 				</group>
 				<group chance="30">
 					<item id="6662" min="1" max="1" chance="100" /> <!-- Ring of Core -->
+				</group>
+				<group chance="96.5">
+					<item id="951" min="1" max="1" chance="14.5078" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="8744" min="3" max="4" chance="20.7254" /> <!-- High-Grade Life Stone: level 49 -->
+					<item id="8745" min="3" max="3" chance="51.8135" /> <!-- High-Grade Life Stone: level 52 -->
+					<item id="8754" min="1" max="1" chance="12.9534" /> <!-- Top-Grade Life Stone: level 49 -->
+				</group>
+				<group chance="33.3333">
+					<item id="8755" min="1" max="1" chance="100" /> <!-- Top-Grade Life Stone: level 52 -->
 				</group>
 			</drop>
 		</dropLists>
@@ -397,10 +383,6 @@
 			<vitals hp="13817" hpRegen="166" mp="747.8" mpRegen="2.1" />
 			<attack physical="410" magical="69" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="801" magical="293" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
@@ -446,10 +428,6 @@
 			<vitals hp="16012" hpRegen="185" mp="889.8" mpRegen="2.4" />
 			<attack physical="470" magical="715" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="895" magical="327" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="230" />
@@ -495,9 +473,6 @@
 			<vitals hp="12544" hpRegen="154" mp="665.0" mpRegen="2.1" />
 			<attack physical="354" magical="60" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="747" magical="273" />
-			<attribute>
-				<defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -542,9 +517,6 @@
 			<vitals hp="12130" hpRegen="150" mp="637.8" mpRegen="2.1" />
 			<attack physical="337" magical="58" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="729" magical="267" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -589,9 +561,6 @@
 			<vitals hp="13389" hpRegen="162" mp="720.0" mpRegen="2.1" />
 			<attack physical="391" magical="66" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
@@ -637,9 +606,6 @@
 			<vitals hp="12964" hpRegen="158" mp="692.4" mpRegen="2.1" />
 			<attack physical="372" magical="63" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="20" />
@@ -687,9 +653,6 @@
 			<vitals hp="11721" hpRegen="146" mp="610.8" mpRegen="2.1" />
 			<attack physical="320" magical="55" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="711" magical="260" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="55" />
 				<run ground="110" />
@@ -736,9 +699,6 @@
 			<vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1602" magical="293" evasion="-18" />
-			<attribute>
-				<defence fire="-83" water="20" wind="53" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -770,59 +730,56 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<group chance="100">
+					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="100">
+					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				</group>
 				<group chance="35">
-					<item id="76" min="1" max="1" chance="12" /> <!-- Sword of Delusion -->
-					<item id="145" min="1" max="1" chance="10" /> <!-- Sword of Whispering Death -->
-					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
-					<item id="201" min="1" max="1" chance="10" /> <!-- Club of Nature -->
-					<item id="199" min="1" max="1" chance="10" /> <!-- Pa'agrian Hammer -->
-					<item id="231" min="1" max="1" chance="12" /> <!-- Grace Dagger -->
-					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
 					<item id="283" min="1" max="1" chance="12" /> <!-- Akat Long Bow -->
 					<item id="303" min="1" max="1" chance="12" /> <!-- Widow Maker -->
+					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
+					<item id="231" min="1" max="1" chance="12" /> <!-- Grace Dagger -->
+					<item id="201" min="1" max="1" chance="10" /> <!-- Club of Nature -->
+					<item id="199" min="1" max="1" chance="10" /> <!-- Pa'agrian Hammer -->
+					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
+					<item id="145" min="1" max="1" chance="10" /> <!-- Sword of Whispering Death -->
+					<item id="76" min="1" max="1" chance="12" /> <!-- Sword of Delusion -->
+				</group>
+				<group chance="90">
+					<item id="420" min="1" max="1" chance="11.1111" /> <!-- Theca Leather Gaiters -->
+					<item id="441" min="1" max="1" chance="11.1111" /> <!-- Demon's Tunic -->
+					<item id="400" min="1" max="1" chance="11.1111" /> <!-- Theca Leather Armor -->
+					<item id="60" min="1" max="1" chance="11.1111" /> <!-- Composite Armor -->
+					<item id="472" min="1" max="1" chance="11.1111" /> <!-- Demon's Stockings -->
+					<item id="103" min="1" max="2" chance="11.1111" /> <!-- Tower Shield -->
+					<item id="608" min="1" max="2" chance="11.1111" /> <!-- Mithril Gauntlets -->
+					<item id="64" min="1" max="2" chance="11.1111" /> <!-- Composite Boots -->
+					<item id="517" min="1" max="2" chance="11.1111" /> <!-- Composite Helmet -->
 				</group>
 				<group chance="100">
+					<item id="885" min="1" max="2" chance="35" /> <!-- Ring of Ages -->
 					<item id="854" min="1" max="2" chance="35" /> <!-- Earring of Binding -->
 					<item id="917" min="1" max="2" chance="30" /> <!-- Necklace of Mermaid -->
-					<item id="885" min="1" max="2" chance="35" /> <!-- Ring of Ages -->
-				</group>
-				<group chance="50">
-					<item id="60" min="1" max="1" chance="20" /> <!-- Composite Armor -->
-					<item id="400" min="1" max="1" chance="20" /> <!-- Theca Leather Armor -->
-					<item id="420" min="1" max="1" chance="20" /> <!-- Theca Leather Gaiters -->
-					<item id="441" min="1" max="1" chance="20" /> <!-- Demon's Tunic -->
-					<item id="472" min="1" max="1" chance="20" /> <!-- Demon's Stockings -->
-				</group>
-				<group chance="50">
-					<item id="517" min="1" max="2" chance="20" /> <!-- Composite Helmet -->
-					<item id="64" min="1" max="2" chance="20" /> <!-- Composite Boots -->
-					<item id="608" min="1" max="2" chance="20" /> <!-- Mithril Gauntlets -->
-					<item id="103" min="1" max="2" chance="20" /> <!-- Tower Shield -->
-					<item id="951" min="1" max="2" chance="20" /> <!-- Scroll: Enchant Weapon (C) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 49 -->
-					<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 52 -->
-					<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 49 -->
-					<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 52 -->
 				</group>
 				<group chance="30">
 					<item id="6661" min="1" max="1" chance="100" /> <!-- Earring of Orfen -->
+				</group>
+				<group chance="80">
+					<item id="951" min="1" max="2" chance="12.5" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+					<item id="8744" min="4" max="4" chance="12.5" /> <!-- High-Grade Life Stone: level 49 -->
+					<item id="8745" min="2" max="4" chance="50" /> <!-- High-Grade Life Stone: level 52 -->
+					<item id="8755" min="1" max="2" chance="25" /> <!-- Top-Grade Life Stone: level 52 -->
 				</group>
 			</drop>
 		</dropLists>
@@ -844,9 +801,6 @@
 			<vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1" />
 			<attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -890,9 +844,6 @@
 			<vitals hp="6694" hpRegen="162" mp="720.0" mpRegen="2.1" />
 			<attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -936,9 +887,6 @@
 			<vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1" />
 			<attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -977,9 +925,6 @@
 			<vitals hp="13389" hpRegen="162" mp="720.0" mpRegen="2.1" />
 			<attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -1018,9 +963,6 @@
 			<vitals hp="7500000" hpRegen="1100" mp="18000.0" mpRegen="99" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" evasion="-18" />
-			<attribute>
-				<defence fire="50" water="50" wind="-83" earth="300" holy="50" dark="50" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -1100,7 +1042,7 @@
 					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
 					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
 					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of The Mother Tree -->
 				</group>
 				<group chance="100">
 					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
@@ -1203,7 +1145,7 @@
 					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				</group>
 				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
+					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 				</group>
 				<group chance="100">
 					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -1217,9 +1159,6 @@
 				</group>
 				<group chance="100">
 					<item id="8620" min="12" max="29" chance="200" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1236,9 +1175,6 @@
 			<vitals hp="1709400" hpRegen="750" mp="18000.0" mpRegen="99" />
 			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -1266,38 +1202,38 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				<group chance="30">
-					<item id="80" min="1" max="1" chance="20" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="1" chance="20" /> <!-- Halberd -->
-					<item id="288" min="1" max="1" chance="20" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="1" chance="20" /> <!-- Elemental Sword -->
-					<item id="6364" min="1" max="1" chance="4" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="4" /> <!-- Basalt Battlehammer -->
-					<item id="6580" min="1" max="1" chance="3" /> <!-- Tallum Blade*Dark Legion's Edge -->
-					<item id="6367" min="1" max="1" chance="3" /> <!-- Angel Slayer -->
-					<item id="6369" min="1" max="1" chance="3" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="3" /> <!-- Saint Spear -->
-				</group>
-				<group chance="30">
-					<item id="269" min="1" max="1" chance="20" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="1" chance="20" /> <!-- Meteor Shower -->
-					<item id="235" min="1" max="1" chance="20" /> <!-- Bloody Orchid -->
-					<item id="212" min="1" max="1" chance="20" /> <!-- Dasparion's Staff -->
-					<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
-					<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
-					<item id="6372" min="1" max="1" chance="4" /> <!-- Heaven's Divider -->
-				</group>
-				<group chance="100">
-					<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
-					<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
-					<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
-					<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
+				<group chance="60">
+					<item id="80" min="1" max="1" chance="10" /> <!-- Tallum Blade -->
+					<item id="6369" min="1" max="1" chance="1.5" /> <!-- Dragon Hunter Axe -->
+					<item id="6367" min="1" max="1" chance="1.5" /> <!-- Angel Slayer -->
+					<item id="6365" min="1" max="1" chance="2" /> <!-- Basalt Battlehammer -->
+					<item id="6364" min="1" max="1" chance="2" /> <!-- Forgotten Blade -->
+					<item id="6370" min="1" max="1" chance="1.5" /> <!-- Saint Spear -->
+					<item id="288" min="1" max="1" chance="10" /> <!-- Carnage Bow -->
+					<item id="6580" min="1" max="1" chance="1.5" /> <!-- Tallum Blade*Dark Legion's Edge -->
+					<item id="150" min="1" max="1" chance="10" /> <!-- Elemental Sword -->
+					<item id="98" min="1" max="1" chance="10" /> <!-- Halberd -->
+					<item id="6579" min="1" max="1" chance="2" /> <!-- Arcana Mace -->
+					<item id="7575" min="1" max="1" chance="2" /> <!-- Draconic Bow -->
+					<item id="6371" min="1" max="1" chance="2" /> <!-- Demon Splinter -->
+					<item id="6372" min="1" max="1" chance="2" /> <!-- Heaven's Divider -->
+					<item id="6366" min="1" max="1" chance="2" /> <!-- Imperial Staff -->
+					<item id="212" min="1" max="1" chance="10" /> <!-- Dasparion's Staff -->
+					<item id="235" min="1" max="1" chance="10" /> <!-- Bloody Orchid -->
+					<item id="269" min="1" max="1" chance="10" /> <!-- Blood Tornado -->
+					<item id="2504" min="1" max="1" chance="10" /> <!-- Meteor Shower -->
 				</group>
 				<group chance="100">
 					<item id="6658" min="1" max="1" chance="100" /> <!-- Ring of Baium -->
+				</group>
+				<group chance="86.4516">
+					<item id="8620" min="5" max="15" chance="92.5373" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
+					<item id="8762" min="1" max="1" chance="1.86567" /> <!-- Top-Grade Life Stone: level 76 -->
+					<item id="8761" min="1" max="1" chance="5.597" /> <!-- Top-Grade Life Stone: level 70 -->
+				</group>
+				<group chance="75.5">
+					<item id="8751" min="1" max="2" chance="52.9801" /> <!-- High-Grade Life Stone: level 70 -->
+					<item id="8752" min="1" max="2" chance="47.0199" /> <!-- High-Grade Life Stone: level 76 -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1315,9 +1251,6 @@
 			<vitals hp="186915" hpRegen="158" mp="1475.0" mpRegen="3" />
 			<attack physical="1395" magical="371" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="5108" magical="1686" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="-13" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -1357,9 +1290,6 @@
 			<vitals hp="360722" hpRegen="346.8" mp="180000.0" mpRegen="100" />
 			<attack physical="3616" magical="1520" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1981" magical="966.39" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="42" />
 				<run ground="190" />
@@ -1384,57 +1314,6 @@
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<group chance="30">
-					<item id="135" min="1" max="1" chance="16" /> <!-- Samurai Longsword -->
-					<item id="204" min="1" max="1" chance="4" /> <!-- Deadman's Staff -->
-					<item id="205" min="1" max="1" chance="4" /> <!-- Ghoul's Staff -->
-					<item id="206" min="1" max="1" chance="5" /> <!-- Demon's Staff -->
-					<item id="228" min="1" max="1" chance="16" /> <!-- Crystal Dagger -->
-					<item id="266" min="1" max="1" chance="10" /> <!-- Great Pata -->
-					<item id="286" min="1" max="1" chance="13" /> <!-- Eminence Bow -->
-					<item id="299" min="1" max="1" chance="10" /> <!-- Orcish Poleaxe -->
-					<item id="2503" min="1" max="1" chance="12" /> <!-- Yaksa Mace -->
-					<item id="5286" min="1" max="1" chance="10" /> <!-- Berserker Blade -->
-				</group>
-				<group chance="10">
-					<item id="78" min="1" max="1" chance="10" /> <!-- Great Sword -->
-					<item id="91" min="1" max="1" chance="12" /> <!-- Heavy War Axe -->
-					<item id="92" min="1" max="1" chance="13" /> <!-- Sprite's Staff -->
-					<item id="142" min="1" max="1" chance="8" /> <!-- Keshanberk -->
-					<item id="148" min="1" max="1" chance="8" /> <!-- Sword of Valhalla -->
-					<item id="229" min="1" max="1" chance="8" /> <!-- Kris -->
-					<item id="243" min="1" max="1" chance="8" /> <!-- Hell Knife -->
-					<item id="267" min="1" max="1" chance="10" /> <!-- Arthro Nail -->
-					<item id="284" min="1" max="1" chance="13" /> <!-- Dark Elven Long Bow -->
-					<item id="300" min="1" max="1" chance="10" /> <!-- Great Axe -->
-				</group>
-				<group chance="20">
-					<item id="357" min="1" max="1" chance="25" /> <!-- Zubei's Breastplate -->
-					<item id="2384" min="1" max="1" chance="25" /> <!-- Zubei's Leather Shirt -->
-					<item id="2376" min="1" max="1" chance="25" /> <!-- Avadon Breastplate -->
-					<item id="2397" min="1" max="1" chance="25" /> <!-- Tunic of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="383" min="1" max="1" chance="25" /> <!-- Zubei's Gaiters -->
-					<item id="2379" min="1" max="1" chance="25" /> <!-- Avadon Gaiters -->
-					<item id="2388" min="1" max="1" chance="25" /> <!-- Zubei's Leather Gaiters -->
-					<item id="2402" min="1" max="1" chance="25" /> <!-- Stockings of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="2390" min="1" max="1" chance="50" /> <!-- Avadon Leather Armor -->
-					<item id="2406" min="1" max="1" chance="50" /> <!-- Avadon Robe -->
-				</group>
-				<group chance="30">
-					<item id="503" min="1" max="1" chance="10" /> <!-- Zubei's Helmet -->
-					<item id="554" min="1" max="1" chance="10" /> <!-- Zubei's Boots -->
-					<item id="600" min="1" max="1" chance="10" /> <!-- Avadon Boots -->
-					<item id="612" min="1" max="1" chance="10" /> <!-- Zubei's Gauntlets -->
-					<item id="633" min="1" max="1" chance="10" /> <!-- Zubei's Shield -->
-					<item id="673" min="1" max="1" chance="10" /> <!-- Avadon Shield -->
-					<item id="2415" min="1" max="1" chance="10" /> <!-- Avadon Circlet -->
-					<item id="2464" min="1" max="1" chance="10" /> <!-- Avadon Gloves -->
-					<item id="947" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (B) -->
-				</group>
 				<group chance="100">
 					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				</group>
@@ -1456,20 +1335,60 @@
 				<group chance="100">
 					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="85">
+				<group chance="40">
+					<item id="266" min="1" max="1" chance="7.5" /> <!-- Great Pata -->
+					<item id="205" min="1" max="1" chance="3" /> <!-- Ghoul's Staff -->
+					<item id="204" min="1" max="1" chance="3" /> <!-- Deadman's Staff -->
+					<item id="228" min="1" max="1" chance="12" /> <!-- Crystal Dagger -->
+					<item id="135" min="1" max="1" chance="12" /> <!-- Samurai Longsword -->
+					<item id="206" min="1" max="1" chance="3.75" /> <!-- Demon's Staff -->
+					<item id="5286" min="1" max="1" chance="7.5" /> <!-- Berserker Blade -->
+					<item id="286" min="1" max="1" chance="9.75" /> <!-- Eminence Bow -->
+					<item id="2503" min="1" max="1" chance="9" /> <!-- Yaksa Mace -->
+					<item id="299" min="1" max="1" chance="7.5" /> <!-- Orcish Poleaxe -->
+					<item id="284" min="1" max="1" chance="3.25" /> <!-- Dark Elven Long Bow -->
+					<item id="300" min="1" max="1" chance="2.5" /> <!-- Great Axe -->
+					<item id="229" min="1" max="1" chance="2" /> <!-- Kris -->
+					<item id="243" min="1" max="1" chance="2" /> <!-- Hell Knife -->
+					<item id="267" min="1" max="1" chance="2.5" /> <!-- Arthro Nail -->
+					<item id="148" min="1" max="1" chance="2" /> <!-- Sword of Valhalla -->
+					<item id="142" min="1" max="1" chance="2" /> <!-- Keshanberk -->
+					<item id="92" min="1" max="1" chance="3.25" /> <!-- Sprite's Staff -->
+					<item id="91" min="1" max="1" chance="3" /> <!-- Heavy War Axe -->
+					<item id="78" min="1" max="1" chance="2.5" /> <!-- Great Sword -->
+				</group>
+				<group chance="92">
+					<item id="2376" min="1" max="1" chance="5.43478" /> <!-- Avadon Breastplate -->
+					<item id="2397" min="1" max="1" chance="5.43478" /> <!-- Tunic of Zubei -->
+					<item id="357" min="1" max="1" chance="5.43478" /> <!-- Zubei's Breastplate -->
+					<item id="2384" min="1" max="1" chance="5.43478" /> <!-- Zubei's Leather Shirt -->
+					<item id="2379" min="1" max="1" chance="5.43478" /> <!-- Avadon Gaiters -->
+					<item id="2388" min="1" max="1" chance="5.43478" /> <!-- Zubei's Leather Gaiters -->
+					<item id="383" min="1" max="1" chance="5.43478" /> <!-- Zubei's Gaiters -->
+					<item id="2402" min="1" max="1" chance="5.43478" /> <!-- Stockings of Zubei -->
+					<item id="2406" min="1" max="1" chance="10.8696" /> <!-- Avadon Robe -->
+					<item id="2390" min="1" max="1" chance="10.8696" /> <!-- Avadon Leather Armor -->
+					<item id="554" min="1" max="1" chance="3.26087" /> <!-- Zubei's Boots -->
+					<item id="2415" min="1" max="1" chance="3.26087" /> <!-- Avadon Circlet -->
+					<item id="2464" min="1" max="1" chance="3.26087" /> <!-- Avadon Gloves -->
+					<item id="673" min="1" max="1" chance="3.26087" /> <!-- Avadon Shield -->
+					<item id="633" min="1" max="1" chance="3.26087" /> <!-- Zubei's Shield -->
+					<item id="612" min="1" max="1" chance="3.26087" /> <!-- Zubei's Gauntlets -->
+					<item id="600" min="1" max="1" chance="3.26087" /> <!-- Avadon Boots -->
+					<item id="503" min="1" max="1" chance="3.26087" /> <!-- Zubei's Helmet -->
+					<item id="8922" min="1" max="1" chance="8.69565" /> <!-- Pirate Hat -->
+				</group>
+				<group chance="100">
 					<item id="6659" min="1" max="1" chance="100" /> <!-- Zaken's Earring -->
 				</group>
-				<group chance="100">
-					<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 58 -->
-					<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 61 -->
-					<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 58 -->
-					<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 61 -->
+				<group chance="95">
+					<item id="947" min="1" max="1" chance="6.31579" /> <!-- Scroll: Enchant Weapon (Grade B) -->
+					<item id="8747" min="3" max="4" chance="33.6842" /> <!-- High-Grade Life Stone: level 58 -->
+					<item id="8748" min="2" max="3" chance="46.3158" /> <!-- High-Grade Life Stone: level 61 -->
+					<item id="8757" min="2" max="2" chance="8.42105" /> <!-- Top-Grade Life Stone: level 58 -->
 				</group>
-				<group chance="1">
-					<item id="8922" min="1" max="1" chance="100" /> <!-- Pirate Hat -->
-				</group>
-				<group chance="1">
-					<item id="10295" min="1" max="1" chance="100" /> <!-- Transform Sealbook - Zaken -->
+				<group chance="8">
+					<item id="8758" min="1" max="2" chance="100" /> <!-- Top-Grade Life Stone: level 61 -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1491,10 +1410,6 @@
 			<vitals hp="1828" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="442" magical="302" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="261" magical="191" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
-			</attribute>
 			<speed>
 				<walk ground="22" />
 				<run ground="150" />
@@ -1543,10 +1458,6 @@
 			<vitals hp="1880" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
 			<attack physical="461" magical="315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267" magical="195" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
-			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
@@ -1590,9 +1501,6 @@
 			<vitals hp="1709400" hpRegen="718" mp="18000.0" mpRegen="99" />
 			<attack physical="1874.18" magical="1596.95" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1631,10 +1539,6 @@
 			<vitals hp="1933" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
 			<attack physical="420" magical="328" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="272" magical="199" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="14" />
 				<run ground="140" />
@@ -1681,10 +1585,6 @@
 			<vitals hp="1776" hpRegen="6.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="371" magical="289" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="256" magical="187" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="11" />
 				<run ground="140" />
@@ -1726,10 +1626,6 @@
 			<vitals hp="26068032.77311" hpRegen="1836" mp="1012870.27027" mpRegen="1000" />
 			<attack physical="5686.34407" magical="382.21561" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
-			<attribute>
-				<attack type="FIRE" value="370" />
-				<defence fire="370" water="250" wind="300" earth="300" holy="300" dark="300" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="120" />
 				<run ground="300" />
@@ -1749,7 +1645,6 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4679" level="1" /> <!-- Valakas -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
 		</skillList>
 		<corpseTime>21</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1812,7 +1707,7 @@
 					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
 					<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
 					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of The Mother Tree -->
 					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
 				</group>
 				<group chance="100">
@@ -1916,7 +1811,7 @@
 					<item id="6657" min="1" max="1" chance="100" /> <!-- Necklace of Valakas -->
 				</group>
 				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
+					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 				</group>
 				<group chance="100">
 					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -1926,14 +1821,6 @@
 				</group>
 				<group chance="100">
 					<item id="8620" min="12" max="19" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="100">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1949,10 +1836,6 @@
 			<vitals hp="4129.70213428133" hpRegen="67.0069943268003" mp="1980.30304497258" mpRegen="3.96" />
 			<attack physical="2670.3603804899" magical="812.454942994962" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="388.150473598966" magical="284.031666989471" evasion="-1" />
-			<attribute>
-				<attack type="FIRE" value="300" />
-				<defence fire="300" water="170" wind="220" earth="220" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -1971,7 +1854,6 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="10" /> <!-- Bows -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="300">
@@ -1999,9 +1881,6 @@
 			<vitals hp="104586.37" hpRegen="170.72" mp="1657.536" mpRegen="9.7" />
 			<attack physical="2512.3" magical="586.96652138195" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2681.953" magical="490.626" evasion="-21" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -2032,10 +1911,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="29.3261">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
+				<group chance="29.3262">
+					<item id="6652" min="2" max="6" chance="63.6765" /> <!-- Scroll: Protection of Valakas -->
 					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
+					<item id="6655" min="14" max="42" chance="14.2136" /> <!-- Scroll: Slay Valakas -->
 				</group>
 			</drop>
 		</dropLists>
@@ -2055,9 +1934,6 @@
 			<vitals hp="20648.928" hpRegen="33.792" mp="1607.808" mpRegen="3.84" />
 			<attack physical="4864.32" magical="3386.88" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1310.88" magical="479.616" evasion="-4" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2097,9 +1973,6 @@
 			<vitals hp="2854.42094757852" hpRegen="48" mp="1607.808" mpRegen="3.84" />
 			<attack physical="4864.32" magical="3386.88" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1310.88" magical="479.616" evasion="-4" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="60" />
@@ -2145,9 +2018,6 @@
 			<vitals hp="105872.34" hpRegen="171.99" mp="1708.14" mpRegen="9.8" />
 			<attack physical="2593.57" magical="611.11393355078" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2742.236" magical="501.662" evasion="-20" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -2178,10 +2048,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="29.745">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
+				<group chance="29.7452">
+					<item id="6652" min="2" max="6" chance="63.6765" /> <!-- Scroll: Protection of Valakas -->
+					<item id="6654" min="18" max="54" chance="22.1098" /> <!-- Scroll: Flames of Valakas -->
+					<item id="6655" min="14" max="42" chance="14.2137" /> <!-- Scroll: Slay Valakas -->
 				</group>
 			</drop>
 		</dropLists>
@@ -2201,9 +2071,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="6682.718" magical="6293.5257924" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2243,9 +2110,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="5024.6" magical="3539.6658" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="60" />
@@ -2290,9 +2154,6 @@
 			<vitals hp="214199.37" hpRegen="345.51" mp="1759.626" mpRegen="9.9" />
 			<attack physical="5351.94" magical="635.498613944512" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2802.591" magical="512.721" evasion="-19" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -2326,9 +2187,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="30.191">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
+				<group chance="30.1911">
+					<item id="6652" min="2" max="6" chance="63.6767" /> <!-- Scroll: Protection of Valakas -->
+					<item id="6654" min="18" max="54" chance="22.1098" /> <!-- Scroll: Flames of Valakas -->
 					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
 				</group>
 			</drop>
@@ -2355,9 +2216,6 @@
 			<vitals hp="108266.5" hpRegen="174" mp="1812.0" mpRegen="10" />
 			<attack physical="2759.5" magical="660.073042542101" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2863" magical="523.7" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -2390,9 +2248,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="30.6213">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
+				<group chance="30.6215">
+					<item id="6652" min="2" max="6" chance="63.6765" /> <!-- Scroll: Protection of Valakas -->
+					<item id="6654" min="18" max="54" chance="22.11" /> <!-- Scroll: Flames of Valakas -->
 					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
 				</group>
 			</drop>
@@ -2413,9 +2271,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="6682.718" magical="6293.5257924" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2459,9 +2314,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="5024.6" magical="3539.6658" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2515,9 +2367,6 @@
 			<vitals hp="218741.76" hpRegen="349.46" mp="1865.268" mpRegen="10.1" />
 			<attack physical="5688.32" magical="684.787299379049" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2923.243" magical="534.795" evasion="-17" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="57" />
 				<run ground="200" />
@@ -2551,7 +2400,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<group chance="31.0358">
+				<group chance="31.0359">
 					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
 					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
 					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
@@ -2573,9 +2422,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="10049.2" magical="14158.6632" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="60" />
@@ -2614,9 +2460,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="5024.6" magical="3539.6658" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="60" />
@@ -2658,9 +2501,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="5024.6" magical="3539.6658" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2704,9 +2544,6 @@
 			<vitals hp="20917.08" hpRegen="34.92" mp="1657.536" mpRegen="3.88" />
 			<attack physical="6682.718" magical="6293.5257924" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1340.9765" magical="490.626" evasion="-3" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="170" />
@@ -2746,10 +2583,6 @@
 			<vitals hp="428076.229929773" hpRegen="2484.3" mp="23423.9034583234" mpRegen="3.15" />
 			<attack physical="2641.63342970569" magical="971.856593649426" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="4218.55484265502" magical="3093.6078479881" />
-			<attribute>
-				<attack type="WIND" value="350" />
-				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="31" />
@@ -2767,7 +2600,6 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skillList>
 		<corpseTime>15</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2789,10 +2621,6 @@
 			<vitals hp="2254518.0975573" hpRegen="248.43" mp="11026.9882971101" mpRegen="109" />
 			<attack physical="3135.90530099925" magical="1442.51644402476" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1342.97453242915" magical="2089.07149518896" />
-			<attribute>
-				<attack type="DARK" value="370" />
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="270" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="240" />
 				<run ground="111" />
@@ -2812,7 +2640,6 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5078" level="1" /> <!-- Frintezza Critical Power -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skillList>
 		<corpseTime>18</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2836,10 +2663,6 @@
 			<vitals hp="3842432.67633202" hpRegen="248.43" mp="23156.6754239312" mpRegen="109" />
 			<attack physical="8890.29152833288" magical="8989.0725799934" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1566.80362116734" magical="2193.5250699484" />
-			<attribute>
-				<attack type="DARK" value="370" />
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="270" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="250" />
 				<run ground="155" />
@@ -2860,7 +2683,6 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5078" level="1" /> <!-- Frintezza Critical Power -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="3000" clanHelpRange="2000" isAggressive="false">
@@ -2898,7 +2720,7 @@
 					<item id="288" min="1" max="1" chance="12.10226" /> <!-- Carnage Bow -->
 					<item id="269" min="1" max="1" chance="6.80753" /> <!-- Blood Tornado -->
 					<item id="235" min="1" max="1" chance="6.80753" /> <!-- Bloody Orchid -->
-					<item id="213" min="1" max="1" chance="6.80753" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="1" chance="6.80753" /> <!-- Branch of The Mother Tree -->
 					<item id="305" min="1" max="1" chance="2.31739" /> <!-- Tallum Glaive -->
 				</group>
 				<group chance="80.8813">
@@ -3009,14 +2831,6 @@
 				<group chance="11.1111">
 					<item id="8762" min="1" max="2" chance="100" /> <!-- Top-Grade Life Stone: level 76 -->
 				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="100">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3031,10 +2845,6 @@
 			<vitals hp="82844.5126642967" hpRegen="1.03" mp="2177.28986625269" mpRegen="1.03" />
 			<attack physical="1637.21079615435" magical="1151.5428303933" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1637.38608949103" magical="1091.59072648368" evasion="3" />
-			<attribute>
-				<attack type="WIND" value="300" />
-				<defence fire="220" water="220" wind="300" earth="170" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
@@ -3053,7 +2863,6 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="1000" isAggressive="false">
@@ -3073,10 +2882,6 @@
 			<vitals hp="82844.5126642967" hpRegen="1.03" mp="2177.28986625269" mpRegen="1.03" />
 			<attack physical="1637.21079615435" magical="1151.5428303933" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1637.38608949103" magical="1091.59072648368" evasion="3" />
-			<attribute>
-				<attack type="WIND" value="300" />
-				<defence fire="220" water="220" wind="300" earth="170" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
@@ -3095,7 +2900,6 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="1000" isAggressive="false">
@@ -3115,10 +2919,6 @@
 			<vitals hp="12996.4412419667" hpRegen="1.01" mp="20560.2695810843" mpRegen="3.03" />
 			<attack physical="1556.78628597682" magical="1073.71405840992" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="642.236873936287" magical="428.157916018841" evasion="1" />
-			<attribute>
-				<attack type="DARK" value="300" />
-				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="300" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -3137,7 +2937,6 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1500" clanHelpRange="2000">
@@ -3157,10 +2956,6 @@
 			<vitals hp="12996.4412419667" hpRegen="1.01" mp="20560.2695810843" mpRegen="3.03" />
 			<attack physical="1556.78628597682" magical="1073.71405840992" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="642.236873936287" magical="428.157916018841" evasion="1" />
-			<attribute>
-				<attack type="DARK" value="300" />
-				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="300" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -3179,7 +2974,6 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1500" clanHelpRange="2000">
@@ -3199,9 +2993,6 @@
 			<vitals hp="3960.03406422627" hpRegen="8.585" mp="2056.8288406974" mpRegen="3.03" />
 			<attack physical="1216.23928591939" magical="838.839108132747" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="3864.96881246637" magical="2826.6352584085" evasion="1" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
@@ -3238,9 +3029,6 @@
 			<vitals hp="5448.83722464782" hpRegen="8.5" mp="2036.46419871029" mpRegen="3" />
 			<attack physical="1456.32495032888" magical="994.481156766258" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="383.421920892449" magical="280.571522036227" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
@@ -3285,9 +3073,6 @@
 			<vitals hp="568382.4" hpRegen="357" mp="4071.06" mpRegen="8.1" />
 			<attack physical="4510" magical="3279" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="2554" magical="467.22" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="79" />
 				<run ground="220" />
@@ -3327,9 +3112,6 @@
 					<item id="6688" min="8" max="22" chance="72.7618" /> <!-- Forgotten Blade Edge -->
 					<item id="6696" min="24" max="72" chance="23.0994" /> <!-- Heavens Divider Edge -->
 				</group>
-				<group chance="1">
-					<item id="10297" min="1" max="1" chance="100" /> <!-- Transform Sealbook - Venom -->
-				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -3354,9 +3136,6 @@
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3398,9 +3177,6 @@
 			<vitals hp="79149.92" hpRegen="147.5576413" mp="1036.8" mpRegen="2.4" />
 			<attack physical="1277.936184" magical="434.6017877" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1981.2" magical="362.44" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="300" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="190" />
@@ -3475,9 +3251,6 @@
 			<vitals hp="7721.463" hpRegen="57.96894" mp="1007.0" mpRegen="2.4" />
 			<attack physical="1181.243" magical="386.9314" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="971.28" magical="355.36" />
-			<attribute>
-				<defence fire="20" water="110" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -3524,9 +3297,6 @@
 			<vitals hp="3860.731" hpRegen="57.96894" mp="1007.0" mpRegen="2.4" />
 			<attack physical="1181.241" magical="386.9314" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="971.28" magical="355.36" />
-			<attribute>
-				<defence fire="20" water="110" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="190" />
@@ -3571,9 +3341,6 @@
 			<vitals hp="3199.0449435" hpRegen="8.925" mp="1939.14" mpRegen="3.15" />
 			<attack physical="1032.200295" magical="740.1019437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="379.877547" magical="277.977903" evasion="5" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
@@ -3612,9 +3379,6 @@
 			<vitals hp="66183.96803" hpRegen="124.2191592" mp="1007.0" mpRegen="2.4" />
 			<attack physical="1063.76651" magical="313.7963651" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1942.56" magical="355.36" evasion="-18" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="140" />
 				<run ground="190" />
@@ -3677,9 +3441,6 @@
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3725,9 +3486,6 @@
 			<vitals hp="115708.195" hpRegen="364.87" mp="2051.19" mpRegen="3.21" />
 			<attack physical="3134.565" magical="1241.64405" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3161.7216" magical="578.3992" evasion="-11" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
@@ -3770,9 +3528,9 @@
 				</group>
 				<group chance="67.7535">
 					<item id="8921" min="1" max="1" chance="47.2441" /> <!-- Demon Circlet -->
-					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (S) -->
-					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (S) -->
-					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (Grade S) -->
 				</group>
 			</drop>
 		</dropLists>
@@ -3793,9 +3551,6 @@
 			<vitals hp="15283.32804" hpRegen="145.856" mp="1994.708" mpRegen="3.18" />
 			<attack physical="8120.810308" magical="8457.09203048" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1550.2288" magical="567.1848" evasion="6" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -3847,9 +3602,6 @@
 			<vitals hp="22740.48" hpRegen="145.32" mp="1939.14" mpRegen="3.15" />
 			<attack physical="5913.6" magical="4557.735" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1519.518" magical="555.954" evasion="5" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="58" />
 				<run ground="200" />
@@ -3904,9 +3656,6 @@
 			<vitals hp="689061.278161977" hpRegen="264.824069962994" mp="2051.19" mpRegen="3.21" />
 			<attack physical="3316.12759363386" magical="1426.64874503057" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1185.643995" magical="578.3992" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="41" />
 				<run ground="185" />
@@ -3945,9 +3694,9 @@
 					<item id="6691" min="3" max="9" chance="98.8751" /> <!-- Angel Slayer Blade -->
 				</group>
 				<group chance="20.4053">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (Grade S) -->
 				</group>
 			</drop>
 		</dropLists>
@@ -3967,9 +3716,6 @@
 			<vitals hp="6100000" hpRegen="1100" mp="1800000.0" mpRegen="1000" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3456" magical="862.5" />
-			<attribute>
-				<defence fire="50" water="50" wind="-83" earth="300" holy="50" dark="50" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -4041,7 +3787,7 @@
 					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
 					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
 					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of The Mother Tree -->
 				</group>
 				<group chance="100">
 					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
@@ -4144,7 +3890,7 @@
 					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				</group>
 				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
+					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 				</group>
 				<group chance="100">
 					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -4158,14 +3904,6 @@
 				</group>
 				<group chance="100">
 					<item id="8620" min="12" max="29" chance="148.76" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="100">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
 				</group>
 			</drop>
 		</dropLists>
@@ -4185,9 +3923,6 @@
 			<vitals hp="6800000" hpRegen="1100" mp="1800000.0" mpRegen="1000" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3456" magical="862.5" />
-			<attribute>
-				<defence fire="50" water="50" wind="-83" earth="300" holy="50" dark="50" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -4259,7 +3994,7 @@
 					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
 					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
 					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of The Mother Tree -->
 				</group>
 				<group chance="100">
 					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
@@ -4362,7 +4097,7 @@
 					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				</group>
 				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
+					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 				</group>
 				<group chance="100">
 					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -4376,14 +4111,6 @@
 				</group>
 				<group chance="100">
 					<item id="8620" min="12" max="29" chance="148.76" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="100">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
 				</group>
 			</drop>
 		</dropLists>
@@ -4403,10 +4130,6 @@
 			<vitals hp="26387521.42857" hpRegen="1830" mp="900000.0" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3974.13793" magical="496.01325" />
-			<attribute>
-				<attack type="EARTH" value="370" />
-				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -4427,7 +4150,6 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skillList>
 		<corpseTime>14</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -4480,7 +4202,7 @@
 					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
 					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
 					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of The Mother Tree -->
 				</group>
 				<group chance="100">
 					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
@@ -4583,7 +4305,7 @@
 					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				</group>
 				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
+					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 				</group>
 				<group chance="100">
 					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -4597,14 +4319,6 @@
 				</group>
 				<group chance="100">
 					<item id="8620" min="12" max="29" chance="148.76" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
-				</group>
-				<group chance="50">
-					<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="100">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
 				</group>
 			</drop>
 		</dropLists>
@@ -4625,10 +4339,6 @@
 			<vitals hp="401551.696720203" hpRegen="76.71" mp="1809.0" mpRegen="3" />
 			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1071.29474264312" magical="522.626863116263" evasion="-18" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="180" />
 				<run ground="180" />
@@ -4648,7 +4358,6 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
 			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
@@ -4657,10 +4366,49 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="8952" min="10" max="20" chance="100" /> <!-- Greater Herb of Life -->
+					<item id="8600" min="4" max="36" chance="30" /> <!-- Herb of Life -->
 				</group>
 				<group chance="100">
-					<item id="8953" min="10" max="20" chance="100" /> <!-- Greater Herb of Mana -->
+					<item id="8601" min="4" max="36" chance="30" /> <!-- Greater Herb of Life -->
+				</group>
+				<group chance="100">
+					<item id="8602" min="4" max="36" chance="30" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="100">
+					<item id="8603" min="4" max="36" chance="30" /> <!-- Herb of Mana -->
+				</group>
+				<group chance="100">
+					<item id="8604" min="4" max="36" chance="30" /> <!-- Greater Herb of Mana -->
+				</group>
+				<group chance="100">
+					<item id="8605" min="4" max="36" chance="30" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="100">
+					<item id="8606" min="4" max="36" chance="30" /> <!-- Herb of Power -->
+				</group>
+				<group chance="100">
+					<item id="8607" min="4" max="36" chance="30" /> <!-- Herb of Magic -->
+				</group>
+				<group chance="100">
+					<item id="8608" min="4" max="36" chance="30" /> <!-- Herb of Atk. Spd. -->
+				</group>
+				<group chance="100">
+					<item id="8609" min="4" max="36" chance="30" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="100">
+					<item id="8610" min="4" max="36" chance="30" /> <!-- Herb of Critical Attack. -->
+				</group>
+				<group chance="100">
+					<item id="8611" min="4" max="36" chance="30" /> <!-- Herb of Speed -->
+				</group>
+				<group chance="100">
+					<item id="8612" min="4" max="36" chance="30" /> <!-- Herb of the Warrior -->
+				</group>
+				<group chance="100">
+					<item id="8613" min="4" max="36" chance="30" /> <!-- Herb of the Mystic -->
+				</group>
+				<group chance="100">
+					<item id="8614" min="4" max="36" chance="30" /> <!-- Herb of Recovery -->
 				</group>
 			</drop>
 		</dropLists>
@@ -4679,10 +4427,6 @@
 			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
 			<attack physical="1094.11758465172" magical="4902.24" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.098247547707" magical="261.308998696584" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="250" />
@@ -4701,20 +4445,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4730,9 +4463,6 @@
 			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="245" />
@@ -4754,16 +4484,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4779,9 +4499,6 @@
 			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="255" />
@@ -4803,16 +4520,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4828,9 +4535,6 @@
 			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="247" />
@@ -4852,16 +4556,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4877,9 +4571,6 @@
 			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="252" />
@@ -4901,16 +4592,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4926,9 +4607,6 @@
 			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="243" />
@@ -4950,16 +4628,6 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -4975,10 +4643,6 @@
 			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
 			<attack physical="1094.11758465172" magical="4902.24" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.098247547707" magical="261.308998696584" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="250" />
@@ -4997,20 +4661,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="200" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<group chance="100">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="42" />
 			<height normal="34.5" />
@@ -5040,9 +4693,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5092,9 +4742,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5144,9 +4791,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5196,9 +4840,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5248,9 +4889,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5300,9 +4938,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5352,9 +4987,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5404,9 +5036,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5456,9 +5085,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5508,9 +5134,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5560,9 +5183,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5612,9 +5232,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5664,9 +5281,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5716,9 +5330,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5768,9 +5379,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5820,9 +5428,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5872,9 +5477,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5924,9 +5526,6 @@
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
@@ -5967,9 +5566,6 @@
 			<vitals hp="961780.70191152" hpRegen="369.61370264709" mp="2051.19" mpRegen="3.21" />
 			<attack physical="6129.55481158677" magical="4888.35447858044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1185.643995" magical="578.3992" evasion="-11" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="53" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -5998,21 +5594,20 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<group chance="24.9999">
-					<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part -->
+				<group chance="2.381">
+					<item id="6371" min="1" max="1" chance="100" /> <!-- Demon Splinter -->
 				</group>
-				<group chance="70.8447">
-					<item id="6371" min="1" max="1" chance="1.1462" /> <!-- Demon Splinter -->
-					<item id="6695" min="3" max="9" chance="98.8538" /> <!-- Demon Splinter Blade -->
+				<group chance="7.1428">
+					<item id="6684" min="1" max="1" chance="100" /> <!-- Sealed Major Arcana Robe -->
 				</group>
-				<group chance="36.842">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+				<group chance="70">
+					<item id="6711" min="15" max="29" chance="100" /> <!-- Sealed Major Arcana Robe Part -->
 				</group>
-				<group chance="1">
-					<item id="10298" min="1" max="1" chance="100" /> <!-- Transform Sealbook - Gordon -->
+				<group chance="93">
+					<item id="6695" min="3" max="9" chance="100" /> <!-- Demon Splinter Blade -->
+				</group>
+				<group chance="50">
+					<item id="960" min="1" max="1" chance="90" /> <!-- Scroll: Enchant Armor (Grade S) -->
 				</group>
 			</drop>
 		</dropLists>
@@ -6039,10 +5634,6 @@
 			<vitals hp="480890.35095576" hpRegen="147.845481058836" mp="2051.19" mpRegen="3.21" />
 			<attack physical="3064.77740579339" magical="1222.08861964511" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1185.643995" magical="578.3992" evasion="-11" />
-			<attribute>
-				<attack type="HOLY" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="71" dark="-13" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -6084,9 +5675,9 @@
 					<item id="6694" min="3" max="9" chance="98.8949" /> <!-- Saint Spear Blade -->
 				</group>
 				<group chance="52.3762">
-					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (S) -->
-					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (S) -->
-					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (Grade S) -->
+					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (Grade S) -->
+					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (Grade S) -->
 					<item id="8920" min="1" max="1" chance="47.2441" /> <!-- Angel Halo -->
 				</group>
 			</drop>
@@ -6104,10 +5695,6 @@
 			<vitals hp="37734.3404839904" hpRegen="145.013611476234" mp="1994.708" mpRegen="3.18" />
 			<attack physical="6012.14777485147" magical="4732.4064449491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="581.336118" magical="567.1848" evasion="-12" />
-			<attribute>
-				<attack type="HOLY" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="71" dark="-13" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="190" />
@@ -6155,10 +5742,6 @@
 			<vitals hp="50564.0162485472" hpRegen="145.013611476234" mp="1994.708" mpRegen="3.18" />
 			<attack physical="6012.14777485147" magical="4732.4064449491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="581.336118" magical="567.1848" evasion="-12" />
-			<attribute>
-				<attack type="HOLY" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="71" dark="-13" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="190" />
@@ -6195,67 +5778,6 @@
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="29099" level="83" type="GrandBoss" name="Baylor" title="Warden">
-		<parameters>
-			<skill name="selfbuff1" id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
-			<skill name="selfbuff2" id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->
-			<skill name="selfbuff3" id="5223" level="1" /> <!-- Balor - Magic Weak Point -->
-			<skill name="selfbuff4" id="5224" level="1" /> <!-- Berserk -->
-			<skill name="selfbuff5" id="5225" level="1" /> <!-- Invincible -->
-			<skill name="PhysicalSpecial1" id="5227" level="1" /> <!-- Ground Strike -->
-			<skill name="PhysicalSpecial2" id="5228" level="1" /> <!-- Jump Attack -->
-			<skill name="PhysicalSpecial3" id="5229" level="1" /> <!-- Strong Punch -->
-			<skill name="PhysicalSpecial4" id="5226" level="1" /> <!-- Imprison -->
-			<skill name="d_skill1" id="5402" level="1" /> <!-- Presentation - Balor 2 -->
-			<skill name="d_skill2" id="5403" level="1" /> <!-- Presentation - Balor 3 -->
-			<skill name="d_skill3" id="5404" level="1" /> <!-- Presentation - Balor 4 -->
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="3190204" sp="2191683" raidPoints="399" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1078413.49462422" hpRegen="100.862738374864" mp="100000.0" mpRegen="1000" />
-			<attack physical="2098.5269559057" magical="1433.02186584885" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="1415.44576" magical="1035.7618" evasion="-18" />
-			<attribute>
-				<attack type="DARK" value="80" />
-				<defence fire="70" water="70" wind="70" earth="70" holy="50" dark="95" default="60" />
-			</attribute>
-			<speed>
-				<walk ground="34" />
-				<run ground="180" />
-			</speed>
-			<hitTime>470</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
-			<skill id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->
-			<skill id="5223" level="1" /> <!-- Balor - Magic Weak Point -->
-			<skill id="5224" level="1" /> <!-- Berserk -->
-			<skill id="5227" level="1" /> <!-- Ground Strike -->
-			<skill id="5228" level="1" /> <!-- Jump Attack -->
-			<skill id="5229" level="1" /> <!-- Strong Punch -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" />
-		<collision>
-			<radius normal="54" />
-			<height normal="77.5" />
 		</collision>
 	</npc>
 </list>

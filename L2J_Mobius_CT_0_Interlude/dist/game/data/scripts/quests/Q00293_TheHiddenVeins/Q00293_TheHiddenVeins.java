@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * The Hidden Veins (293)
  * @author xban1x
@@ -150,7 +148,6 @@ public class Q00293_TheHiddenVeins extends Quest
 							final long maps = getQuestItemsCount(player, HIDDEN_ORE_MAP);
 							giveAdena(player, (ores * 5) + (maps * 500) + (((ores + maps) >= 10) ? 2000 : 0), true);
 							takeItems(player, -1, CHRYSOLITE_ORE, HIDDEN_ORE_MAP);
-							Q00281_HeadForTheHills.giveNewbieReward(player);
 							htmltext = (ores > 0) ? (maps > 0) ? "30535-10.html" : "30535-06.html" : "30535-09.html";
 						}
 						else

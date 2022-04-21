@@ -38,8 +38,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	private static final int BONES_OF_A_PLAINS_DINOSAUR = 8776;
 	// Misc
 	private static final int MIN_LEVEL = 75;
-	private static final int CHANCE_MOBS1 = 116;
-	private static final int CHANCE_MOBS2 = 360;
+	private static final int CHANCE_MOBS = 116;
 	private static final int CHANCE_DEINO = 558;
 	private boolean isFirstTalk = true;
 	// Rewards
@@ -58,7 +57,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		8722, // Daimon Crystal Fragment
 	};
 	// Mobs
-	private static final int[] MOBS1 =
+	private static final int[] MOBS =
 	{
 		22200, // Ornithomimus
 		22201, // Ornithomimus
@@ -81,14 +80,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		22227, // Wild Strider
 	};
 	
-	private static final int[] MOBS2 =
-	{
-		22742, // Ornithomimus
-		22743, // Deinonychus
-		22744, // Ornithomimus
-		22745, // Deinonychus
-	};
-	
 	private static final int DEINONYCHUS = 22203;
 	
 	public Q00643_RiseAndFallOfTheElrokiTribe()
@@ -96,8 +87,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		super(643);
 		addStartNpc(SINGSING);
 		addTalkId(SINGSING, KARAKAWEI);
-		addKillId(MOBS1);
-		addKillId(MOBS2);
+		addKillId(MOBS);
 		addKillId(DEINONYCHUS);
 		registerQuestItems(BONES_OF_A_PLAINS_DINOSAUR);
 	}
@@ -189,9 +179,9 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		}
 		
 		final int npcId = npc.getId();
-		if (CommonUtil.contains(MOBS1, npcId))
+		if (CommonUtil.contains(MOBS, npcId))
 		{
-			final float chance = CHANCE_MOBS1 * Config.RATE_QUEST_DROP;
+			final float chance = CHANCE_MOBS * Config.RATE_QUEST_DROP;
 			if (getRandom(1000) < chance)
 			{
 				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 2);
@@ -200,12 +190,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			{
 				rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
 			}
-			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		
-		if (CommonUtil.contains(MOBS2, npcId) && (getRandom(1000) < (CHANCE_MOBS2 * Config.RATE_QUEST_DROP)))
-		{
-			rewardItems(partyMember, BONES_OF_A_PLAINS_DINOSAUR, 1);
 			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		

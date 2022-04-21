@@ -461,7 +461,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-list.htm");
 						final PageResult result = HtmlUtil.createPage(AnnouncementsTable.getInstance().getAllAnnouncements(), page, 8, currentPage ->
 						{
-							return "<td align=center><button action=\"bypass admin_announces list " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
+							return "<td align=center><button action=\"bypass admin_announces list " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=20 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>";
 						}, announcement ->
 						{
 							final StringBuilder sb = new StringBuilder();
@@ -472,23 +472,23 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							sb.append("<td width=100>" + announcement.getAuthor() + "</td>");
 							if ((announcement.getType() == AnnouncementType.AUTO_NORMAL) || (announcement.getType() == AnnouncementType.AUTO_CRITICAL))
 							{
-								sb.append("<td width=60><button action=\"bypass -h admin_announces restart " + announcement.getId() + "\" value=\"Restart\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+								sb.append("<td width=60><button action=\"bypass -h admin_announces restart " + announcement.getId() + "\" value=\"Restart\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 							}
 							else
 							{
-								sb.append("<td width=60><button action=\"\" value=\"\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+								sb.append("<td width=60><button action=\"\" value=\"\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 							}
 							if (announcement.getType() == AnnouncementType.EVENT)
 							{
-								sb.append("<td width=60><button action=\"bypass -h admin_announces show " + announcement.getId() + "\" value=\"Show\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+								sb.append("<td width=60><button action=\"bypass -h admin_announces show " + announcement.getId() + "\" value=\"Show\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 								sb.append("<td width=60></td>");
 							}
 							else
 							{
-								sb.append("<td width=60><button action=\"bypass -h admin_announces show " + announcement.getId() + "\" value=\"Show\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-								sb.append("<td width=60><button action=\"bypass -h admin_announces edit " + announcement.getId() + "\" value=\"Edit\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+								sb.append("<td width=60><button action=\"bypass -h admin_announces show " + announcement.getId() + "\" value=\"Show\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+								sb.append("<td width=60><button action=\"bypass -h admin_announces edit " + announcement.getId() + "\" value=\"Edit\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 							}
-							sb.append("<td width=60><button action=\"bypass -h admin_announces remove " + announcement.getId() + "\" value=\"Remove\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+							sb.append("<td width=60><button action=\"bypass -h admin_announces remove " + announcement.getId() + "\" value=\"Remove\" width=\"60\" height=\"21\" back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 							sb.append("<td width=5></td>");
 							sb.append("</tr>");
 							return sb.toString();

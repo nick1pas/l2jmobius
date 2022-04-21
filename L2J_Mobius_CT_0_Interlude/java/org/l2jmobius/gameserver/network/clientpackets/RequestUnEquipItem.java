@@ -76,7 +76,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		}
 		
 		// Prevent of unequipping a cursed weapon.
-		if ((_slot == ItemTemplate.SLOT_LR_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped()))
+		if ((_slot == ItemTemplate.SLOT_LR_HAND) && player.isCursedWeaponEquipped())
 		{
 			return;
 		}

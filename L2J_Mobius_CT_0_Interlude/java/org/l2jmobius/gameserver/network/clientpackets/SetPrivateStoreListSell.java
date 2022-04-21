@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import org.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -38,7 +37,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SetPrivateStoreListSell implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 20; // length of the one item
+	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private boolean _packageSale;
 	private Item[] _items = null;
@@ -57,9 +56,9 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
-			if ((itemId < 1) || (cnt < 1) || (price < 0))
+			final int cnt = packet.readD();
+			final int price = packet.readD();
+			if ((cnt > Integer.MAX_VALUE) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;
@@ -156,14 +155,14 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		
 		player.broadcastUserInfo();
 		
-		if (_packageSale)
-		{
-			player.broadcastPacket(new ExPrivateStoreSetWholeMsg(player));
-		}
-		else
-		{
-			player.broadcastPacket(new PrivateStoreMsgSell(player));
-		}
+		// if (_packageSale)
+		// {
+		// player.broadcastPacket(new ExPrivateStoreSetWholeMsg(player));
+		// }
+		// else
+		// {
+		player.broadcastPacket(new PrivateStoreMsgSell(player));
+		// }
 	}
 	
 	private static class Item

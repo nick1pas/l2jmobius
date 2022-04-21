@@ -215,15 +215,6 @@ public class CharacterCreate implements IClientIncomingPacket
 					}
 					break;
 				}
-				case KAMAEL:
-				{
-					if (!Config.ALLOW_KAMAEL)
-					{
-						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
-						return;
-					}
-					break;
-				}
 			}
 			newChar = Player.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
@@ -320,6 +311,7 @@ public class CharacterCreate implements IClientIncomingPacket
 		Disconnection.of(client, newChar).storeMe().deleteMe();
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
+		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
 	}
 	

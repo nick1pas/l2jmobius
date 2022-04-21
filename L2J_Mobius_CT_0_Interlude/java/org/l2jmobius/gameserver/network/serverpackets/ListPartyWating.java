@@ -64,7 +64,7 @@ public class ListPartyWating implements IClientOutgoingPacket
 			_rooms.add(room);
 		}
 		final int size = _rooms.size();
-		OutgoingPackets.LIST_PARTY_WAITING.writeId(packet);
+		OutgoingPackets.PARTY_MATCH_LIST.writeId(packet);
 		if (size > 0)
 		{
 			packet.writeD(1);

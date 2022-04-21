@@ -46,7 +46,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_count = packet.readQ();
+		_count = packet.readD();
 		return true;
 	}
 	

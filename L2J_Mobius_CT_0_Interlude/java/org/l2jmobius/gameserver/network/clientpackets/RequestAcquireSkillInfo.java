@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -84,11 +83,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 		
 		switch (_skillType)
 		{
-			case TRANSFORM:
 			case FISHING:
-			case SUBCLASS:
-			case COLLECT:
-			case TRANSFER:
 			{
 				player.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
@@ -105,15 +100,6 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 			case PLEDGE:
 			{
 				if (!player.isClanLeader())
-				{
-					return;
-				}
-				player.sendPacket(new AcquireSkillInfo(_skillType, s));
-				break;
-			}
-			case SUBPLEDGE:
-			{
-				if (!player.isClanLeader() || !player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 				{
 					return;
 				}

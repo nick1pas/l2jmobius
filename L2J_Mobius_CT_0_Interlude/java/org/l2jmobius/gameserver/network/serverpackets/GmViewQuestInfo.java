@@ -39,7 +39,7 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
+		OutgoingPackets.GM_VIEW_QUEST_LIST.writeId(packet);
 		packet.writeS(_player.getName());
 		final List<Quest> questList = _player.getAllActiveQuests();
 		if (questList.isEmpty())

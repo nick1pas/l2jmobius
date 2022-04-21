@@ -60,7 +60,6 @@ public class SkillList implements IClientOutgoingPacket
 			packet.writeD(temp.level);
 			packet.writeD(temp.id);
 			packet.writeC(temp.disabled ? 1 : 0);
-			packet.writeC(temp.enchanted ? 1 : 0);
 		}
 		return true;
 	}

@@ -48,7 +48,7 @@ public class HennaEquipList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_EQUIP_LIST.writeId(packet);
-		packet.writeQ(_player.getAdena()); // activeChar current amount of Adena
+		packet.writeD((int) _player.getAdena()); // activeChar current amount of Adena
 		packet.writeD(3); // available equip slot
 		packet.writeD(_hennaEquipList.size());
 		for (Henna henna : _hennaEquipList)
@@ -59,8 +59,8 @@ public class HennaEquipList implements IClientOutgoingPacket
 			{
 				packet.writeD(henna.getDyeId()); // dye Id
 				packet.writeD(henna.getDyeItemId()); // item Id of the dye
-				packet.writeQ(henna.getWearCount()); // amount of dyes required
-				packet.writeQ(henna.getWearFee()); // amount of Adena required
+				packet.writeD(henna.getWearCount()); // amount of dyes required
+				packet.writeD(henna.getWearFee()); // amount of Adena required
 				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // meet the requirement or not
 			}
 		}

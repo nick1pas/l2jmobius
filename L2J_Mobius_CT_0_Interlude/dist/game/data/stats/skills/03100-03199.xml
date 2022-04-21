@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3100" levels="10" name="Item Skill: Sleep">
-		<!-- Active: Momentarily throws the target into a state of sleep during magic use. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- Chance: Momentarily throws the target into a state of sleep during magic use. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -377,7 +377,7 @@
 		</for>
 	</skill>
 	<skill id="3115" levels="10" name="Item Skill: Sleep">
-		<!-- Active: Momentarily throws the target into a state of sleep during a critical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- Chance: Momentarily throws the target into a state of sleep during a critical attack. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -616,7 +616,7 @@
 		</for>
 	</skill>
 	<skill id="3124" levels="10" name="Item Skill: Blessed Body">
-		<!-- Active: Increases the Max. HP by 30 temporarily. -->
+		<!-- Active: Increases the maximum HP by 30 temporarily. -->
 		<table name="#effectPoints">440 481 521 562 602 640 677 711 743 789</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#maxHp">30 60 90 120 150 180 210 240 270 300</table>
@@ -642,7 +642,7 @@
 		</for>
 	</skill>
 	<skill id="3125" levels="10" name="Item Skill: Battle Roar">
-		<!-- Active: Increases the Max. HP temporarily and restores HP by the increased amount. -->
+		<!-- Active: Increases the maximum HP temporarily and restores HP by the increased amount. -->
 		<table name="#effectPoints">440 481 521 562 602 640 677 711 743 789</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mpConsume">38 42 44 47 51 52 55 58 61 65</table>
@@ -795,7 +795,7 @@
 		</for>
 	</skill>
 	<skill id="3131" levels="10" name="Item Skill: Cheer">
-		<!-- Active: Increases the Max. CP by 30 temporarily. -->
+		<!-- Active: Increases the maximum CP by 30 temporarily. -->
 		<table name="#effectPoints">440 481 521 562 602 640 677 711 743 789</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#maxCp">30 60 90 120 150 180 210 240 270 300</table>
@@ -1456,7 +1456,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="3158" levels="1" name="Item Skill: Lesser Celestial Shield">
+	<skill id="3158" levels="1" name="Item Skill: Celestial Shield">
 		<!-- Active: Bestows temporary invincibility. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
@@ -2349,7 +2349,7 @@
 		</for>
 	</skill>
 	<skill id="3191" levels="10" name="Item Skill: Sleep">
-		<!-- Skills Used: Instantly puts a target into sleep. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- Active: Temporarily throws the target into a state of sleep. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
 		<table name="#effectPoints">-436 -465 -493 -521 -547 -572 -595 -615 -633 -657</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<table name="#mpConsume">33 35 38 40 43 45 48 50 52 55</table>
@@ -2491,7 +2491,7 @@
 		</for>
 	</skill>
 	<skill id="3195" levels="10" name="Item Skill: Poison">
-		<!-- Active: Temporarily poisons a target. Effect 5. -->
+		<!-- Active: Temporarily throws the target into a poisoned state. Effect 5. -->
 		<table name="#abnormalLevels">5 5 6 6 6 7 7 7 8 8</table>
 		<table name="#dmg">41 41 50 50 50 58 58 58 63 63</table>
 		<table name="#effectPoints">-436 -465 -493 -521 -547 -572 -595 -615 -633 -657</table>

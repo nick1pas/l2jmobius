@@ -52,7 +52,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		"admin_seten", // 3
 		"admin_setun", // 0
 		"admin_setba", // 13
-		"admin_setbe",
 		"admin_enchant"
 	};
 	
@@ -121,10 +120,6 @@ public class AdminEnchant implements IAdminCommandHandler
 			else if (command.startsWith("admin_setba"))
 			{
 				armorType = Inventory.PAPERDOLL_CLOAK;
-			}
-			else if (command.startsWith("admin_setbe"))
-			{
-				armorType = Inventory.PAPERDOLL_BELT;
 			}
 			
 			if (armorType != -1)

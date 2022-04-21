@@ -34,17 +34,11 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.TowerSpawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -53,7 +47,6 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.residences.AbstractResidence;
-import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.type.CastleZone;
 import org.l2jmobius.gameserver.model.zone.type.ResidenceTeleportZone;
 import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
@@ -526,18 +519,10 @@ public class Castle extends AbstractResidence
 		updateOwnerInDB(clan); // Update in database
 		setShowNpcCrest(false);
 		
-		// if clan have fortress, remove it
-		if ((clan != null) && (clan.getFortId() > 0))
-		{
-			FortManager.getInstance().getFortByOwner(clan).removeOwner(true);
-		}
-		
 		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
 		}
-		
-		TerritoryWarManager.getInstance().getTerritory(getResidenceId()).setOwnerClan(clan);
 		
 		if (clan != null)
 		{
@@ -1010,57 +995,6 @@ public class Castle extends AbstractResidence
 		{
 			LOGGER.info("Error saving showNpcCrest for castle " + getName() + ": " + e.getMessage());
 		}
-	}
-	
-	@Override
-	public void giveResidentialSkills(Player player)
-	{
-		final Territory territory = TerritoryWarManager.getInstance().getTerritory(getResidenceId());
-		if ((territory != null) && territory.getOwnedWardIds().contains(getResidenceId() + 80))
-		{
-			for (int wardId : territory.getOwnedWardIds())
-			{
-				final List<SkillLearn> territorySkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
-				for (SkillLearn s : territorySkills)
-				{
-					final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-					if (sk != null)
-					{
-						player.addSkill(sk, false);
-					}
-					else
-					{
-						LOGGER.warning("Trying to add a null skill for Territory Ward Id: " + wardId + ", skill Id: " + s.getSkillId() + " level: " + s.getSkillLevel() + "!");
-					}
-				}
-			}
-		}
-		super.giveResidentialSkills(player);
-	}
-	
-	@Override
-	public void removeResidentialSkills(Player player)
-	{
-		if (TerritoryWarManager.getInstance().getTerritory(getResidenceId()) != null)
-		{
-			for (int wardId : TerritoryWarManager.getInstance().getTerritory(getResidenceId()).getOwnedWardIds())
-			{
-				final List<SkillLearn> territorySkills = SkillTreeData.getInstance().getAvailableResidentialSkills(wardId);
-				for (SkillLearn s : territorySkills)
-				{
-					final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-					if (sk != null)
-					{
-						player.removeSkill(sk, false, true);
-					}
-					else
-					{
-						LOGGER.warning("Trying to remove a null skill for Territory Ward Id: " + wardId + ", skill Id: " + s.getSkillId() + " level: " + s.getSkillLevel() + "!");
-					}
-				}
-			}
-		}
-		super.removeResidentialSkills(player);
 	}
 	
 	/**

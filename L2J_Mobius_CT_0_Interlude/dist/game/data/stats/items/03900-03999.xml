@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3900" type="Armor" name="Wolf's Luxury Plate">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -12,7 +12,7 @@
 		<set name="price" val="283000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add order="0" stat="mDef" val="38" />
@@ -20,7 +20,7 @@
 		</for>
 	</item>
 	<item id="3901" type="Armor" name="Wolf's Mithril Armor">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -31,7 +31,7 @@
 		<set name="price" val="412500" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add order="0" stat="mDef" val="41" />
@@ -39,7 +39,7 @@
 		</for>
 	</item>
 	<item id="3902" type="Weapon" name="Ghost Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -53,7 +53,7 @@
 		<set name="price" val="30500" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="11" />
@@ -63,7 +63,7 @@
 		</for>
 	</item>
 	<item id="3903" type="Weapon" name="Mithril Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -77,7 +77,7 @@
 		<set name="price" val="50000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="16" />
@@ -87,7 +87,7 @@
 		</for>
 	</item>
 	<item id="3904" type="Weapon" name="Sylvan Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -101,7 +101,7 @@
 		<set name="price" val="80000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="23" />
@@ -111,7 +111,7 @@
 		</for>
 	</item>
 	<item id="3905" type="Weapon" name="Orikarukon Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -125,7 +125,7 @@
 		<set name="price" val="120000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="31" />
@@ -135,7 +135,7 @@
 		</for>
 	</item>
 	<item id="3906" type="Weapon" name="Fang of Saltydog">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -149,7 +149,7 @@
 		<set name="price" val="175000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="40" />
@@ -159,7 +159,7 @@
 		</for>
 	</item>
 	<item id="3907" type="Weapon" name="Fang of Cerberus">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -173,7 +173,7 @@
 		<set name="price" val="225000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="49" />
@@ -183,7 +183,7 @@
 		</for>
 	</item>
 	<item id="3908" type="Weapon" name="Fang of Coyote">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -197,7 +197,7 @@
 		<set name="price" val="285000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="58" />
@@ -207,7 +207,7 @@
 		</for>
 	</item>
 	<item id="3909" type="Weapon" name="Crystallized Ice Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -221,7 +221,7 @@
 		<set name="price" val="360000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="69" />
@@ -231,7 +231,7 @@
 		</for>
 	</item>
 	<item id="3910" type="Weapon" name="Fang of the Blue Wolf">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -245,7 +245,7 @@
 		<set name="price" val="550000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="80" />
@@ -255,7 +255,7 @@
 		</for>
 	</item>
 	<item id="3911" type="Weapon" name="Fang of Fenrir">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -269,7 +269,7 @@
 		<set name="price" val="750000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="93" />
@@ -580,7 +580,7 @@
 		</for>
 	</item>
 	<item id="3926" type="EtcItem" name="L2Day - Guidance Scroll">
-		<!-- Accuracy increases. -->
+		<!-- Increases accuracy. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -591,12 +591,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2050-1" /> <!-- Scroll of Guidance -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3927" type="EtcItem" name="L2Day - Death Whisper Scroll">
-		<!-- Critical attack power increases. -->
+		<!-- Increases critical attack power. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -607,12 +604,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2051-1" /> <!-- Scroll of Death Whisper -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3928" type="EtcItem" name="L2Day - Focus Scroll">
-		<!-- Critical rate increases. -->
+		<!-- Increases critical rate. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -623,12 +617,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2052-1" /> <!-- Scroll of Focus -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3929" type="EtcItem" name="L2Day - Greater Acumen Scroll">
-		<!-- Spell Casting Spd. increases. -->
+		<!-- Increases spell casting speed. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -639,12 +630,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2053-1" /> <!-- Scroll of Greater Acumen -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3930" type="EtcItem" name="L2Day - Haste Scroll">
-		<!-- Atk. Spd. increases. -->
+		<!-- Increases attack speed. Intensity 2. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -655,12 +643,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2054-1" /> <!-- Scroll of Haste -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3931" type="EtcItem" name="L2Day - Agility Scroll">
-		<!-- Evasion increases. -->
+		<!-- Increases evasion. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -671,12 +656,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2055-1" /> <!-- Scroll of Agility -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3932" type="EtcItem" name="L2Day - Mystic Empower Scroll">
-		<!-- Magic power increases. -->
+		<!-- Increases magic power. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -687,12 +669,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2056-1" /> <!-- Scroll of Mystic Empower -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3933" type="EtcItem" name="L2Day - Might Scroll">
-		<!-- P. Atk. increases. -->
+		<!-- Increases attack power. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -703,12 +682,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2057-1" /> <!-- Scroll of Might -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3934" type="EtcItem" name="L2Day - Windwalk Scroll">
-		<!-- Moving speed increases. -->
+		<!-- Increases movement speed. Intensity 2. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -719,12 +695,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2058-1" /> <!-- Scroll of Wind Walk -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3935" type="EtcItem" name="L2Day - Shield Scroll">
-		<!-- P. Def. increases. -->
+		<!-- Increases defense. Intensity 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -735,9 +708,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2059-1" /> <!-- Scroll of Shield -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="3936" type="EtcItem" name="Blessed Scroll of Resurrection">
 		<!-- A magic scroll that resurrects a dead character and restores his or her Exp. completely. -->
@@ -840,7 +810,7 @@
 		</for>
 	</item>
 	<item id="3940" type="EtcItem" name="Blueprint: Summon Siege Golem">
-		<!-- Blueprint needed to learn the Summon Siege Golem technique. Required level: 49 -->
+		<!-- Blueprint needed to learn the Summon Siege Golem technique. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -849,7 +819,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3941" type="EtcItem" name="Spellbook: Mass Resurrection">
-		<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops. Required level: 40 -->
+		<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -858,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3942" type="EtcItem" name="Spellbook: Party Return">
-		<!-- Spellbook needed to learn Party Return. Used by Elven Elders. Required level: 48 -->
+		<!-- Spellbook needed to learn Party Return. Used by Elven Elders. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -867,7 +837,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3943" type="EtcItem" name="Amulet: Pa'agrio's Heart">
-		<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords. Required level: 44 -->
+		<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -876,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3944" type="EtcItem" name="Spellbook: Decrease Weight">
-		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
+		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1071,7 +1041,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2062-1" /> <!-- Blessed Scroll of Resurrection -->
+		<set name="item_skill" val="2062-1" /> <!-- none -->
 	</item>
 	<item id="3960" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
 		<!-- Gludio/Sword/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->

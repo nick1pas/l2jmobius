@@ -843,7 +843,6 @@
 		</for>
 	</item>
 	<item id="52" type="Weapon" name="Vesper Dual Sword">
-		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than that of the regular one-handed swords when enchanted. When enchanted to 4 or more, Critical Attack increases by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -873,7 +872,6 @@
 		</for>
 	</item>
 	<item id="53" type="EtcItem" name="(Not In Use)">
-		<!-- Vitamin item pack. A wrapped pack containing a Sudden Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -888,7 +886,6 @@
 		<set name="capsuled_items" val="13024,1,1,100" />
 	</item>
 	<item id="54" type="EtcItem" name="(Not In Use)">
-		<!-- Vitamin item pack. A wrapped pack containing a Shiny Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -903,7 +900,6 @@
 		<set name="capsuled_items" val="13025,1,1,100" />
 	</item>
 	<item id="55" type="EtcItem" name="Shiny Agathion 7-Day Pack (Event)">
-		<!-- Vitamin item pack. A wrapped pack containing a Shiny Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -918,7 +914,6 @@
 		<set name="capsuled_items" val="14102,1,1,100" />
 	</item>
 	<item id="56" type="EtcItem" name="Sobbing Agathion 7-Day Pack (Event)">
-		<!-- Vitamin item pack. A wrapped pack containing a Sobbing Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1079,9 +1074,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2031-1" /> <!-- Lesser Healing Potion -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="66" type="Weapon" name="Gladius">
 		<set name="icon" val="icon.weapon_gladius_i00" />
@@ -1160,7 +1152,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1510" />
 		<set name="price" val="495500" />
-		<set name="change_weaponId" val="9213" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1187,7 +1178,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2090" />
 		<set name="price" val="1387000" />
-		<set name="change_weaponId" val="9226" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1215,7 +1205,6 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="1762900" />
-		<set name="change_weaponId" val="9232" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1243,7 +1232,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1430" />
 		<set name="price" val="1762900" />
-		<set name="change_weaponId" val="9228" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1271,7 +1259,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
-		<set name="change_weaponId" val="9240" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1299,7 +1286,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
 		<set name="price" val="2209700" />
-		<set name="change_weaponId" val="9244" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1327,7 +1313,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
-		<set name="change_weaponId" val="9264" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1355,7 +1340,6 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
-		<set name="change_weaponId" val="9268" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1383,7 +1367,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1400" />
 		<set name="price" val="3304300" />
-		<set name="change_weaponId" val="9272" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1411,7 +1394,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="6680500" />
-		<set name="change_weaponId" val="9308" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1439,7 +1421,6 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1350" />
 		<set name="price" val="10091400" />
-		<set name="change_weaponId" val="9316" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1467,7 +1448,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
 		<set name="price" val="14098000" />
-		<set name="change_weaponId" val="9328" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1495,7 +1475,6 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1840" />
 		<set name="price" val="20741000" />
-		<set name="change_weaponId" val="9344" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1565,7 +1544,7 @@
 		</for>
 	</item>
 	<item id="84" type="Weapon" name="Homunkulus's Sword">
-		<!-- It can bestow one of the following three functions: Acumen, Conversion, or Magic Paralyze. -->
+		<!-- Bestows one of the following functions: Acumen, Conversion or Paralyze. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

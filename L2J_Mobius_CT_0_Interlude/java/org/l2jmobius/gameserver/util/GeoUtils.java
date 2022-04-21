@@ -102,8 +102,8 @@ public final class GeoUtils
 	
 	public static void debugGrid(Player player)
 	{
-		final int geoRadius = 20;
-		final int blocksPerPacket = 40;
+		final int geoRadius = 10;
+		final int blocksPerPacket = 20;
 		
 		int iBlock = blocksPerPacket;
 		int iPacket = 0;

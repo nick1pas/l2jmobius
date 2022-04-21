@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestProcureCropList implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 20; // length of the one item
+	private static final int BATCH_LENGTH = 16; // length of the one item
 	
 	private List<CropHolder> _items = null;
 	
@@ -59,7 +59,11 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			final int objId = packet.readD();
 			final int itemId = packet.readD();
 			final int manorId = packet.readD();
-			final long cnt = packet.readQ();
+			int cnt = packet.readD();
+			if (cnt > Integer.MAX_VALUE)
+			{
+				cnt = Integer.MAX_VALUE;
+			}
 			if ((objId < 1) || (itemId < 1) || (manorId < 0) || (cnt < 0))
 			{
 				_items = null;

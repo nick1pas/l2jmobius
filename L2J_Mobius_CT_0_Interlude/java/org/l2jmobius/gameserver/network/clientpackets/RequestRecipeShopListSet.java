@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestRecipeShopListSet implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12;
+	private static final int BATCH_LENGTH = 8;
 	
 	private ManufactureItem[] _items = null;
 	
@@ -56,7 +56,7 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int id = packet.readD();
-			final long cost = packet.readQ();
+			final int cost = packet.readD();
 			if (cost < 0)
 			{
 				_items = null;

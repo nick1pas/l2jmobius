@@ -45,29 +45,18 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		OutgoingPackets.PRIVATE_STORE_BUY_MANAGE_LIST.writeId(packet);
 		// section 1
 		packet.writeD(_objId);
-		packet.writeQ(_playerAdena);
+		packet.writeD((int) _playerAdena);
 		// section2
 		packet.writeD(_itemList.size()); // inventory items for potential buy
 		for (Item item : _itemList)
 		{
 			packet.writeD(item.getId());
 			packet.writeH(0); // show enchant level as 0, as you can't buy enchanted weapons
-			packet.writeQ(item.getCount());
-			packet.writeQ(item.getReferencePrice());
+			packet.writeD((int) item.getCount());
+			packet.writeD(item.getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getTemplate().getBodyPart());
 			packet.writeH(item.getTemplate().getType2());
-			// T1
-			packet.writeH(item.getAttackElementType());
-			packet.writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
-				packet.writeH(item.getElementDefAttr(i));
-			}
-			for (int op : item.getEnchantOptions())
-			{
-				packet.writeH(op);
-			}
 		}
 		// section 3
 		packet.writeD(_buyList.size()); // count for all items already added for buy
@@ -75,24 +64,13 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		{
 			packet.writeD(item.getItem().getId());
 			packet.writeH(0);
-			packet.writeQ(item.getCount());
-			packet.writeQ(item.getItem().getReferencePrice());
+			packet.writeD((int) item.getCount());
+			packet.writeD(item.getItem().getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
-			packet.writeQ(item.getPrice()); // your price
-			packet.writeQ(item.getItem().getReferencePrice()); // fixed store price
-			// T1
-			packet.writeH(item.getAttackElementType());
-			packet.writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
-				packet.writeH(item.getElementDefAttr(i));
-			}
-			for (int op : item.getEnchantOptions())
-			{
-				packet.writeH(op);
-			}
+			packet.writeD((int) item.getPrice()); // your price
+			packet.writeD(item.getItem().getReferencePrice()); // fixed store price
 		}
 		return true;
 	}

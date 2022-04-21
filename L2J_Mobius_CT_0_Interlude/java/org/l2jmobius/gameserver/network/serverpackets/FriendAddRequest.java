@@ -34,7 +34,7 @@ public class FriendAddRequest implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
+		OutgoingPackets.ASK_JOIN_FRIEND.writeId(packet);
 		packet.writeS(_requestorName);
 		packet.writeD(0);
 		return true;

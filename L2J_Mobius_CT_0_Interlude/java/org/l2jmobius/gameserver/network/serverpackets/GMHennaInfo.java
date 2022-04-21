@@ -48,7 +48,7 @@ public class GMHennaInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.GM_HENNA_INFO.writeId(packet);
+		OutgoingPackets.GM_VIEW_HENNA_INFO.writeId(packet);
 		packet.writeC(_player.getHennaStatINT()); // equip INT
 		packet.writeC(_player.getHennaStatSTR()); // equip STR
 		packet.writeC(_player.getHennaStatCON()); // equip CON

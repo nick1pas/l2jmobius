@@ -37,7 +37,7 @@ public class PrivateStoreMsgSell implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.PRIVATE_STORE_SELL_MSG.writeId(packet);
+		OutgoingPackets.PRIVATE_STORE_MSG_SELL.writeId(packet);
 		packet.writeD(_objId);
 		packet.writeS(_storeMsg);
 		return true;

@@ -286,23 +286,6 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
-	 * Get all element items
-	 * @return
-	 */
-	public Collection<Item> getElementItems()
-	{
-		final List<Item> result = new LinkedList<>();
-		for (Item item : _items)
-		{
-			if (item.getElementals() != null)
-			{
-				result.add(item);
-			}
-		}
-		return result;
-	}
-	
-	/**
 	 * Returns the list of items in inventory available for transaction adjusted by tradeList
 	 * @param tradeList
 	 * @return Item : items in inventory

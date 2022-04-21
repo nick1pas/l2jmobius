@@ -39,7 +39,7 @@ public class CharSelected implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_SELECTED.writeId(packet);
+		OutgoingPackets.CHAR_SELECTED.writeId(packet);
 		packet.writeS(_player.getName());
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getTitle());
@@ -66,6 +66,12 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(_player.getMEN());
 		packet.writeD(_player.getDEX());
 		packet.writeD(_player.getWIT());
+		for (int i = 0; i < 30; i++)
+		{
+			packet.writeD(0);
+		}
+		packet.writeD(0);
+		packet.writeD(0);
 		packet.writeD(GameTimeTaskManager.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
 		packet.writeD(0);
 		packet.writeD(_player.getClassId().getId());
@@ -73,7 +79,13 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(0);
 		packet.writeD(0);
 		packet.writeD(0);
-		packet.writeB(new byte[64]);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		packet.writeD(0);
 		return true;
 	}

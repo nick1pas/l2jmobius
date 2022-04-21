@@ -41,7 +41,6 @@ public class NewbieCoupons extends AbstractNpcAI
 		30602,
 		31076,
 		31077,
-		32135
 	};
 	
 	private static final int WEAPON_MULTISELL = 305986001;

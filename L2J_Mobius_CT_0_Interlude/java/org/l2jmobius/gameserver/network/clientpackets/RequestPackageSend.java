@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestPackageSend implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12; // length of the one item
+	private static final int BATCH_LENGTH = 8; // length of the one item
 	
 	private ItemHolder[] _items = null;
 	private int _objectId;
@@ -60,7 +60,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int objId = packet.readD();
-			final long cnt = packet.readQ();
+			final int cnt = packet.readD();
 			if ((objId < 1) || (cnt < 0))
 			{
 				_items = null;

@@ -165,8 +165,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getTeam().getId());
 		packet.writeD(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit
 		packet.writeD(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit
-		packet.writeD(_summon.getFormId()); // CT1.5 Pet form and skills
-		packet.writeD(_summon.getAbnormalVisualEffectSpecial());
 		return true;
 	}
 }

@@ -69,31 +69,23 @@ public abstract class Inventory extends ItemContainer
 	public static final long MAX_ADENA = Config.MAX_ADENA;
 	
 	public static final int PAPERDOLL_UNDER = 0;
-	public static final int PAPERDOLL_HEAD = 1;
-	public static final int PAPERDOLL_HAIR = 2;
-	public static final int PAPERDOLL_HAIR2 = 3;
-	public static final int PAPERDOLL_NECK = 4;
-	public static final int PAPERDOLL_RHAND = 5;
-	public static final int PAPERDOLL_CHEST = 6;
-	public static final int PAPERDOLL_LHAND = 7;
-	public static final int PAPERDOLL_REAR = 8;
-	public static final int PAPERDOLL_LEAR = 9;
-	public static final int PAPERDOLL_GLOVES = 10;
+	public static final int PAPERDOLL_LEAR = 1;
+	public static final int PAPERDOLL_REAR = 2;
+	public static final int PAPERDOLL_NECK = 3;
+	public static final int PAPERDOLL_LFINGER = 4;
+	public static final int PAPERDOLL_RFINGER = 5;
+	public static final int PAPERDOLL_HEAD = 6;
+	public static final int PAPERDOLL_RHAND = 7;
+	public static final int PAPERDOLL_LHAND = 8;
+	public static final int PAPERDOLL_GLOVES = 9;
+	public static final int PAPERDOLL_CHEST = 10;
 	public static final int PAPERDOLL_LEGS = 11;
 	public static final int PAPERDOLL_FEET = 12;
-	public static final int PAPERDOLL_RFINGER = 13;
-	public static final int PAPERDOLL_LFINGER = 14;
-	public static final int PAPERDOLL_LBRACELET = 15;
-	public static final int PAPERDOLL_RBRACELET = 16;
-	public static final int PAPERDOLL_DECO1 = 17;
-	public static final int PAPERDOLL_DECO2 = 18;
-	public static final int PAPERDOLL_DECO3 = 19;
-	public static final int PAPERDOLL_DECO4 = 20;
-	public static final int PAPERDOLL_DECO5 = 21;
-	public static final int PAPERDOLL_DECO6 = 22;
-	public static final int PAPERDOLL_CLOAK = 23;
-	public static final int PAPERDOLL_BELT = 24;
-	public static final int PAPERDOLL_TOTALSLOTS = 25;
+	public static final int PAPERDOLL_CLOAK = 13;
+	public static final int PAPERDOLL_FACE = 14;
+	public static final int PAPERDOLL_HAIR = 15;
+	public static final int PAPERDOLL_HAIR2 = 16;
+	public static final int PAPERDOLL_TOTALSLOTS = 17;
 	
 	// Speed percentage mods
 	public static final double MAX_ARMOR_WEIGHT = 12000;
@@ -182,14 +174,6 @@ public abstract class Inventory extends ItemContainer
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
 				}
 			}
-			else if (item.getItemType() == WeaponType.CROSSBOW)
-			{
-				final Item bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				if (bolts != null)
-				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
-				}
-			}
 			else if (item.getItemType() == WeaponType.FISHINGROD)
 			{
 				final Item lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
@@ -214,14 +198,6 @@ public abstract class Inventory extends ItemContainer
 				if (arrow != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
-				}
-			}
-			else if (item.getItemType() == WeaponType.CROSSBOW)
-			{
-				final Item bolts = inventory.findBoltForCrossBow(item.getTemplate());
-				if (bolts != null)
-				{
-					inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
 				}
 			}
 		}
@@ -278,8 +254,6 @@ public abstract class Inventory extends ItemContainer
 			{
 				item.getAugmentation().removeBonus(player);
 			}
-			
-			item.removeElementAttrBonus(player);
 			
 			// Remove skills bestowed from +4 armor
 			if (item.getEnchantLevel() >= 4)
@@ -393,8 +367,6 @@ public abstract class Inventory extends ItemContainer
 			{
 				item.getAugmentation().applyBonus(player);
 			}
-			
-			item.updateElementAttrBonus(player);
 			
 			// Add skills bestowed from +4 armor
 			if (item.getEnchantLevel() >= 4)
@@ -699,42 +671,6 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
-	private static final class BraceletListener implements PaperdollListener
-	{
-		private static BraceletListener instance = new BraceletListener();
-		
-		public static BraceletListener getInstance()
-		{
-			return instance;
-		}
-		
-		@Override
-		public void notifyUnequiped(int slot, Item item, Inventory inventory)
-		{
-			final Player player = item.getActingPlayer();
-			if ((player != null) && player.isChangingClass())
-			{
-				return;
-			}
-			
-			if (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_R_BRACELET)
-			{
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO1);
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO2);
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO3);
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO4);
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO5);
-				inventory.unEquipItemInSlot(PAPERDOLL_DECO6);
-			}
-		}
-		
-		// Note (April 3, 2009): Currently on equip, talismans do not display properly, do we need checks here to fix this?
-		@Override
-		public void notifyEquiped(int slot, Item item, Inventory inventory)
-		{
-		}
-	}
-	
 	/**
 	 * Constructor of the inventory
 	 */
@@ -747,7 +683,6 @@ public abstract class Inventory extends ItemContainer
 			addPaperdollListener(ArmorSetListener.getInstance());
 			addPaperdollListener(BowCrossRodListener.getInstance());
 			addPaperdollListener(ItemSkillsListener.getInstance());
-			addPaperdollListener(BraceletListener.getInstance());
 		}
 		
 		// common
@@ -963,22 +898,6 @@ public abstract class Inventory extends ItemContainer
 			case ItemTemplate.SLOT_HAIR2:
 			{
 				return PAPERDOLL_HAIR2;
-			}
-			case ItemTemplate.SLOT_R_BRACELET:
-			{
-				return PAPERDOLL_RBRACELET;
-			}
-			case ItemTemplate.SLOT_L_BRACELET:
-			{
-				return PAPERDOLL_LBRACELET;
-			}
-			case ItemTemplate.SLOT_DECO:
-			{
-				return PAPERDOLL_DECO1; // return first we deal with it later
-			}
-			case ItemTemplate.SLOT_BELT:
-			{
-				return PAPERDOLL_BELT;
 			}
 		}
 		return -1;
@@ -1231,31 +1150,6 @@ public abstract class Inventory extends ItemContainer
 				slot = ItemTemplate.SLOT_FEET;
 				break;
 			}
-			case PAPERDOLL_LBRACELET:
-			{
-				slot = ItemTemplate.SLOT_L_BRACELET;
-				break;
-			}
-			case PAPERDOLL_RBRACELET:
-			{
-				slot = ItemTemplate.SLOT_R_BRACELET;
-				break;
-			}
-			case PAPERDOLL_DECO1:
-			case PAPERDOLL_DECO2:
-			case PAPERDOLL_DECO3:
-			case PAPERDOLL_DECO4:
-			case PAPERDOLL_DECO5:
-			case PAPERDOLL_DECO6:
-			{
-				slot = ItemTemplate.SLOT_DECO;
-				break;
-			}
-			case PAPERDOLL_BELT:
-			{
-				slot = ItemTemplate.SLOT_BELT;
-				break;
-			}
 		}
 		return slot;
 	}
@@ -1414,26 +1308,6 @@ public abstract class Inventory extends ItemContainer
 				pdollSlot = PAPERDOLL_UNDER;
 				break;
 			}
-			case ItemTemplate.SLOT_L_BRACELET:
-			{
-				pdollSlot = PAPERDOLL_LBRACELET;
-				break;
-			}
-			case ItemTemplate.SLOT_R_BRACELET:
-			{
-				pdollSlot = PAPERDOLL_RBRACELET;
-				break;
-			}
-			case ItemTemplate.SLOT_DECO:
-			{
-				pdollSlot = PAPERDOLL_DECO1;
-				break;
-			}
-			case ItemTemplate.SLOT_BELT:
-			{
-				pdollSlot = PAPERDOLL_BELT;
-				break;
-			}
 			default:
 			{
 				LOGGER.info("Unhandled slot type: " + slot);
@@ -1525,7 +1399,7 @@ public abstract class Inventory extends ItemContainer
 			case ItemTemplate.SLOT_L_HAND:
 			{
 				final Item rh = getPaperdollItem(PAPERDOLL_RHAND);
-				if ((rh != null) && (rh.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || ((rh.getItemType() == WeaponType.CROSSBOW) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+				if ((rh != null) && (rh.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
 				{
 					setPaperdollItem(PAPERDOLL_RHAND, null);
 				}
@@ -1660,26 +1534,6 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_CLOAK, item);
 				break;
 			}
-			case ItemTemplate.SLOT_L_BRACELET:
-			{
-				setPaperdollItem(PAPERDOLL_LBRACELET, item);
-				break;
-			}
-			case ItemTemplate.SLOT_R_BRACELET:
-			{
-				setPaperdollItem(PAPERDOLL_RBRACELET, item);
-				break;
-			}
-			case ItemTemplate.SLOT_DECO:
-			{
-				equipTalisman(item);
-				break;
-			}
-			case ItemTemplate.SLOT_BELT:
-			{
-				setPaperdollItem(PAPERDOLL_BELT, item);
-				break;
-			}
 			case ItemTemplate.SLOT_ALLDRESS:
 			{
 				// formal dress
@@ -1751,27 +1605,6 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
-	 * Return the Item of the bolts needed for this crossbow.
-	 * @param crossbow : Item designating the crossbow
-	 * @return Item pointing out bolts for crossbow
-	 */
-	public Item findBoltForCrossBow(ItemTemplate crossbow)
-	{
-		Item bolt = null;
-		for (Item item : _items)
-		{
-			if (item.isEtcItem() && (item.getTemplate().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
-			{
-				bolt = item;
-				break;
-			}
-		}
-		
-		// Get the Item corresponding to the item identifier and return it
-		return bolt;
-	}
-	
-	/**
 	 * Get back items in inventory from database
 	 */
 	@Override
@@ -1822,43 +1655,6 @@ public abstract class Inventory extends ItemContainer
 		{
 			LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
 		}
-	}
-	
-	public int getTalismanSlots()
-	{
-		return getOwner().getActingPlayer().getStat().getTalismanSlots();
-	}
-	
-	private void equipTalisman(Item item)
-	{
-		if (getTalismanSlots() == 0)
-		{
-			return;
-		}
-		
-		// find same (or incompatible) talisman type
-		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
-		{
-			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
-			{
-				// overwrite
-				setPaperdollItem(i, item);
-				return;
-			}
-		}
-		
-		// no free slot found - put on first free
-		for (int i = PAPERDOLL_DECO1; i < (PAPERDOLL_DECO1 + getTalismanSlots()); i++)
-		{
-			if (_paperdoll[i] == null)
-			{
-				setPaperdollItem(i, item);
-				return;
-			}
-		}
-		
-		// no free slots - put on first
-		setPaperdollItem(PAPERDOLL_DECO1, item);
 	}
 	
 	public boolean canEquipCloak()

@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 
 public class WaterZone extends ZoneType
 {
@@ -41,15 +40,7 @@ public class WaterZone extends ZoneType
 		// TODO: update to only send speed status when that packet is known
 		if (creature.isPlayer())
 		{
-			final Player player = creature.getActingPlayer();
-			if (player.isTransformed() && !player.getTransformation().canSwim())
-			{
-				creature.stopTransformation(true);
-			}
-			else
-			{
-				player.broadcastUserInfo();
-			}
+			creature.getActingPlayer().broadcastUserInfo();
 		}
 		else if (creature.isNpc())
 		{
@@ -59,10 +50,10 @@ public class WaterZone extends ZoneType
 				{
 					player.sendPacket(new FakePlayerInfo((Npc) creature));
 				}
-				else if (creature.getRunSpeed() == 0)
-				{
-					player.sendPacket(new ServerObjectInfo((Npc) creature, player));
-				}
+				// else if (creature.getRunSpeed() == 0)
+				// {
+				// player.sendPacket(new ServerObjectInfo((Npc) creature, player));
+				// }
 				else
 				{
 					player.sendPacket(new AbstractNpcInfo.NpcInfo((Npc) creature, player));
@@ -97,10 +88,10 @@ public class WaterZone extends ZoneType
 				{
 					player.sendPacket(new FakePlayerInfo((Npc) creature));
 				}
-				else if (creature.getRunSpeed() == 0)
-				{
-					player.sendPacket(new ServerObjectInfo((Npc) creature, player));
-				}
+				// else if (creature.getRunSpeed() == 0)
+				// {
+				// player.sendPacket(new ServerObjectInfo((Npc) creature, player));
+				// }
 				else
 				{
 					player.sendPacket(new AbstractNpcInfo.NpcInfo((Npc) creature, player));

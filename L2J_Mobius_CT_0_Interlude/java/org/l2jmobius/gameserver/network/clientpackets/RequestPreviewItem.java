@@ -29,11 +29,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
-import org.l2jmobius.gameserver.model.item.Weapon;
-import org.l2jmobius.gameserver.model.item.type.ArmorType;
-import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -184,28 +180,6 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			if (slot < 0)
 			{
 				continue;
-			}
-			
-			if (template instanceof Weapon)
-			{
-				if (player.getRace().ordinal() == 5)
-				{
-					if (template.getItemType() == WeaponType.NONE)
-					{
-						continue;
-					}
-					else if ((template.getItemType() == WeaponType.RAPIER) || (template.getItemType() == WeaponType.CROSSBOW) || (template.getItemType() == WeaponType.ANCIENTSWORD))
-					{
-						continue;
-					}
-				}
-			}
-			else if (template instanceof Armor)
-			{
-				if ((player.getRace().ordinal() == 5) && ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)))
-				{
-					continue;
-				}
 			}
 			
 			if (itemList.containsKey(slot))

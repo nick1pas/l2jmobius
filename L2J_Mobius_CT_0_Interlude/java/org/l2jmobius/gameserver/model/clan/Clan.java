@@ -43,10 +43,7 @@ import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
@@ -61,13 +58,10 @@ import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
@@ -126,7 +120,6 @@ public class Clan implements IIdentifiable, INamable
 	private int _allyId = 0;
 	private int _level;
 	private int _castleId;
-	private int _fortId;
 	private int _hideoutId;
 	private int _hiredGuards;
 	private int _crestId;
@@ -501,14 +494,6 @@ public class Clan implements IIdentifiable, INamable
 					castle.removeResidentialSkills(player);
 				}
 			}
-			if (getFortId() > 0)
-			{
-				final Fort fort = FortManager.getInstance().getFortByOwner(this);
-				if (fort != null)
-				{
-					fort.removeResidentialSkills(player);
-				}
-			}
 			player.sendSkillList();
 			player.setClan(null);
 			
@@ -754,14 +739,6 @@ public class Clan implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * @return the fort Id for this clan if owns a fort, zero otherwise.
-	 */
-	public int getFortId()
-	{
-		return _fortId;
-	}
-	
-	/**
 	 * @return the hideout Id for this clan if owns a hideout, zero otherwise.
 	 */
 	public int getHideoutId()
@@ -823,14 +800,6 @@ public class Clan implements IIdentifiable, INamable
 	public void setCastleId(int castleId)
 	{
 		_castleId = castleId;
-	}
-	
-	/**
-	 * @param fortId the fort Id to set.
-	 */
-	public void setFortId(int fortId)
-	{
-		_fortId = fortId;
 	}
 	
 	/**
@@ -1380,7 +1349,7 @@ public class Clan implements IIdentifiable, INamable
 					else if (temp.getPledgeType() == subType)
 					{
 						temp.getPlayer().addSkill(newSkill, false); // Skill is not saved to player DB
-						temp.getPlayer().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
+						// temp.getPlayer().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
 						temp.getPlayer().sendPacket(sm);
 						temp.getPlayer().sendSkillList();
 					}
@@ -1428,28 +1397,15 @@ public class Clan implements IIdentifiable, INamable
 				player.addSkill(skill, false); // Skill is not saved to player DB
 			}
 		}
-		if (player.getPledgeType() == 0)
+		
+		final SubPledge subunit = getSubPledge(player.getPledgeType());
+		if (subunit == null)
 		{
-			for (Skill skill : _subPledgeSkills.values())
-			{
-				final SkillLearn skillLearn = SkillTreeData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
-				if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal()))
-				{
-					player.addSkill(skill, false); // Skill is not saved to player DB
-				}
-			}
+			return;
 		}
-		else
+		for (Skill skill : subunit.getSkills())
 		{
-			final SubPledge subunit = getSubPledge(player.getPledgeType());
-			if (subunit == null)
-			{
-				return;
-			}
-			for (Skill skill : subunit.getSkills())
-			{
-				player.addSkill(skill, false); // Skill is not saved to player DB
-			}
+			player.addSkill(skill, false); // Skill is not saved to player DB
 		}
 		
 		if (_reputationScore < 0)
@@ -2029,7 +1985,7 @@ public class Clan implements IIdentifiable, INamable
 				{
 					cm.getPlayer().getClanPrivileges().setBitmask(privs);
 					cm.getPlayer().sendPacket(new UserInfo(cm.getPlayer()));
-					cm.getPlayer().sendPacket(new ExBrExtraUserInfo(cm.getPlayer()));
+					// cm.getPlayer().sendPacket(new ExBrExtraUserInfo(cm.getPlayer()));
 				}
 			}
 			broadcastClanStatus();
@@ -2417,7 +2373,7 @@ public class Clan implements IIdentifiable, INamable
 		updateClanInDB();
 		
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
+		// player.sendPacket(new ExBrExtraUserInfo(player));
 		
 		// TODO: Need correct message id
 		player.sendMessage("Alliance " + allyName + " has been created.");
@@ -2627,28 +2583,6 @@ public class Clan implements IIdentifiable, INamable
 						player.sendPacket(sm);
 						increaseClanLevel = true;
 					}
-				}
-				break;
-			}
-			case 10:
-			{
-				// Upgrade to 11
-				boolean hasTerritory = false;
-				for (Territory terr : TerritoryWarManager.getInstance().getAllTerritories())
-				{
-					if (terr.getOwnerClan().getId() == getId())
-					{
-						hasTerritory = true;
-						break;
-					}
-				}
-				if (hasTerritory && (_reputationScore >= Config.CLAN_LEVEL_11_COST) && (_members.size() >= Config.CLAN_LEVEL_11_REQUIREMENT))
-				{
-					setReputationScore(_reputationScore - Config.CLAN_LEVEL_11_COST);
-					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
-					cr.addInt(Config.CLAN_LEVEL_11_COST);
-					player.sendPacket(cr);
-					increaseClanLevel = true;
 				}
 				break;
 			}

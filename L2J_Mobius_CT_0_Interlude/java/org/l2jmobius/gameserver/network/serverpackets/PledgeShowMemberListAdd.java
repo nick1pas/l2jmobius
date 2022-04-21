@@ -34,7 +34,7 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 		_name = player.getName();
 		_level = player.getLevel();
 		_classId = player.getClassId().getId();
-		_isOnline = (player.isOnline() ? player.getObjectId() : 0);
+		_isOnline = player.isOnline() ? player.getObjectId() : 0;
 		_pledgeType = player.getPledgeType();
 	}
 	
@@ -43,7 +43,7 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 		_name = cm.getName();
 		_level = cm.getLevel();
 		_classId = cm.getClassId();
-		_isOnline = (cm.isOnline() ? cm.getObjectId() : 0);
+		_isOnline = cm.isOnline() ? cm.getObjectId() : 0;
 		_pledgeType = cm.getPledgeType();
 	}
 	

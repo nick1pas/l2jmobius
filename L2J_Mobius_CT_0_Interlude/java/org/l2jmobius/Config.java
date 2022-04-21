@@ -88,14 +88,11 @@ public class Config
 	public static final String INTERFACE_CONFIG_FILE = "./config/Interface.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-	public static final String TW_CONFIG_FILE = "./config/TerritoryWar.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
-	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
@@ -123,7 +120,6 @@ public class Config
 	private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
 	private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
 	private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
-	private static final String CUSTOM_HELLBOUND_STATUS_CONFIG_FILE = "./config/Custom/HellboundStatus.ini";
 	private static final String CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/Custom/MerchantZeroSellPrice.ini";
 	private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	private static final String CUSTOM_NOBLESS_MASTER_CONFIG_FILE = "./config/Custom/NoblessMaster.ini";
@@ -194,7 +190,6 @@ public class Config
 	public static boolean ALT_GAME_SKILL_LEARN;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
 	public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
-	public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 	public static int FEE_DELETE_TRANSFER_SKILLS;
 	public static int FEE_DELETE_SUBCLASS_SKILLS;
 	public static boolean RESTORE_SERVITOR_ON_RECONNECT;
@@ -299,7 +294,6 @@ public class Config
 	public static boolean DISABLE_TUTORIAL;
 	public static boolean EXPERTISE_PENALTY;
 	public static boolean STORE_RECIPE_SHOPLIST;
-	public static boolean STORE_UI_SETTINGS;
 	public static String[] FORBIDDEN_NAMES;
 	public static boolean SILENCE_MODE_EXCLUDE;
 	public static boolean ALT_VALIDATE_TRIGGER_SKILLS;
@@ -453,13 +447,11 @@ public class Config
 	public static int CLAN_LEVEL_8_COST;
 	public static int CLAN_LEVEL_9_COST;
 	public static int CLAN_LEVEL_10_COST;
-	public static int CLAN_LEVEL_11_COST;
 	public static int CLAN_LEVEL_6_REQUIREMENT;
 	public static int CLAN_LEVEL_7_REQUIREMENT;
 	public static int CLAN_LEVEL_8_REQUIREMENT;
 	public static int CLAN_LEVEL_9_REQUIREMENT;
 	public static int CLAN_LEVEL_10_REQUIREMENT;
-	public static int CLAN_LEVEL_11_REQUIREMENT;
 	public static boolean ALLOW_WYVERN_ALWAYS;
 	public static boolean ALLOW_WYVERN_DURING_SIEGE;
 	public static boolean ALLOW_MOUNTS_DURING_SIEGE;
@@ -553,8 +545,6 @@ public class Config
 	public static boolean WAREHOUSE_CACHE;
 	public static int WAREHOUSE_CACHE_TIME;
 	public static boolean ALLOW_REFUND;
-	public static boolean ALLOW_MAIL;
-	public static boolean ALLOW_ATTACHMENTS;
 	public static boolean ALLOW_WEAR;
 	public static int WEAR_DELAY;
 	public static int WEAR_PRICE;
@@ -671,23 +661,9 @@ public class Config
 	public static boolean CUSTOM_ITEMS_LOAD;
 	public static boolean CUSTOM_MULTISELL_LOAD;
 	public static boolean CUSTOM_BUYLIST_LOAD;
-	public static int BOOKMARK_CONSUME_ITEM_ID;
-	public static int ALT_BIRTHDAY_GIFT;
-	public static String ALT_BIRTHDAY_MAIL_SUBJECT;
-	public static String ALT_BIRTHDAY_MAIL_TEXT;
-	public static boolean ENABLE_BLOCK_CHECKER_EVENT;
-	public static int MIN_BLOCK_CHECKER_TEAM_MEMBERS;
-	public static boolean HBCE_FAIR_PLAY;
-	public static boolean HELLBOUND_WITHOUT_QUEST;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
 	public static int NORMAL_ENCHANT_COST_MULTIPLIER;
 	public static int SAFE_ENCHANT_COST_MULTIPLIER;
-	public static boolean BOTREPORT_ENABLE;
-	public static String[] BOTREPORT_RESETPOINT_HOUR;
-	public static long BOTREPORT_REPORT_DELAY;
-	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
-	public static boolean ENABLE_PRIME_SHOP;
-	public static int PRIME_SHOP_ITEM_ID;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -967,13 +943,11 @@ public class Config
 	public static int AUGMENTATION_TOP_SKILL_CHANCE;
 	public static int AUGMENTATION_TOP_GLOW_CHANCE;
 	public static int AUGMENTATION_BASESTAT_CHANCE;
-	public static int AUGMENTATION_ACC_SKILL_CHANCE;
 	public static boolean RETAIL_LIKE_AUGMENTATION;
 	public static int[] RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 	public static int[] RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
 	public static int[] RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
 	public static int[] RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
-	public static boolean RETAIL_LIKE_AUGMENTATION_ACCESSORY;
 	public static int[] AUGMENTATION_BLACKLIST;
 	public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
 	public static boolean ALT_ALLOW_AUGMENT_TRADE;
@@ -1025,34 +999,13 @@ public class Config
 	public static int QUEEN_ANT_SPAWN_INTERVAL;
 	public static int QUEEN_ANT_SPAWN_RANDOM;
 	
+	// Zaken
+	public static int ZAKEN_SPAWN_INTERVAL;
+	public static int ZAKEN_SPAWN_RANDOM;
+	
 	// Frintezza
 	public static int FRINTEZZA_SPAWN_INTERVAL;
 	public static int FRINTEZZA_SPAWN_RANDOM;
-	
-	// Beleth
-	public static int BELETH_MIN_PLAYERS;
-	public static int BELETH_SPAWN_INTERVAL;
-	public static int BELETH_SPAWN_RANDOM;
-	
-	// Gracia Seeds Settings
-	public static int SOD_TIAT_KILL_COUNT;
-	public static long SOD_STAGE_2_LENGTH;
-	
-	// Tiat
-	public static int MIN_TIAT_PLAYERS;
-	public static int MAX_TIAT_PLAYERS;
-	public static int MIN_TIAT_LEVEL;
-	
-	// Ekimus
-	public static int SOI_EKIMUS_KILL_COUNT;
-	public static int EROSION_ATTACK_MIN_PLAYERS;
-	public static int EROSION_ATTACK_MAX_PLAYERS;
-	public static int EROSION_DEFENCE_MIN_PLAYERS;
-	public static int EROSION_DEFENCE_MAX_PLAYERS;
-	public static int HEART_ATTACK_MIN_PLAYERS;
-	public static int HEART_ATTACK_MAX_PLAYERS;
-	public static int HEART_DEFENCE_MIN_PLAYERS;
-	public static int HEART_DEFENCE_MAX_PLAYERS;
 	
 	// chatfilter
 	public static List<String> FILTER_LIST;
@@ -1115,7 +1068,6 @@ public class Config
 	public static boolean WEDDING_SAMESEX;
 	public static boolean WEDDING_FORMALWEAR;
 	public static int WEDDING_DIVORCE_COSTS;
-	public static boolean HELLBOUND_STATUS;
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
@@ -1228,7 +1180,6 @@ public class Config
 	public static boolean ALLOW_DARKELF;
 	public static boolean ALLOW_ORC;
 	public static boolean ALLOW_DWARF;
-	public static boolean ALLOW_KAMAEL;
 	public static boolean AUTO_POTIONS_ENABLED;
 	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
 	public static int AUTO_POTION_MIN_LEVEL;
@@ -1634,13 +1585,11 @@ public class Config
 			CLAN_LEVEL_8_COST = featureConfig.getInt("ClanLevel8Cost", 20000);
 			CLAN_LEVEL_9_COST = featureConfig.getInt("ClanLevel9Cost", 40000);
 			CLAN_LEVEL_10_COST = featureConfig.getInt("ClanLevel10Cost", 40000);
-			CLAN_LEVEL_11_COST = featureConfig.getInt("ClanLevel11Cost", 75000);
 			CLAN_LEVEL_6_REQUIREMENT = featureConfig.getInt("ClanLevel6Requirement", 30);
 			CLAN_LEVEL_7_REQUIREMENT = featureConfig.getInt("ClanLevel7Requirement", 50);
 			CLAN_LEVEL_8_REQUIREMENT = featureConfig.getInt("ClanLevel8Requirement", 80);
 			CLAN_LEVEL_9_REQUIREMENT = featureConfig.getInt("ClanLevel9Requirement", 120);
 			CLAN_LEVEL_10_REQUIREMENT = featureConfig.getInt("ClanLevel10Requirement", 140);
-			CLAN_LEVEL_11_REQUIREMENT = featureConfig.getInt("ClanLevel11Requirement", 170);
 			ALLOW_WYVERN_ALWAYS = featureConfig.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = featureConfig.getBoolean("AllowRideWyvernDuringSiege", true);
 			ALLOW_MOUNTS_DURING_SIEGE = featureConfig.getBoolean("AllowRideMountsDuringSiege", false);
@@ -1751,10 +1700,9 @@ public class Config
 			ALT_GAME_SUBCLASS_EVERYWHERE = characterConfig.getBoolean("AltSubclassEverywhere", false);
 			RESTORE_SERVITOR_ON_RECONNECT = characterConfig.getBoolean("RestoreServitorOnReconnect", true);
 			RESTORE_PET_ON_RECONNECT = characterConfig.getBoolean("RestorePetOnReconnect", true);
-			ALLOW_TRANSFORM_WITHOUT_QUEST = characterConfig.getBoolean("AltTransformationWithoutQuest", false);
 			FEE_DELETE_TRANSFER_SKILLS = characterConfig.getInt("FeeDeleteTransferSkills", 10000000);
 			FEE_DELETE_SUBCLASS_SKILLS = characterConfig.getInt("FeeDeleteSubClassSkills", 10000000);
-			ENABLE_VITALITY = characterConfig.getBoolean("EnableVitality", true);
+			ENABLE_VITALITY = characterConfig.getBoolean("EnableVitality", false);
 			RECOVER_VITALITY_ON_RECONNECT = characterConfig.getBoolean("RecoverVitalityOnReconnect", true);
 			STARTING_VITALITY_POINTS = characterConfig.getInt("StartingVitalityPoints", 20000);
 			RAIDBOSS_USE_VITALITY = characterConfig.getBoolean("RaidbossUseVitality", true);
@@ -1809,7 +1757,6 @@ public class Config
 			AUGMENTATION_TOP_SKILL_CHANCE = characterConfig.getInt("AugmentationTopSkillChance", 60);
 			AUGMENTATION_TOP_GLOW_CHANCE = characterConfig.getInt("AugmentationTopGlowChance", 100);
 			AUGMENTATION_BASESTAT_CHANCE = characterConfig.getInt("AugmentationBaseStatChance", 1);
-			AUGMENTATION_ACC_SKILL_CHANCE = characterConfig.getInt("AugmentationAccSkillChance", 0);
 			RETAIL_LIKE_AUGMENTATION = characterConfig.getBoolean("RetailLikeAugmentation", true);
 			String[] array = characterConfig.getString("RetailLikeAugmentationNoGradeChance", "55,35,7,3").split(",");
 			RETAIL_LIKE_AUGMENTATION_NG_CHANCE = new int[array.length];
@@ -1835,8 +1782,7 @@ public class Config
 			{
 				RETAIL_LIKE_AUGMENTATION_TOP_CHANCE[i] = Integer.parseInt(array[i]);
 			}
-			RETAIL_LIKE_AUGMENTATION_ACCESSORY = characterConfig.getBoolean("RetailLikeAugmentationAccessory", true);
-			array = characterConfig.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
+			array = characterConfig.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191").split(",");
 			AUGMENTATION_BLACKLIST = new int[array.length];
 			for (int i = 0; i < array.length; i++)
 			{
@@ -1893,7 +1839,7 @@ public class Config
 			STARTING_ADENA = characterConfig.getLong("StartingAdena", 0);
 			STARTING_LEVEL = characterConfig.getByte("StartingLevel", (byte) 1);
 			STARTING_SP = characterConfig.getInt("StartingSP", 0);
-			MAX_ADENA = characterConfig.getLong("MaxAdena", 99900000000L);
+			MAX_ADENA = characterConfig.getLong("MaxAdena", 2000000000);
 			if (MAX_ADENA < 0)
 			{
 				MAX_ADENA = Long.MAX_VALUE;
@@ -1958,7 +1904,6 @@ public class Config
 			DISABLE_TUTORIAL = characterConfig.getBoolean("DisableTutorial", false);
 			EXPERTISE_PENALTY = characterConfig.getBoolean("ExpertisePenalty", true);
 			STORE_RECIPE_SHOPLIST = characterConfig.getBoolean("StoreRecipeShopList", false);
-			STORE_UI_SETTINGS = characterConfig.getBoolean("StoreCharUiSettings", true);
 			FORBIDDEN_NAMES = characterConfig.getString("ForbiddenNames", "").split(",");
 			SILENCE_MODE_EXCLUDE = characterConfig.getBoolean("SilenceModeExclude", false);
 			ALT_VALIDATE_TRIGGER_SKILLS = characterConfig.getBoolean("AltValidateTriggerSkills", false);
@@ -2052,8 +1997,6 @@ public class Config
 			WAREHOUSE_CACHE = generalConfig.getBoolean("WarehouseCache", false);
 			WAREHOUSE_CACHE_TIME = generalConfig.getInt("WarehouseCacheTime", 15);
 			ALLOW_REFUND = generalConfig.getBoolean("AllowRefund", true);
-			ALLOW_MAIL = generalConfig.getBoolean("AllowMail", true);
-			ALLOW_ATTACHMENTS = generalConfig.getBoolean("AllowAttachments", true);
 			ALLOW_WEAR = generalConfig.getBoolean("AllowWear", true);
 			WEAR_DELAY = generalConfig.getInt("WearDelay", 5);
 			WEAR_PRICE = generalConfig.getInt("WearPrice", 10);
@@ -2160,30 +2103,8 @@ public class Config
 			CUSTOM_ITEMS_LOAD = generalConfig.getBoolean("CustomItemsLoad", false);
 			CUSTOM_MULTISELL_LOAD = generalConfig.getBoolean("CustomMultisellLoad", false);
 			CUSTOM_BUYLIST_LOAD = generalConfig.getBoolean("CustomBuyListLoad", false);
-			BOOKMARK_CONSUME_ITEM_ID = generalConfig.getInt("BookmarkConsumeItemId", -1);
-			ALT_BIRTHDAY_GIFT = generalConfig.getInt("AltBirthdayGift", 22187);
-			ALT_BIRTHDAY_MAIL_SUBJECT = generalConfig.getString("AltBirthdayMailSubject", "Happy Birthday!");
-			ALT_BIRTHDAY_MAIL_TEXT = generalConfig.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
-			ENABLE_BLOCK_CHECKER_EVENT = generalConfig.getBoolean("EnableBlockCheckerEvent", false);
-			MIN_BLOCK_CHECKER_TEAM_MEMBERS = generalConfig.getInt("BlockCheckerMinTeamMembers", 2);
-			if (MIN_BLOCK_CHECKER_TEAM_MEMBERS < 1)
-			{
-				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 1;
-			}
-			else if (MIN_BLOCK_CHECKER_TEAM_MEMBERS > 6)
-			{
-				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 6;
-			}
-			HBCE_FAIR_PLAY = generalConfig.getBoolean("HBCEFairPlay", false);
-			HELLBOUND_WITHOUT_QUEST = generalConfig.getBoolean("HellboundWithoutQuest", false);
 			NORMAL_ENCHANT_COST_MULTIPLIER = generalConfig.getInt("NormalEnchantCostMultipiler", 1);
 			SAFE_ENCHANT_COST_MULTIPLIER = generalConfig.getInt("SafeEnchantCostMultipiler", 5);
-			BOTREPORT_ENABLE = generalConfig.getBoolean("EnableBotReportButton", false);
-			BOTREPORT_RESETPOINT_HOUR = generalConfig.getString("BotReportPointsResetHour", "00:00").split(":");
-			BOTREPORT_REPORT_DELAY = generalConfig.getInt("BotReportDelay", 30) * 60000;
-			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = generalConfig.getBoolean("AllowReportsFromSameClanMembers", false);
-			ENABLE_PRIME_SHOP = generalConfig.getBoolean("EnablePrimeShop", false);
-			PRIME_SHOP_ITEM_ID = generalConfig.getInt("PrimeShopItemId", -1);
 			CORRECT_PRICES = generalConfig.getBoolean("CorrectPrices", true);
 			ENABLE_FALLING_DAMAGE = generalConfig.getBoolean("EnableFallingDamage", true);
 			
@@ -2393,7 +2314,7 @@ public class Config
 			KARMA_AWARD_PK_KILL = pvpConfig.getBoolean("AwardPKKillPVPPoint", false);
 			KARMA_PK_LIMIT = pvpConfig.getInt("MinimumPKRequiredToDrop", 5);
 			KARMA_NONDROPPABLE_PET_ITEMS = pvpConfig.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
-			KARMA_NONDROPPABLE_ITEMS = pvpConfig.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
+			KARMA_NONDROPPABLE_ITEMS = pvpConfig.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694");
 			String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
 			KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
 			for (int i = 0; i < karma.length; i++)
@@ -2515,28 +2436,11 @@ public class Config
 			ORFEN_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfOrfenSpawn", 20);
 			QUEEN_ANT_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfQueenAntSpawn", 36);
 			QUEEN_ANT_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfQueenAntSpawn", 17);
+			ZAKEN_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfFrintezzaSpawn", 36);
+			ZAKEN_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfFrintezzaSpawn", 17);
 			FRINTEZZA_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfFrintezzaSpawn", 48);
 			FRINTEZZA_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfFrintezzaSpawn", 8);
-			BELETH_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfBelethSpawn", 192);
-			BELETH_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfBelethSpawn", 148);
-			BELETH_MIN_PLAYERS = grandBossConfig.getInt("BelethMinPlayers", 36);
 			
-			// Gracia Seeds
-			final PropertiesParser graciaSeedsConfig = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-			SOD_TIAT_KILL_COUNT = graciaSeedsConfig.getInt("TiatKillCountForNextState", 10);
-			SOD_STAGE_2_LENGTH = graciaSeedsConfig.getLong("Stage2Length", 720) * 60000;
-			MIN_TIAT_PLAYERS = graciaSeedsConfig.getInt("MinPlayers", 36);
-			MAX_TIAT_PLAYERS = graciaSeedsConfig.getInt("MaxPlayers", 45);
-			MIN_TIAT_LEVEL = graciaSeedsConfig.getInt("MinLevel", 75);
-			SOI_EKIMUS_KILL_COUNT = graciaSeedsConfig.getInt("EkimusKillCount", 5);
-			EROSION_ATTACK_MIN_PLAYERS = graciaSeedsConfig.getInt("MinEroAttPlayers", 18);
-			EROSION_ATTACK_MAX_PLAYERS = graciaSeedsConfig.getInt("MaxEroAttPlayers", 27);
-			EROSION_DEFENCE_MIN_PLAYERS = graciaSeedsConfig.getInt("MinEroDefPlayers", 18);
-			EROSION_DEFENCE_MAX_PLAYERS = graciaSeedsConfig.getInt("MaxEroDefPlayers", 27);
-			HEART_ATTACK_MIN_PLAYERS = graciaSeedsConfig.getInt("MinHeaAttPlayers", 18);
-			HEART_ATTACK_MAX_PLAYERS = graciaSeedsConfig.getInt("MaxHeaAttPlayers", 27);
-			HEART_DEFENCE_MIN_PLAYERS = graciaSeedsConfig.getInt("MinHeaDefPlayers", 18);
-			HEART_DEFENCE_MAX_PLAYERS = graciaSeedsConfig.getInt("MaxHeaDefPlayers", 27);
 			try
 			{
 				//@formatter:off
@@ -2583,7 +2487,6 @@ public class Config
 			ALLOW_DARKELF = allowedPlayerRacesConfig.getBoolean("AllowDarkElf", true);
 			ALLOW_ORC = allowedPlayerRacesConfig.getBoolean("AllowOrc", true);
 			ALLOW_DWARF = allowedPlayerRacesConfig.getBoolean("AllowDwarf", true);
-			ALLOW_KAMAEL = allowedPlayerRacesConfig.getBoolean("AllowKamael", true);
 			
 			// Load AutoPotions config file (if exists)
 			final PropertiesParser autoPotionsConfig = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
@@ -2818,10 +2721,6 @@ public class Config
 			// Load FindPvP config file (if exists)
 			final PropertiesParser findPvpConfig = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
 			ENABLE_FIND_PVP = findPvpConfig.getBoolean("EnableFindPvP", false);
-			
-			// Load HellboundStatus config file (if exists)
-			final PropertiesParser hellboundStatusConfig = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
-			HELLBOUND_STATUS = hellboundStatusConfig.getBoolean("HellboundStatus", false);
 			
 			// Load MerchantZeroSellPrice config file (if exists)
 			final PropertiesParser merchantZeroSellPriceConfig = new PropertiesParser(CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);

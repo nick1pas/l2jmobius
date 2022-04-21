@@ -48,21 +48,16 @@ public class World
 	public static volatile int MAX_CONNECTED_COUNT = 0;
 	public static volatile int OFFLINE_TRADE_COUNT = 0;
 	
-	/** Gracia border Flying objects not allowed to the east of it. */
-	public static final int GRACIA_MAX_X = -166168;
-	public static final int GRACIA_MAX_Z = 6105;
-	public static final int GRACIA_MIN_Z = -895;
-	
 	/** Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions. */
 	public static final int SHIFT_BY = 11;
 	
 	public static final int TILE_SIZE = 32768;
 	
 	/** Map dimensions. */
-	public static final int TILE_X_MIN = 11;
+	public static final int TILE_X_MIN = 16;
 	public static final int TILE_Y_MIN = 10;
 	public static final int TILE_X_MAX = 26;
-	public static final int TILE_Y_MAX = 26;
+	public static final int TILE_Y_MAX = 25;
 	public static final int TILE_ZERO_COORD_X = 20;
 	public static final int TILE_ZERO_COORD_Y = 18;
 	public static final int WORLD_X_MIN = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;

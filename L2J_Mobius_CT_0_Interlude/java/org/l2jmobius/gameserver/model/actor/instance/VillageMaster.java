@@ -37,8 +37,6 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -50,12 +48,10 @@ import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -339,13 +335,6 @@ public class VillageMaster extends Folk
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			// Subclasses may not be changed while a transformated state.
-			if (player.getTransformation() != null)
-			{
-				html.setFile(player, "data/html/villagemaster/SubClass_NoTransformed.htm");
-				player.sendPacket(html);
-				return;
-			}
 			// Subclasses may not be changed while a summon is active.
 			if (player.hasSummon())
 			{
@@ -425,11 +414,6 @@ public class VillageMaster extends Folk
 						if ((player.getRace() == Race.ELF) || (player.getRace() == Race.DARK_ELF))
 						{
 							html.setFile(player, "data/html/villagemaster/SubClass_Fail_Elves.htm");
-							player.sendPacket(html);
-						}
-						else if (player.getRace() == Race.KAMAEL)
-						{
-							html.setFile(player, "data/html/villagemaster/SubClass_Fail_Kamael.htm");
 							player.sendPacket(html);
 						}
 						else
@@ -731,7 +715,7 @@ public class VillageMaster extends Folk
 	
 	protected String getSubClassMenu(Race race)
 	{
-		if (Config.ALT_GAME_SUBCLASS_EVERYWHERE || (race != Race.KAMAEL))
+		if (Config.ALT_GAME_SUBCLASS_EVERYWHERE)
 		{
 			return "data/html/villagemaster/SubClass.htm";
 		}
@@ -838,56 +822,21 @@ public class VillageMaster extends Folk
 			subclasses = EnumSet.copyOf(mainSubclassSet);
 			subclasses.remove(pClass);
 			
-			if (player.getRace() == Race.KAMAEL)
+			if (player.getRace() == Race.ELF)
 			{
 				for (ClassId cid : ClassId.values())
 				{
-					if (cid.getRace() != Race.KAMAEL)
+					if (cid.getRace() == Race.DARK_ELF)
 					{
 						subclasses.remove(cid);
 					}
 				}
-				
-				if (player.getAppearance().isFemale())
-				{
-					subclasses.remove(ClassId.MALE_SOULBREAKER);
-				}
-				else
-				{
-					subclasses.remove(ClassId.FEMALE_SOULBREAKER);
-				}
-				
-				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
-				{
-					subclasses.remove(ClassId.INSPECTOR);
-				}
 			}
-			else
+			else if (player.getRace() == Race.DARK_ELF)
 			{
-				if (player.getRace() == Race.ELF)
-				{
-					for (ClassId cid : ClassId.values())
-					{
-						if (cid.getRace() == Race.DARK_ELF)
-						{
-							subclasses.remove(cid);
-						}
-					}
-				}
-				else if (player.getRace() == Race.DARK_ELF)
-				{
-					for (ClassId cid : ClassId.values())
-					{
-						if (cid.getRace() == Race.ELF)
-						{
-							subclasses.remove(cid);
-						}
-					}
-				}
-				
 				for (ClassId cid : ClassId.values())
 				{
-					if (cid.getRace() == Race.KAMAEL)
+					if (cid.getRace() == Race.ELF)
 					{
 						subclasses.remove(cid);
 					}
@@ -1027,12 +976,14 @@ public class VillageMaster extends Folk
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE);
 			return;
 		}
+		
 		if (clan.isAtWar())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_ENGAGED_IN_A_WAR);
 			return;
 		}
-		if ((clan.getCastleId() != 0) || (clan.getHideoutId() != 0) || (clan.getFortId() != 0))
+		
+		if ((clan.getCastleId() != 0) || (clan.getHideoutId() != 0))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_OWNING_A_CLAN_HALL_OR_CASTLE);
 			return;
@@ -1046,20 +997,13 @@ public class VillageMaster extends Folk
 				return;
 			}
 		}
-		for (Fort fort : FortManager.getInstance().getForts())
-		{
-			if (FortSiegeManager.getInstance().checkIsRegistered(clan, fort.getResidenceId()))
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
-				return;
-			}
-		}
 		
 		if (player.isInsideZone(ZoneId.SIEGE))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_DURING_A_SIEGE_OR_WHILE_PROTECTING_A_CASTLE);
 			return;
 		}
+		
 		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_YOUR_CLAN);
@@ -1193,7 +1137,7 @@ public class VillageMaster extends Folk
 			{
 				leaderPlayer.setPledgeClass(ClanMember.calculatePledgeClass(leaderPlayer));
 				leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-				leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
+				// leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
 			}
 		}
 	}
@@ -1279,7 +1223,7 @@ public class VillageMaster extends Folk
 		{
 			leaderPlayer.setPledgeClass(ClanMember.calculatePledgeClass(leaderPlayer));
 			leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-			leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
+			// leaderPlayer.sendPacket(new ExBrExtraUserInfo(leaderPlayer));
 		}
 		
 		clan.broadcastClanStatus();

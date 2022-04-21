@@ -40,7 +40,6 @@ public class ShopPreviewInfo implements IClientOutgoingPacket
 		OutgoingPackets.SHOP_PREVIEW_INFO.writeId(packet);
 		packet.writeD(Inventory.PAPERDOLL_TOTALSLOTS);
 		// Slots
-		packet.writeD(getFromList(Inventory.PAPERDOLL_UNDER));
 		packet.writeD(getFromList(Inventory.PAPERDOLL_REAR));
 		packet.writeD(getFromList(Inventory.PAPERDOLL_LEAR));
 		packet.writeD(getFromList(Inventory.PAPERDOLL_NECK));
@@ -56,9 +55,7 @@ public class ShopPreviewInfo implements IClientOutgoingPacket
 		packet.writeD(getFromList(Inventory.PAPERDOLL_CLOAK));
 		packet.writeD(getFromList(Inventory.PAPERDOLL_RHAND));
 		packet.writeD(getFromList(Inventory.PAPERDOLL_HAIR));
-		packet.writeD(getFromList(Inventory.PAPERDOLL_HAIR2));
-		packet.writeD(getFromList(Inventory.PAPERDOLL_RBRACELET));
-		packet.writeD(getFromList(Inventory.PAPERDOLL_LBRACELET));
+		packet.writeD(getFromList(Inventory.PAPERDOLL_UNDER));
 		return true;
 	}
 	

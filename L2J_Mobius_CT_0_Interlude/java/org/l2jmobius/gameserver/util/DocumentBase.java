@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionCategoryType;
-import org.l2jmobius.gameserver.model.conditions.ConditionChangeWeapon;
 import org.l2jmobius.gameserver.model.conditions.ConditionGameChance;
 import org.l2jmobius.gameserver.model.conditions.ConditionGameTime;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicAnd;
@@ -56,25 +55,19 @@ import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCallPc;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanCreateBase;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanCreateOutpost;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanEscape;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanRefuelAirship;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanResurrect;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanSummon;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanSummonSiegeGolem;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanSweep;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanTakeCastle;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanTakeFort;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanTransform;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCanUntransform;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCharges;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCheckAbnormal;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerClassIdRestriction;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCloakStatus;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerCp;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerFlyMounted;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerGrade;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerHasCastle;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerHasClanHall;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerHasFort;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerHasPet;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerHp;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerInsideZoneId;
@@ -83,7 +76,6 @@ import org.l2jmobius.gameserver.model.conditions.ConditionPlayerInvSize;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerIsClanLeader;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerIsHero;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerIsPvpFlagged;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerLandingZone;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerLevel;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerLevelRange;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerMp;
@@ -94,10 +86,8 @@ import org.l2jmobius.gameserver.model.conditions.ConditionPlayerRangeFromNpc;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerServitorNpcId;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSex;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSiegeSide;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSouls;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerState;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerSubclass;
-import org.l2jmobius.gameserver.model.conditions.ConditionPlayerTransformationId;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerVehicleMounted;
 import org.l2jmobius.gameserver.model.conditions.ConditionPlayerWeight;
 import org.l2jmobius.gameserver.model.conditions.ConditionSiegeZone;
@@ -572,12 +562,6 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerIsPvpFlagged(val));
 					break;
 				}
-				case "transformationid":
-				{
-					final int id = Integer.parseInt(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionPlayerTransformationId(id));
-					break;
-				}
 				case "hp":
 				{
 					final int hp = Integer.decode(getValue(a.getNodeValue(), null));
@@ -626,12 +610,6 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerCharges(value));
 					break;
 				}
-				case "souls":
-				{
-					final int value = Integer.decode(getValue(a.getNodeValue(), template));
-					cond = joinAnd(cond, new ConditionPlayerSouls(value));
-					break;
-				}
 				case "weight":
 				{
 					final int weight = Integer.decode(getValue(a.getNodeValue(), null));
@@ -668,12 +646,6 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerHasClanHall(array));
 					break;
 				}
-				case "fort":
-				{
-					final int fort = Integer.decode(getValue(a.getNodeValue(), null));
-					cond = joinAnd(cond, new ConditionPlayerHasFort(fort));
-					break;
-				}
 				case "castle":
 				{
 					final int castle = Integer.decode(getValue(a.getNodeValue(), null));
@@ -686,22 +658,10 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerSex(sex));
 					break;
 				}
-				case "flymounted":
-				{
-					final boolean val = Boolean.parseBoolean(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionPlayerFlyMounted(val));
-					break;
-				}
 				case "vehiclemounted":
 				{
 					final boolean val = Boolean.parseBoolean(a.getNodeValue());
 					cond = joinAnd(cond, new ConditionPlayerVehicleMounted(val));
-					break;
-				}
-				case "landingzone":
-				{
-					final boolean val = Boolean.parseBoolean(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionPlayerLandingZone(val));
 					break;
 				}
 				case "active_effect_id":
@@ -835,11 +795,6 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerCanEscape(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
-				case "canrefuelairship":
-				{
-					cond = joinAnd(cond, new ConditionPlayerCanRefuelAirship(Integer.parseInt(a.getNodeValue())));
-					break;
-				}
 				case "canresurrect":
 				{
 					cond = joinAnd(cond, new ConditionPlayerCanResurrect(Boolean.parseBoolean(a.getNodeValue())));
@@ -863,21 +818,6 @@ public abstract class DocumentBase
 				case "cantakecastle":
 				{
 					cond = joinAnd(cond, new ConditionPlayerCanTakeCastle());
-					break;
-				}
-				case "cantakefort":
-				{
-					cond = joinAnd(cond, new ConditionPlayerCanTakeFort(Boolean.parseBoolean(a.getNodeValue())));
-					break;
-				}
-				case "cantransform":
-				{
-					cond = joinAnd(cond, new ConditionPlayerCanTransform(Boolean.parseBoolean(a.getNodeValue())));
-					break;
-				}
-				case "canuntransform":
-				{
-					cond = joinAnd(cond, new ConditionPlayerCanUntransform(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
 				case "insidezoneid":
@@ -1191,12 +1131,6 @@ public abstract class DocumentBase
 						enchant = Integer.parseInt(st.nextToken().trim());
 					}
 					cond = joinAnd(cond, new ConditionSlotItemId(slot, id, enchant));
-					break;
-				}
-				case "weaponchange":
-				{
-					final boolean val = Boolean.parseBoolean(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionChangeWeapon(val));
 					break;
 				}
 			}

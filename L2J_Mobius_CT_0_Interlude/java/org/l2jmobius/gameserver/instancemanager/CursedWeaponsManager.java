@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.actor.instance.FeedableBeast;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonster;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
@@ -255,7 +254,7 @@ public class CursedWeaponsManager
 	
 	public synchronized void checkDrop(Attackable attackable, Player player)
 	{
-		if ((attackable instanceof Defender) || (attackable instanceof RiftInvader) || (attackable instanceof FestivalMonster) || (attackable instanceof Guard) || (attackable instanceof GrandBoss) || (attackable instanceof FeedableBeast) || (attackable instanceof FortCommander))
+		if ((attackable instanceof Defender) || (attackable instanceof RiftInvader) || (attackable instanceof FestivalMonster) || (attackable instanceof Guard) || (attackable instanceof GrandBoss) || (attackable instanceof FeedableBeast))
 		{
 			return;
 		}

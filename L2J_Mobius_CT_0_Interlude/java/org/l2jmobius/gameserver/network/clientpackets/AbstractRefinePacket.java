@@ -37,7 +37,6 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	public static final int GRADE_MID = 1;
 	public static final int GRADE_HIGH = 2;
 	public static final int GRADE_TOP = 3;
-	public static final int GRADE_ACC = 4; // Accessory LS
 	
 	protected static final int GEMSTONE_D = 2130;
 	protected static final int GEMSTONE_C = 2131;
@@ -136,62 +135,6 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		_lifeStones.put(8760, new LifeStone(GRADE_TOP, 7));
 		_lifeStones.put(8761, new LifeStone(GRADE_TOP, 8));
 		_lifeStones.put(8762, new LifeStone(GRADE_TOP, 9));
-		
-		_lifeStones.put(9573, new LifeStone(GRADE_NONE, 10));
-		_lifeStones.put(9574, new LifeStone(GRADE_MID, 10));
-		_lifeStones.put(9575, new LifeStone(GRADE_HIGH, 10));
-		_lifeStones.put(9576, new LifeStone(GRADE_TOP, 10));
-		
-		_lifeStones.put(10483, new LifeStone(GRADE_NONE, 11));
-		_lifeStones.put(10484, new LifeStone(GRADE_MID, 11));
-		_lifeStones.put(10485, new LifeStone(GRADE_HIGH, 11));
-		_lifeStones.put(10486, new LifeStone(GRADE_TOP, 11));
-		
-		_lifeStones.put(12754, new LifeStone(GRADE_ACC, 0));
-		_lifeStones.put(12755, new LifeStone(GRADE_ACC, 1));
-		_lifeStones.put(12756, new LifeStone(GRADE_ACC, 2));
-		_lifeStones.put(12757, new LifeStone(GRADE_ACC, 3));
-		_lifeStones.put(12758, new LifeStone(GRADE_ACC, 4));
-		_lifeStones.put(12759, new LifeStone(GRADE_ACC, 5));
-		_lifeStones.put(12760, new LifeStone(GRADE_ACC, 6));
-		_lifeStones.put(12761, new LifeStone(GRADE_ACC, 7));
-		_lifeStones.put(12762, new LifeStone(GRADE_ACC, 8));
-		_lifeStones.put(12763, new LifeStone(GRADE_ACC, 9));
-		
-		_lifeStones.put(12821, new LifeStone(GRADE_ACC, 10));
-		_lifeStones.put(12822, new LifeStone(GRADE_ACC, 11));
-		
-		_lifeStones.put(12840, new LifeStone(GRADE_ACC, 0));
-		_lifeStones.put(12841, new LifeStone(GRADE_ACC, 1));
-		_lifeStones.put(12842, new LifeStone(GRADE_ACC, 2));
-		_lifeStones.put(12843, new LifeStone(GRADE_ACC, 3));
-		_lifeStones.put(12844, new LifeStone(GRADE_ACC, 4));
-		_lifeStones.put(12845, new LifeStone(GRADE_ACC, 5));
-		_lifeStones.put(12846, new LifeStone(GRADE_ACC, 6));
-		_lifeStones.put(12847, new LifeStone(GRADE_ACC, 7));
-		_lifeStones.put(12848, new LifeStone(GRADE_ACC, 8));
-		_lifeStones.put(12849, new LifeStone(GRADE_ACC, 9));
-		_lifeStones.put(12850, new LifeStone(GRADE_ACC, 10));
-		_lifeStones.put(12851, new LifeStone(GRADE_ACC, 11));
-		
-		_lifeStones.put(14008, new LifeStone(GRADE_ACC, 12));
-		
-		_lifeStones.put(14166, new LifeStone(GRADE_NONE, 12));
-		_lifeStones.put(14167, new LifeStone(GRADE_MID, 12));
-		_lifeStones.put(14168, new LifeStone(GRADE_HIGH, 12));
-		_lifeStones.put(14169, new LifeStone(GRADE_TOP, 12));
-		
-		_lifeStones.put(16160, new LifeStone(GRADE_NONE, 13));
-		_lifeStones.put(16161, new LifeStone(GRADE_MID, 13));
-		_lifeStones.put(16162, new LifeStone(GRADE_HIGH, 13));
-		_lifeStones.put(16163, new LifeStone(GRADE_TOP, 13));
-		_lifeStones.put(16177, new LifeStone(GRADE_ACC, 13));
-		
-		_lifeStones.put(16164, new LifeStone(GRADE_NONE, 13));
-		_lifeStones.put(16165, new LifeStone(GRADE_MID, 13));
-		_lifeStones.put(16166, new LifeStone(GRADE_HIGH, 13));
-		_lifeStones.put(16167, new LifeStone(GRADE_TOP, 13));
-		_lifeStones.put(16178, new LifeStone(GRADE_ACC, 13));
 	}
 	
 	protected static LifeStone getLifeStone(int itemId)
@@ -272,16 +215,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
-		// weapons can't be augmented with accessory ls
-		if ((item.getTemplate() instanceof Weapon) && (ls.getGrade() == GRADE_ACC))
-		{
-			return false;
-		}
-		// and accessory can't be augmented with weapon ls
-		if ((item.getTemplate() instanceof Armor) && (ls.getGrade() != GRADE_ACC))
-		{
-			return false;
-		}
+		
 		// check for level of the lifestone
 		if (player.getLevel() < ls.getPlayerLevel())
 		{
@@ -488,72 +422,32 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 */
 	protected static int getGemStoneCount(CrystalType itemGrade, int lifeStoneGrade)
 	{
-		switch (lifeStoneGrade)
+		switch (itemGrade)
 		{
-			case GRADE_ACC:
+			case C:
 			{
-				switch (itemGrade)
-				{
-					case C:
-					{
-						return 200;
-					}
-					case B:
-					{
-						return 300;
-					}
-					case A:
-					{
-						return 200;
-					}
-					case S:
-					{
-						return 250;
-					}
-					case S80:
-					{
-						return 360;
-					}
-					case S84:
-					{
-						return 480;
-					}
-					default:
-					{
-						return 0;
-					}
-				}
+				return 20;
+			}
+			case B:
+			{
+				return 30;
+			}
+			case A:
+			{
+				return 20;
+			}
+			case S:
+			{
+				return 25;
+			}
+			case S80:
+			case S84:
+			{
+				return 36;
 			}
 			default:
 			{
-				switch (itemGrade)
-				{
-					case C:
-					{
-						return 20;
-					}
-					case B:
-					{
-						return 30;
-					}
-					case A:
-					{
-						return 20;
-					}
-					case S:
-					{
-						return 25;
-					}
-					case S80:
-					case S84:
-					{
-						return 36;
-					}
-					default:
-					{
-						return 0;
-					}
-				}
+				return 0;
 			}
 		}
 	}

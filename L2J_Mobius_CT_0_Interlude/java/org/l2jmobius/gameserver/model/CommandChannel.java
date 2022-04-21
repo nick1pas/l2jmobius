@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
-import org.l2jmobius.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExOpenMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -67,7 +66,7 @@ public class CommandChannel extends AbstractPlayerGroup
 			return;
 		}
 		// Update the CCinfo for existing players
-		broadcastPacket(new ExMPCCPartyInfoUpdate(party, 1));
+		// broadcastPacket(new ExMPCCPartyInfoUpdate(party, 1));
 		_parties.add(party);
 		if (party.getLevel() > _channelLvl)
 		{
@@ -105,11 +104,11 @@ public class CommandChannel extends AbstractPlayerGroup
 			broadcastPacket(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
 			disbandChannel();
 		}
-		else
-		{
-			// Update the CCinfo for existing players
-			broadcastPacket(new ExMPCCPartyInfoUpdate(party, 0));
-		}
+		// else
+		// {
+		// Update the CCinfo for existing players
+		// broadcastPacket(new ExMPCCPartyInfoUpdate(party, 0));
+		// }
 	}
 	
 	/**

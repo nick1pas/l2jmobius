@@ -33,13 +33,13 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestGiveItemToPet implements IClientIncomingPacket
 {
 	private int _objectId;
-	private long _amount;
+	private int _amount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_amount = packet.readQ();
+		_amount = packet.readD();
 		return true;
 	}
 	

@@ -1,70 +1,106 @@
-L2J-Mobius Epilogue
-Client (password L2jMobius): https://drive.google.com/u/1/uc?id=10cLvBIhj5mL_ldtRrEYSHpg-FZBv-ady&export=download
-System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
+L2J-Mobius Interlude
+Client: https://gameborder.net/file/lineage-ii-interlude-client
+System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/q515p4hl6j0ivxm/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
+Geodata: http://www.mediafire.com/file/4k2pi3qa8rqt299/L2J_Mobius_C6_Interlude_Geodata.zip
 
 
 What is done
--Removed HighFive packets.
--Adjusted packets to match client.
--Removed Nevit system.
--Replaced Olympiad with older version.
--Replaced Frintezza AI with older version.
--Removed Freya instances.
--Removed Zaken 83 instance.
--Removed Kamaloka 83 instance.
--Removed Seed of Annihilation.
--Removed level 16+ crystal level-up data.
--Updated doors data.
--Replaced item auction data with older version.
--Replaced character birthday event with older version.
--Prevent adding more than one element attribute.
--Adjusted boat message broadcasting.
--Adjusted gain exp/sp message notification.
--Added method for using NpcStrings as text.
--Removed Moirai, Vorpal and Elegia armor sets.
--Removed non existent client drops.
--Various item corrections based on retail information.
--Various skill corrections based on retail information.
--Skilltree changes based on retail information.
--Changed experience data according to older version.
--Removed non existent enchant item data.
--Corrections for S80 grade items.
--Beast spice corrections.
--Increased ToI vortex crystal price.
--Addition of old treasure chests.
--Adjusted NPC templates to match client.
--Luxury shop reverted to older version.
--Fantasy Island shop reverted to older version.
--Removed Fantasy Isle Magic Zone.
--Removed shots and keys from grocery shops.
--Blacksmiths unseal B grade items.
--Removed recipe traders.
--Adjusted mammon shop to match older version.
--Other various shops reverted to older versions.
--Teleporter adjustments to match older version.
--Reduced ongoing quests limit to 25.
--Removed non existent client quests.
--Parsed NPC names from client.
--Removed non existent client NPC spawns.
--Removed non existent raibosses.
--Plains of the Lizardmen spawns.
--Skyshadow Meadow spawns.
--BeastFarm spawns.
--Pavel Ruins, Archaic Laboratory spawns.
--Dragon Valley spawns.
--Antharas Lair spawns.
--Monastery of Silence spawns.
--Replaced Monastery of Silence AI with older version.
--Community board html adjustments.
--Proper Path to Becoming a Lord Schuttgart (714) kill ids.
--Older versions of Possessor of a Precious Soul 1 and 3 quests.
--Older versions for quests 19, 631, 647.
--Retail CP base stat values.
--Retail recommendation system.
--Removed AltarsOfSacrifice AI.
--Removed non existent vesper shield set Verteidiger skill.
+-Removed Gludio Airship Field, Gracia, Hellbound, Isle of Souls and Kamael Guild spawns.
+-Removed Gracia tab from map.
+-Removed Gludio Airship Field, Hellbound and Isle of Souls teleports.
+-Removed other non Interlude teleports.
+-Removed Gracia and Hellbound scripts.
+-Removed Gracia and Hellbound configurations.
+-Removed Kamael character creation configuration.
+-Removed Beleth AI and configuration.
+-Removed Steel Citadel teleport AI.
+-Removed non existing quests.
+-Removed Pailaka instances.
+-Removed Seven Sign instances.
+-Removed Castle instances.
+-Removed territory war scripts.
+-Removed Kamael Village master AIs.
+-Removed Cruma Tower Alarm AI.
+-Removed Stakato Nest teleport AI.
+-Removed Crystal Caverns instance.
+-Removed Dark Cloud Mansion instance.
+-Removed Nornils Garden instance.
+-Removed Chambers of Delusion instance.
+-Removed Kamaloka.
+-Removed Airship manager.
+-Removed Fantasy Isle AIs.
+-Removed movie support.
+-Removed Handy's block checker event.
+-Removed birthday event.
+-Removed teleport bookmark system.
+-Removed store char UI settings.
+-Removed talisman and bracelets support.
+-Removed non existing augment options.
+-Removed accessory augmentation.
+-Removed non existent htmls.
+-Removed kamael_town and fantasy_island mapregion.
+-Removed Kamael hero items 9388, 9389 and 9390.
+-Removed ANCIENTSWORD, RAPIER, CROSSBOW and BOLT support.
+-Removed code that checks KAMAEL race.
+-Removed player souls and soul attack effects.
+-Removed kamael Race, ClassId and CategoryType enums.
+-Removed category data from non existent NPC ids.
+-Removed Prime Shop.
+-Removed fort and territory war.
+-Removed landing, territory war, kamael, fantasy isle and hellbound zones.
+-Removed no needed walker routes.
+-Remove transformation system.
+-Removed bot report action system.
+-Removed non existing player actions.
+-Removed Tar beetle AI.
+-Removed non existing SkillLearn data.
+-Removed item elemental attribute system.
+-Removed attribute values from NPCs.
+-Removed non existent NPCs.
+-Removed non existing npcId from random_spawn table.
+-Removed non existent spawns.
+-Removed non existent items.
+-Removed non existent skills.
+-Removed non existing recipes.
+-Removed non existing doors.
+-Removed non existing static objects.
+-Removed non existent armor set items and skills.
+-Removed Expertise S80 and Expertise S84 skills.
+-Removed level 14+ crystal level-up data.
+-Added quest Kamael a Window to the Future (127).
+-Max adena configuration set to two billion.
+-Modified tutorial quest to match T0.
+-Modified World map dimensions.
+-Fixed damage system messages.
+-Fixed NpcSay packet.
+-Fixed inventory display.
+-Fixed Buy Sell packets.
+-Fixed henna packets.
+-Fixed augment packets.
+-Fixed skill learn and display.
+-Fixed shortcut registration.
+-Fixed preview item wear.
+-Fixed geogrid command.
+-Adjusted relation packet.
+-Adjusted arena manager AI.
+-Adjusted admin menu.
+-Adjustments for raidboss spawnlist.
+-Replaced quests 109, 113, 234, 376, 377, 617, 640 and 645.
+-Replaced Zaken AI.
+-Set max level to 80.
+-Updated drops with groups.
+-Added quests 353, 374, 375 and 505. 
+
+TODO: Important (project unusable due to the following)
+-Adjust all skills according to Interlude description.
+-Check if quests need adjustments, mainly rewards.
+
+TODO: Not important.
+-Adjust custom community board htmls.
+-Adjust community board sell buff htmls.
+-Adjust community board announcements admin htmls.
+-Spawn monsters by zones on separate XML files.

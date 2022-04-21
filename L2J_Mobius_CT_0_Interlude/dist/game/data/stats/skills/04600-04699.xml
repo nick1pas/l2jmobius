@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4600" levels="12" name="Reducing P. Def Stun">
+	<skill id="4600" levels="12" name="Reducing P. Def Shock">
 		<!-- Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
 		<table name="#abnormalLevels">11 12 12 13 13 13 13 13 13 13 13 13</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -57,7 +57,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4602" levels="12" name="Decrease P. Atk.">
+	<skill id="4602" levels="12" name="Decrease P.Atk">
 		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -91,7 +91,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4603" levels="12" name="Decrease P. Atk.">
+	<skill id="4603" levels="12" name="Decrease P.Atk">
 		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -123,7 +123,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4604" levels="12" name="Decrease P. Atk.">
+	<skill id="4604" levels="12" name="Decrease P.Atk">
 		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -194,7 +194,7 @@
 		</for>
 	</skill>
 	<skill id="4606" levels="12" name="Poison">
-		<!-- A toxin that gradually reduces HP. Effect 2. -->
+		<!-- A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dot">16 24 32 41 50 58 63 63 66 66 68 68</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -434,7 +434,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4616" levels="1" name="Fake Petrification">
+	<skill id="4616" levels="1" name="Fake Petrificiation">
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="360" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -499,7 +499,7 @@
 		</for>
 	</skill>
 	<skill id="4620" levels="12" name="Paralysis">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<set name="abnormalLevel" val="1" />
@@ -1183,7 +1183,7 @@
 		</for>
 	</skill>
 	<skill id="4649" levels="12" name="Poison">
-		<!-- A toxin that gradually reduces HP. Effect 2. -->
+		<!-- A deadly toxin contaminates your bloodstream, gradually reducing your HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#dot">16 24 32 41 50 58 63 63 66 66 68 68</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1704,7 +1704,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4670" levels="12" name="Short Stun">
+	<skill id="4670" levels="12" name="Short Shock">
 		<!-- A blow that momentarily confuses you, inhibiting your ability to move. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">10 16 23 31 40 49 57 61 64 66 68 68</table>
@@ -1729,17 +1729,6 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" />
-		</for>
-	</skill>
-	<skill id="4671" levels="1" name="AV - Teleport">
-		<set name="castRange" val="1500" />
-		<set name="effectRange" val="2000" />
-		<set name="magicLevel" val="40" />
-		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="TeleportToTarget" />
-			<effect name="TargetMe" />
 		</for>
 	</skill>
 	<skill id="4672" levels="1" name="NPC Corpse Remove">
@@ -2034,7 +2023,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4688" levels="1" name="Valakas Stun">
+	<skill id="4688" levels="1" name="Valakas Shock">
 		<!-- You are thrown into an immobilizing state of shock. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -2061,7 +2050,6 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="ThrowUp" />
 			<effect name="Stun" />
 		</for>
 	</skill>

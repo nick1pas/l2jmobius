@@ -50,7 +50,7 @@ public class BuyListSeed implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.BUY_LIST_SEED.writeId(packet);
-		packet.writeQ(_money); // current money
+		packet.writeD((int) _money); // current money
 		packet.writeD(_manorId); // manor id
 		if (!_list.isEmpty())
 		{
@@ -60,10 +60,10 @@ public class BuyListSeed implements IClientOutgoingPacket
 				packet.writeH(4); // item->type1
 				packet.writeD(0); // objectId
 				packet.writeD(s.getId()); // item id
-				packet.writeQ(s.getAmount()); // item count
+				packet.writeD((int) s.getAmount()); // item count
 				packet.writeH(4); // item->type2
 				packet.writeH(0); // unknown :)
-				packet.writeQ(s.getPrice()); // price
+				packet.writeD((int) s.getPrice()); // price
 			}
 			_list.clear();
 		}

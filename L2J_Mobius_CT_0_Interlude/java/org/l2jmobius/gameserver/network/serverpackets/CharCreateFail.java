@@ -39,7 +39,7 @@ public class CharCreateFail implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_CREATE_FAIL.writeId(packet);
+		OutgoingPackets.CHAR_CREATE_FAIL.writeId(packet);
 		packet.writeD(_error);
 		return true;
 	}

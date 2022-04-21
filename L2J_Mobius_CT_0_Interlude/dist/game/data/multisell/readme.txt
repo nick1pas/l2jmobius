@@ -125,62 +125,9 @@ of this directory a little bit.
 350980008.xml -> Manor Products: Rune
 350980009.xml -> Manor Products: Schuttgart
 
-350980012.xml -> BlackSmith Lahm
-
-90002001.xml -> Castle Merchant - magic related products (hear/face gear)
-90002002.xml -> Castle Merchant - bracelets
-90002003.xml -> Castle Merchant - t-shirts
-90002004.xml -> Castle Merchant - enchanted t-shirts
-
-90001000.xml -> Suspicious Merchant
-90001001.xml -> Support Unit Captain - magic related products (hear/face gear)
-90001002.xml -> Support Unit Captain - bracelets
-90001003.xml -> Support Unit Captain - t-shirts
-90001004.xml -> Support Unit Captain - enchanted t-shirts
-
-32326001.xml -> Yang - Elemental potions
-32326002.xml -> Yang - Elemental stones
-
-323780001.xml -> Fantasy Isle Paddies: Exchange Fantasy Isle coins for goodies
-
-364790001.xml -> Reputation Manager: PvP weapons, armors enhancement
-364790002.xml -> Reputation Manager: Removal of PvP enhancement
-364790003.xml -> Reputation Manager: Consumables
-
-326100001.xml -> Weaver Olf Kanore: Belts
-326100002.xml -> Weaver Olf Kanore: S80 and S84 Clock Unseal
-
-325460001.xml -> Asyatei - Soul Trader
-
-326150001.xml -> Maestro Ishuma - Craft a Dualsword
-326150002.xml -> Maestro Ishuma - Apply Dynasty, Icarus, Vesper Weapon SA
-326150003.xml -> Maestro Ishuma - Remove Dynasty, Icarus, Vesper Weapon SA
-326150004.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Armor
-326150005.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Accesories
-326150006.xml -> Maestro Ishuma - Upgrade Vesper Armor to Vesper Noble Armor
-326150008.xml -> Maestro Ishuma - Change the class of Dynasty High Grade Armor
-
-323470001.xml -> Shadai - Cursed Soul Crystals
-323470002.xml -> Shadai - Shoulder Ornament and Forgotten Scrolls
-323470003.xml -> Shadai - Enhance Armor
-323470004.xml -> Shadai - Remove Enhancement
-
-364900001.xml -> Territory Manager - Gludio
-364910001.xml -> Territory Manager - Dion
-364920001.xml -> Territory Manager - Giran
-364930001.xml -> Territory Manager - Oren
-364940001.xml -> Territory Manager - Aden
-364950001.xml -> Territory Manager - Innadril
-364960001.xml -> Territory Manager - Goddard
-364970001.xml -> Territory Manager - Rune
-364980001.xml -> Territory Manager - Schuttgart
-
-326580001.xml -> S80 Armors / Jewels - Delusion Chamber
-
 3122800.xml -> Heavy Medal Event - No collector level
 3122801.xml -> Heavy Medal Event - Rabbit
 3122802.xml -> Heavy Medal Event - Hyena
 3122803.xml -> Heavy Medal Event - Fox
 3122804.xml -> Heavy Medal Event - Wolf
 
-324840001.xml -> RimKamaloka

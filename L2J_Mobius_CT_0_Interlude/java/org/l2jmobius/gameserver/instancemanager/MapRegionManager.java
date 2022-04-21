@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.io.File;
 import java.util.Collection;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.w3c.dom.Document;
@@ -36,12 +35,10 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
@@ -235,9 +232,8 @@ public class MapRegionManager implements IXmlReader
 		{
 			final Player player = creature.getActingPlayer();
 			Castle castle = null;
-			Fort fort = null;
 			ClanHall clanhall = null;
-			if ((player.getClan() != null) && !player.isFlyingMounted() && !player.isFlying()) // flying players in gracia cant use teleports to aden continent
+			if ((player.getClan() != null) && !player.isFlying()) // Flying players can't use teleports.
 			{
 				// If teleport to clan hall
 				if (teleportWhere == TeleportWhereType.CLANHALL)
@@ -246,7 +242,7 @@ public class MapRegionManager implements IXmlReader
 					if (clanhall != null)
 					{
 						final ClanHallZone zone = clanhall.getZone();
-						if ((zone != null) && !player.isFlyingMounted())
+						if (zone != null)
 						{
 							if (player.getKarma() > 0)
 							{
@@ -282,61 +278,18 @@ public class MapRegionManager implements IXmlReader
 					}
 				}
 				
-				// If teleport to fortress
-				if (teleportWhere == TeleportWhereType.FORTRESS)
-				{
-					fort = FortManager.getInstance().getFortByOwner(player.getClan());
-					// Otherwise check if player is on castle or fortress ground
-					// and player's clan is defender
-					if (fort == null)
-					{
-						fort = FortManager.getInstance().getFort(player);
-						if (!((fort != null) && fort.getSiege().isInProgress() && (fort.getOwnerClan() == player.getClan())))
-						{
-							fort = null;
-						}
-					}
-					
-					if ((fort != null) && (fort.getResidenceId() > 0))
-					{
-						if (player.getKarma() > 0)
-						{
-							return fort.getResidenceZone().getChaoticSpawnLoc();
-						}
-						return fort.getResidenceZone().getSpawnLoc();
-					}
-				}
-				
 				// If teleport to SiegeHQ
 				if (teleportWhere == TeleportWhereType.SIEGEFLAG)
 				{
 					castle = CastleManager.getInstance().getCastle(player);
-					fort = FortManager.getInstance().getFort(player);
 					clanhall = ClanHallTable.getInstance().getNearbyAbstractHall(creature.getX(), creature.getY(), 10000);
-					final SiegeFlag twFlag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
-					if (twFlag != null)
-					{
-						return twFlag.getLocation();
-					}
-					else if (castle != null)
+					
+					if (castle != null)
 					{
 						if (castle.getSiege().isInProgress())
 						{
 							// Check if player's clan is attacker
 							final Collection<Npc> flags = castle.getSiege().getFlag(player.getClan());
-							if ((flags != null) && !flags.isEmpty())
-							{
-								// Spawn to flag - Need more work to get player to the nearest flag
-								return flags.stream().findFirst().get().getLocation();
-							}
-						}
-					}
-					else if (fort != null)
-					{
-						if (fort.getSiege().isInProgress())
-						{
-							// Check if player's clan is attacker
-							final Set<Npc> flags = fort.getSiege().getFlag(player.getClan());
 							if ((flags != null) && !flags.isEmpty())
 							{
 								// Spawn to flag - Need more work to get player to the nearest flag
@@ -375,10 +328,6 @@ public class MapRegionManager implements IXmlReader
 				}
 				catch (Exception e)
 				{
-					if (player.isFlyingMounted())
-					{
-						return REGIONS.get("union_base_of_kserth").getChaoticSpawnLoc();
-					}
 					return REGIONS.get(DEFAULT_RESPAWN).getChaoticSpawnLoc();
 				}
 			}

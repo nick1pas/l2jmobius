@@ -375,24 +375,6 @@ public class Servitor extends Summon implements Runnable
 	}
 	
 	@Override
-	public byte getAttackElement()
-	{
-		return super.getAttackElement();
-	}
-	
-	@Override
-	public int getAttackElementValue(byte attackAttribute)
-	{
-		return super.getAttackElementValue(attackAttribute);
-	}
-	
-	@Override
-	public int getDefenseElementValue(byte defenseAttribute)
-	{
-		return super.getDefenseElementValue(defenseAttribute);
-	}
-	
-	@Override
 	public boolean isServitor()
 	{
 		return true;

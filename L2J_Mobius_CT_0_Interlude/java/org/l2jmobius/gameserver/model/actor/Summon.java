@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.AggroInfo;
 import org.l2jmobius.gameserver.model.Location;
@@ -56,9 +55,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.SummonInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
-import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
-import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PetDelete;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
@@ -123,11 +119,11 @@ public abstract class Summon extends Playable
 		updateAndBroadcastStatus(0);
 		sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
 		World.getInstance().forEachVisibleObjectInRange(getOwner(), Player.class, 800, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
-		final Party party = _owner.getParty();
-		if (party != null)
-		{
-			party.broadcastToPartyMembers(_owner, new ExPartyPetWindowAdd(this));
-		}
+		// final Party party = _owner.getParty();
+		// if (party != null)
+		// {
+		// party.broadcastToPartyMembers(_owner, new ExPartyPetWindowAdd(this));
+		// }
 		setShowSummonAnimation(false); // addVisibleObject created the info packets with summon animation
 		// if someone comes into range now, the animation shouldn't show any more
 		_restoreSummon = false;
@@ -353,11 +349,11 @@ public abstract class Summon extends Playable
 		if (owner != null)
 		{
 			owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
-			final Party party = owner.getParty();
-			if (party != null)
-			{
-				party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
-			}
+			// final Party party = owner.getParty();
+			// if (party != null)
+			// {
+			// party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
+			// }
 		}
 		
 		// pet will be deleted along with all his items
@@ -383,11 +379,11 @@ public abstract class Summon extends Playable
 			if (owner != null)
 			{
 				owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
-				final Party party = owner.getParty();
-				if (party != null)
-				{
-					party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
-				}
+				// final Party party = owner.getParty();
+				// if (party != null)
+				// {
+				// party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
+				// }
 				
 				if ((getInventory() != null) && (getInventory().getSize() > 0))
 				{
@@ -675,14 +671,7 @@ public abstract class Summon extends Playable
 			
 			if (_owner.isSiegeFriend(target))
 			{
-				if (TerritoryWarManager.getInstance().isTWInProgress())
-				{
-					sendPacket(SystemMessageId.YOU_CANNOT_FORCE_ATTACK_A_MEMBER_OF_THE_SAME_TERRITORY);
-				}
-				else
-				{
-					sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-				}
+				sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
@@ -776,9 +765,7 @@ public abstract class Summon extends Playable
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
-				sm.addNpcName(this);
-				sm.addString(target.getName());
+				sm = new SystemMessage(SystemMessageId.YOUR_PET_HIT_FOR_S1_DAMAGE);
 				sm.addInt(damage);
 			}
 			
@@ -792,10 +779,9 @@ public abstract class Summon extends Playable
 		super.reduceCurrentHp(damage, attacker, skill);
 		if ((_owner != null) && (attacker != null))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
-			sm.addNpcName(this);
-			sm.addString(attacker.getName());
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
 			sm.addInt((int) damage);
+			sm.addString(attacker.getName());
 			sendPacket(sm);
 		}
 	}
@@ -842,11 +828,11 @@ public abstract class Summon extends Playable
 		{
 			broadcastNpcInfo(value);
 		}
-		final Party party = _owner.getParty();
-		if (party != null)
-		{
-			party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
-		}
+		// final Party party = _owner.getParty();
+		// if (party != null)
+		// {
+		// party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
+		// }
 		updateEffectIcons(true);
 	}
 	
@@ -1001,14 +987,7 @@ public abstract class Summon extends Playable
 		
 		if (_owner.isSiegeFriend(target))
 		{
-			if (TerritoryWarManager.getInstance().isTWInProgress())
-			{
-				sendPacket(SystemMessageId.YOU_CANNOT_FORCE_ATTACK_A_MEMBER_OF_THE_SAME_TERRITORY);
-			}
-			else
-			{
-				sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-			}
+			sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
@@ -1142,43 +1121,6 @@ public abstract class Summon extends Playable
 	public int getAllyId()
 	{
 		return (_owner != null) ? _owner.getAllyId() : 0;
-	}
-	
-	public int getFormId()
-	{
-		int formId = 0;
-		final int npcId = getId();
-		if ((npcId == 16041) || (npcId == 16042))
-		{
-			if (getLevel() > 69)
-			{
-				formId = 3;
-			}
-			else if (getLevel() > 64)
-			{
-				formId = 2;
-			}
-			else if (getLevel() > 59)
-			{
-				formId = 1;
-			}
-		}
-		else if ((npcId == 16025) || (npcId == 16037))
-		{
-			if (getLevel() > 69)
-			{
-				formId = 3;
-			}
-			else if (getLevel() > 64)
-			{
-				formId = 2;
-			}
-			else if (getLevel() > 59)
-			{
-				formId = 1;
-			}
-		}
-		return formId;
 	}
 	
 	@Override

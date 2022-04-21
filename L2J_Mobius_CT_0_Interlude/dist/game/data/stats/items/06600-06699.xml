@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6600" type="Weapon" name="Saint Spear - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -91,7 +91,7 @@
 		</for>
 	</item>
 	<item id="6603" type="Weapon" name="Demon Splinter - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -121,7 +121,7 @@
 		</for>
 	</item>
 	<item id="6604" type="Weapon" name="Demon Splinter - Critical Stun">
-		<!-- <Soul Crystal Option>. Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Produces a stun effect at a rate of about 25% during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -167,7 +167,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9369" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
@@ -183,7 +182,7 @@
 		</for>
 	</item>
 	<item id="6606" type="Weapon" name="Heavens Divider - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -197,7 +196,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9370" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
@@ -227,7 +225,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1380" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9371" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
@@ -305,7 +302,7 @@
 		</for>
 	</item>
 	<item id="6610" type="Weapon" name="Arcana Mace - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -336,7 +333,7 @@
 		</for>
 	</item>
 	<item id="6611" type="Weapon" name="Infinity Blade">
-		<!-- on a critical attack, decreases one's P. Def. and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Enhances damage to target during PvP. -->
+		<!-- During a critical attack, decreases one's P. Def and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -401,7 +398,7 @@
 		</for>
 	</item>
 	<item id="6613" type="Weapon" name="Infinity Axe">
-		<!-- on a critical attack, it bestows one the ability to cause internal conflict to one's opponent. Damage shield function, Max HP, Max MP, Max CP as well as one's shield defense rate are increased. It also enhances damage to target during PvP. -->
+		<!-- During a critical attack, it bestows one the ability to cause internal conflict to one's opponent. Damage shield function, Max HP, Max MP, Max CP as well as one's shield defense rate are increased. It also enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -435,7 +432,7 @@
 		</for>
 	</item>
 	<item id="6614" type="Weapon" name="Infinity Rod">
-		<!-- Recovers HP 100%, increases Max MP/Max CP, increases casting speed and increases MP recovery speed during magic skill use. Increases damage inflicted during PvP. -->
+		<!-- When good magic is cast upon a target, increases Max MP, Max CP, Casting Spd, and MP regeneration rate. During PvP, HP regeneration is increased to 100% and enhances damage to target. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -504,7 +501,7 @@
 		</for>
 	</item>
 	<item id="6616" type="Weapon" name="Infinity Scepter">
-		<!-- Recovers HP 100%, increases Max MP/Max CP, increases M. Atk., decreases MP consumption, increases magic critical rate, and decreases chance of magic cancel during magic skill use. Increases damage inflicted during PvP. -->
+		<!-- When casting good magic, HP regeneration increases 100%, raises MAX MP, Max CP, M. Atk., lowers MP Consumption, increases the Magic Critical rate, and reduces the Magic Cancel. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -676,7 +673,7 @@
 		</for>
 	</item>
 	<item id="6621" type="Weapon" name="Infinity Spear">
-		<!-- on a critical attack, increases Max HP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
+		<!-- During a critical attack, increases Max HP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -710,7 +707,7 @@
 		</for>
 	</item>
 	<item id="6622" type="EtcItem" name="Giant's Codex">
-		<!-- An item required for skill enchanting. -->
+		<!-- Giants' Scroll. Take it to a certain NPC to enchant skills. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -972,7 +969,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="6648" type="EtcItem" name="Baby Buffalo Panpipe">
-		<!-- A panpipe that is used to call a baby buffalo. The baby buffalo will take away 5 percent of the Exp that its master acquires. -->
+		<!-- A panpipe that is used to call a baby buffalo. The baby buffalo will take away 10% of the Exp its master acquires. -->
 		<set name="icon" val="icon.etc_buffalo_panpipe_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -981,14 +978,11 @@
 		<set name="price" val="100000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="6649" type="EtcItem" name="Baby Cougar Chime">
-		<!-- A chime that is used to call a baby cougar. The baby cougar will take away 5 percent of the Exp that its master acquires. -->
+		<!-- A chime that is used to call a baby cougar. The baby cougar will take away 10% of the Exp its master acquires. -->
 		<set name="icon" val="icon.etc_cougar_chime_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -997,14 +991,11 @@
 		<set name="price" val="100000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="6650" type="EtcItem" name="Baby Kookaburra Ocarina">
-		<!-- An ocarina that is used to call a baby Kookaburra. The baby Kookaburra will take away 5 percent of the Exp that its master acquires. -->
+		<!-- A ocarina that is used to call a baby Kookaburra. The baby Kookaburra will take away 10% of the Exp its master acquires. -->
 		<set name="icon" val="icon.etc_kukaburo_ocarina_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1013,11 +1004,8 @@
 		<set name="price" val="100000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="6651" type="EtcItem" name="Noblesse Gate Pass">
 		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
@@ -1030,7 +1018,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6652" type="EtcItem" name="Scroll: Protection of Valakas">
-		<!-- Fire dragon's protection amulet. Upon use, the Fire dragon's front attack resistance increases. -->
+		<!-- Increases your resistance to an attack made with Valakas' front claws. -->
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1074,7 +1062,7 @@
 		<set name="item_skill" val="2232-1" /> <!-- Amulet: Slay Valakas -->
 	</item>
 	<item id="6656" type="Armor" name="Earring of Antharas">
-		<!-- Produces the following effects: MP +31, increase resist bleed by 50%, increase bleed attack chance by 40%, increase healing effects, vampiric rage, 30% increase in stun/abnormal mental state resistance, increase stun/abnormal mental state attack chance by 30%, decrease MP consumption, and increase resistance to earth attacks. If a character wears two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Produces the following effects: MP +31, 80% increase in resistance to bleeding, increase in the amount of heal, vampiric rage effect, 60% increase in resistance to stun/silence, decrease in MP consumption, and increase in resistance to earthen attack. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1093,7 +1081,7 @@
 		</for>
 	</item>
 	<item id="6657" type="Armor" name="Necklace of Valakas">
-		<!-- Produces the following effects: MP +42, HP +445, increase resistance to sleep by 40%, increase sleep attack chance by 40%, decrease in skill re-use delay, increase P. Atk. and M. Atk., Wild Magic effect, Damage Shield effect and increase resistance to Fire attacks. -->
+		<!-- Produces the following effects: MP+42, 80% increase in sleep resistance, HP +445, decrease in reuse delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1112,7 +1100,7 @@
 		</for>
 	</item>
 	<item id="6658" type="Armor" name="Ring of Baium">
-		<!-- Produces the following effects: MP +21, increase resistance to poison by 40%, increase poison attack chance by 40%, increase accuracy, increase critical damage, increase resistance to hold by 30%, increase hold attack chance by 30%, increase Atk. Spd. and Casting Spd. If a character wears two identical rings, the effect of only one ring will be applied. -->
+		<!-- Produces the following effects: MP +21, 80% increase in resistance to poisoning, increase in Accuracy, increase in critical damage, 60% increase in resistance to hold, and increase in Atk. Spd. and Casting Spd. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1131,7 +1119,7 @@
 		</for>
 	</item>
 	<item id="6659" type="Armor" name="Earring of Zaken">
-		<!-- Produces the following effects: MP +31, increase resistance to bleed by 30%, increase bleed attack chance by 30%, vampiric rage effect, increase healing effects, increase resistance to stun/abnormal mental state attack by 20%, and increase stun/abnormal mental state attack chance by 20%. If a character wears two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Produces the following effects: MP +31, +60% resistance to bleeding, increased heal, vampiric rage and +40% resistance to shock/abnormal mental state. If a character wears two identical earrings, only one earring's effects will apply. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1150,7 +1138,7 @@
 		</for>
 	</item>
 	<item id="6660" type="Armor" name="Ring of Queen Ant">
-		<!-- Produces the following effects: MP +21, increase resistance to poison by 30%, increase poison attack chance by 30%, increase accuracy, increase critical damage, increase resistance to hold by 20%, and increase hold attack chance by 20%. If a character wears two identical rings, the effect of only one ring will be applied -->
+		<!-- Produces the following effects: MP +21, 60% increase in resistance to poisoning, increase in accuracy, increase in critical damage, and 40% increase in resistance to hold. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1169,7 +1157,7 @@
 		</for>
 	</item>
 	<item id="6661" type="Armor" name="Earring of Orfen">
-		<!-- Produces the following effects: MP +31, increase resistance to bleed by 20%, increase bleed attack chance by 20%, and increase healing effects. If a character wears two identical earrings, the effect of only one earring will be applied -->
+		<!-- Produces the following effects: MP+31, 40% increase in resistance to bleeding and increase in the amount of heal. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1188,7 +1176,7 @@
 		</for>
 	</item>
 	<item id="6662" type="Armor" name="Ring of Core">
-		<!-- Produces the following effects: MP +21, increase resistance to poison by 20%, increase poison attack chance by 20%, and increase accuracy. If a character wears two identical rings, the effect of only one ring will be applied -->
+		<!-- Produces the following effects: MP+21, 40% increase in resistance to poisoning and increase in accuracy. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

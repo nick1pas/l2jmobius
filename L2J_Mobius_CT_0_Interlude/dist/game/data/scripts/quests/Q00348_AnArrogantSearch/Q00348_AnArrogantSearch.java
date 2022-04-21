@@ -62,7 +62,6 @@ public class Q00348_AnArrogantSearch extends Quest
 	private static final int BLOOD_OF_SAINT = 4398;
 	private static final int BOUGH_OF_SAINT = 4399;
 	private static final int WHITE_FABRIC_2 = 4400;
-	private static final int SHELL_OF_MONSTERS = 14857;
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	private static final double MIN_HP_PERCENTAGE = 0.3;
@@ -98,8 +97,6 @@ public class Q00348_AnArrogantSearch extends Quest
 	private static final int ARK_GUARDIAN_SHADOWFANG = 27183;
 	private static final int ANGEL_KILLER = 27184;
 	// Monsters
-	private static final int YINTZU = 20647;
-	private static final int PALIOTE = 20648;
 	private static final int PLATINUM_TRIBE_SHAMAN = 20828;
 	private static final int PLATINUM_TRIBE_OVERLORD = 20829;
 	private static final int GUARDIAN_ANGEL = 20830;
@@ -113,8 +110,8 @@ public class Q00348_AnArrogantSearch extends Quest
 		addSpawnId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOWFANG, ANGEL_KILLER);
 		addStartNpc(HANELLIN);
 		addTalkId(HANELLIN, IASON_HEINE, HOLY_ARK_OF_SECRECY_1, HOLY_ARK_OF_SECRECY_2, HOLY_ARK_OF_SECRECY_3, ARK_GUARDIANS_CORPSE, CLAUDIA_ATHEBALDT, HARNE, MARTIEN, SIR_GUSTAV_ATHEBALDT, HARDIN);
-		addKillId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOWFANG, YINTZU, PALIOTE, PLATINUM_TRIBE_SHAMAN, PLATINUM_TRIBE_OVERLORD, GUARDIAN_ANGEL, SEAL_ANGEL_1, SEAL_ANGEL_2);
-		registerQuestItems(SHELL_OF_MONSTERS, TITANS_POWERSTONE, HANELLINS_1ST_LETTER, HANELLINS_2ND_LETTER, HANELLINS_3RD_LETTER, FIRST_KEY_OF_ARK, SECOND_KEY_OF_ARK, THIRD_KEY_OF_ARK, WHITE_FABRIC_1, BOOK_OF_SAINT, BLOOD_OF_SAINT, BOUGH_OF_SAINT, WHITE_FABRIC_2);
+		addKillId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOWFANG, PLATINUM_TRIBE_SHAMAN, PLATINUM_TRIBE_OVERLORD, GUARDIAN_ANGEL, SEAL_ANGEL_1, SEAL_ANGEL_2);
+		registerQuestItems(TITANS_POWERSTONE, HANELLINS_1ST_LETTER, HANELLINS_2ND_LETTER, HANELLINS_3RD_LETTER, FIRST_KEY_OF_ARK, SECOND_KEY_OF_ARK, THIRD_KEY_OF_ARK, WHITE_FABRIC_1, BOOK_OF_SAINT, BLOOD_OF_SAINT, BOUGH_OF_SAINT, WHITE_FABRIC_2);
 	}
 	
 	@Override
@@ -167,7 +164,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			case "30864-08.html":
 			{
 				final int memoState = qs.getMemoState();
-				if (((memoState == 1) && hasAtLeastOneQuestItem(player, TITANS_POWERSTONE, SHELL_OF_MONSTERS)) || (memoState == 2))
+				if (((memoState == 1) && hasAtLeastOneQuestItem(player, TITANS_POWERSTONE)) || (memoState == 2))
 				{
 					qs.setMemoStateEx(0, 4);
 					qs.setMemoStateEx(1, 0);
@@ -489,16 +486,6 @@ public class Q00348_AnArrogantSearch extends Quest
 					}
 					break;
 				}
-				case YINTZU:
-				case PALIOTE:
-				{
-					if (npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE) && qs.isMemoState(1) && !hasQuestItems(qs.getPlayer(), SHELL_OF_MONSTERS))
-					{
-						giveItems(qs.getPlayer(), SHELL_OF_MONSTERS, 1);
-						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-					break;
-				}
 				case PLATINUM_TRIBE_SHAMAN:
 				{
 					if (((qs.getMemoStateEx(0) == 12) || (qs.getMemoStateEx(0) == 13)) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
@@ -631,17 +618,12 @@ public class Q00348_AnArrogantSearch extends Quest
 						case 2:
 						{
 							final int memoState = qs.getMemoState();
-							if ((memoState == 1) && !hasQuestItems(player, TITANS_POWERSTONE) && !hasQuestItems(player, SHELL_OF_MONSTERS))
+							if ((memoState == 1) && !hasQuestItems(player, TITANS_POWERSTONE))
 							{
 								htmltext = "30864-06.html";
 							}
-							else if (((memoState == 1) && hasQuestItems(player, TITANS_POWERSTONE)) || hasQuestItems(player, SHELL_OF_MONSTERS) || (memoState == 2))
+							else if (((memoState == 1) && hasQuestItems(player, TITANS_POWERSTONE)) || (memoState == 2))
 							{
-								if (hasQuestItems(player, SHELL_OF_MONSTERS))
-								{
-									takeItems(player, SHELL_OF_MONSTERS, 1);
-								}
-								
 								if (hasQuestItems(player, TITANS_POWERSTONE))
 								{
 									takeItems(player, TITANS_POWERSTONE, 1);
@@ -1421,7 +1403,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	{
 		final ClassId playerClassId = player.getClassId();
 		final int playerLevel = player.getLevel();
-		if ((playerClassId == ClassId.TREASURE_HUNTER) || (playerClassId == ClassId.PLAINS_WALKER) || (playerClassId == ClassId.ABYSS_WALKER) || (playerClassId == ClassId.ADVENTURER) || (playerClassId == ClassId.WIND_RIDER) || (playerClassId == ClassId.GHOST_HUNTER) || (playerClassId == ClassId.MALE_SOULBREAKER) || (playerClassId == ClassId.FEMALE_SOULBREAKER) || (playerClassId == ClassId.MALE_SOUL_HOUND) || (playerClassId == ClassId.FEMALE_SOUL_HOUND) || (playerClassId == ClassId.INSPECTOR) || (playerClassId == ClassId.JUDICATOR))
+		if ((playerClassId == ClassId.TREASURE_HUNTER) || (playerClassId == ClassId.PLAINS_WALKER) || (playerClassId == ClassId.ABYSS_WALKER) || (playerClassId == ClassId.ADVENTURER) || (playerClassId == ClassId.WIND_RIDER) || (playerClassId == ClassId.GHOST_HUNTER))
 		{
 			if (playerLevel < 69)
 			{
@@ -1461,7 +1443,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				giveItems(player, ORIHARUKON_ORE, 2);
 			}
 		}
-		else if ((playerClassId == ClassId.HAWKEYE) || (playerClassId == ClassId.SILVER_RANGER) || (playerClassId == ClassId.PHANTOM_RANGER) || (playerClassId == ClassId.SAGITTARIUS) || (playerClassId == ClassId.MOONLIGHT_SENTINEL) || (playerClassId == ClassId.GHOST_SENTINEL) || (playerClassId == ClassId.ARBALESTER) || (playerClassId == ClassId.TRICKSTER))
+		else if ((playerClassId == ClassId.HAWKEYE) || (playerClassId == ClassId.SILVER_RANGER) || (playerClassId == ClassId.PHANTOM_RANGER) || (playerClassId == ClassId.SAGITTARIUS) || (playerClassId == ClassId.MOONLIGHT_SENTINEL) || (playerClassId == ClassId.GHOST_SENTINEL))
 		{
 			if (playerLevel < 69)
 			{
@@ -1522,7 +1504,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			giveItems(player, SYNTHETIC_COKES, 2);
 			giveItems(player, ANIMAL_BONE, 2);
 		}
-		else if ((playerClassId == ClassId.DESTROYER) || (playerClassId == ClassId.TITAN) || (playerClassId == ClassId.BERSERKER) || (playerClassId == ClassId.DOOMBRINGER))
+		else if ((playerClassId == ClassId.DESTROYER) || (playerClassId == ClassId.TITAN))
 		{
 			giveItems(player, GREAT_SWORD_BLADE, 1);
 			giveItems(player, VARNISH_OF_PURITY, 2);

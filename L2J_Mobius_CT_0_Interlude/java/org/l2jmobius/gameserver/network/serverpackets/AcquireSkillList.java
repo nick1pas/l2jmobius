@@ -80,10 +80,6 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeD(temp.maxLevel);
 			packet.writeD(temp.spCost);
 			packet.writeD(temp.requirements);
-			if (_skillType == AcquireSkillType.SUBPLEDGE)
-			{
-				packet.writeD(0); // TODO: ?
-			}
 		}
 		return true;
 	}

@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
-import org.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -738,16 +737,16 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	private final void sendInstanceUpdate(Instance instance, boolean hide)
 	{
-		final int startTime = (int) ((System.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
-		final int endTime = (int) ((instance.getInstanceEndTime() - instance.getInstanceStartTime()) / 1000);
-		if (instance.isTimerIncrease())
-		{
-			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, true, startTime, endTime, instance.getTimerText()));
-		}
-		else
-		{
-			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, false, endTime - startTime, 0, instance.getTimerText()));
-		}
+		// final int startTime = (int) ((System.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
+		// final int endTime = (int) ((instance.getInstanceEndTime() - instance.getInstanceStartTime()) / 1000);
+		// if (instance.isTimerIncrease())
+		// {
+		// sendPacket(new ExSendUIEvent(getActingPlayer(), hide, true, startTime, endTime, instance.getTimerText()));
+		// }
+		// else
+		// {
+		// sendPacket(new ExSendUIEvent(getActingPlayer(), hide, false, endTime - startTime, 0, instance.getTimerText()));
+		// }
 	}
 	
 	/**

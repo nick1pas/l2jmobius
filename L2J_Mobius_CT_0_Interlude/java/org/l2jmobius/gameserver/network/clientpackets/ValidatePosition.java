@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.DoorData;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -67,12 +66,6 @@ public class ValidatePosition implements IClientIncomingPacket
 		if (player.isFalling(_z))
 		{
 			return; // Disable validations during fall to avoid "jumping".
-		}
-		
-		// Don't allow flying transformations outside gracia area!
-		if (player.isFlyingMounted() && (_x > World.GRACIA_MAX_X))
-		{
-			player.untransform();
 		}
 		
 		final int dx = _x - realX;

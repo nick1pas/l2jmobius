@@ -17,13 +17,10 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
@@ -62,24 +59,11 @@ public class ConditionSiegeZone extends Condition
 	{
 		final Creature target = _self ? effector : effected;
 		final Castle castle = CastleManager.getInstance().getCastle(target);
-		final Fort fort = FortManager.getInstance().getFort(target);
-		if (((_value & COND_TW_PROGRESS) != 0) && !TerritoryWarManager.getInstance().isTWInProgress())
-		{
-			return false;
-		}
-		else if (((_value & COND_TW_CHANNEL) != 0) && !TerritoryWarManager.getInstance().isTWChannelOpen())
-		{
-			return false;
-		}
-		else if ((castle == null) && (fort == null))
+		if (castle == null)
 		{
 			return (_value & COND_NOT_ZONE) != 0;
 		}
-		if (castle != null)
-		{
-			return checkIfOk(target, castle, _value);
-		}
-		return checkIfOk(target, fort, _value);
+		return checkIfOk(target, castle, _value);
 	}
 	
 	/**
@@ -120,51 +104,6 @@ public class ConditionSiegeZone extends Condition
 			return true;
 		}
 		else if (((value & COND_CAST_NEUTRAL) != 0) && (player.getSiegeState() == 0))
-		{
-			return true;
-		}
-		
-		return false;
-	}
-	
-	/**
-	 * Check if ok.
-	 * @param creature the creature
-	 * @param fort the fort
-	 * @param value the value
-	 * @return true, if successful
-	 */
-	public static boolean checkIfOk(Creature creature, Fort fort, int value)
-	{
-		if ((creature == null) || !creature.isPlayer())
-		{
-			return false;
-		}
-		
-		final Player player = (Player) creature;
-		if ((fort == null) || (fort.getResidenceId() <= 0))
-		{
-			if ((value & COND_NOT_ZONE) != 0)
-			{
-				return true;
-			}
-		}
-		else if (!fort.getZone().isActive())
-		{
-			if ((value & COND_NOT_ZONE) != 0)
-			{
-				return true;
-			}
-		}
-		else if (((value & COND_FORT_ATTACK) != 0) && player.isRegisteredOnThisSiegeField(fort.getResidenceId()) && (player.getSiegeState() == 1))
-		{
-			return true;
-		}
-		else if (((value & COND_FORT_DEFEND) != 0) && player.isRegisteredOnThisSiegeField(fort.getResidenceId()) && (player.getSiegeState() == 2))
-		{
-			return true;
-		}
-		else if (((value & COND_FORT_NEUTRAL) != 0) && (player.getSiegeState() == 0))
 		{
 			return true;
 		}

@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.DropProtection;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -153,8 +152,6 @@ public class Item extends WorldObject
 	private boolean _storedInDb; // if DB data is up-to-date.
 	
 	private final ReentrantLock _dbLock = new ReentrantLock();
-	
-	private Elementals[] _elementals = null;
 	
 	private ScheduledFuture<?> _itemLootShedule = null;
 	
@@ -532,7 +529,7 @@ public class Item extends WorldObject
 	 */
 	public boolean isEquipable()
 	{
-		return (_itemTemplate.getBodyPart() != 0) && (_itemTemplate.getItemType() != EtcItemType.ARROW) && (_itemTemplate.getItemType() != EtcItemType.BOLT) && (_itemTemplate.getItemType() != EtcItemType.LURE);
+		return (_itemTemplate.getBodyPart() != 0) && (_itemTemplate.getItemType() != EtcItemType.ARROW) && (_itemTemplate.getItemType() != EtcItemType.LURE);
 	}
 	
 	/**
@@ -954,8 +951,7 @@ public class Item extends WorldObject
 	public void restoreAttributes()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps1 = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?");
-			PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?"))
+			PreparedStatement ps1 = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?"))
 		{
 			ps1.setInt(1, getObjectId());
 			try (ResultSet rs = ps1.executeQuery())
@@ -966,20 +962,6 @@ public class Item extends WorldObject
 					if (aug_attributes != -1)
 					{
 						_augmentation = new Augmentation(rs.getInt("augAttributes"));
-					}
-				}
-			}
-			
-			ps2.setInt(1, getObjectId());
-			try (ResultSet rs = ps2.executeQuery())
-			{
-				while (rs.next())
-				{
-					final byte elem_type = rs.getByte(1);
-					final int elem_value = rs.getInt(2);
-					if ((elem_type != -1) && (elem_value != -1))
-					{
-						applyAttribute(elem_type, elem_value);
 					}
 				}
 			}
@@ -1001,208 +983,6 @@ public class Item extends WorldObject
 		catch (SQLException e)
 		{
 			LOGGER.log(Level.SEVERE, "Could not update atributes for item: " + this + " from DB:", e);
-		}
-	}
-	
-	private void updateItemElements(Connection con)
-	{
-		try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?"))
-		{
-			ps.setInt(1, getObjectId());
-			ps.executeUpdate();
-		}
-		catch (SQLException e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update elementals for item: " + this + " from DB:", e);
-		}
-		
-		if (_elementals == null)
-		{
-			return;
-		}
-		
-		try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_elementals VALUES(?,?,?)"))
-		{
-			for (Elementals elm : _elementals)
-			{
-				ps.setInt(1, getObjectId());
-				ps.setByte(2, elm.getElement());
-				ps.setInt(3, elm.getValue());
-				ps.executeUpdate();
-				ps.clearParameters();
-			}
-		}
-		catch (SQLException e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update elementals for item: " + this + " from DB:", e);
-		}
-	}
-	
-	public Elementals[] getElementals()
-	{
-		return _elementals;
-	}
-	
-	public Elementals getElemental(byte attribute)
-	{
-		if (_elementals == null)
-		{
-			return null;
-		}
-		for (Elementals elm : _elementals)
-		{
-			if (elm.getElement() == attribute)
-			{
-				return elm;
-			}
-		}
-		return null;
-	}
-	
-	public byte getAttackElementType()
-	{
-		if (!isWeapon())
-		{
-			return -2;
-		}
-		else if (_itemTemplate.getElementals() != null)
-		{
-			return _itemTemplate.getElementals()[0].getElement();
-		}
-		else if (_elementals != null)
-		{
-			return _elementals[0].getElement();
-		}
-		return -2;
-	}
-	
-	public int getAttackElementPower()
-	{
-		if (!isWeapon())
-		{
-			return 0;
-		}
-		else if (_itemTemplate.getElementals() != null)
-		{
-			return _itemTemplate.getElementals()[0].getValue();
-		}
-		else if (_elementals != null)
-		{
-			return _elementals[0].getValue();
-		}
-		return 0;
-	}
-	
-	public int getElementDefAttr(byte element)
-	{
-		if (!isArmor())
-		{
-			return 0;
-		}
-		else if (_itemTemplate.getElementals() != null)
-		{
-			final Elementals elm = _itemTemplate.getElemental(element);
-			if (elm != null)
-			{
-				return elm.getValue();
-			}
-		}
-		else if (_elementals != null)
-		{
-			final Elementals elm = getElemental(element);
-			if (elm != null)
-			{
-				return elm.getValue();
-			}
-		}
-		return 0;
-	}
-	
-	private void applyAttribute(byte element, int value)
-	{
-		if (_elementals == null)
-		{
-			_elementals = new Elementals[1];
-			_elementals[0] = new Elementals(element, value);
-		}
-		else
-		{
-			Elementals elm = getElemental(element);
-			if (elm != null)
-			{
-				elm.setValue(value);
-			}
-			else
-			{
-				elm = new Elementals(element, value);
-				final Elementals[] array = new Elementals[_elementals.length + 1];
-				System.arraycopy(_elementals, 0, array, 0, _elementals.length);
-				array[_elementals.length] = elm;
-				_elementals = array;
-			}
-		}
-	}
-	
-	/**
-	 * Add elemental attribute to item and save to db
-	 * @param element
-	 * @param value
-	 */
-	public void setElementAttr(byte element, int value)
-	{
-		applyAttribute(element, value);
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			updateItemElements(con);
-		}
-		catch (SQLException e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update elementals for item: " + this + " from DB:", e);
-		}
-	}
-	
-	/**
-	 * Remove elemental from item
-	 * @param element byte element to remove, -1 for all elementals remove
-	 */
-	public void clearElementAttr(byte element)
-	{
-		if ((getElemental(element) == null) && (element != -1))
-		{
-			return;
-		}
-		
-		Elementals[] array = null;
-		if ((element != -1) && (_elementals != null) && (_elementals.length > 1))
-		{
-			array = new Elementals[_elementals.length - 1];
-			int i = 0;
-			for (Elementals elm : _elementals)
-			{
-				if (elm.getElement() != element)
-				{
-					array[i++] = elm;
-				}
-			}
-		}
-		_elementals = array;
-		
-		final String query = (element != -1) ? "DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?" : "DELETE FROM item_elementals WHERE itemId = ?";
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement(query))
-		{
-			if (element != -1)
-			{
-				// Item can have still others
-				ps.setInt(2, element);
-			}
-			
-			ps.setInt(1, getObjectId());
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not remove elemental enchant for item: " + this + " from DB:", e);
 		}
 	}
 	
@@ -1624,10 +1404,6 @@ public class Item extends WorldObject
 			{
 				updateItemAttributes(con);
 			}
-			if (_elementals != null)
-			{
-				updateItemElements(con);
-			}
 		}
 		catch (Exception e)
 		{
@@ -1656,12 +1432,6 @@ public class Item extends WorldObject
 			}
 			
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_attributes WHERE itemId = ?"))
-			{
-				ps.setInt(1, getObjectId());
-				ps.executeUpdate();
-			}
-			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?"))
 			{
 				ps.setInt(1, getObjectId());
 				ps.executeUpdate();
@@ -1821,30 +1591,6 @@ public class Item extends WorldObject
 		else
 		{
 			ItemLifeTimeTaskManager.getInstance().add(this, getTime());
-		}
-	}
-	
-	public void updateElementAttrBonus(Player player)
-	{
-		if (_elementals == null)
-		{
-			return;
-		}
-		for (Elementals elm : _elementals)
-		{
-			elm.updateBonus(player, isArmor());
-		}
-	}
-	
-	public void removeElementAttrBonus(Player player)
-	{
-		if (_elementals == null)
-		{
-			return;
-		}
-		for (Elementals elm : _elementals)
-		{
-			elm.removeBonus(player);
 		}
 	}
 	

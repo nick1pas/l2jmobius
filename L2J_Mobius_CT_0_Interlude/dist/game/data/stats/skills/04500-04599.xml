@@ -210,7 +210,7 @@
 		</for>
 	</skill>
 	<skill id="4522" levels="1" name="Eye of Assassin">
-		<!-- Greatly increases the critical success rate of dagger and rapier skills. -->
+		<!-- Greatly increases critical chance and the success rate of dagger skills. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -1280,7 +1280,7 @@
 		</for>
 	</skill>
 	<skill id="4579" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound that continually reduces HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1314,7 +1314,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4580" levels="12" name="Decrease P. Atk.">
+	<skill id="4580" levels="12" name="Decrease P.Atk">
 		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1431,7 +1431,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4584" levels="12" name="Reducing P. Def Stun">
+	<skill id="4584" levels="12" name="Reducing P. Def Shock">
 		<!-- Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
 		<table name="#abnormalLevels">11 12 12 13 13 13 13 13 13 13 13 13</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1531,7 +1531,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4587" levels="12" name="Decrease P. Atk.">
+	<skill id="4587" levels="12" name="Decrease P.Atk">
 		<!-- Instantly reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1687,7 +1687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4592" levels="12" name="Decrease P. Def.">
+	<skill id="4592" levels="12" name="Decrease P. Def">
 		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1718,7 +1718,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4593" levels="12" name="Decrease P. Def.">
+	<skill id="4593" levels="12" name="Decrease P. Def">
 		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1748,7 +1748,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4594" levels="12" name="Decrease P. Def.">
+	<skill id="4594" levels="12" name="Decrease P. Def">
 		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3 3 3 3 3 3 3 3</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1806,7 +1806,7 @@
 		</for>
 	</skill>
 	<skill id="4596" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound that continually reduces HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1838,7 +1838,7 @@
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound that continually reduces HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1869,7 +1869,7 @@
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound that continually reduces HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>

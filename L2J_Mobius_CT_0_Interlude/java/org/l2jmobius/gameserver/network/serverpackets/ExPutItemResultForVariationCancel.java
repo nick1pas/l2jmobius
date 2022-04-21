@@ -23,28 +23,22 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExPutItemResultForVariationCancel implements IClientOutgoingPacket
 {
 	private final int _itemObjId;
-	private final int _itemId;
-	private final int _itemAug1;
-	private final int _itemAug2;
 	private final int _price;
 	
 	public ExPutItemResultForVariationCancel(Item item, int price)
 	{
 		_itemObjId = item.getObjectId();
-		_itemId = item.getDisplayId();
 		_price = price;
-		_itemAug1 = ((short) item.getAugmentation().getAugmentationId());
-		_itemAug2 = item.getAugmentation().getAugmentationId() >> 16;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL.writeId(packet);
+		packet.writeD(0x40A97712);
 		packet.writeD(_itemObjId);
-		packet.writeD(_itemId);
-		packet.writeD(_itemAug1);
-		packet.writeD(_itemAug2);
+		packet.writeD(0x27);
+		packet.writeD(0x2006);
 		packet.writeQ(_price);
 		packet.writeD(1);
 		return true;

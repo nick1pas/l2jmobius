@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.PetitionVotePacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -94,7 +93,7 @@ public class Petition
 		if ((_petitioner != null) && _petitioner.isOnline())
 		{
 			_petitioner.sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
-			_petitioner.sendPacket(PetitionVotePacket.STATIC_PACKET);
+			// _petitioner.sendPacket(PetitionVotePacket.STATIC_PACKET);
 		}
 		
 		PetitionManager.getInstance().getCompletedPetitions().put(getId(), this);

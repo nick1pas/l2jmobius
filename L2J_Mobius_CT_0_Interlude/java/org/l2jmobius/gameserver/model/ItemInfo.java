@@ -58,18 +58,6 @@ public class ItemInfo
 	
 	private int _location;
 	
-	private int _elemAtkType = -2;
-	private int _elemAtkPower = 0;
-	private final int[] _elemDefAttr =
-	{
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	};
-	
 	private int[] _option;
 	
 	/**
@@ -129,12 +117,6 @@ public class ItemInfo
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_location = item.getLocationSlot();
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
-		}
 		_option = item.getEnchantOptions();
 	}
 	
@@ -180,13 +162,6 @@ public class ItemInfo
 		_mana = -1;
 		_time = -9999;
 		_location = item.getLocationSlot();
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
-		}
-		
 		_option = item.getEnchantOptions();
 	}
 	
@@ -253,21 +228,6 @@ public class ItemInfo
 	public int getLocation()
 	{
 		return _location;
-	}
-	
-	public int getAttackElementType()
-	{
-		return _elemAtkType;
-	}
-	
-	public int getAttackElementPower()
-	{
-		return _elemAtkPower;
-	}
-	
-	public int getElementDefAttr(byte i)
-	{
-		return _elemDefAttr[i];
 	}
 	
 	public int[] getEnchantOptions()

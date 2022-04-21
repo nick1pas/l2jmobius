@@ -31,10 +31,4 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10002" levels="1" name="Custom Trap skill">
-		<!-- Use this skill if you want to handle trap activation in scripts(example Seed of Destruction Spawn Traps) -->
-		<set name="targetType" val="AURA" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="P" />
-	</skill>
 </list>

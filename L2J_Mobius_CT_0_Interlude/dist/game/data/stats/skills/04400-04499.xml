@@ -140,14 +140,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4407" levels="2" name="Monster Type">
+	<skill id="4407" levels="2" name="Ordinary Monster">
 		<table name="#icons">icon.skill0000 icon.skill4407</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4408" levels="20" name="HP Modifiers">
+	<skill id="4408" levels="20" name="HP Increase (1x)">
 		<table name="#icons">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4408_x10 icon.skill4408_x11 icon.skill4408_x12</table>
 		<table name="#maxhp">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="icon" val="#icons" />
@@ -161,7 +161,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4409" levels="20" name="MP Modifiers">
+	<skill id="4409" levels="20" name="MP Increase (1x)">
 		<table name="#icons">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill0000 icon.skill4381 icon.skill4311 icon.skill4303 icon.skill4304 icon.skill4305 icon.skill4306 icon.skill4307 icon.skill4308 icon.skill4309 icon.skill4310 icon.skill4409_x10 icon.skill4409_x11 icon.skill4409_x12</table>
 		<table name="#maxmp">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="icon" val="#icons" />
@@ -175,7 +175,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4410" levels="22" name="P. Atk. Modifiers">
+	<skill id="4410" levels="22" name="Extremely Weak P. Atk.">
 		<table name="#icons">icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0000 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill0141 icon.skill4410_max</table>
 		<table name="#pAtk">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
 		<set name="icon" val="#icons" />
@@ -188,7 +188,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4411" levels="22" name="M. Atk. Modifiers">
+	<skill id="4411" levels="22" name="Extremely Weak M. Atk.">
 		<table name="#icons">icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill0000 icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_normal icon.skill4411_max</table>
 		<table name="#mAtk">0.15 0.18 0.22 0.27 0.32 0.39 0.47 0.57 0.69 0.83 1 1.21 1.46 1.77 2.14 2.59 3.13 3.79 4.59 5.55 6.72 100</table>
 		<set name="icon" val="#icons" />
@@ -201,7 +201,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4412" levels="22" name="P. Def. Modifiers">
+	<skill id="4412" levels="22" name="Extremely Weak P. Def.">
 		<table name="#icons">icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0000 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill0142 icon.skill4412_new</table>
 		<table name="#pDef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
 		<set name="icon" val="#icons" />
@@ -214,7 +214,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4413" levels="22" name="M. Def. Modifiers">
+	<skill id="4413" levels="22" name="Extremely Weak M. Def.">
 		<table name="#icons">icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill0000 icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_normal icon.skill4413_max</table>
 		<table name="#mDef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10</table>
 		<set name="icon" val="#icons" />
@@ -227,7 +227,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4414" levels="3" name="Armor Type">
+	<skill id="4414" levels="3" name="Heavy Armor Type">
 		<!-- Strong P. Def. and weak Evasion. -->
 		<table name="#evasion">-10 0 10</table>
 		<table name="#icons">icon.skill4312 icon.skill0000 icon.skill4313</table>
@@ -243,7 +243,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4415" levels="26" name="Weapon Type">
+	<skill id="4415" levels="26" name="Bare Hands">
 		<table name="#pAtk">1 1.38 1 1.38 1 1.38 0.87 1.21 2.22 2.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62</table>
 		<table name="#pAtkSpd">1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61</table>
 		<set name="magicLevel" val="1" />
@@ -256,7 +256,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4416" levels="25" name="Races">
+	<skill id="4416" levels="25" name="Undead">
 		<!-- Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
 		<table name="#icons">icon.skill4290 icon.skill4291 icon.skill4292 icon.skill4293 icon.skill4294 icon.skill4295 icon.skill4296 icon.skill4297 icon.skill4298 icon.skill4299 icon.skill4300 icon.skill4301 icon.skill4302 icon.skill4416_human icon.skill4416_elf icon.skill4416_darkelf icon.skill4416_orc icon.skill4416_dwarf icon.skill4416_etc icon.skill4416_none icon.skill4416_siegeweapon icon.skill4416_castleguard icon.skill4416_mercenary icon.skill4416_none icon.skill4296</table>
 		<table name="#pDefAnimals">0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
@@ -292,7 +292,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4417" levels="38" name="Race Types">
+	<skill id="4417" levels="38" name="Animals">
 		<!-- Animals -->
 		<table name="#icons">icon.skill4293 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4292 icon.skill4301 icon.skill4301 icon.skill4301 icon.skill4291 icon.skill4291 icon.skill4291 icon.skill4298 icon.skill4298 icon.skill4298 icon.skill4297 icon.skill4297 icon.skill4297 icon.skill4299 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4296 icon.skill4302 icon.skill4300 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4295 icon.skill4294 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290 icon.skill4290</table>
 		<table name="#pDefBleed">0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0</table>
@@ -541,8 +541,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4435" levels="5" name="Greater Resist Stun">
-		<!-- Very resistant to stun attacks. -->
+	<skill id="4435" levels="5" name="Greater Resist Shock">
+		<!-- Very resistant to shock attacks. -->
 		<table name="#trait_shock">60 70 80 90 100</table>
 		<set name="icon" val="icon.skill4435" />
 		<set name="magicLevel" val="1" />
@@ -658,8 +658,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
-		<!-- Highly resistant to Bow/Crossbow attacks. -->
+	<skill id="4444" levels="5" name="Greater Resist Bow Weapons">
+		<!-- Very resistant to Bow Weapon attacks. -->
 		<table name="#traits">60 70 80 90 100</table>
 		<set name="icon" val="icon.skill4444" />
 		<set name="magicLevel" val="1" />
@@ -668,7 +668,6 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param BOW="#traits" />
-				<param CROSSBOW="#traits" />
 			</effect>
 		</for>
 	</skill>
@@ -711,8 +710,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4448" levels="5" name="Higher resist Daggers/Rapier Weapon">
-		<!-- Highly resistant to Dagger/Rapier attacks. -->
+	<skill id="4448" levels="5" name="Greater Resist Daggers">
+		<!-- Very resistant to Dagger attacks. -->
 		<table name="#traits">60 70 80 90 100</table>
 		<set name="icon" val="icon.skill4448" />
 		<set name="magicLevel" val="1" />
@@ -721,7 +720,6 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param DAGGER="#traits" />
-				<param RAPIER="#traits" />
 				<param DUALDAGGER="#traits" />
 			</effect>
 		</for>
@@ -733,8 +731,8 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4450" levels="5" name="Stun Attack Weak Point">
-		<!-- Vulnerable to stun attacks. -->
+	<skill id="4450" levels="5" name="Shock Attack Weak Point">
+		<!-- Vulnerable to shock attacks. -->
 		<table name="#trait_shock">-11 -25 -43 -67 -100</table>
 		<set name="icon" val="icon.skill4450" />
 		<set name="magicLevel" val="1" />
@@ -877,7 +875,7 @@
 		</for>
 	</skill>
 	<skill id="4461" levels="5" name="Dagger Weak Point">
-		<!-- Weak against Dagger/Rapier attacks. -->
+		<!-- Vulnerable to Dagger Weapons. -->
 		<table name="#traits">-11 -25 -43 -67 -100</table>
 		<set name="icon" val="icon.skill4461" />
 		<set name="magicLevel" val="1" />
@@ -886,7 +884,6 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param DAGGER="#traits" />
-				<param RAPIER="#traits" />
 				<param DUALDAGGER="#traits" />
 			</effect>
 		</for>
@@ -901,7 +898,6 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param DAGGER="#traits" />
-				<param RAPIER="#traits" />
 				<param DUALDAGGER="#traits" />
 			</effect>
 		</for>
@@ -1154,8 +1150,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4473" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4473" levels="12" name="Shock">
+		<!-- Shocks and instantly immobilizes. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
 		<table name="#power">46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617</table>
@@ -1664,8 +1660,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4496" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="4496" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">32 45 63 83 106 129 150 158 164 168 170 173</table>
 		<table name="#power">176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895</table>

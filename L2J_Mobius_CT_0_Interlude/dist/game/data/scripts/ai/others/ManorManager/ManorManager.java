@@ -51,7 +51,6 @@ public class ManorManager extends AbstractNpcAI
 		35645,
 		35319,
 		35366,
-		36456,
 		35512,
 		35558,
 		35229,

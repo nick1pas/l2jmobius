@@ -25,11 +25,11 @@ public class DropHolder
 {
 	private final DropType _dropType;
 	private final int _itemId;
-	private final long _min;
-	private final long _max;
+	private final int _min;
+	private final int _max;
 	private final double _chance;
 	
-	public DropHolder(DropType dropType, int itemId, long min, long max, double chance)
+	public DropHolder(DropType dropType, int itemId, int min, int max, double chance)
 	{
 		_dropType = dropType;
 		_itemId = itemId;
@@ -48,12 +48,12 @@ public class DropHolder
 		return _itemId;
 	}
 	
-	public long getMin()
+	public int getMin()
 	{
 		return _min;
 	}
 	
-	public long getMax()
+	public int getMax()
 	{
 		return _max;
 	}

@@ -32,12 +32,9 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 
 /**
@@ -62,31 +59,11 @@ public class AugmentationData
 	private static final int BASESTAT_STR = 16341;
 	private static final int BASESTAT_MEN = 16344;
 	
-	// accessory
-	private static final int ACC_START = 16669;
-	private static final int ACC_BLOCKS_NUM = 10;
-	private static final int ACC_STAT_SUBBLOCKSIZE = 21;
-	
-	private static final int ACC_RING_START = ACC_START;
-	private static final int ACC_RING_SKILLS = 18;
-	private static final int ACC_RING_BLOCKSIZE = ACC_RING_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
-	private static final int ACC_RING_END = (ACC_RING_START + (ACC_BLOCKS_NUM * ACC_RING_BLOCKSIZE)) - 1;
-	
-	private static final int ACC_EAR_START = ACC_RING_END + 1;
-	private static final int ACC_EAR_SKILLS = 18;
-	private static final int ACC_EAR_BLOCKSIZE = ACC_EAR_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
-	private static final int ACC_EAR_END = (ACC_EAR_START + (ACC_BLOCKS_NUM * ACC_EAR_BLOCKSIZE)) - 1;
-	
-	private static final int ACC_NECK_START = ACC_EAR_END + 1;
-	private static final int ACC_NECK_SKILLS = 24;
-	private static final int ACC_NECK_BLOCKSIZE = ACC_NECK_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
-	
 	private final List<List<Integer>> _blueSkills = new ArrayList<>();
 	private final List<List<Integer>> _purpleSkills = new ArrayList<>();
 	private final List<List<Integer>> _redSkills = new ArrayList<>();
 	
 	private final List<AugmentationChance> _augmentationChances = new ArrayList<>();
-	private final List<augmentationChanceAcc> _augmentationChancesAcc = new ArrayList<>();
 	
 	private final Map<Integer, SkillHolder> _allSkills = new HashMap<>();
 	
@@ -110,7 +87,6 @@ public class AugmentationData
 		else
 		{
 			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _augmentationChances.size() + " augmentations.");
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _augmentationChancesAcc.size() + " accessory augmentations.");
 		}
 	}
 	
@@ -401,116 +377,18 @@ public class AugmentationData
 				return;
 			}
 		}
-		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
-		{
-			final DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance();
-			factory3.setValidating(false);
-			factory3.setIgnoringComments(true);
-			
-			final File aFile3 = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/retailchances_accessory.xml");
-			if (aFile3.exists())
-			{
-				Document aDoc = null;
-				
-				try
-				{
-					aDoc = factory3.newDocumentBuilder().parse(aFile3);
-				}
-				catch (Exception e)
-				{
-					LOGGER.warning("Problem with AugmentationData: " + e.getMessage());
-					return;
-				}
-				String aWeaponType = null;
-				int aStoneId = 0;
-				int aVariationId = 0;
-				int aCategoryChance = 0;
-				int aAugmentId = 0;
-				float aAugmentChance = 0;
-				for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
-				{
-					if (l.getNodeName().equals("list"))
-					{
-						NamedNodeMap aNodeAttributes = null;
-						for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling())
-						{
-							if (n.getNodeName().equals("weapon"))
-							{
-								aNodeAttributes = n.getAttributes();
-								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
-								for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
-								{
-									if (c.getNodeName().equals("stone"))
-									{
-										aNodeAttributes = c.getAttributes();
-										aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-										for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
-										{
-											if (v.getNodeName().equals("variation"))
-											{
-												aNodeAttributes = v.getAttributes();
-												aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-												for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
-												{
-													if (j.getNodeName().equals("category"))
-													{
-														aNodeAttributes = j.getAttributes();
-														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
-														for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
-														{
-															if (e.getNodeName().equals("augment"))
-															{
-																aNodeAttributes = e.getAttributes();
-																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
-																_augmentationChancesAcc.add(new augmentationChanceAcc(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The retailchances_accessory.xml data file is missing.");
-			}
-		}
 	}
 	
 	/**
 	 * Generate a new random augmentation
-	 * @param lifeStoneLevel
+	 * @param level
 	 * @param lifeStoneGrade
 	 * @param bodyPart
 	 * @param lifeStoneId
-	 * @param targetItem
+	 * @param item
 	 * @return
 	 */
-	public Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, Item targetItem)
-	{
-		switch (bodyPart)
-		{
-			case ItemTemplate.SLOT_LR_FINGER:
-			case ItemTemplate.SLOT_LR_EAR:
-			case ItemTemplate.SLOT_NECK:
-			{
-				return generateRandomAccessoryAugmentation(lifeStoneLevel, bodyPart, lifeStoneId);
-			}
-			default:
-			{
-				return generateRandomWeaponAugmentation(lifeStoneLevel, lifeStoneGrade, lifeStoneId, targetItem);
-			}
-		}
-	}
-	
-	private Augmentation generateRandomWeaponAugmentation(int level, int lifeStoneGrade, int lifeStoneId, Item item)
+	public Augmentation generateRandomAugmentation(int level, int lifeStoneGrade, int bodyPart, int lifeStoneId, Item item)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -761,13 +639,6 @@ public class AugmentationData
 				}
 				break;
 			}
-			case AbstractRefinePacket.GRADE_ACC:
-			{
-				if (Rnd.get(1, 100) <= Config.AUGMENTATION_ACC_SKILL_CHANCE)
-				{
-					generateSkill = true;
-				}
-			}
 		}
 		
 		if (!generateSkill && (Rnd.get(1, 100) <= Config.AUGMENTATION_BASESTAT_CHANCE))
@@ -880,132 +751,6 @@ public class AugmentationData
 			}
 		}
 		stat12 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
-		return new Augmentation(((stat34 << 16) + stat12));
-	}
-	
-	private Augmentation generateRandomAccessoryAugmentation(int level, int bodyPart, int lifeStoneId)
-	{
-		int stat12 = 0;
-		int stat34 = 0;
-		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
-		{
-			final List<augmentationChanceAcc> selectedChances12 = new ArrayList<>();
-			final List<augmentationChanceAcc> selectedChances34 = new ArrayList<>();
-			for (augmentationChanceAcc ac : _augmentationChancesAcc)
-			{
-				if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
-				{
-					if (ac.getVariationId() == 1)
-					{
-						selectedChances12.add(ac);
-					}
-					else
-					{
-						selectedChances34.add(ac);
-					}
-				}
-			}
-			int r = Rnd.get(10000);
-			float s = 10000;
-			for (augmentationChanceAcc ac : selectedChances12)
-			{
-				if (s > r)
-				{
-					s -= (ac.getAugmentChance() * 100);
-					stat12 = ac.getAugmentId();
-				}
-			}
-			int c = Rnd.get(100);
-			if (c < 55)
-			{
-				c = 55;
-			}
-			else if (c < 90)
-			{
-				c = 35;
-			}
-			else if (c < 99)
-			{
-				c = 9;
-			}
-			else
-			{
-				c = 1;
-			}
-			final List<augmentationChanceAcc> selectedChances34final = new ArrayList<>();
-			for (augmentationChanceAcc ac : selectedChances34)
-			{
-				if (ac.getCategoryChance() == c)
-				{
-					selectedChances34final.add(ac);
-				}
-			}
-			r = Rnd.get(10000);
-			s = 10000;
-			for (augmentationChanceAcc ac : selectedChances34final)
-			{
-				if (s > r)
-				{
-					s -= (ac.getAugmentChance() * 100);
-					stat34 = ac.getAugmentId();
-				}
-			}
-			return new Augmentation(((stat34 << 16) + stat12));
-		}
-		int lifeStoneLevel = Math.min(level, 9);
-		int base = 0;
-		int skillsLength = 0;
-		
-		switch (bodyPart)
-		{
-			case ItemTemplate.SLOT_LR_FINGER:
-			{
-				base = ACC_RING_START + (ACC_RING_BLOCKSIZE * lifeStoneLevel);
-				skillsLength = ACC_RING_SKILLS;
-				break;
-			}
-			case ItemTemplate.SLOT_LR_EAR:
-			{
-				base = ACC_EAR_START + (ACC_EAR_BLOCKSIZE * lifeStoneLevel);
-				skillsLength = ACC_EAR_SKILLS;
-				break;
-			}
-			case ItemTemplate.SLOT_NECK:
-			{
-				base = ACC_NECK_START + (ACC_NECK_BLOCKSIZE * lifeStoneLevel);
-				skillsLength = ACC_NECK_SKILLS;
-				break;
-			}
-			default:
-			{
-				return null;
-			}
-		}
-		
-		final int resultColor = Rnd.get(0, 3);
-		
-		// first augmentation (stats only)
-		stat12 = Rnd.get(ACC_STAT_SUBBLOCKSIZE);
-		Options op = null;
-		if (Rnd.get(1, 100) <= Config.AUGMENTATION_ACC_SKILL_CHANCE)
-		{
-			// second augmentation (skill)
-			stat34 = base + Rnd.get(skillsLength);
-			op = OptionData.getInstance().getOptions(stat34);
-		}
-		
-		if ((op == null) || (!op.hasActiveSkill() && !op.hasPassiveSkill() && !op.hasActivationSkills()))
-		{
-			// second augmentation (stats)
-			// calculating any different from stat12 value inside sub-block
-			// starting from next and wrapping over using remainder
-			stat34 = (stat12 + 1 + Rnd.get(ACC_STAT_SUBBLOCKSIZE - 1)) % ACC_STAT_SUBBLOCKSIZE;
-			// this is a stats - skipping skills
-			stat34 = base + skillsLength + (ACC_STAT_SUBBLOCKSIZE * resultColor) + stat34;
-		}
-		
-		// stat12 has stats only
-		stat12 = base + skillsLength + (ACC_STAT_SUBBLOCKSIZE * resultColor) + stat12;
 		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	

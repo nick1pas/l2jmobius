@@ -43,8 +43,8 @@ public class BuyList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet); // writeC(7) ?
-		packet.writeQ(_money); // current money
+		OutgoingPackets.BUY_LIST.writeId(packet); // writeC(7) ?
+		packet.writeD((int) _money); // current money
 		packet.writeD(_listId);
 		packet.writeH(_list.size());
 		for (Product product : _list)
@@ -54,7 +54,7 @@ public class BuyList implements IClientOutgoingPacket
 				packet.writeH(product.getItem().getType1()); // item type1
 				packet.writeD(0); // objectId
 				packet.writeD(product.getItemId());
-				packet.writeQ(product.getCount() < 0 ? 0 : product.getCount());
+				packet.writeD((int) (product.getCount() < 0 ? 0 : product.getCount()));
 				packet.writeH(product.getItem().getType2());
 				packet.writeH(0); // isEquipped
 				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
@@ -73,20 +73,12 @@ public class BuyList implements IClientOutgoingPacket
 				}
 				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
 				{
-					packet.writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
+					packet.writeD((int) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
 				}
 				else
 				{
-					packet.writeQ((long) (product.getPrice() * (1 + _taxRate)));
+					packet.writeD((int) (product.getPrice() * (1 + _taxRate)));
 				}
-				// T1
-				for (byte i = 0; i < 8; i++)
-				{
-					packet.writeH(0);
-				}
-				packet.writeH(0); // Enchant effect 1
-				packet.writeH(0); // Enchant effect 2
-				packet.writeH(0); // Enchant effect 3
 			}
 		}
 		return true;

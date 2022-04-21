@@ -81,28 +81,28 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 			if (_current.containsKey(s.getCropId()))
 			{
 				cp = _current.get(s.getCropId());
-				packet.writeQ(cp.getStartAmount()); // buy
-				packet.writeQ(cp.getPrice()); // price
+				packet.writeD((int) cp.getStartAmount()); // buy
+				packet.writeD((int) cp.getPrice()); // price
 				packet.writeC(cp.getReward()); // reward
 			}
 			else
 			{
-				packet.writeQ(0);
-				packet.writeQ(0);
+				packet.writeD(0);
+				packet.writeD(0);
 				packet.writeC(0);
 			}
 			// Next period
 			if (_next.containsKey(s.getCropId()))
 			{
 				cp = _next.get(s.getCropId());
-				packet.writeQ(cp.getStartAmount()); // buy
-				packet.writeQ(cp.getPrice()); // price
+				packet.writeD((int) cp.getStartAmount()); // buy
+				packet.writeD((int) cp.getPrice()); // price
 				packet.writeC(cp.getReward()); // reward
 			}
 			else
 			{
-				packet.writeQ(0);
-				packet.writeQ(0);
+				packet.writeD(0);
+				packet.writeD(0);
 				packet.writeC(0);
 			}
 		}

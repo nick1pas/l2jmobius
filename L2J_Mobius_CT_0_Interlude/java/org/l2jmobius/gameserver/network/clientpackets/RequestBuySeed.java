@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestBuySeed implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12; // length of the one item
+	private static final int BATCH_LENGTH = 8; // length of the one item
 	private int _manorId;
 	private List<ItemHolder> _items = null;
 	
@@ -64,8 +64,8 @@ public class RequestBuySeed implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			final long cnt = packet.readQ();
-			if ((cnt < 1) || (itemId < 1))
+			final long cnt = packet.readD();
+			if ((cnt > Integer.MAX_VALUE) || (cnt < 1) || (itemId < 1))
 			{
 				_items = null;
 				return false;

@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public class RequestPrivateStoreSell implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 28; // length of the one item
+	private static final int BATCH_LENGTH = 20; // length of the one item
 	
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
@@ -56,9 +56,9 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			final int itemId = packet.readD();
 			packet.readH(); // TODO analyse this
 			packet.readH(); // TODO analyse this
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
-			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
+			final int cnt = packet.readD();
+			final int price = packet.readD();
+			if ((count > Integer.MAX_VALUE) || (objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;

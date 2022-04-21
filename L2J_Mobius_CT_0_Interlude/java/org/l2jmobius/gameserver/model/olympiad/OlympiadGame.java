@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -46,7 +45,6 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -237,14 +235,6 @@ class OlympiadGame
 							castle.removeResidentialSkills(player);
 						}
 					}
-					if (clan.getFortId() > 0)
-					{
-						final Fort fort = FortManager.getInstance().getFortByOwner(clan);
-						if (fort != null)
-						{
-							fort.removeResidentialSkills(player);
-						}
-					}
 				}
 				
 				// Abort casting if player casting
@@ -415,7 +405,6 @@ class OlympiadGame
 			try
 			{
 				player.stopAllEffectsExceptThoseThatLastThroughDeath();
-				player.clearSouls();
 				player.clearCharges();
 				if (player.getAgathionId() > 0)
 				{
@@ -472,10 +461,6 @@ class OlympiadGame
 					player.setCurrentMp(player.getMaxMp());
 				}
 				
-				if (player.isTransformed())
-				{
-					player.untransform();
-				}
 				player.setInOlympiadMode(false);
 				player.setOlympiadStart(false);
 				player.setOlympiadSide(-1);
@@ -499,14 +484,6 @@ class OlympiadGame
 						if (castle != null)
 						{
 							castle.giveResidentialSkills(player);
-						}
-					}
-					if (clan.getFortId() > 0)
-					{
-						final Fort fort = FortManager.getInstance().getFortByOwner(clan);
-						if (fort != null)
-						{
-							fort.giveResidentialSkills(player);
 						}
 					}
 				}

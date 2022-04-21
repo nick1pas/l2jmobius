@@ -482,7 +482,7 @@ public class NpcData implements IXmlReader
 															}
 															else
 															{
-																group.addDrop(new DropHolder(dropType, itemId, parseLong(groupAttrs, "min"), parseLong(groupAttrs, "max"), parseDouble(groupAttrs, "chance")));
+																group.addDrop(new DropHolder(dropType, itemId, parseInteger(groupAttrs, "min"), parseInteger(groupAttrs, "max"), parseDouble(groupAttrs, "chance")));
 															}
 														}
 													}
@@ -505,7 +505,7 @@ public class NpcData implements IXmlReader
 													}
 													else
 													{
-														dropLists.add(new DropHolder(dropType, itemId, parseLong(dropAttrs, "min"), parseLong(dropAttrs, "max"), parseDouble(dropAttrs, "chance")));
+														dropLists.add(new DropHolder(dropType, itemId, parseInteger(dropAttrs, "min"), parseInteger(dropAttrs, "max"), parseDouble(dropAttrs, "chance")));
 													}
 												}
 											}

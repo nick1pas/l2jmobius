@@ -52,16 +52,6 @@ public class StartRotating implements IClientIncomingPacket
 			return;
 		}
 		
-		final StartRotation br;
-		if (player.isInAirShip() && player.getAirShip().isCaptain(player))
-		{
-			br = new StartRotation(player.getAirShip().getObjectId(), _degree, _side, 0);
-			player.getAirShip().broadcastPacket(br);
-		}
-		else
-		{
-			br = new StartRotation(player.getObjectId(), _degree, _side, 0);
-			player.broadcastPacket(br);
-		}
+		player.broadcastPacket(new StartRotation(player.getObjectId(), _degree, _side, 0));
 	}
 }

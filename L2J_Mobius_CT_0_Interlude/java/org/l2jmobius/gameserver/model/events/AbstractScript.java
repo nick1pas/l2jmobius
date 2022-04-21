@@ -36,14 +36,10 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
-import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -105,21 +101,17 @@ import org.l2jmobius.gameserver.model.events.listeners.RunnableEventListener;
 import org.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -1440,15 +1432,6 @@ public abstract class AbstractScript extends ManagedScript
 						}
 						break;
 					}
-					case FORTRESS:
-					{
-						final Fort template = FortManager.getInstance().getFortById(id);
-						if (template != null)
-						{
-							listeners.add(template.addListener(action.apply(template)));
-						}
-						break;
-					}
 					default:
 					{
 						LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Unhandled register type: " + registerType);
@@ -1546,15 +1529,6 @@ public abstract class AbstractScript extends ManagedScript
 					case CASTLE:
 					{
 						final Castle template = CastleManager.getInstance().getCastleById(id);
-						if (template != null)
-						{
-							listeners.add(template.addListener(action.apply(template)));
-						}
-						break;
-					}
-					case FORTRESS:
-					{
-						final Fort template = FortManager.getInstance().getFortById(id);
 						if (template != null)
 						{
 							listeners.add(template.addListener(action.apply(template)));
@@ -2143,34 +2117,6 @@ public abstract class AbstractScript extends ManagedScript
 				}
 			}
 		}
-		// Mail attachments.
-		if (Config.ALLOW_MAIL)
-		{
-			final List<Message> inbox = MailManager.getInstance().getInbox(player.getObjectId());
-			for (int itemId : itemIds)
-			{
-				for (Message message : inbox)
-				{
-					final Mail mail = message.getAttachments();
-					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
-					{
-						return true;
-					}
-				}
-			}
-			final List<Message> outbox = MailManager.getInstance().getOutbox(player.getObjectId());
-			for (int itemId : itemIds)
-			{
-				for (Message message : outbox)
-				{
-					final Mail mail = message.getAttachments();
-					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
-					{
-						return true;
-					}
-				}
-			}
-		}
 		return false;
 	}
 	
@@ -2382,44 +2328,6 @@ public abstract class AbstractScript extends ManagedScript
 		if ((enchantlevel > 0) && (itemId != Inventory.ADENA_ID))
 		{
 			item.setEnchantLevel(enchantlevel);
-		}
-		
-		sendItemGetMessage(player, item, count);
-	}
-	
-	/**
-	 * @param player
-	 * @param itemId
-	 * @param count
-	 * @param attributeId
-	 * @param attributeLevel
-	 */
-	public static void giveItems(Player player, int itemId, long count, byte attributeId, int attributeLevel)
-	{
-		if (count <= 0)
-		{
-			return;
-		}
-		
-		// Add items to player's inventory
-		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
-		if (item == null)
-		{
-			return;
-		}
-		
-		// set enchant level for item if that item is not adena
-		if ((attributeId >= 0) && (attributeLevel > 0))
-		{
-			item.setElementAttr(attributeId, attributeLevel);
-			if (item.isEquipped())
-			{
-				item.updateElementAttrBonus(player);
-			}
-			
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addModifiedItem(item);
-			player.sendPacket(iu);
 		}
 		
 		sendItemGetMessage(player, item, count);
@@ -3016,54 +2924,5 @@ public abstract class AbstractScript extends ManagedScript
 	public void clearRadar(Player player)
 	{
 		player.getRadar().removeAllMarkers();
-	}
-	
-	/**
-	 * Play scene for Player.
-	 * @param player the player
-	 * @param movie the movie
-	 */
-	public void playMovie(Player player, Movie movie)
-	{
-		new MovieHolder(Arrays.asList(player), movie);
-	}
-	
-	/**
-	 * Play scene for all Player inside list.
-	 * @param players list with Player
-	 * @param movie the movie
-	 */
-	public void playMovie(Collection<Player> players, Movie movie)
-	{
-		new MovieHolder(players, movie);
-	}
-	
-	/**
-	 * Play scene for all Player inside set.
-	 * @param players set with Player
-	 * @param movie the movie
-	 */
-	public void playMovie(Set<Player> players, Movie movie)
-	{
-		new MovieHolder(new ArrayList<>(players), movie);
-	}
-	
-	/**
-	 * Play scene for all Player inside instance.
-	 * @param world InstanceWorld object
-	 * @param movie the movie
-	 */
-	public void playMovie(InstanceWorld world, Movie movie)
-	{
-		if (world != null)
-		{
-			for (Player player : world.getAllowed())
-			{
-				if ((player != null) && (player.getInstanceId() == world.getInstanceId()))
-				{
-					playMovie(player, movie);
-				}
-			}
-		}
 	}
 }

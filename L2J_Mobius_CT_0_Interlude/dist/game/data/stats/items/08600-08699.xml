@@ -153,7 +153,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8616" type="EtcItem" name="Spellbook: Summon Friend">
-		<!-- Spellbook needed to learn Summon Friend. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 56 -->
+		<!-- Spellbook needed to learn Summon Friend. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="icon" val="icon.etc_party_sommons_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -220,9 +220,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-1" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8623" type="EtcItem" name="Elixir of Life (D-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 20 and 39. Re-use delay is 5 minutes. -->
@@ -240,9 +237,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-2" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8624" type="EtcItem" name="Elixir of Life (C-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 40 and 51. Re-use delay is 5 minutes. -->
@@ -260,9 +254,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-3" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8625" type="EtcItem" name="Elixir of Life (B-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 52 and 60. Re-use delay is 5 minutes. -->
@@ -280,9 +271,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-4" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8626" type="EtcItem" name="Elixir of Life (A-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 61 and 75. Re-use delay is 5 minutes. -->
@@ -300,9 +288,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-5" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8627" type="EtcItem" name="Elixir of Life (S-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is 76 or higher. Re-use delay is 5 minutes. -->
@@ -320,9 +305,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2287-6" /> <!-- Elixir of Life (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8628" type="EtcItem" name="Elixir of Mental Strength (No Grade)">
 		<!-- Regenerates MP. Can only be used by characters below level 19 upon themselves. Re-use delay is 5 minutes. -->
@@ -339,9 +321,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-1" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8629" type="EtcItem" name="Elixir of Mental Strength (D-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 20 and below level 39 upon themselves. Re-use delay 5 minutes. -->
@@ -359,9 +338,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-2" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8630" type="EtcItem" name="Elixir of Mental Strength (C-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 40 and below level 51 upon themselves. Re-use delay 5 minutes. -->
@@ -379,9 +355,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-3" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8631" type="EtcItem" name="Elixir of Mental Strength (B-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 52 and below level 60 upon themselves. Re-use delay 5 minutes. -->
@@ -399,9 +372,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-4" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8632" type="EtcItem" name="Elixir of Mental Strength (A-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 61 and below level 75 upon themselves. Re-use delay 5 minutes. -->
@@ -419,9 +389,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-5" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8633" type="EtcItem" name="Elixir of Mental Strength (S-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 76 upon themselves. Re-use delay 5 minutes. -->
@@ -439,9 +406,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2288-6" /> <!-- Elixir of Mental Strength (No Grade) -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="8634" type="EtcItem" name="Elixir of CP (No Grade)">
 		<!-- Regenerates CP. Can only be used by characters below level 19 upon themselves. Re-use delay is 5 minutes. -->
@@ -1027,7 +991,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9352" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1055,7 +1018,6 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9356" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1196,7 +1158,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
-		<set name="change_weaponId" val="9360" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="10" />
@@ -1327,7 +1288,7 @@
 		</for>
 	</item>
 	<item id="8689" type="Weapon" name="Blood Sword Akamanah">
-		<!-- This demonic twin blade was forged by Gran Kain, the god of chaos. It needs the fresh blood of a PK at least every 24 hours or it will disappear. -->
+		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade anguishes at the touch of air, and it craves blood to renew its energies. It becomes stronger every time it is supplied with blood. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FIST" />

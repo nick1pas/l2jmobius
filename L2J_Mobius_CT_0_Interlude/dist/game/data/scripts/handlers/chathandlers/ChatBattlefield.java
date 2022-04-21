@@ -19,7 +19,6 @@ package handlers.chathandlers;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IChatHandler;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +38,7 @@ public class ChatBattlefield implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, Player activeChar, String target, String text)
 	{
-		if (TerritoryWarManager.getInstance().isTWChannelOpen() && (activeChar.getSiegeSide() > 0))
+		if (activeChar.getSiegeSide() > 0)
 		{
 			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 			{

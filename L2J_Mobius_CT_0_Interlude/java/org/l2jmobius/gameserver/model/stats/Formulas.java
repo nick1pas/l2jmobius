@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.data.xml.HitConditionBonusData;
 import org.l2jmobius.gameserver.data.xml.KarmaData;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -45,7 +44,6 @@ import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.siege.SiegeClan;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
@@ -71,7 +69,6 @@ import org.l2jmobius.gameserver.model.stats.functions.formulas.FuncPDefMod;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.CastleZone;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
-import org.l2jmobius.gameserver.model.zone.type.FortZone;
 import org.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -304,21 +301,6 @@ public class Formulas
 				}
 			}
 			
-			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
-			{
-				final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
-				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
-				final int fortIndex = player.getClan().getFortId();
-				if ((fortIndex > 0) && (fortIndex == posFortIndex))
-				{
-					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
-					if ((fort != null) && (fort.getFunction(Fort.FUNC_RESTORE_HP) != null))
-					{
-						hpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_HP).getLvl() / 100);
-					}
-				}
-			}
-			
 			// Mother Tree effect is calculated at last
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
@@ -407,21 +389,6 @@ public class Formulas
 					if ((castle != null) && (castle.getFunction(Castle.FUNC_RESTORE_MP) != null))
 					{
 						mpRegenMultiplier *= 1 + ((double) castle.getFunction(Castle.FUNC_RESTORE_MP).getLvl() / 100);
-					}
-				}
-			}
-			
-			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
-			{
-				final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
-				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
-				final int fortIndex = player.getClan().getFortId();
-				if ((fortIndex > 0) && (fortIndex == posFortIndex))
-				{
-					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
-					if ((fort != null) && (fort.getFunction(Fort.FUNC_RESTORE_MP) != null))
-					{
-						mpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_MP).getLvl() / 100);
 					}
 				}
 			}
@@ -766,7 +733,7 @@ public class Formulas
 		if (target.isAttackable())
 		{
 			final Weapon weapon = attacker.getActiveWeaponItem();
-			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
+			if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 			{
 				if (skill != null)
 				{

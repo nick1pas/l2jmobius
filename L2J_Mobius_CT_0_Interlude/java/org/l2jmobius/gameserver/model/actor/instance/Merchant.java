@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
-import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
 
 /**
  * @version $Revision: 1.10.4.9 $ $Date: 2005/04/11 10:06:08 $
@@ -100,7 +99,7 @@ public class Merchant extends Folk
 		player.setInventoryBlockingStatus(true);
 		
 		player.sendPacket(new BuyList(buyList, player.getAdena(), taxRate));
-		player.sendPacket(new ExBuySellList(player, buyList, taxRate, false));
+		// player.sendPacket(new ExBuySellList(player, buyList, taxRate, false));
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

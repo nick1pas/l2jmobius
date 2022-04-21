@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.Util;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Skimirish with Orcs (105)
  * @author janiko
@@ -195,7 +193,6 @@ public class Q00105_SkirmishWithOrcs extends Quest
 				}
 				if (qs.isCond(4) && hasQuestItems(talker, KABOO_CHIEFS_2ST_TORQUE))
 				{
-					Q00281_HeadForTheHills.giveNewbieReward(talker);
 					talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
 					giveAdena(talker, 17599, true);
 					addExpAndSp(talker, 41478, 3555);

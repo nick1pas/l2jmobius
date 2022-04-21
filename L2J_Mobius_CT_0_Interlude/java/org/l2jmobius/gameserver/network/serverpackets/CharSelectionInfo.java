@@ -75,11 +75,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
+		OutgoingPackets.CHAR_SELECT_INFO.writeId(packet);
 		final int size = _characterPackages.size();
 		packet.writeD(size); // Created character count
-		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		packet.writeC(0);
 		long lastAccess = 0;
 		if (_activeId == -1)
 		{
@@ -105,17 +103,15 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getRace()); // Race
 			packet.writeD(charInfoPackage.getBaseClassId());
 			packet.writeD(1); // GameServerName
-			packet.writeD(charInfoPackage.getX());
-			packet.writeD(charInfoPackage.getY());
-			packet.writeD(charInfoPackage.getZ());
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 			packet.writeF(charInfoPackage.getCurrentHp());
 			packet.writeF(charInfoPackage.getCurrentMp());
 			packet.writeD((int) charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
 			packet.writeD(charInfoPackage.getLevel());
 			packet.writeD(charInfoPackage.getKarma());
-			packet.writeD(charInfoPackage.getPkKills());
-			packet.writeD(charInfoPackage.getPvPKills());
 			packet.writeD(0);
 			packet.writeD(0);
 			packet.writeD(0);
@@ -123,10 +119,42 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(0);
 			packet.writeD(0);
 			packet.writeD(0);
-			for (int slot : getPaperdollOrder())
-			{
-				packet.writeD(charInfoPackage.getPaperdollItemId(slot));
-			}
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_RFINGER));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LFINGER));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_HEAD));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LHAND));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_GLOVES));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_CHEST));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LEGS));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_FEET));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_CLOAK));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
+			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_HAIR2));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_REAR));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_NECK));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RFINGER));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LFINGER));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_CLOAK));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR2));
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
@@ -137,8 +165,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(i == _activeId ? 1 : 0);
 			packet.writeC(Math.min(charInfoPackage.getEnchantEffect(), 127));
 			packet.writeD(charInfoPackage.getAugmentationId());
-			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
-			packet.writeD(0); // Currently on retail when you are on character select you don't see your transformation.
 		}
 		return true;
 	}

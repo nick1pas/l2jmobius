@@ -368,7 +368,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 						{
 							html = "messenger_yetti010.htm";
 						}
-						else if ((clan.getCastleId() > 0) || (clan.getFortId() > 0) || (clan.getHideoutId() > 0))
+						else if ((clan.getCastleId() > 0) || (clan.getHideoutId() > 0))
 						{
 							html = "messenger_yetti012.htm";
 						}
@@ -489,7 +489,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 						{
 							html = "game_manager008.htm";
 						}
-						else if ((clan.getCastleId() > 0) || (clan.getFortId() > 0) || (clan.getHideoutId() > 0))
+						else if ((clan.getCastleId() > 0) || (clan.getHideoutId() > 0))
 						{
 							html = "game_manager010.htm";
 						}

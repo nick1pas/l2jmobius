@@ -58,13 +58,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2005" levels="1" name="Nectar">
+	<skill id="2005" levels="1" name="Pollen">
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6391" /> <!-- Nectar -->
+		<set name="itemConsumeId" val="6391" /> <!-- Pollen -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -140,7 +140,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2013" levels="1" name="Scroll Of Escape">
+	<skill id="2013" levels="1" name="Scroll of Escape">
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -162,7 +162,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2014" levels="1" name="Scroll Of Resurrection">
+	<skill id="2014" levels="1" name="Scroll of Resurrection">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -228,7 +228,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2023" levels="1" name="Star Shard">
+	<skill id="2023" levels="1" name="Elven Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6403" /> <!-- Star Shard -->
@@ -285,7 +285,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
-		<!-- Sharp increase in HP recovery bonus. Effect 1. -->
+		<!-- Increases HP regeneration significantly. Effect 1. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -301,8 +301,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2032" levels="1" name="Healing potion">
-		<!-- Sharp increase in HP recovery bonus. Effect 2. -->
+	<skill id="2032" levels="1" name="Healing Potion">
+		<!-- Increases HP regeneration significantly. Effect 2. -->
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -380,7 +380,7 @@
 		</for>
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
-		<!-- Sharp increase in HP recovery bonus. Effect 3. -->
+		<!-- Increases HP regeneration significantly. Effect 3. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -501,7 +501,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2046" levels="2" name="Wolf's Necklace">
+	<skill id="2046" levels="2" name="Wolves' Necklace">
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLevel" val="1" />
@@ -751,7 +751,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
+	<skill id="2062" levels="1" name="none">
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -779,7 +779,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
-		<!-- Sharp increase in MP recovery bonus. Effect 4. -->
+		<!-- Increases MP regeneration. Effect 4 -->
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MP_REGEN_UP" />

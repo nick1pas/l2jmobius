@@ -144,7 +144,7 @@
 			<effect name="Root" />
 		</for>
 	</skill>
-	<skill id="4316" levels="12" name="Boss Lilim Drain">
+	<skill id="4316" levels="12" name="BOSS Lilim Drain">
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#mpConsume">31 51 71 94 121 149 175 186 195 202 206 209</table>
 		<table name="#power">11 16 22 29 38 46 54 58 61 63 65 66</table>
@@ -277,7 +277,7 @@
 		</for>
 	</skill>
 	<skill id="4322" levels="1" name="Wind Walk for Beginners">
-		<!-- Increases movement speed by 60 for 33 minutes. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -295,7 +295,7 @@
 		</for>
 	</skill>
 	<skill id="4323" levels="1" name="Shield for Beginners">
-		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<!-- Temporarily increases P. Def. Effect 3. -->
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -312,8 +312,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4324" levels="1" name="Bless the Body for Beginners">
-		<!-- Increases Max HP by 35% for 60 minutes. -->
+	<skill id="4324" levels="1" name="Blessed Body for Beginners">
+		<!-- Temporarily increases maximum HP. Effect 6. -->
 		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -331,7 +331,7 @@
 		</for>
 	</skill>
 	<skill id="4325" levels="1" name="Vampiric Rage for Beginners">
-		<!-- For 60 minutes, 9% of standard short-range physical damage inflicted on the enemy is recovered as HP. -->
+		<!-- Temporarily restores HP using damage inflicted upon the enemy. Excludes damage inflicted by skill or remote attack. Effect 4. -->
 		<set name="abnormalLevel" val="5" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -349,7 +349,7 @@
 		</for>
 	</skill>
 	<skill id="4326" levels="1" name="Regeneration for Beginners">
-		<!-- Increases HP regeneration bonus by 20% for 60 minutes. -->
+		<!-- Temporarily increases ability to restore HP. Effect 3. -->
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
@@ -367,7 +367,7 @@
 		</for>
 	</skill>
 	<skill id="4327" levels="1" name="Haste for Beginners">
-		<!-- Increases Atk. Spd. by 15% for 60 minutes. -->
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -384,8 +384,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4328" levels="1" name="Bless the Soul for Beginners">
-		<!-- Increases Max MP by 35% for 60 minutes. -->
+	<skill id="4328" levels="1" name="Blessed Soul for Beginners">
+		<!-- Temporarily increases maximum MP. Effect 6. -->
 		<set name="abnormalLevel" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -403,7 +403,7 @@
 		</for>
 	</skill>
 	<skill id="4329" levels="1" name="Acumen for Beginners">
-		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -421,7 +421,7 @@
 		</for>
 	</skill>
 	<skill id="4330" levels="1" name="Concentration for Beginners">
-		<!-- Decreases magic cancel damage by 18 for 60 minutes. -->
+		<!-- Temporarily reduces the probability of damage and cancellation of magic. Effect 1. -->
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
@@ -439,7 +439,7 @@
 		</for>
 	</skill>
 	<skill id="4331" levels="1" name="Empower for Beginners">
-		<!-- Increases M. Atk. by 55% for 60 minutes. -->
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -586,7 +586,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4342" levels="2" name="Clan Hall: Wind Walk">
+	<skill id="4342" levels="2" name="Wind Walk">
 		<!-- Temporarily increases movement speed. Effect 1. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#mpConsume">50 100</table>
@@ -608,7 +608,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4343" levels="3" name="Clan Hall: Decrease Weight">
+	<skill id="4343" levels="3" name="Decrease Weight">
 		<!-- Reduces current weight. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">50 0 100</table>
@@ -630,7 +630,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4344" levels="3" name="Clan Hall: Shield">
+	<skill id="4344" levels="3" name="Shield">
 		<!-- Temporarily increases P. Def. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLevel">7 25 44</table>
@@ -653,7 +653,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4345" levels="3" name="Clan Hall: Might">
+	<skill id="4345" levels="3" name="Might">
 		<!-- Temporarily increases P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">50 0 100</table>
@@ -675,7 +675,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4346" levels="4" name="Clan Hall: Mental Shield">
+	<skill id="4346" levels="4" name="Mental Shield">
 		<!-- Temporarily increases resistance to Hold, Sleep, Fear, and Mental attacks. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#mpConsume">50 0 0 100</table>
@@ -699,7 +699,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4347" levels="6" name="Clan Hall: Blessed Body">
+	<skill id="4347" levels="6" name="Blessed Body">
 		<!-- Temporarily increases maximum HP. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
@@ -721,7 +721,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4348" levels="6" name="Clan Hall: Blessed Soul">
+	<skill id="4348" levels="6" name="Blessed Soul">
 		<!-- Temporarily increases maximum MP. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#maxMp">1.1 1.15 1.2 1.25 1.3 1.35</table>
@@ -743,7 +743,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
+	<skill id="4349" levels="2" name="Magic Barrier">
 		<!-- Temporarily increases M. Def. Effect 2. -->
 		<table name="#abnormalLevels">2 3</table>
 		<table name="#mDef">1.23 1.3</table>
@@ -765,8 +765,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4350" levels="4" name="Clan Hall: Resist Shock">
-		<!-- Temporarily provides powerful resistance against Stun Attack. Effect 1. -->
+	<skill id="4350" levels="4" name="Resist Shock">
+		<!-- Temporarily provides powerful resistance against Shock Attack. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#mpConsume">150 0 0 300</table>
 		<table name="#trait_shock">15 20 30 40</table>
@@ -787,7 +787,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4351" levels="6" name="Clan Hall: Concentration">
+	<skill id="4351" levels="6" name="Concentration">
 		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#cancel">18 25 36 42 48 53</table>
@@ -809,7 +809,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
+	<skill id="4352" levels="2" name="Berserker Spirit">
 		<!-- Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 1. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#mAtk">1.1 1.16</table>
@@ -845,7 +845,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4353" levels="6" name="Clan Hall: Bless Shield">
+	<skill id="4353" levels="6" name="Bless Shield">
 		<!-- Temporarily increases shield defense rate. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#mpConsume">0 200 0 0 0 400</table>
@@ -867,7 +867,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4354" levels="4" name="Clan Hall: Vampiric Rage">
+	<skill id="4354" levels="4" name="Vampiric Rage">
 		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or remote attack. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#absorbDam">6 7 8 9</table>
@@ -889,7 +889,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4355" levels="3" name="Clan Hall: Acumen">
+	<skill id="4355" levels="3" name="Acumen">
 		<!-- Temporarily increases Casting Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mAtkSpd">1.15 1.23 1.3</table>
@@ -911,7 +911,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4356" levels="3" name="Clan Hall: Empower">
+	<skill id="4356" levels="3" name="Empower">
 		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mAtk">1.55 1.65 1.75</table>
@@ -933,7 +933,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4357" levels="2" name="Clan Hall: Haste">
+	<skill id="4357" levels="2" name="Haste">
 		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#mpConsume">300 600</table>
@@ -955,7 +955,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4358" levels="3" name="Clan Hall: Guidance">
+	<skill id="4358" levels="3" name="Guidance">
 		<!-- Temporarily increases Accuracy. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">2 3 4</table>
@@ -977,7 +977,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4359" levels="3" name="Clan Hall: Focus">
+	<skill id="4359" levels="3" name="Focus">
 		<!-- Temporarily increases critical attack rate. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#mpConsume">300 0 600</table>
@@ -999,7 +999,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4360" levels="3" name="Clan Hall: Death Whisper">
+	<skill id="4360" levels="3" name="Death Whisper">
 		<!-- Temporarily increases critical attack power. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#cAtk">1.25 1.3 1.35</table>
@@ -1094,7 +1094,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4364" levels="2" name="Blessing of Revelations">
+	<skill id="4364" levels="2" name="Blessing of Prophecy">
 		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases resistance to Poison/Bleed attacks. Effect 1. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#traits">0 25</table>
@@ -1306,7 +1306,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
+	<skill id="4376" levels="1" name="Strong Resistance to P. Atk.">
 		<!-- Provides very strong resistance against P. Atk. -->
 		<set name="icon" val="icon.skill4376" />
 		<set name="magicLevel" val="1" />
@@ -1337,7 +1337,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="4378" levels="12" name="Self Damage Shield">
+	<skill id="4378" levels="12" name="NPC Self-Damage Shield">
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">12 19 26 35 45 55 65 69 72 75 77 78</table>
 		<set name="abnormalLevel" val="2" />
@@ -1370,7 +1370,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4380" levels="1" name="Arena CP Recovery">
+	<skill id="4380" levels="1" name="Arena: CP Recovery">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1511,7 +1511,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4389" levels="5" name="Resist Mental Derangement">
+	<skill id="4389" levels="5" name="Resist Mental Attacks">
 		<!-- Provides resistance against mental attack. -->
 		<table name="#trait_derangement">10 20 30 40 50</table>
 		<set name="icon" val="icon.skill4389" />

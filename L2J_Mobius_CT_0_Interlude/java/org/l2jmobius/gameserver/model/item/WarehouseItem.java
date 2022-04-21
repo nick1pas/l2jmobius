@@ -45,19 +45,6 @@ public class WarehouseItem
 	private final int _customType2;
 	private final int _mana;
 	
-	private int _elemAtkType = -2;
-	private int _elemAtkPower = 0;
-	
-	private final int[] _elemDefAttr =
-	{
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	};
-	
 	private final int[] _enchantOptions;
 	
 	private final int _time;
@@ -84,12 +71,6 @@ public class WarehouseItem
 		}
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
-		}
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
@@ -258,21 +239,6 @@ public class WarehouseItem
 	public int getMana()
 	{
 		return _mana;
-	}
-	
-	public int getAttackElementType()
-	{
-		return _elemAtkType;
-	}
-	
-	public int getAttackElementPower()
-	{
-		return _elemAtkPower;
-	}
-	
-	public int getElementDefAttr(byte i)
-	{
-		return _elemDefAttr[i];
 	}
 	
 	public int[] getEnchantOptions()

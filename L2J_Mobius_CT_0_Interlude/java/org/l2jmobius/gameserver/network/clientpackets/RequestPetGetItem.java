@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -62,12 +61,6 @@ public class RequestPetGetItem implements IClientIncomingPacket
 		
 		final int castleId = MercTicketManager.getInstance().getTicketCastleId(item.getId());
 		if (castleId > 0)
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (FortSiegeManager.getInstance().isCombat(item.getId()))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

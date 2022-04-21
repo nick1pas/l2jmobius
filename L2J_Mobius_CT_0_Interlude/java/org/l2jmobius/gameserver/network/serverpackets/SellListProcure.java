@@ -49,7 +49,7 @@ public class SellListProcure implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SELL_LIST_PROCURE.writeId(packet);
-		packet.writeQ(_money); // money
+		packet.writeD((int) _money); // money
 		packet.writeD(0); // lease ?
 		packet.writeH(_sellList.size()); // list size
 		for (Entry<Item, Long> entry : _sellList.entrySet())
@@ -58,10 +58,10 @@ public class SellListProcure implements IClientOutgoingPacket
 			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getDisplayId());
-			packet.writeQ(entry.getValue()); // count
+			packet.writeD((int) entry.getValue().longValue()); // count
 			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(0); // unknown
-			packet.writeQ(0); // price, you shouldnt get any adena for crops, only raw materials
+			packet.writeD(0); // price, you shouldnt get any adena for crops, only raw materials
 		}
 		return true;
 	}

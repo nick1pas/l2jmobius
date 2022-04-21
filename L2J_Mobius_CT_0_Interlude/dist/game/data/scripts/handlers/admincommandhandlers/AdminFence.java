@@ -176,7 +176,7 @@ public class AdminFence implements IAdminCommandHandler
 	{
 		final PageResult result = HtmlUtil.createPage(FenceData.getInstance().getFences().values(), page, 10, currentPage ->
 		{
-			return "<td align=center><button action=\"bypass -h admin_listfence " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
+			return "<td align=center><button action=\"bypass -h admin_listfence " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>";
 		}, fence ->
 		{
 			final StringBuilder sb = new StringBuilder();
@@ -185,26 +185,26 @@ public class AdminFence implements IAdminCommandHandler
 			sb.append("</td><td>");
 			sb.append("<button value=\"Go\" action=\"bypass -h admin_gofence ");
 			sb.append(fence.getId());
-			sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			sb.append("</td><td>");
 			sb.append("<button value=\"Hide\" action=\"bypass -h admin_setfencestate ");
 			sb.append(fence.getId());
 			sb.append(" 0");
-			sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			sb.append("</td><td>");
 			sb.append("<button value=\"Off\" action=\"bypass -h admin_setfencestate ");
 			sb.append(fence.getId());
 			sb.append(" 1");
-			sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			sb.append("</td><td>");
 			sb.append("<button value=\"On\" action=\"bypass -h admin_setfencestate ");
 			sb.append(fence.getId());
 			sb.append(" 2");
-			sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			sb.append("</td><td>");
 			sb.append("<button value=\"X\" action=\"bypass -h admin_removefence ");
 			sb.append(fence.getId());
-			sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			sb.append("</td></tr>");
 			return sb.toString();
 		});

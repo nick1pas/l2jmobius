@@ -43,7 +43,6 @@ import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.PetLevelData;
@@ -66,7 +65,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -297,14 +295,14 @@ public class Pet extends Summon
 	
 	public void setCurrentFed(int num)
 	{
-		if (num <= 0)
-		{
-			sendPacket(new ExChangeNpcState(getObjectId(), 0x64));
-		}
-		else if ((_curFed <= 0) && (num > 0))
-		{
-			sendPacket(new ExChangeNpcState(getObjectId(), 0x65));
-		}
+		// if (num <= 0)
+		// {
+		// sendPacket(new ExChangeNpcState(getObjectId(), 0x64));
+		// }
+		// else if ((_curFed <= 0) && (num > 0))
+		// {
+		// sendPacket(new ExChangeNpcState(getObjectId(), 0x65));
+		// }
 		_curFed = num > getMaxFed() ? getMaxFed() : num;
 	}
 	
@@ -473,10 +471,6 @@ public class Pet extends Summon
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getId());
 			sendPacket(smsg);
-			return;
-		}
-		if (FortSiegeManager.getInstance().isCombat(target.getId()))
-		{
 			return;
 		}
 		

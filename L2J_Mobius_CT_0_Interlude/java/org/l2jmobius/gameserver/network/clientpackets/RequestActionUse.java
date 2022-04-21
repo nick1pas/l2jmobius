@@ -16,23 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Arrays;
-
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.ai.SummonAI;
-import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.data.xml.PetSkillData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -40,19 +35,14 @@ import org.l2jmobius.gameserver.model.actor.instance.BabyPet;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.NpcStringId;
-import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
-import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -103,32 +93,6 @@ public class RequestActionUse implements IClientIncomingPacket
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
-		}
-		
-		final BuffInfo info = player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-		if (info != null)
-		{
-			for (AbstractEffect effect : info.getEffects())
-			{
-				if (!effect.checkCondition(_actionId))
-				{
-					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-		}
-		
-		// Don't allow to do some action if player is transformed
-		if (player.isTransformed())
-		{
-			final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
-			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				PacketLogger.warning(player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().getId());
-				return;
-			}
 		}
 		
 		final Summon summon = player.getSummon();
@@ -392,62 +356,6 @@ public class RequestActionUse implements IClientIncomingPacket
 				}
 				break;
 			}
-			case 61: // Private Store Package Sell
-			{
-				player.tryOpenPrivateSellStore(true);
-				break;
-			}
-			case 65: // Bot Report Button
-			{
-				if (Config.BOTREPORT_ENABLE)
-				{
-					BotReportTable.getInstance().reportBot(player);
-				}
-				else
-				{
-					player.sendMessage("This feature is disabled.");
-				}
-				break;
-			}
-			case 67: // Steer
-			{
-				if (player.isInAirShip() && player.getAirShip().setCaptain(player))
-				{
-					player.broadcastUserInfo();
-				}
-				break;
-			}
-			case 68: // Cancel Control
-			{
-				if (player.isInAirShip() && player.getAirShip().isCaptain(player) && player.getAirShip().setCaptain(null))
-				{
-					player.broadcastUserInfo();
-				}
-				break;
-			}
-			case 69: // Destination Map
-			{
-				AirShipManager.getInstance().sendAirShipTeleportList(player);
-				break;
-			}
-			case 70: // Exit Airship
-			{
-				if (player.isInAirShip())
-				{
-					if (player.getAirShip().isCaptain(player))
-					{
-						if (player.getAirShip().setCaptain(null))
-						{
-							player.broadcastUserInfo();
-						}
-					}
-					else if (player.getAirShip().isInDock())
-					{
-						player.getAirShip().oustPlayer(player);
-					}
-				}
-				break;
-			}
 			case 1000: // Siege Golem - Siege Hammer
 			{
 				if ((target != null) && target.isDoor())
@@ -587,374 +495,6 @@ public class RequestActionUse implements IClientIncomingPacket
 			case 1040: // Swoop Cannon - Big Bang
 			{
 				useSkill(5111, false);
-				break;
-			}
-			case 1041: // Great Wolf - Bite Attack
-			{
-				useSkill("Skill01", true);
-				break;
-			}
-			case 1042: // Great Wolf - Maul
-			{
-				useSkill("Skill03", true);
-				break;
-			}
-			case 1043: // Great Wolf - Cry of the Wolf
-			{
-				useSkill("Skill02", true);
-				break;
-			}
-			case 1044: // Great Wolf - Awakening
-			{
-				useSkill("Skill04", true);
-				break;
-			}
-			case 1045: // Great Wolf - Howl
-			{
-				useSkill(5584, true);
-				break;
-			}
-			case 1046: // Strider - Roar
-			{
-				useSkill(5585, true);
-				break;
-			}
-			case 1047: // Divine Beast - Bite
-			{
-				useSkill(5580, false);
-				break;
-			}
-			case 1048: // Divine Beast - Stun Attack
-			{
-				useSkill(5581, false);
-				break;
-			}
-			case 1049: // Divine Beast - Fire Breath
-			{
-				useSkill(5582, false);
-				break;
-			}
-			case 1050: // Divine Beast - Roar
-			{
-				useSkill(5583, false);
-				break;
-			}
-			case 1051: // Feline Queen - Bless The Body
-			{
-				useSkill("buff3", false);
-				break;
-			}
-			case 1052: // Feline Queen - Bless The Soul
-			{
-				useSkill("buff4", false);
-				break;
-			}
-			case 1053: // Feline Queen - Haste
-			{
-				useSkill("buff5", false);
-				break;
-			}
-			case 1054: // Unicorn Seraphim - Acumen
-			{
-				useSkill("buff3", false);
-				break;
-			}
-			case 1055: // Unicorn Seraphim - Clarity
-			{
-				useSkill("buff4", false);
-				break;
-			}
-			case 1056: // Unicorn Seraphim - Empower
-			{
-				useSkill("buff5", false);
-				break;
-			}
-			case 1057: // Unicorn Seraphim - Wild Magic
-			{
-				useSkill("buff6", false);
-				break;
-			}
-			case 1058: // Nightshade - Death Whisper
-			{
-				useSkill("buff3", false);
-				break;
-			}
-			case 1059: // Nightshade - Focus
-			{
-				useSkill("buff4", false);
-				break;
-			}
-			case 1060: // Nightshade - Guidance
-			{
-				useSkill("buff5", false);
-				break;
-			}
-			case 1061: // Wild Beast Fighter, White Weasel - Death blow
-			{
-				useSkill(5745, true);
-				break;
-			}
-			case 1062: // Wild Beast Fighter - Double attack
-			{
-				useSkill(5746, true);
-				break;
-			}
-			case 1063: // Wild Beast Fighter - Spin attack
-			{
-				useSkill(5747, true);
-				break;
-			}
-			case 1064: // Wild Beast Fighter - Meteor Shower
-			{
-				useSkill(5748, true);
-				break;
-			}
-			case 1065: // Fox Shaman, Wild Beast Fighter, White Weasel, Fairy Princess - Awakening
-			{
-				useSkill(5753, true);
-				break;
-			}
-			case 1066: // Fox Shaman, Spirit Shaman - Thunder Bolt
-			{
-				useSkill(5749, true);
-				break;
-			}
-			case 1067: // Fox Shaman, Spirit Shaman - Flash
-			{
-				useSkill(5750, true);
-				break;
-			}
-			case 1068: // Fox Shaman, Spirit Shaman - Lightning Wave
-			{
-				useSkill(5751, true);
-				break;
-			}
-			case 1069: // Fox Shaman, Fairy Princess - Flare
-			{
-				useSkill(5752, true);
-				break;
-			}
-			case 1070: // White Weasel, Fairy Princess, Improved Baby Buffalo, Improved Baby Kookaburra, Improved Baby Cougar, Spirit Shaman, Toy Knight, Turtle Ascetic - Buff control
-			{
-				useSkill(5771, true);
-				break;
-			}
-			case 1071: // Tigress - Power Strike
-			{
-				useSkill("DDMagic", true);
-				break;
-			}
-			case 1072: // Toy Knight - Piercing attack
-			{
-				useSkill(6046, true);
-				break;
-			}
-			case 1073: // Toy Knight - Whirlwind
-			{
-				useSkill(6047, true);
-				break;
-			}
-			case 1074: // Toy Knight - Lance Smash
-			{
-				useSkill(6048, true);
-				break;
-			}
-			case 1075: // Toy Knight - Battle Cry
-			{
-				useSkill(6049, true);
-				break;
-			}
-			case 1076: // Turtle Ascetic - Power Smash
-			{
-				useSkill(6050, true);
-				break;
-			}
-			case 1077: // Turtle Ascetic - Energy Burst
-			{
-				useSkill(6051, true);
-				break;
-			}
-			case 1078: // Turtle Ascetic - Shockwave
-			{
-				useSkill(6052, true);
-				break;
-			}
-			case 1079: // Turtle Ascetic - Howl
-			{
-				useSkill(6053, true);
-				break;
-			}
-			case 1080: // Phoenix Rush
-			{
-				useSkill(6041, false);
-				break;
-			}
-			case 1081: // Phoenix Cleanse
-			{
-				useSkill(6042, false);
-				break;
-			}
-			case 1082: // Phoenix Flame Feather
-			{
-				useSkill(6043, false);
-				break;
-			}
-			case 1083: // Phoenix Flame Beak
-			{
-				useSkill(6044, false);
-				break;
-			}
-			case 1084: // Switch State
-			{
-				if (summon instanceof BabyPet)
-				{
-					useSkill(6054, true);
-				}
-				break;
-			}
-			case 1086: // Panther Cancel
-			{
-				useSkill(6094, false);
-				break;
-			}
-			case 1087: // Panther Dark Claw
-			{
-				useSkill(6095, false);
-				break;
-			}
-			case 1088: // Panther Fatal Claw
-			{
-				useSkill(6096, false);
-				break;
-			}
-			case 1089: // Deinonychus - Tail Strike
-			{
-				useSkill(6199, true);
-				break;
-			}
-			case 1090: // Guardian's Strider - Strider Bite
-			{
-				useSkill(6205, true);
-				break;
-			}
-			case 1091: // Guardian's Strider - Strider Fear
-			{
-				useSkill(6206, true);
-				break;
-			}
-			case 1092: // Guardian's Strider - Strider Dash
-			{
-				useSkill(6207, true);
-				break;
-			}
-			case 1093: // Maguen - Maguen Strike
-			{
-				useSkill(6618, true);
-				break;
-			}
-			case 1094: // Maguen - Maguen Wind Walk
-			{
-				useSkill(6681, true);
-				break;
-			}
-			case 1095: // Elite Maguen - Maguen Power Strike
-			{
-				useSkill(6619, true);
-				break;
-			}
-			case 1096: // Elite Maguen - Elite Maguen Wind Walk
-			{
-				useSkill(6682, true);
-				break;
-			}
-			case 1097: // Maguen - Maguen Return
-			{
-				useSkill(6683, true);
-				break;
-			}
-			case 1098: // Elite Maguen - Maguen Party Return
-			{
-				useSkill(6684, true);
-				break;
-			}
-			case 5000: // Baby Rudolph - Reindeer Scratch
-			{
-				useSkill(23155, true);
-				break;
-			}
-			case 5001: // Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Rosy Seduction
-			{
-				useSkill(23167, true);
-				break;
-			}
-			case 5002: // Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Critical Seduction
-			{
-				useSkill(23168, true);
-				break;
-			}
-			case 5003: // Hyum, Lapham, Hyum, Lapham - Thunder Bolt
-			{
-				useSkill(5749, true);
-				break;
-			}
-			case 5004: // Hyum, Lapham, Hyum, Lapham - Flash
-			{
-				useSkill(5750, true);
-				break;
-			}
-			case 5005: // Hyum, Lapham, Hyum, Lapham - Lightning Wave
-			{
-				useSkill(5751, true);
-				break;
-			}
-			case 5006: // Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Buff Control
-			{
-				useSkill(5771, true);
-				break;
-			}
-			case 5007: // Deseloph, Lilias, Deseloph, Lilias - Piercing Attack
-			{
-				useSkill(6046, true);
-				break;
-			}
-			case 5008: // Deseloph, Lilias, Deseloph, Lilias - Spin Attack
-			{
-				useSkill(6047, true);
-				break;
-			}
-			case 5009: // Deseloph, Lilias, Deseloph, Lilias - Smash
-			{
-				useSkill(6048, true);
-				break;
-			}
-			case 5010: // Deseloph, Lilias, Deseloph, Lilias - Ignite
-			{
-				useSkill(6049, true);
-				break;
-			}
-			case 5011: // Rekang, Mafum, Rekang, Mafum - Power Smash
-			{
-				useSkill(6050, true);
-				break;
-			}
-			case 5012: // Rekang, Mafum, Rekang, Mafum - Energy Burst
-			{
-				useSkill(6051, true);
-				break;
-			}
-			case 5013: // Rekang, Mafum, Rekang, Mafum - Shockwave
-			{
-				useSkill(6052, true);
-				break;
-			}
-			case 5014: // Rekang, Mafum, Rekang, Mafum - Ignite
-			{
-				useSkill(6053, true);
-				break;
-			}
-			case 5015: // Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Switch Stance
-			{
-				useSkill(6054, true);
 				break;
 			}
 			// Social Packets

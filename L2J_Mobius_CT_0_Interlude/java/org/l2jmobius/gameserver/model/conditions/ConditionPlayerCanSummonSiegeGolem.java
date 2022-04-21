@@ -17,13 +17,11 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -51,23 +49,22 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition
 		final Player player = effector.getActingPlayer();
 		boolean canSummonSiegeGolem = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && (player.getClan() != null);
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		final Fort fort = FortManager.getInstance().getFort(player);
-		if ((castle == null) && (fort == null))
+		if (castle == null)
 		{
 			canSummonSiegeGolem = false;
 		}
 		
-		if (((fort != null) && (fort.getResidenceId() == 0)) || ((castle != null) && (castle.getResidenceId() == 0)))
+		if ((castle != null) && (castle.getResidenceId() == 0))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canSummonSiegeGolem = false;
 		}
-		else if (((castle != null) && !castle.getSiege().isInProgress()) || ((fort != null) && !fort.getSiege().isInProgress()))
+		else if ((castle != null) && !castle.getSiege().isInProgress())
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canSummonSiegeGolem = false;
 		}
-		else if ((player.getClanId() != 0) && (((castle != null) && (castle.getSiege().getAttackerClan(player.getClanId()) == null)) || ((fort != null) && (fort.getSiege().getAttackerClan(player.getClanId()) == null))))
+		else if ((player.getClanId() != 0) && ((castle != null) && (castle.getSiege().getAttackerClan(player.getClanId()) == null)))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canSummonSiegeGolem = false;

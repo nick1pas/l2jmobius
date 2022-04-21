@@ -20,9 +20,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -38,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SiegeFlag extends Npc
 {
-	private Clan _clan;
+	private final Clan _clan;
 	private Siegable _siege;
 	private final boolean _isAdvanced;
 	private boolean _canTalk;
@@ -55,34 +53,9 @@ public class SiegeFlag extends Npc
 		super(template);
 		setInstanceType(InstanceType.SiegeFlag);
 		
-		if (TerritoryWarManager.getInstance().isTWInProgress())
-		{
-			_clan = player.getClan();
-			_canTalk = false;
-			if (_clan == null)
-			{
-				deleteMe();
-			}
-			if (outPost)
-			{
-				_isAdvanced = false;
-				setInvul(true);
-			}
-			else
-			{
-				_isAdvanced = advanced;
-				setInvul(false);
-			}
-			getStatus();
-			return;
-		}
 		_clan = player.getClan();
 		_canTalk = true;
 		_siege = SiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
-		if (_siege == null)
-		{
-			_siege = FortSiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
-		}
 		if (_siege == null)
 		{
 			_siege = CHSiegeManager.getInstance().getSiege(player);
@@ -130,10 +103,6 @@ public class SiegeFlag extends Npc
 			{
 				sc.removeFlag(this);
 			}
-		}
-		else if (_clan != null)
-		{
-			TerritoryWarManager.getInstance().removeClanFlag(_clan);
 		}
 		return true;
 	}
@@ -193,7 +162,7 @@ public class SiegeFlag extends Npc
 	public void reduceCurrentHp(double damage, Creature attacker, Skill skill)
 	{
 		super.reduceCurrentHp(damage, attacker, skill);
-		if (canTalk() && (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress()) || ((getConquerableHall() != null) && getConquerableHall().isInSiege())) && (_clan != null))
+		if (canTalk() && (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getConquerableHall() != null) && getConquerableHall().isInSiege())) && (_clan != null))
 		{
 			// send warning to owners of headquarters that theirs base is under attack
 			_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));

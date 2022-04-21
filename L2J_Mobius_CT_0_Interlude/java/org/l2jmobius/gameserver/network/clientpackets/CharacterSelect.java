@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.SSQInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 
 /**
@@ -162,7 +161,7 @@ public class CharacterSelect implements IClientIncomingPacket
 						return;
 					}
 					
-					client.sendPacket(new SSQInfo());
+					// client.sendPacket(new SSQInfo());
 					client.setConnectionState(ConnectionState.ENTERING);
 					client.sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 				}

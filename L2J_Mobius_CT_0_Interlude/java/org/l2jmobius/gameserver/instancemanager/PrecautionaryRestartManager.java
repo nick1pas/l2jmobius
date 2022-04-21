@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -129,14 +128,6 @@ public class PrecautionaryRestartManager
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			if ((castle != null) && castle.getSiege().isInProgress())
-			{
-				return true;
-			}
-		}
-		
-		for (Fort fort : FortManager.getInstance().getForts())
-		{
-			if ((fort != null) && fort.getSiege().isInProgress())
 			{
 				return true;
 			}

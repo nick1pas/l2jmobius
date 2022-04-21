@@ -19,7 +19,6 @@ package quests.Q00235_MimirsElixir;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
@@ -257,11 +256,7 @@ public class Q00235_MimirsElixir extends Quest
 		{
 			if (npc.getId() == LADD)
 			{
-				if (player.getRace() == Race.KAMAEL)
-				{
-					htmltext = "30721-09.html";
-				}
-				else if (player.getLevel() < MIN_LEVEL)
+				if (player.getLevel() < MIN_LEVEL)
 				{
 					htmltext = "30721-08.html";
 				}

@@ -18,15 +18,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
-import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -63,20 +59,6 @@ public class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		BuffInfo info = player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-		if (info != null)
-		{
-			for (AbstractEffect effect : info.getEffects())
-			{
-				if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID))
-				{
-					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-		}
-		
 		final WorldObject target = World.getInstance().findObject(_objectId);
 		// If there is no target, target is far away or
 		// they are in different instances (except multiverse)
@@ -105,22 +87,6 @@ public class TradeRequest implements IClientIncomingPacket
 		{
 			player.sendMessage("A user currently participating in the Olympiad cannot accept or request a trade.");
 			return;
-		}
-		
-		info = partner.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
-		if (info != null)
-		{
-			for (AbstractEffect effect : info.getEffects())
-			{
-				if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID))
-				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
-					sm.addString(partner.getName());
-					player.sendPacket(sm);
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
 		}
 		
 		// L2J Customs: Karma punishment

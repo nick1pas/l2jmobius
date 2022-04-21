@@ -97,8 +97,6 @@ import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeOwnerChange;
 import org.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
-import org.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeFinish;
-import org.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeStart;
 import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 
@@ -134,10 +132,6 @@ public enum EventType
 	ON_CREATURE_TELEPORTED(OnCreatureTeleported.class, void.class),
 	ON_CREATURE_ZONE_ENTER(OnCreatureZoneEnter.class, void.class),
 	ON_CREATURE_ZONE_EXIT(OnCreatureZoneExit.class, void.class),
-	
-	// Fortress events
-	ON_FORT_SIEGE_FINISH(OnFortSiegeFinish.class, void.class),
-	ON_FORT_SIEGE_START(OnFortSiegeStart.class, void.class),
 	
 	// Item events
 	ON_ITEM_BYPASS_EVENT(OnItemBypassEvent.class, void.class),

@@ -82,7 +82,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8909" type="EtcItem" name="Blueprint: Summon Swoop Cannon">
-		<!-- Blueprint needed to learn the Summon Swoop Cannon technique. Can be used by a Warsmith. Required level: 68 -->
+		<!-- Blueprint needed to learn the Summon Swoop Cannon technique. Can be used by a Warsmith. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -535,7 +535,7 @@
 		</for>
 	</item>
 	<item id="8936" type="Armor" name="Santa's Antlers">
-		<!-- Santa's Horn Hat, which is made to celebrate the holy day. -->
+		<!-- Festive Santa hat with antlers. Ideal for celebrating the holidays. This item can only be equipped during the year end. -->
 		<set name="icon" val="icon.accessory_santas_antler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -611,7 +611,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8940" type="EtcItem" name="Mark of the Future: Human">
-		<!-- Mark of the Future. Received from Grand Master Klaus Blackbird of Oren Castle Town. -->
+		<!-- Mark of the Future. Received from Grandmaster Klaus Blackbird of Oren Castle Town. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -666,7 +666,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8945" type="EtcItem" name="Spellbook: Celestial Shield">
-		<!-- Spellbook needed to learn Celestial Shield. Used by Bishops. Required level: 64 -->
+		<!-- Spellbook needed to learn Celestial Shield. Can be used by a Bishop. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8946" type="EtcItem" name="Spellbook: Invocation">
-		<!-- Spellbook need to learn Invocation. Used by Bishops, Elders, and Shillien Elders. Required level: 56 -->
+		<!-- Spellbook needed to learn Invocation. Can be used by an Elder, Shillien Elder, and Bishop. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -793,7 +793,7 @@
 		<set name="item_skill" val="2306-3" /> <!-- Blue Primeval Crystal -->
 	</item>
 	<item id="8957" type="EtcItem" name="Attack Orders">
-		<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for Shadow Items appropriate to your level. -->
+		<!-- Call to Arms event item. Can be exchanged through Strategist Lucien for a Shadow Item suitable to your level. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -803,7 +803,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8958" type="EtcItem" name="Defense Orders">
-		<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for Shadow Item appropriate to your level. -->
+		<!-- Call to Arms event item. Can be exchanged through Strategist Lucien for a set of Shadow Armor suitable to your level. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8959" type="EtcItem" name="Supply Orders">
-		<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for consumables appropriate to your level. -->
+		<!-- Call to Arms event item. an be exchanged through Strategist Lucien for consumables suitable to your level. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -823,7 +823,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8960" type="EtcItem" name="No Grade Shadow Armor Set Box">
-		<!-- One can receive a no-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a No Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -837,7 +837,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8961" type="EtcItem" name="D-Grade Shadow Armor Set Box">
-		<!-- One can receive a D-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a D-Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -851,7 +851,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8962" type="EtcItem" name="C-Grade Shadow Armor Set Box">
-		<!-- One can receive a C-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a C-Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -865,7 +865,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8963" type="EtcItem" name="B-Grade Shadow Armor Set Box">
-		<!-- One can receive a B-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a B-Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -879,7 +879,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8964" type="EtcItem" name="A-Grade Shadow Armor Set Box">
-		<!-- One can receive an A-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a A-Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8965" type="EtcItem" name="S-Grade Shadow Armor Set Box">
-		<!-- One can receive an S-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain an S-Grade Shadow Armor Set. (This item can be used when the weight gauge is below 60% and 20 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -907,7 +907,7 @@
 		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8966" type="EtcItem" name="No Grade Item Set Box (Warrior Use)">
-		<!-- One can receive no-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use No Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -921,7 +921,7 @@
 		<set name="item_skill" val="2308-25" /> <!-- Event Item -->
 	</item>
 	<item id="8967" type="EtcItem" name="D-Grade Item Set Box (Warrior Use)">
-		<!-- One can receive D-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use D-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -935,7 +935,7 @@
 		<set name="item_skill" val="2308-26" /> <!-- Event Item -->
 	</item>
 	<item id="8968" type="EtcItem" name="C-Grade Item Set Box (Warrior Use)">
-		<!-- One can receive C-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use C-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -949,7 +949,7 @@
 		<set name="item_skill" val="2308-27" /> <!-- Event Item -->
 	</item>
 	<item id="8969" type="EtcItem" name="B-Grade Item Set Box (Warrior Use)">
-		<!-- One can receive B-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use B-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +963,7 @@
 		<set name="item_skill" val="2308-28" /> <!-- Event Item -->
 	</item>
 	<item id="8970" type="EtcItem" name="A-Grade Item Set Box (Warrior Use)">
-		<!-- One can receive A-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use A-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -977,7 +977,7 @@
 		<set name="item_skill" val="2308-29" /> <!-- Event Item -->
 	</item>
 	<item id="8971" type="EtcItem" name="A-/ S- Grade Item Set Box (Warrior Use)">
-		<!-- One can receive A- and S-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- If you double-click on it, you can obtain a Fighter-Use A- or S-Grade Item. (This item can be used when the weight gauge is below 80% and 10 or more empty slots are available in your inventory.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -991,7 +991,7 @@
 		<set name="item_skill" val="2308-30" /> <!-- Event Item -->
 	</item>
 	<item id="8972" type="Weapon" name="Shadow Item: Great Spear">
-		<!-- This Shadow Item contains the mirrored power of a Great Spear. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<!-- This Shadow Item contains the mirrored power of a Long Spear. It cannot be traded, dropped, crystallized, or given other functions. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1095,7 +1095,7 @@
 		</for>
 	</item>
 	<item id="8976" type="Weapon" name="Shadow Item: Flanged Mace">
-		<!-- This Shadow Item contains the mirrored power of a Flanged Mace. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<!-- This Shadow Item contains the mirrored power of a Buzdygan. It cannot be traded, dropped, crystallized, or given other functions. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1174,7 +1174,7 @@
 		</for>
 	</item>
 	<item id="8979" type="Weapon" name="Shadow Item: Viper Fang">
-		<!-- This Shadow Item contains the mirrored power of a Viper Fang. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<!-- This Shadow Item contains the mirrored power of a Viper's Fang. It cannot be traded, dropped, crystallized, or given other functions. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1200,7 +1200,7 @@
 		</for>
 	</item>
 	<item id="8980" type="Weapon" name="Shadow Item: Composite Bow">
-		<!-- This Shadow Item contains the mirrored power of a Composite Bow. It cannot be traded, dropped, crystallized, or given other functions. -->
+		<!-- This Shadow Item contains the mirrored power of a Composition Bow. It cannot be traded, dropped, crystallized, or given other functions. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

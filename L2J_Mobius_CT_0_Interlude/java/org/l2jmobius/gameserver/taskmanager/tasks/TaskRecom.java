@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.taskmanager.tasks;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -45,7 +44,6 @@ public class TaskRecom extends Task
 		{
 			player.restartRecom();
 			player.sendPacket(new UserInfo(player));
-			player.sendPacket(new ExBrExtraUserInfo(player));
 		}
 		
 		LOGGER.info("Recommendation Global Task: launched.");

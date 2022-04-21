@@ -34,7 +34,7 @@ public class KeyPacket implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.VERSION_CHECK.writeId(packet);
+		OutgoingPackets.KEY_PACKET.writeId(packet);
 		packet.writeC(_result); // 0 - wrong protocol, 1 - protocol ok
 		for (int i = 0; i < 8; i++)
 		{

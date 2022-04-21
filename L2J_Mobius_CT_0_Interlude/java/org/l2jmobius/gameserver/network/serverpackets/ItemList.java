@@ -25,13 +25,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ItemList extends AbstractItemPacket
 {
-	private final Player _player;
 	private final Collection<Item> _items;
 	private final boolean _showWindow;
 	
 	public ItemList(Player player, boolean showWindow)
 	{
-		_player = player;
 		_showWindow = showWindow;
 		_items = player.getInventory().getItems();
 	}
@@ -46,7 +44,6 @@ public class ItemList extends AbstractItemPacket
 		{
 			writeItem(packet, item);
 		}
-		writeInventoryBlock(packet, _player.getInventory());
 		return true;
 	}
 }

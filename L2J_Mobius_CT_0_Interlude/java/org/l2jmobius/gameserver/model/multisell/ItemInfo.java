@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.multisell;
 
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
@@ -26,36 +25,17 @@ public class ItemInfo
 {
 	private final int _enchantLevel;
 	private final int _augmentId;
-	private final byte _elementId;
-	private final int _elementPower;
-	private final int[] _elementals = new int[6];
 	
 	public ItemInfo(Item item)
 	{
 		_enchantLevel = item.getEnchantLevel();
 		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getAugmentationId() : 0;
-		_elementId = item.getAttackElementType();
-		_elementPower = item.getAttackElementPower();
-		_elementals[0] = item.getElementDefAttr(Elementals.FIRE);
-		_elementals[1] = item.getElementDefAttr(Elementals.WATER);
-		_elementals[2] = item.getElementDefAttr(Elementals.WIND);
-		_elementals[3] = item.getElementDefAttr(Elementals.EARTH);
-		_elementals[4] = item.getElementDefAttr(Elementals.HOLY);
-		_elementals[5] = item.getElementDefAttr(Elementals.DARK);
 	}
 	
 	public ItemInfo(int enchantLevel)
 	{
 		_enchantLevel = enchantLevel;
 		_augmentId = 0;
-		_elementId = Elementals.NONE;
-		_elementPower = 0;
-		_elementals[0] = 0;
-		_elementals[1] = 0;
-		_elementals[2] = 0;
-		_elementals[3] = 0;
-		_elementals[4] = 0;
-		_elementals[5] = 0;
 	}
 	
 	public int getEnchantLevel()
@@ -66,20 +46,5 @@ public class ItemInfo
 	public int getAugmentId()
 	{
 		return _augmentId;
-	}
-	
-	public byte getElementId()
-	{
-		return _elementId;
-	}
-	
-	public int getElementPower()
-	{
-		return _elementPower;
-	}
-	
-	public int[] getElementals()
-	{
-		return _elementals;
 	}
 }

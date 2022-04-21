@@ -19,7 +19,6 @@ parentClassId = CLASS ID PARENT
 
 type = SKILL TREE types like:
 - classSkillTree
-- collectSkillTree
 - fishingSkillTree
 - gameMasterAuraSkillTree
 - gameMasterSkillTree
@@ -29,7 +28,6 @@ type = SKILL TREE types like:
 - subClassSkillTree
 - subPledgeSkillTree
 - transferSkillTree
-- transformSkillTree
 
 It's possible to create custom skill trees in different files and add those skills to the retail skill trees by using the proper type.
 It's possible to add a skill(s) common to all classes by omitting the classId attribute.

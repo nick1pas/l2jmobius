@@ -43,7 +43,7 @@ public class ExPutIntensiveResultForVariationMake implements IClientOutgoingPack
 		packet.writeD(_refinerItemObjId);
 		packet.writeD(_lifestoneItemId);
 		packet.writeD(_gemstoneItemId);
-		packet.writeQ(_gemstoneCount);
+		packet.writeD(_gemstoneCount);
 		packet.writeD(_unk2);
 		return true;
 	}

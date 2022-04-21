@@ -220,7 +220,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4422" type="EtcItem" name="Dragon Bugle of Wind">
-		<!-- A bugle used to summon a Wind Strider. This pet uses some of the experience points earned by its master. -->
+		<!-- A bugle used to play the strider of the Wind. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -229,14 +229,11 @@
 		<set name="price" val="2000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="4423" type="EtcItem" name="Dragon Bugle of Star">
-		<!-- A bugle used to summon a Star Strider. This pet uses some of the experience points earned by its master. -->
+		<!-- A bugle used to play the strider of a Star. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -245,14 +242,11 @@
 		<set name="price" val="2000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="4424" type="EtcItem" name="Dragon Bugle of Twilight">
-		<!-- A bugle used to summon a Twilight Strider. This pet uses some of the experience points earned by its master. -->
+		<!-- A bugle used to play the strider of the Dusk. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -261,11 +255,8 @@
 		<set name="price" val="2000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="4425" type="EtcItem" name="Penitent's Manacles">
 		<!-- The heavy manacles used to summon a Sin Eater. Summoning the Sin Eater consumes all the summoner's Exp. The Sin Eater must be fed Food for Wolves. -->
@@ -281,11 +272,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
+		<set name="item_skill" val="2046-1" /> <!-- Wolves' Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="4426" type="EtcItem" name="Manacles of Penitent">
 		<!-- Having consumed your sins, the Sin Eater has disappeared, leaving you with this ordinary pair of manacles. To repeat this quest, take them back to the Black Judge. -->

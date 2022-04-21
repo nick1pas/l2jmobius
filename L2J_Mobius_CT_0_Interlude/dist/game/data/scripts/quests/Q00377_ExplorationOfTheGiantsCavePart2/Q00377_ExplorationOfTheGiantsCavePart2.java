@@ -16,88 +16,101 @@
  */
 package quests.Q00377_ExplorationOfTheGiantsCavePart2;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
 
-/**
- * Exploration of the Giants' Cave Part 2 (377)<br>
- * Original Jython script by Gnacik.
- * @author nonom
- */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {
-	// NPC
-	private static final int SOBLING = 31147;
 	// Items
-	private static final int TITAN_ANCIENT_BOOK = 14847;
-	private static final int BOOK1 = 14842;
-	private static final int BOOK2 = 14843;
-	private static final int BOOK3 = 14844;
-	private static final int BOOK4 = 14845;
-	private static final int BOOK5 = 14846;
-	// Mobs
-	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
-	private static final Map<Integer, Double> MOBS2 = new HashMap<>();
-	static
+	private static final int ANCIENT_BOOK = 5955;
+	private static final int DICTIONARY_INTERMEDIATE = 5892;
+	private static final int[][] BOOKS =
 	{
-		MOBS1.put(22660, 366); // lesser_giant_re
-		MOBS1.put(22661, 424); // lesser_giant_soldier_re
-		MOBS1.put(22662, 304); // lesser_giant_shooter_re
-		MOBS1.put(22663, 304); // lesser_giant_scout_re
-		MOBS1.put(22664, 354); // lesser_giant_mage_re
-		MOBS1.put(22665, 324); // lesser_giant_elder_re
-		MOBS2.put(22666, 0.276); // barif_re
-		MOBS2.put(22667, 0.284); // barif_pet_re
-		MOBS2.put(22668, 0.240); // gamlin_re
-		MOBS2.put(22669, 0.240); // leogul_re
-	}
+		// @formatter:off
+		// science & technology -> majestic leather, leather armor of nightmare
+		{5945, 5946, 5947, 5948, 5949},
+		// culture -> armor of nightmare, majestic plate
+		{5950, 5951, 5952, 5953, 5954}
+		// @formatter:on
+	};
+	// Rewards
+	private static final int[][] RECIPES =
+	{
+		// @formatter:off
+		// science & technology -> majestic leather, leather armor of nightmare
+		{5338, 5336},
+		// culture -> armor of nightmare, majestic plate
+		{5420, 5422}
+		// @formatter:on
+	};
 	
 	public Q00377_ExplorationOfTheGiantsCavePart2()
 	{
 		super(377);
-		addStartNpc(SOBLING);
-		addTalkId(SOBLING);
-		addKillId(MOBS1.keySet());
-		addKillId(MOBS2.keySet());
-		registerQuestItems(TITAN_ANCIENT_BOOK);
+		addStartNpc(31147); // Sobling
+		addTalkId(31147);
+		addKillId(20654, 20656, 20657, 20658);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		String htmltext = null;
-		if (qs == null)
+		String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
 		switch (event)
 		{
-			case "31147-02.htm":
+			case "31147-03.htm":
 			{
-				qs.startQuest();
-				htmltext = event;
+				st.startQuest();
 				break;
 			}
-			case "31147-04.html":
-			case "31147-cont.html":
+			case "31147-04.htm":
 			{
-				htmltext = event;
+				htmltext = checkItems(st);
 				break;
 			}
-			case "31147-quit.html":
+			case "31147-07.htm":
 			{
-				qs.exitQuest(true, true);
-				htmltext = event;
+				st.exitQuest(true, true);
 				break;
 			}
 		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(Npc npc, Player player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+			{
+				htmltext = ((player.getLevel() < 57) || !hasQuestItems(player, DICTIONARY_INTERMEDIATE)) ? "31147-01.htm" : "31147-02.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				htmltext = checkItems(st);
+				break;
+			}
+		}
+		
 		return htmltext;
 	}
 	
@@ -107,32 +120,35 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 		if (qs != null)
 		{
-			final int npcId = npc.getId();
-			if (MOBS1.containsKey(npcId))
-			{
-				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, (getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2, 0, 1, true);
-			}
-			else
-			{
-				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS2.get(npcId), true);
-			}
+			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_BOOK, 1, 0, 0.8, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	@Override
-	public String onTalk(Npc npc, Player player)
+	private static String checkItems(QuestState st)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated())
+		for (int type = 0; type < BOOKS.length; type++)
 		{
-			htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
+			boolean complete = true;
+			for (int book : BOOKS[type])
+			{
+				if (!hasQuestItems(st.getPlayer(), book))
+				{
+					complete = false;
+				}
+			}
+			
+			if (complete)
+			{
+				for (int book : BOOKS[type])
+				{
+					takeItems(st.getPlayer(), book, 1);
+				}
+				
+				giveItems(st.getPlayer(), RECIPES[type][getRandom(RECIPES[type].length)], 1);
+				return "31147-04.htm";
+			}
 		}
-		else if (qs.isStarted())
-		{
-			htmltext = hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html";
-		}
-		return htmltext;
+		return "31147-05.htm";
 	}
 }

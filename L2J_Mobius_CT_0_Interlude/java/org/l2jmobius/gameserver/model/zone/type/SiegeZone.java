@@ -21,14 +21,10 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siegable;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
@@ -192,11 +188,6 @@ public class SiegeZone extends ZoneType
 		{
 			plyer.dismount();
 		}
-		
-		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isTransformed() && plyer.getTransformation().isRiding())
-		{
-			plyer.untransform();
-		}
 	}
 	
 	@Override
@@ -219,6 +210,7 @@ public class SiegeZone extends ZoneType
 				player.startPvPFlag();
 			}
 		}
+		
 		if (!creature.isPlayer())
 		{
 			return;
@@ -227,23 +219,6 @@ public class SiegeZone extends ZoneType
 		final Player player = creature.getActingPlayer();
 		player.stopFameTask();
 		player.setInSiege(false);
-		
-		if (!(getSettings().getSiege() instanceof FortSiege) || (player.getInventory().getItemByItemId(9819) == null))
-		{
-			return;
-		}
-		
-		final Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
-		if (fort != null)
-		{
-			FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
-		}
-		else
-		{
-			final int slot = player.getInventory().getSlotFromItem(player.getInventory().getItemByItemId(9819));
-			player.getInventory().unEquipItemInBodySlot(slot);
-			player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
-		}
 		
 		final Summon summon = player.getSummon();
 		if (summon != null)

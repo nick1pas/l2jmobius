@@ -17,13 +17,10 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -52,35 +49,13 @@ public class ConditionPlayerCanCreateOutpost extends Condition
 		final Player player = effector.getActingPlayer();
 		boolean canCreateOutpost = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && (player.getClan() != null);
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		final Fort fort = FortManager.getInstance().getFort(player);
-		if ((castle == null) && (fort == null))
+		if (castle == null)
 		{
-			canCreateOutpost = false;
-		}
-		
-		if (((fort != null) && (fort.getResidenceId() == 0)) || ((castle != null) && (castle.getResidenceId() == 0)))
-		{
-			player.sendMessage("You must be on fort or castle ground to construct an outpost or flag.");
-			canCreateOutpost = false;
-		}
-		else if (((fort != null) && !fort.getZone().isActive()) || ((castle != null) && !castle.getZone().isActive()))
-		{
-			player.sendMessage("You can only construct an outpost or flag on siege field.");
 			canCreateOutpost = false;
 		}
 		else if (!player.isClanLeader())
 		{
 			player.sendMessage("You must be a clan leader to construct an outpost or flag.");
-			canCreateOutpost = false;
-		}
-		else if (TerritoryWarManager.getInstance().getHQForClan(player.getClan()) != null)
-		{
-			player.sendPacket(SystemMessageId.AN_OUTPOST_OR_HEADQUARTERS_CANNOT_BE_BUILT_BECAUSE_ONE_ALREADY_EXISTS);
-			canCreateOutpost = false;
-		}
-		else if (TerritoryWarManager.getInstance().getFlagForClan(player.getClan()) != null)
-		{
-			player.sendPacket(SystemMessageId.A_FLAG_IS_ALREADY_BEING_DISPLAYED_ANOTHER_FLAG_CANNOT_BE_DISPLAYED);
 			canCreateOutpost = false;
 		}
 		else if (!player.isInsideZone(ZoneId.HQ))

@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Physical Attack effect implementation.
@@ -66,14 +65,6 @@ public class PhysicalAttack extends AbstractEffect
 		final Skill skill = info.getSkill();
 		if (creature.isAlikeDead())
 		{
-			return;
-		}
-		
-		if (((info.getSkill().getFlyRadius() > 0) || (skill.getFlyType() != null)) && creature.isMovementDisabled())
-		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(skill);
-			creature.sendPacket(sm);
 			return;
 		}
 		

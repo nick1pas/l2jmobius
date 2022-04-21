@@ -52,8 +52,6 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -1048,14 +1046,6 @@ public class CreatureAI extends AbstractAI
 				return true;
 			}
 			
-			// while flying there is no move to cast
-			if ((_actor.getAI().getIntention() == AI_INTENTION_CAST) && _actor.isPlayer() && _actor.isTransformed() && !_actor.getTransformation().isCombat())
-			{
-				_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
-				_actor.sendPacket(ActionFailed.STATIC_PACKET);
-				return true;
-			}
-			
 			// If not running, set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others Player
 			if (!_actor.isRunning() && !(this instanceof PlayerAI) && !(this instanceof SummonAI))
 			{
@@ -1403,7 +1393,7 @@ public class CreatureAI extends AbstractAI
 			else
 			{
 				final Weapon weapon = target.getActiveWeaponItem();
-				if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
+				if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 				{
 					isArcher = true;
 				}

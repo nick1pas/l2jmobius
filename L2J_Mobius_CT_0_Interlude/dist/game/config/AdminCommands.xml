@@ -178,8 +178,6 @@
 	<admin command="admin_play_sound" accessLevel="100" />
 	<admin command="admin_atmosphere" accessLevel="100" />
 	<admin command="admin_atmosphere_menu" accessLevel="100" />
-	<admin command="admin_set_displayeffect" accessLevel="100" />
-	<admin command="admin_set_displayeffect_menu" accessLevel="100" />
 	<admin command="admin_event_trigger" accessLevel="100" />
 
 	<!-- ADMIN SPEED -->
@@ -188,15 +186,6 @@
 	<admin command="admin_superhaste_menu" accessLevel="30" />
 	<admin command="admin_speed" accessLevel="30" />
 	<admin command="admin_speed_menu" accessLevel="30" />
-
-	<!-- ADMIN ELEMENT -->
-	<admin command="admin_setlh" accessLevel="100" />
-	<admin command="admin_setlc" accessLevel="100" />
-	<admin command="admin_setll" accessLevel="100" />
-	<admin command="admin_setlg" accessLevel="100" />
-	<admin command="admin_setlb" accessLevel="100" />
-	<admin command="admin_setlw" accessLevel="100" />
-	<admin command="admin_setls" accessLevel="100" />
 
 	<!-- ADMIN ENCHANT -->
 	<admin command="admin_seteh" accessLevel="100" />
@@ -213,7 +202,6 @@
 	<admin command="admin_seten" accessLevel="100" />
 	<admin command="admin_setun" accessLevel="100" />
 	<admin command="admin_setba" accessLevel="100" />
-	<admin command="admin_setbe" accessLevel="100" />
 	<admin command="admin_enchant" accessLevel="100" />
 
 	<!-- ADMIN EVENTS -->
@@ -233,25 +221,6 @@
 	<admin command="admin_fight_calculator" accessLevel="100" />
 	<admin command="admin_fight_calculator_show" accessLevel="100" />
 	<admin command="admin_fcs" accessLevel="100" />
-
-	<!-- ADMIN FORT SIEGE -->
-	<admin command="admin_fortsiege" accessLevel="100" />
-	<admin command="admin_add_fortattacker" accessLevel="100" />
-	<admin command="admin_list_fortsiege_clans" accessLevel="100" />
-	<admin command="admin_clear_fortsiege_list" accessLevel="100" />
-	<admin command="admin_spawn_fortdoors" accessLevel="100" />
-	<admin command="admin_endfortsiege" accessLevel="100" />
-	<admin command="admin_startfortsiege" accessLevel="100" />
-	<admin command="admin_setfort" accessLevel="100" />
-	<admin command="admin_removefort" accessLevel="100" />
-
-	<!-- ADMIN ITEM MALL AND GAME POINTS -->
-	<admin command="admin_add_game_points" accessLevel="100" />
-	<admin command="admin_count_game_points" accessLevel="100" />
-	<admin command="admin_gamepoints" accessLevel="100" />
-	<admin command="admin_set_game_points" accessLevel="100" />
-	<admin command="admin_subtract_game_points" accessLevel="100" />
-	<admin command="admin_reload_itemmall" accessLevel="100" />
 
 	<!-- ADMIN GEODATA -->
 	<admin command="admin_geo_pos" accessLevel="30" />
@@ -275,12 +244,6 @@
 	<admin command="admin_snoop" accessLevel="30" />
 	<admin command="admin_gmchat_menu" accessLevel="30" />
 
-	<!-- ADMIN GRACIA SEEDS -->
-	<admin command="admin_gracia_seeds" accessLevel="100" />
-	<admin command="admin_kill_tiat" accessLevel="100" />
-	<admin command="admin_set_sodstate" accessLevel="100" />
-	<admin command="admin_set_soistage" accessLevel="100" />
-
 	<!-- ADMIN GRAND BOSS -->
 	<admin command="admin_grandboss" accessLevel="100" />
 	<admin command="admin_grandboss_skip" accessLevel="100" />
@@ -290,10 +253,6 @@
 	
 	<!-- ADMIN HEAL -->
 	<admin command="admin_heal" accessLevel="100" />
-
-	<!-- ADMIN HELLBOUND -->
-	<admin command="admin_hellbound_setlevel" accessLevel="100" />
-	<admin command="admin_hellbound" accessLevel="100" />
 
 	<!-- ADMIN HTML -->
 	<admin command="admin_html" accessLevel="100" />
@@ -399,11 +358,6 @@
 	<!-- ADMIN PLEDGE -->
 	<admin command="admin_pledge" accessLevel="100" />
 
-	<!-- ADMIN TRANSFORM -->
-	<admin command="admin_transform" accessLevel="100" />
-	<admin command="admin_untransform" accessLevel="100" />
-	<admin command="admin_transform_menu" accessLevel="100" />
-
 	<!-- PREMIUM SYSTEM -->
 	<admin command="admin_premium_menu" accessLevel="100" />
 	<admin command="admin_premium_add1" accessLevel="100" confirmDlg="true" />
@@ -431,15 +385,11 @@
 	<admin command="admin_res_monster" accessLevel="100" />
 
 	<!-- ADMIN RIDE -->
-	<admin command="admin_ride_horse" accessLevel="100" />
-	<admin command="admin_ride_bike" accessLevel="100" />
 	<admin command="admin_ride_wyvern" accessLevel="100" />
 	<admin command="admin_ride_strider" accessLevel="100" />
 	<admin command="admin_unride_wyvern" accessLevel="100" />
 	<admin command="admin_unride_strider" accessLevel="100" />
 	<admin command="admin_unride" accessLevel="100" />
-	<admin command="admin_ride_wolf" accessLevel="100" />
-	<admin command="admin_unride_wolf" accessLevel="100" />
 
 	<!-- ADMIN SHOP -->
 	<admin command="admin_buy" accessLevel="100" />
@@ -546,13 +496,6 @@
 	<admin command="admin_teleto" accessLevel="30" />
 	<admin command="admin_instant_move" accessLevel="30" />
 	<admin command="admin_sendhome" accessLevel="100" confirmDlg="true" />
-
-	<!-- ADMIN TERRITORY WAR -->
-	<admin command="admin_territory_war" accessLevel="100" />
-	<admin command="admin_territory_war_time" accessLevel="100" />
-	<admin command="admin_territory_war_start" accessLevel="100" />
-	<admin command="admin_territory_war_end" accessLevel="100" />
-	<admin command="admin_territory_wards_list" accessLevel="100" />
 
 	<!-- ADMIN TEST -->
 	<admin command="admin_stats" accessLevel="100" />

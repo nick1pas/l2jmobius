@@ -33,7 +33,7 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_SHOW_CASTLE_INFO.writeId(packet);
+		OutgoingPackets.SIEGE_INFO.writeId(packet);
 		final List<Castle> castles = CastleManager.getInstance().getCastles();
 		packet.writeD(castles.size());
 		for (Castle castle : castles)

@@ -24,12 +24,9 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
-import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -37,7 +34,6 @@ import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -187,17 +183,6 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			// Equip or unEquip
-			if (FortSiegeManager.getInstance().isCombat(_itemId))
-			{
-				return; // no message
-			}
-			
-			if (player.isCombatFlagEquipped())
-			{
-				return;
-			}
-			
 			switch (item.getTemplate().getBodyPart())
 			{
 				case ItemTemplate.SLOT_LR_HAND:
@@ -228,69 +213,7 @@ public class UseItem implements IClientIncomingPacket
 						return;
 					}
 					
-					// Don't allow other Race to Wear Kamael exclusive Weapons.
-					if (!item.isEquipped() && item.isWeapon() && !player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS))
-					{
-						final Weapon wpn = (Weapon) item.getTemplate();
-						
-						switch (player.getRace())
-						{
-							case KAMAEL:
-							{
-								switch (wpn.getItemType())
-								{
-									case NONE:
-									{
-										player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-									}
-								}
-								break;
-							}
-							case HUMAN:
-							case DWARF:
-							case ELF:
-							case DARK_ELF:
-							case ORC:
-							{
-								switch (wpn.getItemType())
-								{
-									case RAPIER:
-									case CROSSBOW:
-									case ANCIENTSWORD:
-									{
-										player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-									}
-								}
-								break;
-							}
-						}
-					}
 					break;
-				}
-				case ItemTemplate.SLOT_CHEST:
-				case ItemTemplate.SLOT_BACK:
-				case ItemTemplate.SLOT_GLOVES:
-				case ItemTemplate.SLOT_FEET:
-				case ItemTemplate.SLOT_HEAD:
-				case ItemTemplate.SLOT_FULL_ARMOR:
-				case ItemTemplate.SLOT_LEGS:
-				{
-					if ((player.getRace() == Race.KAMAEL) && ((item.getTemplate().getItemType() == ArmorType.HEAVY) || (item.getTemplate().getItemType() == ArmorType.MAGIC)))
-					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					break;
-				}
-				case ItemTemplate.SLOT_DECO:
-				{
-					if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
-					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
 				}
 			}
 			

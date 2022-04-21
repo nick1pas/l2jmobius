@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SendWareHouseWithDrawList implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12; // length of the one item
+	private static final int BATCH_LENGTH = 8; // length of the one item
 	
 	private ItemHolder[] _items = null;
 	
@@ -56,8 +56,8 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int objId = packet.readD();
-			final long cnt = packet.readQ();
-			if ((objId < 1) || (cnt < 0))
+			final long cnt = packet.readD();
+			if ((cnt > Integer.MAX_VALUE) || (objId < 1) || (cnt < 0))
 			{
 				_items = null;
 				return false;

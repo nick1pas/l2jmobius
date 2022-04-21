@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7618" type="EtcItem" name="Scroll of Escape: Ketra Orc Village">
-		<!-- A magical scroll that relocates you to Ketra Orc Village. Cannot be sold in shops. -->
+		<!-- A magic scroll that transports its bearer to Ketra Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -202,12 +202,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-20" /> <!-- Escape - Talking Island Village -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7619" type="EtcItem" name="Scroll of Escape: Varka Silenos Village">
-		<!-- A magical scroll that relocates you to Varka Silenos Village. Cannot be sold in shops. -->
+		<!-- A magic scroll that transports its bearer to Varka Silenos Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -217,9 +214,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2213-21" /> <!-- Escape - Talking Island Village -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7620" type="EtcItem" name="Trash">
 		<!-- Saint's blood that has power of holiness. -->
@@ -366,7 +360,7 @@
 		<set name="item_skill" val="2217-3" /> <!-- Item - Quest Treasure Box -->
 	</item>
 	<item id="7632" type="EtcItem" name="Looted Goods - Red Cargo Box">
-		<!-- Red Crate looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
+		<!-- Red Document Box looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -378,7 +372,7 @@
 		<set name="item_skill" val="2217-4" /> <!-- Item - Quest Treasure Box -->
 	</item>
 	<item id="7633" type="EtcItem" name="Looted Goods - Purple Cargo Box">
-		<!-- Purple crate looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
+		<!-- Violet Document Box looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -438,7 +432,7 @@
 		<set name="item_skill" val="2218-2" /> <!-- Item - Quest Sac -->
 	</item>
 	<item id="7638" type="EtcItem" name="Spellbook - Mass Summon Storm Cubic">
-		<!-- Spellbook needed to learn Mass Summon Storm Cubic. Used by Warlocks. Required level: 40 -->
+		<!-- Spellbook needed to learn Mass Summon Storm Cubic. Used by Warlocks. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -447,7 +441,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7639" type="EtcItem" name="Spellbook - Mass Summon Aqua Cubic">
-		<!-- Spellbook needed to learn Mass Summon Aqua Cubic. Used Elemental Summoners. Required level: 40 -->
+		<!-- Spellbook needed to learn Mass Summon Storm Cubic. Used Elemental Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -456,7 +450,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7640" type="EtcItem" name="Spellbook - Mass Summon Phantom Cubic">
-		<!-- Spellbook needed to learn Mass Summon Phantom Cubic. Used by Phantom Summoners. Required level: 40 -->
+		<!-- Spellbook needed to learn Mass Summon Phantom Cubic. Used by Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -465,7 +459,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7641" type="EtcItem" name="Spellbook - Summon Feline Queen">
-		<!-- Spellbook needed to learn Summon Feline Queen. Used by Warlocks. Required level: 56 -->
+		<!-- Spellbook needed to learn Summon Feline Queen. Used by Warlocks. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -474,7 +468,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7642" type="EtcItem" name="Spellbook - Summon Unicorn Seraphim">
-		<!-- Spellbook needed to learn Summon Unicorn Seraphim. Used by Elemental Summoners. Required level: 56 -->
+		<!-- Spellbook needed to learn Summon Unicorn Seraphim. Used by Elemental Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -483,7 +477,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7643" type="EtcItem" name="Spellbook - Summon Nightshade">
-		<!-- Spellbook needed to learn Summon Night Shade. Used by Phantom Summoners. Required level: 56 -->
+		<!-- Spellbook needed to learn Summon Night Shade. Used by Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -492,7 +486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7644" type="EtcItem" name="Spellbook - Summon Cursed Man">
-		<!-- Spellbook needed to learn Summon Cursed Man. Used by Necromancers. Required level: 56 -->
+		<!-- Spellbook needed to learn Summon Cursed Man. Used by Necromancers. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

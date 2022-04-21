@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5300" type="Armor" name="Sealed Boots of Underworld">
-		<!-- Sealed Boots of the Underworld. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Sealed Boots of The Underworld. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t10_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -745,6 +745,7 @@
 		</for>
 	</item>
 	<item id="5342" type="EtcItem" name="Echo Crystal - Sad Song">
+		<!-- The recipe used to make a Phoenix Earring. Requires Create Item - Skill Level 7. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -756,6 +757,7 @@
 		<set name="item_skill" val="2584-1" /> <!-- Item - Special Sound Crystal -->
 	</item>
 	<item id="5343" type="EtcItem" name="Echo Crystal - Holy Song">
+		<!-- The recipe used to make a Phoenix Earring. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

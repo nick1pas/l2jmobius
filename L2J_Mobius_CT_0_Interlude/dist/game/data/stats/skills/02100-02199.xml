@@ -47,11 +47,6 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
-		<cond msgId="113" addName="1">
-			<not>
-				<player transformationId="103" />
-			</not>
-		</cond>
 	</skill>
 	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -592,7 +587,7 @@
 		</for>
 	</skill>
 	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
-		<!-- Christmas event's luxury tree effect. HP recovery power and MP recovery bonus are increased. -->
+		<!-- Produces a special Holiday Tree during the Holiday event. Increases HP and MP regeneration. -->
 		<set name="abnormalLevel" val="99" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
@@ -864,7 +859,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5916" />
+		<set name="itemConsumeId" val="5916" /> <!-- Spellbook Page -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
@@ -885,7 +880,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5944" />
+		<set name="itemConsumeId" val="5944" /> <!-- Ancient Parchment -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
@@ -908,7 +903,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLevel" val="1" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5955" />
+		<set name="itemConsumeId" val="5955" /> <!-- Ancient Titan Book -->
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -951,7 +946,7 @@
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6010" />
+		<set name="itemConsumeId" val="6010" /> <!-- Reagent Box -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />

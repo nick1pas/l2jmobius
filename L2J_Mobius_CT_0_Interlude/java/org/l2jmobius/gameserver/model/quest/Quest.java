@@ -62,7 +62,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -2378,7 +2377,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String showHtmlFile(Player player, String filename, Npc npc)
 	{
-		final boolean questwindow = !filename.endsWith(".html");
+		// final boolean questwindow = !filename.endsWith(".html");
 		
 		// Create handler to file linked to the quest
 		String content = getHtm(player, filename);
@@ -2391,19 +2390,19 @@ public class Quest extends AbstractScript implements IIdentifiable
 				content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			}
 			
-			if (questwindow && (_questId > 0) && (_questId < 20000) && (_questId != 999))
-			{
-				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, _questId);
-				npcReply.setHtml(content);
-				npcReply.replace("%playername%", player.getName());
-				player.sendPacket(npcReply);
-			}
-			else
-			{
-				final NpcHtmlMessage npcReply = new NpcHtmlMessage(npc != null ? npc.getObjectId() : 0, content);
-				npcReply.replace("%playername%", player.getName());
-				player.sendPacket(npcReply);
-			}
+			// if (questwindow && (_questId > 0) && (_questId < 20000) && (_questId != 999))
+			// {
+			// final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, _questId);
+			// npcReply.setHtml(content);
+			// npcReply.replace("%playername%", player.getName());
+			// player.sendPacket(npcReply);
+			// }
+			// else
+			// {
+			final NpcHtmlMessage npcReply = new NpcHtmlMessage(npc != null ? npc.getObjectId() : 0, content);
+			npcReply.replace("%playername%", player.getName());
+			player.sendPacket(npcReply);
+			// }
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 		

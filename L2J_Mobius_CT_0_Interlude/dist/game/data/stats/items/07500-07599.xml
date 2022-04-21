@@ -659,9 +659,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-1" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7555" type="EtcItem" name="Scroll of Escape: Elven Village">
 		<!-- A magical scroll that relocates you to Elven Village. -->
@@ -674,9 +671,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-2" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7556" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
 		<!-- A magical scroll that relocates you to Dark Elf Village. -->
@@ -689,9 +683,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-3" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7557" type="EtcItem" name="Scroll of Escape: Orc Village">
 		<!-- A magical scroll that relocates you to Orc Village. -->
@@ -704,9 +695,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-4" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7558" type="EtcItem" name="Scroll of Escape: Dwarven Village">
 		<!-- A magical scroll that relocates you to Dwarven Village. -->
@@ -719,9 +707,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-5" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7559" type="EtcItem" name="Scroll of Escape: Town of Giran">
 		<!-- A magical scroll that relocates you to Giran Castle Town. -->
@@ -734,9 +719,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2214-10" /> <!-- Scroll of Escape to Talking Island -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="7560" type="Weapon" name="Monster Only (Fishing Rod)">
 		<set name="icon" val="icon.weapon_monster_i00" />
@@ -774,14 +756,14 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7562" type="EtcItem" name="Dimensional Diamond">
-		<!-- A crystal that is filled with magical power. It is needed when casting Teleportation magic. If you collect this item and take them to a gatekeeper, you can trade them for various types of Scroll of Escape. -->
+		<!-- A crystal that is filled with magical power. It is needed when casting Instant Move magic. If you collect this item and take them to a gatekeeper, you can trade them for various types of Scroll of Escape. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7563" type="EtcItem" name="Galladucci's Order (Document)">
-		<!-- A document with Galladucci's trader order. Take it to Trader Gentler at his magic shop. -->
+		<!-- A document describing Galladucci's orders. Take it to Trader Gentler at his magic shop. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -793,7 +775,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7564" type="EtcItem" name="Galladucci's Order (Document)">
-		<!-- A document with Galladucci's trader order. Take it to Jeweler Sandra at her shop. -->
+		<!-- A document describing Galladucci's orders. Take it to Jeweler Sandra at her shop. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -805,7 +787,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7565" type="EtcItem" name="Galladucci's Order (Document)">
-		<!-- A document with Galladucci's order. Take it to Priest Dustin at his shop. -->
+		<!-- A document describing Galladucci's orders. Take it to Priest Dustin at his shop. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -829,7 +811,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7567" type="EtcItem" name="Gemstone Powder">
-		<!-- The item given by Jeweler Sandra. This seems to be the item Trader Galladucci has been looking for. -->
+		<!-- The item given by Trader Sandra. This seems to be the item Trader Galladucci has been looking for. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -865,7 +847,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7570" type="EtcItem" name="Mark of Traveler">
-		<!-- A certificate to prove to Trader Galladucci the traveler's identity. -->
+		<!-- A certificate to prove to Trader Galladucci the identity of the traveler. -->
 		<set name="icon" val="icon.etc_crest_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -925,7 +907,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7575" type="Weapon" name="Draconic Bow">
-		<!-- Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
+		<!-- It can bestow one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -939,7 +921,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9372" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="11" />
@@ -957,7 +938,7 @@
 		</for>
 	</item>
 	<item id="7576" type="Weapon" name="Draconic Bow - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Has a 26% chance of decreasing MP consumption to 1 on a general attack. Enhances damage to a target during PvP. -->
+		<!-- <Soul Crystal Enhancement>. During a general attack, 1 MP will be consumed 26% of the time. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -971,7 +952,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9373" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="11" />
@@ -1005,7 +985,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9374" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="11" />
@@ -1024,7 +1003,7 @@
 		</for>
 	</item>
 	<item id="7578" type="Weapon" name="Draconic Bow - Critical Slow">
-		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Enhances damage to a target during PvP. -->
+		<!-- <Soul Crystal Enhancement>. During a critical attack, you Slow your target temporarily. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1038,7 +1017,6 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1650" />
 		<set name="price" val="42759400" />
-		<set name="change_weaponId" val="9375" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="11" />

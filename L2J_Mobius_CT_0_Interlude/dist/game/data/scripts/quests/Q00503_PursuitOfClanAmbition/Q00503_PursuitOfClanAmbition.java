@@ -58,9 +58,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 	private static final int GUSTAVS_3RD_LETTER = 3868;
 	private static final int SCEPTER_OF_JUDGMENT = 3869;
 	private static final int BLACK_ANVIL_COIN = 3871;
-	private static final int RECIPE_SPITEFUL_SOUL_ENERGY = 14854;
-	private static final int SPITEFUL_SOUL_ENERGY = 14855;
-	private static final int SPITEFUL_SOUL_VENGEANCE = 14856;
 	// Reward
 	private static final int SEAL_OF_ASPIRATION = 3870;
 	// Monsters
@@ -69,7 +66,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 	private static final int THUNDER_WYRM = 20243;
 	private static final int THUNDER_WYRM2 = 20282;
 	private static final int GRAVE_GUARD = 20668;
-	private static final int SPITEFUL_SOUL_LEADER = 20974;
 	// Quest Monster
 	private static final int GRAVE_KEYMASTER = 27179;
 	private static final int IMPERIAL_GRAVEKEEPER = 27181;
@@ -80,8 +76,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 		super(503);
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
 		addTalkId(SIR_GUSTAV_ATHEBALDT, HEAD_BLACKSMITH_KUSTO, MARTIEN, WITCH_ATHREA, WITCH_KALIS, CORPSE_OF_FRITZ, CORPSE_OF_LUTZ, CORPSE_OF_KURTZ, BALTHAZAR, IMPERIAL_COFFER, WITCH_CLEO, SIR_ERIC_RODEMAI);
-		addKillId(DRAKE, DRAKE2, THUNDER_WYRM, THUNDER_WYRM2, GRAVE_GUARD, SPITEFUL_SOUL_LEADER, GRAVE_KEYMASTER, BLITZ_WYRM, IMPERIAL_GRAVEKEEPER);
-		registerQuestItems(MIST_DRAKES_EGG, BLITZ_WYRM_EGG, DRAKES_EGG, THUNDER_WYRM_EGG, BROOCH_OF_THE_MAGPIE, IMPERIAL_KEY, GUSTAVS_1ST_LETTER, GUSTAVS_2ND_LETTER, GUSTAVS_3RD_LETTER, SCEPTER_OF_JUDGMENT, BLACK_ANVIL_COIN, RECIPE_SPITEFUL_SOUL_ENERGY, SPITEFUL_SOUL_ENERGY, SPITEFUL_SOUL_VENGEANCE);
+		addKillId(DRAKE, DRAKE2, THUNDER_WYRM, THUNDER_WYRM2, GRAVE_GUARD, GRAVE_KEYMASTER, BLITZ_WYRM, IMPERIAL_GRAVEKEEPER);
+		registerQuestItems(MIST_DRAKES_EGG, BLITZ_WYRM_EGG, DRAKES_EGG, THUNDER_WYRM_EGG, BROOCH_OF_THE_MAGPIE, IMPERIAL_KEY, GUSTAVS_1ST_LETTER, GUSTAVS_2ND_LETTER, GUSTAVS_3RD_LETTER, SCEPTER_OF_JUDGMENT, BLACK_ANVIL_COIN);
 	}
 	
 	@Override
@@ -243,7 +239,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				takeItems(player, GUSTAVS_2ND_LETTER, -1);
 				takeItems(player, BLACK_ANVIL_COIN, -1);
-				giveItems(player, RECIPE_SPITEFUL_SOUL_ENERGY, 1);
 				qs.setMemoState(5000);
 				qs.setCond(5, true);
 				htmltext = event;
@@ -386,22 +381,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 					{
 						leaderQS.setMemoState(8500);
 						addSpawn(GRAVE_KEYMASTER, npc, true, 0, false);
-					}
-				}
-				break;
-			}
-			case SPITEFUL_SOUL_LEADER:
-			{
-				if (leaderQS.getMemoState() == 5000)
-				{
-					final int rand = getRandom(100);
-					if (rand < 10)
-					{
-						giveItemRandomly(leader, SPITEFUL_SOUL_ENERGY, 1, 10, 1, false);
-					}
-					else if (rand < 60)
-					{
-						giveItems(leader, SPITEFUL_SOUL_VENGEANCE, 1);
 					}
 				}
 				break;
@@ -674,20 +653,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 							else if (hasQuestItems(player, BLACK_ANVIL_COIN))
 							{
 								htmltext = "30764-04.html";
-							}
-						}
-						else if (qs.getMemoState() == 5000)
-						{
-							if (getQuestItemsCount(player, SPITEFUL_SOUL_ENERGY) < 10)
-							{
-								htmltext = "30764-07a.html";
-							}
-							else
-							{
-								takeItems(player, SPITEFUL_SOUL_ENERGY, -1);
-								qs.setMemoState(6000);
-								qs.setCond(6, true);
-								htmltext = "30764-08a.html";
 							}
 						}
 						else if (qs.getMemoState() >= 6000)

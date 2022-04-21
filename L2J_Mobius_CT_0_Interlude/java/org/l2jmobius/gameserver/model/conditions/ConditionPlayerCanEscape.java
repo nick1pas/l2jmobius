@@ -57,11 +57,7 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		else if (player.isCombatFlagEquipped())
-		{
-			canTeleport = false;
-		}
-		else if (player.isFlying() || player.isFlyingMounted())
+		else if (player.isFlying())
 		{
 			canTeleport = false;
 		}

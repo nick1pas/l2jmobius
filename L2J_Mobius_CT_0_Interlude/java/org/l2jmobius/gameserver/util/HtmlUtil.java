@@ -38,7 +38,7 @@ public class HtmlUtil
 	 */
 	public static String getCpGauge(int width, long current, long max, boolean displayAsPercentage)
 	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_CP_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_CP_Center", 17, -13);
+		return getGauge(width, current, max, displayAsPercentage, "L2UI_CH3.br_bar1_cp", "L2UI_CH3.br_bar1_cp", 16, -13);
 	}
 	
 	/**
@@ -51,33 +51,7 @@ public class HtmlUtil
 	 */
 	public static String getHpGauge(int width, long current, long max, boolean displayAsPercentage)
 	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_HP_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_HP_Center", 17, -13);
-	}
-	
-	/**
-	 * Gets the HTML representation of HP Warn gauge.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @return the HTML
-	 */
-	public static String getHpWarnGauge(int width, long current, long max, boolean displayAsPercentage)
-	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_HPWarn_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_HPWarn_Center", 17, -13);
-	}
-	
-	/**
-	 * Gets the HTML representation of HP Fill gauge.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @return the HTML
-	 */
-	public static String getHpFillGauge(int width, long current, long max, boolean displayAsPercentage)
-	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_HPFill_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_HPFill_Center", 17, -13);
+		return getGauge(width, current, max, displayAsPercentage, "L2UI_CH3.br_bar1_hp", "L2UI_CH3.br_bar1_hp", 16, -13);
 	}
 	
 	/**
@@ -90,60 +64,7 @@ public class HtmlUtil
 	 */
 	public static String getMpGauge(int width, long current, long max, boolean displayAsPercentage)
 	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_MP_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_MP_Center", 17, -13);
-	}
-	
-	/**
-	 * Gets the HTML representation of EXP Warn gauge.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @return the HTML
-	 */
-	public static String getExpGauge(int width, long current, long max, boolean displayAsPercentage)
-	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_EXP_bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_EXP_Center", 17, -13);
-	}
-	
-	/**
-	 * Gets the HTML representation of Food gauge.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @return the HTML
-	 */
-	public static String getFoodGauge(int width, long current, long max, boolean displayAsPercentage)
-	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_Food_Bg_Center", "L2UI_CT1.Gauges.Gauge_DF_Large_Food_Center", 17, -13);
-	}
-	
-	/**
-	 * Gets the HTML representation of Weight gauge automatically changing level depending on current/max.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @return the HTML
-	 */
-	public static String getWeightGauge(int width, long current, long max, boolean displayAsPercentage)
-	{
-		return getWeightGauge(width, current, max, displayAsPercentage, Util.map(current, 0, max, 1, 5));
-	}
-	
-	/**
-	 * Gets the HTML representation of Weight gauge.
-	 * @param width the width
-	 * @param current the current value
-	 * @param max the max value
-	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
-	 * @param level a number from 1 to 5 for the 5 different colors of weight gauge
-	 * @return the HTML
-	 */
-	public static String getWeightGauge(int width, long current, long max, boolean displayAsPercentage, long level)
-	{
-		return getGauge(width, current, max, displayAsPercentage, "L2UI_CT1.Gauges.Gauge_DF_Large_Weight_bg_Center" + level, "L2UI_CT1.Gauges.Gauge_DF_Large_Weight_Center" + level, 17, -13);
+		return getGauge(width, current, max, displayAsPercentage, "L2UI_CH3.br_bar1_mp", "L2UI_CH3.br_bar1_mp", 16, -13);
 	}
 	
 	/**

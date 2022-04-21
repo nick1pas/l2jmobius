@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.Util;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Merciless Punishment (107)
  * @author janiko
@@ -202,7 +200,6 @@ public class Q00107_MercilessPunishment extends Quest
 							{
 								if (hasQuestItems(talker, HATOSS_ORDER_3, LETTER_TO_HUMAN, LETTER_TO_DARK_ELF, LETTER_TO_ELF))
 								{
-									Q00281_HeadForTheHills.giveNewbieReward(talker);
 									addExpAndSp(talker, 34565, 2962);
 									giveAdena(talker, 14666, true);
 									for (ItemHolder reward : REWARDS)

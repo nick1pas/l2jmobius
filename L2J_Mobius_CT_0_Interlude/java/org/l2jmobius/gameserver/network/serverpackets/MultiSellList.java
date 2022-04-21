@@ -61,96 +61,55 @@ public class MultiSellList implements IClientOutgoingPacket
 		{
 			ent = _list.getEntries().get(_index++);
 			packet.writeD(ent.getEntryId());
-			packet.writeC(ent.isStackable() ? 1 : 0);
-			packet.writeH(0); // C6
 			packet.writeD(0); // C6
-			packet.writeD(0); // T1
-			packet.writeH(65534); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
-			packet.writeH(0); // T1
+			packet.writeD(0); // C6
+			packet.writeC(1);
 			packet.writeH(ent.getProducts().size());
 			packet.writeH(ent.getIngredients().size());
 			for (Ingredient ing : ent.getProducts())
 			{
 				if (ing.getTemplate() != null)
 				{
-					packet.writeD(ing.getTemplate().getDisplayId());
+					packet.writeH(ing.getTemplate().getDisplayId());
 					packet.writeD(ing.getTemplate().getBodyPart());
 					packet.writeH(ing.getTemplate().getType2());
 				}
 				else
 				{
-					packet.writeD(ing.getItemId());
+					packet.writeH(ing.getItemId());
 					packet.writeD(0);
 					packet.writeH(65535);
 				}
-				packet.writeQ(ing.getItemCount());
+				packet.writeD((int) ing.getItemCount());
 				if (ing.getItemInfo() != null)
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level
 					packet.writeD(ing.getItemInfo().getAugmentId()); // augment id
 					packet.writeD(0); // mana
-					packet.writeH(ing.getItemInfo().getElementId()); // attack element
-					packet.writeH(ing.getItemInfo().getElementPower()); // element power
-					packet.writeH(ing.getItemInfo().getElementals()[0]); // fire
-					packet.writeH(ing.getItemInfo().getElementals()[1]); // water
-					packet.writeH(ing.getItemInfo().getElementals()[2]); // wind
-					packet.writeH(ing.getItemInfo().getElementals()[3]); // earth
-					packet.writeH(ing.getItemInfo().getElementals()[4]); // holy
-					packet.writeH(ing.getItemInfo().getElementals()[5]); // dark
 				}
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
 					packet.writeD(0); // augment id
 					packet.writeD(0); // mana
-					packet.writeH(0); // attack element
-					packet.writeH(0); // element power
-					packet.writeH(0); // fire
-					packet.writeH(0); // water
-					packet.writeH(0); // wind
-					packet.writeH(0); // earth
-					packet.writeH(0); // holy
-					packet.writeH(0); // dark
 				}
 			}
 			for (Ingredient ing : ent.getIngredients())
 			{
-				packet.writeD(ing.getTemplate() != null ? ing.getTemplate().getDisplayId() : ing.getItemId());
+				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getDisplayId() : ing.getItemId());
 				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getType2() : 65535);
-				packet.writeQ(ing.getItemCount());
+				packet.writeD((int) ing.getItemCount());
 				if (ing.getItemInfo() != null)
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level
 					packet.writeD(ing.getItemInfo().getAugmentId()); // augment id
 					packet.writeD(0); // mana
-					packet.writeH(ing.getItemInfo().getElementId()); // attack element
-					packet.writeH(ing.getItemInfo().getElementPower()); // element power
-					packet.writeH(ing.getItemInfo().getElementals()[0]); // fire
-					packet.writeH(ing.getItemInfo().getElementals()[1]); // water
-					packet.writeH(ing.getItemInfo().getElementals()[2]); // wind
-					packet.writeH(ing.getItemInfo().getElementals()[3]); // earth
-					packet.writeH(ing.getItemInfo().getElementals()[4]); // holy
-					packet.writeH(ing.getItemInfo().getElementals()[5]); // dark
 				}
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
 					packet.writeD(0); // augment id
 					packet.writeD(0); // mana
-					packet.writeH(0); // attack element
-					packet.writeH(0); // element power
-					packet.writeH(0); // fire
-					packet.writeH(0); // water
-					packet.writeH(0); // wind
-					packet.writeH(0); // earth
-					packet.writeH(0); // holy
-					packet.writeH(0); // dark
 				}
 			}
 		}

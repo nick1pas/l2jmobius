@@ -19,9 +19,7 @@ package handlers.effecthandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
 
 /**
  * Heal Over Time effect implementation.
@@ -60,12 +58,13 @@ public class HealOverTime extends AbstractEffect
 		return info.getSkill().isToggle();
 	}
 	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
-		{
-			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
-		}
-	}
+	// Packet does not exist on C6?
+	// @Override
+	// public void onStart(BuffInfo info)
+	// {
+	// if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
+	// {
+	// // info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
+	// }
+	// }
 }

@@ -120,12 +120,6 @@ public class FuncEnchant extends AbstractFunction
 							// Starting at +4, P. Atk. bonus double.
 							value += (10 * enchant) + (20 * overenchant);
 						}
-						else if (type == WeaponType.CROSSBOW)
-						{
-							// P. Atk. increases by 7 for crossbows.
-							// Starting at +4, P. Atk. bonus double.
-							value += (7 * enchant) + (14 * overenchant);
-						}
 						else
 						{
 							// P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
@@ -150,12 +144,6 @@ public class FuncEnchant extends AbstractFunction
 							// P. Atk. increases by 8 for bows.
 							// Starting at +4, P. Atk. bonus double.
 							value += (8 * enchant) + (16 * overenchant);
-						}
-						else if (type == WeaponType.CROSSBOW)
-						{
-							// P. Atk. increases by 6 for crossbows.
-							// Starting at +4, P. Atk. bonus double.
-							value += (6 * enchant) + (12 * overenchant);
 						}
 						else
 						{
@@ -183,12 +171,6 @@ public class FuncEnchant extends AbstractFunction
 							// Starting at +4, P. Atk. bonus double.
 							value += (6 * enchant) + (12 * overenchant);
 						}
-						else if (type == WeaponType.CROSSBOW)
-						{
-							// P. Atk. increases by 5 for crossbows.
-							// Starting at +4, P. Atk. bonus double.
-							value += (5 * enchant) + (10 * overenchant);
-						}
 						else
 						{
 							// P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
@@ -214,13 +196,6 @@ public class FuncEnchant extends AbstractFunction
 							// Bows increase by 4.
 							// Starting at +4, P. Atk. bonus double.
 							value += (4 * enchant) + (8 * overenchant);
-							break;
-						}
-						case CROSSBOW:
-						{
-							// Crossbows increase by 3.
-							// Starting at +4, P. Atk. bonus double.
-							value += (3 * enchant) + (6 * overenchant);
 							break;
 						}
 						default:

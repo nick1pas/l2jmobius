@@ -177,8 +177,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5112" levels="12" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="5112" levels="12" name="Shock">
+		<!-- Temporarily immobilized and in a state of shock. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 80 90 95</table>
 		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
 		<set name="abnormalLevel" val="1" />
@@ -287,7 +287,7 @@
 		</for>
 	</skill>
 	<skill id="5117" levels="1" name="Stun">
-		<!-- Temporarily immobilized. -->
+		<!-- Temporarily immobilized and in a state of shock. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -349,8 +349,8 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="5120" levels="1" name="Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="5120" levels="1" name="Shock">
+		<!-- Temporarily immobilized and in a state of shock. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -447,7 +447,7 @@
 		</for>
 	</skill>
 	<skill id="5126" levels="1" name="Maximum Recovery">
-		<!-- HP and CP recovery bonus are maximized. -->
+		<!-- Maximizes HP and CP recovery. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -485,7 +485,7 @@
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
-		<!-- Maximizes bow/crossbow use abilities. -->
+		<!-- Maximizes archery ability. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -498,10 +498,10 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.2">
-					<using kind="BOW,CROSSBOW" />
+					<using kind="BOW" />
 				</mul>
 				<add stat="accCombat" val="10">
-					<using kind="BOW,CROSSBOW" />
+					<using kind="BOW" />
 				</add>
 			</effect>
 		</for>
@@ -705,8 +705,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="5140" levels="1" name="Dark Curse">
-		<!-- A curse that poisons and reduces Atk. Spd. -->
+	<skill id="5140" levels="1" name="Force Curse">
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1272,7 +1271,7 @@
 		</for>
 	</skill>
 	<skill id="5169" levels="10" name="Hold">
-		<!-- Active: Instantly puts a target into hold. Additional chance to be put into hold greatly decreases while effect lasts. -->
+		<!-- Active: Temporarily restrains the target. Additional hold attacks cannot be made on the target while the effect lasts. -->
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1299,7 +1298,7 @@
 		</for>
 	</skill>
 	<skill id="5170" levels="10" name="Sleep">
-		<!-- Active: Instantly puts a target into sleep. Additional chance to be put into sleep greatly decreases while effect lasts. -->
+		<!-- Active: Causes the target to fall asleep. Additional sleep attacks cannot be made on the target while the effect lasts. -->
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1561,8 +1560,8 @@
 			<effect name="ProtectionBlessing" />
 		</for>
 	</skill>
-	<skill id="5183" levels="1" name="Production: Dimensional Stun">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+	<skill id="5183" levels="1" name="Production: Dimensional Shock">
+		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="flyRadius" val="300" />
@@ -1572,9 +1571,6 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="ThrowUp" />
-		</for>
 	</skill>
 	<skill id="5184" levels="1" name="Production: Valakas Dragon Breath">
 		<set name="affectRange" val="1200" />
@@ -1605,7 +1601,7 @@
 		</for>
 	</skill>
 	<skill id="5186" levels="2" name="Pet Haste">
-		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<!-- Increases Atk. Spd. temporarily. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#magicLevel">44 52</table>
 		<table name="#mpConsume">16 19</table>
@@ -1633,7 +1629,7 @@
 		</for>
 	</skill>
 	<skill id="5187" levels="4" name="Pet Vampiric Rage">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy, excluding damage caused by skills and ranged attacks. Effect 1. -->
+		<!-- Increases the ability to restore some HP from the damage inflicted on an enemy temporarily. Excludes damage from skill or remote attack. -->
 		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#absorbDam">6 7 8 9</table>
 		<table name="#magicLevel">30 44 58 72</table>
@@ -1661,7 +1657,7 @@
 		</for>
 	</skill>
 	<skill id="5188" levels="3" name="Pet Regeneration">
-		<!-- Increases HP recovery bonus for a fixed time. Effect 1. -->
+		<!-- Increases HP recovery rate temporarily. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">331 457 532</table>
 		<table name="#magicLevel">35 48 56</table>
@@ -1690,7 +1686,7 @@
 		</for>
 	</skill>
 	<skill id="5189" levels="6" name="Pet Blessed Body">
-		<!-- Increases maximum HP temporarily. Effect 1. -->
+		<!-- Increases maximum HP temporarily. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#effectPoints">597 457 495 532 597 646</table>
 		<table name="#magicLevel">44 48 52 56 64 72</table>
@@ -1719,7 +1715,7 @@
 		</for>
 	</skill>
 	<skill id="5190" levels="6" name="Pet Blessed Soul">
-		<!-- Increases maximum MP temporarily. Effect 1. -->
+		<!-- Increases maximum MP temporarily. -->
 		<table name="#abnormalLevels">1 2 3 4 5 6</table>
 		<table name="#effectPoints">418 457 495 532 582 635</table>
 		<table name="#magicLevel">44 48 52 56 62 70</table>
@@ -1748,7 +1744,7 @@
 		</for>
 	</skill>
 	<skill id="5191" levels="3" name="Pet Guidance">
-		<!-- Increases Accuracy temporarily. Effect 1. -->
+		<!-- Increases Accuracy temporarily. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#accCombat">2 3 4</table>
 		<table name="#effectPoints">379 457 532</table>
@@ -1777,7 +1773,7 @@
 		</for>
 	</skill>
 	<skill id="5192" levels="2" name="Pet Wind Walk">
-		<!-- Increases Speed temporarily. Effect 1. -->
+		<!-- Increases Speed temporarily. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#effectPoints">204 285</table>
 		<table name="#magicLevel">20 30</table>
@@ -1806,7 +1802,7 @@
 		</for>
 	</skill>
 	<skill id="5193" levels="3" name="Pet Acumen">
-		<!-- Increases Casting Spd. temporarily. Effect 1. -->
+		<!-- Increases Casting Spd. temporarily. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">204 331 457</table>
 		<table name="#magicLevel">20 35 48</table>
@@ -1835,7 +1831,7 @@
 		</for>
 	</skill>
 	<skill id="5194" levels="3" name="Pet Empower">
-		<!-- Increases M. Atk. power temporarily. Effect 1. -->
+		<!-- Increases M. Atk. temporarily. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">243 418 495</table>
 		<table name="#magicLevel">25 44 52</table>
@@ -1864,7 +1860,7 @@
 		</for>
 	</skill>
 	<skill id="5195" levels="12" name="Pet Greater Heal">
-		<!-- Recovers HP and increases HP recovery bonus in an instant. Power 50. Effect 1. -->
+		<!-- Instantly recovers HP and increases HP recovery rate. -->
 		<table name="#abnormalLevels">1 1 2 2 4 6 7 7 7 7 7 7</table>
 		<table name="#amount">58 92 148 219 299 380 450 477 500 525 542 550</table>
 		<table name="#effectPoints">83 151 245 362 494 628 743 789 826 867 895 913</table>

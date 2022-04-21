@@ -26,7 +26,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -93,10 +92,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 	public static final int SLOT_ALLDRESS = 0x020000;
 	public static final int SLOT_HAIR2 = 0x040000;
 	public static final int SLOT_HAIRALL = 0x080000;
-	public static final int SLOT_R_BRACELET = 0x100000;
-	public static final int SLOT_L_BRACELET = 0x200000;
-	public static final int SLOT_DECO = 0x400000;
-	public static final int SLOT_BELT = 0x10000000;
 	public static final int SLOT_WOLF = -100;
 	public static final int SLOT_HATCHLING = -101;
 	public static final int SLOT_STRIDER = -102;
@@ -142,7 +137,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 	
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
-	protected Elementals[] _elementals = null;
 	protected List<FuncTemplate> _funcTemplates;
 	protected List<Condition> _preConditions;
 	private SkillHolder[] _skillHolder;
@@ -519,55 +513,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 	}
 	
 	/**
-	 * @return the base elemental of the item.
-	 */
-	public Elementals[] getElementals()
-	{
-		return _elementals;
-	}
-	
-	public Elementals getElemental(byte attribute)
-	{
-		for (Elementals elm : _elementals)
-		{
-			if (elm.getElement() == attribute)
-			{
-				return elm;
-			}
-		}
-		return null;
-	}
-	
-	/**
-	 * Sets the base elemental of the item.
-	 * @param element the element to set.
-	 */
-	public void setElementals(Elementals element)
-	{
-		if (_elementals == null)
-		{
-			_elementals = new Elementals[1];
-			_elementals[0] = element;
-		}
-		else
-		{
-			Elementals elm = getElemental(element.getElement());
-			if (elm != null)
-			{
-				elm.setValue(element.getValue());
-			}
-			else
-			{
-				elm = element;
-				final Elementals[] array = new Elementals[_elementals.length + 1];
-				System.arraycopy(_elementals, 0, array, 0, _elementals.length);
-				array[_elementals.length] = elm;
-				_elementals = array;
-			}
-		}
-	}
-	
-	/**
 	 * @return the part of the body used with the item.
 	 */
 	public int getBodyPart()
@@ -737,46 +682,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 	 */
 	public void attach(FuncTemplate f)
 	{
-		switch (f.getStat())
-		{
-			case FIRE_RES:
-			case FIRE_POWER:
-			{
-				setElementals(new Elementals(Elementals.FIRE, (int) f.getValue()));
-				break;
-			}
-			case WATER_RES:
-			case WATER_POWER:
-			{
-				setElementals(new Elementals(Elementals.WATER, (int) f.getValue()));
-				break;
-			}
-			case WIND_RES:
-			case WIND_POWER:
-			{
-				setElementals(new Elementals(Elementals.WIND, (int) f.getValue()));
-				break;
-			}
-			case EARTH_RES:
-			case EARTH_POWER:
-			{
-				setElementals(new Elementals(Elementals.EARTH, (int) f.getValue()));
-				break;
-			}
-			case HOLY_RES:
-			case HOLY_POWER:
-			{
-				setElementals(new Elementals(Elementals.HOLY, (int) f.getValue()));
-				break;
-			}
-			case DARK_RES:
-			case DARK_POWER:
-			{
-				setElementals(new Elementals(Elementals.DARK, (int) f.getValue()));
-				break;
-			}
-		}
-		
 		if (_funcTemplates == null)
 		{
 			_funcTemplates = new ArrayList<>(1);

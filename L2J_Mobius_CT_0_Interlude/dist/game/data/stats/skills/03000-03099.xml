@@ -1123,7 +1123,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3069" levels="1" name="Special Ability: Rsk. Evasion">
+	<skill id="3069" levels="1" name="Special Ability: Risky Evasion">
 		<!-- Evasion is increased during a crisis. -->
 		<set name="icon" val="icon.skill0198" />
 		<set name="magicLevel" val="1" />
@@ -1237,7 +1237,7 @@
 		</for>
 	</skill>
 	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
-		<!-- Body is rigid with paralysis. -->
+		<!-- Temporarily paralyzes target. -->
 		<table name="#magicLevel">64 67</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1322,7 +1322,7 @@
 		</for>
 	</skill>
 	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
-		<!-- Body is rigid with paralysis. -->
+		<!-- Temporarily paralyzes target. -->
 		<table name="#magicLevel">46 49 52 55 58 61</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1508,7 +1508,7 @@
 		</for>
 	</skill>
 	<skill id="3087" levels="10" name="Item Skill: Sleep">
-		<!-- Active: Momentarily throws the target into a state of sleep during a physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- Chance: Momentarily throws the target into a state of sleep during a general physical attack. The target cannot be affected by any additional sleep attacks while the effect lasts. -->
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="15" />

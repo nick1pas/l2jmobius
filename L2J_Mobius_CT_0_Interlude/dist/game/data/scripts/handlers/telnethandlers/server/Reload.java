@@ -35,7 +35,6 @@ import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -61,7 +60,7 @@ public class Reload implements ITelnetCommand
 	@Override
 	public String getUsage()
 	{
-		return "Reload <zone/multisell/teleport/skill/npc/htm/item/config/npcwalkers/access/quests/door/primeshop/html/script>";
+		return "Reload <zone/multisell/teleport/skill/npc/htm/item/config/npcwalkers/access/quests/door/html/script>";
 	}
 	
 	@Override
@@ -193,11 +192,6 @@ public class Reload implements ITelnetCommand
 				EnchantItemGroupsData.getInstance().load();
 				EnchantItemData.getInstance().load();
 				return "Telnet Admin: Reloaded item enchanting data.";
-			}
-			case "transform":
-			{
-				TransformData.getInstance().load();
-				return "Telnet Admin: Reloaded transform data.";
 			}
 			case "sets":
 			{

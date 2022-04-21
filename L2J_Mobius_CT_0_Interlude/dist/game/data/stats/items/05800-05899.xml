@@ -91,9 +91,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-2" /> <!-- Raid Blessing -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5804" type="EtcItem" name="Lucky Charm (C-Grade)">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is between 40 and 51. -->
@@ -108,9 +105,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-3" /> <!-- Raid Blessing -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5805" type="EtcItem" name="Lucky Charm (B-Grade)">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is between 52 and 60. -->
@@ -125,9 +119,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-4" /> <!-- Raid Blessing -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5806" type="EtcItem" name="Lucky Charm (A-Grade)">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is between 61 and 75. -->
@@ -142,9 +133,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-5" /> <!-- Raid Blessing -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5807" type="EtcItem" name="Lucky Charm (S-Grade)">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 76 or higher. -->
@@ -159,9 +147,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-6" /> <!-- Raid Blessing -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5808" type="Armor" name="Party Mask">
 		<!-- A fashion item used to display a unique appearance. -->
@@ -174,7 +159,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="5809" type="EtcItem" name="Spellbook: Aqua Splash">
-		<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
+		<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -183,7 +168,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5810" type="EtcItem" name="Spellbook: Rain of Fire">
-		<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
+		<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers/sses. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -192,7 +177,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5811" type="EtcItem" name="Spellbook: Mass Slow">
-		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 62 -->
+		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -201,7 +186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5812" type="EtcItem" name="Spellbook: Servitor Empowerment">
-		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
+		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -210,7 +195,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5813" type="EtcItem" name="Spellbook: Servitor Cure">
-		<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -219,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5814" type="EtcItem" name="Spellbook: Servitor Blessing">
-		<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
+		<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -228,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5815" type="EtcItem" name="Spellbook: Wild Magic">
-		<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
+		<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -237,7 +222,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5816" type="EtcItem" name="Spellbook: Advanced Block">
-		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 58 -->
+		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -598,9 +583,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2177-1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5859" type="EtcItem" name="Blessed Scroll of Escape: Castle">
 		<!-- A magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
@@ -614,9 +596,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2178-1" /> <!-- Blessed Scroll of Escape: Castle -->
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="5860" type="EtcItem" name="Lienrik Egg">
 		<!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
@@ -655,7 +634,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5863" type="EtcItem" name="Alligator Tooth">
-		<!-- Sharp canine tooth of the Alligator. Bring this to the warehouse keeper of Heine. -->
+		<!-- A sharp tooth from an alligator. Take it to Warehouse Freightman Kluck of Heine. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

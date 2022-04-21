@@ -30,17 +30,6 @@ public class TradeItem
 	private long _count;
 	private long _storeCount;
 	private long _price;
-	private final byte _elemAtkType;
-	private final int _elemAtkPower;
-	private final int[] _elemDefAttr =
-	{
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	};
 	private final int[] _enchantOptions;
 	
 	public TradeItem(Item item, long count, long price)
@@ -53,12 +42,6 @@ public class TradeItem
 		_type2 = item.getCustomType2();
 		_count = count;
 		_price = price;
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
-		}
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
@@ -73,8 +56,6 @@ public class TradeItem
 		_count = count;
 		_storeCount = count;
 		_price = price;
-		_elemAtkType = Elementals.NONE;
-		_elemAtkPower = 0;
 		_enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
 	}
 	
@@ -89,12 +70,6 @@ public class TradeItem
 		_count = count;
 		_storeCount = count;
 		_price = price;
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
-		}
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
@@ -161,21 +136,6 @@ public class TradeItem
 	public long getPrice()
 	{
 		return _price;
-	}
-	
-	public byte getAttackElementType()
-	{
-		return _elemAtkType;
-	}
-	
-	public int getAttackElementPower()
-	{
-		return _elemAtkPower;
-	}
-	
-	public int getElementDefAttr(byte i)
-	{
-		return _elemDefAttr[i];
 	}
 	
 	public int[] getEnchantOptions()

@@ -31,8 +31,6 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.Util;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Jumble, Tumble, Diamond Fuss (108)
  * @author Janiko
@@ -220,7 +218,6 @@ public class Q00108_JumbleTumbleDiamondFuss extends Quest
 							{
 								if (hasQuestItems(talker, STAR_DIAMOND))
 								{
-									Q00281_HeadForTheHills.giveNewbieReward(talker);
 									addExpAndSp(talker, 34565, 2962);
 									giveAdena(talker, 14666, true);
 									for (ItemHolder reward : REWARDS)

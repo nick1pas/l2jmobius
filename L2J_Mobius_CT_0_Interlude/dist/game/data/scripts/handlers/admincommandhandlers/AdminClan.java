@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -76,7 +75,6 @@ public class AdminClan implements IAdminCommandHandler
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
 				html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
 				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallTable.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
-				html.replace("%clan_has_fortress%", clan.getFortId() > 0 ? FortManager.getInstance().getFortById(clan.getFortId()).getName() : "No");
 				html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 				html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
 				html.replace("%clan_ally%", clan.getAllyId() > 0 ? clan.getAllyName() : "Not in ally");

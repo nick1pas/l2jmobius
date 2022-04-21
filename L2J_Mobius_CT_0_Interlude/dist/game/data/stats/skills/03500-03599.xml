@@ -50,7 +50,7 @@
 		</for>
 	</skill>
 	<skill id="3504" levels="1" name="Knowledge Set">
-		<!-- Decreases MP recovery bonus and increases M. Atk. -->
+		<!-- Decreases MP regeneration and increases M. Atk. -->
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -87,7 +87,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3507" levels="1" name="Mithril Set">
+	<skill id="3507" levels="1" name="Elven Mithril Set">
 		<!-- Increases Speed. INT-1, WIT+1 -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="magicLevel" val="1" />
@@ -157,7 +157,7 @@
 		</for>
 	</skill>
 	<skill id="3513" levels="1" name="Demon's Set">
-		<!-- Reduces Max. HP. INT+4, WIT-1 -->
+		<!-- Reduces maximum HP. INT+4, WIT-1 -->
 		<set name="icon" val="icon.armor_t54_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -193,7 +193,7 @@
 		</for>
 	</skill>
 	<skill id="3516" levels="1" name="Full Plate Set">
-		<!-- Increases Max. HP. -->
+		<!-- Increases maximum HP. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -231,7 +231,7 @@
 		</for>
 	</skill>
 	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
-		<!-- Increases Max. HP. -->
+		<!-- Increases maximum HP. -->
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -268,7 +268,7 @@
 		</for>
 	</skill>
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
-		<!-- Decreases MP recovery bonus and increases M. Atk. -->
+		<!-- Decreases MP regeneration and increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -294,7 +294,7 @@
 		</for>
 	</skill>
 	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
-		<!-- Increases moving speed and HP recovery bonus. STR+3, CON-1, DEX-2 -->
+		<!-- Increases Speed and HP recovery rate. STR+3, CON-1, DEX-2 -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -333,7 +333,7 @@
 		</for>
 	</skill>
 	<skill id="3527" levels="1" name="Doom Light Armor Set">
-		<!-- Increases resistance to poison attacks and increases lung capacity, P. Atk., and MP recovery bonus. STR-1, CON-2, DEX+3 -->
+		<!-- Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3 -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -350,7 +350,7 @@
 		</for>
 	</skill>
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
-		<!-- Increases Max MP and MP recovery bonus. INT-2, MEN-1, WIT+3 -->
+		<!-- Increases Max MP and MP recovery rate. INT-2, MEN-1, WIT+3 -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -363,7 +363,7 @@
 		</for>
 	</skill>
 	<skill id="3529" levels="1" name="Doom Robe Set">
-		<!-- Increases Moving Speed, Lung Capacity, and MP recovery bonus. INT+2, MEN+1, WIT-3 -->
+		<!-- Increases Speed, lung capacity and MP recovery rate. INT+2, MEN+1, WIT-3 -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -526,7 +526,7 @@
 		</for>
 	</skill>
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
-		<!-- Increases resistance to shock attacks. P. Atk., MaxMP and maximum weight limit are also increased. DEX+1, CON-1 -->
+		<!-- Increases resistance to shock attacks. P. Atk., Max MP and maximum weight limit are also increased. DEX+1, CON-1 -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -534,7 +534,7 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
-					<using kind="BOW,CROSSBOW" />
+					<using kind="BOW" />
 				</mul>
 				<add stat="maxMp" val="240" /> <!-- MP +240 -->
 				<add stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
@@ -562,7 +562,7 @@
 		</for>
 	</skill>
 	<skill id="3541" levels="1" name="Majestic Robe Set">
-		<!-- Increases resistance to shock attacks and increases Max MP, Casting Spd., and MP recovery bonus. MEN+1, INT-1 -->
+		<!-- Increases resistance to shock attacks. Max MP, Casting Spd. and MP recovery rate are also increased. MEN+1, INT-1 -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -593,7 +593,7 @@
 		</for>
 	</skill>
 	<skill id="3543" levels="1" name="Equipped with Shield">
-		<!-- Increases Max. HP. -->
+		<!-- Increases maximum HP. -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -605,7 +605,7 @@
 		</for>
 	</skill>
 	<skill id="3544" levels="1" name="Equipped with Shield">
-		<!-- Increases Max. HP. -->
+		<!-- Increases maximum HP. -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -617,7 +617,7 @@
 		</for>
 	</skill>
 	<skill id="3545" levels="1" name="Equipped with Shield">
-		<!-- Increases Max. HP. -->
+		<!-- Increases maximum HP. -->
 		<set name="icon" val="icon.skill0091" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -782,7 +782,7 @@
 		</for>
 	</skill>
 	<skill id="3557" levels="1" name="Necklace of Valakas">
-		<!-- Increases resistance to fire attacks, resistance to sleep attack, sleep attack bonus, MaxHP/ P. Atk./ M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Redirects some of the physical damage received back upon the enemy. Does not include damage from skill or ranged attacks. -->
+		<!-- Increases resistance to fire/water attacks, Max HP, P. Atk., M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Reflects some of the physical damage received back upon the enemy (does not include damage from skill or range attacks). -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -807,7 +807,7 @@
 		</for>
 	</skill>
 	<skill id="3558" levels="1" name="Earring of Antharas">
-		<!-- Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy. Does not include damage from skill or ranged attacks. -->
+		<!-- Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -833,7 +833,7 @@
 		</for>
 	</skill>
 	<skill id="3559" levels="2" name="Earring of Zaken">
-		<!-- Bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic and restores HP by using some of the damage inflicted upon the enemy. Does not include damage from skill or ranged attacks. -->
+		<!-- Increases resistance to bleed/shock/mental attacks, improves the effect of HP regeneration magic and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
 		<table name="#darkRes">0 15</table>
 		<table name="#healEffect">1.1 1.15</table>
 		<table name="#magicLevel">75 80</table>
@@ -861,7 +861,7 @@
 		</for>
 	</skill>
 	<skill id="3560" levels="1" name="Earring of Orfen">
-		<!-- Increases healing from heal spells, resistance to Bleed attacks, and gives a Bleed attack bonus. -->
+		<!-- Increases healing from heal spells and resistance to Bleed attack. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -879,7 +879,7 @@
 		</for>
 	</skill>
 	<skill id="3561" levels="1" name="Ring of Baium">
-		<!-- Increases resistance to poison/hold attacks, gives a poison/hold attack bonus, and increases critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd. -->
+		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -902,7 +902,7 @@
 		</for>
 	</skill>
 	<skill id="3562" levels="1" name="Ring of Ant Queen">
-		<!-- Increases resistance to poison/hold attacks, gives a poison/hold attack bonus, and increases critical attack damage. Also increases Accuracy, and Attack power of critical attack. -->
+		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -923,7 +923,7 @@
 		</for>
 	</skill>
 	<skill id="3563" levels="1" name="Ring of Core">
-		<!-- Increases Accuracy, resistance to Poison attacks, and gives a Poison attack bonus. -->
+		<!-- Increases Accuracy, and resistance to Poison attack. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="operateType" val="P" />
@@ -1026,7 +1026,7 @@
 		</for>
 	</skill>
 	<skill id="3569" levels="4" name="Special Ability: HP Regeneration">
-		<!-- Increases HP recovery bonus. Increases damage inflicted during PvP. -->
+		<!-- Increases HP regeneration rate and enhances damage to target during PvP. -->
 		<table name="#magicLevel">75 84 84 84</table>
 		<table name="#regHp">2.04 4.92 5.15 5.18</table>
 		<set name="icon" val="icon.skill1044" />
@@ -1059,7 +1059,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
+	<skill id="3571" levels="2" name="Special Ability: Crt. Stun">
 		<!-- Temporarily stuns and paralyzes target. -->
 		<table name="#activateRates">27 43</table>
 		<table name="#magicLevel">75 84</table>
@@ -1081,7 +1081,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
+	<skill id="3572" levels="4" name="Special Ability: Crt. Damage">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
 		<table name="#cAtkAdd">265 906 999 1059</table>
 		<table name="#magicLevel">75 84 85 86</table>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
+	<skill id="3574" levels="3" name="Special Ability: Crt. Slow">
 		<!-- Temporarily decreases Speed. Effect 3. -->
 		<table name="#activateRates">16 24 33</table>
 		<table name="#magicLevel">75 84 84</table>
@@ -1139,7 +1139,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3575" levels="4" name="Special Ability: Empower">
+	<skill id="3575" levels="4" name="Special Ability: Empower Option">
 		<!-- Increases M. Atk. Enhances damage to target during PvP. -->
 		<table name="#magicLevel">75 84 85 86</table>
 		<table name="#mAtk">60.09 151.09 166.54 176.53</table>
@@ -1157,7 +1157,7 @@
 		</for>
 	</skill>
 	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
-		<!-- Increases MP recovery bonus. Increases damage inflicted during PvP. -->
+		<!-- Increases MP regeneration rate and enhances damage to target during PvP. -->
 		<table name="#magicLevel">75 84 85 86</table>
 		<table name="#regMp">0.54 1.95 2.04 2.05</table>
 		<set name="icon" val="icon.skill1047" />
@@ -1323,7 +1323,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
+	<skill id="3585" levels="1" name="Infinity Wing">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="magicLevel" val="80" />
@@ -1550,7 +1550,7 @@
 		</for>
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
-		<!-- When good magic is cast upon a target, increases Max MP, Max CP, Casting Spd, and MP regeneration rate. During PvP the regeneration of HP is increased to 100% and enhances damage to target. -->
+		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, Casting Spd., MP regeneration rate and damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="P" />

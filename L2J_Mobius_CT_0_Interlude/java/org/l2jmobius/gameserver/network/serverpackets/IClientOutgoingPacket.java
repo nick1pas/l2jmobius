@@ -18,48 +18,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 /**
  * @author KenM
  */
 public interface IClientOutgoingPacket extends IOutgoingPacket
 {
-	int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_REAR,
-		Inventory.PAPERDOLL_LEAR,
-		Inventory.PAPERDOLL_NECK,
-		Inventory.PAPERDOLL_RFINGER,
-		Inventory.PAPERDOLL_LFINGER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_CLOAK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2,
-		Inventory.PAPERDOLL_RBRACELET,
-		Inventory.PAPERDOLL_LBRACELET,
-		Inventory.PAPERDOLL_DECO1,
-		Inventory.PAPERDOLL_DECO2,
-		Inventory.PAPERDOLL_DECO3,
-		Inventory.PAPERDOLL_DECO4,
-		Inventory.PAPERDOLL_DECO5,
-		Inventory.PAPERDOLL_DECO6,
-		Inventory.PAPERDOLL_BELT
-	};
-	
-	default int[] getPaperdollOrder()
-	{
-		return PAPERDOLL_ORDER;
-	}
-	
 	default void runImpl(Player player)
 	{
 	}

@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * The Guard is Busy (257)
  * @author xban1x
@@ -163,7 +161,6 @@ public class Q00257_TheGuardIsBusy extends Quest
 					final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
 					giveAdena(player, ((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
 					takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);
-					Q00281_HeadForTheHills.giveNewbieReward(player);
 					htmltext = "30039-07.html";
 				}
 				else

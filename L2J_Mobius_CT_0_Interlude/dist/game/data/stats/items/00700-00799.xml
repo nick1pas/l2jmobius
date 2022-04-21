@@ -359,9 +359,6 @@
 		<set name="price" val="50" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="726" type="EtcItem" name="Mana Drug">
 		<!-- A magical, liquid medicine that restores MP for a certain amount of time. -->
@@ -378,9 +375,6 @@
 		<set name="item_skill" val="10000-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
-		<cond msgId="113" addName="1">
 			<player isPvpFlagged="false" />
 		</cond>
 	</item>
@@ -395,9 +389,6 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="728" type="EtcItem" name="Mana Potion">
 		<!-- A magical, liquid medicine that restores MP for a certain amount of time. -->
@@ -414,14 +405,11 @@
 		<set name="item_skill" val="10001-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
-		<cond msgId="113" addName="1">
 			<player isPvpFlagged="false" />
 		</cond>
 	</item>
 	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A-Grade)">
-		<!-- When enchanted, the P. Atk. of A-Grade weapons such as sword/one-handed, blunt weapon/one-handed, dagger and spear etc. will increase by 4. The P. Atk. of sword/two-handed, blunt weapon/two-handed, dualsword, and fist-fighting weapon/two-handed will increase by 5. The P. Atk. of bow weapons will increase by 8. The M. Atk. of all weapons will increase by 3. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
+		<!-- When enchanted, the P. Atk. of A-Grade weapons such as sword/one-handed, blunt weapon/one-handed, dagger and spear etc. will increase by 4. The P. Atk of sword/two-handed, blunt weapon/two-handed, dualsword, and fist-fighting weapon/two-handed will increase by 5. The P. Atk. of bow weapons will increase by 8. The M. Atk. of all weapons will increase by 3. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -435,7 +423,7 @@
 		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 	</item>
 	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
-		<!-- Increases P. Def. of A-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
+		<!-- Increases the P. Def. of an A-Grade armor or accessory by 1, and from +4, the P. Def will increase by 3. It can be safely enchanted up to +3. One-piece type armor can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -501,12 +489,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2011-1" /> <!-- Haste Potion -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="735" type="EtcItem" name="Alacrity Potion">
-		<!-- A magical potion that increases Atk. Spd. -->
+		<!-- A magical potion that increases attack speed -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -520,9 +505,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2012-1" /> <!-- Potion of Alacrity -->
 		<set name="for_npc" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 	</item>
 	<item id="736" type="EtcItem" name="Scroll of Escape">
 		<!-- A scroll of enchantment that relocates you to the nearest village. -->

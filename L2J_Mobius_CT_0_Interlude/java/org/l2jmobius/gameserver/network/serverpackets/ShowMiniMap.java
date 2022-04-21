@@ -35,7 +35,7 @@ public class ShowMiniMap implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.SHOW_MINIMAP.writeId(packet);
+		OutgoingPackets.SHOW_MINI_MAP.writeId(packet);
 		packet.writeD(_mapId);
 		packet.writeC(SevenSigns.getInstance().getCurrentPeriod());
 		return true;

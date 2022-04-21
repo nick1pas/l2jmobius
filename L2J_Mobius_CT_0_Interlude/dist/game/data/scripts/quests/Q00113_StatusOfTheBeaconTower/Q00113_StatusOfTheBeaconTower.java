@@ -22,108 +22,88 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-/**
- * Status of the Beacon Tower (113)<br>
- * Original Jython script by Kerberos.
- * @author malyelfik
- */
 public class Q00113_StatusOfTheBeaconTower extends Quest
 {
 	// NPCs
 	private static final int MOIRA = 31979;
 	private static final int TORRANT = 32016;
-	// Items
-	private static final int FLAME_BOX = 14860;
-	private static final int FIRE_BOX = 8086;
+	// Item
+	private static final int BOX = 8086;
 	
 	public Q00113_StatusOfTheBeaconTower()
 	{
 		super(113);
+		registerQuestItems(BOX);
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, TORRANT);
-		registerQuestItems(FIRE_BOX, FLAME_BOX);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = event;
-		switch (event)
+		if (event.equals("31979-02.htm"))
 		{
-			case "31979-02.htm":
-			{
-				qs.startQuest();
-				giveItems(player, FLAME_BOX, 1);
-				break;
-			}
-			case "32016-02.html":
-			{
-				if (hasQuestItems(player, FIRE_BOX))
-				{
-					giveAdena(player, 21578, true);
-					addExpAndSp(player, 76665, 5333);
-				}
-				else
-				{
-					giveAdena(player, 154800, true);
-					addExpAndSp(player, 619300, 44200);
-				}
-				qs.exitQuest(false, true);
-				break;
-			}
-			default:
-			{
-				htmltext = null;
-				break;
-			}
+			st.startQuest();
+			giveItems(player, BOX, 1);
 		}
+		else if (event.equals("32016-02.htm"))
+		{
+			takeItems(player, BOX, 1);
+			rewardItems(player, 57, 21578);
+			st.exitQuest(false, true);
+		}
+		
 		return htmltext;
 	}
 	
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg(player);
-		switch (npc.getId())
+		if (st == null)
 		{
-			case MOIRA:
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				switch (qs.getState())
+				htmltext = (player.getLevel() < 40) ? "31979-00.htm" : "31979-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (npc.getId())
 				{
-					case State.CREATED:
+					case MOIRA:
 					{
-						htmltext = (player.getLevel() >= 80) ? "31979-01.htm" : "31979-00.htm";
+						htmltext = "31979-03.htm";
 						break;
 					}
-					case State.STARTED:
+					case TORRANT:
 					{
-						htmltext = "31979-03.html";
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
+						htmltext = "32016-01.htm";
 						break;
 					}
 				}
 				break;
 			}
-			case TORRANT:
+			case State.COMPLETED:
 			{
-				if (qs.isStarted())
-				{
-					htmltext = "32016-01.html";
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
+		
 		return htmltext;
 	}
 }

@@ -65,7 +65,6 @@
 													<xs:enumeration value="DARK_ELF" />
 													<xs:enumeration value="ORC" />
 													<xs:enumeration value="DWARF" />
-													<xs:enumeration value="KAMAEL" />
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
@@ -121,17 +120,12 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
 									<xs:enumeration value="classSkillTree" />
-									<xs:enumeration value="collectSkillTree" />
 									<xs:enumeration value="fishingSkillTree" />
 									<xs:enumeration value="gameMasterAuraSkillTree" />
 									<xs:enumeration value="gameMasterSkillTree" />
 									<xs:enumeration value="heroSkillTree" />
 									<xs:enumeration value="nobleSkillTree" />
 									<xs:enumeration value="pledgeSkillTree" />
-									<xs:enumeration value="subClassSkillTree" />
-									<xs:enumeration value="subPledgeSkillTree" />
-									<xs:enumeration value="transferSkillTree" />
-									<xs:enumeration value="transformSkillTree" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

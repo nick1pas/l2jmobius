@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
-import org.l2jmobius.gameserver.network.serverpackets.SSQInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
@@ -94,8 +93,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_play_sound",
 		"admin_atmosphere",
 		"admin_atmosphere_menu",
-		"admin_set_displayeffect",
-		"admin_set_displayeffect_menu"
 	};
 	
 	@Override
@@ -196,7 +193,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception ex)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red> <duration>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //atmosphere <sky day|night|red> <duration>");
 			}
 		}
 		else if (command.equals("admin_play_sounds"))
@@ -544,26 +541,6 @@ public class AdminEffects implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //effect skill [level | level hittime]");
 			}
 		}
-		else if (command.startsWith("admin_set_displayeffect"))
-		{
-			final WorldObject target = activeChar.getTarget();
-			if (!(target instanceof Npc))
-			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-				return false;
-			}
-			final Npc npc = (Npc) target;
-			try
-			{
-				final String type = st.nextToken();
-				final int diplayeffect = Integer.parseInt(type);
-				npc.setDisplayEffect(diplayeffect);
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_displayeffect <id>");
-			}
-		}
 		
 		if (command.contains("menu") || command.contains("ave_"))
 		{
@@ -640,18 +617,7 @@ public class AdminEffects implements IAdminCommandHandler
 	private void adminAtmosphere(String type, String state, int duration, Player activeChar)
 	{
 		IClientOutgoingPacket packet = null;
-		if (type.equals("signsky"))
-		{
-			if (state.equals("dawn"))
-			{
-				packet = new SSQInfo(2);
-			}
-			else if (state.equals("dusk"))
-			{
-				packet = new SSQInfo(1);
-			}
-		}
-		else if (type.equals("sky"))
+		if (type.equals("sky"))
 		{
 			if (state.equals("night"))
 			{
@@ -675,7 +641,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else
 		{
-			BuilderUtil.sendSysMessage(activeChar, "Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red> <duration>");
+			BuilderUtil.sendSysMessage(activeChar, "Usage: //atmosphere <sky day|night|red> <duration>");
 		}
 		if (packet != null)
 		{

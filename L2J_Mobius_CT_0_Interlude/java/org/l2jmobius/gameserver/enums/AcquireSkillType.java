@@ -24,12 +24,7 @@ public enum AcquireSkillType
 {
 	CLASS,
 	FISHING,
-	PLEDGE,
-	SUBPLEDGE,
-	TRANSFORM,
-	TRANSFER,
-	SUBCLASS,
-	COLLECT;
+	PLEDGE;
 	
 	public static AcquireSkillType getAcquireSkillType(int id)
 	{

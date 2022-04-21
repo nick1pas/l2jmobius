@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.PetDataTable;
@@ -26,7 +24,6 @@ import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
@@ -36,8 +33,6 @@ import org.l2jmobius.gameserver.model.stats.MoveType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -52,11 +47,8 @@ public class PlayerStat extends PlayableStat
 	private int _oldMaxCp; // stats watch
 	private float _vitalityPoints = 1;
 	private byte _vitalityLevel = 0;
-	private long _startingXp;
 	/** Player's maximum cubic count. */
 	private int _maxCubicCount = 1;
-	/** Player's maximum talisman count. */
-	private final AtomicInteger _talismanSlots = new AtomicInteger();
 	private boolean _cloakSlot = false;
 	
 	public static final int[] VITALITY_LEVELS =
@@ -107,7 +99,7 @@ public class PlayerStat extends PlayableStat
 		
 		// EXP status update currently not used in retail
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
+		// player.sendPacket(new ExBrExtraUserInfo(player));
 		return true;
 	}
 	
@@ -265,11 +257,6 @@ public class PlayerStat extends PlayableStat
 			getActiveChar().getParty().recalculatePartyLevel(); // Recalculate the party level
 		}
 		
-		if (getActiveChar().isTransformed() || getActiveChar().isInStance())
-		{
-			getActiveChar().getTransformation().onLevelUp(getActiveChar());
-		}
-		
 		// Synchronize level with pet if possible.
 		if (getActiveChar().hasPet())
 		{
@@ -298,7 +285,7 @@ public class PlayerStat extends PlayableStat
 		getActiveChar().refreshExpertisePenalty();
 		// Send a Server->Client packet UserInfo to the Player
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
-		getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
+		// getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
 		return levelIncreased;
 	}
 	
@@ -357,19 +344,6 @@ public class PlayerStat extends PlayableStat
 		}
 	}
 	
-	public void setStartingExp(long value)
-	{
-		if (Config.BOTREPORT_ENABLE)
-		{
-			_startingXp = value;
-		}
-	}
-	
-	public long getStartingExp()
-	{
-		return _startingXp;
-	}
-	
 	/**
 	 * Gets the maximum cubic count.
 	 * @return the maximum cubic count
@@ -386,20 +360,6 @@ public class PlayerStat extends PlayableStat
 	public void setMaxCubicCount(int cubicCount)
 	{
 		_maxCubicCount = cubicCount;
-	}
-	
-	/**
-	 * Gets the maximum talisman count.
-	 * @return the maximum talisman count
-	 */
-	public int getTalismanSlots()
-	{
-		return _talismanSlots.get();
-	}
-	
-	public void addTalismanSlots(int count)
-	{
-		_talismanSlots.addAndGet(count);
 	}
 	
 	public boolean canEquipCloak()
@@ -540,15 +500,7 @@ public class PlayerStat extends PlayableStat
 	public double getBaseMoveSpeed(MoveType type)
 	{
 		final Player player = getActiveChar();
-		if (player.isTransformed())
-		{
-			final TransformTemplate template = player.getTransformation().getTemplate(player);
-			if (template != null)
-			{
-				return template.getBaseMoveSpeed(type);
-			}
-		}
-		else if (player.isMounted())
+		if (player.isMounted())
 		{
 			final PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
 			if (data != null)
@@ -695,7 +647,7 @@ public class PlayerStat extends PlayableStat
 		
 		_vitalityPoints = points;
 		updateVitalityLevel(quiet);
-		getActiveChar().sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
+		// getActiveChar().sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
 	}
 	
 	public synchronized void updateVitalityPoints(float value, boolean useRates, boolean quiet)

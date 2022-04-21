@@ -22,136 +22,141 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-/**
- * In Search of the Nest (109)
- * @author Adry_85
- */
 public class Q00109_InSearchOfTheNest extends Quest
 {
 	// NPCs
 	private static final int PIERCE = 31553;
-	private static final int SCOUTS_CORPSE = 32015;
 	private static final int KAHMAN = 31554;
+	private static final int SCOUT_CORPSE = 32015;
 	// Items
-	private static final int SCOUTS_NOTE = 14858;
+	private static final int SCOUT_MEMO = 8083;
+	private static final int RECRUIT_BADGE = 7246;
+	private static final int SOLDIER_BADGE = 7247;
 	
 	public Q00109_InSearchOfTheNest()
 	{
 		super(109);
+		registerQuestItems(SCOUT_MEMO);
 		addStartNpc(PIERCE);
-		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
-		registerQuestItems(SCOUTS_NOTE);
+		addTalkId(PIERCE, SCOUT_CORPSE, KAHMAN);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
 		switch (event)
 		{
-			case "31553-0.htm":
+			case "31553-01.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				break;
 			}
-			case "32015-2.html":
+			case "32015-02.htm":
 			{
-				giveItems(player, SCOUTS_NOTE, 1);
-				qs.setCond(2, true);
+				st.setCond(2, true);
+				giveItems(player, SCOUT_MEMO, 1);
 				break;
 			}
-			case "31553-3.html":
+			case "31553-03.htm":
 			{
-				takeItems(player, SCOUTS_NOTE, -1);
-				qs.setCond(3, true);
+				st.setCond(3, true);
+				takeItems(player, SCOUT_MEMO, 1);
 				break;
 			}
-			case "31554-2.html":
+			case "31554-02.htm":
 			{
-				giveAdena(player, 161500, true);
-				addExpAndSp(player, 701500, 50000);
-				qs.exitQuest(false, true);
+				rewardItems(player, 57, 5168);
+				st.exitQuest(false, true);
 				break;
 			}
 		}
-		return event;
+		
+		return htmltext;
 	}
 	
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg(player);
-		switch (npc.getId())
+		if (st == null)
 		{
-			case PIERCE:
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				switch (qs.getState())
+				// Must worn one or other Golden Ram Badge in order to be accepted.
+				if ((player.getLevel() >= 66) && hasAtLeastOneQuestItem(player, RECRUIT_BADGE, SOLDIER_BADGE))
 				{
-					case State.CREATED:
+					htmltext = "31553-00.htm";
+				}
+				else
+				{
+					htmltext = "31553-00a.htm";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				final int cond = st.getCond();
+				switch (npc.getId())
+				{
+					case PIERCE:
 					{
-						htmltext = (player.getLevel() < 81) ? "31553-0a.htm" : "31553-0b.htm";
-						break;
-					}
-					case State.STARTED:
-					{
-						switch (qs.getCond())
+						if (cond == 1)
 						{
-							case 1:
-							{
-								htmltext = "31553-1.html";
-								break;
-							}
-							case 2:
-							{
-								htmltext = "31553-2.html";
-								break;
-							}
-							case 3:
-							{
-								htmltext = "31553-3a.html";
-								break;
-							}
+							htmltext = "31553-01a.htm";
+						}
+						else if (cond == 2)
+						{
+							htmltext = "31553-02.htm";
+						}
+						else if (cond == 3)
+						{
+							htmltext = "31553-03.htm";
 						}
 						break;
 					}
-					case State.COMPLETED:
+					case SCOUT_CORPSE:
 					{
-						htmltext = getAlreadyCompletedMsg(player);
+						if (cond == 1)
+						{
+							htmltext = "32015-01.htm";
+						}
+						else if (cond == 2)
+						{
+							htmltext = "32015-02.htm";
+						}
+						break;
+					}
+					case KAHMAN:
+					{
+						if (cond == 3)
+						{
+							htmltext = "31554-01.htm";
+						}
 						break;
 					}
 				}
 				break;
 			}
-			case SCOUTS_CORPSE:
+			case State.COMPLETED:
 			{
-				if (qs.isStarted())
-				{
-					if (qs.isCond(1))
-					{
-						htmltext = "32015-1.html";
-					}
-					else if (qs.isCond(2))
-					{
-						htmltext = "32015-3.html";
-					}
-				}
-				break;
-			}
-			case KAHMAN:
-			{
-				if (qs.isStarted() && qs.isCond(3))
-				{
-					htmltext = "31554-1.html";
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
+		
 		return htmltext;
 	}
 }

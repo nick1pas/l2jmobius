@@ -60,14 +60,14 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
 		packet.writeH(_whType);
-		packet.writeQ(_playerAdena);
+		packet.writeD((int) _playerAdena);
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{
 			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
-			packet.writeQ(item.getCount());
+			packet.writeD((int) item.getCount());
 			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(item.getCustomType1());
 			packet.writeD(item.getTemplate().getBodyPart());
@@ -83,19 +83,6 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 			else
 			{
 				packet.writeQ(0);
-			}
-			packet.writeH(item.getAttackElementType());
-			packet.writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
-				packet.writeH(item.getElementDefAttr(i));
-			}
-			packet.writeD(item.getMana());
-			// T2
-			packet.writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1);
-			for (int op : item.getEnchantOptions())
-			{
-				packet.writeH(op);
 			}
 		}
 		return true;

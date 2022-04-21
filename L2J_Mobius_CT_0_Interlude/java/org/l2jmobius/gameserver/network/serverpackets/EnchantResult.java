@@ -38,7 +38,7 @@ public class EnchantResult implements IClientOutgoingPacket
 		OutgoingPackets.ENCHANT_RESULT.writeId(packet);
 		packet.writeD(_result);
 		packet.writeD(_crystal);
-		packet.writeQ(_count);
+		packet.writeD(_count);
 		return true;
 	}
 }

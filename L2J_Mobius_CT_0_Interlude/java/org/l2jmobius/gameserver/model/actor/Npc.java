@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -80,7 +79,6 @@ import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -91,12 +89,10 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import org.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
@@ -125,8 +121,6 @@ public class Npc extends Creature
 	private volatile boolean _isDecayed = false;
 	/** The castle index in the array of Castle this Npc belongs to */
 	private int _castleIndex = -2;
-	/** The fortress index in the array of Fort this Npc belongs to */
-	private int _fortIndex = -2;
 	private boolean _isInTown = false;
 	/** True if this Npc is autoattackable **/
 	private boolean _isAutoAttackable = false;
@@ -150,7 +144,6 @@ public class Npc extends Creature
 	
 	private int _soulshotamount = 0;
 	private int _spiritshotamount = 0;
-	private int _displayEffect = 0;
 	
 	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
@@ -396,10 +389,10 @@ public class Npc extends Creature
 			{
 				player.sendPacket(new FakePlayerInfo(this));
 			}
-			else if (getRunSpeed() == 0)
-			{
-				player.sendPacket(new ServerObjectInfo(this, player));
-			}
+			// else if (getRunSpeed() == 0)
+			// {
+			// player.sendPacket(new ServerObjectInfo(this, player));
+			// }
 			else if (isSpawned())
 			{
 				player.sendPacket(new AbstractNpcInfo.NpcInfo(this, player));
@@ -566,8 +559,7 @@ public class Npc extends Creature
 		if (player.isClanLeader())
 		{
 			final int castleId = getCastle() != null ? getCastle().getResidenceId() : -1;
-			final int fortId = getFort() != null ? getFort().getResidenceId() : -1;
-			return (player.getClan().getCastleId() == castleId) || (player.getClan().getFortId() == fortId);
+			return player.getClan().getCastleId() == castleId;
 		}
 		return false;
 	}
@@ -590,49 +582,6 @@ public class Npc extends Creature
 			return null;
 		}
 		return CastleManager.getInstance().getCastles().get(index);
-	}
-	
-	/**
-	 * @return the Fort this Npc belongs to.
-	 */
-	public Fort getFort()
-	{
-		// Get Fort this NPC belongs to (excluding Attackable)
-		if (_fortIndex < 0)
-		{
-			final Fort fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
-			if (fort != null)
-			{
-				_fortIndex = FortManager.getInstance().getFortIndex(fort.getResidenceId());
-			}
-			
-			if (_fortIndex < 0)
-			{
-				_fortIndex = FortManager.getInstance().findNearestFortIndex(this);
-			}
-		}
-		
-		if (_fortIndex < 0)
-		{
-			return null;
-		}
-		
-		return FortManager.getInstance().getForts().get(_fortIndex);
-	}
-	
-	/**
-	 * Return closest Fort in defined distance
-	 * @param maxDistance long
-	 * @return Fort
-	 */
-	public Fort getFort(long maxDistance)
-	{
-		final int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
-		if (index < 0)
-		{
-			return null;
-		}
-		return FortManager.getInstance().getForts().get(index);
 	}
 	
 	public boolean isInTown()
@@ -1464,10 +1413,10 @@ public class Npc extends Creature
 			{
 				player.sendPacket(new FakePlayerInfo(this));
 			}
-			else if (getRunSpeed() == 0)
-			{
-				player.sendPacket(new ServerObjectInfo(this, player));
-			}
+			// else if (getRunSpeed() == 0)
+			// {
+			// player.sendPacket(new ServerObjectInfo(this, player));
+			// }
 			else
 			{
 				player.sendPacket(new AbstractNpcInfo.NpcInfo(this, player));
@@ -1537,20 +1486,6 @@ public class Npc extends Creature
 	public AIType getAiType()
 	{
 		return getTemplate().getAIType();
-	}
-	
-	public void setDisplayEffect(int value)
-	{
-		if (value != _displayEffect)
-		{
-			_displayEffect = value;
-			broadcastPacket(new ExChangeNpcState(getObjectId(), value));
-		}
-	}
-	
-	public int getDisplayEffect()
-	{
-		return _displayEffect;
 	}
 	
 	public int getColorEffect()

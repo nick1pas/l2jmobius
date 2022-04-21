@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
-
 /**
  * Sword of Solidarity (101)
  * @author xban1x
@@ -109,7 +107,6 @@ public class Q00101_SwordOfSolidarity extends Quest
 				{
 					if (qs.isCond(5) && hasQuestItems(player, BROKEN_SWORD_HANDLE))
 					{
-						Q00281_HeadForTheHills.giveNewbieReward(player);
 						for (ItemHolder reward : REWARDS)
 						{
 							giveItems(player, reward);

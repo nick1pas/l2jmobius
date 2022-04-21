@@ -53,9 +53,6 @@ public class MonumentOfHeroes extends AbstractNpcAI
 		6619, // Infinity Bow
 		6620, // Infinity Wing
 		6621, // Infinity Spear
-		9388, // Infinity Rapier
-		9389, // Infinity Sword
-		9390, // Infinity Shooter
 	};
 	
 	private MonumentOfHeroes()

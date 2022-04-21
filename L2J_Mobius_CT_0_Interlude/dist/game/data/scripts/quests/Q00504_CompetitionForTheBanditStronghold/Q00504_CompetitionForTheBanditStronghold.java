@@ -120,7 +120,7 @@ public class Q00504_CompetitionForTheBanditStronghold extends Quest
 		{
 			htmltext = "35437-05.html";
 		}
-		else if ((clan.getHideoutId() > 0) || (clan.getFortId() > 0) || (clan.getCastleId() > 0))
+		else if ((clan.getHideoutId() > 0) || (clan.getCastleId() > 0))
 		{
 			htmltext = "35437-10.html";
 		}

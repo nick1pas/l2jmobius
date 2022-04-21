@@ -31,22 +31,18 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.handler.TargetHandler;
-import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
-import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Block;
 import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -166,7 +162,6 @@ public class Skill implements IIdentifiable
 	
 	private final int _minPledgeClass;
 	private final int _chargeConsume;
-	private final int _soulMaxConsume;
 	
 	private final boolean _isHeroSkill; // If true the skill is a Hero Skill
 	private final boolean _isGMSkill; // True if skill is GM skill
@@ -182,11 +177,6 @@ public class Skill implements IIdentifiable
 	private List<FuncTemplate> _funcTemplates;
 	
 	private final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
-	
-	// Flying support
-	private final FlyType _flyType;
-	private final int _flyRadius;
-	private final float _flyCourse;
 	
 	private final boolean _isDebuff;
 	
@@ -306,7 +296,6 @@ public class Skill implements IIdentifiable
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
 		_chargeConsume = set.getInt("chargeConsume", 0);
-		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
 		_blowChance = set.getInt("blowChance", 0);
 		_isHeroSkill = SkillTreeData.getInstance().isHeroSkill(_id, _level);
 		_isGMSkill = SkillTreeData.getInstance().isGMSkill(_id, _level);
@@ -315,9 +304,6 @@ public class Skill implements IIdentifiable
 		_baseCritRate = set.getInt("baseCritRate", 0);
 		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
 		_effectPoint = set.getInt("effectPoint", 0);
-		_flyType = set.getEnum("flyType", FlyType.class, null);
-		_flyRadius = set.getInt("flyRadius", 0);
-		_flyCourse = set.getFloat("flyCourse", 0);
 		_canBeDispeled = set.getBoolean("canBeDispeled", true);
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
 		_simultaneousCast = set.getBoolean("simultaneousCast", false);
@@ -838,15 +824,6 @@ public class Skill implements IIdentifiable
 		return (_operateType != null) && _operateType.isChanneling();
 	}
 	
-	/**
-	 * Verify if the skill is a transformation skill.
-	 * @return {@code true} if the skill is a transformation, {@code false} otherwise
-	 */
-	public boolean isTransformation()
-	{
-		return _abnormalType == AbnormalType.TRANSFORM;
-	}
-	
 	public int getEffectPoint()
 	{
 		return _effectPoint;
@@ -901,11 +878,6 @@ public class Skill implements IIdentifiable
 		return _chargeConsume;
 	}
 	
-	public int getMaxSoulConsumeCount()
-	{
-		return _soulMaxConsume;
-	}
-	
 	public int getBaseCritRate()
 	{
 		return _baseCritRate;
@@ -914,21 +886,6 @@ public class Skill implements IIdentifiable
 	public boolean getDmgDirectlyToHP()
 	{
 		return _directHpDmg;
-	}
-	
-	public FlyType getFlyType()
-	{
-		return _flyType;
-	}
-	
-	public int getFlyRadius()
-	{
-		return _flyRadius;
-	}
-	
-	public float getFlyCourse()
-	{
-		return _flyCourse;
 	}
 	
 	public boolean isStayAfterDeath()
@@ -1387,65 +1344,25 @@ public class Skill implements IIdentifiable
 	 */
 	private void activateSkill(Creature caster, Cubic cubic, WorldObject... targets)
 	{
-		switch (_id)
+		for (WorldObject obj : targets)
 		{
-			// TODO: replace with AI
-			case 5852:
-			case 5853:
+			final Creature target = (Creature) obj;
+			if (Formulas.calcBuffDebuffReflection(target, this))
 			{
-				final Block block = targets[0] instanceof Block ? (Block) targets[0] : null;
-				final Player player = caster.isPlayer() ? (Player) caster : null;
-				if ((block == null) || (player == null))
-				{
-					return;
-				}
+				// if skill is reflected instant effects should be casted on target
+				// and continuous effects on caster
+				applyEffects(target, caster, false, 0);
 				
-				final int arena = player.getBlockCheckerArena();
-				if (arena != -1)
-				{
-					final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
-					if (holder == null)
-					{
-						return;
-					}
-					
-					final int team = holder.getPlayerTeam(player);
-					final int color = block.getColorEffect();
-					if ((team == 0) && (color == 0x00))
-					{
-						block.changeColor(player, holder, team);
-					}
-					else if ((team == 1) && (color == 0x53))
-					{
-						block.changeColor(player, holder, team);
-					}
-				}
-				break;
+				final BuffInfo info = new BuffInfo(caster, target, this);
+				applyEffectScope(EffectScope.GENERAL, info, true, false);
+				
+				final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
+				applyEffectScope(pvpOrPveEffectScope, info, true, false);
+				applyEffectScope(EffectScope.CHANNELING, info, true, false);
 			}
-			default:
+			else
 			{
-				for (WorldObject obj : targets)
-				{
-					final Creature target = (Creature) obj;
-					if (Formulas.calcBuffDebuffReflection(target, this))
-					{
-						// if skill is reflected instant effects should be casted on target
-						// and continuous effects on caster
-						applyEffects(target, caster, false, 0);
-						
-						final BuffInfo info = new BuffInfo(caster, target, this);
-						applyEffectScope(EffectScope.GENERAL, info, true, false);
-						
-						final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
-						applyEffectScope(pvpOrPveEffectScope, info, true, false);
-						applyEffectScope(EffectScope.CHANNELING, info, true, false);
-					}
-					else
-					{
-						applyEffects(caster, target);
-					}
-				}
-				break;
+				applyEffects(caster, target);
 			}
 		}
 		

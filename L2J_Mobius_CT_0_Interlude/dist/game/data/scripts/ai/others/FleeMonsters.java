@@ -46,8 +46,6 @@ public class FleeMonsters extends AbstractNpcAI
 		18157, // Victim
 		20002, // Rabbit
 		20432, // Elpy
-		22228, // Grey Elpy
-		25604, // Mutated Elpy
 	};
 	// Misc
 	private static final int FLEE_DISTANCE = 500;

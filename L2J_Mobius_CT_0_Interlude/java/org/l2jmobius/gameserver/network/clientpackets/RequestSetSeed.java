@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public class RequestSetSeed implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 20; // length of the one item
+	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private int _manorId;
 	private List<SeedProduction> _items;
@@ -53,8 +53,8 @@ public class RequestSetSeed implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			final long sales = packet.readQ();
-			final long price = packet.readQ();
+			final int sales = packet.readD();
+			final int price = packet.readD();
 			if ((itemId < 1) || (sales < 0) || (price < 0))
 			{
 				_items.clear();

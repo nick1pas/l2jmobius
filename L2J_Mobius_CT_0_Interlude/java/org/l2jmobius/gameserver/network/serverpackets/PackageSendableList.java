@@ -44,7 +44,7 @@ public class PackageSendableList extends AbstractItemPacket
 	{
 		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
 		packet.writeD(_playerObjId);
-		packet.writeQ(_adena);
+		packet.writeD((int) _adena);
 		packet.writeD(_items.size());
 		for (Item item : _items)
 		{

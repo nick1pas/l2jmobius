@@ -242,7 +242,7 @@ public class AdminQuest implements IAdminCommandHandler
 			{
 				for (QuestTimer timer : list)
 				{
-					timers += "<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">" + timer.toString() + ":</font> <font color=00FF00>Active: " + timer.isActive() + " Repeatable: " + timer.isRepeating() + " Player: " + timer.getPlayer() + " Npc: " + timer.getNpc() + "</font></td></tr></table></td></tr>";
+					timers += "<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">" + timer.toString() + ":</font> <font color=00FF00>Active: " + timer.isActive() + " Repeatable: " + timer.isRepeating() + " Player: " + timer.getPlayer() + " Npc: " + timer.getNpc() + "</font></td></tr></table></td></tr>";
 					counter++;
 					if (counter > 10)
 					{
@@ -252,22 +252,22 @@ public class AdminQuest implements IAdminCommandHandler
 			}
 			
 			final StringBuilder sb = new StringBuilder();
-			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
-			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
-			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Descr:</font> <font color=00FF00>" + quest.getPath() + "</font></td></tr></table></td></tr>");
-			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Path:</font> <font color=00FF00>" + quest.getClass().getName().substring(0, quest.getClass().getName().lastIndexOf('.')).replaceAll("\\.", "/") + "</font></td></tr></table></td></tr>");
-			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Events:</font> <font color=00FF00>" + events + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Descr:</font> <font color=00FF00>" + quest.getPath() + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Path:</font> <font color=00FF00>" + quest.getClass().getName().substring(0, quest.getClass().getName().lastIndexOf('.')).replaceAll("\\.", "/") + "</font></td></tr></table></td></tr>");
+			sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Events:</font> <font color=00FF00>" + events + "</font></td></tr></table></td></tr>");
 			if (!npcs.isEmpty())
 			{
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">NPCs:</font> <font color=00FF00>" + npcs + "</font></td></tr></table></td></tr>");
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">NPCs:</font> <font color=00FF00>" + npcs + "</font></td></tr></table></td></tr>");
 			}
 			if (!items.isEmpty())
 			{
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Items:</font> <font color=00FF00>" + items + "</font></td></tr></table></td></tr>");
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Items:</font> <font color=00FF00>" + items + "</font></td></tr></table></td></tr>");
 			}
 			if (!timers.isEmpty())
 			{
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Timers:</font> <font color=00FF00></font></td></tr></table></td></tr>");
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=000000><tr><td width=270><font color=\"LEVEL\">Timers:</font> <font color=00FF00></font></td></tr></table></td></tr>");
 				sb.append(timers);
 			}
 			

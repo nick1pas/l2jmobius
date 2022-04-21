@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Calendar;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -38,15 +37,10 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Couple;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -62,8 +56,6 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.residences.AuctionableHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
@@ -78,11 +70,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
-import org.l2jmobius.gameserver.network.serverpackets.ExBirthdayPopup;
-import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
-import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
-import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
@@ -254,7 +241,10 @@ public class EnterWorld implements IClientIncomingPacket
 			{
 				if (!clanHall.getPaid())
 				{
-					player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+					// final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+					// sm.addString(String.format("%1$TH:%1$TM", LocalTime.ofSecondOfDay((System.currentTimeMillis() - clanHall.getPaidUntil()) / 1000)));
+					// player.sendPacket(sm);
+					player.sendPacket(new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW));
 				}
 			}
 			
@@ -275,26 +265,6 @@ public class EnterWorld implements IClientIncomingPacket
 				{
 					player.setSiegeState((byte) 2);
 					player.setSiegeSide(siege.getCastle().getResidenceId());
-				}
-			}
-			
-			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
-			{
-				if (!siege.isInProgress())
-				{
-					continue;
-				}
-				
-				if (siege.checkIsAttacker(clan))
-				{
-					player.setSiegeState((byte) 1);
-					player.setSiegeSide(siege.getFort().getResidenceId());
-				}
-				
-				else if (siege.checkIsDefender(clan))
-				{
-					player.setSiegeState((byte) 2);
-					player.setSiegeSide(siege.getFort().getResidenceId());
 				}
 			}
 			
@@ -326,25 +296,7 @@ public class EnterWorld implements IClientIncomingPacket
 				}
 			}
 			
-			if (clan.getFortId() > 0)
-			{
-				final Fort fort = FortManager.getInstance().getFortByOwner(clan);
-				if (fort != null)
-				{
-					fort.giveResidentialSkills(player);
-				}
-			}
-			
 			showClanNotice = clan.isNoticeEnabled();
-		}
-		
-		if (TerritoryWarManager.getInstance().getRegisteredTerritoryId(player) > 0)
-		{
-			if (TerritoryWarManager.getInstance().isTWInProgress())
-			{
-				player.setSiegeState((byte) 1);
-			}
-			player.setSiegeSide(TerritoryWarManager.getInstance().getRegisteredTerritoryId(player));
 		}
 		
 		// Updating Seal of Strife Buff/Debuff
@@ -389,14 +341,8 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Item List
 		player.sendPacket(new ItemList(player, false));
 		
-		// Send Teleport Bookmark List
-		player.sendPacket(new ExGetBookMarkInfoPacket(player));
-		
 		// Send Shortcuts
 		player.sendPacket(new ShortCutInit(player));
-		
-		// Send Action list
-		player.sendPacket(ExBasicActionList.STATIC_PACKET);
 		
 		// Send Skill list
 		player.sendSkillList();
@@ -498,11 +444,6 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		if (Config.PETITIONING_ALLOWED)
-		{
-			PetitionManager.getInstance().checkPetitionMessages(player);
-		}
-		
 		if (player.isAlikeDead()) // dead or fake dead
 		{
 			// no broadcast needed since the player will already spawn dead to others
@@ -542,22 +483,6 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
 		
-		// remove combat flag before teleporting
-		if (player.getInventory().getItemByItemId(9819) != null)
-		{
-			final Fort fort = FortManager.getInstance().getFort(player);
-			if (fort != null)
-			{
-				FortSiegeManager.getInstance().dropCombatFlag(player, fort.getResidenceId());
-			}
-			else
-			{
-				final int slot = player.getInventory().getSlotFromItem(player.getInventory().getItemByItemId(9819));
-				player.getInventory().unEquipItemInBodySlot(slot);
-				player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
-			}
-		}
-		
 		// Attacker or spectator logging in to a siege zone.
 		// Actually should be checked for inside castle only?
 		if (!player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) && player.isInsideZone(ZoneId.SIEGE) && (!player.isInSiege() || (player.getSiegeState() < 2)))
@@ -575,47 +500,12 @@ public class EnterWorld implements IClientIncomingPacket
 			player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
 		}
 		
-		if (Config.ALLOW_MAIL && MailManager.getInstance().hasUnreadPost(player))
-		{
-			player.sendPacket(ExNoticePostArrived.valueOf(false));
-		}
-		
 		if (Config.WELCOME_MESSAGE_ENABLED)
 		{
 			player.sendPacket(new ExShowScreenMessage(Config.WELCOME_MESSAGE_TEXT, Config.WELCOME_MESSAGE_TIME));
 		}
 		
 		ClassMaster.showQuestionMark(player);
-		
-		final int birthday = player.checkBirthDay();
-		if (birthday == 0)
-		{
-			final QuestState qs = player.getQuestState("CharacterBirthday");
-			String nextBirthday = null;
-			if (qs != null)
-			{
-				nextBirthday = qs.get("Birthday");
-			}
-			
-			final Calendar now = Calendar.getInstance();
-			now.setTimeInMillis(System.currentTimeMillis());
-			if ((nextBirthday == null) || (Integer.parseInt(nextBirthday) == now.get(Calendar.YEAR)))
-			{
-				player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
-				player.sendPacket(new ExBirthdayPopup());
-			}
-		}
-		else if (birthday != -1)
-		{
-			sm = new SystemMessage(SystemMessageId.THERE_ARE_S1_DAYS_REMAINING_UNTIL_YOUR_BIRTHDAY_ON_YOUR_BIRTHDAY_YOU_WILL_RECEIVE_A_GIFT_THAT_ALEGRIA_HAS_CAREFULLY_PREPARED);
-			sm.addString(Integer.toString(birthday));
-			player.sendPacket(sm);
-		}
-		
-		if (!player.getPremiumItemList().isEmpty())
-		{
-			player.sendPacket(ExNotifyPremiumItem.STATIC_PACKET);
-		}
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 		{

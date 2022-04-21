@@ -244,9 +244,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		
 		final StringBuilder html = new StringBuilder(500 + (effects.size() * 200));
-		html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ");
+		html.append("<html><table width=\"270\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td width=180><center><font color=\"LEVEL\">Effects of ");
 		html.append(target.getName());
-		html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
+		html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
 		
 		final int start = ((page - 1) * PAGE_LIMIT);
 		final int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
@@ -273,13 +273,13 @@ public class AdminBuffs implements IAdminCommandHandler
 					html.append(target.getObjectId());
 					html.append(" ");
 					html.append(skill.getId());
-					html.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+					html.append("\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
 				}
 			}
 			count++;
 		}
 		
-		html.append("</table><table width=300 bgcolor=444444><tr>");
+		html.append("</table><table width=300 bgcolor=000000><tr>");
 		for (int x = 0; x < max; x++)
 		{
 			final int pagenr = x + 1;
@@ -307,10 +307,10 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs");
 		html.append(passive ? "_ps " : " ");
 		html.append(target.getName());
-		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+		html.append("\" width=65 height=21 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\">");
 		html.append("<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ");
 		html.append(target.getObjectId());
-		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
+		html.append("\" width=65 height=21 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"><br>");
 		// Legend
 		if (!passive)
 		{

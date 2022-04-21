@@ -55,7 +55,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		packet.writeC(0x13); // ?
 		packet.writeC(0); // ?
 		packet.writeC(0); // ?
-		packet.writeQ(_money); // current money
+		packet.writeD((int) _money); // current money
 		packet.writeD(_listId);
 		int newlength = 0;
 		for (Product product : _list)
@@ -80,7 +80,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 				{
 					packet.writeH(0); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
-				packet.writeQ(Config.WEAR_PRICE);
+				packet.writeD(Config.WEAR_PRICE);
 			}
 		}
 		return true;

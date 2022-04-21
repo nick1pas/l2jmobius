@@ -181,9 +181,6 @@ public enum Stat
 	// Vitality
 	VITALITY_CONSUME_RATE("vitalityConsumeRate"),
 	
-	// Souls
-	MAX_SOULS("maxSouls"),
-	
 	REDUCE_EXP_LOST_BY_PVP("reduceExpLostByPvp"),
 	REDUCE_EXP_LOST_BY_MOB("reduceExpLostByMob"),
 	REDUCE_EXP_LOST_BY_RAID("reduceExpLostByRaid"),

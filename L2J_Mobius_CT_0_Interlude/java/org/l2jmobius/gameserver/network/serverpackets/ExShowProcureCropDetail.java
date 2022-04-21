@@ -58,8 +58,8 @@ public class ExShowProcureCropDetail implements IClientOutgoingPacket
 		{
 			final CropProcure crop = entry.getValue();
 			packet.writeD(entry.getKey()); // manor name
-			packet.writeQ(crop.getAmount()); // buy residual
-			packet.writeQ(crop.getPrice()); // buy price
+			packet.writeD((int) crop.getAmount()); // buy residual
+			packet.writeD((int) crop.getPrice()); // buy price
 			packet.writeC(crop.getReward()); // reward type
 		}
 		return true;

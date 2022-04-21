@@ -691,14 +691,14 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		 * 0x01-Private Warehouse 0x02-Clan Warehouse 0x03-Castle Warehouse 0x04-Warehouse
 		 */
 		packet.writeH(_whType);
-		packet.writeQ(_playerAdena);
+		packet.writeD((int) _playerAdena);
 		packet.writeH(_objects.size());
 		for (WarehouseItem item : _objects)
 		{
 			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
-			packet.writeQ(item.getCount());
+			packet.writeD((int) item.getCount());
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(item.getCustomType1());
 			packet.writeD(item.getItem().getBodyPart());
@@ -714,18 +714,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 			else
 			{
 				packet.writeQ(0);
-			}
-			packet.writeH(item.getAttackElementType());
-			packet.writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
-				packet.writeH(item.getElementDefAttr(i));
-			}
-			packet.writeD(item.getMana());
-			packet.writeD(item.getTime());
-			for (int op : item.getEnchantOptions())
-			{
-				packet.writeH(op);
 			}
 		}
 		return true;

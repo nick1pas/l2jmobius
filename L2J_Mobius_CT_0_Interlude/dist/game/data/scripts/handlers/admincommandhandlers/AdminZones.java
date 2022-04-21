@@ -49,7 +49,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowTerritory;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 import org.l2jmobius.gameserver.util.HtmlUtil;
@@ -483,10 +482,10 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 					return;
 				}
 				
-				final Location firstLoc = list.get(0);
-				final ExShowTerritory exst = new ExShowTerritory(firstLoc.getZ() - 100, firstLoc.getZ() + 100);
-				list.forEach(exst::addVertice);
-				player.sendPacket(exst);
+				// final Location firstLoc = list.get(0);
+				// final ExShowTerritory exst = new ExShowTerritory(firstLoc.getZ() - 100, firstLoc.getZ() + 100);
+				// list.forEach(exst::addVertice);
+				// player.sendPacket(exst);
 				BuilderUtil.sendSysMessage(player, "In order to remove the debug you must restart your game client!");
 			}
 		}
@@ -506,7 +505,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		final AtomicInteger position = new AtomicInteger(page * 20);
 		final PageResult result = HtmlUtil.createPage(holder.getNodes(), page, 20, i ->
 		{
-			return "<td align=center><button action=\"bypass -h admin_zones list " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
+			return "<td align=center><button action=\"bypass -h admin_zones list " + i + "\" value=\"" + (i + 1) + "\" width=30 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>";
 		}, loc ->
 		{
 			final StringBuilder sb = new StringBuilder();

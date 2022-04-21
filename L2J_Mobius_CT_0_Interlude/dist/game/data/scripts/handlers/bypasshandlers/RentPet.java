@@ -80,7 +80,7 @@ public class RentPet implements IBypassHandler
 	
 	public static void tryRentPet(Player player, int petValue)
 	{
-		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
+		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isCursedWeaponEquipped())
 		{
 			return;
 		}

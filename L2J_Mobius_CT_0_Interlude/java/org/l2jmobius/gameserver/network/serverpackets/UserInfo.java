@@ -19,9 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -30,9 +29,6 @@ public class UserInfo implements IClientOutgoingPacket
 {
 	private final Player _player;
 	private int _relation;
-	private int _territoryId;
-	private final boolean _isDisguised;
-	private int _airShipHelm;
 	private final int _runSpd;
 	private final int _walkSpd;
 	private final int _swimRunSpd;
@@ -44,31 +40,14 @@ public class UserInfo implements IClientOutgoingPacket
 	public UserInfo(Player player)
 	{
 		_player = player;
-		final int _territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		_relation = _player.isClanLeader() ? 0x40 : 0;
 		if (_player.getSiegeState() == 1)
 		{
-			if (_territoryId == 0)
-			{
-				_relation |= 0x180;
-			}
-			else
-			{
-				_relation |= 0x1000;
-			}
+			_relation |= 0x1000;
 		}
 		if (_player.getSiegeState() == 2)
 		{
 			_relation |= 0x80;
-		}
-		_isDisguised = TerritoryWarManager.getInstance().isDisguised(_player.getObjectId());
-		if (_player.isInAirShip() && _player.getAirShip().isCaptain(_player))
-		{
-			_airShipHelm = _player.getAirShip().getHelmItemId();
-		}
-		else
-		{
-			_airShipHelm = 0;
 		}
 		_moveMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
@@ -109,23 +88,77 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getMaxLoad());
 		packet.writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equipped
 		
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollObjectId(slot));
-		}
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RFINGER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LFINGER));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HEAD));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_GLOVES));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_CHEST));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEGS));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FEET));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_CLOAK));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
+		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
 		
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot));
-		}
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_NECK));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RFINGER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LFINGER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CLOAK));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 		
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollAugmentationId(slot));
-		}
+		// c6 new h's
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		// end of c6 new h's
 		
-		packet.writeD(_player.getInventory().getTalismanSlots());
-		packet.writeD(_player.getInventory().canEquipCloak() ? 1 : 0);
 		packet.writeD((int) _player.getPAtk(null));
 		packet.writeD((int) _player.getPAtkSpd());
 		packet.writeD((int) _player.getPDef(null));
@@ -183,7 +216,7 @@ public class UserInfo implements IClientOutgoingPacket
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
 		packet.writeD(_player.isInvisible() ? _player.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _player.getAbnormalVisualEffects());
-		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
+		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : 0);
 		packet.writeD(_player.getClanPrivileges().getBitmask());
 		packet.writeH(_player.getRecomLeft()); // c2 recommendations remaining
 		packet.writeH(_player.getRecomHave()); // c2 recommendations received
@@ -193,7 +226,7 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(0); // special effects? circles around player...
 		packet.writeD(_player.getMaxCp());
 		packet.writeD((int) _player.getCurrentCp());
-		packet.writeC(_player.isMounted() || (_airShipHelm != 0) ? 0 : _player.getEnchantEffect());
+		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
 		packet.writeC(_player.getTeam().getId());
 		packet.writeD(_player.getClanCrestLargeId());
 		packet.writeC(_player.isNoble() ? 1 : 0); // 1: symbol on char menu ctrl+I
@@ -211,26 +244,6 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getPledgeType());
 		packet.writeD(_player.getAppearance().getTitleColor());
 		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-		// T1 Starts
-		packet.writeD(_player.getTransformationDisplayId());
-		final byte attackAttribute = _player.getAttackElement();
-		packet.writeH(attackAttribute);
-		packet.writeH(_player.getAttackElementValue(attackAttribute));
-		packet.writeH(_player.getDefenseElementValue(Elementals.FIRE));
-		packet.writeH(_player.getDefenseElementValue(Elementals.WATER));
-		packet.writeH(_player.getDefenseElementValue(Elementals.WIND));
-		packet.writeH(_player.getDefenseElementValue(Elementals.EARTH));
-		packet.writeH(_player.getDefenseElementValue(Elementals.HOLY));
-		packet.writeH(_player.getDefenseElementValue(Elementals.DARK));
-		packet.writeD(_player.getAgathionId());
-		// T2 Starts
-		packet.writeD(_player.getFame()); // Fame
-		packet.writeD(_player.isMinimapAllowed() ? 1 : 0); // Minimap on Hellbound
-		packet.writeD(_player.getVitalityPoints()); // Vitality Points
-		packet.writeD(_player.getAbnormalVisualEffectSpecial());
-		packet.writeD(_territoryId); // CT2.3
-		packet.writeD((_isDisguised ? 1 : 0)); // CT2.3
-		packet.writeD(_territoryId); // CT2.3
 		return true;
 	}
 }

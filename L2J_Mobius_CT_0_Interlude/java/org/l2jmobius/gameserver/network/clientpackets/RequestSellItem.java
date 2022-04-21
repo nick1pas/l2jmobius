@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.holders.UniqueItemHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
+import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestSellItem implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 16;
+	private static final int BATCH_LENGTH = 12;
 	private static final int CUSTOM_CB_SELL_LIST = 423;
 	
 	private int _listId;
@@ -63,8 +63,8 @@ public class RequestSellItem implements IClientIncomingPacket
 		{
 			final int objectId = packet.readD();
 			final int itemId = packet.readD();
-			final long count = packet.readQ();
-			if ((objectId < 1) || (itemId < 1) || (count < 1))
+			final int count = packet.readD();
+			if ((count > Integer.MAX_VALUE) || (objectId < 1) || (itemId < 1) || (count < 1))
 			{
 				_items = null;
 				return false;
@@ -178,6 +178,6 @@ public class RequestSellItem implements IClientIncomingPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-		player.sendPacket(new ExBuySellList(player, buyList, true));
+		player.sendPacket(new ItemList(player, true));
 	}
 }

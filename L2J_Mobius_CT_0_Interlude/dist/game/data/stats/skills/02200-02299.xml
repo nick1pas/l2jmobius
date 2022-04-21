@@ -652,7 +652,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2229" levels="8" name="Treasure Chest Key">
+	<skill id="2229" levels="8" name="Treasure Chest Key - 1">
 		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8</table>
 		<table name="#itemConsumeId">6665 6666 6667 6668 6669 6670 6671 6672</table>
 		<set name="castRange" val="40" />
@@ -734,8 +734,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2234" levels="1" name="Soul Breaking Arrow">
-		<!-- Temporarily stuns and immobilizes. -->
+	<skill id="2234" levels="1" name="Disrupting Arrow">
+		<!-- Shock temporarily Immobilizes target. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />
@@ -748,7 +748,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8192" /> <!-- Soul Breaking Arrow -->
+		<set name="itemConsumeId" val="8192" /> <!-- Breaking Arrow -->
 		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="2320" />
@@ -809,7 +809,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2237" levels="1" name="Key of Darkness">
+	<skill id="2237" levels="1" name="Altar Door Key">
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="2000" />
@@ -851,7 +851,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2239" levels="1" name="Petrification Scroll">
+	<skill id="2239" levels="1" name="Petrifaction Scroll">
 		<!-- Turns target to stone. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -956,9 +956,6 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<set name="isRecoveryHerb" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Heal">
 				<param power="60" />
@@ -977,9 +974,6 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<set name="isRecoveryHerb" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="ManaHeal">
 				<param power="20" />
@@ -1002,16 +996,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.25">
-					<using kind="FIST,SWORD,DAGGER,DUALDAGGER,DUALFIST,DUAL,BLUNT,ANCIENTSWORD,RAPIER,ETC" />
+					<using kind="FIST,SWORD,DAGGER,DUALDAGGER,DUALFIST,DUAL,BLUNT,ETC" />
 				</mul>
 				<mul stat="pAtk" val="1.15">
-					<using kind="BOW,POLE,CROSSBOW" />
+					<using kind="BOW,POLE" />
 				</mul>
 			</effect>
 		</for>
@@ -1029,9 +1020,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.75" />
@@ -1208,7 +1196,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7916" /> <!-- Dark Shard -->
+		<set name="itemConsumeId" val="7916" /> <!-- Dark Crystal -->
 		<set name="magicLevel" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1587,8 +1575,8 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="2274" levels="8" name="Fisherman's Potion">
-		<!-- Fisherman's Potion Green. Fishing Mastery Level is now reduced. You can now catch green fish. -->
+	<skill id="2274" levels="8" name="Fisherman's Potion   Green">
+		<!-- Fisherman's Potion Green. Fishing Mastery Level is now reduced.You can now catch green fish. -->
 		<table name="#active_skill_id_lvl">1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25</table>
 		<table name="#icons">icon.etc_oblivion_green_i00 icon.etc_oblivion_jade_i00 icon.etc_oblivion_blue_i00 icon.etc_oblivion_yellow_i00 icon.etc_oblivion_orange_i00 icon.etc_oblivion_violet_i00 icon.etc_oblivion_red_i00 icon.etc_oblivion_white_i00</table>
 		<table name="#power">2 5 8 11 14 17 20 23</table>
@@ -1672,9 +1660,6 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<set name="isRecoveryHerb" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="HealPercent">
 				<param power="#amount" />
@@ -1691,9 +1676,6 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<set name="isRecoveryHerb" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="ManaHealPercent">
 				<param power="#amount" />
@@ -1714,9 +1696,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.15" />
@@ -1737,9 +1716,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.75" />
@@ -1760,9 +1736,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.33" />
@@ -1783,9 +1756,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="mAtkSpd" val="1.3" />
@@ -1806,9 +1776,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<mul stat="critRate" val="1.3" />
@@ -1829,16 +1796,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
-		</cond>
 		<for>
 			<effect name="Buff">
 				<add stat="runSpd" val="33" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="2286" levels="6" name="Scroll: Recovery">
+	<skill id="2286" levels="6" name="Scroll: Recovery (No Grade)">
 		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
 		<table name="#itemConsumeId">8594 8595 8596 8597 8598 8599</table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1858,7 +1822,7 @@
 			<effect name="Recovery" />
 		</for>
 	</skill>
-	<skill id="2287" levels="6" name="Elixir of Life">
+	<skill id="2287" levels="6" name="Elixir of Life (No Grade)">
 		<table name="#amount">250 650 1100 1500 1900 2300</table>
 		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1874,7 +1838,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2288" levels="6" name="Elixir of Mental Strength">
+	<skill id="2288" levels="6" name="Elixir of Mental Strength (No Grade)">
 		<table name="#amount">60 140 220 290 360 420</table>
 		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1890,7 +1854,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2289" levels="6" name="Elixir of CP">
+	<skill id="2289" levels="6" name="Elixir of CP (No Grade)">
 		<table name="#amount">150 350 600 800 1000 1200</table>
 		<table name="#levelRange">1;19 20;39 40;51 52;60 61;75 76;85</table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1929,7 +1893,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8664" /> <!-- Facelifting Potion - A (Event) -->
+		<set name="itemConsumeId" val="8664" /> <!-- Masking Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1941,7 +1905,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8665" /> <!-- Facelifting Potion - B (Event) -->
+		<set name="itemConsumeId" val="8665" /> <!-- Masking Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1955,7 +1919,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8666" /> <!-- Facelifting Potion - C (Event) -->
+		<set name="itemConsumeId" val="8666" /> <!-- Masking Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1969,7 +1933,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8667" /> <!-- Dye Potion - A (Event) -->
+		<set name="itemConsumeId" val="8667" /> <!-- Chameleon Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1981,7 +1945,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8668" /> <!-- Dye Potion - B (Event) -->
+		<set name="itemConsumeId" val="8668" /> <!-- Chameleon Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1995,7 +1959,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8669" /> <!-- Dye Potion - C (Event) -->
+		<set name="itemConsumeId" val="8669" /> <!-- Chameleon Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -2009,7 +1973,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8670" /> <!-- Dye Potion - D (Event) -->
+		<set name="itemConsumeId" val="8670" /> <!-- Chameleon Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -2023,7 +1987,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8671" /> <!-- Hair Style Change Potion - A (Event) -->
+		<set name="itemConsumeId" val="8671" /> <!-- Luxury Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -2035,7 +1999,7 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="8672" /> <!-- Hair Style Change Potion - B (Event) -->
+		<set name="itemConsumeId" val="8672" /> <!-- Luxury Oil -->
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

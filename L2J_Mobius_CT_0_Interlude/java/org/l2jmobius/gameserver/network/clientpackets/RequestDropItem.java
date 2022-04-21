@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestDropItem implements IClientIncomingPacket
 {
 	private int _objectId;
-	private long _count;
+	private int _count;
 	private int _x;
 	private int _y;
 	private int _z;
@@ -52,7 +52,7 @@ public class RequestDropItem implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_count = packet.readQ();
+		_count = packet.readD();
 		_x = packet.readD();
 		_y = packet.readD();
 		_z = packet.readD();

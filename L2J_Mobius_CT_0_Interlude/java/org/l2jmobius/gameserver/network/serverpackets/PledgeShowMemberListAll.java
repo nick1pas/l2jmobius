@@ -57,7 +57,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		}
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
 		_player.sendPacket(new UserInfo(_player));
-		_player.sendPacket(new ExBrExtraUserInfo(_player));
+		// _player.sendPacket(new ExBrExtraUserInfo(_player));
 		return true;
 	}
 	
@@ -73,7 +73,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
 		packet.writeD(_clan.getHideoutId());
-		packet.writeD(_clan.getFortId());
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore());
 		packet.writeD(0); // 0
@@ -82,7 +81,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
-		packet.writeD(0); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		for (ClanMember m : _members)
 		{

@@ -19,44 +19,15 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Decoy;
-import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private static final int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_CLOAK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2,
-		Inventory.PAPERDOLL_RBRACELET,
-		Inventory.PAPERDOLL_LBRACELET,
-		Inventory.PAPERDOLL_DECO1,
-		Inventory.PAPERDOLL_DECO2,
-		Inventory.PAPERDOLL_DECO3,
-		Inventory.PAPERDOLL_DECO4,
-		Inventory.PAPERDOLL_DECO5,
-		Inventory.PAPERDOLL_DECO6,
-		Inventory.PAPERDOLL_BELT
-	};
-	
 	private final Player _player;
-	private final Clan _clan;
 	private int _objId;
 	private int _x;
 	private int _y;
@@ -71,8 +42,6 @@ public class CharInfo implements IClientOutgoingPacket
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private final int _territoryId;
-	private final boolean _isDisguised;
 	private int _vehicleId = 0;
 	private final boolean _gmSeeInvis;
 	
@@ -80,7 +49,6 @@ public class CharInfo implements IClientOutgoingPacket
 	{
 		_player = player;
 		_objId = player.getObjectId();
-		_clan = player.getClan();
 		if ((_player.getVehicle() != null) && (_player.getInVehiclePosition() != null))
 		{
 			_x = _player.getInVehiclePosition().getX();
@@ -105,8 +73,6 @@ public class CharInfo implements IClientOutgoingPacket
 		_flyRunSpd = player.isFlying() ? _runSpd : 0;
 		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 		_gmSeeInvis = gmSeeInvis;
-		_territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
-		_isDisguised = TerritoryWarManager.getInstance().isDisguised(player.getObjectId());
 	}
 	
 	public CharInfo(Decoy decoy, boolean gmSeeInvis)
@@ -133,18 +99,41 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		packet.writeD(_player.getBaseClass());
 		
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot));
-		}
-		
-		for (int slot : getPaperdollOrder())
-		{
-			packet.writeD(_player.getInventory().getPaperdollAugmentationId(slot));
-		}
-		
-		packet.writeD(_player.getInventory().getTalismanSlots());
-		packet.writeD(_player.getInventory().canEquipCloak() ? 1 : 0);
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CLOAK));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR2));
+		// c6 new h's
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
 		packet.writeD(_player.getPvpFlag());
 		packet.writeD(_player.getKarma());
 		packet.writeD(_mAtkSpd);
@@ -200,11 +189,11 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
 		packet.writeD(_gmSeeInvis ? (_player.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _player.getAbnormalVisualEffects());
-		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
+		packet.writeC(_player.getRecomLeft());
 		packet.writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
-		packet.writeD(_player.getMountNpcId() + 1000000);
 		packet.writeD(_player.getClassId().getId());
-		packet.writeD(0); // ?
+		packet.writeD(_player.getMaxCp());
+		packet.writeD((int) _player.getCurrentCp());
 		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
 		packet.writeC(_player.getTeam().getId());
 		packet.writeD(_player.getClanCrestLargeId());
@@ -222,23 +211,6 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getPledgeType());
 		packet.writeD(_player.getAppearance().getTitleColor());
 		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-		packet.writeD(_clan != null ? _clan.getReputationScore() : 0);
-		// T1
-		packet.writeD(_player.getTransformationDisplayId());
-		packet.writeD(_player.getAgathionId());
-		// T2
-		packet.writeD(1);
-		// T2.3
-		packet.writeD(_player.getAbnormalVisualEffectSpecial());
-		packet.writeD(_territoryId); // territory Id
-		packet.writeD((_isDisguised ? 1 : 0)); // is Disguised
-		packet.writeD(_territoryId); // territory Id
 		return true;
-	}
-	
-	@Override
-	public int[] getPaperdollOrder()
-	{
-		return PAPERDOLL_ORDER;
 	}
 }

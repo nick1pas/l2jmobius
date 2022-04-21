@@ -16,19 +16,10 @@
  */
 package ai.others.HealerTrainer;
 
-import java.util.Collection;
-
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.data.xml.SkillTreeData;
-import org.l2jmobius.gameserver.enums.AcquireSkillType;
-import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 
 import ai.AbstractNpcAI;
 
@@ -46,7 +37,7 @@ public class HealerTrainer extends AbstractNpcAI
 		30144, 30145, 30188, 30194, 30293, 30330, 30375, 30377, 30464, 30473,
 		30476, 30680, 30701, 30720, 30721, 30858, 30859, 30860, 30861, 30864,
 		30906, 30908, 30912, 31280, 31281, 31287, 31329, 31330, 31335, 31969,
-		31970, 31976, 32155, 32162
+		31970, 31976
 	};
 	// @formatter:on
 	// Misc
@@ -91,25 +82,7 @@ public class HealerTrainer extends AbstractNpcAI
 					break;
 				}
 				
-				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
-				int count = 0;
-				for (SkillLearn skillLearn : SkillTreeData.getInstance().getAvailableTransferSkills(player))
-				{
-					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
-					{
-						count++;
-						asl.addSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel(), skillLearn.getSkillLevel(), skillLearn.getLevelUpSp(), 0);
-					}
-				}
-				
-				if (count > 0)
-				{
-					player.sendPacket(asl);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-				}
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 				break;
 			}
 			case "SkillTransferCleanse":
@@ -132,72 +105,13 @@ public class HealerTrainer extends AbstractNpcAI
 					break;
 				}
 				
-				if (hasTransferSkillItems(player))
-				{
-					// Come back when you have used all transfer skill items for this class.
-					htmltext = "cleanse-no_skills.html";
-				}
-				else
-				{
-					boolean hasSkills = false;
-					final Collection<SkillLearn> skills = SkillTreeData.getInstance().getTransferSkillTree(player.getClassId()).values();
-					for (SkillLearn skillLearn : skills)
-					{
-						final Skill skill = player.getKnownSkill(skillLearn.getSkillId());
-						if (skill != null)
-						{
-							player.removeSkill(skill);
-							for (ItemHolder item : skillLearn.getRequiredItems())
-							{
-								player.addItem("Cleanse", item.getId(), item.getCount(), npc, true);
-							}
-							hasSkills = true;
-						}
-					}
-					
-					// Adena gets reduced once.
-					if (hasSkills)
-					{
-						player.reduceAdena("Cleanse", Config.FEE_DELETE_TRANSFER_SKILLS, npc, true);
-					}
-				}
+				// Come back when you have used all transfer skill items for this class.
+				htmltext = "cleanse-no_skills.html";
+				
 				break;
 			}
 		}
 		return htmltext;
-	}
-	
-	/**
-	 * Verify if the player has the required item.
-	 * @param player the player to verify
-	 * @return {@code true} if the player has the item for the current class, {@code false} otherwise
-	 */
-	private static boolean hasTransferSkillItems(Player player)
-	{
-		int itemId;
-		switch (player.getClassId())
-		{
-			case CARDINAL:
-			{
-				itemId = 15307;
-				break;
-			}
-			case EVA_SAINT:
-			{
-				itemId = 15308;
-				break;
-			}
-			case SHILLIEN_SAINT:
-			{
-				itemId = 15309;
-				break;
-			}
-			default:
-			{
-				itemId = -1;
-			}
-		}
-		return (player.getInventory().getInventoryItemCount(itemId, -1) > 0);
 	}
 	
 	public static void main(String[] args)

@@ -46,11 +46,9 @@ import org.l2jmobius.gameserver.ai.CreatureAI.IntentionCommand;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.RelationCache;
-import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.Race;
@@ -63,7 +61,6 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.EffectList;
@@ -86,8 +83,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.creature.NotifyAITask;
 import org.l2jmobius.gameserver.model.actor.tasks.creature.QueuedMagicUseTask;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
@@ -144,14 +139,12 @@ import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
-import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
-import org.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -454,29 +447,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				_zones[zone.ordinal()]--;
 			}
 		}
-	}
-	
-	/**
-	 * This will return true if the player is transformed,<br>
-	 * but if the player is not transformed it will return false.
-	 * @return transformation status
-	 */
-	public boolean isTransformed()
-	{
-		return false;
-	}
-	
-	public Transform getTransformation()
-	{
-		return null;
-	}
-	
-	/**
-	 * This will untransform a player if they are an instance of Player and if they are transformed.
-	 */
-	public void untransform()
-	{
-		// Just a place holder
 	}
 	
 	/**
@@ -848,16 +818,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private boolean canUseRangeWeapon()
 	{
-		if (isTransformed())
-		{
-			return true;
-		}
-		
 		// Check for arrows and MP
 		if (isPlayer())
 		{
 			final Weapon weaponItem = getActiveWeaponItem();
-			if ((weaponItem == null) || !weaponItem.isRange())
+			if ((weaponItem == null) || !weaponItem.isBow())
 			{
 				return false;
 			}
@@ -994,13 +959,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					
-					final Player actor = getActingPlayer();
-					if (actor.isTransformed() && !actor.getTransformation().canAttack())
-					{
-						sendPacket(ActionFailed.STATIC_PACKET);
-						return;
-					}
 				}
 			}
 			
@@ -1033,14 +991,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				else if (getActingPlayer().isSiegeFriend(target))
 				{
-					if (TerritoryWarManager.getInstance().isTWInProgress())
-					{
-						sendPacket(SystemMessageId.YOU_CANNOT_FORCE_ATTACK_A_MEMBER_OF_THE_SAME_TERRITORY);
-					}
-					else
-					{
-						sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-					}
+					sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -1093,16 +1044,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					}
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeToHit + (reuse / 2), TimeUnit.MILLISECONDS);
 					hitted = doAttackHitByBow(attack, target, timeAtk, reuse);
-					break;
-				}
-				case CROSSBOW:
-				{
-					if (!canUseRangeWeapon())
-					{
-						return;
-					}
-					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeToHit + (reuse / 2), TimeUnit.MILLISECONDS);
-					hitted = doAttackHitByCrossBow(attack, target, timeAtk, reuse);
 					break;
 				}
 				case POLE:
@@ -1233,7 +1174,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		final boolean miss1 = Formulas.calcHitMiss(this, target);
 		
 		// Consume arrows
-		reduceArrowCount(false);
+		reduceArrowCount();
 		
 		_move = null;
 		
@@ -1257,76 +1198,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Check if the Creature is a Player
 		if (isPlayer())
 		{
-			sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse));
-		}
-		
-		// Create a new hit task with Medium priority
-		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, shld1, attack.hasSoulshot(), true), sAtk);
-		
-		// Calculate and set the disable delay of the bow in function of the Attack Speed
-		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeTaskManager.MILLIS_IN_TICK) + GameTimeTaskManager.getInstance().getGameTicks();
-		
-		// Add this hit to the Server-Client packet Attack
-		attack.addHit(target, damage1, miss1, crit1, shld1);
-		
-		// Return true if hit isn't missed
-		return !miss1;
-	}
-	
-	/**
-	 * Launch a CrossBow attack.<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b>
-	 * <ul>
-	 * <li>Calculate if hit is missed or not</li>
-	 * <li>Consume bolts</li>
-	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
-	 * <li>If hit isn't missed, calculate if hit is critical</li>
-	 * <li>If hit isn't missed, calculate physical damages</li>
-	 * <li>If the Creature is a Player, Send a Server->Client packet SetupGauge</li>
-	 * <li>Create a new hit task with Medium priority</li>
-	 * <li>Calculate and set the disable delay of the crossbow in function of the Attack Speed</li>
-	 * <li>Add this hit to the Server-Client packet Attack</li><br>
-	 * @param attack Server->Client packet Attack in which the hit will be added
-	 * @param target The Creature targeted
-	 * @param sAtk The Attack Speed of the attacker
-	 * @param reuse
-	 * @return True if the hit isn't missed
-	 */
-	private boolean doAttackHitByCrossBow(Attack attack, Creature target, int sAtk, int reuse)
-	{
-		int damage1 = 0;
-		byte shld1 = 0;
-		boolean crit1 = false;
-		
-		// Calculate if hit is missed or not
-		final boolean miss1 = Formulas.calcHitMiss(this, target);
-		
-		// Consume bolts
-		reduceArrowCount(true);
-		
-		_move = null;
-		
-		// Check if hit isn't missed
-		if (!miss1)
-		{
-			// Calculate if shield defense is efficient
-			shld1 = Formulas.calcShldUse(this, target);
-			
-			// Calculate if hit is critical
-			crit1 = Formulas.calcCrit(this, target);
-			
-			// Calculate physical damages
-			damage1 = (int) Formulas.calcPhysDam(this, target, null, shld1, crit1, attack.hasSoulshot());
-		}
-		
-		// Check if the Creature is a Player
-		if (isPlayer())
-		{
-			// Send a system message
-			sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
-			
-			// Send a Server->Client packet SetupGauge
 			sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse));
 		}
 		
@@ -1910,31 +1781,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				abortCast();
 				return;
 			}
-			
-			// reduce talisman mana on skill use
-			if ((skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(skill.getReferenceItemId()).getBodyPart() == ItemTemplate.SLOT_DECO))
-			{
-				for (Item item : getInventory().getAllItemsByItemId(skill.getReferenceItemId()))
-				{
-					if (item.isEquipped())
-					{
-						if (item.getMana() < item.useSkillDisTime())
-						{
-							abortCast();
-							return;
-						}
-						item.decreaseMana(false, item.useSkillDisTime());
-						break;
-					}
-				}
-			}
-		}
-		
-		// Broadcast fly effect if needed.
-		if (skill.getFlyType() != null)
-		{
-			broadcastPacket(new FlyToLocation(this, target, skill.getFlyType()));
-			setXYZ(target.getX(), target.getY(), target.getZ());
 		}
 		
 		if (!skill.isToggle())
@@ -2034,7 +1880,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public boolean checkDoCastConditions(Skill skill)
 	{
-		if ((skill == null) || isSkillDisabled(skill) || ((skill.getFlyType() == FlyType.CHARGE) && isMovementDisabled()))
+		if ((skill == null) || isSkillDisabled(skill))
 		{
 			// Send a Server->Client packet ActionFailed to the Player
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -2961,10 +2807,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					player.sendPacket(new FakePlayerInfo((Npc) this));
 				}
-				else if (_stat.getRunSpeed() == 0)
-				{
-					player.sendPacket(new ServerObjectInfo((Npc) this, player));
-				}
+				// else if (_stat.getRunSpeed() == 0)
+				// {
+				// player.sendPacket(new ServerObjectInfo((Npc) this, player));
+				// }
 				else
 				{
 					player.sendPacket(new AbstractNpcInfo.NpcInfo((Npc) this, player));
@@ -3409,37 +3255,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		updateAbnormalEffect();
 	}
 	
-	/**
-	 * Stop Effect: Transformation.<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b>
-	 * <ul>
-	 * <li>Remove Transformation Effect</li>
-	 * <li>Notify the Creature AI</li>
-	 * <li>Send Server->Client UserInfo/CharInfo packet</li>
-	 * </ul>
-	 * @param removeEffects
-	 */
-	public void stopTransformation(boolean removeEffects)
-	{
-		if (removeEffects)
-		{
-			_effectList.stopSkillEffects(SkillFinishType.NORMAL, AbnormalType.TRANSFORM);
-		}
-		
-		// if this is a player instance, then untransform, also set the transform_id column equal to 0 if not cursed.
-		if (isPlayer() && (getActingPlayer().getTransformation() != null))
-		{
-			getActingPlayer().untransform();
-		}
-		
-		if (!isPlayer())
-		{
-			getAI().notifyEvent(CtrlEvent.EVT_THINK);
-		}
-		updateAbnormalEffect();
-	}
-	
 	public abstract void updateAbnormalEffect();
 	
 	/**
@@ -3827,10 +3642,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						{
 							player.sendPacket(new FakePlayerInfo((Npc) this));
 						}
-						else if (_stat.getRunSpeed() == 0)
-						{
-							player.sendPacket(new ServerObjectInfo((Npc) this, player));
-						}
+						// else if (_stat.getRunSpeed() == 0)
+						// {
+						// player.sendPacket(new ServerObjectInfo((Npc) this, player));
+						// }
 						else
 						{
 							player.sendPacket(new AbstractNpcInfo.NpcInfo((Npc) this, player));
@@ -4722,16 +4537,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * <b><u>Overridden in</u>:</b>
-	 * <li>Player</li>
-	 * @return True if bolts are available.
-	 */
-	protected boolean checkAndEquipBolts()
-	{
-		return true;
-	}
-	
-	/**
 	 * Add Exp and Sp to the Creature.<br>
 	 * <br>
 	 * <b><u>Overridden in</u>:</b>
@@ -4868,7 +4673,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (!miss && (damage > 0))
 		{
 			final Weapon weapon = getActiveWeaponItem();
-			final boolean isBow = ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)));
+			final boolean isBow = (weapon != null) && (weapon.getItemType() == WeaponType.BOW);
 			int reflectedDamage = 0;
 			if (!isBow && !target.isInvul()) // Do not reflect if weapon is of type bow or target is invunlerable
 			{
@@ -5022,9 +4827,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <br>
 	 * <b><u>Overridden in</u>:</b>
 	 * <li>Player</li><br>
-	 * @param bolts
 	 */
-	protected void reduceArrowCount(boolean bolts)
+	protected void reduceArrowCount()
 	{
 		// default is to do nothing
 	}
@@ -5086,11 +4890,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		if (player.getBlockCheckerArena() != -1)
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
 		// Notify AI with AI_INTENTION_ATTACK
 		player.getAI().setIntention(AI_INTENTION_ATTACK, this);
 	}
@@ -5115,12 +4914,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return false;
 		}
-		if (InstanceManager.getInstance().getInstance(getInstanceId()).isPvP())
-		{
-			return false;
-		}
 		
-		if (TerritoryWarManager.PLAYER_WITH_WARD_CAN_BE_KILLED_IN_PEACEZONE && TerritoryWarManager.getInstance().isTWInProgress() && target.isPlayer() && target.getActingPlayer().isCombatFlagEquipped())
+		if (InstanceManager.getInstance().getInstance(getInstanceId()).isPvP())
 		{
 			return false;
 		}
@@ -5180,21 +4975,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public int calculateReuseTime(Weapon weapon)
 	{
-		if (isTransformed())
-		{
-			switch (getAttackType())
-			{
-				case BOW:
-				{
-					return (int) ((1500 * 333 * _stat.getWeaponReuseModifier(null)) / _stat.getPAtkSpd());
-				}
-				case CROSSBOW:
-				{
-					return (int) ((1200 * 333 * _stat.getWeaponReuseModifier(null)) / _stat.getPAtkSpd());
-				}
-			}
-		}
-		
 		if ((weapon == null) || (weapon.getReuseDelay() == 0))
 		{
 			return 0;
@@ -5573,20 +5353,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				sendPacket(su);
 			}
 			
-			if (isPlayer())
+			// Consume Charges
+			if (isPlayer() && (skill.getChargeConsume() > 0))
 			{
-				// Consume Charges
-				if (skill.getChargeConsume() > 0)
-				{
-					getActingPlayer().decreaseCharges(skill.getChargeConsume());
-				}
-				
-				// Consume Souls if necessary
-				if ((skill.getMaxSoulConsumeCount() > 0) && !getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount()))
-				{
-					abortCast();
-					return;
-				}
+				getActingPlayer().decreaseCharges(skill.getChargeConsume());
 			}
 			
 			// Launch the magic skill in order to calculate its effects
@@ -6317,8 +6087,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if (miss && target.isPlayer())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
-			sm.addPcName(target.getActingPlayer());
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_C1_S_ATTACK);
 			sm.addString(getName());
 			target.sendPacket(sm);
 		}
@@ -6641,14 +6410,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public WeaponType getAttackType()
 	{
-		if (isTransformed())
-		{
-			final TransformTemplate template = getTransformation().getTemplate(getActingPlayer());
-			if (template != null)
-			{
-				return template.getBaseAttackType();
-			}
-		}
 		final Weapon weapon = getActiveWeaponItem();
 		if (weapon != null)
 		{

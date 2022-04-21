@@ -68,7 +68,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode() || player.isCombatFlagEquipped())
+		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode())
 		{
 			return false;
 		}

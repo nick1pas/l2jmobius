@@ -15,7 +15,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1320" />
 		<set name="price" val="20741000" />
-		<set name="change_weaponId" val="9340" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -135,7 +134,7 @@
 		</for>
 	</item>
 	<item id="2505" type="Weapon" name="Iron Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -149,7 +148,7 @@
 		<set name="price" val="7000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="4" />
@@ -159,7 +158,7 @@
 		</for>
 	</item>
 	<item id="2506" type="Armor" name="Wolf's Leather Armor">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_armor_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -170,7 +169,7 @@
 		<set name="price" val="3060" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add order="0" stat="mDef" val="14" />
@@ -309,7 +308,7 @@
 		<set name="item_skill" val="2048-1" /> <!-- Wolves' Food -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player categoryType="ALL_WOLF_GROUP,SIN_EATER_GROUP,DEINONYCHUS_PET_GROUP" />
+			<player categoryType="WOLF,SIN_EATER_GROUP" />
 		</cond>
 	</item>
 	<item id="2516" type="Weapon" name="Saber*Saber">
@@ -1301,7 +1300,7 @@
 		</for>
 	</item>
 	<item id="2554" type="Weapon" name="Crimson Sword*Elven Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1381,7 +1380,7 @@
 		</for>
 	</item>
 	<item id="2557" type="Weapon" name="Elven Sword*Elven Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 61 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 61 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1409,7 +1408,7 @@
 		</for>
 	</item>
 	<item id="2558" type="Weapon" name="Sword of Revolution*Sword of Revolution">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1437,7 +1436,7 @@
 		</for>
 	</item>
 	<item id="2559" type="Weapon" name="Sword of Revolution*Elven Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Critical Attack will increase by 50. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Critical Attack will increase by 50. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1465,7 +1464,7 @@
 		</for>
 	</item>
 	<item id="2560" type="Weapon" name="Elven Long Sword*Elven Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1493,7 +1492,7 @@
 		</for>
 	</item>
 	<item id="2561" type="Weapon" name="Stormbringer*Stormbringer">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1521,7 +1520,7 @@
 		</for>
 	</item>
 	<item id="2562" type="Weapon" name="Stormbringer*Shamshir">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 49 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 49 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1549,7 +1548,7 @@
 		</for>
 	</item>
 	<item id="2563" type="Weapon" name="Stormbringer*Katana">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1577,7 +1576,7 @@
 		</for>
 	</item>
 	<item id="2564" type="Weapon" name="Stormbringer*Spirit Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical attack will increase by 24. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical attack will increase by 24. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1605,7 +1604,7 @@
 		</for>
 	</item>
 	<item id="2565" type="Weapon" name="Stormbringer*Raid Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 2%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 2%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1633,7 +1632,7 @@
 		</for>
 	</item>
 	<item id="2566" type="Weapon" name="Stormbringer*Caliburs">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 5. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 5. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1661,7 +1660,7 @@
 		</for>
 	</item>
 	<item id="2567" type="Weapon" name="Stormbringer*Sword of Limit">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 166 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 166 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1689,7 +1688,7 @@
 		</for>
 	</item>
 	<item id="2568" type="Weapon" name="Stormbringer*Sword of Delusion">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1717,7 +1716,7 @@
 		</for>
 	</item>
 	<item id="2569" type="Weapon" name="Stormbringer*Sword of Nightmare">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 76. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 76. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1745,7 +1744,7 @@
 		</for>
 	</item>
 	<item id="2570" type="Weapon" name="Stormbringer*Tsurugi">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 7%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 7%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1773,7 +1772,7 @@
 		</for>
 	</item>
 	<item id="2571" type="Weapon" name="Stormbringer*Samurai Long sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1801,7 +1800,7 @@
 		</for>
 	</item>
 	<item id="2572" type="Weapon" name="Shamshir*Shamshir">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1829,7 +1828,7 @@
 		</for>
 	</item>
 	<item id="2573" type="Weapon" name="Shamshir*Katana">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 84 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 84 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1857,7 +1856,7 @@
 		</for>
 	</item>
 	<item id="2574" type="Weapon" name="Shamshir*Spirit Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1885,7 +1884,7 @@
 		</for>
 	</item>
 	<item id="2575" type="Weapon" name="Shamshir*Raid Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 40. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 40. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1913,7 +1912,7 @@
 		</for>
 	</item>
 	<item id="2576" type="Weapon" name="Shamshir*Caliburs">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1941,7 +1940,7 @@
 		</for>
 	</item>
 	<item id="2577" type="Weapon" name="Shamshir*Sword of Limit">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1969,7 +1968,7 @@
 		</for>
 	</item>
 	<item id="2578" type="Weapon" name="Shamshir*Sword of Delusion">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1997,7 +1996,7 @@
 		</for>
 	</item>
 	<item id="2579" type="Weapon" name="Shamshir*Sword of Nightmare">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 65. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 65. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2025,7 +2024,7 @@
 		</for>
 	</item>
 	<item id="2580" type="Weapon" name="Shamshir*Tsurugi">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 6%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 6%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2053,7 +2052,7 @@
 		</for>
 	</item>
 	<item id="2581" type="Weapon" name="Shamshir*Samurai Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 3. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 3. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2081,7 +2080,7 @@
 		</for>
 	</item>
 	<item id="2582" type="Weapon" name="Katana*Katana">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2109,7 +2108,7 @@
 		</for>
 	</item>
 	<item id="2583" type="Weapon" name="Katana*Spirit Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2137,7 +2136,7 @@
 		</for>
 	</item>
 	<item id="2584" type="Weapon" name="Katana*Raid Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 84 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 84 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2165,7 +2164,7 @@
 		</for>
 	</item>
 	<item id="2585" type="Weapon" name="Katana*Caliburs">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2193,7 +2192,7 @@
 		</for>
 	</item>
 	<item id="2586" type="Weapon" name="Katana*Sword of Limit">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2221,7 +2220,7 @@
 		</for>
 	</item>
 	<item id="2587" type="Weapon" name="Katana*Sword of Delusion">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2249,7 +2248,7 @@
 		</for>
 	</item>
 	<item id="2588" type="Weapon" name="Katana*Sword of Nightmare">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2277,7 +2276,7 @@
 		</for>
 	</item>
 	<item id="2589" type="Weapon" name="Katana*Tsurugi">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2305,7 +2304,7 @@
 		</for>
 	</item>
 	<item id="2590" type="Weapon" name="Katana*Samurai Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 106 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 106 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2333,7 +2332,7 @@
 		</for>
 	</item>
 	<item id="2591" type="Weapon" name="Spirit Sword*Spirit Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2361,7 +2360,7 @@
 		</for>
 	</item>
 	<item id="2592" type="Weapon" name="Spirit Sword*Raid Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 40. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 40. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2389,7 +2388,7 @@
 		</for>
 	</item>
 	<item id="2593" type="Weapon" name="Spirit Sword*Caliburs">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2417,7 +2416,7 @@
 		</for>
 	</item>
 	<item id="2594" type="Weapon" name="Spirit Sword*Sword of Limit">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2445,7 +2444,7 @@
 		</for>
 	</item>
 	<item id="2595" type="Weapon" name="Spirit Sword*Sword of Delusion">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2473,7 +2472,7 @@
 		</for>
 	</item>
 	<item id="2596" type="Weapon" name="Spirit Sword*Sword of Nightmare">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2501,7 +2500,7 @@
 		</for>
 	</item>
 	<item id="2597" type="Weapon" name="Spirit Sword*Tsurugi">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2529,7 +2528,7 @@
 		</for>
 	</item>
 	<item id="2598" type="Weapon" name="Spirit Sword*Samurai Long Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Max HP will increase by 25%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2557,7 +2556,7 @@
 		</for>
 	</item>
 	<item id="2599" type="Weapon" name="Raid Sword*Raid Sword">
-		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 4%. -->
+		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

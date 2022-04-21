@@ -85,7 +85,7 @@
 		<set name="item_skill" val="2228-9" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7807" type="EtcItem" name="Green Colored Lure - For Beginners">
-		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast fish. -->
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast moving fish. -->
 		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -121,7 +121,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7810" type="Weapon" name="Soulfire Dirk - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -151,7 +151,7 @@
 		</for>
 	</item>
 	<item id="7811" type="Weapon" name="Soulfire Dirk - Magic Hold">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -182,7 +182,7 @@
 		</for>
 	</item>
 	<item id="7812" type="Weapon" name="Soulfire Dirk - Magic Silence">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -213,7 +213,7 @@
 		</for>
 	</item>
 	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
-		<!-- <Soul Crystal Enhancement>. Endowed with the ability to cast Regeneration with a 30% probability when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. Casts HP Regeneration magic upon the target with a 30% chance of success when using good magic. Effect 3. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -244,7 +244,7 @@
 		</for>
 	</item>
 	<item id="7814" type="Weapon" name="Hell Knife - Mental Shield">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 4. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -275,7 +275,7 @@
 		</for>
 	</item>
 	<item id="7815" type="Weapon" name="Hell Knife - Magic Weakness">
-		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse: Weakness when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -792,7 +792,7 @@
 		</for>
 	</item>
 	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
-		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guide. -->
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -801,7 +801,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7833" type="EtcItem" name="Adventurer's Magic Accessory Exchange Coupon">
-		<!-- Use this exchange coupon to borrow magic accessories from the Adventurers' Guild. -->
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7836" type="Armor" name="Santa's Hat">
-		<!-- Santa's Hat, which is made to celebrate the holy day. Uses 2 hair accessory slots. -->
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. It uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1245,7 +1245,7 @@
 		</for>
 	</item>
 	<item id="7860" type="Armor" name="Apella Helm">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1264,7 +1264,7 @@
 		</for>
 	</item>
 	<item id="7861" type="Armor" name="Apella Plate Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1287,7 +1287,7 @@
 		</for>
 	</item>
 	<item id="7862" type="Armor" name="Apella Gauntlet - Heavy Armor">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1309,7 +1309,7 @@
 		</for>
 	</item>
 	<item id="7863" type="Armor" name="Apella Solleret - Heavy Armor">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1331,7 +1331,7 @@
 		</for>
 	</item>
 	<item id="7864" type="Armor" name="Apella Brigandine">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1351,7 +1351,7 @@
 		</for>
 	</item>
 	<item id="7865" type="Armor" name="Apella Leather Gloves - Light Armor">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1370,7 +1370,7 @@
 		</for>
 	</item>
 	<item id="7866" type="Armor" name="Apella Boots - Light Armor">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1389,7 +1389,7 @@
 		</for>
 	</item>
 	<item id="7867" type="Armor" name="Apella Doublet">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1413,7 +1413,7 @@
 		</for>
 	</item>
 	<item id="7868" type="Armor" name="Apella Silk Gloves - Robe">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1435,7 +1435,7 @@
 		</for>
 	</item>
 	<item id="7869" type="Armor" name="Apella Sandals - Robe">
-		<!-- May be worn by Elder and above. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1457,7 +1457,7 @@
 		</for>
 	</item>
 	<item id="7870" type="Armor" name="Sealed Apella Helm">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1476,7 +1476,7 @@
 		</for>
 	</item>
 	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Plate Armor. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1499,7 +1499,7 @@
 		</for>
 	</item>
 	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Gauntlet. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1521,7 +1521,7 @@
 		</for>
 	</item>
 	<item id="7873" type="Armor" name="Sealed Apella Solleret">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1543,7 +1543,7 @@
 		</for>
 	</item>
 	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1563,7 +1563,7 @@
 		</for>
 	</item>
 	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1582,7 +1582,7 @@
 		</for>
 	</item>
 	<item id="7876" type="Armor" name="Sealed Apella Boots">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1601,7 +1601,7 @@
 		</for>
 	</item>
 	<item id="7877" type="Armor" name="Sealed Apella Doublet">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1625,7 +1625,7 @@
 		</for>
 	</item>
 	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Silk Gloves. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1647,7 +1647,7 @@
 		</for>
 	</item>
 	<item id="7879" type="Armor" name="Sealed Apella Sandals">
-		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Sandals. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1682,7 +1682,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2100" />
 		<set name="price" val="315000" />
-		<set name="change_weaponId" val="9211" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1709,7 +1708,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2020" />
 		<set name="price" val="1074000" />
-		<set name="change_weaponId" val="9223" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1737,7 +1735,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="3304300" />
-		<set name="change_weaponId" val="9284" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1765,7 +1762,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
 		<set name="price" val="10091400" />
-		<set name="change_weaponId" val="9320" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1793,7 +1789,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1900" />
 		<set name="price" val="14098000" />
-		<set name="change_weaponId" val="9332" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1889,7 +1884,7 @@
 		</for>
 	</item>
 	<item id="7888" type="Weapon" name="Ecliptic Sword">
-		<!-- Bestows either Empower, Magic Power or Magic Silence. -->
+		<!-- Bestows either Empower, Magic Power, or Magic Silence." -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

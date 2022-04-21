@@ -62,7 +62,7 @@ public class ConditionPlayerCanSummon extends Condition
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_MULTIPLE_PETS_OR_SERVITORS_AT_THE_SAME_TIME);
 			canSummon = false;
 		}
-		else if (player.isFlyingMounted() || player.isMounted())
+		else if (player.isMounted())
 		{
 			canSummon = false;
 		}

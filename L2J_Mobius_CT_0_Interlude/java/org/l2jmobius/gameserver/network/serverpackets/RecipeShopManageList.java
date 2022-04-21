@@ -91,7 +91,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 			{
 				packet.writeD(item.getRecipeId());
 				packet.writeD(0);
-				packet.writeQ(item.getCost());
+				packet.writeD((int) item.getCost());
 			}
 		}
 		return true;

@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SendWareHouseDepositList implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 12;
+	private static final int BATCH_LENGTH = 8;
 	
 	private List<ItemHolder> _items = null;
 	
@@ -59,8 +59,8 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		for (int i = 0; i < size; i++)
 		{
 			final int objId = packet.readD();
-			final long count = packet.readQ();
-			if ((objId < 1) || (count < 0))
+			final long count = packet.readD();
+			if ((count > Integer.MAX_VALUE) || (objId < 1) || (count < 0))
 			{
 				_items = null;
 				return false;

@@ -41,14 +41,14 @@ public class AdminSummon implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, Player activeChar)
 	{
 		int id;
-		long count = 1;
+		int count = 1;
 		final String[] data = command.split(" ");
 		try
 		{
 			id = Integer.parseInt(data[1]);
 			if (data.length > 2)
 			{
-				count = Long.parseLong(data[2]);
+				count = Integer.parseInt(data[2]);
 			}
 		}
 		catch (NumberFormatException nfe)

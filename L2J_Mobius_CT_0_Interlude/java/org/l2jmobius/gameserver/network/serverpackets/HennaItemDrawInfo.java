@@ -41,10 +41,10 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 		OutgoingPackets.HENNA_ITEM_INFO.writeId(packet);
 		packet.writeD(_henna.getDyeId()); // symbol Id
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
-		packet.writeQ(_henna.getWearCount()); // total amount of dye require
-		packet.writeQ(_henna.getWearFee()); // total amount of Adena require to draw symbol
+		packet.writeD(_henna.getWearCount()); // total amount of dye require
+		packet.writeD(_henna.getWearFee()); // total amount of Adena require to draw symbol
 		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to draw or not 0 is false and 1 is true
-		packet.writeQ(_player.getAdena());
+		packet.writeD((int) _player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeC(_player.getINT() + _henna.getStatINT()); // equip INT
 		packet.writeD(_player.getSTR()); // current STR

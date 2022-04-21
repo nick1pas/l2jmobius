@@ -42,13 +42,13 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestDestroyItem implements IClientIncomingPacket
 {
 	private int _objectId;
-	private long _count;
+	private int _count;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_count = packet.readQ();
+		_count = packet.readD();
 		return true;
 	}
 	

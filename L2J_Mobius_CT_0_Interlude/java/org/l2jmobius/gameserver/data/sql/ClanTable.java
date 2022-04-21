@@ -34,8 +34,6 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -48,12 +46,9 @@ import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.clan.OnPlayerClanCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.clan.OnPlayerClanDestroy;
 import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
-import org.l2jmobius.gameserver.model.siege.Fort;
-import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
@@ -212,7 +207,7 @@ public class ClanTable
 		player.sendPacket(new PledgeShowInfoUpdate(clan));
 		player.sendPacket(new PledgeShowMemberListAll(clan, player));
 		player.sendPacket(new UserInfo(player));
-		player.sendPacket(new ExBrExtraUserInfo(player));
+		// player.sendPacket(new ExBrExtraUserInfo(player));
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		
@@ -236,15 +231,6 @@ public class ClanTable
 			for (Siege siege : SiegeManager.getInstance().getSieges())
 			{
 				siege.removeSiegeClan(clan);
-			}
-		}
-		
-		final int fortId = clan.getFortId();
-		if (fortId == 0)
-		{
-			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
-			{
-				siege.removeAttacker(clan);
 			}
 		}
 		
@@ -319,15 +305,6 @@ public class ClanTable
 				{
 					ps.setInt(1, castleId);
 					ps.execute();
-				}
-			}
-			
-			if (fortId != 0)
-			{
-				final Fort fort = FortManager.getInstance().getFortById(fortId);
-				if ((fort != null) && (clan == fort.getOwnerClan()))
-				{
-					fort.removeOwner(true);
 				}
 			}
 			

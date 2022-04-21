@@ -37,8 +37,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 		30599,
 		30600,
 		30601,
-		30602,
-		32135
+		30602
 	};
 	
 	private static final int[] NPCRADAR =

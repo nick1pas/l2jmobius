@@ -74,7 +74,6 @@ public class ShortCuts implements IRestorable
 			{
 				return;
 			}
-			shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
 		}
 		registerShortCutInDb(shortcut, _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
 	}
@@ -181,7 +180,7 @@ public class ShortCuts implements IRestorable
 				{
 					final int slot = rset.getInt("slot");
 					final int page = rset.getInt("page");
-					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[rset.getInt("type")], rset.getInt("shortcut_id"), rset.getInt("level"), 1));
+					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[rset.getInt("type")], rset.getInt("shortcut_id"), rset.getInt("level")));
 				}
 			}
 		}
@@ -201,10 +200,6 @@ public class ShortCuts implements IRestorable
 				{
 					deleteShortCut(sc.getSlot(), sc.getPage());
 				}
-				else if (item.isEtcItem())
-				{
-					sc.setSharedReuseGroup(item.getEtcItem().getSharedReuseGroup());
-				}
 			}
 		}
 		
@@ -223,7 +218,7 @@ public class ShortCuts implements IRestorable
 		{
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
-				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, 1);
+				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel);
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

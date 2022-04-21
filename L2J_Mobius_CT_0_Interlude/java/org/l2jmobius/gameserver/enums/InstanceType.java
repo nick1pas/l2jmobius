@@ -65,19 +65,12 @@ public enum InstanceType
 	// Vehicles
 	Vehicle(Creature),
 	Boat(Vehicle),
-	AirShip(Vehicle),
-	ControllableAirShip(AirShip),
 	// Siege
 	Defender(Attackable),
 	Artefact(Folk),
 	ControlTower(Npc),
 	FlameTower(Npc),
 	SiegeFlag(Npc),
-	// Fort Siege
-	FortCommander(Defender),
-	// Fort NPCs
-	FortLogistics(Merchant),
-	FortManager(Merchant),
 	// Seven Signs
 	SignsPriest(Npc),
 	DawnPriest(SignsPriest),

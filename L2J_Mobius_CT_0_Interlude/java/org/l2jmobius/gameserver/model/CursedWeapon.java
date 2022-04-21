@@ -27,7 +27,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -78,7 +77,6 @@ public class CursedWeapon implements INamable
 	private Item _item = null;
 	private int _playerKarma = 0;
 	private int _playerPkKills = 0;
-	protected int transformationId = 0;
 	
 	public CursedWeapon(int itemId, int skillId, String name)
 	{
@@ -258,7 +256,6 @@ public class CursedWeapon implements INamable
 	
 	public void cursedOnLogin()
 	{
-		doTransform();
 		giveSkill();
 		
 		final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S_OWNER_HAS_LOGGED_INTO_THE_S1_REGION);
@@ -291,33 +288,8 @@ public class CursedWeapon implements INamable
 		
 		// Void Burst, Void Flow
 		_player.addSkill(CommonSkill.VOID_BURST.getSkill(), false);
-		_player.addTransformSkill(CommonSkill.VOID_BURST.getSkill());
 		_player.addSkill(CommonSkill.VOID_FLOW.getSkill(), false);
-		_player.addTransformSkill(CommonSkill.VOID_FLOW.getSkill());
 		_player.sendSkillList();
-	}
-	
-	public void doTransform()
-	{
-		if (_itemId == 8689)
-		{
-			transformationId = 302;
-		}
-		else if (_itemId == 8190)
-		{
-			transformationId = 301;
-		}
-		
-		if (_player.isTransformed() || _player.isInStance())
-		{
-			_player.stopTransformation(true);
-			
-			ThreadPool.schedule(() -> TransformData.getInstance().transformPlayer(transformationId, _player), 500);
-		}
-		else
-		{
-			TransformData.getInstance().transformPlayer(transformationId, _player);
-		}
 	}
 	
 	public void removeSkill()
@@ -325,7 +297,6 @@ public class CursedWeapon implements INamable
 		_player.removeSkill(_skillId);
 		_player.removeSkill(CommonSkill.VOID_BURST.getSkill().getId());
 		_player.removeSkill(CommonSkill.VOID_FLOW.getSkill().getId());
-		_player.untransform();
 		_player.sendSkillList();
 	}
 	
@@ -387,9 +358,6 @@ public class CursedWeapon implements INamable
 			_player.getParty().removePartyMember(_player, PartyMessageType.EXPELLED);
 		}
 		
-		// Disable All Skills
-		// Do Transform
-		doTransform();
 		// Add skill
 		giveSkill();
 		

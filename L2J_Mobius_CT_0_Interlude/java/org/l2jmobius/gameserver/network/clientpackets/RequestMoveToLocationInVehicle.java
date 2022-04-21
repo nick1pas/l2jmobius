@@ -93,13 +93,6 @@ public class RequestMoveToLocationInVehicle implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isTransformed())
-		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_BOAT);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		Boat boat;
 		if (player.isInBoat())
 		{

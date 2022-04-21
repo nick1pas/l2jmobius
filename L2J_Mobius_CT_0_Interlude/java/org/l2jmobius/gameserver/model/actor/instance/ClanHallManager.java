@@ -36,7 +36,6 @@ import org.l2jmobius.gameserver.model.residences.AuctionableHall;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.skill.Skill;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -1735,12 +1734,7 @@ public class ClanHallManager extends Merchant
 		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(value);
 		if (list != null)
 		{
-			if (player.isCombatFlagEquipped())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
-				return;
-			}
-			else if (player.destroyItemByItemId("Teleport", list.getItemId(), list.getPrice(), this, true))
+			if (player.destroyItemByItemId("Teleport", list.getItemId(), list.getPrice(), this, true))
 			{
 				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
 			}

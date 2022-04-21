@@ -51,8 +51,6 @@ public class Q00419_GetAPet extends Quest
 	private static final int BLOODY_NAIL = 3425;
 	private static final int BLOODY_KASHA_FANG = 3426;
 	private static final int BLOODY_TARANTULA_NAIL = 3427;
-	private static final int ANIMAL_SLAYERS_LIST = 10164;
-	private static final int BLOODY_RED_CLAW = 10165;
 	// Reward
 	private static final int WOLF_COLLAR = 2375;
 	// Monster
@@ -70,7 +68,6 @@ public class Q00419_GetAPet extends Quest
 	private static final int KASHA_FANG_SPIDER = 20476;
 	private static final int KASHA_BLADE_SPIDER = 20478;
 	private static final int PLUNDER_TARANTULA = 20508;
-	private static final int CRIMSON_SPIDER2 = 22244;
 	// Misc
 	private static final int MIN_LEVEL = 15;
 	// Links
@@ -154,8 +151,8 @@ public class Q00419_GetAPet extends Quest
 		super(419);
 		addStartNpc(PET_MENAGER_MARTIN);
 		addTalkId(PET_MENAGER_MARTIN, GUARD_METTY, ACCESSORY_MERCHANT_ELICE, GATEKEEPER_BELLA);
-		addKillId(LESSER_DARK_HORROR, PROWLER, GIANT_SPIDER, DARK_HORROR, TALON_SPIDER, BLADE_SPIDER, HOOK_SPIDER, HUNTER_TARANTULA, CRIMSON_SPIDER, PINCER_SPIDER, KASHA_SPIDER, KASHA_FANG_SPIDER, KASHA_BLADE_SPIDER, PLUNDER_TARANTULA, CRIMSON_SPIDER2);
-		registerQuestItems(ANIMAL_LOVERS_LIST, ANIMAL_SLAYERS_1ST_LIST, ANIMAL_SLAYERS_2ND_LIST, ANIMAL_SLAYERS_3RD_LIST, ANIMAL_SLAYERS_4TH_LIST, ANIMAL_SLAYERS_5TH_LIST, BLOODY_FANG, BLOODY_CLAW, BLOODY_NAIL, BLOODY_KASHA_FANG, BLOODY_TARANTULA_NAIL, ANIMAL_SLAYERS_LIST, BLOODY_RED_CLAW);
+		addKillId(LESSER_DARK_HORROR, PROWLER, GIANT_SPIDER, DARK_HORROR, TALON_SPIDER, BLADE_SPIDER, HOOK_SPIDER, HUNTER_TARANTULA, CRIMSON_SPIDER, PINCER_SPIDER, KASHA_SPIDER, KASHA_FANG_SPIDER, KASHA_BLADE_SPIDER, PLUNDER_TARANTULA);
+		registerQuestItems(ANIMAL_LOVERS_LIST, ANIMAL_SLAYERS_1ST_LIST, ANIMAL_SLAYERS_2ND_LIST, ANIMAL_SLAYERS_3RD_LIST, ANIMAL_SLAYERS_4TH_LIST, ANIMAL_SLAYERS_5TH_LIST, BLOODY_FANG, BLOODY_CLAW, BLOODY_NAIL, BLOODY_KASHA_FANG, BLOODY_TARANTULA_NAIL);
 	}
 	
 	@Override
@@ -199,11 +196,6 @@ public class Q00419_GetAPet extends Quest
 					{
 						giveItems(player, ANIMAL_SLAYERS_5TH_LIST, 1);
 						htmltext = "30731-08.htm";
-					}
-					else if (player.getRace() == Race.KAMAEL)
-					{
-						giveItems(player, ANIMAL_SLAYERS_LIST, 1);
-						htmltext = "30731-08a.htm";
 					}
 				}
 				break;
@@ -261,15 +253,6 @@ public class Q00419_GetAPet extends Quest
 					{
 						takeItems(player, ANIMAL_SLAYERS_5TH_LIST, -1);
 						takeItems(player, BLOODY_TARANTULA_NAIL, -1);
-						giveItems(player, ANIMAL_LOVERS_LIST, 1);
-					}
-				}
-				else if (player.getRace() == Race.KAMAEL)
-				{
-					if (hasQuestItems(player, ANIMAL_SLAYERS_LIST) && (getQuestItemsCount(player, BLOODY_RED_CLAW) >= 50))
-					{
-						takeItems(player, ANIMAL_SLAYERS_LIST, -1);
-						takeItems(player, BLOODY_RED_CLAW, -1);
 						giveItems(player, ANIMAL_LOVERS_LIST, 1);
 					}
 				}
@@ -598,22 +581,6 @@ public class Q00419_GetAPet extends Quest
 					}
 					break;
 				}
-				case CRIMSON_SPIDER2:
-				{
-					if (hasQuestItems(killer, ANIMAL_SLAYERS_LIST) && (getQuestItemsCount(killer, BLOODY_RED_CLAW) < 50) && (getRandom(100) < 75))
-					{
-						giveItems(killer, BLOODY_RED_CLAW, 1);
-						if (getQuestItemsCount(killer, BLOODY_RED_CLAW) >= 50)
-						{
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
-						else
-						{
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
-					}
-					break;
-				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -644,25 +611,7 @@ public class Q00419_GetAPet extends Quest
 			{
 				case PET_MENAGER_MARTIN:
 				{
-					if (hasQuestItems(player, ANIMAL_SLAYERS_LIST))
-					{
-						if (getQuestItemsCount(player, BLOODY_RED_CLAW) < 50)
-						{
-							if (!hasQuestItems(player, BLOODY_RED_CLAW))
-							{
-								htmltext = "30731-09.html";
-							}
-							else
-							{
-								htmltext = "30731-10.html";
-							}
-						}
-						else
-						{
-							htmltext = "30731-11.html";
-						}
-					}
-					else if (hasQuestItems(player, ANIMAL_SLAYERS_1ST_LIST))
+					if (hasQuestItems(player, ANIMAL_SLAYERS_1ST_LIST))
 					{
 						if (getQuestItemsCount(player, BLOODY_FANG) < 50)
 						{

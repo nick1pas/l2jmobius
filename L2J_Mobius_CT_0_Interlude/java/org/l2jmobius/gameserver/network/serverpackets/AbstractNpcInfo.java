@@ -90,7 +90,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		private int _allyCrest = 0;
 		private int _allyId = 0;
 		private int _clanId = 0;
-		private int _displayEffect = 0;
 		private String[] _localisation;
 		
 		public void setLang(String lang)
@@ -131,7 +130,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 					}
 				}
 			}
-			_displayEffect = cha.getDisplayEffect();
 		}
 		
 		@Override
@@ -239,12 +237,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeF(_collisionHeight);
 			packet.writeD(_enchantEffect); // C4
 			packet.writeD(_npc.isFlying() ? 1 : 0); // C6
-			packet.writeD(0);
-			packet.writeD(_npc.getColorEffect()); // CT1.5 Pet form and skills, Color effect
-			packet.writeC(_npc.isTargetable() ? 1 : 0);
-			packet.writeC(_npc.isShowName() ? 1 : 0);
-			packet.writeD(_npc.getAbnormalVisualEffectSpecial());
-			packet.writeD(_displayEffect);
 			return true;
 		}
 	}
@@ -320,11 +312,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeF(_collisionHeight);
 			packet.writeD(0); // C4
 			packet.writeD(0); // C6
-			packet.writeD(0);
-			packet.writeD(0); // CT1.5 Pet form and skills
-			packet.writeC(1);
-			packet.writeC(1);
-			packet.writeD(0);
 			return true;
 		}
 	}
@@ -335,7 +322,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	public static class SummonInfo extends AbstractNpcInfo
 	{
 		private final Summon _summon;
-		private final int _form;
 		private final int _value;
 		
 		public SummonInfo(Summon cha, Creature attacker, int value)
@@ -343,7 +329,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			super(cha, attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			_summon = cha;
 			_value = value;
-			_form = cha.getFormId();
 			_isAttackable = cha.isAutoAttackable(attacker);
 			_rhand = cha.getWeapon();
 			_lhand = 0;
@@ -406,11 +391,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeF(_collisionHeight);
 			packet.writeD(_enchantEffect); // C4
 			packet.writeD(0); // C6
-			packet.writeD(0);
-			packet.writeD(_form); // CT1.5 Pet form and skills
-			packet.writeC(1);
-			packet.writeC(1);
-			packet.writeD(_summon.getAbnormalVisualEffectSpecial());
 			return true;
 		}
 	}

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4001" levels="12" name="NPC Wind Strike">
+	<skill id="4001" levels="12" name="NPC Windstrike">
 		<table name="#hitTime">4000 4000 4000 4000 4000 4000 4000 1000 1000 1000 1000 1000</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
@@ -81,7 +81,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4006" levels="1" name="Blazing Log">
+	<skill id="4006" levels="1" name="Burning Wood">
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -116,49 +116,49 @@
 		</for>
 	</skill>
 	<skill id="4009" levels="5" name="Resist Fire">
-		<!-- Resistant to Fire attacks. -->
+		<!-- Resistant to fire attacks. -->
 		<set name="icon" val="icon.skill4009" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4010" levels="5" name="Resist Water">
-		<!-- Resistant to Water attacks. -->
+		<!-- Resistant to water attacks. -->
 		<set name="icon" val="icon.skill4010" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4011" levels="5" name="Resist Wind">
-		<!-- Resistant to Wind attacks. -->
+		<!-- Resistant to wind attacks. -->
 		<set name="icon" val="icon.skill4011" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4012" levels="5" name="Resist Earth">
-		<!-- Resistant to Earth attacks. -->
+		<!-- Resistant to earth attacks. -->
 		<set name="icon" val="icon.skill4012" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
+	<skill id="4013" levels="1" name="Resistance to Fire, Vulnerable to Water">
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
+	<skill id="4014" levels="1" name="Resistance to Water, Vulnerable to Fire">
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
+	<skill id="4015" levels="1" name="Resistance to Wind, Vulnerable to Earth">
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
+	<skill id="4016" levels="1" name="Resistance to Earth, Vulnerable to Wind">
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -203,7 +203,7 @@
 		</for>
 	</skill>
 	<skill id="4019" levels="1" name="Decrease Speed">
-		<!-- Instantly decreases speed and continually consumes HP. Effect 3. -->
+		<!-- Instantly reduces Speed. Effect 3. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -244,7 +244,7 @@
 		</for>
 	</skill>
 	<skill id="4021" levels="1" name="Queen Ant">
-		<!-- Vulnerable to Fire attacks but highly resistant to archery attacks. -->
+		<!-- Vulnerable to fire attack but possesses great resistance against archery attack. -->
 		<set name="icon" val="icon.skillboss" />
 		<set name="magicLevel" val="40" />
 		<set name="operateType" val="P" />
@@ -255,12 +255,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4022" levels="1" name="Body Of Nurse Ant">
+	<skill id="4022" levels="1" name="Body of Nurse Ant">
 		<set name="magicLevel" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="4023" levels="1" name="Body Of Royal Guard Ant">
+	<skill id="4023" levels="1" name="Body of Royal Guard Ant">
 		<set name="magicLevel" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -593,7 +593,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4038" levels="5" name="Decrease Atk.Spd.">
+	<skill id="4038" levels="5" name="Decrease Atk.Speed">
 		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 3 3</table>
 		<table name="#magicLevel">10 20 30 50 70</table>
@@ -839,7 +839,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4050" levels="16" name="Cubic DD">
+	<skill id="4050" levels="16" name="Cubic Drain">
 		<table name="#effectPoints">-408 -467 -523 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLevel">43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
 		<table name="#power">543 760 1084 1377 1635 1955 2262 2386 2425 2524 2632 2722 2812 2898 2986 3062</table>
@@ -922,7 +922,7 @@
 		</for>
 	</skill>
 	<skill id="4054" levels="16" name="Decrease P. Def">
-		<!-- Instantly reduces P. Def. Effect 3. -->
+		<!-- Temporarily reduces P. Def. Effect 3. -->
 		<table name="#effectPoints">-379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689</table>
 		<table name="#magicLevel">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
 		<set name="abnormalLevel" val="3" />
@@ -1035,7 +1035,7 @@
 		</for>
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -1059,7 +1059,7 @@
 		</for>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -1182,8 +1182,8 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="4070" levels="1" name="Decrease Atk. Spd.">
-		<!-- Reduction in Atk. Spd.. Effect 3. -->
+	<skill id="4070" levels="1" name="Decrease Atk.Speed">
+		<!-- Reduction in Atk.Speed. Effect 3. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1202,8 +1202,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4071" levels="5" name="Resist Archery">
-		<!-- Resistant to Bow/Crossbow attacks. -->
+	<skill id="4071" levels="5" name="Resist Bow Weapons">
+		<!-- Resistant to archery attacks. -->
 		<table name="#icons">icon.skill4071 icon.skill4071 icon.skill4071 icon.skill4272 icon.skill4272</table>
 		<table name="#traits">10 20 30 40 50</table>
 		<set name="icon" val="#icons" />
@@ -1213,12 +1213,11 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param BOW="#traits" />
-				<param CROSSBOW="#traits" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4072" levels="12" name="Shock">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
@@ -1248,7 +1247,7 @@
 		</for>
 	</skill>
 	<skill id="4073" levels="12" name="Shock">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
@@ -1303,7 +1302,7 @@
 		</for>
 	</skill>
 	<skill id="4075" levels="12" name="Shock">
-		<!-- You are stunned and temporarily prohibited from movement. -->
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<set name="abnormalLevel" val="1" />
@@ -1330,7 +1329,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="4076" levels="3" name="Reduction in movement speed">
+	<skill id="4076" levels="3" name="Decrease Speed">
 		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#magicLevel">20 40 70</table>
@@ -1404,7 +1403,7 @@
 		</for>
 	</skill>
 	<skill id="4079" levels="1" name="Siege Hammer">
-		<!-- Powerfully attacks castle gates, castle walls, etc. -->
+		<!-- Powerfully attacks castle gates, castle walls etc. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1542,7 +1541,7 @@
 		</for>
 	</skill>
 	<skill id="4088" levels="12" name="Bleed">
-		<!-- Inflicts a wound that reduces HP. Effect 2. -->
+		<!-- Inflicts a wound, reducing HP. Effect 2. -->
 		<table name="#abnormalLevels">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#damage">18 25 34 44 54 62 67 67 70 70 71 71</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1664,7 +1663,7 @@
 		</for>
 	</skill>
 	<skill id="4093" levels="1" name="Evasion">
-		<!-- Increases Evasion. -->
+		<!-- High rate of evasion. -->
 		<set name="icon" val="icon.skill4093" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -1754,7 +1753,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4098" levels="12" name="Magic Skill Block">
+	<skill id="4098" levels="12" name="Silence">
 		<!-- Instantly blocks magic skills. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>

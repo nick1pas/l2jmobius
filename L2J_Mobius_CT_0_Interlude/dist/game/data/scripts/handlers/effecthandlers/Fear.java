@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.Defender;
-import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -43,7 +42,7 @@ public class Fear extends AbstractEffect
 	public boolean canStart(BuffInfo info)
 	{
 		return info.getEffected().isPlayer() || info.getEffected().isSummon() || (info.getEffected().isAttackable() && //
-			!((info.getEffected() instanceof Defender) || (info.getEffected() instanceof FortCommander) || //
+			!((info.getEffected() instanceof Defender) || //
 				(info.getEffected() instanceof SiegeFlag) || (info.getEffected().getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	

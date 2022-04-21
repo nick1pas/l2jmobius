@@ -75,22 +75,6 @@ public class Teleporter extends Npc
 		}
 		else if (actualCommand.equalsIgnoreCase("goto"))
 		{
-			final int npcId = getId();
-			
-			switch (npcId)
-			{
-				case 32534: // Seed of Infinity
-				case 32539:
-				{
-					if (player.isFlyingMounted())
-					{
-						player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_A_SEED_WHILE_IN_A_FLYING_TRANSFORMATION_STATE);
-						return;
-					}
-					break;
-				}
-			}
-			
 			if (st.countTokens() <= 0)
 			{
 				return;
@@ -258,11 +242,6 @@ public class Teleporter extends Npc
 			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getKarma() > 0)) // karma
 			{
 				player.sendMessage("Go away, you're not welcome here.");
-				return;
-			}
-			else if (player.isCombatFlagEquipped())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				return;
 			}
 			else if (list.isForNoble() && !player.isNoble())

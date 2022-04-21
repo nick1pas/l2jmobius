@@ -29,12 +29,11 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.enums.MessageSenderType;
-import org.l2jmobius.gameserver.model.Message;
+import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -64,7 +63,7 @@ public class CustomMailManager
 					{
 						// Create message.
 						final String items = rs.getString("items");
-						final Message msg = new Message(playerId, rs.getString("subject"), rs.getString("message"), MessageSenderType.PLAYER);
+						player.sendPacket(new CreatureSay(null, ChatType.WHISPER, rs.getString("subject"), rs.getString("message")));
 						final List<ItemHolder> itemHolders = new ArrayList<>();
 						for (String str : items.split(";"))
 						{
@@ -84,10 +83,9 @@ public class CustomMailManager
 						}
 						if (!itemHolders.isEmpty())
 						{
-							final Mail attachments = msg.createAttachments();
 							for (ItemHolder itemHolder : itemHolders)
 							{
-								attachments.addItem("Custom-Mail", itemHolder.getId(), itemHolder.getCount(), null, null);
+								player.addItem("Custom-Mail", itemHolder.getId(), itemHolder.getCount(), null, true);
 							}
 						}
 						
@@ -103,8 +101,6 @@ public class CustomMailManager
 							LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting entry from database: ", e);
 						}
 						
-						// Send message.
-						MailManager.getInstance().sendMessage(msg);
 						LOGGER.info(getClass().getSimpleName() + ": Message sent to " + player.getName() + ".");
 					}
 				}

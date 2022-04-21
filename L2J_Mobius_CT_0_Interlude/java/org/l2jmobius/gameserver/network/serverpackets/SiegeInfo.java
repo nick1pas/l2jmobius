@@ -66,7 +66,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.CASTLE_SIEGE_INFO.writeId(packet);
+		OutgoingPackets.SIEGE_INFO.writeId(packet);
 		if (_castle != null)
 		{
 			packet.writeD(_castle.getResidenceId());

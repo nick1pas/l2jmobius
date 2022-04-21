@@ -337,7 +337,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3428" type="EtcItem" name="Crystal Brooch">
-		<!-- A brooch received from Warehouse Keeper Wilford. Present this to Lilith of the temple at the Village of Talking Island. -->
+		<!-- A brooch received from Warehouse Keeper Wilfred. Present this to Lilith of the temple at the Village of Talking Island. -->
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -349,7 +349,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3429" type="EtcItem" name="Spellbook: Greater Heal">
-		<!-- Spellbook needed to learn Greater Heal. Used by Bishops, Elders, and Shillien Elders. Required level: Bishop- 40, Elder, Shilien Elder 48 -->
+		<!-- Spellbook needed to learn the Greater Heal spell. Used by Bishops, Elven Elders, and Shillien Elders. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -358,7 +358,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3430" type="EtcItem" name="Spellbook: Greater Battle Heal">
-		<!-- Amulet required for the Greater Battle Heal spell. Used by Bishops. Required level: 40 -->
+		<!-- Amulet required for the Greater Battle Heal spell. Used by Bishops. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -367,7 +367,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3431" type="EtcItem" name="Spellbook: Greater Group Heal">
-		<!-- Spellbook needed to learn Greater Group Heal. Used by Bishops, Shillien Elders, and Elders. Required level: Bishop: 40, Shillien Elder and Elder: 48 -->
+		<!-- Amulet required for the Greater Group Heal spell. Used by Bishops and Shillien Elders. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -376,7 +376,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3432" type="EtcItem" name="Spellbook: Remedy">
-		<!-- Amulet required for the Remedy spell. Used by Paladins. Required level: 40 -->
+		<!-- Amulet required for the Remedy spell. Used by Paladins. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -439,7 +439,7 @@
 		<set name="price" val="20000" />
 	</item>
 	<item id="3439" type="Weapon" name="Shining Canine">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<!-- Double-click to wear. Only for wolves. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -453,7 +453,7 @@
 		<set name="price" val="17000" /> <!-- H5 Price -->
 		<set name="for_npc" val="true" />
 		<cond msgId="1518">
-			<player categoryType="ALL_WOLF_GROUP" />
+			<player categoryType="WOLF" />
 		</cond>
 		<for>
 			<add stat="pAtk" val="7" />

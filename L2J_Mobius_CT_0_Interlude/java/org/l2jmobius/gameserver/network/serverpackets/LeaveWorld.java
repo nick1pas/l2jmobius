@@ -30,7 +30,7 @@ public class LeaveWorld implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.LOG_OUT_OK.writeId(packet);
+		OutgoingPackets.LEAVE_WORLD.writeId(packet);
 		return true;
 	}
 }

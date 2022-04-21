@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
-import org.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -87,7 +86,7 @@ public class AdminShop implements IAdminCommandHandler
 		if (buyList != null)
 		{
 			activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));
-			activeChar.sendPacket(new ExBuySellList(activeChar, buyList, false));
+			// activeChar.sendPacket(new ExBuySellList(activeChar, buyList, false));
 		}
 		else
 		{

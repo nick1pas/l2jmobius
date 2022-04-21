@@ -23,7 +23,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.Augmentation;
-import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -45,47 +44,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 {
 	private int _listId;
 	private int _entryId;
-	private long _amount;
-	@SuppressWarnings("unused")
-	private int _unk1;
-	@SuppressWarnings("unused")
-	private int _unk2;
-	@SuppressWarnings("unused")
-	private int _unk3;
-	@SuppressWarnings("unused")
-	private int _unk4;
-	@SuppressWarnings("unused")
-	private int _unk5;
-	@SuppressWarnings("unused")
-	private int _unk6;
-	@SuppressWarnings("unused")
-	private int _unk7;
-	@SuppressWarnings("unused")
-	private int _unk8;
-	@SuppressWarnings("unused")
-	private int _unk9;
-	@SuppressWarnings("unused")
-	private int _unk10;
-	@SuppressWarnings("unused")
-	private int _unk11;
+	private int _amount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_listId = packet.readD();
 		_entryId = packet.readD();
-		_amount = packet.readQ();
-		_unk1 = packet.readH();
-		_unk2 = packet.readD();
-		_unk3 = packet.readD();
-		_unk4 = packet.readH(); // elemental attributes
-		_unk5 = packet.readH(); // elemental attributes
-		_unk6 = packet.readH(); // elemental attributes
-		_unk7 = packet.readH(); // elemental attributes
-		_unk8 = packet.readH(); // elemental attributes
-		_unk9 = packet.readH(); // elemental attributes
-		_unk10 = packet.readH(); // elemental attributes
-		_unk11 = packet.readH(); // elemental attributes
+		_amount = packet.readD();
 		return true;
 	}
 	
@@ -250,7 +216,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				
 				final List<Augmentation> augmentation = new ArrayList<>();
-				Elementals[] elemental = null;
 				/** All ok, remove items and add final product */
 				for (Ingredient e : entry.getIngredients())
 				{
@@ -305,10 +270,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 										if (inventoryContents.get(i).isAugmented())
 										{
 											augmentation.add(inventoryContents.get(i).getAugmentation());
-										}
-										if (inventoryContents.get(i).getElementals() != null)
-										{
-											elemental = inventoryContents.get(i).getElementals();
 										}
 										if (!player.destroyItem("Multisell", inventoryContents.get(i).getObjectId(), 1, player.getTarget(), true))
 										{
@@ -413,13 +374,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 									if (i < augmentation.size())
 									{
 										product.setAugmentation(new Augmentation(augmentation.get(i).getAugmentationId()));
-									}
-									if (elemental != null)
-									{
-										for (Elementals elm : elemental)
-										{
-											product.setElementAttr(elm.getElement(), elm.getValue());
-										}
 									}
 									product.setEnchantLevel(e.getEnchantLevel());
 									product.updateDatabase();
