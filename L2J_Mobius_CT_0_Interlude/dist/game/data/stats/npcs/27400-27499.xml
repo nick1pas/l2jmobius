@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="27400" level="51" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
+			<skill name="Skill02_ID" id="5976" level="1" /> <!-- Dark Storm -->
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27401" level="61" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
+			<skill name="Skill02_ID" id="5976" level="2" /> <!-- Dark Storm -->
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.49346" magical="184.76376" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27402" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+			<skill name="Skill01_ID" id="5975" level="3" /> <!-- Dark Attack -->
+			<skill name="Skill02_ID" id="5976" level="3" /> <!-- Dark Storm -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3127.82459333517" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+			<attack physical="929.930814318487" magical="635.022195830619" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="170" water="170" wind="170" earth="170" holy="120" dark="200" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+</list>
