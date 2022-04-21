@@ -71,7 +71,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	 */
 	public ExShowScreenMessage(String text, int time)
 	{
-		_type = 2;
+		_type = 1;
 		_sysMessageId = -1;
 		_unk1 = 0;
 		_unk2 = 0;
@@ -93,7 +93,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	 */
 	public ExShowScreenMessage(String text, int position, int time)
 	{
-		_type = 2;
+		_type = 1;
 		_sysMessageId = -1;
 		_unk1 = 0;
 		_unk2 = 0;
