@@ -122,7 +122,7 @@ public class RandomCraftData implements IXmlReader
 		final double random = Rnd.get(100d);
 		while (!REWARD_DATA.isEmpty())
 		{
-			if (REWARD_DATA.size() == _randomRewardIndex)
+			if (_randomRewardIndex == (REWARD_DATA.size() - 1))
 			{
 				randomizeRewards();
 			}
