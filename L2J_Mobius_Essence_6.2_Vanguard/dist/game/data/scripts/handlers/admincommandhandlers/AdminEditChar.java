@@ -434,6 +434,17 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.getAppearance().setMale();
 						player.disarmShield();
+						if (!player.isVanguard())
+						{
+							player.setVanguard(true);
+						}
+					}
+					else
+					{
+						if (player.isVanguard())
+						{
+							player.setVanguard(false);
+						}
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();

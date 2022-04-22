@@ -17,8 +17,6 @@
 package quests.Q10950_FiercestFlame;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -235,7 +233,7 @@ public class Q10950_FiercestFlame extends Quest
 			return;
 		}
 		
-		if ((player.getRace() != Race.ORC) || CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId()))
+		if ((player.getRace() != Race.ORC) || player.isVanguard())
 		{
 			return;
 		}

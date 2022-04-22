@@ -67,6 +67,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
 	public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 	public static final String DEATH_POINT_COUNT = "DEATH_POINT_COUNT";
+	public static final String BEAST_POINT_COUNT = "BEAST_POINT_COUNT";
 	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
 	public static final String ELIXIRS_AVAILABLE = "ELIXIRS_AVAILABLE";
 	public static final String ELIXIRS_USED = "ELIXIRS_USED";

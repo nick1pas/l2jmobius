@@ -651,6 +651,12 @@ public class EnterWorld implements IClientIncomingPacket
 			player.setDeathPoints(500);
 			player.setDeathPoints(player.getVariables().getInt(PlayerVariables.DEATH_POINT_COUNT, 0));
 		}
+		// Vanguard beast points init.
+		else if (player.isVanguard())
+		{
+			player.setBeastPoints(500);
+			player.setBeastPoints(player.getVariables().getInt(PlayerVariables.BEAST_POINT_COUNT, 0));
+		}
 		
 		// Sayha's Grace.
 		if (Config.ENABLE_VITALITY)

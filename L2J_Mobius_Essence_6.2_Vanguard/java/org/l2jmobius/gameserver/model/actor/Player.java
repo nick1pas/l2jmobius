@@ -502,6 +502,7 @@ public class Player extends Playable
 	protected int _activeClass;
 	protected int _classIndex = 0;
 	private boolean _isDeathKnight = false;
+	private boolean _isVanguard = false;
 	
 	/** data for mounted pets */
 	private int _controlItemId;
@@ -747,6 +748,10 @@ public class Player extends Playable
 	private final static int DEVASTATING_MIND = 45300;
 	private int _deathPoints = 0;
 	private int _maxDeathPoints = 0;
+	
+	// Beast points
+	private int _beastPoints = 0;
+	private int _maxBeastPoints = 0;
 	
 	// WorldPosition used by TARGET_SIGNET_GROUND
 	private Location _currentSkillWorldPosition;
@@ -6814,6 +6819,10 @@ public class Player extends Playable
 					{
 						player._isDeathKnight = true;
 					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getBaseTemplate().getClassId().getId()))
+					{
+						player._isVanguard = true;
+					}
 					
 					player.setApprentice(rset.getInt("apprentice"));
 					player.setSponsor(rset.getInt("sponsor"));
@@ -8833,6 +8842,19 @@ public class Player extends Playable
 	public void setDeathKnight(boolean value)
 	{
 		_isDeathKnight = value;
+	}
+	
+	/**
+	 * @return True if the Player is a Vanguard.
+	 */
+	public boolean isVanguard()
+	{
+		return _isVanguard;
+	}
+	
+	public void setVanguard(boolean value)
+	{
+		_isVanguard = value;
 	}
 	
 	public boolean isMounted()
@@ -11187,6 +11209,12 @@ public class Player extends Playable
 			getVariables().set(PlayerVariables.DEATH_POINT_COUNT, _deathPoints);
 		}
 		
+		// Store beast points.
+		if (_isVanguard)
+		{
+			getVariables().set(PlayerVariables.BEAST_POINT_COUNT, _beastPoints);
+		}
+		
 		// Make sure player variables are stored.
 		getVariables().storeMe();
 		
@@ -11876,6 +11904,31 @@ public class Player extends Playable
 		final StatusUpdate su = new StatusUpdate(this);
 		computeStatusUpdate(su, StatusUpdateType.MAX_DP);
 		computeStatusUpdate(su, StatusUpdateType.CUR_DP);
+		sendPacket(su);
+	}
+	
+	public int getBeastPoints()
+	{
+		return _beastPoints;
+	}
+	
+	public int getMaxBeastPoints()
+	{
+		return _maxBeastPoints;
+	}
+	
+	public void setBeastPoints(int value)
+	{
+		// TODO: Implement?
+		_maxBeastPoints = 500;
+		
+		// Set current points.
+		_beastPoints = Math.min(_maxBeastPoints, Math.max(0, value));
+		
+		// Send StatusUpdate.
+		final StatusUpdate su = new StatusUpdate(this);
+		computeStatusUpdate(su, StatusUpdateType.MAX_BP);
+		computeStatusUpdate(su, StatusUpdateType.CUR_BP);
 		sendPacket(su);
 	}
 	
@@ -14375,9 +14428,13 @@ public class Player extends Playable
 		addStatusUpdateValue(StatusUpdateType.LEVEL);
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
-		if (isDeathKnight())
+		if (_isDeathKnight)
 		{
 			addStatusUpdateValue(StatusUpdateType.CUR_DP);
+		}
+		else if (_isVanguard)
+		{
+			addStatusUpdateValue(StatusUpdateType.CUR_BP);
 		}
 	}
 	

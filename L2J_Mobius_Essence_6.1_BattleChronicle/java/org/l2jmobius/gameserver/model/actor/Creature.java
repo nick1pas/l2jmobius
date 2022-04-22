@@ -3999,7 +3999,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				target.setCurrentCp(0);
 			}
 			
-			if (player.isDeathKnight())
+			if (player.isDeathKnight() && (target.isAttackable() || target.isPlayable()))
 			{
 				player.setDeathPoints(player.getDeathPoints() + 1);
 			}

@@ -27,6 +27,7 @@ public class SkillConditionMasterHandler
 {
 	public static void main(String[] args)
 	{
+		SkillConditionHandler.getInstance().registerHandler("BeastPoints", BeastPointsSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("BuildAdvanceBase", BuildAdvanceBaseSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("BuildCamp", BuildCampSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanAddMaxEntranceInzone", CanAddMaxEntranceInzoneSkillCondition::new);

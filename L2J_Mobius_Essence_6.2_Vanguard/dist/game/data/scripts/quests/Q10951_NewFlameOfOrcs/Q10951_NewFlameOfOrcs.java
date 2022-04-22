@@ -17,8 +17,6 @@
 package quests.Q10951_NewFlameOfOrcs;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -145,7 +143,7 @@ public class Q10951_NewFlameOfOrcs extends Quest
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		if (!CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId()))
+		if (!player.isVanguard())
 		{
 			return "no_race.html";
 		}
@@ -234,7 +232,7 @@ public class Q10951_NewFlameOfOrcs extends Quest
 			return;
 		}
 		
-		if (!CategoryData.getInstance().isInCategory(CategoryType.VANGUARD_ALL_CLASS, player.getClassId().getId()))
+		if (!player.isVanguard())
 		{
 			return;
 		}

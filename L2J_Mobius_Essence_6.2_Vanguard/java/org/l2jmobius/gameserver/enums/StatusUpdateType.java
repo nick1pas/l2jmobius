@@ -55,7 +55,10 @@ public enum StatusUpdateType
 	MAX_CP(0x22, Creature::getMaxCp),
 	
 	CUR_DP(0x28, creature -> creature.isPlayer() ? creature.getActingPlayer().getDeathPoints() : 0),
-	MAX_DP(0x29, creature -> creature.isPlayer() ? creature.getActingPlayer().getMaxDeathPoints() : 0);
+	MAX_DP(0x29, creature -> creature.isPlayer() ? creature.getActingPlayer().getMaxDeathPoints() : 0),
+	
+	CUR_BP(0x2B, creature -> creature.isPlayer() ? creature.getActingPlayer().getBeastPoints() : 0),
+	MAX_BP(0x2C, creature -> creature.isPlayer() ? creature.getActingPlayer().getMaxBeastPoints() : 0);
 	
 	private int _clientId;
 	private Function<Creature, Integer> _valueSupplier;
