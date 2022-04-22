@@ -53,7 +53,7 @@ What is done
 -Removed fort and territory war.
 -Removed landing, territory war, kamael, fantasy isle and hellbound zones.
 -Removed no needed walker routes.
--Remove transformation system.
+-Removed transformation system.
 -Removed bot report action system.
 -Removed non existing player actions.
 -Removed Tar beetle AI.
