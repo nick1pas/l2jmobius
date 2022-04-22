@@ -766,6 +766,11 @@
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.90</pDefMod>
+				<overHit>true</overHit>
+				<chargeConsume>3</chargeConsume>
+				<criticalChance>15</criticalChance>
 				<power>
 					<value level="1">1106</value>
 					<value level="2">1183</value>
@@ -818,9 +823,6 @@
 					<value level="49">5556</value>
 					<value level="50">5623</value>
 				</power>
-				<overHit>true</overHit>
-				<chargeConsume>3</chargeConsume>
-				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -1038,7 +1040,6 @@
 				</power>
 				<overHit>true</overHit>
 				<chargeConsume>2</chargeConsume>
-				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>45496</skillId> <!-- Sonic Blaster -->
@@ -1250,6 +1251,7 @@
 					<value level="30">482</value>
 					<value level="31">495</value>
 				</power>
+				<chargeConsume>2</chargeConsume>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -1498,7 +1500,7 @@
 					<value level="36">465</value>
 					<value level="37">469</value>
 				</power>
-				<chargeConsume>3</chargeConsume>
+				<chargeConsume>2</chargeConsume>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>

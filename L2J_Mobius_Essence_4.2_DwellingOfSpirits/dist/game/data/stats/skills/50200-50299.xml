@@ -2262,14 +2262,12 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<isCritical>true</isCritical>
-				<attackerType>Creature</attackerType>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="11">
 				<chance>10</chance>
 				<targetType>SELF</targetType>
-				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>50294</skillId>
+				<isCritical>true</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>50294</skillId> <!-- Elmoreden Spirit Hit -->
 				<castSkillId>50294</castSkillId>
 				<skillLevel>
 					<value level="1">1</value>
@@ -2284,15 +2282,40 @@
 					<value level="10">10</value>
 					<value level="11">11</value>
 				</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="11">
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>50294</skillId> <!-- Elmoreden Spirit Hit -->
+				<castSkillId>50294</castSkillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="11">
 				<chance>5</chance>
 				<targetType>SELF</targetType>
-				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>50294</skillId>
+				<isCritical>true</isCritical>
+				<allowNormalAttack>true</allowNormalAttack>
+				<skillId>50294</skillId> <!-- Elmoreden Spirit Hit -->
 				<castSkillId>50294</castSkillId>
 				<skillLevel>
 					<value level="1">1</value>
@@ -2307,6 +2330,33 @@
 					<value level="10">10</value>
 					<value level="11">11</value>
 				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="11">
+				<chance>5</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowNormalAttack>true</allowNormalAttack>
+				<skillId>50294</skillId> <!-- Elmoreden Spirit Hit -->
+				<castSkillId>50294</castSkillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
 			</effect>
 		</effects>
 	</skill>
