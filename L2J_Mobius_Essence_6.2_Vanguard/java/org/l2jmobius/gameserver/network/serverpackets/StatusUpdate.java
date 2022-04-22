@@ -54,6 +54,7 @@ public class StatusUpdate implements IClientOutgoingPacket
 				case CUR_MP:
 				case CUR_CP:
 				case CUR_DP:
+				case CUR_BP:
 				{
 					_isVisible = true;
 				}
