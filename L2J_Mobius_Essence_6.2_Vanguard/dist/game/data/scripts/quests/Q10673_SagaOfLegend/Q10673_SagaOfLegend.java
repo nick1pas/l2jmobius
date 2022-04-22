@@ -293,6 +293,12 @@ public class Q10673_SagaOfLegend extends Quest
 			return;
 		}
 		
+		// Vanguard.
+		if (player.isVanguard())
+		{
+			return;
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
