@@ -94,6 +94,7 @@ What is done
 -Set max level to 80.
 -Updated drops with groups.
 -Added quests 353, 374, 375 and 505. 
+-Removed Kamael class ids from hennas.
 
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.
@@ -101,9 +102,10 @@ TODO: Important (project unusable due to the following)
 -Test Olympiad and make adjustments if needed.
 
 TODO: Not that important.
+-Update skilltrees with retail data.
+-Update buylists and multisells with retail data.
 -Adjust custom community board htmls.
 -Adjust community board sell buff htmls.
 -Adjust community board announcements admin htmls.
 -Spawn monsters by zones on separate XML files.
 -Update htmls with retail dialogs.
--Update buylists and multisells with retail data.
