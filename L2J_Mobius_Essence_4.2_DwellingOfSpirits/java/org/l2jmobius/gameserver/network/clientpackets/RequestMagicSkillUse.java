@@ -83,6 +83,7 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 				if ((skill != null) && (pet != null))
 				{
 					player.onActionRequest();
+					pet.setTarget(null);
 					pet.useMagic(skill, null, _ctrlPressed, false);
 					return;
 				}
