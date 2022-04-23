@@ -16,34 +16,40 @@
 	<item id="96601" name="Antharas Doll Lv. 1" additionalName="Sealed" type="EtcItem">
 		<!-- <Antharas Doll's Sorcery Lv. 1> CON +1 MEN +1 Received damage -2% Knockback Resistance +5% Shock Resistance +5% Pull Resistance +5% Soulshot Damage Resistance +2% Spiritshot Damage Resistance +2% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_antaras_doll_30d" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50554" level="1" /> <!-- Antharas Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96602" name="Antharas Doll Lv. 2" type="EtcItem">
 		<!-- <Antharas Doll's Sorcery Lv. 2> CON +2 MEN +2 Received damage -5% Knockback Resistance +10% Shock Resistance +10% Pull Resistance +10% Soulshot Damage Resistance +3% Spiritshot Damage Resistance +3% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_antaras_doll_30d" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50554" level="2" /> <!-- Antharas Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96603" name="Antharas Doll Lv. 3" type="EtcItem">
 		<!-- <Antharas Doll's Sorcery Lv. 3> CON +3 MEN +3 Received damage -10% Knockback Resistance +20% Shock Resistance +20% Pull Resistance +20% Soulshot Damage Resistance +10% Spiritshot Damage Resistance +10% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_antaras_doll_30d" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50554" level="3" /> <!-- Antharas Doll's Sorcery -->
+		</skills>
 	</item>
+
 	<item id="96604" name="Pack of Seals (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Giran Seal and another one of various items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
@@ -165,6 +171,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="16.66" /> <!-- Zaken's Blood Sword -->
+			<item id="92405" min="1" max="1" chance="16.66" /> <!-- Core's Plasmic Bow -->
+			<item id="92407" min="1" max="1" chance="16.66" /> <!-- Orfen's Venom Sword -->
+			<item id="92421" min="1" max="1" chance="16.66" /> <!-- Queen Ant's Stone Breaker -->
+			<item id="92408" min="1" max="1" chance="16.66" /> <!-- Baium's Thunder Breaker -->
+			<item id="94888" min="1" max="1" chance="16.66" /> <!-- Anakim's Divine Pistols -->
+		</capsuled_items>
 	</item>
 	<item id="96617" name="STR Dye" additionalName="Lv. 0" type="EtcItem">
 		<!-- Required for applying STR Pattern. Applying the pattern requires 1 dye. <Effect> STR +1 <font color=ff6666>Note!</font> Requirements: all classes after the 1st class change. Hidden power is not available. Patterns and dyes can be upgraded through compounding. Costs for upgrading patterns and dyes differ. -->
@@ -247,67 +265,86 @@
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93301" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Cloak of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="96625" name="Package: +5 Agathion Ignis" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93128" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Agathion Ignis -->
+		</capsuled_items>
 	</item>
 	<item id="96626" name="Package: +5 Agathion Nebula" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93129" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Agathion Nebula -->
+		</capsuled_items>
 	</item>
 	<item id="96627" name="Package: +5 Agathion Procella" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93130" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Agathion Procella -->
+		</capsuled_items>
 	</item>
 	<item id="96628" name="Package: +5 Agathion Petram" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93131" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Agathion Petram -->
+		</capsuled_items>
 	</item>
 	<item id="96629" name="Package: +5 Agathion Joy" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93132" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!--  +5 Agathion Joy -->
+		</capsuled_items>
 	</item>
+
 	<item id="96630" name="Enhanced Dye Powder" type="EtcItem">
 		<!-- Required for upgrading patterns and dyes. <font color=eeaa22>Used with items of Lv. 11~19.</font> -->
 		<set name="icon" val="icon.dye_charge_meal" />
@@ -317,146 +354,178 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="96631" name="Queen Ant Doll Lv. 4" type="EtcItem">
+		<item id="96631" name="Queen Ant Doll Lv. 4" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 4> P. Atk. +15% P. Critical Damage +12% P. Skill Critical Damage +12% Max HP +17% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39303" level="4" /> <!-- Queen Ant Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96632" name="Baium Doll Lv. 4" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 4> Skill Cooldown -4% P. Def. +18% M. Def. +18% Silence Resistance +45% Fear Resistance +45% Paralysis Resistance +25% Knockback Resistance +25% Pull Resistance +27% Shock Resistance +10% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_baium_doll_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39302" level="4" /> <!-- Baium Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96633" name="Orfen Doll Lv. 4" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 4> M. Atk. +20% M. Skill Critical Damage +12% Max MP +17% Melee Weapon Resistance +1% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39304" level="4" /> <!-- Orfen Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96634" name="Zaken Doll Lv. 4" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 4> Skill Critical Rate +70 HP Recovery Potions' Effect +110 Skill Critical Damage +300 Vampiric Rage +3% (with a certain chance) Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_zaken_doll_30d_00" />
-		<set name="default_action" val="NONE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="4" /> <!-- Zaken Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96635" name="Core Doll Lv. 4" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 4> Received Skill Critical Damage -17% Received Skill Critical Rate -10% Shock Resistance +35% Sleep Resistance +35% Knockback Resistance +20% Paralysis Resistance +10% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_core_doll_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="4" /> <!-- Core Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96636" name="Frintezza Doll Lv. 4" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 4> STR/ INT +2 DEX/ WIT +3 CON/ MEN +2 Skill Power +6% Atk. Spd. +110 Casting Spd. +110 Speed +5 Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_doll_frintessa_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="4" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96637" name="Antharas Doll Lv. 4" type="EtcItem">
 		<!-- <Antharas Doll's Sorcery Lv. 4> CON +4 MEN +4 Received damage -12% Knockback Resistance +25% Shock Resistance +25% Pull Resistance +25% Soulshot Damage Resistance +12% Spiritshot Damage Resistance +10% Imprisonment Resistance +10% Boosts stats when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_antaras_doll_30d_00" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50554" level="4" /> <!-- Antharas Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96638" name="Queen Ant Doll Lv. 5" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 5> P. Atk. +18% P. Critical Damage +15% P. Skill Critical Damage +15% Max HP +20% Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d_01" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39303" level="5" /> <!-- Queen Ant Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96639" name="Baium Doll Lv. 5" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 5> Skill Cooldown -4% P. Def. +21% M. Def. +21% Silence Resistance +45% Fear Resistance +45% Paralysis Resistance +25% Knockback Resistance +25% Pull Resistance +30% Shock Resistance +15% Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d_01" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39302" level="5" /> <!-- Baium Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96640" name="Orfen Doll Lv. 5" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 5> M. Atk. +25% M. Skill Critical Damage +15% Max MP +20% Melee Weapon Resistance +2% Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d_01" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39304" level="5" /> <!-- Orfen Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96641" name="Zaken Doll Lv. 5" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 5> Skill Critical Rate +80 HP Recovery Potions' Effect +150 Skill Critical Damage +300 Vampiric Rage +3% (with a certain chance) Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_zaken_doll_30d_01" />
-		<set name="default_action" val="NONE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="5" /> <!-- Zaken Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96642" name="Core Doll Lv. 5" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 5> Received Skill Critical Damage -20% Received Skill Critical Rate -12% Shock Resistance +35% Sleep Resistance +35% Knockback Resistance +20% Paralysis Resistance +20% Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_core_doll_30d_01" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="5" /> <!-- Core Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96643" name="Frintezza Doll Lv. 5" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 5> STR/ INT +3 DEX/ WIT +3 CON/ MEN +3 Skill Power +8% Atk. Spd. +120 Casting Spd. +120 Speed +5 Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_doll_frintessa_30d_01" />
-		<set name="default_action" val="NONE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="5" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="96644" name="Antharas Doll Lv. 5" type="EtcItem">
 		<!-- <Antharas Doll's Sorcery Lv. 5> CON +5 MEN +5 Received damage -15% Knockback Resistance +25% Shock Resistance +25% Pull Resistance +25% Soulshot Damage Resistance +15% Spiritshot Damage Resistance +15% Imprisonment Resistance +20% Boosts stats when in inventory. -->
 		<set name="icon" val="icon.bm_antaras_doll_30d_01" />
-		<set name="default_action" val="NONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50554" level="5" /> <!-- Antharas Doll's Sorcery -->
+		</skills>
 	</item>
+
 	<item id="96645" name="Ice Crystal Heavy Armor Set" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />

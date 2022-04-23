@@ -3545,24 +3545,38 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50463" toLevel="3" name="Zaken Doll's Sorcery">
+	<skill id="50463" toLevel="5" name="Zaken Doll's Sorcery">
 		<!-- A doll imbued with Zaken' power. <Effect> Skill Critical Rate $s1 Skill Critical Damage $s2 HP Recovery Potions' Effect $s3 Absorbs $s4 of the inflicted damage as HP. -->
 		<icon>icon.bm_zaken_doll_30d</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillMasteryRate">
+			<effect name="CriticalRate">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">40</value>
 					<value level="3">60</value>
+					<value level="4">70</value>
+					<value level="5">80</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">40</value>
+					<value level="3">60</value>
+					<value level="4">70</value>
+					<value level="5">80</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="SkillCriticalDamage">
 				<amount>
 					<value level="1">100</value>
 					<value level="2">200</value>
 					<value level="3">300</value>
+					<value level="4">300</value>
+					<value level="5">300</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3571,6 +3585,8 @@
 					<value level="1">20</value>
 					<value level="2">50</value>
 					<value level="3">80</value>
+					<value level="4">110</value>
+					<value level="5">150</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3579,6 +3595,8 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
 				</amount>
 				<chance>80</chance>
 			</effect>
