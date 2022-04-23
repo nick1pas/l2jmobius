@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
@@ -184,6 +185,19 @@ public class AutoPlayTaskManager implements Runnable
 	public void stopAutoPlay(Player player)
 	{
 		PLAYERS.remove(player);
+		
+		// Pets must follow their owner.
+		if (player.hasServitors())
+		{
+			for (Summon summon : player.getServitors().values())
+			{
+				summon.followOwner();
+			}
+		}
+		if (player.hasPet())
+		{
+			player.getPet().followOwner();
+		}
 	}
 	
 	public boolean isAutoPlay(Player player)
