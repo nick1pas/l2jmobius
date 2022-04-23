@@ -18,7 +18,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -54,18 +56,40 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		Skill skill = player.getKnownSkill(_magicId);
 		if (skill == null)
 		{
-			if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) //
-				|| ((_magicId > 1565) && (_magicId < 1570))) // subClass change SkillTree
+			if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) || ((_magicId > 1565) && (_magicId < 1570))) // subClass change SkillTree
 			{
 				skill = SkillData.getInstance().getSkill(_magicId, 1);
 			}
-			else
+			else // Check for known pet skill.
+			{
+				Playable pet = null;
+				if (player.hasServitors())
+				{
+					for (Summon summon : player.getServitors().values())
+					{
+						skill = summon.getKnownSkill(_magicId);
+						if (skill != null)
+						{
+							pet = summon;
+							break;
+						}
+					}
+				}
+				if ((skill == null) && player.hasPet())
+				{
+					pet = player.getPet();
+					skill = pet.getKnownSkill(_magicId);
+				}
+				if ((skill != null) && (pet != null))
+				{
+					player.onActionRequest();
+					pet.useMagic(skill, null, _ctrlPressed, false);
+					return;
+				}
+			}
+			if (skill == null)
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
-				// if (_magicId > 0)
-				// {
-				// PacketLogger.warning("Skill Id " + _magicId + " not found in player: " + player);
-				// }
 				return;
 			}
 		}
@@ -86,7 +110,6 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		}
 		
 		player.onActionRequest();
-		
 		player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 	}
 }

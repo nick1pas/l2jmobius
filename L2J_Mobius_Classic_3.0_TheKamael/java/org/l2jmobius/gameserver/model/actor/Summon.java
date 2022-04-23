@@ -629,7 +629,7 @@ public abstract class Summon extends Playable
 		}
 		
 		// Get the target for the skill
-		final WorldObject target;
+		WorldObject target;
 		if (skill.getTargetType() == TargetType.OWNER_PET)
 		{
 			target = _owner;
@@ -656,8 +656,16 @@ public abstract class Summon extends Playable
 		// Check the validity of the target
 		if (target == null)
 		{
-			sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
-			return false;
+			if (!isMovementDisabled())
+			{
+				setTarget(_owner.getTarget());
+				target = skill.getTarget(this, forceUse, dontMove, false);
+			}
+			if (target == null)
+			{
+				sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+				return false;
+			}
 		}
 		
 		// Check if this skill is enabled (e.g. reuse time)
