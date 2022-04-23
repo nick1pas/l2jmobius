@@ -109,7 +109,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(Player player, long delay)
 	{
-		_expiretasks.put(player.getAccountName(), ThreadPool.schedule(new PremiumExpireTask(player), delay));
+		_expiretasks.put(player.getAccountName().toLowerCase(), ThreadPool.schedule(new PremiumExpireTask(player), delay));
 	}
 	
 	/**
@@ -117,7 +117,7 @@ public class PremiumManager
 	 */
 	private void stopExpireTask(Player player)
 	{
-		ScheduledFuture<?> task = _expiretasks.remove(player.getAccountName());
+		ScheduledFuture<?> task = _expiretasks.remove(player.getAccountName().toLowerCase());
 		if (task != null)
 		{
 			task.cancel(false);
@@ -130,12 +130,12 @@ public class PremiumManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(LOAD_SQL))
 		{
-			stmt.setString(1, accountName);
+			stmt.setString(1, accountName.toLowerCase());
 			try (ResultSet rset = stmt.executeQuery())
 			{
 				while (rset.next())
 				{
-					_premiumData.put(rset.getString(1), rset.getLong(2));
+					_premiumData.put(rset.getString(1).toLowerCase(), rset.getLong(2));
 				}
 			}
 		}
@@ -147,7 +147,7 @@ public class PremiumManager
 	
 	public long getPremiumExpiration(String accountName)
 	{
-		return _premiumData.getOrDefault(accountName, 0L);
+		return _premiumData.getOrDefault(accountName.toLowerCase(), 0L);
 	}
 	
 	public void addPremiumTime(String accountName, int timeValue, TimeUnit timeUnit)
@@ -162,7 +162,7 @@ public class PremiumManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
 		{
-			stmt.setString(1, accountName);
+			stmt.setString(1, accountName.toLowerCase());
 			stmt.setLong(2, newPremiumExpiration);
 			stmt.execute();
 		}
@@ -172,12 +172,12 @@ public class PremiumManager
 		}
 		
 		// UPDATE CACHE
-		_premiumData.put(accountName, newPremiumExpiration);
+		_premiumData.put(accountName.toLowerCase(), newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
 		for (Player player : World.getInstance().getPlayers())
 		{
-			if (accountName.equals(player.getAccountName()))
+			if (accountName.equalsIgnoreCase(player.getAccountName()))
 			{
 				stopExpireTask(player);
 				startExpireTask(player, newPremiumExpiration - now);
@@ -196,7 +196,7 @@ public class PremiumManager
 		{
 			for (Player player : World.getInstance().getPlayers())
 			{
-				if (accountName.equals(player.getAccountName()) && player.hasPremiumStatus())
+				if (accountName.equalsIgnoreCase(player.getAccountName()) && player.hasPremiumStatus())
 				{
 					player.setPremiumStatus(false);
 					stopExpireTask(player);
@@ -206,13 +206,13 @@ public class PremiumManager
 		}
 		
 		// UPDATE CACHE
-		_premiumData.remove(accountName);
+		_premiumData.remove(accountName.toLowerCase());
 		
 		// UPDATE DATABASE
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(DELETE_SQL))
 		{
-			stmt.setString(1, accountName);
+			stmt.setString(1, accountName.toLowerCase());
 			stmt.execute();
 		}
 		catch (SQLException e)
