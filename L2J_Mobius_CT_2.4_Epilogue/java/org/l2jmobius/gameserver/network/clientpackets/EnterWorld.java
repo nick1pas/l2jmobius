@@ -250,12 +250,11 @@ public class EnterWorld implements IClientIncomingPacket
 			notifySponsorOrApprentice(player);
 			
 			final AuctionableHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(clan);
-			if (clanHall != null)
+			if ((clanHall != null) && !clanHall.getPaid())
 			{
-				if (!clanHall.getPaid())
-				{
-					player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-				}
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				sm.addInt(clanHall.getLease());
+				player.sendPacket(sm);
 			}
 			
 			for (Siege siege : SiegeManager.getInstance().getSieges())

@@ -396,7 +396,9 @@ public class EnterWorld implements IClientIncomingPacket
 			final ClanHall clanHall = ClanHallTable.getInstance().getClanHallByOwner(player.getClan());
 			if ((clanHall != null) && !clanHall.getPaid())
 			{
-				player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				sm.addNumber(clanHall.getLease());
+				player.sendPacket(sm);
 			}
 		}
 		

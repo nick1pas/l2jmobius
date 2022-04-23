@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class MercTicket implements IItemHandler
 {
@@ -74,6 +75,7 @@ public class MercTicket implements IItemHandler
 			player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
+		
 		// Checking the Seal of Strife status
 		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
 		{
@@ -121,7 +123,9 @@ public class MercTicket implements IItemHandler
 		
 		MercTicketManager.getInstance().addTicket(item.getId(), player);
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		player.sendPacket(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
+		sm.addItemName(item.getId());
+		player.sendPacket(sm);
 		return true;
 	}
 }
