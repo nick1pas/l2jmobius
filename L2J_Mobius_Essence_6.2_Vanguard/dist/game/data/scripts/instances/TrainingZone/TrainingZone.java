@@ -148,7 +148,6 @@ public class TrainingZone extends AbstractInstance
 	private static final Location LOCAL_AREA = new Location(-56255, 13537, -3336);
 	private static final Location WAITING_AREA = new Location(-49550, 17189, -3016);
 	private static final Location INSOLENCE_TOWER = new Location(-52849, 5272, -240);
-	
 	private static final int TEMPLATE_ID = 224;
 	
 	public TrainingZone()
@@ -377,7 +376,7 @@ public class TrainingZone extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					npc.broadcastSay(ChatType.NPC_SHOUT, "I can summon mobs for the training");
+					npc.broadcastSay(ChatType.NPC_SHOUT, "I can summon mobs for the training!");
 					startQuestTimer(event, 11500, npc, player);
 				}
 				break;
@@ -481,7 +480,6 @@ public class TrainingZone extends AbstractInstance
 				}
 				else if (areaTeleport == 0)
 				{
-					
 					world.spawnGroup("PlainsOfTheLizardmen");
 					worldParameters.set("TRAINIG_AREA_TELEPORT", areaTeleport + 1);
 					return npc.getId() + "-Selected.html";
@@ -726,7 +724,6 @@ public class TrainingZone extends AbstractInstance
 					world.getNpcs().stream().filter(WorldObject::isAttackable).forEach(Npc::deleteMe);
 					worldParameters.remove("TRAINIG_AREA_TELEPORT");
 					return npc.getId() + "-removeselect.html";
-					
 				}
 				else if (areaTeleport == 0)
 				{
@@ -782,13 +779,12 @@ public class TrainingZone extends AbstractInstance
 				if (areaTeleport <= 4)
 				{
 					player.teleToLocation(LOCAL_AREA);
-					world.setParameter("BATTLEZONE", true);
 				}
-				if (areaTeleport >= 5)
+				else if (areaTeleport >= 5)
 				{
 					player.teleToLocation(INSOLENCE_TOWER);
-					world.setParameter("BATTLEZONE", true);
 				}
+				world.setParameter("BATTLEZONE", true);
 				break;
 			}
 			case "LOCAL_TELEPORT_RETURN":
@@ -832,28 +828,34 @@ public class TrainingZone extends AbstractInstance
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		final Instance world = npc.getInstanceWorld();
-		if (world.getParameters().getBoolean("BATTLEZONE", true) && (npc.getId() == TIND))
+		switch (npc.getId())
 		{
-			return npc.getId() + "-waitingzone.html";
+			case TIND:
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (world.getParameters().getBoolean("BATTLEZONE", true))
+				{
+					return npc.getId() + "-waitingzone.html";
+				}
+				
+				final int areaTeleport = world.getParameters().getInt("TRAINIG_AREA_TELEPORT", 0);
+				if (areaTeleport >= 1)
+				{
+					return npc.getId() + "-teleport.html";
+				}
+				
+				return npc.getId() + "-NoSummonStatus.html";
+			}
+			case TOKA:
+			{
+				return npc.getId() + "-toka.html";
+			}
+			case ERI:
+			{
+				return npc.getId() + "-eri.html";
+			}
 		}
-		final int areaTeleport = world.getParameters().getInt("TRAINIG_AREA_TELEPORT", 0);
-		if ((areaTeleport >= 1) && (npc.getId() == TIND))
-		{
-			return npc.getId() + "-teleport.html";
-		}
-		if (npc.getId() == TIND)
-		{
-			return npc.getId() + "-NoSummonStatus.html";
-		}
-		if (npc.getId() == TOKA)
-		{
-			return npc.getId() + "-toka.html";
-		}
-		if (npc.getId() == ERI)
-		{
-			return npc.getId() + "-eri.html";
-		}
+		
 		return super.onFirstTalk(npc, player);
 	}
 	
@@ -861,11 +863,10 @@ public class TrainingZone extends AbstractInstance
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
-		
-		if (!world.getParameters().getBoolean("spawnedBoss", false))
+		if ((world != null) && !world.getParameters().getBoolean("spawnedBoss", false))
 		{
-			startQuestTimer("SpawnBossClockList", 1000, npc, attacker);
 			world.getParameters().set("spawnedBoss", true);
+			startQuestTimer("SpawnBossClockList", 1000, npc, attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
