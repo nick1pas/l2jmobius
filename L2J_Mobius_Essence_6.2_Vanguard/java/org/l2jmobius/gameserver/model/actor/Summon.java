@@ -410,14 +410,24 @@ public abstract class Summon extends Playable
 			}
 		}
 		
-		// pet will be deleted along with all his items
+		// Pet will be deleted along with all his items.
 		if (getInventory() != null)
 		{
-			getInventory().destroyAllItems("pet deleted", _owner, this);
+			// Pet related - Removed on Essence.
+			// getInventory().destroyAllItems("pet deleted", _owner, this);
+			// Pet related - Added the following.
+			for (Item item : getInventory().getItems())
+			{
+				World.getInstance().removeObject(item);
+			}
 		}
+		
 		decayMe();
 		
-		CharSummonTable.getInstance().removeServitor(_owner, getObjectId());
+		if (!isPet())
+		{
+			CharSummonTable.getInstance().removeServitor(_owner, getObjectId());
+		}
 	}
 	
 	public void unSummon(Player owner)

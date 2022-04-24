@@ -764,10 +764,14 @@ public class Pet extends Summon
 	@Override
 	public void deleteMe(Player owner)
 	{
-		_inventory.transferItemsToOwner();
+		// Pet related - Removed on Essence.
+		// _inventory.transferItemsToOwner();
+		
 		super.deleteMe(owner);
-		destroyControlItem(owner, false); // this should also delete the pet from the db
-		CharSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
+		
+		// Pet related - Removed on Essence.
+		// destroyControlItem(owner, false); // this should also delete the pet from the db
+		// CharSummonTable.getInstance().getPets().remove(getOwner().getObjectId());
 	}
 	
 	@Override
@@ -783,7 +787,16 @@ public class Pet extends Summon
 			return false;
 		}
 		stopFeed();
-		sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_H_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
+		
+		// Pet related - Removed on Essence.
+		// sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_H_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
+		// Pet related - Added the following.
+		storeMe();
+		for (Skill skill : getAllSkills())
+		{
+			storePetSkills(skill.getId(), skill.getLevel());
+		}
+		
 		DecayTaskManager.getInstance().add(this);
 		if (owner != null)
 		{
@@ -1002,8 +1015,11 @@ public class Pet extends Summon
 				pet.getStatus().setCurrentCp(pet.getMaxCp());
 				if (rset.getDouble("curHp") < 1)
 				{
-					pet.setDead(true);
-					pet.stopHpMpRegeneration();
+					// Pet related - Removed on Essence.
+					// pet.setDead(true);
+					// pet.stopHpMpRegeneration();
+					// Pet related - Added the following.
+					pet.setCurrentHpMp(pet.getMaxHp(), pet.getMaxMp());
 				}
 				pet.setEvolveLevel(pet.getPetData().getEvolveLevel());
 				pet.setCurrentFed(rset.getInt("fed"));

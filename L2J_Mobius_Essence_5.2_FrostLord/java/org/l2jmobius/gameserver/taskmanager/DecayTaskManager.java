@@ -75,11 +75,15 @@ public class DecayTaskManager implements Runnable
 		}
 		
 		long delay;
-		if (creature.isPet())
-		{
-			delay = 86400;
-		}
-		else if (creature.getTemplate() instanceof NpcTemplate)
+		
+		// Pet related - Removed on Essence.
+		// if (creature.isPet())
+		// {
+		// delay = 86400;
+		// }
+		// else
+		
+		if (creature.getTemplate() instanceof NpcTemplate)
 		{
 			delay = ((NpcTemplate) creature.getTemplate()).getCorpseTime();
 		}
