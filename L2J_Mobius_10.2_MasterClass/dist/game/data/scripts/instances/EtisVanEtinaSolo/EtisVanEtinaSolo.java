@@ -178,12 +178,12 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			case "checkProgress":
 			{
 				final Instance world = player.getInstanceWorld();
-				boolean mobs1 = world.getParameters().getBoolean("CORRIDOR_MOBS_1_SPAWNED", false);
-				boolean mobs2 = world.getParameters().getBoolean("CORRIDOR_MOBS_2_SPAWNED", false);
-				boolean mobs3 = world.getParameters().getBoolean("CORRIDOR_MOBS_3_SPAWNED", false);
-				boolean mobs4 = world.getParameters().getBoolean("CORRIDOR_MOBS_4_SPAWNED", false);
 				if (isInInstance(world))
 				{
+					boolean mobs1 = world.getParameters().getBoolean("CORRIDOR_MOBS_1_SPAWNED", false);
+					boolean mobs2 = world.getParameters().getBoolean("CORRIDOR_MOBS_2_SPAWNED", false);
+					boolean mobs3 = world.getParameters().getBoolean("CORRIDOR_MOBS_3_SPAWNED", false);
+					boolean mobs4 = world.getParameters().getBoolean("CORRIDOR_MOBS_4_SPAWNED", false);
 					final Monster monsterCheck = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 					if (monsterCheck == null)
 					{
