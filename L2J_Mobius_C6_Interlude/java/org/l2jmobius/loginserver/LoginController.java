@@ -150,7 +150,7 @@ public class LoginController
 			addBanForAddress(addr, Config.LOGIN_BLOCK_AFTER_BAN * 1000);
 			// we need to clear the failed login attempts here, so after the ip ban is over the client has another 5 attempts
 			clearFailedLoginAttemps(addr);
-			LOGGER.warning("Added banned address " + addr.getHostAddress() + "! Too many login attemps.");
+			LOGGER.warning("Added banned address " + addr.getHostAddress() + "! Too many login attempts.");
 		}
 	}
 	
