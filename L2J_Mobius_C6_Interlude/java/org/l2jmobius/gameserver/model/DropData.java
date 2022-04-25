@@ -79,7 +79,7 @@ public class DropData
 	}
 	
 	/**
-	 * Sets the value for minimal quantity of dropped items
+	 * Sets the value for minimum quantity of dropped items
 	 * @param mindrop : int designating the quantity
 	 */
 	public void setMinDrop(int mindrop)
@@ -88,7 +88,7 @@ public class DropData
 	}
 	
 	/**
-	 * Sets the value for maximal quantity of dopped items
+	 * Sets the value for maximum quantity of dopped items
 	 * @param maxdrop : int designating the quantity of dropped items
 	 */
 	public void setMaxDrop(int maxdrop)

@@ -197,7 +197,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						catch (NumberFormatException e)
 						{
-							player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
+							player.sendMessage("Too big price! Maximum price is " + Config.SELLBUFF_MAX_PRICE);
 							SellBuffsManager.getInstance().sendBuffEditMenu(player);
 						}
 					}
@@ -274,7 +274,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						catch (NumberFormatException e)
 						{
-							player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MIN_PRICE);
+							player.sendMessage("Too big price! Maximum price is " + Config.SELLBUFF_MIN_PRICE);
 							SellBuffsManager.getInstance().sendBuffEditMenu(player);
 						}
 					}
@@ -291,12 +291,12 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					}
 					else if (price < Config.SELLBUFF_MIN_PRICE)
 					{
-						player.sendMessage("Too small price! Minimal price is " + Config.SELLBUFF_MIN_PRICE);
+						player.sendMessage("Too small price! Minimum price is " + Config.SELLBUFF_MIN_PRICE);
 						return false;
 					}
 					else if (price > Config.SELLBUFF_MAX_PRICE)
 					{
-						player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
+						player.sendMessage("Too big price! Maximum price is " + Config.SELLBUFF_MAX_PRICE);
 						return false;
 					}
 					else if (player.getSellingBuffs().size() >= Config.SELLBUFF_MAX_BUFFS)

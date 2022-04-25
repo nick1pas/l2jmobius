@@ -1778,7 +1778,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	/**
 	 * @param player the player whose language settings to use in finding the html of the right language
-	 * @return the default html for when player don't have minimal level for reward: "You cannot receive quest rewards as your character.."
+	 * @return the default html for when player don't have minimum level for reward: "You cannot receive quest rewards as your character.."
 	 */
 	public static String getNoQuestLevelRewardMsg(Player player)
 	{

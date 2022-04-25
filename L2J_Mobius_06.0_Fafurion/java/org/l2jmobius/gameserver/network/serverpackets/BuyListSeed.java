@@ -58,7 +58,7 @@ public class BuyListSeed implements IClientOutgoingPacket
 			packet.writeH(_list.size()); // list length
 			for (SeedProduction s : _list)
 			{
-				packet.writeC(0); // mask item 0 to print minimal item information
+				packet.writeC(0); // mask item 0 to print minimum item information
 				packet.writeD(s.getId()); // ObjectId
 				packet.writeD(s.getId()); // ItemId
 				packet.writeC(0xFF); // T1

@@ -3469,8 +3469,8 @@ public class Config
 			SELLBUFF_ENABLED = sellBuffConfig.getBoolean("SellBuffEnable", false);
 			SELLBUFF_MP_MULTIPLER = sellBuffConfig.getInt("MpCostMultipler", 1);
 			SELLBUFF_PAYMENT_ID = sellBuffConfig.getInt("PaymentID", 57);
-			SELLBUFF_MIN_PRICE = sellBuffConfig.getLong("MinimalPrice", 100000);
-			SELLBUFF_MAX_PRICE = sellBuffConfig.getLong("MaximalPrice", 100000000);
+			SELLBUFF_MIN_PRICE = sellBuffConfig.getLong("MinimumPrice", 100000);
+			SELLBUFF_MAX_PRICE = sellBuffConfig.getLong("MaximumPrice", 100000000);
 			SELLBUFF_MAX_BUFFS = sellBuffConfig.getInt("MaxBuffs", 15);
 			
 			// Load ServerTime config file (if exists)

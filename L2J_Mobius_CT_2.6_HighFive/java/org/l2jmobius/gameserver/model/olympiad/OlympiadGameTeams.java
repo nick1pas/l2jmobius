@@ -646,7 +646,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		
 		// calculating coefficients and trying to correct total number of points for each team
 		// due to rounding errors total points after correction will always be lower or equal
-		// than needed minimal sum
+		// than needed minimum sum
 		final double dividerOne = (double) totalPointsTeamOne / min;
 		final double dividerTwo = (double) totalPointsTeamTwo / min;
 		totalPointsTeamOne = min;

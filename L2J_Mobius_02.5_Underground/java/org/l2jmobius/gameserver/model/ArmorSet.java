@@ -102,7 +102,7 @@ public class ArmorSet
 	}
 	
 	/**
-	 * The list of skills that are activated when set reaches it's minimal equipped items condition
+	 * The list of skills that are activated when set reaches it's minimum equipped items condition
 	 * @return
 	 */
 	public List<ArmorsetSkillHolder> getSkills()

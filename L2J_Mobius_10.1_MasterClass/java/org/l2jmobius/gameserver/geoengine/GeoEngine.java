@@ -139,7 +139,7 @@ public class GeoEngine
 	
 	/**
 	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer and log this situation.
-	 * @param size : pre-calculated minimal required size
+	 * @param size : pre-calculated minimum required size
 	 * @return NodeBuffer : buffer
 	 */
 	private NodeBuffer getBuffer(int size)
