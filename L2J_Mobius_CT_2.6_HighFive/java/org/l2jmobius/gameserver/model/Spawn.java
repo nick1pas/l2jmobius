@@ -329,7 +329,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	{
 		try
 		{
-			// Check if the Spawn is not a Net or Minion or Decoy spawn
+			// Check if the spawn is not a Pet, Decoy or Trap spawn.
 			if (_template.isType("Pet") || _template.isType("Decoy") || _template.isType("Trap"))
 			{
 				_currentCount++;
