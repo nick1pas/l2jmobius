@@ -203,9 +203,9 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // 1: Fishing Mode (Cant be undone by setting back to 0)
-		packet.writeD(_player.getFishx());
-		packet.writeD(_player.getFishy());
-		packet.writeD(_player.getFishz());
+		packet.writeD(_player.getFishX());
+		packet.writeD(_player.getFishY());
+		packet.writeD(_player.getFishZ());
 		
 		packet.writeD(_player.getAppearance().getNameColor());
 		packet.writeD(_heading);

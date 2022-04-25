@@ -233,9 +233,9 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // 1: Hero Aura
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // Fishing Mode
-		packet.writeD(_player.getFishx()); // fishing x
-		packet.writeD(_player.getFishy()); // fishing y
-		packet.writeD(_player.getFishz()); // fishing z
+		packet.writeD(_player.getFishX()); // fishing x
+		packet.writeD(_player.getFishY()); // fishing y
+		packet.writeD(_player.getFishZ()); // fishing z
 		
 		packet.writeD(_player.getAppearance().getNameColor());
 		// new c5

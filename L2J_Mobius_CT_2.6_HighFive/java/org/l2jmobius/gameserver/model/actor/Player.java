@@ -758,9 +758,9 @@ public class Player extends Playable
 	
 	private Fishing _fishCombat;
 	private boolean _fishing = false;
-	private int _fishx = 0;
-	private int _fishy = 0;
-	private int _fishz = 0;
+	private int _fishX = 0;
+	private int _fishY = 0;
+	private int _fishZ = 0;
 	
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
@@ -11519,9 +11519,9 @@ public class Player extends Playable
 		stopMove(null);
 		setImmobilized(true);
 		_fishing = true;
-		_fishx = x;
-		_fishy = y;
-		_fishz = z;
+		_fishX = x;
+		_fishY = y;
+		_fishZ = z;
 		// broadcastUserInfo();
 		// Starts fishing
 		final int lvl = getRandomFishLvl();
@@ -11911,9 +11911,9 @@ public class Player extends Playable
 	public void endFishing(boolean win)
 	{
 		_fishing = false;
-		_fishx = 0;
-		_fishy = 0;
-		_fishz = 0;
+		_fishX = 0;
+		_fishY = 0;
+		_fishZ = 0;
 		// broadcastUserInfo();
 		if (_fishCombat == null)
 		{
@@ -11933,19 +11933,19 @@ public class Player extends Playable
 		return _fishCombat;
 	}
 	
-	public int getFishx()
+	public int getFishX()
 	{
-		return _fishx;
+		return _fishX;
 	}
 	
-	public int getFishy()
+	public int getFishY()
 	{
-		return _fishy;
+		return _fishY;
 	}
 	
-	public int getFishz()
+	public int getFishZ()
 	{
-		return _fishz;
+		return _fishZ;
 	}
 	
 	public void setLure(Item lure)
