@@ -46,18 +46,18 @@ public class ExMagicLampGameInfoUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAGICLAMP_GAME_INFO.writeId(packet);
-		packet.writeD(_player.getMaxLampCount()); // nMagicLampGameMaxCCount
-		packet.writeD(_count); // cMagicLampGameCCount
-		packet.writeD(_mode == 0 ? Config.MAGIC_LAMP_REWARD_COUNT : Config.MAGIC_LAMP_GREATER_REWARD_COUNT); // cMagicLampCountPerGame
-		packet.writeD(_player.getLampCount()); // cMagicLampCount
-		packet.writeC(_mode); // cGameMode
+		packet.writeD(_player.getMaxLampCount()); // MagicLampGameMaxCCount
+		packet.writeD(_count); // MagicLampGameCCount
+		packet.writeD(_mode == 0 ? Config.MAGIC_LAMP_CONSUME_COUNT : Config.MAGIC_LAMP_GREATER_CONSUME_COUNT); // MagicLampCountPerGame
+		packet.writeD(_player.getLampCount()); // MagicLampCount
+		packet.writeC(_mode); // GameMode
 		final List<GreaterMagicLampHolder> greater = MagicLampData.getInstance().getGreaterLamps();
 		packet.writeD(greater.size()); // costItemList
 		for (GreaterMagicLampHolder lamp : greater)
 		{
-			packet.writeD(lamp.getItemId()); // nItemClassID
-			packet.writeQ(lamp.getCount()); // nItemAmountPerGame
-			packet.writeQ(_player.getInventory().getInventoryItemCount(lamp.getItemId(), -1)); // nItemAmount
+			packet.writeD(lamp.getItemId()); // ItemClassID
+			packet.writeQ(lamp.getCount()); // ItemAmountPerGame
+			packet.writeQ(_player.getInventory().getInventoryItemCount(lamp.getItemId(), -1)); // ItemAmount
 		}
 		return true;
 	}

@@ -16,108 +16,36 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Collection;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.MagicLampData;
-import org.l2jmobius.gameserver.enums.LampMode;
-import org.l2jmobius.gameserver.enums.LampType;
-import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.MagicLampDataHolder;
 import org.l2jmobius.gameserver.model.holders.MagicLampHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author L2CCCP
+ * @author Mobius
  */
 public class ExMagicLampGameResult implements IClientOutgoingPacket
 {
-	private final Map<LampType, MagicLampHolder> _reward = new HashMap<>();
+	private final Collection<MagicLampHolder> _rewards;
 	
-	public ExMagicLampGameResult(Player player, int count, byte mode)
+	public ExMagicLampGameResult(Collection<MagicLampHolder> rewards)
 	{
-		final LampMode type = LampMode.getByMode(mode);
-		final int consume = calcConsume(type, count);
-		final int have = player.getLampCount();
-		if (have >= consume)
-		{
-			init(type, count);
-			player.setLampCount(have - consume);
-			_reward.values().forEach(lamp -> player.addExpAndSp(lamp.getExp(), lamp.getSp()));
-			// update UI
-			final int left = player.getLampCount();
-			player.sendPacket(new ExMagicLampGameInfoUI(player, mode, left > consume ? count : left)); // check left count for update UI
-			player.sendPacket(new ExMagicLampExpInfoUI(player));
-		}
-	}
-	
-	private void init(LampMode mode, int count)
-	{
-		for (int x = count; x > 0; x--)
-		{
-			final List<MagicLampDataHolder> available = MagicLampData.getInstance().getLamps().stream().filter(lamp -> (lamp.getMode() == mode) && chance(lamp.getChance())).collect(Collectors.toList());
-			final MagicLampDataHolder random = getRandom(available);
-			if (random != null)
-			{
-				_reward.computeIfAbsent(random.getType(), list -> new MagicLampHolder(random)).inc();
-			}
-		}
-	}
-	
-	private boolean chance(double chance)
-	{
-		return (chance > 0) && ((chance >= 100) || (Rnd.get(100d) <= chance));
-	}
-	
-	private <E> E getRandom(List<E> list)
-	{
-		if (list.isEmpty())
-		{
-			return null;
-		}
-		if (list.size() == 1)
-		{
-			return list.get(0);
-		}
-		return list.get(Rnd.get(list.size()));
-	}
-	
-	private int calcConsume(LampMode mode, int count)
-	{
-		switch (mode)
-		{
-			case NORMAL:
-			{
-				return Config.MAGIC_LAMP_REWARD_COUNT * count;
-			}
-			case GREATER:
-			{
-				return Config.MAGIC_LAMP_GREATER_REWARD_COUNT * count;
-			}
-			default:
-			{
-				return 0;
-			}
-		}
+		_rewards = rewards;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAGICLAMP_GAME_RESULT.writeId(packet);
-		packet.writeD(_reward.size()); // magicLampGameResult
-		for (MagicLampHolder lamp : _reward.values())
+		packet.writeD(_rewards.size());
+		for (MagicLampHolder lamp : _rewards)
 		{
-			packet.writeC(lamp.getType().getGrade()); // cGradeNum
-			packet.writeD(lamp.getCount()); // nRewardCount
-			packet.writeQ(lamp.getExp()); // nEXP
-			packet.writeQ(lamp.getSp()); // nSP
+			packet.writeC(lamp.getType().getGrade());
+			packet.writeD(lamp.getCount());
+			packet.writeQ(lamp.getExp());
+			packet.writeQ(lamp.getSp());
 		}
 		return true;
 	}

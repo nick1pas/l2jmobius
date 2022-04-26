@@ -893,8 +893,9 @@ public class Config
 	// Magic Lamp
 	public static boolean ENABLE_MAGIC_LAMP;
 	public static int MAGIC_LAMP_MAX_GAME_COUNT;
-	public static int MAGIC_LAMP_REWARD_COUNT;
-	public static int MAGIC_LAMP_GREATER_REWARD_COUNT;
+	public static int MAGIC_LAMP_CONSUME_COUNT;
+	public static int MAGIC_LAMP_GREATER_CONSUME_COUNT;
+	public static int MAGIC_LAMP_GREATER_SAYHA_CONSUME_COUNT;
 	public static int MAGIC_LAMP_MAX_LEVEL_EXP;
 	public static double MAGIC_LAMP_CHARGE_RATE;
 	
@@ -1927,8 +1928,9 @@ public class Config
 			final PropertiesParser magicLampconfig = new PropertiesParser(MAGIC_LAMP_FILE);
 			ENABLE_MAGIC_LAMP = magicLampconfig.getBoolean("MagicLampEnabled", false);
 			MAGIC_LAMP_MAX_GAME_COUNT = magicLampconfig.getInt("MagicLampMaxGames", 300);
-			MAGIC_LAMP_REWARD_COUNT = magicLampconfig.getInt("MagicLampRewardCount", 1);
-			MAGIC_LAMP_GREATER_REWARD_COUNT = magicLampconfig.getInt("MagicLampGreaterRewardCount", 10);
+			MAGIC_LAMP_CONSUME_COUNT = magicLampconfig.getInt("MagicLampConsumeCount", 5);
+			MAGIC_LAMP_GREATER_CONSUME_COUNT = magicLampconfig.getInt("MagicLampGreaterConsumeCount", 10);
+			MAGIC_LAMP_GREATER_SAYHA_CONSUME_COUNT = magicLampconfig.getInt("MagicLampGreaterSayhaConsumeCount", 5);
 			MAGIC_LAMP_MAX_LEVEL_EXP = magicLampconfig.getInt("MagicLampMaxLevelExp", 10000000);
 			MAGIC_LAMP_CHARGE_RATE = magicLampconfig.getDouble("MagicLampChargeRate", 0.1);
 			
