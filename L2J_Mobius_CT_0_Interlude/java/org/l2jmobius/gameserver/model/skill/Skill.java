@@ -1496,7 +1496,7 @@ public class Skill implements IIdentifiable
 	 */
 	public boolean canBeStolen()
 	{
-		return !isPassive() && !isToggle() && !_isDebuff && !_isHeroSkill && !_isGMSkill && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && _canBeDispeled && (getId() != CommonSkill.SERVITOR_SHARE.getId());
+		return !isPassive() && !isToggle() && !_isDebuff && !_isHeroSkill && !_isGMSkill && !isStatic() && _canBeDispeled;
 	}
 	
 	public boolean isClanSkill()

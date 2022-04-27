@@ -2026,44 +2026,27 @@ public class Player extends Playable
 			}
 		}
 		
-		boolean changed = false;
-		
 		// calc weapon penalty
 		weaponPenalty = weaponPenalty - expertiseLevel - _expertisePenaltyBonus;
 		weaponPenalty = Math.min(Math.max(weaponPenalty, 0), 4);
-		if ((_expertiseWeaponPenalty != weaponPenalty) || (getSkillLevel(CommonSkill.WEAPON_GRADE_PENALTY.getId()) != weaponPenalty))
-		{
-			_expertiseWeaponPenalty = weaponPenalty;
-			if (_expertiseWeaponPenalty > 0)
-			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), _expertiseWeaponPenalty));
-			}
-			else
-			{
-				removeSkill(getKnownSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId()), false, true);
-			}
-			changed = true;
-		}
 		
 		// calc armor penalty
 		armorPenalty = armorPenalty - expertiseLevel - _expertisePenaltyBonus;
 		armorPenalty = Math.min(Math.max(armorPenalty, 0), 4);
-		if ((_expertiseArmorPenalty != armorPenalty) || (getSkillLevel(CommonSkill.ARMOR_GRADE_PENALTY.getId()) != armorPenalty))
+		
+		if ((_expertiseWeaponPenalty != weaponPenalty) || (_expertiseArmorPenalty != armorPenalty))
 		{
+			_expertiseWeaponPenalty = weaponPenalty;
 			_expertiseArmorPenalty = armorPenalty;
-			if (_expertiseArmorPenalty > 0)
+			if ((_expertiseWeaponPenalty > 0) || (_expertiseArmorPenalty > 0))
 			{
-				addSkill(SkillData.getInstance().getSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), _expertiseArmorPenalty));
+				addSkill(SkillData.getInstance().getSkill(CommonSkill.GRADE_PENALTY.getId(), Math.max(weaponPenalty, armorPenalty)));
 			}
 			else
 			{
-				removeSkill(getKnownSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId()), false, true);
+				removeSkill(getKnownSkill(CommonSkill.GRADE_PENALTY.getId()), false, true);
 			}
-			changed = true;
-		}
-		
-		if (changed)
-		{
+			
 			sendPacket(new EtcStatusUpdate(this));
 		}
 	}

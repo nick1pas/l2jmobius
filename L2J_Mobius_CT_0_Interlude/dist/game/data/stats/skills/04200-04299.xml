@@ -1290,13 +1290,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4267" levels="1" name="Grade Penalty">
+	<skill id="4267" levels="10" name="Grade Penalty">
 		<!-- A penalty applied when the grade of equipment one is wearing is not appropriate for one's level. -->
 		<set name="icon" val="icon.skill4267" />
+		<table name="#rate">0.22 0.19 0.16 0.13 0.1 0.1 0.1 0.1 0.1 0.1</table>
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#rate" />
+				<mul stat="mAtkSpd" val="#rate" />
+				<mul stat="rEvas" val="#rate" />
+				<mul stat="rExp" val="#rate" />
+				<mul stat="runSpd" val="#rate" />
+				<mul stat="regHp" val="#rate" />
+				<mul stat="regCp" val="#rate" />
+				<mul stat="regMp" val="#rate" />
+				<sub stat="accCombat" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="4268" levels="1" name="Danger Area">
 		<!-- You are located in an area in which you can can receive environmental damage or penalty. -->

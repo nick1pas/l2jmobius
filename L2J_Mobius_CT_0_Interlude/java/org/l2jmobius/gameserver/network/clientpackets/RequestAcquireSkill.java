@@ -215,14 +215,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel())
 					{
-						if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
-						{
-							player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_ACQUIRE_FURTHER_SKILLS);
-						}
-						else
-						{
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-						}
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
 						return false;
 					}
 				}
