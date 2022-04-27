@@ -24,12 +24,14 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
+import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * Basic instance zone data transfer object.
@@ -107,6 +109,26 @@ public class InstanceWorld
 	public boolean isAllowed(Player player)
 	{
 		return _allowed.contains(player.getObjectId());
+	}
+	
+	/**
+	 * Teleport player out of instance.
+	 * @param player player that should be moved out
+	 */
+	public void ejectPlayer(Player player)
+	{
+		if ((player != null) && (player.getInstanceId() == _instance.getId()))
+		{
+			player.setInstanceId(0);
+			if (_instance.getExitLoc() != null)
+			{
+				player.teleToLocation(_instance.getExitLoc(), true);
+			}
+			else
+			{
+				player.teleToLocation(TeleportWhereType.TOWN);
+			}
+		}
 	}
 	
 	/**
@@ -330,6 +352,35 @@ public class InstanceWorld
 		if ((door != null) && door.isOpen())
 		{
 			door.closeMe();
+		}
+	}
+	
+	/**
+	 * Get spawned door by template ID.
+	 * @param doorId template ID of door
+	 * @return instance of door if found, otherwise {@code null}
+	 */
+	public Door getDoor(int doorId)
+	{
+		return _instance.getDoor(doorId);
+	}
+	
+	/**
+	 * Send packet to each player from instance world.
+	 * @param packets packets to be send
+	 */
+	public void broadcastPacket(IClientOutgoingPacket... packets)
+	{
+		for (int objectId : _instance.getPlayers())
+		{
+			final Player player = World.getInstance().getPlayer(objectId);
+			if ((player != null) && (player.getInstanceId() == _instance.getId()))
+			{
+				for (IClientOutgoingPacket packet : packets)
+				{
+					player.sendPacket(packet);
+				}
+			}
 		}
 	}
 }
