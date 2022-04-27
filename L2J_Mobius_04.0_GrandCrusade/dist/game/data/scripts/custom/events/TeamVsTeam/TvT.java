@@ -175,6 +175,10 @@ public class TvT extends Event
 			}
 			case "CancelParticipation":
 			{
+				if (player.isOnEvent())
+				{
+					return null;
+				}
 				// Remove the player from the IP count
 				if (Config.DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP > 0)
 				{
@@ -256,6 +260,8 @@ public class TvT extends Event
 				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
 				for (Player participant : PLAYER_LIST)
 				{
+					participant.setOnEvent(true);
+					participant.setRegisteredOnEvent(false);
 					if (team)
 					{
 						BLUE_TEAM.add(participant);
@@ -275,7 +281,6 @@ public class TvT extends Event
 						team = true;
 					}
 					addDeathListener(participant);
-					participant.setOnEvent(true);
 				}
 				// Make Blue CC.
 				if (BLUE_TEAM.size() > 1)
@@ -896,6 +901,7 @@ public class TvT extends Event
 			removeListeners(participant);
 			participant.setTeam(Team.NONE);
 			participant.setRegisteredOnEvent(false);
+			participant.setOnEvent(false);
 		}
 		if (PVP_WORLD != null)
 		{
