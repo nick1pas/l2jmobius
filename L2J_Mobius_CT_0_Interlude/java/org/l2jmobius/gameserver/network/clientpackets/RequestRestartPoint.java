@@ -93,7 +93,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 		// Custom event resurrection management.
 		if (player.isOnEvent())
 		{
-			for (AbstractEventListener listener : player.getListeners(EventType.ON_CREATURE_KILL))
+			for (AbstractEventListener listener : player.getListeners(EventType.ON_CREATURE_DEATH))
 			{
 				if (listener.getOwner() instanceof Event)
 				{

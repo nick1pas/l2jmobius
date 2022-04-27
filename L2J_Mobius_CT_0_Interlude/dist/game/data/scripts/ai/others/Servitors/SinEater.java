@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -82,10 +82,10 @@ public class SinEater extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	@RegisterEvent(EventType.ON_CREATURE_KILL)
+	@RegisterEvent(EventType.ON_CREATURE_DEATH)
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id(SIN_EATER)
-	public void onCreatureKill(OnCreatureKill event)
+	public void onCreatureKill(OnCreatureDeath event)
 	{
 		final int random = getRandom(100);
 		final Summon summon = (Summon) event.getTarget();

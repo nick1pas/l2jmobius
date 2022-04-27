@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -85,7 +85,7 @@ public class Servitors extends AbstractNpcAI
 	{
 	}
 	
-	@RegisterEvent(EventType.ON_CREATURE_KILL)
+	@RegisterEvent(EventType.ON_CREATURE_DEATH)
 	@RegisterType(ListenerRegisterType.NPC)
 	// @formatter:off
 	@Id({
@@ -103,7 +103,7 @@ public class Servitors extends AbstractNpcAI
 		14527, 14528, 14529, 14530
 	})
 	// @formatter:on
-	public void onCreatureKill(OnCreatureKill event)
+	public void onCreatureKill(OnCreatureDeath event)
 	{
 		if (event.getAttacker().isNpc() && event.getTarget().isServitor() //
 			&& Util.checkIfInRange(1500, event.getAttacker(), event.getTarget(), true))

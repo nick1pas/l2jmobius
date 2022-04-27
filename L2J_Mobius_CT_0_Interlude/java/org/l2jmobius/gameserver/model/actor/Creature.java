@@ -94,7 +94,8 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttackAvoid
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKilled;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureTeleported;
@@ -2281,12 +2282,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public boolean doDie(Creature killer)
 	{
-		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureKill(killer, this), this, TerminateReturn.class);
-		if ((returnBack != null) && returnBack.terminate())
-		{
-			return false;
-		}
-		
 		// killing is only possible one time
 		synchronized (this)
 		{
@@ -2298,6 +2293,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// now reset currentHp to zero
 			setCurrentHp(0);
 			setDead(true);
+		}
+		
+		EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
+		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), this, TerminateReturn.class);
+		if ((returnBack != null) && returnBack.terminate())
+		{
+			return false;
 		}
 		
 		// Calculate rewards for main damage dealer.
