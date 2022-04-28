@@ -148,8 +148,6 @@ public enum Stat
 	MAX_MAGIC_CRITICAL_RATE("maxMagicCritRate"),
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
 	MAGIC_CRITICAL_RATE_BY_CRITICAL_RATE("mCritRateByRCrit", Stat::defaultValue, MathUtil::add, MathUtil::mul, 0, 0),
-	BLOW_RATE("blowRate"),
-	BLOW_RATE_DEFENCE("blowRateDefence"),
 	DEFENCE_CRITICAL_RATE("defCritRate"),
 	DEFENCE_CRITICAL_RATE_ADD("defCritRateAdd"),
 	DEFENCE_MAGIC_CRITICAL_RATE("defMCritRate"),
@@ -160,6 +158,10 @@ public enum Stat
 	DEFENCE_CRITICAL_DAMAGE_ADD("defCritDamageAdd"), // Resistance to critical damage in value (Example: +100 will be 100 more critical damage, NOT 100% more).
 	DEFENCE_CRITICAL_DAMAGE_SKILL("defCAtkSkill"),
 	DEFENCE_CRITICAL_DAMAGE_SKILL_ADD("defCAtkSkillAdd"),
+	AREA_OF_EFFECT_DAMAGE_MODIFIER("aoeDamageMofifier"),
+	AREA_OF_EFFECT_DAMAGE_DEFENCE("aoeDamageDefence"),
+	BLOW_RATE("blowRate"),
+	BLOW_RATE_DEFENCE("blowRateDefence"),
 	INSTANT_KILL_RESIST("instantKillResist"),
 	EXPSP_RATE("rExp"),
 	ACTIVE_BONUS_EXP("activeBonusExp"), // Used to measure active skill bonus exp.
