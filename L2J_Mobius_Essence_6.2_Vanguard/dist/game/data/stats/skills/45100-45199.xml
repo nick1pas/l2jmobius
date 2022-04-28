@@ -3993,20 +3993,28 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45190" toLevel="2" name="Detection">
+	<skill id="45190" toLevel="3" name="Detection">
 		<!-- Allows to find invisible enemies nearby. The target can't become invisible for 2 sec. -->
 		<icon>icon.skill19203</icon>
 		<coolTime>300</coolTime>
 		<affectRange>
 			<value level="1">200</value>
 			<value level="2">400</value>
+			<value level="2">450</value>
 		</affectRange>
 		<effectPoint>-760</effectPoint>
 		<hitTime>1200</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">85</value>
+			<value level="2">88</value>
 		</magicLevel>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">1</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<abnormalLevel>2</abnormalLevel>
 		<activateRate>-1</activateRate>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
