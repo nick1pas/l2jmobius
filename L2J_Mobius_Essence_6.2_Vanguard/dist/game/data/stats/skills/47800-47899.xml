@@ -1,48 +1,453 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="47801" toLevel="8" name="Piercing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_impale</icon>
+		<castRange>120</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-300</value>
+			<value level="3">-400</value>
+			<value level="4">-500</value>
+			<value level="5">-550</value>
+			<value level="6">-600</value>
+			<value level="7">-650</value>
+			<value level="8">-700</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">30</value>
+			<value level="3">40</value>
+			<value level="4">50</value>
+			<value level="5">55</value>
+			<value level="6">60</value>
+			<value level="7">65</value>
+			<value level="8">70</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">25</value>
+			<value level="3">33</value>
+			<value level="4">40</value>
+			<value level="5">44</value>
+			<value level="6">48</value>
+			<value level="7">51</value>
+			<value level="8">55</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">419</value>
+					<value level="2">581</value>
+					<value level="3">1333</value>
+					<value level="4">2478</value>
+					<value level="5">3097</value>
+					<value level="6">4501</value>
+					<value level="7">5176</value>
+					<value level="8">6386</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47802" toLevel="8" name="Amazing Piercing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_arc_impale</icon>
+		<castRange>150</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-790</value>
+			<value level="3">-830</value>
+			<value level="4">-850</value>
+			<value level="5">-860</value>
+			<value level="6">-870</value>
+			<value level="7">-880</value>
+			<value level="8">-900</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">79</value>
+			<value level="3">83</value>
+			<value level="4">85</value>
+			<value level="5">86</value>
+			<value level="6">87</value>
+			<value level="7">88</value>
+			<value level="8">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">62</value>
+			<value level="3">65</value>
+			<value level="4">66</value>
+			<value level="5">67</value>
+			<value level="6">68</value>
+			<value level="7">69</value>
+			<value level="8">70</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">7276</value>
+					<value level="2">7655</value>
+					<value level="3">8176</value>
+					<value level="4">8435</value>
+					<value level="5">8565</value>
+					<value level="6">8703</value>
+					<value level="7">8834</value>
+					<value level="8">9099</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+				<pDefMod>0.85</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47803" toLevel="10" name="Threatening Swing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_brandish</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-440</value>
+			<value level="3">-480</value>
+			<value level="4">-520</value>
+			<value level="5">-560</value>
+			<value level="6">-600</value>
+			<value level="7">-640</value>
+			<value level="8">-680</value>
+			<value level="9">-710</value>
+			<value level="10">-740</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">52</value>
+			<value level="5">56</value>
+			<value level="6">60</value>
+			<value level="7">64</value>
+			<value level="8">68</value>
+			<value level="9">71</value>
+			<value level="10">74</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">38</value>
+			<value level="2">41</value>
+			<value level="3">44</value>
+			<value level="4">48</value>
+			<value level="5">51</value>
+			<value level="6">55</value>
+			<value level="7">58</value>
+			<value level="8">61</value>
+			<value level="9">64</value>
+			<value level="10">66</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1136</value>
+					<value level="2">1512</value>
+					<value level="3">1907</value>
+					<value level="4">2320</value>
+					<value level="5">2748</value>
+					<value level="6">3835</value>
+					<value level="7">4303</value>
+					<value level="8">4781</value>
+					<value level="9">5150</value>
+					<value level="10">5524</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47804" toLevel="10" name="Threatening Swing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_brandish_wave</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-770</value>
+			<value level="3">-790</value>
+			<value level="4">-810</value>
+			<value level="5">-830</value>
+			<value level="6">-850</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">79</value>
+			<value level="4">81</value>
+			<value level="5">83</value>
+			<value level="6">85</value>
+			<value level="7">87</value>
+			<value level="8">88</value>
+			<value level="9">89</value>
+			<value level="10">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">68</value>
+			<value level="2">69</value>
+			<value level="3">71</value>
+			<value level="4">72</value>
+			<value level="5">74</value>
+			<value level="6">76</value>
+			<value level="7">77</value>
+			<value level="8">78</value>
+			<value level="9">79</value>
+			<value level="10">80</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">6198</value>
+					<value level="2">6302</value>
+					<value level="3">6521</value>
+					<value level="4">6742</value>
+					<value level="5">6965</value>
+					<value level="6">7186</value>
+					<value level="7">7413</value>
+					<value level="8">7525</value>
+					<value level="9">7638</value>
+					<value level="10">7751</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+				<pDefMod>0.90</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47805" toLevel="10" name="Wild Scratch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_wild_scratch</icon>
+		<castRange>150</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-500</value>
+			<value level="3">-600</value>
+			<value level="4">-700</value>
+			<value level="5">-750</value>
+			<value level="6">-780</value>
+			<value level="7">-820</value>
+			<value level="8">-860</value>
+			<value level="9">-880</value>
+			<value level="10">-900</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">75</value>
+			<value level="6">78</value>
+			<value level="7">82</value>
+			<value level="8">86</value>
+			<value level="9">88</value>
+			<value level="10">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">33</value>
+			<value level="2">40</value>
+			<value level="3">48</value>
+			<value level="4">55</value>
+			<value level="5">59</value>
+			<value level="6">61</value>
+			<value level="7">64</value>
+			<value level="8">67</value>
+			<value level="9">69</value>
+			<value level="10">70</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1432</value>
+					<value level="2">2661</value>
+					<value level="3">4835</value>
+					<value level="4">6337</value>
+					<value level="5">7126</value>
+					<value level="6">8087</value>
+					<value level="7">8637</value>
+					<value level="8">9199</value>
+					<value level="9">9488</value>
+					<value level="10">9773</value>
+				</power>
+				<pDefMod>0.90</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47806" toLevel="10" name="Shadow Scratch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_shadow_scratch</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47807" toLevel="6" name="Wild Charge">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_wild_charge</icon>
+		<castRange>400</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-1520</value>
+			<value level="2">-1600</value>
+			<value level="3">-1660</value>
+			<value level="4">-1700</value>
+			<value level="5">-1760</value>
+			<value level="6">-1800</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">80</value>
+			<value level="3">83</value>
+			<value level="4">85</value>
+			<value level="5">88</value>
+			<value level="6">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">88</value>
+			<value level="2">89</value>
+			<value level="3">96</value>
+			<value level="4">99</value>
+			<value level="5">102</value>
+			<value level="6">105</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">3773</value>
+					<value level="2">4038</value>
+					<value level="3">4240</value>
+					<value level="4">4374</value>
+					<value level="5">4581</value>
+					<value level="6">4718</value>
+				</power>
+				<pDefMod>0.90</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47808</skillId> <!-- Spectral Charge -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47808" toLevel="6" name="Spectral Charge">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_phantom_charge</icon>
+		<castRange>400</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>1100</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">3773</value>
+					<value level="2">4038</value>
+					<value level="3">4240</value>
+					<value level="4">4374</value>
+					<value level="5">4581</value>
+					<value level="6">4718</value>
+				</power>
+				<pDefMod>0.90</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47809" toLevel="1" name="Shadow Scratch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_shadow_scratch</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47811" toLevel="1" name="Giant's Stomp">
@@ -56,19 +461,105 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47813" toLevel="2" name="Wild Growl">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_roar</icon>
+		<castRange>40</castRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<activateRate>80</activateRate>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-1560</value>
+			<value level="2">-1740</value>
+		</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>1200</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>
+			<value level="1">78</value>
+			<value level="2">87</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">90</value>
+			<value level="2">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>45000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>47815</skillId> <!-- Wild Growl - Suppression -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47814" toLevel="1" name="Wild Growl - Hold">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill10792</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectLimit>5-10</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-1800</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="47815" toLevel="2" name="Wild Growl - Suppression">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill10514</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<activateRate>80</activateRate>
+		<effectPoint>
+			<value level="1">-1600</value>
+			<value level="2">-1800</value>
+		</effectPoint>
+		<effectRange>1000</effectRange>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SUPPRESSION</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-70</value>
+					<value level="2">-90</value>
+				</amount>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>47814</skillId> <!-- Wild Growl - Hold -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="47821" toLevel="1" name="Wild Assault">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -76,9 +567,50 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47822" toLevel="3" name="Wild Rush">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_rush</icon>
+		<castRange>
+			<value level="1">300</value>
+			<value level="2">400</value>
+			<value level="3">500</value>
+		</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-400</value>
+			<value level="3">-760</value>
+		</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>400</hitTime>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">76</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">40</value>
+			<value level="3">50</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>
+					<value level="1">150</value>
+					<value level="2">120</value>
+					<value level="3">100</value>
+				</distance>
+			</condition>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="47823" toLevel="1" name="Wild Assault: Burning">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -86,14 +618,127 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47824" toLevel="3" name="Wild Rush: Burning">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_rush</icon>
+		<castRange>
+			<value level="1">300</value>
+			<value level="2">400</value>
+			<value level="3">500</value>
+		</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-400</value>
+			<value level="3">-760</value>
+		</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>400</hitTime>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">76</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">40</value>
+			<value level="3">50</value>
+		</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>
+					<value level="1">150</value>
+					<value level="2">120</value>
+					<value level="3">100</value>
+				</distance>
+			</condition>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="47831" toLevel="3" name="Blazing Fury">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill1434</icon>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BLAZING_FURY</abnormalType>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<magicLevel>
+			<value level="1">1</value>
+			<value level="2">76</value>
+			<value level="3">85</value>
+		</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47832" toLevel="3" name="Blazing Fury: Evolution">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -101,19 +746,111 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47833" toLevel="1" name="Flame of Pa'agrio">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill1171</icon>
+		<castRange>40</castRange>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<effectPoint>-1000</effectPoint>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FatalBlow">
+				<power>50</power>
+				<chanceBoost>200</chanceBoost>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47834" toLevel="2" name="Final Secret">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill10951</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>FINAL_SECRET</abnormalType>
+		<hitTime>1500</hitTime>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">60</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>150000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>60</BOW>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>60</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47855" toLevel="1" name="Blazing Beast">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_burning_beast</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BLAZING_BEAST</abnormalType>
+		<hitTime>500</hitTime>
+		<magicLevel>1</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="BeastPoints">
+				<amount>500</amount>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="ModifyBeastPoints">
+				<amount>-100</amount>
+			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47856" toLevel="1" name="Pa'agrio's Grace">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -131,49 +868,289 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47861" toLevel="15" name="Wild Weapon Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_weapon_mastery</icon>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">48</value>
+			<value level="4">54</value>
+			<value level="5">60</value>
+			<value level="6">66</value>
+			<value level="7">72</value>
+			<value level="8">76</value>
+			<value level="9">79</value>
+			<value level="10">82</value>
+			<value level="11">84</value>
+			<value level="12">86</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">30</value>
+					<value level="3">45</value>
+					<value level="4">65</value>
+					<value level="5">85</value>
+					<value level="6">110</value>
+					<value level="7">130</value>
+					<value level="8">145</value>
+					<value level="9">155</value>
+					<value level="10">165</value>
+					<value level="11">175</value>
+					<value level="12">185</value>
+					<value level="13">195</value>
+					<value level="14">205</value>
+					<value level="15">220</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+					<value level="10">0</value>
+					<value level="11">0</value>
+					<value level="12">1</value>
+					<value level="13">2</value>
+					<value level="14">3</value>
+					<value level="15">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47862" toLevel="15" name="Wild Armor Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_armor_mastery</icon>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">48</value>
+			<value level="4">54</value>
+			<value level="5">60</value>
+			<value level="6">66</value>
+			<value level="7">72</value>
+			<value level="8">76</value>
+			<value level="9">79</value>
+			<value level="10">82</value>
+			<value level="11">84</value>
+			<value level="12">86</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">30</value>
+					<value level="3">45</value>
+					<value level="4">65</value>
+					<value level="5">85</value>
+					<value level="6">110</value>
+					<value level="7">130</value>
+					<value level="8">145</value>
+					<value level="9">155</value>
+					<value level="10">165</value>
+					<value level="11">175</value>
+					<value level="12">185</value>
+					<value level="13">195</value>
+					<value level="14">205</value>
+					<value level="15">220</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="AreaOfEffectDamageDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
+					<value level="10">0</value>
+					<value level="11">0</value>
+					<value level="12">1</value>
+					<value level="13">2</value>
+					<value level="14">3</value>
+					<value level="15">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47863" toLevel="3" name="Wild Instinct">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_instinct</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>10</KNOCKBACK>
+				<IMPRISON>10</IMPRISON>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47864" toLevel="1" name="Darkness Unleashing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_awaken_darkness</icon>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47865" toLevel="1" name="Wild Evolution">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_wild_evolution</icon>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47866" toLevel="1" name="Spear Focus Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30932</icon>
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="HitNumber">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackRange">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="MpVampiricAttack">
+				<amount>5</amount>
+				<chance>50</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47867" toLevel="1" name="Wild Health">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill0967</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47868" toLevel="1" name="Wild Movement">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.winghound_vehicle</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47871" toLevel="1" name="Change Armor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_orc_armor_change</icon>
+		<operateType>T</operateType>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>DK_CHANGE_ARMOR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>1500</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="47881" toLevel="1" name="Beast Point Absorption">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
