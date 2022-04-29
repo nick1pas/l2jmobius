@@ -1195,13 +1195,20 @@
 		<!-- Momentarily recovers 50 HP. If HP is full, CP is restored. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="price" val="30" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ItemSkills" />		
+		<skills>
+			<skill id="50151" level="1" /> <!-- HP Potion -->
+		</skills>
 	</item>
 	<item id="91975" name="Combat Scroll (Event)" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +200. Atk. Spd. +60. Casting Spd. +60. Max HP +300. Max MP +300. Max CP +300. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +10%. M. Critical Damage +10%. Duration: 20 min. Cooldown: 1 min. -->
