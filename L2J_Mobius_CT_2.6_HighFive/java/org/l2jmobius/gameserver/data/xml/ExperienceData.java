@@ -19,11 +19,13 @@ package org.l2jmobius.gameserver.data.xml;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 
 /**
@@ -32,6 +34,8 @@ import org.l2jmobius.commons.util.IXmlReader;
  */
 public class ExperienceData implements IXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
+	
 	private final Map<Integer, Long> _expTable = new HashMap<>();
 	
 	private byte MAX_LEVEL;
@@ -62,12 +66,27 @@ public class ExperienceData implements IXmlReader
 		final NamedNodeMap tableAttr = table.getAttributes();
 		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
+		if (MAX_LEVEL > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			MAX_LEVEL = Config.PLAYER_MAXIMUM_LEVEL;
+		}
+		if (MAX_PET_LEVEL > MAX_LEVEL)
+		{
+			MAX_PET_LEVEL = MAX_LEVEL; // Pet level should not exceed owner level.
+		}
+		
+		int maxLevel = 0;
 		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("experience".equals(n.getNodeName()))
 			{
 				final NamedNodeMap attrs = n.getAttributes();
-				_expTable.put(parseInteger(attrs, "level"), parseLong(attrs, "tolevel"));
+				maxLevel = parseInteger(attrs, "level");
+				if (maxLevel > Config.PLAYER_MAXIMUM_LEVEL)
+				{
+					break;
+				}
+				_expTable.put(maxLevel, parseLong(attrs, "tolevel"));
 			}
 		}
 	}
@@ -79,20 +98,11 @@ public class ExperienceData implements IXmlReader
 	 */
 	public long getExpForLevel(int level)
 	{
-		if (level <= 0)
+		if (level > Config.PLAYER_MAXIMUM_LEVEL)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Requested exp for level " + level);
-			return 0;
+			return _expTable.get((int) Config.PLAYER_MAXIMUM_LEVEL);
 		}
-		
-		final Long exp = _expTable.get(level);
-		if (exp == null)
-		{
-			LOGGER.warning(getClass().getSimpleName() + ": Requested exp for level " + level);
-			return _expTable.get((int) MAX_LEVEL);
-		}
-		
-		return exp.longValue();
+		return _expTable.get(level);
 	}
 	
 	/**
