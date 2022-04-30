@@ -4253,13 +4253,11 @@ public class Player extends Playable
 				final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
 				if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
 				{
-					final RelationChanged rc = new RelationChanged();
-					rc.addRelation(this, relation, isAutoAttackable);
+					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable));
 					if (hasSummon())
 					{
-						player.sendPacket(new RelationChanged(_summon, getRelation(player), isAutoAttackable(player)));
+						player.sendPacket(new RelationChanged(_summon, relation, isAutoAttackable));
 					}
-					player.sendPacket(rc);
 					getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 				}
 			}
