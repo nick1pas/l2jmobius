@@ -8042,6 +8042,17 @@ public class Player extends Playable
 	 */
 	public boolean removeHenna(int slot)
 	{
+		return removeHenna(slot, true);
+	}
+	
+	/**
+	 * Remove a Henna of the Player, save update in the character_hennas table of the database and send Server->Client HennaInfo/UserInfo packet to this Player.
+	 * @param slot
+	 * @param restoreDye
+	 * @return
+	 */
+	public boolean removeHenna(int slot, boolean restoreDye)
+	{
 		if ((slot < 1) || (slot > _hennaPoten.length))
 		{
 			return false;
@@ -8082,7 +8093,7 @@ public class Player extends Playable
 			{
 				reduceAdena("Henna", henna.getCancelFee(), this, false);
 			}
-			if (henna.getCancelCount() > 0)
+			if ((henna.getCancelCount() > 0) && restoreDye)
 			{
 				_inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);

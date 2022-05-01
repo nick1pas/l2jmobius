@@ -57,6 +57,7 @@ import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.CollectionData;
+import org.l2jmobius.gameserver.data.xml.CombinationDyeData;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.CubicData;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
@@ -260,7 +261,6 @@ public class GameServer
 		ActionData.getInstance();
 		CategoryData.getInstance();
 		SecondaryAuthData.getInstance();
-		CombinationItemsData.getInstance();
 		SayuneData.getInstance();
 		ClanRewardData.getInstance();
 		DailyMissionHandler.getInstance().executeScript();
@@ -293,6 +293,8 @@ public class GameServer
 		EnchantItemHPBonusData.getInstance();
 		BuyListData.getInstance();
 		MultisellData.getInstance();
+		CombinationItemsData.getInstance();
+		CombinationDyeData.getInstance();
 		EquipmentUpgradeData.getInstance();
 		AgathionData.getInstance();
 		RaidTeleportListData.getInstance();
