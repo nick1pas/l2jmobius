@@ -16,15 +16,18 @@
  */
 package org.l2jmobius.gameserver.model.item.enchant;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class EnchantRateItem
 {
 	private final String _name;
-	private int _itemId;
+	private final Set<Integer> _items = new HashSet<>();
 	private int _slot;
 	private Boolean _isMagicWeapon = null;
 	
@@ -45,9 +48,9 @@ public class EnchantRateItem
 	 * Adds item id verification.
 	 * @param id
 	 */
-	public void setItemId(int id)
+	public void addItemId(int id)
 	{
-		_itemId = id;
+		_items.add(id);
 	}
 	
 	/**
@@ -74,7 +77,7 @@ public class EnchantRateItem
 	 */
 	public boolean validate(ItemTemplate item)
 	{
-		if ((_itemId != 0) && (_itemId != item.getId()))
+		if (!_items.isEmpty() && !_items.contains(item.getId()))
 		{
 			return false;
 		}

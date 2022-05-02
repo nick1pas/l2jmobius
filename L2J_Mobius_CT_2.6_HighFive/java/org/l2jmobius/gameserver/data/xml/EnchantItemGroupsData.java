@@ -124,7 +124,7 @@ public class EnchantItemGroupsData implements IXmlReader
 										}
 										if (attrs.getNamedItem("itemId") != null)
 										{
-											rateGroup.setItemId(parseInteger(attrs, "itemId"));
+											rateGroup.addItemId(parseInteger(attrs, "itemId"));
 										}
 									}
 								}
