@@ -31,23 +31,31 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 {
 	// Items
 	private static final int A = 3875;
+	private static final int C = 3876;
 	private static final int E = 3877;
+	// private static final int F = 3878;
 	private static final int G = 3879;
+	private static final int H = 3880;
 	private static final int I = 3881;
 	private static final int L = 3882;
 	private static final int N = 3883;
+	private static final int O = 3884;
 	private static final int R = 3885;
-	private static final int M = 34956;
-	private static final int S = 3886;
-	private static final int T = 3886;
-	private static final int H = 3880;
+	// private static final int S = 3886;
+	private static final int T = 3887;
 	private static final int II = 3888;
-	private static final int D = 92021;
-	private static final int K = 93412;
-	private static final int U = 93413;
+	// private static final int Y = 13417;
+	// private static final int M = 34956;
+	private static final int J = 72343;
+	private static final int XX = 72344;
+	// private static final int D = 92021;
+	private static final int P = 92022;
+	// private static final int K = 93412;
+	// private static final int U = 93413;
+	// private static final int W = 93414;
 	
 	// Rewards
-	private static final ItemChanceHolder[] LINEAGE_II_REWARDS =
+	private static final ItemChanceHolder[] NCJAPAN_20TH_REWARDS =
 	{
 		new ItemChanceHolder(49683, 5, 1), // Talisman of Baium
 		new ItemChanceHolder(91119, 5, 1), // Ignis' Necklace
@@ -67,7 +75,7 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 		new ItemChanceHolder(91974, 30, 10), // HP Recovery Potion
 		new ItemChanceHolder(3031, 30, 10), // Spirit Ore
 	};
-	private static final ItemChanceHolder[] DEATH_REWARDS =
+	private static final ItemChanceHolder[] LINEAGE_II_REWARDS =
 	{
 		new ItemChanceHolder(91012, 5, 1), // Top-grade A-grade Weapon Pack
 		new ItemChanceHolder(93459, 5, 1), // A-grade Armor Pack - Majestic Equipment
@@ -85,25 +93,7 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 		new ItemChanceHolder(91974, 30, 10), // HP Recovery Potion
 		new ItemChanceHolder(3031, 30, 10), // Spirit Ore
 	};
-	private static final ItemChanceHolder[] KNIGHT_REWARDS =
-	{
-		new ItemChanceHolder(93103, 5, 1), // Spellbook: Divine Beam
-		new ItemChanceHolder(92401, 5, 1), // Spellbook: White Guardian
-		new ItemChanceHolder(91945, 5, 1), // Book of Shadows
-		new ItemChanceHolder(91944, 5, 1), // Book of Light
-		new ItemChanceHolder(91943, 15, 1), // Crystal of Shadows
-		new ItemChanceHolder(91942, 15, 1), // Crystal of Light
-		new ItemChanceHolder(8619, 15, 1), // Buff Expansion Book Lv. 2
-		new ItemChanceHolder(8620, 15, 1), // Buff Expansion Book Lv. 3
-		new ItemChanceHolder(90045, 15, 1), // Magical Tablet
-		new ItemChanceHolder(91641, 30, 1), // Sayha's Blessing
-		new ItemChanceHolder(49674, 30, 1), // XP Growth Scroll
-		new ItemChanceHolder(90907, 30, 5), // Soulshot Ticket
-		new ItemChanceHolder(91757, 30, 1), // Magic Lamp Charging Potion
-		new ItemChanceHolder(91974, 30, 10), // HP Recovery Potion
-		new ItemChanceHolder(3031, 30, 10), // Spirit Ore
-	};
-	private static final ItemChanceHolder[] SUMMER_REWARDS =
+	private static final ItemChanceHolder[] TOGETHER_REWARDS =
 	{
 		new ItemChanceHolder(93976, 5, 1), // Blessed Scroll: Enchant A-grade Weapon
 		new ItemChanceHolder(93977, 5, 1), // Blessed Scroll: Enchant A-grade Armor
@@ -152,6 +142,34 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 		{
 			case 0:
 			{
+				if ((inventory.getInventoryItemCount(N, -1) < 2) || //
+					(inventory.getInventoryItemCount(C, -1) < 1) || //
+					(inventory.getInventoryItemCount(J, -1) < 1) || //
+					(inventory.getInventoryItemCount(A, -1) < 2) || //
+					(inventory.getInventoryItemCount(P, -1) < 1) || //
+					(inventory.getInventoryItemCount(XX, -1) < 1) || //
+					(inventory.getInventoryItemCount(T, -1) < 1) || //
+					(inventory.getInventoryItemCount(H, -1) < 1))
+				{
+					return;
+				}
+				
+				player.destroyItemByItemId("LetterCollector", N, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", C, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", J, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", A, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", P, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", A, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", N, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", XX, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", T, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", H, 1, player, true);
+				
+				player.addItem("LetterCollector", getRandomReward(NCJAPAN_20TH_REWARDS), player, true);
+				break;
+			}
+			case 1:
+			{
 				if ((inventory.getInventoryItemCount(L, -1) < 1) || //
 					(inventory.getInventoryItemCount(I, -1) < 1) || //
 					(inventory.getInventoryItemCount(N, -1) < 1) || //
@@ -175,67 +193,28 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 				player.addItem("LetterCollector", getRandomReward(LINEAGE_II_REWARDS), player, true);
 				break;
 			}
-			case 1:
-			{
-				if ((inventory.getInventoryItemCount(D, -1) < 1) || //
-					(inventory.getInventoryItemCount(E, -1) < 1) || //
-					(inventory.getInventoryItemCount(A, -1) < 1) || //
-					(inventory.getInventoryItemCount(T, -1) < 1) || //
-					(inventory.getInventoryItemCount(H, -1) < 1))
-				{
-					return;
-				}
-				
-				player.destroyItemByItemId("LetterCollector", D, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", E, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", A, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", T, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", H, 1, player, true);
-				
-				player.addItem("LetterCollector", getRandomReward(DEATH_REWARDS), player, true);
-				break;
-			}
 			case 2:
 			{
-				if ((inventory.getInventoryItemCount(K, -1) < 1) || //
-					(inventory.getInventoryItemCount(N, -1) < 1) || //
-					(inventory.getInventoryItemCount(I, -1) < 1) || //
+				if ((inventory.getInventoryItemCount(T, -1) < 2) || //
+					(inventory.getInventoryItemCount(O, -1) < 1) || //
 					(inventory.getInventoryItemCount(G, -1) < 1) || //
+					(inventory.getInventoryItemCount(E, -1) < 2) || //
 					(inventory.getInventoryItemCount(H, -1) < 1) || //
-					(inventory.getInventoryItemCount(T, -1) < 1))
-				{
-					return;
-				}
-				
-				player.destroyItemByItemId("LetterCollector", K, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", N, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", I, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", G, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", H, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", T, 1, player, true);
-				
-				player.addItem("LetterCollector", getRandomReward(KNIGHT_REWARDS), player, true);
-				break;
-			}
-			case 3:
-			{
-				if ((inventory.getInventoryItemCount(S, -1) < 1) || //
-					(inventory.getInventoryItemCount(U, -1) < 1) || //
-					(inventory.getInventoryItemCount(M, -1) < 2) || //
-					(inventory.getInventoryItemCount(E, -1) < 1) || //
 					(inventory.getInventoryItemCount(R, -1) < 1))
 				{
 					return;
 				}
 				
-				player.destroyItemByItemId("LetterCollector", S, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", U, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", M, 1, player, true);
-				player.destroyItemByItemId("LetterCollector", M, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", T, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", O, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", G, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", E, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", T, 1, player, true);
+				player.destroyItemByItemId("LetterCollector", H, 1, player, true);
 				player.destroyItemByItemId("LetterCollector", E, 1, player, true);
 				player.destroyItemByItemId("LetterCollector", R, 1, player, true);
 				
-				player.addItem("LetterCollector", getRandomReward(SUMMER_REWARDS), player, true);
+				player.addItem("LetterCollector", getRandomReward(TOGETHER_REWARDS), player, true);
 				break;
 			}
 		}
