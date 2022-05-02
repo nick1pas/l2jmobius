@@ -117,6 +117,7 @@ import org.l2jmobius.gameserver.network.serverpackets.collection.ExCollectionInf
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2jmobius.gameserver.network.serverpackets.huntpass.HuntPassSimpleInfo;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeContributionList;
@@ -672,6 +673,11 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.ENABLE_RANDOM_CRAFT)
 		{
 			player.sendPacket(new ExCraftInfo(player));
+		}
+		
+		if (Config.ENABLE_HUNT_PASS)
+		{
+			player.sendPacket(new HuntPassSimpleInfo(player));
 		}
 		
 		for (int category = 1; category <= 7; category++)

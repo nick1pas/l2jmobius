@@ -148,6 +148,7 @@ import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.ContactList;
 import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
+import org.l2jmobius.gameserver.model.HuntPass;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroList;
@@ -949,6 +950,8 @@ public class Player extends Playable
 	
 	private final Map<Integer, PurgePlayerHolder> _purgePoints = new HashMap<>();
 	
+	private final HuntPass _huntPass;
+	
 	private final Map<Integer, PetEvolveHolder> _petEvolves = new HashMap<>();
 	
 	private int _clanDonationPoints = 3;
@@ -1231,6 +1234,8 @@ public class Player extends Playable
 		app.setOwner(this);
 		_appearance = app;
 		
+		_huntPass = Config.ENABLE_HUNT_PASS ? new HuntPass(this) : null;
+		
 		// Create an AI
 		getAI();
 		
@@ -1319,6 +1324,11 @@ public class Player extends Playable
 	public PlayerTemplate getBaseTemplate()
 	{
 		return PlayerTemplateData.getInstance().getTemplate(_baseClass);
+	}
+	
+	public HuntPass getHuntPass()
+	{
+		return _huntPass;
 	}
 	
 	/**
@@ -7277,6 +7287,11 @@ public class Player extends Playable
 		{
 			_randomCraft.store();
 		}
+		
+		if (_huntPass != null)
+		{
+			_huntPass.store();
+		}
 	}
 	
 	@Override
@@ -12084,6 +12099,10 @@ public class Player extends Playable
 	
 	public void updateVitalityPoints(int points, boolean useRates, boolean quiet)
 	{
+		if ((_huntPass != null) && _huntPass.toggleSayha())
+		{
+			return;
+		}
 		getStat().updateVitalityPoints(points, useRates, quiet);
 	}
 	

@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.model.AggroInfo;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DamageDoneInfo;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
+import org.l2jmobius.gameserver.model.HuntPass;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Seed;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -613,6 +614,12 @@ public class Attackable extends Npc
 										}
 										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
 										MagicLampData.getInstance().addLampExp(attacker, exp, true);
+										
+										final HuntPass huntPass = attacker.getHuntPass();
+										if (huntPass != null)
+										{
+											attacker.getHuntPass().addPassPoint(exp);
+										}
 									}
 								}
 								

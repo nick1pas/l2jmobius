@@ -99,6 +99,7 @@ public class Config
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	private static final String HUNT_PASS_CONFIG_FILE = "./config/HuntPass.ini";
 	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
 	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -903,6 +904,12 @@ public class Config
 	public static boolean ENABLE_RANDOM_CRAFT;
 	public static int RANDOM_CRAFT_CREATE_FEE;
 	public static boolean DROP_RANDOM_CRAFT_MATERIALS;
+	
+	// HuntPass
+	public static boolean ENABLE_HUNT_PASS;
+	public static int HUNT_PASS_PERIOD;
+	public static int HUNT_PASS_PREMIUM_COST;
+	public static int HUNT_PASS_POINTS_FOR_STEP;
 	
 	// GrandBoss Settings
 	
@@ -2500,6 +2507,13 @@ public class Config
 			QUEEN_ANT_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfQueenAntSpawn", 17);
 			ZAKEN_SPAWN_INTERVAL = grandBossConfig.getInt("IntervalOfZakenSpawn", 168);
 			ZAKEN_SPAWN_RANDOM = grandBossConfig.getInt("RandomOfZakenSpawn", 48);
+			
+			// Load HuntPass (if exists)
+			final PropertiesParser huntPassConfig = new PropertiesParser(HUNT_PASS_CONFIG_FILE);
+			ENABLE_HUNT_PASS = huntPassConfig.getBoolean("EnabledHuntPass", true);
+			HUNT_PASS_PREMIUM_COST = huntPassConfig.getInt("PremiumCost", 3600);
+			HUNT_PASS_POINTS_FOR_STEP = huntPassConfig.getInt("PointsForstep", 2400);
+			HUNT_PASS_PERIOD = huntPassConfig.getInt("DayOfMonth", 1);
 			
 			// Gracia Seeds
 			final PropertiesParser graciaSeedsConfig = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

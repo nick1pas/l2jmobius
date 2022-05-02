@@ -99,6 +99,11 @@ import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUp
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneList;
+import org.l2jmobius.gameserver.network.clientpackets.huntpass.HuntpassSayhasToggle;
+import org.l2jmobius.gameserver.network.clientpackets.huntpass.RequestHuntPassBuyPremium;
+import org.l2jmobius.gameserver.network.clientpackets.huntpass.RequestHuntPassInfo;
+import org.l2jmobius.gameserver.network.clientpackets.huntpass.RequestHuntPassReward;
+import org.l2jmobius.gameserver.network.clientpackets.huntpass.RequestHuntPassRewardAll;
 import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseLimitShopItemBuy;
 import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseLimitShopItemList;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -740,11 +745,11 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_ITEM_USABLE_LIST(0x21F, null, ConnectionState.IN_GAME),
 	EX_PACKETREADCOUNTPERSECOND(0x220, null, ConnectionState.IN_GAME),
 	EX_SELECT_GLOBAL_EVENT_UI(0x221, null, ConnectionState.IN_GAME),
-	EX_L2PASS_INFO(0x222, null, ConnectionState.IN_GAME),
-	EX_L2PASS_REQUEST_REWARD(0x223, null, ConnectionState.IN_GAME),
-	EX_L2PASS_REQUEST_REWARD_ALL(0x224, null, ConnectionState.IN_GAME),
-	EX_L2PASS_BUY_PREMIUM(0x225, null, ConnectionState.IN_GAME),
-	EX_SAYHAS_SUPPORT_TOGGLE(0x226, null, ConnectionState.IN_GAME),
+	EX_L2PASS_INFO(0x222, RequestHuntPassInfo::new, ConnectionState.IN_GAME),
+	EX_L2PASS_REQUEST_REWARD(0x223, RequestHuntPassReward::new, ConnectionState.IN_GAME),
+	EX_L2PASS_REQUEST_REWARD_ALL(0x224, RequestHuntPassRewardAll::new, ConnectionState.IN_GAME),
+	EX_L2PASS_BUY_PREMIUM(0x225, RequestHuntPassBuyPremium::new, ConnectionState.IN_GAME),
+	EX_SAYHAS_SUPPORT_TOGGLE(0x226, HuntpassSayhasToggle::new, ConnectionState.IN_GAME),
 	// 362
 	EX_REQ_ENCHANT_FAIL_REWARD_INFO(0x227, ExRequestEnchantFailRewardInfo::new, ConnectionState.IN_GAME),
 	EX_SET_ENCHANT_CHALLENGE_POINT(0x228, null, ConnectionState.IN_GAME),

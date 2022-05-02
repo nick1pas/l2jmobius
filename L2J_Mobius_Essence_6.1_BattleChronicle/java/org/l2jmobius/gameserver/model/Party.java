@@ -878,7 +878,9 @@ public class Party extends AbstractPlayerGroup
 					if (clan != null)
 					{
 						double finalExp = exp;
+						
 						if (target.useVitalityRate())
+						
 						{
 							finalExp *= member.getStat().getExpBonusMultiplier();
 						}
@@ -887,6 +889,12 @@ public class Party extends AbstractPlayerGroup
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
 					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
 					MagicLampData.getInstance().addLampExp(member, exp, true);
+					
+					final HuntPass huntpass = member.getHuntPass();
+					if (huntpass != null)
+					{
+						huntpass.addPassPoint(exp);
+					}
 				}
 			}
 			else
