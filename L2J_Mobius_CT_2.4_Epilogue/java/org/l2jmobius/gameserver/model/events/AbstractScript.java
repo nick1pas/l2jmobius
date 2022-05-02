@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
+import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Message;
@@ -2673,6 +2674,7 @@ public abstract class AbstractScript extends ManagedScript
 	public static void addExpAndSp(Player player, long exp, int sp)
 	{
 		player.addExpAndSp((long) player.calcStat(Stat.EXPSP_RATE, exp * Config.RATE_QUEST_REWARD_XP, null, null), (int) player.calcStat(Stat.EXPSP_RATE, sp * Config.RATE_QUEST_REWARD_SP, null, null));
+		PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
 	}
 	
 	/**

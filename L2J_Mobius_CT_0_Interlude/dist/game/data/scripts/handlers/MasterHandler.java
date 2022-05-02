@@ -100,6 +100,7 @@ import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminOnline;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
+import handlers.admincommandhandlers.AdminPcCafePoints;
 import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
@@ -377,6 +378,7 @@ public class MasterHandler
 			AdminMobGroup.class,
 			AdminOnline.class,
 			AdminPathNode.class,
+			AdminPcCafePoints.class,
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,

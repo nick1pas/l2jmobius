@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
+import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -743,6 +744,7 @@ public class Party extends AbstractPlayerGroup
 				if (addexp > 0)
 				{
 					member.updateVitalityPoints(vitalityPoints, true, false);
+					PcCafePointsManager.getInstance().givePcCafePoint(member, addexp);
 				}
 			}
 			else

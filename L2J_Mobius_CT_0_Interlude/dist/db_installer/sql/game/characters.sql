@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `createDate` date NOT NULL DEFAULT '2015-01-01',
   `language` VARCHAR(2) DEFAULT NULL,
   `faction` TINYINT UNSIGNED NOT NULL DEFAULT '0',
+  `pccafe_points` int(6) NOT NULL DEFAULT '0',
   `last_recom_date` BIGINT UNSIGNED NOT NULL DEFAULT 0,
   `rec_have` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   `rec_left` TINYINT UNSIGNED NOT NULL DEFAULT 0,

@@ -120,6 +120,7 @@ import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
+import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
@@ -262,6 +263,7 @@ public class GameServer
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
 		PrimeShopData.getInstance();
+		PcCafePointsManager.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

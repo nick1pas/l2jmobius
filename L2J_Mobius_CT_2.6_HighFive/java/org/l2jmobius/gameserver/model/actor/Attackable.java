@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.EventDropManager;
+import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.AbsorberInfo;
 import org.l2jmobius.gameserver.model.AggroInfo;
@@ -549,6 +550,7 @@ public class Attackable extends Npc
 								if ((addexp > 0) && useVitalityRate())
 								{
 									attacker.updateVitalityPoints(getVitalityPoints(damage), true, false);
+									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
 								}
 							}
 						}

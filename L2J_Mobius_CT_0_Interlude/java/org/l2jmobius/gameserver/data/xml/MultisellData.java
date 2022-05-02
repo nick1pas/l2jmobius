@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.model.multisell.Ingredient;
 import org.l2jmobius.gameserver.model.multisell.ListContainer;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -49,7 +50,7 @@ public class MultisellData implements IXmlReader
 	
 	public static final int PAGE_SIZE = 40;
 	// Special IDs.
-	public static final int PC_BANG_POINTS = -100;
+	public static final int PC_CAFE_POINTS = -100;
 	public static final int CLAN_REPUTATION = -200;
 	public static final int FAME = -300;
 	// Misc
@@ -278,6 +279,15 @@ public class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
+			case PC_CAFE_POINTS:
+			{
+				if (player.getPcCafePoints() < amount)
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS));
+					break;
+				}
+				return true;
+			}
 			case CLAN_REPUTATION:
 			{
 				if (player.getClan() == null)
@@ -314,6 +324,12 @@ public class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
+			case PC_CAFE_POINTS:
+			{
+				player.setPcCafePoints((player.getPcCafePoints() - (int) amount));
+				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -amount, 0));
+				break;
+			}
 			case CLAN_REPUTATION:
 			{
 				player.getClan().takeReputationScore((int) amount);
@@ -337,6 +353,12 @@ public class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
+			case PC_CAFE_POINTS:
+			{
+				player.setPcCafePoints((int) (player.getPcCafePoints() + amount));
+				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) amount, 0));
+				break;
+			}
 			case CLAN_REPUTATION:
 			{
 				player.getClan().addReputationScore((int) amount);
