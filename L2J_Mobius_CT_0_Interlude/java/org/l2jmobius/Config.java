@@ -930,10 +930,6 @@ public class Config
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
 	
-	public static double ENCHANT_CHANCE_ELEMENT_STONE;
-	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
-	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
 	public static int[] ENCHANT_BLACKLIST;
 	public static boolean DISABLE_OVER_ENCHANTING;
 	public static int AUGMENTATION_NG_SKILL_CHANCE;
@@ -1749,10 +1745,6 @@ public class Config
 			WAREHOUSE_SLOTS_CLAN = characterConfig.getInt("MaximumWarehouseSlotsForClan", 150);
 			ALT_FREIGHT_SLOTS = characterConfig.getInt("MaximumFreightSlots", 200);
 			ALT_FREIGHT_PRICE = characterConfig.getInt("FreightPrice", 1000);
-			ENCHANT_CHANCE_ELEMENT_STONE = characterConfig.getDouble("EnchantChanceElementStone", 50);
-			ENCHANT_CHANCE_ELEMENT_CRYSTAL = characterConfig.getDouble("EnchantChanceElementCrystal", 30);
-			ENCHANT_CHANCE_ELEMENT_JEWEL = characterConfig.getDouble("EnchantChanceElementJewel", 20);
-			ENCHANT_CHANCE_ELEMENT_ENERGY = characterConfig.getDouble("EnchantChanceElementEnergy", 10);
 			final String[] notenchantable = characterConfig.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
 			ENCHANT_BLACKLIST = new int[notenchantable.length];
 			for (int i = 0; i < notenchantable.length; i++)

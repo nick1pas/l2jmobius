@@ -245,14 +245,6 @@
 	<admin command="admin_setfort" accessLevel="100" />
 	<admin command="admin_removefort" accessLevel="100" />
 
-	<!-- ADMIN ITEM MALL AND GAME POINTS -->
-	<admin command="admin_add_game_points" accessLevel="100" />
-	<admin command="admin_count_game_points" accessLevel="100" />
-	<admin command="admin_gamepoints" accessLevel="100" />
-	<admin command="admin_set_game_points" accessLevel="100" />
-	<admin command="admin_subtract_game_points" accessLevel="100" />
-	<admin command="admin_reload_itemmall" accessLevel="100" />
-
 	<!-- ADMIN GEODATA -->
 	<admin command="admin_geo_pos" accessLevel="30" />
 	<admin command="admin_geo_spawn_pos" accessLevel="30" />
@@ -407,6 +399,14 @@
 	<!-- ADMIN PC CAFE POINTS -->
 	<admin command="admin_pccafepoints" accessLevel="100" />
 
+	<!-- ADMIN ITEM MALL AND GAME POINTS -->
+	<admin command="admin_add_game_points" accessLevel="100" />
+	<admin command="admin_count_game_points" accessLevel="100" />
+	<admin command="admin_gamepoints" accessLevel="100" />
+	<admin command="admin_set_game_points" accessLevel="100" />
+	<admin command="admin_subtract_game_points" accessLevel="100" />
+	<admin command="admin_reload_itemmall" accessLevel="100" />
+
 	<!-- PREMIUM SYSTEM -->
 	<admin command="admin_premium_menu" accessLevel="100" />
 	<admin command="admin_premium_add1" accessLevel="100" confirmDlg="true" />
@@ -424,7 +424,7 @@
 
 	<!-- ADMIN RELOAD -->
 	<admin command="admin_reload" accessLevel="100" confirmDlg="true" />
-	
+
 	<!-- ADMIN REPAIR CHAR -->
 	<admin command="admin_restore" accessLevel="100" />
 	<admin command="admin_repair" accessLevel="100" />
