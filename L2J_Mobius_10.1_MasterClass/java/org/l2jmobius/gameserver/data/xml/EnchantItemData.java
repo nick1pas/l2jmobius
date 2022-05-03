@@ -90,7 +90,7 @@ public class EnchantItemData implements IXmlReader
 							{
 								if ("item".equalsIgnoreCase(cd.getNodeName()))
 								{
-									item.addItem(parseInteger(cd.getAttributes(), "id"));
+									item.addItem(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "altScrollGroupId", -1));
 								}
 							}
 							_scrolls.put(item.getId(), item);

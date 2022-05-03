@@ -16,8 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.item.enchant;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
@@ -31,7 +32,7 @@ import org.l2jmobius.gameserver.model.item.type.ItemType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class EnchantScroll extends AbstractEnchantItem
 {
@@ -41,7 +42,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	private final boolean _isSafe;
 	private final boolean _isGiant;
 	private final int _scrollGroupId;
-	private Set<Integer> _items;
+	private final Map<Integer, Integer> _items = new HashMap<>();
 	
 	public EnchantScroll(StatSet set)
 	{
@@ -92,29 +93,18 @@ public class EnchantScroll extends AbstractEnchantItem
 	}
 	
 	/**
-	 * @return id of scroll group that should be used
-	 */
-	public int getScrollGroupId()
-	{
-		return _scrollGroupId;
-	}
-	
-	/**
 	 * Enforces current scroll to use only those items as possible items to enchant
 	 * @param itemId
+	 * @param scrollGroupId
 	 */
-	public void addItem(int itemId)
+	public void addItem(int itemId, int scrollGroupId)
 	{
-		if (_items == null)
-		{
-			_items = new HashSet<>();
-		}
-		_items.add(itemId);
+		_items.put(itemId, scrollGroupId > -1 ? scrollGroupId : _scrollGroupId);
 	}
 	
-	public Set<Integer> getItems()
+	public Collection<Integer> getItems()
 	{
-		return _items;
+		return _items.keySet();
 	}
 	
 	/**
@@ -125,7 +115,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	@Override
 	public boolean isValid(Item itemToEnchant, EnchantSupportItem supportItem)
 	{
-		if ((_items != null) && !_items.contains(itemToEnchant.getId()))
+		if (!_items.isEmpty() && !_items.containsKey(itemToEnchant.getId()))
 		{
 			return false;
 		}
@@ -152,7 +142,7 @@ public class EnchantScroll extends AbstractEnchantItem
 				return false;
 			}
 		}
-		if (_items == null)
+		if (_items.isEmpty())
 		{
 			for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
 			{
@@ -160,8 +150,8 @@ public class EnchantScroll extends AbstractEnchantItem
 				{
 					continue;
 				}
-				final Set<Integer> scrollItems = scroll.getItems();
-				if ((scrollItems != null) && scrollItems.contains(itemToEnchant.getId()))
+				final Collection<Integer> scrollItems = scroll.getItems();
+				if (!scrollItems.isEmpty() && scrollItems.contains(itemToEnchant.getId()))
 				{
 					return false;
 				}
@@ -177,13 +167,14 @@ public class EnchantScroll extends AbstractEnchantItem
 	 */
 	public double getChance(Player player, Item enchantItem)
 	{
-		if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null)
+		final int scrollGroupId = _items.getOrDefault(enchantItem.getId(), _scrollGroupId);
+		if (EnchantItemGroupsData.getInstance().getScrollGroup(scrollGroupId) == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
 			return -1;
 		}
 		
-		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getTemplate(), _scrollGroupId);
+		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getTemplate(), scrollGroupId);
 		if (group == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
