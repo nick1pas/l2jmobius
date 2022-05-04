@@ -264,10 +264,10 @@ public class Config
 	public static int ALT_PARTY_RANGE;
 	public static boolean ALT_LEAVE_PARTY_LEADER;
 	public static boolean INITIAL_EQUIPMENT_EVENT;
-	public static long STARTING_ADENA;
+	public static int STARTING_ADENA;
 	public static byte STARTING_LEVEL;
 	public static int STARTING_SP;
-	public static long MAX_ADENA;
+	public static int MAX_ADENA;
 	public static boolean AUTO_LOOT;
 	public static boolean AUTO_LOOT_RAIDS;
 	public static boolean AUTO_LOOT_SLOT_LIMIT;
@@ -618,12 +618,12 @@ public class Config
 	public static int ALT_MANOR_MAINTENANCE_MIN;
 	public static boolean ALT_MANOR_SAVE_ALL_ACTIONS;
 	public static int ALT_MANOR_SAVE_PERIOD_RATE;
-	public static long ALT_LOTTERY_PRIZE;
-	public static long ALT_LOTTERY_TICKET_PRICE;
+	public static int ALT_LOTTERY_PRIZE;
+	public static int ALT_LOTTERY_TICKET_PRICE;
 	public static float ALT_LOTTERY_5_NUMBER_RATE;
 	public static float ALT_LOTTERY_4_NUMBER_RATE;
 	public static float ALT_LOTTERY_3_NUMBER_RATE;
-	public static long ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
+	public static int ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
 	public static boolean ALT_FISH_CHAMPIONSHIP_ENABLED;
 	public static int ALT_FISH_CHAMPIONSHIP_REWARD_ITEM;
 	public static int ALT_FISH_CHAMPIONSHIP_REWARD_1;
@@ -1841,13 +1841,13 @@ public class Config
 			ALT_PARTY_RANGE = characterConfig.getInt("AltPartyRange", 1500);
 			ALT_LEAVE_PARTY_LEADER = characterConfig.getBoolean("AltLeavePartyLeader", false);
 			INITIAL_EQUIPMENT_EVENT = characterConfig.getBoolean("InitialEquipmentEvent", false);
-			STARTING_ADENA = characterConfig.getLong("StartingAdena", 0);
+			STARTING_ADENA = characterConfig.getInt("StartingAdena", 0);
 			STARTING_LEVEL = characterConfig.getByte("StartingLevel", (byte) 1);
 			STARTING_SP = characterConfig.getInt("StartingSP", 0);
-			MAX_ADENA = characterConfig.getLong("MaxAdena", 2000000000);
+			MAX_ADENA = characterConfig.getInt("MaxAdena", 2000000000);
 			if (MAX_ADENA < 0)
 			{
-				MAX_ADENA = Long.MAX_VALUE;
+				MAX_ADENA = Integer.MAX_VALUE;
 			}
 			AUTO_LOOT = characterConfig.getBoolean("AutoLoot", false);
 			AUTO_LOOT_RAIDS = characterConfig.getBoolean("AutoLootRaids", false);
@@ -2043,12 +2043,12 @@ public class Config
 			ALT_MANOR_MAINTENANCE_MIN = generalConfig.getInt("AltManorMaintenanceMin", 6);
 			ALT_MANOR_SAVE_ALL_ACTIONS = generalConfig.getBoolean("AltManorSaveAllActions", false);
 			ALT_MANOR_SAVE_PERIOD_RATE = generalConfig.getInt("AltManorSavePeriodRate", 2);
-			ALT_LOTTERY_PRIZE = generalConfig.getLong("AltLotteryPrize", 50000);
-			ALT_LOTTERY_TICKET_PRICE = generalConfig.getLong("AltLotteryTicketPrice", 2000);
+			ALT_LOTTERY_PRIZE = generalConfig.getInt("AltLotteryPrize", 50000);
+			ALT_LOTTERY_TICKET_PRICE = generalConfig.getInt("AltLotteryTicketPrice", 2000);
 			ALT_LOTTERY_5_NUMBER_RATE = generalConfig.getFloat("AltLottery5NumberRate", 0.6f);
 			ALT_LOTTERY_4_NUMBER_RATE = generalConfig.getFloat("AltLottery4NumberRate", 0.2f);
 			ALT_LOTTERY_3_NUMBER_RATE = generalConfig.getFloat("AltLottery3NumberRate", 0.2f);
-			ALT_LOTTERY_2_AND_1_NUMBER_PRIZE = generalConfig.getLong("AltLottery2and1NumberPrize", 200);
+			ALT_LOTTERY_2_AND_1_NUMBER_PRIZE = generalConfig.getInt("AltLottery2and1NumberPrize", 200);
 			ALT_FISH_CHAMPIONSHIP_ENABLED = generalConfig.getBoolean("AltFishChampionshipEnabled", true);
 			ALT_FISH_CHAMPIONSHIP_REWARD_ITEM = generalConfig.getInt("AltFishChampionshipRewardItemId", 57);
 			ALT_FISH_CHAMPIONSHIP_REWARD_1 = generalConfig.getInt("AltFishChampionshipReward1", 800000);

@@ -88,7 +88,7 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "ADENA":
 			{
-				final long count = getQuestItemsCount(player, ALLIGATOR_TOOTH);
+				final int count = getQuestItemsCount(player, ALLIGATOR_TOOTH);
 				if (count >= 100)
 				{
 					giveAdena(player, (count * 220) + 10700, true);

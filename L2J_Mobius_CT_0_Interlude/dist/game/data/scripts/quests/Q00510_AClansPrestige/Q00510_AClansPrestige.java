@@ -136,7 +136,7 @@ public class Q00510_AClansPrestige extends Quest
 				}
 				else
 				{
-					final int count = (int) getQuestItemsCount(player, TYRANNOSAURUS_CLAW);
+					final int count = getQuestItemsCount(player, TYRANNOSAURUS_CLAW);
 					final int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
 					playSound(player, QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 					takeItems(player, TYRANNOSAURUS_CLAW, -1);

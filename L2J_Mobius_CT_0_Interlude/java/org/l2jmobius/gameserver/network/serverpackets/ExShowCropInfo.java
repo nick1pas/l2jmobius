@@ -57,9 +57,9 @@ public class ExShowCropInfo implements IClientOutgoingPacket
 		for (CropProcure crop : _crops)
 		{
 			packet.writeD(crop.getId()); // Crop id
-			packet.writeD((int) crop.getAmount()); // Buy residual
-			packet.writeD((int) crop.getStartAmount()); // Buy
-			packet.writeD((int) crop.getPrice()); // Buy price
+			packet.writeD(crop.getAmount()); // Buy residual
+			packet.writeD(crop.getStartAmount()); // Buy
+			packet.writeD(crop.getPrice()); // Buy price
 			packet.writeC(crop.getReward()); // Reward
 			final Seed seed = CastleManorManager.getInstance().getSeedByCrop(crop.getId());
 			if (seed == null)

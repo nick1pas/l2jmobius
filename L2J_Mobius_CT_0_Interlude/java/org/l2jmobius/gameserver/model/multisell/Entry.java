@@ -84,7 +84,7 @@ public class Entry
 		return _stackable;
 	}
 	
-	public long getTaxAmount()
+	public int getTaxAmount()
 	{
 		return 0;
 	}

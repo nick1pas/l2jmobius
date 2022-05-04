@@ -124,8 +124,8 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, BLACK_SOULSTONE, RED_SOULSTONE))
 				{
-					final long black = getQuestItemsCount(player, BLACK_SOULSTONE);
-					final long red = getQuestItemsCount(player, RED_SOULSTONE);
+					final int black = getQuestItemsCount(player, BLACK_SOULSTONE);
+					final int red = getQuestItemsCount(player, RED_SOULSTONE);
 					giveAdena(player, (red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
 					takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
 					htmltext = (red > 0) ? "30566-07.html" : "30566-06.html";

@@ -16,24 +16,21 @@
  */
 package org.l2jmobius.gameserver.model;
 
-/**
- *
- */
 public class ItemRequest
 {
 	int _objectId;
 	int _itemId;
-	long _count;
-	long _price;
+	int _count;
+	int _price;
 	
-	public ItemRequest(int objectId, long count, long price)
+	public ItemRequest(int objectId, int count, int price)
 	{
 		_objectId = objectId;
 		_count = count;
 		_price = price;
 	}
 	
-	public ItemRequest(int objectId, int itemId, long count, long price)
+	public ItemRequest(int objectId, int itemId, int count, int price)
 	{
 		_objectId = objectId;
 		_itemId = itemId;
@@ -51,17 +48,17 @@ public class ItemRequest
 		return _itemId;
 	}
 	
-	public void setCount(long count)
+	public void setCount(int count)
 	{
 		_count = count;
 	}
 	
-	public long getCount()
+	public int getCount()
 	{
 		return _count;
 	}
 	
-	public long getPrice()
+	public int getPrice()
 	{
 		return _price;
 	}

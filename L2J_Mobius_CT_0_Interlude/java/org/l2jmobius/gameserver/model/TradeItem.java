@@ -27,12 +27,12 @@ public class TradeItem
 	private int _enchant;
 	private final int _type1;
 	private final int _type2;
-	private long _count;
-	private long _storeCount;
-	private long _price;
+	private int _count;
+	private int _storeCount;
+	private int _price;
 	private final int[] _enchantOptions;
 	
-	public TradeItem(Item item, long count, long price)
+	public TradeItem(Item item, int count, int price)
 	{
 		_objectId = item.getObjectId();
 		_item = item.getTemplate();
@@ -45,7 +45,7 @@ public class TradeItem
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
-	public TradeItem(ItemTemplate item, long count, long price)
+	public TradeItem(ItemTemplate item, int count, int price)
 	{
 		_objectId = 0;
 		_item = item;
@@ -59,7 +59,7 @@ public class TradeItem
 		_enchantOptions = Item.DEFAULT_ENCHANT_OPTIONS;
 	}
 	
-	public TradeItem(TradeItem item, long count, long price)
+	public TradeItem(TradeItem item, int count, int price)
 	{
 		_objectId = item.getObjectId();
 		_item = item.getItem();
@@ -113,27 +113,27 @@ public class TradeItem
 		return _type2;
 	}
 	
-	public void setCount(long count)
+	public void setCount(int count)
 	{
 		_count = count;
 	}
 	
-	public long getCount()
+	public int getCount()
 	{
 		return _count;
 	}
 	
-	public long getStoreCount()
+	public int getStoreCount()
 	{
 		return _storeCount;
 	}
 	
-	public void setPrice(long price)
+	public void setPrice(int price)
 	{
 		_price = price;
 	}
 	
-	public long getPrice()
+	public int getPrice()
 	{
 		return _price;
 	}

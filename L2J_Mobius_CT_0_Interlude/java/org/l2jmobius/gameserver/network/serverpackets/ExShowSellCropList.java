@@ -76,8 +76,8 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 			{
 				final CropProcure crop = _castleCrops.get(item.getId());
 				packet.writeD(_manorId); // manor
-				packet.writeD((int) crop.getAmount()); // buy residual
-				packet.writeD((int) crop.getPrice()); // buy price
+				packet.writeD(crop.getAmount()); // buy residual
+				packet.writeD(crop.getPrice()); // buy price
 				packet.writeC(crop.getReward()); // reward
 			}
 			else
@@ -87,7 +87,7 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 				packet.writeD(0); // buy price
 				packet.writeC(0); // reward
 			}
-			packet.writeD((int) item.getCount()); // my crops
+			packet.writeD(item.getCount()); // my crops
 		}
 		return true;
 	}

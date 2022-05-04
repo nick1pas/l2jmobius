@@ -103,7 +103,7 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 			}
 			case "30971-03.html":
 			{
-				final long uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
+				final int uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
 				if (uselessBonePiecesCount > 0)
 				{
 					giveAdena(player, uselessBonePiecesCount * 104, true);
@@ -318,7 +318,7 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 						case 8:
 						{
 							final int memoStateEx = qs.getMemoStateEx(1);
-							final long uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
+							final int uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
 							if ((memoStateEx == 1) || (memoStateEx == 2))
 							{
 								giveItems(player, BILL_OF_IASON_HEINE, 3);

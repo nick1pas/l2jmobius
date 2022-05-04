@@ -1064,10 +1064,10 @@ public class Q00333_HuntOfTheBlackLion extends Quest
 						{
 							giveItems(player, LIONS_CLAW, 3);
 						}
-						final long ash = getQuestItemsCount(player, UNDEAD_ASH);
-						final long insignia = getQuestItemsCount(player, BLOODY_AXE_INSIGNIA);
-						final long fang = getQuestItemsCount(player, DELU_LIZARDMAN_FANG);
-						final long talon = getQuestItemsCount(player, STAKATO_TALON);
+						final int ash = getQuestItemsCount(player, UNDEAD_ASH);
+						final int insignia = getQuestItemsCount(player, BLOODY_AXE_INSIGNIA);
+						final int fang = getQuestItemsCount(player, DELU_LIZARDMAN_FANG);
+						final int talon = getQuestItemsCount(player, STAKATO_TALON);
 						giveAdena(player, ((ash * 35) + (insignia * 35) + ((fang + 35) + (talon * 35))), true);
 						takeItems(player, UNDEAD_ASH, -1);
 						takeItems(player, BLOODY_AXE_INSIGNIA, -1);

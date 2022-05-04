@@ -40,7 +40,7 @@ public class SpawnItem implements IClientOutgoingPacket
 		packet.writeD(_item.getZ());
 		// only show item count if it is a stackable item
 		packet.writeD(_item.isStackable() ? 1 : 0);
-		packet.writeD((int) _item.getCount());
+		packet.writeD(_item.getCount());
 		packet.writeD(0); // c2
 		return true;
 	}

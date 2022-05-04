@@ -95,6 +95,7 @@ What is done
 -Updated drops with groups.
 -Added quests 353, 374, 375 and 505. 
 -Removed Kamael class ids from hennas.
+-Changed item count to integer.
 
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.

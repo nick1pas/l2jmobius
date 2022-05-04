@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.util.Util;
 public class RequestCrystallizeItem implements IClientIncomingPacket
 {
 	private int _objectId;
-	private long _count;
+	private int _count;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -213,7 +213,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(createditem);
-		sm.addLong(crystalAmount);
+		sm.addInt(crystalAmount);
 		player.sendPacket(sm);
 		
 		player.broadcastUserInfo();

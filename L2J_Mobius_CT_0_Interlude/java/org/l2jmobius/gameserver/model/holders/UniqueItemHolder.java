@@ -31,7 +31,7 @@ public class UniqueItemHolder extends ItemHolder implements IUniqueId
 		this(id, objectId, 1);
 	}
 	
-	public UniqueItemHolder(int id, int objectId, long count)
+	public UniqueItemHolder(int id, int objectId, int count)
 	{
 		super(id, count);
 		_objectId = objectId;

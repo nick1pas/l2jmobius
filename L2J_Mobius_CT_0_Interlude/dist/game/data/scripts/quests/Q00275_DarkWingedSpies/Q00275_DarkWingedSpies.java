@@ -145,7 +145,7 @@ public class Q00275_DarkWingedSpies extends Quest
 					}
 					case 2:
 					{
-						final long count = getQuestItemsCount(talker, DARKWING_BAT_FANG);
+						final int count = getQuestItemsCount(talker, DARKWING_BAT_FANG);
 						if (count >= MAX_BAT_FANG_COUNT)
 						{
 							giveAdena(talker, count * FANG_PRICE, true);

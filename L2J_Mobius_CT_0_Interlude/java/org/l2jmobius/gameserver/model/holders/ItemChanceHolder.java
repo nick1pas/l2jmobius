@@ -29,7 +29,7 @@ public class ItemChanceHolder extends ItemHolder
 		this(id, chance, 1);
 	}
 	
-	public ItemChanceHolder(int id, double chance, long count)
+	public ItemChanceHolder(int id, double chance, int count)
 	{
 		super(id, count);
 		_chance = chance;

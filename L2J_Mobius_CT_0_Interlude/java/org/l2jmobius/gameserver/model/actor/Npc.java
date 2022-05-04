@@ -1720,7 +1720,7 @@ public class Npc extends Creature
 	 * @param itemCount the item count
 	 * @return the dropped item
 	 */
-	public Item dropItem(Creature creature, int itemId, long itemCount)
+	public Item dropItem(Creature creature, int itemId, int itemCount)
 	{
 		Item item = null;
 		for (int i = 0; i < itemCount; i++)
@@ -1766,7 +1766,7 @@ public class Npc extends Creature
 	}
 	
 	/**
-	 * Method overload for {@link Attackable#dropItem(Creature, int, long)}
+	 * Method overload for {@link Attackable#dropItem(Creature, int, int)}
 	 * @param creature the last attacker or main damage dealer
 	 * @param item the item holder
 	 * @return the dropped item

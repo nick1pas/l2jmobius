@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author xban1x
@@ -24,14 +24,14 @@ import java.util.concurrent.atomic.AtomicLong;
 public class SeedProduction
 {
 	private final int _seedId;
-	private final long _price;
-	private final long _startAmount;
-	private final AtomicLong _amount;
+	private final int _price;
+	private final int _startAmount;
+	private final AtomicInteger _amount;
 	
-	public SeedProduction(int id, long amount, long price, long startAmount)
+	public SeedProduction(int id, int amount, int price, int startAmount)
 	{
 		_seedId = id;
-		_amount = new AtomicLong(amount);
+		_amount = new AtomicInteger(amount);
 		_price = price;
 		_startAmount = startAmount;
 	}
@@ -41,30 +41,30 @@ public class SeedProduction
 		return _seedId;
 	}
 	
-	public long getAmount()
+	public int getAmount()
 	{
 		return _amount.get();
 	}
 	
-	public long getPrice()
+	public int getPrice()
 	{
 		return _price;
 	}
 	
-	public long getStartAmount()
+	public int getStartAmount()
 	{
 		return _startAmount;
 	}
 	
-	public void setAmount(long amount)
+	public void setAmount(int amount)
 	{
 		_amount.set(amount);
 	}
 	
-	public boolean decreaseAmount(long value)
+	public boolean decreaseAmount(int value)
 	{
-		long current;
-		long next;
+		int current;
+		int next;
 		do
 		{
 			current = _amount.get();

@@ -165,10 +165,10 @@ public class Q00292_BrigandsSweep extends Quest
 						}
 						else
 						{
-							final long necklaces = getQuestItemsCount(talker, GOBLIN_NECKLACE);
-							final long pendants = getQuestItemsCount(talker, GOBLIN_PENDANT);
-							final long lordPendants = getQuestItemsCount(talker, GOBLIN_LORD_PENDANT);
-							final long sum = necklaces + pendants + lordPendants;
+							final int necklaces = getQuestItemsCount(talker, GOBLIN_NECKLACE);
+							final int pendants = getQuestItemsCount(talker, GOBLIN_PENDANT);
+							final int lordPendants = getQuestItemsCount(talker, GOBLIN_LORD_PENDANT);
+							final int sum = necklaces + pendants + lordPendants;
 							if (sum > 0)
 							{
 								giveAdena(talker, (necklaces * 12) + (pendants * 36) + (lordPendants * 33) + (sum >= 10 ? 1000 : 0), true);

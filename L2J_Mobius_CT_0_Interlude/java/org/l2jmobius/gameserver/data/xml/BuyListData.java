@@ -75,7 +75,7 @@ public class BuyListData implements IXmlReader
 			{
 				final int buyListId = rs.getInt("buylist_id");
 				final int itemId = rs.getInt("item_id");
-				final long count = rs.getLong("count");
+				final int count = rs.getInt("count");
 				final long nextRestockTime = rs.getLong("next_restock_time");
 				final BuyListHolder buyList = getBuyList(buyListId);
 				if (buyList == null)
@@ -118,16 +118,16 @@ public class BuyListData implements IXmlReader
 						if ("item".equalsIgnoreCase(list_node.getNodeName()))
 						{
 							int itemId = -1;
-							long price = -1;
+							int price = -1;
 							long restockDelay = -1;
-							long count = -1;
+							int count = -1;
 							final NamedNodeMap attrs = list_node.getAttributes();
 							Node attr = attrs.getNamedItem("id");
 							itemId = Integer.parseInt(attr.getNodeValue());
 							attr = attrs.getNamedItem("price");
 							if (attr != null)
 							{
-								price = Long.parseLong(attr.getNodeValue());
+								price = Integer.parseInt(attr.getNodeValue());
 							}
 							attr = attrs.getNamedItem("restock_delay");
 							if (attr != null)
@@ -137,7 +137,7 @@ public class BuyListData implements IXmlReader
 							attr = attrs.getNamedItem("count");
 							if (attr != null)
 							{
-								count = Long.parseLong(attr.getNodeValue());
+								count = Integer.parseInt(attr.getNodeValue());
 							}
 							final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)

@@ -253,10 +253,10 @@ public class MultisellData implements IXmlReader
 			list.getEntries().forEach(entry ->
 			{
 				// Math.max used here to avoid dropping count to 0
-				entry.getProducts().forEach(product -> product.setItemCount((long) Math.max(product.getItemCount() * productMultiplier, 1)));
+				entry.getProducts().forEach(product -> product.setItemCount((int) Math.max(product.getItemCount() * productMultiplier, 1)));
 				
 				// Math.max used here to avoid dropping count to 0
-				entry.getIngredients().forEach(ingredient -> ingredient.setItemCount((long) Math.max(ingredient.getItemCount() * ingredientMultiplier, 1)));
+				entry.getIngredients().forEach(ingredient -> ingredient.setItemCount((int) Math.max(ingredient.getItemCount() * ingredientMultiplier, 1)));
 			});
 		}
 		int index = 0;
@@ -320,27 +320,27 @@ public class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static boolean takeSpecialIngredient(int id, long amount, Player player)
+	public static boolean takeSpecialIngredient(int id, int amount, Player player)
 	{
 		switch (id)
 		{
 			case PC_CAFE_POINTS:
 			{
-				player.setPcCafePoints((player.getPcCafePoints() - (int) amount));
-				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -amount, 0));
+				player.setPcCafePoints((player.getPcCafePoints() - amount));
+				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), -amount, 0));
 				break;
 			}
 			case CLAN_REPUTATION:
 			{
-				player.getClan().takeReputationScore((int) amount);
+				player.getClan().takeReputationScore(amount);
 				final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION_SCORE);
-				smsg.addLong(amount);
+				smsg.addInt(amount);
 				player.sendPacket(smsg);
 				return true;
 			}
 			case FAME:
 			{
-				player.setFame(player.getFame() - (int) amount);
+				player.setFame(player.getFame() - amount);
 				player.sendPacket(new UserInfo(player));
 				// player.sendPacket(new ExBrExtraUserInfo(player));
 				return true;

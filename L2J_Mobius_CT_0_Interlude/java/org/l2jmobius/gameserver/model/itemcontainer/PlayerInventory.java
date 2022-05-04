@@ -96,7 +96,7 @@ public class PlayerInventory extends Inventory
 	}
 	
 	@Override
-	public long getAdena()
+	public int getAdena()
 	{
 		return _adena != null ? _adena.getCount() : 0;
 	}
@@ -106,7 +106,7 @@ public class PlayerInventory extends Inventory
 		return _ancientAdena;
 	}
 	
-	public long getAncientAdena()
+	public int getAncientAdena()
 	{
 		return (_ancientAdena != null) ? _ancientAdena.getCount() : 0;
 	}
@@ -353,7 +353,7 @@ public class PlayerInventory extends Inventory
 	 * @param actor : Player Player requesting the item add
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void addAdena(String process, long count, Player actor, Object reference)
+	public void addAdena(String process, int count, Player actor, Object reference)
 	{
 		if (count > 0)
 		{
@@ -369,7 +369,7 @@ public class PlayerInventory extends Inventory
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return boolean : true if adena was reduced
 	 */
-	public boolean reduceAdena(String process, long count, Player actor, Object reference)
+	public boolean reduceAdena(String process, int count, Player actor, Object reference)
 	{
 		if (count > 0)
 		{
@@ -385,7 +385,7 @@ public class PlayerInventory extends Inventory
 	 * @param actor : Player Player requesting the item add
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void addAncientAdena(String process, long count, Player actor, Object reference)
+	public void addAncientAdena(String process, int count, Player actor, Object reference)
 	{
 		if (count > 0)
 		{
@@ -401,7 +401,7 @@ public class PlayerInventory extends Inventory
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return boolean : true if adena was reduced
 	 */
-	public boolean reduceAncientAdena(String process, long count, Player actor, Object reference)
+	public boolean reduceAncientAdena(String process, int count, Player actor, Object reference)
 	{
 		return (count > 0) && (destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null);
 	}
@@ -448,7 +448,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
 	@Override
-	public Item addItem(String process, int itemId, long count, Player actor, Object reference)
+	public Item addItem(String process, int itemId, int count, Player actor, Object reference)
 	{
 		final Item item = super.addItem(process, itemId, count, actor, reference);
 		if (item != null)
@@ -498,7 +498,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
 	@Override
-	public Item transferItem(String process, int objectId, long count, ItemContainer target, Player actor, Object reference)
+	public Item transferItem(String process, int objectId, int count, ItemContainer target, Player actor, Object reference)
 	{
 		final Item item = super.transferItem(process, objectId, count, target, actor, reference);
 		
@@ -540,7 +540,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
 	@Override
-	public Item destroyItem(String process, Item item, long count, Player actor, Object reference)
+	public Item destroyItem(String process, Item item, int count, Player actor, Object reference)
 	{
 		final Item destroyedItem = super.destroyItem(process, item, count, actor, reference);
 		
@@ -573,7 +573,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
 	@Override
-	public Item destroyItem(String process, int objectId, long count, Player actor, Object reference)
+	public Item destroyItem(String process, int objectId, int count, Player actor, Object reference)
 	{
 		final Item item = getItemByObjectId(objectId);
 		return item == null ? null : destroyItem(process, item, count, actor, reference);
@@ -589,7 +589,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
 	@Override
-	public Item destroyItemByItemId(String process, int itemId, long count, Player actor, Object reference)
+	public Item destroyItemByItemId(String process, int itemId, int count, Player actor, Object reference)
 	{
 		// Attempt to find non equipped items.
 		Item destroyItem = null;
@@ -646,7 +646,7 @@ public class PlayerInventory extends Inventory
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
 	@Override
-	public Item dropItem(String process, int objectId, long count, Player actor, Object reference)
+	public Item dropItem(String process, int objectId, int count, Player actor, Object reference)
 	{
 		final Item item = super.dropItem(process, objectId, count, actor, reference);
 		

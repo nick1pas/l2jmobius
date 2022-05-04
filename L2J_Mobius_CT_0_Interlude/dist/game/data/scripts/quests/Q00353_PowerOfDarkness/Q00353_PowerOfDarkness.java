@@ -78,7 +78,7 @@ public class Q00353_PowerOfDarkness extends Quest
 			}
 			case State.STARTED:
 			{
-				final long stones = getQuestItemsCount(player, STONE);
+				final int stones = getQuestItemsCount(player, STONE);
 				if (stones == 0)
 				{
 					htmltext = "31044-05.htm";

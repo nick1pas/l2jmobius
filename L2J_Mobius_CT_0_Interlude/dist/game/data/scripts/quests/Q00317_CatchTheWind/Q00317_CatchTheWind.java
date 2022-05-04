@@ -74,7 +74,7 @@ public class Q00317_CatchTheWind extends Quest
 			case "30361-08.html":
 			case "30361-09.html":
 			{
-				final long shardCount = getQuestItemsCount(player, WIND_SHARD);
+				final int shardCount = getQuestItemsCount(player, WIND_SHARD);
 				if (shardCount > 0)
 				{
 					giveAdena(player, ((shardCount * 40) + (shardCount >= 10 ? 2988 : 0)), true);

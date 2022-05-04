@@ -203,12 +203,12 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						// if this is not a list that maintains enchantment, check the count of all items that have the given id.
 						// otherwise, check only the count of items with exactly the needed enchantment level
-						final long required = ((Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount());
+						final int required = ((Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount());
 						if (inv.getInventoryItemCount(e.getItemId(), (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)) ? e.getEnchantLevel() : -1, false) < required)
 						{
 							final SystemMessage sm = new SystemMessage(SystemMessageId.S2_UNIT_S_OF_THE_ITEM_S1_IS_ARE_REQUIRED);
 							sm.addItemName(e.getTemplate());
-							sm.addLong(required);
+							sm.addInt(required);
 							player.sendPacket(sm);
 							return;
 						}
@@ -386,7 +386,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						{
 							sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 							sm.addItemName(e.getItemId());
-							sm.addLong(e.getItemCount() * _amount);
+							sm.addInt(e.getItemCount() * _amount);
 							player.sendPacket(sm);
 						}
 						else
@@ -394,7 +394,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 							if (list.getMaintainEnchantment() && (e.getEnchantLevel() > 0))
 							{
 								sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
-								sm.addLong(e.getEnchantLevel());
+								sm.addInt(e.getEnchantLevel());
 								sm.addItemName(e.getItemId());
 							}
 							else

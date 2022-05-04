@@ -40,7 +40,7 @@ public class Q00257_TheGuardIsBusy extends Quest
 		private final int _chance;
 		private final int _random;
 		
-		public MobDrop(int random, int chance, int id, long count)
+		public MobDrop(int random, int chance, int id, int count)
 		{
 			super(id, count);
 			_random = random;
@@ -157,8 +157,8 @@ public class Q00257_TheGuardIsBusy extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG))
 				{
-					final long amulets = getQuestItemsCount(player, ORC_AMULET);
-					final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
+					final int amulets = getQuestItemsCount(player, ORC_AMULET);
+					final int common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
 					giveAdena(player, ((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
 					takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);
 					htmltext = "30039-07.html";

@@ -181,7 +181,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 						final int seedId = rs.getInt("seed_id");
 						if (_seeds.containsKey(seedId)) // Don't load unknown seeds
 						{
-							final SeedProduction sp = new SeedProduction(seedId, rs.getLong("amount"), rs.getLong("price"), rs.getInt("start_amount"));
+							final SeedProduction sp = new SeedProduction(seedId, rs.getInt("amount"), rs.getInt("price"), rs.getInt("start_amount"));
 							if (rs.getBoolean("next_period"))
 							{
 								pNext.add(sp);
@@ -212,7 +212,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 						final int cropId = rs.getInt("crop_id");
 						if (cropIds.contains(cropId)) // Don't load unknown crops
 						{
-							final CropProcure cp = new CropProcure(cropId, rs.getLong("amount"), rs.getInt("reward_type"), rs.getLong("start_amount"), rs.getLong("price"));
+							final CropProcure cp = new CropProcure(cropId, rs.getInt("amount"), rs.getInt("reward_type"), rs.getInt("start_amount"), rs.getInt("price"));
 							if (rs.getBoolean("next_period"))
 							{
 								next.add(cp);
@@ -303,7 +303,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 							// Adding bought crops to clan warehouse
 							if (crop.getStartAmount() != crop.getAmount())
 							{
-								long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
+								int count = (int) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
 								if ((count < 1) && (Rnd.get(99) < 90))
 								{
 									count = 1;
@@ -445,9 +445,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 					{
 						ips.setInt(1, castleId);
 						ips.setInt(2, sp.getId());
-						ips.setLong(3, sp.getAmount());
-						ips.setLong(4, sp.getStartAmount());
-						ips.setLong(5, sp.getPrice());
+						ips.setInt(3, sp.getAmount());
+						ips.setInt(4, sp.getStartAmount());
+						ips.setInt(5, sp.getPrice());
 						ips.setBoolean(6, true);
 						ips.addBatch();
 					}
@@ -481,9 +481,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 					{
 						ips.setInt(1, castleId);
 						ips.setInt(2, cp.getId());
-						ips.setLong(3, cp.getAmount());
-						ips.setLong(4, cp.getStartAmount());
-						ips.setLong(5, cp.getPrice());
+						ips.setInt(3, cp.getAmount());
+						ips.setInt(4, cp.getStartAmount());
+						ips.setInt(5, cp.getPrice());
 						ips.setInt(6, cp.getReward());
 						ips.setBoolean(7, true);
 						ips.addBatch();
@@ -505,7 +505,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 		{
 			for (SeedProduction sp : items)
 			{
-				ps.setLong(1, sp.getAmount());
+				ps.setInt(1, sp.getAmount());
 				ps.setInt(2, castleId);
 				ps.setInt(3, sp.getId());
 				ps.addBatch();
@@ -525,7 +525,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 		{
 			for (CropProcure sp : items)
 			{
-				ps.setLong(1, sp.getAmount());
+				ps.setInt(1, sp.getAmount());
 				ps.setInt(2, castleId);
 				ps.setInt(3, sp.getId());
 				ps.addBatch();
@@ -608,9 +608,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 				{
 					is.setInt(1, entry.getKey());
 					is.setInt(2, sp.getId());
-					is.setLong(3, sp.getAmount());
-					is.setLong(4, sp.getStartAmount());
-					is.setLong(5, sp.getPrice());
+					is.setInt(3, sp.getAmount());
+					is.setInt(4, sp.getStartAmount());
+					is.setInt(5, sp.getPrice());
 					is.setBoolean(6, false);
 					is.addBatch();
 				}
@@ -623,9 +623,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 				{
 					is.setInt(1, entry.getKey());
 					is.setInt(2, sp.getId());
-					is.setLong(3, sp.getAmount());
-					is.setLong(4, sp.getStartAmount());
-					is.setLong(5, sp.getPrice());
+					is.setInt(3, sp.getAmount());
+					is.setInt(4, sp.getStartAmount());
+					is.setInt(5, sp.getPrice());
 					is.setBoolean(6, true);
 					is.addBatch();
 				}
@@ -644,9 +644,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 				{
 					ip.setInt(1, entry.getKey());
 					ip.setInt(2, cp.getId());
-					ip.setLong(3, cp.getAmount());
-					ip.setLong(4, cp.getStartAmount());
-					ip.setLong(5, cp.getPrice());
+					ip.setInt(3, cp.getAmount());
+					ip.setInt(4, cp.getStartAmount());
+					ip.setInt(5, cp.getPrice());
 					ip.setInt(6, cp.getReward());
 					ip.setBoolean(7, false);
 					ip.addBatch();
@@ -660,9 +660,9 @@ public class CastleManorManager implements IXmlReader, IStorable
 				{
 					ip.setInt(1, entry.getKey());
 					ip.setInt(2, cp.getId());
-					ip.setLong(3, cp.getAmount());
-					ip.setLong(4, cp.getStartAmount());
-					ip.setLong(5, cp.getPrice());
+					ip.setInt(3, cp.getAmount());
+					ip.setInt(4, cp.getStartAmount());
+					ip.setInt(5, cp.getPrice());
 					ip.setInt(6, cp.getReward());
 					ip.setBoolean(7, true);
 					ip.addBatch();

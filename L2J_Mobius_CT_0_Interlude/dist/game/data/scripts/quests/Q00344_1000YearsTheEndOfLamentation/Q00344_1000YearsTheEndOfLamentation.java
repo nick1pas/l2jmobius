@@ -114,7 +114,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					final long count = getQuestItemsCount(player, ARTICLES);
+					final int count = getQuestItemsCount(player, ARTICLES);
 					if (count < 1)
 					{
 						htmltext = "30754-07.html";

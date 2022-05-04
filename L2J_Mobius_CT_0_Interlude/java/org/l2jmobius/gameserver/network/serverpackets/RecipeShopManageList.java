@@ -63,7 +63,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.RECIPE_SHOP_MANAGE_LIST.writeId(packet);
 		packet.writeD(_seller.getObjectId());
-		packet.writeD((int) _seller.getAdena());
+		packet.writeD(_seller.getAdena());
 		packet.writeD(_isDwarven ? 0 : 1);
 		if (_recipes == null)
 		{
@@ -91,7 +91,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 			{
 				packet.writeD(item.getRecipeId());
 				packet.writeD(0);
-				packet.writeD((int) item.getCost());
+				packet.writeD(item.getCost());
 			}
 		}
 		return true;

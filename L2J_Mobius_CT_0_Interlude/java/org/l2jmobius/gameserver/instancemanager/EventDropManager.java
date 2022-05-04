@@ -78,7 +78,7 @@ public class EventDropManager
 				if ((monsterLevel >= drop.getMinLevel()) && (monsterLevel <= drop.getMaxLevel()) && (Rnd.get(100d) < drop.getChance()))
 				{
 					final int itemId = drop.getItemId();
-					final long itemCount = Rnd.get(drop.getMin(), drop.getMax());
+					final int itemCount = Rnd.get(drop.getMin(), drop.getMax());
 					if (Config.AUTO_LOOT_ITEM_IDS.contains(itemId) || Config.AUTO_LOOT || attackable.isFlying())
 					{
 						player.doAutoLoot(attackable, itemId, itemCount); // Give the item to the player that has killed the attackable.

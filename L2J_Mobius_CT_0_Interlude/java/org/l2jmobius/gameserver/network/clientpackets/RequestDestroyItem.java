@@ -76,7 +76,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		long count = _count;
+		int count = _count;
 		if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
 			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);

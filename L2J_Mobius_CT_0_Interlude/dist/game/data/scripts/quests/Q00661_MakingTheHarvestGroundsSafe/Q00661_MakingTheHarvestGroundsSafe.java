@@ -89,10 +89,10 @@ public class Q00661_MakingTheHarvestGroundsSafe extends Quest
 			}
 			case "30210-08.html":
 			{
-				final long stingCount = getQuestItemsCount(player, BIG_HORNET_STING);
-				final long gemCount = getQuestItemsCount(player, CLOUD_GEM);
-				final long clawCount = getQuestItemsCount(player, YOUNG_ARANEID_CLAW);
-				long reward = (57 * stingCount) + (56 * gemCount) + (60 * clawCount);
+				final int stingCount = getQuestItemsCount(player, BIG_HORNET_STING);
+				final int gemCount = getQuestItemsCount(player, CLOUD_GEM);
+				final int clawCount = getQuestItemsCount(player, YOUNG_ARANEID_CLAW);
+				int reward = (57 * stingCount) + (56 * gemCount) + (60 * clawCount);
 				if ((stingCount + gemCount + clawCount) >= 10)
 				{
 					reward += 5773;

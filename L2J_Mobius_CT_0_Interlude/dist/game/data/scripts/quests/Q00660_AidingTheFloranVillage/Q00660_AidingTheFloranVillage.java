@@ -131,7 +131,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 			}
 			case "30291-06.html":
 			{
-				final long itemCount = getQuestItemsCount(player, WATCHING_EYES) + getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD) + getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
+				final int itemCount = getQuestItemsCount(player, WATCHING_EYES) + getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD) + getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
 				if (itemCount > 0)
 				{
 					giveAdena(player, itemCount * 100, true);
@@ -153,10 +153,10 @@ public class Q00660_AidingTheFloranVillage extends Quest
 			}
 			case "30291-12.html":
 			{
-				final long itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
-				final long itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
-				final long itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
-				final long itemCount = itemCount1 + itemCount2 + itemCount3;
+				final int itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
+				final int itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
+				final int itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
+				final int itemCount = itemCount1 + itemCount2 + itemCount3;
 				if (itemCount < 100)
 				{
 					htmltext = "30291-11.html";
@@ -180,10 +180,10 @@ public class Q00660_AidingTheFloranVillage extends Quest
 			}
 			case "30291-16.html":
 			{
-				final long itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
-				final long itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
-				final long itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
-				final long itemCount = itemCount1 + itemCount2 + itemCount3;
+				final int itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
+				final int itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
+				final int itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
+				final int itemCount = itemCount1 + itemCount2 + itemCount3;
 				if (itemCount < 200)
 				{
 					htmltext = "30291-15.html";
@@ -214,10 +214,10 @@ public class Q00660_AidingTheFloranVillage extends Quest
 			}
 			case "30291-20.html":
 			{
-				final long itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
-				final long itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
-				final long itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
-				final long itemCount = itemCount1 + itemCount2 + itemCount3;
+				final int itemCount1 = getQuestItemsCount(player, WATCHING_EYES);
+				final int itemCount2 = getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD);
+				final int itemCount3 = getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
+				final int itemCount = itemCount1 + itemCount2 + itemCount3;
 				if (itemCount < 500)
 				{
 					htmltext = "30291-19.html";
@@ -241,7 +241,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 			}
 			case "30291-22.html":
 			{
-				final long itemCount = getQuestItemsCount(player, WATCHING_EYES) + getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD) + getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
+				final int itemCount = getQuestItemsCount(player, WATCHING_EYES) + getQuestItemsCount(player, ROUGHLY_HEWN_ROCK_GOLEM_SHARD) + getQuestItemsCount(player, DELU_LIZARDMANS_SCALE);
 				if (itemCount <= 0)
 				{
 					htmltext = "30291-23.html";
@@ -341,9 +341,9 @@ public class Q00660_AidingTheFloranVillage extends Quest
 		return htmltext;
 	}
 	
-	private void tradeItems(Player player, long requiredValue, long itemCount1, long itemCount2, long itemCount3)
+	private void tradeItems(Player player, int requiredValue, int itemCount1, int itemCount2, int itemCount3)
 	{
-		long required = requiredValue;
+		int required = requiredValue;
 		if (itemCount1 < required)
 		{
 			takeItems(player, WATCHING_EYES, itemCount1);

@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 public class Ingredient
 {
 	private int _itemId;
-	private long _itemCount;
+	private int _itemCount;
 	private final int _enchantmentLevel;
 	private boolean _isTaxIngredient;
 	private boolean _maintainIngredient;
@@ -38,10 +38,10 @@ public class Ingredient
 	
 	public Ingredient(StatSet set)
 	{
-		this(set.getInt("id"), set.getLong("count"), set.getInt("enchantmentLevel", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
+		this(set.getInt("id"), set.getInt("count"), set.getInt("enchantmentLevel", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
 	}
 	
-	public Ingredient(int itemId, long itemCount, int enchantmentLevel, boolean isTaxIngredient, boolean maintainIngredient)
+	public Ingredient(int itemId, int itemCount, int enchantmentLevel, boolean isTaxIngredient, boolean maintainIngredient)
 	{
 		_itemId = itemId;
 		_itemCount = itemCount;
@@ -97,12 +97,12 @@ public class Ingredient
 		return _itemId;
 	}
 	
-	public void setItemCount(long itemCount)
+	public void setItemCount(int itemCount)
 	{
 		_itemCount = itemCount;
 	}
 	
-	public long getItemCount()
+	public int getItemCount()
 	{
 		return _itemCount;
 	}

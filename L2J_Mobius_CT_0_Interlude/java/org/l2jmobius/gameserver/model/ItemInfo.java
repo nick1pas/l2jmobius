@@ -37,7 +37,7 @@ public class ItemInfo
 	private int _augmentation;
 	
 	/** The quantity of Item */
-	private long _count;
+	private int _count;
 	
 	/** The price of the Item */
 	private int _price;
@@ -185,7 +185,7 @@ public class ItemInfo
 		return _augmentation;
 	}
 	
-	public long getCount()
+	public int getCount()
 	{
 		return _count;
 	}

@@ -90,7 +90,7 @@ public class RentPet implements IBypassHandler
 		}
 		
 		int petId;
-		double price = 1;
+		int price = 1;
 		final int[] cost =
 		{
 			1800,
@@ -125,7 +125,7 @@ public class RentPet implements IBypassHandler
 		
 		price *= cost[value - 1];
 		final int time = ridetime[value - 1];
-		if (!player.reduceAdena("Rent", (long) price, player.getLastFolkNPC(), true))
+		if (!player.reduceAdena("Rent", price, player.getLastFolkNPC(), true))
 		{
 			return;
 		}

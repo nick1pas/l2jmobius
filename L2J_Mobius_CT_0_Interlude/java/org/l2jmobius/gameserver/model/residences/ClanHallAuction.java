@@ -48,17 +48,17 @@ public class ClanHallAuction
 	private long _endDate;
 	private int _highestBidderId = 0;
 	private String _highestBidderName = "";
-	private long _highestBidderMaxBid = 0;
+	private int _highestBidderMaxBid = 0;
 	private int _itemId = 0;
 	private String _itemName = "";
 	private int _itemObjectId = 0;
-	private final long _itemQuantity = 0;
+	private final int _itemQuantity = 0;
 	private String _itemType = "";
 	private int _sellerId = 0;
 	private String _sellerClanName = "";
 	private String _sellerName = "";
-	private long _currentBid = 0;
-	private long _startingBid = 0;
+	private int _currentBid = 0;
+	private int _startingBid = 0;
 	
 	private final Map<Integer, Bidder> _bidders = new ConcurrentHashMap<>();
 	
@@ -71,10 +71,10 @@ public class ClanHallAuction
 	{
 		private final String _name; // TODO replace with objId
 		private final String _clanName;
-		private long _bid;
+		private int _bid;
 		private final Calendar _timeBid;
 		
-		public Bidder(String name, String clanName, long bid, long timeBid)
+		public Bidder(String name, String clanName, int bid, long timeBid)
 		{
 			_name = name;
 			_clanName = clanName;
@@ -93,7 +93,7 @@ public class ClanHallAuction
 			return _clanName;
 		}
 		
-		public long getBid()
+		public int getBid()
 		{
 			return _bid;
 		}
@@ -108,7 +108,7 @@ public class ClanHallAuction
 			_timeBid.setTimeInMillis(timeBid);
 		}
 		
-		public void setBid(long bid)
+		public void setBid(int bid)
 		{
 			_bid = bid;
 		}
@@ -142,7 +142,7 @@ public class ClanHallAuction
 		startAutoTask();
 	}
 	
-	public ClanHallAuction(int itemId, Clan clan, long delay, long bid, String name)
+	public ClanHallAuction(int itemId, Clan clan, long delay, int bid, String name)
 	{
 		_id = itemId;
 		_endDate = System.currentTimeMillis() + delay;
@@ -166,7 +166,7 @@ public class ClanHallAuction
 			{
 				while (rs.next())
 				{
-					_currentBid = rs.getLong("currentBid");
+					_currentBid = rs.getInt("currentBid");
 					_endDate = rs.getLong("endDate");
 					_itemId = rs.getInt("itemId");
 					_itemName = rs.getString("itemName");
@@ -175,7 +175,7 @@ public class ClanHallAuction
 					_sellerId = rs.getInt("sellerId");
 					_sellerClanName = rs.getString("sellerClanName");
 					_sellerName = rs.getString("sellerName");
-					_startingBid = rs.getLong("startingBid");
+					_startingBid = rs.getInt("startingBid");
 				}
 			}
 			loadBid();
@@ -205,9 +205,9 @@ public class ClanHallAuction
 					{
 						_highestBidderId = rs.getInt("bidderId");
 						_highestBidderName = rs.getString("bidderName");
-						_highestBidderMaxBid = rs.getLong("maxBid");
+						_highestBidderMaxBid = rs.getInt("maxBid");
 					}
-					_bidders.put(rs.getInt("bidderId"), new Bidder(rs.getString("bidderName"), rs.getString("clan_name"), rs.getLong("maxBid"), rs.getLong("time_bid")));
+					_bidders.put(rs.getInt("bidderId"), new Bidder(rs.getString("bidderName"), rs.getString("clan_name"), rs.getInt("maxBid"), rs.getLong("time_bid")));
 				}
 			}
 		}
@@ -260,9 +260,9 @@ public class ClanHallAuction
 	 * @param bidder
 	 * @param bid
 	 */
-	public synchronized void setBid(Player bidder, long bid)
+	public synchronized void setBid(Player bidder, int bid)
 	{
-		final long requiredAdena = _highestBidderName.equals(bidder.getClan().getLeaderName()) ? bid - _highestBidderMaxBid : bid;
+		final int requiredAdena = _highestBidderName.equals(bidder.getClan().getLeaderName()) ? bid - _highestBidderMaxBid : bid;
 		if ((((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid))) && takeItem(bidder, requiredAdena))
 		{
 			updateInDB(bidder, bid);
@@ -281,9 +281,9 @@ public class ClanHallAuction
 	 * @param quantity the Adena value
 	 * @param penalty if {@code true} fees are applied
 	 */
-	private void returnItem(String clanName, long quantity, boolean penalty)
+	private void returnItem(String clanName, int quantity, boolean penalty)
 	{
-		long amount = quantity;
+		int amount = quantity;
 		if (penalty)
 		{
 			amount *= 0.9; // take 10% tax fee if needed
@@ -304,7 +304,7 @@ public class ClanHallAuction
 		}
 		
 		// avoid overflow on return
-		final long limit = MAX_ADENA - cwh.getAdena();
+		final int limit = MAX_ADENA - cwh.getAdena();
 		amount = Math.min(amount, limit);
 		cwh.addItem("Outbidded", ADENA_ID, amount, null, null);
 	}
@@ -315,7 +315,7 @@ public class ClanHallAuction
 	 * @param quantity
 	 * @return
 	 */
-	private boolean takeItem(Player bidder, long quantity)
+	private boolean takeItem(Player bidder, int quantity)
 	{
 		if ((bidder.getClan() != null) && (bidder.getClan().getWarehouse().getAdena() >= quantity))
 		{
@@ -331,7 +331,7 @@ public class ClanHallAuction
 	 * @param bidder
 	 * @param bid
 	 */
-	private void updateInDB(Player bidder, long bid)
+	private void updateInDB(Player bidder, int bid)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -341,7 +341,7 @@ public class ClanHallAuction
 				{
 					ps.setInt(1, bidder.getClanId());
 					ps.setString(2, bidder.getClan().getLeaderName());
-					ps.setLong(3, bid);
+					ps.setInt(3, bid);
 					ps.setLong(4, System.currentTimeMillis());
 					ps.setInt(5, _id);
 					ps.setInt(6, bidder.getClanId());
@@ -356,7 +356,7 @@ public class ClanHallAuction
 					ps.setInt(2, _id);
 					ps.setInt(3, bidder.getClanId());
 					ps.setString(4, bidder.getName());
-					ps.setLong(5, bid);
+					ps.setInt(5, bid);
 					ps.setString(6, bidder.getClan().getName());
 					ps.setLong(7, System.currentTimeMillis());
 					ps.execute();
@@ -516,9 +516,9 @@ public class ClanHallAuction
 			ps.setInt(6, _itemId);
 			ps.setInt(7, _itemObjectId);
 			ps.setString(8, _itemName);
-			ps.setLong(9, _itemQuantity);
-			ps.setLong(10, _startingBid);
-			ps.setLong(11, _currentBid);
+			ps.setInt(9, _itemQuantity);
+			ps.setInt(10, _startingBid);
+			ps.setInt(11, _currentBid);
 			ps.setLong(12, _endDate);
 			ps.execute();
 			ps.close();

@@ -67,7 +67,7 @@ public class Castle extends AbstractResidence
 	private Calendar _siegeTimeRegistrationEndDate; // last siege end date + 1 day
 	private int _taxPercent = 0;
 	private double _taxRate = 0;
-	private long _treasury = 0;
+	private int _treasury = 0;
 	private boolean _showNpcCrest = false;
 	private SiegeZone _zone = null;
 	private ResidenceTeleportZone _teleZone;
@@ -340,7 +340,7 @@ public class Castle extends AbstractResidence
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle SET treasury = ? WHERE id = ?"))
 		{
-			ps.setLong(1, _treasury);
+			ps.setInt(1, _treasury);
 			ps.setInt(2, getResidenceId());
 			ps.execute();
 		}
@@ -633,7 +633,7 @@ public class Castle extends AbstractResidence
 					_siegeTimeRegistrationEndDate.setTimeInMillis(rs.getLong("regTimeEnd"));
 					_isTimeRegistrationOver = rs.getBoolean("regTimeOver");
 					_taxPercent = rs.getInt("taxPercent");
-					_treasury = rs.getLong("treasury");
+					_treasury = rs.getInt("treasury");
 					_showNpcCrest = rs.getBoolean("showNpcCrest");
 					_ticketBuyCount = rs.getInt("ticketBuyCount");
 				}
@@ -934,7 +934,7 @@ public class Castle extends AbstractResidence
 		return _taxRate;
 	}
 	
-	public long getTreasury()
+	public int getTreasury()
 	{
 		return _treasury;
 	}

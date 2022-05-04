@@ -87,9 +87,9 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 				
 				for (int i = 0; i < spotLeft; i++)
 				{
-					long counter = 0;
+					int counter = 0;
 					Clan clan = null;
-					for (Entry<Integer, Long> entry : _warDecreesCount.entrySet())
+					for (Entry<Integer, Integer> entry : _warDecreesCount.entrySet())
 					{
 						final Clan actingClan = ClanTable.getInstance().getClan(entry.getKey());
 						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
@@ -98,7 +98,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 							continue;
 						}
 						
-						final long count = entry.getValue();
+						final int count = entry.getValue();
 						if (count > counter)
 						{
 							counter = count;
@@ -259,7 +259,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static final Skill[] DEBUFFS = {};
 	
-	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
+	protected static Map<Integer, Integer> _warDecreesCount = new HashMap<>();
 	protected static List<Clan> _acceptedClans = new ArrayList<>(4);
 	private static Map<String, List<Clan>> _usedTextPassages = new HashMap<>();
 	private static Map<Clan, Integer> _pendingItemToGet = new HashMap<>();
@@ -393,7 +393,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 							}
 							else
 							{
-								final long count = warDecrees.getCount();
+								final int count = warDecrees.getCount();
 								_warDecreesCount.put(clan.getId(), count);
 								player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
 								updateAttacker(clan.getId(), count, false);
@@ -832,7 +832,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		return false;
 	}
 	
-	private void updateAttacker(int clanId, long count, boolean remove)
+	private void updateAttacker(int clanId, int count, boolean remove)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -846,7 +846,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			{
 				statement = con.prepareStatement("INSERT INTO rainbowsprings_attacker_list VALUES (?,?)");
 				statement.setInt(1, clanId);
-				statement.setLong(2, count);
+				statement.setInt(2, count);
 			}
 			statement.execute();
 			statement.close();
@@ -867,7 +867,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			while (rset.next())
 			{
 				final int clanId = rset.getInt("clan_id");
-				final long count = rset.getLong("decrees_count");
+				final int count = rset.getInt("decrees_count");
 				_warDecreesCount.put(clanId, count);
 			}
 			rset.close();

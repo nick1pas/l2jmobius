@@ -230,7 +230,7 @@ public class Q00378_GrandFeast extends Quest
 						takeItems(player, RITRONS_DESSERT_RECIPE, 1);
 						int item = 0;
 						int adena = 0;
-						long quantity = 0;
+						int quantity = 0;
 						switch (qs.getMemoStateEx(1))
 						{
 							case 11:

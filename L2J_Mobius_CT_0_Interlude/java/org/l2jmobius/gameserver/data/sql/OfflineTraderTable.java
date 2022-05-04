@@ -89,8 +89,8 @@ public class OfflineTraderTable
 								{
 									stmItems.setInt(1, pc.getObjectId());
 									stmItems.setInt(2, i.getItem().getId());
-									stmItems.setLong(3, i.getCount());
-									stmItems.setLong(4, i.getPrice());
+									stmItems.setInt(3, i.getCount());
+									stmItems.setInt(4, i.getPrice());
 									stmItems.executeUpdate();
 									stmItems.clearParameters();
 								}
@@ -110,8 +110,8 @@ public class OfflineTraderTable
 									{
 										stmItems.setInt(1, pc.getObjectId());
 										stmItems.setInt(2, holder.getSkillId());
-										stmItems.setLong(3, 0);
-										stmItems.setLong(4, holder.getPrice());
+										stmItems.setInt(3, 0);
+										stmItems.setInt(4, holder.getPrice());
 										stmItems.executeUpdate();
 										stmItems.clearParameters();
 									}
@@ -122,8 +122,8 @@ public class OfflineTraderTable
 									{
 										stmItems.setInt(1, pc.getObjectId());
 										stmItems.setInt(2, i.getObjectId());
-										stmItems.setLong(3, i.getCount());
-										stmItems.setLong(4, i.getPrice());
+										stmItems.setInt(3, i.getCount());
+										stmItems.setInt(4, i.getPrice());
 										stmItems.executeUpdate();
 										stmItems.clearParameters();
 									}
@@ -141,8 +141,8 @@ public class OfflineTraderTable
 								{
 									stmItems.setInt(1, pc.getObjectId());
 									stmItems.setInt(2, i.getRecipeId());
-									stmItems.setLong(3, 0);
-									stmItems.setLong(4, i.getCost());
+									stmItems.setInt(3, 0);
+									stmItems.setInt(4, i.getCost());
 									stmItems.executeUpdate();
 									stmItems.clearParameters();
 								}
@@ -239,7 +239,7 @@ public class OfflineTraderTable
 								{
 									while (items.next())
 									{
-										if (player.getBuyList().addItemByItemId(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
+										if (player.getBuyList().addItemByItemId(items.getInt(2), items.getInt(3), items.getInt(4)) == null)
 										{
 											continue;
 											// throw new NullPointerException();
@@ -255,14 +255,14 @@ public class OfflineTraderTable
 									{
 										while (items.next())
 										{
-											player.getSellingBuffs().add(new SellBuffHolder(items.getInt("item"), items.getLong("price")));
+											player.getSellingBuffs().add(new SellBuffHolder(items.getInt("item"), items.getInt("price")));
 										}
 									}
 									else
 									{
 										while (items.next())
 										{
-											if (player.getSellList().addItem(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
+											if (player.getSellList().addItem(items.getInt(2), items.getInt(3), items.getInt(4)) == null)
 											{
 												continue;
 												// throw new NullPointerException();
@@ -277,7 +277,7 @@ public class OfflineTraderTable
 								{
 									while (items.next())
 									{
-										player.getManufactureItems().put(items.getInt(2), new ManufactureItem(items.getInt(2), items.getLong(4)));
+										player.getManufactureItems().put(items.getInt(2), new ManufactureItem(items.getInt(2), items.getInt(4)));
 									}
 									player.setStoreName(rs.getString("title"));
 									break;
@@ -360,8 +360,8 @@ public class OfflineTraderTable
 								{
 									stm3.setInt(1, trader.getObjectId());
 									stm3.setInt(2, i.getItem().getId());
-									stm3.setLong(3, i.getCount());
-									stm3.setLong(4, i.getPrice());
+									stm3.setInt(3, i.getCount());
+									stm3.setInt(4, i.getPrice());
 									stm3.executeUpdate();
 									stm3.clearParameters();
 								}
@@ -380,8 +380,8 @@ public class OfflineTraderTable
 									{
 										stm3.setInt(1, trader.getObjectId());
 										stm3.setInt(2, holder.getSkillId());
-										stm3.setLong(3, 0);
-										stm3.setLong(4, holder.getPrice());
+										stm3.setInt(3, 0);
+										stm3.setInt(4, holder.getPrice());
 										stm3.executeUpdate();
 										stm3.clearParameters();
 									}
@@ -392,8 +392,8 @@ public class OfflineTraderTable
 									{
 										stm3.setInt(1, trader.getObjectId());
 										stm3.setInt(2, i.getObjectId());
-										stm3.setLong(3, i.getCount());
-										stm3.setLong(4, i.getPrice());
+										stm3.setInt(3, i.getCount());
+										stm3.setInt(4, i.getPrice());
 										stm3.executeUpdate();
 										stm3.clearParameters();
 									}
@@ -410,8 +410,8 @@ public class OfflineTraderTable
 								{
 									stm3.setInt(1, trader.getObjectId());
 									stm3.setInt(2, i.getRecipeId());
-									stm3.setLong(3, 0);
-									stm3.setLong(4, i.getCost());
+									stm3.setInt(3, 0);
+									stm3.setInt(4, i.getCost());
 									stm3.executeUpdate();
 									stm3.clearParameters();
 								}

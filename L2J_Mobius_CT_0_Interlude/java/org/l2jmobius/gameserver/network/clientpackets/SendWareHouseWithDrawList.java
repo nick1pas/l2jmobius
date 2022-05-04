@@ -56,7 +56,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int objId = packet.readD();
-			final long cnt = packet.readD();
+			final int cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (objId < 1) || (cnt < 0))
 			{
 				_items = null;

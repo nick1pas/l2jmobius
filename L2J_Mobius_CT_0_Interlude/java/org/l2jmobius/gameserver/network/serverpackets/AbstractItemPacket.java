@@ -41,7 +41,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		packet.writeH(item.getItem().getType1());
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
-		packet.writeD((int) item.getCount()); // Quantity
+		packet.writeD(item.getCount()); // Quantity
 		packet.writeH(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
 		packet.writeH(item.getCustomType1()); // Filler (always 0)
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes

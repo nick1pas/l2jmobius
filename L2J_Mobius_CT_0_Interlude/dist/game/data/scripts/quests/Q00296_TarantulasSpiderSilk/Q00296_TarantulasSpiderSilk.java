@@ -145,7 +145,7 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 		{
 			if (npc.getId() == TRADER_MION)
 			{
-				final long silk = getQuestItemsCount(talker, TARANTULA_SPIDER_SILK);
+				final int silk = getQuestItemsCount(talker, TARANTULA_SPIDER_SILK);
 				if (silk >= 1)
 				{
 					giveAdena(talker, (silk * 30) + (silk >= 10 ? 2000 : 0), true);

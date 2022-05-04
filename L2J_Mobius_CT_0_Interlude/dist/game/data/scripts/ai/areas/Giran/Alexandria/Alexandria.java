@@ -23,8 +23,8 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 import ai.AbstractNpcAI;
 
@@ -124,7 +124,7 @@ public class Alexandria extends AbstractNpcAI
 	{
 		private final int _additionalId;
 		
-		AdditionalItemChanceHolder(int id, int chance, long count, int additionalId)
+		AdditionalItemChanceHolder(int id, int chance, int count, int additionalId)
 		{
 			super(id, chance, count);
 			_additionalId = additionalId;

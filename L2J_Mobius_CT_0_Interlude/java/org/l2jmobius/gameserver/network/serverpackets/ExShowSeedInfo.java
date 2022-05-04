@@ -57,9 +57,9 @@ public class ExShowSeedInfo implements IClientOutgoingPacket
 		for (SeedProduction seed : _seeds)
 		{
 			packet.writeD(seed.getId()); // Seed id
-			packet.writeD((int) seed.getAmount()); // Left to buy
-			packet.writeD((int) seed.getStartAmount()); // Started amount
-			packet.writeD((int) seed.getPrice()); // Sell Price
+			packet.writeD(seed.getAmount()); // Left to buy
+			packet.writeD(seed.getStartAmount()); // Started amount
+			packet.writeD(seed.getPrice()); // Sell Price
 			final Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
 			if (s == null)
 			{

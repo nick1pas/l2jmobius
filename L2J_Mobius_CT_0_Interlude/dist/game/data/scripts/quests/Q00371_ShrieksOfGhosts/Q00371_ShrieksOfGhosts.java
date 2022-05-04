@@ -104,7 +104,7 @@ public class Q00371_ShrieksOfGhosts extends Quest
 			}
 			case "30867-05.html":
 			{
-				final long ancientAshUrnCount = getQuestItemsCount(player, ANCIENT_ASH_URN);
+				final int ancientAshUrnCount = getQuestItemsCount(player, ANCIENT_ASH_URN);
 				if (ancientAshUrnCount < 1)
 				{
 					htmltext = event;

@@ -124,7 +124,7 @@ public class Observation implements IBypassHandler
 		}
 		final int[] locCost = LOCATIONS[param];
 		final Location loc = new Location(locCost[0], locCost[1], locCost[2]);
-		final long cost = locCost[3];
+		final int cost = locCost[3];
 		
 		switch (_command)
 		{
@@ -154,7 +154,7 @@ public class Observation implements IBypassHandler
 		return false;
 	}
 	
-	private void doObserve(Player player, Npc npc, Location pos, long cost)
+	private void doObserve(Player player, Npc npc, Location pos, int cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{

@@ -66,7 +66,7 @@ public abstract class Inventory extends ItemContainer
 	public static final int ADENA_ID = 57;
 	public static final int ANCIENT_ADENA_ID = 5575;
 	
-	public static final long MAX_ADENA = Config.MAX_ADENA;
+	public static final int MAX_ADENA = Config.MAX_ADENA;
 	
 	public static final int PAPERDOLL_UNDER = 0;
 	public static final int PAPERDOLL_LEAR = 1;
@@ -742,7 +742,7 @@ public abstract class Inventory extends ItemContainer
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
-	public Item dropItem(String process, int objectId, long count, Player actor, Object reference)
+	public Item dropItem(String process, int objectId, int count, Player actor, Object reference)
 	{
 		Item item = getItemByObjectId(objectId);
 		if (item == null)

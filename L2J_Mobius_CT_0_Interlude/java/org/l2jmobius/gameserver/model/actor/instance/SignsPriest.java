@@ -302,19 +302,19 @@ public class SignsPriest extends Npc
 					final Item contribBlueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 					final Item contribGreenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 					final Item contribRedStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-					final long contribBlueStoneCount = contribBlueStones == null ? 0 : contribBlueStones.getCount();
-					final long contribGreenStoneCount = contribGreenStones == null ? 0 : contribGreenStones.getCount();
-					final long contribRedStoneCount = contribRedStones == null ? 0 : contribRedStones.getCount();
-					long score = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
-					long contributionCount = 0;
+					final int contribBlueStoneCount = contribBlueStones == null ? 0 : contribBlueStones.getCount();
+					final int contribGreenStoneCount = contribGreenStones == null ? 0 : contribGreenStones.getCount();
+					final int contribRedStoneCount = contribRedStones == null ? 0 : contribRedStones.getCount();
+					int score = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
+					int contributionCount = 0;
 					boolean contribStonesFound = false;
-					long redContrib = 0;
-					long greenContrib = 0;
-					long blueContrib = 0;
+					int redContrib = 0;
+					int greenContrib = 0;
+					int blueContrib = 0;
 					
 					try
 					{
-						contributionCount = Long.parseLong(command.substring(19).trim());
+						contributionCount = Integer.parseInt(command.substring(19).trim());
 					}
 					catch (Exception nfe)
 					{
@@ -365,7 +365,7 @@ public class SignsPriest extends Npc
 						contribStonesFound = true;
 						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
-						msg.addLong(redContrib);
+						msg.addInt(redContrib);
 						player.sendPacket(msg);
 					}
 					if ((greenContrib > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContrib, this, false))
@@ -373,7 +373,7 @@ public class SignsPriest extends Npc
 						contribStonesFound = true;
 						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
-						msg.addLong(greenContrib);
+						msg.addInt(greenContrib);
 						player.sendPacket(msg);
 					}
 					if ((blueContrib > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContrib, this, false))
@@ -381,7 +381,7 @@ public class SignsPriest extends Npc
 						contribStonesFound = true;
 						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
-						msg.addLong(blueContrib);
+						msg.addInt(blueContrib);
 						player.sendPacket(msg);
 					}
 					
@@ -400,7 +400,7 @@ public class SignsPriest extends Npc
 					{
 						score = SevenSigns.getInstance().addPlayerStoneContrib(player.getObjectId(), blueContrib, greenContrib, redContrib);
 						sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
-						sm.addLong(score);
+						sm.addInt(score);
 						player.sendPacket(sm);
 						
 						if (this instanceof DawnPriest)
@@ -421,10 +421,10 @@ public class SignsPriest extends Npc
 					final Item blueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 					final Item greenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 					final Item redStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-					final long blueStoneCount = blueStones == null ? 0 : blueStones.getCount();
-					final long greenStoneCount = greenStones == null ? 0 : greenStones.getCount();
-					final long redStoneCount = redStones == null ? 0 : redStones.getCount();
-					long contribScore = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
+					final int blueStoneCount = blueStones == null ? 0 : blueStones.getCount();
+					final int greenStoneCount = greenStones == null ? 0 : greenStones.getCount();
+					final int redStoneCount = redStones == null ? 0 : redStones.getCount();
+					int contribScore = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
 					boolean stonesFound = false;
 					if (contribScore == Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 					{
@@ -432,12 +432,12 @@ public class SignsPriest extends Npc
 					}
 					else
 					{
-						long redContribCount = 0;
-						long greenContribCount = 0;
-						long blueContribCount = 0;
+						int redContribCount = 0;
+						int greenContribCount = 0;
+						int blueContribCount = 0;
 						String contribStoneColor = null;
 						String stoneColorContr = null;
-						long stoneCountContr = 0;
+						int stoneCountContr = 0;
 						int stoneIdContr = 0;
 						
 						switch (stoneType)
@@ -468,7 +468,7 @@ public class SignsPriest extends Npc
 							}
 							case 4:
 							{
-								long tempContribScore = contribScore;
+								int tempContribScore = contribScore;
 								redContribCount = (Config.ALT_MAXIMUM_PLAYER_CONTRIB - tempContribScore) / SevenSigns.RED_CONTRIB_POINTS;
 								if (redContribCount > redStoneCount)
 								{
@@ -494,7 +494,7 @@ public class SignsPriest extends Npc
 									stonesFound = true;
 									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 									msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
-									msg.addLong(redContribCount);
+									msg.addInt(redContribCount);
 									player.sendPacket(msg);
 								}
 								if ((greenContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
@@ -502,7 +502,7 @@ public class SignsPriest extends Npc
 									stonesFound = true;
 									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 									msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
-									msg.addLong(greenContribCount);
+									msg.addInt(greenContribCount);
 									player.sendPacket(msg);
 								}
 								if ((blueContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
@@ -510,7 +510,7 @@ public class SignsPriest extends Npc
 									stonesFound = true;
 									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 									msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
-									msg.addLong(blueContribCount);
+									msg.addInt(blueContribCount);
 									player.sendPacket(msg);
 								}
 								
@@ -529,7 +529,7 @@ public class SignsPriest extends Npc
 								{
 									contribScore = SevenSigns.getInstance().addPlayerStoneContrib(player.getObjectId(), blueContribCount, greenContribCount, redContribCount);
 									sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
-									sm.addLong(contribScore);
+									sm.addInt(contribScore);
 									player.sendPacket(sm);
 									
 									if (this instanceof DawnPriest)
@@ -576,11 +576,11 @@ public class SignsPriest extends Npc
 				}
 				case 7: // Exchange Ancient Adena for Adena - SevenSigns 7 xxxxxxx
 				{
-					long ancientAdenaConvert = 0;
+					int ancientAdenaConvert = 0;
 					
 					try
 					{
-						ancientAdenaConvert = Long.parseLong(command.substring(13).trim());
+						ancientAdenaConvert = Integer.parseInt(command.substring(13).trim());
 					}
 					catch (NumberFormatException e)
 					{
@@ -650,7 +650,7 @@ public class SignsPriest extends Npc
 						final int x = Integer.parseInt(st.nextToken());
 						final int y = Integer.parseInt(st.nextToken());
 						final int z = Integer.parseInt(st.nextToken());
-						final long ancientAdenaCost = Long.parseLong(st.nextToken());
+						final int ancientAdenaCost = Integer.parseInt(st.nextToken());
 						if ((ancientAdenaCost > 0) && !player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
 						{
 							break;
@@ -712,10 +712,10 @@ public class SignsPriest extends Npc
 							final Item blueStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 							final Item greenStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 							final Item redStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-							final long blueStoneCountAll = blueStonesAll == null ? 0 : blueStonesAll.getCount();
-							final long greenStoneCountAll = greenStonesAll == null ? 0 : greenStonesAll.getCount();
-							final long redStoneCountAll = redStonesAll == null ? 0 : redStonesAll.getCount();
-							long ancientAdenaRewardAll = 0;
+							final int blueStoneCountAll = blueStonesAll == null ? 0 : blueStonesAll.getCount();
+							final int greenStoneCountAll = greenStonesAll == null ? 0 : greenStonesAll.getCount();
+							final int redStoneCountAll = redStonesAll == null ? 0 : redStonesAll.getCount();
+							int ancientAdenaRewardAll = 0;
 							ancientAdenaRewardAll = SevenSigns.calcAncientAdenaReward(blueStoneCountAll, greenStoneCountAll, redStoneCountAll);
 							if (ancientAdenaRewardAll == 0)
 							{
@@ -793,11 +793,11 @@ public class SignsPriest extends Npc
 				case 18: // Exchange Seal Stones for Ancient Adena - SevenSigns 18 xxxx xxxxxx
 				{
 					final int convertStoneId = Integer.parseInt(command.substring(14, 18));
-					long convertCount = 0;
+					int convertCount = 0;
 					
 					try
 					{
-						convertCount = Long.parseLong(command.substring(19).trim());
+						convertCount = Integer.parseInt(command.substring(19).trim());
 					}
 					catch (Exception nfe)
 					{
@@ -815,8 +815,8 @@ public class SignsPriest extends Npc
 					final Item convertItem = player.getInventory().getItemByItemId(convertStoneId);
 					if (convertItem != null)
 					{
-						long ancientAdenaReward = 0;
-						final long totalCount = convertItem.getCount();
+						int ancientAdenaReward = 0;
+						final int totalCount = convertItem.getCount();
 						if ((convertCount <= totalCount) && (convertCount > 0))
 						{
 							switch (convertStoneId)

@@ -601,7 +601,7 @@ public class Party extends AbstractPlayerGroup
 			msg = new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 			msg.addString(target.getName());
 			msg.addItemName(item);
-			msg.addLong(item.getCount());
+			msg.addInt(item.getCount());
 		}
 		else
 		{
@@ -620,7 +620,7 @@ public class Party extends AbstractPlayerGroup
 	 * @param spoil {@code true} if it's spoil loot
 	 * @param target the NPC target
 	 */
-	public void distributeItem(Player player, int itemId, long itemCount, boolean spoil, Attackable target)
+	public void distributeItem(Player player, int itemId, int itemCount, boolean spoil, Attackable target)
 	{
 		if (itemId == Inventory.ADENA_ID)
 		{
@@ -641,7 +641,7 @@ public class Party extends AbstractPlayerGroup
 			msg = spoil ? new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 			msg.addString(looter.getName());
 			msg.addItemName(itemId);
-			msg.addLong(itemCount);
+			msg.addInt(itemCount);
 		}
 		else
 		{
@@ -653,7 +653,7 @@ public class Party extends AbstractPlayerGroup
 	}
 	
 	/**
-	 * Method overload for {@link Party#distributeItem(Player, int, long, boolean, Attackable)}
+	 * Method overload for {@link Party#distributeItem(Player, int, int, boolean, Attackable)}
 	 * @param player the reference player
 	 * @param item the item holder
 	 * @param spoil {@code true} if it's spoil loot
@@ -670,7 +670,7 @@ public class Party extends AbstractPlayerGroup
 	 * @param adena
 	 * @param target
 	 */
-	public void distributeAdena(Player player, long adena, Creature target)
+	public void distributeAdena(Player player, int adena, Creature target)
 	{
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
@@ -687,7 +687,7 @@ public class Party extends AbstractPlayerGroup
 		{
 			// Now we can actually distribute the adena reward
 			// (Total adena splitted by the number of party members that are in range and must be rewarded)
-			final long count = adena / toReward.size();
+			final int count = adena / toReward.size();
 			for (Player member : toReward)
 			{
 				member.addAdena("Party", count, player, true);

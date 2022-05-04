@@ -109,9 +109,9 @@ public class Q00328_SenseForBusiness extends Quest
 			}
 			case State.STARTED:
 			{
-				final long carcass = getQuestItemsCount(player, MONSTER_EYE_CARCASS);
-				final long lens = getQuestItemsCount(player, MONSTER_EYE_LENS);
-				final long gizzards = getQuestItemsCount(player, BASILISK_GIZZARD);
+				final int carcass = getQuestItemsCount(player, MONSTER_EYE_CARCASS);
+				final int lens = getQuestItemsCount(player, MONSTER_EYE_LENS);
+				final int gizzards = getQuestItemsCount(player, BASILISK_GIZZARD);
 				if ((carcass + lens + gizzards) > 0)
 				{
 					giveAdena(player, ((carcass * MONSTER_EYE_CARCASS_ADENA) + (lens * MONSTER_EYE_LENS_ADENA) + (gizzards * BASILISK_GIZZARD_ADENA) + ((carcass + lens + gizzards) >= BONUS_COUNT ? BONUS : 0)), true);

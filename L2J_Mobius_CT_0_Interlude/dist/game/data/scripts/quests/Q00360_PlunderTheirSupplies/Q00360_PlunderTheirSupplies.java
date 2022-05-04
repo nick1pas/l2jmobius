@@ -138,8 +138,8 @@ public class Q00360_PlunderTheirSupplies extends Quest
 			}
 			case State.STARTED:
 			{
-				final long supplyCount = getQuestItemsCount(player, SUPPLY_ITEMS);
-				final long recipeCount = getQuestItemsCount(player, RECIPE_OF_SUPPLY);
+				final int supplyCount = getQuestItemsCount(player, SUPPLY_ITEMS);
+				final int recipeCount = getQuestItemsCount(player, RECIPE_OF_SUPPLY);
 				if (supplyCount == 0)
 				{
 					if (recipeCount == 0)

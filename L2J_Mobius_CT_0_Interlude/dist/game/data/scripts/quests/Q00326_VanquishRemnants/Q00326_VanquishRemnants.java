@@ -124,10 +124,10 @@ public class Q00326_VanquishRemnants extends Quest
 			}
 			case State.STARTED:
 			{
-				final long red_badges = getQuestItemsCount(player, RED_CROSS_BADGE);
-				final long blue_badges = getQuestItemsCount(player, BLUE_CROSS_BADGE);
-				final long black_badges = getQuestItemsCount(player, BLACK_CROSS_BADGE);
-				final long sum = red_badges + blue_badges + black_badges;
+				final int red_badges = getQuestItemsCount(player, RED_CROSS_BADGE);
+				final int blue_badges = getQuestItemsCount(player, BLUE_CROSS_BADGE);
+				final int black_badges = getQuestItemsCount(player, BLACK_CROSS_BADGE);
+				final int sum = red_badges + blue_badges + black_badges;
 				if (sum > 0)
 				{
 					if ((sum >= 100) && !hasQuestItems(player, BLACK_LION_MARK))

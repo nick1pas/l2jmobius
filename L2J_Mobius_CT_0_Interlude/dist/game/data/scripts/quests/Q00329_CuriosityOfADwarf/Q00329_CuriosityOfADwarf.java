@@ -131,8 +131,8 @@ public class Q00329_CuriosityOfADwarf extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 				{
-					final long broken = getQuestItemsCount(player, BROKEN_HEARTSTONE);
-					final long golem = getQuestItemsCount(player, GOLEM_HEARTSTONE);
+					final int broken = getQuestItemsCount(player, BROKEN_HEARTSTONE);
+					final int golem = getQuestItemsCount(player, GOLEM_HEARTSTONE);
 					giveAdena(player, ((broken * 50) + (golem * 1000) + ((broken + golem) >= 10 ? 1183 : 0)), true);
 					takeItems(player, -1, getRegisteredItemIds());
 					htmltext = "30437-05.html";

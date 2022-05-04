@@ -34,7 +34,7 @@ public class AddTradeItem implements IClientIncomingPacket
 {
 	private int _tradeId;
 	private int _objectId;
-	private long _count;
+	private int _count;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

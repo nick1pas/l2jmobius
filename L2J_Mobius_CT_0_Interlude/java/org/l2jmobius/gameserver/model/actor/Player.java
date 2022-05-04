@@ -2886,7 +2886,7 @@ public class Player extends Playable
 	/**
 	 * @return the Adena amount of the Player.
 	 */
-	public long getAdena()
+	public int getAdena()
 	{
 		return _inventory.getAdena();
 	}
@@ -2894,7 +2894,7 @@ public class Player extends Playable
 	/**
 	 * @return the Ancient Adena amount of the Player.
 	 */
-	public long getAncientAdena()
+	public int getAncientAdena()
 	{
 		return _inventory.getAncientAdena();
 	}
@@ -2906,12 +2906,12 @@ public class Player extends Playable
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 */
-	public void addAdena(String process, long count, WorldObject reference, boolean sendMessage)
+	public void addAdena(String process, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
-			sm.addLong(count);
+			sm.addInt(count);
 			sendPacket(sm);
 		}
 		
@@ -2942,7 +2942,7 @@ public class Player extends Playable
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @return boolean informing if the action was successful
 	 */
-	public boolean reduceAdena(String process, long count, WorldObject reference, boolean sendMessage)
+	public boolean reduceAdena(String process, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (count > _inventory.getAdena())
 		{
@@ -2976,7 +2976,7 @@ public class Player extends Playable
 			if (sendMessage)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
-				sm.addLong(count);
+				sm.addInt(count);
 				sendPacket(sm);
 			}
 		}
@@ -2991,13 +2991,13 @@ public class Player extends Playable
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 */
-	public void addAncientAdena(String process, long count, WorldObject reference, boolean sendMessage)
+	public void addAncientAdena(String process, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 			sm.addItemName(Inventory.ANCIENT_ADENA_ID);
-			sm.addLong(count);
+			sm.addInt(count);
 			sendPacket(sm);
 		}
 		
@@ -3027,7 +3027,7 @@ public class Player extends Playable
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @return boolean informing if the action was successful
 	 */
-	public boolean reduceAncientAdena(String process, long count, WorldObject reference, boolean sendMessage)
+	public boolean reduceAncientAdena(String process, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (count > _inventory.getAncientAdena())
 		{
@@ -3064,7 +3064,7 @@ public class Player extends Playable
 				{
 					sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(Inventory.ANCIENT_ADENA_ID);
-					sm.addLong(count);
+					sm.addInt(count);
 				}
 				else
 				{
@@ -3097,7 +3097,7 @@ public class Player extends Playable
 				{
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					sm.addItemName(item);
-					sm.addLong(item.getCount());
+					sm.addInt(item.getCount());
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
@@ -3154,7 +3154,7 @@ public class Player extends Playable
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @return
 	 */
-	public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
+	public Item addItem(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (count > 0)
 		{
@@ -3173,14 +3173,14 @@ public class Player extends Playable
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 						sm.addItemName(itemId);
-						sm.addLong(count);
+						sm.addInt(count);
 						sendPacket(sm);
 					}
 					else
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 						sm.addItemName(itemId);
-						sm.addLong(count);
+						sm.addInt(count);
 						sendPacket(sm);
 					}
 				}
@@ -3264,7 +3264,7 @@ public class Player extends Playable
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @return boolean informing if the action was successful
 	 */
-	public boolean destroyItem(String process, Item item, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItem(String process, Item item, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item destoyedItem = _inventory.destroyItem(process, item, count, this, reference);
 		if (destoyedItem == null)
@@ -3301,7 +3301,7 @@ public class Player extends Playable
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(destoyedItem);
-				sm.addLong(count);
+				sm.addInt(count);
 			}
 			else
 			{
@@ -3324,7 +3324,7 @@ public class Player extends Playable
 	 * @return boolean informing if the action was successful
 	 */
 	@Override
-	public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item item = _inventory.getItemByObjectId(objectId);
 		if (item != null)
@@ -3347,7 +3347,7 @@ public class Player extends Playable
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @return boolean informing if the action was successful
 	 */
-	public boolean destroyItemWithoutTrace(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItemWithoutTrace(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item item = _inventory.getItemByObjectId(objectId);
 		if ((item != null) && (item.getCount() >= count))
@@ -3371,7 +3371,7 @@ public class Player extends Playable
 	 * @return boolean informing if the action was successful
 	 */
 	@Override
-	public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		if (itemId == Inventory.ADENA_ID)
 		{
@@ -3379,7 +3379,7 @@ public class Player extends Playable
 		}
 		
 		final Item item = _inventory.getItemByItemId(itemId);
-		final long quantity = (count < 0) && (item != null) ? item.getCount() : count;
+		final int quantity = (count < 0) && (item != null) ? item.getCount() : count;
 		if ((item == null) || (item.getCount() < quantity) || (quantity <= 0) || (_inventory.destroyItemByItemId(process, itemId, quantity, this, reference) == null))
 		{
 			if (sendMessage)
@@ -3414,7 +3414,7 @@ public class Player extends Playable
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(itemId);
-				sm.addLong(count);
+				sm.addInt(count);
 			}
 			else
 			{
@@ -3436,7 +3436,7 @@ public class Player extends Playable
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
-	public Item transferItem(String process, int objectId, long count, Inventory target, WorldObject reference)
+	public Item transferItem(String process, int objectId, int count, Inventory target, WorldObject reference)
 	{
 		final Item oldItem = checkItemManipulation(objectId, count, "transfer");
 		if (oldItem == null)
@@ -3517,7 +3517,7 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Use instead of calling {@link #addItem(String, Item, WorldObject, boolean)} and {@link #destroyItemByItemId(String, int, long, WorldObject, boolean)}<br>
+	 * Use instead of calling {@link #addItem(String, Item, WorldObject, boolean)} and {@link #destroyItemByItemId(String, int, int, WorldObject, boolean)}<br>
 	 * This method validates slots and weight limit, for stackable and non-stackable items.
 	 * @param process a generic string representing the process that is exchanging this items
 	 * @param reference the (probably NPC) reference, could be null
@@ -3528,7 +3528,7 @@ public class Player extends Playable
 	 * @param sendMessage if {@code true} it will send messages to the acting player
 	 * @return {@code true} if the player successfully exchanged the items, {@code false} otherwise
 	 */
-	public boolean exchangeItemsById(String process, WorldObject reference, int coinId, long cost, int rewardId, long count, boolean sendMessage)
+	public boolean exchangeItemsById(String process, WorldObject reference, int coinId, int cost, int rewardId, int count, boolean sendMessage)
 	{
 		if (!_inventory.validateCapacityByItemId(rewardId, count))
 		{
@@ -3645,7 +3645,7 @@ public class Player extends Playable
 	 * @param protectItem
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
-	public Item dropItem(String process, int objectId, long count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem)
+	public Item dropItem(String process, int objectId, int count, int x, int y, int z, WorldObject reference, boolean sendMessage, boolean protectItem)
 	{
 		final Item invitem = _inventory.getItemByObjectId(objectId);
 		final Item item = _inventory.dropItem(process, objectId, count, this, reference);
@@ -3706,7 +3706,7 @@ public class Player extends Playable
 		return item;
 	}
 	
-	public Item checkItemManipulation(int objectId, long count, String action)
+	public Item checkItemManipulation(int objectId, int count, String action)
 	{
 		// TODO: if we remove objects that are not visible from the World, we'll have to remove this check
 		if (World.getInstance().findObject(objectId) == null)
@@ -4219,7 +4219,7 @@ public class Player extends Playable
 	 * @param itemId the item ID
 	 * @param itemCount the item count
 	 */
-	public void doAutoLoot(Attackable target, int itemId, long itemCount)
+	public void doAutoLoot(Attackable target, int itemId, int itemCount)
 	{
 		if (isInParty() && !ItemTable.getInstance().getTemplate(itemId).hasExImmediateEffect())
 		{
@@ -4236,7 +4236,7 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Method overload for {@link Player#doAutoLoot(Attackable, int, long)}
+	 * Method overload for {@link Player#doAutoLoot(Attackable, int, int)}
 	 * @param target the NPC dropping the item
 	 * @param item the item holder
 	 */
@@ -4313,13 +4313,13 @@ public class Player extends Playable
 				if (target.getId() == Inventory.ADENA_ID)
 				{
 					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-					smsg.addLong(target.getCount());
+					smsg.addInt(target.getCount());
 				}
 				else if (target.getCount() > 1)
 				{
 					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
 					smsg.addItemName(target);
-					smsg.addLong(target.getCount());
+					smsg.addInt(target.getCount());
 				}
 				else
 				{
@@ -7737,7 +7737,7 @@ public class Player extends Playable
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(henna.getDyeItemId());
-		sm.addLong(henna.getCancelCount());
+		sm.addInt(henna.getCancelCount());
 		sendPacket(sm);
 		sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_DELETED);
 		
@@ -12385,7 +12385,7 @@ public class Player extends Playable
 			{
 				while (rs.next())
 				{
-					getManufactureItems().put(rs.getInt("recipeId"), new ManufactureItem(rs.getInt("recipeId"), rs.getLong("price")));
+					getManufactureItems().put(rs.getInt("recipeId"), new ManufactureItem(rs.getInt("recipeId"), rs.getInt("price")));
 				}
 			}
 		}

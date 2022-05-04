@@ -995,7 +995,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		}
 		
 		// finally
-		return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+		return new ItemHolder(itemId, (int) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
 	}
 	
 	/**
@@ -1106,7 +1106,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// finally
-					return new ItemHolder(itemId, (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+					return new ItemHolder(itemId, (int) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
 				}
 				break;
 			}
@@ -1132,7 +1132,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// finally
-					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+					return new ItemHolder(dropItem.getItemId(), (int) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
 				}
 				break;
 			}

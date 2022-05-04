@@ -64,7 +64,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			final long cnt = packet.readD();
+			final int cnt = packet.readD();
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 1) || (itemId < 1))
 			{
 				_items = null;
@@ -117,7 +117,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			return;
 		}
 		
-		long totalPrice = 0;
+		int totalPrice = 0;
 		int slots = 0;
 		int totalWeight = 0;
 		
@@ -176,7 +176,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		for (ItemHolder i : _items)
 		{
 			final SeedProduction sp = productInfo.get(i.getId());
-			final long price = sp.getPrice() * i.getCount();
+			final int price = sp.getPrice() * i.getCount();
 			
 			// Take Adena and decrease seed amount
 			if (!sp.decreaseAmount(i.getCount()) || !player.reduceAdena("Buy", price, player, false))
@@ -196,7 +196,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			castle.addToTreasuryNoTax(totalPrice);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED);
-			sm.addLong(totalPrice);
+			sm.addInt(totalPrice);
 			player.sendPacket(sm);
 			
 			if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)

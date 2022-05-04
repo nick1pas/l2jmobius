@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
  */
 public class PreparedEntry extends Entry
 {
-	private long _taxAmount = 0;
+	private int _taxAmount = 0;
 	
 	public PreparedEntry(Entry template, Item item, boolean applyTaxes, boolean maintainEnchantment, double taxRate)
 	{
@@ -38,7 +38,7 @@ public class PreparedEntry extends Entry
 		}
 		
 		ItemInfo info = null;
-		long adenaAmount = 0;
+		int adenaAmount = 0;
 		_ingredients = new ArrayList<>(template.getIngredients().size());
 		for (Ingredient ing : template.getIngredients())
 		{
@@ -104,7 +104,7 @@ public class PreparedEntry extends Entry
 	}
 	
 	@Override
-	public long getTaxAmount()
+	public int getTaxAmount()
 	{
 		return _taxAmount;
 	}

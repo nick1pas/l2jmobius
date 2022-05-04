@@ -931,7 +931,7 @@ public class Q00348_AnArrogantSearch extends Quest
 							}
 							else
 							{
-								final long bloodedFabricCount = getQuestItemsCount(player, BLOODED_FABRIC);
+								final int bloodedFabricCount = getQuestItemsCount(player, BLOODED_FABRIC);
 								if (bloodedFabricCount >= 10)
 								{
 									htmltext = "30864-46.html";

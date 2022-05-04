@@ -1108,7 +1108,7 @@ public class Attackable extends Npc
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2);
 					sm.addString(getName());
 					sm.addItemName(item);
-					sm.addLong(drop.getCount());
+					sm.addInt(drop.getCount());
 					broadcastPacket(sm);
 				}
 			}

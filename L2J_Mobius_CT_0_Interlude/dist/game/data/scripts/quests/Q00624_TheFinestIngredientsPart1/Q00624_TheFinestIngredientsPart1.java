@@ -104,7 +104,7 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest
 		if ((partyMember != null) && partyMember.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			final int item = MONSTER_DROPS.get(npc.getId());
-			final long count = getQuestItemsCount(partyMember, item);
+			final int count = getQuestItemsCount(partyMember, item);
 			if ((count + 1) >= 50)
 			{
 				if (count < 50)

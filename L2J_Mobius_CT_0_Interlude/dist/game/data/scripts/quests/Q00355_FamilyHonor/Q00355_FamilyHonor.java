@@ -113,7 +113,7 @@ public class Q00355_FamilyHonor extends Quest
 			}
 			case "30181-06.html":
 			{
-				final long galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
+				final int galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
 				if (galfredoRomersBustCount < 1)
 				{
 					htmltext = event;
@@ -134,7 +134,7 @@ public class Q00355_FamilyHonor extends Quest
 			}
 			case "30181-10.html":
 			{
-				final long galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
+				final int galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
 				if (galfredoRomersBustCount > 0)
 				{
 					giveAdena(player, galfredoRomersBustCount * 120, true);

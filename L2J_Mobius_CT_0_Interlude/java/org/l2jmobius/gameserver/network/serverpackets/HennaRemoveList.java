@@ -37,7 +37,7 @@ public class HennaRemoveList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_REMOVE_LIST.writeId(packet);
-		packet.writeD((int) _player.getAdena());
+		packet.writeD(_player.getAdena());
 		packet.writeD(0);
 		packet.writeD(3 - _player.getHennaEmptySlots());
 		for (Henna henna : _player.getHennaList())

@@ -83,10 +83,10 @@ public class Q00357_WarehouseKeepersAmbition extends Quest
 				}
 				case "30686-09.html":
 				{
-					final long crystalCount = getQuestItemsCount(player, JADE_CRYSTAL);
+					final int crystalCount = getQuestItemsCount(player, JADE_CRYSTAL);
 					if (crystalCount > 0)
 					{
-						long adenaReward = crystalCount * 425;
+						int adenaReward = crystalCount * 425;
 						if (crystalCount < 100)
 						{
 							adenaReward += 13500;
@@ -104,7 +104,7 @@ public class Q00357_WarehouseKeepersAmbition extends Quest
 				}
 				case "30686-11.html":
 				{
-					final long crystalCount = getQuestItemsCount(player, JADE_CRYSTAL);
+					final int crystalCount = getQuestItemsCount(player, JADE_CRYSTAL);
 					if (crystalCount > 0)
 					{
 						giveAdena(player, (crystalCount * 425) + ((crystalCount >= 100) ? 40500 : 0), true);

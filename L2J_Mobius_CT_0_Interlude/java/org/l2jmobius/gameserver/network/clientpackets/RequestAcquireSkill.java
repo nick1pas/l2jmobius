@@ -141,7 +141,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 							
 							final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 							sm.addItemName(item.getId());
-							sm.addLong(item.getCount());
+							sm.addInt(item.getCount());
 							player.sendPacket(sm);
 						}
 					}

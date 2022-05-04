@@ -23,9 +23,9 @@ package org.l2jmobius.gameserver.model.holders;
 public class SellBuffHolder
 {
 	private final int _skillId;
-	private long _price;
+	private int _price;
 	
-	public SellBuffHolder(int skillId, long price)
+	public SellBuffHolder(int skillId, int price)
 	{
 		_skillId = skillId;
 		_price = price;
@@ -41,7 +41,7 @@ public class SellBuffHolder
 		_price = price;
 	}
 	
-	public long getPrice()
+	public int getPrice()
 	{
 		return _price;
 	}

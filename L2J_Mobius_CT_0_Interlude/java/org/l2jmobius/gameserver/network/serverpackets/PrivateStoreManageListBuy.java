@@ -52,7 +52,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		{
 			packet.writeD(item.getId());
 			packet.writeH(0); // show enchant level as 0, as you can't buy enchanted weapons
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeD(item.getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getTemplate().getBodyPart());
@@ -64,12 +64,12 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		{
 			packet.writeD(item.getItem().getId());
 			packet.writeH(0);
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeD(item.getItem().getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
-			packet.writeD((int) item.getPrice()); // your price
+			packet.writeD(item.getPrice()); // your price
 			packet.writeD(item.getItem().getReferencePrice()); // fixed store price
 		}
 		return true;

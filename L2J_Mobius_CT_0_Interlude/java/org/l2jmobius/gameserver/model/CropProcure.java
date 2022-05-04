@@ -23,7 +23,7 @@ public class CropProcure extends SeedProduction
 {
 	private final int _rewardType;
 	
-	public CropProcure(int id, long amount, int type, long startAmount, long price)
+	public CropProcure(int id, int amount, int type, int startAmount, int price)
 	{
 		super(id, amount, price, startAmount);
 		_rewardType = type;

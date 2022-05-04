@@ -53,7 +53,7 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate
 			packet.writeH(item.getItem().getType1()); // item type1
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeH(item.getItem().getType2()); // item type2
 			packet.writeH(0); // ?
 			packet.writeH(item.getEquipped());

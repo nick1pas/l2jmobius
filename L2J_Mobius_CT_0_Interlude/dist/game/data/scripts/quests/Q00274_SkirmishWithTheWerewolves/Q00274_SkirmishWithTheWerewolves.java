@@ -120,10 +120,10 @@ public class Q00274_SkirmishWithTheWerewolves extends Quest
 					}
 					case 2:
 					{
-						final long heads = getQuestItemsCount(player, WEREWOLF_HEAD);
+						final int heads = getQuestItemsCount(player, WEREWOLF_HEAD);
 						if (heads >= 40)
 						{
-							final long totems = getQuestItemsCount(player, WEREWOLF_TOTEM);
+							final int totems = getQuestItemsCount(player, WEREWOLF_TOTEM);
 							giveAdena(player, (heads * 30) + (totems * 600) + 2300, true);
 							qs.exitQuest(true, true);
 							htmltext = (totems > 0) ? "30569-07.html" : "30569-06.html";

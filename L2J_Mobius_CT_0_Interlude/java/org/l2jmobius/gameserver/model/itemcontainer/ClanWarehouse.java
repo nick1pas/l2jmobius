@@ -80,7 +80,7 @@ public class ClanWarehouse extends Warehouse
 	}
 	
 	@Override
-	public Item addItem(String process, int itemId, long count, Player actor, Object reference)
+	public Item addItem(String process, int itemId, int count, Player actor, Object reference)
 	{
 		final Item item = super.addItem(process, itemId, count, actor, reference);
 		
@@ -98,7 +98,7 @@ public class ClanWarehouse extends Warehouse
 	}
 	
 	@Override
-	public Item destroyItem(String process, Item item, long count, Player actor, Object reference)
+	public Item destroyItem(String process, Item item, int count, Player actor, Object reference)
 	{
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanWHItemDestroy(process, actor, item, count, this), item.getTemplate());
@@ -106,7 +106,7 @@ public class ClanWarehouse extends Warehouse
 	}
 	
 	@Override
-	public Item transferItem(String process, int objectId, long count, ItemContainer target, Player actor, Object reference)
+	public Item transferItem(String process, int objectId, int count, ItemContainer target, Player actor, Object reference)
 	{
 		final Item item = getItemByObjectId(objectId);
 		

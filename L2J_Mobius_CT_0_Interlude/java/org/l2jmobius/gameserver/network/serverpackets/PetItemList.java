@@ -41,7 +41,7 @@ public class PetItemList implements IClientOutgoingPacket
 			packet.writeH(item.getTemplate().getType1()); // item type1
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeH(item.getTemplate().getType2()); // item type2
 			packet.writeH(0); // ?
 			packet.writeH(item.isEquipped() ? 1 : 0);

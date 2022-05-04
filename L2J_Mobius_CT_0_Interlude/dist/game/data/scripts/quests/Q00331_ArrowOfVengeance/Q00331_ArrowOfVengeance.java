@@ -108,9 +108,9 @@ public class Q00331_ArrowOfVengeance extends Quest
 			}
 			case State.STARTED:
 			{
-				final long harpyFeathers = getQuestItemsCount(player, HARPY_FEATHER);
-				final long medusaVenoms = getQuestItemsCount(player, MEDUSA_VENOM);
-				final long wyrmsTeeth = getQuestItemsCount(player, WYRMS_TOOTH);
+				final int harpyFeathers = getQuestItemsCount(player, HARPY_FEATHER);
+				final int medusaVenoms = getQuestItemsCount(player, MEDUSA_VENOM);
+				final int wyrmsTeeth = getQuestItemsCount(player, WYRMS_TOOTH);
 				if ((harpyFeathers + medusaVenoms + wyrmsTeeth) > 0)
 				{
 					giveAdena(player, ((harpyFeathers * HARPY_FEATHER_ADENA) + (medusaVenoms * MEDUSA_VENOM_ADENA) + (wyrmsTeeth * WYRMS_TOOTH_ADENA) + ((harpyFeathers + medusaVenoms + wyrmsTeeth) >= BONUS_COUNT ? BONUS : 0)), true);

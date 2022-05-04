@@ -56,12 +56,12 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getType2());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeH(0);
 			packet.writeH(item.getEnchant()); // enchant level
 			packet.writeH(item.getCustomType2());
 			packet.writeD(item.getItem().getBodyPart());
-			packet.writeD((int) item.getPrice()); // store price
+			packet.writeD(item.getPrice()); // store price
 		}
 		// section 3
 		packet.writeD(_sellList.size()); // count for any items already added for sell
@@ -70,12 +70,12 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getType2());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeH(0);
 			packet.writeH(item.getEnchant()); // enchant level
 			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
-			packet.writeD((int) item.getPrice()); // your price
+			packet.writeD(item.getPrice()); // your price
 			packet.writeD(item.getItem().getReferencePrice()); // store price
 		}
 		return true;

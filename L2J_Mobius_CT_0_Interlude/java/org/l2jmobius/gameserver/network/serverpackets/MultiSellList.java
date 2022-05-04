@@ -80,7 +80,7 @@ public class MultiSellList implements IClientOutgoingPacket
 					packet.writeD(0);
 					packet.writeH(65535);
 				}
-				packet.writeD((int) ing.getItemCount());
+				packet.writeD(ing.getItemCount());
 				if (ing.getItemInfo() != null)
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level
@@ -98,7 +98,7 @@ public class MultiSellList implements IClientOutgoingPacket
 			{
 				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getDisplayId() : ing.getItemId());
 				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getType2() : 65535);
-				packet.writeD((int) ing.getItemCount());
+				packet.writeD(ing.getItemCount());
 				if (ing.getItemInfo() != null)
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level

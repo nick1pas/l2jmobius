@@ -95,9 +95,9 @@ public class Item extends WorldObject
 	private int _dropperObjectId = 0;
 	
 	/** Quantity of the item */
-	private long _count;
+	private int _count;
 	/** Initial Quantity of the item */
-	private long _initCount;
+	private int _initCount;
 	/** Remaining time (in miliseconds) */
 	private long _time;
 	/** Quantity of the item can decrease */
@@ -409,7 +409,7 @@ public class Item extends WorldObject
 	 * Sets the quantity of the item.
 	 * @param count the new count to set
 	 */
-	public void setCount(long count)
+	public void setCount(int count)
 	{
 		if (_count == count)
 		{
@@ -423,7 +423,7 @@ public class Item extends WorldObject
 	/**
 	 * @return Returns the count.
 	 */
-	public long getCount()
+	public int getCount()
 	{
 		return _count;
 	}
@@ -436,14 +436,14 @@ public class Item extends WorldObject
 	 * @param creator : Player Player requesting the item creation
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void changeCount(String process, long count, Player creator, Object reference)
+	public void changeCount(String process, int count, Player creator, Object reference)
 	{
 		if (count == 0)
 		{
 			return;
 		}
-		final long old = _count;
-		final long max = _itemId == ADENA_ID ? MAX_ADENA : Long.MAX_VALUE;
+		final int old = _count;
+		final int max = _itemId == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
 		
 		if ((count > 0) && (_count > (max - count)))
 		{
@@ -1224,13 +1224,13 @@ public class Item extends WorldObject
 		int customType2;
 		int manaLeft;
 		long time;
-		long count;
+		int count;
 		ItemLocation loc;
 		try
 		{
 			objectId = rs.getInt(1);
 			itemId = rs.getInt("item_id");
-			count = rs.getLong("count");
+			count = rs.getInt("count");
 			loc = ItemLocation.valueOf(rs.getString("loc"));
 			locData = rs.getInt("loc_data");
 			enchantLevel = rs.getInt("enchant_level");
@@ -1352,7 +1352,7 @@ public class Item extends WorldObject
 			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
-			ps.setLong(2, _count);
+			ps.setInt(2, _count);
 			ps.setString(3, _loc.name());
 			ps.setInt(4, _locData);
 			ps.setInt(5, _enchantLevel);
@@ -1386,7 +1386,7 @@ public class Item extends WorldObject
 		{
 			ps.setInt(1, _ownerId);
 			ps.setInt(2, _itemId);
-			ps.setLong(3, _count);
+			ps.setInt(3, _count);
 			ps.setString(4, _loc.name());
 			ps.setInt(5, _locData);
 			ps.setInt(6, _enchantLevel);

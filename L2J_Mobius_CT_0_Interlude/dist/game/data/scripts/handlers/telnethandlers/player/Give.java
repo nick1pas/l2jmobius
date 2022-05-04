@@ -53,14 +53,14 @@ public class Give implements ITelnetCommand
 		if (player != null)
 		{
 			final int itemId = Integer.parseInt(args[1]);
-			long amount = 1;
+			int amount = 1;
 			int enchanted = 0;
 			if (args.length > 2)
 			{
 				String token = args[2];
 				if (Util.isDigit(token))
 				{
-					amount = Long.parseLong(token);
+					amount = Integer.parseInt(token);
 				}
 				if (args.length > 3)
 				{

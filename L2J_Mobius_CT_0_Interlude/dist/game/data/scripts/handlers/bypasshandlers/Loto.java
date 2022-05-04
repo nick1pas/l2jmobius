@@ -188,7 +188,7 @@ public class Loto implements IBypassHandler
 				return;
 			}
 			
-			final long price = Config.ALT_LOTTERY_TICKET_PRICE;
+			final int price = Config.ALT_LOTTERY_TICKET_PRICE;
 			final int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
@@ -270,10 +270,10 @@ public class Loto implements IBypassHandler
 					{
 						message += numbers[i] + " ";
 					}
-					final long[] check = Lottery.getInstance().checkTicket(item);
+					final int[] check = Lottery.getInstance().checkTicket(item);
 					if (check[0] > 0)
 					{
-						switch ((int) check[0])
+						switch (check[0])
 						{
 							case 1:
 							{
@@ -320,13 +320,13 @@ public class Loto implements IBypassHandler
 			{
 				return;
 			}
-			final long[] check = Lottery.getInstance().checkTicket(item);
+			final int[] check = Lottery.getInstance().checkTicket(item);
 			
 			sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			final long adena = check[1];
+			final int adena = check[1];
 			if (adena > 0)
 			{
 				player.addAdena("Loto", adena, npc, true);

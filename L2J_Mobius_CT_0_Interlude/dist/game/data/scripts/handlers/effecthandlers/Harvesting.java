@@ -79,7 +79,7 @@ public class Harvesting extends AbstractEffect
 					{
 						sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 						sm.addItemName(item.getId());
-						sm.addLong(item.getCount());
+						sm.addInt(item.getCount());
 					}
 					player.sendPacket(sm);
 					
@@ -96,7 +96,7 @@ public class Harvesting extends AbstractEffect
 						{
 							sm = new SystemMessage(SystemMessageId.C1_HARVESTED_S3_S2_S);
 							sm.addString(player.getName());
-							sm.addLong(item.getCount());
+							sm.addInt(item.getCount());
 							sm.addItemName(item.getId());
 						}
 						player.getParty().broadcastToPartyMembers(player, sm);

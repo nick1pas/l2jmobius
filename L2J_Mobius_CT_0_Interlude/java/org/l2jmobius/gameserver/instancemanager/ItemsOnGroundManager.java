@@ -213,7 +213,7 @@ public class ItemsOnGroundManager implements Runnable
 				{
 					ps.setInt(1, item.getObjectId());
 					ps.setInt(2, item.getId());
-					ps.setLong(3, item.getCount());
+					ps.setInt(3, item.getCount());
 					ps.setInt(4, item.getEnchantLevel());
 					ps.setInt(5, item.getX());
 					ps.setInt(6, item.getY());

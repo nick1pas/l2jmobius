@@ -54,7 +54,7 @@ public class BuyList implements IClientOutgoingPacket
 				packet.writeH(product.getItem().getType1()); // item type1
 				packet.writeD(0); // objectId
 				packet.writeD(product.getItemId());
-				packet.writeD((int) (product.getCount() < 0 ? 0 : product.getCount()));
+				packet.writeD(product.getCount() < 0 ? 0 : product.getCount());
 				packet.writeH(product.getItem().getType2());
 				packet.writeH(0); // isEquipped
 				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)

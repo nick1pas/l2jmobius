@@ -172,14 +172,14 @@ public class Festival implements IBypassHandler
 						player.sendMessage("You do not have any blood offerings to contribute.");
 						return true;
 					}
-					final long offeringScore = bloodOfferings.getCount() * SevenSignsFestival.FESTIVAL_OFFERING_VALUE;
+					final int offeringScore = bloodOfferings.getCount() * SevenSignsFestival.FESTIVAL_OFFERING_VALUE;
 					if (!player.destroyItem("SevenSigns", bloodOfferings, npc, false))
 					{
 						return true;
 					}
 					final boolean isHighestScore = SevenSignsFestival.getInstance().setFinalScore(player, npc.getFestivalOracle(), npc.getFestivalType(), offeringScore);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_HAS_INCREASED_BY_S1);
-					sm.addLong(offeringScore);
+					sm.addInt(offeringScore);
 					player.sendPacket(sm);
 					if (isHighestScore)
 					{

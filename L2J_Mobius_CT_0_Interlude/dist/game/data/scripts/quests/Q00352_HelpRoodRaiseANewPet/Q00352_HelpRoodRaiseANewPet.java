@@ -149,29 +149,29 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			final long LienrikEgg1Count = getQuestItemsCount(player, LIENRIK_EGG1);
-			final long LienrikEgg2Count = getQuestItemsCount(player, LIENRIK_EGG2);
-			if ((LienrikEgg1Count == 0) && (LienrikEgg2Count == 0))
+			final int lienrikEgg1Count = getQuestItemsCount(player, LIENRIK_EGG1);
+			final int lienrikEgg2Count = getQuestItemsCount(player, LIENRIK_EGG2);
+			if ((lienrikEgg1Count == 0) && (lienrikEgg2Count == 0))
 			{
 				htmltext = "31067-06.html";
 			}
-			else if ((LienrikEgg1Count >= 1) && (LienrikEgg2Count == 0))
+			else if ((lienrikEgg1Count >= 1) && (lienrikEgg2Count == 0))
 			{
-				if (LienrikEgg1Count >= 10)
+				if (lienrikEgg1Count >= 10)
 				{
-					giveAdena(player, (LienrikEgg1Count * 34) + 4000, true);
+					giveAdena(player, (lienrikEgg1Count * 34) + 4000, true);
 				}
 				else
 				{
-					giveAdena(player, (LienrikEgg1Count * 34) + 2000, true);
+					giveAdena(player, (lienrikEgg1Count * 34) + 2000, true);
 				}
 				
 				takeItems(player, LIENRIK_EGG1, -1);
 				htmltext = "31067-10.html";
 			}
-			else if (LienrikEgg1Count >= 1)
+			else if (lienrikEgg1Count >= 1)
 			{
-				giveAdena(player, 4000 + ((LienrikEgg1Count * 34) + (LienrikEgg2Count * 1025)), true);
+				giveAdena(player, 4000 + ((lienrikEgg1Count * 34) + (lienrikEgg2Count * 1025)), true);
 				takeItems(player, LIENRIK_EGG1, -1);
 				takeItems(player, LIENRIK_EGG2, -1);
 				htmltext = "31067-11.html";

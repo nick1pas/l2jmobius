@@ -90,7 +90,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		final int partnerId = activeChar.getPartnerId();
 		final int coupleId = activeChar.getCoupleId();
-		long adenaAmount = 0;
+		int adenaAmount = 0;
 		if (activeChar.isMarried())
 		{
 			activeChar.sendMessage("You are now divorced.");

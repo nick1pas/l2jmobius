@@ -77,7 +77,7 @@ public class MonsterRace
 	
 	protected final List<Integer> _npcTemplates = new ArrayList<>(); // List holding npc templates, shuffled on a new race.
 	protected final List<HistoryInfo> _history = new ArrayList<>(); // List holding old race records.
-	protected final Map<Integer, Long> _betsPerLane = new ConcurrentHashMap<>(); // Map holding all bets for each lane ; values setted to 0 after every race.
+	protected final Map<Integer, Integer> _betsPerLane = new ConcurrentHashMap<>(); // Map holding all bets for each lane ; values setted to 0 after every race.
 	protected final List<Double> _odds = new ArrayList<>(); // List holding sorted odds per lane ; cleared at new odds calculation.
 	
 	protected int _raceNumber = 1;
@@ -468,7 +468,7 @@ public class MonsterRace
 			
 			while (rset.next())
 			{
-				setBetOnLane(rset.getInt("lane_id"), rset.getLong("bet"), false);
+				setBetOnLane(rset.getInt("lane_id"), rset.getInt("bet"), false);
 			}
 			
 			rset.close();
@@ -485,13 +485,13 @@ public class MonsterRace
 	 * @param lane : The lane to affect.
 	 * @param sum : The sum to set.
 	 */
-	protected void saveBet(int lane, long sum)
+	protected void saveBet(int lane, int sum)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("REPLACE INTO mdt_bets (lane_id, bet) VALUES (?,?)");
 			statement.setInt(1, lane);
-			statement.setLong(2, sum);
+			statement.setInt(2, sum);
 			statement.execute();
 			statement.close();
 		}
@@ -508,7 +508,7 @@ public class MonsterRace
 	{
 		for (int key : _betsPerLane.keySet())
 		{
-			_betsPerLane.put(key, 0L);
+			_betsPerLane.put(key, 0);
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection())
@@ -529,9 +529,9 @@ public class MonsterRace
 	 * @param amount : The amount to add.
 	 * @param saveOnDb : Should it be saved on db or not.
 	 */
-	public void setBetOnLane(int lane, long amount, boolean saveOnDb)
+	public void setBetOnLane(int lane, int amount, boolean saveOnDb)
 	{
-		final long sum = (_betsPerLane.containsKey(lane)) ? _betsPerLane.get(lane) + amount : amount;
+		final int sum = (_betsPerLane.containsKey(lane)) ? _betsPerLane.get(lane) + amount : amount;
 		
 		_betsPerLane.put(lane, sum);
 		
@@ -550,7 +550,7 @@ public class MonsterRace
 		_odds.clear();
 		
 		// Sort bets lanes per lane.
-		final Map<Integer, Long> sortedLanes = new TreeMap<>(_betsPerLane);
+		final Map<Integer, Integer> sortedLanes = new TreeMap<>(_betsPerLane);
 		
 		// Pass a first loop in order to calculate total sum of all lanes.
 		long sumOfAllLanes = 0;

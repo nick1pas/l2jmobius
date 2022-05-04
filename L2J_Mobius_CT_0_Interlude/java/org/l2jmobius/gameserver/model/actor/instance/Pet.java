@@ -362,7 +362,7 @@ public class Pet extends Summon
 	 * @return boolean informing if the action was successfull
 	 */
 	@Override
-	public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
 		if (item == null)
@@ -386,7 +386,7 @@ public class Pet extends Summon
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getId());
-				sm.addLong(count);
+				sm.addInt(count);
 			}
 			else
 			{
@@ -407,7 +407,7 @@ public class Pet extends Summon
 	 * @return boolean informing if the action was successfull
 	 */
 	@Override
-	public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final Item item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
 		if (item == null)
@@ -431,7 +431,7 @@ public class Pet extends Summon
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 				sm.addItemName(item.getId());
-				sm.addLong(count);
+				sm.addInt(count);
 			}
 			else
 			{
@@ -506,13 +506,13 @@ public class Pet extends Summon
 				if (target.getId() == Inventory.ADENA_ID)
 				{
 					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-					smsg.addLong(target.getCount());
+					smsg.addInt(target.getCount());
 				}
 				else if (target.getCount() > 1)
 				{
 					smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S2_S1_S);
 					smsg.addItemName(target);
-					smsg.addLong(target.getCount());
+					smsg.addInt(target.getCount());
 				}
 				else
 				{
@@ -559,7 +559,7 @@ public class Pet extends Summon
 			if (target.getId() == Inventory.ADENA_ID)
 			{
 				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_ADENA);
-				smsg.addLong(target.getCount());
+				smsg.addInt(target.getCount());
 				sendPacket(smsg);
 			}
 			else if (target.getEnchantLevel() > 0)
@@ -572,7 +572,7 @@ public class Pet extends Summon
 			else if (target.getCount() > 1)
 			{
 				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S2_S1_S);
-				smsg.addLong(target.getCount());
+				smsg.addInt(target.getCount());
 				smsg.addItemName(target);
 				sendPacket(smsg);
 			}
@@ -668,7 +668,7 @@ public class Pet extends Summon
 	 * @param reference Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
-	public Item transferItem(String process, int objectId, long count, Inventory target, Player actor, WorldObject reference)
+	public Item transferItem(String process, int objectId, int count, Inventory target, Player actor, WorldObject reference)
 	{
 		final Item oldItem = _inventory.getItemByObjectId(objectId);
 		final Item playerOldItem = target.getItemByItemId(oldItem.getId());

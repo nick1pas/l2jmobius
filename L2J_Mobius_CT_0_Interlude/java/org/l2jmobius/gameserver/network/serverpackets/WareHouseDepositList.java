@@ -69,7 +69,7 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 			packet.writeH(item.getTemplate().getType1());
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getId());
-			packet.writeD((int) item.getCount());
+			packet.writeD(item.getCount());
 			packet.writeH(item.getTemplate().getType2());
 			packet.writeH(item.getCustomType1());
 			packet.writeD(item.getTemplate().getBodyPart());

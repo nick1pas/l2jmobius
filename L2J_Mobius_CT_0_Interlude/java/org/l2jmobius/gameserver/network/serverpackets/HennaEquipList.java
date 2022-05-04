@@ -48,7 +48,7 @@ public class HennaEquipList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_EQUIP_LIST.writeId(packet);
-		packet.writeD((int) _player.getAdena()); // activeChar current amount of Adena
+		packet.writeD(_player.getAdena()); // activeChar current amount of Adena
 		packet.writeD(3); // available equip slot
 		packet.writeD(_hennaEquipList.size());
 		for (Henna henna : _hennaEquipList)

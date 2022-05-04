@@ -163,7 +163,7 @@ public class TradeList
 	 * @param count : int
 	 * @return
 	 */
-	public TradeItem addItem(int objectId, long count)
+	public TradeItem addItem(int objectId, int count)
 	{
 		return addItem(objectId, count, 0);
 	}
@@ -175,7 +175,7 @@ public class TradeList
 	 * @param price : long
 	 * @return
 	 */
-	public synchronized TradeItem addItem(int objectId, long count, long price)
+	public synchronized TradeItem addItem(int objectId, int count, int price)
 	{
 		if (_locked)
 		{
@@ -237,7 +237,7 @@ public class TradeList
 	 * @param price
 	 * @return
 	 */
-	public synchronized TradeItem addItemByItemId(int itemId, long count, long price)
+	public synchronized TradeItem addItemByItemId(int itemId, int count, int price)
 	{
 		if (_locked)
 		{
@@ -284,7 +284,7 @@ public class TradeList
 	 * @param count : int
 	 * @return
 	 */
-	private synchronized TradeItem removeItem(int objectId, int itemId, long count)
+	private synchronized TradeItem removeItem(int objectId, int itemId, int count)
 	{
 		if (_locked)
 		{
@@ -635,7 +635,7 @@ public class TradeList
 		
 		int slots = 0;
 		int weight = 0;
-		long totalPrice = 0;
+		int totalPrice = 0;
 		
 		final PlayerInventory ownerInventory = _owner.getInventory();
 		final PlayerInventory playerInventory = player.getInventory();
@@ -796,12 +796,12 @@ public class TradeList
 				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
-				msg.addLong(item.getCount());
+				msg.addInt(item.getCount());
 				_owner.sendPacket(msg);
 				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
-				msg.addLong(item.getCount());
+				msg.addInt(item.getCount());
 			}
 			else
 			{
@@ -843,7 +843,7 @@ public class TradeList
 		// Prepare inventory update packet
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
-		long totalPrice = 0;
+		int totalPrice = 0;
 		for (ItemRequest item : items)
 		{
 			// searching item in tradelist using itemId
@@ -879,7 +879,7 @@ public class TradeList
 				break;
 			}
 			
-			final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
+			final int _totalPrice = totalPrice + (item.getCount() * item.getPrice());
 			// check for overflow of the total price
 			if ((MAX_ADENA < _totalPrice) || (_totalPrice < 0))
 			{
@@ -960,12 +960,12 @@ public class TradeList
 				msg = new SystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
-				msg.addLong(item.getCount());
+				msg.addInt(item.getCount());
 				_owner.sendPacket(msg);
 				msg = new SystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
-				msg.addLong(item.getCount());
+				msg.addInt(item.getCount());
 			}
 			else
 			{

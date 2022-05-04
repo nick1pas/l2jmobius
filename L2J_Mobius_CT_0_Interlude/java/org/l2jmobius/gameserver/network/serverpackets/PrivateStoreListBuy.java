@@ -49,13 +49,13 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
 			packet.writeH(item.getEnchant());
-			packet.writeD((int) item.getCount()); // give max possible sell amount
+			packet.writeD(item.getCount()); // give max possible sell amount
 			packet.writeD(item.getItem().getReferencePrice());
 			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
-			packet.writeD((int) item.getPrice()); // buyers price
-			packet.writeD((int) item.getStoreCount()); // maximum possible tradecount
+			packet.writeD(item.getPrice()); // buyers price
+			packet.writeD(item.getStoreCount()); // maximum possible tradecount
 		}
 		return true;
 	}

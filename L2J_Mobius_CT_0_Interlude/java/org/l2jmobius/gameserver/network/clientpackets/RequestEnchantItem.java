@@ -369,7 +369,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								
 								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 								sm.addItemName(crystalId);
-								sm.addLong(count);
+								sm.addInt(count);
 								player.sendPacket(sm);
 								player.sendPacket(new EnchantResult(1, crystalId, count));
 							}

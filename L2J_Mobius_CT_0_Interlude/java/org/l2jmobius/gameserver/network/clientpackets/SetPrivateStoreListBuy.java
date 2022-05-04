@@ -163,10 +163,10 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 	private static class Item
 	{
 		private final int _itemId;
-		private final long _count;
-		private final long _price;
+		private final int _count;
+		private final int _price;
 		
-		public Item(int id, long num, long pri)
+		public Item(int id, int num, int pri)
 		{
 			_itemId = id;
 			_count = num;

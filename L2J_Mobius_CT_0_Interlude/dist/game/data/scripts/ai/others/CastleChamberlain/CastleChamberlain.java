@@ -803,7 +803,7 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
-					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
+					final int amount = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0;
 					if ((amount > 0) && (amount < Inventory.MAX_ADENA))
 					{
 						if (player.getAdena() >= amount)
@@ -828,7 +828,7 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_TAXES))
 				{
-					final long amount = (st.hasMoreTokens()) ? Long.parseLong(st.nextToken()) : 0;
+					final int amount = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0;
 					if (amount <= castle.getTreasury())
 					{
 						castle.addToTreasuryNoTax((-1) * amount);
@@ -1276,7 +1276,7 @@ public class CastleChamberlain extends AbstractNpcAI
 							final int ticketCount = castle.getTicketBuyCount();
 							if (ticketCount < (Config.SSQ_DAWN_TICKET_QUANTITY / Config.SSQ_DAWN_TICKET_BUNDLE))
 							{
-								final long totalCost = Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE;
+								final int totalCost = Config.SSQ_DAWN_TICKET_PRICE * Config.SSQ_DAWN_TICKET_BUNDLE;
 								if (player.getAdena() >= totalCost)
 								{
 									takeItems(player, Inventory.ADENA_ID, totalCost);

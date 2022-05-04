@@ -167,19 +167,19 @@ public class Q00370_AnElderSowsSeeds extends Quest
 		return htmltext;
 	}
 	
-	private final boolean exchangeChapters(Player player, boolean takeAllItems)
+	private boolean exchangeChapters(Player player, boolean takeAllItems)
 	{
-		final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
-		final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);
-		final long windChapters = getQuestItemsCount(player, CHAPTER_OF_WIND);
-		final long fireChapters = getQuestItemsCount(player, CHAPTER_OF_FIRE);
-		final long minCount = Util.min(waterChapters, earthChapters, windChapters, fireChapters);
+		final int waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
+		final int earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);
+		final int windChapters = getQuestItemsCount(player, CHAPTER_OF_WIND);
+		final int fireChapters = getQuestItemsCount(player, CHAPTER_OF_FIRE);
+		final int minCount = Util.min(waterChapters, earthChapters, windChapters, fireChapters);
 		if (minCount > 0)
 		{
 			giveAdena(player, minCount * 3600, true);
 		}
-		final long countToTake = (takeAllItems ? -1 : minCount);
-		takeItems(player, (int) countToTake, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
+		final int countToTake = (takeAllItems ? -1 : minCount);
+		takeItems(player, countToTake, CHAPTER_OF_WATER, CHAPTER_OF_EARTH, CHAPTER_OF_WIND, CHAPTER_OF_FIRE);
 		return (minCount > 0);
 	}
 }

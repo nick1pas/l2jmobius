@@ -44,7 +44,7 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.getCancelCount()); // total amount of dye require
 		packet.writeD(_henna.getCancelFee()); // total amount of Adena require to remove symbol
 		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to remove or not
-		packet.writeD((int) _player.getAdena());
+		packet.writeD(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeC(_player.getINT() - _henna.getStatINT()); // equip INT
 		packet.writeD(_player.getSTR()); // current STR

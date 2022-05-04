@@ -141,7 +141,7 @@ public class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
-		long totalPrice = 0;
+		int totalPrice = 0;
 		// Proceed the sell
 		for (UniqueItemHolder i : _items)
 		{
@@ -151,7 +151,7 @@ public class RequestSellItem implements IClientIncomingPacket
 				continue;
 			}
 			
-			final long price = item.getReferencePrice() / 2;
+			final int price = item.getReferencePrice() / 2;
 			totalPrice += price * i.getCount();
 			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
 			{

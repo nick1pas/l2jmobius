@@ -59,7 +59,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					final String id = st.nextToken();
 					final int idval = Integer.parseInt(id);
 					final String num = st.nextToken();
-					final long numval = Long.parseLong(num);
+					final int numval = Integer.parseInt(num);
 					createItem(activeChar, activeChar, idval, numval);
 				}
 				else if (st.countTokens() == 1)
@@ -92,7 +92,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					if (idval > 0)
 					{
 						final String num = st.nextToken();
-						final long numval = Long.parseLong(num);
+						final int numval = Integer.parseInt(num);
 						createItem(activeChar, activeChar, idval, numval);
 					}
 				}
@@ -131,7 +131,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					final String id = st.nextToken();
 					final int idval = Integer.parseInt(id);
 					final String num = st.nextToken();
-					final long numval = Long.parseLong(num);
+					final int numval = Integer.parseInt(num);
 					createItem(activeChar, (Player) target, idval, numval);
 				}
 				else if (st.countTokens() == 1)
@@ -156,13 +156,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final String val = command.substring(22);
 			final StringTokenizer st = new StringTokenizer(val);
 			int idval = 0;
-			long numval = 0;
+			int numval = 0;
 			if (st.countTokens() == 2)
 			{
 				final String id = st.nextToken();
 				idval = Integer.parseInt(id);
 				final String num = st.nextToken();
-				numval = Long.parseLong(num);
+				numval = Integer.parseInt(num);
 			}
 			else if (st.countTokens() == 1)
 			{
@@ -202,7 +202,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(Player activeChar, Player target, int id, long num)
+	private void createItem(Player activeChar, Player target, int id, int num)
 	{
 		final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)

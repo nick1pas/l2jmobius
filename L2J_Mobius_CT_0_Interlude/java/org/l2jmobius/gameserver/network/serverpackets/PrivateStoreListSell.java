@@ -45,19 +45,19 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 			OutgoingPackets.PRIVATE_STORE_LIST_SELL.writeId(packet);
 			packet.writeD(_seller.getObjectId());
 			packet.writeD(_seller.getSellList().isPackaged() ? 1 : 0);
-			packet.writeD((int) _player.getAdena());
+			packet.writeD(_player.getAdena());
 			packet.writeD(_seller.getSellList().getItems().size());
 			for (TradeItem item : _seller.getSellList().getItems())
 			{
 				packet.writeD(item.getItem().getType2());
 				packet.writeD(item.getObjectId());
 				packet.writeD(item.getItem().getId());
-				packet.writeD((int) item.getCount());
+				packet.writeD(item.getCount());
 				packet.writeH(0);
 				packet.writeH(item.getEnchant());
 				packet.writeH(item.getCustomType2());
 				packet.writeD(item.getItem().getBodyPart());
-				packet.writeD((int) item.getPrice()); // your price
+				packet.writeD(item.getPrice()); // your price
 				packet.writeD(item.getItem().getReferencePrice()); // store price
 			}
 		}

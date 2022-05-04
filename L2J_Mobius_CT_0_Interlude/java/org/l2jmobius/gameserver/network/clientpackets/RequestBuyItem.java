@@ -156,14 +156,14 @@ public class RequestBuyItem implements IClientIncomingPacket
 			}
 		}
 		
-		long subTotal = 0;
+		int subTotal = 0;
 		
 		// Check for buylist validity and calculates summary values
 		long slots = 0;
 		long weight = 0;
 		for (ItemHolder i : _items)
 		{
-			long price = -1;
+			int price = -1;
 			
 			final Product product = buyList.getProductByItemId(i.getId());
 			if (product == null)
@@ -212,7 +212,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			// first calculate price per item with tax, then multiply by count
-			price = (long) (price * (1 + castleTaxRate + baseTaxRate));
+			price = (int) (price * (1 + castleTaxRate + baseTaxRate));
 			subTotal += i.getCount() * price;
 			if (subTotal > MAX_ADENA)
 			{

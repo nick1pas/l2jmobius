@@ -2559,7 +2559,7 @@ public class Clan implements IIdentifiable, INamable
 					player.sendPacket(cr);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 					sm.addItemName(9910);
-					sm.addLong(150);
+					sm.addInt(150);
 					player.sendPacket(sm);
 					increaseClanLevel = true;
 				}
@@ -2579,7 +2579,7 @@ public class Clan implements IIdentifiable, INamable
 						player.sendPacket(cr);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 						sm.addItemName(9911);
-						sm.addLong(5);
+						sm.addInt(5);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
 					}

@@ -81,8 +81,8 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 			if (_current.containsKey(s.getSeedId()))
 			{
 				sp = _current.get(s.getSeedId());
-				packet.writeD((int) sp.getStartAmount()); // sales
-				packet.writeD((int) sp.getPrice()); // price
+				packet.writeD(sp.getStartAmount()); // sales
+				packet.writeD(sp.getPrice()); // price
 			}
 			else
 			{
@@ -93,8 +93,8 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 			if (_next.containsKey(s.getSeedId()))
 			{
 				sp = _next.get(s.getSeedId());
-				packet.writeD((int) sp.getStartAmount()); // sales
-				packet.writeD((int) sp.getPrice()); // price
+				packet.writeD(sp.getStartAmount()); // sales
+				packet.writeD(sp.getPrice()); // price
 			}
 			else
 			{

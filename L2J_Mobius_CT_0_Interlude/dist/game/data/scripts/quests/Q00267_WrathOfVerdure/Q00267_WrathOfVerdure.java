@@ -109,7 +109,7 @@ public class Q00267_WrathOfVerdure extends Quest
 			{
 				if (hasQuestItems(player, GOBLIN_CLUB))
 				{
-					final long count = getQuestItemsCount(player, GOBLIN_CLUB);
+					final int count = getQuestItemsCount(player, GOBLIN_CLUB);
 					rewardItems(player, SILVERY_LEAF, count);
 					if (count >= 10)
 					{

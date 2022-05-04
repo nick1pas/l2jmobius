@@ -145,8 +145,8 @@ public class Q00648_AnIceMerchantsDream extends Quest
 			{
 				if (qs.getCond() >= 1)
 				{
-					final long silverCryCount = getQuestItemsCount(player, SILVER_ICE_CRYSTAL);
-					final long blackCryCount = getQuestItemsCount(player, BLACK_ICE_CRYSTAL);
+					final int silverCryCount = getQuestItemsCount(player, SILVER_ICE_CRYSTAL);
+					final int blackCryCount = getQuestItemsCount(player, BLACK_ICE_CRYSTAL);
 					if ((silverCryCount + blackCryCount) > 0)
 					{
 						giveAdena(player, (silverCryCount * 300) + (blackCryCount * 1200), true);

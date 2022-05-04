@@ -25,9 +25,9 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 public class ItemHolder implements IIdentifiable
 {
 	private final int _id;
-	private final long _count;
+	private final int _count;
 	
-	public ItemHolder(int id, long count)
+	public ItemHolder(int id, int count)
 	{
 		_id = id;
 		_count = count;
@@ -45,7 +45,7 @@ public class ItemHolder implements IIdentifiable
 	/**
 	 * @return the count of items contained in this object
 	 */
-	public long getCount()
+	public int getCount()
 	{
 		return _count;
 	}

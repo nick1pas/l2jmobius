@@ -21,10 +21,10 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 public class ManufactureItem
 {
 	private final int _recipeId;
-	private final long _cost;
+	private final int _cost;
 	private final boolean _isDwarven;
 	
-	public ManufactureItem(int recipeId, long cost)
+	public ManufactureItem(int recipeId, int cost)
 	{
 		_recipeId = recipeId;
 		_cost = cost;
@@ -36,7 +36,7 @@ public class ManufactureItem
 		return _recipeId;
 	}
 	
-	public long getCost()
+	public int getCost()
 	{
 		return _cost;
 	}

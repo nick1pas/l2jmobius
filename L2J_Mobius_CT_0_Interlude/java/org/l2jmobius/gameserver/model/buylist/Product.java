@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.buylist;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,12 +35,12 @@ public class Product
 	
 	private final int _buyListId;
 	private final ItemTemplate _item;
-	private final long _price;
+	private final int _price;
 	private final long _restockDelay;
-	private final long _maxCount;
-	private AtomicLong _count = null;
+	private final int _maxCount;
+	private AtomicInteger _count = null;
 	
-	public Product(int buyListId, ItemTemplate item, long price, long restockDelay, long maxCount)
+	public Product(int buyListId, ItemTemplate item, int price, long restockDelay, int maxCount)
 	{
 		_buyListId = buyListId;
 		_item = item;
@@ -49,7 +49,7 @@ public class Product
 		_maxCount = maxCount;
 		if (hasLimitedStock())
 		{
-			_count = new AtomicLong(maxCount);
+			_count = new AtomicInteger(maxCount);
 		}
 	}
 	
@@ -68,7 +68,7 @@ public class Product
 		return _item.getId();
 	}
 	
-	public long getPrice()
+	public int getPrice()
 	{
 		return _price < 0 ? _item.getReferencePrice() : _price;
 	}
@@ -83,26 +83,26 @@ public class Product
 		return _maxCount;
 	}
 	
-	public long getCount()
+	public int getCount()
 	{
 		if (_count == null)
 		{
 			return 0;
 		}
-		final long count = _count.get();
+		final int count = _count.get();
 		return count > 0 ? count : 0;
 	}
 	
-	public void setCount(long currentCount)
+	public void setCount(int currentCount)
 	{
 		if (_count == null)
 		{
-			_count = new AtomicLong();
+			_count = new AtomicInteger();
 		}
 		_count.set(currentCount);
 	}
 	
-	public boolean decreaseCount(long value)
+	public boolean decreaseCount(int value)
 	{
 		if (_count == null)
 		{
@@ -147,8 +147,8 @@ public class Product
 		{
 			statement.setInt(1, _buyListId);
 			statement.setInt(2, _item.getId());
-			statement.setLong(3, getCount());
-			statement.setLong(5, getCount());
+			statement.setInt(3, getCount());
+			statement.setInt(5, getCount());
 			
 			final long nextRestockTime = BuyListTaskManager.getInstance().getRestockDelay(this);
 			if (nextRestockTime > 0)

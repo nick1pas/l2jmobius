@@ -49,7 +49,7 @@ public class Lottery
 	private static final String SELECT_LOTTERY_TICKET = "SELECT number1, number2, prize1, prize2, prize3 FROM lottery WHERE id = 1 and idnr = ?";
 	
 	protected int _number;
-	protected long _prize;
+	protected int _prize;
 	protected boolean _isSellingTickets;
 	protected boolean _isStarted;
 	protected long _enddate;
@@ -93,8 +93,8 @@ public class Lottery
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PRICE))
 		{
-			ps.setLong(1, _prize);
-			ps.setLong(2, _prize);
+			ps.setInt(1, _prize);
+			ps.setInt(2, _prize);
 			ps.setInt(3, _number);
 			ps.execute();
 		}
@@ -134,11 +134,11 @@ public class Lottery
 					if (rset.getInt("finished") == 1)
 					{
 						_number++;
-						_prize = rset.getLong("newprize");
+						_prize = rset.getInt("newprize");
 					}
 					else
 					{
-						_prize = rset.getLong("prize");
+						_prize = rset.getInt("prize");
 						_enddate = rset.getLong("enddate");
 						if (_enddate <= (System.currentTimeMillis() + (2 * MINUTE)))
 						{
@@ -194,8 +194,8 @@ public class Lottery
 				ps.setInt(1, 1);
 				ps.setInt(2, _number);
 				ps.setLong(3, _enddate);
-				ps.setLong(4, _prize);
-				ps.setLong(5, _prize);
+				ps.setInt(4, _prize);
+				ps.setInt(5, _prize);
 				ps.execute();
 			}
 			catch (SQLException e)
@@ -329,54 +329,54 @@ public class Lottery
 				LOGGER.log(Level.WARNING, "Lottery: Could restore lottery data: " + e.getMessage(), e);
 			}
 			
-			final long prize4 = count4 * Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
-			long prize1 = 0;
-			long prize2 = 0;
-			long prize3 = 0;
+			final int prize4 = count4 * Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
+			int prize1 = 0;
+			int prize2 = 0;
+			int prize3 = 0;
 			if (count1 > 0)
 			{
-				prize1 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
+				prize1 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
 			}
 			
 			if (count2 > 0)
 			{
-				prize2 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
+				prize2 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
 			}
 			
 			if (count3 > 0)
 			{
-				prize3 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
+				prize3 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
 			}
 			
-			final long newprize = _prize - (prize1 + prize2 + prize3 + prize4);
+			final int newprize = _prize - (prize1 + prize2 + prize3 + prize4);
 			SystemMessage sm;
 			if (count1 > 0)
 			{
 				// There are winners.
 				sm = new SystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY_S1_IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
 				sm.addInt(_number);
-				sm.addLong(_prize);
-				sm.addLong(count1);
+				sm.addInt(_prize);
+				sm.addInt(count1);
 			}
 			else
 			{
 				// There are no winners.
 				sm = new SystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
 				sm.addInt(_number);
-				sm.addLong(_prize);
+				sm.addInt(_prize);
 			}
 			Broadcast.toAllOnlinePlayers(sm);
 			
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_LOTTERY))
 			{
-				ps.setLong(1, _prize);
-				ps.setLong(2, newprize);
+				ps.setInt(1, _prize);
+				ps.setInt(2, newprize);
 				ps.setInt(3, enchant);
 				ps.setInt(4, type2);
-				ps.setLong(5, prize1);
-				ps.setLong(6, prize2);
-				ps.setLong(7, prize3);
+				ps.setInt(5, prize1);
+				ps.setInt(6, prize2);
+				ps.setInt(7, prize3);
 				ps.setInt(8, _number);
 				ps.execute();
 			}
@@ -429,14 +429,14 @@ public class Lottery
 		return res;
 	}
 	
-	public long[] checkTicket(Item item)
+	public int[] checkTicket(Item item)
 	{
 		return checkTicket(item.getCustomType1(), item.getEnchantLevel(), item.getCustomType2());
 	}
 	
-	public long[] checkTicket(int id, int enchant, int type2)
+	public int[] checkTicket(int id, int enchant, int type2)
 	{
-		final long[] res =
+		final int[] res =
 		{
 			0,
 			0
@@ -482,19 +482,19 @@ public class Lottery
 						case 5:
 						{
 							res[0] = 1;
-							res[1] = rs.getLong("prize1");
+							res[1] = rs.getInt("prize1");
 							break;
 						}
 						case 4:
 						{
 							res[0] = 2;
-							res[1] = rs.getLong("prize2");
+							res[1] = rs.getInt("prize2");
 							break;
 						}
 						case 3:
 						{
 							res[0] = 3;
-							res[1] = rs.getLong("prize3");
+							res[1] = rs.getInt("prize3");
 							break;
 						}
 						default:

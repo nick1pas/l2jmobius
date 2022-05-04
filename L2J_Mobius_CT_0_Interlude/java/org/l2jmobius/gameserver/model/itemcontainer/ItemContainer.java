@@ -171,7 +171,7 @@ public abstract class ItemContainer
 	 * @param enchantLevel the item enchant level, use -1 to match any enchant level
 	 * @return the inventory item count
 	 */
-	public long getInventoryItemCount(int itemId, int enchantLevel)
+	public int getInventoryItemCount(int itemId, int enchantLevel)
 	{
 		return getInventoryItemCount(itemId, enchantLevel, true);
 	}
@@ -183,9 +183,9 @@ public abstract class ItemContainer
 	 * @param includeEquipped if {@code true} includes equipped items in the result
 	 * @return the inventory item count
 	 */
-	public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped)
+	public int getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped)
 	{
-		long count = 0;
+		int count = 0;
 		for (Item item : _items)
 		{
 			if ((item.getId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)) && (includeEquipped || !item.isEquipped()))
@@ -216,7 +216,7 @@ public abstract class ItemContainer
 		// If stackable item is found in inventory just add to current quantity
 		if ((olditem != null) && olditem.isStackable())
 		{
-			final long count = newItem.getCount();
+			final int count = newItem.getCount();
 			olditem.changeCount(process, count, actor, reference);
 			olditem.setLastChange(Item.MODIFIED);
 			
@@ -248,7 +248,7 @@ public abstract class ItemContainer
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
-	public Item addItem(String process, int itemId, long count, Player actor, Object reference)
+	public Item addItem(String process, int itemId, int count, Player actor, Object reference)
 	{
 		Item item = getItemByItemId(itemId);
 		
@@ -300,7 +300,7 @@ public abstract class ItemContainer
 	 * @param reference Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the new item or the updated item in inventory
 	 */
-	public Item transferItem(String process, int objectId, long countValue, ItemContainer target, Player actor, Object reference)
+	public Item transferItem(String process, int objectId, int countValue, ItemContainer target, Player actor, Object reference)
 	{
 		if (target == null)
 		{
@@ -323,7 +323,7 @@ public abstract class ItemContainer
 			}
 			
 			// Check if requested quantity is available
-			long count = countValue;
+			int count = countValue;
 			if (count > sourceitem.getCount())
 			{
 				count = sourceitem.getCount();
@@ -396,7 +396,7 @@ public abstract class ItemContainer
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
-	public Item destroyItem(String process, Item item, long count, Player actor, Object reference)
+	public Item destroyItem(String process, Item item, int count, Player actor, Object reference)
 	{
 		synchronized (item)
 		{
@@ -439,7 +439,7 @@ public abstract class ItemContainer
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
-	public Item destroyItem(String process, int objectId, long count, Player actor, Object reference)
+	public Item destroyItem(String process, int objectId, int count, Player actor, Object reference)
 	{
 		final Item item = getItemByObjectId(objectId);
 		return item == null ? null : destroyItem(process, item, count, actor, reference);
@@ -454,7 +454,7 @@ public abstract class ItemContainer
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the destroyed item or the updated item in inventory
 	 */
-	public Item destroyItemByItemId(String process, int itemId, long count, Player actor, Object reference)
+	public Item destroyItemByItemId(String process, int itemId, int count, Player actor, Object reference)
 	{
 		final Item item = getItemByItemId(itemId);
 		return item == null ? null : destroyItem(process, item, count, actor, reference);
@@ -477,7 +477,7 @@ public abstract class ItemContainer
 	/**
 	 * @return warehouse Adena.
 	 */
-	public long getAdena()
+	public int getAdena()
 	{
 		for (Item item : _items)
 		{

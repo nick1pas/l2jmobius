@@ -158,7 +158,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			return;
 		}
 		
-		long totalPrice = 0;
+		int totalPrice = 0;
 		final Map<Integer, Integer> itemList = new HashMap<>();
 		for (int i = 0; i < _count; i++)
 		{

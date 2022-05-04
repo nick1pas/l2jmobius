@@ -133,19 +133,19 @@ public class Q00325_GrimCollector extends Quest
 			case "30434-06.html":
 			case "30434-07.html":
 			{
-				final long head = getQuestItemsCount(player, ZOMBIE_HEAD);
-				final long heart = getQuestItemsCount(player, ZOMBIE_HEART);
-				final long liver = getQuestItemsCount(player, ZOMBIE_LIVER);
-				final long skull = getQuestItemsCount(player, SKULL);
-				final long rib = getQuestItemsCount(player, RIB_BONE);
-				final long spine = getQuestItemsCount(player, SPINE);
-				final long arm = getQuestItemsCount(player, ARM_BONE);
-				final long thigh = getQuestItemsCount(player, THIGH_BONE);
-				final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
-				final long totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
+				final int head = getQuestItemsCount(player, ZOMBIE_HEAD);
+				final int heart = getQuestItemsCount(player, ZOMBIE_HEART);
+				final int liver = getQuestItemsCount(player, ZOMBIE_LIVER);
+				final int skull = getQuestItemsCount(player, SKULL);
+				final int rib = getQuestItemsCount(player, RIB_BONE);
+				final int spine = getQuestItemsCount(player, SPINE);
+				final int arm = getQuestItemsCount(player, ARM_BONE);
+				final int thigh = getQuestItemsCount(player, THIGH_BONE);
+				final int complete = getQuestItemsCount(player, COMPLETE_SKELETON);
+				final int totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
 				if (totalCount > 0)
 				{
-					long sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
+					int sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
 					if (totalCount >= 10)
 					{
 						sum += 1629;
@@ -171,7 +171,7 @@ public class Q00325_GrimCollector extends Quest
 			}
 			case "30434-09.html":
 			{
-				final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
+				final int complete = getQuestItemsCount(player, COMPLETE_SKELETON);
 				if (complete > 0)
 				{
 					giveAdena(player, ((complete * 341) + 543), true);

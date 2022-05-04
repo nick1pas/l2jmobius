@@ -1931,7 +1931,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item whose amount to get
 	 * @return the amount of the specified item in player's inventory
 	 */
-	public static long getQuestItemsCount(Player player, int itemId)
+	public static int getQuestItemsCount(Player player, int itemId)
 	{
 		return player.getInventory().getInventoryItemCount(itemId, -1);
 	}
@@ -1942,9 +1942,9 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemIds a list of IDs of items whose amount to get
 	 * @return the summary amount of all listed items in player's inventory
 	 */
-	public long getQuestItemsCount(Player player, int... itemIds)
+	public int getQuestItemsCount(Player player, int... itemIds)
 	{
-		long count = 0;
+		int count = 0;
 		for (Item item : player.getInventory().getItems())
 		{
 			if (item == null)
@@ -1956,9 +1956,9 @@ public abstract class AbstractScript extends ManagedScript
 			{
 				if (item.getId() == itemId)
 				{
-					if ((count + item.getCount()) > Long.MAX_VALUE)
+					if ((count + item.getCount()) > Integer.MAX_VALUE)
 					{
-						return Long.MAX_VALUE;
+						return Integer.MAX_VALUE;
 					}
 					count += item.getCount();
 				}
@@ -2143,7 +2143,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param count the amount of Adena to give
 	 * @param applyRates if {@code true} quest rates will be applied to the amount
 	 */
-	public static void giveAdena(Player player, long count, boolean applyRates)
+	public static void giveAdena(Player player, int count, boolean applyRates)
 	{
 		if (applyRates)
 		{
@@ -2171,7 +2171,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId the ID of the item to give
 	 * @param countValue the amount of items to give
 	 */
-	public static void rewardItems(Player player, int itemId, long countValue)
+	public static void rewardItems(Player player, int itemId, int countValue)
 	{
 		if (countValue <= 0)
 		{
@@ -2184,7 +2184,7 @@ public abstract class AbstractScript extends ManagedScript
 			return;
 		}
 		
-		long count = countValue;
+		int count = countValue;
 		try
 		{
 			if (itemId == Inventory.ADENA_ID)
@@ -2233,7 +2233,7 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		catch (Exception e)
 		{
-			count = Long.MAX_VALUE;
+			count = Integer.MAX_VALUE;
 		}
 		
 		// Add items to player's inventory
@@ -2252,13 +2252,13 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param item the item obtain by the player
 	 * @param count the item count
 	 */
-	private static void sendItemGetMessage(Player player, Item item, long count)
+	private static void sendItemGetMessage(Player player, Item item, int count)
 	{
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
 		{
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
-			smsg.addLong(count);
+			smsg.addInt(count);
 			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
@@ -2268,7 +2268,7 @@ public abstract class AbstractScript extends ManagedScript
 			{
 				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				smsg.addItemName(item);
-				smsg.addLong(count);
+				smsg.addInt(count);
 				player.sendPacket(smsg);
 			}
 			else
@@ -2290,7 +2290,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param itemId
 	 * @param count
 	 */
-	public static void giveItems(Player player, int itemId, long count)
+	public static void giveItems(Player player, int itemId, int count)
 	{
 		giveItems(player, itemId, count, 0);
 	}
@@ -2311,7 +2311,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param count
 	 * @param enchantlevel
 	 */
-	public static void giveItems(Player player, int itemId, long count, int enchantlevel)
+	public static void giveItems(Player player, int itemId, int count, int enchantlevel)
 	{
 		if (count <= 0)
 		{
@@ -2345,7 +2345,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(Player player, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, int itemId, int amountToGive, int limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, null, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2362,7 +2362,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long amountToGive, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, int amountToGive, int limit, double dropChance, boolean playSound)
 	{
 		return giveItemRandomly(player, npc, itemId, amountToGive, amountToGive, limit, dropChance, playSound);
 	}
@@ -2380,16 +2380,16 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param playSound if true, plays ItemSound.quest_itemget when items are given and ItemSound.quest_middle when the limit is reached
 	 * @return {@code true} if limit > 0 and the limit was reached or if limit <= 0 and items were given; {@code false} in all other cases
 	 */
-	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
+	public static boolean giveItemRandomly(Player player, Npc npc, int itemId, int minAmount, int maxAmount, int limit, double dropChance, boolean playSound)
 	{
-		final long currentCount = getQuestItemsCount(player, itemId);
+		final int currentCount = getQuestItemsCount(player, itemId);
 		if ((limit > 0) && (currentCount >= limit))
 		{
 			return true;
 		}
 		
-		long minAmountWithBonus = (long) (minAmount * Config.RATE_QUEST_DROP);
-		long maxAmountWithBonus = (long) (maxAmount * Config.RATE_QUEST_DROP);
+		int minAmountWithBonus = (int) (minAmount * Config.RATE_QUEST_DROP);
+		int maxAmountWithBonus = (int) (maxAmount * Config.RATE_QUEST_DROP);
 		double dropChanceWithBonus = dropChance * Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
 		if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion())
 		{
@@ -2407,7 +2407,7 @@ public abstract class AbstractScript extends ManagedScript
 			}
 		}
 		
-		long amountToGive = (minAmountWithBonus == maxAmountWithBonus) ? minAmountWithBonus : Rnd.get(minAmountWithBonus, maxAmountWithBonus);
+		int amountToGive = (minAmountWithBonus == maxAmountWithBonus) ? minAmountWithBonus : Rnd.get(minAmountWithBonus, maxAmountWithBonus);
 		final double random = Rnd.nextDouble();
 		// Inventory slot check (almost useless for non-stacking items)
 		if ((dropChanceWithBonus >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
@@ -2452,7 +2452,7 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param amount the amount to take
 	 * @return {@code true} if any items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(Player player, int itemId, long amount)
+	public static boolean takeItems(Player player, int itemId, int amount)
 	{
 		final Collection<Item> items = player.getInventory().getAllItemsByItemId(itemId);
 		if (amount < 0)
@@ -2461,10 +2461,10 @@ public abstract class AbstractScript extends ManagedScript
 		}
 		else
 		{
-			long currentCount = 0;
+			int currentCount = 0;
 			for (Item i : items)
 			{
-				long toDelete = i.getCount();
+				int toDelete = i.getCount();
 				if ((currentCount + toDelete) > amount)
 				{
 					toDelete = amount - currentCount;
@@ -2479,7 +2479,7 @@ public abstract class AbstractScript extends ManagedScript
 		return true;
 	}
 	
-	private static boolean takeItem(Player player, Item item, long toDelete)
+	private static boolean takeItem(Player player, Item item, int toDelete)
 	{
 		if (item.isEquipped())
 		{

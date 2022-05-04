@@ -154,7 +154,7 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 					{
 						if (hasQuestItems(player, SPIDER_SKIN))
 						{
-							final long skins = getQuestItemsCount(player, SPIDER_SKIN);
+							final int skins = getQuestItemsCount(player, SPIDER_SKIN);
 							giveAdena(player, (skins * SKIN_REWARD) + ((skins >= 10) ? SKIN_BONUS : 0), true);
 							takeItems(player, SPIDER_SKIN, -1);
 							htmltext = "30497-05.html";

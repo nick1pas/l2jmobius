@@ -224,7 +224,7 @@ public class Q00365_DevilsLegacy extends Quest
 				{
 					if (hasQuestItems(player, PIRATES_TREASURE_CHEST))
 					{
-						final long chestCount = getQuestItemsCount(player, PIRATES_TREASURE_CHEST);
+						final int chestCount = getQuestItemsCount(player, PIRATES_TREASURE_CHEST);
 						giveAdena(player, (chestCount * 400) + 19800, true);
 						takeItems(player, PIRATES_TREASURE_CHEST, -1);
 						htmltext = "30095-04.html";

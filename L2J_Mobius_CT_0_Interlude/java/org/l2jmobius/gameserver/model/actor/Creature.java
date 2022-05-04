@@ -387,14 +387,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return null;
 	}
 	
-	public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		// Default: NPCs consume virtual items for their skills
 		// TODO: should be logged if even happens.. should be false
 		return true;
 	}
 	
-	public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		// Default: NPCs consume virtual items for their skills
 		// TODO: should be logged if even happens.. should be false

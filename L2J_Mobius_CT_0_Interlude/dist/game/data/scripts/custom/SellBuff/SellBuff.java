@@ -266,7 +266,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					
 					int skillId = -1;
-					long price = -1;
+					int price = -1;
 					
 					if (st.hasMoreTokens())
 					{

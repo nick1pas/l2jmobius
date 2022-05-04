@@ -95,14 +95,14 @@ public class Q00351_BlackSwan extends Quest
 			}
 			case "30969-02.html":
 			{
-				final long lizardFangCount = getQuestItemsCount(player, LIZARD_FANG);
+				final int lizardFangCount = getQuestItemsCount(player, LIZARD_FANG);
 				if (lizardFangCount == 0)
 				{
 					htmltext = event;
 				}
 				else
 				{
-					final long adenaBonus = (lizardFangCount >= 10) ? 3880 : 0;
+					final int adenaBonus = (lizardFangCount >= 10) ? 3880 : 0;
 					giveAdena(player, adenaBonus + (20 * lizardFangCount), true);
 					takeItems(player, LIZARD_FANG, -1);
 					htmltext = "30969-04.html";
@@ -111,7 +111,7 @@ public class Q00351_BlackSwan extends Quest
 			}
 			case "30969-05.html":
 			{
-				final long barrelOfLeagueCount = getQuestItemsCount(player, BARREL_OF_LEAGUE);
+				final int barrelOfLeagueCount = getQuestItemsCount(player, BARREL_OF_LEAGUE);
 				if (barrelOfLeagueCount == 0)
 				{
 					htmltext = event;

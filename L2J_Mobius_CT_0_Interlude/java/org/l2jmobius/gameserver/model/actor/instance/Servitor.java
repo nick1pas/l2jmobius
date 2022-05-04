@@ -363,13 +363,13 @@ public class Servitor extends Summon implements Runnable
 	}
 	
 	@Override
-	public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		return getOwner().destroyItem(process, objectId, count, reference, sendMessage);
 	}
 	
 	@Override
-	public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
+	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		return getOwner().destroyItemByItemId(process, itemId, count, reference, sendMessage);
 	}

@@ -94,10 +94,10 @@ public class Auctioneer extends Npc
 					try
 					{
 						final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-						long bid = 0;
+						int bid = 0;
 						if (st.countTokens() >= 1)
 						{
-							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
+							bid = Math.min(Integer.parseInt(st.nextToken()), MAX_ADENA);
 						}
 						
 						final ClanHallAuction a = new ClanHallAuction(player.getClan().getHideoutId(), player.getClan(), days * 86400000, bid, ClanHallTable.getInstance().getClanHallByOwner(player.getClan()).getName());
@@ -204,10 +204,10 @@ public class Auctioneer extends Npc
 					final int auctionId = Integer.parseInt(val);
 					try
 					{
-						long bid = 0;
+						int bid = 0;
 						if (st.countTokens() >= 1)
 						{
-							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
+							bid = Math.min(Integer.parseInt(st.nextToken()), MAX_ADENA);
 						}
 						
 						ClanHallAuctionManager.getInstance().getAuction(auctionId).setBid(player, bid);

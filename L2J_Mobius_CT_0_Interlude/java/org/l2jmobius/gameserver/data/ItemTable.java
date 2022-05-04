@@ -257,7 +257,7 @@ public class ItemTable
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return Item corresponding to the new item
 	 */
-	public Item createItem(String process, int itemId, long count, Creature actor, Object reference)
+	public Item createItem(String process, int itemId, int count, Creature actor, Object reference)
 	{
 		// Create and Init the Item corresponding to the Item Identifier
 		final Item item = new Item(IdManager.getInstance().getNextId(), itemId);

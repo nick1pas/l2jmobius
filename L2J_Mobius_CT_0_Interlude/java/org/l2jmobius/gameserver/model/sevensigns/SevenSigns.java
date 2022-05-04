@@ -401,17 +401,17 @@ public class SevenSigns
 		return SingletonHolder.INSTANCE;
 	}
 	
-	public static long calcContributionScore(long blueCount, long greenCount, long redCount)
+	public static int calcContributionScore(int blueCount, int greenCount, int redCount)
 	{
-		long contrib = blueCount * BLUE_CONTRIB_POINTS;
+		int contrib = blueCount * BLUE_CONTRIB_POINTS;
 		contrib += greenCount * GREEN_CONTRIB_POINTS;
 		contrib += redCount * RED_CONTRIB_POINTS;
 		return contrib;
 	}
 	
-	public static long calcAncientAdenaReward(long blueCount, long greenCount, long redCount)
+	public static int calcAncientAdenaReward(int blueCount, int greenCount, int redCount)
 	{
-		long reward = blueCount * SEAL_STONE_BLUE_VALUE;
+		int reward = blueCount * SEAL_STONE_BLUE_VALUE;
 		reward += greenCount * SEAL_STONE_GREEN_VALUE;
 		reward += redCount * SEAL_STONE_RED_VALUE;
 		return reward;
@@ -1095,12 +1095,12 @@ public class SevenSigns
 	 * @param redCount
 	 * @return
 	 */
-	public long addPlayerStoneContrib(int objectId, long blueCount, long greenCount, long redCount)
+	public int addPlayerStoneContrib(int objectId, int blueCount, int greenCount, int redCount)
 	{
 		final StatSet currPlayer = _signsPlayerData.get(objectId);
-		final long contribScore = calcContributionScore(blueCount, greenCount, redCount);
-		final long totalAncientAdena = currPlayer.getLong("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
-		final long totalContribScore = currPlayer.getLong("contribution_score") + contribScore;
+		final int contribScore = calcContributionScore(blueCount, greenCount, redCount);
+		final int totalAncientAdena = currPlayer.getInt("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
+		final int totalContribScore = currPlayer.getInt("contribution_score") + contribScore;
 		if (totalContribScore > Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 		{
 			return -1;

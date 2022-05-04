@@ -279,7 +279,7 @@ public class Q00047_IntoTheDarkElvenForest extends Quest
 					final int cond = i.getId();
 					if (qs.isCond(cond))
 					{
-						final int itemId = (int) i.getCount();
+						final int itemId = i.getCount();
 						if (hasQuestItems(talker, itemId))
 						{
 							htmltext = npc.getId() + "-01.html";
