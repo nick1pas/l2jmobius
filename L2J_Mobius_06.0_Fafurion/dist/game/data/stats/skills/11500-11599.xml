@@ -3031,7 +3031,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>-687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
@@ -3042,6 +3041,7 @@
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
 			</effect>
+			<effect name="TargetCancel" />
 			<effect name="Untargetable" />
 			<effect name="ChangeBody">
 				<templates>
@@ -3055,14 +3055,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="6001" toSubLevel="6020">{base + (subIndex * 1.5)}</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>4500</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>4500</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="BlockSkill">
 				<magicTypes>0;1;2;3;4;22</magicTypes>
