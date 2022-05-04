@@ -1,97 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
-	<!-- Scroll: Enchant Anhel's Protection -->
+	<!-- Scroll: Enchant the 17th Anniversary Guardian Angel's Ring Event -->
 	<enchant id="81737" maxEnchant="10">
-		<item id="81736" />
+		<item id="81736" /><!-- 17th Anniversary Guardian Angel's Ring Event -->
 	</enchant>
 
-	<!-- Scroll: Enchant Mysterious Weapon -->
-	<enchant id="48502">
-		<item id="48494" />
-	</enchant>
-	
-	<!-- Mysterious and Special Weapon Enchant Scroll -->
-	<enchant id="48503" maxEnchant="14" randomEnchantMin="1" randomEnchantMax="3">
-		<item id="48494" />
-	</enchant>
-	
 	<!-- Blessed Scroll: Enchant Brooch -->
 	<enchant id="81361" maxEnchant="10">
-		<item id="81359" />
-		<item id="81360" />
-		<item id="29546" />
-		<item id="29547" />
+		<item id="81359" /><!-- Enhanced La Vie En Rose's Brooch -->
+		<item id="81360" altScrollGroupId="1" /><!-- Superior La Vie En Rose's Brooch -->
+		<item id="29546" /><!-- Enhanced La Vie En Rose's Brooch -->
+		<item id="29547" altScrollGroupId="1" /><!-- Superior La Vie En Rose's Brooch -->
 	</enchant>
-	
+
 	<!-- Gran Kain's Scroll: Enchant La Vie En Rose's Brooch -->
-	<enchant id="81908" minEnchant="7" maxEnchant="10">
-		<item id="29547" />
-		<item id="81360" />
+	<enchant id="81908" minEnchant="7" maxEnchant="10" scrollGroupId="1">
+		<item id="29547" /><!-- Superior La Vie En Rose's Brooch -->
+		<item id="81360" /><!-- Superior La Vie En Rose's Brooch -->
 	</enchant>
-	
+
 	<!-- Scrolls: Enchant Hair's -->
-	<enchant id="33818" maxEnchant="10" />
-	<enchant id="34940" maxEnchant="10" />
-	<enchant id="36978" maxEnchant="10" />
+	<enchant id="33818" maxEnchant="10" /><!-- Scroll: Enchant Head Accessory Event -->
+	<enchant id="34940" maxEnchant="10" /><!-- Scroll: Enchant Head Accessory Event -->
+	<enchant id="36978" maxEnchant="10" /><!-- Scroll: Enchant Head Accessory -->
 
 	<!-- Knight's, Warrior's, Wizard's Circlets -->
 	<enchant id="48211" maxEnchant="10">
-		<item id="48202" />
-		<item id="48203" />
-		<item id="48205" />
-		<item id="48206" />
-		<item id="48208" />
-		<item id="48209" />
-		<item id="48204" /> <!-- TODO: Only this +10 -->
-		<item id="48207" /> <!-- TODO: Only this +10 -->
-		<item id="48210" /> <!-- TODO: Only this +10 -->
+		<item id="48202" /><!-- Warrior's Circlet -->
+		<item id="48205" /><!-- Wizard's Circlet -->
+		<item id="48208" /><!-- Knight's Circlet -->
+		<item id="48203" altScrollGroupId="1" /><!-- Noble Warrior's Circlet -->
+		<item id="48206" altScrollGroupId="1" /><!-- Noble Wizard's Circlet -->
+		<item id="48209" altScrollGroupId="1" /><!-- Noble Knight's Circlet -->
+		<item id="80776" altScrollGroupId="1" /><!-- Noble Warrior's Circlet -->
+		<item id="80777" altScrollGroupId="1" /><!-- Noble Wizard's Circlet -->
+		<item id="80778" altScrollGroupId="1" /><!-- Noble Knight's Circlet -->
+		<item id="48204" altScrollGroupId="2" /><!-- Radiant Warrior's Circlet -->
+		<item id="48207" altScrollGroupId="2" /><!-- Radiant Wizard's Circlet -->
+		<item id="48210" altScrollGroupId="2" /><!-- Radiant Knight's Circlet -->
+		<item id="48918" altScrollGroupId="2" /><!-- Radiant Warrior's Circlet -->
+		<item id="48919" altScrollGroupId="2" /><!-- Radiant Wizard's Circlet -->
+		<item id="48920" altScrollGroupId="2" /><!-- Radiant Knight's Circlet -->
 	</enchant>
-	
+
 	<!-- Gran Kain's Scroll: Enchant Circlet -->
-	<enchant id="81820" minEnchant="7" maxEnchant="10">
-		<item id="48204" />
-		<item id="48207" />
-		<item id="48210" />
+	<enchant id="81820" minEnchant="7" maxEnchant="10" scrollGroupId="2">
+		<item id="48204" /><!-- Radiant Warrior's Circlet -->
+		<item id="48207" /><!-- Radiant Wizard's Circlet -->
+		<item id="48210" /><!-- Radiant Knight's Circlet -->
+		<item id="48918" /><!-- Radiant Warrior's Circlet -->
+		<item id="48919" /><!-- Radiant Wizard's Circlet -->
+		<item id="48920" /><!-- Radiant Knight's Circlet -->
 	</enchant>
-	
+
 	<!-- Enchant Scroll: Blessed Bracelet -->
 	<enchant id="80838" maxEnchant="10">
-		<item id="80835" />
-		<item id="80836" />
-		<item id="80837" />
+		<item id="80835" /><!-- Kaliel's Bracelet -->
+		<item id="80836" altScrollGroupId="1" /><!-- Greater Kaliel's Bracelet -->
+		<item id="80837" altScrollGroupId="2" /><!-- Superior Kaliel's Bracelet -->
+	</enchant>
+
+	<!-- Gran Kain's Scroll: Enchant Kaliel's Bracelet -->
+	<enchant id="81752" minEnchant="7" maxEnchant="10" scrollGroupId="2">
+		<item id="80837" /><!-- Superior Kaliel's Bracelet -->
 	</enchant>
 	
-	<!-- Gran Kain's Scroll: Enchant Kaliel's Bracelet -->
-	<enchant id="81752" minEnchant="7" maxEnchant="10">
-		<item id="80837" />
+	<!-- Scroll: Enchant Superior Seed Bracelet -->
+	<enchant id="81706" maxEnchant="10">
+		<item id="48577" /> <!-- Superior Seed Bracelet Lv. 4 -->
 	</enchant>
 	
 	<!-- Gran Kain's Scroll: Enchant Superior Seed Bracelet -->
 	<enchant id="82010" minEnchant="7" maxEnchant="10">
-		<item id="48577" />
+		<item id="48577" /><!-- Superior Seed Bracelet Lv. 4 -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt (Event) -->
+	<enchant id="21707" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Power Shirt -->
+	<enchant id="21581" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt -->
+	<enchant id="21582" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Power Shirt -->
+	<enchant id="22904" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Power Shirt -->
+	<enchant id="22905" maxEnchant="10">
+		<item id="21580" /> <!-- Power Shirt -->
+		<item id="21706" /> <!-- Power Shirt (Event) -->
+		<item id="23085" /> <!-- Power Shirt (Event) -->
+		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
+	<enchant id="23241" maxEnchant="10" scrollGroupId="1">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Elemental Shirt -->
+	<enchant id="25792" maxEnchant="10" scrollGroupId="1">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Blessed Scroll: Enchant Elemental Shirt -->
+	<enchant id="25793" maxEnchant="10" scrollGroupId="1">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	</enchant>
+
+	<!-- Scroll: Enchant Elemental Shirt -->
+	<enchant id="34627" maxEnchant="10" scrollGroupId="1">
+		<item id="23240" /> <!-- Pa'agrio's Shirt -->
+		<item id="23301" /> <!-- Sayha's Shirt -->
+		<item id="23304" /> <!-- Eva's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+		<item id="34623" /> <!-- Pa'agrio's Shirt -->
+		<item id="34624" /> <!-- Sayha's Shirt -->
+		<item id="34625" /> <!-- Eva's Shirt -->
+		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
+		<item id="34772" /> <!-- Eva's Shirt (Event) -->
+		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
+		<item id="37718" /> <!-- Shiny Elemental Shirt -->
+		<item id="46193" /> <!-- Physical Reflect Shirt -->
+		<item id="46194" /> <!-- Magical Reflect Shirt -->
 	</enchant>
 	
 	<!-- Blessed Scroll: Enchant Dragon Shirt -->
-	<enchant id="48498" maxEnchant="10">
-		<item id="48491" />
-		<item id="48492" />
-		<item id="48493" /> <!-- TODO: Only this +10 -->
+	<enchant id="48498" maxEnchant="10" scrollGroupId="2">
+		<item id="48491" /><!-- Dragon Skin Shirt -->
+		<item id="48492" altScrollGroupId="3" /><!-- Dragon Leather Shirt -->
+		<item id="48493" altScrollGroupId="4" /><!-- Dragon Rind Leather Shirt -->
 	</enchant>
-	
+
 	<!-- Gran Kain's Scroll: Enchant Dragon Rind Leather Shirt -->
-	<enchant id="81832" minEnchant="7" maxEnchant="10">
-		<item id="48493" />
+	<enchant id="81832" minEnchant="7" maxEnchant="10" scrollGroupId="4">
+		<item id="48493" /><!-- Dragon Rind Leather Shirt -->
 	</enchant>
-	
+
 	<!-- Blessed Scroll: Enchant Artifact Book -->
 	<enchant id="81694" maxEnchant="10">
-		<item id="48956" />
-		<item id="81695" />
-		<item id="81696" /> <!-- TODO: Only this +10 -->
+		<item id="48956" /> <!-- Artifact Book Lv. 3 -->
+		<item id="81695" altScrollGroupId="1" /> <!-- Improved Artifact Book Lv. 3 -->
+		<item id="81696" altScrollGroupId="2" /> <!-- Unique Artifact Book Lv. 3 -->
 	</enchant>
-	
+
+	<!-- Gran Kain's Scroll: Enchant Unique Artifact Book -->
+	<enchant id="82198" minEnchant="7" maxEnchant="10" scrollGroupId="2">
+		<item id="81696" /> <!-- Unique Artifact Book Lv. 3 -->
+	</enchant>
+
 	<!-- Scroll: Enchant Fallen Angel's Accessory -->
-	<enchant id="48863" maxEnchant="10">
+	<enchant id="48863" maxEnchant="10" scrollGroupId="1">
 		<item id="48864" /> <!-- Fallen Angel's Ring -->
 		<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 		<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
@@ -109,9 +234,9 @@
 		<item id="82222" /> <!-- Blessed Fallen Angel's Earring (Cooldown Decrease Lv. 2) -->
 		<item id="82223" /> <!-- Blessed Fallen Angel's Earring (Cooldown Decrease Lv. 3) -->
 	</enchant>
-	
+
 	<!-- Scroll: Enchant Angel's Accessory -->
-	<enchant id="48668" targetGrade="R" maxEnchant="10">
+	<enchant id="48668" targetGrade="R" maxEnchant="10" scrollGroupId="1">
 		<item id="48669" /> <!-- Angel's Necklace -->
 		<item id="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
 		<item id="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
@@ -173,46 +298,58 @@
 		<item id="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
 		<item id="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
 	</enchant>
-	
+
 	<!-- Scroll: Enchant Atlas' Earring -->
 	<enchant id="81351" targetGrade="R" maxEnchant="12" bonusRate="100">
 		<item id="81350" /> <!-- Atlas' Earring -->
 		<item id="81454" /> <!-- Atlas' Earring (Vitality) -->
 	</enchant>
-	
-	<!-- Scroll: Enchant Savior's Mask -->
+
+	<!-- Scroll: Enchant Mask -->
 	<enchant id="48582" maxEnchant="10">
 		<item id="48584" /> <!-- Savior's Mask -->
-		<item id="81153" /> <!-- Navari's Mask -->
-	</enchant>
-	<!-- Special Scroll: Enchant Savior's Mask -->
-	<enchant id="48583" maxEnchant="10">
-		<item id="48584" /> <!-- Savior's Mask -->
-		<item id="81153" /> <!-- Navari's Mask -->
+		<item id="81153" altScrollGroupId="1" /> <!-- Navari's Mask -->
 	</enchant>
 	
+	<!-- Giant Scroll: Enchant Mask -->
+	<enchant id="48583" maxEnchant="10">
+		<item id="48584" /> <!-- Savior's Mask -->
+		<item id="81153" altScrollGroupId="1" /> <!-- Navari's Mask -->
+	</enchant>
+
 	<!-- Scroll: Enchant Expert's Mask -->
 	<enchant id="81346" maxEnchant="10">
 		<item id="81345" /> <!-- Expert's Mask -->
 	</enchant>
 
-	<!-- Guard Agathion's Book of Growth -->
+	<!-- Book of Growth: Agathion Guard -->
 	<enchant id="48570" maxEnchant="10">
 		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
 		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
 		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
 	</enchant>
-	<!-- Ancient Guard Agathion's Book of Growth -->
+	
+	<!-- Ancient Book of Growth: Agathion Guard -->
 	<enchant id="48571" maxEnchant="7">
 		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
 		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
 		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
 	</enchant>
-		
-	<!-- Gran Kain's Scroll: Enchant Weapon (R-grade) -->
-	<enchant id="48912" targetGrade="R" maxEnchant="20" />
-	<!-- Gran Kain's Scroll: Enchant Armor (R-grade) -->
-	<enchant id="80502" targetGrade="R" maxEnchant="12" />
+
+	<!-- Gran Kain's Scroll: Enchant R-grade Weapon -->
+	<enchant id="60206" targetGrade="R" maxEnchant="20" />
+	<!-- Shining Gran Kain's Scroll: Enchant Weapon (R-grade) -->
+	<enchant id="48912" targetGrade="R" maxEnchant="30" />
+
+	<!-- Gran Kain's Scroll: Enchant R-grade Armor -->
+	<enchant id="60207" targetGrade="R" maxEnchant="12" />
+	<!-- Shining Gran Kain's Scroll: Enchant Armor (R-grade) -->
+	<enchant id="80502" targetGrade="R" maxEnchant="20" />
+
+	<!-- Anakim's Scroll: Enchant R-grade Weapon (Event) -->
+	<enchant id="60226" targetGrade="R" maxEnchant="10" />
+	<!-- Anakim's Scroll: Enchant R-grade Armor (Event) -->
+	<enchant id="60227" targetGrade="R" maxEnchant="6" />
 
 	<!-- Scroll: Enchant Shadow Weapon -->
 	<enchant id="46337" targetGrade="R" maxEnchant="10">
@@ -240,71 +377,78 @@
 
 	<!-- Scroll: Enchant Cloak -->
 	<enchant id="28593" maxEnchant="10">
-		<item id="28585" />
-		<item id="28586" />
-		<item id="28587" />
-		<item id="28588" />
-		<item id="28589" />
-		<item id="28590" />
-		<item id="28591" />
-		<item id="28592" />
+		<item id="28585" /><!-- Elmoreden Cloak -->
+		<item id="28586" /><!-- Aden Cloak -->
+		<item id="28587" /><!-- Elmore Cloak -->
+		<item id="28588" /><!-- Ferios Cloak -->
+		<item id="28589" altScrollGroupId="1" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" altScrollGroupId="1" /><!-- Legendary Aden Cloak -->
+		<item id="28591" altScrollGroupId="1" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" altScrollGroupId="1" /><!-- Legendary Ferios Cloak -->
 	</enchant>
 
 	<!-- Scroll: Enchant Cloak - Legendary -->
-	<enchant id="28594" minEnchant="10" maxEnchant="20">
-		<item id="28589" />
-		<item id="28590" />
-		<item id="28591" />
-		<item id="28592" />
+	<enchant id="28594" minEnchant="10" maxEnchant="20" scrollGroupId="1">
+		<item id="28589" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" /><!-- Legendary Aden Cloak -->
+		<item id="28591" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" /><!-- Legendary Ferios Cloak -->
 	</enchant>
 
-	<!-- Scroll: Ancient Cloak - Legendary -->
-	<enchant id="28595" minEnchant="7" maxEnchant="20" bonusRate="10">
-		<item id="28589" />
-		<item id="28590" />
-		<item id="28591" />
-		<item id="28592" />
-	</enchant>
-	
-	<!-- Stable Cloak Enchantment Scroll -->
-	<enchant id="29163" maxEnchant="10">
-		<item id="28585" />
-		<item id="28586" />
-		<item id="28587" />
-		<item id="28588" />
-		<item id="28589" />
-		<item id="28590" />
-		<item id="28591" />
-		<item id="28592" />
+	<!-- Scroll: Enchant Ancient Cloak -->
+	<enchant id="28595" minEnchant="8" maxEnchant="20" bonusRate="10">
+		<item id="28585" /><!-- Elmoreden Cloak -->
+		<item id="28586" /><!-- Aden Cloak -->
+		<item id="28587" /><!-- Elmore Cloak -->
+		<item id="28588" /><!-- Ferios Cloak -->
+		<item id="28589" altScrollGroupId="1" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" altScrollGroupId="1" /><!-- Legendary Aden Cloak -->
+		<item id="28591" altScrollGroupId="1" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" altScrollGroupId="1" /><!-- Legendary Ferios Cloak -->
 	</enchant>
 
-	<!-- Stable Cloak Enchantment Scroll - Legendary -->
-	<enchant id="28766" minEnchant="10" maxEnchant="15">
-		<item id="28589" />
-		<item id="28590" />
-		<item id="28591" />
-		<item id="28592" />
+	<!-- Stable Scroll: Enchant Cloak -->
+	<enchant id="29163" minEnchant="1" maxEnchant="10">
+		<item id="28585" /><!-- Elmoreden Cloak -->
+		<item id="28586" /><!-- Aden Cloak -->
+		<item id="28587" /><!-- Elmore Cloak -->
+		<item id="28588" /><!-- Ferios Cloak -->
+		<item id="28589" altScrollGroupId="1" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" altScrollGroupId="1" /><!-- Legendary Aden Cloak -->
+		<item id="28591" altScrollGroupId="1" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" altScrollGroupId="1" /><!-- Legendary Ferios Cloak -->
+	</enchant>
+
+	<!-- Stable Scroll: Enchant Legendary Cloak -->
+	<enchant id="28766" minEnchant="10" maxEnchant="14" scrollGroupId="1">
+		<item id="28589" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" /><!-- Legendary Aden Cloak -->
+		<item id="28591" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" /><!-- Legendary Ferios Cloak -->
 	</enchant>
 	
+	<!-- High Grade Stable Scroll: Enchant Legendary Cloak -->
+	<enchant id="29823" minEnchant="15" maxEnchant="17" scrollGroupId="1">
+		<item id="28589" /><!-- Legendary Elmoreden Cloak -->
+		<item id="28590" /><!-- Legendary Aden Cloak -->
+		<item id="28591" /><!-- Legendary Elmore Cloak -->
+		<item id="28592" /><!-- Legendary Ferios Cloak -->
+	</enchant>
+
 	<!-- Scroll: Blessed Enchant Lucien's Bracelet -->
 	<enchant id="48845" maxEnchant="10" bonusRate="100">
-		<item id="48842" />
-		<item id="48843" />
-		<item id="48844" />
+		<item id="48842" /><!-- Lucien's Bracelet Attack -->
+		<item id="48843" /><!-- Lucien's Bracelet Magic -->
+		<item id="48844" /><!-- Lucien's Bracelet Defense -->
 	</enchant>
-	
-	<!-- Scroll: Enchant Superior Seed Bracelet -->
-	<enchant id="81706" maxEnchant="10">
-		<item id="48577" /> <!-- Superior Seed Bracelet Lv. 4 -->
-	</enchant>
-	
+
 	<!-- Divine Book of Growth: Agathion Dragon -->
-	<enchant id="81445" maxEnchant="10">
+	<enchant id="81445" maxEnchant="10" scrollGroupId="2">
 		<item id="81443" /> <!-- Agathion Fire Dragon Charm -->
 	</enchant>
-	
+
 	<!-- Greater Zodiac Agathion's Book of Growth -->
-	<enchant id="80932" maxEnchant="10">
+	<enchant id="80932" maxEnchant="10" scrollGroupId="1">
 		<item id="80936" /> <!-- Greater Agathion Virgo Charm -->
 		<item id="80937" /> <!-- Greater Agathion Capricorn Charm -->
 		<item id="80938" /> <!-- Greater Agathion Libra Charm -->
@@ -318,9 +462,9 @@
 		<item id="80946" /> <!-- Greater Agathion Sagittarius Charm -->
 		<item id="80947" /> <!-- Greater Agathion Cancer Charm -->
 	</enchant>
-	
+
 	<!-- Greater Zodiac Agathion's Sacred Book of Growth -->
-	<enchant id="81938" minEnchant="5" maxEnchant="10">
+	<enchant id="81938" minEnchant="5" maxEnchant="10" scrollGroupId="1">
 		<item id="80936" /> <!-- Greater Agathion Virgo Charm -->
 		<item id="80937" /> <!-- Greater Agathion Capricorn Charm -->
 		<item id="80938" /> <!-- Greater Agathion Libra Charm -->
@@ -334,8 +478,8 @@
 		<item id="80946" /> <!-- Greater Agathion Sagittarius Charm -->
 		<item id="80947" /> <!-- Greater Agathion Cancer Charm -->
 	</enchant>
-		
-	<!-- Zodiac Agathion Charm Book of Growth -->
+
+	<!-- Book of Growth: Starlight Agathion -->
 	<enchant id="28757" maxEnchant="10">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -581,8 +725,8 @@
 		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
 		<item id="48059" /> <!-- Agathion Cancer Charm -->
 	</enchant>
-	
-	<!-- Book of Growth Zodiac Agathion -->
+
+	<!-- Book of Growth: Zodiac Agathion -->
 	<enchant id="48046" maxEnchant="10">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -828,8 +972,8 @@
 		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
 		<item id="48059" /> <!-- Agathion Cancer Charm -->
 	</enchant>
-	
-	<!-- Ancient Zodiac Agathion Charm Book of Growth -->
+
+	<!-- Ancient Book of Growth: Starlight Agathion -->
 	<enchant id="28758" maxEnchant="7">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -1075,8 +1219,8 @@
 		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
 		<item id="48059" /> <!-- Agathion Cancer Charm -->
 	</enchant>
-	
-	<!-- Divine Zodiac Agathion Charm Book of Growth -->
+
+	<!-- Ancient Book of Growth: Zodiac Agathion -->
 	<enchant id="48047" maxEnchant="7">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -1322,8 +1466,8 @@
 		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
 		<item id="48059" /> <!-- Agathion Cancer Charm -->
 	</enchant>
-	
-	<!-- Stabilized Agathion Charm Book of Growth -->
+
+	<!-- Stable Book of Growth: Starlight Agathion Charm -->
 	<enchant id="29239" maxEnchant="7">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -1569,8 +1713,8 @@
 		<item id="48058" /> <!-- Agathion Sagittarius Charm -->
 		<item id="48059" /> <!-- Agathion Cancer Charm -->
 	</enchant>
-	
-	<!-- Ancient Zodiac Agathion Charm Book of Growth -->
+
+	<!-- Divine Book of Growth: Zodiac Agathion -->
 	<enchant id="48323" maxEnchant="7">
 		<item id="28769" /> <!-- Virgo Agathion Charm -->
 		<item id="28770" /> <!-- Virgo Agathion Charm -->
@@ -1882,14 +2026,14 @@
 
 	<!-- Scrolls: Enchant Armor -->
 	<enchant id="22428" targetGrade="R" bonusRate="10" />
-	
+
 	<!-- Ancient Crystal: Enchant Weapon -->
 	<enchant id="22014" targetGrade="B" maxEnchant="16" bonusRate="10" />
 	<enchant id="22015" targetGrade="A" maxEnchant="16" bonusRate="10" />
 	<enchant id="20519" targetGrade="S" maxEnchant="16" bonusRate="10" />
 	<enchant id="22426" targetGrade="R" maxEnchant="15" bonusRate="10" />
 	<enchant id="23342" targetGrade="R" maxEnchant="15" bonusRate="10" />
-	
+
 	<!-- Ancient Crystal: Enchant Armor -->
 	<enchant id="22016" targetGrade="B" maxEnchant="16" bonusRate="10" />
 	<enchant id="22017" targetGrade="A" maxEnchant="16" bonusRate="10" />
@@ -1903,7 +2047,7 @@
 	<enchant id="20521" targetGrade="S" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
 	<enchant id="22427" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
 	<enchant id="23343" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
-	
+
 	<!-- Sacred Crystal: Enchant Armor -->
 	<enchant id="22020" targetGrade="B" maxEnchant="7" bonusRate="100" />
 	<enchant id="22021" targetGrade="A" maxEnchant="7" bonusRate="100" />
@@ -1942,7 +2086,7 @@
 	<enchant id="33841" targetGrade="A" maxEnchant="15" />
 	<enchant id="33842" targetGrade="S" maxEnchant="15" />
 	<enchant id="33843" targetGrade="R" maxEnchant="15" />
-	
+
 	<!-- Destruction Scroll: Enchant Armor (Event) -->
 	<enchant id="22222" targetGrade="S" maxEnchant="6" />
 	<enchant id="22224" targetGrade="A" maxEnchant="6" />
@@ -1971,121 +2115,20 @@
 	<enchant id="37803" maxEnchant="15">
 		<item id="13539" /> <!-- Staff of Master Yogi -->
 	</enchant>
-
-	<!-- Blessed Scroll: Enchant Power Shirt (Event) -->
-	<enchant id="21707" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
+	
+	<!-- Scroll: Enchant Mysterious Weapon -->
+	<enchant id="48502">
+		<item id="48494" /><!-- Mysterious Dragon Slayer -->
 	</enchant>
 
-	<!-- Scroll: Enchant Power Shirt -->
-	<enchant id="21581" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Power Shirt -->
-	<enchant id="21582" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-	</enchant>
-
-	<!-- Scroll: Enchant Power Shirt -->
-	<enchant id="22904" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Power Shirt -->
-	<enchant id="22905" maxEnchant="10">
-		<item id="21580" /> <!-- Power Shirt -->
-		<item id="21706" /> <!-- Power Shirt (Event) -->
-		<item id="23085" /> <!-- Power Shirt (Event) -->
-		<item id="34732" /> <!-- Exchanged Power Shirt -->
-	</enchant>
-
-	<!-- Blessed Scroll: Enchant Elemental Shirt -->
-	<enchant id="23241" maxEnchant="10">
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23301" /> <!-- Sayha's Shirt -->
-		<item id="23304" /> <!-- Eva's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
-		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
-		<item id="34772" /> <!-- Eva's Shirt (Event) -->
-		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46193" /> <!-- Physical Reflect Shirt -->
-		<item id="46194" /> <!-- Magical Reflect Shirt -->
-	</enchant>
-
-	<!-- Scroll: Enchant Elemental Shirt -->
-	<enchant id="25792" maxEnchant="10">
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23301" /> <!-- Sayha's Shirt -->
-		<item id="23304" /> <!-- Eva's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
-		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
-		<item id="34772" /> <!-- Eva's Shirt (Event) -->
-		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46193" /> <!-- Physical Reflect Shirt -->
-		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	<!-- Mysterious and Special Weapon Enchant Scroll -->
+	<enchant id="48503" maxEnchant="14" randomEnchantMin="1" randomEnchantMax="3">
+		<item id="48494" /><!-- Mysterious Dragon Slayer -->
 	</enchant>
 	
-	<!-- Blessed Scroll: Enchant Elemental Shirt -->
-	<enchant id="25793" maxEnchant="10">
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23301" /> <!-- Sayha's Shirt -->
-		<item id="23304" /> <!-- Eva's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
-		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
-		<item id="34772" /> <!-- Eva's Shirt (Event) -->
-		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46193" /> <!-- Physical Reflect Shirt -->
-		<item id="46194" /> <!-- Magical Reflect Shirt -->
-	</enchant>
-
-	<!-- Scroll: Enchant Elemental Shirt -->
-	<enchant id="34627" maxEnchant="10">
-		<item id="23240" /> <!-- Pa'agrio's Shirt -->
-		<item id="23301" /> <!-- Sayha's Shirt -->
-		<item id="23304" /> <!-- Eva's Shirt -->
-		<item id="23307" /> <!-- Maphr's Shirt -->
-		<item id="34623" /> <!-- Pa'agrio's Shirt -->
-		<item id="34624" /> <!-- Sayha's Shirt -->
-		<item id="34625" /> <!-- Eva's Shirt -->
-		<item id="34626" /> <!-- Maphr's Shirt -->
-		<item id="34770" /> <!-- Pa'agrio's Shirt (Event) -->
-		<item id="34771" /> <!-- Sayha's Shirt (Event) -->
-		<item id="34772" /> <!-- Eva's Shirt (Event) -->
-		<item id="34773" /> <!-- Maphr's Shirt (Event) -->
-		<item id="37718" /> <!-- Shiny Elemental Shirt -->
-		<item id="46193" /> <!-- Physical Reflect Shirt -->
-		<item id="46194" /> <!-- Magical Reflect Shirt -->
+	<!-- Improved Scroll: Enchant Mysterious Weapon -->
+	<enchant id="60212" maxEnchant="22" randomEnchantMin="1" randomEnchantMax="3">
+		<item id="48494" /> <!-- Mysterious Dragon Slayer -->
 	</enchant>
 
 	<!-- Event - Herdsman's Love Scroll Event -->
@@ -2471,7 +2514,7 @@
 	<support id="23646" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="36008" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="36019" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
-	
+
 	<!-- High-grade Lucky Enchant Stone Armor -->
 	<support id="23647" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
 	<support id="36009" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
@@ -2485,7 +2528,7 @@
 	<support id="23791" targetGrade="S" minEnchant="3" maxEnchant="9" />
 	<support id="23792" targetGrade="R" minEnchant="3" maxEnchant="9" />
 	<support id="37566" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
-	
+
 	<!-- Blessed Lucky Enchant Stone Armor -->
 	<support id="23793" targetGrade="D" minEnchant="3" maxEnchant="9" />
 	<support id="23794" targetGrade="C" minEnchant="3" maxEnchant="9" />
@@ -2496,7 +2539,7 @@
 	<support id="37567" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
 	<support id="38758" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
 	<support id="38760" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
-	
+
 	<!-- Blessed High-grade Lucky Enchant Stone Weapon -->
 	<support id="38757" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="38759" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
@@ -2507,10 +2550,10 @@
 
 	<!-- Lesser Giant's Lucky Stone: Enchant Weapon -->
 	<support id="23785" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
-	
+
 	<!-- Lesser Giant's Lucky Stone: Enchant Armor -->
 	<support id="23786" targetGrade="R" minEnchant="3" maxEnchant="9" randomEnchantMin="2" randomEnchantMax="4" />
-	
+
 	<!-- Giant's Lucky Enchant Stone Weapon -->
 	<support id="23781" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
 	<support id="39463" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="10" />
@@ -2518,13 +2561,13 @@
 	<!-- Giant's Lucky Enchant Stone Armor -->
 	<support id="23782" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
 	<support id="39462" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="15" />
-	
+
 	<!-- Blessed Giant's Lucky Enchant Stone Weapon -->
 	<support id="23783" targetGrade="R" minEnchant="3" maxEnchant="9" />
 
 	<!-- Blessed Giant's Lucky Enchant Stone Armor -->
 	<support id="23784" targetGrade="R" minEnchant="3" maxEnchant="9" />
-	
+
 	<!-- Windy Lucky Enchant Stone Weapon -->
 	<support id="39465" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="28497" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />

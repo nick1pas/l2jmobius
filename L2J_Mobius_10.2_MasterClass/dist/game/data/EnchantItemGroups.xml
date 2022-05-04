@@ -6,16 +6,200 @@
 		<current enchant="3-15" chance="66.67" />
 		<current enchant="16-19" chance="33" />
 		<current enchant="20-29" chance="20" />
-		<current enchant="30-65535" chance="0" />
+		<current enchant="30-127" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General full armor enchant group. -->
 	<enchantRateGroup name="FULL_ARMOR_GROUP">
-		<current enchant="0-3" chance="100" />
-		<current enchant="4-15" chance="66.67" />
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-15" chance="66.67" />
 		<current enchant="16-19" chance="33" />
 		<current enchant="20-29" chance="20" />
-		<current enchant="30-65535" chance="0" />
+		<current enchant="30-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Common Accessories (all jewels except rare ones) -->
+	<enchantRateGroup name="COMMON_ACCESSORIES_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-15" chance="66.67" />
+		<current enchant="16-19" chance="33" />
+		<current enchant="20-29" chance="20" />
+		<current enchant="30-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Rare Accessories (Angel, Dragon, Fallen Angel jewels) enchant group. -->
+	<enchantRateGroup name="RARE_ACCESSORIES_GROUP">
+		<current enchant="0-2" chance="50" />
+		<current enchant="3-4" chance="45" />
+		<current enchant="5-6" chance="40" />
+		<current enchant="7" chance="35" />
+		<current enchant="8" chance="17" />
+		<current enchant="9" chance="7" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Common Kaliel bracelet enchant group. -->
+	<enchantRateGroup name="COMMON_KALIEL_BRACELET_GROUP">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="65" />
+		<current enchant="2" chance="55" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="40" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Greater Kaliel bracelet enchant group. -->
+	<enchantRateGroup name="GREATER_KALIEL_BRACELET_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="45" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="35" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Superior Kaliel bracelet enchant group. -->
+	<enchantRateGroup name="SUPERIOR_KALIEL_BRACELET_GROUP">
+		<current enchant="0" chance="50" />
+		<current enchant="1" chance="45" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="30" />
+		<current enchant="4" chance="15" />
+		<current enchant="5-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Superior Seed bracelet enchant group. -->
+	<enchantRateGroup name="SUPERIOR_SEED_BRACELET_GROUP">
+		<current enchant="0" chance="50" />
+		<current enchant="1" chance="40" />
+		<current enchant="2" chance="30" />
+		<current enchant="3" chance="15" />
+		<current enchant="4-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Common Kingdom cloaks enchant group. -->
+	<enchantRateGroup name="COMMON_KINGDOM_CLOAK_GROUP">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="65" />
+		<current enchant="2" chance="58" />
+		<current enchant="3" chance="42" />
+		<current enchant="4-5" chance="32" />
+		<current enchant="6" chance="28" />
+		<current enchant="7" chance="48" />
+		<current enchant="8-9" chance="28" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Legendary Kingdom cloaks enchant group. -->
+	<enchantRateGroup name="LEGENDARY_KINGDOM_CLOAK_GROUP">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="65" />
+		<current enchant="2" chance="58" />
+		<current enchant="3" chance="42" />
+		<current enchant="4-5" chance="32" />
+		<current enchant="6" chance="28" />
+		<current enchant="7" chance="48" />
+		<current enchant="8-12" chance="28" />
+		<current enchant="13" chance="65" />
+		<current enchant="14" chance="20" />
+		<current enchant="15-16" chance="7" />
+		<current enchant="17-18" chance="5" />
+		<current enchant="19" chance="3" />
+		<current enchant="20-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Power Shirts Group -->
+	<enchantRateGroup name="POWER_SHIRT_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="66" />
+		<current enchant="4" chance="33" />
+		<current enchant="5" chance="15" />
+		<current enchant="6" chance="14" />
+		<current enchant="7" chance="9" />
+		<current enchant="8" chance="7" />
+		<current enchant="9" chance="4" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Special Shirts Group (Pa'agrio, Sayha, Eva, Maphr, Elemental, Reflect) -->
+	<enchantRateGroup name="SPECIAL_SHIRT_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="40" />
+		<current enchant="5" chance="30" />
+		<current enchant="6" chance="27" />
+		<current enchant="7" chance="17" />
+		<current enchant="8" chance="9" />
+		<current enchant="9" chance="1" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Dragon Shirt Group -->
+	<enchantRateGroup name="DRAGON_SHIRT_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="55" />
+		<current enchant="2" chance="50" />
+		<current enchant="3" chance="45" />
+		<current enchant="4" chance="40" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Dragon Leather Shirt Group -->
+	<enchantRateGroup name="DRAGON_LEATHER_SHIRT_GROUP">
+		<current enchant="0" chance="50" />
+		<current enchant="1" chance="45" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Dragon Rind Leather Shirt Group -->
+	<enchantRateGroup name="DRAGON_RIND_LEATHER_SHIRT_GROUP">
+		<current enchant="0" chance="45" />
+		<current enchant="1" chance="40" />
+		<current enchant="2" chance="30" />
+		<current enchant="3" chance="20" />
+		<current enchant="4-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Savior's Mask Group -->
+	<enchantRateGroup name="SAVIOR_MASK_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="45" />
+		<current enchant="5" chance="33" />
+		<current enchant="6" chance="25" />
+		<current enchant="7" chance="20" />
+		<current enchant="8" chance="15" />
+		<current enchant="9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Navari's Mask Group -->
+	<enchantRateGroup name="NAVARI_MASK_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="41" />
+		<current enchant="5" chance="32" />
+		<current enchant="6" chance="23" />
+		<current enchant="7" chance="19" />
+		<current enchant="8" chance="15" />
+		<current enchant="9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- 17th Anniversary Guardian Angel's Ring Event Group -->
+	<enchantRateGroup name="GUARDIAN_ANGEL_RING_GROUP">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="30" />
+		<current enchant="5-6" chance="20" />
+		<current enchant="7-9" chance="10" />
+		<current enchant="10-127" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General fighter weapon enchant group. -->
@@ -24,7 +208,7 @@
 		<current enchant="3-15" chance="66.67" />
 		<current enchant="16-19" chance="33" />
 		<current enchant="20-29" chance="20" />
-		<current enchant="30-65535" chance="0" />
+		<current enchant="30-127" chance="0" />
 	</enchantRateGroup>
 
 	<!-- General mage weapon enchant group. -->
@@ -33,33 +217,123 @@
 		<current enchant="3-15" chance="66.67" />
 		<current enchant="16-19" chance="33" />
 		<current enchant="20-29" chance="20" />
-		<current enchant="30-65535" chance="0" />
-	</enchantRateGroup>
-	
-	<!-- Evolved Agathion enchant group. -->
-	<enchantRateGroup name="AGATHION_CHARM">
-		<current enchant="0-4" chance="66.67" />
-		<current enchant="5-6" chance="33" />
-		<current enchant="7-10" chance="20" />
-		<current enchant="11-65535" chance="0" />
-	</enchantRateGroup>
-	
-	<!-- Brooch enchant group. -->
-	<enchantRateGroup name="BROOCH_GROUP">
-		<current enchant="0-4" chance="66.67" />
-		<current enchant="5-6" chance="33" />
-		<current enchant="7-10" chance="20" />
-		<current enchant="11-65535" chance="0" />
+		<current enchant="30-127" chance="0" />
 	</enchantRateGroup>
 
-	<!-- Artifact Book enchant group. -->
-	<enchantRateGroup name="ARTIFACT_BOOK_GROUP">
-		<current enchant="0-4" chance="66.67" />
-		<current enchant="5-6" chance="33" />
-		<current enchant="7-10" chance="20" />
-		<current enchant="11-65535" chance="0" />
+	<!-- Agathion Charms enchant group. -->
+	<enchantRateGroup name="AGATHION_CHARM">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="45" />
+		<current enchant="5" chance="35" />
+		<current enchant="6" chance="25" />
+		<current enchant="7" chance="20" />
+		<current enchant="8" chance="15" />
+		<current enchant="9" chance="7" />
+		<current enchant="10-127" chance="0" />
 	</enchantRateGroup>
-	
+
+	<!-- Greater Agathion Charms enchant group. -->
+	<enchantRateGroup name="GREATER_AGATHION_CHARM">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="55" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="25" />
+		<current enchant="4" chance="15" />
+		<current enchant="5-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Agathion Fire Dragon Charm enchant group. -->
+	<enchantRateGroup name="AGATHION_FIRE_DRAGON_CHARM">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3-4" chance="2" />
+		<current enchant="5-9" chance="1" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Enhanced Brooch enchant group. -->
+	<enchantRateGroup name="ENHANCED_BROOCH_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="45" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="35" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Superior Brooch enchant group. -->
+	<enchantRateGroup name="SUPERIOR_BROOCH_GROUP">
+		<current enchant="0-2" chance="60" />
+		<current enchant="3-4" chance="50" />
+		<current enchant="5-6" chance="40" />
+		<current enchant="7-8" chance="30" />
+		<current enchant="9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Common Circlet enchant group. -->
+	<enchantRateGroup name="COMMON_CIRCLET_GROUP">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="65" />
+		<current enchant="2" chance="55" />
+		<current enchant="3" chance="50" />
+		<current enchant="4" chance="40" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Noble Circlet enchant group. -->
+	<enchantRateGroup name="NOBLE_CIRCLET_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="45" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="35" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Radiant Circlet enchant group. -->
+	<enchantRateGroup name="RADIANT_CIRCLET_GROUP">
+		<current enchant="0" chance="48" />
+		<current enchant="1" chance="35" />
+		<current enchant="2" chance="29" />
+		<current enchant="3" chance="25" />
+		<current enchant="4" chance="20" />
+		<current enchant="5-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Common Artifact Book enchant group -->
+	<enchantRateGroup name="COMMON_ARTIFACT_BOOK_GROUP">
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="60" />
+		<current enchant="2" chance="50" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="35" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Improved Artifact Book enchant group -->
+	<enchantRateGroup name="IMPROVED_ARTIFACT_BOOK_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="30" />
+		<current enchant="4" chance="25" />
+		<current enchant="5-127" chance="0" />
+	</enchantRateGroup>
+
+	<!-- Unique Artifact Book enchant group -->
+	<enchantRateGroup name="UNIQUE_ARTIFACT_BOOK_GROUP">
+		<current enchant="0" chance="55" />
+		<current enchant="1" chance="45" />
+		<current enchant="2" chance="35" />
+		<current enchant="3" chance="25" />
+		<current enchant="4" chance="15" />
+		<current enchant="5-9" chance="10" />
+		<current enchant="10-127" chance="0" />
+	</enchantRateGroup>
+
 	<!-- Default scrolls enchanting route line. -->
 	<enchantScrollGroup id="0">
 		<!-- Bind armor group to all item slots except full armor. -->
@@ -70,33 +344,66 @@
 			<item slot="legs" /> <!-- Legs: Armor lower body. -->
 			<item slot="feet" /> <!-- Feet: Boots -->
 			<item slot="gloves" /> <!-- Gloves: Gloves -->
+			<item slot="waist" /> <!-- Belt: Belts -->
+		</enchantRate>
+		<!-- Common Accessories -->
+		<enchantRate group="COMMON_ACCESSORIES_GROUP">
 			<item slot="neck" /> <!-- Neck: Necklaces -->
 			<item slot="rear;lear" /> <!-- Right ear, Left ear: Earrings -->
 			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
-			<item slot="belt" /> <!-- Belt: Belts -->
-			<item slot="shirt" /> <!-- Shirt: Shirts -->
-			<item slot="hair" /> <!-- Hair Accessories -->
-			<item slot="hair2" /> <!-- Hair Accessories -->
-			<item slot="hairall" /> <!-- Hair Accessories -->
-			<item slot="back" /> <!-- Cloaks -->
-			<item slot="rbracelet" /> <!-- Bracelet -->
-			<item slot="lbracelet" /> <!-- Evolved Agathion Bracelet -->
 		</enchantRate>
 		<!-- Agathion Charm -->
 		<enchantRate group="AGATHION_CHARM">
 			<item slot="agathion" /> <!-- Agathion Charm -->
 		</enchantRate>
-		<!-- Brooch -->
-		<enchantRate group="BROOCH_GROUP">
-			<item slot="brooch" /> <!-- Brooch -->
+		<!-- Enhanced Brooch -->
+		<enchantRate group="ENHANCED_BROOCH_GROUP">
+			<item itemId="81359" /> <!-- Enhanced La Vie En Rose's Brooch -->
+			<item itemId="29546" /> <!-- Enhanced La Vie En Rose's Brooch -->
 		</enchantRate>
-		<!-- Artifact -->
-		<enchantRate group="ARTIFACT_BOOK_GROUP">
-			<item slot="artifactbook" /> <!-- Artifact Book -->
+		<!-- Common Circlets -->
+		<enchantRate group="COMMON_CIRCLET_GROUP">
+			<item itemId="48202" /> <!-- Warrior's Circlet -->
+			<item itemId="48205" /> <!-- Wizard's Circlet -->
+			<item itemId="48208" /> <!-- Knight's Circlet -->
+		</enchantRate>
+		<!-- Common Artifact Book -->
+		<enchantRate group="COMMON_ARTIFACT_BOOK_GROUP">
+			<item itemId="48956" /> <!-- Artifact Book Lv. 3 -->
 		</enchantRate>
 		<!-- Bind only full armor group to to full armor slot items. -->
 		<enchantRate group="FULL_ARMOR_GROUP">
 			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
+		</enchantRate>
+		<!-- Common Kaliel Bracelet -->
+		<enchantRate group="COMMON_KALIEL_BRACELET_GROUP">
+			<item itemId="80835" /> <!-- Kaliel Bracelet -->
+		</enchantRate>
+		<!-- Superior Seed Bracelet Lv. 4 -->
+		<enchantRate group="SUPERIOR_SEED_BRACELET_GROUP">
+			<item itemId="48577" /> <!-- Superior Seed Bracelet Lv. 4 -->
+		</enchantRate>
+		<!-- Common Kingdom Cloaks -->
+		<enchantRate group="COMMON_KINGDOM_CLOAK_GROUP">
+			<item itemId="28585" /><!-- Elmoreden Cloak -->
+			<item itemId="28586" /><!-- Aden Cloak -->
+			<item itemId="28587" /><!-- Elmore Cloak -->
+			<item itemId="28588" /><!-- Ferios Cloak -->
+		</enchantRate>
+		<!-- Power Shirts -->
+		<enchantRate group="POWER_SHIRT_GROUP">
+			<item itemId="21580" /> <!-- Power Shirt -->
+			<item itemId="21706" /> <!-- Power Shirt (Event) -->
+			<item itemId="23085" /> <!-- Power Shirt (Event) -->
+			<item itemId="34732" /> <!-- Exchanged Power Shirt -->
+		</enchantRate>
+		<!-- Navari's Mask -->
+		<enchantRate group="SAVIOR_MASK_GROUP">
+			<item itemId="48584" /> <!-- Savior's Mask -->
+		</enchantRate>
+		<!-- 17th Anniversary Guardian Angel's Ring Event Group -->
+		<enchantRate group="GUARDIAN_ANGEL_RING_GROUP">
+			<item itemId="81736" /> <!-- 17th Anniversary Guardian Angel's Ring Event -->
 		</enchantRate>
 		<!-- Bind only fighter weapon group to all fighter weapons. -->
 		<enchantRate group="FIGHTER_WEAPON_GROUP">
@@ -107,6 +414,192 @@
 		<enchantRate group="MAGE_WEAPON_GROUP">
 			<item slot="rhand" magicWeapon="true" /> <!-- Right hand: Weapons, Magic weapon -->
 			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
+		</enchantRate>
+	</enchantScrollGroup>
+	<enchantScrollGroup id="1">
+		<!-- Rare Accessories -->
+		<enchantRate group="RARE_ACCESSORIES_GROUP">
+			<item itemId="48669" /> <!-- Angel's Necklace -->
+			<item itemId="81370" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item itemId="81371" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item itemId="81372" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item itemId="48841" /> <!-- Angel's Earring -->
+			<item itemId="81373" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item itemId="81374" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item itemId="81375" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item itemId="81154" /> <!-- Angel's Ring -->
+			<item itemId="81376" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item itemId="81377" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item itemId="81378" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item itemId="81212" /> <!-- Angel's Necklace -->
+			<item itemId="81388" /> <!-- Angel's Necklace(Assault Lv. 1) -->
+			<item itemId="81389" /> <!-- Angel's Necklace(Assault Lv. 2) -->
+			<item itemId="81390" /> <!-- Angel's Necklace(Assault Lv. 3) -->
+			<item itemId="81213" /> <!-- Angel's Earring -->
+			<item itemId="81391" /> <!-- Angel's Earring(Security Lv. 1) -->
+			<item itemId="81392" /> <!-- Angel's Earring(Security Lv. 2) -->
+			<item itemId="81393" /> <!-- Angel's Earring(Security Lv. 3) -->
+			<item itemId="81214" /> <!-- Angel's Ring -->
+			<item itemId="81394" /> <!-- Angel's Ring(Elements Lv. 1) -->
+			<item itemId="81395" /> <!-- Angel's Ring(Elements Lv. 2) -->
+			<item itemId="81396" /> <!-- Angel's Ring(Elements Lv. 3) -->
+			<item itemId="81784" /> <!-- Blessed Angel's Necklace -->
+			<item itemId="81785" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item itemId="81786" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item itemId="81787" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item itemId="81788" /> <!-- Blessed Angel's Earring -->
+			<item itemId="81789" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item itemId="81790" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item itemId="81791" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item itemId="81792" /> <!-- Blessed Angel's Ring -->
+			<item itemId="81793" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item itemId="81794" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item itemId="81795" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item itemId="81796" /> <!-- Blessed Angel's Necklace -->
+			<item itemId="81797" /> <!-- Blessed Angel's Necklace(Assault Lv. 1) -->
+			<item itemId="81798" /> <!-- Blessed Angel's Necklace(Assault Lv. 2) -->
+			<item itemId="81799" /> <!-- Blessed Angel's Necklace(Assault Lv. 3) -->
+			<item itemId="81800" /> <!-- Blessed Angel's Earring -->
+			<item itemId="81801" /> <!-- Blessed Angel's Earring(Security Lv. 1) -->
+			<item itemId="81802" /> <!-- Blessed Angel's Earring(Security Lv. 2) -->
+			<item itemId="81803" /> <!-- Blessed Angel's Earring(Security Lv. 3) -->
+			<item itemId="81804" /> <!-- Blessed Angel's Ring -->
+			<item itemId="81805" /> <!-- Blessed Angel's Ring(Elements Lv. 1) -->
+			<item itemId="81806" /> <!-- Blessed Angel's Ring(Elements Lv. 2) -->
+			<item itemId="81807" /> <!-- Blessed Angel's Ring(Elements Lv. 3) -->
+			<item itemId="80333" /> <!-- Dragon Necklace -->
+			<item itemId="81379" /> <!-- Dragon Necklace (Battle Lv. 1) -->
+			<item itemId="81380" /> <!-- Dragon Necklace (Battle Lv. 2) -->
+			<item itemId="81381" /> <!-- Dragon Necklace (Battle Lv. 3) -->
+			<item itemId="80334" /> <!-- Dragon's Earring -->
+			<item itemId="81382" /> <!-- Dragon's Earring (Guardian lv. 1) -->
+			<item itemId="81383" /> <!-- Dragon's Earring (Guardian lv. 2) -->
+			<item itemId="81384" /> <!-- Dragon's Earring (Guardian lv. 3) -->
+			<item itemId="80335" /> <!-- Dragon's Ring -->
+			<item itemId="81385" /> <!-- Dragon's Ring (Potential Lv. 1) -->
+			<item itemId="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
+			<item itemId="81387" /> <!-- Dragon's Ring (Potential Lv. 3) -->
+			<item itemId="48864" /> <!-- Fallen Angel's Ring -->
+			<item itemId="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
+			<item itemId="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
+			<item itemId="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+			<item itemId="81914" /> <!-- Blessed Fallen Angel's Ring -->
+			<item itemId="81915" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 1) -->
+			<item itemId="81916" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 2) -->
+			<item itemId="81917" /> <!-- Blessed Fallen Angel's Ring (Charisma Lv. 3) -->
+			<item itemId="82216" /> <!-- Fallen Angel's Earring -->
+			<item itemId="82217" /> <!-- Fallen Angel's Earring (Cooldown Decrease Lv. 1) -->
+			<item itemId="82218" /> <!-- Fallen Angel's Earring (Cooldown Decrease Lv. 2) -->
+			<item itemId="82219" /> <!-- Fallen Angel's Earring (Cooldown Decrease Lv. 3) -->
+			<item itemId="82220" /> <!-- Blessed Fallen Angel's Earring -->
+			<item itemId="82221" /> <!-- Blessed Fallen Angel's Earring (Cooldown Decrease Lv. 1) -->
+			<item itemId="82222" /> <!-- Blessed Fallen Angel's Earring (Cooldown Decrease Lv. 2) -->
+			<item itemId="82223" /> <!-- Blessed Fallen Angel's Earring (Cooldown Decrease Lv. 3) -->
+		</enchantRate>
+		<!-- Greater Agathion Charm -->
+		<enchantRate group="GREATER_AGATHION_CHARM">
+			<item itemId="80936" /> <!-- Greater Agathion Virgo Charm -->
+			<item itemId="80937" /> <!-- Greater Agathion Capricorn Charm -->
+			<item itemId="80938" /> <!-- Greater Agathion Libra Charm -->
+			<item itemId="80939" /> <!-- Greater Agathion Aries Charm -->
+			<item itemId="80940" /> <!-- Greater Agathion Taurus Charm -->
+			<item itemId="80941" /> <!-- Greater Agathion Leo Charm -->
+			<item itemId="80942" /> <!-- Greater Agathion Gemini Charm -->
+			<item itemId="80943" /> <!-- Greater Agathion Scorpio Charm -->
+			<item itemId="80944" /> <!-- Greater Agathion Aquarius Charm -->
+			<item itemId="80945" /> <!-- Greater Agathion Pisces Charm -->
+			<item itemId="80946" /> <!-- Greater Agathion Sagittarius Charm -->
+			<item itemId="80947" /> <!-- Greater Agathion Cancer Charm -->
+		</enchantRate>
+		<!-- Superior Brooch -->
+		<enchantRate group="SUPERIOR_BROOCH_GROUP">
+			<item itemId="81360" /> <!-- Superior La Vie En Rose's Brooch -->
+			<item itemId="29547" /> <!-- Superior La Vie En Rose's Brooch -->
+		</enchantRate>
+		<!-- Noble Circlet -->
+		<enchantRate group="NOBLE_CIRCLET_GROUP">
+			<item itemId="48203" /> <!-- Noble Warrior's Circlet -->
+			<item itemId="48206" /> <!-- Noble Wizard's Circlet -->
+			<item itemId="48209" /> <!-- Noble Knight's Circlet -->
+			<item itemId="80776" /> <!-- Noble Warrior's Circlet -->
+			<item itemId="80777" /> <!-- Noble Wizard's Circlet -->
+			<item itemId="80778" /> <!-- Noble Knight's Circlet -->
+		</enchantRate>
+		<!-- Improved Artifact Book -->
+		<enchantRate group="IMPROVED_ARTIFACT_BOOK_GROUP">
+			<item itemId="81695" /> <!-- Improved Artifact Book Lv. 3 -->
+		</enchantRate>
+		<!-- Greater Kaliel Bracelet -->
+		<enchantRate group="GREATER_KALIEL_BRACELET_GROUP">
+			<item itemId="80836" /> <!-- Greater Kaliel Bracelet -->
+		</enchantRate>
+		<!-- Legendary Kingdom Cloaks -->
+		<enchantRate group="LEGENDARY_KINGDOM_CLOAK_GROUP">
+			<item itemId="28589" /><!-- Legendary Elmoreden Cloak -->
+			<item itemId="28590" /><!-- Legendary Aden Cloak -->
+			<item itemId="28591" /><!-- Legendary Elmore Cloak -->
+			<item itemId="28592" /><!-- Legendary Ferios Cloak -->
+		</enchantRate>
+		<!-- Special Shirts (Pa'agrio, Sayha, Eva, Maphr, Elemental, Reflect) -->
+		<enchantRate group="SPECIAL_SHIRT_GROUP">
+			<item itemId="23240" /> <!-- Pa'agrio's Shirt -->
+			<item itemId="23301" /> <!-- Sayha's Shirt -->
+			<item itemId="23304" /> <!-- Eva's Shirt -->
+			<item itemId="23307" /> <!-- Maphr's Shirt -->
+			<item itemId="34623" /> <!-- Pa'agrio's Shirt -->
+			<item itemId="34624" /> <!-- Sayha's Shirt -->
+			<item itemId="34625" /> <!-- Eva's Shirt -->
+			<item itemId="34626" /> <!-- Maphr's Shirt -->
+			<item itemId="34770" /> <!-- Pa'agrio's Shirt (Event) -->
+			<item itemId="34771" /> <!-- Sayha's Shirt (Event) -->
+			<item itemId="34772" /> <!-- Eva's Shirt (Event) -->
+			<item itemId="34773" /> <!-- Maphr's Shirt (Event) -->
+			<item itemId="37718" /> <!-- Shiny Elemental Shirt -->
+			<item itemId="46193" /> <!-- Physical Reflect Shirt -->
+			<item itemId="46194" /> <!-- Magical Reflect Shirt -->
+		</enchantRate>
+		<!-- Navari's Mask -->
+		<enchantRate group="NAVARI_MASK_GROUP">
+			<item itemId="81153" /> <!-- Navari's Mask -->
+		</enchantRate>
+	</enchantScrollGroup>
+	<enchantScrollGroup id="2">
+		<!-- Agathion Fire Dragon Charm -->
+		<enchantRate group="AGATHION_FIRE_DRAGON_CHARM">
+			<item itemId="81443" /> <!-- Agathion Fire Dragon Charm -->
+		</enchantRate>
+		<!-- Radiant Circlets -->
+		<enchantRate group="RADIANT_CIRCLET_GROUP">
+			<item itemId="48204" /> <!-- Radiant Warrior's Circlet -->
+			<item itemId="48207" /> <!-- Radiant Wizard's Circlet -->
+			<item itemId="48210" /> <!-- Radiant Knight's Circlet -->
+			<item itemId="48918" /> <!-- Radiant Warrior's Circlet -->
+			<item itemId="48919" /> <!-- Radiant Wizard's Circlet -->
+			<item itemId="48920" /> <!-- Radiant Knight's Circlet -->
+		</enchantRate>
+		<!-- Unique Artifact Book -->
+		<enchantRate group="UNIQUE_ARTIFACT_BOOK_GROUP">
+			<item itemId="81696" /> <!-- Unique Artifact Book Lv. 3 -->
+		</enchantRate>
+		<!-- Superior Kaliel Bracelet -->
+		<enchantRate group="SUPERIOR_KALIEL_BRACELET_GROUP">
+			<item itemId="80837" /> <!-- Superior Kaliel Bracelet -->
+		</enchantRate>
+		<!-- Dragon Shirt -->
+		<enchantRate group="DRAGON_SHIRT_GROUP">
+			<item itemId="48491" /><!-- Dragon Skin Shirt -->
+		</enchantRate>
+	</enchantScrollGroup>
+	<enchantScrollGroup id="3">
+		<!-- Dragon Leather Shirt -->
+		<enchantRate group="DRAGON_LEATHER_SHIRT_GROUP">
+			<item itemId="48492" /><!-- Dragon Leather Shirt -->
+		</enchantRate>
+	</enchantScrollGroup>
+	<enchantScrollGroup id="4">
+		<!-- Dragon Rind Leather Shirt -->
+		<enchantRate group="DRAGON_RIND_LEATHER_SHIRT_GROUP">
+			<item itemId="48493" /><!-- Dragon Rind Leather Shirt -->
 		</enchantRate>
 	</enchantScrollGroup>
 </list>
