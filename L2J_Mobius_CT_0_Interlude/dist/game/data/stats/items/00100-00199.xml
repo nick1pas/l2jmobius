@@ -766,89 +766,125 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="136" type="EtcItem" name="(Not In Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14075,1,1,100" />
+	<item id="136" type="Weapon" name="Blade of Serenity">
+		<set name="icon" val="icon.weapon_limpid_sword_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set val="175" stat="pAtk" />
+			<set val="91" stat="mAtk" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
-	<item id="137" type="EtcItem" name="(Not In Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14076,1,1,100" />
+	<item id="137" type="Weapon" name="Mist Sword">
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
-	<item id="138" type="EtcItem" name="(Not In Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14077,1,1,100" />
+	<item id="138" type="Weapon" name="Sword of Desert">
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
-	<item id="139" type="EtcItem" name="Sudden Agathion 7-Day Pack">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14093,1,1,100" />
+	<item id="139" type="Weapon" name="Dusk Sword">
+		<set name="icon" val="icon.weapon_deathbreath_sword_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
-	<item id="140" type="EtcItem" name="Shiny Agathion 7-Day Pack">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14094,1,1,100" />
+	<item id="140" type="Weapon" name="Eminence Sword">
+		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
-	<item id="141" type="EtcItem" name="Sobbing Agathion 7-Day Pack">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14095,1,1,100" />
+	<item id="141" type="Weapon" name="Hazard Sword">
+		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="10" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
 	<item id="142" type="Weapon" name="Keshanberk">
 		<!-- Bestows one of the following functions: Guidance, Focus or Back Blow -->
@@ -1404,19 +1440,26 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="163" type="EtcItem" name="(Not In Use)">
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="13026,1,1,100" />
+	<item id="163" type="Weapon" name="_">
+		<set name="icon" val="icon.weapon_war_axe_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="4000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="B" />
+		<set name="random_damage" val="20" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="price" val="8680000" />
+		<set name="crystal_count" val="1157" />
+		<for>
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
 	<item id="164" type="Weapon" name="Elysian">
 		<!-- Bestows one of the following functions: Health, Anger, or a Critical Drain. -->
@@ -1581,19 +1624,26 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="170" type="EtcItem" name="Sudden Agathion 7-Day Pack (Event)">
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="14101,1,1,100" />
+	<item id="170" type="Weapon" name="_">
+		<set name="icon" val="icon.weapon_war_axe_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="6400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="crystal_type" val="A" />
+		<set name="random_damage" val="20" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="price" val="16600000" />
+		<set name="crystal_count" val="7" />
+		<for>
+			<set stat="pAtk" val="258" />
+			<set stat="mAtk" val="86" />
+			<set stat="critRate" val="4" />
+			<add stat="accCombat" val="4" />
+			<set stat="pAtkSpd" val="379" />
+			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
+		</for>
 	</item>
 	<item id="171" type="Weapon" name="Deadman's Glory">
 		<!-- Bestows one of the following functions: Anger, Health or Haste. -->
