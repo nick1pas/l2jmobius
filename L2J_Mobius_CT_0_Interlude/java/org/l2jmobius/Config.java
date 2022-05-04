@@ -557,7 +557,6 @@ public class Config
 	public static boolean ALLOW_LOTTERY;
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
-	public static boolean ALLOW_RENTPET;
 	public static boolean ALLOW_FISHING;
 	public static boolean ALLOW_BOAT;
 	public static int BOAT_BROADCAST_RADIUS;
@@ -718,7 +717,6 @@ public class Config
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
 	public static boolean ENABLE_GUARD_RETURN;
 	public static boolean ALLOW_WYVERN_UPGRADER;
-	public static List<Integer> LIST_PET_RENT_NPC;
 	public static double RAID_HP_REGEN_MULTIPLIER;
 	public static double RAID_MP_REGEN_MULTIPLIER;
 	public static double RAID_PDEFENCE_MULTIPLIER;
@@ -2012,7 +2010,6 @@ public class Config
 			ALLOW_LOTTERY = generalConfig.getBoolean("AllowLottery", true);
 			ALLOW_RACE = generalConfig.getBoolean("AllowRace", true);
 			ALLOW_WATER = generalConfig.getBoolean("AllowWater", true);
-			ALLOW_RENTPET = generalConfig.getBoolean("AllowRentPet", false);
 			ALLOW_FISHING = generalConfig.getBoolean("AllowFishing", true);
 			ALLOW_MANOR = generalConfig.getBoolean("AllowManor", true);
 			ALLOW_BOAT = generalConfig.getBoolean("AllowBoat", true);
@@ -2148,12 +2145,6 @@ public class Config
 			GUARD_ATTACK_AGGRO_MOB = npcConfig.getBoolean("GuardAttackAggroMob", false);
 			ENABLE_GUARD_RETURN = npcConfig.getBoolean("EnableGuardReturn", false);
 			ALLOW_WYVERN_UPGRADER = npcConfig.getBoolean("AllowWyvernUpgrader", false);
-			final String[] listPetRentNpc = npcConfig.getString("ListPetRentNpc", "30827").split(",");
-			LIST_PET_RENT_NPC = new ArrayList<>(listPetRentNpc.length);
-			for (String id : listPetRentNpc)
-			{
-				LIST_PET_RENT_NPC.add(Integer.parseInt(id));
-			}
 			RAID_HP_REGEN_MULTIPLIER = npcConfig.getDouble("RaidHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = npcConfig.getDouble("RaidMpRegenMultiplier", 100) / 100;
 			RAID_PDEFENCE_MULTIPLIER = npcConfig.getDouble("RaidPDefenceMultiplier", 100) / 100;

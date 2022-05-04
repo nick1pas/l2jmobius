@@ -1032,14 +1032,6 @@ public class Npc extends Creature
 		// Send a Server->Client NpcHtmlMessage containing the text of the Npc to the Player
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player, filename);
-		if (this instanceof Merchant)
-		{
-			if (Config.LIST_PET_RENT_NPC.contains(npcId))
-			{
-				html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
-			}
-		}
-		
 		html.replace("%npcname%", String.valueOf(getName()));
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%festivalMins%", SevenSignsFestival.getInstance().getTimeToNextFestivalStr());

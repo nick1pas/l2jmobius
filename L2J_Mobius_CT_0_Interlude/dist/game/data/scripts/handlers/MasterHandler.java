@@ -145,8 +145,8 @@ import handlers.bypasshandlers.PlayerHelp;
 import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.QuestList;
-import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.Rift;
+import handlers.bypasshandlers.Sell;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
 import handlers.bypasshandlers.SupportMagic;
@@ -426,8 +426,8 @@ public class MasterHandler
 			PlayerHelp.class,
 			PrivateWarehouse.class,
 			QuestList.class,
-			RentPet.class,
 			Rift.class,
+			Sell.class,
 			SkillList.class,
 			SupportBlessing.class,
 			SupportMagic.class,

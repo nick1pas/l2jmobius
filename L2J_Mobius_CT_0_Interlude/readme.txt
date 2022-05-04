@@ -96,6 +96,8 @@ What is done
 -Added quests 353, 374, 375 and 505. 
 -Removed Kamael class ids from hennas.
 -Changed item count to integer.
+-Adjusted luxury shop merchants.
+-Added support for merchant sell bypass.
 
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.

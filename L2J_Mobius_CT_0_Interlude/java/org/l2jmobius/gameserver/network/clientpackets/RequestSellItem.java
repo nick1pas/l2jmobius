@@ -128,17 +128,20 @@ public class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(_listId);
-		if (buyList == null)
+		if (_listId != 0) // Sell.
 		{
-			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
-			return;
-		}
-		
-		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
-		{
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			final BuyListHolder buyList = BuyListData.getInstance().getBuyList(_listId);
+			if (buyList == null)
+			{
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
+				return;
+			}
+			
+			if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
+			{
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
 		}
 		
 		int totalPrice = 0;
