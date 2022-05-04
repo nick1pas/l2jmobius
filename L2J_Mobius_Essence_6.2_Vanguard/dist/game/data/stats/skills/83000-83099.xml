@@ -404,7 +404,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="SkillCriticalDamage">
+			<effect name="PhysicalSkillCriticalDamage">
 				<amount>
 					<value level="1">0.1</value>
 					<value level="2">0.2</value>
@@ -584,7 +584,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="DefenceSkillCriticalDamage">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -615,7 +615,7 @@
 	<skill id="83019" toLevel="21" name="Pattern (DEX) Lv. 3">
 		<operateType>P</operateType>
 		<effects>
-			<effect name="DefenceSkillCriticalDamage">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>

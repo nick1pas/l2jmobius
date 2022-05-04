@@ -1037,7 +1037,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceSkillCriticalDamage">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>
 					<value fromLevel="1" toLevel="4">0</value>
 					<value level="5">1</value>
@@ -1213,7 +1213,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceSkillCriticalDamage">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>
 					<value fromLevel="1" toLevel="4">0</value>
 					<value level="5">1</value>
@@ -2072,7 +2072,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceSkillCriticalDamage">
+			<effect name="DefencePhysicalSkillCriticalDamage">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">3</value>
@@ -2282,7 +2282,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="PhysicalSkillCriticalDamage">
 				<amount>
 					<value level="4">50</value>
 					<value level="5">100</value>
@@ -3943,7 +3943,7 @@
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effects>
-			<effect name="SkillCriticalDamage">
+			<effect name="PhysicalSkillCriticalDamage">
 				<amount>
 					<value level="4">5</value>
 					<value level="5">15</value>

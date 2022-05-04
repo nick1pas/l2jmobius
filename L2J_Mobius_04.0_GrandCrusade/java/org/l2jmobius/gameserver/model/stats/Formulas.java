@@ -355,8 +355,8 @@ public class Formulas
 			}
 			else
 			{
-				criticalDamage = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_SKILL, 1);
-				defenceCriticalDamage = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_SKILL, 1);
+				criticalDamage = attacker.getStat().getValue(Stat.PHYSICAL_SKILL_CRITICAL_DAMAGE, 1);
+				defenceCriticalDamage = target.getStat().getValue(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE, 1);
 				if (attacker.isPlayable())
 				{
 					balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS[attacker.getActingPlayer().getClassId().getId()] : Config.PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS[attacker.getActingPlayer().getClassId().getId()];
@@ -398,8 +398,8 @@ public class Formulas
 			}
 			else
 			{
-				criticalDamageAdd = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_SKILL_ADD, 0);
-				defenceCriticalDamageAdd = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_SKILL_ADD, 0);
+				criticalDamageAdd = attacker.getStat().getValue(Stat.PHYSICAL_SKILL_CRITICAL_DAMAGE_ADD, 0);
+				defenceCriticalDamageAdd = target.getStat().getValue(Stat.DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE_ADD, 0);
 			}
 		}
 		else

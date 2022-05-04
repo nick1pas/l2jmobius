@@ -118,7 +118,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DefenceCriticalRate", DefenceCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("DefenceMagicCriticalDamage", DefenceMagicCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("DefenceMagicCriticalRate", DefenceMagicCriticalRate::new);
-		EffectHandler.getInstance().registerHandler("DefenceSkillCriticalDamage", DefenceSkillCriticalDamage::new);
+		EffectHandler.getInstance().registerHandler("DefencePhysicalSkillCriticalDamage", DefencePhysicalSkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("DefenceTrait", DefenceTrait::new);
 		EffectHandler.getInstance().registerHandler("DeleteHate", DeleteHate::new);
 		EffectHandler.getInstance().registerHandler("DeleteHateOfMe", DeleteHateOfMe::new);
@@ -256,6 +256,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("PhysicalEvasion", PhysicalEvasion::new);
 		EffectHandler.getInstance().registerHandler("PhysicalMute", PhysicalMute::new);
 		EffectHandler.getInstance().registerHandler("PhysicalShieldAngleAll", PhysicalShieldAngleAll::new);
+		EffectHandler.getInstance().registerHandler("PhysicalSkillCriticalDamage", PhysicalSkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("PhysicalSkillCriticalRate", PhysicalSkillCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("PhysicalSkillPower", PhysicalSkillPower::new);
 		EffectHandler.getInstance().registerHandler("PhysicalSoulAttack", PhysicalSoulAttack::new);
@@ -320,7 +321,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ShieldDefenceRate", ShieldDefenceRate::new);
 		EffectHandler.getInstance().registerHandler("ShotsBonus", ShotsBonus::new);
 		EffectHandler.getInstance().registerHandler("SilentMove", SilentMove::new);
-		EffectHandler.getInstance().registerHandler("SkillCriticalDamage", SkillCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("SkillEvasion", SkillEvasion::new);
 		EffectHandler.getInstance().registerHandler("SkillMastery", SkillMastery::new);
 		EffectHandler.getInstance().registerHandler("SkillMasteryRate", SkillMasteryRate::new);
