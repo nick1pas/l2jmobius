@@ -1,162 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24900" level="85" type="Folk" name="Heaven's Palace Judge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24900" level="120" type="Monster" name="Heaven's Palace Judge">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="37534608000" sp="33781104" />
 		<equipment rhand="8221" /> <!-- Monster Only (Grail Apostle Spear) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="1574869.942196532" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24901" level="85" type="Folk" name="Heaven's Palace Archangel" title="Elite Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24901" level="120" type="Monster" name="Heaven's Palace Archangel" title="Elite Monster">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="262742342400" sp="236468016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15748668" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="15748700" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="76" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24902" level="85" type="Folk" name="Divine Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24902" level="122" type="Monster" name="Divine Watcher">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
+			<attribute>
+				<attack type="HOLY" value="2280" />
+				<defence fire="2130" water="2130" wind="2130" earth="2130" holy="2130" dark="2130" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24903" level="85" type="Folk" name="Divine Pilgrim">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24903" level="122" type="Monster" name="Divine Pilgrim">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
+			<attribute>
+				<attack type="HOLY" value="2280" />
+				<defence fire="2130" water="2130" wind="2130" earth="2130" holy="2130" dark="2130" />
+			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="44" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24904" level="85" type="Folk" name="Divine Protector">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24904" level="122" type="Monster" name="Divine Protector">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
+			<attribute>
+				<attack type="HOLY" value="2280" />
+				<defence fire="2130" water="2130" wind="2130" earth="2130" holy="2130" dark="2130" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24905" level="85" type="Folk" name="Divine Herald">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24905" level="122" type="Monster" name="Divine Herald">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
+			<attribute>
+				<attack type="HOLY" value="2280" />
+				<defence fire="2130" water="2130" wind="2130" earth="2130" holy="2130" dark="2130" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24906" level="85" type="Folk" name="Divine Judge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24906" level="122" type="Monster" name="Divine Judge">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24907" level="85" type="Folk" name="Divine Archangel" title="Elite Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24907" level="122" type="Monster" name="Divine Archangel" title="Elite Monster">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65957627380" sp="59361857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<attack physical="665659.901743584" magical="1444.35390697649" random="40" critical="4.75" accuracy="8" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5338.77216096896" magical="2047.72727463440" />
 			<vitals hp="21401406" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="51" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1984500" max="2146500" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="34.4756" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24908" level="85" type="Folk" name="Sealed Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24908" level="124" type="Monster" name="Sealed Watcher">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -167,15 +374,23 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="22.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
-	<npc id="24909" level="85" type="Folk" name="Sealed Pilgrim">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24909" level="124" type="Monster" name="Sealed Pilgrim">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -186,15 +401,23 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="22.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
-	<npc id="24910" level="85" type="Folk" name="Sealed Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24910" level="124" type="Monster" name="Sealed Guardian">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -205,15 +428,23 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
-	<npc id="24911" level="85" type="Folk" name="Sealed Herald">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24911" level="124" type="Monster" name="Sealed Herald">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -224,15 +455,23 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
-	<npc id="24912" level="85" type="Folk" name="Sealed Judge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24912" level="124" type="Monster" name="Sealed Judge">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -243,15 +482,23 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="36.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
-	<npc id="24913" level="85" type="Folk" name="Sealed Archangel" title="Elite Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24913" level="124" type="Monster" name="Sealed Archangel" title="Elite Monster">
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="21401406" hpRegen="10.5" mp="3190" mpRegen="3.6" />
@@ -262,10 +509,19 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="62" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Holy Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="1" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="1" /> <!-- Energy of Insolence -->
+		</skillList>
 	</npc>
 </list>
