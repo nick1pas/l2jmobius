@@ -181,6 +181,7 @@ public class Config
 	public static long EFFECT_TICK_RATIO;
 	public static boolean FAKE_DEATH_UNTARGET;
 	public static boolean FAKE_DEATH_DAMAGE_STAND;
+	public static boolean CALCULATE_MAGIC_SUCCESS_BY_SKILL_MAGIC_LEVEL;
 	public static boolean ALLOW_CLASS_MASTERS;
 	public static ClassMasterSettings CLASS_MASTER_SETTINGS;
 	public static boolean ALLOW_ENTIRE_TREE;
@@ -1690,6 +1691,7 @@ public class Config
 			EFFECT_TICK_RATIO = characterConfig.getLong("EffectTickRatio", 666);
 			FAKE_DEATH_UNTARGET = characterConfig.getBoolean("FakeDeathUntarget", false);
 			FAKE_DEATH_DAMAGE_STAND = characterConfig.getBoolean("FakeDeathDamageStand", true);
+			CALCULATE_MAGIC_SUCCESS_BY_SKILL_MAGIC_LEVEL = characterConfig.getBoolean("CalculateMagicSuccessBySkillMagicLevel", true);
 			ALLOW_CLASS_MASTERS = characterConfig.getBoolean("AllowClassMasters", false);
 			ALLOW_ENTIRE_TREE = characterConfig.getBoolean("AllowEntireTree", false);
 			ALTERNATE_CLASS_MASTER = characterConfig.getBoolean("AlternateClassMaster", false);
