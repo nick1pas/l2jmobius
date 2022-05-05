@@ -59,6 +59,17 @@ public class ExApplyVariationOption implements IClientIncomingPacket
 		final int option1Id = augment.getOption1Id();
 		final int option2Id = augment.getOption2Id();
 		
+		// Unequip item.
+		final InventoryUpdate iu = new InventoryUpdate();
+		if (targetItem.isEquipped())
+		{
+			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
+			{
+				iu.addModifiedItem(itm);
+			}
+			player.broadcastUserInfo();
+		}
+		
 		if ((targetItem.getObjectId() != _enchantedObjectId) || (_option1 != option1Id) || (_option2 != option2Id))
 		{
 			player.sendPacket(new ApplyVariationOption(0, 0, 0, 0));
@@ -73,21 +84,9 @@ public class ExApplyVariationOption implements IClientIncomingPacket
 		
 		targetItem.setAugmentation(augment, true);
 		
-		// Unequip item.
-		final InventoryUpdate iu = new InventoryUpdate();
-		if (targetItem.isEquipped())
-		{
-			for (Item itm : player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot()))
-			{
-				iu.addModifiedItem(itm);
-			}
-			player.broadcastUserInfo();
-		}
-		
 		iu.addModifiedItem(targetItem);
 		player.sendInventoryUpdate(iu);
-		
-		player.removeRequest(VariationRequest.class);
 		player.sendPacket(new ApplyVariationOption(1, _enchantedObjectId, _option1, _option2));
+		player.removeRequest(VariationRequest.class);
 	}
 }
