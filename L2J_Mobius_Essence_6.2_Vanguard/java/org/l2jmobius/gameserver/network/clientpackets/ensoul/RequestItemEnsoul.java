@@ -125,11 +125,6 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			PacketLogger.warning("Player: " + player + " attempting to ensoul non equippable item: " + item + "!");
 			return;
 		}
-		if (!item.isWeapon())
-		{
-			PacketLogger.warning("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
-			return;
-		}
 		if (item.isCommonItem())
 		{
 			PacketLogger.warning("Player: " + player + " attempting to ensoul common item: " + item + "!");
