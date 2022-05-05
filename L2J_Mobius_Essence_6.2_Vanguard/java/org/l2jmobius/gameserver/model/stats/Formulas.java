@@ -195,7 +195,8 @@ public class Formulas
 			}
 		}
 		
-		damage = damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
+		// Nasseka rev. 10196: generalTraitMod == 0 ? 1 : generalTraitMod (no invulnerable traits).
+		damage = damage * critMod * (generalTraitMod == 0 ? 1 : generalTraitMod) * weaknessMod * attributeMod * randomMod * pvpPveMod;
 		damage *= attacker.getStat().getValue(Stat.MAGICAL_SKILL_POWER, 1);
 		
 		// AoE modifiers.
