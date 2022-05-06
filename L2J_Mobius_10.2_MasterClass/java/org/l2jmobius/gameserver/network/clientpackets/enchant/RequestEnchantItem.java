@@ -193,7 +193,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						}
 						else
 						{
-							item.setEnchantLevel(item.getEnchantLevel() + Math.min(Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
+							item.setEnchantLevel(Math.min(item.getEnchantLevel() + Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
 						}
 						item.updateDatabase();
 					}
