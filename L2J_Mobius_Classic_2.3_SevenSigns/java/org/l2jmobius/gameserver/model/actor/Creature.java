@@ -598,7 +598,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Custom boss announcements configuration.
 		if (this instanceof GrandBoss)
 		{
-			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
+			if (Config.GRANDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion() && !isRaidMinion())
 			{
 				final String name = NpcData.getInstance().getTemplate(getId()).getName();
 				if (name != null)
@@ -608,7 +608,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
-		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
+		else if (isRaid() && Config.RAIDBOSS_SPAWN_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion() && !isRaidMinion())
 		{
 			final String name = NpcData.getInstance().getTemplate(getId()).getName();
 			if (name != null)
@@ -1763,7 +1763,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Custom boss announcements configuration.
 		if (this instanceof GrandBoss)
 		{
-			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
+			if (Config.GRANDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.GRANDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion() && !isRaidMinion())
 			{
 				final String name = NpcData.getInstance().getTemplate(getId()).getName();
 				if (name != null)
@@ -1773,7 +1773,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
-		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion())
+		else if (isRaid() && Config.RAIDBOSS_DEFEAT_ANNOUNCEMENTS && (!isInInstance() || Config.RAIDBOSS_INSTANCE_ANNOUNCEMENTS) && !isMinion() && !isRaidMinion())
 		{
 			final String name = NpcData.getInstance().getTemplate(getId()).getName();
 			if (name != null)
