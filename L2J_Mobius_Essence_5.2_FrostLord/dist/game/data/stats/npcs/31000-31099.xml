@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31001" level="70" type="Folk" name="Claudia Athebaldt">
 		<parameters>
@@ -7,19 +7,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -28,7 +29,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
@@ -44,19 +45,20 @@
 		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -65,7 +67,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -75,11 +77,11 @@
 		</collision>
 	</npc>
 	<npc id="31003" level="70" type="Monster" name="Here I Come">
-		<race>ANIMAL</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="40" />
@@ -90,7 +92,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -99,7 +101,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -109,11 +111,11 @@
 		</collision>
 	</npc>
 	<npc id="31004" level="70" type="Monster" name="Half Moon Love">
-		<race>ANIMAL</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="25" />
@@ -124,7 +126,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -133,7 +135,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -145,9 +147,9 @@
 	<npc id="31005" level="70" type="Monster" name="Everlasting">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="30" />
@@ -158,8 +160,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -168,7 +169,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -180,9 +182,9 @@
 	<npc id="31006" level="70" type="Monster" name="Dark Side of the Moon">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="80" />
@@ -193,7 +195,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -202,7 +204,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -214,9 +216,9 @@
 	<npc id="31007" level="70" type="Monster" name="Wind Rider">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="27" />
@@ -227,7 +229,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -236,7 +238,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -248,9 +250,9 @@
 	<npc id="31008" level="70" type="Monster" name="Shooting Star">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="27" />
@@ -261,7 +263,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -270,7 +272,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -282,9 +284,9 @@
 	<npc id="31009" level="70" type="Monster" name="Cyclone Thunder">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="25" />
@@ -295,7 +297,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -304,7 +306,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -316,9 +318,9 @@
 	<npc id="31010" level="70" type="Monster" name="Hungry Baby">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="80" />
@@ -329,7 +331,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -338,7 +340,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -350,9 +352,9 @@
 	<npc id="31011" level="70" type="Monster" name="Salty Dog">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="24" />
@@ -363,7 +365,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -372,7 +374,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -382,11 +384,11 @@
 		</collision>
 	</npc>
 	<npc id="31012" level="70" type="Monster" name="Raging Revolution">
-		<race>ANIMAL</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="20" />
@@ -397,7 +399,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -406,7 +408,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -418,9 +420,9 @@
 	<npc id="31013" level="70" type="Monster" name="Valentine Blue">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="48" />
@@ -431,7 +433,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -440,7 +442,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -452,20 +454,20 @@
 	<npc id="31014" level="70" type="Monster" name="Light My Fire">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="48" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -474,7 +476,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -486,9 +489,9 @@
 	<npc id="31015" level="70" type="Monster" name="Red Bullet">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="18" />
@@ -499,7 +502,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -508,7 +511,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -520,19 +523,20 @@
 	<npc id="31016" level="70" type="Monster" name="Shining Silver">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="110" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -541,7 +545,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -553,9 +557,9 @@
 	<npc id="31017" level="70" type="Monster" name="Over the Top">
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="40" />
@@ -566,7 +570,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -575,7 +579,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -587,9 +591,9 @@
 	<npc id="31018" level="70" type="Monster" name="Royal Straight">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="80" />
@@ -600,8 +604,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -610,7 +613,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -622,9 +626,9 @@
 	<npc id="31019" level="70" type="Monster" name="All Seven">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="80" />
@@ -635,7 +639,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -644,7 +648,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -654,11 +658,11 @@
 		</collision>
 	</npc>
 	<npc id="31020" level="70" type="Monster" name="Nasty Green">
-		<race>ELEMENTAL</race>
+		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="40" />
@@ -669,7 +673,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -678,7 +682,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -690,9 +694,9 @@
 	<npc id="31021" level="70" type="Monster" name="Shortcut">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="40" />
@@ -703,7 +707,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -712,7 +716,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -724,9 +728,9 @@
 	<npc id="31022" level="70" type="Monster" name="Typhoon Tiger">
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="90" />
@@ -737,7 +741,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -746,7 +750,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -758,9 +762,9 @@
 	<npc id="31023" level="70" type="Monster" name="Red Hot">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="64" />
@@ -771,7 +775,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -780,7 +784,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -792,9 +796,9 @@
 	<npc id="31024" level="70" type="Monster" name="Galaxy Express">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="30" />
@@ -805,7 +809,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -814,7 +818,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -826,9 +830,9 @@
 	<npc id="31025" level="70" type="Monster" name="Best Condition">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="80" />
@@ -839,7 +843,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -848,7 +852,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -860,9 +864,9 @@
 	<npc id="31026" level="70" type="Monster" name="Albatross">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="45" />
@@ -873,7 +877,7 @@
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -882,7 +886,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -898,20 +902,20 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -920,7 +924,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -936,20 +941,20 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -958,7 +963,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -974,20 +980,20 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -996,7 +1002,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1012,20 +1019,20 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1034,7 +1041,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1046,20 +1054,20 @@
 	<npc id="31031" level="70" type="BroadcastingTower" name="Broadcasting Tower">
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1068,7 +1076,8 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1077,7 +1086,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="31032" level="80" type="Guard" name="Guard">
+	<npc id="31032" level="75" type="Guard" name="Guard">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1087,19 +1096,20 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<equipment rhand="275" /> <!-- Longbow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="1988.15672" magical="611" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.38" magical="249.8" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="49042.6571486547" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="1839.95121517957" magical="1066.69244923556" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" talkable="false" randomWalk="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1107,8 +1117,8 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1117,7 +1127,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31033" level="80" type="Guard" name="Sentinel">
+	<npc id="31033" level="75" type="Guard" name="Sentinel">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1127,19 +1137,20 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="1988.15672" magical="611" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.38" magical="249.8" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="49042.6571486547" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="1839.95121517957" magical="1066.69244923556" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" talkable="false" randomWalk="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="15" /> <!-- Elves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1147,8 +1158,8 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1157,7 +1168,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31034" level="80" type="Guard" name="Sentry">
+	<npc id="31034" level="75" type="Guard" name="Sentry">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1167,19 +1178,20 @@
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="277" /> <!-- Dark Elven Bow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="1988.15672" magical="611" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.38" magical="249.8" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="49042.6571486547" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="1839.95121517957" magical="1066.69244923556" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" talkable="false" randomWalk="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1187,8 +1199,8 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1197,7 +1209,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31035" level="80" type="Guard" name="Protector">
+	<npc id="31035" level="75" type="Guard" name="Protector">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1207,19 +1219,20 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<equipment rhand="275" /> <!-- Longbow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="1988.15672" magical="611" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.38" magical="249.8" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="49042.6571486547" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="1839.95121517957" magical="1066.69244923556" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" talkable="false" randomWalk="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1227,8 +1240,8 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1237,7 +1250,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="31036" level="80" type="Guard" name="Centurion">
+	<npc id="31036" level="75" type="Guard" name="Centurion">
 		<parameters>
 			<param name="NoFnHi" value="1" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1247,19 +1260,20 @@
 		<race>ORC</race>
 		<sex>MALE</sex>
 		<equipment rhand="273" /> <!-- Compound Bow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="1988.15672" magical="611" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="341.38" magical="249.8" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="49042.6571486547" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="1839.95121517957" magical="1066.69244923556" />
 			<speed>
 				<walk ground="35" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" talkable="false" randomWalk="true" />
+		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1267,8 +1281,8 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1284,19 +1298,20 @@
 		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1305,7 +1320,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1321,19 +1336,20 @@
 		</parameters>
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1342,7 +1358,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1358,19 +1374,20 @@
 		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1379,7 +1396,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1395,19 +1412,20 @@
 		</parameters>
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1416,7 +1434,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1432,19 +1450,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1453,7 +1472,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1469,19 +1488,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1490,7 +1510,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1506,19 +1526,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1527,7 +1548,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1543,19 +1564,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1564,7 +1586,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1580,19 +1602,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1601,7 +1624,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1617,19 +1640,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1638,7 +1662,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1654,19 +1678,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1675,7 +1700,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1691,19 +1716,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1712,7 +1738,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
@@ -1760,19 +1786,20 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="63" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1781,7 +1808,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -1797,19 +1824,20 @@
 		</parameters>
 		<race>ORC</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1818,7 +1846,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="300" aggroRange="450" />
@@ -1829,283 +1857,512 @@
 	</npc>
 	<npc id="31075" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- CLASSIC NPC -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="31076" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- CLASSIC NPC -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31077" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31077" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31078" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31078" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31079" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31079" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31080" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31080" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31081" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31081" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31082" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31082" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31083" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31083" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31084" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31084" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31085" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31085" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31086" level="80" type="Teleporter" name="Gatekeeper Ziggurat">
+	<npc id="31086" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31087" level="80" type="Teleporter" name="Gatekeeper Spirit">
+	<npc id="31087" level="70" type="Teleporter" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31088" level="80" type="Teleporter" name="Gatekeeper Spirit">
+	<npc id="31088" level="70" type="Teleporter" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="31089" level="80" type="Teleporter" name="Gatekeeper Spirit">
+	<npc id="31089" level="70" type="Teleporter" name="Gatekeeper Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 </list>

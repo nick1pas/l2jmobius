@@ -1,280 +1,388 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29100" level="80" type="Monster" name="Archangel">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="290966.74193" hpRegen="8.5" mp="1608.045" mpRegen="3" />
-			<attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="747660" hpRegen="158" mp="1475" mpRegen="3" />
+			<attack physical="4185" magical="371" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="5108" magical="1686" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
+			<hitTime>760</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
+		<ai clanHelpRange="300" aggroRange="450">
+			<clanList>
+				<clan>ARCHANGEL</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="80" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29101" level="80" type="Folk" name="Baium">
+	<npc id="29101" level="80" type="RaidBoss" name="Baium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1709400" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1709400" hpRegen="718" mp="18000" mpRegen="99" />
+			<attack physical="1874.18" magical="1596.95" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3300" magical="2200" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="65" />
 			<height normal="82" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Earth Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="1000" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="24630999.75369" hpRegen="319.2293199" mp="3440344.575" mpRegen="3" />
-			<attack physical="3152.927754" magical="1289.681983" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3500.450389" magical="1707.68215" />
+			<vitals hp="44444444" hpRegen="2568.6" mp="2025740.40219378" mpRegen="1000" />
+			<attack physical="19098" magical="3153" random="5" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2087.8612716763" magical="1210.03954974141" />
 			<speed>
 				<walk ground="50" />
 				<run ground="279" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" showName="true" />
 		<collision>
 			<radius normal="300" />
 			<height normal="300" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
 		</skillList>
 	</npc>
 	<npc id="29103" level="84" type="Monster" name="Behemoth Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="197048" hpRegen="8.5" mp="24863.19" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="506329" hpRegen="15" mp="22800" mpRegen="30" />
+			<attack physical="10163" magical="8167" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1245" magical="774" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" showName="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="29104" level="84" type="Monster" name="Tarask Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="394096" hpRegen="8.5" mp="24863.19" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1012658" hpRegen="15" mp="22800" mpRegen="30" />
+			<attack physical="10163" magical="8167" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1245" magical="774" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" showName="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="6655" level="1" /> <!-- Tarask's Carapace -->
 		</skillList>
 	</npc>
 	<npc id="29105" level="80" type="RaidBoss" name="King Ignis" element="FIRE">
 		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="6456058.49802372" hpRegen="319.2293199" mp="4203.40091563113" mpRegen="3" />
-			<attack physical="680.441457140486" magical="127.33579646414" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="208.284023668639" magical="95.9748607784026" />
+			<vitals hp="2505295" hpRegen="2647.36823225113" mp="3349.6" mpRegen="6" />
+			<attack physical="27330.336" magical="9145.973" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="102" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
-			<skill id="50079" level="1" /> <!-- Raid Boss (Lv. 82) -->
-			<skill id="50069" level="1" /> <!-- Fire Breath -->
-			<skill id="50070" level="1" /> <!-- Tears of Fire -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+			<skill id="4045" level="2" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="1.968" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5288" min="1" max="1" chance="1.966" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5319" min="1" max="1" chance="1.959" /> <!-- Sealed Majestic Boots -->
-				<item id="5316" min="1" max="1" chance="1.958" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5297" min="1" max="1" chance="1.955" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5290" min="1" max="1" chance="1.942" /> <!-- Sealed Dark Crystal Gloves -->
-				<item id="5315" min="1" max="1" chance="1.941" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5304" min="1" max="1" chance="1.94" /> <!-- Sealed Tallum Tunic -->
-				<item id="5292" min="1" max="1" chance="1.934" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5314" min="1" max="1" chance="1.924" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5311" min="1" max="1" chance="1.92" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5313" min="1" max="1" chance="1.911" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5301" min="1" max="1" chance="1.901" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="5291" min="1" max="1" chance="1.898" /> <!-- Sealed Dark Crystal Boots -->
-				<item id="5289" min="1" max="1" chance="1.884" /> <!-- Sealed Dark Crystal Helmet -->
-				<item id="5296" min="1" max="1" chance="1.882" /> <!-- Sealed Tallum Boots -->
-				<item id="5298" min="1" max="1" chance="1.875" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5320" min="1" max="1" chance="1.875" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5294" min="1" max="1" chance="1.874" /> <!-- Sealed Tallum Helmet -->
-				<item id="5326" min="1" max="1" chance="1.871" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5293" min="1" max="1" chance="1.871" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="5287" min="1" max="1" chance="1.87" /> <!-- Sealed Dark Crystal Breastplate -->
-				<item id="5323" min="1" max="1" chance="1.865" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5318" min="1" max="1" chance="1.859" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5305" min="1" max="1" chance="1.853" /> <!-- Sealed Tallum Stockings -->
-				<item id="5295" min="1" max="1" chance="1.851" /> <!-- Sealed Tallum Gloves -->
-				<item id="5308" min="1" max="1" chance="1.841" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="5317" min="1" max="1" chance="1.839" /> <!-- Sealed Majestic Circlet -->
-				<item id="5329" min="1" max="1" chance="1.834" /> <!-- Sealed Majestic Robe -->
-				<item id="91887" min="1" max="1" chance="0.075" /> <!-- Durendal -->
-				<item id="8938" min="1" max="1" chance="0.075" /> <!-- Tallum Blade*Damascus -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga's Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="91902" min="1" max="1" chance="0.075" /> <!-- Éclair Bijou -->
-				<item id="91032" min="1" max="1" chance="2.012" /> <!-- Fire Spirit Evolution Stone -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 CON -2> - 3rd Class Transfer -->
+				<group chance="1">
+					<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+					<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+					<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+					<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+					<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+					<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+					<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+					<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+					<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+					<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+					<item id="8688" min="1" max="1" chance="7.15" /> <!-- Daimon Crystal -->
+					<item id="8938" min="1" max="1" chance="7.15" /> <!-- Tallum Blade*Damascus Sword -->
+					<item id="91887" min="1" max="1" chance="7.15" /> <!-- Durendal -->
+					<item id="91902" min="1" max="1" chance="7.15" /> <!-- Éclair Bijou -->
+				</group>
+				<group chance="55">
+					<item id="5287" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Breastplate -->
+					<item id="5288" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5289" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Helmet -->
+					<item id="5290" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5291" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5292" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Shield -->
+					<item id="5293" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Plate Armor -->
+					<item id="5294" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Helmet -->
+					<item id="5295" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Gloves -->
+					<item id="5296" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Boots -->
+					<item id="5297" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5298" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5301" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Leather Armor -->
+					<item id="5304" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Tunic -->
+					<item id="5305" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Stockings -->
+					<item id="5308" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Robe -->
+					<item id="5311" min="1" max="1" chance="3.45" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5312" min="1" max="1" chance="3.45" /> <!-- Sealed Helm of Nightmare -->
+					<item id="5313" min="1" max="1" chance="3.45" /> <!-- Sealed Gauntlets of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3.45" /> <!-- Sealed Boots of Nightmare -->
+					<item id="5315" min="1" max="1" chance="3.45" /> <!-- Sealed Shield of Nightmare -->
+					<item id="5320" min="1" max="1" chance="3.45" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5326" min="1" max="1" chance="3.45" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5316" min="1" max="1" chance="3.45" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5317" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Circlet -->
+					<item id="5318" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Gauntlets -->
+					<item id="5319" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Boots -->
+					<item id="5323" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5329" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Robe -->
+				</group>
+				<group chance="50">
+					<item id="94186" min="1" max="1" chance="16" /> <!-- Life Stone Lv. 2 - Weapon -->
+					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
+				</group>
+				<group chance="5">
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+				</group>
+				<group chance="2">
+					<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="29106" level="80" type="RaidBoss" name="Queen Nebula" element="WATER">
 		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="8408646.64031621" hpRegen="319.2293199" mp="4203.40091563113" mpRegen="3" />
-			<attack physical="680.441457140486" magical="127.33579646414" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="208.284023668639" magical="95.9748607784026" />
+			<vitals hp="2478639" hpRegen="2647.36823225113" mp="3349.6" mpRegen="6" />
+			<attack physical="27330.336" magical="9145.973" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="80" />
 				<run ground="190" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="42" />
 			<height normal="88.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
-			<skill id="50080" level="1" /> <!-- Raid Boss (Lv. 82) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="4045" level="2" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="1.96" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5312" min="1" max="1" chance="1.956" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5296" min="1" max="1" chance="1.955" /> <!-- Sealed Tallum Boots -->
-				<item id="5308" min="1" max="1" chance="1.951" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="5297" min="1" max="1" chance="1.95" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5287" min="1" max="1" chance="1.949" /> <!-- Sealed Dark Crystal Breastplate -->
-				<item id="5295" min="1" max="1" chance="1.936" /> <!-- Sealed Tallum Gloves -->
-				<item id="5311" min="1" max="1" chance="1.929" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5320" min="1" max="1" chance="1.928" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5294" min="1" max="1" chance="1.927" /> <!-- Sealed Tallum Helmet -->
-				<item id="5293" min="1" max="1" chance="1.919" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="5314" min="1" max="1" chance="1.915" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5315" min="1" max="1" chance="1.914" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5290" min="1" max="1" chance="1.911" /> <!-- Sealed Dark Crystal Gloves -->
-				<item id="5292" min="1" max="1" chance="1.907" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5329" min="1" max="1" chance="1.9" /> <!-- Sealed Majestic Robe -->
-				<item id="5288" min="1" max="1" chance="1.893" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5319" min="1" max="1" chance="1.892" /> <!-- Sealed Majestic Boots -->
-				<item id="5304" min="1" max="1" chance="1.889" /> <!-- Sealed Tallum Tunic -->
-				<item id="5326" min="1" max="1" chance="1.886" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5318" min="1" max="1" chance="1.878" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5291" min="1" max="1" chance="1.878" /> <!-- Sealed Dark Crystal Boots -->
-				<item id="5289" min="1" max="1" chance="1.875" /> <!-- Sealed Dark Crystal Helmet -->
-				<item id="5323" min="1" max="1" chance="1.862" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5301" min="1" max="1" chance="1.86" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="5298" min="1" max="1" chance="1.846" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5316" min="1" max="1" chance="1.838" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5305" min="1" max="1" chance="1.832" /> <!-- Sealed Tallum Stockings -->
-				<item id="5317" min="1" max="1" chance="1.829" /> <!-- Sealed Majestic Circlet -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8938" min="1" max="1" chance="0.075" /> <!-- Tallum Blade*Damascus -->
-				<item id="91887" min="1" max="1" chance="0.075" /> <!-- Durendal -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga's Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="91902" min="1" max="1" chance="0.075" /> <!-- Éclair Bijou -->
-				<item id="91031" min="1" max="1" chance="1.95" /> <!-- Water Spirit Evolution Stone -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 CON -2> - 3rd Class Transfer -->
+				<group chance="1">
+					<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+					<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+					<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+					<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+					<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+					<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+					<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+					<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+					<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+					<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+					<item id="8688" min="1" max="1" chance="7.15" /> <!-- Daimon Crystal -->
+					<item id="8938" min="1" max="1" chance="7.15" /> <!-- Tallum Blade*Damascus Sword -->
+					<item id="91887" min="1" max="1" chance="7.15" /> <!-- Durendal -->
+					<item id="91902" min="1" max="1" chance="7.15" /> <!-- Éclair Bijou -->
+				</group>
+				<group chance="55">
+					<item id="5287" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Breastplate -->
+					<item id="5288" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5289" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Helmet -->
+					<item id="5290" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5291" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5292" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Shield -->
+					<item id="5293" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Plate Armor -->
+					<item id="5294" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Helmet -->
+					<item id="5295" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Gloves -->
+					<item id="5296" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Boots -->
+					<item id="5297" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5298" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5301" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Leather Armor -->
+					<item id="5304" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Tunic -->
+					<item id="5305" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Stockings -->
+					<item id="5308" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Robe -->
+					<item id="5311" min="1" max="1" chance="3.45" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5312" min="1" max="1" chance="3.45" /> <!-- Sealed Helm of Nightmare -->
+					<item id="5313" min="1" max="1" chance="3.45" /> <!-- Sealed Gauntlets of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3.45" /> <!-- Sealed Boots of Nightmare -->
+					<item id="5315" min="1" max="1" chance="3.45" /> <!-- Sealed Shield of Nightmare -->
+					<item id="5320" min="1" max="1" chance="3.45" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5326" min="1" max="1" chance="3.45" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5316" min="1" max="1" chance="3.45" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5317" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Circlet -->
+					<item id="5318" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Gauntlets -->
+					<item id="5319" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Boots -->
+					<item id="5323" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5329" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Robe -->
+				</group>
+				<group chance="50">
+					<item id="94186" min="1" max="1" chance="16" /> <!-- Life Stone Lv. 2 - Weapon -->
+					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
+				</group>
+				<group chance="5">
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+				</group>
+				<group chance="2">
+					<item id="91031" min="1" max="1" chance="100" /> <!-- Water Spirit Evolution Stone -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -283,83 +391,105 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="8233255.33596838" hpRegen="319.2293199" mp="4203.40091563113" mpRegen="3" />
-			<attack physical="680.441457140486" magical="127.33579646414" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="208.284023668639" magical="95.9748607784026" />
+			<vitals hp="2380030" hpRegen="2647.36823225113" mp="3349.6" mpRegen="6" />
+			<attack physical="27330.336" magical="9145.973" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
-			<skill id="50081" level="1" /> <!-- Raid Boss (Lv. 82) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+			<skill id="4045" level="2" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5316" min="1" max="1" chance="1.968" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5312" min="1" max="1" chance="1.964" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5308" min="1" max="1" chance="1.959" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="5317" min="1" max="1" chance="1.954" /> <!-- Sealed Majestic Circlet -->
-				<item id="5293" min="1" max="1" chance="1.953" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="5319" min="1" max="1" chance="1.948" /> <!-- Sealed Majestic Boots -->
-				<item id="5292" min="1" max="1" chance="1.944" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5320" min="1" max="1" chance="1.94" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5301" min="1" max="1" chance="1.94" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="5305" min="1" max="1" chance="1.938" /> <!-- Sealed Tallum Stockings -->
-				<item id="5298" min="1" max="1" chance="1.934" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5314" min="1" max="1" chance="1.922" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="1.918" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5297" min="1" max="1" chance="1.916" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5313" min="1" max="1" chance="1.898" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5294" min="1" max="1" chance="1.894" /> <!-- Sealed Tallum Helmet -->
-				<item id="5287" min="1" max="1" chance="1.888" /> <!-- Sealed Dark Crystal Breastplate -->
-				<item id="5295" min="1" max="1" chance="1.878" /> <!-- Sealed Tallum Gloves -->
-				<item id="5323" min="1" max="1" chance="1.874" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5311" min="1" max="1" chance="1.874" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5288" min="1" max="1" chance="1.869" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5315" min="1" max="1" chance="1.867" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5326" min="1" max="1" chance="1.858" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5291" min="1" max="1" chance="1.854" /> <!-- Sealed Dark Crystal Boots -->
-				<item id="5290" min="1" max="1" chance="1.853" /> <!-- Sealed Dark Crystal Gloves -->
-				<item id="5296" min="1" max="1" chance="1.844" /> <!-- Sealed Tallum Boots -->
-				<item id="5289" min="1" max="1" chance="1.836" /> <!-- Sealed Dark Crystal Helmet -->
-				<item id="5304" min="1" max="1" chance="1.833" /> <!-- Sealed Tallum Tunic -->
-				<item id="5329" min="1" max="1" chance="1.822" /> <!-- Sealed Majestic Robe -->
-				<item id="91887" min="1" max="1" chance="0.075" /> <!-- Durendal -->
-				<item id="8938" min="1" max="1" chance="0.075" /> <!-- Tallum Blade*Damascus -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga's Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="91902" min="1" max="1" chance="0.075" /> <!-- Éclair Bijou -->
-				<item id="91033" min="1" max="1" chance="2.008" /> <!-- Wind Spirit Evolution Stone -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 CON -2> - 3rd Class Transfer -->
+				<group chance="1">
+					<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+					<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+					<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+					<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+					<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+					<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+					<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+					<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+					<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+					<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+					<item id="8688" min="1" max="1" chance="7.15" /> <!-- Daimon Crystal -->
+					<item id="8938" min="1" max="1" chance="7.15" /> <!-- Tallum Blade*Damascus Sword -->
+					<item id="91887" min="1" max="1" chance="7.15" /> <!-- Durendal -->
+					<item id="91902" min="1" max="1" chance="7.15" /> <!-- Éclair Bijou -->
+				</group>
+				<group chance="55">
+					<item id="5287" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Breastplate -->
+					<item id="5288" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5289" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Helmet -->
+					<item id="5290" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5291" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5292" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Shield -->
+					<item id="5293" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Plate Armor -->
+					<item id="5294" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Helmet -->
+					<item id="5295" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Gloves -->
+					<item id="5296" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Boots -->
+					<item id="5297" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5298" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5301" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Leather Armor -->
+					<item id="5304" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Tunic -->
+					<item id="5305" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Stockings -->
+					<item id="5308" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Robe -->
+					<item id="5311" min="1" max="1" chance="3.45" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5312" min="1" max="1" chance="3.45" /> <!-- Sealed Helm of Nightmare -->
+					<item id="5313" min="1" max="1" chance="3.45" /> <!-- Sealed Gauntlets of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3.45" /> <!-- Sealed Boots of Nightmare -->
+					<item id="5315" min="1" max="1" chance="3.45" /> <!-- Sealed Shield of Nightmare -->
+					<item id="5320" min="1" max="1" chance="3.45" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5326" min="1" max="1" chance="3.45" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5316" min="1" max="1" chance="3.45" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5317" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Circlet -->
+					<item id="5318" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Gauntlets -->
+					<item id="5319" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Boots -->
+					<item id="5323" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5329" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Robe -->
+				</group>
+				<group chance="50">
+					<item id="94186" min="1" max="1" chance="16" /> <!-- Life Stone Lv. 2 - Weapon -->
+					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
+				</group>
+				<group chance="5">
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+				</group>
+				<group chance="2">
+					<item id="91033" min="1" max="1" chance="100" /> <!-- Wind Spirit Evolution Stone -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -368,143 +498,205 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" attributeExp="104000" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="8851877.47035573" hpRegen="319.2293199" mp="4203.40091563113" mpRegen="3" />
-			<attack physical="680.441457140486" magical="127.33579646414" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="208.284023668639" magical="95.9748607784026" />
+			<vitals hp="1603389" hpRegen="2647.36823225113" mp="3349.6" mpRegen="6" />
+			<attack physical="27330.336" magical="9145.973" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="150" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="80" />
 			<height normal="125" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
-			<skill id="50082" level="1" /> <!-- Raid Boss (Lv. 82) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
+			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
+			<skill id="4045" level="2" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5311" min="1" max="1" chance="1.96" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5293" min="1" max="1" chance="1.956" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="5287" min="1" max="1" chance="1.933" /> <!-- Sealed Dark Crystal Breastplate -->
-				<item id="5305" min="1" max="1" chance="1.932" /> <!-- Sealed Tallum Stockings -->
-				<item id="5295" min="1" max="1" chance="1.93" /> <!-- Sealed Tallum Gloves -->
-				<item id="5312" min="1" max="1" chance="1.925" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5297" min="1" max="1" chance="1.919" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5314" min="1" max="1" chance="1.913" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5290" min="1" max="1" chance="1.912" /> <!-- Sealed Dark Crystal Gloves -->
-				<item id="5323" min="1" max="1" chance="1.904" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5320" min="1" max="1" chance="1.902" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5289" min="1" max="1" chance="1.897" /> <!-- Sealed Dark Crystal Helmet -->
-				<item id="5318" min="1" max="1" chance="1.895" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5313" min="1" max="1" chance="1.895" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5308" min="1" max="1" chance="1.894" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="5288" min="1" max="1" chance="1.883" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5292" min="1" max="1" chance="1.878" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5317" min="1" max="1" chance="1.867" /> <!-- Sealed Majestic Circlet -->
-				<item id="5319" min="1" max="1" chance="1.866" /> <!-- Sealed Majestic Boots -->
-				<item id="5316" min="1" max="1" chance="1.865" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5298" min="1" max="1" chance="1.858" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5315" min="1" max="1" chance="1.854" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5291" min="1" max="1" chance="1.85" /> <!-- Sealed Dark Crystal Boots -->
-				<item id="5304" min="1" max="1" chance="1.845" /> <!-- Sealed Tallum Tunic -->
-				<item id="5294" min="1" max="1" chance="1.844" /> <!-- Sealed Tallum Helmet -->
-				<item id="5301" min="1" max="1" chance="1.843" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="5296" min="1" max="1" chance="1.842" /> <!-- Sealed Tallum Boots -->
-				<item id="5326" min="1" max="1" chance="1.836" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="1.83" /> <!-- Sealed Majestic Robe -->
-				<item id="91887" min="1" max="1" chance="0.075" /> <!-- Durendal -->
-				<item id="8938" min="1" max="1" chance="0.075" /> <!-- Tallum Blade*Damascus -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga's Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="91902" min="1" max="1" chance="0.075" /> <!-- Éclair Bijou -->
-				<item id="91034" min="1" max="1" chance="1.94" /> <!-- Earth Spirit Evolution Stone -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best WIT Dye <WIT +4 INT -2> - 3rd Class Transfer -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best MEN Dye <MEN +4 INT -2> - 3rd Class Transfer -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 WIT -2> - 3rd Class Transfer -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best INT Dye <INT +4 MEN -2> - 3rd Class Transfer -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 CON -2> - 3rd Class Transfer -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best DEX Dye <DEX +4 STR -2> - 3rd Class Transfer -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best CON Dye <CON +4 STR -2> - 3rd Class Transfer -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 DEX -2> - 3rd Class Transfer -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best STR Dye <STR +4 CON -2> - 3rd Class Transfer -->
+				<group chance="1">
+					<item id="8678" min="1" max="1" chance="7.14" /> <!-- Sirra's Blade -->
+					<item id="8679" min="1" max="1" chance="7.14" /> <!-- Sword of Ipos -->
+					<item id="8680" min="1" max="1" chance="7.14" /> <!-- Barakiel's Axe -->
+					<item id="8681" min="1" max="1" chance="7.14" /> <!-- Behemoth' Tuning Fork -->
+					<item id="8682" min="1" max="1" chance="7.14" /> <!-- Naga's Storm -->
+					<item id="8683" min="1" max="1" chance="7.14" /> <!-- Tiphon's Spear -->
+					<item id="8684" min="1" max="1" chance="7.14" /> <!-- Shyeed's Bow -->
+					<item id="8685" min="1" max="1" chance="7.14" /> <!-- Sobekk's Hurricane -->
+					<item id="8686" min="1" max="1" chance="7.14" /> <!-- Themis' Tongue -->
+					<item id="8687" min="1" max="1" chance="7.14" /> <!-- Cabrio's Hand -->
+					<item id="8688" min="1" max="1" chance="7.15" /> <!-- Daimon Crystal -->
+					<item id="8938" min="1" max="1" chance="7.15" /> <!-- Tallum Blade*Damascus Sword -->
+					<item id="91887" min="1" max="1" chance="7.15" /> <!-- Durendal -->
+					<item id="91902" min="1" max="1" chance="7.15" /> <!-- Éclair Bijou -->
+				</group>
+				<group chance="55">
+					<item id="5287" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Breastplate -->
+					<item id="5288" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5289" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Helmet -->
+					<item id="5290" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5291" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5292" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Shield -->
+					<item id="5293" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Plate Armor -->
+					<item id="5294" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Helmet -->
+					<item id="5295" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Gloves -->
+					<item id="5296" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Boots -->
+					<item id="5297" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5298" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5301" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Leather Armor -->
+					<item id="5304" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Tunic -->
+					<item id="5305" min="1" max="1" chance="3.45" /> <!-- Sealed Tallum Stockings -->
+					<item id="5308" min="1" max="1" chance="3.45" /> <!-- Sealed Dark Crystal Robe -->
+					<item id="5311" min="1" max="1" chance="3.45" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5312" min="1" max="1" chance="3.45" /> <!-- Sealed Helm of Nightmare -->
+					<item id="5313" min="1" max="1" chance="3.45" /> <!-- Sealed Gauntlets of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3.45" /> <!-- Sealed Boots of Nightmare -->
+					<item id="5315" min="1" max="1" chance="3.45" /> <!-- Sealed Shield of Nightmare -->
+					<item id="5320" min="1" max="1" chance="3.45" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5326" min="1" max="1" chance="3.45" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5316" min="1" max="1" chance="3.45" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5317" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Circlet -->
+					<item id="5318" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Gauntlets -->
+					<item id="5319" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Boots -->
+					<item id="5323" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5329" min="1" max="1" chance="3.44" /> <!-- Sealed Majestic Robe -->
+				</group>
+				<group chance="50">
+					<item id="94186" min="1" max="1" chance="16" /> <!-- Life Stone Lv. 2 - Weapon -->
+					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
+				</group>
+				<group chance="5">
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+				</group>
+				<group chance="2">
+					<item id="91034" min="1" max="1" chance="100" /> <!-- Earth Spirit Evolution Stone -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29109" level="80" type="Folk" name="Freya" title="Ice Queen">
+	<npc id="29109" level="82" type="Folk" name="Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12680" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12680" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="13829.6" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="54" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29110" level="80" type="Folk" name="Safe Zone">
+	<npc id="29110" level="82" type="Folk" name="Safe Zone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12680640" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="13829.6" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="true" noSleepMode="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.001" />
 			<height normal="0.001" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29111" level="80" type="Monster" name="Water Slime">
 		<parameters>
 			<skill name="Skill01_ID" id="50039" level="1" />
 			<param name="Skill01_Probablity" value="9000" />
 		</parameters>
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="50000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="62632" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="36" />
 				<run ground="36" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" />
 		<skillList>
-			<skill id="50039" level="1" /> <!-- Aqua Destruction -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="36" />
@@ -513,423 +705,750 @@
 	</npc>
 	<npc id="29112" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="5" /> <!-- HP High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4276" level="2" /> <!-- Bow Vulnerability -->
+		</skillList>
 	</npc>
 	<npc id="29113" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="5" /> <!-- HP High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29114" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="5" /> <!-- HP High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29115" level="80" type="Monster" name="Procella's Storm">
+	<npc id="29115" level="82" type="Monster" name="Procella's Storm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="20" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2500000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="13829.6" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="50" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="true" noSleepMode="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29116" level="80" type="Monster" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29117" level="80" type="Monster" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
+			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.25" magical="999.2" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="2" /> <!-- Bow Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29118" level="80" type="Folk" name="Spirit King's Magic">
+	<npc id="29118" level="82" type="Folk" name="Spirit King's Magic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="400000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="400000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="13829.6" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29119" level="75" type="RaidBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="11083949.50738" hpRegen="310.756323" mp="20787.765" mpRegen="3" />
-			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2788.494256" magical="1360.356908" />
+			<vitals hp="19999999.8" hpRegen="1355.01358333333" mp="12240" mpRegen="10" />
+			<attack physical="10122" magical="4400" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2244" magical="1496" />
 			<speed>
 				<walk ground="42" />
 				<run ground="190" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="19.2" />
 			<height normal="39" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29120" level="85" type="Folk" name="Ignis" title="Flame Spirit King">
+	<npc id="29120" level="84" type="RaidBoss" name="Ignis" title="Flame Spirit King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="300000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="223" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="102" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29121" level="85" type="Folk" name="Nebula" title="Water Spirit Queen">
+	<npc id="29121" level="84" type="RaidBoss" name="Nebula" title="Water Spirit Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="300000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="223" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="80" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="42" />
 			<height normal="88.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29122" level="85" type="Folk" name="Procella" title="Wind Spirit King">
+	<npc id="29122" level="84" type="RaidBoss" name="Procella" title="Wind Spirit King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="300000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="223" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29123" level="85" type="Folk" name="Petram" title="Earth Spirit King">
+	<npc id="29123" level="84" type="RaidBoss" name="Petram" title="Earth Spirit King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="300000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="223" type="SWORD" range="150" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="80" />
 			<height normal="125" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29124" level="85" type="Folk" name="Freya" title="Ice Queen">
+	<npc id="29124" level="84" type="Folk" name="Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12680" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12680" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="54" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29125" level="85" type="Folk" name="Safe Zone">
+	<npc id="29125" level="84" type="Folk" name="Safe Zone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12680640" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="1" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="true" noSleepMode="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.001" />
 			<height normal="0.001" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29126" level="85" type="Folk" name="Water Slime">
+	<npc id="29126" level="84" type="Folk" name="Water Slime">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="80000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="80000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="36" />
 				<run ground="36" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="true" noSleepMode="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="39" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29127" level="85" type="Folk" name="Procella's Guardian">
+	<npc id="29127" level="84" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14666666" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29128" level="85" type="Folk" name="Procella's Guardian">
+	<npc id="29128" level="84" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14666666" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29129" level="85" type="Folk" name="Procella's Guardian">
+	<npc id="29129" level="84" type="Folk" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14666666" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29130" level="85" type="Folk" name="Procella's Storm">
+	<npc id="29130" level="84" type="Folk" name="Procella's Storm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2500000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="50" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" undying="true" noSleepMode="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29131" level="85" type="Folk" name="Petram Piece">
+	<npc id="29131" level="84" type="Folk" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29132" level="85" type="Folk" name="Petram Fragment">
+	<npc id="29132" level="84" type="Folk" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="29133" level="85" type="Folk" name="Spirit King's Magic">
+	<npc id="29133" level="84" type="Folk" name="Spirit King's Magic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2505" magical="1452" />
 			<speed>
 				<walk ground="45" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" canMove="false" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29134" level="85" type="Folk" name="Mantis King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1547,22 +2066,31 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2793296.08938547" hpRegen="8.5" mp="22859.2351505289" mpRegen="3" />
-			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1071.29474264312" magical="522.626863116263" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1898734" hpRegen="22" mp="22800" mpRegen="30" />
+			<attack physical="14519" magical="11667" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1370" magical="851" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" showName="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
-			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="6655" level="1" /> <!-- Tarask's Carapace -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />

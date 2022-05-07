@@ -1,38 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21400" level="84" type="Monster" name="Hexa Beetle">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="993837" sp="14907" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
+		<ai clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.107">
+					<item id="600" min="1" max="1" chance="1.3812" /> <!-- Sealed Avadon Boots -->
+					<item id="601" min="1" max="1" chance="0.8916" /> <!-- Sealed Doom Boots -->
+					<item id="2439" min="1" max="1" chance="0.8916" /> <!-- Sealed Blue Wolf Boots -->
+					<item id="554" min="1" max="1" chance="1.3812" /> <!-- Sealed Zubei's Boots -->
+					<item id="92779" min="1" max="1" chance="18.7229" /> <!-- Sealed Blue Wolf Boot Design -->
+					<item id="92784" min="1" max="1" chance="18.7229" /> <!-- Sealed Doom Boot Fragment -->
+					<item id="92782" min="1" max="1" chance="29.0044" /> <!-- Sealed Zubei's Boot Design -->
+					<item id="92783" min="1" max="1" chance="29.0042" /> <!-- Sealed Avadon Boot Design -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -40,14 +76,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1943222" sp="29148" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -55,9 +93,16 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -65,14 +110,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="993837" sp="14907" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="37" />
 				<run ground="165" />
 			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -80,20 +127,49 @@
 			<height normal="52.8" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.107">
+					<item id="2475" min="1" max="1" chance="0.8916" /> <!-- Sealed Doom Gloves -->
+					<item id="612" min="1" max="1" chance="1.3812" /> <!-- Sealed Zubei's Gauntlets -->
+					<item id="2487" min="1" max="1" chance="0.8916" /> <!-- Sealed Blue Wolf Gloves -->
+					<item id="2464" min="1" max="1" chance="1.3812" /> <!-- Sealed Avadon Gloves -->
+					<item id="92766" min="1" max="1" chance="29.0044" /> <!-- Sealed Avadon Glove Fragment -->
+					<item id="92785" min="1" max="1" chance="29.0044" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+					<item id="92780" min="1" max="1" chance="18.7229" /> <!-- Sealed Doom Glove Fragment -->
+					<item id="92781" min="1" max="1" chance="18.7227" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -101,14 +177,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1980478" sp="29707" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="37" />
 				<run ground="165" />
 			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -116,11 +194,16 @@
 			<height normal="52.8" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -128,14 +211,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="993837" sp="14907" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -143,20 +228,47 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0116">
+					<item id="243" min="1" max="1" chance="1.0194" /> <!-- Twilight Knife -->
+					<item id="92795" min="1" max="1" chance="21.4075" /> <!-- Twilight Knife Edge -->
+					<item id="229" min="1" max="1" chance="1.0194" /> <!-- Kris -->
+					<item id="92794" min="1" max="1" chance="21.4075" /> <!-- Kris Edge -->
+					<item id="2392" min="1" max="1" chance="2.5066" /> <!-- Doom Leather Armor -->
+					<item id="92772" min="1" max="1" chance="52.6396" /> <!-- Doom Leather Armor Design -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -164,14 +276,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1980478" sp="29707" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -179,11 +293,16 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -192,14 +311,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
 		<acquire exp="691558" sp="10373" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="40" />
 				<run ground="145" />
 			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -208,16 +329,47 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5311" min="1" max="1" chance="0.0075" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="57" min="7193" max="16783" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0555">
+					<item id="2390" min="1" max="1" chance="0.6058" /> <!-- Avadon Leather Armor -->
+					<item id="92761" min="1" max="1" chance="12.7221" /> <!-- Avadon Leather Armor Lining -->
+					<item id="2388" min="1" max="1" chance="1.4196" /> <!-- Zubei's Leather Gaiters -->
+					<item id="92760" min="1" max="1" chance="29.8115" /> <!-- Zubei's Leather Gaiters Texture -->
+					<item id="2384" min="1" max="1" chance="0.8854" /> <!-- Zubei's Leather Shirt -->
+					<item id="92759" min="1" max="1" chance="18.5939" /> <!-- Zubei's Leather Shirt Fabric -->
+					<item id="110" min="1" max="1" chance="1.6346" /> <!-- Doom Shield -->
+					<item id="92767" min="1" max="1" chance="34.3271" /> <!-- Doom Shield Fragment -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -226,14 +378,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
 		<acquire exp="1375920" sp="20638" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="40" />
 				<run ground="145" />
 			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -242,9 +396,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -253,14 +412,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="98" />
 		<acquire exp="708492" sp="10627" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
+			<hitTime>210</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -269,19 +430,48 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5311" min="1" max="1" chance="0.0075" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="57" min="7372" max="17200" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0665">
+					<item id="2406" min="1" max="1" chance="0.5057" /> <!-- Avadon Robe -->
+					<item id="92764" min="1" max="1" chance="10.6199" /> <!-- Avadon Robe Fabric -->
+					<item id="2397" min="1" max="1" chance="0.7391" /> <!-- Zubei's Tunic -->
+					<item id="92762" min="1" max="1" chance="15.5214" /> <!-- Zubei's Tunic Fabric -->
+					<item id="2402" min="1" max="1" chance="1.185" /> <!-- Zubei's Stockings -->
+					<item id="92763" min="1" max="1" chance="24.8854" /> <!-- Zubei's Stockings Fabric -->
+					<item id="673" min="1" max="1" chance="2.1156" /> <!-- Avadon Shield -->
+					<item id="92808" min="1" max="1" chance="44.4279" /> <!-- Avadon Shield Fragment -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -290,14 +480,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="98" />
 		<acquire exp="1387139" sp="20807" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
+			<hitTime>210</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -306,11 +498,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -318,14 +513,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1010772" sp="15161" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="195" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -333,20 +530,46 @@
 			<height normal="26.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5326" min="1" max="1" chance="0.03" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Robe -->
-				<item id="57" min="10413" max="24297" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0438">
+					<item id="284" min="1" max="1" chance="0.4032" /> <!-- Dark Elven Longbow -->
+					<item id="92797" min="1" max="1" chance="8.4682" /> <!-- Dark Elven Longbow Shaft -->
+					<item id="110" min="1" max="1" chance="4.1422" /> <!-- Doom Shield -->
+					<item id="92767" min="1" max="1" chance="86.9864" /> <!-- Doom Shield Fragment -->
+				</group>
+				<group chance="13.7665">
+					<item id="92908" min="1" max="1" chance="29.7139" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="5.9428" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="2.9714" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="0.9905" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.5943" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.2971" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.099" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0594" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="29.7139" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="5.9428" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="2.9714" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.5943" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.2971" /> <!-- Drained Thons -->
+					<!-- <item id="2508" min="1" max="1" chance="19.8091" /> Cursed Bone - Not Available -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -354,14 +577,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1991697" sp="29875" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="195" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -369,13 +594,16 @@
 			<height normal="26.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -383,14 +611,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="993837" sp="14907" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="37" />
 				<run ground="130" />
 			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -398,18 +628,49 @@
 			<height normal="66" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5326" min="1" max="1" chance="0.03" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Robe -->
-				<item id="57" min="10234" max="23880" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.107">
+					<item id="600" min="1" max="1" chance="1.3812" /> <!-- Sealed Avadon Boots -->
+					<item id="601" min="1" max="1" chance="0.8916" /> <!-- Sealed Doom Boots -->
+					<item id="2439" min="1" max="1" chance="0.8916" /> <!-- Sealed Blue Wolf Boots -->
+					<item id="554" min="1" max="1" chance="1.3812" /> <!-- Sealed Zubei's Boots -->
+					<item id="92779" min="1" max="1" chance="18.7229" /> <!-- Sealed Blue Wolf Boot Design -->
+					<item id="92784" min="1" max="1" chance="18.7229" /> <!-- Sealed Doom Boot Fragment -->
+					<item id="92782" min="1" max="1" chance="29.0044" /> <!-- Sealed Zubei's Boot Design -->
+					<item id="92783" min="1" max="1" chance="29.0042" /> <!-- Sealed Avadon Boot Design -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -417,14 +678,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1980478" sp="29707" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.383556667" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="37" />
 				<run ground="130" />
 			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -432,11 +695,16 @@
 			<height normal="66" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -445,14 +713,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
 		<acquire exp="758237" sp="11373" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -461,15 +731,45 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5320" min="1" max="1" chance="0.0075" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5323" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="7897" max="18427" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.023">
+					<item id="2381" min="1" max="1" chance="0.9458" /> <!-- Doom Plate Armor -->
+					<item id="92770" min="1" max="1" chance="19.8615" /> <!-- Doom Plate Armor Temper -->
+					<item id="358" min="1" max="1" chance="1.3834" /> <!-- Blue Wolf Breastplate -->
+					<item id="92768" min="1" max="1" chance="29.052" /> <!-- Blue Wolf Breastplate Part -->
+					<item id="2380" min="1" max="1" chance="2.2162" /> <!-- Blue Wolf Gaiters -->
+					<item id="92769" min="1" max="1" chance="46.5411" /> <!-- Blue Wolf Gaiter Material -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -478,14 +778,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
 		<acquire exp="1397934" sp="20969" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -494,9 +796,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -505,14 +812,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
 		<acquire exp="789989" sp="11849" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="39" />
 				<run ground="140" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -521,17 +830,43 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5320" min="1" max="1" chance="0.0075" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5323" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="8233" max="19209" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0078">
+					<item id="92" min="1" max="1" chance="2.2727" /> <!-- Spirit's Staff -->
+					<item id="92791" min="1" max="1" chance="47.7273" /> <!-- Spirit's Staff Head -->
+					<item id="91" min="1" max="1" chance="2.2727" /> <!-- Heavy War Axe -->
+					<item id="92790" min="1" max="1" chance="47.7273" /> <!-- Heavy War Axe Head -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -540,14 +875,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
 		<acquire exp="1442599" sp="21638" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="39" />
 				<run ground="140" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -556,11 +893,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -569,14 +909,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="142" />
 		<acquire exp="705317" sp="10579" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
 			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -585,15 +927,47 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Circlet -->
-				<item id="57" min="7338" max="17122" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.065">
+					<item id="2379" min="1" max="1" chance="0.9072" /> <!-- Avadon Gaiters -->
+					<item id="92758" min="1" max="1" chance="19.0516" /> <!-- Avadon Gaiters Material -->
+					<item id="357" min="1" max="1" chance="0.567" /> <!-- Zubei's Breastplate -->
+					<item id="92755" min="1" max="1" chance="11.9073" /> <!-- Zubei's Breastplate Part -->
+					<item id="383" min="1" max="1" chance="0.9072" /> <!-- Zubei's Gaiters -->
+					<item id="92756" min="1" max="1" chance="19.0516" /> <!-- Zubei's Gaiters Material -->
+					<item id="633" min="1" max="1" chance="2.164" /> <!-- Zubei's Shield -->
+					<item id="92786" min="1" max="1" chance="45.4441" /> <!-- Zubei's Shield Fragment -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -602,14 +976,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="142" />
 		<acquire exp="1388620" sp="20829" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
 			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -618,10 +994,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -629,14 +1009,16 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1330194" sp="19952" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="41" />
 				<run ground="200" />
 			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -645,33 +1027,60 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8678" min="1" max="1" chance="0.0075" /> <!-- Sirra's Blade -->
-				<item id="57" min="13307" max="31050" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="7.803" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0057">
+					<item id="97" min="1" max="1" chance="2.2727" /> <!-- Lance -->
+					<item id="92800" min="1" max="1" chance="47.7273" /> <!-- Lance Blade -->
+					<item id="268" min="1" max="1" chance="2.2727" /> <!-- Bellion Cestus -->
+					<item id="92805" min="1" max="1" chance="47.7273" /> <!-- Bellion Cestus Edge -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8690" min="1" max="1" chance="1.409" /> <!-- Recipe: Sirra's Blade (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21421" level="85" type="Monster" name="Ashuras">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2640882" sp="39613" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="41" />
 				<run ground="200" />
 			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -680,24 +1089,32 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 	</npc>
 	<npc id="21422" level="85" type="Monster" name="Imperial Dancer">
 		<race>DEMONIC</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<equipment rhand="3939" />
 		<acquire exp="767945" sp="11519" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -706,36 +1123,64 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8679" min="1" max="1" chance="0.003" /> <!-- Sword of Ipos -->
-				<item id="57" min="7810" max="18223" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="4.547" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0111">
+					<item id="78" min="1" max="1" chance="1.1828" /> <!-- Great Sword -->
+					<item id="92789" min="1" max="1" chance="24.8393" /> <!-- Great Sword Blade -->
+					<item id="142" min="1" max="1" chance="1.1828" /> <!-- Keshanberk -->
+					<item id="92792" min="1" max="1" chance="24.8393" /> <!-- Keshanberk Blade -->
+					<item id="2381" min="1" max="1" chance="2.1798" /> <!-- Doom Plate Armor -->
+					<item id="92770" min="1" max="1" chance="45.776" /> <!-- Doom Plate Armor Temper -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8692" min="1" max="1" chance="0.75" /> <!-- Recipe: Sword of Ipos (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21423" level="85" type="Monster" name="Imperial Dancer">
 		<race>DEMONIC</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<equipment rhand="3939" />
 		<acquire exp="1430983" sp="21464" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -744,9 +1189,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
 		</skillList>
@@ -755,14 +1205,16 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1059474" sp="15892" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -771,34 +1223,61 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8680" min="1" max="1" chance="0.0075" /> <!-- Barakiel's Axe -->
-				<item id="57" min="10666" max="24887" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="6.258" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0489">
+					<item id="284" min="1" max="1" chance="0.4032" /> <!-- Dark Elven Longbow -->
+					<item id="92797" min="1" max="1" chance="8.4682" /> <!-- Dark Elven Longbow Shaft -->
+					<item id="110" min="1" max="1" chance="4.1422" /> <!-- Doom Shield -->
+					<item id="92767" min="1" max="1" chance="86.9864" /> <!-- Doom Shield Fragment -->
+				</group>
+				<group chance="15.3497">
+					<item id="92908" min="1" max="1" chance="29.7139" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="5.9428" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="2.9714" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="0.9905" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.5943" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.2971" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.099" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0594" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="29.7139" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="5.9428" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="2.9714" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.5943" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.2971" /> <!-- Drained Thons -->
+					<!-- <item id="2508" min="1" max="1" chance="19.8091" /> Cursed Bone - Not Available -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8694" min="1" max="1" chance="1.106" /> <!-- Recipe: Barakiel's Axe (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21425" level="85" type="Monster" name="Ashikenas">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2076464" sp="31146" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -807,9 +1286,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 	</npc>
@@ -817,14 +1301,16 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1059474" sp="15892" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="31" />
 				<run ground="130" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -833,34 +1319,60 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8681" min="1" max="1" chance="0.0075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="57" min="10666" max="24887" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="6.159" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0087">
+					<item id="92" min="1" max="1" chance="2.2727" /> <!-- Spirit's Staff -->
+					<item id="92791" min="1" max="1" chance="47.7273" /> <!-- Spirit's Staff Head -->
+					<item id="91" min="1" max="1" chance="2.2727" /> <!-- Heavy War Axe -->
+					<item id="92790" min="1" max="1" chance="47.7273" /> <!-- Heavy War Axe Head -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8696" min="1" max="1" chance="1.125" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21427" level="85" type="Monster" name="Abraxian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2076464" sp="31146" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="31" />
 				<run ground="130" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -869,9 +1381,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 	</npc>
@@ -879,14 +1396,16 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1357938" sp="20369" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -895,35 +1414,63 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8683" min="1" max="1" chance="0.0075" /> <!-- Tiphon's Spear -->
-				<item id="57" min="13593" max="31718" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="7.983" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0129">
+					<item id="243" min="1" max="1" chance="1.0194" /> <!-- Twilight Knife -->
+					<item id="92795" min="1" max="1" chance="21.4075" /> <!-- Twilight Knife Edge -->
+					<item id="229" min="1" max="1" chance="1.0194" /> <!-- Kris -->
+					<item id="92794" min="1" max="1" chance="21.4075" /> <!-- Kris Edge -->
+					<item id="2392" min="1" max="1" chance="2.5066" /> <!-- Doom Leather Armor -->
+					<item id="92772" min="1" max="1" chance="52.6396" /> <!-- Doom Leather Armor Design -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8700" min="1" max="1" chance="1.418" /> <!-- Recipe: Tiphon's Spear (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21429" level="85" type="Monster" name="Hasturan">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2673394" sp="40100" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -932,9 +1479,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
 		</skillList>
@@ -944,14 +1496,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="6722" />
 		<acquire exp="1452658" sp="21789" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="35" />
 				<run ground="210" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -960,20 +1514,42 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="8685" min="1" max="1" chance="0.0075" /> <!-- Sobekk's Hurricane -->
-				<item id="57" min="14571" max="33999" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="8.441" /> <!-- A-grade Gemstone -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0057">
+					<item id="234" min="1" max="1" chance="4.5455" /> <!-- Demon's Dagger -->
+					<item id="92804" min="1" max="1" chance="95.4545" /> <!-- Demon's Dagger Edge -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="8704" min="1" max="1" chance="1.456" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21431" level="85" type="Monster" name="Ahrimanes">
@@ -981,14 +1557,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="6722" />
 		<acquire exp="2697670" sp="40465" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17259.68063" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="35" />
 				<run ground="210" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -997,9 +1575,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 	</npc>
@@ -1007,14 +1590,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="5564" sp="43180" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1022,29 +1607,43 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="175" min="1" max="1" chance="0.0009" /> <!-- Art of Battle Axe -->
-				<item id="57" min="684" max="1596" chance="70" /> <!-- Adena -->
-				<item id="92908" min="1" max="1" chance="4.829" /> <!-- Material: Lump of Wood -->
-				<item id="92996" min="1" max="1" chance="4.82" /> <!-- Old Resources -->
-				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
-				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
-				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
-				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
-				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
-				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92802" min="1" max="1" chance="0.0075" /> <!-- Art of Battle Axe Blade -->
-				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0057">
+					<item id="175" min="1" max="1" chance="4.5455" /> <!-- Art of Battle Axe -->
+					<item id="92802" min="1" max="1" chance="95.4545" /> <!-- Art of Battle Axe Blade -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1052,14 +1651,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="5564" sp="40040" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1067,31 +1668,45 @@
 			<height normal="43.6" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="97" min="1" max="1" chance="0.0009" /> <!-- Lance -->
-				<item id="268" min="1" max="1" chance="0.0009" /> <!-- Bellion Cestus -->
-				<item id="57" min="684" max="1596" chance="70" /> <!-- Adena -->
-				<item id="92908" min="1" max="1" chance="4.944" /> <!-- Material: Lump of Wood -->
-				<item id="92996" min="1" max="1" chance="4.926" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
-				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
-				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
-				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
-				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
-				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92805" min="1" max="1" chance="0.003" /> <!-- Bellion Cestus Edge -->
-				<item id="92800" min="1" max="1" chance="0.003" /> <!-- Lance Blade -->
-				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0057">
+					<item id="97" min="1" max="1" chance="2.2727" /> <!-- Lance -->
+					<item id="92800" min="1" max="1" chance="47.7273" /> <!-- Lance Blade -->
+					<item id="268" min="1" max="1" chance="2.2727" /> <!-- Bellion Cestus -->
+					<item id="92805" min="1" max="1" chance="47.7273" /> <!-- Bellion Cestus Edge -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1099,14 +1714,16 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="5564" sp="56881" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1114,30 +1731,44 @@
 			<height normal="50" />
 		</collision>
 		<skillList>
-			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="97" min="1" max="1" chance="0.0009" /> <!-- Lance -->
-				<item id="268" min="1" max="1" chance="0.0009" /> <!-- Bellion Cestus -->
-				<item id="57" min="684" max="1596" chance="70" /> <!-- Adena -->
-				<item id="92996" min="1" max="1" chance="4.875" /> <!-- Old Resources -->
-				<item id="92908" min="1" max="1" chance="4.831" /> <!-- Material: Lump of Wood -->
-				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
-				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
-				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
-				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
-				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
-				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92805" min="1" max="1" chance="0.003" /> <!-- Bellion Cestus Edge -->
-				<item id="92800" min="1" max="1" chance="0.003" /> <!-- Lance Blade -->
-				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0057">
+					<item id="97" min="1" max="1" chance="2.2727" /> <!-- Lance -->
+					<item id="92800" min="1" max="1" chance="47.7273" /> <!-- Lance Blade -->
+					<item id="268" min="1" max="1" chance="2.2727" /> <!-- Bellion Cestus -->
+					<item id="92805" min="1" max="1" chance="47.7273" /> <!-- Bellion Cestus Edge -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1146,14 +1777,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
 		<acquire exp="5564" sp="25529" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1161,32 +1794,46 @@
 			<height normal="30" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="78" min="1" max="1" chance="0.0009" /> <!-- Great Sword -->
-				<item id="142" min="1" max="1" chance="0.0009" /> <!-- Keshanberk -->
-				<item id="2381" min="1" max="1" chance="0.0009" /> <!-- Doom Plate Armor -->
-				<item id="57" min="684" max="1596" chance="70" /> <!-- Adena -->
-				<item id="92996" min="1" max="1" chance="4.905" /> <!-- Old Resources -->
-				<item id="92908" min="1" max="1" chance="4.879" /> <!-- Material: Lump of Wood -->
-				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
-				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
-				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
-				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
-				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
-				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92770" min="1" max="1" chance="0.0075" /> <!-- Doom Plate Armor Temper -->
-				<item id="92792" min="1" max="1" chance="0.003" /> <!-- Keshanberk Blade -->
-				<item id="92789" min="1" max="1" chance="0.003" /> <!-- Great Sword Blade -->
-				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0111">
+					<item id="78" min="1" max="1" chance="1.1828" /> <!-- Great Sword -->
+					<item id="92789" min="1" max="1" chance="24.8393" /> <!-- Great Sword Blade -->
+					<item id="142" min="1" max="1" chance="1.1828" /> <!-- Keshanberk -->
+					<item id="92792" min="1" max="1" chance="24.8393" /> <!-- Keshanberk Blade -->
+					<item id="2381" min="1" max="1" chance="2.1798" /> <!-- Doom Plate Armor -->
+					<item id="92770" min="1" max="1" chance="45.776" /> <!-- Doom Plate Armor Temper -->
+				</group>
+				<group chance="13.1882">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1195,14 +1842,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" />
 		<acquire exp="5564" sp="25529" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1210,30 +1859,45 @@
 			<height normal="30" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="110" min="1" max="1" chance="0.003" /> <!-- Doom Shield -->
-				<item id="284" min="1" max="1" chance="0.0009" /> <!-- Dark Elven Longbow -->
-				<item id="57" min="684" max="1596" chance="70" /> <!-- Adena -->
-				<item id="92908" min="1" max="1" chance="4.581" /> <!-- Material: Lump of Wood -->
-				<item id="92996" min="1" max="1" chance="4.56" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
-				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
-				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
-				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
-				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92767" min="1" max="1" chance="0.03" /> <!-- Doom Shield Fragment -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
-				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92797" min="1" max="1" chance="0.003" /> <!-- Dark Elven Longbow Shaft -->
-				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<group chance="70">
+					<item id="57" min="684" max="1596" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0489">
+					<item id="284" min="1" max="1" chance="0.4032" /> <!-- Dark Elven Longbow -->
+					<item id="92797" min="1" max="1" chance="8.4682" /> <!-- Dark Elven Longbow Shaft -->
+					<item id="110" min="1" max="1" chance="4.1422" /> <!-- Doom Shield -->
+					<item id="92767" min="1" max="1" chance="86.9864" /> <!-- Doom Shield Fragment -->
+				</group>
+				<group chance="15.3497">
+					<item id="92908" min="1" max="1" chance="29.7139" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="5.9428" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="2.9714" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="0.9905" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.5943" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.2971" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.099" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0594" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="29.7139" /> <!-- Ancient Resources -->
+					<item id="92997" min="1" max="1" chance="5.9428" /> <!-- Old Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="2.9714" /> <!-- Old Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.5943" /> <!-- Old High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.2971" /> <!-- Drained Thons -->
+					<!-- <item id="2508" min="1" max="1" chance="19.8091" /> Cursed Bone - Not Available -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1241,14 +1905,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="5564" sp="30842" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="65244.8789571695" hpRegen="8.5" mp="2777.05451586656" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="17" mp="2770.2" mpRegen="6" />
+			<attack physical="47554.9" magical="24355.375" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1562.9247648" magical="714.800322" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1256,9 +1922,17 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
 	<npc id="21438" level="83" type="Monster" name="Ghost of Gatekeeper">
@@ -1266,14 +1940,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
 		<acquire exp="702678" sp="10540" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="16911.39829" hpRegen="8.5" mp="2907.225" mpRegen="3" />
-			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="17" mp="2666.1" mpRegen="6" />
+			<attack physical="43976.95" magical="22522.925" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1528.6814208" magical="699.139215" />
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1282,6 +1958,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -1290,14 +1974,16 @@
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" />
 		<acquire exp="702678" sp="10540" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="16911.39829" hpRegen="8.5" mp="2907.225" mpRegen="3" />
-			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="17" mp="2666.1" mpRegen="6" />
+			<attack physical="43976.95" magical="22522.925" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1528.6814208" magical="699.139215" />
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1306,6 +1992,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
@@ -1313,14 +2007,16 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="5505" sp="10541" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="63928.3054003724" hpRegen="8.5" mp="2672.90480065094" mpRegen="3" />
-			<attack physical="1099.423617" magical="750.7638096" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="17" mp="2666.1" mpRegen="6" />
+			<attack physical="43976.95" magical="22522.925" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1528.6814208" magical="699.139215" />
 			<speed>
 				<walk ground="15" />
 				<run ground="15" />
 			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1328,8 +2024,16 @@
 			<height normal="21" />
 		</collision>
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 	</npc>
 </list>

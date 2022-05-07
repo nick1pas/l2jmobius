@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="34200" level="85" type="Folk" name="Elite Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -192,147 +192,263 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="34210" level="85" type="Folk" name="Kerkir" title="Master">
+	<npc id="34210" level="75" type="Folk" name="Kerkir" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
 			<speed>
-				<walk ground="60" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="20.1" />
 		</collision>
 	</npc>
-	<npc id="34211" level="85" type="Merchant" name="Evia" title="Grocer">
-		<race>HUMAN</race>
+	<npc id="34211" level="75" type="Merchant" name="Evia" title="Grocer">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
 			<speed>
-				<walk ground="64" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="34212" level="85" type="Warehouse" name="Tyra" title="Warehouse Keeper">
-		<race>HUMAN</race>
+	<npc id="34212" level="75" type="Warehouse" name="Tyra" title="Warehouse Keeper">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
 			<speed>
-				<walk ground="20" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34213" level="85" type="Teleporter" name="Mellos" title="Gatekeeper">
-		<race>HUMAN</race>
+	<npc id="34213" level="75" type="Teleporter" name="Mellos" title="Gatekeeper">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3038" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="34214" level="80" type="Guard" name="Creta" title="Guard">
-		<race>HUMAN</race>
+	<npc id="34214" level="75" type="Guard" name="Creta" title="Guard">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="148" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="894.75854" magical="611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.38" magical="249.8" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="64" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="9.5" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="34215" level="80" type="Guard" name="Royda" title="Guard">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="288" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="49042" hpRegen="8.5" mp="23550" mpRegen="3" />
-			<attack physical="894.75854" magical="611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.38" magical="249.8" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="64" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="9.5" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="34216" level="85" type="Folk" name="Bonnie" title="Keber Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
 			<speed>
 				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="true" canMove="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="34215" level="75" type="Guard" name="Royda" title="Guard">
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<equipment rhand="288" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<speed>
+				<walk ground="20" />
+				<run ground="40" />
+			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="34216" level="75" type="Folk" name="Bonnie" title="Keber Hunter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="8446.444757" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="1949.954119" magical="1331.565883" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="405.66735" magical="296.84976" />
+			<speed>
+				<walk ground="1" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="17" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="34217" level="85" type="Merchant" name="Dresen" title="Equipment Merchant">
 		<race>ETC</race>
@@ -1111,21 +1227,36 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="34259" level="80" type="Folk" name="Dandy" title="Dreaming">
+	<npc id="34259" level="75" type="Folk" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1133,21 +1264,36 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34260" level="80" type="Folk" name="Dandy" title="Successful">
+	<npc id="34260" level="75" type="Folk" name="Dandy" title="Successful">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1155,21 +1301,36 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34261" level="80" type="Folk" name="Dandy" title="Successful">
+	<npc id="34261" level="75" type="Folk" name="Dandy" title="Successful">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1177,21 +1338,36 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34262" level="80" type="Merchant" name="Sibi" title="Balthus Knights' Supply Officer">
+	<npc id="34262" level="75" type="Merchant" name="Sibi" title="Balthus Knights' Supply Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1199,21 +1375,33 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34263" level="80" type="Folk" name="Dandy" title="Celebrating">
+	<npc id="34263" level="75" type="Folk" name="Dandy" title="Celebrating">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1221,21 +1409,33 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34264" level="80" type="Folk" name="Dandy" title="Celebrating">
+	<npc id="34264" level="75" type="Folk" name="Dandy" title="Celebrating">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1243,198 +1443,301 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34265" level="80" type="Folk" name="Mucta" title="Hames Orc Messenger">
+	<npc id="34265" level="75" type="Folk" name="Mucta" title="Hames Orc Messenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>460</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="34266" level="80" type="Folk" name="Nazeph">
+	<npc id="34266" level="75" type="Folk" name="Nazeph">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="34267" level="80" type="Folk" name="Dazling" title="Collector">
+	<npc id="34267" level="75" type="Folk" name="Dazling" title="Collector">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34268" level="80" type="Folk" name="Rifken" title="Gourmet">
+	<npc id="34268" level="75" type="Folk" name="Rifken" title="Gourmet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="34269" level="80" type="Folk" name="Tavoz" title="Brewer">
+	<npc id="34269" level="75" type="Folk" name="Tavoz" title="Brewer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="20" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34270" level="80" type="Folk" name="Broome" title="Information Broker">
+	<npc id="34270" level="75" type="Folk" name="Broome" title="Information Broker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34271" level="80" type="Folk" name="Roo-roo" title="Information Broker">
+	<npc id="34271" level="75" type="Folk" name="Roo-roo" title="Information Broker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="34272" level="80" type="Folk" name="Mihai" title="Tobald's Disciple">
+	<npc id="34272" level="75" type="Folk" name="Mihai" title="Tobald's Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34273" level="80" type="Folk" name="Jeros" title="Augmenting Blacksmith">
+	<npc id="34273" level="75" type="Folk" name="Jeros" title="Augmenting Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DWARF</race>
+		<sex>MALE</sex>
 		<equipment rhand="89" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1442,21 +1745,36 @@
 			<height normal="17.285" />
 		</collision>
 	</npc>
-	<npc id="34274" level="80" type="Folk" name="Jeros' Anvil">
+	<npc id="34274" level="75" type="Folk" name="Jeros' Anvil">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1464,22 +1782,37 @@
 			<height normal="18.25" />
 		</collision>
 	</npc>
-	<npc id="34275" level="80" type="Folk" name="Jeris" title="Augmenting Blacksmith">
+	<npc id="34275" level="75" type="Folk" name="Jeris" title="Augmenting Blacksmith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>DWARF</race>
+		<sex>MALE</sex>
 		<equipment rhand="89" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1487,21 +1820,36 @@
 			<height normal="17.285" />
 		</collision>
 	</npc>
-	<npc id="34276" level="80" type="Folk" name="Jeris' Anvil">
+	<npc id="34276" level="75" type="Folk" name="Jeris' Anvil">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1509,21 +1857,33 @@
 			<height normal="18.25" />
 		</collision>
 	</npc>
-	<npc id="34277" level="80" type="Folk" name="Lau" title="Arena Manager">
+	<npc id="34277" level="75" type="Folk" name="Lau" title="Arena Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1531,21 +1891,33 @@
 			<height normal="18.4" />
 		</collision>
 	</npc>
-	<npc id="34278" level="80" type="Folk" name="2015 Christmas Tree, Large">
+	<npc id="34278" level="75" type="Folk" name="2015 Christmas Tree, Large">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1553,21 +1925,33 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="34279" level="80" type="Folk" name="2015 Christmas Tree, Medium">
+	<npc id="34279" level="75" type="Folk" name="2015 Christmas Tree, Medium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1575,21 +1959,33 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="34280" level="80" type="Folk" name="2015 Christmas Tree, Small">
+	<npc id="34280" level="75" type="Folk" name="2015 Christmas Tree, Small">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1597,21 +1993,33 @@
 			<height normal="27.4" />
 		</collision>
 	</npc>
-	<npc id="34281" level="80" type="Folk" name="2015 Santa Claus">
+	<npc id="34281" level="75" type="Folk" name="2015 Santa Claus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1619,21 +2027,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34282" level="80" type="Folk" name="2015 Santa Girl">
+	<npc id="34282" level="75" type="Folk" name="2015 Santa Girl">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1641,21 +2061,33 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="34283" level="80" type="Folk" name="2015 Blue Snowman">
+	<npc id="34283" level="75" type="Folk" name="2015 Blue Snowman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>ETC</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1663,21 +2095,33 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34284" level="80" type="Folk" name="2015 Red Snow Man">
+	<npc id="34284" level="75" type="Folk" name="2015 Red Snow Man">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="20" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1685,21 +2129,33 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34285" level="80" type="Folk" name="2015 Baby Rudolph">
+	<npc id="34285" level="75" type="Folk" name="2015 Baby Rudolph">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1707,21 +2163,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34286" level="80" type="Folk" name="2015 Baby Rudolph">
+	<npc id="34286" level="75" type="Folk" name="2015 Baby Rudolph">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1729,21 +2197,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34287" level="80" type="Folk" name="2015 Rudolph, Medium">
+	<npc id="34287" level="75" type="Folk" name="2015 Rudolph, Medium">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1751,21 +2231,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34288" level="80" type="Folk" name="2015 Rudolph, Large">
+	<npc id="34288" level="75" type="Folk" name="2015 Rudolph, Large">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1773,21 +2265,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34289" level="80" type="Folk" name="2015 Rudolph Girl">
+	<npc id="34289" level="75" type="Folk" name="2015 Rudolph Girl">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1795,22 +2299,33 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="34290" level="80" type="Folk" name="Adventure Guildsman" title="PA Event">
+	<npc id="34290" level="70" type="Folk" name="Adventure Guildsman" title="PA Event">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="130" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="64" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1818,21 +2333,33 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34291" level="80" type="Folk" name="Nana" title="Healer of the Arena">
+	<npc id="34291" level="75" type="Folk" name="Nana" title="Healer of the Arena">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1840,21 +2367,32 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="34292" level="80" type="Folk" name="Chef Monkey" title="Event Manager">
+	<npc id="34292" level="75" type="Folk" name="Chef Monkey" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1862,134 +2400,240 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="34293" level="78" type="Teleporter" name="Maris" title="Researcher">
-		<race>ETC</race>
+	<npc id="34293" level="75" type="Teleporter" name="Maris" title="Researcher">
+		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="34294" level="80" type="Folk" name="Priest of Dawn" title="Arena">
+	<npc id="34294" level="75" type="Folk" name="Priest of Dawn" title="Arena">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="30.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="34295" level="80" type="Folk" name="Priestess of Dusk" title="Arena">
+	<npc id="34295" level="75" type="Folk" name="Priestess of Dusk" title="Arena">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="8" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="34296" level="80" type="Folk" name="Veteran" title="Elder Council">
+	<npc id="34296" level="75" type="Folk" name="Veteran" title="Elder Council">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="1949.95411856464" magical="662.751329129412" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="40" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="16" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
+		</skillList>
 	</npc>
-	<npc id="34297" level="80" type="Folk" name="Veteran" title="Elder Council">
+	<npc id="34297" level="75" type="Folk" name="Veteran" title="Elder Council">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="1949.95411856464" magical="662.751329129412" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="40" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="16" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
+		</skillList>
 	</npc>
-	<npc id="34298" level="80" type="Folk" name="Veteran" title="Elder Council">
+	<npc id="34298" level="75" type="Folk" name="Veteran" title="Elder Council">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="1949.95411856464" magical="662.751329129412" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="40" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="16" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
+		</skillList>
 	</npc>
-	<npc id="34299" level="80" type="Folk" name="Veteran" title="Elder Council">
+	<npc id="34299" level="75" type="Folk" name="Veteran" title="Elder Council">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="1949.95411856464" magical="662.751329129412" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="40" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="16" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
+		</skillList>
 	</npc>
 </list>

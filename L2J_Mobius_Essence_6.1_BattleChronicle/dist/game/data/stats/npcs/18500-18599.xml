@@ -1,42 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18500" level="85" type="Folk" name="Royal Guard Ant">
+	<npc id="18500" level="80" type="Folk" name="Royal Guard Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32328" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.2738039371" hpRegen="1" mp="2227.484" mpRegen="3" />
+			<attack physical="1106.41280529526" magical="755.53651520753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="436.96" magical="319.7483648" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>610</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
+		<ai clanHelpRange="500" aggroRange="450">
+			<clanList>
+				<clan>QUEEN_ANT</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="17" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="18501" level="85" type="Folk" name="">
+	<npc id="18501" level="75" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2823.47946968528" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="18502" level="85" type="Folk" name="Orfen" title="Spore Mistress">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

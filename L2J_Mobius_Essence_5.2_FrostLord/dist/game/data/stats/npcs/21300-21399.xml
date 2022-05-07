@@ -4,35 +4,70 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="680551" sp="10208" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
+		<ai clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="6326" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Necklace -->
-				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
-				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
-				<item id="57" min="7076" max="16511" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0792">
+					<item id="895" min="1" max="1" chance="2.0971" /> <!-- Black Ore Ring -->
+					<item id="92752" min="1" max="1" chance="44.0395" /> <!-- Black Ore Ring Gemstone -->
+					<item id="864" min="1" max="1" chance="1.3981" /> <!-- Black Ore Earring -->
+					<item id="92751" min="1" max="1" chance="29.3596" /> <!-- Black Ore Earring Piece -->
+					<item id="926" min="1" max="1" chance="1.0503" /> <!-- Black Ore Necklace -->
+					<item id="92753" min="1" max="1" chance="22.0554" /> <!-- Black Ore Necklace Beads -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -40,14 +75,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1355598" sp="20333" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -55,11 +92,16 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 		</skillList>
@@ -68,14 +110,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="680551" sp="20416" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -83,20 +127,47 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5315" min="1" max="1" chance="0.0075" /> <!-- Sealed Shield of Nightmare -->
-				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
-				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
-				<item id="6327" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Earring -->
-				<item id="57" min="1868" max="4359" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="613" max="1431" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.0792">
+					<item id="895" min="1" max="1" chance="2.0971" /> <!-- Black Ore Ring -->
+					<item id="92752" min="1" max="1" chance="44.0395" /> <!-- Black Ore Ring Gemstone -->
+					<item id="864" min="1" max="1" chance="1.3981" /> <!-- Black Ore Earring -->
+					<item id="92751" min="1" max="1" chance="29.3596" /> <!-- Black Ore Earring Piece -->
+					<item id="926" min="1" max="1" chance="1.0503" /> <!-- Black Ore Necklace -->
+					<item id="92753" min="1" max="1" chance="22.0554" /> <!-- Black Ore Necklace Beads -->
+				</group>
+				<group chance="11.828">
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -104,14 +175,16 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1355598" sp="40667" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17090.342505" hpRegen="8.5" mp="2963.865" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="17" mp="2718" mpRegen="6" />
+			<attack physical="45789.25" magical="23451.1" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1545.9864336" magical="707.053617" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -119,11 +192,16 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4437" level="4" /> <!-- Greater Bleed Resistance -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4437" level="4" /> <!-- Greater Infection Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 		</skillList>
