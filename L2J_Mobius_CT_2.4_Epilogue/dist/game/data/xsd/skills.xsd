@@ -1208,7 +1208,7 @@
 								</xs:element>
 							</xs:choice>
 						</xs:sequence>
-						<xs:attribute name="id" type="xs:unsignedShort" use="required" />
+						<xs:attribute name="id" type="xs:unsignedInt" use="required" />
 						<xs:attribute name="levels" type="xs:unsignedByte" use="required" />
 						<xs:attribute name="name" type="xs:string" use="required" />
 						<xs:attribute name="enchantGroup1" type="xs:unsignedByte" use="optional" />
