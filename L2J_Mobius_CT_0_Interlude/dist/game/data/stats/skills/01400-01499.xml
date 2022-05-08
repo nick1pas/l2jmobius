@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1400" levels="10" name="Turn Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="1400" levels="10" name="Turn Undead" enchantGroup1="1" enchantGroup2="1">
 		<!-- The undead cower and flee as you reveal your divine nature. A Lethal Strike is possible. Consumes 3 Spirit Ore. -->
 		<table name="#effectPoints">-532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#itemConsumeCount">3 3 4 4 4 4 5 5 5 5</table>
@@ -12,8 +12,6 @@
 		<table name="#ench2mpConsume">53 52 51 50 49 48 48 47 46 45 44 43 42 41 40 39 38 38 37 36 35 34 33 32 31 30 29 29 28 27</table>
 		<table name="#ench2mpInitialConsume">13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 7 6</table>
 		<table name="#ench2Time">21 22 24 25 26 28 29 30 32 33 34 36 37 38 40 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60</table>
-		<table name="#ench3Attack">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
-		<table name="#ench4HolyAttack">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -33,11 +31,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="power" val="#ench3Attack" />
-		<enchant4 name="element" val="4" /> <!-- Holy -->
-		<enchant4 name="elementPower" val="#ench4HolyAttack" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<target race="UNDEAD" />
 		</cond>
@@ -68,16 +61,6 @@
 				<param fullLethal="25" />
 			</effect>
 		</enchant2for>
-		<enchant3for>
-			<effect name="RunAway">
-				<param power="30" />
-				<param time="20" />
-			</effect>
-			<effect name="Lethal">
-				<param fullLethal="25" />
-			</effect>
-			<effect name="MagicalAttack" />
-		</enchant3for>
 	</skill>
 	<skill id="1401" levels="11" name="Major Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Instantly regenerates the target's HP. Consumes 1 Spirit Ore. Power 690. -->
@@ -119,7 +102,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1402" levels="5" name="Major Group Heal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="1402" levels="5" name="Major Group Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Your party instantly recovers their HP. Consumes 4 Spirit Ore. Power 902. -->
 		<table name="#amount">902 979 1050 1115 1170</table>
 		<table name="#effectPoints">421 457 490 520 546</table>
@@ -128,9 +111,6 @@
 		<table name="#ench1amount">1183 1196 1209 1222 1235 1248 1261 1274 1287 1300 1313 1326 1339 1352 1365 1378 1391 1404 1417 1430 1443 1456 1469 1482 1495 1508 1521 1534 1547 1561</table>
 		<table name="#ench2MpConsume">187 184 180 177 174 171 168 165 161 158 155 152 149 145 142 139 136 133 130 126 123 120 117 114 111 107 104 101 98 95</table>
 		<table name="#ench2mpInitialConsume">46 46 45 44 43 42 42 41 40 39 38 38 37 36 35 34 34 33 32 31 30 30 29 28 27 26 26 25 24 23</table>
-		<table name="#ench34amount">1174 1178 1183 1187 1191 1196 1200 1204 1209 1213 1218 1222 1226 1231 1235 1239 1244 1248 1252 1257 1261 1266 1270 1274 1279 1283 1287 1292 1296 1301</table>
-		<table name="#ench3dispelAbnormals">POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,8 POISON,9</table>
-		<table name="#ench4dispelAbnormals">BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,8 BLEEDING,9</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -148,8 +128,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Heal">
 				<param power="#amount" />
@@ -160,22 +138,6 @@
 				<param power="#ench1amount" />
 			</effect>
 		</enchant1for>
-		<enchant3for>
-			<effect name="Heal">
-				<param power="#ench34amount" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="#ench3dispelAbnormals" />
-			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="Heal">
-				<param power="#ench34amount" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="#ench4dispelAbnormals" />
-			</effect>
-		</enchant4for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
 		<!-- Summons party members to your location. The player being summoned must possess a Summoning Crystal. -->
@@ -250,10 +212,8 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
+	<skill id="1406" levels="1" name="Summon Feline King">
 		<!-- Summons Feline King. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp. -->
-		<table name="#ench1npcId">14871 14872 14873 14874 14875 14876 14877 14878 14879 14880 14881 14882 14883 14884 14885</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill1406" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -265,9 +225,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="116" />
-		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
@@ -278,18 +235,9 @@
 				<param lifeTime="3600" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
-				<param lifeTime="3600" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1407" levels="1" name="Summon Magnus the Unicorn" enchantGroup1="5">
+	<skill id="1407" levels="1" name="Summon Magnus the Unicorn">
 		<!-- Summons Magnus the Unicorn. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp. -->
-		<table name="#ench1npcId">14886 14887 14888 14889 14890 14891 14892 14893 14894 14895 14896 14897 14898 14899 14900</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill1407" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -301,9 +249,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="116" />
-		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
@@ -314,18 +259,9 @@
 				<param lifeTime="3600" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
-				<param lifeTime="3600" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1408" levels="1" name="Summon Spectral Lord" enchantGroup1="5">
+	<skill id="1408" levels="1" name="Summon Spectral Lord">
 		<!-- Summons Spectral Lord. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp. -->
-		<table name="#ench1npcId">14901 14902 14903 14904 14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14915</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill1408" />
 		<set name="inheritElementals" val="true" />
@@ -339,9 +275,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="116" />
-		<enchant1 name="mpInitialConsume" val="29" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
@@ -352,13 +285,6 @@
 				<param lifeTime="3600" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
-				<param lifeTime="3600" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
 		<!-- Cancels your target's debuffs. Consumes 1 Einhasad Holy Water. -->
@@ -450,11 +376,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1413" levels="1" name="Magnus' Chant" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1413" levels="1" name="Magnus' Chant">
 		<!-- Allows the Ancient Soul of Magnus to temporarily possess a party member. Consumes 40 Spirit Ore. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">225 221 218 214 210 206 202 198 195 191 187 183 179 176 172</table>
-		<table name="#ench2mpInitialConsume">56 55 54 53 52 51 50 49 48 47 46 45 44 44 43</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -471,9 +394,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxMp" val="1.15" />
@@ -495,12 +415,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1414" levels="1" name="Victories of Pa'agrio" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1414" levels="1" name="Victories of Pa'agrio">
 		<!-- Allows the Ancient Hero's Soul to temporarily possesses an alliance member. Consumes 40 Spirit Ore. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">218 212 204 196 189 181 174 166 158 150 142 136 128 121 113</table>
-		<table name="#ench2mpInitialConsume">55 53 51 49 47 45 43 41 40 38 36 34 32 30 28</table>
-		<table name="#ench3decreasePenalty">0.82 0.84 0.86 0.88 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1.0</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -518,9 +434,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxCp" val="1.2" />
@@ -541,32 +454,9 @@
 				<param power="20" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.2" />
-				<mul stat="regCp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="critRate" val="1.2" />
-				<mul stat="mCritPower" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="runSpd" val="#ench3decreasePenalty" />
-			</effect>
-			<effect name="CpHealPercent">
-				<param power="20" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1415" levels="1" name="Pa'agrio's Emblem" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1415" levels="1" name="Pa'agrio's Emblem">
 		<!-- Temporarily increases an alliance member's resistance to buff cancelling and de-buff attacks. Effect 3. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">219 212 204 196 189 181 174 166 159 151 143 136 128 121 113</table>
-		<table name="#ench2mpInitialConsume">54 53 51 49 47 45 43 41 39 37 35 34 32 30 28</table>
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
@@ -582,9 +472,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<sub stat="cancelVuln" val="30" />
@@ -592,11 +479,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1416" levels="1" name="Pa'agrio's Fist" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1416" levels="1" name="Pa'agrio's Fist">
 		<!-- Increases an alliance member's maximum CP and fully restores it. Consumes 20 Spirit Ore. -->
-		<table name="#ench1amount">810 820 830 840 850 860 870 880 890 900 910 920 930 940 950</table>
-		<table name="#ench2mpConsume">219 212 205 196 189 181 174 166 159 151 143 136 128 121 113</table>
-		<table name="#ench2mpInitialConsume">54 53 51 49 47 45 43 41 39 37 35 34 32 30 28</table>
 		<set name="abnormalLevel" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CP_UP" />
@@ -614,8 +498,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<add stat="maxCp" val="800" />
@@ -624,14 +506,6 @@
 				<param power="800" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="maxCp" val="#ench1amount" />
-			</effect>
-			<effect name="CpHeal">
-				<param power="#ench1amount" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1417" levels="5" name="Aura Flash" enchantGroup1="2" enchantGroup2="2">
 		<!-- Unleashes an elemental attack on nearby enemies that cancels their targets. Consumes 2 Spirit Ore. Power 49. -->

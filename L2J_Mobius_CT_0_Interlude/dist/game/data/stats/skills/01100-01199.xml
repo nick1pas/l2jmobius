@@ -693,7 +693,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1148" levels="13" name="Death Spike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="1148" levels="13" name="Death Spike" enchantGroup1="2" enchantGroup2="2">
 		<!-- Damages an enemy by throwing a bone. Power 58. 1 Cursed Bone needed. -->
 		<table name="#effectPoints">-418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -704,7 +704,6 @@
 		<table name="#ench2mpConsume">38 38 38 38 37 37 36 36 34 34 34 34 33 33 32 32 30 30 30 30 29 29 28 28 26 26 26 26 25 25</table>
 		<table name="#ench2mpInitialConsume">10 10 9 9 9 9 9 9 9 9 8 8 8 8 8 8 8 8 7 7 7 7 7 7 7 7 6 6 6 6</table>
 		<table name="#ench2Power">108 108 109 109 109 109 109 109 109 110 110 110 110 110 110 110 111 111 111 111 111 111 111 112 112 112 112 112 112 113</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -729,8 +728,6 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -881,14 +878,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1157" levels="5" name="Body To Mind">
 		<!-- Sacrifices HP to regenerate MP. -->
 		<table name="#amount">22 35 47 53 61</table>
 		<table name="#effectPoints">243 379 495 549 611</table>
 		<table name="#hpConsume">131 209 280 318 366</table>
-		<table name="#ench1amount">70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75</table>
-		<table name="#ench2hpConsume">359 353 347 341 335 328 322 316 310 304 297 291 285 279 273 266 260 254 248 242 235 229 223 217 211 204 198 192 186 180</table>
-		<table name="#ench3Bravery">29 38 48 57 66 76 85 94 104 113 122 132 141 150 160 169 178 188 197 206 216 225 234 244 253 262 272 281 290 300</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="hpConsume" val="#hpConsume" />
@@ -897,25 +891,11 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<for>
 			<effect name="ManaHeal">
 				<param power="#amount" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="ManaHeal">
-				<param power="#ench1amount" />
-			</effect>
-		</enchant1for>
-		<enchant3for>
-			<effect name="CpHeal">
-				<param power="#ench3Bravery" />
-			</effect>
-			<effect name="ManaHeal">
-				<param power="61" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">
 		<!-- Transfers one's pain to the enemy. The lower one's HP, the greater its power. Power 68. -->
@@ -954,7 +934,7 @@
 			<effect name="DeathLink" />
 		</for>
 	</skill>
-	<skill id="1160" levels="15" name="Slow" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1160" levels="15" name="Slow" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly reduces enemy's Speed. Effect 2. -->
 		<table name="#abnormalLevels">2 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#effectPoints">-331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
@@ -966,7 +946,6 @@
 		<table name="#ench2AbnormalTimes">62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120</table>
 		<table name="#ench2mpConsume">54 54 53 53 52 52 51 51 50 50 49 49 48 48 47 47 46 46 45 45 44 44 43 43 42 42 41 41 40 40</table>
 		<table name="#ench2mpInitialConsume">13 13 13 13 13 13 12 12 12 12 12 12 12 12 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10</table>
-		<table name="#ench3rEvas">5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="60" />
@@ -993,18 +972,11 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.7" />
-				<sub stat="rEvas" val="#ench3rEvas" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1163" levels="14" name="Curse Discord">
 		<!-- Confuses an enemy to attack its ally. -->
@@ -1031,7 +1003,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1164" levels="19" name="Curse: Weakness" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="1164" levels="19" name="Curse: Weakness" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantaneous curse that reduces target's P. Atk. Effect 1. -->
 		<table name="#abnormalLevels">1 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<table name="#effectPoints">-162 -204 -243 -285 -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
@@ -1043,8 +1015,6 @@
 		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
 		<table name="#ench2mpConsume">54 53 52 50 50 49 48 46 46 45 44 44 42 42 41 40 38 38 37 36 34 34 33 33 32 30 30 29 28 26</table>
 		<table name="#ench2mpInitialConsume">13 13 13 13 12 12 12 12 11 11 11 11 11 10 10 10 10 9 9 9 9 8 8 8 8 8 7 7 7 7</table>
-		<table name="#ench3runSpd">0.99 0.99 0.98 0.98 0.97 0.97 0.96 0.96 0.95 0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85</table>
-		<table name="#ench4pDef">0.99 0.99 0.98 0.98 0.97 0.97 0.96 0.96 0.95 0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
@@ -1071,27 +1041,13 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="0.77" />
-				<mul stat="runSpd" val="#ench3runSpd" />
-			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="0.77" />
-				<mul stat="pDef" val="#ench4pDef" />
-			</effect>
-		</enchant4for>
 	</skill>
-	<skill id="1167" levels="6" name="Poisonous Cloud" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1167" levels="6" name="Poisonous Cloud">
 		<!-- Instantaneous poison cloud attack. Effect 3. -->
 		<table name="#abnormalLevels">3 4 5 6 7 8</table>
 		<table name="#dot">24 32 41 50 58 63</table>
@@ -1099,11 +1055,6 @@
 		<table name="#magicLevel">25 35 48 56 64 74</table>
 		<table name="#mpConsume">27 36 52 61 71 82</table>
 		<table name="#mpInitialConsume">7 9 13 16 18 21</table>
-		<table name="#ench1dot">64 65 65 66 67 67 68 69 69 70 70 71 72 72 73 74 74 75 76 76 77 77 78 79 79 80 81 81 82 83</table>
-		<table name="#ench2MpConsume">82 79 78 78 75 74 74 71 70 70 67 66 64 63 62 60 59 58 56 55 54 52 51 50 48 47 46 44 43 42</table>
-		<table name="#ench2mpInitialConsume">20 20 20 19 19 19 18 18 18 17 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 11 11 11 10</table>
-		<table name="#ench3ActivateRates">36 38 39 41 42 44 45 47 48 50 51 53 54 56 57 59 60 62 63 65 66 68 69 71 72 74 75 77 78 80</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -1127,22 +1078,11 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
 				<param power="#dot" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="DamOverTime" ticks="5">
-				<param power="#ench1dot" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
 		<!-- Instantaneous poisonous curse. Effect 1. -->
@@ -1179,17 +1119,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">
+	<skill id="1169" levels="14" name="Curse Fear">
 		<!-- Frightens a monster, causing it to flee. -->
 		<table name="#effectPoints">-379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#mpInitialConsume">7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
-		<table name="#ench1AbnormalTimes">12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70</table>
-		<table name="#ench1mpConsume">55 54 52 51 50 50 50 48 47 46 45 43 42 41 41 39 39 38 37 36 34 33 33 32 30 29 28 28 27 25</table>
-		<table name="#ench1mpInitialConsume">13 13 13 13 13 12 12 12 12 12 12 12 12 12 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10</table>
-		<table name="#ench2ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1211,12 +1146,6 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Fear" />
 		</for>
@@ -1269,7 +1198,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="1171" levels="19" name="Blazing Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="1171" levels="19" name="Blazing Circle" enchantGroup1="2" enchantGroup2="2">
 		<!-- Sends out a ring of flames around oneself. Power 29. -->
 		<table name="#effectPoints">-180 -190 -200 -209 -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328</table>
 		<table name="#magicLevel">38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74</table>
@@ -1280,7 +1209,6 @@
 		<table name="#ench2mpConsume">80 78 78 76 74 73 72 70 69 68 66 65 64 62 61 60 58 57 56 54 53 52 50 49 46 46 45 42 42 41</table>
 		<table name="#ench2mpInitialConsume">20 20 19 19 19 18 18 18 17 17 17 16 16 15 15 15 14 14 14 13 13 13 12 12 12 11 11 11 10 10</table>
 		<table name="#ench2Power">65 65 65 65 65 65 66 66 66 66 66 66 67 67 67 67 67 67 68 68 68 68 68 68 69 69 69 69 69 70</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
@@ -1303,8 +1231,6 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -1333,7 +1259,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1174" levels="22" name="Frost Wall" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="1174" levels="22" name="Frost Wall" enchantGroup1="2" enchantGroup2="2">
 		<!-- Attacks your target with a wall of ice. Power 48. -->
 		<table name="#effectPoints">-286 -297 -309 -319 -325 -330 -335 -340 -345 -349 -354 -358 -363 -367 -371 -374 -378 -381 -385 -388 -390 -393</table>
 		<table name="#magicLevel">50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1344,7 +1270,6 @@
 		<table name="#ench2mpConsume">80 78 77 76 74 73 72 70 69 68 66 65 64 62 61 60 58 57 54 54 53 50 50 49 46 46 44 42 42 40</table>
 		<table name="#ench2mpInitialConsume">20 20 19 19 19 18 18 18 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 12 11 11 11 10 10</table>
 		<table name="#ench2Power">77 78 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 86 86 87 87 88 88 89 89 90 90 91 91 92</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
@@ -1370,8 +1295,6 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -1402,7 +1325,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1176" levels="15" name="Tempest" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="1176" levels="15" name="Tempest" enchantGroup1="2" enchantGroup2="2">
 		<!-- Calls forth a severe storm to attack multiple enemies. Power 31. -->
 		<table name="#effectPoints">-219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328</table>
 		<table name="#magicLevel">46 48 50 52 54 56 58 60 62 64 66 68 70 72 74</table>
@@ -1412,7 +1335,6 @@
 		<table name="#ench1Power">55 55 56 56 57 57 58 58 59 59 60 60 61 61 62 62 63 63 64 64 65 65 66 66 67 67 68 68 69 70</table>
 		<table name="#ench2mpConsume">80 79 78 77 76 75 74 72 71 70 69 68 66 65 64 63 62 61 65 59 58 56 55 54 53 52 50 49 48 47</table>
 		<table name="#ench2mpInitialConsume">20 19 19 19 19 18 18 18 17 17 17 17 16 16 16 15 15 15 15 14 14 14 13 13 13 13 12 12 12 11</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
@@ -1436,8 +1358,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
@@ -1522,7 +1442,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1182" levels="3" name="Resist Aqua" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1182" levels="3" name="Resist Aqua" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases tolerance to attack by water. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">243 379 418</table>
@@ -1532,7 +1452,6 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2mpConsume">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		<table name="#ench2mpInitialConsume">7 7 7 7 7 7 7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4</table>
-		<table name="#ench3vuln">24 28 33 37 41 46 50 54 59 63 67 72 76 80 85 89 93 98 102 106 111 115 119 124 128 132 137 141 145 150</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<table name="#enchvuln">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
@@ -1554,7 +1473,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="waterRes" val="#vuln" />
@@ -1570,11 +1488,6 @@
 				<add stat="waterRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="waterRes" val="#ench3vuln" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1183" levels="4" name="Freezing Shackle">
 		<!-- Powerful freezing attack that reduces enemy's HP while in effect. Effect 5. -->
@@ -1649,7 +1562,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1189" levels="3" name="Resist Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1189" levels="3" name="Resist Wind" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases resistance to attack by wind. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">331 379 418</table>
@@ -1659,8 +1572,6 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2mpConsume">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		<table name="#ench2mpInitialConsume">7 7 7 7 7 7 7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4</table>
-		<table name="#ench3abnormalLevel">3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5</table>
-		<table name="#ench3vuln">24 28 33 37 41 46 50 54 59 63 67 72 76 80 85 89 93 98 102 106 111 115 119 124 128 132 137 141 145 150</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<table name="#enchvuln">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
@@ -1682,7 +1593,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="windRes" val="#vuln" />
@@ -1698,13 +1608,8 @@
 				<add stat="windRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="windRes" val="#ench3vuln" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1191" levels="3" name="Resist Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1191" levels="3" name="Resist Fire" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases resistance to attacks by fire. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">285 379 418</table>
@@ -1714,8 +1619,6 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2mpConsume">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		<table name="#ench2mpInitialConsume">7 7 7 7 7 7 7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4</table>
-		<table name="#ench3abnormalLevel">3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5</table>
-		<table name="#ench3vuln">24 28 33 37 41 46 50 54 59 63 67 72 76 80 85 89 93 98 102 106 111 115 119 124 128 132 137 141 145 150</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<table name="#enchvuln">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
@@ -1737,7 +1640,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="fireRes" val="#vuln" />
@@ -1753,10 +1655,5 @@
 				<add stat="fireRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="fireRes" val="#ench3vuln" />
-			</effect>
-		</enchant3for>
 	</skill>
 </list>

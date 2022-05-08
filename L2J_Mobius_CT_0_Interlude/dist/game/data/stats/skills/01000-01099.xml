@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1001" levels="10" name="Soul Cry" enchantGroup1="1">
+	<skill id="1001" levels="10" name="Soul Cry">
 		<!-- Increases one's own P. Atk. MP gets consumed continuously. -->
 		<table name="#magicLevel">1 14 25 35 40 48 56 60 66 72</table>
 		<table name="#mdot">0 0 1 2 2 2 3 3 4 4</table>
@@ -14,19 +14,12 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="#mdot" />
 				<add stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="4" />
-				<add stat="pAtk" val="#ench1patk" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1002" levels="3" name="Flame Chant" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases party member's magic speed. Effect 1. -->
@@ -605,7 +598,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1028" levels="19" name="Might of Heaven" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="1028" levels="19" name="Might of Heaven" enchantGroup1="2" enchantGroup2="2">
 		<!-- Inflicts damage to undead monsters. Power 39. -->
 		<table name="#effectPoints">-360 -379 -399 -418 -438 -457 -477 -495 -514 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74</table>
@@ -617,7 +610,6 @@
 		<table name="#ench2mpConsume">54 53 52 50 50 49 48 46 46 45 44 42 42 42 41 40 38 38 37 36 34 34 33 32 30 30 29 29 28 26</table>
 		<table name="#ench2mpInitialConsume">13 13 13 13 12 12 12 12 11 11 11 11 10 10 10 10 10 9 9 9 9 8 8 8 8 7 7 7 7 7</table>
 		<table name="#ench2power">88 88 88 88 89 89 89 89 90 90 90 90 91 91 91 91 91 92 92 92 92 93 93 93 93 94 94 94 94 95</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -641,8 +633,6 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<target race="UNDEAD" />
 		</cond>
@@ -679,7 +669,7 @@
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>
-	<skill id="1032" levels="3" name="Invigor" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1032" levels="3" name="Invigor" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases resistance to bleeding. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">379 457 532</table>
@@ -690,8 +680,6 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2mpConsume">40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20</table>
 		<table name="#ench2mpInitialConsume">10 10 10 10 10 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 6 6 6 6 6 6 5 5 5</table>
-		<table name="#ench3abnormalLevel">3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6</table>
-		<table name="#ench3Trait_bleed">51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
@@ -717,13 +705,8 @@
 				<param BLEED="#trait_bleed" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="DefenceTrait">
-				<param BLEED="#ench3Trait_bleed" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1033" levels="3" name="Resist Poison" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1033" levels="3" name="Resist Poison" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases resistance to poison. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">331 379 418</table>
@@ -734,8 +717,6 @@
 		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2mpConsume">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		<table name="#ench2mpInitialConsume">7 7 7 7 7 7 7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4</table>
-		<table name="#ench3abnormalLevel">3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 6</table>
-		<table name="#ench3Trait_poison">51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
@@ -757,27 +738,17 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="DefenceTrait">
 				<param POISON="#trait_poison" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="DefenceTrait">
-				<param POISON="#ench3Trait_poison" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1034" levels="13" name="Repose" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1034" levels="13" name="Repose">
 		<!-- Diminishes undead monster's will to attack. -->
 		<table name="#magicLevel">44 48 52 56 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">47 52 56 62 64 66 70 71 74 76 78 80 82</table>
 		<table name="#mpInitialConsume">12 13 14 15 16 17 17 18 19 19 20 20 21</table>
-		<table name="#ench1Power">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#ench2mpConsume">82 79 78 78 75 74 74 71 70 70 67 66 64 63 62 60 59 58 56 55 54 52 51 50 48 47 46 44 43 42</table>
-		<table name="#ench2mpInitialConsume">20 20 20 19 19 19 18 18 18 17 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 11 11 11 10</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1500" />
@@ -790,11 +761,6 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<cond msgId="144">
 			<target race="UNDEAD" />
 		</cond>
@@ -920,7 +886,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1042" levels="12" name="Hold Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1042" levels="12" name="Hold Undead" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly paralyzes undead monsters. -->
 		<table name="#effectPoints">-457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -928,7 +894,6 @@
 		<table name="#mpInitialConsume">26 28 31 32 33 35 36 37 38 39 40 41</table>
 		<table name="#ench1ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
 		<table name="#ench2mpConsume">201 200 198 196 195 192 191 188 187 185 183 181 180 177 176 175 172 171 168 167 165 163 161 160 157 156 153 152 151 148</table>
-		<table name="#ench3Attack">30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -955,20 +920,12 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="element" val="4" /> <!-- Holy -->
-		<enchant3 name="elementPower" val="20" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="power" val="#ench3Attack" />
 		<cond msgId="113" addName="1">
 			<target race="UNDEAD" />
 		</cond>
 		<for>
 			<effect name="Paralyze" />
 		</for>
-		<enchant3for>
-			<effect name="MagicalAttack" />
-			<effect name="Paralyze" />
-		</enchant3for>
 	</skill>
 	<skill id="1043" levels="1" name="Holy Weapon" enchantGroup1="1" enchantGroup2="1">
 		<!-- A temporary holy enhancement of a physical attack. Can be used on one's party members. -->
@@ -1079,7 +1036,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1047" levels="4" name="Mana Regeneration" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1047" levels="4" name="Mana Regeneration">
 		<!-- Temporarily increases ability to regenerate MP. Consumes 7 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3 4</table>
 		<table name="#effectPoints">379 457 566 635</table>
@@ -1088,8 +1045,6 @@
 		<table name="#mpConsume">28 35 44 52</table>
 		<table name="#mpInitialConsume">7 9 11 13</table>
 		<table name="#regMp">1.72 2.16 2.74 3.09</table>
-		<table name="#ench1Power">3.157 3.214 3.271 3.328 3.385 3.442 3.499 3.556 3.613 3.67 3.727 3.784 3.841 3.898 3.955 4.012 4.069 4.126 4.183 4.24 4.297 4.354 4.411 4.468 4.525 4.582 4.639 4.696 4.753 4.81</table>
-		<table name="#ench2AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -1105,17 +1060,11 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
 				<add stat="regMp" val="#regMp" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="regMp" val="#ench1Power" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1048" levels="6" name="Blessed Soul" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases maximum MP. Effect 1. -->
@@ -1456,7 +1405,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1071" levels="14" name="Surrender To Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1071" levels="14" name="Surrender To Water" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly decreases enemy's resistance to water attacks and increases resistance to fire attacks. Effect 4. -->
 		<table name="#effectPoints">-379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -1466,7 +1415,6 @@
 		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
 		<table name="#ench2mpConsume">54 53 52 51 50 49 48 47 46 45 44 44 43 42 41 40 39 38 37 36 35 34 33 33 32 31 30 29 28 27</table>
 		<table name="#ench2mpInitialConsume">13 13 13 12 12 12 12 11 11 11 11 11 10 10 10 10 9 9 9 9 8 8 8 8 8 7 7 7 7 6</table>
-		<table name="#enchElementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="30" />
@@ -1495,20 +1443,12 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="waterRes" val="20" />
 				<add stat="fireRes" val="10" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<sub stat="waterRes" val="20" />
-				<add stat="fireRes" val="10" />
-				<sub stat="waterPower" val="#enchElementPower" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1072" levels="5" name="Sleeping Cloud" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly puts nearby enemies to sleep. If cast on a sleeping target, the spell has no effect. -->
@@ -1592,7 +1532,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1074" levels="14" name="Surrender To Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1074" levels="14" name="Surrender To Wind" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly decreases enemy's resistance to wind attacks and increases resistance to earth attacks. Effect 4. -->
 		<table name="#effectPoints">-379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -1602,7 +1542,6 @@
 		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
 		<table name="#ench2mpConsume">54 53 52 51 50 49 48 47 46 45 44 44 43 42 41 40 39 38 37 36 35 34 33 33 32 31 30 29 28 27</table>
 		<table name="#ench2mpInitialConsume">13 13 13 12 12 12 12 11 11 11 11 11 10 10 10 10 9 9 9 9 8 8 8 8 8 7 7 7 7 6</table>
-		<table name="#enchElementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="30" />
@@ -1631,20 +1570,12 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="windRes" val="20" />
 				<add stat="earthRes" val="10" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<sub stat="windRes" val="20" />
-				<add stat="earthRes" val="10" />
-				<sub stat="windPower" val="#enchElementPower" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1075" levels="15" name="Peace">
 		<!-- Puts target's mind at peace. Desire to attack is decreased. -->
@@ -1739,7 +1670,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1083" levels="17" name="Surrender To Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1083" levels="17" name="Surrender To Fire" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly decreases enemy's resistance to fire attacks and increases resistance to water attacks. Effect 3. -->
 		<table name="#abnormalLevels">3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4</table>
 		<table name="#castRange">750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900</table>
@@ -1752,7 +1683,6 @@
 		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
 		<table name="#ench2mpConsume">54 53 52 51 50 49 48 47 46 45 44 44 43 42 41 40 39 38 37 36 35 34 33 33 32 31 30 29 28 27</table>
 		<table name="#ench2mpInitialConsume">13 13 13 12 12 12 12 11 11 11 11 11 10 10 10 10 9 9 9 9 8 8 8 8 8 7 7 7 7 6</table>
-		<table name="#enchElementPower">2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="30" />
@@ -1781,20 +1711,12 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="fireRes" val="20" />
 				<add stat="waterRes" val="10" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<sub stat="fireRes" val="20" />
-				<add stat="waterRes" val="10" />
-				<sub stat="firePower" val="#enchElementPower" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1085" levels="3" name="Acumen" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases Casting Spd. Effect 1. -->
@@ -1930,17 +1852,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1092" levels="19" name="Fear" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1092" levels="19" name="Fear">
 		<!-- Instills fear into an enemy causing it to flee. -->
 		<table name="#effectPoints">-162 -204 -243 -285 -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">12 16 18 21 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#mpInitialConsume">3 4 5 6 6 7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
-		<table name="#ench1ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#ench1EffectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 -710 -711 -713 -714 -715 -1 -1 -1 -1</table>
-		<table name="#ench2mpConsume">54 53 52 50 50 49 48 46 46 46 45 44 42 42 41 40 38 38 37 37 36 34 34 33 32 30 30 29 28 28</table>
-		<table name="#ench2mpInitialConsume">13 13 13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1962,12 +1879,6 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Fear" />
 		</for>

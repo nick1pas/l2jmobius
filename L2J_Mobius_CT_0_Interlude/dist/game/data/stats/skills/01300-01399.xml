@@ -656,15 +656,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1328" levels="8" name="Mass Summon Storm Cubic" enchantGroup1="2">
+	<skill id="1328" levels="8" name="Mass Summon Storm Cubic">
 		<!-- Summons Storm Cubic for party members. Storm Cubic uses magic that damages a targeted enemy. Requires 20 Crystals: D-Grade. -->
 		<table name="#cubicPower">282 434 677 919 1141 1394 1673 1975</table>
 		<table name="#itemConsumeCount">20 24 32 36 44 48 56 52</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">40 46 52 58 62 66 70 74</table>
 		<table name="#mpConsume">111 130 150 170 183 195 207 217</table>
 		<table name="#mpInitialConsume">28 33 38 43 46 49 52 55</table>
-		<table name="#ench1Power">2081 2133 2184 2234 2283 2331 2378 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1328" />
@@ -677,27 +675,19 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="1" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="12" cubicPower="#cubicPower" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="1" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="12" cubicPower="#ench1Power" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1329" levels="9" name="Mass Summon Aqua Cubic" enchantGroup1="2">
+	<skill id="1329" levels="9" name="Mass Summon Aqua Cubic">
 		<!-- Summons Aqua Cubic for party members. Aqua Cubic uses magic that damages a targeted enemy over time. Requires 8 Crystals: D-Grade. -->
 		<table name="#cubicPower">282 377 497 644 820 1141 1394 1673 1975</table>
 		<table name="#itemConsumeCount">7 10 10 13 13 16 20 20 23</table>
 		<table name="#magicLevel">40 44 48 52 56 62 66 70 74</table>
 		<table name="#mpConsume">111 123 137 150 163 183 195 207 217</table>
 		<table name="#mpInitialConsume">28 31 35 38 41 46 49 52 55</table>
-		<table name="#ench1Power">2081 2133 2184 2234 2283 2331 2378 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1329" />
@@ -710,27 +700,19 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#cubicPower" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#ench1Power" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1330" levels="8" name="Mass Summon Phantom Cubic" enchantGroup1="2">
+	<skill id="1330" levels="8" name="Mass Summon Phantom Cubic">
 		<!-- Summons Phantom Cubic for party members. Phantom Cubic uses magic that decreases P. Atk, P. Def, and Atk. Spd. of a targeted enemy. Requires 8 Crystals: D-Grade. -->
 		<table name="#cubicPower">282 434 644 919 1141 1394 1673 1975</table>
 		<table name="#itemConsumeCount">8 12 16 16 20 24 24 28 28</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">40 46 52 58 62 66 70 74</table>
 		<table name="#mpConsume">111 130 150 170 183 195 207 217</table>
 		<table name="#mpInitialConsume">28 33 38 43 46 49 52 55</table>
-		<table name="#ench1Power">2081 2133 2184 2234 2283 2331 2378 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1330" />
@@ -743,19 +725,12 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="5" cubicDelay="8" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
 				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="5" cubicDelay="8" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#ench1Power" />
-				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1331" levels="10" name="Summon Feline Queen" enchantGroup1="1">
 		<!-- Summons a Feline Queen, a servitor. Requires 1 Crystal: C-Grade. While active, 5% of earned Exp will be consumed, along with 1 additional crystal at 14 regular intervals. -->
@@ -939,13 +914,8 @@
 			<effect name="RebalanceHP" />
 		</for>
 	</skill>
-	<skill id="1336" levels="1" name="Curse of Doom" enchantGroup1="6" enchantGroup2="6">
+	<skill id="1336" levels="1" name="Curse of Doom">
 		<!-- Instantly blocks the use of enemy's physical/magic skills. -->
-		<table name="#ench1ActivateRates">81 82 82 83 84 84 85 86 86 87 87 88 89 89 90</table>
-		<table name="#ench2AbnormalTimes">64 68 72 76 80 84 88 92 96 100 104 108 112 116 120</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 28</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE_ALL" />
@@ -967,24 +937,13 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Mute" />
 			<effect name="PhysicalMute" />
 		</for>
 	</skill>
-	<skill id="1337" levels="1" name="Curse of Abyss" enchantGroup1="6" enchantGroup2="6">
+	<skill id="1337" levels="1" name="Curse of Abyss">
 		<!-- Instantly decreases an enemy's Speed, P. Def., Evasion, M. Atk., Casting Spd. and critical rate of damage magic. -->
-		<table name="#ench1ActivateRates">81 82 82 83 84 84 85 86 86 87 87 88 89 89 90</table>
-		<table name="#ench2AbnormalTimes">32 34 36 38 40 42 44 46 48 50 52 54 56 58 60</table>
-		<table name="#ench2mpConsume">55 54 51 50 47 46 43 42 40 38 36 34 32 30 30</table>
-		<table name="#ench2mpInitialConsume">14 13 13 12 12 11 11 11 10 10 9 9 8 8 7</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
@@ -1005,12 +964,6 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
@@ -1022,13 +975,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1338" levels="1" name="Arcane Chaos" enchantGroup1="6" enchantGroup2="6">
+	<skill id="1338" levels="1" name="Arcane Chaos">
 		<!-- Instantly decreases an enemy's resistance to buff canceling attacks and resistance to debuff attacks. Increases MP consumption of physical and magic skills. MP is continuously decreased. -->
-		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45</table>
-		<table name="#ench2mpConsume">56 55 54 54 52 51 50 50 48 47 46 46 44 43 43</table>
-		<table name="#ench2mpInitialConsume">14 14 14 13 13 13 13 12 12 12 12 11 11 11 11</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
@@ -1049,12 +997,6 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="24" />
@@ -1065,14 +1007,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1339" levels="1" name="Fire Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1339" levels="1" name="Fire Vortex">
 		<!-- Creates a vortex that connects to the dimension of fire. While launching a fire attack, it instantly decreases the enemy's resistance to fire attack, Speed, Atk. Spd. And Casting Spd at the same time. Decreases MP continuously. Over-hit is possible. Power 140. -->
-		<table name="#ench1Power">147 147 148 148 148 149 149 149 150 150 151 151 151 152 152</table>
-		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench4elementPower">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_FIRE" />
@@ -1096,15 +1032,6 @@
 		<set name="power" val="140" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
@@ -1115,25 +1042,9 @@
 				<sub stat="fireRes" val="20" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="MagicalAttack" />
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="12" />
-				<mul stat="runSpd" val="0.9" />
-				<mul stat="pAtkSpd" val="0.7" />
-				<mul stat="mAtkSpd" val="0.9" />
-				<sub stat="fireRes" val="20" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1340" levels="1" name="Ice Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1340" levels="1" name="Ice Vortex">
 		<!-- Creates a vortex that connects to the dimension of water. While launching a water attack, it instantly decreases the enemy's resistance to water attack, Speed, Atk. Spd., and Casting Spd at the same time. Decreases MP continuously. Over-hit is possible. Power 140. -->
-		<table name="#ench1Power">147 147 148 148 148 149 149 149 150 150 151 151 151 152 152</table>
-		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench4elementPower">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_WATER" />
@@ -1157,15 +1068,6 @@
 		<set name="power" val="140" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
@@ -1176,25 +1078,9 @@
 				<sub stat="waterRes" val="20" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="MagicalAttack" />
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="12" />
-				<mul stat="runSpd" val="0.7" />
-				<mul stat="pAtkSpd" val="0.9" />
-				<mul stat="mAtkSpd" val="0.9" />
-				<sub stat="waterRes" val="20" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1341" levels="1" name="Wind Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1341" levels="1" name="Wind Vortex">
 		<!-- Creates a vortex that connects to the dimension of wind. While launching a wind attack, it instantly decreases the enemy's resistance to wind attack, Speed, Atk. Spd., and Casting Spd at the same time. Decreases MP continuously. Over-hit is possible. Power 140. -->
-		<table name="#ench1Power">147 147 148 148 148 149 149 149 150 150 151 151 151 152 152</table>
-		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench4elementPower">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_WIND" />
@@ -1218,15 +1104,6 @@
 		<set name="power" val="140" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
@@ -1237,25 +1114,9 @@
 				<sub stat="windRes" val="20" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="MagicalAttack" />
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="12" />
-				<mul stat="runSpd" val="0.9" />
-				<mul stat="pAtkSpd" val="0.9" />
-				<mul stat="mAtkSpd" val="0.7" />
-				<sub stat="windRes" val="20" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1342" levels="1" name="Light Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1342" levels="1" name="Light Vortex">
 		<!-- Creates a vortex that connects to the dimension of light. While launching a light magic attack, it instantly decreases the enemy's resistance to light attack and decreases MP continuously. Power 139. -->
-		<table name="#ench1Power">147 147 148 148 148 149 149 149 150 150 151 151 151 152 152</table>
-		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench4elementPower">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_HOLY" />
@@ -1278,15 +1139,6 @@
 		<set name="power" val="139" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="ManaDamOverTime" ticks="5">
@@ -1295,23 +1147,9 @@
 				<sub stat="holyRes" val="30" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="MagicalAttack" />
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="12" />
-				<sub stat="accCombat" val="6" />
-				<sub stat="holyRes" val="30" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1343" levels="1" name="Dark Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1343" levels="1" name="Dark Vortex">
 		<!-- Creates a vortex that connects to the dimension of darkness. While launching a dark magic attack, it absorbs HP, instantly decreases the enemy's resistance to dark attack and decreases MP continuously. Power 111. -->
-		<table name="#ench1Power">118 118 118 119 119 119 119 120 120 120 121 121 121 121 122</table>
-		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench4elementPower">22 24 26 28 30 32 34 36 38 40 42 44 46 48 50</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF_UNHOLY" />
@@ -1334,15 +1172,6 @@
 		<set name="power" val="111" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="HpDrain">
 				<param power="0.4" /> <!-- Epilogue Modification -->
@@ -1353,16 +1182,6 @@
 				<sub stat="darkRes" val="30" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="HpDrain">
-				<param power="0.4" /> <!-- Epilogue Modification -->
-			</effect>
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="12" />
-				<sub stat="accCombat" val="6" />
-				<sub stat="darkRes" val="30" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1344" levels="1" name="Mass Warrior Bane">
 		<!-- Removes buffs that increase Atk. Spd. and Speed from nearby enemies. -->
@@ -1404,11 +1223,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1346" levels="1" name="Warrior Servitor" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1346" levels="1" name="Warrior Servitor">
 		<!-- The spirit of an ancient warrior takes possession of the servitor for a certain period of time. Consumes 10 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1426,9 +1242,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SERVITOR" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.2" />
@@ -1442,11 +1255,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1347" levels="1" name="Wizard Servitor" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1347" levels="1" name="Wizard Servitor">
 		<!-- The spirit of an ancient wizard takes possession of the servitor for a certain period of time. Consumes 10 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1464,9 +1274,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SERVITOR" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="regMp" val="1.2" />
@@ -1479,11 +1286,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1348" levels="1" name="Assassin Servitor" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1348" levels="1" name="Assassin Servitor">
 		<!-- The spirit of an ancient assassin takes possession of the servitor for a certain period of time. Consumes 10 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1501,9 +1305,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SERVITOR" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="4" />
@@ -1520,11 +1321,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1349" levels="1" name="Final Servitor" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1349" levels="1" name="Final Servitor">
 		<!-- The spirit of an ancient hero takes possession of the servitor for a certain period of time. Consumes 20 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1542,9 +1340,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="SERVITOR" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="MaxHp">
 				<param power="20" />
@@ -1604,11 +1399,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1352" levels="1" name="Elemental Protection" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1352" levels="1" name="Elemental Protection">
 		<!-- Temporarily increases resistance to fire/water/wind/earth attack. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1280 1360 1440 1520 1600 1680 1760 1840 1920 2000 2080 2160 2240 2320 2400</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MD_UP_ATTR" />
@@ -1624,9 +1416,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<add stat="waterRes" val="20" />
@@ -1636,11 +1425,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1353" levels="1" name="Divine Protection" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1353" levels="1" name="Divine Protection">
 		<!-- Temporarily increases resistance to dark/sacred attack. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1280 1360 1440 1520 1600 1680 1760 1840 1920 2000 2080 2160 2240 2320 2400</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_HOLY_UNHOLY" />
@@ -1656,9 +1442,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<add stat="darkRes" val="30" />
@@ -1666,11 +1449,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1354" levels="1" name="Arcane Protection" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1354" levels="1" name="Arcane Protection">
 		<!-- Temporarily increases resistance to buff cancel and de-buff attack. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1280 1360 1440 1520 1600 1680 1760 1840 1920 2000 2080 2160 2240 2320 2400</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 38 37 34 33 30 29 26</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 10 9 9 8 8 7 7</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
@@ -1686,9 +1466,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<sub stat="cancelVuln" val="30" />
@@ -1696,13 +1473,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1355" levels="1" name="Prophecy of Water" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1355" levels="1" name="Prophecy of Water">
 		<!-- The spirit of an ancient wizard temporarily possesses the user. Consumes 5 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">56 54 52 50 48 46 44 42 40 38 36 34 33 30 29</table>
-		<table name="#ench2mpInitialConsume">14 13 13 12 12 11 11 10 10 9 9 9 8 8 7</table>
-		<table name="#ench3Spd">0.83 0.85 0.87 0.89 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1720,12 +1492,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="PARTY_MEMBER" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="mCritRate" val="2" />
@@ -1743,30 +1509,9 @@
 				<mul stat="danceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="mCritRate" val="2" />
-				<mul stat="regMp" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="runSpd" val="#ench3Spd" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
-				<mul stat="physicalMpConsumeRate" val="0.95" />
-				<mul stat="danceMpConsumeRate" val="0.95" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1356" levels="1" name="Prophecy of Fire" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1356" levels="1" name="Prophecy of Fire">
 		<!-- The spirit of an ancient warrior temporarily possesses the user. Consumes 5 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">56 54 52 50 48 46 44 42 40 38 36 34 33 30 29</table>
-		<table name="#ench2mpInitialConsume">14 13 13 12 12 11 11 10 10 9 9 9 8 8 7</table>
-		<table name="#ench3Spd">0.83 0.85 0.87 0.89 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1784,9 +1529,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="PARTY_MEMBER" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxMp" val="1.2" />
@@ -1804,30 +1546,9 @@
 				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="regHp" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<add stat="accCombat" val="4" />
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="runSpd" val="#ench3Spd" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1357" levels="1" name="Prophecy of Wind" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1357" levels="1" name="Prophecy of Wind">
 		<!-- The spirit of an ancient assassin temporarily possesses the user. Consumes 5 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">56 54 52 50 48 46 44 42 40 38 36 34 33 30 29</table>
-		<table name="#ench2mpInitialConsume">14 13 13 12 12 11 11 10 10 9 9 9 8 8 7</table>
-		<table name="#ench3Spd">0.83 0.85 0.87 0.89 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1845,9 +1566,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="PARTY_MEMBER" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="1.2" />
@@ -1864,30 +1582,9 @@
 				<add stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="critRate" val="1.2" />
-				<mul stat="mCritPower" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="runSpd" val="#ench3Spd" />
-				<add stat="absorbDam" val="5" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1358" levels="1" name="Block Shield" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1358" levels="1" name="Block Shield">
 		<!-- Removes buffs that increase P. Def from a targeted enemy. Temporarily decreases P. Def and prevents enemy from receiving the buff that will increase P. Def. again. -->
-		<table name="#ench1ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench2AbnormalTimes">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 39 37 35 33 31 29 27</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 9 9 8 8 7 7 6</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="10" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SHIELD_UP" />
@@ -1907,12 +1604,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="pDef" val="0.9" />
@@ -1925,13 +1616,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1359" levels="1" name="Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1359" levels="1" name="Block Wind Walk">
 		<!-- Removes buffs that increase Speed from a targeted enemy. Temporarily decreases Speed and prevents enemy from receiving removed buffs that will increase Speed again. -->
-		<table name="#ench1ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
-		<table name="#ench2AbnormalTimes">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
-		<table name="#ench2mpConsume">54 52 50 48 46 44 42 41 39 37 35 33 31 29 27</table>
-		<table name="#ench2mpInitialConsume">13 13 12 12 11 11 10 10 9 9 8 8 7 7 6</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="10" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SPEED_UP" />
@@ -1951,12 +1637,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
@@ -1969,13 +1649,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1360" levels="1" name="Mass Block Shield" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1360" levels="1" name="Mass Block Shield">
 		<!-- Removes buffs that increase P. Def from nearby enemies. Temporarily decreases P. Def and prevents enemies from receiving removed buffs that will increase their P. Def. again. -->
-		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60</table>
-		<table name="#ench2mpConsume">81 78 75 72 69 67 64 61 58 55 53 50 47 44 41</table>
-		<table name="#ench2mpInitialConsume">20 19 18 18 17 16 16 15 14 13 13 12 11 11 10</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="10" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SHIELD_UP" />
@@ -1995,12 +1670,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="pDef" val="0.9" />
@@ -2013,13 +1682,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1361" levels="1" name="Mass Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1361" levels="1" name="Mass Block Wind Walk">
 		<!-- Removes buffs that increase Speed from nearby enemies. Temporarily decreases Speed and prevents enemies from receiving removed buffs that will increase their Speed again. -->
-		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60</table>
-		<table name="#ench2mpConsume">81 78 75 72 69 67 64 61 58 55 53 50 47 44 41</table>
-		<table name="#ench2mpInitialConsume">20 19 18 18 17 16 16 15 14 13 13 12 11 11 10</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="10" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SPEED_UP" />
@@ -2039,12 +1703,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.9" />
@@ -2057,11 +1715,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1362" levels="1" name="Chant of Spirit" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1362" levels="1" name="Chant of Spirit">
 		<!-- Temporarily increases party members' resistance to buff cancel and de-buff attack. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800</table>
-		<table name="#ench2mpConsume">218 210 202 194 188 180 172 165 157 150 142 134 126 120 112</table>
-		<table name="#ench2mpInitialConsume">54 52 51 49 47 45 43 41 39 37 35 34 32 30 28</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
@@ -2076,9 +1731,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<sub stat="cancelVuln" val="30" />
@@ -2086,13 +1738,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1363" levels="1" name="Chant of Victory" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1363" levels="1" name="Chant of Victory">
 		<!-- The spirits of ancient heroes temporarily possess one's party members. Consumes 40 spirit ores. -->
-		<table name="#ench1AbnormalTimes">320 340 360 380 400 420 440 460 480 500 520 540 560 580 600</table>
-		<table name="#ench2mpConsume">218 212 204 196 189 181 174 166 158 150 142 136 128 121 113</table>
-		<table name="#ench2mpInitialConsume">55 53 51 49 47 45 43 41 40 38 36 34 32 30 28</table>
-		<table name="#ench3Spd">0.83 0.85 0.87 0.89 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -2109,12 +1756,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="MaxHp">
 				<param power="20" />
@@ -2133,31 +1774,9 @@
 				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="MaxHp">
-				<param power="20" />
-				<param type="PER" />
-				<param heal="true" />
-				<add stat="mCritRate" val="2" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
-				<add stat="accCombat" val="4" />
-				<mul stat="runSpd" val="#ench3Spd" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1364" levels="1" name="The Eye of Pa'agrio" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1364" levels="1" name="The Eye of Pa'agrio">
 		<!-- Temporarily increases alliance members' critical power. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800</table>
-		<table name="#ench2mpConsume">216 209 201 194 186 179 171 164 156 149 141 134 126 119 112</table>
-		<table name="#ench2mpInitialConsume">54 52 50 48 46 44 42 41 39 37 35 33 31 29 28</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
@@ -2173,11 +1792,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<add stat="accCombat" val="4" />
@@ -2191,12 +1805,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1365" levels="1" name="The Soul of Pa'agrio" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1365" levels="1" name="The Soul of Pa'agrio">
 		<!-- Temporarily increases alliance members' M. Atk. Effect 3. -->
-		<table name="#ench1AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800</table>
-		<table name="#ench2mpConsume">216 209 201 194 186 179 171 164 156 149 141 134 126 119 112</table>
-		<table name="#ench2mpInitialConsume">54 52 50 48 46 44 42 41 39 37 35 33 31 29 28</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
@@ -2212,11 +1822,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.75" />
@@ -2230,13 +1835,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1366" levels="1" name="Seal of Despair" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1366" levels="1" name="Seal of Despair">
 		<!-- Instantly decreases nearby enemies' Speed, M. Def., Accuracy, P. Atk. and Atk. Spd, as well as the success rate and power of critical attacks. -->
-		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2ActivateRates">42 43 44 46 47 48 50 51 52 54 55 56 57 59 60</table>
-		<table name="#ench2mpConsume">82 78 77 74 70 68 65 62 58 57 54 50 48 45 42</table>
-		<table name="#ench2mpInitialConsume">20 20 19 18 18 17 16 15 15 14 13 13 12 11 10</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
@@ -2257,12 +1857,6 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DEATH" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="pAtk" val="0.9" />
@@ -2275,13 +1869,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1367" levels="1" name="Seal of Disease" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1367" levels="1" name="Seal of Disease">
 		<!-- Temporarily decreases enemy's alliance members' healing from heal spells and increases chance of buffs being removed. -->
-		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60</table>
-		<table name="#ench2mpConsume">80 77 75 72 69 66 63 60 57 55 52 49 46 43 40</table>
-		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
@@ -2302,12 +1891,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AREA" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="healEffect" val="0.5" />
@@ -2665,17 +2248,12 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1383" levels="5" name="Mass Surrender to Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1383" levels="5" name="Mass Surrender to Fire">
 		<!-- Decreases the fire attack resistance of enemies surrounding the servitor. Consumes 2 Spirit Ore. Effect 4. -->
 		<table name="#effectPoints">-549 -582 -611 -635 -655</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#magicLevel">58 62 66 70 74</table>
 		<table name="#mpConsume">80 87 93 98 103</table>
-		<table name="#ench1fireRes">31 32 32 33 34 34 35 36 36 37 37 38 39 39 40 41 41 42 43 43 44 44 45 46 46 47 48 48 49 50</table>
-		<table name="#ench2ActivateRates">41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60</table>
-		<table name="#ench2MpConsume">102 99 98 97 94 93 92 89 88 87 84 83 80 79 78 75 74 73 70 69 68 65 64 63 60 59 57 55 54 52</table>
-		<table name="#ench3ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
@@ -2698,36 +2276,19 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA_SUMMON" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="fireRes" val="30" />
 				<add stat="waterRes" val="15" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Debuff">
-				<sub stat="fireRes" val="#ench1fireRes" />
-				<add stat="waterRes" val="15" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1384" levels="5" name="Mass Surrender to Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1384" levels="5" name="Mass Surrender to Water">
 		<!-- Decreases the water attack resistance of enemies surrounding the servitor. Consumes 2 Spirit Ore. Effect 4. -->
 		<table name="#effectPoints">-549 -582 -611 -635 -655</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#magicLevel">58 62 66 70 74</table>
 		<table name="#mpConsume">80 87 93 98 103</table>
-		<table name="#ench1waterRes">31 32 32 33 34 34 35 36 36 37 37 38 39 39 40 41 41 42 43 43 44 44 45 46 46 47 48 48 49 50</table>
-		<table name="#ench2ActivateRates">41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60</table>
-		<table name="#ench2MpConsume">102 99 98 97 94 93 92 89 88 87 84 83 80 79 78 75 74 73 70 69 68 65 64 63 60 59 57 55 54 52</table>
-		<table name="#ench3ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_WATER" />
@@ -2750,36 +2311,19 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA_SUMMON" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="waterRes" val="30" />
 				<add stat="fireRes" val="15" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Debuff">
-				<sub stat="waterRes" val="#ench1waterRes" />
-				<add stat="fireRes" val="15" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1385" levels="5" name="Mass Surrender to Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1385" levels="5" name="Mass Surrender to Wind">
 		<!-- Decreases the wind attack resistance of enemies surrounding the servitor. Consumes 2 Spirit Ore. Effect 4. -->
 		<table name="#effectPoints">-549 -582 -611 -635 -655</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#magicLevel">58 62 66 70 74</table>
 		<table name="#mpConsume">80 87 93 98 103</table>
-		<table name="#ench1windRes">31 32 32 33 34 34 35 36 36 37 37 38 39 39 40 41 41 42 43 43 44 44 45 46 46 47 48 48 49 50</table>
-		<table name="#ench2ActivateRates">41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60</table>
-		<table name="#ench2MpConsume">102 99 98 97 94 93 92 89 88 87 84 83 80 79 78 75 74 73 70 69 68 65 64 63 60 59 57 55 54 52</table>
-		<table name="#ench3ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="4" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_WIND" />
@@ -2802,35 +2346,18 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA_SUMMON" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<sub stat="windRes" val="30" />
 				<add stat="earthRes" val="15" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Debuff">
-				<sub stat="windRes" val="#ench1windRes" />
-				<add stat="earthRes" val="15" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="1386" levels="10" name="Arcane Disruption" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1386" levels="10" name="Arcane Disruption">
 		<!-- Decreases your enemies' Casting Spd. Effect 3. -->
 		<table name="#effectPoints">-532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">56 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">52 54 55 58 60 62 64 65 67 69</table>
-		<table name="#ench1mAtkSpd">0.76 0.75 0.75 0.74 0.74 0.73 0.73 0.72 0.72 0.71 0.71 0.7 0.7 0.69 0.68 0.68 0.67 0.67 0.66 0.66 0.65 0.65 0.64 0.64 0.63 0.63 0.62 0.62 0.61 0.6</table>
-		<table name="#ench2AbnormalTimes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
-		<table name="#ench2MpConsume">68 67 65 64 63 62 62 60 59 58 57 55 54 53 52 50 50 49 48 47 45 44 43 42 40 39 38 38 37 35</table>
-		<table name="#ench3ActivateRates">81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -2849,22 +2376,11 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="mAtkSpd" val="0.77" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Debuff">
-				<mul stat="mAtkSpd" val="#ench1mAtkSpd" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
 		<!-- Summons 25-100 cursed bones. Consumes 40 Spirit Ore. -->
@@ -2897,7 +2413,7 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="1388" levels="3" name="Greater Might" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1388" levels="3" name="Greater Might">
 		<!-- Temporarily increases your target's P. Atk. Consumes 1 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
@@ -2905,8 +2421,6 @@
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">54 62 69</table>
 		<table name="#pAtk">1.04 1.07 1.1</table>
-		<table name="#ench1MpConsume">68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33</table>
-		<table name="#ench2AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -2923,15 +2437,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="1389" levels="3" name="Greater Shield" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1389" levels="3" name="Greater Shield">
 		<!-- Temporarily increases your target's P. Def. Consumes 1 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
@@ -2939,8 +2451,6 @@
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">54 62 69</table>
 		<table name="#pDef">1.05 1.1 1.15</table>
-		<table name="#ench1MpConsume">68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33</table>
-		<table name="#ench2AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -2957,15 +2467,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="1390" levels="3" name="War Chant" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1390" levels="3" name="War Chant">
 		<!-- Temporarily increases your party's P. Atk. Consumes 4 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
@@ -2973,8 +2481,6 @@
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">213 244 272</table>
 		<table name="#pAtk">1.04 1.07 1.1</table>
-		<table name="#ench1MpConsume">269 265 263 259 257 254 250 248 244 242 238 235 232 229 225 223 219 217 213 210 207 204 202 198 195 192 189 185 183 179</table>
-		<table name="#ench2AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -2990,15 +2496,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="1391" levels="3" name="Earth Chant" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1391" levels="3" name="Earth Chant">
 		<!-- Temporarily increases your party's P. Def. Consumes 4 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
@@ -3006,8 +2510,6 @@
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">213 244 272</table>
 		<table name="#pDef">1.05 1.1 1.15</table>
-		<table name="#ench1MpConsume">269 265 263 259 257 254 250 248 244 242 238 235 232 229 225 223 219 217 213 210 207 204 202 198 195 192 189 185 183 179</table>
-		<table name="#ench2AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -3023,26 +2525,19 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
-	<skill id="1392" levels="3" name="Holy Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1392" levels="3" name="Holy Resistance" enchantGroup1="1">
 		<!-- Temporarily increases your target's resistance to sacred attacks. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#holyRes">15 23 30</table>
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">54 62 69</table>
-		<table name="#ench1holyRes">34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150</table>
-		<table name="#ench2mpConsume">68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33</table>
-		<table name="#ench3AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
-		<table name="#enchholyRes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ARMOR_HOLY" />
@@ -3057,44 +2552,19 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="abnormalTime" val="#ench3AbnormalTimes" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="holyRes" val="#holyRes" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#ench1holyRes" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#enchholyRes" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#enchholyRes" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1393" levels="3" name="Unholy Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1393" levels="3" name="Unholy Resistance">
 		<!-- Temporarily increases your target's resistance to dark attacks. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#darkRes">15 23 30</table>
 		<table name="#effectPoints">549 611 655</table>
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">54 62 69</table>
-		<table name="#ench1darkRes">34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150</table>
-		<table name="#ench2mpConsume">68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33</table>
-		<table name="#ench3AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
-		<table name="#enchdarkRes">31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -3109,31 +2579,11 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="abnormalTime" val="#ench3AbnormalTimes" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#ench1darkRes" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#enchdarkRes" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#enchdarkRes" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1394" levels="10" name="Trance" enchantGroup1="1" enchantGroup2="1">
 		<!-- Puts your target to sleep. The target may not be put to sleep again while the spell remains in effect. -->
@@ -3211,7 +2661,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1396" levels="10" name="Magical Backfire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1396" levels="10" name="Magical Backfire" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly increases the MP consumption rate of your enemy's skills. Effect 3. -->
 		<table name="#effectPoints">-532 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">56 58 60 62 64 66 68 70 72 74</table>
@@ -3220,7 +2670,6 @@
 		<table name="#ench1MpConsume">53 52 51 50 49 48 48 47 46 45 44 43 42 41 40 39 38 38 37 36 35 34 33 32 31 30 29 29 28 27</table>
 		<table name="#ench1mpInitialConsume">13 13 12 12 12 12 12 11 11 11 11 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 7 6</table>
 		<table name="#ench2ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
-		<table name="#ench3mpReg">0.98 0.96 0.95 0.93 0.91 0.9 0.88 0.86 0.85 0.83 0.82 0.8 0.78 0.77 0.75 0.73 0.72 0.7 0.68 0.67 0.65 0.64 0.62 0.6 0.59 0.57 0.55 0.54 0.52 0.5</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
@@ -3246,7 +2695,6 @@
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
 				<mul stat="magicalMpConsumeRate" val="3" />
@@ -3254,16 +2702,8 @@
 				<mul stat="danceMpConsumeRate" val="3" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="magicalMpConsumeRate" val="3" />
-				<mul stat="physicalMpConsumeRate" val="3" />
-				<mul stat="danceMpConsumeRate" val="3" />
-				<mul stat="regMp" val="#ench3mpReg" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="1397" levels="3" name="Clarity" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="1397" levels="3" name="Clarity">
 		<!-- Temporarily decreases your target's MP consumption rate for skills. Consumes 1 Spirit Ore. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">549 611 655</table>
@@ -3272,10 +2712,6 @@
 		<table name="#magicLevel">58 66 74</table>
 		<table name="#mpConsume">54 62 69</table>
 		<table name="#MpConsumeRate">0.9 0.85 0.8</table>
-		<table name="#ench1Power">0.79 0.79 0.79 0.79 0.79 0.79 0.79 0.78 0.78 0.78 0.78 0.78 0.78 0.78 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.76 0.76 0.76 0.76 0.76 0.76 0.76 0.75</table>
-		<table name="#ench2Power">0.9 0.9 0.9 0.9 0.9 0.89 0.89 0.89 0.89 0.89 0.89 0.88 0.88 0.88 0.88 0.88 0.88 0.87 0.87 0.87 0.87 0.87 0.87 0.86 0.86 0.86 0.86 0.86 0.86 0.85</table>
-		<table name="#ench4AbnormalTimes">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -3292,11 +2728,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="abnormalTime" val="#ench4AbnormalTimes" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
@@ -3304,27 +2735,6 @@
 				<mul stat="danceMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="#ench1Power" />
-				<mul stat="danceMpConsumeRate" val="0.8" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="magicalMpConsumeRate" val="#ench2Power" />
-				<mul stat="physicalMpConsumeRate" val="0.8" />
-				<mul stat="danceMpConsumeRate" val="0.8" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.8" />
-				<mul stat="danceMpConsumeRate" val="#ench1Power" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="1398" levels="10" name="Mana Burn" enchantGroup1="2" enchantGroup2="2">
 		<!-- Your enemies' MP is reduced. Power 117. -->

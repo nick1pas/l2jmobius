@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1" levels="37" name="Triple Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="1" levels="37" name="Triple Slash" enchantGroup1="2" enchantGroup2="2">
 		<!-- Inflicts 3 quick slashes on a target. An equipped Dual-Sword Weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 431. -->
 		<table name="#effectPoints">-213 -219 -225 -231 -237 -242 -248 -254 -260 -265 -271 -277 -283 -288 -294 -299 -305 -310 -316 -321 -326 -331 -336 -340 -345 -350 -354 -358 -362 -366 -370 -373 -377 -380 -383 -386 -388</table>
 		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -8,8 +8,6 @@
 		<table name="#power">517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1857 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557</table>
 		<table name="#ench1Power">2581 2604 2627 2650 2673 2696 2719 2743 2766 2789 2812 2835 2858 2881 2904 2927 2950 2973 2996 3019 3042 3065 3088 3111 3134 3157 3180 3204 3227 3250</table>
 		<table name="#ench2MpConsume">84 83 81 80 78 77 75 74 73 71 70 68 67 65 64 63 61 60 58 57 55 54 53 51 50 48 47 45 44 43</table>
-		<table name="#enchDuel">2602 2647 2691 2736 2781 2825 2870 2915 2959 3004 3049 3094 3138 3183 3228 3272 3317 3362 3406 3451 3496 3541 3585 3630 3675 3719 3764 3809 3853 3898</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
@@ -31,20 +29,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<using kind="DUAL" />
 		</cond>
@@ -126,7 +110,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5" levels="31" name="Double Sonic Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="5" levels="31" name="Double Sonic Slash" enchantGroup1="2" enchantGroup2="2">
 		<!-- You channel sonic force energy into a powerful sword strike! An equipped Dual-Sword Weapon is required to use this skill. Level 3 Sonic Focus charge required. A critical hit is possible. Power 918. -->
 		<table name="#effectPoints">-372 -381 -389 -398 -407 -415 -424 -432 -440 -449 -457 -465 -473 -481 -488 -496 -503 -510 -517 -524 -531 -537 -543 -549 -555 -560 -565 -570 -574 -578 -582</table>
 		<table name="#magicLevel">44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -134,8 +118,6 @@
 		<table name="#power">918 971 1025 1081 1140 1200 1262 1327 1393 1461 1531 1603 1677 1753 1830 1908 1988 2070 2153 2237 2322 2408 2494 2581 2669 2757 2846 2934 3022 3109 3196</table>
 		<table name="#ench1Power">3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061</table>
 		<table name="#ench2MpConsume">104 102 100 98 96 95 93 91 89 87 86 84 82 80 78 77 75 73 71 69 68 66 64 62 60 59 57 55 53 52</table>
-		<table name="#ench7pvpPower">3252 3308 3364 3420 3476 3532 3587 3643 3699 3755 3811 3867 3923 3979 4034 4090 4146 4202 4258 4314 4370 4426 4481 4537 4593 4649 4705 4761 4817 4872</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="3" />
@@ -154,19 +136,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUAL" /> <!-- Requires a dualsword weapon -->
@@ -185,22 +154,8 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="3196" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
-	<skill id="6" levels="37" name="Sonic Blaster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="6" levels="37" name="Sonic Blaster" enchantGroup1="2" enchantGroup2="2">
 		<!-- Discharges a solid beam of sonic force toward a distant target. An equipped sword, blunt weapon or Dual-Sword Weapon is required to use this skill. Level 2 Sonic Focus charge required. A critical hit is possible. Power 369. -->
 		<table name="#effectPoints">-183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333</table>
 		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -208,8 +163,6 @@
 		<table name="#power">369 392 417 442 469 496 525 555 586 618 651 686 722 758 796 835 875 916 959 1002 1046 1091 1136 1183 1230 1278 1327 1376 1425 1475 1525 1576 1626 1677 1727 1777 1827</table>
 		<table name="#ench1Power">1843 1860 1876 1893 1909 1925 1942 1958 1975 1991 2008 2024 2041 2057 2074 2090 2107 2123 2139 2156 2172 2189 2205 2222 2238 2255 2271 2288 2304 2321</table>
 		<table name="#ench2pvePower">1858 1890 1922 1954 1986 2018 2050 2082 2114 2146 2178 2210 2242 2274 2306 2338 2369 2401 2433 2465 2497 2529 2561 2593 2625 2657 2689 2721 2753 2785</table>
-		<table name="#ench7pvpPower">1874 1921 1969 2016 2064 2111 2158 2206 2253 2301 2348 2395 2443 2490 2538 2585 2632 2680 2727 2775 2822 2869 2917 2964 3012 3059 3106 3154 3201 3248</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="600" />
 		<set name="chargeConsume" val="2" />
@@ -225,19 +178,6 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a dualsword, sword or blunt weapon weapon -->
@@ -270,22 +210,8 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant2pveEffects>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="1827" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
-	<skill id="7" levels="28" name="Sonic Storm" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="7" levels="28" name="Sonic Storm" enchantGroup1="2" enchantGroup2="2">
 		<!-- You unleash a violent mass of sonic energy emitting beams that strike distant targets. Consumes 3 Energy Stones. An equipped sword, blunt weapon or Dual-Sword Weapon is required to use this skill. Level 2 Sonic Focus charge is required. A critical hit is possible. Power 155. -->
 		<table name="#effectPoints">-114 -117 -119 -121 -124 -126 -129 -131 -133 -136 -138 -140 -142 -144 -146 -148 -150 -152 -154 -156 -157 -159 -160 -162 -163 -164 -166 -167</table>
 		<table name="#magicLevel">47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -293,8 +219,6 @@
 		<table name="#power">155 163 172 181 190 199 209 219 229 240 251 262 273 284 296 308 320 332 344 357 369 382 394 407 420 432 445 457</table>
 		<table name="#ench1Power">461 465 469 474 478 482 486 490 494 498 502 506 511 515 519 523 527 531 535 539 543 548 552 556 560 564 568 572 576 581</table>
 		<table name="#ench2MpConsume">88 87 85 84 82 81 79 78 76 75 73 72 70 69 67 66 64 63 61 60 58 57 55 54 52 51 49 48 46 45</table>
-		<table name="#ench7pvpPower">465 473 481 489 497 505 513 521 529 537 545 553 561 569 577 585 593 601 609 617 625 633 641 649 657 665 673 681 689 696</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
@@ -314,19 +238,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
@@ -345,20 +256,6 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="457" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
 		<!-- Channels force energy for use with other Sonic skills. An equipped sword, blunt weapon or Dual-Sword Weapon is required to use this skill. Force energy will disperse after 10 minutes of non-use. Can be charged up to level 1. -->
@@ -386,7 +283,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9" levels="34" name="Sonic Buster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="9" levels="34" name="Sonic Buster" enchantGroup1="2" enchantGroup2="2">
 		<!-- A wave of sonic force blasts nearby enemies. Consumes 3 Energy Stones. An equipped sword, blunt weapon or Dual-Sword Weapon is required to use this skill. Level 2 Sonic Focus charge is required. A critical hit is possible. Power 111. -->
 		<table name="#effectPoints">-99 -102 -104 -107 -109 -112 -114 -117 -119 -121 -124 -126 -129 -131 -133 -136 -138 -140 -142 -144 -146 -148 -150 -152 -154 -156 -157 -159 -160 -162 -163 -164 -166 -167</table>
 		<table name="#magicLevel">41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -419,19 +316,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a sword, blunt weapon or dualsword weapon -->
@@ -450,30 +334,14 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="457" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
-	<skill id="10" levels="8" name="Summon Storm Cubic" enchantGroup1="2">
+	<skill id="10" levels="8" name="Summon Storm Cubic">
 		<!-- Summons a storm cubic. A storm cubic uses magic that inflicts damage to one's enemy. When summoning, 5 Crystals: D-Grade are consumed. -->
 		<table name="#cubicPower">282 434 677 919 1141 1394 1673 1975</table>
 		<table name="#itemConsumeCount">5 6 8 9 11 12 13 14</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">40 46 52 58 62 66 70 74</table>
 		<table name="#mpConsume">28 33 38 43 46 49 52 55</table>
 		<table name="#mpInitialConsume">7 9 10 11 12 13 13 14</table>
-		<table name="#ench1Power">2081 2133 2184 2234 2283 2331 2378 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0010" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -485,17 +353,11 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="1" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="12" cubicPower="#cubicPower" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="1" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="12" cubicPower="#ench1Power" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11" levels="12" name="Trick">
 		<!-- Takes away the enemy's will to attack and removes the enemy's target state. An equipped dagger weapon is required to use this skill. -->
@@ -633,7 +495,7 @@
 			<effect name="FatalBlow" />
 		</for>
 	</skill>
-	<skill id="17" levels="34" name="Force Burst" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="17" levels="34" name="Force Burst" enchantGroup1="2" enchantGroup2="2">
 		<!-- A great magic force is detonated and damages the enemies before you. Consumes 2 Energy Stones. An equipped hand-to-hand combat weapon is required to use this skill. Level 1 Focused Force charge required. A critical hit is possible. Power 129. -->
 		<table name="#effectPoints">-116 -119 -121 -124 -127 -130 -133 -136 -139 -142 -144 -147 -150 -153 -155 -158 -161 -163 -166 -168 -170 -173 -175 -177 -179 -181 -183 -185 -187 -189 -190 -192 -193 -194</table>
 		<table name="#magicLevel">41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -641,8 +503,6 @@
 		<table name="#power">129 137 145 153 162 171 181 190 200 211 222 233 244 256 268 280 293 305 318 332 345 359 373 387 402 416 431 445 460 475 489 504 519 533</table>
 		<table name="#ench1Power">539 543 548 553 558 563 567 572 577 582 587 591 596 601 606 611 615 620 625 630 635 639 644 649 654 659 664 668 673 678</table>
 		<table name="#ench2MpConsume">103 101 99 97 96 94 92 90 89 87 85 83 81 80 78 76 74 73 71 69 67 66 64 62 60 59 57 55 53 52</table>
-		<table name="#ench7pvpPower">645 651 657 663 668 674 680 686 692 697 703 709 715 720 726 732 738 743 749 755 761 766 772 778 784 789 795 801 807 812</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
@@ -666,19 +526,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUALFIST" /> <!-- Requires a hand-to-hand weapon -->
@@ -697,29 +544,14 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="533" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
-	<skill id="18" levels="37" name="Aura of Hate" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="18" levels="37" name="Aura of Hate" enchantGroup1="1" enchantGroup2="1">
 		<!-- Provokes nearby enemies to attack. Power 1078. -->
 		<table name="#effectPoints">-3594 -3690 -3787 -3885 -3982 -4080 -4178 -4276 -4374 -4471 -4568 -4665 -4761 -4856 -4950 -5043 -5135 -5226 -5316 -5403 -5490 -5574 -5657 -5737 -5815 -5891 -5965 -6036 -6104 -6170 -6232 -6292 -6349 -6402 -6452 -6499 -6542</table>
 		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
 		<table name="#mpConsume">50 51 53 54 55 57 58 60 61 63 64 66 67 69 70 72 74 75 77 78 80 81 83 85 86 87 89 90 92 93 95 96 97 99 100 101 102</table>
 		<table name="#ench1EffectPoints">-6591 -6601 -6611 -6621 -6631 -6642 -6652 -6662 -6672 -6682 -6692 -6703 -6713 -6723 -6733 -6743 -6753 -6764 -6774 -6784 -6794 -6804 -6814 -6825 -6835 -6845 -6855 -6865 -6875 -6886</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<table name="#enchpDefAtk">0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -738,25 +570,17 @@
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 		</for>
 		<enchant2for>
 			<effect name="TargetMe">
-				<mul stat="pDef" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant2for>
-		<enchant3for>
-			<effect name="TargetMe">
-				<mul stat="pAtk" val="#enchpDefAtk" />
-			</effect>
-			<effect name="GetAgro" />
-		</enchant3for>
 	</skill>
-	<skill id="19" levels="37" name="Double Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="19" levels="37" name="Double Shot" enchantGroup1="2" enchantGroup2="2">
 		<!-- Allows two arrows to be fired quickly. A critical hit is possible. An equipped bow is required to use this skill. Over-hit is possible. Power 984. -->
 		<table name="#effectPoints">-366 -375 -385 -395 -405 -415 -425 -435 -445 -455 -465 -474 -484 -494 -503 -513 -522 -532 -541 -550 -558 -567 -575 -583 -591 -599 -607 -614 -621 -627 -634 -640 -646 -651 -656 -661 -665</table>
 		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -764,8 +588,6 @@
 		<table name="#power">984 1046 1110 1178 1249 1322 1399 1479 1562 1647 1736 1828 1923 2021 2123 2227 2333 2443 2555 2670 2788 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870</table>
 		<table name="#ench1Power">4915 4959 5003 5047 5090 5134 5178 5222 5266 5310 5354 5398 5442 5486 5529 5573 5617 5561 5705 5749 5793 5837 5881 5925 5968 6012 6056 6100 6144 6188</table>
 		<table name="#ench2MpConsume">148 145 143 140 138 135 133 130 128 125 122 120 118 115 112 110 108 105 102 100 98 95 93 90 88 85 83 80 78 75</table>
-		<table name="#enchDuel">4977 5083 5188 5294 5400 5506 5611 5717 5823 5929 6034 6140 6246 6352 6458 6563 6669 6775 6881 6986 7092 7198 7304 7410 7515 7621 7727 7833 7938 8044</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
@@ -785,20 +607,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<using kind="BOW" />
 		</cond>
@@ -829,15 +637,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22" levels="7" name="Summon Vampiric Cubic" enchantGroup1="2">
+	<skill id="22" levels="7" name="Summon Vampiric Cubic">
 		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the targeted enemy's HP and with it regenerates its master's HP. Requires 6 Crystals: D-Grade. -->
 		<table name="#cubicPower">351 531 773 1026 1264 1530 1822</table>
 		<table name="#itemConsumeCount">6 7 8 9 11 12 13</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">43 49 55 60 64 68 72</table>
 		<table name="#mpConsume">30 35 40 44 48 51 53</table>
 		<table name="#mpInitialConsume">8 9 10 11 12 13 14</table>
-		<table name="#ench1Power">1967 2015 2061 2106 2151 2194 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0022" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -849,19 +655,13 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="2" cubicDelay="15" cubicDuration="900" cubicMaxCount="20" cubicSkillChance="8" cubicPower="#cubicPower" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="2" cubicDelay="15" cubicDuration="900" cubicMaxCount="20" cubicSkillChance="8" cubicPower="#ench1Power" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="24" levels="31" name="Burst Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="24" levels="31" name="Burst Shot" enchantGroup1="2" enchantGroup2="2">
 		<!-- Exploding arrows inflict damage on multiple enemies at range. An equipped bow is required to use this skill. Over-hit is possible. Power 350. -->
 		<table name="#effectPoints">-213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333</table>
 		<table name="#magicLevel">44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -869,7 +669,6 @@
 		<table name="#power">350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218</table>
 		<table name="#ench1Power">1230 1241 1252 1262 1273 1284 1295 1306 1317 1328 1339 1350 1361 1372 1383 1394 1405 1416 1427 1438 1449 1460 1471 1482 1493 1504 1515 1526 1537 1548</table>
 		<table name="#ench2MpConsume">220 216 213 209 205 201 198 194 190 186 183 179 175 171 168 164 160 156 153 149 145 141 138 134 130 126 123 119 115 112</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
@@ -890,9 +689,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="BOW" />
 		</cond>
@@ -965,7 +761,7 @@
 			<effect name="OpenChest" />
 		</for>
 	</skill>
-	<skill id="28" levels="49" name="Aggression" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="28" levels="49" name="Aggression" enchantGroup1="1" enchantGroup2="1">
 		<!-- Provokes a target to attack. Power 655. -->
 		<table name="#castRange">400 400 400 400 400 400 400 400 400 400 400 400 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 800 800 800 800 800 800 800 800 800 800 800 800 800 800 800 800</table>
 		<table name="#effectPoints">-2401 -2487 -2575 -2755 -2847 -2942 -3134 -3233 -3332 -3536 -3638 -3743 -3953 -4058 -4165 -4273 -4380 -4487 -4595 -4703 -4811 -4918 -5024 -5131 -5237 -5341 -5444 -5547 -5648 -5748 -5847 -5943 -6038 -6131 -6222 -6310 -6396 -6480 -6561 -6639 -6714 -6786 -6855 -6921 -6983 -7042 -7097 -7148 -7196</table>
@@ -973,7 +769,6 @@
 		<table name="#magicLevel">22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
 		<table name="#ench1EffectPoints">-7250 -7261 -7272 -7283 -7295 -7306 -7317 -7328 -7339 -7350 -7362 -7373 -7384 -7395 -7406 -7418 -7429 -7440 -7451 -7462 -7473 -7485 -7496 -7507 -7518 -7529 -7541 -7552 -7563 -7574</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
-		<table name="#enchpDefAtk">0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -992,23 +787,15 @@
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 		</for>
 		<enchant2for>
 			<effect name="TargetMe">
-				<mul stat="pDef" val="#enchpDefAtk" />
 			</effect>
 			<effect name="GetAgro" />
 		</enchant2for>
-		<enchant3for>
-			<effect name="TargetMe">
-				<mul stat="pAtk" val="#enchpDefAtk" />
-			</effect>
-			<effect name="GetAgro" />
-		</enchant3for>
 	</skill>
 	<skill id="29" levels="24" name="Iron Punch">
 		<!-- Strikes target with a fist of iron. An equipped fist weapon is required to use this skill. Power 29. Over-hit possible. -->
@@ -1037,7 +824,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="30" levels="37" name="Backstab" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="30" levels="37" name="Backstab" enchantGroup1="2" enchantGroup2="2">
 		<!-- Attacks an enemy from behind, inflicting a mortal wound. A critical hit is possible. Instant kill is possible. An equipped dagger weapon is required to use this skill. Power 1107. -->
 		<table name="#baseCritLethal">5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 15 15 15 15</table>
 		<table name="#effectPoints">-305 -313 -321 -329 -338 -346 -354 -363 -371 -379 -387 -395 -404 -412 -420 -428 -435 -443 -451 -458 -465 -472 -479 -486 -493 -499 -506 -512 -517 -523 -528 -533 -538 -543 -547 -551 -554</table>
@@ -1046,8 +833,6 @@
 		<table name="#power">1107 1176 1249 1325 1405 1488 1574 1664 1757 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3217 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479</table>
 		<table name="#ench1Power">5493 5506 5520 5534 5547 5561 5575 5588 5602 5616 5629 5643 5657 5670 5684 5698 5711 5725 5738 5752 5766 5779 5793 5802 5820 5834 5848 5861 5875 5889</table>
 		<table name="#ench2MpConsume">110 108 106 104 102 100 99 97 95 93 91 89 87 85 83 82 80 78 76 74 72 70 69 67 65 63 61 59 57 56</table>
-		<table name="#enchDuel">5552 5624 5697 5769 5842 5914 5987 6059 6132 6204 6277 6350 6422 6495 6567 6640 6712 6785 6857 6930 7002 7075 7147 7220 7292 7365 7437 7510 7583 7655</table>
-		<table name="#enchElementPower">11 12 14 15 16 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 42 43 44 46 47 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="baseCritRate" val="#baseCritLethal" />
 		<set name="blowChance" val="40" />
@@ -1070,20 +855,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
@@ -1094,15 +865,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="33" levels="8" name="Summon Phantom Cubic" enchantGroup1="2">
+	<skill id="33" levels="8" name="Summon Phantom Cubic">
 		<!-- Summons Phantom Cubic. Phantom Cubic uses magic that decreases P.Atk, P. Def, and Atk.Speed of a targeted enemy. Requires 2 Crystals: D-Grade. -->
 		<table name="#cubicPower">282 434 644 919 1141 1394 1673 1975</table>
 		<table name="#itemConsumeCount">2 3 4 4 5 6 6 7</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">40 46 52 58 62 66 70 74</table>
 		<table name="#mpConsume">28 33 38 43 46 49 52 55</table>
 		<table name="#mpInitialConsume">7 9 10 11 12 13 13 14</table>
-		<table name="#ench1Power">2081 2133 2184 2234 2283 2331 2378 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423 2423</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0033" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1114,19 +883,12 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="5" cubicDelay="8" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
 				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SummonCubic">
-				<param cubicId="5" cubicDelay="8" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#ench1Power" />
-				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="34" levels="3" name="Bandage">
 		<!-- Heals one's own bleeding up to Effect 3. -->
@@ -1148,7 +910,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="35" levels="28" name="Force Storm" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="35" levels="28" name="Force Storm" enchantGroup1="2" enchantGroup2="2">
 		<!-- By unleashing a magical force you attack enemies from afar. Consumes 2 Energy Stones. An equipped hand-to-hand combat weapon is required to use this skill. Level 1 Focused Force charge required. A critical hit is possible. Power 181. -->
 		<table name="#effectPoints">-133 -136 -139 -142 -144 -147 -150 -153 -155 -158 -161 -163 -166 -168 -170 -173 -175 -177 -179 -181 -183 -185 -187 -189 -190 -192 -193 -194</table>
 		<table name="#magicLevel">47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1156,8 +918,6 @@
 		<table name="#power">181 190 200 211 222 233 244 256 268 280 293 305 318 332 345 359 373 387 402 416 431 445 460 475 489 504 519 533</table>
 		<table name="#ench1Power">538 542 547 552 557 562 566 571 576 581 586 590 595 600 605 610 614 619 624 629 634 638 643 648 653 658 663 667 672 677</table>
 		<table name="#ench2MpConsume">104 103 102 102 101 101 100 99 99 98 97 97 96 95 95 94 93 93 92 91 91 90 90 89 88 88 87 86 86 85</table>
-		<table name="#ench7pvpPower">540 547 554 561 567 574 581 588 595 602 609 615 622 629 636 643 650 656 663 670 677 684 691 698 704 711 718 725 732 739</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
@@ -1178,19 +938,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="DUALFIST" /> <!-- Requires a hand-to-hand weapon -->
@@ -1209,22 +956,8 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="533" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
-	<skill id="36" levels="37" name="Whirlwind" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="36" levels="37" name="Whirlwind" enchantGroup1="2" enchantGroup2="2">
 		<!-- A wide arcing swing that inflicts damage to multiple surrounding enemies. Usable when a pole-arm is equipped. Shield Defense is ignored. Over-hit is possible. Power 461. -->
 		<table name="#effectPoints">-183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333</table>
 		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1232,8 +965,6 @@
 		<table name="#power">554 588 625 663 703 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740</table>
 		<table name="#ench1Power">2763 2788 2813 2837 2862 2887 2911 2936 2961 2985 3010 3035 3059 3084 3109 3133 3158 3183 3207 3232 3257 3281 3306 3331 3355 3380 3405 3429 3454 3479</table>
 		<table name="#ench2MpConsume">74 72 71 69 68 67 65 64 62 61 59 58 56 55 53 52 50 49 48 46 45 43 42 40 39 37 36 34 33 32</table>
-		<table name="#enchDuel">2787 2835 2883 2931 2979 3027 3075 3122 3170 3218 3266 3314 3362 3410 3458 3505 3553 3601 3649 3697 3745 3793 3840 3888 3936 3984 4032 4080 4128 4176</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -1254,20 +985,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<using kind="POLE" />
 		</cond>
@@ -1450,7 +1167,7 @@
 			<effect name="Stun" />
 		</enchant1for>
 	</skill>
-	<skill id="49" levels="26" name="Holy Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="49" levels="26" name="Holy Strike" enchantGroup1="2" enchantGroup2="2">
 		<!-- Inflicts damage to undead monsters. Power 47. -->
 		<table name="#effectPoints">-418 -438 -448 -467 -477 -495 -505 -523 -532 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655</table>
 		<table name="#magicLevel">44 46 47 49 50 52 53 55 56 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1460,7 +1177,6 @@
 		<table name="#ench1Power">87 88 88 89 89 90 90 91 91 92 92 93 93 94 94 95 95 96 96 97 97 98 98 99 99 100 100 101 102 102</table>
 		<table name="#ench2MpConsume">27 27 26 26 25 25 25 24 24 24 23 23 22 22 22 21 21 20 20 20 19 19 19 18 18 17 17 17 16 16</table>
 		<table name="#ench2mpInitialConsume">6 6 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4</table>
-		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1482,8 +1198,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<target race="UNDEAD" />
 		</cond>
@@ -1545,7 +1259,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="54" levels="49" name="Force Blaster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
+	<skill id="54" levels="49" name="Force Blaster" enchantGroup1="2" enchantGroup2="2">
 		<!-- Discharges a powerful force attack on a distant enemy. An equipped hand-to-hand combat weapon is required to use this skill. Capable of critical attack. Power 143. -->
 		<table name="#effectPoints">-130 -134 -139 -149 -154 -159 -169 -175 -180 -191 -197 -202 -213 -219 -225 -231 -237 -242 -248 -254 -260 -265 -271 -277 -283 -288 -294 -299 -305 -310 -316 -321 -326 -331 -336 -340 -345 -350 -354 -358 -362 -366 -370 -373 -377 -380 -383 -386 -388</table>
 		<table name="#magicLevel">22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1553,8 +1267,6 @@
 		<table name="#power">143 154 166 193 207 222 256 274 293 334 357 380 431 458 486 516 547 579 612 647 683 721 760 800 842 885 929 974 1021 1069 1118 1169 1220 1272 1326 1380 1435 1491 1548 1605 1663 1721 1780 1838 1897 1956 2015 2073 2131</table>
 		<table name="#ench1Power">2151 2170 2189 2209 2228 2247 2266 2285 2305 2324 2343 2362 2381 2401 2420 2439 2458 2477 2497 2516 2535 2554 2573 2593 2612 2631 2650 2670 2689 2708</table>
 		<table name="#ench2MpConsume">59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30</table>
-		<table name="#ench7pvpPower">2168 2206 2243 2280 2317 2355 2392 2429 2466 2504 2541 2578 2615 2653 2690 2727 2764 2802 2839 2876 2913 2951 2988 3025 3062 3100 3137 3174 3211 3248</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1572,19 +1284,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
-		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="magicLevel" val="#enchMagicLvl" />
-		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="magicLevel" val="#enchMagicLvl" />
-		<enchant7 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
 		</cond>
@@ -1600,20 +1299,6 @@
 				<param criticalChance="15" />
 			</effect>
 		</enchant1for>
-		<enchant7for>
-		</enchant7for>
-		<enchant7pvpEffects>
-			<effect name="EnergyAttack">
-				<param power="#ench7pvpPower" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pvpEffects>
-		<enchant7pveEffects>
-			<effect name="EnergyAttack">
-				<param power="2131" />
-				<param criticalChance="15" />
-			</effect>
-		</enchant7pveEffects>
 	</skill>
 	<skill id="56" levels="24" name="Power Shot">
 		<!-- A deadly damage-dealing volley from a bow. Power 65. Over-hit possible. -->
@@ -1641,7 +1326,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="58" levels="55" name="Elemental Heal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="58" levels="55" name="Elemental Heal" enchantGroup1="2" enchantGroup2="2">
 		<!-- Regenerates one's HP. Power 71. -->
 		<table name="#amount">71 75 80 95 100 106 118 124 130 143 150 157 172 179 187 203 211 219 236 245 254 262 271 281 290 299 308 318 327 337 346 356 365 375 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546</table>
 		<table name="#effectPoints">101 107 114 135 143 151 168 176 185 204 214 224 245 256 267 289 301 313 337 349 362 375 388 401 414 427 440 454 467 481 494 508 521 535 549 562 575 589 602 615 628 640 653 665 677 689 700 711 722 733 743 753 763 772 780</table>
@@ -1666,8 +1351,6 @@
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Heal">
 				<param power="#amount" />
@@ -1678,22 +1361,6 @@
 				<param power="#ench1amount" />
 			</effect>
 		</enchant1for>
-		<enchant3for>
-			<effect name="Heal">
-				<param power="546" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="POISON,9" />
-			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="Heal">
-				<param power="546" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="BLEEDING,9" />
-			</effect>
-		</enchant4for>
 	</skill>
 	<skill id="60" levels="1" name="Fake Death">
 		<!-- Makes PC play dead and dissuades the enemy from attacking. Continuously consumes MP. -->
@@ -1763,7 +1430,7 @@
 			<effect name="Fear" />
 		</for>
 	</skill>
-	<skill id="67" levels="7" name="Summon Life Cubic" enchantGroup1="2">
+	<skill id="67" levels="7" name="Summon Life Cubic">
 		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Requires 6 Crystals: D-Grade. -->
 		<table name="#itemConsumeCount">6 7 8 9 11 12 13</table> <!-- Epilogue Modification -->
 		<table name="#magicLevel">42 49 53 60 64 68 72</table>
@@ -1781,7 +1448,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="3" cubicDelay="13" cubicDuration="900" cubicMaxCount="20" cubicSkillChance="0" />
@@ -1789,7 +1455,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="69" levels="25" name="Sacrifice" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="69" levels="25" name="Sacrifice" enchantGroup1="2" enchantGroup2="2">
 		<!-- Restores another character's HP by sacrificing your own. Power 741. -->
 		<table name="#amount">741 762 782 802 822 843 863 882 902 922 941 960 979 997 1015 1033 1050 1067 1083 1099 1115 1129 1144 1157 1170</table>
 		<table name="#effectPoints">494 508 521 535 549 562 575 589 602 615 628 640 653 665 677 689 700 711 722 733 743 753 763 772 780</table>
@@ -1797,7 +1463,6 @@
 		<table name="#magicLevel">50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
 		<table name="#ench1amount">1231 1292 1353 1415 1476 1537 1598 1659 1720 1781 1842 1903 1964 2025 2086 2147 2208 2269 2331 2392 2453 2514 2575 2636 2697 2758 2819 2880 2941 3002</table>
 		<table name="#ench2HpConsume">1534 1508 1482 1456 1430 1404 1378 1352 1326 1300 1274 1248 1222 1196 1170 1144 1118 1092 1066 1040 1014 988 962 936 910 884 858 832 806 780</table>
-		<table name="#ench34HpConsume">1544 1528 1513 1497 1482 1466 1450 1435 1419 1404 1388 1372 1357 1341 1326 1310 1294 1279 1263 1248 1232 1216 1201 1185 1170 1154 1138 1123 1107 1092</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1813,10 +1478,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="hpConsume" val="#ench2HpConsume" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="hpConsume" val="#ench34HpConsume" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant4 name="hpConsume" val="#ench34HpConsume" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Heal">
 				<param power="#amount" />
@@ -1827,24 +1488,8 @@
 				<param power="#ench1amount" />
 			</effect>
 		</enchant1for>
-		<enchant3for>
-			<effect name="Heal">
-				<param power="1170" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="POISON,9" />
-			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="Heal">
-				<param power="1170" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="BLEEDING,9" />
-			</effect>
-		</enchant4for>
 	</skill>
-	<skill id="70" levels="53" name="Drain Health" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="70" levels="53" name="Drain Health" enchantGroup1="2" enchantGroup2="2">
 		<!-- Transfers HP from a target to yourself. Power 20. -->
 		<table name="#effectPoints">-78 -84 -95 -102 -110 -114 -118 -251 -259 -268 -285 -294 -303 -322 -331 -341 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655</table>
 		<table name="#magicLevel">13 15 18 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -1855,7 +1500,6 @@
 		<table name="#ench2MpConsume">40 40 39 39 38 37 37 36 36 35 35 34 33 33 32 32 31 31 30 29 29 28 28 27 27 26 25 25 24 24</table>
 		<table name="#ench2mpInitialConsume">10 10 9 9 9 9 9 9 9 8 8 8 8 8 8 8 7 7 7 7 7 7 7 6 6 6 6 6 6 6</table>
 		<table name="#ench2Power">108 109 109 109 109 109 110 110 110 110 111 111 111 111 111 112 112 112 112 113 113 113 113 113 114 114 114 114 114 115</table>
-		<table name="#ench3Sap">0.3 0.31 0.32 0.32 0.33 0.34 0.34 0.35 0.36 0.36 0.37 0.38 0.38 0.39 0.4 0.4 0.41 0.42 0.42 0.43 0.44 0.44 0.45 0.46 0.46 0.47 0.48 0.48 0.49 0.5</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1878,17 +1522,11 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="HpDrain">
 				<param power="0.2" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="HpDrain">
-				<param power="#ench3Sap" />
-			</effect>
-		</enchant3for>
 	</skill>
 	<skill id="72" levels="3" name="Iron Will" enchantGroup1="1" enchantGroup2="1">
 		<!-- Temporarily increases M. Def. Effect 1. -->
@@ -2046,7 +1684,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="81" levels="3" name="Punch of Doom" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+	<skill id="81" levels="3" name="Punch of Doom" enchantGroup1="2" enchantGroup2="2">
 		<!-- Strikes an enemy with an iron fist but temporarily stuns you. An equipped hand-to-hand combat weapon is required to use this skill. Ignores Shield Defense. Over-hit is possible. Power 4580. -->
 		<table name="#effectPoints">-266 -304 -333</table>
 		<table name="#hpConsume">399 455 499</table>
@@ -2054,7 +1692,6 @@
 		<table name="#power">4580 6332 9132</table>
 		<table name="#ench1Power">9214 9296 9378 9461 9543 9625 9708 9790 9872 9955 10037 10119 10201 10284 10366 10448 10531 10613 10695 10778 10860 10942 11024 11107 11189 11271 11354 11436 11518 11601</table>
 		<table name="#ench2HpConsume">489 481 473 464 456 448 439 431 423 415 406 398 390 382 373 365 357 349 340 332 324 316 307 299 291 283 274 266 258 250</table>
-		<table name="#enchElementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalType" val="STUN" />
@@ -2081,9 +1718,6 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="hpConsume" val="#ench2HpConsume" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
 		</cond>
@@ -2091,7 +1725,7 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="82" levels="3" name="Majesty" enchantGroup1="1" enchantGroup2="1">
+	<skill id="82" levels="3" name="Majesty">
 		<!-- Temporarily increase P. Def while decreasing Evasion. Effect 1. -->
 		<table name="#abnormalLevels">1 2 3</table>
 		<table name="#effectPoints">204 379 549</table>
@@ -2099,9 +1733,6 @@
 		<table name="#mpConsume">10 18 27</table>
 		<table name="#pDef">1.07 1.11 1.15</table>
 		<table name="#rEvas">2 4 6</table>
-		<table name="#ench1pDef">1.16 1.16 1.17 1.17 1.18 1.18 1.19 1.19 1.2 1.2 1.21 1.21 1.22 1.22 1.23 1.23 1.23 1.24 1.24 1.25 1.25 1.26 1.26 1.27 1.27 1.28 1.28 1.29 1.29 1.3</table>
-		<table name="#ench2AbnormalTimes">310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAJESTY" />
@@ -2113,21 +1744,12 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pDef" val="#pDef" />
 				<sub stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#ench1pDef" />
-				<sub stat="rEvas" val="6" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="83" levels="1" name="Wolf Spirit Totem">
 		<!-- The spirit of the wolf possesses you, temporarily increasing Accuracy and Speed when using hand-to-hand combat weapons. An equipped hand-to-hand combat weapon is required to use this skill. -->
@@ -2318,7 +1940,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="92" levels="52" name="Shield Stun" enchantGroup1="3" enchantGroup2="2" >
+	<skill id="92" levels="52" name="Shield Stun" enchantGroup1="2" enchantGroup2="2">
 		<!-- A brutal shield bash that stuns your target. The target cannot be stunned, shocked or dazed again while this is in effect. A shield must be equipped in order to use this skill. -->
 		<table name="#effectPoints">-189 -196 -204 -219 -227 -235 -251 -259 -268 -285 -294 -303 -322 -331 -341 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655</table>
 		<table name="#magicLevel">18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
@@ -2360,7 +1982,7 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="94" levels="2" name="Rage" enchantGroup1="1" enchantGroup2="1">
+	<skill id="94" levels="2" name="Rage">
 		<!-- Temporarily increases P. Atk. when using Sword, Blunt or Spear weapons. Also increases Accuracy and P. Atk. when using Two-Handed Swords and Blunt Weapons. Evasion and P. Def. are decreased while the effect lasts. Effect 1. -->
 		<table name="#abnormalLevels">1 2</table>
 		<table name="#accCombat">2 4</table>
@@ -2369,9 +1991,6 @@
 		<table name="#mpConsume">11 25</table>
 		<table name="#swordbluntpole">1.21 1.29</table>
 		<table name="#twohands">1.07 1.06</table>
-		<table name="#ench1atk">1.292 1.294 1.296 1.298 1.3 1.302 1.304 1.306 1.308 1.31 1.312 1.314 1.316 1.318 1.32 1.322 1.324 1.326 1.328 1.33 1.332 1.334 1.336 1.338 1.34 1.342 1.344 1.346 1.348 1.35</table>
-		<table name="#ench2atk">1.062 1.064 1.066 1.068 1.07 1.072 1.074 1.076 1.078 1.08 1.082 1.084 1.086 1.088 1.09 1.092 1.094 1.096 1.098 1.1 1.102 1.104 1.106 1.108 1.11 1.112 1.114 1.116 1.118 1.12</table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />
@@ -2383,8 +2002,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLevel" val="#enchMagicLvl" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.2" />
@@ -2407,50 +2024,6 @@
 				<sub stat="rEvas" val="3" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.2" />
-				<mul stat="pAtk" val="#ench1atk">
-					<using kind="SWORD,BLUNT,POLE" />
-				</mul>
-				<mul stat="pAtk" val="1.06">
-					<and>
-						<using kind="SWORD,BLUNT" />
-						<using slot="lrhand" />
-					</and>
-				</mul>
-				<add stat="accCombat" val="4">
-					<and>
-						<using kind="SWORD,BLUNT" />
-						<using slot="lrhand" />
-					</and>
-				</add>
-				<mul stat="pDef" val="0.8" />
-				<sub stat="rEvas" val="3" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.2" />
-				<mul stat="pAtk" val="1.29">
-					<using kind="SWORD,BLUNT,POLE" />
-				</mul>
-				<mul stat="pAtk" val="#ench2atk">
-					<and>
-						<using kind="SWORD,BLUNT" />
-						<using slot="lrhand" />
-					</and>
-				</mul>
-				<add stat="accCombat" val="4">
-					<and>
-						<using kind="SWORD,BLUNT" />
-						<using slot="lrhand" />
-					</and>
-				</add>
-				<mul stat="pDef" val="0.8" />
-				<sub stat="rEvas" val="3" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="95" levels="20" name="Cripple" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly reduces enemy's Speed. An equipped hand-to-hand combat weapon is required to use this skill. Effect 2. -->
@@ -2493,7 +2066,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="96" levels="6" name="Bleed" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="96" levels="6" name="Bleed" enchantGroup1="1">
 		<!-- Inflicts a serious wound that causes the enemy to bleed momentarily. An equipped dagger weapon is required to use this skill. Effect 3. -->
 		<table name="#abnormalLevels">3 4 5 6 7 8</table>
 		<table name="#dot">25 34 44 54 62 67</table>
@@ -2501,8 +2074,6 @@
 		<table name="#magicLevel">24 32 49 58 66 70</table>
 		<table name="#mpConsume">28 37 60 73 83 89</table>
 		<table name="#ench1MpConsume">88 86 85 83 82 80 79 77 76 74 73 71 70 68 67 65 64 62 61 59 58 56 55 53 52 50 49 47 46 44</table>
-		<table name="#ench2Sap">24 49 74 99 124 148 173 198 223 248 273 297 322 347 372 397 422 446 471 496 521 546 570 595 620 645 670 695 719 744</table>
-		<table name="#ench3dot">69 70 71 72 74 75 76 77 79 80 81 82 83 85 86 87 88 90 91 92 93 95 96 97 98 100 101 102 103 105</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="20" />
@@ -2527,8 +2098,6 @@
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="DAGGER,DUALDAGGER" />
 		</cond>
@@ -2538,31 +2107,14 @@
 				<mul stat="runSpd" val="0.8" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="HpByLevel">
-				<param power="#ench2Sap" />
-			</effect>
-			<effect name="DamOverTime" ticks="5">
-				<param power="67" />
-				<mul stat="runSpd" val="0.8" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="DamOverTime" ticks="5">
-				<param power="#ench3dot" />
-				<mul stat="runSpd" val="0.8" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="97" levels="11" name="Sanctuary" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="97" levels="11" name="Sanctuary" enchantGroup1="1" enchantGroup2="1">
 		<!-- Instantly reduces P. Atk. of surrounding undead monsters. Effect 3. -->
 		<table name="#effectPoints">-495 -523 -549 -566 -582 -597 -611 -624 -635 -646 -655</table>
 		<table name="#magicLevel">52 55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">35 38 40 42 43 45 46 48 49 50 51</table>
 		<table name="#ench1ActivateRates">41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80</table>
 		<table name="#ench2Cost">50 50 49 48 47 46 45 44 44 43 42 41 40 39 38 38 37 36 35 34 33 32 32 31 30 29 28 27 26 26</table>
-		<table name="#ench3Attack">191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340</table>
-		<table name="#ench4defCritRate">1.1 1.11 1.12 1.12 1.13 1.14 1.14 1.15 1.16 1.16 1.17 1.18 1.18 1.19 1.2 1.2 1.21 1.22 1.22 1.23 1.24 1.24 1.25 1.26 1.26 1.27 1.28 1.28 1.29 1.3</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -2585,9 +2137,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2Cost" />
-		<enchant3 name="magicLevel" val="#enchMagicLvl" />
-		<enchant3 name="power" val="#ench3Attack" />
-		<enchant4 name="magicLevel" val="#enchMagicLvl" />
 		<cond msgId="144">
 			<target race="UNDEAD" />
 		</cond>
@@ -2596,18 +2145,6 @@
 				<mul stat="pAtk" val="0.77" />
 			</effect>
 		</for>
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="0.77" />
-			</effect>
-			<effect name="PhysicalAttack" />
-		</enchant3for>
-		<enchant4for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="0.77" />
-				<mul stat="defCritRate" val="#ench4defCritRate" />
-			</effect>
-		</enchant4for>
 	</skill>
 	<skill id="98" levels="5" name="Sword Symphony">
 		<!-- Used to inflict damage to surrounding enemies while fleeing. -->

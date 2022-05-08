@@ -98,6 +98,7 @@ What is done
 -Changed item count to integer.
 -Adjusted luxury shop merchants.
 -Added support for merchant sell bypass.
+-Removed all non existing skill enchants.
 
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.
