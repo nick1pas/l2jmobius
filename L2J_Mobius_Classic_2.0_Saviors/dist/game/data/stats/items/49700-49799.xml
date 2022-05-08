@@ -886,6 +886,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39173" level="1" /> <!-- Armor Supply Box (A-grade) -->
+		</skills>
 	</item>
 	<item id="49761" name="Ornament Supply Box (A-grade)" type="EtcItem">
 		<!-- Double-click to receive an A-grade Ornament. -->
@@ -906,6 +910,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39153" level="1" /> <!-- A-grade Armor Ingredient Pack -->
+		</skills>
 	</item>
 	<item id="49763" name="Ornament Ingredient Box - A-grade" type="EtcItem">
 		<!-- Double-click to receive one of A-grade Ornament Ingredients. -->

@@ -613,10 +613,117 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51342" toLevel="1" name="+10 A-grade Armor Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91627</itemConsumeId>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.44">
+						<item id="5287" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Breastplate -->
+					</item>
+					<item chance="3.44">
+						<item id="5288" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Gaiters -->
+					</item>
+					<item chance="3.44">
+						<item id="5289" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Helmet -->
+					</item>
+					<item chance="3.44">
+						<item id="5290" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Gloves -->
+					</item>
+					<item chance="3.44">
+						<item id="5291" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Boots -->
+					</item>
+					<item chance="3.44">
+						<item id="5293" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Plate Armor -->
+					</item>
+					<item chance="3.44">
+						<item id="5294" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Helmet -->
+					</item>
+					<item chance="3.44">
+						<item id="5295" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Gloves -->
+					</item>
+					<item chance="3.44">
+						<item id="5296" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Boots -->
+					</item>
+					<item chance="3.44">
+						<item id="5297" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Leather Armor -->
+					</item>
+					<item chance="3.44">
+						<item id="5298" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Leggings -->
+					</item>
+					<item chance="3.44">
+						<item id="5301" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Leather Armor -->
+					</item>
+					<item chance="3.44">
+						<item id="5304" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Tunic -->
+					</item>
+					<item chance="3.44">
+						<item id="5305" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Tallum Stockings -->
+					</item>
+					<item chance="3.44">
+						<item id="5308" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Robe -->
+					</item>
+					<item chance="3.44">
+						<item id="5311" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Armor of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5312" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Helm of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5313" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Gauntlets of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5314" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Boots of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5316" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Plate Armor -->
+					</item>
+					<item chance="3.44">
+						<item id="5317" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Circlet -->
+					</item>
+					<item chance="3.44">
+						<item id="5318" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Gauntlets -->
+					</item>
+					<item chance="3.44">
+						<item id="5319" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Boots -->
+					</item>
+					<item chance="3.44">
+						<item id="5320" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Leather Armor of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5323" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Leather Armor -->
+					</item>
+					<item chance="3.44">
+						<item id="5326" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Robe of Nightmare -->
+					</item>
+					<item chance="3.44">
+						<item id="5329" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Majestic Robe -->
+					</item>
+					<item chance="3.44">
+						<item id="5292" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Dark Crystal Shield -->
+					</item>
+					<item chance="3.44">
+						<item id="5315" count="1" minEnchant="10" maxEnchant="10" /> <!-- Sealed Shield of Nightmare -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51343" toLevel="1" name="+10 B-grade Armor Pack">
 		<operateType>A1</operateType>

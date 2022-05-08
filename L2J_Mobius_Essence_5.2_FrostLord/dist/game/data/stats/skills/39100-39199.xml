@@ -1093,9 +1093,204 @@
 	</skill>
 	<skill id="39153" toLevel="1" name="Armor Ingredient Box - A-grade">
 		<icon>icon.etc_treasure_box_i05</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49762</itemConsumeId>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.73">
+						<item id="5332" count="1" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5334" count="1" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5336" count="1" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5338" count="1" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5340" count="1" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5346" count="1" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5348" count="1" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5350" count="1" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5352" count="1" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5354" count="1" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5364" count="1" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5366" count="1" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5368" count="1" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5370" count="1" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5380" count="1" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5382" count="1" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5392" count="1" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5394" count="1" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5404" count="1" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5406" count="1" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5416" count="1" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5418" count="1" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5420" count="1" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5422" count="1" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5424" count="1" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5426" count="1" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5428" count="1" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5430" count="1" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="5432" count="1" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
+					</item>
+					<item chance="1.73">
+						<item id="92809" count="1" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92810" count="1" /> <!-- Sealed Tallum Leather Armor Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92811" count="1" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92812" count="1" /> <!-- Sealed Majestic Leather Armor Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92813" count="1" /> <!-- Sealed Dark Crystal Legging Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92814" count="1" /> <!-- Sealed Tallum Tunic Texture -->
+					</item>
+					<item chance="1.73">
+						<item id="92815" count="1" /> <!-- Sealed Dark Crystal Robe Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92816" count="1" /> <!-- Sealed Robe of Nightmare Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92817" count="1" /> <!-- Sealed Majestic Robe Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92818" count="1" /> <!-- Sealed Tallum Stocking Fabric -->
+					</item>
+					<item chance="1.73">
+						<item id="92819" count="1" /> <!-- Sealed Dark Crystal Shield Fragment -->
+					</item>
+					<item chance="1.73">
+						<item id="92820" count="1" /> <!-- Sealed Shield of Nightmare Fragment -->
+					</item>
+					<item chance="1.73">
+						<item id="92821" count="1" /> <!-- Sealed Dark Crystal Boot Lining -->
+					</item>
+					<item chance="1.73">
+						<item id="92822" count="1" /> <!-- Sealed Tallum Boot Lining -->
+					</item>
+					<item chance="1.73">
+						<item id="92823" count="1" /> <!-- Sealed Boots of Nightmare Lining -->
+					</item>
+					<item chance="1.73">
+						<item id="92824" count="1" /> <!-- Sealed Majestic Boot Lining -->
+					</item>
+					<item chance="1.73">
+						<item id="92825" count="1" /> <!-- Sealed Dark Crystal Glove Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92826" count="1" /> <!-- Sealed Tallum Glove Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92827" count="1" /> <!-- Sealed Gauntlets of Nightmare Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92828" count="1" /> <!-- Sealed Majestic Gauntlet Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92829" count="1" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92830" count="1" /> <!-- Sealed Tallum Plate Armor Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92831" count="1" /> <!-- Sealed Armor of Nightmare Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92832" count="1" /> <!-- Sealed Majestic Plate Armor Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92833" count="1" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+					</item>
+					<item chance="1.73">
+						<item id="92834" count="1" /> <!-- Sealed Dark Crystal Helmet Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92835" count="1" /> <!-- Sealed Tallum Helmet Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92836" count="1" /> <!-- Sealed Helm of Nightmare Design -->
+					</item>
+					<item chance="1.73">
+						<item id="92837" count="1" /> <!-- Sealed Majestic Circlet Design -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39154" toLevel="1" name="Ornament Ingredient Box - A-grade">
 		<icon>icon.etc_treasure_box_i05</icon>
