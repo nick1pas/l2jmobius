@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -39,35 +39,35 @@
 		</collision>
 	</npc>
 	<npc id="13002" level="20" type="ControlTower" name="Life Control Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -77,35 +77,35 @@
 		</collision>
 	</npc>
 	<npc id="13003" level="20" type="ControlTower" name="Life Control Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -115,35 +115,35 @@
 		</collision>
 	</npc>
 	<npc id="13004" level="20" type="FlameTower" name="Flame Control Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -153,35 +153,35 @@
 		</collision>
 	</npc>
 	<npc id="13005" level="20" type="FlameTower" name="Flame Control Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -191,35 +191,34 @@
 		</collision>
 	</npc>
 	<npc id="13006" level="70" type="Folk" name="Holiday Tree">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<hitTime>520</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -229,36 +228,35 @@
 		</collision>
 	</npc>
 	<npc id="13007" level="70" type="Folk" name="Special Holiday Tree">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<hitTime>520</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -268,7 +266,6 @@
 		</collision>
 	</npc>
 	<npc id="13014" level="85" type="Folk" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -276,29 +273,30 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
 			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -312,34 +310,33 @@
 		</collision>
 	</npc>
 	<npc id="13015" level="85" type="Folk">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
 			<attack physical="983.0479" magical="671.29428" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="1" />
 			</speed>
 			<hitTime>500</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450">
@@ -353,35 +350,35 @@
 		</collision>
 	</npc>
 	<npc id="13016" level="1" type="Monster" name="Royal Pumpkin">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4414" level="3" /> <!-- Light Armor -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" />
@@ -391,35 +388,35 @@
 		</collision>
 	</npc>
 	<npc id="13017" level="1" type="Monster" name="Royal Large Pumpkin">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4414" level="3" /> <!-- Light Armor -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" />
@@ -428,8 +425,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13018" level="68" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
+	<npc id="13018" level="70" type="EffectPoint">
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -438,31 +434,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5123" level="1" /> <!-- Maximum Defense -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -472,7 +469,6 @@
 		</collision>
 	</npc>
 	<npc id="13019" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -481,31 +477,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5124" level="1" /> <!-- Anti-Music -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -515,7 +512,6 @@
 		</collision>
 	</npc>
 	<npc id="13020" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -524,31 +520,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5125" level="1" /> <!-- Maximum Resist Status -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -558,7 +555,6 @@
 		</collision>
 	</npc>
 	<npc id="13021" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -567,31 +563,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5126" level="1" /> <!-- Maximum Recovery -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -601,7 +598,6 @@
 		</collision>
 	</npc>
 	<npc id="13022" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -610,31 +606,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5127" level="1" /> <!-- Recover Force -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -644,7 +641,6 @@
 		</collision>
 	</npc>
 	<npc id="13023" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -653,31 +649,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5128" level="1" /> <!-- Maximize long-range weapon use -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -687,7 +684,6 @@
 		</collision>
 	</npc>
 	<npc id="13024" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="5" />
 			<param name="despawn_time" value="120" />
@@ -696,31 +692,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5129" level="1" /> <!-- Smokescreen -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -730,7 +727,6 @@
 		</collision>
 	</npc>
 	<npc id="13025" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -739,31 +735,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5130" level="1" /> <!-- Volcano -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -773,7 +770,6 @@
 		</collision>
 	</npc>
 	<npc id="13026" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -782,31 +778,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5131" level="1" /> <!-- Tsunami -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -816,7 +813,6 @@
 		</collision>
 	</npc>
 	<npc id="13027" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -825,31 +821,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5132" level="1" /> <!-- Cyclone -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -859,7 +856,6 @@
 		</collision>
 	</npc>
 	<npc id="13028" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -868,31 +864,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5145" level="1" /> <!-- Day of Doom -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -902,7 +899,6 @@
 		</collision>
 	</npc>
 	<npc id="13029" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -911,31 +907,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5133" level="1" /> <!-- Gehenna -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -945,7 +942,6 @@
 		</collision>
 	</npc>
 	<npc id="13030" level="70" type="EffectPoint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -954,31 +950,32 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="20" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" />
+		<status attackable="false" undying="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5134" level="1" /> <!-- Anti-Summoning Field -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -988,34 +985,34 @@
 		</collision>
 	</npc>
 	<npc id="13031" level="80" type="Monster" name="Giant Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="680" mp="2000" mpRegen="0.9" hpRegen="0" />
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5206" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1030,34 +1027,34 @@
 		</collision>
 	</npc>
 	<npc id="13032" level="80" type="Monster" name="Giant Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="680" mp="2000" mpRegen="0.9" hpRegen="0" />
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="300">
@@ -1071,34 +1068,34 @@
 		</collision>
 	</npc>
 	<npc id="13033" level="80" type="Monster" name="Giant Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="680" mp="2000" mpRegen="0.9" hpRegen="0" />
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="300">
@@ -1112,34 +1109,34 @@
 		</collision>
 	</npc>
 	<npc id="13034" level="80" type="Monster" name="Super Huge Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3400" mp="6000" mpRegen="0.9" hpRegen="0" />
+			<vitals hp="3400" hpRegen="0" mp="6000" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5206" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1154,34 +1151,34 @@
 		</collision>
 	</npc>
 	<npc id="13035" level="80" type="Monster" name="Golden Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="680" mp="2000" mpRegen="0.9" hpRegen="0" />
+			<vitals hp="680" hpRegen="0" mp="2000" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5206" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1196,36 +1193,35 @@
 		</collision>
 	</npc>
 	<npc id="13036" level="80" type="Chest" name="Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="1" />
 			</speed>
 			<hitTime>560</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -1235,7 +1231,6 @@
 		</collision>
 	</npc>
 	<npc id="13037" level="28" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="1" />
@@ -1243,30 +1238,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="543" hpRegen="3.5" mp="300" mpRegen="1.5" />
+			<vitals hp="543.79576" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="111.61368" magical="81.67405" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="1" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1277,7 +1273,6 @@
 		</collision>
 	</npc>
 	<npc id="13038" level="36" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="2" />
@@ -1285,30 +1280,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
+			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="2" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1319,7 +1315,6 @@
 		</collision>
 	</npc>
 	<npc id="13039" level="43" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="3" />
@@ -1327,30 +1322,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1094" hpRegen="5.5" mp="557" mpRegen="2.1" />
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="123.76505" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="3" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1361,7 +1357,6 @@
 		</collision>
 	</npc>
 	<npc id="13040" level="49" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="4" />
@@ -1369,30 +1364,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1372" hpRegen="5.5" mp="720" mpRegen="2.1" />
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="143.17771" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="4" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1403,7 +1399,6 @@
 		</collision>
 	</npc>
 	<npc id="13041" level="55" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="5" />
@@ -1411,30 +1406,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="5" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1445,7 +1441,6 @@
 		</collision>
 	</npc>
 	<npc id="13042" level="60" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="6" />
@@ -1453,30 +1448,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="6" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1487,7 +1483,6 @@
 		</collision>
 	</npc>
 	<npc id="13043" level="64" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="7" />
@@ -1495,30 +1490,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="7" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1529,7 +1525,6 @@
 		</collision>
 	</npc>
 	<npc id="13044" level="68" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="8" />
@@ -1537,30 +1532,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="8" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1571,7 +1567,6 @@
 		</collision>
 	</npc>
 	<npc id="13045" level="72" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="9" />
@@ -1579,30 +1574,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5267" level="9" /> <!-- Trap Explosion -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1613,7 +1609,6 @@
 		</collision>
 	</npc>
 	<npc id="13046" level="49" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="1" />
@@ -1621,30 +1616,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1372" hpRegen="5.5" mp="720" mpRegen="2.1" />
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="143.17771" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="1" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1655,7 +1651,6 @@
 		</collision>
 	</npc>
 	<npc id="13047" level="55" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="2" />
@@ -1663,30 +1658,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="2" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1697,7 +1693,6 @@
 		</collision>
 	</npc>
 	<npc id="13048" level="60" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="3" />
@@ -1705,30 +1700,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="3" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1739,7 +1735,6 @@
 		</collision>
 	</npc>
 	<npc id="13049" level="64" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="4" />
@@ -1747,30 +1742,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="4" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1781,7 +1777,6 @@
 		</collision>
 	</npc>
 	<npc id="13050" level="68" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="5" />
@@ -1789,30 +1784,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="5" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1823,7 +1819,6 @@
 		</collision>
 	</npc>
 	<npc id="13051" level="72" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="6" />
@@ -1831,30 +1826,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5268" level="6" /> <!-- Poison -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1865,7 +1861,6 @@
 		</collision>
 	</npc>
 	<npc id="13052" level="55" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="1" />
@@ -1873,30 +1868,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5270" level="1" /> <!-- Flash Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1907,7 +1903,6 @@
 		</collision>
 	</npc>
 	<npc id="13053" level="60" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="2" />
@@ -1915,30 +1910,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5270" level="2" /> <!-- Flash Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1949,7 +1945,6 @@
 		</collision>
 	</npc>
 	<npc id="13054" level="64" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="3" />
@@ -1957,30 +1952,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5270" level="3" /> <!-- Flash Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1991,7 +1987,6 @@
 		</collision>
 	</npc>
 	<npc id="13055" level="68" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="4" />
@@ -1999,30 +1994,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5270" level="4" /> <!-- Flash Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2033,7 +2029,6 @@
 		</collision>
 	</npc>
 	<npc id="13056" level="72" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="5" />
@@ -2041,30 +2036,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5270" level="5" /> <!-- Flash Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2075,7 +2071,6 @@
 		</collision>
 	</npc>
 	<npc id="13057" level="40" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="1" />
@@ -2083,30 +2078,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="1" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2117,7 +2113,6 @@
 		</collision>
 	</npc>
 	<npc id="13058" level="46" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="2" />
@@ -2125,30 +2120,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1229" hpRegen="5.5" mp="637" mpRegen="2.1" />
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="2" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2159,7 +2155,6 @@
 		</collision>
 	</npc>
 	<npc id="13059" level="52" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="3" />
@@ -2167,30 +2162,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="153.30378" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="3" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2201,7 +2197,6 @@
 		</collision>
 	</npc>
 	<npc id="13060" level="58" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="4" />
@@ -2209,30 +2204,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2243,7 +2239,6 @@
 		</collision>
 	</npc>
 	<npc id="13061" level="62" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="5" />
@@ -2251,30 +2246,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<vitals hp="2037.81082" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2285,7 +2281,6 @@
 		</collision>
 	</npc>
 	<npc id="13062" level="66" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="6" />
@@ -2293,30 +2288,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="6" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2327,7 +2323,6 @@
 		</collision>
 	</npc>
 	<npc id="13063" level="70" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="7" />
@@ -2335,30 +2330,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="7" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2369,7 +2365,6 @@
 		</collision>
 	</npc>
 	<npc id="13064" level="74" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="8" />
@@ -2377,30 +2372,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5271" level="8" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2411,7 +2407,6 @@
 		</collision>
 	</npc>
 	<npc id="13065" level="52" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="1" />
@@ -2419,30 +2414,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="153.30378" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="1" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2453,7 +2449,6 @@
 		</collision>
 	</npc>
 	<npc id="13066" level="58" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="2" />
@@ -2461,30 +2456,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="2" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2495,7 +2491,6 @@
 		</collision>
 	</npc>
 	<npc id="13067" level="62" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="3" />
@@ -2503,30 +2498,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<vitals hp="2037.81082" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="3" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2537,7 +2533,6 @@
 		</collision>
 	</npc>
 	<npc id="13068" level="66" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="4" />
@@ -2545,30 +2540,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="4" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2579,7 +2575,6 @@
 		</collision>
 	</npc>
 	<npc id="13069" level="70" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="5" />
@@ -2587,30 +2582,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="5" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2621,7 +2617,6 @@
 		</collision>
 	</npc>
 	<npc id="13070" level="74" type="Folk" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="6" />
@@ -2629,30 +2624,31 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5269" level="6" /> <!-- Slow Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2663,37 +2659,37 @@
 		</collision>
 	</npc>
 	<npc id="13071" level="43" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="1" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1094" hpRegen="5.5" mp="557" mpRegen="2.1" />
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="123.76505" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="1" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2703,37 +2699,37 @@
 		</collision>
 	</npc>
 	<npc id="13072" level="52" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="2" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="153.30378" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="2" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2743,37 +2739,37 @@
 		</collision>
 	</npc>
 	<npc id="13073" level="60" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="3" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="3" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2783,37 +2779,37 @@
 		</collision>
 	</npc>
 	<npc id="13074" level="66" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="4" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="4" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2823,37 +2819,37 @@
 		</collision>
 	</npc>
 	<npc id="13075" level="70" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="5" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="5" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2863,37 +2859,37 @@
 		</collision>
 	</npc>
 	<npc id="13076" level="74" type="Decoy" name="Illusion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="6" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" hasSummoner="true" />
+		<status attackable="true" hasSummoner="true" />
 		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
 			<skill id="5272" level="6" /> <!-- Decoy Provocation -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2903,34 +2899,33 @@
 		</collision>
 	</npc>
 	<npc id="13077" level="55" type="Folk" name="Onyx Beast">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
 			<hitTime>240</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2941,34 +2936,33 @@
 		</collision>
 	</npc>
 	<npc id="13078" level="55" type="Folk" name="Doom Wraith">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
 			<hitTime>450</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2979,34 +2973,33 @@
 		</collision>
 	</npc>
 	<npc id="13079" level="55" type="Folk" name="Grail Apostle">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hitTime>430</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3017,34 +3010,33 @@
 		</collision>
 	</npc>
 	<npc id="13080" level="55" type="Folk" name="Grail Apostle">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hitTime>460</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3055,34 +3047,33 @@
 		</collision>
 	</npc>
 	<npc id="13081" level="55" type="Folk" name="Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
 			<hitTime>740</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3093,34 +3084,33 @@
 		</collision>
 	</npc>
 	<npc id="13082" level="55" type="Folk" name="Lilim Knight">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
 			</speed>
 			<hitTime>460</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3131,34 +3121,33 @@
 		</collision>
 	</npc>
 	<npc id="13083" level="55" type="Folk" name="Golem Guardian">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="53" />
 				<run ground="180" />
 			</speed>
 			<hitTime>430</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3169,34 +3158,33 @@
 		</collision>
 	</npc>
 	<npc id="13084" level="55" type="Folk" name="Inferno Drake">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
 			<hitTime>480</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3207,33 +3195,33 @@
 		</collision>
 	</npc>
 	<npc id="13085" level="55" type="Folk" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3244,35 +3232,34 @@
 		</collision>
 	</npc>
 	<npc id="13086" level="55" type="Folk" name="Zariche">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8190" /> <!-- Demonic Sword Zariche -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hitTime>490</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3283,35 +3270,34 @@
 		</collision>
 	</npc>
 	<npc id="13087" level="55" type="Folk" name="Akamanah">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8689" /> <!-- Blood Sword Akamanah -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hitTime>470</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3322,34 +3308,33 @@
 		</collision>
 	</npc>
 	<npc id="13088" level="55" type="Folk" name="Final Form">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hitTime>480</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3360,34 +3345,33 @@
 		</collision>
 	</npc>
 	<npc id="13089" level="55" type="Folk" name="Final Form">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hitTime>540</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3398,33 +3382,33 @@
 		</collision>
 	</npc>
 	<npc id="13090" level="55" type="Folk" name="Native">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3435,34 +3419,33 @@
 		</collision>
 	</npc>
 	<npc id="13091" level="55" type="Folk" name="Yeti">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hitTime>480</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3473,34 +3456,33 @@
 		</collision>
 	</npc>
 	<npc id="13092" level="55" type="Folk" name="Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hitTime>460</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3511,33 +3493,33 @@
 		</collision>
 	</npc>
 	<npc id="13093" level="55" type="Folk" name="Pig">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3548,34 +3530,33 @@
 		</collision>
 	</npc>
 	<npc id="13094" level="55" type="Folk" name="Zombie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
 			<hitTime>430</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3586,34 +3567,33 @@
 		</collision>
 	</npc>
 	<npc id="13095" level="55" type="Folk" name="Pixy">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hitTime>720</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3624,33 +3604,33 @@
 		</collision>
 	</npc>
 	<npc id="13096" level="55" type="Folk" name="Rabbit">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3661,35 +3641,35 @@
 		</collision>
 	</npc>
 	<npc id="13097" level="80" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="894.75854" magical="611.00409" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -3699,35 +3679,34 @@
 		</collision>
 	</npc>
 	<npc id="13098" level="80" type="Folk" name="Event Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="1" />
 			</speed>
 			<hitTime>560</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -3737,34 +3716,33 @@
 		</collision>
 	</npc>
 	<npc id="13099" level="55" type="Folk" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
 			<speed>
 				<walk ground="42" />
 				<run ground="180" />
 			</speed>
 			<hitTime>590</hitTime>
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>

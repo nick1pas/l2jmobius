@@ -62,10 +62,10 @@
 					<item id="92486" min="1" max="1" chance="40.9325" /> <!-- Necklace of Devotion Chain -->
 				</group>
 				<group chance="0.1617">
-					<item id="92908" min="1" max="1" chance="76.3739" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.2748" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6374" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2546" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.3739" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.2748" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6374" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2546" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2180" min="1" max="1" chance="0.4593" /> <!-- Recipe: Scale Mail -->
 				</group>
 			</drop>
@@ -112,6 +112,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -143,10 +144,10 @@
 					<item id="130" min="1" max="1" chance="0.6538" /> <!-- Elven Sword -->
 				</group>
 				<group chance="0.1723">
-					<item id="92908" min="1" max="1" chance="76.0008" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.2002" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6001" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2533" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.0008" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.2002" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6001" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2533" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2153" min="1" max="1" chance="0.9456" /> <!-- Recipe: Tiger's Eye -->
 				</group>
 			</drop>
@@ -204,9 +205,9 @@
 					<item id="2386" min="1" max="1" chance="38.1043" /> <!-- Wooden Gaiters -->
 				</group>
 				<group chance="0.3458">
-					<item id="92908" min="1" max="1" chance="28.3438" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.6688" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.8344" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="28.3438" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.6688" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.8344" /> <!-- Material: Rags - Sealed -->
 					<item id="1793" min="1" max="1" chance="0.1667" /> <!-- Recipe: Sword of Reflection -->
 					<item id="1060" min="1" max="1" chance="62.9863" /> <!-- HP Replenishing Potion -->
 				</group>
@@ -267,9 +268,9 @@
 					<item id="43" min="1" max="1" chance="41.1243" /> <!-- Wooden Helmet -->
 				</group>
 				<group chance="0.484">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
 					<item id="1833" min="1" max="1" chance="67.2269" /> <!-- Bandage -->
 				</group>
 			</drop>
@@ -314,6 +315,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4001" level="2" /> <!-- NPC Windstrike -->
+			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
+			<skill id="4038" level="3" /> <!-- Decrease Atk. Spd. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -336,9 +340,9 @@
 					<item id="218" min="1" max="1" chance="50" /> <!-- Throwing Knife -->
 				</group>
 				<group chance="0.4549">
-					<item id="92908" min="1" max="1" chance="25.073" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.0146" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.5073" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.073" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.0146" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.5073" /> <!-- Material: Rags - Sealed -->
 					<item id="2173" min="1" max="1" chance="0.5436" /> <!-- Recipe: Durable Leather Shirt -->
 					<item id="1831" min="1" max="1" chance="66.8615" /> <!-- Antidote -->
 				</group>
@@ -382,6 +386,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4076" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -406,9 +411,9 @@
 					<item id="412" min="1" max="1" chance="30.7576" /> <!-- Cotton Pants -->
 				</group>
 				<group chance="0.1753">
-					<item id="92908" min="1" max="1" chance="75.4627" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.0925" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.5463" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="75.4627" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.0925" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.5463" /> <!-- Material: Rags - Sealed -->
 					<item id="1800" min="1" max="1" chance="1.8985" /> <!-- Recipe: Piece Bone Breastplate -->
 				</group>
 			</drop>
@@ -457,6 +462,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4152" level="2" /> <!-- NPC HP Drain - Magic -->
+			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -479,9 +486,9 @@
 					<item id="92591" min="1" max="1" chance="50" /> <!-- Compound Bow Shaft -->
 				</group>
 				<group chance="0.4594">
-					<item id="92908" min="1" max="1" chance="25.1977" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.0395" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.5198" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.1977" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.0395" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.5198" /> <!-- Material: Rags - Sealed -->
 					<item id="2256" min="1" max="1" chance="0.0493" /> <!-- Recipe: Assassin Knife -->
 					<item id="1831" min="1" max="1" chance="67.1937" /> <!-- Antidote -->
 				</group>
@@ -541,9 +548,9 @@
 					<item id="1104" min="1" max="1" chance="61.5152" /> <!-- Stockings of Devotion -->
 				</group>
 				<group chance="0.4659">
-					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags - Sealed -->
 					<item id="1060" min="1" max="1" chance="63.0915" /> <!-- HP Replenishing Potion -->
 				</group>
 			</drop>
@@ -604,9 +611,9 @@
 					<item id="1103" min="1" max="1" chance="30.7595" /> <!-- Cotton Stockings -->
 				</group>
 				<group chance="0.3522">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
 					<item id="1831" min="1" max="1" chance="67.2269" /> <!-- Antidote -->
 				</group>
 			</drop>
@@ -665,9 +672,9 @@
 					<item id="2386" min="1" max="1" chance="38.1043" /> <!-- Wooden Gaiters -->
 				</group>
 				<group chance="0.1553">
-					<item id="92908" min="1" max="1" chance="72.5462" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.5092" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.2546" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="72.5462" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.5092" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.2546" /> <!-- Material: Rags - Sealed -->
 					<item id="1798" min="1" max="1" chance="5.69" /> <!-- Recipe: Leather Helmet -->
 				</group>
 			</drop>
@@ -713,6 +720,7 @@
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
+			<skill id="4249" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -735,9 +743,9 @@
 					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
 				</group>
 				<group chance="0.186">
-					<item id="92908" min="1" max="1" chance="75.4627" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.0925" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.5463" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="75.4627" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.0925" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.5463" /> <!-- Material: Rags - Sealed -->
 					<item id="1800" min="1" max="1" chance="1.8985" /> <!-- Recipe: Piece Bone Breastplate -->
 				</group>
 			</drop>
@@ -784,6 +792,7 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4033" level="3" /> <!-- NPC Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -835,6 +844,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -902,9 +912,9 @@
 					<item id="43" min="1" max="1" chance="41.1243" /> <!-- Wooden Helmet -->
 				</group>
 				<group chance="0.4859">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
 					<item id="1831" min="1" max="1" chance="67.2269" /> <!-- Antidote -->
 				</group>
 			</drop>
@@ -965,9 +975,9 @@
 					<item id="92586" min="1" max="1" chance="50" /> <!-- Short Spear Edge -->
 				</group>
 				<group chance="0.5067">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
 					<item id="1831" min="1" max="1" chance="67.2269" /> <!-- Antidote -->
 				</group>
 			</drop>
@@ -1075,9 +1085,9 @@
 					<item id="271" min="1" max="1" chance="100" /> <!-- Hunting Bow -->
 				</group>
 				<group chance="0.7097">
-					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags - Sealed -->
 					<item id="17" min="10" max="30" chance="79.3651" /> <!-- Wooden Arrow -->
 				</group>
 			</drop>
@@ -1140,9 +1150,9 @@
 					<item id="271" min="1" max="1" chance="100" /> <!-- Hunting Bow -->
 				</group>
 				<group chance="0.1538">
-					<item id="92908" min="1" max="1" chance="76.5766" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3153" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6577" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.5766" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3153" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6577" /> <!-- Material: Rags - Sealed -->
 					<item id="1793" min="1" max="1" chance="0.4504" /> <!-- Recipe: Sword of Reflection -->
 				</group>
 			</drop>
@@ -1283,6 +1293,7 @@
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
+			<skill id="4247" level="1" /> <!-- NPC Windstrike - Slow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -1305,9 +1316,9 @@
 					<item id="154" min="1" max="1" chance="33.3334" /> <!-- Dwarven Mace -->
 				</group>
 				<group chance="0.2115">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1449,9 +1460,9 @@
 					<item id="1" min="1" max="1" chance="100" /> <!-- Short Sword -->
 				</group>
 				<group chance="0.1006">
-					<item id="92908" min="1" max="1" chance="24.8098" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.962" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.481" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="24.8098" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.962" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.481" /> <!-- Material: Rags - Sealed -->
 					<item id="1788" min="1" max="1" chance="1.5878" /> <!-- Recipe: Bow -->
 					<item id="1833" min="1" max="1" chance="66.1594" /> <!-- Bandage -->
 				</group>
@@ -1494,6 +1505,7 @@
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
+			<skill id="4249" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -1518,9 +1530,9 @@
 					<item id="92483" min="1" max="1" chance="15" /> <!-- Necklace of Anguish Chain -->
 				</group>
 				<group chance="0.2123">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1621,9 +1633,9 @@
 					<item id="92584" min="1" max="1" chance="50" /> <!-- Dirk Blade -->
 				</group>
 				<group chance="0.3811">
-					<item id="92908" min="1" max="1" chance="24.7213" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.9443" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.4721" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="24.7213" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.9443" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.4721" /> <!-- Material: Rags - Sealed -->
 					<item id="1798" min="1" max="1" chance="1.9389" /> <!-- Recipe: Leather Helmet -->
 					<item id="1833" min="1" max="1" chance="65.9234" /> <!-- Bandage -->
 				</group>
@@ -1684,9 +1696,9 @@
 					<item id="1121" min="1" max="1" chance="63.793" /> <!-- Apprentice's Shoes -->
 				</group>
 				<group chance="0.059">
-					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags - Sealed -->
 					<item id="1060" min="1" max="1" chance="63.0915" /> <!-- HP Replenishing Potion -->
 				</group>
 			</drop>
@@ -1743,9 +1755,9 @@
 					<item id="462" min="1" max="1" chance="61.5063" /> <!-- Stockings -->
 				</group>
 				<group chance="0.0229">
-					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags - Sealed -->
 					<item id="1786" min="1" max="1" chance="4.692" /> <!-- Recipe: Broadsword (100%) -->
 				</group>
 			</drop>
@@ -1799,9 +1811,9 @@
 					<item id="462" min="1" max="1" chance="61.5063" /> <!-- Stockings -->
 				</group>
 				<group chance="0.1056">
-					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags - Sealed -->
 					<item id="17" min="10" max="30" chance="79.3651" /> <!-- Wooden Arrow -->
 				</group>
 			</drop>
@@ -1855,9 +1867,9 @@
 					<item id="41" min="1" max="1" chance="41.4894" /> <!-- Cloth Cap -->
 				</group>
 				<group chance="0.0263">
-					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags - Sealed -->
 					<item id="1788" min="1" max="1" chance="4.692" /> <!-- Recipe: Bow -->
 				</group>
 			</drop>
@@ -1914,9 +1926,9 @@
 					<item id="13" min="1" max="1" chance="100" /> <!-- Short Bow -->
 				</group>
 				<group chance="0.1215">
-					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.873" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1746" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5873" /> <!-- Material: Rags - Sealed -->
 					<item id="17" min="10" max="30" chance="79.3651" /> <!-- Wooden Arrow -->
 				</group>
 			</drop>
@@ -1970,9 +1982,9 @@
 					<item id="28" min="1" max="1" chance="61.5063" /> <!-- Pants -->
 				</group>
 				<group chance="0.0553">
-					<item id="92908" min="1" max="1" chance="27.8845" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.5769" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.7884" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="27.8845" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.5769" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.7884" /> <!-- Material: Rags - Sealed -->
 					<item id="1786" min="1" max="1" chance="1.7846" /> <!-- Recipe: Broadsword (100%) -->
 					<item id="1060" min="1" max="1" chance="61.9656" /> <!-- HP Replenishing Potion -->
 				</group>
@@ -2030,9 +2042,9 @@
 					<item id="28" min="1" max="1" chance="61.5063" /> <!-- Pants -->
 				</group>
 				<group chance="0.0679">
-					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags - Sealed -->
 					<item id="1060" min="1" max="1" chance="63.0915" /> <!-- HP Replenishing Potion -->
 				</group>
 			</drop>
@@ -2088,9 +2100,9 @@
 					<item id="13" min="1" max="1" chance="100" /> <!-- Short Bow -->
 				</group>
 				<group chance="0.1171">
-					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags - Sealed -->
 					<item id="1788" min="1" max="1" chance="1.0057" /> <!-- Recipe: Bow -->
 					<item id="17" min="10" max="30" chance="78.5669" /> <!-- Wooden Arrow -->
 				</group>
@@ -2147,9 +2159,9 @@
 					<item id="308" min="1" max="1" chance="100" /> <!-- Buffalo's Horn -->
 				</group>
 				<group chance="0.0314">
-					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="73.3138" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6628" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3314" /> <!-- Material: Rags - Sealed -->
 					<item id="1787" min="1" max="1" chance="4.692" /> <!-- Recipe: Willow Staff -->
 				</group>
 			</drop>
@@ -2205,9 +2217,9 @@
 					<item id="1" min="1" max="1" chance="100" /> <!-- Short Sword -->
 				</group>
 				<group chance="0.081">
-					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="28.3912" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.6782" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.8391" /> <!-- Material: Rags - Sealed -->
 					<item id="1060" min="1" max="1" chance="63.0915" /> <!-- HP Replenishing Potion -->
 				</group>
 			</drop>
@@ -2263,9 +2275,9 @@
 					<item id="253" min="1" max="1" chance="100" /> <!-- Spiked Gloves -->
 				</group>
 				<group chance="0.1171">
-					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags - Sealed -->
 					<item id="1788" min="1" max="1" chance="1.0057" /> <!-- Recipe: Bow -->
 					<item id="17" min="10" max="30" chance="78.5669" /> <!-- Wooden Arrow -->
 				</group>
@@ -2324,9 +2336,9 @@
 					<item id="2386" min="1" max="1" chance="38.1043" /> <!-- Wooden Gaiters -->
 				</group>
 				<group chance="0.1471">
-					<item id="92908" min="1" max="1" chance="76.5766" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3153" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6577" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.5766" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3153" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6577" /> <!-- Material: Rags - Sealed -->
 					<item id="1792" min="1" max="1" chance="0.4504" /> <!-- Recipe: Short Spear -->
 				</group>
 			</drop>
@@ -2369,6 +2381,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4076" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2387,9 +2400,9 @@
 					<item id="92588" min="1" max="1" chance="50" /> <!-- Forest Bow Shaft -->
 				</group>
 				<group chance="0.1806">
-					<item id="92908" min="1" max="1" chance="73.2579" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6516" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3258" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="73.2579" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6516" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3258" /> <!-- Material: Rags - Sealed -->
 					<item id="2175" min="1" max="1" chance="4.7647" /> <!-- Recipe: Boots -->
 				</group>
 			</drop>
@@ -2450,9 +2463,9 @@
 					<item id="92588" min="1" max="1" chance="50" /> <!-- Forest Bow Shaft -->
 				</group>
 				<group chance="0.2433">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -2509,9 +2522,9 @@
 					<item id="310" min="1" max="1" chance="50" /> <!-- Relic of the Saints -->
 				</group>
 				<group chance="0.2471">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -2568,9 +2581,9 @@
 					<item id="28" min="1" max="1" chance="61.5063" /> <!-- Pants -->
 				</group>
 				<group chance="0.1171">
-					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags - Sealed -->
 					<item id="1787" min="1" max="1" chance="1.0057" /> <!-- Recipe: Willow Staff -->
 					<item id="17" min="10" max="30" chance="78.5669" /> <!-- Wooden Arrow -->
 				</group>
@@ -2625,9 +2638,9 @@
 					<item id="41" min="1" max="1" chance="41.4894" /> <!-- Cloth Cap -->
 				</group>
 				<group chance="0.0853">
-					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags - Sealed -->
 					<item id="1787" min="1" max="1" chance="1.0057" /> <!-- Recipe: Willow Staff -->
 					<item id="17" min="10" max="30" chance="78.5669" /> <!-- Wooden Arrow -->
 				</group>
@@ -2675,6 +2688,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2701,10 +2715,10 @@
 					<item id="92840" min="1" max="1" chance="6.9216" /> <!-- Heavy Sword Edge -->
 				</group>
 				<group chance="0.5666">
-					<item id="92908" min="1" max="1" chance="21.5175" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.3035" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.1518" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.0717" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="21.5175" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.3035" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.1518" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.0717" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2193" min="1" max="1" chance="0.2304" /> <!-- Recipe: Boots of Strength -->
 					<item id="1341" min="10" max="30" chance="71.7251" /> <!-- Bone Arrow -->
 				</group>
@@ -2775,10 +2789,10 @@
 					<item id="51" min="1" max="1" chance="33.3334" /> <!-- Bracer -->
 				</group>
 				<group chance="0.1597">
-					<item id="92908" min="1" max="1" chance="75.4365" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.0873" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.5437" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2515" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="75.4365" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.0873" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.5437" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2515" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2151" min="1" max="1" chance="1.681" /> <!-- Recipe: Necklace of Devotion -->
 				</group>
 			</drop>
@@ -2846,10 +2860,10 @@
 					<item id="1148" min="1" max="1" chance="41.2141" /> <!-- Durable Leather Helmet -->
 				</group>
 				<group chance="0.1571">
-					<item id="92908" min="1" max="1" chance="76.6533" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3307" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6653" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2555" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.6533" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3307" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6653" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2555" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2261" min="1" max="1" chance="0.0952" /> <!-- Recipe: Conjuror's Staff -->
 				</group>
 			</drop>
@@ -2896,6 +2910,7 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4033" level="3" /> <!-- NPC Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2923,10 +2938,10 @@
 					<item id="144" min="1" max="1" chance="15.5216" /> <!-- Sword of Occult -->
 				</group>
 				<group chance="0.1907">
-					<item id="92908" min="1" max="1" chance="76.7002" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.34" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.67" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2557" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.7002" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.34" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.67" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2557" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2287" min="1" max="1" chance="0.0341" /> <!-- Recipe: Atuba Hammer -->
 				</group>
 			</drop>
@@ -2972,6 +2987,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4029" level="2" /> <!-- NPC Shield -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2997,12 +3013,12 @@
 					<item id="397" min="1" max="1" chance="1.4897" /> <!-- Reinforced Mithril Shirt -->
 				</group>
 				<group chance="0.2623">
-					<item id="92908" min="1" max="1" chance="20.3115" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.0623" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.0312" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.6771" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.0406" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="3031" min="1" max="1" chance="5.0779" /> <!-- Spirit Ore -->
+					<item id="92908" min="1" max="1" chance="20.3115" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.0623" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.0312" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.6771" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0406" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="3031" min="1" max="1" chance="5.0779" /> <!-- Spirit Ore - Sealed -->
 					<item id="2277" min="1" max="1" chance="0.0116" /> <!-- Recipe: Bich'Hwa (100%) -->
 					<item id="92616" min="1" max="1" chance="0.0087" /> <!-- War Pick Head -->
 					<item id="2210" min="1" max="1" chance="0.0394" /> <!-- Recipe: Steel Plate Helmet (100%) -->
@@ -3082,11 +3098,11 @@
 					<item id="92623" min="1" max="1" chance="1.0223" /> <!-- Bonebreaker Head -->
 				</group>
 				<group chance="0.0924">
-					<item id="92908" min="1" max="1" chance="74.4029" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.8806" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4403" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4801" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1488" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.4029" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.8806" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4403" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4801" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1488" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2983" min="1" max="1" chance="0.4049" /> <!-- Recipe: Plate Helmet (100%) -->
 					<item id="92612" min="1" max="1" chance="0.0319" /> <!-- Heavy Bone Club Head -->
 					<item id="2988" min="1" max="1" chance="0.1256" /> <!-- Recipe: Reinforced Mithril Gaiters (100%) -->
@@ -3138,6 +3154,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3160,11 +3177,11 @@
 					<item id="92559" min="1" max="1" chance="70.5957" /> <!-- Knight's Shield Fragment -->
 				</group>
 				<group chance="0.1052">
-					<item id="92908" min="1" max="1" chance="72.5257" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.5051" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.2526" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4175" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1451" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="72.5257" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.5051" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.2526" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4175" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1451" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="956" min="1" max="1" chance="2.4175" /> <!-- Scroll: Enchant D-grade Armor -->
 					<item id="2218" min="1" max="1" chance="0.2341" /> <!-- Recipe: Pa'agrio Hand -->
 					<item id="2157" min="1" max="1" chance="0.4795" /> <!-- Recipe: Onyx Beast's Eye Earring (100%) -->
@@ -3235,11 +3252,11 @@
 					<item id="92713" min="1" max="1" chance="68.906" /> <!-- Reinforced Mithril Gaiter Fragment -->
 				</group>
 				<group chance="0.1294">
-					<item id="92908" min="1" max="1" chance="74.701" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9402" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4701" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.49" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.701" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9402" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4701" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.49" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="3020" min="1" max="1" chance="0.0332" /> <!-- Recipe: Elven Long Sword -->
 					<item id="2284" min="1" max="1" chance="0.0393" /> <!-- Recipe: Demon's Fangs (100%) -->
 					<item id="2217" min="1" max="1" chance="0.1768" /> <!-- Recipe: Knight's Shield (100%) -->
@@ -3290,6 +3307,10 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3316,11 +3337,11 @@
 					<item id="92633" min="1" max="1" chance="12.2842" /> <!-- Atuba Mace Head -->
 				</group>
 				<group chance="0.1516">
-					<item id="92908" min="1" max="1" chance="74.3147" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.8629" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4315" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4772" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1486" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.3147" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.8629" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4315" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4772" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1486" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2985" min="1" max="1" chance="0.6079" /> <!-- Recipe: Plate Boots -->
 					<item id="2989" min="1" max="1" chance="0.1572" /> <!-- Recipe: Chain Hood (100%) -->
 				</group>
@@ -3368,6 +3389,7 @@
 			<skill id="4277" level="5" /> <!-- Infection Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3399,13 +3421,13 @@
 					<item id="603" min="1" max="1" chance="1.0253" /> <!-- Divine Boots -->
 				</group>
 				<group chance="0.0976">
-					<item id="92908" min="1" max="1" chance="62.1633" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="12.4327" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="6.2163" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.0721" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.2433" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0622" /> <!-- Material: Animal Spirit -->
-					<item id="3031" min="1" max="1" chance="15.5408" /> <!-- Spirit Ore -->
+					<item id="92908" min="1" max="1" chance="62.1633" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="12.4327" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="6.2163" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.0721" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.2433" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0622" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="3031" min="1" max="1" chance="15.5408" /> <!-- Spirit Ore - Sealed -->
 					<!-- <item id="5816" min="1" max="1" chance="0.0414" /> Spellbook: Advanced Block - Not Available -->
 					<!-- <item id="3063" min="1" max="1" chance="0.0414" /> Spellbook: Anchor - Not Available -->
 					<!-- <item id="49571" min="1" max="1" chance="0.0414" /> Spellbook: Clear Mind - Not Available -->
@@ -3488,12 +3510,12 @@
 					<item id="7898" min="1" max="1" chance="0.6832" /> <!-- Karik Horn -->
 				</group>
 				<group chance="0.1792">
-					<item id="92908" min="1" max="1" chance="73.6276" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7255" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3628" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4543" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4726" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.6276" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7255" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3628" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4543" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4726" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="8891" min="1" max="1" chance="0.0245" /> Spellbook: Aura Flash - Not Available -->
 					<!-- <item id="49426" min="1" max="1" chance="0.0491" /> Spellbook: Break Duress - Not Available -->
 					<!-- <item id="3089" min="1" max="1" chance="0.0491" /> Spellbook: Tempest - Not Available -->
@@ -3568,12 +3590,12 @@
 					<item id="2436" min="1" max="1" chance="35.7458" /> <!-- Theca Leather Boots -->
 				</group>
 				<group chance="0.2169">
-					<item id="92908" min="1" max="1" chance="73.4934" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6987" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3493" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4498" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4699" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0735" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.4934" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6987" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3493" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4498" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4699" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0735" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3079" min="1" max="1" chance="0.049" /> Spellbook: Cancel - Not Available -->
 					<!-- <item id="49433" min="1" max="1" chance="0.0245" /> Amulet: Chant of Battle - Not Available -->
 					<!-- <item id="49432" min="1" max="1" chance="0.294" /> Spellbook: Stigma of Shillien - Not Available -->
@@ -3627,6 +3649,7 @@
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3653,12 +3676,12 @@
 					<item id="92747" min="1" max="1" chance="0.5194" /> <!-- Yaksa Mace Head -->
 				</group>
 				<group chance="0.2395">
-					<item id="92908" min="1" max="1" chance="73.7563" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7513" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3756" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4585" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4751" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.7563" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7513" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3756" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4585" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4751" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="6397" min="1" max="1" chance="0.0492" /> Amulet: Chant of Vampire - Not Available -->
 					<!-- <item id="3066" min="1" max="1" chance="0.0492" /> Spellbook: Curse Death Link - Not Available -->
 					<item id="3022" min="1" max="1" chance="0.0048" /> <!-- Recipe: Yaksa Mace -->
@@ -3739,12 +3762,12 @@
 					<item id="92682" min="1" max="1" chance="16.3105" /> <!-- Fisted Blade Piece -->
 				</group>
 				<group chance="0.2207">
-					<item id="92908" min="1" max="1" chance="73.5094" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7019" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3509" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4503" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4702" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0735" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.5094" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7019" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3509" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4503" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4702" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0735" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3101" min="1" max="1" chance="0.147" /> Spellbook: Death Whisper - Not Available -->
 					<!-- <item id="49431" min="1" max="1" chance="0.049" /> Spellbook: Divine Power - Not Available -->
 					<item id="3006" min="1" max="1" chance="0.12" /> <!-- Recipe: Demon's Gloves (100%) -->
@@ -3825,12 +3848,12 @@
 					<item id="92733" min="1" max="1" chance="13.1105" /> <!-- Theca Leather Glove Texture -->
 				</group>
 				<group chance="0.3055">
-					<item id="92908" min="1" max="1" chance="73.7644" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7529" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3764" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4588" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4753" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.7644" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7529" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3764" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4588" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4753" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3052" min="1" max="1" chance="0.0492" /> Spellbook: Hamstring - Not Available -->
 					<!-- <item id="3050" min="1" max="1" chance="0.0492" /> Spellbook: Hex - Not Available -->
 				</group>
@@ -3911,12 +3934,12 @@
 					<item id="92645" min="1" max="1" chance="23.2558" /> <!-- Cursed Dagger Blade -->
 				</group>
 				<group chance="0.9013">
-					<item id="92908" min="1" max="1" chance="73.622" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7244" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3622" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4541" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4724" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.622" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7244" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3622" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4541" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4724" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3044" min="1" max="1" chance="0.0491" /> Spellbook: Horror - Not Available -->
 					<!-- <item id="3047" min="1" max="1" chance="0.0491" /> Spellbook: Iron Will - Not Available -->
 					<item id="2315" min="1" max="1" chance="0.0103" /> <!-- Recipe: Shamshir -->
@@ -4001,15 +4024,15 @@
 					<item id="92731" min="1" max="1" chance="15.7324" /> <!-- Demon's Glove Fabric -->
 				</group>
 				<group chance="1.5014">
-					<item id="92908" min="1" max="1" chance="49.4234" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="9.8847" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="4.9423" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.6474" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.9885" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0494" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="49.4234" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="9.8847" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="4.9423" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.6474" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.9885" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0494" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3055" min="1" max="1" chance="0.0165" /> Spellbook: Lightning Strike - Not Available -->
 					<!-- <item id="4205" min="1" max="1" chance="0.0988" /> Amulet: Chant of Berserker Spirit - Not Available -->
-					<!-- <item id="2508" min="1" max="1" chance="32.949" /> Cursed Bone - Not Available -->
+					<item id="2508" min="1" max="1" chance="32.949" /> <!-- Cursed Bone -->
 				</group>
 			</drop>
 			<spoil>
@@ -4060,6 +4083,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4073" level="4" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4096,12 +4120,12 @@
 					<item id="92706" min="1" max="1" chance="9.375" /> <!-- Elven Mithril Glove Design -->
 				</group>
 				<group chance="0.119">
-					<item id="92908" min="1" max="1" chance="73.6739" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7348" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3674" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4558" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4735" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0737" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.6739" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7348" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3674" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4558" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4735" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0737" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3046" min="1" max="1" chance="0.0491" /> Spellbook: Sacrifice - Not Available -->
 					<!-- <item id="49427" min="1" max="1" chance="0.0246" /> Spellbook: Shield Deflect Magic - Not Available -->
 					<!-- <item id="3101" min="1" max="1" chance="0.1472" /> Spellbook: Death Whisper - Not Available -->
@@ -4154,6 +4178,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4151" level="4" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4180,12 +4207,12 @@
 					<item id="92712" min="1" max="1" chance="27.7707" /> <!-- Plate Shield Fragment -->
 				</group>
 				<group chance="0.2152">
-					<item id="92908" min="1" max="1" chance="73.556" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7112" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3556" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4519" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4711" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.556" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7112" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3556" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4519" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4711" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3051" min="1" max="1" chance="0.049" /> Spellbook: Spirit Barrier - Not Available -->
 					<!-- <item id="4923" min="1" max="1" chance="0.049" /> Spellbook: Summon Aqua Cubic - Not Available -->
 					<!-- <item id="49562" min="1" max="1" chance="0.049" /> Spellbook: Spirit Sharing - Not Available -->
@@ -4240,6 +4267,7 @@
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
+			<skill id="4254" level="4" /> <!-- NPC Prominence - Slow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4262,12 +4290,12 @@
 					<item id="92628" min="1" max="1" chance="75" /> <!-- Scallop Jamadhr Edge -->
 				</group>
 				<group chance="0.2647">
-					<item id="92908" min="1" max="1" chance="73.6102" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.722" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.361" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4537" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4722" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.6102" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.722" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.361" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4537" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4722" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="8890" min="1" max="1" chance="0.0245" /> Spellbook: Summon Attractive Cubic - Not Available -->
 					<!-- <item id="4922" min="1" max="1" chance="0.0491" /> Spellbook: Summon Binding Cubic - Not Available -->
 					<item id="2990" min="1" max="1" chance="0.2337" /> <!-- Recipe: Chain Boots (100%) -->
@@ -4317,6 +4345,7 @@
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
+			<skill id="4252" level="4" /> <!-- NPC Flamestrike - Slow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4343,12 +4372,12 @@
 					<item id="92712" min="1" max="1" chance="27.7707" /> <!-- Plate Shield Fragment -->
 				</group>
 				<group chance="0.2666">
-					<item id="92908" min="1" max="1" chance="73.6012" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7202" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3601" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4534" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.472" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.6012" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7202" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3601" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4534" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.472" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3045" min="1" max="1" chance="0.0491" /> Spellbook: Summon Life Cubic - Not Available -->
 					<!-- <item id="3041" min="1" max="1" chance="0.0491" /> Spellbook: Summon Phantom Cubic - Not Available -->
 					<item id="2209" min="1" max="1" chance="0.2213" /> <!-- Recipe: Eldarake -->
@@ -4401,6 +4430,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4073" level="4" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4423,12 +4453,12 @@
 					<item id="92648" min="1" max="1" chance="90.9091" /> <!-- Chakram Edge -->
 				</group>
 				<group chance="0.2688">
-					<item id="92908" min="1" max="1" chance="73.7594" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7519" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3759" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4586" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4752" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.7594" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7519" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3759" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4586" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4752" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit - Sealed -->
 					<!-- <item id="3940" min="1" max="1" chance="0.0492" /> Blueprint: Summon Siege Golem - Not Available -->
 					<!-- <item id="4924" min="1" max="1" chance="0.0492" /> Spellbook: Summon Spark Cubic - Not Available -->
 					<item id="2340" min="1" max="1" chance="0.0068" /> <!-- Recipe: Pa'agrio Hammer (100%) -->
@@ -4513,12 +4543,12 @@
 					<item id="92644" min="1" max="1" chance="11.3636" /> <!-- Heavy Doom Axe Blade -->
 				</group>
 				<group chance="0.407">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -4564,6 +4594,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4028" level="2" /> <!-- NPC Might -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4593,12 +4624,12 @@
 					<item id="2321" min="1" max="1" chance="0.5363" /> <!-- Recipe: Stiletto -->
 				</group>
 				<group chance="1.4978">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -4671,12 +4702,12 @@
 					<item id="92501" min="1" max="1" chance="42.7983" /> <!-- Earring of Seal Gemstone -->
 				</group>
 				<group chance="1.5074">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -4724,6 +4755,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4755,12 +4787,12 @@
 					<item id="2318" min="1" max="1" chance="5.27" /> <!-- Recipe: Spirit Sword (100%) -->
 				</group>
 				<group chance="3.2211">
-					<item id="92908" min="1" max="1" chance="29.8122" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9624" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9812" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9937" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5962" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0298" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="29.8122" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9624" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9812" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9937" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5962" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0298" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="1342" min="10" max="30" chance="59.6245" /> <!-- Steel Arrow -->
 				</group>
 			</drop>
@@ -4808,6 +4840,7 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4032" level="4" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4832,12 +4865,12 @@
 					<item id="92735" min="1" max="1" chance="64.891" /> <!-- Compound Helmet Design -->
 				</group>
 				<group chance="1.527">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -4905,13 +4938,13 @@
 					<item id="3009" min="1" max="1" chance="13.1581" /> <!-- Recipe: Compound Boots -->
 				</group>
 				<group chance="1.0458">
-					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="49428" min="1" max="1" chance="0.0488" /> Spellbook: Aegis - Not Available -->
 					<!-- <item id="6398" min="1" max="1" chance="0.0489" /> Spellbook: Body of Avatar - Not Available -->
 				</group>
@@ -4991,13 +5024,13 @@
 					<item id="2333" min="1" max="1" chance="2.0171" /> <!-- Recipe: Sword of Nightmare (100%) -->
 				</group>
 				<group chance="1.0686">
-					<item id="92908" min="1" max="1" chance="73.1172" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6234" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3117" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4372" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4623" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7312" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.1172" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6234" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3117" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4372" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4623" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7312" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="3118" min="1" max="1" chance="0.1462" /> Amulet: Chant of Death Whisper - Not Available -->
 					<!-- <item id="8397" min="1" max="1" chance="0.1464" /> Spellbook: Clarity - Not Available -->
 				</group>
@@ -5070,13 +5103,13 @@
 					<item id="92687" min="1" max="1" chance="90.9091" /> <!-- Samurai Long Sword Blade -->
 				</group>
 				<group chance="1.1849">
-					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="49428" min="1" max="1" chance="0.0488" /> Spellbook: Aegis - Not Available -->
 					<!-- <item id="6398" min="1" max="1" chance="0.0489" /> Spellbook: Body of Avatar - Not Available -->
 				</group>
@@ -5128,6 +5161,9 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4065" level="5" /> <!-- NPC Heal -->
+			<skill id="4151" level="5" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4160" level="5" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5157,13 +5193,13 @@
 					<item id="92690" min="1" max="1" chance="1.8604" /> <!-- Demon's Staff Head -->
 				</group>
 				<group chance="1.3419">
-					<item id="92908" min="1" max="1" chance="73.1172" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6234" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3117" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4372" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4623" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7312" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.1172" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6234" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3117" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4372" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4623" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7312" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="3118" min="1" max="1" chance="0.1462" /> Amulet: Chant of Death Whisper - Not Available -->
 					<!-- <item id="8397" min="1" max="1" chance="0.1464" /> Spellbook: Clarity - Not Available -->
 				</group>
@@ -5237,11 +5273,11 @@
 					<item id="912" min="1" max="1" chance="11.9999" /> <!-- Necklace of Old Forest -->
 				</group>
 				<group chance="0.1427">
-					<item id="92908" min="1" max="1" chance="74.5112" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9022" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4511" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4837" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.149" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.5112" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9022" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4511" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4837" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.149" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2187" min="1" max="1" chance="0.2661" /> <!-- Recipe: Manticore Skin Shirt (100%) -->
 					<item id="2992" min="1" max="1" chance="0.2367" /> <!-- Recipe: Plated Leather Boots -->
 				</group>
@@ -5312,11 +5348,11 @@
 					<item id="92719" min="1" max="1" chance="90.56" /> <!-- Boot of Seal Pattern -->
 				</group>
 				<group chance="0.4362">
-					<item id="92908" min="1" max="1" chance="21.3787" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.2757" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.1379" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.7126" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.0428" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="21.3787" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.2757" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.1379" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.7126" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0428" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2190" min="1" max="1" chance="0.1222" /> <!-- Recipe: Mithril Stockings -->
 					<item id="2994" min="1" max="1" chance="0.0679" /> <!-- Recipe: Boots of Seal -->
 					<item id="1341" min="10" max="30" chance="71.2622" /> <!-- Bone Arrow -->
@@ -5400,11 +5436,11 @@
 					<item id="92706" min="1" max="1" chance="9.375" /> <!-- Elven Mithril Glove Design -->
 				</group>
 				<group chance="0.1687">
-					<item id="92908" min="1" max="1" chance="74.7101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.942" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.471" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4903" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.7101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.942" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.471" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4903" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2996" min="1" max="1" chance="0.2372" /> <!-- Recipe: Chain Gloves (100%) -->
 				</group>
 			</drop>
@@ -5476,11 +5512,11 @@
 					<item id="92530" min="1" max="1" chance="46.1537" /> <!-- Manticore Skin Gaiter Pattern -->
 				</group>
 				<group chance="0.1702">
-					<item id="92908" min="1" max="1" chance="74.7194" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9439" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4719" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4906" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.7194" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9439" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4719" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4906" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1494" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2998" min="1" max="1" chance="0.2248" /> <!-- Recipe: Chain Shield (100%) -->
 				</group>
 			</drop>
@@ -5529,6 +5565,9 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4076" level="2" /> <!-- Decrease Speed -->
+			<skill id="4152" level="3" /> <!-- NPC HP Drain - Magic -->
+			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5551,11 +5590,11 @@
 					<item id="92615" min="1" max="1" chance="75" /> <!-- Reinforced Longbow Shaft -->
 				</group>
 				<group chance="0.1721">
-					<item id="92908" min="1" max="1" chance="74.8628" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9726" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4863" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4954" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.8628" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9726" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4863" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4954" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2289" min="1" max="1" chance="0.0332" /> <!-- Recipe: Staff of Life -->
 				</group>
 			</drop>
@@ -5629,11 +5668,11 @@
 					<item id="92707" min="1" max="1" chance="27.7776" /> <!-- Brigandine Shield Fragment -->
 				</group>
 				<group chance="0.1766">
-					<item id="92908" min="1" max="1" chance="74.4317" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.8863" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4432" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4811" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1489" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.4317" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.8863" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4432" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4811" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1489" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2986" min="1" max="1" chance="0.6088" /> <!-- Recipe: Sage's Worn Gloves (100%) -->
 				</group>
 			</drop>
@@ -5702,12 +5741,12 @@
 					<item id="92618" min="1" max="1" chance="42.8572" /> <!-- Eye of Infinity Stone -->
 				</group>
 				<group chance="0.1781">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -5754,6 +5793,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4040" level="4" /> <!-- NPC Bow Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5776,12 +5816,12 @@
 					<item id="92629" min="1" max="1" chance="75" /> <!-- Light Bow Shaft -->
 				</group>
 				<group chance="0.3067">
-					<item id="92908" min="1" max="1" chance="73.7314" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7463" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3731" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4577" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4746" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0737" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.7314" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7463" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3731" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4577" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4746" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0737" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="2210" min="1" max="1" chance="0.1432" /> <!-- Recipe: Steel Plate Helmet (100%) -->
 				</group>
 			</drop>
@@ -5829,6 +5869,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4032" level="4" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5859,12 +5900,12 @@
 					<item id="92633" min="1" max="1" chance="15" /> <!-- Atuba Mace Head -->
 				</group>
 				<group chance="0.3958">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -5911,6 +5952,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5935,12 +5977,12 @@
 					<item id="92745" min="1" max="1" chance="37.5" /> <!-- Elven Long Sword Blade -->
 				</group>
 				<group chance="0.3987">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -5988,6 +6030,9 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4153" level="4" /> <!-- Decrease Speed -->
+			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6024,12 +6069,12 @@
 					<item id="92644" min="1" max="1" chance="11.3636" /> <!-- Heavy Doom Axe Blade -->
 				</group>
 				<group chance="0.4028">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -6080,6 +6125,11 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6105,12 +6155,12 @@
 					<item id="92661" min="1" max="1" chance="26.6154" /> <!-- Noble Elven Bow Shaft -->
 				</group>
 				<group chance="0.407">
-					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.8371" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7674" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3837" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4612" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4767" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0739" /> <!-- Material: Animal Spirit - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -6159,6 +6209,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6173,13 +6224,13 @@
 					<item id="57" min="58" max="137" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.2582">
-					<item id="92908" min="1" max="1" chance="72.6041" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.5208" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.2604" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4201" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4521" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.726" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="72.6041" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.5208" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.2604" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4201" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4521" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.726" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="952" min="1" max="1" chance="0.9681" /> <!-- Scroll: Enchant C-grade Armor -->
 					<!-- <item id="49570" min="1" max="1" chance="0.0242" /> Spellbook: Mass Curse Gloom - Not Available -->
 				</group>
@@ -6226,6 +6277,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6240,13 +6292,13 @@
 					<item id="57" min="60" max="140" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.2823">
-					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="49423" min="1" max="1" chance="0.0488" /> Spellbook: Dual Weapon Defense - Not Available -->
 					<!-- <item id="3942" min="1" max="1" chance="0.0489" /> Spellbook: Party Return - Not Available -->
 				</group>
@@ -6295,6 +6347,7 @@
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4248" level="4" /> <!-- NPC HP Drain - Slow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6309,13 +6362,13 @@
 					<item id="57" min="61" max="142" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.3196">
-					<item id="92908" min="1" max="1" chance="73.2959" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6592" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3296" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4432" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4659" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.733" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2959" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6592" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3296" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4432" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4659" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.733" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="8389" min="1" max="1" chance="0.0244" /> Spellbook: Defense Prowess - Not Available -->
 					<!-- <item id="8388" min="1" max="1" chance="0.0244" /> Spellbook: Attack Prowess - Not Available -->
 				</group>
@@ -6376,13 +6429,13 @@
 					<item id="57" min="63" max="149" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.1881">
-					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="6350" min="1" max="1" chance="0.0244" /> Amulet: Pa'agrio's Honor - Not Available -->
 					<!-- <item id="49429" min="1" max="1" chance="0.0488" /> Spellbook: Hide - Not Available -->
 					<!-- <item id="49568" min="1" max="1" chance="0.0245" /> Spellbook: Sonic Move - Not Available -->
@@ -6430,6 +6483,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6444,13 +6498,13 @@
 					<item id="57" min="67" max="156" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.5593">
-					<item id="92908" min="1" max="1" chance="72.5865" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.5173" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.2586" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4195" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4517" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7259" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="72.5865" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.5173" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.2586" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4195" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4517" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7259" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="952" min="1" max="1" chance="0.9678" /> <!-- Scroll: Enchant C-grade Armor -->
 					<!-- <item id="49562" min="1" max="1" chance="0.0485" /> Spellbook: Spirit Sharing - Not Available -->
 				</group>
@@ -6511,13 +6565,13 @@
 					<item id="57" min="75" max="176" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="2.8654">
-					<item id="92908" min="1" max="1" chance="73.278" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6556" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3278" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4426" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4656" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7328" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.278" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6556" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3278" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4426" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4656" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7328" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="5811" min="1" max="1" chance="0.0244" /> Spellbook: Mass Slow - Not Available -->
 					<!-- <item id="49425" min="1" max="1" chance="0.0488" /> Spellbook: Dynamic Recovery - Not Available -->
 				</group>
@@ -6564,6 +6618,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6582,13 +6637,13 @@
 					<item id="92574" min="1" max="1" chance="90.9091" /> <!-- Drake Leather Armor Texture -->
 				</group>
 				<group chance="1.6184">
-					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2601" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.652" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.326" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.442" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4652" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7326" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="49430" min="1" max="1" chance="0.0488" /> Spellbook: Mystic Immunity - Not Available -->
 					<!-- <item id="6351" min="1" max="1" chance="0.0489" /> Amulet: Ritual of Life - Not Available -->
 				</group>
@@ -6638,6 +6693,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6652,13 +6708,13 @@
 					<item id="57" min="112" max="263" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="5.4974">
-					<item id="92908" min="1" max="1" chance="73.3317" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6663" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3332" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4444" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4666" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7333" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0245" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.3317" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6663" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3332" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4444" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4666" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7333" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0245" /> <!-- Material: Metal Ingot - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -6705,6 +6761,7 @@
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
 			<skill id="4284" level="5" /> <!-- Infection Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4250" level="5" /> <!-- NPC Twister - Slow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6723,13 +6780,13 @@
 					<item id="92738" min="1" max="1" chance="90.9091" /> <!-- Drake Leather Boot Design -->
 				</group>
 				<group chance="1.8003">
-					<item id="92908" min="1" max="1" chance="73.2064" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6413" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3206" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4402" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4641" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7321" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.2064" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6413" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3206" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4402" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4641" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7321" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="3116" min="1" max="1" chance="0.1464" /> Amulet: Chant of Haste - Not Available -->
 					<!-- <item id="4912" min="1" max="1" chance="0.0245" /> Spellbook: Benediction - Not Available -->
 				</group>
@@ -6802,13 +6859,13 @@
 					<item id="92740" min="1" max="1" chance="90.9091" /> <!-- Drake Leather Glove Design -->
 				</group>
 				<group chance="1.9001">
-					<item id="92908" min="1" max="1" chance="72.5865" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.5173" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.2586" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4195" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4517" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7259" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="72.5865" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.5173" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.2586" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4195" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4517" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7259" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0242" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="952" min="1" max="1" chance="0.9678" /> <!-- Scroll: Enchant C-grade Armor -->
 					<!-- <item id="49569" min="1" max="1" chance="0.0485" /> Spellbook: Sand Bomb - Not Available -->
 				</group>
@@ -6858,6 +6915,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6872,13 +6930,13 @@
 					<item id="57" min="158" max="367" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="5.3873">
-					<item id="92908" min="1" max="1" chance="73.1707" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6341" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3171" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.439" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4634" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7317" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.1707" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6341" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3171" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.439" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4634" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7317" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0244" /> <!-- Material: Metal Ingot - Sealed -->
 					<!-- <item id="3099" min="1" max="1" chance="0.1463" /> Spellbook: Haste - Not Available -->
 					<!-- <item id="3072" min="1" max="1" chance="0.0488" /> Spellbook: Purify - Not Available -->
 					<!-- <item id="4915" min="1" max="1" chance="0.0245" /> Blueprint: Summon Wild Hog Cannon - Not Available -->

@@ -1,157 +1,320 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="15922" level="99" type="Folk" name="">
+	<npc id="15922" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" targetable="false" showName="false" />
+		<ai aggroRange="125" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15923" level="99" type="Folk" name="">
+	<npc id="15923" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="10" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15925" level="99" type="Folk" name="">
+	<npc id="15925" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15926" level="99" type="Folk" name="">
+	<npc id="15926" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15927" level="99" type="Folk" name="">
+	<npc id="15927" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="FIRE" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" flying="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15928" level="99" type="Folk" name="">
+	<npc id="15928" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="50" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="FIRE" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="15929" level="99" type="Teleporter" name="Seed Teleport Device">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="15930" level="97" type="Monster" name="Suppressed Tumor" title="Protection Target">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="68890.6111170679" magical="19509.7667259604" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="707.4014668126" magical="406.117291797" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
-			<defence physical="401.00250626566" magical="293.50497504274" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -163,20 +326,35 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="68890.6111170679" magical="19509.7667259604" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="707.4014668126" magical="406.117291797" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
-			<defence physical="401.00250626566" magical="293.50497504274" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -188,20 +366,35 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="68890.6111170679" magical="19509.7667259604" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="707.4014668126" magical="406.117291797" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
-			<defence physical="401.00250626566" magical="293.50497504274" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -213,20 +406,35 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="68890.6111170679" magical="19509.7667259604" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="707.4014668126" magical="406.117291797" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
-			<defence physical="401.00250626566" magical="293.50497504274" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -238,20 +446,35 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<vitals hp="12000000" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="68890.6111170679" magical="19509.7667259604" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="707.4014668126" magical="406.117291797" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
-			<defence physical="401.00250626566" magical="293.50497504274" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -263,161 +486,319 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="356248.833567932" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.93505039194" magical="296.98218582057" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
 			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="7028" level="1" /> <!-- Stationary NPCs -->
 		</skillList>
 		<collision>
 			<radius normal="42" grown="50.4" />
 			<height normal="55" grown="66" />
 		</collision>
 	</npc>
-	<npc id="15936" level="99" type="Folk" name="">
+	<npc id="15936" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15937" level="99" type="Folk" name="">
+	<npc id="15937" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15938" level="99" type="Folk" name="">
+	<npc id="15938" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15939" level="99" type="Folk" name="">
+	<npc id="15939" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15940" level="99" type="Folk" name="">
+	<npc id="15940" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" noSleepMode="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15941" level="99" type="Folk" name="">
+	<npc id="15941" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="FIRE" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="15942" level="99" type="Folk" name="">
+	<npc id="15942" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="1" />
 				<run ground="210" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="FIRE" value="300" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canMove="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 </list>

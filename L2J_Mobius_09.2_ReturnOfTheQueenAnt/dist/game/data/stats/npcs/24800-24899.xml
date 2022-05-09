@@ -1,689 +1,1505 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24800" level="85" type="Folk" name="Knight Agar" title="Ashen Shadow Elite Warrior">
+	<npc id="24800" level="116" type="Monster" name="Knight Agar" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1751190" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1751190" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2296308" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="555919" magical="264196" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai clanHelpRange="700" aggroRange="700" isAggressive="true">
+			<clanList>
+				<clan>AS_REVOLUTION</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24801" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Elite Warrior">
+	<npc id="24801" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1459325" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1459325" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="3280440" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="427630" magical="203228" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24802" level="85" type="Folk" name="Rogue Fiord" title="Ashen Shadow Elite Warrior">
+	<npc id="24802" level="116" type="Monster" name="Rogue Fiord" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2788374" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363486" magical="172763" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24803" level="85" type="Folk" name="Archer Torn" title="Ashen Shadow Elite Warrior">
+	<npc id="24803" level="116" type="Monster" name="Archer Torn" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="1558209" magical="1166022" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="397579" magical="172763" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24804" level="85" type="Folk" name="Mage Kenaz" title="Ashen Shadow Elite Warrior">
+	<npc id="24804" level="116" type="Monster" name="Mage Kenaz" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2296308" magical="1457528" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="416640" magical="218547" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24805" level="85" type="Folk" name="Enchanter Nied" title="Ashen Shadow Elite Warrior">
+	<npc id="24805" level="116" type="Monster" name="Enchanter Nied" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2624352" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="384867" magical="203228" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24806" level="85" type="Folk" name="Summoner Inke" title="Ashen Shadow Elite Warrior">
+	<npc id="24806" level="116" type="Monster" name="Summoner Inke" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2624352" magical="1166022" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="468720" magical="182123" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24807" level="85" type="Folk" name="Healer Zera" title="Ashen Shadow Elite Warrior">
+	<npc id="24807" level="116" type="Monster" name="Healer Zera" title="Ashen Shadow Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1605257" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1605257" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2296308" magical="1311825" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="468720" magical="200335" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24808" level="85" type="Folk" name="Soul Specter" title="Summoner Inke">
+	<npc id="24808" level="116" type="Monster" name="Soul Specter" title="Summoner Inke">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2624352" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="384867" magical="203228" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="28.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24809" level="85" type="Folk" name="Banshee Queen" title="Summoner Inke">
+	<npc id="24809" level="116" type="Monster" name="Banshee Queen" title="Summoner Inke">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1313392" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1313392" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="1312176" magical="1166022" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="420966" magical="203228" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="23.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24811" level="85" type="Folk" name="Unit Signalman" title="Ashen Shadow">
+	<npc id="24811" level="116" type="Monster" name="Unit Signalman" title="Ashen Shadow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1459325" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1459325" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="3280440" magical="1166022" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="427630" magical="203228" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24812" level="85" type="Folk" name="Unit Guard" title="Ashen Shadow">
+	<npc id="24812" level="116" type="Monster" name="Unit Guard" title="Ashen Shadow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1459325" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="1459325" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="3280440" magical="1166022" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="427630" magical="203228" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
+				<attack type="DARK" value="1450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24813" level="85" type="Folk" name="Knight Agar" title="Ashen Shadow Commander">
+	<npc id="24813" level="116" type="Monster" name="Knight Agar" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="4592616" magical="2332044" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1667757" magical="792587" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13.5" />
 			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24814" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24814" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3180972" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4377975" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6560880" magical="2332044" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1282890" magical="609683" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24815" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24815" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="5576748" magical="2332044" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1090457" magical="518288" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24816" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24816" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6232836" magical="2915055" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1090457" magical="518288" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24817" level="85" type="Folk" name="Rogue Fiord" title="Ashen Shadow Commander">
+	<npc id="24817" level="116" type="Monster" name="Rogue Fiord" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="4592616" magical="2332044" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1026312" magical="731619" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24818" level="85" type="Folk" name="Archer Torn" title="Ashen Shadow Commander">
+	<npc id="24818" level="116" type="Monster" name="Archer Torn" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2624352" magical="2332044" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="1262898" magical="609683" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24819" level="85" type="Folk" name="Archer Torn" title="Ashen Shadow Commander">
+	<npc id="24819" level="116" type="Monster" name="Archer Torn" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="2624352" magical="2623649" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="1262898" magical="609683" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24820" level="85" type="Folk" name="Mage Kenaz" title="Ashen Shadow Commander">
+	<npc id="24820" level="116" type="Monster" name="Mage Kenaz" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3499070" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4815773" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="4592616" magical="2332044" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1406160" magical="601004" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="35.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24821" level="85" type="Folk" name="Enchanter Nied" title="Ashen Shadow Commander">
+	<npc id="24821" level="116" type="Monster" name="Enchanter Nied" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="5248704" magical="2332044" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1154601" magical="609683" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="35.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24822" level="85" type="Folk" name="Summoner Inke" title="Ashen Shadow Commander">
+	<npc id="24822" level="116" type="Monster" name="Summoner Inke" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862875" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="3940178" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="5248704" magical="2332044" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1406160" magical="546368" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24823" level="85" type="Folk" name="Healer Zera" title="Ashen Shadow Commander">
+	<npc id="24823" level="116" type="Monster" name="Healer Zera" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3180972" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4377975" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6560880" magical="2332044" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562400" magical="546368" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24824" level="85" type="Folk" name="Healer Zera" title="Ashen Shadow Commander">
+	<npc id="24824" level="116" type="Monster" name="Healer Zera" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3180972" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="4377975" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6560880" magical="4664088" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1562400" magical="546368" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24825" level="85" type="Folk" name="Knight Agar" title="Ashen Shadow Commander">
+	<npc id="24825" level="116" type="Monster" name="Knight Agar" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5089557" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="7004761" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6888924" magical="3498066" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2223676" magical="1056783" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13.5" />
 			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24826" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24826" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4241297" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5837301" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="9841320" magical="3498066" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1710520" magical="812910" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24827" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24827" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="8365122" magical="3498066" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1453942" magical="691051" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24828" level="85" type="Folk" name="Warrior Ule" title="Ashen Shadow Commander">
+	<npc id="24828" level="116" type="Monster" name="Warrior Ule" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="9349254" magical="3498066" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1453942" magical="691051" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.5" />
 			<height normal="43.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24829" level="85" type="Folk" name="Rogue Fiord" title="Ashen Shadow Commander">
+	<npc id="24829" level="116" type="Monster" name="Rogue Fiord" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6888924" magical="4372583" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1368416" magical="975492" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24830" level="85" type="Folk" name="Archer Torn" title="Ashen Shadow Commander">
+	<npc id="24830" level="116" type="Monster" name="Archer Torn" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="3936528" magical="3498066" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="1683864" magical="812910" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24831" level="85" type="Folk" name="Archer Torn" title="Ashen Shadow Commander">
+	<npc id="24831" level="116" type="Monster" name="Archer Torn" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="3936528" magical="3498066" random="5" critical="8" accuracy="0" attackSpeed="633" type="BOW" range="600" distance="10" width="0" />
+			<defence physical="1683864" magical="812910" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24832" level="85" type="Folk" name="Mage Kenaz" title="Ashen Shadow Commander">
+	<npc id="24832" level="116" type="Monster" name="Mage Kenaz" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4665427" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="6421031" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="6888924" magical="3935474" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1874880" magical="801339" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="35.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24833" level="85" type="Folk" name="Enchanter Nied" title="Ashen Shadow Commander">
+	<npc id="24833" level="116" type="Monster" name="Enchanter Nied" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="7873056" magical="3498066" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1539468" magical="812910" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="35.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24834" level="85" type="Folk" name="Summoner Inke" title="Ashen Shadow Commander">
+	<npc id="24834" level="116" type="Monster" name="Summoner Inke" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3817167" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5253571" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="7873056" magical="3498066" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1874880" magical="728490" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24835" level="85" type="Folk" name="Healer Zera" title="Ashen Shadow Commander">
+	<npc id="24835" level="116" type="Monster" name="Healer Zera" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4241297" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5837301" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="9841320" magical="3498066" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2083200" magical="728490" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24836" level="85" type="Folk" name="Healer Zera" title="Ashen Shadow Commander">
+	<npc id="24836" level="116" type="Monster" name="Healer Zera" title="Ashen Shadow Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4241297" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="5837301" hpRegen="13" mp="3024" mpRegen="30" />
+			<attack physical="9841320" magical="3498066" random="20" critical="1" accuracy="9" attackSpeed="633" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2083200" magical="728490" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="1750" water="1750" wind="1750" earth="1750" holy="1700" dark="1750" />
+				<attack type="DARK" value="1650" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.25" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="24837" level="85" type="Folk" name="Nerba Orc Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -948,7 +1764,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -994,7 +1809,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1040,7 +1854,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1086,7 +1899,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1132,7 +1944,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1179,7 +1990,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1225,7 +2035,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1271,7 +2080,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="200000" max="210000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1318,7 +2126,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="100000" max="105000" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->

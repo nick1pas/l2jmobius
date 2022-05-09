@@ -16,23 +16,28 @@
 		<acquire exp="34255" sp="8" />
 		<equipment rhand="75" /> <!-- Caliburs -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985.01577287066" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="501.08068" magical="342.17315" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.49346" magical="184.76376" />
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
 			</speed>
-			<attack physical="691.729323308271" magical="327.643210792231" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="252.666666666667" magical="184.914841849148" />
+			<hitTime>710</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -45,17 +50,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="191" max="446" chance="70" /> <!-- Adena -->
-				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="91" max="212" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23102" level="62" type="Monster" name="Bathin's Knight">
+	<npc id="23102" level="60" type="Monster" name="Bathin's Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -67,23 +68,28 @@
 		<acquire exp="11891" sp="2" />
 		<equipment rhand="150" /> <!-- Elemental Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1997.56046267087" hpRegen="6.5" mp="1071.04622871046" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<attack physical="695.006942837306" magical="325.518362996356" critical="4" attackSpeed="253" range="80" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="255.96908684157" magical="187.298943483728" />
+			<hitTime>170</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -96,19 +102,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
-				<item id="1830" min="1" max="1" chance="34.35" /> <!-- Scroll of Escape: Castle -->
+				<group chance="70">
+					<item id="57" min="88" max="205" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23103" level="62" type="Monster" name="Bathin's Wizard">
+	<npc id="23103" level="60" type="Monster" name="Bathin's Wizard">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -121,25 +121,28 @@
 		<acquire exp="11525" sp="2" />
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1997.56046267087" hpRegen="6.5" mp="1071.04622871046" mpRegen="2.4" />
+			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<attack physical="686.783018193334" magical="326.113133535001" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="204.901362619483" magical="220.35169821615" />
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4065" level="1" /> <!-- Heal -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4065" level="1" /> <!-- Heal -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -152,16 +155,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="53" max="125" chance="70" /> <!-- Adena -->
-				<item id="5276" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Compressed Package: A-grade Spiritshots (100%) -->
+				<group chance="70">
+					<item id="57" min="88" max="205" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23104" level="65" type="Monster" name="Elmoreden's Lady">
@@ -181,24 +178,28 @@
 		<acquire exp="37799" sp="9" />
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<attack physical="804.646266975034" magical="379.046349556157" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="217.532467532468" magical="234.2011788126" />
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4087" level="1" /> <!-- Blaze -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4087" level="1" /> <!-- Blaze -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -211,13 +212,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="212" max="498" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="104" max="244" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23105" level="64" type="Monster" name="Elmoreden's Archer">
@@ -232,23 +230,28 @@
 		<acquire exp="33499" sp="8" />
 		<equipment rhand="284" /> <!-- Dark Elven Longbow -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.07255520505" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="40" />
 				<run ground="140" />
 			</speed>
-			<attack physical="632.985927103574" magical="366.306309413094" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="213.725490196078" magical="230.119241055518" />
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4040" level="1" /> <!-- Power Shot -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4040" level="1" /> <!-- Power Shot -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -261,13 +264,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="193" max="449" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="101" max="235" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23106" level="64" type="Monster" name="Elmoreden's Maid">
@@ -282,23 +282,28 @@
 		<acquire exp="33050" sp="7" />
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.07255520505" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="22" />
 				<run ground="150" />
 			</speed>
-			<attack physical="775.631890182974" magical="366.306309413094" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="267.320261437908" magical="195.60135489719" />
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4099" level="1" /> <!-- Berserker Spirit -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4099" level="1" /> <!-- Berserker Spirit -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -311,12 +316,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="190" max="443" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="101" max="235" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23107" level="64" type="Monster" name="Elmoreden's Warrior">
@@ -331,22 +334,28 @@
 		<acquire exp="34357" sp="8" />
 		<equipment rhand="150" /> <!-- Elemental Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.07255520505" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<attack physical="785.064983847945" magical="365.934673240812" critical="4" attackSpeed="253" range="80" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="267.320261437908" magical="195.60135489719" />
+			<hitTime>170</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -359,13 +368,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="198" max="461" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="101" max="235" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23108" level="69" type="Monster" name="Binder">
@@ -384,24 +390,28 @@
 		<acquire exp="44816" sp="10" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.03154574132" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="213.05139" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="921.557345607979" magical="431.656255425883" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="291.714614499425" magical="213.537014793598" />
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -414,12 +424,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="256" max="597" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="119" max="277" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23109" level="68" type="Monster" name="Bound Warrior">
@@ -434,23 +442,28 @@
 		<acquire exp="38263" sp="9" />
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="892.202277552596" magical="418.49843872484" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="286.624203821656" magical="209.731326938078" />
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -463,12 +476,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="223" max="521" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="115" max="269" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23110" level="68" type="Monster" name="Bound Archer">
@@ -483,24 +494,28 @@
 		<acquire exp="37817" sp="9" />
 		<equipment rhand="288" /> <!-- Carnage Bow -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="727.710918793721" magical="418.367680885226" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="286.974172324491" magical="209.731326938078" />
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4040" level="1" /> <!-- Power Shot -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4040" level="1" /> <!-- Power Shot -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -513,13 +528,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="220" max="514" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="115" max="269" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23111" level="74" type="Monster" name="Heaven's Palace Seraphim">
@@ -537,23 +549,27 @@
 		<acquire exp="50798" sp="12" />
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632.01892744479" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1068.04238706079" magical="497.15247484307" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="315.114333519241" magical="230.372327457097" />
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -566,13 +582,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="295" max="685" chance="70" /> <!-- Adena -->
-				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="139" max="323" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23112" level="73" type="Monster" name="Heaven's Palace Seraphim Escort">
@@ -585,22 +598,27 @@
 		<sex>MALE</sex>
 		<acquire exp="43368" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586.11987381703" hpRegen="8.5" mp="1442.01135442011" mpRegen="3" />
+			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+			<attack physical="752.73928" magical="514.02335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.02959" magical="226.8662" />
 			<speed>
 				<walk ground="30" />
 				<run ground="66" />
 			</speed>
-			<attack physical="1039.09465020576" magical="484.381712804029" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="310.493827160494" magical="227.288656593874" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -613,16 +631,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="257" max="597" chance="70" /> <!-- Adena -->
-				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<group chance="70">
+					<item id="57" min="135" max="314" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23113" level="10" type="Monster" name="Crawler" title="Husk">
+	<npc id="23113" level="4" type="Monster" name="Crawler" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -633,19 +648,27 @@
 		<sex>MALE</sex>
 		<acquire exp="10" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="170.347003154574" hpRegen="2" mp="156.123276561233" mpRegen="0.9" />
+			<vitals hp="68.20985" hpRegen="2" mp="62.08" mpRegen="0.9" />
+			<attack physical="11.24892" magical="7.68155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="49.73343" magical="36.39277" />
 			<speed>
 				<walk ground="8" />
 				<run ground="120" />
 			</speed>
-			<attack physical="40.3225806451613" magical="22.492612808658" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="126.344086021505" magical="91.5679041414855" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14158" level="1" /> <!-- Crawler Spear -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -653,22 +676,8 @@
 			<radius normal="6.5" />
 			<height normal="18.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23114" level="8" type="Monster" name="Stalker" title="Husk">
+	<npc id="23114" level="6" type="Monster" name="Stalker" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -680,19 +689,27 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="124.500525762355" hpRegen="2" mp="102.730467693971" mpRegen="0.9" />
+			<vitals hp="93.54158" hpRegen="2" mp="77.2" mpRegen="0.9" />
+			<attack physical="13.52471" magical="9.23562" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="53.53373" magical="39.17366" />
 			<speed>
 				<walk ground="10" />
 				<run ground="120" />
 			</speed>
-			<attack physical="25.7309941520468" magical="13.7348494605274" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="71.5789473684211" magical="52.3612356113317" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14156" level="1" /> <!-- Snake -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -700,22 +717,8 @@
 			<radius normal="9.4" />
 			<height normal="20" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23115" level="16" type="Monster" name="Critter" title="Husk">
+	<npc id="23115" level="12" type="Monster" name="Critter" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -726,19 +729,27 @@
 		<sex>MALE</sex>
 		<acquire exp="16" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="265.825446898002" hpRegen="2.5" mp="165.450121654501" mpRegen="1.2" />
+			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
+			<attack physical="22.99606" magical="15.70333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="66.32989" magical="48.53733" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<attack physical="42.9042904290429" magical="21.99676139369" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="88.4488448844884" magical="65.3106673197733" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14166" level="1" /> <!-- Baelz -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -746,20 +757,6 @@
 			<radius normal="14.5" />
 			<height normal="18" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="23116" level="14" type="Monster" name="Avian" title="Husk">
 		<parameters>
@@ -772,19 +769,27 @@
 		<sex>MALE</sex>
 		<acquire exp="13" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="230.283911671924" hpRegen="2.5" mp="140.308191403082" mpRegen="1.2" />
+			<vitals hp="230.38548" hpRegen="2.5" mp="140.88" mpRegen="1.2" />
+			<attack physical="27.24646" magical="18.6058" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="71.08179" magical="52.01457" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<attack physical="38.0258899676375" magical="20.1075506642242" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="71.8446601941748" magical="52.7563209159127" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14161" level="1" /> <!-- Gash -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -794,20 +799,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23117" level="18" type="Monster" name="Rider" title="Husk">
+	<npc id="23117" level="16" type="Monster" name="Rider" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -819,19 +833,27 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="297.397476340694" hpRegen="2.5" mp="177.007299270073" mpRegen="1.2" />
+			<vitals hp="264.34345" hpRegen="2.5" mp="157.6" mpRegen="1.2" />
+			<attack physical="32.16396" magical="21.96382" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="76.08628" magical="55.67663" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="50" magical="26.3267883045886" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="85.7142857142857" magical="63.4341327771985" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14162" level="1" /> <!-- Sweep -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -841,20 +863,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23118" level="14" type="Monster" name="Krapher" title="Husk">
+	<npc id="23118" level="8" type="Monster" name="Krapher" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -866,19 +897,27 @@
 		<sex>MALE</sex>
 		<acquire exp="13" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="217.507886435331" hpRegen="2" mp="161.800486618005" mpRegen="0.9" />
+			<vitals hp="124.92828" hpRegen="2" mp="92.64" mpRegen="0.9" />
+			<attack physical="16.20165" magical="11.06363" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="57.56203" magical="42.1214" />
 			<speed>
 				<walk ground="15" />
 				<run ground="120" />
 			</speed>
-			<attack physical="40.5927835051546" magical="22.9557201745524" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="101.030927835052" magical="74.6231218802518" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14164" level="1" /> <!-- Arcane Jet -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -886,20 +925,6 @@
 			<radius normal="9" />
 			<height normal="22.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="23119" level="18" type="Monster" name="Handyman" title="Embryo">
 		<parameters>
@@ -914,33 +939,51 @@
 		<acquire exp="789" sp="0" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="301.577287066246" hpRegen="2.5" mp="174.371451743715" mpRegen="1.2" />
+			<vitals hp="301.66622" hpRegen="2.5" mp="174.64" mpRegen="1.2" />
+			<attack physical="37.82932" magical="25.83252" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="81.34791" magical="59.52687" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="42.7998091549493" magical="27.7286597676582" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="82.2429906542056" magical="59.8797856455268" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="14167" level="1" /> <!-- Black Powder -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -961,33 +1004,51 @@
 		<sex>FEMALE</sex>
 		<acquire exp="789" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="301.577287066246" hpRegen="2.5" mp="174.371451743715" mpRegen="1.2" />
+			<vitals hp="301.66622" hpRegen="2.5" mp="174.64" mpRegen="1.2" />
+			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81.34791" magical="59.52687" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="52.9595015576324" magical="27.7286597676582" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="82.2429906542056" magical="59.8797856455268" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14169" level="1" /> <!-- Dirty Fighting -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1010,33 +1071,51 @@
 		<sex>FEMALE</sex>
 		<acquire exp="352" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="400" hpRegen="2" mp="92.4574209245742" mpRegen="0.9" />
-			<attack physical="23.1958762886598" magical="13.1175543854585" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="57.7319587628866" magical="42.6417839315725" />
+			<vitals hp="400" hpRegen="2" mp="92.64" mpRegen="0.9" />
+			<attack physical="16.20165" magical="11.06363" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="57.56203" magical="42.1214" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14172" level="1" /> <!-- Ray of Pain -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -1056,18 +1135,27 @@
 		<sex>MALE</sex>
 		<acquire exp="20" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="341.955835962145" hpRegen="2.5" mp="193.836171938362" mpRegen="1.2" />
+			<vitals hp="342.5127" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="86.87049" magical="63.56806" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="61.9266055045872" magical="31.688209507759" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="87.1559633027523" magical="63.989523575675" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14159" level="1" /> <!-- Fist Bump -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -1077,16 +1165,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -1101,32 +1198,35 @@
 		<sex>MALE</sex>
 		<mpReward value="92" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012.138728324" hpRegen="8.5" mp="23174.2574257426" mpRegen="30" />
+			<vitals hp="356012.657439055" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<attack physical="45027.4086463771" magical="7933.39078546243" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="515.39249724918" magical="297.335874351375" />
 			<speed>
 				<walk ground="100" />
 				<run ground="100" />
 			</speed>
-			<attack physical="62137.927480447" magical="6633.91546902241" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="515.508021390374" magical="297.559167681474" />
+			<hitTime>530</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<item id="10015" min="1" max="1" chance="90" /> <!-- Prison Gate Key -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="60" />
 			<height normal="99.5" />
@@ -1143,21 +1243,33 @@
 		<sex>MALE</sex>
 		<mpReward value="10" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="115836.416184971" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="115836.371581907" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1768.5036670315" magical="1015.2932294925" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="59253.3696804483" magical="6344.3277245068" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1768.81720430108" magical="1015.29507789489" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14231" level="1" /> <!-- Creation's Rage -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1176,21 +1288,33 @@
 		<sex>MALE</sex>
 		<mpReward value="10" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="115836.416184971" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="115836.371581907" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1768.5036670315" magical="1015.2932294925" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="59253.3696804483" magical="6344.3277245068" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1768.81720430108" magical="1015.29507789489" />
+			<hitTime>600</hitTime>
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14231" level="1" /> <!-- Creation's Rage -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1207,17 +1331,19 @@
 		</parameters>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.152887814" magical="23965.6643833032" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5660" magical="2291" />
 			<speed>
 				<walk ground="35" />
 				<run ground="130" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1226,12 +1352,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="4" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5273" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1251,17 +1386,19 @@
 		<equipment rhand="15302" />
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="170323.253168118" magical="23965.6363148394" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="344534" magical="90519" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="3517" magical="1637" />
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
 			</speed>
+			<hitTime>1200</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1270,11 +1407,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="16516" level="4" /> <!-- Party Archer Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="5298" level="1" /> <!-- Power Shot -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1293,17 +1439,19 @@
 		<sex>MALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.016991153" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="4043" magical="1637" />
 			<speed>
 				<walk ground="35" />
 				<run ground="130" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1312,12 +1460,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="16514" level="4" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5275" level="1" /> <!-- Spinning Slasher -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1336,17 +1493,19 @@
 		<sex>FEMALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208720.927362339" magical="23965.6445382876" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.43763290118" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2829" magical="2129" />
 			<speed>
 				<walk ground="32" />
 				<run ground="136" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1355,12 +1514,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="16515" level="4" /> <!-- Party Mage Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5312" level="1" /> <!-- Blaze -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1379,17 +1547,19 @@
 		<sex>FEMALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.152887814" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2829" magical="2129" />
 			<speed>
 				<walk ground="32" />
 				<run ground="136" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1398,12 +1568,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="16515" level="4" /> <!-- Party Mage Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4002" level="1" /> <!-- Blood Siphon -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1423,17 +1602,19 @@
 		<acquire exp="1789620768" sp="1789616" />
 		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208720.927362339" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2525.85346862301" magical="1464.43763290118" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5660" magical="2291" />
 			<speed>
-				<walk ground="36" />
+				<walk ground="36.48" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1442,12 +1623,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="4" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5273" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 	</npc>
 	<npc id="23132" level="104" type="Monster" name="Etina Gospel">
@@ -1469,17 +1659,19 @@
 		<sex>MALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.016991153" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4043" magical="1637" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>1600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1488,12 +1680,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5336" level="1" /> <!-- Spinning Slasher -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1516,17 +1716,19 @@
 		<sex>FEMALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.152887814" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2829" magical="2129" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<hitTime>560</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1535,12 +1737,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4002" level="1" /> <!-- Blood Siphon -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1563,17 +1773,19 @@
 		<sex>MALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.152887814" magical="23965.6643833032" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5660" magical="2291" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1582,12 +1794,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5334" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1610,17 +1830,19 @@
 		<sex>MALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.07521172" magical="23965.6421370408" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2525.84951456311" magical="1464.50810129557" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4043" magical="1637" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1629,12 +1851,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5334" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1657,17 +1887,19 @@
 		<sex>FEMALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208720.927362339" magical="23965.6445382876" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.43763290118" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="757976" magical="90519" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2829" magical="2129" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>560</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1676,12 +1908,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5373" level="1" /> <!-- Blaze -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1704,17 +1944,19 @@
 		<sex>MALE</sex>
 		<acquire exp="894810384" sp="894808" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208721.016991153" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2526.01032389205" magical="1464.51097007318" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="454785" magical="54311" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4043" magical="1637" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1723,12 +1965,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="6093" level="1" /> <!-- Panther Hide -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1743,17 +1993,19 @@
 		<sex>MALE</sex>
 		<acquire exp="1789620768" sp="1789616" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
-			<attack physical="208720.927362339" magical="23965.6363148394" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2525.85346862301" magical="1464.43763290118" />
+			<vitals hp="1024526" hpRegen="11.4" mp="25074" mpRegen="30" />
+			<attack physical="454785" magical="54311" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5660" magical="2291" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1762,12 +2014,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="4" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="6093" level="1" /> <!-- Panther Hide -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
@@ -1783,17 +2044,19 @@
 		<acquire exp="731391144" sp="731385" />
 		<equipment rhand="10278" lhand="10278" /> <!-- Monster Only (Behamah Dual) / Monster Only (Behamah Dual) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
-			<attack physical="186172.231725287" magical="20994.6207328088" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2253.28147788041" magical="1306.19495860609" />
+			<vitals hp="946008" hpRegen="11.4" mp="24690" mpRegen="30" />
+			<attack physical="647205" magical="79194" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3452" magical="1398" />
 			<speed>
-				<walk ground="29" />
+				<walk ground="29.8" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1802,12 +2065,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="3" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5328" level="1" /> <!-- Unholy Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1827,17 +2099,19 @@
 		<equipment rhand="15302" />
 		<acquire exp="731391144" sp="731385" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
-			<attack physical="151922.816626837" magical="20994.6207328088" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2253.28147788041" magical="1306.19495860609" />
+			<vitals hp="946008" hpRegen="11.4" mp="24690" mpRegen="30" />
+			<attack physical="294184" magical="79194" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="3003" magical="1398" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
+			<hitTime>1200</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1846,11 +2120,20 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="16516" level="3" /> <!-- Party Archer Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="5298" level="1" /> <!-- Power Shot -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1870,17 +2153,19 @@
 		<equipment rhand="10004" />
 		<acquire exp="731391144" sp="731385" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
-			<attack physical="186172.192760285" magical="20994.6040936824" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2253.28147788041" magical="1306.15375761695" />
+			<vitals hp="946008" hpRegen="11.4" mp="24690" mpRegen="30" />
+			<attack physical="647205" magical="79194" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3452" magical="1398" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1889,12 +2174,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="3" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5273" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1914,17 +2208,19 @@
 		<acquire exp="731391144" sp="731385" />
 		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="946008.092485549" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
-			<attack physical="186172.387098235" magical="20994.6823938359" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2253.10736033184" magical="1306.15375761695" />
+			<vitals hp="946008" hpRegen="11.4" mp="24690" mpRegen="30" />
+			<attack physical="647205" magical="79194" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4832" magical="1957" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
+			<hitTime>600</hitTime>
 			<attribute>
+				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
 				<attack type="DARK" value="400" />
-				<defence fire="400" water="400" wind="400" earth="400" holy="350" dark="400" />
 			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1933,12 +2229,21 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="16514" level="3" /> <!-- Party Fighter Monster -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5273" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1960,26 +2265,34 @@
 		<sex>MALE</sex>
 		<mpReward value="78" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="15841.7282909073" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="18" />
 				<run ground="190" />
 			</speed>
-			<attack physical="9309.49639606959" magical="991.122050317562" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="526.063829787234" magical="305.104978582965" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="400" />
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14033" level="1" /> <!-- Vital Spot Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2001,26 +2314,34 @@
 		<sex>MALE</sex>
 		<mpReward value="92" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356248.833567932" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.700347194163" magical="304.76927121016" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="65164.108953835" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="526.063829787234" magical="305.104978582965" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="400" />
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14037" level="1" /> <!-- Front Foot Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2044,26 +2365,34 @@
 		<sex>MALE</sex>
 		<mpReward value="78" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15685.549132948" hpRegen="8.5" mp="2280.52805280528" mpRegen="3" />
+			<vitals hp="15685.4987841718" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<attack physical="6133.84931619787" magical="1082.67036126497" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
 			<speed>
 				<walk ground="18" />
 				<run ground="190" />
 			</speed>
-			<attack physical="8465.05177072622" magical="906.440029526151" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="505.376344086022" magical="290.287093225452" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14032" level="1" /> <!-- Red Net -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2086,28 +2415,34 @@
 		<sex>MALE</sex>
 		<mpReward value="99" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="355923.121387283" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="355923.798767211" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="42936.9452133851" magical="7578.69252885478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762009" magical="290.083779855" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="59253.1226497084" magical="6344.35246364684" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="505.376344086022" magical="290.287093225452" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14036" level="1" /> <!-- Vulnerability Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2130,31 +2465,36 @@
 		<acquire exp="17968775" sp="16155" />
 		<mpReward value="86" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="29612.1387283237" hpRegen="8.5" mp="2227.06270627063" mpRegen="3" />
+			<vitals hp="14806.6982893791" hpRegen="8.5" mp="2205.8" mpRegen="3" />
+			<attack physical="5574.2816024306" magical="986.874609959272" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="388.532688972703" magical="248.495325991196" />
 			<speed>
 				<walk ground="30" />
 				<run ground="100" />
 			</speed>
-			<attack physical="7692.79048977716" magical="828.083276257366" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="388.833992094862" magical="248.503111180683" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="14266" level="1" /> <!-- Yoke -->
 			<skill id="14650" level="1" /> <!-- Corpse' Blow -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2167,17 +2507,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="313" max="730" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="313" max="730" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2196,31 +2547,36 @@
 		<acquire exp="20375743" sp="18321" />
 		<mpReward value="94" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="29612.1387283237" hpRegen="8.5" mp="2227.06270627063" mpRegen="3" />
+			<vitals hp="14806.6982893791" hpRegen="8.5" mp="2205.8" mpRegen="3" />
+			<attack physical="5574.2816024306" magical="986.874609959272" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="388.532688972703" magical="248.495325991196" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<attack physical="7784.88691618934" magical="828.039140063131" critical="4" attackSpeed="253" range="40" type="DUAL" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="388.96873877111" magical="248.740289048668" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="19" /> <!-- Dual Swords -->
 			<skill id="14042" level="6" /> <!-- Disarm -->
 			<skill id="14061" level="1" /> <!-- Frontal Brandish -->
 			<skill id="14661" level="1" /> <!-- Darkness Wave -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2233,17 +2589,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="313" max="730" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="313" max="730" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2262,31 +2629,36 @@
 		<acquire exp="30688610" sp="27617" />
 		<mpReward value="126" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="59224.2774566474" hpRegen="8.5" mp="2227.06270627063" mpRegen="3" />
+			<vitals hp="14806.6982893791" hpRegen="8.5" mp="2205.8" mpRegen="3" />
+			<attack physical="5574.2816024306" magical="986.874609959272" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="485.665861215878" magical="276.105917767995" />
 			<speed>
 				<walk ground="20" />
 				<run ground="90" />
 			</speed>
-			<attack physical="7692.58020273998" magical="828.083276257366" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="485.98634567014" magical="276.312216201857" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="14652" level="1" /> <!-- Blood Siphon -->
 			<skill id="14660" level="1" /> <!-- Blood Strike -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2299,17 +2671,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="313" max="730" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="313" max="730" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2328,31 +2711,36 @@
 		<acquire exp="32942132" sp="29584" />
 		<mpReward value="134" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="59560.1156069364" hpRegen="8.5" mp="2264.68646864686" mpRegen="3" />
+			<vitals hp="14890.0775601929" hpRegen="8.5" mp="2242.8" mpRegen="3" />
+			<attack physical="5845.53506617802" magical="1033.01266087889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="495.379178440196" magical="283.008565712195" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<attack physical="8066.96885663762" magical="865.774502099058" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="495.421040875586" magical="283.01956389502" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="1676" level="1" /> <!-- Crazy After-effect -->
 			<skill id="14650" level="1" /> <!-- Corpse' Blow -->
 			<skill id="14656" level="1" /> <!-- Corpse Lunacy -->
 			<skill id="14664" level="1" /> <!-- Destruction Blow -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2365,17 +2753,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="319" max="745" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="319" max="745" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2396,32 +2795,37 @@
 		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->
 		<mpReward value="96" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="29779.7687861272" hpRegen="8.5" mp="2264.68646864686" mpRegen="3" />
+			<vitals hp="14890.0775601929" hpRegen="8.5" mp="2242.8" mpRegen="3" />
+			<attack physical="5845.53506617802" magical="1033.01266087889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="396.303342752157" magical="254.707709140976" />
 			<speed>
-				<walk ground="42" />
+				<walk ground="42.5" />
 				<run ground="180" />
 			</speed>
-			<attack physical="8163.708868547" magical="865.774502099058" critical="4" attackSpeed="253" range="80" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="396.667344035765" magical="254.767491491164" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="14508" level="1" /> <!-- Chains of Yoke -->
 			<skill id="14654" level="1" /> <!-- Darkness Drain -->
 			<skill id="14655" level="1" /> <!-- Barrier of Reflection -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2434,21 +2838,32 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="319" max="745" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="319" max="745" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23152" level="20" type="Monster" name="Eyesaroch">
+	<npc id="23152" level="10" type="Monster" name="Eyesaroch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2460,33 +2875,55 @@
 		<sex>MALE</sex>
 		<acquire exp="20" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="326.813880126183" hpRegen="2" mp="217.35604217356" mpRegen="0.9" />
+			<vitals hp="163.28607" hpRegen="2" mp="108.4" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="61.82527" magical="45.24105" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="53.8720538720539" magical="28.2144742444469" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="125.252525252525" magical="91.7528898064178" />
+			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4158" level="1" /> <!-- Prominence -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4158" level="1" /> <!-- Prominence -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="1061" min="1" max="1" chance="1.2314" /> <!-- Greater HP Replenishing Potion -->
+				<group chance="70">
+					<item id="57" min="9" max="21" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 		<collision>
@@ -2506,25 +2943,31 @@
 			<skill name="Skill04_ID" id="4582" level="6" />
 			<skill name="Skill05_ID" id="5259" level="5" />
 		</parameters>
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="5119" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4410.09463722398" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<attack physical="526.101745045844" magical="213.078714928697" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="204.968944099379" magical="165.459644511739" />
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="4036" level="1" /> <!-- Poison -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2534,17 +2977,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2560,25 +3014,31 @@
 			<skill name="Skill04_ID" id="4036" level="5" />
 			<skill name="Skill05_ID" id="5259" level="5" />
 		</parameters>
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="4903" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4410.09463722398" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<attack physical="526.101745045844" magical="213.078714928697" critical="1" attackSpeed="253" range="40" />
-			<defence physical="204.968944099379" magical="165.459644511739" />
+			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2588,17 +3048,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2614,26 +3085,31 @@
 			<skill name="Skill04_ID" id="4592" level="5" />
 			<skill name="Skill05_ID" id="4580" level="6" />
 		</parameters>
-		<race>ETC</race>
+		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="5578" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4410.09463722398" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="27" />
 				<run ground="174" />
 			</speed>
-			<attack physical="436.610211094747" magical="258.00905098395" critical="4" attackSpeed="253" range="40" />
-			<defence physical="300" magical="199.645521476975" />
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2643,17 +3119,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2674,22 +3161,27 @@
 		<acquire exp="5578" sp="2" />
 		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4410.09463722398" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
 			</speed>
-			<attack physical="436.610211094747" magical="258.00905098395" critical="1" attackSpeed="253" range="40" />
-			<defence physical="300" magical="199.645521476975" />
+			<hitTime>580</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2699,17 +3191,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2730,23 +3233,27 @@
 		<acquire exp="5102" sp="2" />
 		<equipment rhand="4028" /> <!-- Giant Cannon -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4410.09463722398" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="390.372212406111" magical="377.3683783083" critical="8" attackSpeed="253" range="1100" />
-			<defence physical="298.066595059076" magical="157.941210191003" />
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4036" level="1" /> <!-- Poison -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2756,17 +3263,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2787,21 +3305,27 @@
 		<acquire exp="6113" sp="2" />
 		<equipment rhand="3938" /> <!-- Monster Only (Lesser Giant Wizard's Weapon) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5880.1261829653" hpRegen="6.5" mp="782.64395782644" mpRegen="2.4" />
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
 			</speed>
-			<attack physical="526.101745045844" magical="213.078714928697" critical="1" attackSpeed="253" range="40" />
-			<defence physical="204.968944099379" magical="165.459644511739" />
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="4158" level="1" /> <!-- Prominence -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2811,17 +3335,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="62" max="146" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<group chance="70">
+					<item id="57" min="62" max="146" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="20">
+					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
+					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="33">
+					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="0.7">
+					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
+				</group>
+				<group chance="0.7">
+					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
+				</group>
+				<group chance="0.1">
+					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Recovering Potion - Grizzly -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2834,19 +3369,27 @@
 		<sex>MALE</sex>
 		<acquire exp="141990" sp="34" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1400000" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="1400000" hpRegen="1" mp="610.8" mpRegen="2.1" />
+			<attack physical="667.348949019213" magical="142.928040387499" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="533.36238" magical="130.09715" />
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
 			</speed>
-			<attack physical="921.019900497512" magical="140.62346539296" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="533.582089552239" magical="130.127949062474" />
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14274" level="1" /> <!-- Mechanic Shot -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -2856,7 +3399,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="405" max="953" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="48" max="113" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2876,29 +3421,34 @@
 		<sex>MALE</sex>
 		<acquire exp="1463563" sp="352" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="938531.791907514" hpRegen="8.5" mp="21537.2937293729" mpRegen="3" />
+			<vitals hp="312844.449201519" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<attack physical="35459.9874241795" magical="6296.76383568414" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="466.806863913762" magical="262.801587405588" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<attack physical="48935.0519726682" magical="5295.0688213131" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.826406676031" magical="262.863449182081" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14081" level="1" /> <!-- Garden Judgment -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2911,7 +3461,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="237" max="553" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="237" max="553" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2926,29 +3478,34 @@
 		<sex>MALE</sex>
 		<acquire exp="57631" sp="14" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="28426.0115606936" hpRegen="8.5" mp="3175.57755775578" mpRegen="3" />
+			<vitals hp="14213.315791308" hpRegen="8.5" mp="3144" mpRegen="3" />
+			<attack physical="4830.82624752625" magical="261.823763291887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="320.357651705523" magical="307.670151108981" />
 			<speed>
 				<walk ground="13" />
 				<run ground="120" />
 			</speed>
-			<attack physical="6666.56535039797" magical="220.472102424285" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="320.69123083953" magical="307.715352147972" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="6610" level="1" /> <!-- Earth Magic -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2961,7 +3518,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="234" max="547" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="234" max="547" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
@@ -2991,7 +3550,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3030,7 +3588,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3069,7 +3626,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3107,7 +3663,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="156" max="363" chance="70" /> <!-- Adena -->
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3146,7 +3701,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3185,7 +3739,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3224,7 +3777,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3263,7 +3815,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3302,7 +3853,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3341,7 +3891,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3380,7 +3929,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3419,7 +3967,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3458,7 +4005,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3497,7 +4043,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3536,7 +4081,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3575,7 +4119,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3614,7 +4157,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3653,7 +4195,6 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3683,26 +4224,34 @@
 		<sex>MALE</sex>
 		<acquire exp="12663061" sp="3040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="627960.115606936" hpRegen="8.5" mp="22652.1452145215" mpRegen="3" />
+			<vitals hp="627960" hpRegen="8.5" mp="22428" mpRegen="30" />
+			<attack physical="65652.4903459599" magical="18614.9328177446" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="277.41" magical="158.48" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<attack physical="90600.4447739066" magical="15600.4769693884" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="332.972972972973" magical="138.063160017529" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<attack type="DARK" value="330" />
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="300" />
 			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" noSleepMode="true" />
 		<skillList>
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -3711,7 +4260,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="252" max="589" chance="70" /> <!-- Adena -->
+				<group chance="70">
+					<item id="57" min="252" max="589" chance="100" /> <!-- Adena -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>

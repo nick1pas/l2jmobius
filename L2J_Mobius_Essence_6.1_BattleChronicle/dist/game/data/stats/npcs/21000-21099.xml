@@ -63,13 +63,13 @@
 					<item id="92744" min="1" max="1" chance="90.9091" /> <!-- Full Plate Shield Fragment -->
 				</group>
 				<group chance="1.9233">
-					<item id="92908" min="1" max="1" chance="49.253" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="9.8506" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="4.9253" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.6418" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.9851" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.4925" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0164" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="49.253" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="9.8506" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="4.9253" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.6418" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.9851" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.4925" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0164" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="2508" min="1" max="1" chance="32.8353" /> <!-- Cursed Bone -->
 				</group>
 			</drop>
@@ -121,6 +121,7 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4120" level="5" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -147,26 +148,26 @@
 					<item id="92695" min="1" max="1" chance="42.8903" /> <!-- Ring of Seal Gemstone -->
 				</group>
 				<group chance="2.5046">
-					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9989" /> <!-- Cursed Bone -->
 				</group>
 			</drop>
 			<spoil>
 				<item id="4937" min="1" max="1" chance="0.0046" /> <!-- Recipe: Adamantite Earring (70%) -->
 				<item id="4126" min="1" max="1" chance="0.0032" /> <!-- Recipe: Adamantite Earring (100%) -->
-				<item id="92996" min="1" max="1" chance="7.3254" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="1.4651" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.1465" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="7.3254" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="1.4651" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.1465" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -211,6 +212,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -230,24 +232,24 @@
 					<item id="92687" min="1" max="1" chance="3.4938" /> <!-- Samurai Long Sword Blade -->
 				</group>
 				<group chance="3.5357">
-					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9989" /> <!-- Cursed Bone -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="17.2356" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="3.4471" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.3447" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="17.2356" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="3.4471" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.3447" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -294,6 +296,9 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4002" level="5" /> <!-- NPC HP Drain -->
+			<skill id="4035" level="5" /> <!-- Poison -->
+			<skill id="4046" level="5" /> <!-- Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -312,13 +317,13 @@
 					<item id="57" min="134" max="313" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="6.557">
-					<item id="92908" min="1" max="1" chance="73.3317" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.6663" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3332" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4444" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4666" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.7333" /> <!-- Material: Unknown Metal -->
-					<item id="92917" min="1" max="1" chance="0.0245" /> <!-- Material: Metal Ingot -->
+					<item id="92908" min="1" max="1" chance="73.3317" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.6663" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3332" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4444" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4666" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.7333" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92917" min="1" max="1" chance="0.0245" /> <!-- Material: Metal Ingot - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -364,6 +369,7 @@
 			<skill id="4277" level="5" /> <!-- Infection Resistance -->
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4028" level="3" /> <!-- NPC Might -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -377,18 +383,18 @@
 					<item id="57" min="141" max="330" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="6.4599">
-					<item id="92908" min="1" max="1" chance="34.2208" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="6.8442" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.4221" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.1407" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.6844" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3422" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1141" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.0068" /> <!-- Material: Blacksmith's Power -->
-					<item id="3031" min="1" max="1" chance="8.5552" /> <!-- Spirit Ore -->
-					<item id="92996" min="1" max="1" chance="34.2208" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="6.8442" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.4221" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="34.2208" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="6.8442" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.4221" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.1407" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.6844" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3422" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1141" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.0068" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="3031" min="1" max="1" chance="8.5552" /> <!-- Spirit Ore - Sealed -->
+					<item id="92996" min="1" max="1" chance="34.2208" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="6.8442" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.4221" /> <!-- Shining Resources - Sealed -->
 					<!-- <item id="49428" min="1" max="1" chance="0.0228" /> Spellbook: Aegis - Not Available -->
 					<!-- <item id="3118" min="1" max="1" chance="0.0684" /> Amulet: Chant of Death Whisper - Not Available -->
 					<!-- <item id="6398" min="1" max="1" chance="0.0228" /> Spellbook: Body of Avatar - Not Available -->
@@ -396,9 +402,9 @@
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="19.1588" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="3.8318" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.3832" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="19.1588" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="3.8318" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.3832" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -442,6 +448,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -463,25 +470,25 @@
 					<item id="92568" min="1" max="1" chance="53.1446" /> <!-- Mithril Gauntlet Design -->
 				</group>
 				<group chance="3.5895">
-					<item id="92908" min="1" max="1" chance="37.4972" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4994" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7497" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2499" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7499" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.375" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.125" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.0075" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="37.4972" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4994" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7498" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="37.4972" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4994" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7497" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2499" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7499" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.375" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.125" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.0075" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.4972" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4994" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7498" /> <!-- Shining Resources - Sealed -->
 				</group>
 			</drop>
 			<spoil>
 				<item id="4939" min="1" max="1" chance="0.004" /> <!-- Recipe: Adamantite Necklace (70%) -->
 				<item id="4128" min="1" max="1" chance="0.0028" /> <!-- Recipe: Adamantite Necklace (100%) -->
-				<item id="92996" min="1" max="1" chance="8.4243" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="1.6849" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.1685" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="8.4243" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="1.6849" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.1685" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -528,6 +535,9 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4100" level="6" /> <!-- NPC Prominence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -545,25 +555,25 @@
 					<item id="855" min="1" max="1" chance="9.0909" /> <!-- Nassen's Earring -->
 				</group>
 				<group chance="4.824">
-					<item id="92908" min="1" max="1" chance="29.9897" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9979" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.999" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9997" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5998" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.2999" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.9897" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9979" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.999" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.9897" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9979" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.999" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9997" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5998" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.2999" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.9897" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9979" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.999" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9931" /> <!-- Cursed Bone -->
 					<item id="2170" min="1" max="1" chance="0.0283" /> <!-- Recipe: Nassen's Earring (100%) -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="17.8354" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="3.5671" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.3567" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="17.8354" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="3.5671" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.3567" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -607,6 +617,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4036" level="6" /> <!-- Poison -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -629,24 +640,24 @@
 					<item id="92577" min="1" max="1" chance="30.0045" /> <!-- Mithril Helmet Design -->
 				</group>
 				<group chance="5.4461">
-					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.9982" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9996" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9998" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9999" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.6" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.9982" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9996" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.9998" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9989" /> <!-- Cursed Bone -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="18.5918" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="3.7184" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.3718" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="18.5918" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="3.7184" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.3718" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -692,6 +703,7 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4120" level="6" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -710,18 +722,18 @@
 					<item id="57" min="205" max="480" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="11.5358">
-					<item id="92908" min="1" max="1" chance="27.8889" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.5778" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.7889" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9296" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5578" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.2789" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.093" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.0056" /> <!-- Material: Blacksmith's Power -->
-					<item id="3031" min="1" max="1" chance="6.9722" /> <!-- Spirit Ore -->
-					<item id="92996" min="1" max="1" chance="27.8889" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.5778" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.7889" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="27.8889" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.5778" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.7889" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9296" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5578" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.2789" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.093" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.0056" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="3031" min="1" max="1" chance="6.9722" /> <!-- Spirit Ore - Sealed -->
+					<item id="92996" min="1" max="1" chance="27.8889" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.5778" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.7889" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="18.5926" /> <!-- Cursed Bone -->
 					<item id="2223" min="1" max="1" chance="0.0432" /> <!-- Recipe: Tower Shield (100%) -->
 					<item id="2229" min="1" max="1" chance="0.0135" /> <!-- Recipe: Theca Leather Armor (100%) -->
@@ -731,9 +743,9 @@
 			<spoil>
 				<item id="4939" min="1" max="1" chance="0.0055" /> <!-- Recipe: Adamantite Necklace (70%) -->
 				<item id="4127" min="1" max="1" chance="0.0077" /> <!-- Recipe: Adamantite Ring (100%) -->
-				<item id="92996" min="1" max="1" chance="11.7158" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="2.3432" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.2343" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="11.7158" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="2.3432" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.2343" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -780,6 +792,9 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4244" level="6" /> <!-- NPC Wild Sweep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -798,17 +813,17 @@
 					<item id="57" min="213" max="498" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="10.4895">
-					<item id="92908" min="1" max="1" chance="29.9889" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9978" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9989" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9996" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5998" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.2999" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.9889" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9978" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.9989" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.9889" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9978" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9989" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9996" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5998" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.2999" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.9889" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9978" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.9989" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9926" /> <!-- Cursed Bone -->
 					<item id="2353" min="1" max="1" chance="0.002" /> <!-- Recipe: Samurai Long Sword (100%) -->
 					<item id="2355" min="1" max="1" chance="0.002" /> <!-- Recipe: Ghoul's Staff (100%) -->
@@ -818,9 +833,9 @@
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="20.2855" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="4.0571" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.4057" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="20.2855" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="4.0571" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.4057" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -866,6 +881,7 @@
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -884,21 +900,21 @@
 					<item id="57" min="221" max="516" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.0009">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure -->
+					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
+					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="4.9233">
-					<item id="92908" min="1" max="1" chance="29.968" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9936" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9968" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9989" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5994" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.2997" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.0999" /> <!-- Material: Sack Shreds -->
-					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power -->
-					<item id="92996" min="1" max="1" chance="29.968" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="5.9936" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="2.9968" /> <!-- Shining Resources -->
+					<item id="92908" min="1" max="1" chance="29.968" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9936" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9968" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9989" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5994" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.2997" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.0999" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92918" min="1" max="1" chance="0.006" /> <!-- Material: Blacksmith's Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="29.968" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="5.9936" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="2.9968" /> <!-- Shining Resources - Sealed -->
 					<item id="2508" min="1" max="1" chance="19.9787" /> <!-- Cursed Bone -->
 					<item id="2226" min="1" max="1" chance="0.0489" /> <!-- Recipe: Mithril Gauntlets (100%) -->
 					<item id="3009" min="1" max="1" chance="0.0489" /> <!-- Recipe: Compound Boots (100%) -->
@@ -906,9 +922,9 @@
 				</group>
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="20.9879" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="4.1976" /> <!-- Unknown Resources -->
-				<item id="92999" min="1" max="1" chance="0.4198" /> <!-- High-grade Resources -->
+				<item id="92996" min="1" max="1" chance="20.9879" /> <!-- Old Resources - Sealed -->
+				<item id="92997" min="1" max="1" chance="4.1976" /> <!-- Unknown Resources - Sealed -->
+				<item id="92999" min="1" max="1" chance="0.4198" /> <!-- High-grade Resources - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -971,11 +987,11 @@
 					<item id="627" min="1" max="1" chance="58.8235" /> <!-- Aspis -->
 				</group>
 				<group chance="0.1489">
-					<item id="92908" min="1" max="1" chance="74.4193" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.8839" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4419" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4806" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1488" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.4193" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.8839" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4419" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4806" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1488" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2184" min="1" max="1" chance="0.6255" /> <!-- Recipe: Mithril Banded Gaiters -->
 				</group>
 			</drop>
@@ -1022,6 +1038,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4088" level="3" /> <!-- Bleed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1045,11 +1062,11 @@
 					<item id="92599" min="1" max="1" chance="60" /> <!-- Elven Bow Shaft -->
 				</group>
 				<group chance="0.1517">
-					<item id="92908" min="1" max="1" chance="74.8413" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9683" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4841" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4947" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.8413" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9683" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4841" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4947" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2266" min="1" max="1" chance="0.0619" /> <!-- Recipe: Shillien Knife (100%) -->
 				</group>
 			</drop>
@@ -1097,6 +1114,7 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4040" level="3" /> <!-- NPC Bow Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1121,11 +1139,11 @@
 					<item id="92487" min="1" max="1" chance="40.9082" /> <!-- Necklace  of Magic Chain -->
 				</group>
 				<group chance="0.1526">
-					<item id="92908" min="1" max="1" chance="74.8413" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9683" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4841" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4947" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.8413" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9683" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4841" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4947" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2265" min="1" max="1" chance="0.0619" /> <!-- Recipe: Spiked Club -->
 				</group>
 			</drop>
@@ -1174,6 +1192,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4067" level="3" /> <!-- NPC Mortal Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1197,11 +1216,11 @@
 					<item id="92605" min="1" max="1" chance="60" /> <!-- Tome of Blood Page -->
 				</group>
 				<group chance="0.1604">
-					<item id="92908" min="1" max="1" chance="74.2918" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.8584" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4292" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4764" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.1486" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="74.2918" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.8584" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4292" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4764" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.1486" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2977" min="1" max="1" chance="0.7956" /> <!-- Recipe: Brigandine Boots (100%) -->
 				</group>
 			</drop>
@@ -1250,6 +1269,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
+			<skill id="4032" level="3" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1276,11 +1296,11 @@
 					<item id="144" min="1" max="1" chance="15.5216" /> <!-- Sword of Occult -->
 				</group>
 				<group chance="0.4881">
-					<item id="92908" min="1" max="1" chance="21.4071" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.2814" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.1407" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.7136" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.0428" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="21.4071" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.2814" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.1407" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.7136" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0428" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2186" min="1" max="1" chance="0.0573" /> <!-- Recipe: Brigandine (100%) -->
 					<item id="1341" min="10" max="30" chance="71.3571" /> <!-- Bone Arrow -->
 				</group>
@@ -1329,6 +1349,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4067" level="3" /> <!-- NPC Mortal Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1356,11 +1377,11 @@
 					<item id="379" min="1" max="1" chance="17.5204" /> <!-- Dwarven Scale Gaiters -->
 				</group>
 				<group chance="0.4976">
-					<item id="92908" min="1" max="1" chance="21.3704" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="4.2741" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.137" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.7123" /> <!-- Material: Leather Scraps -->
-					<item id="92915" min="1" max="1" chance="0.0427" /> <!-- Material: Bag of Low-grade Stuff -->
+					<item id="92908" min="1" max="1" chance="21.3704" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="4.2741" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.137" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.7123" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0427" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 					<item id="2191" min="1" max="1" chance="0.2289" /> <!-- Recipe: Rip Gauntlets (100%) -->
 					<item id="1341" min="10" max="30" chance="71.2346" /> <!-- Bone Arrow -->
 				</group>
@@ -1426,20 +1447,20 @@
 					<item id="92756" min="1" max="1" chance="95.4545" /> <!-- Zubei's Gaiters Material -->
 				</group>
 				<group chance="4.8655">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1486,6 +1507,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4071" level="3" /> <!-- Bow Resistance -->
+			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1508,20 +1530,20 @@
 					<item id="92759" min="1" max="1" chance="95.4545" /> <!-- Zubei's Leather Shirt Fabric -->
 				</group>
 				<group chance="5.011">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1569,6 +1591,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4071" level="3" /> <!-- Bow Resistance -->
+			<skill id="4040" level="5" /> <!-- NPC Bow Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1591,20 +1614,20 @@
 					<item id="92760" min="1" max="1" chance="95.4545" /> <!-- Zubei's Leather Gaiters Texture -->
 				</group>
 				<group chance="6.0691">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1654,6 +1677,9 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
+			<skill id="4035" level="5" /> <!-- Poison -->
+			<skill id="4066" level="5" /> <!-- NPC Twister -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1676,20 +1702,20 @@
 					<item id="92762" min="1" max="1" chance="95.4545" /> <!-- Zubei's Tunic Fabric -->
 				</group>
 				<group chance="6.2721">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1737,6 +1763,7 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4073" level="5" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1789,6 +1816,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1811,20 +1839,20 @@
 					<item id="92763" min="1" max="1" chance="95.4545" /> <!-- Zubei's Stockings Fabric -->
 				</group>
 				<group chance="6.458">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -1871,6 +1899,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4046" level="2" /> <!-- Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1894,10 +1923,10 @@
 					<item id="178" min="1" max="1" chance="33.3334" /> <!-- Bone Staff -->
 				</group>
 				<group chance="0.2528">
-					<item id="92908" min="1" max="1" chance="41.199" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="8.2398" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="4.1199" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.1373" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="41.199" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="8.2398" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="4.1199" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1373" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2178" min="1" max="1" chance="0.5273" /> <!-- Recipe: Dark Stockings (100%) -->
 					<item id="1834" min="1" max="1" chance="45.7767" /> <!-- Emergency Dressing -->
 				</group>
@@ -1947,6 +1976,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4151" level="2" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1968,10 +1999,10 @@
 					<item id="220" min="1" max="1" chance="100" /> <!-- Crafted Dagger -->
 				</group>
 				<group chance="0.1673">
-					<item id="92908" min="1" max="1" chance="76.1651" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.233" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6165" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2539" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.1651" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.233" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6165" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2539" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2182" min="1" max="1" chance="0.7315" /> <!-- Recipe: Scale Gaiters -->
 				</group>
 			</drop>
@@ -2021,6 +2052,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4001" level="2" /> <!-- NPC Windstrike -->
+			<skill id="4047" level="2" /> <!-- Hold -->
+			<skill id="4098" level="2" /> <!-- Silence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2043,10 +2077,10 @@
 					<item id="92594" min="1" max="1" chance="74.9999" /> <!-- Trident Edge -->
 				</group>
 				<group chance="0.1691">
-					<item id="92908" min="1" max="1" chance="75.9061" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.1812" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.5906" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.253" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="75.9061" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.1812" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.5906" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.253" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2152" min="1" max="1" chance="1.0691" /> <!-- Recipe: Necklace of Magic (100%) -->
 				</group>
 			</drop>
@@ -2092,6 +2126,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4001" level="2" /> <!-- NPC Windstrike -->
+			<skill id="4038" level="3" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4066" level="2" /> <!-- NPC Twister -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2115,10 +2152,10 @@
 					<item id="92599" min="1" max="1" chance="60" /> <!-- Elven Bow Shaft -->
 				</group>
 				<group chance="0.1711">
-					<item id="92908" min="1" max="1" chance="76.5399" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.308" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.654" /> <!-- Material: Rags -->
-					<item id="92914" min="1" max="1" chance="0.2551" /> <!-- Material: Sack Shreds -->
+					<item id="92908" min="1" max="1" chance="76.5399" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.308" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.654" /> <!-- Material: Rags - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.2551" /> <!-- Material: Sack Shreds - Sealed -->
 					<item id="2203" min="1" max="1" chance="0.243" /> <!-- Recipe: Reinforced Mithril Boots (100%) -->
 				</group>
 			</drop>
@@ -2170,6 +2207,9 @@
 			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4225" level="1" /> <!-- Shock Attack Resistance -->
+			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4599" level="3" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2232,6 +2272,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4072" level="4" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2257,12 +2299,12 @@
 					<item id="92644" min="1" max="1" chance="17.4212" /> <!-- Heavy Doom Axe Blade -->
 				</group>
 				<group chance="0.2977">
-					<item id="92908" min="1" max="1" chance="73.6121" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7224" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3612" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4537" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4722" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.6121" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7224" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3612" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4537" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4722" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0736" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="955" min="1" max="1" chance="0.2944" /> <!-- Scroll: Enchant D-grade Weapon -->
 					<item id="2318" min="1" max="1" chance="0.0104" /> <!-- Recipe: Spirit Sword (100%) -->
 				</group>
@@ -2325,6 +2367,9 @@
 			<skill id="4093" level="1" /> <!-- Evasion -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4033" level="4" /> <!-- NPC Burn -->
+			<skill id="4077" level="4" /> <!-- NPC Aura Burn -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2375,6 +2420,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4032" level="4" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2411,12 +2457,12 @@
 					<item id="2345" min="1" max="1" chance="1.4517" /> <!-- Recipe: Dark Screamer (100%) -->
 				</group>
 				<group chance="1.1333">
-					<item id="92908" min="1" max="1" chance="49.1066" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="9.8213" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="4.9107" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.6369" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.9821" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0491" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="49.1066" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="9.8213" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="4.9107" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.6369" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.9821" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0491" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="952" min="1" max="1" chance="0.6548" /> <!-- Scroll: Enchant C-grade Armor -->
 					<item id="2231" min="1" max="1" chance="0.0094" /> <!-- Recipe: Full Plate Armor (100%) -->
 					<item id="2508" min="1" max="1" chance="32.7377" /> <!-- Cursed Bone -->
@@ -2480,6 +2526,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4093" level="1" /> <!-- Evasion -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4154" level="4" /> <!-- NPC MP Drain - Magic -->
+			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2537,6 +2585,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4065" level="4" /> <!-- NPC Heal -->
+			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2564,12 +2614,12 @@
 					<item id="92564" min="1" max="1" chance="20.9485" /> <!-- Compound Armor Temper -->
 				</group>
 				<group chance="0.2659">
-					<item id="92908" min="1" max="1" chance="73.7962" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.7592" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.3796" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="2.4599" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="1.4759" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="73.7962" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.7592" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.3796" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="2.4599" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="1.4759" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0738" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="2317" min="1" max="1" chance="0.0103" /> <!-- Recipe: Bec de Corbin (100%) -->
 					<item id="2222" min="1" max="1" chance="0.0205" /> <!-- Recipe: Compound Armor (100%) -->
 					<item id="92629" min="1" max="1" chance="0.0246" /> <!-- Light Bow Shaft -->
@@ -2629,6 +2679,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4038" level="4" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4065" level="4" /> <!-- NPC Heal -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2653,12 +2705,12 @@
 					<item id="92572" min="1" max="1" chance="29.5697" /> <!-- Theca Leather Gaiter Fragment -->
 				</group>
 				<group chance="2.522">
-					<item id="92908" min="1" max="1" chance="29.8045" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.9609" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.9804" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="0.9935" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.5961" /> <!-- Material: Plain Fabric -->
-					<item id="92916" min="1" max="1" chance="0.0298" /> <!-- Material: Animal Spirit -->
+					<item id="92908" min="1" max="1" chance="29.8045" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.9609" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.9804" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="0.9935" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.5961" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92916" min="1" max="1" chance="0.0298" /> <!-- Material: Animal Spirit - Sealed -->
 					<item id="2230" min="1" max="1" chance="0.0231" /> <!-- Recipe: Theca Leather Gaiters (100%) -->
 					<item id="2342" min="1" max="1" chance="0.0028" /> <!-- Recipe: Club of Nature (100%) -->
 					<item id="1342" min="10" max="30" chance="59.6089" /> <!-- Steel Arrow -->
@@ -2711,6 +2763,7 @@
 			<skill id="4389" level="3" /> <!-- Fear Resistance -->
 			<skill id="4225" level="5" /> <!-- Shock Attack Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4072" level="6" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2738,20 +2791,20 @@
 					<item id="92770" min="1" max="1" chance="45.776" /> <!-- Doom Plate Armor Temper -->
 				</group>
 				<group chance="6.5439">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -2798,6 +2851,8 @@
 			<skill id="4389" level="3" /> <!-- Fear Resistance -->
 			<skill id="4225" level="5" /> <!-- Shock Attack Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4039" level="5" /> <!-- NPC MP Drain -->
+			<skill id="4097" level="5" /> <!-- NPC Chant of Life -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2825,20 +2880,20 @@
 					<item id="92753" min="1" max="1" chance="22.0554" /> <!-- Black Ore Necklace Beads -->
 				</group>
 				<group chance="6.5265">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -2885,6 +2940,8 @@
 			<skill id="4389" level="3" /> <!-- Fear Resistance -->
 			<skill id="4225" level="5" /> <!-- Shock Attack Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4065" level="5" /> <!-- NPC Heal -->
+			<skill id="4098" level="5" /> <!-- Silence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2912,20 +2969,20 @@
 					<item id="92753" min="1" max="1" chance="22.0554" /> <!-- Black Ore Necklace Beads -->
 				</group>
 				<group chance="6.5265">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons -->
+					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
+					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
+					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
+					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
+					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
+					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
+					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Old Resources - Sealed -->
+					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Unknown Resources - Sealed -->
+					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Shining Resources - Sealed -->
+					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- High-grade Resources - Sealed -->
+					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Thons - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -2972,6 +3029,9 @@
 			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3033,6 +3093,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4033" level="7" /> <!-- NPC Burn -->
+			<skill id="4073" level="7" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3092,6 +3155,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4047" level="7" /> <!-- Hold -->
+			<skill id="4066" level="7" /> <!-- NPC Twister -->
+			<skill id="4098" level="7" /> <!-- Silence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3150,6 +3216,7 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4040" level="7" /> <!-- NPC Bow Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3208,6 +3275,7 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4073" level="7" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3267,6 +3335,9 @@
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="5554" level="10" /> <!-- Silence Resistance -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4039" level="7" /> <!-- NPC MP Drain -->
+			<skill id="4100" level="7" /> <!-- NPC Prominence -->
+			<skill id="4118" level="7" /> <!-- Paralysis -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3328,6 +3399,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4032" level="7" /> <!-- NPC Strike -->
+			<skill id="4033" level="7" /> <!-- NPC Burn -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3386,6 +3460,8 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4046" level="7" /> <!-- Sleep -->
+			<skill id="4087" level="7" /> <!-- NPC Blaze -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3445,6 +3521,7 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4073" level="7" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3506,6 +3583,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4033" level="8" /> <!-- NPC Burn -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3564,6 +3644,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4066" level="8" /> <!-- NPC Twister -->
+			<skill id="4087" level="8" /> <!-- NPC Blaze -->
+			<skill id="4118" level="8" /> <!-- Paralysis -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3622,6 +3705,9 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4102" level="2" /> <!-- Surrender To Fire -->
+			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
+			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3675,6 +3761,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3732,6 +3819,8 @@
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4065" level="7" /> <!-- NPC Heal -->
+			<skill id="4087" level="7" /> <!-- NPC Blaze -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3791,6 +3880,7 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4073" level="6" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3846,6 +3936,7 @@
 			<skill id="4093" level="1" /> <!-- Evasion -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4073" level="6" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3903,6 +3994,8 @@
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4065" level="6" /> <!-- NPC Heal -->
+			<skill id="4118" level="6" /> <!-- Paralysis -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3965,6 +4058,7 @@
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4072" level="7" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4022,6 +4116,7 @@
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4077" level="6" /> <!-- NPC Aura Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4077,6 +4172,8 @@
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4065" level="6" /> <!-- NPC Heal -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4136,6 +4233,7 @@
 			<skill id="4093" level="1" /> <!-- Evasion -->
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4118" level="8" /> <!-- Paralysis -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4192,6 +4290,7 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4461" level="2" /> <!-- Dagger Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4032" level="7" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4246,6 +4345,8 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4065" level="7" /> <!-- NPC Heal -->
+			<skill id="4098" level="7" /> <!-- Silence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4307,6 +4408,8 @@
 			<skill id="5601" level="1" /> <!-- Melee Attack Resistance -->
 			<skill id="5599" level="10" /> <!-- Shock Resistance -->
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4336,18 +4439,18 @@
 					<item id="94365" min="1" max="1" chance="5.9316" /> <!-- Master's Book: Wind Walk -->
 				</group>
 				<group chance="3.8427">
-					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit -->
-					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot -->
+					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="94184" min="1" max="1" chance="0.1989" /> <!-- Scroll of Blessing -->
-					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons -->
-					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe -->
+					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons - Sealed -->
+					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe - Sealed -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92999" min="1" max="1" chance="30.4482" /> <!-- High-grade Resources -->
-				<item id="92995" min="1" max="1" chance="15.2241" /> <!-- Thons -->
-				<item id="92994" min="1" max="1" chance="1.5224" /> <!-- Asofe -->
+				<item id="92999" min="1" max="1" chance="30.4482" /> <!-- High-grade Resources - Sealed -->
+				<item id="92995" min="1" max="1" chance="15.2241" /> <!-- Thons - Sealed -->
+				<item id="92994" min="1" max="1" chance="1.5224" /> <!-- Asofe - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4399,6 +4502,7 @@
 			<skill id="5601" level="1" /> <!-- Melee Attack Resistance -->
 			<skill id="5599" level="10" /> <!-- Shock Resistance -->
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
+			<skill id="4141" level="7" /> <!-- NPC Wind Fist -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4425,18 +4529,18 @@
 					<item id="94365" min="1" max="1" chance="8.7456" /> <!-- Master's Book: Wind Walk -->
 				</group>
 				<group chance="3.4303">
-					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit -->
-					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot -->
+					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="94184" min="1" max="1" chance="0.1989" /> <!-- Scroll of Blessing -->
-					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons -->
-					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe -->
+					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons - Sealed -->
+					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe - Sealed -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92999" min="1" max="1" chance="27.1808" /> <!-- High-grade Resources -->
-				<item id="92995" min="1" max="1" chance="13.5904" /> <!-- Thons -->
-				<item id="92994" min="1" max="1" chance="1.359" /> <!-- Asofe -->
+				<item id="92999" min="1" max="1" chance="27.1808" /> <!-- High-grade Resources - Sealed -->
+				<item id="92995" min="1" max="1" chance="13.5904" /> <!-- Thons - Sealed -->
+				<item id="92994" min="1" max="1" chance="1.359" /> <!-- Asofe - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4485,6 +4589,8 @@
 			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="5599" level="10" /> <!-- Shock Resistance -->
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
+			<skill id="4157" level="7" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4515,18 +4621,18 @@
 					<item id="94365" min="1" max="1" chance="8.7456" /> <!-- Master's Book: Wind Walk -->
 				</group>
 				<group chance="3.4303">
-					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit -->
-					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot -->
+					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="94184" min="1" max="1" chance="0.1989" /> <!-- Scroll of Blessing -->
-					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons -->
-					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe -->
+					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons - Sealed -->
+					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe - Sealed -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92999" min="1" max="1" chance="27.1808" /> <!-- High-grade Resources -->
-				<item id="92995" min="1" max="1" chance="13.5904" /> <!-- Thons -->
-				<item id="92994" min="1" max="1" chance="1.359" /> <!-- Asofe -->
+				<item id="92999" min="1" max="1" chance="27.1808" /> <!-- High-grade Resources - Sealed -->
+				<item id="92995" min="1" max="1" chance="13.5904" /> <!-- Thons - Sealed -->
+				<item id="92994" min="1" max="1" chance="1.359" /> <!-- Asofe - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4579,6 +4685,7 @@
 			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="5599" level="10" /> <!-- Shock Resistance -->
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4611,18 +4718,18 @@
 					<item id="94365" min="1" max="1" chance="6.6442" /> <!-- Master's Book: Wind Walk -->
 				</group>
 				<group chance="3.8427">
-					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit -->
-					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot -->
+					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="94184" min="1" max="1" chance="0.1989" /> <!-- Scroll of Blessing -->
-					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons -->
-					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe -->
+					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons - Sealed -->
+					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe - Sealed -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92999" min="1" max="1" chance="30.4482" /> <!-- High-grade Resources -->
-				<item id="92995" min="1" max="1" chance="15.2241" /> <!-- Thons -->
-				<item id="92994" min="1" max="1" chance="1.5224" /> <!-- Asofe -->
+				<item id="92999" min="1" max="1" chance="30.4482" /> <!-- High-grade Resources - Sealed -->
+				<item id="92995" min="1" max="1" chance="15.2241" /> <!-- Thons - Sealed -->
+				<item id="92994" min="1" max="1" chance="1.5224" /> <!-- Asofe - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4666,6 +4773,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
+			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4729,6 +4838,7 @@
 			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="5599" level="10" /> <!-- Shock Resistance -->
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4757,18 +4867,18 @@
 					<item id="94365" min="1" max="1" chance="5.0116" /> <!-- Master's Book: Wind Walk -->
 				</group>
 				<group chance="3.6199">
-					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff -->
-					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit -->
-					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot -->
+					<item id="92915" min="1" max="1" chance="13.9257" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+					<item id="92916" min="1" max="1" chance="6.9629" /> <!-- Material: Animal Spirit - Sealed -->
+					<item id="92917" min="1" max="1" chance="2.321" /> <!-- Material: Metal Ingot - Sealed -->
 					<item id="94184" min="1" max="1" chance="0.1989" /> <!-- Scroll of Blessing -->
-					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons -->
-					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe -->
+					<item id="92995" min="1" max="1" chance="69.6286" /> <!-- Thons - Sealed -->
+					<item id="92994" min="1" max="1" chance="6.9629" /> <!-- Asofe - Sealed -->
 				</group>
 			</drop>
 			<spoil>
-				<item id="92999" min="1" max="1" chance="28.6834" /> <!-- High-grade Resources -->
-				<item id="92995" min="1" max="1" chance="14.3417" /> <!-- Thons -->
-				<item id="92994" min="1" max="1" chance="1.4342" /> <!-- Asofe -->
+				<item id="92999" min="1" max="1" chance="28.6834" /> <!-- High-grade Resources - Sealed -->
+				<item id="92995" min="1" max="1" chance="14.3417" /> <!-- Thons - Sealed -->
+				<item id="92994" min="1" max="1" chance="1.4342" /> <!-- Asofe - Sealed -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4817,6 +4927,9 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4117" level="8" /> <!-- Paralysis -->
+			<skill id="4152" level="8" /> <!-- NPC HP Drain - Magic -->
+			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4871,6 +4984,7 @@
 			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4032" level="7" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4928,6 +5042,8 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4065" level="7" /> <!-- NPC Heal -->
+			<skill id="4098" level="7" /> <!-- Silence -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4998,9 +5114,9 @@
 					<item id="121" min="1" max="1" chance="25" /> <!-- Sword of Watershadow -->
 				</group>
 				<group chance="0.1881">
-					<item id="92908" min="1" max="1" chance="74.6157" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9231" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4616" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="74.6157" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9231" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4616" /> <!-- Material: Rags - Sealed -->
 					<item id="1801" min="1" max="1" chance="2.9996" /> <!-- Recipe: Piece Bone Gaiters -->
 				</group>
 			</drop>
@@ -5064,9 +5180,9 @@
 					<item id="2501" min="1" max="1" chance="50" /> <!-- Bone Club -->
 				</group>
 				<group chance="0.2471">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -5112,6 +5228,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4035" level="2" /> <!-- Poison -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5133,9 +5250,9 @@
 					<item id="257" min="1" max="1" chance="100" /> <!-- Viper Fang -->
 				</group>
 				<group chance="0.574">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
 					<item id="1831" min="1" max="1" chance="67.2269" /> <!-- Antidote -->
 				</group>
 			</drop>
@@ -5204,9 +5321,9 @@
 					<item id="51" min="1" max="1" chance="33.3334" /> <!-- Bracer -->
 				</group>
 				<group chance="0.1991">
-					<item id="92908" min="1" max="1" chance="74.7229" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="14.9446" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.4723" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="74.7229" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="14.9446" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.4723" /> <!-- Material: Rags - Sealed -->
 					<item id="2179" min="1" max="1" chance="2.8602" /> <!-- Recipe: Quality Leather Gloves -->
 				</group>
 			</drop>
@@ -5252,6 +5369,7 @@
 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4035" level="2" /> <!-- Poison -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5276,9 +5394,9 @@
 					<item id="878" min="1" max="1" chance="37.4049" /> <!-- Blue Coral Ring -->
 				</group>
 				<group chance="0.4781">
-					<item id="92908" min="1" max="1" chance="25.1977" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="5.0395" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="2.5198" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="25.1977" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="5.0395" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="2.5198" /> <!-- Material: Rags - Sealed -->
 					<item id="2257" min="1" max="1" chance="0.0493" /> <!-- Recipe: Trident -->
 					<item id="1831" min="1" max="1" chance="67.1937" /> <!-- Antidote -->
 				</group>
@@ -5347,9 +5465,9 @@
 					<item id="16" min="1" max="1" chance="100" /> <!-- Spear -->
 				</group>
 				<group chance="0.2626">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
 				</group>
 			</drop>
 			<spoil>
@@ -5415,9 +5533,9 @@
 					<item id="92519" min="1" max="1" chance="100" /> <!-- Bone Helmet Design -->
 				</group>
 				<group chance="0.1625">
-					<item id="92908" min="1" max="1" chance="75.9855" /> <!-- Material: Lump of Wood -->
-					<item id="92909" min="1" max="1" chance="15.1971" /> <!-- Material: Pack of Knickknacks -->
-					<item id="92910" min="1" max="1" chance="7.5986" /> <!-- Material: Rags -->
+					<item id="92908" min="1" max="1" chance="75.9855" /> <!-- Material: Lump of Wood - Sealed -->
+					<item id="92909" min="1" max="1" chance="15.1971" /> <!-- Material: Pack of Knickknacks - Sealed -->
+					<item id="92910" min="1" max="1" chance="7.5986" /> <!-- Material: Rags - Sealed -->
 					<item id="2152" min="1" max="1" chance="1.0702" /> <!-- Recipe: Necklace of Magic (100%) -->
 					<item id="8294" min="1" max="1" chance="0.1486" /> <!-- Recipe: Steel Sword (100%) -->
 				</group>

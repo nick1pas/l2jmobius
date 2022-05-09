@@ -30,6 +30,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4213" level="3" /> <!-- BOSS Haste -->
+			<skill id="4783" level="3" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -77,6 +79,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="3" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -146,6 +149,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -185,6 +189,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="3" /> <!-- Decrease Speed -->
+			<skill id="4204" level="3" /> <!-- Bleed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -233,6 +239,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="3" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -273,6 +280,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -313,6 +321,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4728" level="3" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -362,6 +371,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="6" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -462,6 +472,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -502,6 +513,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -548,6 +560,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -616,6 +629,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4726" level="3" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -664,6 +678,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4753" level="4" /> <!-- BOSS Mortal Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -674,10 +689,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -686,7 +701,7 @@
 					<item id="91033" min="1" max="1" chance="100" /> <!-- Wind Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -807,6 +822,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4185" level="4" /> <!-- Sleep -->
+			<skill id="4187" level="4" /> <!-- Decrease Speed -->
+			<skill id="4191" level="4" /> <!-- BOSS Windstrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -817,10 +835,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -829,7 +847,7 @@
 					<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -867,6 +885,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4194" level="3" /> <!-- BOSS Aura Burn -->
+			<skill id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -905,6 +925,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4213" level="3" /> <!-- BOSS Haste -->
+			<skill id="4783" level="3" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -952,6 +974,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -962,10 +985,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -974,7 +997,7 @@
 					<item id="91034" min="1" max="1" chance="100" /> <!-- Earth Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -1011,6 +1034,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1054,6 +1078,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="4" /> <!-- Poison -->
+			<skill id="4189" level="4" /> <!-- Paralysis -->
+			<skill id="4196" level="4" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1064,10 +1091,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.072">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="50">
 					<item id="91036" min="2" max="4" chance="25" /> <!-- Fire Spirit Ore -->
@@ -1076,7 +1103,7 @@
 					<item id="91035" min="2" max="4" chance="25" /> <!-- Water Spirit Ore -->
 				</group>
 				<group chance="90">
-					<item id="93003" min="1" max="3" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="1" max="3" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1111,6 +1138,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="4" /> <!-- Decrease Speed -->
+			<skill id="4204" level="4" /> <!-- Bleed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1149,6 +1178,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4212" level="4" /> <!-- BOSS Shield -->
+			<skill id="4781" level="4" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1196,6 +1227,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4187" level="6" /> <!-- Decrease Speed -->
+			<skill id="4190" level="6" /> <!-- Decrease MP -->
+			<skill id="4194" level="6" /> <!-- BOSS Aura Burn -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false">
@@ -1212,8 +1246,8 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="91971" min="1" max="1" chance="50" /> <!-- Star Candy -->
-					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch -->
+					<item id="91971" min="1" max="1" chance="50" /> <!-- Star Candy - Sealed -->
+					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="30">
 					<item id="91036" min="2" max="4" chance="25" /> <!-- Fire Spirit Ore -->
@@ -1293,6 +1327,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4742" level="6" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" isAggressive="false">
@@ -1344,6 +1379,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="2" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1381,6 +1417,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="2" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1418,6 +1455,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4728" level="2" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1465,6 +1503,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="2" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1505,6 +1544,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="2" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1553,6 +1593,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1563,17 +1604,17 @@
 		<dropLists>
 			<drop>
 				<group chance="0.108">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="91032" min="1" max="1" chance="50" /> <!-- Fire Spirit Evolution Stone -->
 					<item id="91034" min="1" max="1" chance="50" /> <!-- Earth Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1611,6 +1652,8 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4211" level="4" /> <!-- BOSS Might -->
+			<skill id="4783" level="4" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1694,6 +1737,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1704,14 +1748,14 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="91971" min="1" max="3" chance="50" /> <!-- Star Candy -->
-					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch -->
+					<item id="91971" min="1" max="3" chance="50" /> <!-- Star Candy - Sealed -->
+					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="50">
 					<item id="91038" min="2" max="4" chance="100" /> <!-- Earth Spirit Ore -->
 				</group>
 				<group chance="90">
-					<item id="93003" min="1" max="3" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="1" max="3" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -1746,6 +1790,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1785,6 +1830,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4195" level="5" /> <!-- BOSS Twister -->
+			<skill id="4199" level="5" /> <!-- Decrease P. Atk. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" />
@@ -1831,6 +1878,9 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="4172" level="4" /> <!-- Stun -->
+			<skill id="4175" level="4" /> <!-- BOSS Haste -->
+			<skill id="4723" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -1939,6 +1989,7 @@
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4071" level="5" /> <!-- Bow Resistance -->
+			<skill id="4197" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2008,6 +2059,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2047,6 +2099,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4191" level="4" /> <!-- BOSS Windstrike -->
+			<skill id="4200" level="4" /> <!-- Decrease Atk. Spd. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2096,6 +2150,9 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 			<skill id="4273" level="5" /> <!-- Dagger Resistance -->
+			<skill id="4186" level="4" /> <!-- Hold -->
+			<skill id="4187" level="4" /> <!-- Decrease Speed -->
+			<skill id="4195" level="4" /> <!-- BOSS Twister -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2106,10 +2163,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -2118,7 +2175,7 @@
 					<item id="91034" min="1" max="1" chance="100" /> <!-- Earth Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -2189,6 +2246,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2236,6 +2294,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="6" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2443,6 +2502,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="7" /> <!-- BOSS Flamestrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2605,6 +2665,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4213" level="7" /> <!-- BOSS Haste -->
+			<skill id="4783" level="7" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2654,6 +2716,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4183" level="8" /> <!-- Decrease P. Atk. -->
+			<skill id="4190" level="8" /> <!-- Decrease MP -->
+			<skill id="4194" level="8" /> <!-- BOSS Aura Burn -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2781,6 +2846,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4194" level="8" /> <!-- BOSS Aura Burn -->
+			<skill id="4202" level="8" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2820,6 +2887,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4210" level="8" /> <!-- BOSS Chant of Life -->
+			<skill id="4212" level="8" /> <!-- BOSS Shield -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2867,6 +2936,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4184" level="7" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4188" level="7" /> <!-- Bleed -->
+			<skill id="4195" level="7" /> <!-- BOSS Twister -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
@@ -2877,10 +2949,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -2892,7 +2964,7 @@
 					<item id="91031" min="1" max="1" chance="25" /> <!-- Water Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -2930,6 +3002,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="6" /> <!-- Decrease Speed -->
+			<skill id="4204" level="6" /> <!-- Bleed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
@@ -2968,6 +3042,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4211" level="6" /> <!-- BOSS Might -->
+			<skill id="4780" level="6" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
@@ -3015,6 +3091,7 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
+			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3025,8 +3102,8 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="91971" min="1" max="1" chance="70" /> <!-- Star Candy -->
-					<item id="93002" min="1" max="1" chance="30" /> <!-- Sayha's Blessing Pouch -->
+					<item id="91971" min="1" max="1" chance="70" /> <!-- Star Candy - Sealed -->
+					<item id="93002" min="1" max="1" chance="30" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="20">
 					<item id="91035" min="1" max="3" chance="100" /> <!-- Water Spirit Ore -->
@@ -3102,6 +3179,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4213" level="4" /> <!-- BOSS Haste -->
+			<skill id="4783" level="4" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3186,6 +3265,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3196,10 +3276,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -3208,7 +3288,7 @@
 					<item id="91033" min="1" max="1" chance="100" /> <!-- Wind Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -3248,6 +3328,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3288,6 +3369,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4728" level="5" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3334,6 +3416,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="5" /> <!-- BOSS Flamestrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3344,16 +3427,16 @@
 		<dropLists>
 			<drop>
 				<group chance="0.108">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="1" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -3388,6 +3471,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4728" level="5" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3427,6 +3511,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4212" level="5" /> <!-- BOSS Shield -->
+			<skill id="4783" level="5" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3465,6 +3551,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3512,6 +3599,9 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4185" level="6" /> <!-- Sleep -->
+			<skill id="4190" level="6" /> <!-- Decrease MP -->
+			<skill id="4196" level="6" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3656,6 +3746,7 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
+			<skill id="4743" level="6" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3704,6 +3795,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="6" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3816,6 +3908,8 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4195" level="6" /> <!-- BOSS Twister -->
+			<skill id="4205" level="6" /> <!-- Paralysis -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3856,6 +3950,7 @@
 			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="6" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3901,6 +3996,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -3911,8 +4007,8 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="91971" min="1" max="1" chance="50" /> <!-- Star Candy -->
-					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch -->
+					<item id="91971" min="1" max="1" chance="50" /> <!-- Star Candy - Sealed -->
+					<item id="93002" min="1" max="1" chance="50" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="30">
 					<item id="91036" min="2" max="4" chance="25" /> <!-- Fire Spirit Ore -->
@@ -3953,6 +4049,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4728" level="5" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4001,6 +4098,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4011,10 +4109,10 @@
 		<dropLists>
 			<drop>
 				<group chance="0.18">
-					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure -->
+					<item id="92989" min="1" max="1" chance="100" /> <!-- Orc King's Treasure - Sealed -->
 				</group>
 				<group chance="100">
-					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+					<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 				<group chance="85">
 					<item id="90045" min="1" max="1" chance="100" /> <!-- Magical Tablet -->
@@ -4023,7 +4121,7 @@
 					<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
 				</group>
 				<group chance="100">
-					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace -->
+					<item id="93003" min="4" max="8" chance="100" /> <!-- Sayha's Grace - Sealed -->
 				</group>
 				<group chance="1">
 					<item id="49756" min="1" max="1" chance="100" /> <!-- Cloth Piece -->
@@ -4145,6 +4243,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="6" /> <!-- Poison -->
+			<skill id="4189" level="6" /> <!-- Paralysis -->
+			<skill id="4195" level="6" /> <!-- BOSS Twister -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4271,6 +4372,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4192" level="6" /> <!-- BOSS HP Drain -->
+			<skill id="4204" level="6" /> <!-- Bleed -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4309,6 +4412,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4211" level="6" /> <!-- BOSS Might -->
+			<skill id="4783" level="6" /> <!-- BOSS Heal -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4355,6 +4460,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4178" level="5" /> <!-- BOSS Flamestrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4392,6 +4498,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4430,6 +4537,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4212" level="6" /> <!-- BOSS Shield -->
+			<skill id="4788" level="6" /> <!-- BOSS Chant of Life -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4478,6 +4587,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4197" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4518,6 +4628,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4555,6 +4666,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4600,6 +4712,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4638,6 +4751,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="3" /> <!-- Decrease Speed -->
+			<skill id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4675,6 +4790,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="3" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -4721,6 +4837,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="4" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4838,6 +4955,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4185" level="5" /> <!-- Sleep -->
+			<skill id="4188" level="5" /> <!-- Bleed -->
+			<skill id="4191" level="5" /> <!-- BOSS Windstrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4875,6 +4995,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4955,6 +5076,7 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4993,6 +5115,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4743" level="5" /> <!-- BOSS Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -5041,6 +5164,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4182" level="5" /> <!-- Poison -->
+			<skill id="4183" level="5" /> <!-- Decrease P. Atk. -->
+			<skill id="4191" level="5" /> <!-- BOSS Windstrike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -5051,8 +5177,8 @@
 		<dropLists>
 			<drop>
 				<group chance="100">
-					<item id="91971" min="1" max="1" chance="80" /> <!-- Star Candy -->
-					<item id="93002" min="1" max="1" chance="20" /> <!-- Sayha's Blessing Pouch -->
+					<item id="91971" min="1" max="1" chance="80" /> <!-- Star Candy - Sealed -->
+					<item id="93002" min="1" max="1" chance="20" /> <!-- Sayha's Blessing Pouch - Sealed -->
 				</group>
 			</drop>
 		</dropLists>
@@ -5086,6 +5212,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4728" level="4" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" />

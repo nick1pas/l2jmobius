@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="15000" level="99" type="Monster" name="Unison of Lights">
 		<race>HUMANOID</race>
@@ -6,24 +6,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="101" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -37,24 +45,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="102" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -68,24 +84,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="103" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -99,24 +123,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="104" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -130,24 +162,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="105" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -161,24 +201,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="106" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -192,24 +240,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="107" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -223,24 +279,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="108" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -254,24 +318,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="109" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -285,24 +357,32 @@
 		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9728" hpRegen="9" mp="1175" mpRegen="6.5" />
+			<attack physical="1818.717" magical="1035.302" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="962" magical="660.495964566658" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1818.717" magical="1035.302" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="962" magical="660.495964566658" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="16" /> <!-- Servitor PvP Penalty -->
-			<skill id="11836" level="110" /> <!-- Summon Lumi Power Passive -->
+			<skill id="11836" level="1" /> <!-- Summon Lumi Power Passive -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -318,23 +398,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -350,23 +438,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -382,23 +478,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -414,23 +518,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -446,23 +558,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -478,23 +598,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -510,23 +638,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -542,23 +678,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -574,23 +718,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -606,23 +758,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -638,23 +798,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -670,23 +838,31 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2000" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<attack physical="1" magical="1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="0" width="0" />
+			<defence physical="962" magical="568" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
-			<defence physical="962" magical="568" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" undying="false" />
+		<status attackable="true" canMove="false" />
 		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -702,23 +878,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -737,23 +921,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -772,23 +964,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -807,23 +1007,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -842,23 +1050,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -877,23 +1093,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -912,23 +1136,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -947,23 +1179,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -982,23 +1222,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1017,23 +1265,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15564" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="15564.8" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1613.67511609812" magical="966.281855255374" random="10" critical="4" accuracy="5" attackSpeed="378" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2022.19400220688" magical="1792.04331471574" />
 			<speed>
 				<walk ground="17" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1614" magical="966" critical="4" attackSpeed="378" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2022" magical="1792" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1052,23 +1308,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078664" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1087,23 +1351,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078664" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1122,23 +1394,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1157,23 +1437,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1192,23 +1480,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1227,23 +1523,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1262,23 +1566,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1297,23 +1609,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1332,23 +1652,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1367,23 +1695,31 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1177" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1177.5" mpRegen="6.5" />
+			<attack physical="1901.83138682992" magical="759.221457700651" random="10" critical="12" accuracy="5" attackSpeed="415" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1849.38870078665" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1902" magical="759" critical="12" attackSpeed="415" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1849" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1403,22 +1739,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1438,22 +1782,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1473,22 +1825,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1508,22 +1868,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1543,22 +1911,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1578,22 +1954,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1613,22 +1997,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1648,22 +2040,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1683,22 +2083,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1718,22 +2126,30 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="30329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10376" hpRegen="9" mp="1766" mpRegen="6.5" />
+			<vitals hp="10376" hpRegen="9" mp="1766.25" mpRegen="6.5" />
+			<attack physical="950.915693414961" magical="2958.00567935318" random="10" critical="4" accuracy="5" attackSpeed="378" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1348.12933480459" magical="1194.69554314383" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="951" magical="2958" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1348" magical="1195" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
@@ -1753,22 +2169,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1" hpRegen="1" mp="1" mpRegen="1" />
+			<attack physical="1" magical="1" random="0" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1" magical="1" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="0" accuracy="4.75" />
-			<defence physical="1" magical="1" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -1787,23 +2211,31 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="68083" hpRegen="8.5" mp="18468" mpRegen="30" />
+			<vitals hp="68083.1819711104" hpRegen="8.5" mp="18468" mpRegen="30" />
+			<attack physical="10909.3522923532" magical="2729.66700769613" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3067.79675938004" magical="1660.83996283877" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="10909.3522923532" magical="2729.66700769613" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3067.79675938004" magical="1660.83996283877" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" canMove="false" hasSummoner="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -1816,22 +2248,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1000000" hpRegen="6.5" mp="1778" mpRegen="2.4" />
+			<attack physical="3900" magical="530" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="1674" magical="1348" />
 			<speed>
 				<walk ground="40" />
 				<run ground="40" />
 			</speed>
-			<attack physical="3900" magical="530" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="1674" magical="1348" />
+			<hitTime>690</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="30" spirit="30" />
 		<collision>
@@ -1844,22 +2284,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1100000" hpRegen="6.5" mp="1955" mpRegen="2.4" />
+			<attack physical="4290" magical="583" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="1841" magical="1482" />
 			<speed>
 				<walk ground="40" />
 				<run ground="40" />
 			</speed>
-			<attack physical="4290" magical="583" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="1841" magical="1482" />
+			<hitTime>690</hitTime>
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="30" spirit="30" />
 		<collision>
@@ -1872,22 +2320,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1200000" hpRegen="6.5" mp="2133" mpRegen="2.4" />
+			<attack physical="4680" magical="636" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="2008" magical="1617" />
 			<speed>
 				<walk ground="40" />
 				<run ground="40" />
 			</speed>
-			<attack physical="4680" magical="636" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="2008" magical="1617" />
+			<hitTime>690</hitTime>
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="30" spirit="30" />
 		<collision>
@@ -1900,22 +2356,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1300000" hpRegen="6.5" mp="2311" mpRegen="2.4" />
+			<attack physical="5070" magical="689" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="2176" magical="1752" />
 			<speed>
 				<walk ground="40" />
 				<run ground="40" />
 			</speed>
-			<attack physical="5070" magical="689" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="2176" magical="1752" />
+			<hitTime>690</hitTime>
 			<attribute>
 				<defence fire="270" water="270" wind="270" earth="270" holy="270" dark="270" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="30" spirit="30" />
 		<collision>
@@ -1931,25 +2395,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4234" hpRegen="8.5" mp="3962" mpRegen="3" />
+			<attack physical="2376" magical="1622" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="722" magical="528" />
 			<speed>
 				<walk ground="10" />
 				<run ground="10" />
 			</speed>
-			<attack physical="2376" magical="1622" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="722" magical="528" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="100" spirit="100" />
 		<collision>
@@ -1965,25 +2434,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9314" hpRegen="8.5" mp="4061" mpRegen="3" />
+			<attack physical="2613" magical="1784" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="794" magical="580" />
 			<speed>
 				<walk ground="10" />
 				<run ground="10" />
 			</speed>
-			<attack physical="2613" magical="1784" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="794" magical="580" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="100" spirit="100" />
 		<collision>
@@ -1999,25 +2473,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10161" hpRegen="8.5" mp="4430" mpRegen="3" />
+			<attack physical="2851" magical="1946" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="866" magical="633" />
 			<speed>
 				<walk ground="10" />
 				<run ground="10" />
 			</speed>
-			<attack physical="2851" magical="1946" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="866" magical="633" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="100" spirit="100" />
 		<collision>
@@ -2033,25 +2512,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11008" hpRegen="8.5" mp="4799" mpRegen="3" />
+			<attack physical="3088" magical="2108" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="938" magical="686" />
 			<speed>
 				<walk ground="10" />
 				<run ground="10" />
 			</speed>
-			<attack physical="3088" magical="2108" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="938" magical="686" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="270" water="270" wind="270" earth="270" holy="270" dark="270" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
-			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="100" spirit="100" />
 		<collision>
@@ -2064,22 +2548,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100000" hpRegen="8.5" mp="1778" mpRegen="2.4" />
+			<attack physical="6926" magical="530" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="1674" magical="1348" />
 			<speed>
 				<walk ground="60" />
 				<run ground="40" />
 			</speed>
-			<attack physical="6926" magical="530" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="1" accuracy="4.75" />
-			<defence physical="1674" magical="1348" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2092,22 +2584,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="110000" hpRegen="8.5" mp="1955" mpRegen="2.4" />
+			<attack physical="8786" magical="583" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="1841" magical="1482" />
 			<speed>
 				<walk ground="60" />
 				<run ground="40" />
 			</speed>
-			<attack physical="8786" magical="583" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="1" accuracy="4.75" />
-			<defence physical="1841" magical="1482" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2120,22 +2620,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="120000" hpRegen="8.5" mp="2133" mpRegen="2.4" />
+			<attack physical="11148" magical="636" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="2008" magical="1617" />
 			<speed>
 				<walk ground="60" />
 				<run ground="40" />
 			</speed>
-			<attack physical="11148" magical="636" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="1" accuracy="4.75" />
-			<defence physical="2008" magical="1617" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2148,22 +2656,30 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="130000" hpRegen="8.5" mp="2311" mpRegen="2.4" />
+			<attack physical="13491" magical="689" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="2176" magical="1752" />
 			<speed>
 				<walk ground="60" />
 				<run ground="40" />
 			</speed>
-			<attack physical="13491" magical="689" critical="4" attackSpeed="150" range="80" type="POLE" distance="80" width="120" random="1" accuracy="4.75" />
-			<defence physical="2176" magical="1752" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="270" water="270" wind="270" earth="270" holy="270" dark="270" />
 			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2172,25 +2688,37 @@
 		</collision>
 	</npc>
 	<npc id="15066" level="85" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12634" hpRegen="9.5" mp="1384" mpRegen="3.3" />
+			<vitals hp="12634" hpRegen="15" mp="1384" mpRegen="10" />
+			<attack physical="792" magical="281" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1314" magical="1087" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="791.98725322291" magical="280.82224756717" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1313.7931034483" magical="1630.4389059596" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2199,25 +2727,37 @@
 		</collision>
 	</npc>
 	<npc id="15067" level="87" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12929" hpRegen="9.5" mp="1437" mpRegen="3.3" />
+			<vitals hp="12929" hpRegen="15" mp="1437" mpRegen="10" />
+			<attack physical="840" magical="300" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1367" magical="1142" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="839.84769863198" magical="299.97616921847" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1366.4772727273" magical="1712.796279628" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2226,25 +2766,37 @@
 		</collision>
 	</npc>
 	<npc id="15068" level="89" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13231" hpRegen="9.5" mp="1491" mpRegen="3.3" />
+			<vitals hp="13231" hpRegen="15" mp="1491" mpRegen="10" />
+			<attack physical="891" magical="318" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1422" magical="1200" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="890.79717810113" magical="317.81056986594" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1421.9101123596" magical="1799.977750584" />
+			<hitTime>340</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2253,25 +2805,37 @@
 		</collision>
 	</npc>
 	<npc id="15069" level="91" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13542" hpRegen="10.5" mp="1544" mpRegen="3.6" />
+			<vitals hp="13542" hpRegen="15" mp="1544" mpRegen="10" />
+			<attack physical="945" magical="337" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1479" magical="1261" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="944.73272382835" magical="336.89425376575" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1478.8888888889" magical="1891.4558122479" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2280,25 +2844,37 @@
 		</collision>
 	</npc>
 	<npc id="15070" level="93" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13859" hpRegen="10.5" mp="1599" mpRegen="3.6" />
+			<vitals hp="13859" hpRegen="15" mp="1599" mpRegen="10" />
+			<attack physical="1003" magical="358" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1539" magical="1325" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1002.7778004057" magical="357.88344830754" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1538.4615384615" magical="1987.451492402" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2307,24 +2883,36 @@
 		</collision>
 	</npc>
 	<npc id="15071" level="95" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17458" hpRegen="10.5" mp="1654" mpRegen="3.6" />
+			<vitals hp="17458" hpRegen="15" mp="1654" mpRegen="10" />
+			<attack physical="1418" magical="675" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1868" magical="1624" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1417.7168272795" magical="674.93973844084" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1867.9347826087" magical="2435.7870569666" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2334,24 +2922,36 @@
 		</collision>
 	</npc>
 	<npc id="15072" level="97" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18493" hpRegen="10.5" mp="1710" mpRegen="3.6" />
+			<vitals hp="18493" hpRegen="15" mp="1710" mpRegen="10" />
+			<attack physical="1505" magical="716" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1944" magical="1706" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1504.8980925736" magical="715.87444622067" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1943.5483870968" magical="2558.9978352674" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2361,24 +2961,36 @@
 		</collision>
 	</npc>
 	<npc id="15073" level="99" type="Servitor" name="Wynn Kai the Cat">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18677" hpRegen="10.5" mp="1766" mpRegen="3.6" />
+			<vitals hp="18677" hpRegen="15" mp="1766" mpRegen="10" />
+			<attack physical="1597" magical="759" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2022" magical="1792" />
 			<speed>
 				<walk ground="20" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1596.9275901771" magical="758.971123285" critical="9" attackSpeed="343" range="40" />
-			<defence physical="2021.8085106383" magical="2687.6623832596" />
+			<hitTime>340</hitTime>
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2388,25 +3000,37 @@
 		</collision>
 	</npc>
 	<npc id="15074" level="85" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8843" hpRegen="9.5" mp="968" mpRegen="3.3" />
+			<vitals hp="8843" hpRegen="15" mp="968" mpRegen="10" />
+			<attack physical="1132" magical="281" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051" magical="760" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1131.9581128635" magical="280.82224756717" critical="14" attackSpeed="491" range="40" />
-			<defence physical="918.96551724138" magical="1139.9415803649" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2415,25 +3039,37 @@
 		</collision>
 	</npc>
 	<npc id="15075" level="87" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9050" hpRegen="9.5" mp="1005" mpRegen="3.3" />
+			<vitals hp="9050" hpRegen="15" mp="1005" mpRegen="10" />
+			<attack physical="1200" magical="300" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1093" magical="799" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1199.9629355078" magical="299.97616921847" critical="14" attackSpeed="491" range="40" />
-			<defence physical="955.68181818182" magical="1198.2448244824" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2442,25 +3078,37 @@
 		</collision>
 	</npc>
 	<npc id="15076" level="89" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9261" hpRegen="9.5" mp="1043" mpRegen="3.3" />
+			<vitals hp="9261" hpRegen="15" mp="1043" mpRegen="10" />
+			<attack physical="1273" magical="318" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1137" magical="840" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1272.6863844213" magical="317.81056986594" critical="14" attackSpeed="491" range="40" />
-			<defence physical="994.94382022472" magical="1259.6877665295" />
+			<hitTime>600</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2469,25 +3117,37 @@
 		</collision>
 	</npc>
 	<npc id="15077" level="91" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9479" hpRegen="10.5" mp="1080" mpRegen="3.6" />
+			<vitals hp="9479" hpRegen="15" mp="1080" mpRegen="10" />
+			<attack physical="1351" magical="337" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1183" magical="882" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1350.7948274442" magical="336.89425376575" critical="14" attackSpeed="491" range="40" />
-			<defence physical="1035" magical="1322.6989365603" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2496,25 +3156,37 @@
 		</collision>
 	</npc>
 	<npc id="15078" level="93" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9701" hpRegen="10.5" mp="1119" mpRegen="3.6" />
+			<vitals hp="9701" hpRegen="15" mp="1119" mpRegen="10" />
+			<attack physical="1433" magical="358" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1231" magical="927" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1432.8888309615" magical="357.88344830754" critical="14" attackSpeed="491" range="40" />
-			<defence physical="1076.9230769231" magical="1390.4906974214" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2523,24 +3195,36 @@
 		</collision>
 	</npc>
 	<npc id="15079" level="95" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12220" hpRegen="10.5" mp="1157" mpRegen="3.6" />
+			<vitals hp="12220" hpRegen="15" mp="1157" mpRegen="10" />
+			<attack physical="2027" magical="675" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1494" magical="1136" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2026.8636993586" magical="674.93973844084" critical="14" attackSpeed="491" range="40" />
-			<defence physical="1306.5217391304" magical="1703.9747453006" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2550,24 +3234,36 @@
 		</collision>
 	</npc>
 	<npc id="15080" level="97" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12945" hpRegen="10.5" mp="1197" mpRegen="3.6" />
+			<vitals hp="12945" hpRegen="15" mp="1197" mpRegen="10" />
+			<attack physical="2151" magical="716" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1555" magical="1194" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2150.9361773357" magical="715.87444622067" critical="14" attackSpeed="491" range="40" />
-			<defence physical="1359.6774193548" magical="1790.6951985521" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2577,24 +3273,36 @@
 		</collision>
 	</npc>
 	<npc id="15081" level="99" type="Servitor" name="Wynn Feline King">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13073" hpRegen="10.5" mp="1236" mpRegen="3.6" />
+			<vitals hp="13073" hpRegen="15" mp="1236" mpRegen="10" />
+			<attack physical="2282" magical="759" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1617" magical="1254" />
 			<speed>
 				<walk ground="10" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2281.8320899642" magical="758.971123285" critical="14" attackSpeed="491" range="40" />
-			<defence physical="1414.8936170213" magical="1880.8370198722" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2604,26 +3312,38 @@
 		</collision>
 	</npc>
 	<npc id="15082" level="85" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6317" hpRegen="9.5" mp="692" mpRegen="3.3" />
+			<vitals hp="6317" hpRegen="15" mp="692" mpRegen="10" />
+			<attack physical="509" magical="281" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="788" magical="543" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="656.89655172414" magical="814.46075642047" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2632,26 +3352,38 @@
 		</collision>
 	</npc>
 	<npc id="15083" level="87" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6464" hpRegen="9.5" mp="718" mpRegen="3.3" />
+			<vitals hp="6464" hpRegen="15" mp="718" mpRegen="10" />
+			<attack physical="540" magical="300" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="820" magical="571" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="682.95454545455" magical="856.21062106211" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2660,26 +3392,38 @@
 		</collision>
 	</npc>
 	<npc id="15084" level="89" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6615" hpRegen="9.5" mp="745" mpRegen="3.3" />
+			<vitals hp="6615" hpRegen="15" mp="745" mpRegen="10" />
+			<attack physical="573" magical="318" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="853" magical="600" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="710.67415730337" magical="899.98887529202" />
+			<hitTime>480</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2688,26 +3432,38 @@
 		</collision>
 	</npc>
 	<npc id="15085" level="91" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6771" hpRegen="10.5" mp="772" mpRegen="3.6" />
+			<vitals hp="6771" hpRegen="15" mp="772" mpRegen="10" />
+			<attack physical="608" magical="337" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="887" magical="630" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="738.88888888889" magical="944.99449944995" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2716,26 +3472,38 @@
 		</collision>
 	</npc>
 	<npc id="15086" level="93" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6929" hpRegen="10.5" mp="799" mpRegen="3.6" />
+			<vitals hp="6929" hpRegen="15" mp="799" mpRegen="10" />
+			<attack physical="645" magical="358" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="923" magical="662" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="768.68131868132" magical="992.63772531099" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2744,25 +3512,37 @@
 		</collision>
 	</npc>
 	<npc id="15087" level="95" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8729" hpRegen="10.5" mp="827" mpRegen="3.6" />
+			<vitals hp="8729" hpRegen="15" mp="827" mpRegen="10" />
+			<attack physical="913" magical="675" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1120" magical="812" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="933.69565217391" magical="1217.8935284833" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2772,25 +3552,37 @@
 		</collision>
 	</npc>
 	<npc id="15088" level="97" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9246" hpRegen="10.5" mp="855" mpRegen="3.6" />
+			<vitals hp="9246" hpRegen="15" mp="855" mpRegen="10" />
+			<attack physical="968" magical="716" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1166" magical="853" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="971.50537634409" magical="1279.3214805352" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2800,25 +3592,37 @@
 		</collision>
 	</npc>
 	<npc id="15089" level="99" type="Servitor" name="Wynn Feline Queen">
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9338" hpRegen="10.5" mp="883" mpRegen="3.6" />
+			<vitals hp="9338" hpRegen="15" mp="883" mpRegen="10" />
+			<attack physical="1027" magical="759" random="10" critical="12" accuracy="5" attackSpeed="326" type="BOW" range="800" distance="80" width="120" />
+			<defence physical="1213" magical="896" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="900" type="BOW" />
-			<defence physical="1010.6382978723" magical="1343.65564216" />
+			<hitTime>480</hitTime>
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2828,25 +3632,37 @@
 		</collision>
 	</npc>
 	<npc id="15090" level="85" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12634" hpRegen="9.5" mp="1384" mpRegen="3.3" />
+			<vitals hp="12634" hpRegen="15" mp="1384" mpRegen="10" />
+			<attack physical="792" magical="281" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1314" magical="1087" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="791.98725322291" magical="280.82224756717" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1313.7931034483" magical="1630.4389059596" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2855,25 +3671,37 @@
 		</collision>
 	</npc>
 	<npc id="15091" level="87" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12929" hpRegen="9.5" mp="1437" mpRegen="3.3" />
+			<vitals hp="12929" hpRegen="15" mp="1437" mpRegen="10" />
+			<attack physical="840" magical="300" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1367" magical="1142" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="839.84769863198" magical="299.97616921847" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1366.4772727273" magical="1712.796279628" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2882,25 +3710,37 @@
 		</collision>
 	</npc>
 	<npc id="15092" level="89" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13231" hpRegen="9.5" mp="1491" mpRegen="3.3" />
+			<vitals hp="13231" hpRegen="15" mp="1491" mpRegen="10" />
+			<attack physical="891" magical="318" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1422" magical="1200" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="890.79717810113" magical="317.81056986594" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1421.9101123596" magical="1799.977750584" />
+			<hitTime>590</hitTime>
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2909,25 +3749,37 @@
 		</collision>
 	</npc>
 	<npc id="15093" level="91" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13542" hpRegen="10.5" mp="1544" mpRegen="3.6" />
+			<vitals hp="13542" hpRegen="15" mp="1544" mpRegen="10" />
+			<attack physical="945" magical="337" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1479" magical="1261" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="944.73272382835" magical="336.89425376575" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1478.8888888889" magical="1891.4558122479" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2936,25 +3788,37 @@
 		</collision>
 	</npc>
 	<npc id="15094" level="93" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13859" hpRegen="10.5" mp="1599" mpRegen="3.6" />
+			<vitals hp="13859" hpRegen="15" mp="1599" mpRegen="10" />
+			<attack physical="1003" magical="358" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1539" magical="1325" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1002.7778004057" magical="357.88344830754" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1538.4615384615" magical="1987.451492402" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -2963,24 +3827,36 @@
 		</collision>
 	</npc>
 	<npc id="15095" level="95" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17458" hpRegen="10.5" mp="1654" mpRegen="3.6" />
+			<vitals hp="17458" hpRegen="15" mp="1654" mpRegen="10" />
+			<attack physical="1418" magical="675" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1868" magical="1624" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1417.7168272795" magical="674.93973844084" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1867.9347826087" magical="2435.7870569666" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -2990,24 +3866,36 @@
 		</collision>
 	</npc>
 	<npc id="15096" level="97" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18493" hpRegen="10.5" mp="1710" mpRegen="3.6" />
+			<vitals hp="18493" hpRegen="15" mp="1710" mpRegen="10" />
+			<attack physical="1505" magical="716" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1944" magical="1706" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1504.8980925736" magical="715.87444622067" critical="9" attackSpeed="343" range="40" />
-			<defence physical="1943.5483870968" magical="2558.9978352674" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -3017,24 +3905,36 @@
 		</collision>
 	</npc>
 	<npc id="15097" level="99" type="Servitor" name="Wynn Nightshade">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18677" hpRegen="10.5" mp="1766" mpRegen="3.6" />
+			<vitals hp="18677" hpRegen="15" mp="1766" mpRegen="10" />
+			<attack physical="1597" magical="759" random="10" critical="8" accuracy="5" attackSpeed="290" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2022" magical="1792" />
 			<speed>
 				<walk ground="30" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1596.9275901771" magical="758.971123285" critical="9" attackSpeed="343" range="40" />
-			<defence physical="2021.8085106383" magical="2687.6623832596" />
+			<hitTime>590</hitTime>
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -3044,25 +3944,37 @@
 		</collision>
 	</npc>
 	<npc id="15098" level="85" type="Servitor" name="Wynn Spectral Lord">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8843" hpRegen="9.5" mp="968" mpRegen="3.3" />
+			<vitals hp="8843" hpRegen="15" mp="968" mpRegen="10" />
+			<attack physical="1132" magical="281" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051" magical="760" />
 			<speed>
 				<walk ground="160" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1131.9581128635" magical="280.82224756717" critical="14" attackSpeed="491" range="40" />
-			<defence physical="918.96551724138" magical="1139.9415803649" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
@@ -3071,25 +3983,37 @@
 		</collision>
 	</npc>
 	<npc id="15099" level="87" type="Servitor" name="Wynn Spectral Lord">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9050" hpRegen="9.5" mp="1005" mpRegen="3.3" />
+			<vitals hp="9050" hpRegen="15" mp="1005" mpRegen="10" />
+			<attack physical="1200" magical="300" random="10" critical="12" accuracy="5" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1093" magical="799" />
 			<speed>
 				<walk ground="160" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1199.9629355078" magical="299.97616921847" critical="14" attackSpeed="491" range="40" />
-			<defence physical="955.68181818182" magical="1198.2448244824" />
+			<hitTime>600</hitTime>
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
-			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+			<skill id="11315" level="1" /> <!-- Summon Defense -->
+			<skill id="11496" level="1" /> <!-- Summoner Boss Penalty -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>

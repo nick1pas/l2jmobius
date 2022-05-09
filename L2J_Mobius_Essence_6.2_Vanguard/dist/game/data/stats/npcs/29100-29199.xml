@@ -86,7 +86,7 @@
 			<hitTime>600</hitTime>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" noSleepMode="true" showName="true" />
+		<status attackable="true" noSleepMode="true" isDeathPenalty="true" />
 		<collision>
 			<radius normal="300" />
 			<height normal="300" />
@@ -121,7 +121,7 @@
 			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" showName="true" />
+		<status attackable="true" isDeathPenalty="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
@@ -153,7 +153,7 @@
 			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" showName="true" />
+		<status attackable="true" isDeathPenalty="true" />
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
@@ -205,6 +205,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
 			<skill id="4045" level="2" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50069" level="1" /> <!-- Fire Breath -->
+			<skill id="50070" level="1" /> <!-- Tears of Fire -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -260,18 +262,18 @@
 					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
 				</group>
 				<group chance="5">
-					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
-					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
-					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
-					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
-					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
-					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
-					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
-					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
-					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
-					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
-					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
-					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> - Lv. 0 -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> - Lv. 0 -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> - Lv. 0 -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> - Lv. 0 -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> - Lv. 0 -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> - Lv. 0 -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> - Lv. 0 -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> - Lv. 0 -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> - Lv. 0 -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> - Lv. 0 -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> - Lv. 0 -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> - Lv. 0 -->
 				</group>
 				<group chance="2">
 					<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
@@ -367,18 +369,18 @@
 					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
 				</group>
 				<group chance="5">
-					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
-					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
-					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
-					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
-					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
-					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
-					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
-					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
-					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
-					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
-					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
-					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> - Lv. 0 -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> - Lv. 0 -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> - Lv. 0 -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> - Lv. 0 -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> - Lv. 0 -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> - Lv. 0 -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> - Lv. 0 -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> - Lv. 0 -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> - Lv. 0 -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> - Lv. 0 -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> - Lv. 0 -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> - Lv. 0 -->
 				</group>
 				<group chance="2">
 					<item id="91031" min="1" max="1" chance="100" /> <!-- Water Spirit Evolution Stone -->
@@ -474,18 +476,18 @@
 					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
 				</group>
 				<group chance="5">
-					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
-					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
-					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
-					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
-					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
-					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
-					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
-					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
-					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
-					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
-					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
-					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> - Lv. 0 -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> - Lv. 0 -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> - Lv. 0 -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> - Lv. 0 -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> - Lv. 0 -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> - Lv. 0 -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> - Lv. 0 -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> - Lv. 0 -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> - Lv. 0 -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> - Lv. 0 -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> - Lv. 0 -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> - Lv. 0 -->
 				</group>
 				<group chance="2">
 					<item id="91033" min="1" max="1" chance="100" /> <!-- Wind Spirit Evolution Stone -->
@@ -581,18 +583,18 @@
 					<item id="94188" min="1" max="1" chance="84" /> <!-- Life Stone Lv. 2 - Armor -->
 				</group>
 				<group chance="5">
-					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> -->
-					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> -->
-					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> -->
-					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> -->
-					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> -->
-					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> -->
-					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> -->
-					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> -->
-					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> -->
-					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> -->
-					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> -->
-					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> -->
+					<item id="49995" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 CON -2> - Lv. 0 -->
+					<item id="49996" min="1" max="1" chance="8.33" /> <!-- Faded Best STR Dye <STR +4 DEX -2> - Lv. 0 -->
+					<item id="49997" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 STR -2> - Lv. 0 -->
+					<item id="49998" min="1" max="1" chance="8.33" /> <!-- Faded Best CON Dye <CON +4 DEX -2> - Lv. 0 -->
+					<item id="49999" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 STR -2> - Lv. 0 -->
+					<item id="90000" min="1" max="1" chance="8.33" /> <!-- Faded Best DEX Dye <DEX +4 CON -2> - Lv. 0 -->
+					<item id="90001" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 MEN -2> - Lv. 0 -->
+					<item id="90002" min="1" max="1" chance="8.33" /> <!-- Faded Best INT Dye <INT +4 WIT -2> - Lv. 0 -->
+					<item id="90003" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 INT -2> - Lv. 0 -->
+					<item id="90004" min="1" max="1" chance="8.34" /> <!-- Faded Best MEN Dye <MEN +4 WIT -2> - Lv. 0 -->
+					<item id="90005" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 INT -2> - Lv. 0 -->
+					<item id="90006" min="1" max="1" chance="8.34" /> <!-- Faded Best WIT Dye <WIT +4 MEN -2> - Lv. 0 -->
 				</group>
 				<group chance="2">
 					<item id="91034" min="1" max="1" chance="100" /> <!-- Earth Spirit Evolution Stone -->
@@ -697,6 +699,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50039" level="1" /> <!-- Aqua Destruction -->
 		</skillList>
 		<collision>
 			<radius normal="36" />
@@ -2077,7 +2080,7 @@
 			<hitTime>600</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" showName="true" />
+		<status attackable="true" isDeathPenalty="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attribute -->
@@ -2091,6 +2094,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="6655" level="1" /> <!-- Tarask's Carapace -->
+			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
+			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
