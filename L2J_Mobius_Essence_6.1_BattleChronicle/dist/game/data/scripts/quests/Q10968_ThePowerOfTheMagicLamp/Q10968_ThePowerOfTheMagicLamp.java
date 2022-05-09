@@ -40,7 +40,7 @@ public class Q10968_ThePowerOfTheMagicLamp extends Quest
 	// private static final int BLUE_LANTERN = 93074;
 	private static final ItemHolder MAGIC_FIRE = new ItemHolder(92033, 1);
 	// Misc
-	private static final int MIN_LEVEL = 35;
+	private static final int MIN_LEVEL = 40;
 	
 	public Q10968_ThePowerOfTheMagicLamp()
 	{
