@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -27,10 +29,15 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 {
+	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
+	
 	private final int _hpPoints;
 	private final int _spPoints;
 	private final int _vpPoints;
 	private final int _homunculusCreateTime;
+	private final int _feeHpPoints;
+	private final int _feeSpPoints;
+	private final int _feeVpPoints;
 	
 	public ExShowHomunculusBirthInfo(Player player)
 	{
@@ -38,6 +45,9 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 		_spPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
 		_vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
 		_homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
+		_feeHpPoints = TEMPLATE.getHPFeeCount();
+		_feeSpPoints = (int) TEMPLATE.getSPFeeCount();
+		_feeVpPoints = TEMPLATE.getVPFeeCount();
 	}
 	
 	@Override
@@ -47,7 +57,7 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 		int creationStage = 0;
 		if (_homunculusCreateTime > 0)
 		{
-			if (((System.currentTimeMillis() / 1000) >= _homunculusCreateTime) && (_hpPoints == 100) && (_spPoints == 10) && (_vpPoints == 5))
+			if (((System.currentTimeMillis() / 1000) >= _homunculusCreateTime) && (_hpPoints == _feeHpPoints) && (_spPoints == _feeSpPoints) && (_vpPoints == _feeVpPoints))
 			{
 				creationStage = 2;
 			}
@@ -60,8 +70,8 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 		packet.writeD(_hpPoints); // hp points
 		packet.writeD(_spPoints); // sp points
 		packet.writeD(_vpPoints); // vp points
-		packet.writeD(_homunculusCreateTime); // finish time
-		packet.writeD(0); // JP = 0. ?
+		packet.writeQ(_homunculusCreateTime); // finish time
+		// packet.writeD(0); // JP = 0. ?
 		return true;
 	}
 }

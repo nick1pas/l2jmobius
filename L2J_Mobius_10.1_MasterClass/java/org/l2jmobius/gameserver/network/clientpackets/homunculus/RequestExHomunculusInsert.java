@@ -17,8 +17,9 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -31,9 +32,10 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusInsert implements IClientIncomingPacket
 {
-	private static final short HP_COST = 10000;
-	private static final long SP_COST = 5000000000L;
-	private static final int VP_COST = PlayerStat.MAX_VITALITY_POINTS / 4;
+	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
+	private static final short HP_COST = (short) TEMPLATE.getHPFeeCountByUse();
+	private static final long SP_COST = TEMPLATE.getSPFeeCountByUse();
+	private static final int VP_COST = TEMPLATE.getVPFeeByUse();
 	
 	private int _type;
 	
@@ -59,7 +61,7 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 		{
 			case 0:
 			{
-				if ((player.getCurrentHp() > HP_COST) && (hpPoints < 100))
+				if ((player.getCurrentHp() > HP_COST) && (hpPoints < TEMPLATE.getHPFeeCount()))
 				{
 					int newHp = (int) (player.getCurrentHp()) - HP_COST;
 					player.setCurrentHp(newHp, true);
@@ -74,7 +76,7 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 			}
 			case 1:
 			{
-				if ((player.getSp() >= SP_COST) && (spPoints < 10))
+				if ((player.getSp() >= SP_COST) && (spPoints < TEMPLATE.getSPFeeCount()))
 				{
 					player.setSp(player.getSp() - SP_COST);
 					spPoints += 1;
@@ -88,7 +90,7 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 			}
 			case 2:
 			{
-				if ((player.getVitalityPoints() >= VP_COST) && (vpPoints < 5))
+				if ((player.getVitalityPoints() >= VP_COST) && (vpPoints < TEMPLATE.getVPFeeCount()))
 				{
 					int newVitality = player.getVitalityPoints() - VP_COST;
 					player.setVitalityPoints(newVitality, true);

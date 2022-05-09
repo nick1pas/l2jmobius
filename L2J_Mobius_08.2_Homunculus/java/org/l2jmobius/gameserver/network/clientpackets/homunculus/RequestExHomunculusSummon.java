@@ -18,9 +18,11 @@ package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -35,6 +37,8 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusSummon implements IClientIncomingPacket
 {
+	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -56,88 +60,26 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 		final int vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
 		final int homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
 		
-		if ((homunculusCreateTime > 0) && ((System.currentTimeMillis() / 1000) >= homunculusCreateTime) && (hpPoints == 100) && (spPoints == 10) && (vpPoints == 5))
+		if ((homunculusCreateTime > 0) && ((System.currentTimeMillis() / 1000) >= homunculusCreateTime) && (hpPoints == TEMPLATE.getHPFeeCount()) && (spPoints == TEMPLATE.getSPFeeCount()) && (vpPoints == TEMPLATE.getVPFeeCount()))
 		{
-			int chance;
-			int random;
+			double chance = Rnd.get(100.0);
+			double current = 0;
 			int homunculusId = 0;
 			while (homunculusId == 0)
 			{
-				chance = Rnd.get(100);
-				random = Rnd.get(100);
-				
-				// Basic Homunculus
-				if (chance >= 60)
+				if (chance > TEMPLATE.getMaxChance())
 				{
-					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(1))
-					{
-						homunculusId = 1;
-					}
-					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(4))
-					{
-						homunculusId = 4;
-					}
-					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(7))
-					{
-						homunculusId = 7;
-					}
-					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(10))
-					{
-						homunculusId = 10;
-					}
-					else if (!player.getHomunculusList().hasHomunculus(13))
-					{
-						homunculusId = 13;
-					}
+					player.sendMessage("Homunculus is not created!");
+					return;
 				}
-				
-				// Water Homunculus
-				if ((homunculusId == 0) && (chance >= 10))
+				for (int i = 0; i < TEMPLATE.getCreationChance().size(); i++)
 				{
-					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(2))
+					final Double[] homuHolder = TEMPLATE.getCreationChance().get(i);
+					current += homuHolder[1];
+					if (current >= chance)
 					{
-						homunculusId = 2;
-					}
-					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(5))
-					{
-						homunculusId = 5;
-					}
-					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(8))
-					{
-						homunculusId = 8;
-					}
-					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(11))
-					{
-						homunculusId = 11;
-					}
-					else if (!player.getHomunculusList().hasHomunculus(14))
-					{
-						homunculusId = 14;
-					}
-				}
-				
-				// Luminous Homunculus
-				if (homunculusId == 0)
-				{
-					if ((random >= 80) && !player.getHomunculusList().hasHomunculus(3))
-					{
-						homunculusId = 3;
-					}
-					else if ((random >= 60) && !player.getHomunculusList().hasHomunculus(6))
-					{
-						homunculusId = 6;
-					}
-					else if ((random >= 40) && !player.getHomunculusList().hasHomunculus(9))
-					{
-						homunculusId = 9;
-					}
-					else if ((random >= 20) && !player.getHomunculusList().hasHomunculus(12))
-					{
-						homunculusId = 12;
-					}
-					else if (!player.getHomunculusList().hasHomunculus(15))
-					{
-						homunculusId = 15;
+						homunculusId = homuHolder[0].intValue();
+						break;
 					}
 				}
 			}

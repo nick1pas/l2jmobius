@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/HomunculusCreationData.xsd">
+	<!-- https://l2central.info/main/articles/247.html?lang=ru
+	=================================================================
+
+	=================================================================
+	For change items or params in client need to edit HomunCreate.dat
+	=================================================================
+	homun_create_begin	cost_base=1000000
+	hp_count=100	hp_volume=10000
+	sp_count=10	sp_volume=5000000000
+	vp_count=5	vp_volume=35000
+	cost_time=86400	homun_create_end
+	=================================================================
+
+	IF CHANCES IN <CHANCE> != 100, HOMUNCULUS CAN BE NOT CREATED!
+	-->
+	<homunculusCreation slotId="0" isEnabled="true" grade="0" event="false" >
+		<itemFees>
+			<item id="57" count="1000000" />
+		</itemFees>
+		<hpFee count="100" byUse="10000" />
+		<spFee count="10" byUse="5000000000" />
+		<vpFee count="5" byUse="35000" />
+		<time count="86400000" /> <!-- Client take time in minutes, server need to be in milliseconds ( * 1000 ) -->
+		<chance>
+			<homunculus id="1" creationChance="7.00" />
+			<homunculus id="2" creationChance="2.99" />
+			<homunculus id="3" creationChance="0.01" />
+			<homunculus id="4" creationChance="7.00" />
+			<homunculus id="5" creationChance="2.99" />
+			<homunculus id="6" creationChance="0.01" />
+			<homunculus id="7" creationChance="7.00" />
+			<homunculus id="8" creationChance="2.99" />
+			<homunculus id="9" creationChance="0.01" />
+			<homunculus id="10" creationChance="7.00" />
+			<homunculus id="11" creationChance="2.99" />
+			<homunculus id="12" creationChance="0.01" />
+			<homunculus id="13" creationChance="7.00" />
+			<homunculus id="14" creationChance="2.99" />
+			<homunculus id="15" creationChance="0.01" />
+		</chance>
+	</homunculusCreation>
+</list>

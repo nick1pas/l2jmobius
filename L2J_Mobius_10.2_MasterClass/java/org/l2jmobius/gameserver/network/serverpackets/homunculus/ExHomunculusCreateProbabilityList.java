@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -43,30 +45,19 @@ public class ExHomunculusCreateProbabilityList implements IClientOutgoingPacket
 		}
 		
 		OutgoingPackets.EX_HOMUNCULUS_CREATE_PROB_LIST.writeId(packet);
-		final int size = HomunculusData.getInstance().size();
+		HomunculusCreationTemplate creationTemplate = HomunculusCreationData.getInstance().getTemplate(0);
+		final int size = creationTemplate.getCreationChance().size();
 		packet.writeD(size);
-		for (int i = 1; i < size; i++)
+		for (int type = 0; type < 3; type++)
 		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 0)
+			for (int i = 0; i < size; i++)
 			{
-				packet.writeD(i);
-				packet.writeD(7000000);
-			}
-		}
-		for (int i = 1; i < size; i++)
-		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 1)
-			{
-				packet.writeD(i);
-				packet.writeD(2990000);
-			}
-		}
-		for (int i = 1; i <= size; i++)
-		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 2)
-			{
-				packet.writeD(i);
-				packet.writeD(10000);
+				final Double[] chance = creationTemplate.getCreationChance().get(i);
+				if (HomunculusData.getInstance().getTemplate(chance[0].intValue()).getType() == type)
+				{
+					packet.writeD(chance[0].intValue());
+					packet.writeD((int) (chance[1] * 1000000));
+				}
 			}
 		}
 		return true;

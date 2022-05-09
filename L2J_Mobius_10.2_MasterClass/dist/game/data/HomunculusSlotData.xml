@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/HomunculusSlotData.xsd">
+	<!-- https://l2central.info/main/articles/247.html?lang=ru
+	=================================================================
+	Slot	Cost
+	=================================================================
+	01 		-
+	02 		-
+	03 		-
+	04 		0 090 000 000 Aden + Gemstone: R - 084 pcs.
+	05 		0 090 000 000 Aden + Gemstone: R - 084 pcs.
+	06 		0 090 000 000 Aden + Gemstone: R - 084 pcs.
+	07 		0 700 000 000 Aden + Gemstone: R - 250 pcs.
+	08 		0 700 000 000 Aden + Gemstone: R - 250 pcs.
+	09 		2 700 000 000 Aden + Gemstone: R - 250 pcs.
+	10 		Einhasad's Golden Coin - 180 pcs. + Gemstone: R - 165 pcs.
+	11 		Einhasad's Golden Coin - 180 pcs. + Gemstone: R - 165 pcs.
+	12 		Einhasad's Golden Coin - 180 pcs. + Gemstone: R - 165 pcs.
+	13 		Einhasad's Golden Coin - 360 pcs. + Gemstone: R - 330 pcs.
+	14 		Einhasad's Golden Coin - 360 pcs. + Gemstone: R - 330 pcs.
+	15 		Einhasad's Golden Coin - 360 pcs. + Gemstone: R - 330 pcs.
+	16 		Einhasad's Golden Coin - 750 pcs. + Gemstone: R - 420 pcs.
+	17 		Einhasad's Golden Coin - 750 pcs. + Gemstone: R - 420 pcs.
+	18 		Einhasad's Golden Coin - 750 pcs. + Gemstone: R - 420 pcs.
+	=================================================================
+	Slots after 09 is disabled on client side. For enable it, paste it in file - HomunSlot.dat
+	homun_slot_begin	slotid=4	costitems={{57;90000000};{19440;84}}	homun_slot_end
+	homun_slot_begin	slotid=5	costitems={{57;90000000};{19440;84}}	homun_slot_end
+	homun_slot_begin	slotid=6	costitems={{57;90000000};{19440;84}}	homun_slot_end
+	homun_slot_begin	slotid=7	costitems={{57;2700000000};{19440;250}}	homun_slot_end
+	homun_slot_begin	slotid=8	costitems={{57;2700000000};{19440;250}}	homun_slot_end
+	homun_slot_begin	slotid=9	costitems={{57;2700000000};{19440;250}}	homun_slot_end
+	homun_slot_begin	slotid=10	costitems={{48472;180};{19440;165}}	homun_slot_end
+	homun_slot_begin	slotid=11	costitems={{48472;180};{19440;165}}	homun_slot_end
+	homun_slot_begin	slotid=12	costitems={{48472;180};{19440;165}}	homun_slot_end
+	homun_slot_begin	slotid=13	costitems={{48472;360};{19440;330}}	homun_slot_end
+	homun_slot_begin	slotid=14	costitems={{48472;360};{19440;330}}	homun_slot_end
+	homun_slot_begin	slotid=15	costitems={{48472;360};{19440;330}}	homun_slot_end
+	homun_slot_begin	slotid=16	costitems={{48472;750};{19440;420}}	homun_slot_end
+	homun_slot_begin	slotid=17	costitems={{48472;750};{19440;420}}	homun_slot_end
+	homun_slot_begin	slotid=18	costitems={{48472;750};{19440;420}}	homun_slot_end
+	-->
+	<homunculusSlot slotId="1" isEnabled="True" >
+		<fee>
+			<item id="0" count="0" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="2" isEnabled="True" >
+		<fee>
+			<item id="0" count="0" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="3" isEnabled="True" >
+		<fee>
+			<item id="0" count="0" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="4" isEnabled="True" >
+		<fee>
+			<item id="57" count="90000000" />
+			<item id="19440" count="84" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="5" isEnabled="True" >
+		<fee>
+			<item id="57" count="90000000" />
+			<item id="19440" count="84" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="6" isEnabled="True" >
+		<fee>
+			<item id="57" count="90000000" />
+			<item id="19440" count="84" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="7" isEnabled="True" >
+		<fee>
+			<item id="57" count="2700000000" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="8" isEnabled="True" >
+		<fee>
+			<item id="57" count="2700000000" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="9" isEnabled="True" >
+		<fee>
+			<item id="57" count="2700000000" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<!--
+	<homunculusSlot slotId="10" isEnabled="False" >
+		<fee>
+			<item id="48472" count="165" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="11" isEnabled="False" >
+		<fee>
+			<item id="48472" count="165" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="12" isEnabled="False" >
+		<fee>
+			<item id="48472" count="165" />
+			<item id="19440" count="250" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="13" isEnabled="False" >
+		<fee>
+			<item id="48472" count="360" />
+			<item id="19440" count="330" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="14" isEnabled="False" >
+		<fee>
+			<item id="48472" count="360" />
+			<item id="19440" count="330" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="15" isEnabled="False" >
+		<fee>
+			<item id="48472" count="360" />
+			<item id="19440" count="330" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="16" isEnabled="False" >
+		<fee>
+			<item id="48472" count="750" />
+			<item id="19440" count="420" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="17" isEnabled="False" >
+		<fee>
+			<item id="48472" count="750" />
+			<item id="19440" count="420" />
+		</fee>
+	</homunculusSlot>
+	<homunculusSlot slotId="18" isEnabled="False" >
+		<fee>
+			<item id="48472" count="750" />
+			<item id="19440" count="420" />
+		</fee>
+	</homunculusSlot>
+	-->
+</list>

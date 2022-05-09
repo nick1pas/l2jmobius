@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -30,8 +32,9 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusCreateStart implements IClientIncomingPacket
 {
-	private static final int COST = 1000000;
-	private static final long CREATION_TIME = 86400000L;
+	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
+	private static final int COST = Math.toIntExact(TEMPLATE.getItemFee().get(0).getCount());
+	private static final long CREATION_TIME = TEMPLATE.getCreationLime();
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -53,6 +56,7 @@ public class RequestExHomunculusCreateStart implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA_2);
 			return;
 		}
+		
 		player.reduceAdena("Homunculus creation", COST, player, true);
 		player.getVariables().set(PlayerVariables.HOMUNCULUS_CREATION_TIME, System.currentTimeMillis() + CREATION_TIME);
 		

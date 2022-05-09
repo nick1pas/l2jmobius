@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -38,18 +38,34 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_SHOW_HOMUNCULUS_LIST.writeId(packet);
-		if (_player.getHomunculusList().size() > 0)
+		if ((_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, 0) == 0) || (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT) == 1) || (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT) == 2))
 		{
-			packet.writeD(_player.getHomunculusList().size()); // homunculus count
-			int counter = 0;
-			for (int i = 0; i < Config.MAX_HOMUNCULUS_COUNT; i++)
+			if ((_player.getHomunculusList() != null) && (_player.getHomunculusList().size() != 0) && (_player.getHomunculusList().size() < 2))
+			{
+				if (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) >= 0)
+				{
+					_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _player.getHomunculusList().size() + 1);
+				}
+				else
+				{
+					_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _player.getHomunculusList().size());
+				}
+			}
+			else
+			{
+				_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, 3);
+			}
+		}
+		
+		final int slotCount = _player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT);
+		OutgoingPackets.EX_SHOW_HOMUNCULUS_LIST.writeId(packet);
+		packet.writeD(slotCount);
+		int counter = 0;
+		for (int i = 0; i <= slotCount; i++)
+		{
+			if (_player.getHomunculusList().get(i) != null)
 			{
 				final Homunculus homunculus = _player.getHomunculusList().get(i);
-				if (homunculus == null)
-				{
-					continue;
-				}
 				packet.writeD(counter); // slot
 				packet.writeD(homunculus.getId()); // homunculus id
 				packet.writeD(homunculus.getType());
@@ -72,13 +88,33 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 				packet.writeD(homunculus.getAtk());
 				packet.writeD(homunculus.getDef());
 				packet.writeD(homunculus.getCritRate());
-				counter++;
 			}
+			else
+			{
+				packet.writeD(counter); // slot
+				packet.writeD(0); // homunculus id
+				packet.writeD(0);
+				packet.writeC(0);
+				packet.writeD(0);
+				for (int j = 1; j <= 5; j++)
+				{
+					packet.writeD(0);
+				}
+				packet.writeD(0);
+				for (int j = 1; j <= 5; j++)
+				{
+					packet.writeD(0);
+				}
+				packet.writeD(0);// m_nLevel
+				packet.writeD(0);// m_nHP
+				packet.writeD(0);// m_nHP
+				packet.writeD(0);// m_nAttack
+				packet.writeD(0);// m_nDefence
+				packet.writeD(0);// m_nCritical
+			}
+			counter++;
 		}
-		else
-		{
-			packet.writeD(0);
-		}
+		
 		return true;
 	}
 }

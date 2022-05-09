@@ -16,13 +16,20 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
-import org.l2jmobius.Config;
+import java.util.List;
+import java.util.logging.Logger;
+
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.xml.HomunculusSlotData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.Homunculus;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusSlotTemplate;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExActivateHomunculusResult;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;
 
 /**
@@ -31,13 +38,12 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
 public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 {
 	private int _slot;
-	private boolean _activate;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_slot = packet.readD();
-		_activate = packet.readC() == 1; // enabled?
+		// _activate = packet.readC() == 1; // enabled?
 		return true;
 	}
 	
@@ -51,62 +57,46 @@ public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 		}
 		
 		final int size = activeChar.getHomunculusList().size();
-		if (size == 0)
+		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
+		if ((size != 0) && ((activeChar.getHomunculusList().get(_slot) != null) || (_slot == activeChar.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT))))
 		{
+			PacketLogger.info(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock already unlocked slot;");
+			activeChar.sendPacket(new ExActivateHomunculusResult(false));
+			return;
+		}
+		if (!template.getSlotEnabled())
+		{
+			Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock disabled slot;");
+			activeChar.sendPacket(new ExActivateHomunculusResult(false));
 			return;
 		}
 		
-		final Homunculus homunculus = activeChar.getHomunculusList().get(_slot);
-		if (homunculus == null)
+		final List<ItemHolder> fee = template.getPrice();
+		for (int i = 0; i < fee.size(); i++)
 		{
-			return;
-		}
-		
-		for (int i = 0; i < Config.MAX_HOMUNCULUS_COUNT; i++)
-		{
-			if (size <= i)
+			final ItemHolder feeHolder = fee.get(i);
+			if ((activeChar.getInventory().getItemByItemId(feeHolder.getId()) == null) || ((activeChar.getInventory().getItemByItemId(feeHolder.getId()) != null) && (activeChar.getInventory().getItemByItemId(feeHolder.getId()).getCount() < feeHolder.getCount())))
 			{
-				break;
-			}
-			
-			final Homunculus homu = activeChar.getHomunculusList().get(i);
-			if (homu == null)
-			{
-				continue;
-			}
-			
-			if (homu.isActive())
-			{
-				homu.setActive(false);
-				activeChar.getHomunculusList().update(homu);
-				activeChar.getHomunculusList().refreshStats(true);
-				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
 				activeChar.sendPacket(new ExActivateHomunculusResult(false));
+				return;
+			}
+		}
+		for (int i = 0; i < fee.size(); i++)
+		{
+			final ItemHolder feeHolder = fee.get(i);
+			if (activeChar.getInventory().destroyItemByItemId("Homunclus slot unlock", feeHolder.getId(), feeHolder.getCount(), activeChar, null) == null)
+			{
+				Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock slot without items;");
+				activeChar.sendPacket(new ExActivateHomunculusResult(false));
+				return;
 			}
 		}
 		
-		if (_activate)
-		{
-			if (!homunculus.isActive())
-			{
-				
-				homunculus.setActive(true);
-				activeChar.getHomunculusList().update(homunculus);
-				activeChar.getHomunculusList().refreshStats(true);
-				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
-				activeChar.sendPacket(new ExActivateHomunculusResult(true));
-			}
-		}
-		else
-		{
-			if (homunculus.isActive())
-			{
-				homunculus.setActive(false);
-				activeChar.getHomunculusList().update(homunculus);
-				activeChar.getHomunculusList().refreshStats(true);
-				activeChar.sendPacket(new ExShowHomunculusList(activeChar));
-				activeChar.sendPacket(new ExActivateHomunculusResult(false));
-			}
-		}
+		activeChar.sendItemList();
+		activeChar.broadcastUserInfo();
+		activeChar.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _slot);
+		activeChar.sendPacket(new ExHomunculusPointInfo(activeChar));
+		activeChar.sendPacket(new ExShowHomunculusList(activeChar));
+		activeChar.sendPacket(new ExActivateHomunculusResult(true));
 	}
 }

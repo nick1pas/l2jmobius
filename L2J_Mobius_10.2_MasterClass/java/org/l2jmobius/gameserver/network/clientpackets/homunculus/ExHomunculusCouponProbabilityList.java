@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -44,32 +46,33 @@ public class ExHomunculusCouponProbabilityList implements IClientOutgoingPacket
 			return false;
 		}
 		
+		HomunculusCreationTemplate creationTemplate = null;
+		for (int i = 1; i < HomunculusCreationData.getInstance().size(); i++)
+		{
+			if (HomunculusCreationData.getInstance().getTemplate(i).isInstanceHaveCoupon(_couponId))
+			{
+				creationTemplate = HomunculusCreationData.getInstance().getTemplate(i);
+			}
+		}
+		if (creationTemplate == null)
+		{
+			return false;
+		}
+		
 		OutgoingPackets.EX_HOMUNCULUS_COUPON_PROB_LIST.writeId(packet);
-		final int size = HomunculusData.getInstance().size();
+		final int size = creationTemplate.getCreationChance().size();
 		packet.writeD(_couponId);
 		packet.writeD(size);
-		for (int i = 1; i < size; i++)
+		for (int type = 0; type < 3; type++)
 		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 0)
+			for (int i = 0; i < size; i++)
 			{
-				packet.writeD(i);
-				packet.writeD(7000000);
-			}
-		}
-		for (int i = 1; i < size; i++)
-		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 1)
-			{
-				packet.writeD(i);
-				packet.writeD(2990000);
-			}
-		}
-		for (int i = 1; i <= size; i++)
-		{
-			if (HomunculusData.getInstance().getTemplate(i).getType() == 2)
-			{
-				packet.writeD(i);
-				packet.writeD(10000);
+				final Double[] homunculusChance = creationTemplate.getCreationChance().get(i);
+				if (HomunculusData.getInstance().getTemplate(homunculusChance[0].intValue()).getType() == type)
+				{
+					packet.writeD(homunculusChance[0].intValue());
+					packet.writeD((int) (homunculusChance[1] * 1000000));
+				}
 			}
 		}
 		return true;

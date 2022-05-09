@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -46,7 +45,7 @@ public class ExHomunculusPointInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_POINTS, 0)); // vp points
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0)); // consumed basic vp points
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_VP, 0)); // consumed reset vp points
-		packet.writeD(Math.min(Config.MAX_HOMUNCULUS_COUNT, _player.getHomunculusList().size() + 1)); // 306
+		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT)); // 306
 		return true;
 	}
 }

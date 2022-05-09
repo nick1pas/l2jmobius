@@ -80,6 +80,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HOMUNCULUS_USED_VP_POINTS = "HOMUNCULUS_USED_VP_POINTS";
 	public static final String HOMUNCULUS_USED_VP_CONVERT = "HOMUNCULUS_USED_VP_CONVERT";
 	public static final String HOMUNCULUS_USED_RESET_VP = "HOMUNCULUS_USED_RESET_VP";
+	public static final String HOMUNCULUS_OPENED_SLOT_COUNT = "HOMUNCULUS_OPENED_SLOT_COUNT";
 	
 	private final int _objectId;
 	

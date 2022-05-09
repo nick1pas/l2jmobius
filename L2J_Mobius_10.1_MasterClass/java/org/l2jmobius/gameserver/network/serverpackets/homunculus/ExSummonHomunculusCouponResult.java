@@ -26,17 +26,31 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExSummonHomunculusCouponResult implements IClientOutgoingPacket
 {
 	private final int _slot;
+	private int _success = -1;
 	
 	public ExSummonHomunculusCouponResult(int slot)
 	{
 		_slot = slot;
 	}
 	
+	public ExSummonHomunculusCouponResult(int slot, int success)
+	{
+		_slot = slot;
+		_success = success;
+	}
+	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUMMON_HOMUNCULUS_COUPON_RESULT.writeId(packet);
-		packet.writeD(1); // 1 - success
+		if (_success == -1)
+		{
+			packet.writeD(1); // 1 - success
+		}
+		else
+		{
+			packet.writeD(_success);
+		}
 		packet.writeD(_slot); // homunculus slot
 		packet.writeD(0); // keep or delete
 		return true;
