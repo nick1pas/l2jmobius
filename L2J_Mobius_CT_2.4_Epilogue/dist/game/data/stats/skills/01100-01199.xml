@@ -430,6 +430,9 @@
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<startEffects>
+			<effect name="ConsumeBody" />
+		</startEffects>
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
@@ -437,7 +440,6 @@
 				<param lifeTime="3600" />
 				<param expMultiplier="0.85" />
 			</effect>
-			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
 			<effect name="Summon">
@@ -446,7 +448,6 @@
 				<param lifeTime="3600" />
 				<param expMultiplier="#summonExpMultiplierEnch" />
 			</effect>
-			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
@@ -802,13 +803,15 @@
 		<cond>
 			<player canSummon="true" />
 		</cond>
+		<startEffects>
+			<effect name="ConsumeBody" />
+		</startEffects>
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
 				<param lifeTime="3600" />
 				<param expMultiplier="0.1" />
 			</effect>
-			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
 			<effect name="Summon">
@@ -816,7 +819,6 @@
 				<param lifeTime="3600" />
 				<param expMultiplier="0.1" />
 			</effect>
-			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantGroup1="2" enchantGroup2="2">

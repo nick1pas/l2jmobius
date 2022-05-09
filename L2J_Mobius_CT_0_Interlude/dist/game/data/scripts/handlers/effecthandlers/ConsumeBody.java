@@ -16,11 +16,15 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.EffectScope;
+import org.l2jmobius.gameserver.model.stats.Formulas;
+import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 /**
  * Consume Body effect implementation.
@@ -47,6 +51,14 @@ public class ConsumeBody extends AbstractEffect
 			return;
 		}
 		
-		((Npc) info.getEffected()).endDecayTask();
+		if (info.getSkill().hasEffects(EffectScope.START))
+		{
+			DecayTaskManager.getInstance().cancel(info.getEffected());
+			ThreadPool.schedule(() -> info.getEffected().onDecay(), Formulas.calcAtkSpd(info.getEffector(), info.getSkill(), info.getSkill().getHitTime() + info.getSkill().getCoolTime()));
+		}
+		else
+		{
+			((Npc) info.getEffected()).endDecayTask();
+		}
 	}
 }

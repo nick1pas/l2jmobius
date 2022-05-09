@@ -65,7 +65,7 @@ public class Summon extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isPlayer() || info.getEffected().hasSummon())
+		if (!info.getEffector().isPlayer() || info.getEffector().hasSummon())
 		{
 			return;
 		}
