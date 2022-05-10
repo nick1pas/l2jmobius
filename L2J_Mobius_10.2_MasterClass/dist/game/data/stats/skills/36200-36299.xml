@@ -141,179 +141,2734 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="36228" toLevel="10" name="Helmet - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36229" toLevel="10" name="Helmet - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36230" toLevel="10" name="Helmet - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36231" toLevel="10" name="Helmet - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36232" toLevel="10" name="Helmet - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36233" toLevel="10" name="Upper Armor - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36234" toLevel="10" name="Upper Armor - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36235" toLevel="10" name="Upper Armor - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36236" toLevel="10" name="Upper Armor - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36237" toLevel="10" name="Upper Armor - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36238" toLevel="10" name="Lower Armor - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36239" toLevel="10" name="Lower Armor - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36240" toLevel="10" name="Lower Armor - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36241" toLevel="10" name="Lower Armor - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36242" toLevel="10" name="Lower Armor - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36243" toLevel="10" name="Gloves - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36244" toLevel="10" name="Gloves - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36245" toLevel="10" name="Gloves - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36246" toLevel="10" name="Gloves - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36247" toLevel="10" name="Gloves - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36248" toLevel="10" name="Boots - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36249" toLevel="10" name="Boots - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36250" toLevel="10" name="Boots - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36251" toLevel="10" name="Boots - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36252" toLevel="10" name="Boots - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36253" toLevel="10" name="Shield - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36254" toLevel="10" name="Shield - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36255" toLevel="10" name="Shield - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36256" toLevel="10" name="Shield - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36257" toLevel="10" name="Shield - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36258" toLevel="10" name="Sigil - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36259" toLevel="10" name="Sigil - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36260" toLevel="10" name="Sigil - Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36261" toLevel="10" name="Sigil - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36262" toLevel="10" name="Sigil - Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +400 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">600</value>
+					<value level="3">800</value>
+					<value level="4">1000</value>
+					<value level="5">1200</value>
+					<value level="6">1200</value>
+					<value level="7">1200</value>
+					<value level="8">1200</value>
+					<value level="9">1200</value>
+					<value level="10">1200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36263" toLevel="1" name="Collection_7_2009">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
