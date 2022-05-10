@@ -58,15 +58,15 @@ public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 		
 		final int size = activeChar.getHomunculusList().size();
 		final HomunculusSlotTemplate template = HomunculusSlotData.getInstance().getTemplate(_slot);
-		if ((size != 0) && ((activeChar.getHomunculusList().get(_slot) != null) || (_slot == activeChar.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT))))
+		if ((size != 0) && ((activeChar.getHomunculusList().get(_slot) != null) || (_slot == activeChar.getAvailableHomunculusSlotCount())))
 		{
-			PacketLogger.info(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock already unlocked slot;");
+			PacketLogger.info(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock already unlocked slot!");
 			activeChar.sendPacket(new ExActivateHomunculusResult(false));
 			return;
 		}
 		if (!template.getSlotEnabled())
 		{
-			Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock disabled slot;");
+			Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock disabled slot!");
 			activeChar.sendPacket(new ExActivateHomunculusResult(false));
 			return;
 		}
@@ -84,15 +84,15 @@ public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 		for (int i = 0; i < fee.size(); i++)
 		{
 			final ItemHolder feeHolder = fee.get(i);
-			if (activeChar.getInventory().destroyItemByItemId("Homunclus slot unlock", feeHolder.getId(), feeHolder.getCount(), activeChar, null) == null)
+			if (!activeChar.destroyItemByItemId("Homunclus slot unlock", feeHolder.getId(), feeHolder.getCount(), activeChar, true))
 			{
-				Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock slot without items;");
+				Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock slot without items!");
 				activeChar.sendPacket(new ExActivateHomunculusResult(false));
 				return;
 			}
 		}
 		
-		activeChar.sendItemList();
+		// activeChar.sendItemList();
 		activeChar.broadcastUserInfo();
 		activeChar.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _slot);
 		activeChar.sendPacket(new ExHomunculusPointInfo(activeChar));

@@ -98,7 +98,7 @@ public class ExRequestMultiEnchantItemList implements IClientIncomingPacket
 		{
 			player.removeRequest(request.getClass());
 			player.sendPacket(new ExResultSetMultiEnchantItemList(player, 1));
-			Logger.getLogger("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying enchant items, when scrolls count less than items;");
+			Logger.getLogger("MultiEnchant - player " + player.getObjectId() + " " + player.getName() + " trying enchant items, when scrolls count less than items!");
 		}
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if (scrollTemplate == null)

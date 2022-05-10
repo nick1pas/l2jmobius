@@ -337,6 +337,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Enable Homunculus system.
+		player.calculateHomunculusSlots();
 		player.sendPacket(new ExShowHomunculusBirthInfo(player));
 		player.sendPacket(new ExHomunculusPointInfo(player));
 		player.sendPacket(new ExHomunculusReady(true));

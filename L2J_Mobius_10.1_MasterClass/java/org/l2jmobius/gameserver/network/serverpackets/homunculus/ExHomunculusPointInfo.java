@@ -45,7 +45,7 @@ public class ExHomunculusPointInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_POINTS, 0)); // vp points
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_VP_CONVERT, 0)); // consumed basic vp points
 		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_USED_RESET_VP, 0)); // consumed reset vp points
-		packet.writeD(_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT)); // 306
+		packet.writeD(_player.getAvailableHomunculusSlotCount()); // 306
 		return true;
 	}
 }

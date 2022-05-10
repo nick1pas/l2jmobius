@@ -14744,6 +14744,34 @@ public class Player extends Playable
 		return _homunculusList;
 	}
 	
+	public int getAvailableHomunculusSlotCount()
+	{
+		return Math.min(Config.MAX_HOMUNCULUS_COUNT, getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, Config.START_HOMUNCULUS_COUNT));
+	}
+	
+	public void calculateHomunculusSlots()
+	{
+		final int slotCount = getAvailableHomunculusSlotCount();
+		if ((slotCount == 0) || (slotCount == 1) || (slotCount == 2))
+		{
+			if ((_homunculusList.size() != 0) && (_homunculusList.size() < 2))
+			{
+				if (getVariables().getInt(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) >= 0)
+				{
+					getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _homunculusList.size() + 1);
+				}
+				else
+				{
+					getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _homunculusList.size());
+				}
+			}
+			else
+			{
+				getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, 3);
+			}
+		}
+	}
+	
 	public List<PlayerCollectionData> getCollections()
 	{
 		return _collections;

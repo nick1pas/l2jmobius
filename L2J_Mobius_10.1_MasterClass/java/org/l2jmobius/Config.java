@@ -582,6 +582,7 @@ public class Config
 	public static boolean HBCE_FAIR_PLAY;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
 	public static long ABILITY_POINTS_RESET_SP;
+	public static int START_HOMUNCULUS_COUNT;
 	public static int MAX_HOMUNCULUS_COUNT;
 	public static boolean BOTREPORT_ENABLE;
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
@@ -1963,8 +1964,12 @@ public class Config
 			SHOW_INTRO_VIDEO = characterConfig.getBoolean("ShowIntroVideo", true);
 			PLAYER_MOVEMENT_BLOCK_TIME = characterConfig.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ABILITY_POINTS_RESET_SP = characterConfig.getLong("AbilityPointsResetSP", 500000000);
+			START_HOMUNCULUS_COUNT = characterConfig.getInt("StartHomunculusCount", 3);
 			MAX_HOMUNCULUS_COUNT = characterConfig.getInt("MaxHomunculusCount", 9);
-			
+			if (MAX_HOMUNCULUS_COUNT < START_HOMUNCULUS_COUNT)
+			{
+				MAX_HOMUNCULUS_COUNT = START_HOMUNCULUS_COUNT;
+			}
 			// Load Telnet config file (if exists)
 			final PropertiesParser telnetConfig = new PropertiesParser(TELNET_CONFIG_FILE);
 			TELNET_ENABLED = telnetConfig.getBoolean("EnableTelnet", false);

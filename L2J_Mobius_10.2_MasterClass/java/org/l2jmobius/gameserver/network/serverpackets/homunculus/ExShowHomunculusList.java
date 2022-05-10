@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -38,29 +37,10 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		if ((_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, 0) == 0) || (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT) == 1) || (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT) == 2))
-		{
-			if ((_player.getHomunculusList() != null) && (_player.getHomunculusList().size() != 0) && (_player.getHomunculusList().size() < 2))
-			{
-				if (_player.getVariables().getInt(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) >= 0)
-				{
-					_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _player.getHomunculusList().size() + 1);
-				}
-				else
-				{
-					_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _player.getHomunculusList().size());
-				}
-			}
-			else
-			{
-				_player.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, 3);
-			}
-		}
-		
-		final int slotCount = _player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT);
 		OutgoingPackets.EX_SHOW_HOMUNCULUS_LIST.writeId(packet);
-		packet.writeD(slotCount);
 		int counter = 0;
+		final int slotCount = _player.getAvailableHomunculusSlotCount();
+		packet.writeD(slotCount);
 		for (int i = 0; i <= slotCount; i++)
 		{
 			if (_player.getHomunculusList().get(i) != null)
@@ -105,12 +85,12 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 				{
 					packet.writeD(0);
 				}
-				packet.writeD(0);// m_nLevel
-				packet.writeD(0);// m_nHP
-				packet.writeD(0);// m_nHP
-				packet.writeD(0);// m_nAttack
-				packet.writeD(0);// m_nDefence
-				packet.writeD(0);// m_nCritical
+				packet.writeD(0); // Level
+				packet.writeD(0); // HP
+				packet.writeD(0); // HP
+				packet.writeD(0); // Attack
+				packet.writeD(0); // Defence
+				packet.writeD(0); // Critical
 			}
 			counter++;
 		}

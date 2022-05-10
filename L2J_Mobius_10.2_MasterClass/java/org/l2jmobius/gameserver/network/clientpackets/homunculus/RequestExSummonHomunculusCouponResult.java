@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
-import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -56,10 +55,10 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 			return;
 		}
 		
-		if (player.getHomunculusList().size() == player.getVariables().getInt(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT))
+		if (player.getHomunculusList().size() == player.getAvailableHomunculusSlotCount())
 		{
 			player.sendPacket(new ExSummonHomunculusCouponResult(0, 0));
-			PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus withouts avaible slots;");
+			PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus withouts avaible slots!");
 			return;
 		}
 		HomunculusCreationTemplate creationTemplate = null;
