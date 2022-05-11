@@ -19,7 +19,6 @@ package ai.others.ClanTrader;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -108,16 +107,7 @@ public class ClanTrader extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		String htmltext = null;
-		if (player.getClanId() > 0)
-		{
-			htmltext = npc.getId() + ((player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_SETTINGS)) ? ".html" : "-06.html");
-		}
-		else
-		{
-			htmltext = npc.getId() + "-01.html";
-		}
-		return htmltext;
+		return npc.getId() + ".html";
 	}
 	
 	public static void main(String[] args)
