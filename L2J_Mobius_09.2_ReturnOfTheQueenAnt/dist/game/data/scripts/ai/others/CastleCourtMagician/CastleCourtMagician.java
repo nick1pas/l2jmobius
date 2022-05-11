@@ -340,7 +340,7 @@ public class CastleCourtMagician extends AbstractNpcAI
 			}
 			case "squadSkill":
 			{
-				if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
+				if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_SETTINGS))
 				{
 					RequestAcquireSkill.showSubUnitSkillList(player);
 				}

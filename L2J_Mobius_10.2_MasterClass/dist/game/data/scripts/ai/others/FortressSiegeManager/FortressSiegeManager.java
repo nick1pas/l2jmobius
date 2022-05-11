@@ -100,7 +100,7 @@ public class FortressSiegeManager extends AbstractNpcAI
 						html.replace("%clanName%", fortress.getOwnerClan().getName());
 						return html.getHtml();
 					}
-					else if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
+					else if (!player.hasClanPrivilege(ClanPrivilege.CS_SIEGE_WAR))
 					{
 						htmltext = "FortressSiegeManager-10.html";
 					}
@@ -169,7 +169,7 @@ public class FortressSiegeManager extends AbstractNpcAI
 						html.replace("%clanName%", fortress.getOwnerClan().getName());
 						return html.getHtml();
 					}
-					else if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
+					else if (!player.hasClanPrivilege(ClanPrivilege.CS_SIEGE_WAR))
 					{
 						htmltext = "FortressSiegeManager-10.html";
 					}

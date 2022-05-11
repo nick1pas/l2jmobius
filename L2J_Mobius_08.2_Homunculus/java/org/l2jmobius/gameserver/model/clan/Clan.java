@@ -2040,7 +2040,7 @@ public class Clan implements IIdentifiable, INamable
 		{
 			return false;
 		}
-		if (!player.hasClanPrivilege(ClanPrivilege.CL_JOIN_CLAN))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_INVITE))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return false;

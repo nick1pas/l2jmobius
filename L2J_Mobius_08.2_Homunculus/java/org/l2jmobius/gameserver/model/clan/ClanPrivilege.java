@@ -25,35 +25,35 @@ public enum ClanPrivilege
 {
 	/** dummy entry */
 	DUMMY,
-	/** Privilege to join clan */
-	CL_JOIN_CLAN,
-	/** Privilege to give a title */
-	CL_GIVE_TITLE,
-	/** Privilege to view warehouse content */
-	CL_VIEW_WAREHOUSE,
-	/** Privilege to manage clan ranks */
+	
+	/** System Privileges */
+	CL_INVITE,
+	CL_MANAGE_TITLES,
+	CL_WAREHOUSE_SEARCH,
 	CL_MANAGE_RANKS,
-	CL_PLEDGE_WAR,
+	CL_CLAN_WAR,
 	CL_DISMISS,
-	/** Privilege to register clan crest */
-	CL_REGISTER_CREST,
-	CL_APPRENTICE,
-	CL_TROOPS_FAME,
-	CL_SUMMON_AIRSHIP,
-	/** Privilege to open a door */
-	CH_OPEN_DOOR,
-	CH_OTHER_RIGHTS,
+	CL_EDIT_CREST,
+	CL_USE_FUNCTIONS,
+	CL_SETTINGS,
+	CL_THRONE_OF_HEROES,
+	
+	/** Clan Hall Privileges */
+	CH_ENTRY_EXIT_RIGHTS,
+	CH_USE_FUNCTIONS,
 	CH_AUCTION,
 	CH_DISMISS,
-	CH_SET_FUNCTIONS,
-	CS_OPEN_DOOR,
-	CS_MANOR_ADMIN,
-	CS_MANAGE_SIEGE,
+	CH_SETTTINGS,
+	
+	/** Castle/Fortress Privileges */
+	CS_ENTRY_EXIT_RIGHTS,
+	CS_SIEGE_WAR,
 	CS_USE_FUNCTIONS,
+	CS_SETTINGS,
 	CS_DISMISS,
-	CS_TAXES,
+	CS_MANAGE_TAXES,
 	CS_MERCENARIES,
-	CS_SET_FUNCTIONS;
+	CS_MANOR_ADMIN;
 	
 	public int getBitmask()
 	{

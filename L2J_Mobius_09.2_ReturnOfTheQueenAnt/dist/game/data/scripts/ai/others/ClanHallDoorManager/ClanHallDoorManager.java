@@ -74,7 +74,7 @@ public class ClanHallDoorManager extends AbstractNpcAI
 				}
 				case "manageDoors":
 				{
-					if (isOwningClan(player, npc) && st.hasMoreTokens() && player.hasClanPrivilege(ClanPrivilege.CH_OPEN_DOOR))
+					if (isOwningClan(player, npc) && st.hasMoreTokens() && player.hasClanPrivilege(ClanPrivilege.CH_ENTRY_EXIT_RIGHTS))
 					{
 						final boolean open = st.nextToken().equals("1");
 						clanHall.openCloseDoors(open);

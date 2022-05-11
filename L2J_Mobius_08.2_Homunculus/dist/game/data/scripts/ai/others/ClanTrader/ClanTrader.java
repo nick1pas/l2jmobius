@@ -111,7 +111,7 @@ public class ClanTrader extends AbstractNpcAI
 		String htmltext = null;
 		if (player.getClanId() > 0)
 		{
-			htmltext = npc.getId() + ((player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME)) ? ".html" : "-06.html");
+			htmltext = npc.getId() + ((player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_SETTINGS)) ? ".html" : "-06.html");
 		}
 		else
 		{

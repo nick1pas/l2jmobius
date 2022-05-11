@@ -19,7 +19,9 @@ package ai.areas.Rune.Roiental;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 
 import ai.AbstractNpcAI;
 
@@ -57,13 +59,21 @@ public class Roiental extends AbstractNpcAI
 			{
 				htmltext = "Roiental-NoLevel.html";
 			}
-			else if ((player.getClan() == null) || (player.getClan().getLevel() < CLAN_MIN_LVL_GB))
+			else if (player.getClan() == null)
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_BELONG_TO_ANY_CLAN);
+			}
+			else if ((player.getClan().getLevel() < CLAN_MIN_LVL_GB))
 			{
 				htmltext = "Roiental-03a.html";
 			}
-			else if ((player.getClan() == null) || player.getClan().getVariables().hasVariable("TOH_DONE"))
+			else if (player.getClan().getVariables().hasVariable("TOH_DONE"))
 			{
 				htmltext = "Roiental-AlreadyDone.html";
+			}
+			else if (!player.hasClanPrivilege(ClanPrivilege.CL_THRONE_OF_HEROES))
+			{
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			}
 			else
 			{
@@ -76,13 +86,21 @@ public class Roiental extends AbstractNpcAI
 			{
 				htmltext = "Roiental-NoLevel.html";
 			}
-			else if ((player.getClan() == null) || (player.getClan().getLevel() < CLAN_MIN_LVL_MR))
+			else if (player.getClan() == null)
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_BELONG_TO_ANY_CLAN);
+			}
+			else if ((player.getClan().getLevel() < CLAN_MIN_LVL_MR))
 			{
 				htmltext = "Roiental-03b.html";
 			}
-			else if ((player.getClan() == null) || player.getClan().getVariables().hasVariable("TOH_DONE"))
+			else if (player.getClan().getVariables().hasVariable("TOH_DONE"))
 			{
 				htmltext = "Roiental-AlreadyDone.html";
+			}
+			else if (!player.hasClanPrivilege(ClanPrivilege.CL_THRONE_OF_HEROES))
+			{
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			}
 			else
 			{
@@ -95,13 +113,21 @@ public class Roiental extends AbstractNpcAI
 			{
 				htmltext = "Roiental-NoLevel.html";
 			}
-			else if ((player.getClan() == null) || (player.getClan().getLevel() < CLAN_MIN_LVL_TA))
+			else if (player.getClan() == null)
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_BELONG_TO_ANY_CLAN);
+			}
+			else if ((player.getClan().getLevel() < CLAN_MIN_LVL_TA))
 			{
 				htmltext = "Roiental-03c.html";
 			}
-			else if ((player.getClan() == null) || player.getClan().getVariables().hasVariable("TOH_DONE"))
+			else if (player.getClan().getVariables().hasVariable("TOH_DONE"))
 			{
 				htmltext = "Roiental-AlreadyDone.html";
+			}
+			else if (!player.hasClanPrivilege(ClanPrivilege.CL_THRONE_OF_HEROES))
+			{
+				player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			}
 			else
 			{

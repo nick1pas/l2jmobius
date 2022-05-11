@@ -65,7 +65,7 @@ public class RequestPledgePower implements IClientIncomingPacket
 				// Clan war, right to dismiss, set functions
 				// Auction, manage taxes, attack/defend registration, mercenary management
 				// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
-				_privs &= ClanPrivilege.CL_VIEW_WAREHOUSE.getBitmask() | ClanPrivilege.CH_OPEN_DOOR.getBitmask() | ClanPrivilege.CS_OPEN_DOOR.getBitmask();
+				_privs &= ClanPrivilege.CL_WAREHOUSE_SEARCH.getBitmask() | ClanPrivilege.CH_ENTRY_EXIT_RIGHTS.getBitmask() | ClanPrivilege.CS_ENTRY_EXIT_RIGHTS.getBitmask();
 			}
 			player.getClan().setRankPrivs(_rank, _privs);
 		}

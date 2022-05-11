@@ -69,7 +69,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		}
 		
 		// Check if player who does the request has the correct rights to do it
-		if (!player.hasClanPrivilege(ClanPrivilege.CL_PLEDGE_WAR))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_CLAN_WAR))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;

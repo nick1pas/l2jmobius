@@ -63,7 +63,7 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		else if (!player.hasClanPrivilege(ClanPrivilege.CL_PLEDGE_WAR))
+		else if (!player.hasClanPrivilege(ClanPrivilege.CL_CLAN_WAR))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);

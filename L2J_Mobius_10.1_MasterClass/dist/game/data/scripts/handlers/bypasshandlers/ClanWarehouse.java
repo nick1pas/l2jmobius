@@ -80,7 +80,7 @@ public class ClanWarehouse implements IBypassHandler
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					
-					if (!player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
+					if (!player.hasClanPrivilege(ClanPrivilege.CL_WAREHOUSE_SEARCH))
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 						return true;

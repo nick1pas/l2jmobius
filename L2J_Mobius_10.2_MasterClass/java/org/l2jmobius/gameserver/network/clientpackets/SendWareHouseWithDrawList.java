@@ -103,7 +103,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		
 		if (Config.ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH)
 		{
-			if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
+			if ((warehouse instanceof ClanWarehouse) && !player.hasClanPrivilege(ClanPrivilege.CL_WAREHOUSE_SEARCH))
 			{
 				return;
 			}

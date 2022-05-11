@@ -183,7 +183,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 			}
 			case SUBPLEDGE:
 			{
-				if (!player.isClanLeader() || !player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
+				if (!player.isClanLeader() || !player.hasClanPrivilege(ClanPrivilege.CL_SETTINGS))
 				{
 					return;
 				}

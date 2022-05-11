@@ -54,7 +54,7 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.hasClanPrivilege(ClanPrivilege.CL_APPRENTICE))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_DISMISS))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
 			return;

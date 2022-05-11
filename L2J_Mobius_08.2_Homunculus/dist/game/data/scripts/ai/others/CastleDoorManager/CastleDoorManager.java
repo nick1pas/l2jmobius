@@ -136,7 +136,7 @@ public class CastleDoorManager extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		return isOwningClan(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_OPEN_DOOR) ? getHtmlName(npc) + ".html" : getHtmlName(npc) + "-no.html";
+		return isOwningClan(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_ENTRY_EXIT_RIGHTS) ? getHtmlName(npc) + ".html" : getHtmlName(npc) + "-no.html";
 	}
 	
 	private String getHtmlName(Npc npc)

@@ -68,7 +68,7 @@ public class Nottingale extends AbstractNpcAI
 			{
 				if (player.getClan() != null)
 				{
-					if (player.hasClanPrivilege(ClanPrivilege.CL_SUMMON_AIRSHIP) && AirShipManager.getInstance().hasAirShipLicense(player.getClanId()) && !AirShipManager.getInstance().hasAirShip(player.getClanId()))
+					if (player.hasClanPrivilege(ClanPrivilege.CL_USE_FUNCTIONS) && AirShipManager.getInstance().hasAirShipLicense(player.getClanId()) && !AirShipManager.getInstance().hasAirShip(player.getClanId()))
 					{
 						htmltext = event;
 					}

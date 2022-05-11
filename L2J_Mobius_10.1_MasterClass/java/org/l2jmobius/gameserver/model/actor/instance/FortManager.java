@@ -185,7 +185,7 @@ public class FortManager extends Merchant
 			else if (actualCommand.equalsIgnoreCase("operate_door")) // door
 			// control
 			{
-				if (player.hasClanPrivilege(ClanPrivilege.CS_OPEN_DOOR))
+				if (player.hasClanPrivilege(ClanPrivilege.CS_ENTRY_EXIT_RIGHTS))
 				{
 					if (!val.isEmpty())
 					{
@@ -230,7 +230,7 @@ public class FortManager extends Merchant
 			else if (actualCommand.equalsIgnoreCase("manage_vault"))
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if (player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
+				if (player.hasClanPrivilege(ClanPrivilege.CL_WAREHOUSE_SEARCH))
 				{
 					if (val.equalsIgnoreCase("deposit"))
 					{
@@ -320,7 +320,7 @@ public class FortManager extends Merchant
 			}
 			else if (actualCommand.equalsIgnoreCase("manage"))
 			{
-				if (player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
+				if (player.hasClanPrivilege(ClanPrivilege.CS_SETTINGS))
 				{
 					if (val.equalsIgnoreCase("recovery"))
 					{
@@ -995,7 +995,7 @@ public class FortManager extends Merchant
 	
 	private void showVaultWindowWithdraw(Player player)
 	{
-		if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
+		if (player.isClanLeader() || player.hasClanPrivilege(ClanPrivilege.CL_WAREHOUSE_SEARCH))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			player.setActiveWarehouse(player.getClan().getWarehouse());

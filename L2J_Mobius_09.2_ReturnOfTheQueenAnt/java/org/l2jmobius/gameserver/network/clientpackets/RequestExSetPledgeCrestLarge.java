@@ -75,7 +75,7 @@ public class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.hasClanPrivilege(ClanPrivilege.CL_REGISTER_CREST))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_EDIT_CREST))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;

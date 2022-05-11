@@ -134,7 +134,7 @@ public class ClanHallManager extends AbstractNpcAI
 				}
 				case "manageDoors":
 				{
-					if (player.hasClanPrivilege(ClanPrivilege.CH_OPEN_DOOR))
+					if (player.hasClanPrivilege(ClanPrivilege.CH_ENTRY_EXIT_RIGHTS))
 					{
 						if (st.hasMoreTokens())
 						{
@@ -175,7 +175,7 @@ public class ClanHallManager extends AbstractNpcAI
 				}
 				case "useFunctions":
 				{
-					if (player.hasClanPrivilege(ClanPrivilege.CH_OTHER_RIGHTS))
+					if (player.hasClanPrivilege(ClanPrivilege.CH_USE_FUNCTIONS))
 					{
 						if (!st.hasMoreTokens())
 						{
@@ -303,7 +303,7 @@ public class ClanHallManager extends AbstractNpcAI
 				}
 				case "manageFunctions":
 				{
-					if (player.hasClanPrivilege(ClanPrivilege.CH_SET_FUNCTIONS))
+					if (player.hasClanPrivilege(ClanPrivilege.CH_SETTTINGS))
 					{
 						if (!st.hasMoreTokens())
 						{

@@ -52,7 +52,7 @@ public class RequestJoinSiege implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
+		if (!player.hasClanPrivilege(ClanPrivilege.CS_SIEGE_WAR))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;

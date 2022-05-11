@@ -55,7 +55,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 		else
 		{
 			// Can the player change/give a title?
-			if (!player.hasClanPrivilege(ClanPrivilege.CL_GIVE_TITLE))
+			if (!player.hasClanPrivilege(ClanPrivilege.CL_MANAGE_TITLES))
 			{
 				player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;

@@ -134,7 +134,7 @@ public abstract class AirShipController extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.ANOTHER_AIRSHIP_HAS_BEEN_SUMMONED_TO_THE_WHARF_PLEASE_TRY_AGAIN_LATER);
 				return null;
 			}
-			if (!player.hasClanPrivilege(ClanPrivilege.CL_SUMMON_AIRSHIP))
+			if (!player.hasClanPrivilege(ClanPrivilege.CL_USE_FUNCTIONS))
 			{
 				player.sendPacket(SystemMessageId.AIRSHIP_SUMMON_LICENSE_REGISTRATION_CAN_ONLY_BE_DONE_BY_THE_CLAN_LEADER);
 				return null;
