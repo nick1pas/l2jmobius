@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/LimitShop.xsd">
 	<!-- Cat 0 Equipment -->
+	<product id="210" category="0" minLevel="60">
+		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
+		<production id="95681" accountBuyLimit="1" /> <!-- Premium Growth Kit -->
+	</product>	
 	<product id="212" category="0" maxLevel="84">
 		<ingredient id="91663" count="4000" /> <!-- L-Coin -->
 		<production id="94735" accountBuyLimit="1" /> <!-- Starter Kit -->
@@ -17,15 +21,19 @@
 		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
 		<production id="94738" accountBuyLimit="3" /> <!-- Settling Kit: Upgrading -->
 	</product>
-	<product id="216" category="0">
+	<product id="321" category="0" maxLevel="84">
+		<ingredient id="91663" count="9500" /> <!-- L-Coin -->
+		<production id="96968" accountBuyLimit="1" /> <!-- Aden Starter Kit -->
+	</product>
+	<product id="322" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="9589" /> <!-- Talisman Bracelet Lv. 1 -->
 	</product>
-	<product id="217" category="0">
+	<product id="323" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="90311" /> <!-- Brooch Lv. 1 -->
 	</product>
-	<product id="218" category="0">
+	<product id="324" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="90888" /> <!-- Agathion Bracelet Lv. 1 -->
 	</product>
@@ -63,10 +71,6 @@
 		<ingredient id="91663" count="2000" /> <!-- L-Coin -->
 		<production id="71899" /> <!-- Limited Sayha's Blessing (30 Day) -->
 	</product>
-	<product id="227" category="2">
-		<ingredient id="91663" count="20" /> <!-- L-Coin -->
-		<production id="91641" /> <!-- Sayha's Blessing -->
-	</product>
 	<product id="228" category="2">
 		<ingredient id="91663" count="6" /> <!-- L-Coin -->
 		<production id="90907" /> <!-- Soulshot Ticket -->
@@ -95,27 +99,153 @@
 		<ingredient id="91663" count="100" /> <!-- L-Coin -->
 		<production id="92973" /> <!-- Scroll of Escape Pack: Tower of Insolence (Floors 8-12) -->
 	</product>
-	<!-- Cat 3 Misc. -->
-	<product id="235" category="3">
-		<ingredient id="91663" count="300" /> <!-- L-Coin -->
-		<production id="92400" accountDailyLimit="1" /> <!-- Forgotten Primeval Garden's Time Stone -->
+	<!--
+	<product id="237" category="2">
+		<ingredient id="91663" count="200" /> L-Coin
+		<production id="93704" accountDailyLimit="1" /> Alligator Island's Time Stone
 	</product>
-	<product id="236" category="2" minLevel="76">
-		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="91983" accountDailyLimit="1" /> <!-- Primeval Isle's Time Stone -->
-	</product>
-	<product id="237" category="3">
-		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="93704" accountDailyLimit="1" /> <!-- Alligator Island's Time Stone -->
-	</product>
-	<product id="238" category="3">
+	-->
+	<product id="238" category="2">
 		<ingredient id="91663" count="600" /> <!-- L-Coin -->
 		<production id="93948" accountDailyLimit="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
+	</product>	
+	<!-- Cat 3 Ancient Adena Shop. -->
+	<product id="325" category="3">
+		<ingredient id="97145" count="4000" /> <!-- Ancient Adena -->
+		<production id="93449" accountDailyLimit="1" /> <!-- A-grade Armor Coupon -->
+	</product>
+	<product id="326" category="3">
+		<ingredient id="97145" count="8000" /> <!-- Ancient Adena -->
+		<production id="93448" accountDailyLimit="1" /> <!-- A-grade Weapon Coupon -->
+	</product>
+	<product id="327" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93141" accountDailyLimit="1" /> <!-- Ice Crystal Breastplate -->
+	</product>
+	<product id="328" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93142" accountDailyLimit="1" /> <!-- Ice Crystal Gaiters -->
+	</product>
+	<product id="329" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93317" accountDailyLimit="1" /> <!-- Leather Armor of Lightning -->
+	</product>
+	<product id="330" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93318" accountDailyLimit="1" /> <!-- Leather Leggings of Lightning -->
+	</product>
+	<product id="331" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93735" accountDailyLimit="1" /> <!-- Flaming Tunic -->
+	</product>
+	<product id="332" category="3">
+		<ingredient id="97145" count="10000" /> <!-- Ancient Adena -->
+		<production id="93736" accountDailyLimit="1" /> <!-- Flaming Stockings -->
+	</product>
+	<product id="333" category="3">
+		<ingredient id="97145" count="15000" /> <!-- Ancient Adena -->
+		<production id="94084" accountDailyLimit="1" /> <!-- Helmet of Mana -->
+	</product>
+	<product id="334" category="3">
+		<ingredient id="97145" count="15000" /> <!-- Ancient Adena -->
+		<production id="94264" accountDailyLimit="1" /> <!-- Stun Gauntlets -->
+	</product>
+	<product id="335" category="3">
+		<ingredient id="97145" count="15000" /> <!-- Ancient Adena -->
+		<production id="94086" accountDailyLimit="1" /> <!-- Boots of Evasion -->
+	</product>
+	<product id="336" category="3">
+		<ingredient id="97145" count="15000" /> <!-- Ancient Adena -->
+		<production id="93076" accountDailyLimit="1" /> <!-- Gloves of Silence -->
+	</product>
+	<product id="337" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="93291" accountBuyLimit="1" /> <!-- Zaken's Blood Sword -->
+	</product>
+	<product id="338" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="93292" accountBuyLimit="1" /> <!-- Core's Plasmic Bow -->
+	</product>
+	<product id="339" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="93293" accountBuyLimit="1" /> <!-- Orfen's Venom Sword -->
+	</product>
+	<product id="340" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="93294" accountBuyLimit="1" /> <!-- Baium's Thunder Breaker -->
+	</product>
+	<product id="341" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="93295" accountBuyLimit="1" /> <!-- Queen Ant's Stone Breaker -->
+	</product>
+	<product id="342" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="95422" accountBuyLimit="1" /> <!-- Anakim's Divine Pistols -->
+	</product>
+	<product id="343" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="96269" accountBuyLimit="1" /> <!-- Beleth' Soul Eater -->
+	</product>
+	<product id="344" category="3">
+		<ingredient id="97145" count="20000" /> <!-- Ancient Adena -->
+		<production id="95329" accountBuyLimit="1" /> <!-- Ring of Core -->
+	</product>
+	<product id="345" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="95328" accountBuyLimit="1" /> <!-- Orfen's Earring -->
+	</product>
+	<product id="346" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="95327" accountBuyLimit="1" /> <!-- Queen Ant's Ring -->
+	</product>
+	<product id="347" category="3">
+		<ingredient id="97145" count="50000" /> <!-- Ancient Adena -->
+		<production id="95331" accountBuyLimit="1" /> <!-- Zaken's Earring -->
+	</product>
+	<product id="348" category="3">
+		<ingredient id="97145" count="80000" /> <!-- Ancient Adena -->
+		<production id="95330" accountBuyLimit="1" /> <!-- Baium's Ring -->
+	</product>
+	<product id="349" category="3">
+		<ingredient id="97145" count="100000" /> <!-- Ancient Adena -->
+		<production id="95333" accountBuyLimit="1" /> <!-- Frintezza's Necklace -->
+	</product>
+	<product id="350" category="3">
+		<ingredient id="97145" count="15000" /> <!-- Ancient Adena -->
+		<production id="97176" accountDailyLimit="1" /> <!-- Spellbook Coupon - 2 Stars -->
+	</product>
+	<product id="351" category="3">
+		<ingredient id="97145" count="80000" /> <!-- Ancient Adena -->
+		<production id="97177" accountBuyLimit="1" /> <!-- Spellbook Coupon - 3 Stars -->
+	</product>
+	<product id="352" category="3">
+		<ingredient id="97145" count="1000000" /> <!-- Ancient Adena -->
+		<production id="97178" accountBuyLimit="1" /> <!-- Spellbook Coupon - 4 Stars -->
+	</product>
+	<product id="353" category="3">
+		<ingredient id="97145" count="300000" /> <!-- Ancient Adena -->
+		<production id="96614" accountBuyLimit="1" /> <!-- Spellbook: Expanded Potential of Dyes -->
+	</product>
+	<product id="369" category="3">
+		<ingredient id="97145" count="1000" /> <!-- Ancient Adena -->
+		<production id="97147" accountDailyLimit="2" /> <!-- Dye Powder -->
 	</product>
 	<!-- Cat 4 Adena store -->
-	<product id="239" category="4">
-		<ingredient id="57" count="50000" /> <!-- Adena -->
-		<production id="91641" accountDailyLimit="30" /> <!-- Sayha's Blessing -->
+	<product id="216" category="4">
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="9589" /> <!-- Talisman Bracelet Lv. 1 -->
+	</product>
+	<product id="217" category="4">
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="90311" /> <!-- Brooch Lv. 1 -->
+	</product>
+	<product id="218" category="4">
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="90888" /> <!-- Agathion Bracelet Lv. 1 -->
+	</product>	
+	<product id="235" category="4">
+		<ingredient id="57" count="1500000" /> <!-- Adena -->
+		<production id="92400" accountDailyLimit="2" /> <!-- Forgotten Primeval Garden's Time Stone -->
 	</product>
 	<product id="240" category="4">
 		<ingredient id="57" count="30000" /> <!-- Adena -->
@@ -135,7 +265,7 @@
 	</product>
 	<product id="244" category="4">
 		<ingredient id="57" count="1000000" /> <!-- Adena -->
-		<production id="94780" accountDailyLimit="2" /> <!-- Growth Rune Fragment -->
+		<production id="94780" accountDailyLimit="20" /> <!-- Growth Rune Fragment -->
 	</product>
 	<product id="245" category="4">
 		<ingredient id="57" count="1000000" /> <!-- Adena -->
@@ -157,33 +287,79 @@
 		<ingredient id="57" count="500000" /> <!-- Adena -->
 		<production id="91983" accountDailyLimit="4" /> <!-- Primeval Isle's Time Stone -->
 	</product>
-	<product id="250" category="4">
-		<ingredient id="57" count="1000000" /> <!-- Adena -->
-		<production id="91839" /> <!-- Blessed Scroll of Escape (Time-limited) -->
-	</product>
-	<!-- 
 	<product id="251" category="4">
-		<ingredient id="57" count="100000" /> Adena
-		<production id="95749" accountDailyLimit="20" /> Daily Enchant Scroll Pack
+		<ingredient id="57" count="100000" /> <!-- Adena -->
+		<production id="95749" accountDailyLimit="40" /> <!-- Daily Enchant Scroll Pack -->
 	</product>
 	<product id="252" category="4">
-		<ingredient id="57" count="2000000" /> Adena
-		<production id="95746" accountDailyLimit="1" /> Enchant Package: Talisman of Aden
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="95746" accountDailyLimit="2" /> <!-- Enchant Package: Talisman of Aden -->
 	</product>
 	<product id="253" category="4">
-		<ingredient id="57" count="1000000" /> Adena
-		<production id="95747" accountDailyLimit="1" /> Enchant Package: Ring of Insolence
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="95747" accountDailyLimit="2" /> <!-- Enchant Package: Ring of Insolence -->
 	</product>
 	<product id="254" category="4">
-		<ingredient id="57" count="1000000" /> Adena
-		<production id="95748" accountDailyLimit="1" /> Enchant Package: Dragon Valley's Earring
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="95748" accountDailyLimit="2" /> <!-- Enchant Package: Dragon Valley's Earring -->
 	</product>
-	-->
+	<product id="292" category="4">
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="96124" accountDailyLimit="2" /> <!-- Elmoreden Tower's Time Stone -->
+	</product>
+	<product id="355" category="4">
+		<ingredient id="57" count="10000000" /> <!-- Adena -->
+		<production id="96941" accountDailyLimit="1" /> <!-- Extra Pass: Training Zone -->
+	</product>
+	<product id="356" category="4">
+		<ingredient id="57" count="7000000" /> <!-- Adena -->
+		<production id="97163" accountDailyLimit="10" /> <!-- Daily Life Stone Chest -->
+	</product>
+	<product id="357" category="4">
+		<ingredient id="57" count="50000000" /> <!-- Adena -->
+		<production id="94828" accountBuyLimit="3" /> <!-- Class Change Coupon -->
+	</product>
+	<product id="358" category="4">
+		<ingredient id="57" count="300" /> <!-- Adena -->
+		<production id="3031" accountDailyLimit="2000" /> <!-- Spirit Ore -->
+	</product>
+	<product id="359" category="4">
+		<ingredient id="57" count="45000" /> <!-- Adena -->
+		<production id="93274" /> <!-- Sayha's Cookie -->
+	</product>
+	<product id="360" category="4">
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="91757" accountDailyLimit="5" /> <!-- Magic Lamp Charging Potion -->
+	</product>
+	<product id="361" category="4">
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="95481" accountDailyLimit="1" /> <!-- Aden Purge Crystal -->
+	</product>
+	<product id="362" category="4">
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="93976" /> <!-- Scroll: Enchant A-grade Weapon -->
+	</product>
+	<product id="363" category="4">
+		<ingredient id="57" count="1950000" /> <!-- Adena -->
+		<production id="93406" /> <!-- Scroll: Enchant B-grade Weapon -->
+	</product>
+	<product id="364" category="4">
+		<ingredient id="57" count="42900" /> <!-- Adena -->
+		<production id="93408" /> <!-- Scroll: Enchant C-grade Weapon -->
+	</product>
+	<product id="365" category="4">
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
+		<production id="93977" /> <!-- Scroll: Enchant A-grade Armor -->
+	</product>
+	<product id="366" category="4">
+		<ingredient id="57" count="312000" /> <!-- Adena -->
+		<production id="93407" /> <!-- Scroll: Enchant B-grade Armor -->
+	</product>
+	<product id="367" category="4">
+		<ingredient id="57" count="58500" /> <!-- Adena -->
+		<production id="93409" /> <!-- Scroll: Enchant C-grade Armor -->
+	</product>	
 	<!-- Cat 5 Events and Offers -->
-	<product id="210" category="5" minLevel="60">
-		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
-		<production id="95681" accountBuyLimit="1" /> <!-- Premium Growth Kit -->
-	</product>
 	<product id="211" category="5">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="93740" /> <!-- Giran Seal Pack -->
