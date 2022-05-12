@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import instances.AbstractInstance;
@@ -83,6 +84,16 @@ public class KrofinNest extends AbstractInstance
 	private static final int DOOR2 = 24250002;
 	private static final int DOOR3 = 24250004;
 	private static final int DOOR4 = 24250006;
+	// Effect Triggers
+	private static final int DOOR1_CLOSED = 23227500;
+	private static final int DOOR1_OPENING = 23227502;
+	private static final int DOOR2_CLOSED = 24257710;
+	private static final int DOOR2_OPENING = 24257712;
+	private static final int DOOR3_CLOSED = 24257720;
+	private static final int DOOR3_OPENING = 24257722;
+	private static final int DOOR4_CLOSED = 24257730;
+	private static final int DOOR4_OPENING = 24257732;
+	private static final int BOSS_WATERFALL = 24257780;
 	
 	public KrofinNest()
 	{
@@ -103,134 +114,243 @@ public class KrofinNest extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		switch (event)
+		if (event.contains("enterInstance"))
 		{
-			case "enterInstance":
+			if (player.isInParty())
 			{
-				if (player.isInParty())
+				final Party party = player.getParty();
+				if (!party.isLeader(player))
 				{
-					final Party party = player.getParty();
-					if (!party.isLeader(player))
-					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
-						return null;
-					}
-					
-					if (player.isInCommandChannel())
-					{
-						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
-						return null;
-					}
-					
-					final long currentTime = System.currentTimeMillis();
-					final List<Player> members = party.getMembers();
-					for (Player member : members)
-					{
-						if (!member.isInsideRadius3D(npc, 1000))
-						{
-							player.sendMessage("Player " + member.getName() + " must come closer.");
-							return null;
-						}
-						
-						if (currentTime < InstanceManager.getInstance().getInstanceTime(member, TEMPLATE_ID))
-						{
-							final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
-							msg.addString(member.getName());
-							party.broadcastToPartyMembers(member, msg);
-							return null;
-						}
-					}
-					
-					for (Player member : members)
-					{
-						enterInstance(member, npc, TEMPLATE_ID);
-					}
-				}
-				else if (player.isGM())
-				{
-					enterInstance(player, npc, TEMPLATE_ID);
-				}
-				else
-				{
-					player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
-				}
-				
-				if (player.getInstanceWorld() != null)
-				{
-					startQuestTimer("check_status", 1000, null, player);
-				}
-				return null;
-			}
-			case "check_status":
-			{
-				final Instance world = player.getInstanceWorld();
-				if (!isInInstance(world))
-				{
+					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 					return null;
 				}
 				
-				switch (world.getStatus())
+				if (player.isInCommandChannel())
 				{
-					case 0:
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+					return null;
+				}
+				
+				final long currentTime = System.currentTimeMillis();
+				final List<Player> members = party.getMembers();
+				for (Player member : members)
+				{
+					if (!member.isInsideRadius3D(npc, 1000))
 					{
-						world.setStatus(1);
-						world.spawnGroup("FIRST_AREA");
-						startQuestTimer("check_status", 10000, null, player);
-						break;
+						player.sendMessage("Player " + member.getName() + " must come closer.");
+						return null;
 					}
-					case 1:
+					
+					if (currentTime < InstanceManager.getInstance().getInstanceTime(member, TEMPLATE_ID))
 					{
-						if (world.getAliveNpcCount(FIRST_AREA) == 0)
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(2);
-							world.getDoor(DOOR1).openMe();
-							world.spawnGroup("SECOND_AREA");
-						}
-						startQuestTimer("check_status", 1000, null, player);
-						break;
-					}
-					case 2:
-					{
-						if (world.getAliveNpcCount(SECOND_AREA) == 0)
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(3);
-							world.getDoor(DOOR2).openMe();
-							world.spawnGroup("THIRD_AREA");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-					case 3:
-					{
-						if (world.getAliveNpcCount(THIRD_AREA) == 0)
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(4);
-							world.getDoor(DOOR3).openMe();
-							world.spawnGroup("FOURTH_AREA");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
-					}
-					case 4:
-					{
-						if (world.getAliveNpcCount(FOURTH_AREA) == 0)
-						{
-							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
-							world.setStatus(5);
-							world.getDoor(DOOR4).openMe();
-							world.spawnGroup("KROSHA_FIRST_FORM");
-						}
-						startQuestTimer("check_status", 10000, null, player);
-						break;
+						final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
+						msg.addString(member.getName());
+						party.broadcastToPartyMembers(member, msg);
+						return null;
 					}
 				}
-				return null;
+				
+				for (Player member : members)
+				{
+					enterInstance(member, npc, TEMPLATE_ID);
+				}
+			}
+			else if (player.isGM())
+			{
+				enterInstance(player, npc, TEMPLATE_ID);
+			}
+			else
+			{
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+			}
+			
+			if (player.getInstanceWorld() != null)
+			{
+				startQuestTimer("check_status", 1000, null, player);
+				startQuestTimer("door_closed_effects", 1000, null, player);
 			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		else if (event.equals("door_closed_effects"))
+		{
+			final Instance world = player.getInstanceWorld();
+			if (!isInInstance(world))
+			{
+				return null;
+			}
+			
+			switch (world.getStatus())
+			{
+				case 1:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR1_CLOSED, true));
+					break;
+				}
+				case 2:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR2_CLOSED, true));
+					break;
+				}
+				case 3:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR3_CLOSED, true));
+					break;
+				}
+				case 4:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR4_CLOSED, true));
+					break;
+				}
+			}
+		}
+		else if (event.equals("door_opening_effects"))
+		{
+			final Instance world = player.getInstanceWorld();
+			if (!isInInstance(world))
+			{
+				return null;
+			}
+			
+			switch (world.getStatus())
+			{
+				case 2:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR1_OPENING, true));
+					break;
+				}
+				case 3:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR2_OPENING, true));
+					break;
+				}
+				case 4:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR3_OPENING, true));
+					break;
+				}
+				case 5:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR4_OPENING, true));
+					break;
+				}
+			}
+		}
+		else if (event.equals("door_effects_off"))
+		{
+			final Instance world = player.getInstanceWorld();
+			if (!isInInstance(world))
+			{
+				return null;
+			}
+			
+			switch (world.getStatus())
+			{
+				case 2:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR1_OPENING, false));
+					world.broadcastPacket(new OnEventTrigger(DOOR1_CLOSED, false));
+					break;
+				}
+				case 3:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR2_OPENING, false));
+					world.broadcastPacket(new OnEventTrigger(DOOR2_CLOSED, false));
+					break;
+				}
+				case 4:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR3_OPENING, false));
+					world.broadcastPacket(new OnEventTrigger(DOOR3_CLOSED, false));
+					break;
+				}
+				case 5:
+				{
+					world.broadcastPacket(new OnEventTrigger(DOOR4_OPENING, false));
+					world.broadcastPacket(new OnEventTrigger(DOOR4_CLOSED, false));
+					break;
+				}
+			}
+		}
+		else if (event.equals("check_status"))
+		{
+			final Instance world = player.getInstanceWorld();
+			if (!isInInstance(world))
+			{
+				return null;
+			}
+			
+			switch (world.getStatus())
+			{
+				case 0:
+				{
+					world.setStatus(1);
+					world.spawnGroup("FIRST_AREA");
+					startQuestTimer("door_closed_effects", 2000, null, player);
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 1:
+				{
+					if (world.getAliveNpcCount(FIRST_AREA) == 0)
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(2);
+						world.getDoor(DOOR1).openMe();
+						startQuestTimer("door_opening_effects", 1000, null, player);
+						startQuestTimer("door_effects_off", 5000, null, player);
+						world.spawnGroup("SECOND_AREA");
+						startQuestTimer("door_closed_effects", 10000, null, player);
+					}
+					startQuestTimer("check_status", 1000, null, player);
+					break;
+				}
+				case 2:
+				{
+					if (world.getAliveNpcCount(SECOND_AREA) == 0)
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(3);
+						world.getDoor(DOOR2).openMe();
+						startQuestTimer("door_opening_effects", 1000, null, player);
+						startQuestTimer("door_effects_off", 5000, null, player);
+						world.spawnGroup("THIRD_AREA");
+						startQuestTimer("door_closed_effects", 2000, null, player);
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 3:
+				{
+					if (world.getAliveNpcCount(THIRD_AREA) == 0)
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(4);
+						world.getDoor(DOOR3).openMe();
+						startQuestTimer("door_opening_effects", 1000, null, player);
+						startQuestTimer("door_effects_off", 5000, null, player);
+						world.spawnGroup("FOURTH_AREA");
+						startQuestTimer("door_closed_effects", 2000, null, player);
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+				case 4:
+				{
+					if (world.getAliveNpcCount(FOURTH_AREA) == 0)
+					{
+						showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						world.setStatus(5);
+						world.getDoor(DOOR4).openMe();
+						startQuestTimer("door_opening_effects", 1000, null, player);
+						startQuestTimer("door_effects_off", 5000, null, player);
+						world.spawnGroup("KROSHA_FIRST_FORM");
+						world.broadcastPacket(new OnEventTrigger(BOSS_WATERFALL, true));
+					}
+					startQuestTimer("check_status", 10000, null, player);
+					break;
+				}
+			}
+		}
+		return null;
 	}
 	
 	@Override

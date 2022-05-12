@@ -22,8 +22,9 @@
 		<condition type="GroupMax">
 			<param name="limit" value="7" />
 		</condition>
-		<condition type="Level">
+		<condition type="Level" showMessageAndHtml="true">
 			<param name="min" value="105" />
+			<param name="html" value="condNoLevel.html" />
 		</condition>
 		<condition type="Distance" />
 	</conditions>
