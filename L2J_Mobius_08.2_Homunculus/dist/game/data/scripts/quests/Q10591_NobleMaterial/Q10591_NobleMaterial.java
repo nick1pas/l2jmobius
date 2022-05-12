@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -77,6 +78,7 @@ public class Q10591_NobleMaterial extends Quest
 	private static final int KNIGHT_CICLET_BOX_LV5 = 80913;
 	// Misc
 	private static final int MIN_LEVEL = 100;
+	private static final SkillHolder NOBLESSE_PRESENTATION = new SkillHolder(18176, 1);
 	// Location
 	private static final Location BURNING_MARSH = new Location(152754, -15142, -4400);
 	private static final Location WAR_PLAINS = new Location(159620, 21075, -3688);
@@ -190,6 +192,7 @@ public class Q10591_NobleMaterial extends Quest
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					player.doCast(NOBLESSE_PRESENTATION.getSkill());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -207,6 +210,7 @@ public class Q10591_NobleMaterial extends Quest
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					player.doCast(NOBLESSE_PRESENTATION.getSkill());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -224,6 +228,7 @@ public class Q10591_NobleMaterial extends Quest
 					player.setNobleLevel(1);
 					player.broadcastInfo();
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					player.doCast(NOBLESSE_PRESENTATION.getSkill());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
