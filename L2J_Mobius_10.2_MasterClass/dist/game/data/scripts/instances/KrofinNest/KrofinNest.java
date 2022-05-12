@@ -110,7 +110,6 @@ public class KrofinNest extends AbstractInstance
 		291, // lv. 105
 		315, // lv. 110
 	};
-	private static int INITIAL_PARTY_MEMBERS = 0;
 	private static final int DOOR1 = 23220101;
 	private static final int DOOR2 = 24250002;
 	private static final int DOOR3 = 24250004;
@@ -431,7 +430,7 @@ public class KrofinNest extends AbstractInstance
 	@Override
 	public void onInstanceCreated(Instance instance, Player player)
 	{
-		INITIAL_PARTY_MEMBERS = (player.getParty() != null ? player.getParty().getMemberCount() : 1);
+		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
 	}
 	
 	@Override
@@ -474,15 +473,9 @@ public class KrofinNest extends AbstractInstance
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX);
 					}
-					if (world.getPlayersCount() == INITIAL_PARTY_MEMBERS)
+					if ((randomPl != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 					{
-						if (getRandom(100) < 80)
-						{
-							if (randomPl != null)
-							{
-								giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
-							}
-						}
+						giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
 					}
 					showOnScreenMsg(world, NpcStringId.THE_WATER_POWER_PROTECTING_QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.finishInstance();
@@ -493,15 +486,9 @@ public class KrofinNest extends AbstractInstance
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX_110);
 					}
-					if (world.getPlayersCount() == INITIAL_PARTY_MEMBERS)
+					if ((randomPl != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 					{
-						if (getRandom(100) < 80)
-						{
-							if (randomPl != null)
-							{
-								giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
-							}
-						}
+						giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
 					}
 					showOnScreenMsg(world, NpcStringId.THE_WATER_POWER_PROTECTING_QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.finishInstance();
