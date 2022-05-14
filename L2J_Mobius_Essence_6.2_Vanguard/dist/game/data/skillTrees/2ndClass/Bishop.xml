@@ -18,13 +18,19 @@
 		<skill skillName="Haste" skillId="1086" skillLevel="2" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="6" getLevel="40" levelUpSp="69000" />
 		<skill skillName="Poison" skillId="1168" skillLevel="4" getLevel="40" levelUpSp="69000" />
-		<skill skillName="Greater Heal" skillId="1217" skillLevel="1" getLevel="40" levelUpSp="69000" />
+		<skill skillName="Greater Heal" skillId="1217" skillLevel="1" getLevel="40" levelUpSp="69000">
+			<removeSkill id="1011" /> <!-- Heal -->
+		</skill>
 		<skill skillName="Greater Heal" skillId="1217" skillLevel="2" getLevel="40" levelUpSp="69000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLevel="3" getLevel="40" levelUpSp="69000" />
-		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="1" getLevel="40" levelUpSp="69000" />
+		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="1" getLevel="40" levelUpSp="69000">
+			<removeSkill id="1015" /> <!-- Battle Heal -->
+		</skill>
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="2" getLevel="40" levelUpSp="69000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="3" getLevel="40" levelUpSp="69000" />
-		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="1" getLevel="40" levelUpSp="69000" />
+		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="1" getLevel="40" levelUpSp="69000">
+			<removeSkill id="1027" /> <!-- Group Heal -->
+		</skill>
 		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="2" getLevel="40" levelUpSp="69000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="3" getLevel="40" levelUpSp="69000" />
 		<skill skillName="Death Whisper" skillId="1242" skillLevel="3" getLevel="40" levelUpSp="80000" />
