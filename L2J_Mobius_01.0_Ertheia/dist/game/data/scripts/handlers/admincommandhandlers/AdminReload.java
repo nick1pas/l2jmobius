@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
+import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
@@ -353,6 +354,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					CombinationItemsData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Combination data.");
+					break;
+				}
+				case "variation":
+				{
+					VariationData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Variation data.");
 					break;
 				}
 				default:
