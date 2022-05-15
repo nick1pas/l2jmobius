@@ -63,6 +63,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpAffectedBySkill", OpAffectedBySkillSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpAgathionEnergy", OpAgathionEnergySkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpAlignment", OpAlignmentSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpBaseStat", OpBaseStatSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpBlink", OpBlinkSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpCallPc", OpCallPcSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpCanEscape", OpCanEscapeSkillCondition::new);
