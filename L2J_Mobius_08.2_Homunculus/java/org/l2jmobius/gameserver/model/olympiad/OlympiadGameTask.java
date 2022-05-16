@@ -255,6 +255,7 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = OlympiadGameState.BATTLE_STARTED;
 						_game.removePlayersInvul();
+						_stadium.broadcastPacket(new SystemMessage(SystemMessageId.HIDDEN_MSG_START_OLYMPIAD));
 					}
 					break;
 				}
