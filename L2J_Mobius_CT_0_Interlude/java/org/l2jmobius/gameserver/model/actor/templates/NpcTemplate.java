@@ -801,7 +801,14 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// finally
-					if (dropItem.getChance() < 100)
+					if (itemChance != null)
+					{
+						if ((dropItem.getChance() * itemChance) < 100)
+						{
+							dropOccurrenceCounter--;
+						}
+					}
+					else if (dropItem.getChance() < 100)
 					{
 						dropOccurrenceCounter--;
 					}
@@ -891,7 +898,16 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				}
 				
 				// finally
-				if (dropItem.getChance() < 100)
+				final Float itemChance = Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+				if (itemChance != null)
+				{
+					if ((dropItem.getChance() * itemChance) < 100)
+					{
+						dropOccurrenceCounter--;
+						randomDrops.add(drop);
+					}
+				}
+				else if (dropItem.getChance() < 100)
 				{
 					dropOccurrenceCounter--;
 					randomDrops.add(drop);
