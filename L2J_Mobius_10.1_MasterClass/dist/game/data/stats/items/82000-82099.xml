@@ -921,9 +921,16 @@
 		<!-- For enchanting Blessed Exalted weapons. Enchant success rate: 100%. Cannot be used with weapons enchanted to +12 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39742" level="1" /> <!-- Scroll: Enchant Blessed Exalted Weapon -->
+		</skills>
 	</item>
 	<item id="82075" name="Prophetess' Gift Cube" additionalName="Event" type="EtcItem">
 		<!-- A wondrous cube created by the Prophetess. Double-click to obtain Mysterious Energy Potion. Upon the 10th use you can obtain a special reward. -->
