@@ -19,11 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-/**
- * Format: (ch)ddd
- */
 public class ExVariationResult implements IClientOutgoingPacket
 {
+	public static final ExVariationResult FAIL = new ExVariationResult(0, 0, false);
+	
 	private final int _option1;
 	private final int _option2;
 	private final int _success;
@@ -41,6 +40,8 @@ public class ExVariationResult implements IClientOutgoingPacket
 		OutgoingPackets.EX_VARIATION_RESULT.writeId(packet);
 		packet.writeD(_option1);
 		packet.writeD(_option2);
+		packet.writeQ(0); // GemStoneCount
+		packet.writeQ(0); // NecessaryGemStoneCount
 		packet.writeD(_success);
 		return true;
 	}

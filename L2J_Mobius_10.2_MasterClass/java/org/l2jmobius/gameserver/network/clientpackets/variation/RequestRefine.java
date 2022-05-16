@@ -84,14 +84,14 @@ public class RequestRefine extends AbstractRefinePacket
 		
 		if (!isValid(player, targetItem, mineralItem, feeItem, fee))
 		{
-			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(ExVariationResult.FAIL);
 			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
 		
 		if (_feeCount <= 0)
 		{
-			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(ExVariationResult.FAIL);
 			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
@@ -99,7 +99,7 @@ public class RequestRefine extends AbstractRefinePacket
 		final long adenaFee = fee.getAdenaFee();
 		if ((adenaFee > 0) && (player.getAdena() < adenaFee))
 		{
-			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(ExVariationResult.FAIL);
 			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
@@ -107,14 +107,14 @@ public class RequestRefine extends AbstractRefinePacket
 		final Variation variation = VariationData.getInstance().getVariation(mineralItem.getId());
 		if (variation == null)
 		{
-			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(ExVariationResult.FAIL);
 			return;
 		}
 		
 		VariationInstance augment = VariationData.getInstance().generateRandomVariation(variation, targetItem);
 		if (augment == null)
 		{
-			player.sendPacket(new ExVariationResult(0, 0, false));
+			player.sendPacket(ExVariationResult.FAIL);
 			return;
 		}
 		
@@ -137,35 +137,30 @@ public class RequestRefine extends AbstractRefinePacket
 			}
 		}
 		
+		player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
+		
 		// Consume the life stone.
-		if (!player.destroyItem("RequestRefine", mineralItem, 1, null, false))
-		{
-			return;
-		}
+		player.destroyItem("RequestRefine", mineralItem, 1, null, false);
 		
 		// Consume the gemstones.
-		if ((feeItem != null) && !player.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
+		if (feeItem != null)
 		{
-			return;
+			player.destroyItem("RequestRefine", feeItem, _feeCount, null, false);
 		}
 		
 		// Consume Adena.
-		if ((adenaFee > 0) && !player.reduceAdena("RequestRefine", adenaFee, player, false))
+		if (adenaFee > 0)
 		{
-			return;
+			player.reduceAdena("RequestRefine", adenaFee, player, false);
 		}
 		
+		// Request (continues at ExApplyVariationOption).
 		if (player.getRequest(VariationRequest.class) == null)
 		{
 			player.addRequest(new VariationRequest(player));
 		}
-		
-		VariationRequest request = player.getRequest(VariationRequest.class);
+		final VariationRequest request = player.getRequest(VariationRequest.class);
 		request.setAugmentedItem(_targetItemObjId);
-		request.setMineralItem(_mineralItemObjId);
 		request.setAugment(augment);
-		
-		player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
-		
 	}
 }

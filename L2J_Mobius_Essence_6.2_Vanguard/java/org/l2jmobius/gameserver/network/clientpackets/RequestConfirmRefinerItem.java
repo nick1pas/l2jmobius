@@ -70,6 +70,6 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 			return;
 		}
 		
-		player.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItem.getId(), fee.getItemId(), fee.getItemCount()));
+		player.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItem.getId(), 1));
 	}
 }
