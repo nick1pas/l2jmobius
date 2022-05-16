@@ -26,9 +26,9 @@ public class CollectionDataHolder
 	private final int _collectionId;
 	private final int _optionId;
 	private final int _category;
-	private final List<ItemCollectionData> _items;
+	private final List<ItemEnchantHolder> _items;
 	
-	public CollectionDataHolder(int collectionId, int optionId, int category, List<ItemCollectionData> items)
+	public CollectionDataHolder(int collectionId, int optionId, int category, List<ItemEnchantHolder> items)
 	{
 		_collectionId = collectionId;
 		_optionId = optionId;
@@ -51,7 +51,7 @@ public class CollectionDataHolder
 		return _category;
 	}
 	
-	public List<ItemCollectionData> getItems()
+	public List<ItemEnchantHolder> getItems()
 	{
 		return _items;
 	}

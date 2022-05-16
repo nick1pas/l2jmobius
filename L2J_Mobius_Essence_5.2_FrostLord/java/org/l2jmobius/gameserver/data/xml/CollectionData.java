@@ -32,7 +32,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
-import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
+import org.l2jmobius.gameserver.model.holders.ItemEnchantHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 
 /**
@@ -88,7 +88,7 @@ public class CollectionData implements IXmlReader
 						final int id = parseInteger(attrs, "id");
 						final int optionId = parseInteger(attrs, "optionId");
 						final int category = parseInteger(attrs, "category");
-						List<ItemCollectionData> items = new ArrayList<>();
+						final List<ItemEnchantHolder> items = new ArrayList<>();
 						for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 						{
 							attrs = b.getAttributes();
@@ -103,7 +103,7 @@ public class CollectionData implements IXmlReader
 									LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + itemId + " collection item: " + id);
 									continue;
 								}
-								items.add(new ItemCollectionData(itemId, itemCount, itemEnchantLevel));
+								items.add(new ItemEnchantHolder(itemId, itemCount, itemEnchantLevel));
 							}
 						}
 						

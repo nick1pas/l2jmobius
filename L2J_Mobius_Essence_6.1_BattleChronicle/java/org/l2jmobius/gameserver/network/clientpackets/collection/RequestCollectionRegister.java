@@ -21,7 +21,7 @@ import org.l2jmobius.gameserver.data.xml.CollectionData;
 import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.CollectionDataHolder;
-import org.l2jmobius.gameserver.model.holders.ItemCollectionData;
+import org.l2jmobius.gameserver.model.holders.ItemEnchantHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Options;
@@ -72,9 +72,9 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 		}
 		
 		long count = 0;
-		for (ItemCollectionData data : collection.getItems())
+		for (ItemEnchantHolder data : collection.getItems())
 		{
-			if ((data.getItemId() == item.getId()) && ((data.getEnchantLevel() == 0) || (data.getEnchantLevel() == item.getEnchantLevel())))
+			if ((data.getId() == item.getId()) && ((data.getEnchantLevel() == 0) || (data.getEnchantLevel() == item.getEnchantLevel())))
 			{
 				count = data.getCount();
 				break;
