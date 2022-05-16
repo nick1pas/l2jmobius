@@ -85,6 +85,7 @@ import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElement
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
+import org.l2jmobius.gameserver.network.clientpackets.equipmentupgradenormal.ExUpgradeSystemNormalRequest;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneEnter;
 import org.l2jmobius.gameserver.network.clientpackets.huntingzones.ExTimedHuntingZoneList;
@@ -531,7 +532,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
 	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME),
 	EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME),
-	EX_UPGRADE_SYSTEM_NORMAL_REQUEST(0x161, null, ConnectionState.IN_GAME),
+	EX_UPGRADE_SYSTEM_NORMAL_REQUEST(0x161, ExUpgradeSystemNormalRequest::new, ConnectionState.IN_GAME),
 	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, RequestPurchaseLimitShopItemList::new, ConnectionState.IN_GAME),
 	EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, RequestPurchaseLimitShopItemBuy::new, ConnectionState.IN_GAME),
 	// 228

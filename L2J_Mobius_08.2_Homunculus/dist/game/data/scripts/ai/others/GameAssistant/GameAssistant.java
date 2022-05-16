@@ -204,6 +204,13 @@ public class GameAssistant extends AbstractNpcAI
 				}
 				break;
 			}
+			case "items_conversion":
+			{
+				// TODO: Add to html.
+				// player.setTarget(player);
+				// player.sendPacket(new ExShowUpgradeSystemNormal(1, 1));
+				break;
+			}
 		}
 		return htmltext;
 	}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EquipmentUpgradeNormalData.xsd">
+	<!--
+	Commission in params its Adena multiplier, which apply to commission from upgrade.
+	Commission in upgrade its adena, which request for change item type.
+	Upgrade commission value 5 000 000:
+		* commission   100 - upgrade commission will be  5 000 000 // default value
+		* commission 1 000 - upgrade commission will be 50 000 000
+	Calculation formula -> (Upgrade commission / 100) * (params commission)
+	-->
+	<params commission="100" />
+	<discount>
+	<!--
+	Working only for material items in upgrade.
+	For change adena tax - use commission in params.
+		<item id="57" count="0" />
+		<item id="57" count="0" />
+		<item id="57" count="0" />
+	-->
+	</discount>
+	<upgrade id="1" type="1" chance="50" commission="5000000">
+		<upgradeItem id="6660" count="1" enchantLevel="0" /> <!-- Queen Ant's Ring -->
+		<successItems>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94208" count="1" enchantLevel="0" /> <!-- Scroll of Blessing (Sealed) -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="2" type="1" chance="50" commission="5000000">
+		<upgradeItem id="6661" count="1" enchantLevel="0" /> <!--Orfen's Earring -->
+		<successItems>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94208" count="1" enchantLevel="0" /> <!-- Scroll of Blessing (Sealed) -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="3" type="1" chance="20" commission="2000000">
+		<upgradeItem id="6662" count="1" enchantLevel="0" /> <!-- Ring of Core -->
+		<successItems>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94208" count="1" enchantLevel="0" /> <!-- Scroll of Blessing (Sealed) -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="4" type="1" chance="23" commission="7500000">
+		<upgradeItem id="49580" count="1" enchantLevel="0" /> <!-- Baium's Ring -->
+		<successItems>
+			<item id="94385" count="1" enchantLevel="0" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="5" type="1" chance="80" commission="7500000">
+		<upgradeItem id="90763" count="1" enchantLevel="0" /> <!-- Zaken's Earring -->
+		<successItems>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94208" count="1" enchantLevel="0" /> <!-- Scroll of Blessing (Sealed) -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="6" type="1" chance="40" commission="10000000">
+		<upgradeItem id="90992" count="1" enchantLevel="0" /> <!-- Antharas' Earring -->
+		<successItems>
+			<item id="94385" count="1" enchantLevel="0" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94383" count="2" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</failure_items>
+	</upgrade>
+	<upgrade id="7" type="1" chance="40" commission="10000000">
+		<upgradeItem id="91550" count="1" enchantLevel="0" /> <!-- Frintezza's Necklace -->
+		<successItems>
+			<item id="94385" count="1" enchantLevel="0" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+		</successItems>
+		<failure_items>
+			<item id="94383" count="1" enchantLevel="0" /> <!-- Scroll: Enchant Rare Accessories -->
+		</failure_items>
+	</upgrade>
+</list>

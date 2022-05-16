@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulExtractionWindow;
 import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
-import org.l2jmobius.gameserver.network.serverpackets.equipmentupgrade.ExShowUpgradeSystem;
 
 import ai.AbstractNpcAI;
 
@@ -220,8 +219,9 @@ public class GameAssistant extends AbstractNpcAI
 			}
 			case "items_conversion":
 			{
-				player.setTarget(player);
-				player.sendPacket(new ExShowUpgradeSystem());
+				// TODO: Add to html.
+				// player.setTarget(player);
+				// player.sendPacket(new ExShowUpgradeSystemNormal(1, 1));
 				break;
 			}
 			// Multisell

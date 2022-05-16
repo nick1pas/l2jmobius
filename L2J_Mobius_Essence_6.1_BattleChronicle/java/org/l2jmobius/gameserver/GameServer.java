@@ -71,6 +71,7 @@ import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
+import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeNormalData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.FenceData;
@@ -296,6 +297,7 @@ public class GameServer
 		CombinationItemsData.getInstance();
 		CombinationDyeData.getInstance();
 		EquipmentUpgradeData.getInstance();
+		EquipmentUpgradeNormalData.getInstance();
 		AgathionData.getInstance();
 		RaidTeleportListData.getInstance();
 		RecipeData.getInstance();
