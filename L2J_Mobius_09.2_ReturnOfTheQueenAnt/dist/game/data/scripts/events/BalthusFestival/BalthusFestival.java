@@ -33,13 +33,15 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemUse;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
@@ -214,6 +216,38 @@ public class BalthusFestival extends LongTimeEvent implements IXmlReader
 		return npc.getId() + ".htm";
 	}
 	
+	@RegisterEvent(EventType.ON_ITEM_USE)
+	@RegisterType(ListenerRegisterType.ITEM)
+	@Id(28609) // Balthus Knights' High-grade Mark
+	@Id(47385) // Lucky Gift Coupon (2-hour)
+	@Id(48223) // Lucky Gift Coupon (3-hour)
+	@Id(48224) // Lucky Gift Coupon (6-hour)
+	@Id(48853) // Lucky Gift Coupon (8-hour)
+	@Id(60009) // Festival Fairy's Lucky Ticket
+	public void onItemUse(OnItemUse event)
+	{
+		if (!isEventPeriod())
+		{
+			return;
+		}
+		
+		final List<ItemSkillHolder> skills = event.getItem().getTemplate().getAllSkills();
+		if (skills != null)
+		{
+			final Player player = event.getPlayer();
+			for (SkillHolder skill : skills)
+			{
+				if (SKILLS.contains(skill))
+				{
+					startQuestTimer("balthusEventBuff" + player.getObjectId(), skill.getSkill().getAbnormalTime() * 1000, null, player);
+					BalthusEventManager.getInstance().addPlayer(player);
+					player.sendPacket(new ExBalthusEvent(player));
+					break;
+				}
+			}
+		}
+	}
+	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
@@ -252,39 +286,13 @@ public class BalthusFestival extends LongTimeEvent implements IXmlReader
 		}
 		
 		final Player player = event.getPlayer();
-		if ((player == null))
+		if (player == null)
 		{
 			return;
 		}
 		
 		cancelQuestTimer("balthusEventBuff" + player.getObjectId(), null, player);
 		BalthusEventManager.getInstance().removePlayer(player);
-	}
-	
-	@RegisterEvent(EventType.ON_CREATURE_SKILL_FINISH_CAST)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onCreatureSkillFinishCast(OnCreatureSkillFinishCast event)
-	{
-		if (!isEventPeriod())
-		{
-			return;
-		}
-		
-		final Player player = event.getCaster().getActingPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		
-		for (SkillHolder skill : SKILLS)
-		{
-			if (event.getSkill() == skill.getSkill())
-			{
-				startQuestTimer("balthusEventBuff" + player.getObjectId(), skill.getSkill().getAbnormalTime() * 1000, null, player);
-				BalthusEventManager.getInstance().addPlayer(player);
-				player.sendPacket(new ExBalthusEvent(player));
-			}
-		}
 	}
 	
 	public static void main(String[] args)
