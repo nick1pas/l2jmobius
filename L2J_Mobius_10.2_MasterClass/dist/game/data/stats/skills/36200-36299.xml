@@ -1,144 +1,784 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="36200" toLevel="3" name="Shield Augmentation: P. Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Evasion +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36201" toLevel="3" name="Shield Augmentation: M. Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Evasion +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36202" toLevel="9" name="Shield Augmentation: P. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +282 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">293</value>
+					<value level="4">299</value>
+					<value level="5">305</value>
+					<value level="6">311</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36203" toLevel="9" name="Shield Augmentation: M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. +151 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">151</value>
+					<value level="2">155</value>
+					<value level="3">159</value>
+					<value level="4">163</value>
+					<value level="5">167</value>
+					<value level="6">171</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36204" toLevel="8" name="Shield Augmentation: Attribute Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Resistance +4 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36205" toLevel="2" name="Shield Augmentation: Received PvE Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvE damage -1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36206" toLevel="2" name="Shield Augmentation: Received PvP Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvP damage -1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36207" toLevel="3" name="Shield Augmentation: P. Accuracy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Accuracy +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36208" toLevel="3" name="Shield Augmentation: M. Accuracy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Accuracy +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="36209" toLevel="9" name="Shield Augmentation: P. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="36209" toLevel="9" name="Shield Augmentation: P. Atk">
+		<!-- P. Atk. +763 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">763</value>
+					<value level="2">786</value>
+					<value level="3">809</value>
+					<value level="4">834</value>
+					<value level="5">859</value>
+					<value level="6">884</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36210" toLevel="9" name="Shield Augmentation: M. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +443 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">443</value>
+					<value level="2">457</value>
+					<value level="3">470</value>
+					<value level="4">484</value>
+					<value level="5">499</value>
+					<value level="6">514</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36211" toLevel="8" name="Shield Augmentation: Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Attack +4 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36212" toLevel="2" name="Shield Augmentation: PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvE damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36213" toLevel="2" name="Shield Augmentation: PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvP damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36214" toLevel="3" name="Sigil Augmentation: P. Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Evasion +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36215" toLevel="3" name="Sigil Augmentation: M. Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Evasion +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36216" toLevel="9" name="Sigil Augmentation: P. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +282 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">293</value>
+					<value level="4">299</value>
+					<value level="5">305</value>
+					<value level="6">311</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36217" toLevel="9" name="Sigil Augmentation: M. Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. +151 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">151</value>
+					<value level="2">155</value>
+					<value level="3">159</value>
+					<value level="4">163</value>
+					<value level="5">167</value>
+					<value level="6">171</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36218" toLevel="8" name="Sigil Augmentation: Attribute Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Resistance +4 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36219" toLevel="2" name="Sigil Augmentation: Received PvE Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvE damage -1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36220" toLevel="2" name="Sigil Augmentation: Received PvP Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvP damage -1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36221" toLevel="3" name="Sigil Augmentation: P. Accuracy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Accuracy +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36222" toLevel="3" name="Sigil Augmentation: M. Accuracy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Accuracy +1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<value level="1">1</value>
+				<value level="2">2</value>
+				<value level="3">3</value>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="36223" toLevel="9" name="Sigil Augmentation: P. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="36223" toLevel="9" name="Sigil Augmentation: P. Atk">
+		<!-- P. Atk. +763 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">763</value>
+					<value level="2">786</value>
+					<value level="3">809</value>
+					<value level="4">834</value>
+					<value level="5">859</value>
+					<value level="6">884</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36224" toLevel="9" name="Sigil Augmentation: M. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +443 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">443</value>
+					<value level="2">457</value>
+					<value level="3">470</value>
+					<value level="4">484</value>
+					<value level="5">499</value>
+					<value level="6">514</value>
+					<value fromLevel="7" toLevel="9">0</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36225" toLevel="8" name="Sigil Augmentation: Attribute Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Attack +4 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36226" toLevel="2" name="Sigil Augmentation: PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvE damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36227" toLevel="2" name="Sigil Augmentation: PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvP damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36228" toLevel="10" name="Helmet - Might">
 		<!-- P. Def. +400 -->
