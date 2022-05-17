@@ -35,6 +35,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemUse;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -283,6 +285,9 @@ public class UseItem implements IClientIncomingPacket
 					player.addTimeStampItem(item, reuseDelay);
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
+				
+				// Notify events.
+				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 		}
 	}

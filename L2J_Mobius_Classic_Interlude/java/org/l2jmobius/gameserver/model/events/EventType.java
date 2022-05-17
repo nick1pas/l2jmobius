@@ -123,6 +123,7 @@ import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChang
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemUse;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
@@ -178,6 +179,7 @@ public enum EventType
 	// Item events
 	ON_ITEM_BYPASS_EVENT(OnItemBypassEvent.class, void.class),
 	ON_ITEM_CREATE(OnItemCreate.class, void.class),
+	ON_ITEM_USE(OnItemUse.class, void.class),
 	ON_ITEM_TALK(OnItemTalk.class, void.class),
 	
 	// NPC events
