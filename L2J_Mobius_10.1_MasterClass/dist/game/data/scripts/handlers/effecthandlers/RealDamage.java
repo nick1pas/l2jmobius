@@ -35,6 +35,10 @@ public class RealDamage extends AbstractEffect
 	
 	public RealDamage(StatSet params)
 	{
+		if (params.getDouble("amount", 0) > 0)
+		{
+			LOGGER.warning(getClass().getSimpleName() + " should use power instead of amount.");
+		}
 		_power = params.getDouble("power", 0);
 		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
 	}
