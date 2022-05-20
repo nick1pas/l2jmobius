@@ -2102,19 +2102,227 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47384" toLevel="1" name="Legendary Archer">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_legendary_archer_el1</icon>
+		<operateType>A2</operateType>
+		<mpConsume>200</mpConsume>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>H_B_MOONLIGHTA_AVE</abnormalVisualEffect>
+		<abnormalTime>1200</abnormalTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SWORD>10</SWORD>
+				<DAGGER>10</DAGGER>
+				<DUALFIST>10</DUALFIST>
+				<ANCIENTSWORD>10</ANCIENTSWORD>
+				<DUALDAGGER>10</DUALDAGGER>
+				<BLUNT>10</BLUNT>
+				<POLE>10</POLE>
+				<DUAL>10</DUAL>
+				<RAPIER>10</RAPIER>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>343</existingSkillId> <!-- Lethal Shot -->
+				<replacementSkillId>47386</replacementSkillId> <!-- Legendary Lethal Shot -->
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>47386</castSkillId>
+				<skillId>47387</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+					<value level="14">14</value>
+					<value level="15">15</value>
+				</skillLevel>
+				<chance>10</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47386" toLevel="15" name="Legendary Lethal Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_lethal_shot_el</icon>
 		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">68</value>
+			<value level="2">69</value>
+			<value level="3">70</value>
+			<value level="4">71</value>
+			<value level="5">72</value>
+			<value level="6">72</value>
+			<value level="7">73</value>
+			<value level="8">74</value>
+			<value level="9">75</value>
+			<value level="10">73</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+			<value level="13">78</value>
+			<value level="14">79</value>
+			<value level="15">80</value>
+		</mpConsume>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
+		</effectPoint>
+		<reuseDelay>1500</reuseDelay>
+		<hitTime>1800</hitTime>
+		<coolTime>500</coolTime>
+		<castRange>700</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">5170</value>
+					<value level="2">5255</value>
+					<value level="3">5341</value>
+					<value level="4">5426</value>
+					<value level="5">5512</value>
+					<value level="6">5599</value>
+					<value level="7">5685</value>
+					<value level="8">5772</value>
+					<value level="9">5859</value>
+					<value level="10">5947</value>
+					<value level="11">6035</value>
+					<value level="12">6123</value>
+					<value level="13">6212</value>
+					<value level="14">6301</value>
+					<value level="15">6389</value>
+				</amount>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47387" toLevel="15" name="Legendary Lethal Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.s_lethal_shot_el</icon>
 		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">68</value>
+			<value level="2">69</value>
+			<value level="3">70</value>
+			<value level="4">71</value>
+			<value level="5">72</value>
+			<value level="6">72</value>
+			<value level="7">73</value>
+			<value level="8">74</value>
+			<value level="9">75</value>
+			<value level="10">73</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+			<value level="13">78</value>
+			<value level="14">79</value>
+			<value level="15">80</value>
+		</mpConsume>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
+		</effectPoint>
+		<reuseDelay>1500</reuseDelay>
+		<hitTime>1800</hitTime>
+		<coolTime>500</coolTime>
+		<castRange>700</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">5170</value>
+					<value level="2">5255</value>
+					<value level="3">5341</value>
+					<value level="4">5426</value>
+					<value level="5">5512</value>
+					<value level="6">5599</value>
+					<value level="7">5685</value>
+					<value level="8">5772</value>
+					<value level="9">5859</value>
+					<value level="10">5947</value>
+					<value level="11">6035</value>
+					<value level="12">6123</value>
+					<value level="13">6212</value>
+					<value level="14">6301</value>
+					<value level="15">6389</value>
+				</amount>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47388" toLevel="1" name="Legendary Archer">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
