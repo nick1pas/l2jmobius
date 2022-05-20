@@ -748,6 +748,7 @@ public class LastImperialTomb extends AbstractInstance
 			final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 			broadcastPacket(world, new MagicSkillCanceld(frintezza.getObjectId()));
 			startQuestTimer("FINISH_CAMERA_1", 500, npc, killer, false);
+			world.finishInstance();
 		}
 		else if (CommonUtil.contains(DEMONS, npc.getId()))
 		{
