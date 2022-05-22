@@ -74,6 +74,14 @@ public class AreaSkillNpc extends AbstractNpcAI
 		13549, // Solo Dance
 		13580, // Solo Dance
 		13581, // Solo Dance
+		14927, // Death Gate 1
+		15200, // Death Gate 2
+		15201, // Death Gate 3
+		15202, // Death Gate 4
+		15218, // Death Gate 5
+		15219, // Death Gate 6
+		15264, // Death Gate 7
+		15265, // Death Gate 8
 	};
 	private static final int[] DECOY = // ai_decoy
 	{

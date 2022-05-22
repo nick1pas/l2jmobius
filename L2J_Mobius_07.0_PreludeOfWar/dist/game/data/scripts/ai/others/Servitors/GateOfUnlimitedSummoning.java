@@ -36,15 +36,15 @@ public class GateOfUnlimitedSummoning extends AbstractNpcAI
 {
 	// NPCs
 	private static final Map<Integer, Integer> DEATH_GATE = new HashMap<>();
-	
 	static
 	{
 		DEATH_GATE.put(14927, 1); // Death Gate
 		DEATH_GATE.put(15200, 2); // Death Gate
 		DEATH_GATE.put(15201, 3); // Death Gate
 		DEATH_GATE.put(15202, 4); // Death Gate
+		DEATH_GATE.put(15218, 5); // Death Gate
+		DEATH_GATE.put(15219, 6); // Death Gate
 	}
-	
 	// Skills
 	private static final int GATE_ROOT = 11289;
 	private static final int GATE_VORTEX = 11291;
