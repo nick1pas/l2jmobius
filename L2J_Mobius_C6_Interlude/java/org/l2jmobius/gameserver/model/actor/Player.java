@@ -12680,7 +12680,7 @@ public class Player extends Playable
 	}
 	
 	@Override
-	public void addExpAndSp(long addToExp, int addToSp)
+	public synchronized void addExpAndSp(long addToExp, int addToSp)
 	{
 		getStat().addExpAndSp(addToExp, addToSp);
 	}

@@ -336,7 +336,7 @@ public class Player extends Creature
 	}
 	
 	@Override
-	public void addExpAndSp(int addToExp, int addToSp)
+	public synchronized void addExpAndSp(int addToExp, int addToSp)
 	{
 		_exp += addToExp;
 		_sp += addToSp;

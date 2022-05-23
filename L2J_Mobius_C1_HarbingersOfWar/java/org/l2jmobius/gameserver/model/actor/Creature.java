@@ -1187,7 +1187,7 @@ public abstract class Creature extends WorldObject
 		return true;
 	}
 	
-	public void addExpAndSp(int addToExp, int addToSp)
+	public synchronized void addExpAndSp(int addToExp, int addToSp)
 	{
 	}
 	

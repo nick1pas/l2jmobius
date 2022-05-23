@@ -170,7 +170,7 @@ public class Servitor extends Summon
 		_timeRemaining -= value;
 	}
 	
-	public void addExpAndSp(int addToExp, int addToSp)
+	public synchronized void addExpAndSp(int addToExp, int addToSp)
 	{
 		getOwner().addExpAndSp(addToExp, addToSp);
 	}

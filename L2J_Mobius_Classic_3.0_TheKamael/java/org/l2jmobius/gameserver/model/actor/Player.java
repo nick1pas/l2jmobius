@@ -10419,12 +10419,12 @@ public class Player extends Playable
 	}
 	
 	@Override
-	public void addExpAndSp(double addToExp, double addToSp)
+	public synchronized void addExpAndSp(double addToExp, double addToSp)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, false);
 	}
 	
-	public void addExpAndSp(double addToExp, double addToSp, boolean useVitality)
+	public synchronized void addExpAndSp(double addToExp, double addToSp, boolean useVitality)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, useVitality);
 	}

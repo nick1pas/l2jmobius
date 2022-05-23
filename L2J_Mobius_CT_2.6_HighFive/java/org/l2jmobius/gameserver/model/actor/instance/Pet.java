@@ -1141,7 +1141,7 @@ public class Pet extends Summon
 	}
 	
 	@Override
-	public void addExpAndSp(double addToExp, double addToSp)
+	public synchronized void addExpAndSp(double addToExp, double addToSp)
 	{
 		if (getId() == 12564)
 		{

@@ -3794,7 +3794,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param addToExp
 	 * @param addToSp
 	 */
-	public void addExpAndSp(double addToExp, double addToSp)
+	public synchronized void addExpAndSp(double addToExp, double addToSp)
 	{
 		// Dummy method (overridden by players and pets)
 	}
