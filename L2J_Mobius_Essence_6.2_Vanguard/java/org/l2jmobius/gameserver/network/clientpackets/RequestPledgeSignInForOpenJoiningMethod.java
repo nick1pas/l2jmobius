@@ -74,7 +74,7 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_S2_MIN_AFTER_LEAVING_THE_PREVIOUS_ONE);
 					sm.addString(player.getName());
-					sm.addInt(Config.ALT_CLAN_JOIN_DAYS);
+					sm.addInt(Config.ALT_CLAN_JOIN_MINS);
 					player.sendPacket(sm);
 					return;
 				}

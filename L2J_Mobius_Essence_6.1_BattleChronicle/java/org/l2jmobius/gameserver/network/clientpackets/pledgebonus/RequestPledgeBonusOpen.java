@@ -45,7 +45,7 @@ public class RequestPledgeBonusOpen implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new ExPledgeBonusOpen(player));
-		final long joinedTime = (player.getClanJoinExpiryTime() - (Config.ALT_CLAN_JOIN_DAYS * 60000));
+		final long joinedTime = (player.getClanJoinExpiryTime() - (Config.ALT_CLAN_JOIN_MINS * 60000));
 		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), (joinedTime + 86400000) < System.currentTimeMillis()));
 	}
 }

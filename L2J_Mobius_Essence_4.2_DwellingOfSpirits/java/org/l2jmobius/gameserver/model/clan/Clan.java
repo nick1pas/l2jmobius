@@ -1088,7 +1088,7 @@ public class Clan implements IIdentifiable, INamable
 						setAllyPenaltyExpiryTime(0, 0);
 					}
 					setCharPenaltyExpiryTime(clanData.getLong("char_penalty_expiry_time"));
-					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
+					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_MINS * 60000)) < System.currentTimeMillis()) // 24*60*60*1000 = 60000
 					{
 						setCharPenaltyExpiryTime(0);
 					}

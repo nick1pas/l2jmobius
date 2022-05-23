@@ -267,7 +267,7 @@ public class Config
 	public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
 	public static double ALT_GAME_CREATION_SP_RATE;
 	public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
-	public static int ALT_CLAN_JOIN_DAYS;
+	public static int ALT_CLAN_JOIN_MINS;
 	public static int ALT_CLAN_CREATE_DAYS;
 	public static int ALT_CLAN_DISSOLVE_DAYS;
 	public static int ALT_ALLY_JOIN_DAYS_WHEN_LEAVED;
@@ -1829,7 +1829,7 @@ public class Config
 			ALT_GAME_CREATION_SP_RATE = characterConfig.getDouble("AltGameCreationSpRate", 1);
 			ALT_GAME_CREATION_RARE_XPSP_RATE = characterConfig.getDouble("AltGameCreationRareXpSpRate", 2);
 			ALT_CLAN_LEADER_INSTANT_ACTIVATION = characterConfig.getBoolean("AltClanLeaderInstantActivation", false);
-			ALT_CLAN_JOIN_DAYS = characterConfig.getInt("DaysBeforeJoinAClan", 1);
+			ALT_CLAN_JOIN_MINS = characterConfig.getInt("MinutesBeforeJoinAClan", 1);
 			ALT_CLAN_CREATE_DAYS = characterConfig.getInt("DaysBeforeCreateAClan", 10);
 			ALT_CLAN_DISSOLVE_DAYS = characterConfig.getInt("DaysToPassToDissolveAClan", 7);
 			ALT_ALLY_JOIN_DAYS_WHEN_LEAVED = characterConfig.getInt("DaysBeforeJoinAllyWhenLeaved", 1);

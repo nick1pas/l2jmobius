@@ -1109,7 +1109,7 @@ public class Clan implements IIdentifiable, INamable
 						setAllyPenaltyExpiryTime(0, 0);
 					}
 					setCharPenaltyExpiryTime(clanData.getLong("char_penalty_expiry_time"));
-					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_DAYS * 86400000)) < System.currentTimeMillis()) // 24*60*60*1000 = 86400000
+					if ((_charPenaltyExpiryTime + (Config.ALT_CLAN_JOIN_MINS * 60000)) < System.currentTimeMillis()) // 24*60*60*1000 = 60000
 					{
 						setCharPenaltyExpiryTime(0);
 					}
@@ -2234,7 +2234,7 @@ public class Clan implements IIdentifiable, INamable
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_S2_MIN_AFTER_LEAVING_THE_PREVIOUS_ONE);
 			sm.addString(target.getName());
-			sm.addInt(Config.ALT_CLAN_JOIN_DAYS);
+			sm.addInt(Config.ALT_CLAN_JOIN_MINS);
 			player.sendPacket(sm);
 			return false;
 		}

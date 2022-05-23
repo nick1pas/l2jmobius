@@ -62,7 +62,7 @@ public class RequestWithdrawalPledge implements IClientIncomingPacket
 		}
 		
 		final Clan clan = player.getClan();
-		clan.removeClanMember(player.getObjectId(), System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+		clan.removeClanMember(player.getObjectId(), System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_MINS * 60000)); // 60*1000 = 60000
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
 		sm.addString(player.getName());
