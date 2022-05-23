@@ -51,24 +51,26 @@ import instances.AbstractInstance;
  */
 public class TimedHunting extends AbstractInstance
 {
-	// NPCs
-	private static final int JOON = 34124;
-	private static final int KATE = 34120;
-	private static final int DEEKHIN = 34121;
-	private static final int BUNCH = 34122;
-	private static final int AYAN = 34123;
-	private static final int PANJI = 34125;
+	// NPCs (on official server random pick of NPC's)
+	private static final int KATE = 34120; // Dragon Valley 80-99
+	private static final int DEEKHIN = 34121; // Cemetery 50-59
+	private static final int BUNCH = 34122; // Giant's Cave 90+
+	private static final int AYAN = 34123; // Sel Mahum Base 85-99
+	private static final int JOON = 34124; // Sea of Spores 40-49
+	private static final int PANJI = 34125; // Plains of Glory 60-69
+	private static final int DEBBIE = 34126; // War-Torn Plains 70-79
 	// Skill
 	private static final int BUFF = 45197;
 	// Misc
 	private static final int[] TEMPLATES =
 	{
 		208, // Sea of Spores
-		209, // Enchanted Valley
-		210, // Blazing Swamp
+		209, // Cemetery
+		210, // Plains of Glory
 		211, // War-Torn Plains
 		212, // Dragon Valley
 		213, // Sel Mahum Base
+		215, // Giant's Cave
 	};
 	private static final Map<Integer, Integer> SKILL_REPLACEMENTS = new HashMap<>();
 	static
@@ -120,7 +122,7 @@ public class TimedHunting extends AbstractInstance
 	public TimedHunting()
 	{
 		super(TEMPLATES);
-		addFirstTalkId(JOON, KATE, DEEKHIN, BUNCH, AYAN, PANJI);
+		addFirstTalkId(KATE, DEEKHIN, BUNCH, AYAN, JOON, PANJI, DEBBIE);
 		addInstanceLeaveId(TEMPLATES);
 	}
 	
