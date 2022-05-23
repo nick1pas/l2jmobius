@@ -350,23 +350,20 @@ public class Party
 			return;
 		}
 		
-		// sends new member party window for all members
-		player.sendPacket(new PartySmallWindowAll(player, this));
-		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
-		msg.addString(getLeader().getName());
-		player.sendPacket(msg);
-		
-		msg = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_PARTY);
+		SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_JOINED_THE_PARTY);
 		msg.addString(player.getName());
 		broadcastToPartyMembers(msg);
 		broadcastToPartyMembers(new PartySmallWindowAdd(player, this));
-		for (Player member : _members)
-		{
-			player.sendPacket(new PartySmallWindowAdd(member, this));
-		}
 		
 		// add player to party, adjust party level
 		_members.add(player);
+		
+		// sends new member party window for all members
+		player.sendPacket(new PartySmallWindowAll(player, this));
+		msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
+		msg.addString(getLeader().getName());
+		player.sendPacket(msg);
+		
 		if (player.getLevel() > _partyLvl)
 		{
 			_partyLvl = player.getLevel();
