@@ -445,23 +445,31 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		final Clan clan = player.getClan();
 		if (party != null)
 		{
-			relation |= 0x08; // Party member
+			relation |= 8; // Party member
 			if (party.getLeader() == _player)
 			{
-				relation |= 0x10; // Party leader
+				relation |= 16; // Party leader
 			}
 		}
 		if (clan != null)
 		{
-			relation |= 0x20; // Clan member
+			
+			if (player.getSiegeState() == 1)
+			{
+				relation |= 256; // Clan member
+			}
+			else if (player.getSiegeState() == 2)
+			{
+				relation |= 32; // Clan member
+			}
 			if (clan.getLeaderId() == player.getObjectId())
 			{
-				relation |= 0x40; // Clan leader
+				relation |= 64; // Clan leader
 			}
 		}
-		if (player.isInSiege())
+		if (player.getSiegeState() != 0)
 		{
-			relation |= 0x80; // In siege
+			relation |= 128; // In siege
 		}
 		return relation;
 	}

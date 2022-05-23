@@ -502,6 +502,7 @@ public class Siege implements Siegable
 			_isInProgress = true; // Flag so that same siege instance cannot be started again
 			loadSiegeClan(); // Load siege clan from db
 			updatePlayerSiegeStateFlags(false);
+			updatePlayerSiegeStateFlags(false); // This fixes icons between allies because it first shows as an enemy for unknown reasons
 			teleportPlayer(SiegeTeleportWhoType.NotOwner, TeleportWhereType.TOWN); // Teleport to the closest town
 			_controlTowerCount = 0;
 			spawnControlTower(); // Spawn control tower
