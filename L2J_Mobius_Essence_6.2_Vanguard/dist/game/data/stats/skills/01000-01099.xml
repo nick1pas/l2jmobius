@@ -2808,7 +2808,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1064" toLevel="16" name="Silence">
+	<skill id="1064" toLevel="22" name="Silence">
 		<!-- <Silence Skill> The effect lasts for $s1 Blocks enemy's magical skill usage. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2835,6 +2835,12 @@
 			<value level="14">-655</value>
 			<value level="15">-659</value>
 			<value level="16">-663</value>
+			<value level="17">-667</value>
+			<value level="18">-671</value>
+			<value level="19">-675</value>
+			<value level="20">-679</value>
+			<value level="21">-684</value>
+			<value level="22">-689</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -2858,6 +2864,12 @@
 			<value level="14">74</value>
 			<value level="15">76</value>
 			<value level="16">78</value>
+			<value level="17">80</value>
+			<value level="18">82</value>
+			<value level="19">84</value>
+			<value level="20">86</value>
+			<value level="21">88</value>
+			<value level="22">90</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">28</value>
@@ -2876,6 +2888,12 @@
 			<value level="14">55</value>
 			<value level="15">61</value>
 			<value level="16">63</value>
+			<value level="17">64</value>
+			<value level="18">65</value>
+			<value level="19">67</value>
+			<value level="20">68</value>
+			<value level="21">70</value>
+			<value level="22">72</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -2894,6 +2912,12 @@
 			<value level="14">14</value>
 			<value level="15">14</value>
 			<value level="16">14</value>
+			<value level="17">15</value>
+			<value level="18">15</value>
+			<value level="19">15</value>
+			<value level="20">15</value>
+			<value level="21">15</value>
+			<value level="22">15</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>

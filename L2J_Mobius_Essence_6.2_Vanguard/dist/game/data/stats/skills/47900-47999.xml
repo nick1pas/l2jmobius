@@ -1,9 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="47901" toLevel="1" name="Summon Cat Emperor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<hitTime>4500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">50</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>
+			<value level="1">76</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">186</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummon" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">14918</value>
+				</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47902" toLevel="1" name="Emperor's Blessing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -16,9 +41,34 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47904" toLevel="1" name="Summon Unicorn Guard">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<hitTime>4500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">50</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>
+			<value level="1">76</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">186</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummon" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">14919</value>
+				</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47905" toLevel="1" name="Guard's Blessing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -31,9 +81,34 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47907" toLevel="1" name="Summon Lord Raise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<hitTime>4500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">50</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>
+			<value level="1">76</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">186</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummon" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">14920</value>
+				</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47908" toLevel="1" name="Lord's Blessing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -76,14 +151,81 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47916" toLevel="2" name="Chains of Pain">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<magicLevel>
+			<value level="1">86</value>
+			<value level="2">90</value>
+		</magicLevel>
+		<mpInitialConsume>
+			<value level="1">13</value>
+			<value level="2">13</value>
+		</mpInitialConsume>
+		<operateType>T</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<effects>
+			<effect name="MpConsumePerLevel">
+				<power>0.2</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="TransferDamageToSummon">
+				<amount>
+					<value level="1">55</value>
+					<value level="2">58</value>
+				</amount>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47917" toLevel="5" name="Ray of Light">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<castRange>700</castRange>
+		<effectRange>1250</effectRange>
+		<effectPoint>
+			<value level="1">-450</value>
+			<value level="2">-455</value>
+			<value level="3">-460</value>
+			<value level="4">-465</value>
+			<value level="5">-470</value>
+		</effectPoint>
+		<hitTime>6500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">82</value>
+			<value level="2">84</value>
+			<value level="3">86</value>
+			<value level="4">88</value>
+			<value level="5">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">82</value>
+			<value level="2">87</value>
+			<value level="3">92</value>
+			<value level="4">97</value>
+			<value level="5">102</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackRange">
+				<power>
+					<value level="1">202</value>
+					<value level="2">207</value>
+					<value level="3">214</value>
+					<value level="4">222</value>
+					<value level="5">230</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47918" toLevel="13" name="Summoner's Attack Mastery">
 		<icon>icon.skill0000</icon>
@@ -334,7 +476,7 @@
 	</skill>
 	<skill id="47920" toLevel="8" name="Summoner's Recovery Mastery">
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">40</value>

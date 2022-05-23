@@ -307,7 +307,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45507" toLevel="6" name="Blizzard">
+	<skill id="45507" toLevel="9" name="Blizzard">
 		<!-- Speed -50% -->
 		<icon>icon.skill1290</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -323,6 +323,9 @@
 			<value level="4">-2130</value>
 			<value level="5">-2140</value>
 			<value level="6">-2150</value>
+			<value level="7">-2180</value>
+			<value level="8">-2210</value>
+			<value level="9">-2240</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
@@ -503,11 +506,11 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45514" toLevel="6" name="Inferno">
+	<skill id="45514" toLevel="9" name="Inferno">
 		<!-- HP is draining. -->
 		<icon>icon.skill1289</icon>
 		<abnormalLevel>10</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<castRange>700</castRange>
@@ -518,6 +521,9 @@
 			<value level="4">-2130</value>
 			<value level="5">-2140</value>
 			<value level="6">-2150</value>
+			<value level="7">-2160</value>
+			<value level="8">-2170</value>
+			<value level="9">-2180</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -540,6 +546,9 @@
 					<value level="4">120</value>
 					<value level="5">150</value>
 					<value level="6">180</value>
+					<value level="7">210</value>
+					<value level="8">240</value>
+					<value level="9">270</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -1112,8 +1121,8 @@
 		<isMagic>1</isMagic>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
-		<affectLimit>2-12</affectLimit>
-		<affectRange>300</affectRange>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>450</affectRange>
 		<abnormalLevel>1</abnormalLevel>
 		<hitTime>4000</hitTime>
 		<itemConsumeCount>100</itemConsumeCount>

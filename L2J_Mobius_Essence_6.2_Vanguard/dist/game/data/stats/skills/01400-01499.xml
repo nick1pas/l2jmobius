@@ -302,18 +302,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1406" toLevel="6" name="Summon Feline King">
+	<skill id="1406" toLevel="9" name="Summon Feline King">
 		<!-- <Summoning Skill> Summons Feline King. -->
 		<icon>icon.skill1406</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
-			<value level="1">12</value>
+			<value level="1">14</value>
 			<value level="2">14</value>
 			<value level="3">14</value>
 			<value level="4">14</value>
 			<value level="5">16</value>
 			<value level="6">16</value>
+			<value level="7">16</value>
+			<value level="8">16</value>
+			<value level="9">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
@@ -323,23 +326,21 @@
 			<value level="4">83</value>
 			<value level="5">84</value>
 			<value level="6">85</value>
+			<value level="7">87</value>
+			<value level="8">89</value>
+			<value level="9">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">115</value>
-			<value level="2">127</value>
-			<value level="3">130</value>
-			<value level="4">132</value>
-			<value level="5">136</value>
-			<value level="6">140</value>
+			<value level="1">144</value>
+			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
+			<value level="7">179</value>
+			<value level="8">183</value>
+			<value level="9">186</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">29</value>
-			<value level="2">32</value>
-			<value level="3">32</value>
-			<value level="4">33</value>
-			<value level="5">34</value>
-			<value level="6">35</value>
-		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -357,22 +358,28 @@
 					<value level="4">14876</value>
 					<value level="5">14877</value>
 					<value level="6">14878</value>
+					<value level="7">14879</value>
+					<value level="8">14880</value>
+					<value level="9">14881</value>
 				</npcId>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1407" toLevel="6" name="Summon Magnus the Unicorn">
+	<skill id="1407" toLevel="9" name="Summon Magnus the Unicorn">
 		<!-- <Summoning Skill> Summons Magnus the Unicorn. -->
 		<icon>icon.skill1407</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
-			<value level="1">12</value>
+			<value level="1">14</value>
 			<value level="2">14</value>
 			<value level="3">14</value>
 			<value level="4">14</value>
 			<value level="5">16</value>
 			<value level="6">16</value>
+			<value level="7">16</value>
+			<value level="8">16</value>
+			<value level="9">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
@@ -382,23 +389,21 @@
 			<value level="4">83</value>
 			<value level="5">84</value>
 			<value level="6">85</value>
+			<value level="7">87</value>
+			<value level="8">89</value>
+			<value level="9">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">115</value>
-			<value level="2">127</value>
-			<value level="3">130</value>
-			<value level="4">132</value>
-			<value level="5">136</value>
-			<value level="6">140</value>
+			<value level="1">144</value>
+			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
+			<value level="7">179</value>
+			<value level="8">183</value>
+			<value level="9">186</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">29</value>
-			<value level="2">32</value>
-			<value level="3">32</value>
-			<value level="4">33</value>
-			<value level="5">34</value>
-			<value level="6">35</value>
-		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -410,17 +415,20 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>
-					<value level="1">14889</value>
-					<value level="2">14890</value>
-					<value level="3">14891</value>
-					<value level="4">14892</value>
-					<value level="5">14893</value>
-					<value level="6">14837</value>
+					<value level="1">14837</value>
+					<value level="2">14889</value>
+					<value level="3">14890</value>
+					<value level="4">14891</value>
+					<value level="5">14892</value>
+					<value level="6">14893</value>
+					<value level="7">14894</value>
+					<value level="8">14895</value>
+					<value level="9">14896</value>
 				</npcId>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1408" toLevel="6" name="Summon Spectral Lord">
+	<skill id="1408" toLevel="9" name="Summon Spectral Lord">
 		<!-- <Summoning Skill> Summons Spectral Lord. -->
 		<icon>icon.skill1408</icon>
 		<hitTime>6000</hitTime>
@@ -428,12 +436,15 @@
 		<inheritPercent>1.00</inheritPercent>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
-			<value level="1">12</value>
+			<value level="1">14</value>
 			<value level="2">14</value>
 			<value level="3">14</value>
 			<value level="4">14</value>
 			<value level="5">16</value>
 			<value level="6">16</value>
+			<value level="7">16</value>
+			<value level="8">16</value>
+			<value level="9">16</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
@@ -443,23 +454,21 @@
 			<value level="4">83</value>
 			<value level="5">84</value>
 			<value level="6">85</value>
+			<value level="7">87</value>
+			<value level="8">89</value>
+			<value level="9">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">115</value>
-			<value level="2">127</value>
-			<value level="3">130</value>
-			<value level="4">132</value>
-			<value level="5">136</value>
-			<value level="6">140</value>
+			<value level="1">144</value>
+			<value level="2">159</value>
+			<value level="3">162</value>
+			<value level="4">165</value>
+			<value level="5">170</value>
+			<value level="6">175</value>
+			<value level="7">179</value>
+			<value level="8">183</value>
+			<value level="9">186</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">29</value>
-			<value level="2">32</value>
-			<value level="3">32</value>
-			<value level="4">33</value>
-			<value level="5">34</value>
-			<value level="6">35</value>
-		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -477,6 +486,9 @@
 					<value level="4">14906</value>
 					<value level="5">14907</value>
 					<value level="6">14908</value>
+					<value level="7">14909</value>
+					<value level="8">14910</value>
+					<value level="9">14911</value>
 				</npcId>
 			</effect>
 		</effects>
@@ -1249,8 +1261,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ManaHealPercent">
 				<power>

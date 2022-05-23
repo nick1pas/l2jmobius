@@ -196,54 +196,409 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47440" toLevel="1" name="Faery Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
+		<effectPoint>
+			<value level="1">200</value>
+		</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>
+			<value level="1">86</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">125</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<abnormalType>MP_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>
+					<value level="1">30</value>
+				</power>
+			</effect>
+			<effect name="MpShield">
+				<amount>
+					<value level="1">70</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47441" toLevel="1" name="Soul Guardian">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>86</magicLevel>
+		<mpConsume>125</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SUMMON</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">7500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">5000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>-75</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47442" toLevel="3" name="Fire Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">116</value>
+			<value level="2">122</value>
+			<value level="3">128</value>
+		</mpConsume>
+		<castRange>700</castRange>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>300</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<hitTime>6000</hitTime>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">229</value>
+					<value level="2">238</value>
+					<value level="3">247</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47444</skillId> <!-- Fire Spiral -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47444" toLevel="3" name="Fire Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FIRE_SPIRAL</abnormalType>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-2100</value>
+			<value level="2">-2110</value>
+			<value level="3">-2120</value>
+		</effectPoint>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47445" toLevel="3" name="Dark Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">116</value>
+			<value level="2">122</value>
+			<value level="3">128</value>
+		</mpConsume>
+		<castRange>700</castRange>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>300</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<hitTime>6000</hitTime>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">229</value>
+					<value level="2">238</value>
+					<value level="3">247</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47447</skillId> <!-- Dark Spiral -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47447" toLevel="3" name="Dark Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FIRE_SPIRAL</abnormalType>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-2100</value>
+			<value level="2">-2110</value>
+			<value level="3">-2120</value>
+		</effectPoint>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47448" toLevel="3" name="Ice Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">116</value>
+			<value level="2">122</value>
+			<value level="3">128</value>
+		</mpConsume>
+		<castRange>700</castRange>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>300</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<hitTime>6000</hitTime>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">229</value>
+					<value level="2">238</value>
+					<value level="3">247</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47450</skillId> <!-- Ice Spiral -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47450" toLevel="3" name="Ice Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FIRE_SPIRAL</abnormalType>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-2100</value>
+			<value level="2">-2110</value>
+			<value level="3">-2120</value>
+		</effectPoint>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47451" toLevel="3" name="Wind Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">116</value>
+			<value level="2">122</value>
+			<value level="3">128</value>
+		</mpConsume>
+		<castRange>700</castRange>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>300</affectRange>
+		<abnormalLevel>1</abnormalLevel>
+		<hitTime>6000</hitTime>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">229</value>
+					<value level="2">238</value>
+					<value level="3">247</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47453</skillId> <!-- Wind Spiral -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47453" toLevel="3" name="Wind Spiral">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FIRE_SPIRAL</abnormalType>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-2100</value>
+			<value level="2">-2110</value>
+			<value level="3">-2120</value>
+		</effectPoint>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-7</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47454" toLevel="2" name="Magic Circle">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -271,34 +626,615 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47461" toLevel="6" name="Heavy Sleep">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-640</value>
+			<value level="2">-700</value>
+			<value level="3">-750</value>
+			<value level="4">-800</value>
+			<value level="5">-850</value>
+			<value level="6">-900</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">87</value>
+			<value level="4">88</value>
+			<value level="5">89</value>
+			<value level="6">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">74</value>
+			<value level="2">77</value>
+			<value level="3">79</value>
+			<value level="4">82</value>
+			<value level="5">83</value>
+			<value level="6">85</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<removedOnDamage>false</removedOnDamage>
+		<reuseDelay>15000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47462" toLevel="12" name="Sleep">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-280</value>
+			<value level="2">-380</value>
+			<value level="3">-450</value>
+			<value level="4">-490</value>
+			<value level="5">-540</value>
+			<value level="6">-590</value>
+			<value level="7">-640</value>
+			<value level="8">-700</value>
+			<value level="9">-750</value>
+			<value level="10">-800</value>
+			<value level="11">-850</value>
+			<value level="12">-900</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">40</value>
+			<value level="3">60</value>
+			<value level="4">76</value>
+			<value level="5">80</value>
+			<value level="6">82</value>
+			<value level="7">84</value>
+			<value level="8">86</value>
+			<value level="9">87</value>
+			<value level="10">88</value>
+			<value level="11">89</value>
+			<value level="12">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">21</value>
+			<value level="2">31</value>
+			<value level="3">50</value>
+			<value level="4">66</value>
+			<value level="5">70</value>
+			<value level="6">72</value>
+			<value level="7">74</value>
+			<value level="8">76</value>
+			<value level="9">77</value>
+			<value level="10">78</value>
+			<value level="11">79</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<removedOnDamage>true</removedOnDamage>
+		<reuseDelay>20000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47463" toLevel="13" name="Wizard's Attack Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">78</value>
+			<value level="7">80</value>
+			<value level="8">82</value>
+			<value level="9">84</value>
+			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">89</value>
+			<value level="13">90</value>
+		</magicLevel>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">50</value>
+					<value level="4">70</value>
+					<value level="5">83</value>
+					<value level="6">89</value>
+					<value level="7">95</value>
+					<value level="8">101</value>
+					<value level="9">107</value>
+					<value level="10">115</value>
+					<value level="11">130</value>
+					<value level="12">140</value>
+					<value level="13">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">220</value>
+					<value level="2">330</value>
+					<value level="3">450</value>
+					<value level="4">580</value>
+					<value level="5">630</value>
+					<value level="6">650</value>
+					<value level="7">700</value>
+					<value level="8">725</value>
+					<value level="9">750</value>
+					<value level="10">775</value>
+					<value level="11">800</value>
+					<value level="12">840</value>
+					<value level="13">880</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">100</value>
+					<value level="3">150</value>
+					<value level="4">150</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">200</value>
+					<value level="9">200</value>
+					<value level="10">210</value>
+					<value level="11">220</value>
+					<value level="12">230</value>
+					<value level="13">240</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47464" toLevel="13" name="Wizard's Armor Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">78</value>
+			<value level="7">80</value>
+			<value level="8">82</value>
+			<value level="9">84</value>
+			<value level="10">86</value>
+			<value level="11">88</value>
+			<value level="12">89</value>
+			<value level="13">90</value>
+		</magicLevel>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">50</value>
+					<value level="3">80</value>
+					<value level="4">110</value>
+					<value level="5">120</value>
+					<value level="6">125</value>
+					<value level="7">130</value>
+					<value level="8">135</value>
+					<value level="9">140</value>
+					<value level="10">150</value>
+					<value level="11">160</value>
+					<value level="12">170</value>
+					<value level="13">180</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+					<value level="6">30</value>
+					<value level="7">30</value>
+					<value level="8">30</value>
+					<value level="9">30</value>
+					<value level="10">30</value>
+					<value level="11">30</value>
+					<value level="12">30</value>
+					<value level="13">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+					<value level="4">65</value>
+					<value level="5">73</value>
+					<value level="6">80</value>
+					<value level="7">85</value>
+					<value level="8">90</value>
+					<value level="9">96</value>
+					<value level="10">102</value>
+					<value level="11">110</value>
+					<value level="12">115</value>
+					<value level="13">120</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">90</value>
+					<value level="3">140</value>
+					<value level="4">220</value>
+					<value level="5">250</value>
+					<value level="6">270</value>
+					<value level="7">290</value>
+					<value level="8">310</value>
+					<value level="9">330</value>
+					<value level="10">350</value>
+					<value level="11">370</value>
+					<value level="12">390</value>
+					<value level="13">410</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47465" toLevel="8" name="Wizard's Recovery Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">50</value>
+			<value level="3">60</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">80</value>
+			<value level="7">85</value>
+			<value level="8">90</value>
+		</magicLevel>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-20</value>
+					<value level="7">-20</value>
+					<value level="8">-20</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">1.7</value>
+					<value level="2">2.3</value>
+					<value level="3">2.9</value>
+					<value level="4">3.5</value>
+					<value level="5">4.1</value>
+					<value level="6">4.5</value>
+					<value level="7">5</value>
+					<value level="8">5.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">1.5</value>
+					<value level="2">2.3</value>
+					<value level="3">2.9</value>
+					<value level="4">3.2</value>
+					<value level="5">3.6</value>
+					<value level="6">4.1</value>
+					<value level="7">4.5</value>
+					<value level="8">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47466" toLevel="7" name="Higher Mana Gain">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">60</value>
+			<value level="4">76</value>
+			<value level="5">80</value>
+			<value level="6">85</value>
+			<value level="7">90</value>
+		</magicLevel>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">150</value>
+					<value level="5">200</value>
+					<value level="6">260</value>
+					<value level="7">330</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">400</value>
+					<value level="4">600</value>
+					<value level="5">800</value>
+					<value level="6">1000</value>
+					<value level="7">1500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>4000</mp>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">100</value>
+					<value level="2">100</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">100</value>
+					<value level="6">100</value>
+					<value level="7">100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>4000</mp>
+				<stat>ACCURACY_MAGIC</stat>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>4000</mp>
+				<stat>MAGIC_CRITICAL_RATE</stat>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>6500</mp>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">150</value>
+					<value level="2">150</value>
+					<value level="3">150</value>
+					<value level="4">150</value>
+					<value level="5">150</value>
+					<value level="6">150</value>
+					<value level="7">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>6500</mp>
+				<stat>ACCURACY_MAGIC</stat>
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>6500</mp>
+				<stat>MAGIC_CRITICAL_RATE</stat>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>10000</mp>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">200</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+					<value level="4">200</value>
+					<value level="5">200</value>
+					<value level="6">200</value>
+					<value level="7">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>10000</mp>
+				<stat>ACCURACY_MAGIC</stat>
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">7</value>
+					<value level="7">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>10000</mp>
+				<stat>MAGIC_CRITICAL_RATE</stat>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>15000</mp>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">300</value>
+					<value level="2">300</value>
+					<value level="3">300</value>
+					<value level="4">300</value>
+					<value level="5">300</value>
+					<value level="6">300</value>
+					<value level="7">300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>15000</mp>
+				<stat>ACCURACY_MAGIC</stat>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">8</value>
+					<value level="5">8</value>
+					<value level="6">8</value>
+					<value level="7">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>15000</mp>
+				<stat>MAGIC_CRITICAL_RATE</stat>
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">7</value>
+					<value level="7">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>20000</mp>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">400</value>
+					<value level="2">400</value>
+					<value level="3">400</value>
+					<value level="4">400</value>
+					<value level="5">400</value>
+					<value level="6">400</value>
+					<value level="7">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>20000</mp>
+				<stat>ACCURACY_MAGIC</stat>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+					<value level="7">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForMp">
+				<mp>20000</mp>
+				<stat>MAGIC_CRITICAL_RATE</stat>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+					<value level="7">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47470" toLevel="20" name="Transcendent Punishment">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

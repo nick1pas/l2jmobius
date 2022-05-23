@@ -1008,8 +1008,16 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<KNOCKBACK>10</KNOCKBACK>
-				<IMPRISON>10</IMPRISON>
+				<IMPRISON>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</IMPRISON>
+				<KNOCKBACK>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</KNOCKBACK>
 			</effect>
 			<effect name="MaxHp">
 				<amount>
