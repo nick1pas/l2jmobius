@@ -297,6 +297,11 @@ public class Attackable extends Npc
 		
 		if ((killer != null) && (killer.getActingPlayer() != null))
 		{
+			if ((killer.getClan() != null) && (Rnd.get(100) < 2))
+			{
+				killer.getClan().addExp(1);
+			}
+			
 			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this);
 		}

@@ -96,6 +96,11 @@ import org.l2jmobius.gameserver.network.clientpackets.pet.ExEvolvePet;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetEquipItem;
 import org.l2jmobius.gameserver.network.clientpackets.pet.ExPetUnequipItem;
 import org.l2jmobius.gameserver.network.clientpackets.pet.RequestExAcquirePetSkill;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyDelete;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyInfoList;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeEnemyRegister;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeV3Info;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV3.RequestExPledgeV3SetAnnounce;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
@@ -599,14 +604,14 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PVP_RANKING_MY_INFO(0x1C2, RequestPvpRankingMyInfo::new, ConnectionState.IN_GAME),
 	EX_PVP_RANKING_LIST(0x1C3, RequestPvpRankingList::new, ConnectionState.IN_GAME),
 	EX_ACQUIRE_PET_SKILL(0x1C4, RequestExAcquirePetSkill::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_V3_INFO(0x1C5, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_REGISTER(0x1C7, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ENEMY_DELETE(0x1C8, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_INFO(0x1C5, RequestExPledgeV3Info::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, RequestExPledgeEnemyInfoList::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_REGISTER(0x1C7, RequestExPledgeEnemyRegister::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_DELETE(0x1C8, RequestExPledgeEnemyDelete::new, ConnectionState.IN_GAME),
 	EX_PK_PENALTY_LIST(0x1C9, null, ConnectionState.IN_GAME),
 	EX_PK_PENALTY_LIST_ONLY_LOC(0x1CA, null, ConnectionState.IN_GAME),
 	EX_TRY_PET_EXTRACT_SYSTEM(0x1CB, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, RequestExPledgeV3SetAnnounce::new, ConnectionState.IN_GAME),
 	EX_MAX(0x1CD, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
