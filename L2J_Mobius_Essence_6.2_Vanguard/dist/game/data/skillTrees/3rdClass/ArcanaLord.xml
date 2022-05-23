@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="96" parentClassId="14">
-		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="9" getLevel="76" levelUpSp="8100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="42" getLevel="76" levelUpSp="8100000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="43" getLevel="76" levelUpSp="8100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="34" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="8100000">
 			<item id="94136,95518" count="1" /> <!-- Master's Book: Shield -->
 		</skill>
@@ -15,7 +11,6 @@
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="46" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="20" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="27" getLevel="76" levelUpSp="8100000" />
-		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="11" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLevel="1" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLevel="1" getLevel="76" levelUpSp="8100000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8100000">
@@ -74,10 +69,14 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="43" getLevel="77" levelUpSp="8100000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="44" getLevel="77" levelUpSp="8100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="35" getLevel="77" levelUpSp="8100000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="5" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="5" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Summoner's Recovery Mastery" skillId="47920" skillLevel="5" getLevel="76" levelUpSp="8100000" />
+		<skill skillName="Summon Cat Emperor" skillId="47901" skillLevel="1" getLevel="76" levelUpSp="8100000">
+			<item id="97182,97191" count="1" /> <!-- Spellbook: Cat Emperor -->
+		</skill>
+		<skill skillName="Summon Cubic of Secrets" skillId="47910" skillLevel="1" getLevel="76" levelUpSp="8100000" />
+
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="36" getLevel="77" levelUpSp="8100000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="47" getLevel="77" levelUpSp="8100000" />
 		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="1" getLevel="77" levelUpSp="8100000">
@@ -86,17 +85,11 @@
 		<skill skillName="Summon Feline King" skillId="1406" skillLevel="1" getLevel="77" levelUpSp="8100000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="47" getLevel="77" levelUpSp="8100000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="2" getLevel="77" levelUpSp="8100000" />
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="5" getLevel="77" levelUpSp="8100000" />
 		
-		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="10" getLevel="78" levelUpSp="17900000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="44" getLevel="78" levelUpSp="17900000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="45" getLevel="78" levelUpSp="17900000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="36" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="37" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="48" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="21" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="28" getLevel="78" levelUpSp="17900000" />
-		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="12" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Warrior Servitor" skillId="1346" skillLevel="1" getLevel="78" levelUpSp="17900000">
 			<item id="90127" count="1" /> <!-- Scroll: Warrior Servitor -->
 		</skill>
@@ -106,31 +99,21 @@
 		<skill skillName="Servitor Share" skillId="1557" skillLevel="2" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="48" getLevel="78" levelUpSp="17900000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="3" getLevel="78" levelUpSp="17900000" />
-		
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="6" getLevel="78" levelUpSp="17900000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="6" getLevel="78" levelUpSp="17900000" />
+
 		<skill skillName="Blaze" skillId="1220" skillLevel="29" getLevel="79" levelUpSp="17900000" />
 		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="2" getLevel="79" levelUpSp="17900000" />
-		<skill skillName="Final Servitor" skillId="1349" skillLevel="1" getLevel="79" levelUpSp="17900000">
-			<item id="90130" count="1" /> <!-- Scroll: Final Servitor -->
-		</skill>
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="4" getLevel="79" levelUpSp="17900000" />
 		
-		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="11" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="45" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="46" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="37" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="38" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="49" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="22" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="8" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="30" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="13" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLevel="3" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLevel="3" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Servitor Share" skillId="1557" skillLevel="3" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="Power Supremacy" skillId="1611" skillLevel="5" getLevel="80" levelUpSp="17900000" />
-		<skill skillName="Spell Master" skillId="1829" skillLevel="4" getLevel="80" levelUpSp="2400000">
-			<item id="57" count="500000" /> <!-- Adena -->
-		</skill>
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
@@ -139,14 +122,19 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0">
 			<item id="57" count="40000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="6" getLevel="80" levelUpSp="17900000" />
 		<skill skillName="White Guardian Transformation" skillId="54102" skillLevel="1" getLevel="80">
 			<item id="92401,95502" count="1" /> <!-- Spellbook - White Guardian -->
 		</skill>
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="46" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="47" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="38" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="7" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="7" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Summoner's Recovery Mastery" skillId="47920" skillLevel="6" getLevel="80" levelUpSp="17900000" />
+		<skill skillName="Servitor Ultimate Defense" skillId="1299" skillLevel="3" getLevel="80" levelUpSp="17900000">
+			<item id="97190,97199" count="1" /> <!-- Spellbook: Servitor Ultimate Defense -->
+		</skill>
+		<skill skillName="Warrior Servitor" skillId="1346" skillLevel="2" getLevel="80" levelUpSp="17900000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
+
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="39" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="23" getLevel="81" levelUpSp="160000000" />
@@ -156,15 +144,10 @@
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="6" getLevel="81" levelUpSp="160000000" />
 		
-		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="12" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="47" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="48" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="39" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="40" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="24" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="32" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="14" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Summon Feline King" skillId="1406" skillLevel="3" getLevel="82" levelUpSp="170000000" />
@@ -172,14 +155,15 @@
 		<skill skillName="Servitor Share" skillId="1557" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="7" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="7" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Dragon Slayer Appearance" skillId="54231" skillLevel="1" getLevel="82" levelUpSp="0">
 			<item id="96300,96780" count="1" /> <!-- Spellbook: Dragon Slayer -->
 		</skill>
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="48" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="49" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="40" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="8" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="8" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Ray of Light" skillId="47917" skillLevel="1" getLevel="82" levelUpSp="170000000">
+			<item id="97188,97197" count="1" /> <!-- Spellbook: Ray of Light -->
+		</skill>
+
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="41" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="25" getLevel="83" levelUpSp="240000000" />
@@ -189,15 +173,10 @@
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="8" getLevel="83" levelUpSp="240000000" />
 		
-		<skill skillName="Summon Storm Cubic" skillId="10" skillLevel="13" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="49" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="50" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="41" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="42" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="26" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="34" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Summon Binding Cubic" skillId="1279" skillLevel="15" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="5" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLevel="5" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLevel="5" getLevel="84" levelUpSp="240000000" />
@@ -206,12 +185,10 @@
 		<skill skillName="Power Supremacy" skillId="1611" skillLevel="6" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="9" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="8" getLevel="84" levelUpSp="240000000" />
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="50" getLevel="85" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="51" getLevel="85" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="42" getLevel="85" levelUpSp="840000000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="9" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="9" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="9" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Ray of Light" skillId="47917" skillLevel="2" getLevel="84" levelUpSp="240000000" />
+
 		<skill skillName="Blaze" skillId="1220" skillLevel="35" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="6" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Summon Feline King" skillId="1406" skillLevel="6" getLevel="85" levelUpSp="840000000" />
@@ -222,42 +199,62 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0">
 			<item id="57" count="100000000" /> <!-- Adena -->
 		</skill>
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="51" getLevel="86" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="52" getLevel="86" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="43" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Summoner's Recovery Mastery" skillId="47920" skillLevel="7" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Summon Cubic of Secrets" skillId="47910" skillLevel="2" getLevel="85" levelUpSp="840000000">
+			<item id="97185,97194" count="1" /> <!-- Spellbook: Cubic of Secrets lv. 2 -->
+		</skill>
+
 		<skill skillName="Blaze" skillId="1220" skillLevel="36" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="11" getLevel="86" levelUpSp="840000000" />
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="9" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="10" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="10" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Chains of Pain" skillId="47916" skillLevel="1" getLevel="86" levelUpSp="840000000">
+			<removeSkill id="1262" onlyReplaceByLearn="true" /> <!-- Transfer Pain -->
+			<item id="97189,97198" count="1" /> <!-- Spellbook: Chains of Pain -->
+		</skill>
+		<skill skillName="Ray of Light" skillId="47917" skillLevel="3" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Warrior Bane" skillId="1350" skillLevel="6" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Mage Bane" skillId="1351" skillLevel="6" getLevel="86" levelUpSp="840000000" />
 
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="52" getLevel="87" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="53" getLevel="87" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="44" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="37" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="12" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="7" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Summon Feline King" skillId="1406" skillLevel="7" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="7" getLevel="87" levelUpSp="840000000" />
 
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="53" getLevel="88" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="54" getLevel="88" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="45" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="38" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="13" getLevel="88" levelUpSp="840000000" />
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="10" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="11" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="11" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Ray of Light" skillId="47917" skillLevel="4" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Warrior Bane" skillId="1350" skillLevel="7" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Mage Bane" skillId="1351" skillLevel="7" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Summon Cubic of Secrets" skillId="47910" skillLevel="3" getLevel="88" levelUpSp="840000000" />
 
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="54" getLevel="89" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="55" getLevel="89" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="46" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="39" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="14" getLevel="89" levelUpSp="840000000" />
-		
-		<skill skillName="Robe Mastery" skillId="234" skillLevel="55" getLevel="90" levelUpSp="840000000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLevel="56" getLevel="90" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="47" getLevel="90" levelUpSp="840000000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="10" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="12" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="12" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="8" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Summon Feline King" skillId="1406" skillLevel="8" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="8" getLevel="89" levelUpSp="840000000" />
+
 		<skill skillName="Blaze" skillId="1220" skillLevel="40" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="15" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0">
 			<item id="57" count="200000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Anti Magic" skillId="47270" skillLevel="11" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="13" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="13" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summoner's Recovery Mastery" skillId="47920" skillLevel="8" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Chains of Pain" skillId="47916" skillLevel="2" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Ray of Light" skillId="47917" skillLevel="5" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Warrior Bane" skillId="1350" skillLevel="8" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Mage Bane" skillId="1351" skillLevel="8" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="9" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summon Feline King" skillId="1406" skillLevel="9" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Summon Feline Queen" skillId="1331" skillLevel="9" getLevel="90" levelUpSp="840000000" />
+
+		<skill skillName="Summon Cubic of Secrets" skillId="47910" skillLevel="4" getLevel="91" levelUpSp="840000000" />
 	</skillTree>
 </list>
