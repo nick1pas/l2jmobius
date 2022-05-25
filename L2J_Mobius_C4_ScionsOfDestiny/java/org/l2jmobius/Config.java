@@ -1775,7 +1775,7 @@ public class Config
 		RAIDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
 		GRANDBOSS_SPAWN_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossSpawnAnnouncements", false);
 		GRANDBOSS_DEFEAT_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossDefeatAnnouncements", false);
-		GRANDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("RaidBossInstanceAnnouncements", false);
+		GRANDBOSS_INSTANCE_ANNOUNCEMENTS = bossAnnouncementsConfig.getBoolean("GrandBossInstanceAnnouncements", false);
 	}
 	
 	public static void loadCancelSkillRestoreBuffsConfig()
