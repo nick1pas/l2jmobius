@@ -141,13 +141,7 @@ public class Q10967_CulturedAdventurer extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killer.isGM())
-			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
-			}
-			else if (killCount < 150)
+			if (killCount < 150)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
