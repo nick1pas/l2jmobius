@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -58,6 +59,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -449,8 +451,21 @@ public class AdminEditChar implements IAdminCommandHandler
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.store(false);
+					for (Skill oldSkill : player.getAllSkills())
+					{
+						if (oldSkill.isBad())
+						{
+							AutoUseTaskManager.getInstance().removeAutoSkill(player, oldSkill.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoBuff(player, oldSkill.getId());
+						}
+						player.removeSkill(oldSkill, false, true);
+					}
 					player.broadcastUserInfo();
 					player.sendSkillList();
+					player.rewardSkills();
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(new ExUserInfoInvenWeight(player));
 					player.sendMessage("A GM changed your class to " + newclass + ".");
