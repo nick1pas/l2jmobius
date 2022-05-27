@@ -212,8 +212,8 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			// Prevent equip shields for Death Knight players.
-			if (item.isArmor() && (item.getArmorItem().getItemType() == ArmorType.SHIELD) && CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()))
+			// Prevent equip shields for Death Knight or Sylph players.
+			if (item.isArmor() && (item.getArmorItem().getItemType() == ArmorType.SHIELD) && (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()) || CategoryData.getInstance().isInCategory(CategoryType.SYLPH_ALL_CLASS, player.getClassId().getId())))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
@@ -221,6 +221,13 @@ public class UseItem implements IClientIncomingPacket
 			
 			// Prevent equip pistols for non Sylph players.
 			if (item.isWeapon() && (item.getWeaponItem().getItemType() == WeaponType.PISTOLS) && (player.getRace() != Race.SYLPH))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
+			// Prevent Sylph players to equip other weapons.
+			if (item.isWeapon() && (player.getRace() == Race.SYLPH) && (item.getWeaponItem().getItemType() != WeaponType.PISTOLS))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
