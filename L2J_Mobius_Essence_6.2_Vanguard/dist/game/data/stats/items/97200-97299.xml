@@ -691,7 +691,7 @@
 		<!-- Can be enchanted up to +10 with enchant scrolls. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. <font color=eeaa22>Equipped in the right hair accessory slot.</font> -->
 		<set name="icon" val="icon.accessory_black_half_face_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="NONE" />
 		<set name="material" val="WOOD" />
@@ -700,6 +700,22 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<set name="weight" val="7700" />
+		<skills>
+			<skill id="50568" level="1" type="ON_ENCHANT" type_value="0" /> <!-- Ignore Decrease Mask Lv1 -->
+			<skill id="50568" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Ignore Decrease Mask Lv2 -->
+			<skill id="50568" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Ignore Decrease Mask Lv3 -->
+			<skill id="50568" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Ignore Decrease Mask Lv4 -->
+			<skill id="50568" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Ignore Decrease Mask Lv5 -->
+			<skill id="50568" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Ignore Decrease Mask Lv6 -->
+			<skill id="50568" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Ignore Decrease Mask Lv7 -->
+			<skill id="50568" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Ignore Decrease Mask Lv8 -->
+			<skill id="50568" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Ignore Decrease Mask Lv9 -->
+			<skill id="50568" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Ignore Decrease Mask Lv10 -->
+			<skill id="50568" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Ignore Decrease Mask Lv11 -->
+		</skills>
 	</item>
 	<item id="97260" name="Piglet-Bank Lv. 1" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -755,11 +771,16 @@
 		<!-- Required for enchanting Ignore Decrease Mask. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40417" level="1" /> <!-- Scroll: Enchant Ignore Decrease Mask -->
+		</skills>
 	</item>
 	<item id="97266" name="Enchant Kit: Ignore Decrease Mask" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -771,6 +792,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="97259" min="1" max="1" chance="100" /> <!-- Ignore Decrease Mask Sealed -->
+			<item id="97265" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Ignore Decrease Mask Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="97267" name="Entry Token to Xilenos' Secret Hall" additionalName="Sealed" type="EtcItem">
 		<!-- A token given to the clan that has defeated Morgos' Commando Captain. -->
