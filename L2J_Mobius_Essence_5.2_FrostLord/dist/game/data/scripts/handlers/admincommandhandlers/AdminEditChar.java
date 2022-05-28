@@ -47,6 +47,9 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.html.PageBuilder;
 import org.l2jmobius.gameserver.model.html.PageResult;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.WeaponType;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -54,6 +57,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
@@ -414,6 +418,22 @@ public class AdminEditChar implements IAdminCommandHandler
 						}
 					}
 					
+					// Sylph checks
+					if (!CategoryData.getInstance().isInCategory(CategoryType.SYLPH_ALL_CLASS, classidval) && (player.getActiveWeaponItem().getItemType() == WeaponType.PISTOLS))
+					{
+						final Item itemToRemove = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+						if (itemToRemove != null)
+						{
+							final long slot = player.getInventory().getSlotFromItem(itemToRemove);
+							player.getInventory().unEquipItemInBodySlot(slot);
+							
+							final InventoryUpdate iu = new InventoryUpdate();
+							iu.addModifiedItem(itemToRemove);
+							player.sendInventoryUpdate(iu);
+							player.broadcastUserInfo();
+						}
+					}
+					
 					// Death Knight checks.
 					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, classidval))
 					{
@@ -443,7 +463,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						{
 							AutoUseTaskManager.getInstance().removeAutoBuff(player, oldSkill.getId());
 						}
-						player.removeSkill(oldSkill, false, true);
+						player.removeSkill(oldSkill, true, true);
 					}
 					player.broadcastUserInfo();
 					player.sendSkillList();

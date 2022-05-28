@@ -430,7 +430,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						{
 							AutoUseTaskManager.getInstance().removeAutoBuff(player, oldSkill.getId());
 						}
-						player.removeSkill(oldSkill, false, true);
+						player.removeSkill(oldSkill, true, true);
 					}
 					player.broadcastUserInfo();
 					player.sendSkillList();
