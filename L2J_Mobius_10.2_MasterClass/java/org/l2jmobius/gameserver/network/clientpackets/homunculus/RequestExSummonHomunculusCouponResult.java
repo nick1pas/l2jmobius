@@ -78,15 +78,15 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 		// Take items.
 		for (int i = 0; i < creationTemplate.getItemFee().size(); i++)
 		{
-			ItemHolder humu = creationTemplate.getItemFee().get(i);
-			if (player.getInventory().getItemByItemId(humu.getId()).getCount() <= humu.getCount())
+			final ItemHolder humu = creationTemplate.getItemFee().get(i);
+			if (player.getInventory().getItemByItemId(humu.getId()).getCount() < humu.getCount())
 			{
 				return;
 			}
 		}
 		for (int i = 0; i < creationTemplate.getItemFee().size(); i++)
 		{
-			ItemHolder humu = creationTemplate.getItemFee().get(i);
+			final ItemHolder humu = creationTemplate.getItemFee().get(i);
 			if (!player.destroyItemByItemId("Homunculus Coupon Creation", humu.getId(), humu.getCount(), player, true))
 			{
 				PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus without " + humu + "!");
