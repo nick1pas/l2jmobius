@@ -1009,12 +1009,26 @@
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1080</hitTime>
-		<magicLevel>80</magicLevel>
-		<mpConsume>214</mpConsume>
+		<hitTime>1000</hitTime>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">214</value>
+			<value level="2">220</value>
+			<value level="3">226</value>
+			<value level="4">232</value>
+			<value level="5">238</value>
+			<value level="6">244</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1028,6 +1042,7 @@
 					<value level="5">9674</value>
 					<value level="6">10061</value>
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1036,11 +1051,25 @@
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
 		<effectPoint>-100</effectPoint>
-		<hitTime>1067</hitTime>
-		<magicLevel>80</magicLevel>
-		<mpConsume>322</mpConsume>
+		<hitTime>1000</hitTime>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">322</value>
+			<value level="2">332</value>
+			<value level="3">342</value>
+			<value level="4">352</value>
+			<value level="5">362</value>
+			<value level="6">372</value>
+		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>17000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1055,6 +1084,7 @@
 					<value level="5">4834</value>
 					<value level="6">5027</value>
 				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1062,22 +1092,40 @@
 		<!-- Immobilizes enemy -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>70</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>2</lvlBonusRate>
-		<magicLevel>80</magicLevel>
-		<mpConsume>258</mpConsume>
-		<mpInitialConsume>64</mpInitialConsume>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">258</value>
+			<value level="2">260</value>
+			<value level="3">262</value>
+			<value level="4">264</value>
+			<value level="5">266</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">64</value>
+			<value level="2">65</value>
+			<value level="3">66</value>
+			<value level="4">67</value>
+			<value level="5">68</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>20000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>SELF</targetType>
@@ -1094,23 +1142,37 @@
 		<!-- Cannot move for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>60</activateRate>
+		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1080</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>1</lvlBonusRate>
-		<magicLevel>80</magicLevel>
-		<mpConsume>214</mpConsume>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">214</value>
+			<value level="2">220</value>
+			<value level="3">226</value>
+			<value level="4">232</value>
+			<value level="5">238</value>
+			<value level="6">244</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -1118,17 +1180,18 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">2900</value>
-					<value level="2">3450</value>
-					<value level="3">3600</value>
-					<value level="4">3850</value>
-					<value level="5">4100</value>
-					<value level="6">4450</value>
+					<value level="1">6198</value>
+					<value level="2">6448</value>
+					<value level="3">6708</value>
+					<value level="4">6842</value>
+					<value level="5">6979</value>
+					<value level="6">7118</value>
 				</power>
-				<allowedSkills>35016;35045;18103</allowedSkills>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5139" toLevel="6" name="Tidal Wave">
@@ -1140,13 +1203,34 @@
 		<effectRange>1000</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<hitTime>4000</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>80</magicLevel>
-		<mpConsume>258</mpConsume>
-		<mpInitialConsume>64</mpInitialConsume>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">258</value>
+			<value level="2">260</value>
+			<value level="3">262</value>
+			<value level="4">264</value>
+			<value level="5">266</value>
+			<value level="6">268</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">64</value>
+			<value level="2">65</value>
+			<value level="3">66</value>
+			<value level="4">67</value>
+			<value level="5">68</value>
+			<value level="6">70</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1154,14 +1238,13 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">220</value> <!-- 228 Retail Damage -->
-					<value level="2">222</value> <!-- 230 Retail Damage -->
-					<value level="3">224</value> <!-- 232 Retail Damage -->
-					<value level="4">226</value> <!-- 234 Retail Damage -->
-					<value level="5">228</value> <!-- 236 Retail Damage -->
-					<value level="6">232</value> <!-- 240 Retail Damage -->
+					<value level="1">228</value>
+					<value level="2">230</value>
+					<value level="3">232</value>
+					<value level="4">234</value>
+					<value level="5">236</value>
+					<value level="6">240</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1171,29 +1254,62 @@
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
-		<activateRate>60</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>1</lvlBonusRate>
-		<magicLevel>80</magicLevel>
-		<mpConsume>258</mpConsume>
-		<mpInitialConsume>64</mpInitialConsume>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">258</value>
+			<value level="2">260</value>
+			<value level="3">262</value>
+			<value level="4">264</value>
+			<value level="5">266</value>
+			<value level="6">268</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">64</value>
+			<value level="2">65</value>
+			<value level="3">66</value>
+			<value level="4">67</value>
+			<value level="5">68</value>
+			<value level="6">70</value>
+		</mpInitialConsume>
+		<trait>BOSS</trait>
 		<operateType>A2</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
-				<power>109</power>
-				<ticks>5</ticks>
+				<power>
+					<value level="1">109</value>
+					<value level="2">112</value>
+					<value level="3">115</value>
+					<value level="4">118</value>
+					<value level="5">121</value>
+					<value level="6">124</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
 				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1205,25 +1321,36 @@
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1080</hitTime>
-		<magicLevel>80</magicLevel>
+		<hitTime>1000</hitTime>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
 		<mpConsume>214</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">8200</value> <!-- 8264 Retail Damage -->
-					<value level="2">8500</value> <!-- 8597 Retail Damage -->
-					<value level="3">8900</value> <!-- 8945 Retail Damage -->
-					<value level="4">9300</value> <!-- 9302 Retail Damage -->
-					<value level="5">9650</value> <!-- 9674 Retail Damage -->
-					<value level="6">9900</value> <!-- 10061 Retail Damage -->
+					<value level="1">8264</value>
+					<value level="2">8597</value>
+					<value level="3">8945</value>
+					<value level="4">9302</value>
+					<value level="5">9674</value>
+					<value level="6">10061</value>
 				</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>30</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -1233,13 +1360,34 @@
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>1500</hitTime>
+		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>80</magicLevel>
-		<mpConsume>258</mpConsume>
-		<mpInitialConsume>64</mpInitialConsume>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">258</value>
+			<value level="2">260</value>
+			<value level="3">262</value>
+			<value level="4">264</value>
+			<value level="5">266</value>
+			<value level="6">268</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">64</value>
+			<value level="2">65</value>
+			<value level="3">66</value>
+			<value level="4">67</value>
+			<value level="5">68</value>
+			<value level="6">70</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>20000</reuseDelay>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>NPC_BODY</targetType>
 		<affectScope>RANGE</affectScope>

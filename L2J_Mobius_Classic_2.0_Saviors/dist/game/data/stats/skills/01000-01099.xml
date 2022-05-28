@@ -15,10 +15,10 @@
 			<value level="9">66</value>
 			<value level="10">72</value>
 			<value level="11">78</value>
-			<value level="12">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="13">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="14">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="15">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">78</value>
+			<value level="13">78</value>
+			<value level="14">78</value>
+			<value level="15">78</value>
 		</magicLevel>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>T</operateType>
@@ -158,10 +158,10 @@
 					<value level="9">5</value>
 					<value level="10">5</value>
 					<value level="11">5</value>
-					<value level="12">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="13">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="14">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="15">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">5</value>
+					<value level="13">5</value>
+					<value level="14">5</value>
+					<value level="15">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2180,7 +2180,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1043" toLevel="1" name="Holy Weapon">
@@ -3323,7 +3325,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -3483,7 +3487,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -4815,7 +4821,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
