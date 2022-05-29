@@ -3399,6 +3399,21 @@ public class Player extends Playable
 	 */
 	public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
 	{
+		return addItem(process, itemId, count, -1, reference, sendMessage);
+	}
+	
+	/**
+	 * Adds item to Inventory and send a Server->Client InventoryUpdate packet to the Player.
+	 * @param process : String Identifier of process triggering this action
+	 * @param itemId : int Item Identifier of the item to be added
+	 * @param count : long Quantity of items to be added
+	 * @param enchantLevel : int EnchantLevel of the item to be added
+	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
+	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
+	 * @return
+	 */
+	public Item addItem(String process, int itemId, long count, int enchantLevel, WorldObject reference, boolean sendMessage)
+	{
 		if (count > 0)
 		{
 			final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
@@ -3422,7 +3437,16 @@ public class Player extends Playable
 					}
 					else
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_X_S2);
+						final SystemMessage sm;
+						if (enchantLevel > 0)
+						{
+							sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_S2_X_S3);
+							sm.addInt(enchantLevel);
+						}
+						else
+						{
+							sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_X_S2);
+						}
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);
@@ -3455,6 +3479,10 @@ public class Player extends Playable
 			{
 				// Add the item to inventory
 				final Item createdItem = _inventory.addItem(process, itemId, count, this, reference);
+				if (enchantLevel > -1)
+				{
+					createdItem.setEnchantLevel(enchantLevel);
+				}
 				
 				// If over capacity, drop the item
 				if (!canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !_inventory.validateCapacity(0, item.isQuestItem()) && createdItem.isDropable() && (!createdItem.isStackable() || (createdItem.getLastChange() != Item.MODIFIED)))
