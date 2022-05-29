@@ -440,8 +440,7 @@ public class Player extends Playable
 	private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 	private static final String DELETE_CHAR_HENNA = "DELETE FROM character_hennas WHERE charId=? AND slot=? AND class_index=?";
 	private static final String ADD_CHAR_HENNA_POTENS = "REPLACE INTO character_potens (charId,enchant_level,enchant_exp,poten_id) VALUES (?,?,?,?)";
-	// private static final String RESTORE_CHAR_HENNAS_POTENS = "SELECT poten_id,enchant_level,enchant_exp FROM character_potens WHERE charId=?";
-	// private static final String UPDATE_CHAR_HENNAS_POTENS = "UPDATE character_potens SET enchant_level=?,enchant_exp=?,poten_id=?,class_id=?,dual_class=? WHERE charId=?";
+	private static final String RESTORE_CHAR_HENNA_POTENS = "SELECT poten_id,enchant_level,enchant_exp FROM character_potens WHERE charId=?";
 	
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
@@ -7977,10 +7976,7 @@ public class Player extends Playable
 	 */
 	private void restoreHenna()
 	{
-		for (int i = 1; i < 5; i++)
-		{
-			_hennaPoten[i - 1] = new HennaPoten();
-		}
+		restoreDyePoten();
 		
 		// Cancel and remove existing running tasks.
 		for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
@@ -8262,26 +8258,62 @@ public class Player extends Playable
 		}
 	}
 	
-	private void storeDyePoten()
+	private void restoreDyePoten()
 	{
-		if (_hennaPoten[0] == null)
-		{
-			return;
-		}
-		
-		final HennaPoten hennaPoten = new HennaPoten();
+		int pos = 0;
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA_POTENS))
+			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNA_POTENS))
 		{
 			statement.setInt(1, getObjectId());
-			statement.setInt(2, hennaPoten.getEnchantLevel());
-			statement.setInt(3, hennaPoten.getEnchantExp());
-			statement.setInt(4, hennaPoten.getPotenId());
-			statement.execute();
+			try (ResultSet rset = statement.executeQuery())
+			{
+				while (rset.next())
+				{
+					final int potenId = rset.getInt("poten_id");
+					if (potenId > 0)
+					{
+						_hennaPoten[pos] = new HennaPoten();
+						_hennaPoten[pos].setEnchantLevel(rset.getInt("enchant_level"));
+						_hennaPoten[pos].setEnchantExp(rset.getInt("enchant_exp"));
+						_hennaPoten[pos].setPotenId(potenId);
+						pos++;
+					}
+				}
+			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Failed saving character henna Potential.", e);
+			LOGGER.log(Level.SEVERE, "Failed restoring character " + this + " henna potential.", e);
+		}
+		
+		for (int i = pos; i < 4; i++)
+		{
+			_hennaPoten[i] = new HennaPoten();
+		}
+		
+		applyDyePotenSkills();
+	}
+	
+	private void storeDyePoten()
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			if ((_hennaPoten[i] != null) && (_hennaPoten[i].getPotenId() > 0))
+			{
+				try (Connection con = DatabaseFactory.getConnection();
+					PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA_POTENS))
+				{
+					statement.setInt(1, getObjectId());
+					statement.setInt(2, _hennaPoten[i].getEnchantLevel());
+					statement.setInt(3, _hennaPoten[i].getEnchantExp());
+					statement.setInt(4, _hennaPoten[i].getPotenId());
+					statement.execute();
+				}
+				catch (Exception e)
+				{
+					LOGGER.log(Level.SEVERE, "Failed saving character " + this + " henna potential.", e);
+				}
+			}
 		}
 	}
 	
@@ -10265,10 +10297,6 @@ public class Player extends Playable
 			restoreEffects();
 			
 			sendPacket(new EtcStatusUpdate(this));
-			for (int i = 0; i < 3; i++)
-			{
-				_hennaPoten[i] = null;
-			}
 			
 			restoreHenna();
 			sendPacket(new HennaInfo(this));
