@@ -247,7 +247,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MpShield", MpShield::new);
 		EffectHandler.getInstance().registerHandler("MpVampiricAttack", MpVampiricAttack::new);
 		EffectHandler.getInstance().registerHandler("Mute", Mute::new);
-		EffectHandler.getInstance().registerHandler("HennaSlotsAdd", NewHennaSlotsAdd::new);
+		EffectHandler.getInstance().registerHandler("NewHennaSlot", NewHennaSlot::new);
 		EffectHandler.getInstance().registerHandler("NoblesseBless", NoblesseBless::new);
 		EffectHandler.getInstance().registerHandler("OpenChest", OpenChest::new);
 		EffectHandler.getInstance().registerHandler("OpenCommonRecipeBook", OpenCommonRecipeBook::new);

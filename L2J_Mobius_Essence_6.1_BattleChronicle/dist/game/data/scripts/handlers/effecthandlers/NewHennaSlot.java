@@ -22,9 +22,9 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 /**
  * @author Serenitty
  */
-public class NewHennaSlotsAdd extends AbstractStatPercentEffect
+public class NewHennaSlot extends AbstractStatAddEffect
 {
-	public NewHennaSlotsAdd(StatSet params)
+	public NewHennaSlot(StatSet params)
 	{
 		super(params, Stat.HENNA_SLOTS_AVAILABLE);
 	}
