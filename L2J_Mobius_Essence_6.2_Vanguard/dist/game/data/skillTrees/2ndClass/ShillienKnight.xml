@@ -35,15 +35,21 @@
 		<skill skillName="Drain HP" skillId="45250" skillLevel="6" getLevel="40" levelUpSp="56000" />
 		<skill skillName="Bloody Weapon" skillId="47285" skillLevel="3" getLevel="40" levelUpSp="56000" />
 		<skill skillName="Freezing Weapon" skillId="47288" skillLevel="2" getLevel="40" levelUpSp="56000" />
-		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="1" getLevel="40" levelUpSp="56000" />
-		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="1" getLevel="40" levelUpSp="56000" />
-		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="1" getLevel="40" levelUpSp="56000" />
-		
+		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="1" getLevel="40" levelUpSp="56000">
+			<removeSkill id="147" /> <!-- Magic Resistance -->
+		</skill>
+		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="1" getLevel="40" levelUpSp="56000">
+			<removeSkill id="232" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="1" getLevel="40" levelUpSp="56000">
+			<removeSkill id="217" /> <!-- Sword / Blunt Weapon Mastery -->
+		</skill>
+
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="4" getLevel="41" levelUpSp="66000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="16" getLevel="41" levelUpSp="66000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="11" getLevel="41" levelUpSp="66000" />
-		<skill skillName="Fortitude" skillId="335" skillLevel="1" getLevel="41" levelUpSp="66000" />
-		
+		<skill skillName="Fortitude" skillId="335" skillLevel="1" getLevel="41" levelUpSp="78000" />
+
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="5" getLevel="42" levelUpSp="66000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="17" getLevel="42" levelUpSp="66000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="12" getLevel="42" levelUpSp="66000" />
@@ -179,7 +185,8 @@
 		<skill skillName="Life Leech" skillId="289" skillLevel="7" getLevel="58" levelUpSp="380000" />
 		<skill skillName="Final Fortress" skillId="291" skillLevel="3" getLevel="58" levelUpSp="380000" />
 		<skill skillName="Judgment" skillId="401" skillLevel="7" getLevel="58" levelUpSp="380000" />
-		
+		<skill skillName="Drain HP" skillId="45250" skillLevel="15" getLevel="58" levelUpSp="380000" />
+
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="22" getLevel="59" levelUpSp="550000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="34" getLevel="59" levelUpSp="550000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="29" getLevel="59" levelUpSp="550000" />
@@ -246,8 +253,8 @@
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="28" getLevel="65" levelUpSp="850000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="40" getLevel="65" levelUpSp="850000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="35" getLevel="65" levelUpSp="850000" />
-		<skill skillName="Fortitude" skillId="335" skillLevel="2" getLevel="65" levelUpSp="850000" />
 		<skill skillName="Knight's Protection" skillId="53010" skillLevel="3" getLevel="65" levelUpSp="850000" />
+		<skill skillName="Fortitude" skillId="335" skillLevel="2" getLevel="65" levelUpSp="1000000" />
 
 		<skill skillName="Confusion" skillId="2" skillLevel="15" getLevel="66" levelUpSp="1000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="29" getLevel="66" levelUpSp="1000000" />

@@ -34,12 +34,18 @@
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Slowdown" skillId="47284" skillLevel="2" getLevel="40" levelUpSp="80000" />
-		<skill skillName="Rogue Weapon Mastery" skillId="47331" skillLevel="1" getLevel="40" levelUpSp="80000" />
-		<skill skillName="Rogue Armor Mastery" skillId="47332" skillLevel="1" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Rogue Weapon Mastery" skillId="47331" skillLevel="1" getLevel="40" levelUpSp="80000">
+			<removeSkill id="208" /> <!-- Bow Mastery -->
+			<removeSkill id="209" /> <!-- Dagger Mastery -->
+		</skill>
+		<skill skillName="Rogue Armor Mastery" skillId="47332" skillLevel="1" getLevel="40" levelUpSp="80000">
+			<removeSkill id="233" /> <!-- Light Armor Mastery -->
+		</skill>
 		<skill skillName="Acrobatic Body" skillId="47333" skillLevel="3" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Backstab" skillId="47334" skillLevel="1" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Sharpness" skillId="53009" skillLevel="1" getLevel="40" levelUpSp="80000" />
-		
+		<skill skillName="Bleed" skillId="96" skillLevel="1" getLevel="40" levelUpSp="95000" />
+
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="6" getLevel="41" levelUpSp="94000" />
 
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="7" getLevel="42" levelUpSp="94000" />
@@ -57,6 +63,7 @@
 		<skill skillName="Spirit Barrier" skillId="123" skillLevel="2" getLevel="45" levelUpSp="140000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="10" getLevel="45" levelUpSp="140000" />
 		<skill skillName="Pirate Transformation" skillId="1800" skillLevel="1" getLevel="45" autoGet="true" />
+		<skill skillName="Bleed" skillId="96" skillLevel="2" getLevel="45" levelUpSp="170000" />
 
 		<skill skillName="Fast Run" skillId="4" skillLevel="2" getLevel="46" levelUpSp="140000" />
 		<skill skillName="Switch" skillId="12" skillLevel="2" getLevel="46" levelUpSp="140000" />

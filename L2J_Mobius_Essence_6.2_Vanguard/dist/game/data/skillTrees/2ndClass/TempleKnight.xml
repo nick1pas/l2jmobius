@@ -34,9 +34,15 @@
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Slowdown" skillId="47284" skillLevel="2" getLevel="40" levelUpSp="67000" />
-		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="1" getLevel="40" levelUpSp="67000" />
-		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="1" getLevel="40" levelUpSp="67000" />
-		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="1" getLevel="40" levelUpSp="67000" />
+		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="1" getLevel="40" levelUpSp="67000">
+			<removeSkill id="147" /> <!-- Magic Resistance -->
+		</skill>
+		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="1" getLevel="40" levelUpSp="67000">
+			<removeSkill id="232" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="1" getLevel="40" levelUpSp="67000">
+			<removeSkill id="217" /> <!-- Sword / Blunt Weapon Mastery -->
+		</skill>
 		
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="4" getLevel="41" levelUpSp="78000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="16" getLevel="41" levelUpSp="78000" />
@@ -99,9 +105,9 @@
 		<skill skillName="MP Recovery" skillId="45177" skillLevel="2" getLevel="50" levelUpSp="300000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="2" getLevel="88" levelUpSp="230000" />
-		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="2" getLevel="88" levelUpSp="230000" />
-		<skill skillName="Knight's Protection" skillId="53010" skillLevel="1" getLevel="88" levelUpSp="230000" />
+		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="2" getLevel="50" levelUpSp="230000" />
+		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="2" getLevel="50" levelUpSp="230000" />
+		<skill skillName="Knight's Protection" skillId="53010" skillLevel="1" getLevel="50" levelUpSp="230000" />
 		
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="14" getLevel="51" levelUpSp="230000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="26" getLevel="51" levelUpSp="230000" />
@@ -179,7 +185,8 @@
 		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="3" getLevel="60" levelUpSp="650000" />
 		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="3" getLevel="60" levelUpSp="650000" />
 		<skill skillName="Knight's Protection" skillId="53010" skillLevel="2" getLevel="60" levelUpSp="650000" />
-		
+		<skill skillName="Mass Shackling" skillId="404" skillLevel="2" getLevel="60" levelUpSp="610000" />
+
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="24" getLevel="61" levelUpSp="650000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="36" getLevel="61" levelUpSp="650000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="31" getLevel="61" levelUpSp="650000" />
@@ -215,9 +222,10 @@
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="28" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="40" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="35" getLevel="65" levelUpSp="1000000" />
-		<skill skillName="Fortitude" skillId="335" skillLevel="2" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Mass Shackling" skillId="404" skillLevel="3" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Knight's Protection" skillId="53010" skillLevel="3" getLevel="65" levelUpSp="1000000" />
+		<skill skillName="Mass Shackling" skillId="404" skillLevel="3" getLevel="65" levelUpSp="950000" />
+		<skill skillName="Fortitude" skillId="335" skillLevel="2" getLevel="65" levelUpSp="1000000" />
 		
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="29" getLevel="66" levelUpSp="1100000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="41" getLevel="66" levelUpSp="1100000" />
@@ -266,7 +274,8 @@
 		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="4" getLevel="70" levelUpSp="1900000" />
 		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="4" getLevel="70" levelUpSp="1900000" />
 		<skill skillName="Knight's Protection" skillId="53010" skillLevel="4" getLevel="70" levelUpSp="1900000" />
-		
+		<skill skillName="Mass Shackling" skillId="404" skillLevel="4" getLevel="70" levelUpSp="1800000" />
+
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="34" getLevel="71" levelUpSp="1900000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="46" getLevel="71" levelUpSp="1900000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="41" getLevel="71" levelUpSp="1900000" />
@@ -288,6 +297,7 @@
 		<skill skillName="Aggression" skillId="28" skillLevel="48" getLevel="73" levelUpSp="2200000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="43" getLevel="73" levelUpSp="2200000" />
 		<skill skillName="Mass Shackling" skillId="404" skillLevel="5" getLevel="73" levelUpSp="2200000" />
+		<skill skillName="Mass Shackling" skillId="404" skillLevel="5" getLevel="73" levelUpSp="2000000" />
 		
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="37" getLevel="74" levelUpSp="2200000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="49" getLevel="74" levelUpSp="2200000" />
