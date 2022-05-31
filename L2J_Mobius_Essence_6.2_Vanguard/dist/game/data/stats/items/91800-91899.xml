@@ -161,6 +161,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90901" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 1 (15-day) -->
+		</capsuled_items>
 	</item>
 	<item id="91811" name="+3 Agathion Capricorn" additionalName="3-day" type="Armor">
 		<!-- Available for 3 d. Can be used to obtain the power of Agathion Capricorn. Equipping it in the main slot summons the agathion. Enables its secondary skills. <Secondary skills>. Increases M. Skill Critical Rate. When enchanted to +6 and higher, decreases M. Skill/ Song/ Dance Cooldown. -->

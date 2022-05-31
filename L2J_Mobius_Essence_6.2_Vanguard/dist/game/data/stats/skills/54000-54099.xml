@@ -866,6 +866,32 @@
 		<!-- HP/ MP Recovery Rate +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
 		<icon>icon.ertheia_bracelet_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="MpRegen">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54021" toLevel="15" name="Talisman of Authority">
 		<!-- By the energy of Power P./ M. Def. +13, Max HP +6%, Max MP +2%, P./ M. Atk. +2%. -->

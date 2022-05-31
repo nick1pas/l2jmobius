@@ -1391,22 +1391,22 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="50183" toLevel="1" name="Adventurer's Brooch">
-		<!-- <Effect> 1 jewel can be equipped. -->
+		<!-- Jewel Slots +4 -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="JewelSlot">
-				<amount>1</amount>
+				<amount>4</amount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="50184" toLevel="1" name="Adventurer's Agathion Bracelet">
-		<!-- <Effect> Unlocks the main agathion slot. -->
+		<!-- Agathion slots +4 -->
 		<icon>icon.agathion_magmeld_teleport</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AgathionSlot">
-				<amount>1</amount>
+				<amount>4</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1807,10 +1807,75 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50192" toLevel="6" name="Talisman Bracelet Lv. 1">
-		<!-- <Effect> Talismans can be equipped: $s1 pcs. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="50192" toLevel="8" name="Talisman Bracelet Lv. 1">
+		<icon>
+			<value level="1">icon.dimension_bracelet_i00</value>
+			<value level="2">icon.dimension_bracelet_i01</value>
+			<value level="3">icon.dimension_bracelet_i02</value>
+			<value level="4">icon.dimension_bracelet_i03</value>
+			<value level="5">icon.dimension_bracelet_i04</value>
+			<value level="6">icon.dimension_bracelet_i05</value>
+			<value level="7">icon.dimension_bracelet_i05</value>
+			<value level="8">icon.dimension_bracelet_i05</value>
+		</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+				</slots>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+					<value level="4">100</value>
+					<value level="5">200</value>
+					<value level="6">300</value>
+					<value level="7">500</value>
+					<value level="8">700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+					<value level="4">100</value>
+					<value level="5">200</value>
+					<value level="6">300</value>
+					<value level="7">500</value>
+					<value level="8">700</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value level="7">1</value>
+					<value level="8">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50193" toLevel="11" name="Talisman of Eva">
 		<!-- Imbued with Eva's energy. M. Def. $s1 Max MP $s2 -->

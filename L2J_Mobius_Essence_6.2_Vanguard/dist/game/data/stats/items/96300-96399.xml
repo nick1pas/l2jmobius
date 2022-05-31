@@ -443,7 +443,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="96341" name="Support Box: Agathion Lv. 5 (Time-limited)" additionalName="Sealed" type="EtcItem">
+	<item id="96341" name="Support Box: Agathion Bracelet Lv. 5 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -453,6 +453,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96189" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 5 (Time-limited) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="96342" name="Support Box: +5 Agathion Ignis (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
@@ -518,7 +522,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96195" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 5 (Time-limited) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="96348" name="Support Box: Venir's Talisman Lv. 12 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->

@@ -556,8 +556,8 @@
 			<skill id="50184" level="1" /> <!-- Expand Agathion Slots -->
 		</skills>
 	</item>
-	<item id="91934" name="Adventurer's Bracelet" additionalName="Sealed" type="Armor">
-		<!-- When equipped, unlocks 1 talisman slot. -->
+	<item id="91934" name="Adventurer's Talisman Bracelet" additionalName="Sealed" type="Armor">
+		<!-- Talisman slots +4 -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -570,7 +570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="50912" level="1" /> <!-- Talisman Bracelet Lv. 1 -->
+			<skill id="50566" level="1" /> <!-- Adventurer's Talisman Bracelet -->
 		</skills>
 	</item>
 	<item id="91935" name="Adventurer's Agathion Griffin" additionalName="Sealed" type="Armor">
@@ -607,7 +607,7 @@
 		</skills>
 	</item>
 	<item id="91937" name="Adventurer's Talisman" additionalName="Sealed" type="Armor">
-		<!-- M. Def. +5%. Effects of two identical talismans do not stack. -->
+		<!-- A talisman for adventurers. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="bodypart" val="talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -619,8 +619,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<set name="enchant_enabled" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="enchant_limit" val="1" />
+		<skills>
+			<skill id="50188" level="1" type="ON_ENCHANT" type_value="0"  /> <!-- Adventurer's Talisman Lv1 -->
+			<skill id="50188" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Adventurer's Talisman Lv2 -->
+		</skills>
 	</item>
 	<item id="91938" name="Primeval Isle's Time Stone" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->

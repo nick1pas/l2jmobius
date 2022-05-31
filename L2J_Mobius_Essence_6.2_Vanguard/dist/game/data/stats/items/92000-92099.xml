@@ -397,7 +397,7 @@
 		</capsuled_items>
 	</item>
 	<item id="92031" name="Talisman Bracelet Lv. 5" type="Armor">
-		<!-- Unlocks 5 talisman slots. <Attributes>. HP/ MP Recovery Rate +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. Can be compounded with a Talisman Bracelet of the same level. -->
+		<!-- Talisman slots +6 / P.Atk +200 / M.Atk +200 / Can be compounded with two other Talisman Bracelets of the same level. -->
 		<set name="icon" val="icon.dimension_bracelet_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -408,11 +408,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50912" level="5" /> <!-- Talisman Bracelet Lv. 5 -->
+			<skill id="50192" level="5" /> <!-- Talisman Bracelet Lv. 5 -->
 		</skills>
 	</item>
 	<item id="92032" name="Talisman Bracelet Lv. 6" type="Armor">
-		<!-- Unlocks 6 talisman slots. <Attributes>. HP/ MP Recovery Rate +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
+		<!-- Talisman slots +6 / P.Atk +300 / M.Atk +300 -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -423,7 +423,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50912" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
+			<skill id="50192" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
 		</skills>
 	</item>
 	<item id="92033" name="Magic Fire" additionalName="Sealed" type="EtcItem">

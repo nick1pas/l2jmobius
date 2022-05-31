@@ -154,7 +154,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="96214" name="Package: Agathion Lv. 5 (Time-limited)" additionalName="Sealed" type="EtcItem">
+	<item id="96214" name="Package: Agathion Bracelet Lv. 5 (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="PEEL" />
@@ -164,6 +164,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91161" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="96215" name="Package: +5 Agathion Ignis (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following. -->

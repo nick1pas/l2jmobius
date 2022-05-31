@@ -209,7 +209,25 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="96182" min="1" max="1" chance="100" /> <!-- Brooch Lv. 5 (Time-limited) Sealed -->
+			<item id="96183" min="1" max="1" chance="100" /> <!-- Opal Lv. 4 (Time-limited) Sealed -->
+			<item id="96184" min="1" max="1" chance="100" /> <!-- Coral Lv. 4 (Time-limited) Sealed -->
+			<item id="96185" min="1" max="1" chance="100" /> <!-- Onyx Lv. 4 (Time-limited) Sealed -->
+			<item id="96186" min="1" max="1" chance="100" /> <!-- Spinel Lv. 4 (Time-limited) Sealed -->
+			<item id="96187" min="1" max="1" chance="100" /> <!-- Zircon Lv. 4 (Time-limited) Sealed -->
+			<item id="96188" min="1" max="1" chance="100" /> <!-- Moonstone Lv. 4 (Time-limited) Sealed -->
+			<item id="96189" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 5 (Time-limited) Sealed -->
+			<item id="96190" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Ignis (Time-limited) Sealed -->
+			<item id="96191" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Nebula (Time-limited) Sealed -->
+			<item id="96192" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Procella (Time-limited) Sealed -->
+			<item id="96193" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Petram (Time-limited) Sealed -->
+			<item id="96194" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Joy (Time-limited) Sealed -->
+			<item id="96195" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 5 (Time-limited) Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="96121" name="Growth Mark (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Can be used for creating +5 A-grade time-limited weapons through the Special Craft or exchanged for various items through the Grocer. -->
@@ -1299,6 +1317,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="54020" level="1" /> <!-- Bracelet of Power -->
+		</skills>
 	</item>
 	<item id="96196" name="Venir's Talisman Lv. 12 (Time-limited)" additionalName="Sealed" type="Armor">
 		<!-- <When equipped> CON +2 MEN +2 DEX +2 WIT +2 STR +2 INT +2 All received Critical Rate -2% P./ M. Skill Cooldown -1% <font color=eeaa22><Permanent item craft></font> Can be created in the Accessories tab of the Special Craft window. <font color=ff6666>Note!</font> Effects of two identical talismans do not stack. -->

@@ -672,40 +672,55 @@
 		<!-- Jewel slots +6 Inventory slots +18 P. Def. +300 M. Def. +300 -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="13660" level="2" /> <!-- Activates 6 jewel slots. -->
+			<skill id="13661" level="6" /> <!-- Inventory Slot +18. -->
+			<skill id="13648" level="1" type="ON_EQUIP" /> <!-- Brooch Lv. 5 Lv2 On. -->
+			<skill id="13649" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 5 Lv2 Off. -->
+		</skills>
 	</item>
 	<item id="96961" name="Brooch Lv. 7" type="Armor">
 		<!-- Jewel slots +6 Inventory slots +20 P. Def. +500 M. Def. +500 Max HP +500 Max MP +500 Can be compounded with two other Brooches of the same level. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="13660" level="3" /> <!-- Activates 6 jewel slots. -->
+			<skill id="13661" level="7" /> <!-- Inventory Slot +20. -->
+			<skill id="13648" level="3" type="ON_EQUIP" /> <!-- Brooch Lv. 5 Lv3 On. -->
+			<skill id="13649" level="3" type="ON_UNEQUIP" /> <!-- Brooch Lv. 5 Lv3 Off. -->
+		</skills>
 	</item>
 	<item id="96962" name="Brooch Lv. 8" type="Armor">
 		<!-- Jewel slots +6 Inventory slots +25 P. Def. +700 M. Def. +700 Max HP +1000 Max MP +1000 -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="13660" level="4" /> <!-- Activates 6 jewel slots. -->
+			<skill id="13661" level="8" /> <!-- Inventory Slot +25. -->
+			<skill id="13648" level="4" type="ON_EQUIP" /> <!-- Brooch Lv. 5 Lv4 On. -->
+			<skill id="13649" level="4" type="ON_UNEQUIP" /> <!-- Brooch Lv. 5 Lv4 Off. -->
+		</skills>
 	</item>
 	<item id="96963" name="Talisman Bracelet Lv. 7" type="Armor">
 		<!-- Talisman slots +6 P. Atk. +500 M. Atk. +500 Skill Power +1% Can be compounded with two other Talisman Bracelets of the same level. -->
@@ -713,11 +728,15 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="SILVER" />
+		<set name="price" val="5400000" />
+		<set name="commissionItemType" val="BRACELET" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50192" level="7" /> <!-- Talisman Bracelet Lv. 7 -->
+		</skills>
 	</item>
 	<item id="96964" name="Talisman Bracelet Lv. 8" type="Armor">
 		<!-- Talisman slots +6 P. Atk. +700 M. Atk. +700 Skill Power +2% -->
@@ -725,11 +744,15 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="NONE" />
 		<set name="material" val="SILVER" />
+		<set name="price" val="5400000" />
+		<set name="commissionItemType" val="BRACELET" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50192" level="8" /> <!-- Talisman Bracelet Lv. 8 -->
+		</skills>
 	</item>
 	<item id="96965" name="Agathion Bracelet Lv. 6" type="Armor">
 		<!-- Agathion slots +5 Paralysis Resistance +10% Shock Resistance +10% Sleep Resistance +10% Silence Resistance +10% Fear Resistance +10% STR +1 INT +1 DEX +2 WIT +2 CON +2 MEN +2 -->
@@ -743,6 +766,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50565" level="6" /> <!-- Agathion Bracelet Lv. 1 Lv6 -->
+		</skills>
 	</item>
 	<item id="96966" name="Agathion Bracelet Lv. 7" type="Armor">
 		<!-- Agathion slots +5 Paralysis Resistance +12% Shock Resistance +12% Sleep Resistance +12% Silence Resistance +12% Fear Resistance +12% Hold Resistance +5% Imprisonment Resistance +5% Pull Resistance +5% Knockback Resistance +5% Suppression Resistance +5% STR +2 INT +2 DEX +2 WIT +2 CON +3 MEN +3 Can be compounded with two other Agathion Bracelets of the same level. -->
@@ -756,6 +782,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50565" level="7" /> <!-- Agathion Bracelet Lv. 1 Lv7 -->
+		</skills>
 	</item>
 	<item id="96967" name="Agathion Bracelet Lv. 8" type="Armor">
 		<!-- Agathion slots +5 Paralysis Resistance +15% Shock Resistance +15% Sleep Resistance +15% Silence Resistance +15% Fear Resistance +15% Hold Resistance +10% Imprisonment Resistance +10% Pull Resistance +10% Knockback Resistance +10% Suppression Resistance +10% STR +3 INT +3 DEX +3 WIT +3 CON +3 MEN +3 -->
@@ -769,6 +798,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50565" level="8" /> <!-- Agathion Bracelet Lv. 1 Lv8 -->
+		</skills>
 	</item>
 	<item id="96968" name="Aden Starter Kit" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -919,6 +951,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92314" min="1" max="1" chance="100" /> <!-- Giran Seal Sealed -->
+			<item id="94777" min="1" max="1" chance="100" /> <!-- Berserker's Scroll Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="96983" name="Package: Agathion Bracelet Lv. 3" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -929,6 +967,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90890" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="96984" name="Package: Talisman Bracelet Lv. 3" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -939,6 +982,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9591" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="96985" name="Package: Brooch Lv. 3" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -949,6 +997,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90934" min="1" max="1" chance="100" /> <!-- Brooch Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="96986" name="Aden Adventure Reward (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
