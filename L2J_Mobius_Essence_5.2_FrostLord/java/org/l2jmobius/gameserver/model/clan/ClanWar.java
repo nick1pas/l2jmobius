@@ -117,11 +117,11 @@ public class ClanWar
 			SystemMessage sm = new SystemMessage(SystemMessageId.BECAUSE_C1_WAS_KILLED_BY_A_CLAN_MEMBER_OF_S2_CLAN_REPUTATION_DECREASED_BY_1);
 			sm.addPcName(victim);
 			sm.addString(killerClan.getName());
-			victimClan.broadcastToOtherOnlineMembers(sm, victim);
+			victimClan.broadcastToOnlineMembers(sm);
 			sm = new SystemMessage(SystemMessageId.BECAUSE_CLAN_MEMBER_OF_S1_WAS_KILLED_BY_C2_CLAN_REPUTATION_INCREASED_BY_1);
 			sm.addString(victimClan.getName());
 			sm.addPcName(killer);
-			killerClan.broadcastToOtherOnlineMembers(sm, killer);
+			killerClan.broadcastToOnlineMembers(sm);
 			if (killerClan.getId() == _attackerClanId)
 			{
 				_attackerKillCount.incrementAndGet();
