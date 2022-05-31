@@ -2008,7 +2008,7 @@ public class Config
 			INSTANCE_FINISH_TIME = generalConfig.getInt("DefaultFinishTime", 5);
 			RESTORE_PLAYER_INSTANCE = generalConfig.getBoolean("RestorePlayerInstance", false);
 			ALLOW_SUMMON_IN_INSTANCE = generalConfig.getBoolean("AllowSummonInInstance", false);
-			EJECT_DEAD_PLAYER_TIME = generalConfig.getInt("EjectDeadPlayerTime", 1);
+			EJECT_DEAD_PLAYER_TIME = generalConfig.getInt("EjectDeadPlayerTime", 60) * 1000;
 			ALLOW_LOTTERY = generalConfig.getBoolean("AllowLottery", true);
 			ALLOW_RACE = generalConfig.getBoolean("AllowRace", true);
 			ALLOW_WATER = generalConfig.getBoolean("AllowWater", true);
