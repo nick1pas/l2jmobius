@@ -1,41 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18500" level="80" type="Folk" name="Royal Guard Ant">
+	<npc id="18500" level="80" type="Monster" name="Royal Guard Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32328.2738039371" hpRegen="1" mp="2227.484" mpRegen="3" />
-			<attack physical="1106.41280529526" magical="755.53651520753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="436.96" magical="319.7483648" />
+			<vitals hp="258626.58228" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
 			</speed>
-			<hitTime>610</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" noSleepMode="true" />
-		<ai clanHelpRange="500" aggroRange="450">
-			<clanList>
-				<clan>QUEEN_ANT</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="17" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="18501" level="75" type="Monster" name="">
@@ -71,293 +57,586 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18502" level="85" type="Folk" name="Orfen" title="Spore Mistress">
+	<npc id="18502" level="80" type="RaidBoss" name="Orfen" title="Spore Mistress">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="143" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4062" level="1" /> <!-- Orfen -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49756" min="2" max="5" chance="100" /> <!-- Cloth Piece -->
+				<item id="91258" min="1" max="1" chance="5" /> <!-- Orfen Doll Lv. 2 -->
+				<item id="91944" min="1" max="1" chance="0.0231" /> <!-- Book of Light -->
+				<item id="91945" min="1" max="1" chance="0.0231" /> <!-- Book of Shadows -->
+				<item id="92401" min="1" max="1" chance="0.0231" /> <!-- Spellbook: White Guardian -->
+				<item id="93103" min="1" max="1" chance="0.0233" /> <!-- Spellbook: Divine Beam -->
+				<item id="93384" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Burning Field -->
+				<item id="93385" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Frozen Field -->
+				<item id="93386" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Lightning Storm -->
+				<item id="93631" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94137" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Devour -->
+				<item id="94324" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Earth -->
+				<item id="94325" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Hunter -->
+				<item id="94326" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Warrior -->
+				<item id="94327" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Fire -->
+				<item id="94383" min="1" max="1" chance="0.94" /> <!-- Scroll: Enchant Rare Accessories -->
+				<item id="94385" min="1" max="1" chance="0.235" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="94469" min="1" max="1" chance="0.0715" /> <!-- Pet Book: Blocked Target Change -->
+				<item id="6661" min="1" max="1" chance="0.95" /> <!-- Orfen's Earring -->
+				<item id="5311" min="1" max="1" chance="7.69" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="7.69" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="7.69" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="7.69" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="7.69" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="7.69" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="7.69" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.383" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.383" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.383" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.383" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.383" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.3835" /> <!-- Tiphon's Spear -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18503" level="85" type="Folk" name="Laikel">
+	<npc id="18503" level="80" type="Monster" name="Laikel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="521936" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="20000000" sp="256000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="521936.70886" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="18504" level="85" type="Folk" name="Laikel Leos">
+	<npc id="18504" level="80" type="Monster" name="Laikel Leos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32328" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="18505" level="85" type="Folk" name="Riba">
+	<npc id="18505" level="80" type="Monster" name="Riba">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32328" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="18506" level="85" type="Folk" name="Riba Iren">
+	<npc id="18506" level="80" type="Monster" name="Riba Iren">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32328" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="18507" level="85" type="Folk" name="Core" title="Cruma Control Device">
+	<npc id="18507" level="80" type="RaidBoss" name="Core" title="Cruma Control Device">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="1708" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4" hpRegen="10.2" mp="1708.8" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="140" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49756" min="2" max="5" chance="100" /> <!-- Cloth Piece -->
+				<item id="91944" min="1" max="1" chance="0.0231" /> <!-- Book of Light -->
+				<item id="91945" min="1" max="1" chance="0.0231" /> <!-- Book of Shadows -->
+				<item id="92401" min="1" max="1" chance="0.0231" /> <!-- Spellbook: White Guardian -->
+				<item id="93103" min="1" max="1" chance="0.0233" /> <!-- Spellbook: Divine Beam -->
+				<item id="93384" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Burning Field -->
+				<item id="93385" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Frozen Field -->
+				<item id="93386" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Lightning Storm -->
+				<item id="93631" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94137" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Devour -->
+				<item id="94324" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Earth -->
+				<item id="94325" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Hunter -->
+				<item id="94326" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Warrior -->
+				<item id="94327" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Fire -->
+				<item id="94383" min="1" max="1" chance="0.94" /> <!-- Scroll: Enchant Rare Accessories -->
+				<item id="94385" min="1" max="1" chance="0.235" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="94469" min="1" max="1" chance="0.0715" /> <!-- Pet Book: Blocked Target Change -->
+				<item id="94471" min="1" max="1" chance="0.0715" /> <!-- Pet Book: Strong Bite -->
+				<item id="6662" min="1" max="1" chance="0.95" /> <!-- Ring of Core -->
+				<item id="5311" min="1" max="1" chance="7.69" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="7.69" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="7.69" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="7.69" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="7.69" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="7.69" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="7.69" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.383" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.383" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.383" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.383" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.383" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.3835" /> <!-- Tiphon's Spear -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18508" level="85" type="Folk" name="Death Knight">
+	<npc id="18508" level="80" type="Monster" name="Death Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="747" mpRegen="3.6" />
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="747.8" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
-	<npc id="18509" level="85" type="Folk" name="Doom Wraith">
+	<npc id="18509" level="80" type="Monster" name="Doom Wraith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="1472" /> <!-- Dreadbane - Not Available - Not Available -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="889" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- Dreadbane - Not Available -->
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="889.8" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="100" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
-	<npc id="18510" level="85" type="Folk" name="Dicor">
+	<npc id="18510" level="80" type="Monster" name="Dicor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="665" mpRegen="3.6" />
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="665" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skillList>
 	</npc>
-	<npc id="18511" level="85" type="Folk" name="Validus">
+	<npc id="18511" level="80" type="Monster" name="Validus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="637" mpRegen="3.6" />
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="637.8" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
 	</npc>
-	<npc id="18512" level="85" type="Folk" name="Susceptor" title="Cruma Tower Guardian">
+	<npc id="18512" level="80" type="RaidBoss" name="Susceptor" title="Cruma Tower Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2609682" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="40000000" sp="512000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1832575.11111" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="54" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="91944" min="1" max="1" chance="0.0666" /> <!-- Book of Light -->
+				<item id="91945" min="1" max="1" chance="0.0666" /> <!-- Book of Shadows -->
+				<item id="92401" min="1" max="1" chance="0.0666" /> <!-- Spellbook: White Guardian -->
+				<item id="93631" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94137" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Devour -->
+				<item id="94324" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Song of Earth -->
+				<item id="94325" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Song of Hunter -->
+				<item id="94326" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Dance of Warrior -->
+				<item id="94327" min="1" max="1" chance="0.0666" /> <!-- Spellbook: Dance of Fire -->
+				<item id="94383" min="1" max="1" chance="0.2063" /> <!-- Scroll: Enchant Rare Accessories -->
+				<item id="94385" min="1" max="1" chance="0.0688" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="94469" min="1" max="1" chance="0.065" /> <!-- Pet Book: Blocked Target Change -->
+				<item id="94471" min="1" max="1" chance="0.065" /> <!-- Pet Book: Strong Bite -->
+				<item id="94472" min="1" max="1" chance="0.065" /> <!-- Pet Book: Last Dire Claw -->
+				<item id="94475" min="1" max="1" chance="0.065" /> <!-- Pet Book: Exploding Feather -->
+				<item id="94476" min="1" max="1" chance="0.065" /> <!-- Pet Book: Pulling Body -->
+				<item id="94477" min="1" max="1" chance="0.065" /> <!-- Pet Book: Back Explosion -->
+				<item id="94478" min="1" max="1" chance="0.11" /> <!-- Pet Book: Steel Skin -->
+				<item id="6662" min="1" max="1" chance="0.083" /> <!-- Ring of Core -->
+				<item id="5311" min="1" max="1" chance="0.6408" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.6408" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.6408" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.6408" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.6408" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.6408" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="0.6408" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="0.6408" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.6416" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="0.6408" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.6416" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.6408" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.6416" /> <!-- Sealed Majestic Robe -->
+				<item id="6326" min="1" max="1" chance="2.7774" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="1" chance="2.7774" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="2.7782" /> <!-- Sealed Majestic Ring -->
+				<item id="8678" min="1" max="1" chance="0.1012" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.1012" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.1012" /> <!-- Barakiel's Axe -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18513" level="85" type="Folk" name="Perum">
+	<npc id="18513" level="80" type="Monster" name="Perum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="692" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="692.4" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="20" />
 				<run ground="20" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4444" level="2" /> <!-- Greater Bow Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="18514" level="85" type="Folk" name="Premo">
+	<npc id="18514" level="80" type="Monster" name="Premo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="40000" hpRegen="10.5" mp="610" mpRegen="3.6" />
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32328.48101" hpRegen="10.2" mp="610.8" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="55" />
 				<run ground="110" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+		</skillList>
 	</npc>
-	<npc id="18515" level="85" type="Folk" name="Baium" title="Lord">
+	<npc id="18515" level="80" type="RaidBoss" name="Baium" title="Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="6" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="65" />
 			<height normal="174" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49756" min="2" max="5" chance="100" /> <!-- Cloth Piece -->
+				<item id="91256" min="1" max="1" chance="4" /> <!-- Baium Doll Lv. 2 -->
+				<item id="91944" min="1" max="1" chance="0.0231" /> <!-- Book of Light -->
+				<item id="91945" min="1" max="1" chance="0.0231" /> <!-- Book of Shadows -->
+				<item id="92401" min="1" max="1" chance="0.0231" /> <!-- Spellbook: White Guardian -->
+				<item id="93103" min="1" max="1" chance="0.0056" /> <!-- Spellbook: Divine Beam -->
+				<item id="93384" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Burning Field -->
+				<item id="93385" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Frozen Field -->
+				<item id="93386" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Lightning Storm -->
+				<item id="93387" min="1" max="1" chance="0.0056" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+				<item id="93631" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94137" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Devour -->
+				<item id="94324" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Earth -->
+				<item id="94325" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Hunter -->
+				<item id="94326" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Warrior -->
+				<item id="94327" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Fire -->
+				<item id="94383" min="1" max="1" chance="0.94" /> <!-- Scroll: Enchant Rare Accessories -->
+				<item id="94385" min="1" max="1" chance="0.235" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="49580" min="1" max="1" chance="0.95" /> <!-- Baium's Ring -->
+				<item id="49683" min="1" max="1" chance="0.95" /> <!-- Talisman of Baium -->
+				<item id="5311" min="1" max="1" chance="7.69" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="7.69" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="7.69" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="7.69" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="7.69" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="7.69" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="7.69" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.383" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.383" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.383" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.383" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.383" /> <!-- Naga's Storm -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18516" level="85" type="Folk" name="Archangel" title="Guardian of the Tower of Insolence">
+	<npc id="18516" level="80" type="RaidBoss" name="Archangel" title="Guardian of the Tower of Insolence">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1200000" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="842666.66667" hpRegen="10.2" mp="1475" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49756" min="2" max="5" chance="100" /> <!-- Cloth Piece -->
+				<item id="91256" min="1" max="1" chance="0.4" /> <!-- Baium Doll Lv. 2 -->
+				<item id="91944" min="1" max="1" chance="0.0231" /> <!-- Book of Light -->
+				<item id="91945" min="1" max="1" chance="0.0231" /> <!-- Book of Shadows -->
+				<item id="92401" min="1" max="1" chance="0.0231" /> <!-- Spellbook: White Guardian -->
+				<item id="93103" min="1" max="1" chance="0.0056" /> <!-- Spellbook: Divine Beam -->
+				<item id="93384" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Burning Field -->
+				<item id="93385" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Frozen Field -->
+				<item id="93386" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Lightning Storm -->
+				<item id="93387" min="1" max="1" chance="0.0056" /> <!-- Spellbook: Ultimate Death Knight Transformation -->
+				<item id="93631" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Hellfire -->
+				<item id="93869" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Elemental Burst -->
+				<item id="93870" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Ethereal Strike -->
+				<item id="94137" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Devour -->
+				<item id="94324" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Earth -->
+				<item id="94325" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Song of Hunter -->
+				<item id="94326" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Warrior -->
+				<item id="94327" min="1" max="1" chance="0.0231" /> <!-- Spellbook: Dance of Fire -->
+				<item id="94383" min="1" max="1" chance="0.094" /> <!-- Scroll: Enchant Rare Accessories -->
+				<item id="94385" min="1" max="1" chance="0.0235" /> <!-- Improved Scroll: Enchant Rare Accessories -->
+				<item id="49580" min="1" max="1" chance="0.095" /> <!-- Baium's Ring -->
+				<item id="49683" min="1" max="1" chance="0.095" /> <!-- Talisman of Baium -->
+				<item id="5311" min="1" max="1" chance="7.69" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="7.69" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="7.69" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="7.69" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="7.69" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="7.69" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="7.69" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="7.69" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="7.7" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.383" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.383" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.383" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.383" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.383" /> <!-- Naga's Storm -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18517" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -416,24 +695,28 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18520" level="85" type="Folk" name="Trix" title="Gods' Azure Keltir">
+	<npc id="18520" level="80" type="RaidBoss" name="Trix" title="Gods' Azure Keltir">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="36000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="36" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="85" />
 				<run ground="550" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="72" />
 			<height normal="57" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
 	</npc>
 	<npc id="18521" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -454,24 +737,28 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18522" level="85" type="Folk" name="Baium" title="Lord">
+	<npc id="18522" level="80" type="Monster" name="Baium" title="Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="65" />
 			<height normal="82" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
 	<npc id="18523" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -492,20 +779,21 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18524" level="85" type="Folk" name="Nephenthes" title="Contaminated">
+	<npc id="18524" level="80" type="Monster" name="Nephenthes" title="Contaminated">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="16113" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32227.8481" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="48" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.8" />
 			<height normal="19.8" />
@@ -568,427 +856,526 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18528" level="85" type="Folk" name="Blaze" title="Fire Lord">
+	<npc id="18528" level="80" type="Monster" name="Blaze" title="Fire Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="36000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="51265822.78481" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="85" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50.4" />
 			<height normal="128.4" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
 	</npc>
-	<npc id="18529" level="85" type="Folk" name="Blaze's Sky Lantern">
+	<npc id="18529" level="80" type="Monster" name="Blaze's Sky Lantern" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2916" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="11520" sp="3840" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5833.5443" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18530" level="85" type="Folk" name="Blaze" title="Fire Lord">
+	<npc id="18530" level="80" type="RaidBoss" name="Blaze" title="Fire Lord" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="57600000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="576" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="85" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50.4" />
 			<height normal="128.4" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
 	</npc>
-	<npc id="18531" level="85" type="Folk" name="Lavasaurus">
+	<npc id="18531" level="80" type="Monster" name="Lavasaurus" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="41754" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="525001" sp="48000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="41755.06329" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="1" />
 				<run ground="80" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 	</npc>
-	<npc id="18532" level="85" type="Folk" name="Scarlet Worker">
+	<npc id="18532" level="80" type="Monster" name="Scarlet Worker" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3232" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<acquire exp="96000" sp="5183" attributeExp="1040" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12931.01266" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="25" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+		</skillList>
 	</npc>
-	<npc id="18533" level="85" type="Folk" name="Lava" title="Blaze's Follower">
+	<npc id="18533" level="80" type="Monster" name="Lava" title="Blaze's Follower" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="83509" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1050000" sp="96000" attributeExp="1040" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="167019.62025" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="13" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+		</skillList>
 	</npc>
-	<npc id="18534" level="85" type="Folk" name="Scarlet Stakato Noble">
+	<npc id="18534" level="80" type="Monster" name="Scarlet Stakato Noble" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3232" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<acquire exp="96000" sp="5183" attributeExp="1040" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12931.01266" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+		</skillList>
 	</npc>
-	<npc id="18535" level="85" type="Folk" name="Evil Spirit Wizard of Destruction">
+	<npc id="18535" level="80" type="Monster" name="Evil Spirit Wizard of Destruction" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3232" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="96000" sp="5183" attributeExp="1040" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12931.01266" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="70" />
 				<run ground="145" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14.5" />
 			<height normal="48" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+		</skillList>
 	</npc>
-	<npc id="18536" level="85" type="Folk" name="Blaze's Sky Lantern">
+	<npc id="18536" level="80" type="Monster" name="Blaze's Sky Lantern" element="FIRE">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2916" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="11520" sp="3840" attributeExp="1040" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5833.5443" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18537" level="85" type="Folk" name="Keber" title="Maddened">
+	<npc id="18537" level="63" type="RaidBoss" name="Keber" title="Maddened">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="599967" hpRegen="10.5" mp="1563" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="3969000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1685243.55556" hpRegen="7.5" mp="1563.41856899671" mpRegen="2.7" />
+			<attack physical="2165.79096" magical="1478.95448" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1048.77704" magical="767.44952" />
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="18538" level="85" type="Folk" name="Kishan" title="Keber's Henchman">
+	<npc id="18538" level="63" type="RaidBoss" name="Kishan" title="Keber's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="599967" hpRegen="10.5" mp="1563" mpRegen="3.6" />
+		<acquire exp="1984500" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1685243.55556" hpRegen="7.5" mp="1563.41856899671" mpRegen="2.7" />
+			<attack physical="2165.79096" magical="1478.95448" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1048.77704" magical="767.44952" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23.4" />
 			<height normal="56.15" />
 		</collision>
 	</npc>
-	<npc id="18539" level="85" type="Folk" name="Kishan's Minion">
+	<npc id="18539" level="63" type="Monster" name="Kishan's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Silence Shield) - Sealed -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4999" hpRegen="10.5" mp="1563" mpRegen="3.6" />
+		<acquire exp="37388" sp="2505" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="9999.36709" hpRegen="7.5" mp="1563.41856899671" mpRegen="2.7" />
+			<attack physical="1082.89548" magical="739.47724" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524.38852" magical="383.72476" />
 			<speed>
 				<walk ground="44" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="439" max="485" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18540" level="85" type="Folk" name="Kishan's Minion" title="Elite">
+	<npc id="18540" level="63" type="Monster" name="Kishan's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Silence Shield) - Sealed -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4999" hpRegen="10.5" mp="1563" mpRegen="3.6" />
+		<acquire exp="37388" sp="2505" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="9999.36709" hpRegen="7.5" mp="1563.41856899671" mpRegen="2.7" />
+			<attack physical="1082.89548" magical="739.47724" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524.38852" magical="383.72476" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1171" max="1295" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18541" level="85" type="Folk" name="Kishan's Minion" title="Brainwashed">
+	<npc id="18541" level="63" type="Monster" name="Kishan's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="99994" hpRegen="10.5" mp="1563" mpRegen="3.6" />
+		<acquire exp="112164" sp="4176" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="99994.3038" hpRegen="7.5" mp="1563.41856899671" mpRegen="2.7" />
+			<attack physical="1082.89548" magical="739.47724" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524.38852" magical="383.72476" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="18542" level="85" type="Folk" name="Noma" title="Keber's Henchman">
+	<npc id="18542" level="69" type="RaidBoss" name="Noma" title="Keber's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="752212" hpRegen="10.5" mp="1866" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="3570750" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="211288" hpRegen="7.5" mp="1866.80353274661" mpRegen="2.7" />
+			<attack physical="2670.01444" magical="1823.27376" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1164.60252" magical="852.20556" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="48.1" />
 		</collision>
 	</npc>
-	<npc id="18543" level="85" type="Folk" name="Noma's Minion">
+	<npc id="18543" level="69" type="Monster" name="Noma's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="98" /> <!-- Halberd -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6268" hpRegen="10.5" mp="1866" mpRegen="3.6" />
+		<acquire exp="48277" sp="4782" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12536.70886" hpRegen="7.5" mp="1866.80353274661" mpRegen="2.7" />
+			<attack physical="1335.00722" magical="911.63688" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="582.30126" magical="426.10278" />
 			<speed>
 				<walk ground="22" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14.7" />
 			<height normal="29.9" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="836" max="924" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18544" level="85" type="Folk" name="Noma's Minion" title="Elite">
+	<npc id="18544" level="69" type="Monster" name="Noma's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6268" hpRegen="10.5" mp="1866" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="48277" sp="4782" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12536.70886" hpRegen="7.5" mp="1866.80353274661" mpRegen="2.7" />
+			<attack physical="1335.00722" magical="911.63688" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="582.30126" magical="426.10278" />
 			<speed>
 				<walk ground="45" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2233" max="2468" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18545" level="85" type="Folk" name="Noma's Minion" title="Brainwashed">
+	<npc id="18545" level="69" type="Monster" name="Noma's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- Morning Star -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="125368" hpRegen="10.5" mp="1866" mpRegen="3.6" />
+		<acquire exp="144830" sp="7970" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="125368.98734" hpRegen="7.5" mp="1866.80353274661" mpRegen="2.7" />
+			<attack physical="1335.00722" magical="911.63688" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="582.30126" magical="426.10278" />
 			<speed>
 				<walk ground="55" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18546" level="85" type="Folk" name="Spall" title="Keber's Henchman">
+	<npc id="18546" level="75" type="RaidBoss" name="Spall" title="Keber's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="936091" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="5625000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2629375.55556" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="3178.83604" magical="2170.73296" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1276.98492" magical="934.44212" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36.3" />
 			<height normal="65.2" />
 		</collision>
 	</npc>
-	<npc id="18547" level="85" type="Folk" name="Spall's Minion">
+	<npc id="18547" level="75" type="Monster" name="Spall's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7800" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="60750" sp="3551" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="15601.26582" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1188" max="1313" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18548" level="85" type="Folk" name="Spall's Minion" title="Elite">
+	<npc id="18548" level="75" type="Monster" name="Spall's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7800" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="60750" sp="3551" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="15601.26582" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30.8" />
 			<height normal="51.065" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3135" max="3465" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18549" level="85" type="Folk" name="Spall's Minion" title="Brainwashed">
+	<npc id="18549" level="75" type="Monster" name="Spall's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="156015" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="182250" sp="5918" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="156015.18987" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30.8" />
 			<height normal="51.065" />
@@ -1013,77 +1400,84 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18551" level="85" type="Folk" name="Keber's Seal Stone">
+	<npc id="18551" level="80" type="Monster" name="Keber's Seal Stone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="5786" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3038.60759" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="62.5" />
 		</collision>
 	</npc>
-	<npc id="18552" level="85" type="Folk" name="Keber" title="Maddened">
+	<npc id="18552" level="69" type="RaidBoss" name="Keber" title="Maddened">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="752212" hpRegen="10.5" mp="1866" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="7141500" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="211288" hpRegen="7.5" mp="1866.80353274661" mpRegen="2.7" />
+			<attack physical="2670.01444" magical="1823.27376" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1164.60252" magical="852.20556" />
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="18553" level="85" type="Folk" name="Keber" title="Maddened">
+	<npc id="18553" level="75" type="RaidBoss" name="Keber" title="Maddened">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="936091" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="11250000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2629375.55556" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="3178.83604" magical="2170.73296" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1276.98492" magical="934.44212" />
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="18554" level="85" type="Folk" name="Otherworldly Shard" title="Full of Energy">
+	<npc id="18554" level="85" type="Monster" name="Otherworldly Shard" title="Full of Energy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19282" hpRegen="10.5" mp="11080" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="231396.20253" hpRegen="10.2" mp="11080.8" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="62.5" />
@@ -1108,161 +1502,202 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18556" level="85" type="Folk" name="Egg" title="Tanas' Clutch">
+	<npc id="18556" level="75" type="Monster" name="Egg" title="Tanas' Clutch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="156015" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="182250" sp="5918" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="156015.18987" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18557" level="85" type="Folk" name="Golden Pig" title="Treasure Keeper">
+	<npc id="18557" level="78" type="RaidBoss" name="Golden Pig" title="Treasure Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="435" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="88.88889" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="5699.2" magical="2918.848" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1596.96" magical="1007.8968" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="29" />
 			<height normal="38.7" />
 		</collision>
 	</npc>
-	<npc id="18558" level="85" type="Folk" name="Nurka" title="Bandit Stronghold's Boss">
+	<npc id="18558" level="85" type="RaidBoss" name="Nurka" title="Bandit Stronghold's Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="800000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- Long Sword -->
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="16" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="8905.0086" magical="6080.96658" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3992.40732" magical="2921.47044" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="69" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="1" max="1" chance="20" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18559" level="85" type="Folk" name="Nurka" title="Bandit Stronghold's Boss">
+	<npc id="18559" level="75" type="RaidBoss" name="Nurka" title="Bandit Stronghold's Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="501059" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2" /> <!-- Long Sword -->
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="501059.11111" hpRegen="8.5" mp="12240" mpRegen="3" />
+			<attack physical="3178.83604" magical="2170.73296" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1276.98492" magical="934.44212" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="69" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="49758" min="1" max="1" chance="20" /> <!-- Blood Crystal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18560" level="85" type="Folk" name="Villain">
+	<npc id="18560" level="80" type="Monster" name="Villain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="69" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="87505" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="69" /> <!-- Bastard Sword -->
+		<acquire exp="76800" sp="3840" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="87505.06329" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18561" level="85" type="Folk" name="Villain">
+	<npc id="18561" level="75" type="Monster" name="Villain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="69" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="45175" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="69" /> <!-- Bastard Sword -->
+		<acquire exp="67500" sp="3375" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="45175.94937" hpRegen="8.5" mp="12240" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18562" level="85" type="Folk" name="Clan Treasure Chest">
+	<npc id="18562" level="80" type="Monster" name="Clan Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="851200" sp="30822" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3038.60759" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 	</npc>
-	<npc id="18563" level="85" type="Folk" name="Clan Treasure Chest">
+	<npc id="18563" level="75" type="Monster" name="Clan Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="748125" sp="27090" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5646.83544" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 	</npc>
 	<npc id="18564" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1283,62 +1718,79 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18565" level="85" type="Folk" name="Ice Knight">
+	<npc id="18565" level="80" type="Monster" name="Ice Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8527" hpRegen="10.5" mp="2584" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="69344" sp="3520" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10318.98734" hpRegen="10.2" mp="2584.09268001591" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="14" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="18566" level="85" type="Folk" name="Ice Crystal's Breath">
+	<npc id="18566" level="80" type="Monster" name="Ice Crystal's Breath">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5241" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="170688" sp="48576" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="26205.6962" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
 	</npc>
-	<npc id="18567" level="85" type="Folk" name="Freezing Stone">
+	<npc id="18567" level="80" type="Monster" name="Freezing Stone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5241" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20964.55696" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="1" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33.8" />
 			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+		</skillList>
 	</npc>
 	<npc id="18568" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1359,81 +1811,183 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18569" level="85" type="Folk" name="Freya" title="Ice Queen">
+	<npc id="18569" level="80" type="RaidBoss" name="Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="45" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="98.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="5311" min="1" max="1" chance="0.6035" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.6078" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.6078" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.6078" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.6078" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="0.6078" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.6078" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.1132" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.1132" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.1132" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.1132" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.1132" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.1134" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="0.1134" /> <!-- Shyeed's Bow -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18570" level="85" type="Folk" name="Ice Freya" title="Ice Queen">
+	<npc id="18570" level="80" type="RaidBoss" name="Ice Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="54" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="39.6" />
 			<height normal="62.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="93933" min="1" max="1" chance="5.5" /> <!-- Rare Accessory Pack - Sealed -->
+				<item id="5311" min="1" max="1" chance="0.6035" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.6078" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.6078" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.6078" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.6078" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="0.6078" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.6078" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.1132" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.1132" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.1132" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.1132" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.1132" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.1134" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="0.1134" /> <!-- Shyeed's Bow -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18571" level="85" type="Folk" name="Freya" title="Ice Queen">
+	<npc id="18571" level="75" type="RaidBoss" name="Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3757943" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="375794" hpRegen="8.5" mp="3349.6" mpRegen="3" />
+			<attack physical="3178.83604" magical="2170.73296" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1276.98492" magical="934.44212" />
 			<speed>
 				<walk ground="45" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="98.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="5311" min="1" max="1" chance="0.6035" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.6078" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.6078" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.6078" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.6078" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="0.6078" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.6078" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.1132" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.1132" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.1132" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.1132" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.1132" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.1134" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="0.1134" /> <!-- Shyeed's Bow -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18572" level="85" type="Folk" name="Ice Freya" title="Ice Queen">
+	<npc id="18572" level="75" type="RaidBoss" name="Ice Freya" title="Ice Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3757943" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="375794" hpRegen="8.5" mp="3349.6" mpRegen="3" />
+			<attack physical="3178.83604" magical="2170.73296" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1276.98492" magical="934.44212" />
 			<speed>
 				<walk ground="54" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="39.6" />
 			<height normal="62.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="93933" min="1" max="1" chance="5.5" /> <!-- Rare Accessory Pack - Sealed -->
+				<item id="5311" min="1" max="1" chance="0.6035" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.6078" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.6078" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.6078" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.6078" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5317" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Circlet -->
+				<item id="5318" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.7098" /> <!-- Sealed Majestic Boots -->
+				<item id="5320" min="1" max="1" chance="0.6078" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.6078" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.7055" /> <!-- Sealed Majestic Robe -->
+				<item id="8678" min="1" max="1" chance="0.1132" /> <!-- Sirra's Blade -->
+				<item id="8679" min="1" max="1" chance="0.1132" /> <!-- Sword of Ipos -->
+				<item id="8680" min="1" max="1" chance="0.1132" /> <!-- Barakiel's Axe -->
+				<item id="8681" min="1" max="1" chance="0.1132" /> <!-- Behemoth' Tuning Fork -->
+				<item id="8682" min="1" max="1" chance="0.1132" /> <!-- Naga's Storm -->
+				<item id="8683" min="1" max="1" chance="0.1134" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="0.1134" /> <!-- Shyeed's Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18573" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1454,119 +2008,239 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="18574" level="85" type="Folk" name="Ice Wizard" title="Enhanced with Soul Crystal">
+	<npc id="18574" level="85" type="Monster" name="Ice Wizard" title="Enhanced with Soul Crystal" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22175" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="137714" sp="39188" attributeExp="1216" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="39250.63291" hpRegen="10.2" mp="2770.2" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="30" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="35.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1949" max="2155" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="4.1904" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="2.0952" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.6984" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.419" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.2095" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0419" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.2095" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="2.0952" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18575" level="85" type="Folk" name="Frozen Knight">
+	<npc id="18575" level="85" type="Monster" name="Frozen Knight" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11087" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="68857" sp="19594" attributeExp="1216" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="19625.31646" hpRegen="10.2" mp="2770.2" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="20" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="974" max="1077" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="2.0952" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="1.0476" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.3492" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.2095" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.1048" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0209" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.1048" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="1.0476" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18576" level="85" type="Folk" name="Frozen Lancer">
+	<npc id="18576" level="85" type="Monster" name="Frozen Lancer" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11087" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="68857" sp="19594" attributeExp="1216" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="19625.31646" hpRegen="10.2" mp="2770.2" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="974" max="1077" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="2.0952" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="1.0476" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.3492" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.2095" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.1048" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0209" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.1048" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="1.0476" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18577" level="85" type="Folk" name="Ice Golem" title="Enhanced with Soul Crystal">
+	<npc id="18577" level="75" type="Monster" name="Ice Golem" title="Enhanced with Soul Crystal" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8082" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="136530" sp="13653" attributeExp="41" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="64656.32911" hpRegen="8.5" mp="1345.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="47.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1183" max="1311" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="2.5491" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="1.2746" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.4249" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.2549" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.1275" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0255" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.1275" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="1.2746" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18578" level="85" type="Folk" name="Frozen Walking Fungus">
+	<npc id="18578" level="70" type="Monster" name="Frozen Walking Fungus" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4331" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="56699" sp="3437" attributeExp="30" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="34655.6962" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="39" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="543" max="602" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="1.1708" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="0.5854" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.1951" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.1171" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.0585" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0117" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.0585" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="0.5854" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18579" level="85" type="Folk" name="Frozen Hedgehog">
+	<npc id="18579" level="70" type="Monster" name="Frozen Hedgehog" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4331" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="56699" sp="3437" attributeExp="30" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="34655.6962" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="39" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="17.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="543" max="602" chance="70" /> <!-- Adena -->
+				<item id="92912" min="1" max="1" chance="1.1708" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="0.5854" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="0.1951" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="0.1171" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
+				<item id="92916" min="1" max="1" chance="0.0585" /> <!-- Material: Animal Spirit - Sealed -->
+				<item id="92993" min="1" max="1" chance="0.0117" /> <!-- Enria - Sealed -->
+				<item id="92994" min="1" max="1" chance="0.0585" /> <!-- Asofe - Sealed -->
+				<item id="92995" min="1" max="1" chance="0.5854" /> <!-- Thons - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18580" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1625,270 +2299,294 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18583" level="85" type="Folk" name="Bull" title="New Year">
+	<npc id="18583" level="80" type="Monster" name="Bull" title="New Year">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="600000" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="854430.37975" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="59.2" />
 			<height normal="54.35" />
 		</collision>
 	</npc>
-	<npc id="18584" level="85" type="Folk" name="White Bull" title="New Year">
+	<npc id="18584" level="80" type="Monster" name="White Bull" title="New Year">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="600000" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="854430.37975" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="59.2" />
 			<height normal="54.35" />
 		</collision>
 	</npc>
-	<npc id="18585" level="85" type="Folk" name="Golden Bull" title="New Year">
+	<npc id="18585" level="80" type="Monster" name="Golden Bull" title="New Year">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="600000" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="854430.37975" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="59.2" />
 			<height normal="54.35" />
 		</collision>
 	</npc>
-	<npc id="18586" level="85" type="Folk" name="Earth Warrior">
+	<npc id="18586" level="75" type="Monster" name="Earth Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7800" hpRegen="10.5" mp="2229" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="9360" sp="4646" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="9676.58228" hpRegen="8.5" mp="2229.06104544454" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="20" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="41" />
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18587" level="85" type="Folk" name="Rebel Warrior">
+	<npc id="18587" level="76" type="Monster" name="Rebel Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7917" hpRegen="10.5" mp="2295" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="12499" sp="10547" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="9822.1519" hpRegen="10.2" mp="2295.93287680788" mpRegen="3.6" />
+			<attack physical="1319.072" magical="675.568" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="388.54" magical="213.24" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18588" level="85" type="Folk" name="Blind Berserker">
+	<npc id="18588" level="77" type="Monster" name="Blind Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8155" hpRegen="10.5" mp="2364" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="18759" sp="16755" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10116.4557" hpRegen="10.2" mp="2364.81086311211" mpRegen="3.6" />
+			<attack physical="1370.304" magical="701.808" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="393.92" magical="248.6208" />
 			<speed>
 				<walk ground="52" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18589" level="85" type="Folk" name="Abyssal Archon">
+	<npc id="18589" level="78" type="Monster" name="Abyssal Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="72" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8277" hpRegen="10.5" mp="2435" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- Stormbringer -->
+		<acquire exp="25334" sp="23277" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10268.35443" hpRegen="10.2" mp="2435.75518900548" mpRegen="3.6" />
+			<attack physical="1424.8" magical="729.712" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.24" magical="251.9742" />
 			<speed>
 				<walk ground="38" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="38.3" />
 		</collision>
 	</npc>
-	<npc id="18590" level="85" type="Folk" name="Chaos Slayer">
+	<npc id="18590" level="79" type="Monster" name="Chaos Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38429" lhand="38435" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8401" hpRegen="10.5" mp="2508" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<equipment rhand="38429" lhand="38435" /> <!-- Monster Only: Tiger Sword - Not Available / Monster Only: Tiger Shield - Not Available -->
+		<acquire exp="39193" sp="13387" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10422.78481" hpRegen="10.2" mp="2508.82784467564" mpRegen="3.6" />
+			<attack physical="1487.888" magical="762.024" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="404.48" magical="255.2862" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18591" level="85" type="Folk" name="Crafty Bull Hunter">
+	<npc id="18591" level="78" type="Monster" name="Crafty Bull Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5241" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="9953" sp="2786" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3250.63291" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1424.8" magical="729.712" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.24" magical="251.9742" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="18592" level="85" type="Folk" name="Horn Hunter">
+	<npc id="18592" level="79" type="Monster" name="Horn Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5307" hpRegen="10.5" mp="2563" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="13331" sp="5979" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6584.17722" hpRegen="10.2" mp="2563.2" mpRegen="3.6" />
+			<attack physical="1487.888" magical="762.024" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="404.48" magical="255.2862" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="18593" level="85" type="Folk" name="Bull Slayer">
+	<npc id="18593" level="80" type="Monster" name="Bull Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5371" hpRegen="10.5" mp="2614" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="30592" sp="3200" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6663.29114" hpRegen="10.2" mp="2614.5" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36.8" />
 			<height normal="39.4" />
 		</collision>
 	</npc>
-	<npc id="18594" level="85" type="Folk" name="Monstruous Butcher">
+	<npc id="18594" level="83" type="Monster" name="Monstruous Butcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5431" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="36374" sp="7888" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="10107.59494" hpRegen="10.2" mp="2666.1" mpRegen="3.6" />
+			<attack physical="1759.08" magical="900.92" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="424.63" magical="233.046" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="48.3" />
 		</collision>
 	</npc>
-	<npc id="18595" level="85" type="Folk" name="Cattle Farmer">
+	<npc id="18595" level="85" type="Monster" name="Cattle Farmer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="95893" lhand="95894" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5489" hpRegen="10.5" mp="2718" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<equipment rhand="95893" lhand="95894" /> <!-- Monsters Only_Sword - Not Available / Monsters Only_Shield - Not Available -->
+		<acquire exp="41761" sp="11885" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="17024.05063" hpRegen="10.2" mp="2718" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19.2" />
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="18596" level="85" type="Folk" name="Fountain">
+	<npc id="18596" level="75" type="Monster" name="Fountain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41" hpRegen="10.5" mp="40" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1751.26582" hpRegen="8.5" mp="40" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="220" />
@@ -1913,42 +2611,57 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18598" level="85" type="Folk" name="Renewed Treasure Chest">
+	<npc id="18598" level="78" type="Monster" name="Renewed Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="59429" sp="16637" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5646.83544" hpRegen="10.2" mp="1507.8" mpRegen="3.6" />
+			<attack physical="1424.8" magical="729.712" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.24" magical="251.9742" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="19" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="95895" min="1" max="1" chance="100" /> <!-- Small Chest (Time-limited) - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18599" level="85" type="Folk" name="Renewed Treasure Chest">
+	<npc id="18599" level="80" type="Monster" name="Renewed Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="125030" sp="35002" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3038.60759" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="19" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 	</npc>
 </list>

@@ -3402,70 +3402,52 @@
 			<skill id="48083" level="1" /> <!-- Antharas' Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18498" level="80" type="Folk" name="Nurse Ant">
+	<npc id="18498" level="80" type="Monster" name="Nurse Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<acquire exp="487424" sp="46513" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32328.2738039371" hpRegen="1" mp="2227.484" mpRegen="3" />
-			<attack physical="2212.82561059052" magical="1511.07303041506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="436.96" magical="319.7483648" />
+			<vitals hp="258626.58228" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hitTime>260</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="18499" level="80" type="Folk" name="Escort Ant">
+	<npc id="18499" level="80" type="Monster" name="Escort Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="104387.308038203" hpRegen="1" mp="3349.6" mpRegen="6" />
-			<attack physical="4372.85376" magical="1756.026816" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.25" magical="999.2" />
+		<acquire exp="5000000" sp="64000" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="148652.53165" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
 			</speed>
-			<hitTime>260</hitTime>
-			<abnormalResist physical="230" magical="230" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 </list>

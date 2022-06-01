@@ -354,21 +354,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25740" level="80" type="Folk" name="Angel Blade" title="Raid Fighter">
+	<npc id="25740" level="80" type="Monster" name="Angel Blade" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="120" />
+		<sex>MALE</sex>
+		<equipment rhand="120" /> <!-- Sword of Reflection -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="90576" hpRegen="17" mp="71253" mpRegen="10" />
-			<attack physical="3633" magical="6279" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1024" magical="725" />
+			<vitals hp="90575.94937" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -377,32 +376,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25741" level="80" type="Folk" name="Angel's Staff" title="Raid Fighter">
+	<npc id="25741" level="80" type="Monster" name="Angel's Staff" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="206" />
+		<equipment rhand="206" /> <!-- Demon's Staff -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="90576" hpRegen="17" mp="71253" mpRegen="10" />
-			<attack physical="3633" magical="6279" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1024" magical="725" />
+			<vitals hp="90575.94937" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -411,15 +400,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25742" level="80" type="RaidBoss" name="Priest of Core Decar" title="High Elite">
@@ -1146,21 +1127,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25752" level="60" type="Folk" name="Tayga Warrior" title="Raid Fighter">
+	<npc id="25752" level="60" type="Monster" name="Tayga Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="38434" />
+		<equipment rhand="38434" /> <!-- Monster Only: Tiger Polearm - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42592" hpRegen="13" mp="33506" mpRegen="10" />
-			<attack physical="1997" magical="3023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="742" magical="526" />
+			<vitals hp="42591.77215" hpRegen="6.5" mp="33506" mpRegen="2.4" />
+			<attack physical="962.69102" magical="657.39318" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="495.30016" magical="362.43916" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1169,32 +1149,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25753" level="60" type="Folk" name="Tayga Archer" title="Raid Fighter">
+	<npc id="25753" level="60" type="Monster" name="Tayga Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="38430" />
+		<equipment rhand="38430" /> <!-- Monster Only: Tiger Bow - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="42592" hpRegen="13" mp="33506" mpRegen="10" />
-			<attack physical="1497" magical="3023" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="742" magical="526" />
+			<vitals hp="42591.77215" hpRegen="6.5" mp="33506" mpRegen="2.4" />
+			<attack physical="962.69102" magical="657.39318" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="495.30016" magical="362.43916" />
 			<speed>
 				<walk ground="75" />
 				<run ground="160" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1203,15 +1174,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25754" level="70" type="RaidBoss" name="Flamestone Giant" title="Elite">
@@ -2134,20 +2097,19 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25764" level="75" type="Folk" name="Demon Collector" title="Raid Fighter">
+	<npc id="25764" level="75" type="Monster" name="Demon Collector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="70968" hpRegen="17" mp="55828" mpRegen="10" />
-			<attack physical="3333" magical="5676" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="957" magical="678" />
+			<vitals hp="70967.72152" hpRegen="8.5" mp="55828" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="110" />
 				<run ground="190" />
 			</speed>
-			<hitTime>440</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2156,32 +2118,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25765" level="75" type="Folk" name="Demon Servant" title="Raid Fighter">
+	<npc id="25765" level="75" type="Monster" name="Demon Servant" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="15302" />
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="70968" hpRegen="17" mp="55828" mpRegen="10" />
-			<attack physical="3333" magical="5676" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="957" magical="678" />
+			<vitals hp="70967.72152" hpRegen="8.5" mp="55828" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2190,15 +2143,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25766" level="80" type="RaidBoss" name="Monster Minotaur" title="High Elite">
@@ -2709,21 +2654,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25771" level="70" type="Folk" name="Centaur Thrower" title="Raid Fighter">
+	<npc id="25771" level="70" type="Monster" name="Centaur Thrower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="38446" />
+		<equipment rhand="38446" /> <!-- Monster Only: Centaur Throwing Blade - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="56685" hpRegen="15" mp="44592" mpRegen="10" />
-			<attack physical="2930" magical="4686" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="887" magical="629" />
+			<vitals hp="56684.81013" hpRegen="7.5" mp="44592" mpRegen="2.7" />
+			<attack physical="1377.72746" magical="940.80926" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="591.83194" magical="433.07694" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2732,15 +2676,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25772" level="70" type="RaidBoss" name="Evil Orc Zetahl" title="High Elite">
@@ -3352,21 +3288,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25778" level="80" type="Folk" name="Evil Orc Archer" title="Raid Fighter">
+	<npc id="25778" level="80" type="Monster" name="Evil Orc Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="288" />
+		<equipment rhand="288" /> <!-- Carnage Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="90576" hpRegen="17" mp="71253" mpRegen="10" />
-			<attack physical="3633" magical="6279" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="1024" magical="725" />
+			<vitals hp="90575.94937" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
-			<hitTime>910</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3375,15 +3310,6 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25779" level="80" type="RaidBoss" name="Gariott" title="High Elite">
@@ -4007,21 +3933,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25785" level="75" type="Folk" name="Lesser Giant Warrior" title="Raid Fighter">
+	<npc id="25785" level="75" type="Monster" name="Lesser Giant Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<equipment rhand="3937" />
+		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="70968" hpRegen="17" mp="55828" mpRegen="10" />
-			<attack physical="3333" magical="5676" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="957" magical="678" />
+			<vitals hp="70967.72152" hpRegen="8.5" mp="55828" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="15" />
 				<run ground="190" />
 			</speed>
-			<hitTime>580</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -4030,32 +3955,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25786" level="75" type="Folk" name="Lesser Giant Soldier" title="Raid Fighter">
+	<npc id="25786" level="75" type="Monster" name="Lesser Giant Soldier" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<equipment rhand="4028" />
+		<equipment rhand="4028" /> <!-- Giant Cannon - Not Available -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="70968" hpRegen="17" mp="55828" mpRegen="10" />
-			<attack physical="3333" magical="5676" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="957" magical="678" />
+			<vitals hp="70967.72152" hpRegen="8.5" mp="55828" mpRegen="3" />
+			<attack physical="1589.41802" magical="1085.36648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="638.49246" magical="467.22106" />
 			<speed>
 				<walk ground="15" />
 				<run ground="160" />
 			</speed>
-			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -4064,15 +3980,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25787" level="25" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">

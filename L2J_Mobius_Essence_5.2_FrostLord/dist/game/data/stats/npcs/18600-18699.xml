@@ -1,61 +1,81 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18600" level="85" type="Folk" name="Renewed Treasure Chest">
+	<npc id="18600" level="78" type="Monster" name="Renewed Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<acquire exp="99048" sp="27728" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5646.83544" hpRegen="10.2" mp="1507.8" mpRegen="3.6" />
+			<attack physical="1424.8" magical="729.712" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="399.24" magical="251.9742" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24.2" />
 			<height normal="21.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="95896" min="1" max="1" chance="100" /> <!-- Small Golden Chest (Time-limited) - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="18601" level="85" type="Folk" name="Rebel Leader" title="Slayer">
+	<npc id="18601" level="75" type="Monster" name="Rebel Leader" title="Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="84704" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1935450" sp="541800" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="84704.43038" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28.8" />
 			<height normal="57" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18602" level="85" type="Folk" name="Bull Slaughterer" title="Slayer">
+	<npc id="18602" level="80" type="Monster" name="Bull Slaughterer" title="Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="84704" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="2422323" sp="678093" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="84704.43038" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="51" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
 	<npc id="18603" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

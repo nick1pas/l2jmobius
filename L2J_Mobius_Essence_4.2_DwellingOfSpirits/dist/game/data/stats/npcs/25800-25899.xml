@@ -571,21 +571,20 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25814" level="62" type="Folk" name="Kutis' Pawn" title="Raid Fighter">
+	<npc id="25814" level="62" type="Monster" name="Kutis' Pawn" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="283" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="46957.68" hpRegen="15" mp="35201" mpRegen="5.4" />
-			<attack physical="2201.6925" magical="2135.16" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="771.9768" magical="558.0334" />
+		<equipment rhand="283" /> <!-- Akat Longbow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="66870.25316" hpRegen="7.5" mp="35201" mpRegen="2.7" />
+			<attack physical="1042.24782" magical="711.72014" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="514.68534" magical="376.6244" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hitTime>930</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -594,31 +593,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
 	</npc>
-	<npc id="25815" level="64" type="Folk" name="Garan's Vanguard" title="Raid Fighter">
+	<npc id="25815" level="64" type="Monster" name="Garan's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="72" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="51770.8422" hpRegen="15" mp="37345" mpRegen="5.4" />
-			<attack physical="2427.36598125" magical="2302.73" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="803.16466272" magical="592.01763406" />
+		<equipment rhand="72" /> <!-- Stormbringer -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="73724.05063" hpRegen="7.5" mp="37345" mpRegen="2.7" />
+			<attack physical="1124.0455" magical="767.57736" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="534.08936" magical="390.82342" />
 			<speed>
 				<walk ground="34" />
 				<run ground="170" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -627,31 +618,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25816" level="66" type="Folk" name="Batur's Priest" title="Raid Fighter">
+	<npc id="25816" level="66" type="Monster" name="Batur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="84" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="59795.322741" hpRegen="15" mp="39620" mpRegen="5.4" />
-			<attack physical="2676.17099432813" magical="2473.9" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="835.612515093888" magical="628.071507974254" />
+		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="85151.26582" hpRegen="7.5" mp="39620" mpRegen="2.7" />
+			<attack physical="1207.59806" magical="824.63294" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="553.45504" magical="404.99438" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<hitTime>260</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -660,30 +643,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25817" level="68" type="Folk" name="Venir's Spirit" title="Raid Fighter">
+	<npc id="25817" level="68" type="Monster" name="Venir's Spirit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="72352.34051661" hpRegen="15" mp="42032" mpRegen="5.4" />
-			<attack physical="2950.47852124676" magical="2647.54" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="869.371260703681" magical="666.321062809886" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="103033.5443" hpRegen="7.5" mp="42032" mpRegen="2.7" />
+			<attack physical="1292.35936" magical="882.51392" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="572.723" magical="419.09384" />
 			<speed>
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<hitTime>370</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -692,31 +668,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25818" level="70" type="Folk" name="Oel's Vanguard" title="Raid Fighter">
+	<npc id="25818" level="70" type="Monster" name="Oel's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="75" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="87546.3320250981" hpRegen="15" mp="44592" mpRegen="5.4" />
-			<attack physical="3252.90256967455" magical="2822.43" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="904.49385963611" magical="706.900015535008" />
+		<equipment rhand="75" /> <!-- Caliburs -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="124670.25316" hpRegen="7.5" mp="44592" mpRegen="2.7" />
+			<attack physical="1377.72746" magical="940.80926" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="591.83194" magical="433.07694" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hitTime>630</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -725,31 +694,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25819" level="72" type="Folk" name="Taranka's Healer" title="Raid Fighter">
+	<npc id="25819" level="72" type="Monster" name="Taranka's Healer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="195" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="105931.061750369" hpRegen="17" mp="48227" mpRegen="6" />
-			<attack physical="3757.10246797411" magical="2997.22" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="941.035411565409" magical="749.95022648109" />
+		<equipment rhand="195" /> <!-- Cursed Staff -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="150851.26582" hpRegen="8.5" mp="48227" mpRegen="3" />
+			<attack physical="1463.05012" magical="999.07358" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="610.71894" magical="446.89762" />
 			<speed>
 				<walk ground="29" />
 				<run ground="170" />
 			</speed>
-			<hitTime>220</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -758,31 +719,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25820" level="74" type="Folk" name="Kasha's Marksman" title="Raid Fighter">
+	<npc id="25820" level="74" type="Monster" name="Kasha's Marksman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="286" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="128176.584717946" hpRegen="17" mp="53170" mpRegen="6" />
-			<attack physical="4339.45335051009" magical="3170.495" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="979.053242192652" magical="795.622195273789" />
+		<equipment rhand="286" /> <!-- Eminence Bow -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="182530.37975" hpRegen="8.5" mp="53170" mpRegen="3" />
+			<attack physical="1547.63196" magical="1056.83202" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="629.31974" magical="460.50888" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<hitTime>960</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -791,30 +745,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
 	</npc>
-	<npc id="25821" level="76" type="Folk" name="Dorak's Evil Spirit" title="Raid Fighter">
+	<npc id="25821" level="76" type="Monster" name="Dorak's Evil Spirit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="155093.667508715" hpRegen="17" mp="58620" mpRegen="6" />
-			<attack physical="5250.73855411722" magical="3377.84" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1018.60699317723" magical="844.075586965963" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="220862.02532" hpRegen="10.2" mp="58620" mpRegen="3.6" />
+			<attack physical="2638.144" magical="1351.136" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="777.08" magical="426.48" />
 			<speed>
 				<walk ground="15" />
 				<run ground="170" />
 			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -823,31 +769,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25822" level="78" type="Folk" name="Turan's Escort" title="Raid Fighter">
+	<npc id="25822" level="78" type="Monster" name="Turan's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2503" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="187663.337685545" hpRegen="17" mp="64628" mpRegen="6" />
-			<attack physical="6353.39365048183" magical="3648.58" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1059.7587157016" magical="895.47979021219" />
+		<equipment rhand="2503" /> <!-- Yaksa Mace -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="267241.77215" hpRegen="10.2" mp="64628" mpRegen="3.6" />
+			<attack physical="2849.6" magical="1459.424" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="798.48" magical="503.9484" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -856,31 +795,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25823" level="80" type="Folk" name="Varkan's Priest" title="Raid Fighter">
+	<npc id="25823" level="80" type="Monster" name="Varkan's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="5793" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="5793" /> <!-- Tomb Savant A - Not available -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<hitTime>470</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -889,31 +820,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25824" level="80" type="Folk" name="Ketran's Sniper" title="Raid Fighter">
+	<npc id="25824" level="80" type="Monster" name="Ketran's Sniper" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="287" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="287" /> <!-- Bow of Peril -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<hitTime>910</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -922,30 +846,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
 	</npc>
-	<npc id="25825" level="80" type="Folk" name="Likan's Maid" title="Raid Fighter">
+	<npc id="25825" level="80" type="Monster" name="Likan's Maid" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -954,31 +870,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25826" level="80" type="Folk" name="Anbarad's Priest" title="Raid Fighter">
+	<npc id="25826" level="80" type="Monster" name="Anbarad's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="210" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<hitTime>260</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -987,30 +896,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25827" level="80" type="Folk" name="Baranos' Guard" title="Raid Fighter">
+	<npc id="25827" level="80" type="Monster" name="Baranos' Guard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hitTime>590</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1019,31 +921,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 		</skillList>
 	</npc>
-	<npc id="25828" level="80" type="Folk" name="Takuran's Protector" title="Raid Fighter">
+	<npc id="25828" level="80" type="Monster" name="Takuran's Protector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="175" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="175" /> <!-- Art of Battle Axe -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1052,31 +946,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25829" level="80" type="Folk" name="Nast's Pikeman" title="Raid Fighter">
+	<npc id="25829" level="80" type="Monster" name="Nast's Pikeman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="1472" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="1472" /> <!-- Dreadbane - Not available -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1085,31 +971,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25830" level="80" type="Folk" name="Keltar's Shaman" title="Raid Fighter">
+	<npc id="25830" level="80" type="Monster" name="Keltar's Shaman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="202" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="202" /> <!-- Mace of Underworld -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hitTime>280</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1118,31 +996,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25831" level="80" type="Folk" name="Satur's Priest" title="Raid Fighter">
+	<npc id="25831" level="80" type="Monster" name="Satur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="5794" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="5794" /> <!-- Tomb Savant B - Not available -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<hitTime>490</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1151,31 +1022,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25832" level="80" type="Folk" name="Kosnak's Escorts" title="Raid Fighter">
+	<npc id="25832" level="80" type="Monster" name="Kosnak's Escorts" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="171" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<equipment rhand="171" /> <!-- Deadman's Glory -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="33" />
 				<run ground="170" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1184,31 +1047,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25833" level="80" type="Folk" name="Garaki's Banshee" title="Raid Fighter">
+	<npc id="25833" level="80" type="Monster" name="Garaki's Banshee" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="3939" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="227072.63859951" hpRegen="17" mp="71253" mpRegen="6" />
-			<attack physical="7764.3" magical="3976.51" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1179.792" magical="1079.1507312" />
+		<sex>MALE</sex>
+		<equipment rhand="3939" /> <!-- Monster Only (Bensh) - Not available -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="323363.29114" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1217,14 +1072,8 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
 	<npc id="25834" level="81" type="RaidBoss" name="Shadai" title="Chief">
@@ -1405,21 +1254,20 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25839" level="81" type="Folk" name="Shadai's Priest" title="Raid Fighter">
+	<npc id="25839" level="81" type="Monster" name="Shadai's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="5794" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="249779.902459461" hpRegen="17" mp="102528" mpRegen="6" />
-			<attack physical="8540.73" magical="4254.8657" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1194.43254912" magical="1092.5423856" />
+		<equipment rhand="5794" /> <!-- Tomb Savant B - Not available -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="355699.36709" hpRegen="10.2" mp="102528" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<hitTime>490</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1428,31 +1276,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
-	<npc id="25840" level="82" type="Folk" name="Turabait's Warrior" title="Raid Fighter">
+	<npc id="25840" level="82" type="Monster" name="Turabait's Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="8678" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="274757.892705407" hpRegen="17" mp="104580" mpRegen="6" />
-			<attack physical="9394.803" magical="4552.706299" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1208.82160512" magical="1105.704" />
+		<equipment rhand="8678" /> <!-- Sirra's Blade -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="391269.62025" hpRegen="10.2" mp="104580" mpRegen="3.6" />
+			<attack physical="3376.912" magical="1729.488" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="839.46" magical="460.716" />
 			<speed>
 				<walk ground="33" />
 				<run ground="170" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1461,31 +1302,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25841" level="83" type="Folk" name="Tier's Follower" title="Raid Fighter">
+	<npc id="25841" level="83" type="Monster" name="Tier's Follower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="8680" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="302233.681975947" hpRegen="17" mp="106644" mpRegen="6" />
-			<attack physical="10334.2833" magical="4871.39573993" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1222.94513664" magical="1118.622744" />
+		<equipment rhand="8680" /> <!-- Barakiel's Axe -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="430396.83544" hpRegen="10.2" mp="106644" mpRegen="3.6" />
+			<attack physical="3518.16" magical="1801.84" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="849.26" magical="466.092" />
 			<speed>
 				<walk ground="61" />
 				<run ground="170" />
 			</speed>
-			<hitTime>430</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1494,30 +1327,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25842" level="84" type="Folk" name="Cherkya's Escort" title="Raid Fighter">
+	<npc id="25842" level="84" type="Monster" name="Cherkia's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="332457.050173542" hpRegen="17" mp="108720" mpRegen="6" />
-			<attack physical="11367.71163" magical="5212.3934417251" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="1236.78914688" magical="1131.2857872" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="473435.44304" hpRegen="10.2" mp="108720" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1526,30 +1351,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 		</skillList>
 	</npc>
-	<npc id="25843" level="85" type="Folk" name="Spicula's Follower" title="Raid Fighter">
+	<npc id="25843" level="85" type="Monster" name="Spicula's Follower" title="Raid Fighter" element="WIND">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="365702.755190897" hpRegen="17" mp="110808" mpRegen="6" />
-			<attack physical="12504.482793" magical="5577.26098264586" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1250.33981184" magical="1143.6805152" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="520779.74684" hpRegen="10.2" mp="110808" mpRegen="3.6" />
+			<attack physical="4452.5043" magical="3040.48329" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1996.20366" magical="1460.73522" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -1558,14 +1376,8 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 	</npc>
 </list>

@@ -72,6 +72,11 @@
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="132" max="145" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22102" level="66" type="Monster" name="Guard of Honor" element="WIND">
 		<race>HUMANOID</race>
@@ -108,6 +113,11 @@
 			<radius normal="36" />
 			<height normal="44.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="192" max="213" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22103" level="72" type="Monster" name="Fierce Guard" element="WATER">
 		<race>ANIMAL</race>
@@ -143,6 +153,11 @@
 			<radius normal="31.5" />
 			<height normal="44.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="274" max="303" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22104" level="80" type="Monster" name="Odd">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -179,6 +194,11 @@
 			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
 			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1302" max="1440" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22105" level="80" type="Monster" name="Crokin Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -215,6 +235,11 @@
 			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
 			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1957" max="2164" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22106" level="75" type="Monster" name="Ancient Guardian" element="EARTH">
 		<race>HUMANOID</race>
@@ -250,6 +275,11 @@
 			<radius normal="28" />
 			<height normal="46.15" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="307" max="340" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22107" level="45" type="Monster" name="Rotting Tree">
 		<parameters>
@@ -939,7 +969,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="92912" min="1" max="1" chance="100" /> <!-- Material: Plain Fabric - Sealed -->
+				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1014,7 +1044,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92914" min="1" max="1" chance="100" /> <!-- Material: Sack Shreds - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1052,7 +1082,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal - Sealed -->
+				<item id="92915" min="1" max="1" chance="100" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1157,6 +1187,11 @@
 			<radius normal="18" />
 			<height normal="30.6" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="61" max="68" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22129" level="76" type="Monster" name="Turek Orc Ranger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1399,28 +1434,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="992" max="2314" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="7.3418">
-					<item id="92912" min="1" max="1" chance="7.5066" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="3.7533" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="1.2511" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.7507" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="0.3753" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0375" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92479" min="1" max="1" chance="75.0657" /> <!-- Metallograph -->
-					<item id="92999" min="1" max="1" chance="7.5066" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="3.7532" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="1311" max="1448" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="56.4456" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="11.2891" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="5.6446" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="1.1289" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.5645" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22136" level="85" type="Monster" name="Turek Orc Footman" element="FIRE">
@@ -1459,27 +1474,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1203" max="2807" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.4983">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="1588" max="1755" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="68.4743" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="13.6949" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="6.8474" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="1.3695" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.6847" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22137" level="85" type="Monster" name="Turek Orc Marksman" element="FIRE">
@@ -1518,27 +1514,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="997" max="2327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.0708">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="1317" max="1455" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="56.757" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="11.3514" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="5.6757" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="1.1351" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.5676" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22138" level="85" type="Monster" name="Turek Orc Warrior" element="FIRE">
@@ -1577,31 +1554,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1350" max="3149" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="1.1209">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="1782" max="1970" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="76.8049" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="15.361" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="7.6805" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="1.5361" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.768" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22139" level="85" type="Monster" name="Turek Orc Shaman" element="FIRE">
@@ -1640,26 +1594,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1003" max="2340" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.0822">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="1325" max="1464" chance="70" /> <!-- Adena -->
+				<item id="92827" min="1" max="1" chance="0.158" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5313" min="1" max="1" chance="0.0059" /> <!-- Sealed Gauntlets of Nightmare -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="57.0684" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="11.4137" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="5.7068" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="1.1414" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.5707" /> <!-- Drained Thons - Sealed -->
+				<item id="5404" min="1" max="1" chance="0.0375" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5405" min="1" max="1" chance="0.0225" /> <!-- Recipe: Sealed Gauntlets of Nightmare (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1699,31 +1640,49 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5397" max="12594" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.022">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="3.9856">
-					<item id="92912" min="1" max="1" chance="30.1008" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0504" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0168" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0101" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.505" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="94328" min="1" max="1" chance="0.0151" /> <!-- Elixir Powder - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1008" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0505" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="7128" max="7877" chance="70" /> <!-- Adena -->
+				<item id="92476" min="1" max="1" chance="8.8616" /> <!-- Metal Ingot -->
+				<item id="92478" min="1" max="1" chance="8.8616" /> <!-- Varnish -->
+				<item id="92479" min="1" max="1" chance="8.8616" /> <!-- Metallograph -->
+				<item id="92811" min="1" max="1" chance="0.0134" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="92816" min="1" max="1" chance="0.0134" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="92820" min="1" max="1" chance="0.0623" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="92823" min="1" max="1" chance="0.0654" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="92827" min="1" max="1" chance="0.0654" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="92831" min="1" max="1" chance="0.0101" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="92836" min="1" max="1" chance="0.0436" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="92900" min="1" max="1" chance="0.0033" /> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="94328" min="1" max="1" chance="0.001" /> <!-- Elixir Powder - Sealed -->
+				<item id="95569" min="1" max="1" chance="0.0886" /> <!-- Adena Pouch - Sealed -->
+				<item id="95783" min="1" max="1" chance="0.0236" /> <!-- Aden's Soul Crystal Lv. 1 - Weapon -->
+				<item id="91745" min="1" max="1" chance="0.0048" /> <!-- Talisman of Aden - Sealed -->
+				<item id="5311" min="1" max="1" chance="0.001" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.0019" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.0029" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0029" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0028" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5320" min="1" max="1" chance="0.001" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="0.001" /> <!-- Sealed Robe of Nightmare -->
+				<item id="8681" min="1" max="1" chance="0.001" /> <!-- Behemoth' Tuning Fork -->
+				<item id="91887" min="1" max="1" chance="0.001" /> <!-- Durendal -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="7" chance="76.7952" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="61.4361" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="30.7181" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="6.1436" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="3.0718" /> <!-- Drained Thons - Sealed -->
+				<item id="5336" min="1" max="1" chance="0.0052" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5337" min="1" max="1" chance="0.0031" /> <!-- Recipe: Sealed Leather Armor of Nightmare (100%) -->
+				<item id="5350" min="1" max="1" chance="0.0052" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5351" min="1" max="1" chance="0.0031" /> <!-- Recipe: Sealed Robe of Nightmare (100%) -->
+				<item id="5366" min="1" max="1" chance="0.024" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="5367" min="1" max="1" chance="0.0144" /> <!-- Recipe: Sealed Shield of Nightmare (100%) -->
+				<item id="5380" min="1" max="1" chance="0.0252" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5381" min="1" max="1" chance="0.0151" /> <!-- Recipe: Sealed Boots of Nightmare (100%) -->
+				<item id="5404" min="1" max="1" chance="0.0252" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5405" min="1" max="1" chance="0.0151" /> <!-- Recipe: Sealed Gauntlets of Nightmare (100%) -->
+				<item id="5420" min="1" max="1" chance="0.0039" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5421" min="1" max="1" chance="0.0023" /> <!-- Recipe: Sealed Armor of Nightmare (100%) -->
+				<item id="5430" min="1" max="1" chance="0.0168" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="5431" min="1" max="1" chance="0.0101" /> <!-- Recipe: Sealed Helm of Nightmare (100%) -->
+				<item id="8696" min="1" max="1" chance="0.0013" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
+				<item id="8697" min="1" max="1" chance="0.001" /> <!-- Recipe: Behemoth' Tuning Fork (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1763,27 +1722,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1828" max="4265" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.7951">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="2540" max="2807" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="3" chance="52.0078" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="20.8031" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="10.4016" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="2.0803" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="1.0402" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22142" level="85" type="Monster" name="Turek Orc Skirmisher" element="FIRE">
@@ -1822,27 +1762,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="3289" max="7675" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="6.8303">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="4572" max="5053" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="3" chance="93.6023" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="37.4409" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="18.7205" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="3.7441" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="1.872" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22143" level="85" type="Monster" name="Turek Orc Sniper" element="FIRE">
@@ -1881,27 +1802,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="2445" max="5706" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.0776">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="3399" max="3756" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="3" chance="69.5838" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="27.8335" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="13.9168" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="2.7834" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="1.3917" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22144" level="85" type="Monster" name="Turek Orc Prefect" element="FIRE">
@@ -1940,31 +1842,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="9499" max="22165" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0387">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="7.8901">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="13203" max="14590" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="11" chance="90.1053" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="3" chance="54.0632" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="54.0632" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="10.8126" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="5.4063" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22145" level="85" type="Monster" name="Turek Orc Elder" element="FIRE">
@@ -2003,40 +1882,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="2726" max="6362" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0015">
-					<item id="80" min="1" max="1" chance="8.3333" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="1" chance="8.3333" /> <!-- Halberd -->
-					<item id="150" min="1" max="1" chance="8.3333" /> <!-- Elemental Sword -->
-					<item id="212" min="1" max="1" chance="8.3333" /> <!-- Dasparion's Staff -->
-					<item id="235" min="1" max="1" chance="8.3333" /> <!-- Bloody Orchid -->
-					<item id="269" min="1" max="1" chance="8.3333" /> <!-- Bloody Tornado -->
-					<item id="288" min="1" max="1" chance="8.3333" /> <!-- Carnage Bow -->
-					<item id="2504" min="1" max="1" chance="8.3333" /> <!-- Meteor Shower -->
-					<item id="5233" min="1" max="1" chance="8.3333" /> <!-- Keshanberk*Keshanberk -->
-					<item id="7884" min="1" max="1" chance="8.3333" /> <!-- Infernal Master -->
-					<item id="7894" min="1" max="1" chance="8.3333" /> <!-- Spiritual Eye -->
-					<item id="7899" min="1" max="1" chance="8.3337" /> <!-- Destroyer Hammer -->
-				</group>
-				<group chance="2.2646">
-					<item id="92912" min="1" max="1" chance="30.1054" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0527" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0176" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0105" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.5053" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1054" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0526" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="3789" max="4187" chance="70" /> <!-- Adena -->
+				<item id="92820" min="1" max="1" chance="0.2153" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="92836" min="1" max="1" chance="0.1507" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5312" min="1" max="1" chance="0.0056" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0081" /> <!-- Sealed Shield of Nightmare -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="3" chance="77.5835" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="31.0334" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="15.5167" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="3.1033" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="1.5517" /> <!-- Drained Thons - Sealed -->
+				<item id="5366" min="1" max="1" chance="0.0511" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="5367" min="1" max="1" chance="0.0306" /> <!-- Recipe: Sealed Shield of Nightmare (100%) -->
+				<item id="5430" min="1" max="1" chance="0.0357" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="5431" min="1" max="1" chance="0.0214" /> <!-- Recipe: Sealed Helm of Nightmare (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2075,31 +1931,49 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="27634" max="64478" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1126">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="20.4052">
-					<item id="92912" min="1" max="1" chance="30.1008" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="15.0504" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="5.0168" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="3.0101" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="1.505" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.1505" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="94328" min="1" max="1" chance="0.0151" /> <!-- Elixir Powder - Sealed -->
-					<item id="92999" min="1" max="1" chance="30.1008" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="15.0505" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="26885" max="29711" chance="70" /> <!-- Adena -->
+				<item id="92476" min="1" max="3" chance="16.7122" /> <!-- Metal Ingot -->
+				<item id="92478" min="2" max="6" chance="8.3561" /> <!-- Varnish -->
+				<item id="92479" min="1" max="3" chance="11.1415" /> <!-- Metallograph -->
+				<item id="92811" min="1" max="1" chance="0.0506" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="92816" min="1" max="1" chance="0.0506" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="92820" min="1" max="1" chance="0.2351" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="92823" min="1" max="1" chance="0.2467" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="92827" min="1" max="1" chance="0.2467" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="92831" min="1" max="1" chance="0.038" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="92836" min="1" max="1" chance="0.1645" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="92906" min="1" max="1" chance="0.0124" /> <!-- Cabrio's Hand Head -->
+				<item id="94328" min="1" max="1" chance="0.0016" /> <!-- Elixir Powder - Sealed -->
+				<item id="95569" min="1" max="1" chance="0.3343" /> <!-- Adena Pouch - Sealed -->
+				<item id="95783" min="1" max="1" chance="0.0889" /> <!-- Aden's Soul Crystal Lv. 1 - Weapon -->
+				<item id="91745" min="1" max="1" chance="0.0182" /> <!-- Talisman of Aden - Sealed -->
+				<item id="5311" min="1" max="1" chance="0.0017" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5312" min="1" max="1" chance="0.0073" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5313" min="1" max="1" chance="0.0109" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0109" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0104" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5320" min="1" max="1" chance="0.0022" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="0.0022" /> <!-- Sealed Robe of Nightmare -->
+				<item id="8687" min="1" max="1" chance="0.001" /> <!-- Cabrio's Hand -->
+				<item id="8938" min="1" max="1" chance="0.001" /> <!-- Tallum Blade*Damascus Sword -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="33" chance="92.5112" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="7" chance="78.6345" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="3" chance="78.6345" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="31.4538" /> <!-- Old High-grade Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="15.7269" /> <!-- Drained Thons - Sealed -->
+				<item id="5336" min="1" max="1" chance="0.0195" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5337" min="1" max="1" chance="0.0117" /> <!-- Recipe: Sealed Leather Armor of Nightmare (100%) -->
+				<item id="5350" min="1" max="1" chance="0.0195" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5351" min="1" max="1" chance="0.0117" /> <!-- Recipe: Sealed Robe of Nightmare (100%) -->
+				<item id="5366" min="1" max="1" chance="0.0906" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="5367" min="1" max="1" chance="0.0543" /> <!-- Recipe: Sealed Shield of Nightmare (100%) -->
+				<item id="5380" min="1" max="1" chance="0.095" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5381" min="1" max="1" chance="0.057" /> <!-- Recipe: Sealed Boots of Nightmare (100%) -->
+				<item id="5404" min="1" max="1" chance="0.095" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5405" min="1" max="1" chance="0.057" /> <!-- Recipe: Sealed Gauntlets of Nightmare (100%) -->
+				<item id="5420" min="1" max="1" chance="0.0146" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5421" min="1" max="1" chance="0.0088" /> <!-- Recipe: Sealed Armor of Nightmare (100%) -->
+				<item id="5430" min="1" max="1" chance="0.0634" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="5431" min="1" max="1" chance="0.038" /> <!-- Recipe: Sealed Helm of Nightmare (100%) -->
+				<item id="8708" min="1" max="1" chance="0.0048" /> <!-- Recipe: Cabrio's Hand (60%) -->
+				<item id="8709" min="1" max="1" chance="0.0029" /> <!-- Recipe: Cabrio's Hand (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2240,6 +2114,7 @@
 		<dropLists>
 			<drop>
 				<item id="92914" min="1" max="1" chance="100" /> <!-- Material: Sack Shreds - Sealed -->
+				<item id="92915" min="1" max="1" chance="100" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2278,37 +2153,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="405" max="944" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0017">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="5.1327">
-					<item id="92909" min="1" max="1" chance="10.5276" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="5.2638" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.7546" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="1.0528" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.5264" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1755" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.1053" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="0.0526" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0053" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92478" min="1" max="1" chance="10.5276" /> <!-- Varnish -->
-					<item id="92996" min="1" max="1" chance="52.638" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="10.5276" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="5.2638" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="1.0528" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.5263" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="379" max="419" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="28.8245" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="5.7649" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="2.8825" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.2882" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22152" level="78" type="Monster" name="Tanta Lizardman Warrior" element="WATER">
@@ -2491,38 +2337,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="406" max="948" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0089">
-					<item id="284" min="1" max="1" chance="1.3141" /> <!-- Dark Elven Longbow -->
-					<item id="92797" min="1" max="1" chance="27.5966" /> <!-- Dark Elven Longbow Shaft -->
-					<item id="2391" min="1" max="1" chance="3.2313" /> <!-- Blue Wolf Leather Armor -->
-					<item id="92771" min="1" max="1" chance="67.858" /> <!-- Blue Wolf Leather Armor Texture -->
-				</group>
-				<group chance="4.9335">
-					<item id="92909" min="1" max="1" chance="11.7663" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="5.8832" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.9611" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="1.1766" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.5883" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1961" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.1177" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="0.0588" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0059" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="58.8316" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="11.7663" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="5.8832" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="1.1766" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.5883" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="381" max="421" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="92996" min="1" max="1" chance="28.9012" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="5.7802" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="2.8901" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.289" /> <!-- Drained Thons - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22155" level="80" type="Monster" name="Tanta Lizardman Summoner" element="WATER">
@@ -2560,54 +2376,34 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="409" max="956" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0139">
-					<item id="92" min="1" max="1" chance="0.426" /> <!-- Spirit's Staff -->
-					<item id="92791" min="1" max="1" chance="8.945" /> <!-- Spirit's Staff Head -->
-					<item id="2398" min="1" max="1" chance="1.5341" /> <!-- Blue Wolf Tunic -->
-					<item id="92773" min="1" max="1" chance="32.2167" /> <!-- Blue Wolf Tunic Fabric -->
-					<item id="2403" min="1" max="1" chance="2.4485" /> <!-- Blue Wolf Stockings -->
-					<item id="92775" min="1" max="1" chance="51.4186" /> <!-- Blue Wolf Stocking Pattern -->
-					<item id="92988" min="1" max="1" chance="2.946" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="0.0651" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="2.5893">
-					<item id="92909" min="1" max="1" chance="11.7364" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="5.8682" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.9561" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="1.1736" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.5868" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1956" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.1174" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92916" min="1" max="1" chance="0.0587" /> <!-- Material: Animal Spirit - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0059" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="58.682" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="11.7364" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="5.8682" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="1.1736" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.5868" /> <!-- Drained Thons - Sealed -->
-					<!-- <item id="49568" min="1" max="1" chance="0.0196" /> Spellbook: Sonic Move - Not Available -->
-					<!-- <item id="6350" min="1" max="1" chance="0.0196" /> Amulet: Pa'agrio's Honor - Not Available -->
-					<!-- <item id="49570" min="1" max="1" chance="0.0196" /> Spellbook: Mass Curse Gloom - Not Available -->
-					<!-- <item id="8891" min="1" max="1" chance="0.0196" /> Spellbook: Aura Flash - Not Available -->
-					<!-- <item id="3055" min="1" max="1" chance="0.0196" /> Spellbook: Lightning Strike - Not Available -->
-					<!-- <item id="4915" min="1" max="1" chance="0.0196" /> Blueprint: Summon Wild Hog Cannon - Not Available -->
-					<!-- <item id="8388" min="1" max="1" chance="0.0196" /> Spellbook: Attack Prowess - Not Available -->
-					<!-- <item id="8389" min="1" max="1" chance="0.0196" /> Spellbook: Defense Prowess - Not Available -->
-					<!-- <item id="49427" min="1" max="1" chance="0.0196" /> Spellbook: Shield Deflect Magic - Not Available -->
-					<!-- <item id="5811" min="1" max="1" chance="0.0196" /> Spellbook: Mass Slow - Not Available -->
-					<!-- <item id="8890" min="1" max="1" chance="0.0196" /> Spellbook: Summon Attractive Cubic - Not Available -->
-					<!-- <item id="4912" min="1" max="1" chance="0.0196" /> Spellbook: Benediction - Not Available -->
-					<!-- <item id="49433" min="1" max="1" chance="0.0191" /> Amulet: Chant of Battle - Not Available -->
-				</group>
+				<item id="57" min="382" max="423" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="1.4459" /> <!-- Spirit Ore - Sealed -->
+				<item id="92477" min="1" max="1" chance="1.1567" /> <!-- Wood -->
+				<item id="92479" min="1" max="1" chance="1.1567" /> <!-- Metallograph -->
+				<item id="92480" min="1" max="1" chance="1.1567" /> <!-- Leather -->
+				<item id="92767" min="1" max="1" chance="0.0096" /> <!-- Doom Shield Fragment -->
+				<item id="92774" min="1" max="1" chance="0.0034" /> <!-- Doom Tunic Pattern -->
+				<item id="92804" min="1" max="1" chance="0.001" /> <!-- Demon's Dagger Edge -->
+				<item id="92805" min="1" max="1" chance="0.001" /> <!-- Bellion Cestus Edge -->
+				<item id="92806" min="1" max="1" chance="0.001" /> <!-- Bow of Peril Shaft -->
+				<item id="95569" min="1" max="1" chance="0.0116" /> <!-- Adena Pouch - Sealed -->
+				<item id="110" min="1" max="1" chance="0.0019" /> <!-- Doom Shield -->
+				<item id="234" min="1" max="1" chance="0.001" /> <!-- Demon's Dagger -->
+				<item id="268" min="1" max="1" chance="0.001" /> <!-- Bellion Cestus -->
+				<item id="287" min="1" max="1" chance="0.001" /> <!-- Bow of Peril -->
+				<item id="2399" min="1" max="1" chance="0.001" /> <!-- Doom Tunic -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="29.1796" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="5.8359" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="2.918" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92995" min="1" max="1" chance="0.2918" /> <!-- Drained Thons - Sealed -->
+				<item id="4154" min="1" max="1" chance="0.0143" /> <!-- Recipe: Doom Shield (100%) -->
+				<item id="4162" min="1" max="1" chance="0.005" /> <!-- Recipe: Doom Tunic (100%) -->
+				<item id="4197" min="1" max="1" chance="0.001" /> <!-- Recipe: Demon's Dagger (100%) -->
+				<item id="4198" min="1" max="1" chance="0.001" /> <!-- Recipe: Bellion Cestus (100%) -->
+				<item id="4199" min="1" max="1" chance="0.001" /> <!-- Recipe: Bow of Peril (100%) -->
+				<item id="4980" min="1" max="1" chance="0.0238" /> <!-- Recipe: Doom Shield (60%) -->
+				<item id="4987" min="1" max="1" chance="0.0083" /> <!-- Recipe: Doom Tunic (60%) -->
+				<item id="5005" min="1" max="1" chance="0.0015" /> <!-- Recipe: Demon's Dagger (60%) -->
+				<item id="5006" min="1" max="1" chance="0.0015" /> <!-- Recipe: Bellion Cestus (60%) -->
+				<item id="5007" min="1" max="1" chance="0.0015" /> <!-- Recipe: Bow of Peril (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3493,6 +3289,11 @@
 			<radius normal="44" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="382" max="423" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22183" level="1" type="Monster" name="Training Dummy">
 		<race>ETC</race>
@@ -3556,6 +3357,28 @@
 			<radius normal="7" />
 			<height normal="22" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="92508" min="1" max="1" chance="0.0075" /> <!-- Leather Shoe Texture -->
+				<item id="92511" min="1" max="1" chance="0.002" /> <!-- Leather Helmet Design -->
+				<item id="20" min="1" max="1" chance="0.002" /> <!-- Buckler -->
+				<item id="37" min="1" max="1" chance="0.002" /> <!-- Leather Shoes -->
+				<item id="44" min="1" max="1" chance="0.001" /> <!-- Leather Helmet -->
+				<item id="68" min="1" max="1" chance="0.001" /> <!-- Falchion -->
+				<item id="100" min="1" max="1" chance="0.001" /> <!-- Voodoo Doll -->
+				<item id="177" min="1" max="1" chance="0.001" /> <!-- Mage Staff -->
+				<item id="311" min="1" max="1" chance="0.001" /> <!-- Crucifix of Blessing -->
+				<item id="945" min="1" max="1" chance="0.0016" /> <!-- Skeleton Buckler -->
+				<item id="1119" min="1" max="1" chance="0.0089" /> <!-- Short Leather Gloves -->
+				<item id="1122" min="1" max="1" chance="0.0089" /> <!-- Cotton Shoes -->
+				<item id="1129" min="1" max="1" chance="0.0089" /> <!-- Crude Leather Shoes -->
+			</drop>
+			<spoil>
+				<item id="1795" min="1" max="1" chance="0.1221" /> <!-- Recipe: Leather Shoes -->
+				<item id="1798" min="1" max="1" chance="0.0317" /> <!-- Recipe: Leather Helmet -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22185" level="5" type="Monster" name="Skeleton Warrior">
 		<race>UNDEAD</race>
@@ -3587,6 +3410,27 @@
 			<radius normal="15" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="92483" min="1" max="1" chance="0.0052" /> <!-- Necklace of Anguish Chain -->
+				<item id="92516" min="1" max="1" chance="0.0011" /> <!-- Durable Leather Gaiter Material -->
+				<item id="92517" min="1" max="1" chance="0.002" /> <!-- Boot Lining -->
+				<item id="33" min="1" max="1" chance="0.001" /> <!-- Durable Leather Gaiters -->
+				<item id="34" min="1" max="1" chance="0.001" /> <!-- Bronze Gaiters -->
+				<item id="39" min="1" max="1" chance="0.001" /> <!-- Boots -->
+				<item id="51" min="1" max="1" chance="0.001" /> <!-- Bracer -->
+				<item id="112" min="1" max="1" chance="0.2515" /> <!-- Apprentice's Earring -->
+				<item id="845" min="1" max="1" chance="0.0014" /> <!-- Cat's Eye -->
+				<item id="907" min="1" max="1" chance="0.0026" /> <!-- Necklace of Anguish -->
+				<item id="1105" min="1" max="1" chance="0.001" /> <!-- Stockings of Magic -->
+			</drop>
+			<spoil>
+				<item id="1802" min="1" max="1" chance="0.0856" /> <!-- Recipe: Necklace of Anguish (100%) -->
+				<item id="2174" min="1" max="1" chance="0.0174" /> <!-- Recipe: Durable Leather Gaiters -->
+				<item id="2175" min="1" max="1" chance="0.0326" /> <!-- Recipe: Boots -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22186" level="15" type="Monster" name="Skeleton Scout">
 		<race>UNDEAD</race>
@@ -3620,6 +3464,27 @@
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3" max="4" chance="70" /> <!-- Adena -->
+				<item id="92584" min="1" max="1" chance="0.0039" /> <!-- Dirk Blade -->
+				<item id="7" min="1" max="1" chance="0.0345" /> <!-- Apprentice's Rod -->
+				<item id="12" min="1" max="1" chance="0.0021" /> <!-- Knife -->
+				<item id="66" min="1" max="1" chance="0.001" /> <!-- Gladius -->
+				<item id="99" min="1" max="1" chance="0.0021" /> <!-- Apprentice's Spellbook -->
+				<item id="122" min="1" max="1" chance="0.001" /> <!-- Handmade Sword -->
+				<item id="152" min="1" max="1" chance="0.0033" /> <!-- Heavy Chisel -->
+				<item id="216" min="1" max="1" chance="0.001" /> <!-- Dirk -->
+				<item id="256" min="1" max="1" chance="0.001" /> <!-- Cestus -->
+				<item id="310" min="1" max="1" chance="0.001" /> <!-- Relic of the Saints -->
+				<item id="754" min="1" max="1" chance="0.001" /> <!-- Red Sunset Staff -->
+				<item id="975" min="1" max="1" chance="0.001" /> <!-- Blood Saber -->
+				<item id="1511" min="1" max="1" chance="0.001" /> <!-- Silversmith Hammer -->
+			</drop>
+			<spoil>
+				<item id="1790" min="1" max="1" chance="0.0638" /> <!-- Recipe: Dirk -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22187" level="17" type="Monster" name="Skeleton Hunter">
 		<race>UNDEAD</race>
@@ -3724,16 +3589,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="236" max="553" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0096">
-					<item id="92789" min="1" max="1" chance="20" /> <!-- Great Sword Blade -->
-					<item id="92790" min="1" max="1" chance="20" /> <!-- Heavy War Axe Head -->
-					<item id="92791" min="1" max="1" chance="20" /> <!-- Spirit's Staff Head -->
-					<item id="92792" min="1" max="1" chance="20" /> <!-- Keshanberk Blade -->
-					<item id="92793" min="1" max="1" chance="20" /> <!-- Sword of Valhalla Blade -->
-				</group>
+				<item id="57" min="599" max="662" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0346" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0252" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.1844" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0022" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.0138" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0101" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.0738" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3775,17 +3639,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="474" max="1107" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="78" min="1" max="1" chance="16.6667" /> <!-- Great Sword -->
-					<item id="91" min="1" max="1" chance="16.6667" /> <!-- Heavy War Axe -->
-					<item id="92" min="1" max="1" chance="16.6667" /> <!-- Spirit's Staff -->
-					<item id="142" min="1" max="1" chance="16.6667" /> <!-- Keshanberk -->
-					<item id="148" min="1" max="1" chance="16.6667" /> <!-- Sword of Valhalla -->
-					<item id="229" min="1" max="1" chance="16.6665" /> <!-- Kris -->
-				</group>
+				<item id="57" min="599" max="662" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0346" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0252" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.1844" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0022" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.0138" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0101" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.0738" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3827,19 +3689,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="474" max="1107" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0015">
-					<item id="243" min="1" max="1" chance="7.6515" /> <!-- Twilight Knife -->
-					<item id="267" min="1" max="1" chance="7.6515" /> <!-- Arthro Nail -->
-					<item id="284" min="1" max="1" chance="7.6515" /> <!-- Dark Elven Longbow -->
-					<item id="300" min="1" max="1" chance="7.6515" /> <!-- Great Axe -->
-					<item id="91886" min="1" max="1" chance="7.6515" /> <!-- Innominate Victory -->
-					<item id="91901" min="1" max="1" chance="7.6515" /> <!-- Military Fleuret -->
-					<item id="92988" min="1" max="1" chance="52.9206" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="1.1704" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
+				<item id="57" min="599" max="662" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0346" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0252" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.1844" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0022" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.0138" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0101" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.0738" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3881,13 +3739,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="947" max="2214" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0064">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
+				<item id="57" min="899" max="993" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0311" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0226" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.166" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.002" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.0125" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0091" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.0664" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
+				<item id="97033" min="1" max="1" chance="0.001" /> <!-- Rare Collection Armor Pack - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3929,16 +3790,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="474" max="1107" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0191">
-					<item id="92794" min="1" max="1" chance="20" /> <!-- Kris Edge -->
-					<item id="92795" min="1" max="1" chance="20" /> <!-- Twilight Knife Edge -->
-					<item id="92796" min="1" max="1" chance="20" /> <!-- Arthro Nail Blade -->
-					<item id="92797" min="1" max="1" chance="20" /> <!-- Dark Elven Longbow Shaft -->
-					<item id="92798" min="1" max="1" chance="20" /> <!-- Great Axe Head -->
-				</group>
+				<item id="57" min="599" max="662" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0346" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0252" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.1844" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0022" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.0138" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0101" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.0738" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3980,15 +3840,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="807" max="1886" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0216">
-					<item id="92799" min="1" max="1" chance="25" /> <!-- Damascus Sword Blade -->
-					<item id="92800" min="1" max="1" chance="25" /> <!-- Lance Blade -->
-					<item id="92801" min="1" max="1" chance="25" /> <!-- Deadman's Glory Stone -->
-					<item id="92802" min="1" max="1" chance="25" /> <!-- Art of Battle Axe Blade -->
-				</group>
+				<item id="57" min="3032" max="3350" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0545" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3998" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0375" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0048" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.03" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0218" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.1599" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4030,16 +3892,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="807" max="1886" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.001">
-					<item id="79" min="1" max="1" chance="20" /> <!-- Damascus Sword -->
-					<item id="97" min="1" max="1" chance="20" /> <!-- Lance -->
-					<item id="171" min="1" max="1" chance="20" /> <!-- Deadman's Glory -->
-					<item id="175" min="1" max="1" chance="20" /> <!-- Art of Battle Axe -->
-					<item id="210" min="1" max="1" chance="20" /> <!-- Staff of Evil Spirits -->
-				</group>
+				<item id="57" min="3032" max="3350" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0545" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3998" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0375" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0048" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.03" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0218" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.1599" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4081,18 +3944,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="807" max="1886" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0023">
-					<item id="234" min="1" max="1" chance="6.382" /> <!-- Demon's Dagger -->
-					<item id="268" min="1" max="1" chance="6.382" /> <!-- Bellion Cestus -->
-					<item id="287" min="1" max="1" chance="6.382" /> <!-- Bow of Peril -->
-					<item id="91885" min="1" max="1" chance="6.382" /> <!-- Dismantler -->
-					<item id="91900" min="1" max="1" chance="6.382" /> <!-- Colichemarde -->
-					<item id="92988" min="1" max="1" chance="66.617" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="1.473" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
+				<item id="57" min="3032" max="3350" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0545" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3998" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0375" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0048" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.03" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0218" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.1599" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4133,13 +3995,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1615" max="3772" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.011">
-					<item id="92988" min="1" max="1" chance="97.8367" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="2.1633" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
+				<item id="57" min="4549" max="5027" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.0108" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.0675" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0491" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3599" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.0045" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0337" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0043" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.027" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0196" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.144" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
+				<item id="97033" min="1" max="1" chance="0.0027" /> <!-- Rare Collection Armor Pack - Sealed -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4180,9 +4047,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="403" max="942" chance="100" /> <!-- Adena -->
-				</group>
+				<item id="57" min="3032" max="3350" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0545" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3998" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0375" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0048" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.03" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0218" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.1599" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4224,15 +4099,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="807" max="1886" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0216">
-					<item id="92804" min="1" max="1" chance="25" /> <!-- Demon's Dagger Edge -->
-					<item id="92805" min="1" max="1" chance="25" /> <!-- Bellion Cestus Edge -->
-					<item id="92806" min="1" max="1" chance="25" /> <!-- Bow of Peril Shaft -->
-					<item id="92803" min="1" max="1" chance="25" /> <!-- Staff of Evil Spirits Head -->
-				</group>
+				<item id="57" min="3032" max="3350" chance="70" /> <!-- Adena -->
+				<item id="93406" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant B-grade Weapon - Sealed -->
+				<item id="93407" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant B-grade Armor - Sealed -->
+				<item id="93408" min="1" max="1" chance="0.0545" /> <!-- Scroll: Enchant C-grade Weapon - Sealed -->
+				<item id="93409" min="1" max="1" chance="0.3998" /> <!-- Scroll: Enchant C-grade Armor - Sealed -->
+				<item id="93976" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant A-grade Weapon - Sealed -->
+				<item id="93977" min="1" max="1" chance="0.0375" /> <!-- Scroll: Enchant A-grade Armor - Sealed -->
+				<item id="95700" min="1" max="1" chance="0.0048" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+				<item id="95701" min="1" max="1" chance="0.03" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+				<item id="95702" min="1" max="1" chance="0.0218" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+				<item id="95703" min="1" max="1" chance="0.1599" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>

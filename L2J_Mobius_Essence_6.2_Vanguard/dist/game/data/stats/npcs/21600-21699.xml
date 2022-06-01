@@ -4045,17 +4045,38 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="18" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2039">
-					<item id="92908" min="1" max="1" chance="74.8877" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="14.9775" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.4888" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="2.4963" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.1497" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-				</group>
+				<item id="57" min="19" max="21" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="0.1321" /> <!-- Spirit Ore - Sealed -->
+				<item id="92502" min="1" max="1" chance="0.0027" /> <!-- Ring of Ages Gemstone -->
+				<item id="92545" min="1" max="1" chance="0.0042" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="92567" min="1" max="1" chance="0.0011" /> <!-- Demon's Stocking Pattern -->
+				<item id="92643" min="1" max="1" chance="0.001" /> <!-- Stick of Faith Shaft -->
+				<item id="92653" min="1" max="1" chance="0.001" /> <!-- Katana Blade -->
+				<item id="92675" min="1" max="1" chance="0.001" /> <!-- Inferno Staff Head -->
+				<item id="92685" min="1" max="1" chance="0.001" /> <!-- Scorpion Blade -->
+				<item id="92727" min="1" max="1" chance="0.0033" /> <!-- Dwarven Chain Glove Design -->
+				<item id="92733" min="1" max="1" chance="0.0019" /> <!-- Theca Leather Glove Texture -->
+				<item id="62" min="1" max="1" chance="0.0014" /> <!-- Reinforced Mithril Boots -->
+				<item id="74" min="1" max="1" chance="0.001" /> <!-- Katana -->
+				<item id="193" min="1" max="1" chance="0.001" /> <!-- Stick of Faith -->
+				<item id="198" min="1" max="1" chance="0.001" /> <!-- Inferno Staff -->
+				<item id="301" min="1" max="1" chance="0.001" /> <!-- scorpion -->
+				<item id="472" min="1" max="1" chance="0.001" /> <!-- Demon's Stockings -->
+				<item id="885" min="1" max="1" chance="0.001" /> <!-- Ring of Ages -->
+				<item id="2456" min="1" max="1" chance="0.0011" /> <!-- Dwarven Chain Gloves -->
+				<item id="2460" min="1" max="1" chance="0.001" /> <!-- Theca Leather Gloves -->
 			</drop>
+			<spoil>
+				<item id="2167" min="1" max="1" chance="0.0097" /> <!-- Recipe: Ring of Ages (100%) -->
+				<item id="2203" min="1" max="1" chance="0.0151" /> <!-- Recipe: Reinforced Mithril Boots (100%) -->
+				<item id="2225" min="1" max="1" chance="0.0041" /> <!-- Recipe: Demon's Stockings (100%) -->
+				<item id="2306" min="1" max="1" chance="0.001" /> <!-- Recipe: Stick of Faith (100%) -->
+				<item id="2316" min="1" max="1" chance="0.001" /> <!-- Recipe: Katana (100%) -->
+				<item id="2339" min="1" max="1" chance="0.001" /> <!-- Recipe: Inferno Staff (100%) -->
+				<item id="2351" min="1" max="1" chance="0.001" /> <!-- Recipe: Scorpion -->
+				<item id="3002" min="1" max="1" chance="0.0119" /> <!-- Recipe: Dwarven Chain Gloves (100%) -->
+				<item id="3008" min="1" max="1" chance="0.0069" /> <!-- Recipe: Theca Leather Gloves (100%) -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21658" level="55" type="Monster" name="Harit" title="Earth Guardian">

@@ -2966,31 +2966,37 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="276" max="645" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="13.3202">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="296" max="328" chance="70" /> <!-- Adena -->
+				<item id="92752" min="1" max="1" chance="0.0186" /> <!-- Black Ore Ring Gemstone -->
+				<item id="92765" min="1" max="1" chance="0.0148" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="92768" min="1" max="1" chance="0.0036" /> <!-- Blue Wolf Breastplate Part -->
+				<item id="92781" min="1" max="1" chance="0.0143" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="92788" min="1" max="1" chance="0.0015" /> <!-- Pata Blade -->
+				<item id="92790" min="1" max="1" chance="0.0013" /> <!-- Heavy War Axe Head -->
+				<item id="92808" min="1" max="1" chance="0.0211" /> <!-- Avadon Shield Fragment -->
+				<item id="91" min="1" max="1" chance="0.001" /> <!-- Heavy War Axe -->
+				<item id="264" min="1" max="1" chance="0.001" /> <!-- Pata -->
+				<item id="358" min="1" max="1" chance="0.001" /> <!-- Blue Wolf Breastplate -->
+				<item id="673" min="1" max="1" chance="0.0022" /> <!-- Avadon Shield -->
+				<item id="895" min="1" max="1" chance="0.002" /> <!-- Black Ore Ring -->
+				<item id="2415" min="1" max="1" chance="0.0016" /> <!-- Sealed Avadon Circlet -->
+				<item id="2487" min="1" max="1" chance="0.0015" /> <!-- Sealed Blue Wolf Gloves -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="19.6587" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="3.9317" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="1.9659" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="0.3932" /> <!-- Old High-grade Resources - Sealed -->
+				<item id="4130" min="1" max="1" chance="0.0151" /> <!-- Recipe: Black Ore Ring (100%) -->
+				<item id="4149" min="1" max="1" chance="0.012" /> <!-- Recipe: Sealed Avadon Circlet (100%) -->
+				<item id="4155" min="1" max="1" chance="0.0029" /> <!-- Recipe: Blue Wolf Breastplate (100%) -->
+				<item id="4173" min="1" max="1" chance="0.0116" /> <!-- Recipe: Sealed Blue Wolf Gloves -->
+				<item id="4181" min="1" max="1" chance="0.0012" /> <!-- Recipe: Pata -->
+				<item id="4183" min="1" max="1" chance="0.0011" /> <!-- Recipe: Heavy War Axe (100%) -->
+				<item id="4441" min="1" max="1" chance="0.0171" /> <!-- Recipe: Avadon Shield (100%) -->
+				<item id="4936" min="1" max="1" chance="0.0285" /> <!-- Recipe: Avadon Shield (60%) -->
+				<item id="4952" min="1" max="1" chance="0.02" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4964" min="1" max="1" chance="0.0018" /> <!-- Recipe: Heavy War Axe (60%) -->
+				<item id="4974" min="1" max="1" chance="0.0216" /> <!-- Recipe: Black Ore Ring (70%) -->
+				<item id="4981" min="1" max="1" chance="0.0048" /> <!-- Recipe: Blue Wolf Breastplate (60%) -->
+				<item id="4998" min="1" max="1" chance="0.0193" /> <!-- Recipe: Sealed Blue Wolf Gloves (60%) -->
+				<item id="5008" min="1" max="1" chance="0.002" /> <!-- Recipe: Pata (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3040,40 +3046,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="400" max="935" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.042">
-					<item id="895" min="1" max="1" chance="3.8701" /> <!-- Black Ore Ring -->
-					<item id="92752" min="1" max="1" chance="81.2722" /> <!-- Black Ore Ring Gemstone -->
-					<item id="2392" min="1" max="1" chance="0.6753" /> <!-- Doom Leather Armor -->
-					<item id="92772" min="1" max="1" chance="14.1824" /> <!-- Doom Leather Armor Design -->
-				</group>
-				<group chance="7.725">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="305" max="338" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="4974" min="1" max="1" chance="0.0118" /> <!-- Recipe: Black Ore Ring (70%) -->
-				<item id="4130" min="1" max="1" chance="0.0082" /> <!-- Recipe: Black Ore Ring (100%) -->
-				<item id="92996" min="1" max="1" chance="19.0018" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="3.8004" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="1.9002" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="0.38" /> <!-- Old High-grade Resources - Sealed -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20969" level="75" type="Monster" name="Giant's Shadow" element="EARTH">
@@ -3298,31 +3272,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="398" max="931" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="19.2459">
-					<item id="92908" min="1" max="1" chance="37.054" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="7.4108" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="3.7054" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.2351" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.7411" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.3705" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1235" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.0741" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="37.054" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="7.4108" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="3.7054" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="0.7411" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.3705" /> <!-- Drained Thons - Sealed -->
-				</group>
+				<item id="57" min="305" max="338" chance="70" /> <!-- Adena -->
+				<item id="92791" min="1" max="1" chance="0.0109" /> <!-- Spirit's Staff Head -->
+				<item id="92" min="1" max="1" chance="0.001" /> <!-- Spirit's Staff -->
+				<item id="91886" min="1" max="1" chance="0.001" /> <!-- Innominate Victory -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="28.4043" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="5.6809" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="2.8404" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="0.5681" /> <!-- Old High-grade Resources - Sealed -->
+				<item id="4184" min="1" max="1" chance="0.0089" /> <!-- Recipe: Spirit's Staff (100%) -->
+				<item id="4965" min="1" max="1" chance="0.0148" /> <!-- Recipe: Spirit's Staff (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3383,48 +3340,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="400" max="935" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0154">
-					<item id="2404" min="1" max="1" chance="4.3048" /> <!-- Doom Stockings -->
-					<item id="92776" min="1" max="1" chance="90.4011" /> <!-- Doom Stockings Pattern -->
-					<item id="92988" min="1" max="1" chance="5.1795" /> <!-- Orcish Treasure - Sealed -->
-					<item id="92989" min="1" max="1" chance="0.1146" /> <!-- Orc King's Treasure - Sealed -->
-				</group>
-				<group chance="4.3378">
-					<item id="92908" min="1" max="1" chance="36.9535" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="7.3907" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="3.6954" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.2318" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.7391" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.3695" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.1232" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="92915" min="1" max="1" chance="0.0739" /> <!-- Material: Bag of Low-grade Stuff - Sealed -->
-					<item id="92919" min="1" max="1" chance="0.0037" /> <!-- Material: Blacksmith's High-grade Power - Sealed -->
-					<item id="92996" min="1" max="1" chance="36.9535" /> <!-- Ancient Resources - Sealed -->
-					<item id="92997" min="1" max="1" chance="7.3907" /> <!-- Old Unknown Resources - Sealed -->
-					<item id="92998" min="1" max="1" chance="3.6954" /> <!-- Old Shining Resources - Sealed -->
-					<item id="92999" min="1" max="1" chance="0.7391" /> <!-- Old High-grade Resources - Sealed -->
-					<item id="92995" min="1" max="1" chance="0.3695" /> <!-- Drained Thons - Sealed -->
-					<!-- <item id="3066" min="1" max="1" chance="0.0246" /> Spellbook: Curse Death Link - Not Available -->
-					<!-- <item id="3046" min="1" max="1" chance="0.0246" /> Spellbook: Sacrifice - Not Available -->
-					<!-- <item id="49431" min="1" max="1" chance="0.0246" /> Spellbook: Divine Power - Not Available -->
-					<!-- <item id="49429" min="1" max="1" chance="0.0246" /> Spellbook: Hide - Not Available -->
-					<!-- <item id="49424" min="1" max="1" chance="0.0246" /> Spellbook: Fell Swoop - Not Available -->
-					<!-- <item id="49430" min="1" max="1" chance="0.0246" /> Spellbook: Mystic Immunity - Not Available -->
-					<!-- <item id="49425" min="1" max="1" chance="0.0246" /> Spellbook: Dynamic Recovery - Not Available -->
-					<!-- <item id="49428" min="1" max="1" chance="0.0246" /> Spellbook: Aegis - Not Available -->
-					<!-- <item id="49426" min="1" max="1" chance="0.0246" /> Spellbook: Break Duress - Not Available -->
-					<!-- <item id="49569" min="1" max="1" chance="0.0246" /> Spellbook: Sand Bomb - Not Available -->
-					<!-- <item id="49571" min="1" max="1" chance="0.025" /> Spellbook: Clear Mind - Not Available -->
-				</group>
+				<item id="57" min="305" max="338" chance="70" /> <!-- Adena -->
+				<item id="92761" min="1" max="1" chance="0.0138" /> <!-- Avadon Leather Armor Lining -->
+				<item id="92764" min="1" max="1" chance="0.0138" /> <!-- Avadon Robe Fabric -->
+				<item id="92794" min="1" max="1" chance="0.0036" /> <!-- Kris Edge -->
+				<item id="229" min="1" max="1" chance="0.001" /> <!-- Kris -->
+				<item id="2390" min="1" max="1" chance="0.0011" /> <!-- Avadon Leather Armor -->
+				<item id="2406" min="1" max="1" chance="0.0011" /> <!-- Avadon Robe -->
+				<item id="91901" min="1" max="1" chance="0.001" /> <!-- Military Fleuret -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="28.5027" /> <!-- Ancient Resources - Sealed -->
-				<item id="92997" min="1" max="1" chance="5.7005" /> <!-- Old Unknown Resources - Sealed -->
-				<item id="92998" min="1" max="1" chance="2.8503" /> <!-- Old Shining Resources - Sealed -->
-				<item id="92999" min="1" max="1" chance="0.5701" /> <!-- Old High-grade Resources - Sealed -->
+				<item id="4145" min="1" max="1" chance="0.0113" /> <!-- Recipe: Avadon Leather Armor (100%) -->
+				<item id="4148" min="1" max="1" chance="0.0113" /> <!-- Recipe: Avadon Robe (100%) -->
+				<item id="4187" min="1" max="1" chance="0.003" /> <!-- Recipe: Kris (100%) -->
+				<item id="4948" min="1" max="1" chance="0.0188" /> <!-- Recipe: Avadon Leather Armor (60%) -->
+				<item id="4951" min="1" max="1" chance="0.0188" /> <!-- Recipe: Avadon Robe (60%) -->
+				<item id="4968" min="1" max="1" chance="0.0049" /> <!-- Recipe: Kris (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4987,26 +4918,30 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="65" max="151" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.015">
-					<item id="2462" min="1" max="1" chance="9.0909" /> <!-- Full Plate Gauntlets -->
-					<item id="92741" min="1" max="1" chance="90.9091" /> <!-- Full Plate Gauntlet Fragment -->
-				</group>
-				<group chance="1.6548">
-					<item id="92908" min="1" max="1" chance="49.253" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="9.8506" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="4.9253" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.6418" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.9851" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.4925" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92917" min="1" max="1" chance="0.0164" /> <!-- Material: Metal Ingot - Sealed -->
-					<!-- <item id="2508" min="1" max="1" chance="32.8353" /> Cursed Bone - Not Available -->
-				</group>
+				<item id="57" min="58" max="65" chance="70" /> <!-- Adena -->
+				<item id="92500" min="1" max="1" chance="0.0103" /> <!-- Necklace of Protection Gemstone -->
+				<item id="92547" min="1" max="1" chance="0.0085" /> <!-- Chain Gaiter Fragment -->
+				<item id="92555" min="1" max="1" chance="0.0042" /> <!-- Dwarven Chain Mail Shirt Material -->
+				<item id="92571" min="1" max="1" chance="0.0033" /> <!-- Theca Leather Armor Pattern -->
+				<item id="92638" min="1" max="1" chance="0.0012" /> <!-- Battle Axe Head -->
+				<item id="92730" min="1" max="1" chance="0.0109" /> <!-- Demon's Boot Fabric -->
+				<item id="160" min="1" max="1" chance="0.001" /> <!-- Battle Axe -->
+				<item id="355" min="1" max="1" chance="0.001" /> <!-- Dwarven Chain Mail Shirt -->
+				<item id="381" min="1" max="1" chance="0.0017" /> <!-- Chain Gaiters -->
+				<item id="400" min="1" max="1" chance="0.001" /> <!-- Theca Leather Armor -->
+				<item id="916" min="1" max="1" chance="0.0021" /> <!-- Necklace of Protection -->
+				<item id="2435" min="1" max="1" chance="0.0022" /> <!-- Demon's Boots -->
+				<item id="7898" min="1" max="1" chance="0.001" /> <!-- Karik Horn -->
+				<item id="91897" min="1" max="1" chance="0.001" /> <!-- Blinzlasher -->
+				<item id="91898" min="1" max="1" chance="0.001" /> <!-- Chevalier Rapier -->
 			</drop>
 			<spoil>
-				<item id="3016" min="1" max="1" chance="0.0296" /> <!-- Recipe: Full Plate Gauntlets (100%) -->
+				<item id="2165" min="1" max="1" chance="0.0334" /> <!-- Recipe: Necklace of Protection (100%) -->
+				<item id="2205" min="1" max="1" chance="0.0276" /> <!-- Recipe: Chain Gaiters (100%) -->
+				<item id="2213" min="1" max="1" chance="0.0135" /> <!-- Recipe: Dwarven Chain Mail Shirt (100%) -->
+				<item id="2229" min="1" max="1" chance="0.0106" /> <!-- Recipe: Theca Leather Armor (100%) -->
+				<item id="2301" min="1" max="1" chance="0.0038" /> <!-- Recipe: Battle Axe (100%) -->
+				<item id="3005" min="1" max="1" chance="0.0356" /> <!-- Recipe: Demon's Boots (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5065,20 +5000,34 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="68" max="159" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.3277">
-					<item id="92908" min="1" max="1" chance="49.253" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="9.8506" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="4.9253" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.6418" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.9851" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.4925" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92917" min="1" max="1" chance="0.0164" /> <!-- Material: Metal Ingot - Sealed -->
-					<!-- <item id="2508" min="1" max="1" chance="32.8353" /> Cursed Bone - Not Available -->
-				</group>
+				<item id="57" min="58" max="65" chance="70" /> <!-- Adena -->
+				<item id="92549" min="1" max="1" chance="0.0053" /> <!-- Karmian Tunic Pattern -->
+				<item id="92557" min="1" max="1" chance="0.0028" /> <!-- Robe of Seal Fabric -->
+				<item id="92568" min="1" max="1" chance="0.0082" /> <!-- Mithril Gauntlet Design -->
+				<item id="92651" min="1" max="1" chance="0.001" /> <!-- Body Slasher Blade -->
+				<item id="92652" min="1" max="1" chance="0.001" /> <!-- Shamshir Blade -->
+				<item id="92663" min="1" max="1" chance="0.001" /> <!-- Caliburs Edge -->
+				<item id="92664" min="1" max="1" chance="0.001" /> <!-- Delusional Blade -->
+				<item id="92734" min="1" max="1" chance="0.0082" /> <!-- Compound Boot Fragment -->
+				<item id="64" min="1" max="1" chance="0.0025" /> <!-- Compound Boots -->
+				<item id="73" min="1" max="1" chance="0.001" /> <!-- Shamshir -->
+				<item id="75" min="1" max="1" chance="0.001" /> <!-- Caliburs -->
+				<item id="76" min="1" max="1" chance="0.001" /> <!-- Sword of Delusion -->
+				<item id="302" min="1" max="1" chance="0.001" /> <!-- Body Slasher -->
+				<item id="439" min="1" max="1" chance="0.0016" /> <!-- Karmian Tunic -->
+				<item id="440" min="1" max="1" chance="0.001" /> <!-- Robe of Seal -->
+				<item id="608" min="1" max="1" chance="0.0025" /> <!-- Mithril Gauntlets -->
 			</drop>
+			<spoil>
+				<item id="2207" min="1" max="1" chance="0.0173" /> <!-- Recipe: Karmian Tunic (100%) -->
+				<item id="2215" min="1" max="1" chance="0.0092" /> <!-- Recipe: Robe of Seal (100%) -->
+				<item id="2226" min="1" max="1" chance="0.0267" /> <!-- Recipe: Mithril Gauntlets (100%) -->
+				<item id="2314" min="1" max="1" chance="0.0029" /> <!-- Recipe: Body Slasher (100%) -->
+				<item id="2315" min="1" max="1" chance="0.0023" /> <!-- Recipe: Shamshir (100%) -->
+				<item id="2327" min="1" max="1" chance="0.0015" /> <!-- Recipe: Caliburs (100%) -->
+				<item id="2328" min="1" max="1" chance="0.0015" /> <!-- Recipe: Sword of Delusion (100%) -->
+				<item id="3009" min="1" max="1" chance="0.0267" /> <!-- Recipe: Compound Boots (100%) -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20998" level="52" type="Monster" name="Cruel Punisher" element="FIRE">
@@ -5135,20 +5084,32 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="69" max="161" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.4007">
-					<item id="92908" min="1" max="1" chance="49.253" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="9.8506" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="4.9253" /> <!-- Material: Rags - Sealed -->
-					<item id="92911" min="1" max="1" chance="1.6418" /> <!-- Material: Leather Scraps - Sealed -->
-					<item id="92912" min="1" max="1" chance="0.9851" /> <!-- Material: Plain Fabric - Sealed -->
-					<item id="92913" min="1" max="1" chance="0.4925" /> <!-- Material: Unknown Metal - Sealed -->
-					<item id="92917" min="1" max="1" chance="0.0164" /> <!-- Material: Metal Ingot - Sealed -->
-					<!-- <item id="2508" min="1" max="1" chance="32.8353" /> Cursed Bone - Not Available -->
-				</group>
+				<item id="57" min="59" max="66" chance="70" /> <!-- Adena -->
+				<item id="92542" min="1" max="1" chance="0.0159" /> <!-- Chain Helmet Design -->
+				<item id="92548" min="1" max="1" chance="0.0062" /> <!-- Reinforced Mithril Shirt Fabric -->
+				<item id="92565" min="1" max="1" chance="0.0091" /> <!-- Tower Shield Fragment -->
+				<item id="92569" min="1" max="1" chance="0.0096" /> <!-- Forgotten Boot Pattern -->
+				<item id="92654" min="1" max="1" chance="0.001" /> <!-- Bec de Corbin Blade -->
+				<item id="92665" min="1" max="1" chance="0.001" /> <!-- Tsurugi Blade -->
+				<item id="92679" min="1" max="1" chance="0.001" /> <!-- Mace of Underworld Head -->
+				<item id="77" min="1" max="1" chance="0.001" /> <!-- Tsurugi -->
+				<item id="94" min="1" max="1" chance="0.001" /> <!-- Bec de Corbin -->
+				<item id="103" min="1" max="1" chance="0.0024" /> <!-- Tower Shield -->
+				<item id="202" min="1" max="1" chance="0.001" /> <!-- Mace of Underworld -->
+				<item id="397" min="1" max="1" chance="0.0016" /> <!-- Reinforced Mithril Shirt -->
+				<item id="497" min="1" max="1" chance="0.0042" /> <!-- Chain Helmet -->
+				<item id="1127" min="1" max="1" chance="0.0025" /> <!-- Forgotten Boots -->
+				<item id="7887" min="1" max="1" chance="0.001" /> <!-- Mysterious Sword -->
 			</drop>
+			<spoil>
+				<item id="2200" min="1" max="1" chance="0.0518" /> <!-- Recipe: Chain Helmet (100%) -->
+				<item id="2206" min="1" max="1" chance="0.0201" /> <!-- Recipe: Reinforced Mithril Shirt (100%) -->
+				<item id="2223" min="1" max="1" chance="0.0295" /> <!-- Recipe: Tower Shield (100%) -->
+				<item id="2227" min="1" max="1" chance="0.0311" /> <!-- Recipe: Forgotten Boots (100%) -->
+				<item id="2317" min="1" max="1" chance="0.0027" /> <!-- Recipe: Bec de Corbin (100%) -->
+				<item id="2329" min="1" max="1" chance="0.0018" /> <!-- Recipe: Tsurugi (100%) -->
+				<item id="2343" min="1" max="1" chance="0.0018" /> <!-- Recipe: Mace of Underworld (100%) -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20999" level="49" type="Monster" name="Roving Soul" element="FIRE">

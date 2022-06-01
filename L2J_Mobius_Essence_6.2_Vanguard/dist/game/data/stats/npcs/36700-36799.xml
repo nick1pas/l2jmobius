@@ -695,9 +695,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -735,9 +733,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -775,9 +771,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -815,9 +809,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -889,9 +881,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -929,9 +919,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -969,9 +957,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1009,9 +995,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<group chance="100">
-					<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-				</group>
+				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1125,77 +1109,81 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36796" level="85" type="Folk" name="Central Object for Capture">
+	<npc id="36796" level="85" type="Monster" name="Central Object for Capture">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="17088607.59494" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="36797" level="85" type="Folk" name="Central Object for Capture" title="Captured">
+	<npc id="36797" level="85" type="Monster" name="Central Object for Capture" title="Captured">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="17088607.59494" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="36798" level="85" type="Folk" name="Inner Object for Capture">
+	<npc id="36798" level="85" type="Monster" name="Inner Object for Capture">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="36799" level="85" type="Folk" name="Inner Object for Capture" title="Captured">
+	<npc id="36799" level="85" type="Monster" name="Inner Object for Capture" title="Captured">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="1" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="120" />

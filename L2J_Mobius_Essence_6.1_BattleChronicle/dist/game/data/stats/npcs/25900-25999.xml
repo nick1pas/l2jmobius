@@ -120,20 +120,19 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25902" level="81" type="Folk" name="Lilith' Agent">
+	<npc id="25902" level="81" type="Monster" name="Lilith' Agent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -142,32 +141,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25903" level="81" type="Folk" name="Lilith' Escort">
+	<npc id="25903" level="81" type="Monster" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="5800" lhand="5799" />
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord - Not Available / Nephilim Lord -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="56" />
 				<run ground="220" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -176,15 +166,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 		</skillList>
 	</npc>
@@ -224,20 +206,19 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25905" level="81" type="Folk" name="Anakim's Guardian">
+	<npc id="25905" level="81" type="Monster" name="Anakim's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -246,31 +227,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25906" level="81" type="Folk" name="Anakim's Royal Guard">
+	<npc id="25906" level="81" type="Monster" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />
 			</speed>
-			<hitTime>630</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -279,32 +251,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25907" level="81" type="Folk" name="Anakim's Executor">
+	<npc id="25907" level="81" type="Monster" name="Anakim's Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="65" />
 				<run ground="190" />
 			</speed>
-			<hitTime>630</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -313,15 +276,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25908" level="75" type="RaidBoss" name="Queen Ant Drone Priest" title="Raid Fighter">
@@ -1821,139 +1776,174 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25935" level="85" type="Folk" name="Ultimate Behemoth" title="Antharas' Avatar">
+	<npc id="25935" level="85" type="RaidBoss" name="Ultimate Behemoth" title="Antharas' Avatar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="12" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="8905.0086" magical="6080.96658" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3992.40732" magical="2921.47044" />
 			<speed>
 				<walk ground="60" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="29.7" />
 			<height normal="80.7" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
 	</npc>
-	<npc id="25936" level="85" type="Folk" name="Ryuminir" title="Tower Lord">
+	<npc id="25936" level="85" type="RaidBoss" name="Ryuminir" title="Tower Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="32" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="8905.0086" magical="6080.96658" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3992.40732" magical="2921.47044" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="78.25" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="25937" level="85" type="Folk" name="Aizen Kelsour" title="Blood and Iron Commander">
+	<npc id="25937" level="85" type="RaidBoss" name="Aizen Kelsour" title="Blood and Iron Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="32000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="3872" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="8905.0086" magical="6080.96658" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3992.40732" magical="2921.47044" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="75.125" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="25938" level="85" type="Folk" name="Tanas" title="Forgotten Sage Spider">
+	<npc id="25938" level="80" type="RaidBoss" name="Tanas" title="Forgotten Sage Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4000000" hpRegen="10.5" mp="12240" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="4" hpRegen="10.2" mp="12240" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="140" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25939" level="85" type="Folk" name="Tulana" title="Forgotten Sage Spider">
+	<npc id="25939" level="80" type="Monster" name="Tulana" title="Forgotten Sage Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="362303.79747" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="140" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="25940" level="85" type="Folk" name="Young Spider" title="Pinrul">
+	<npc id="25940" level="80" type="Monster" name="Young Spider" title="Pinrul">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="90576" hpRegen="10.5" mp="71253" mpRegen="3.6" />
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="90575.94937" hpRegen="10.2" mp="71253" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="105" />
 				<run ground="105" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="39" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 	</npc>
-	<npc id="25941" level="85" type="Folk" name="Atingo" title="Pet Legion's Master">
+	<npc id="25941" level="82" type="RaidBoss" name="Atingo" title="Pet Legion's Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="95759" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="31577" hpRegen="10.5" mp="3486" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="22174.22222" hpRegen="10.2" mp="3486" mpRegen="3.6" />
+			<attack physical="6753.824" magical="3458.976" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1678.92" magical="921.432" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19.5" />
 			<height normal="39.9" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
 	<npc id="25942" level="85" type="RaidBoss" name="Reggiesys" title="Counsellor's Servitor">
 		<!-- FROST LORD CASTLEZONE -->
@@ -2009,7 +1999,7 @@
 			<skill id="48391" level="1" /> <!-- Self-destruction -->
 			<skill id="48392" level="1" /> <!-- Ice Storm -->
 		</skillList>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
 				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
@@ -2017,158 +2007,270 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25944" level="85" type="Folk" name="Royal Vampire" title="Gatekeeper">
+	<npc id="25944" level="87" type="RaidBoss" name="Royal Vampire" title="Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="242088" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="353448.44444" hpRegen="10.2" mp="3834" mpRegen="3.6" />
+			<attack physical="1112" magical="7592" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6208" magical="3424" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="43" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
 	</npc>
-	<npc id="25945" level="85" type="Folk" name="Tower Knight" title="Gatekeeper">
+	<npc id="25945" level="87" type="RaidBoss" name="Tower Knight" title="Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<equipment rhand="428" /> <!-- Feriotic Tunic -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="242088" hpRegen="10.5" mp="3834" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="353448.44444" hpRegen="10.2" mp="3834" mpRegen="3.6" />
+			<attack physical="1112" magical="7592" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6208" magical="3424" />
 			<speed>
 				<walk ground="42" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22.88" />
 			<height normal="41.6" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
-	<npc id="25946" level="85" type="Folk" name="Knight of Darkness" title="Battlefield Nightmare">
+	<npc id="25946" level="90" type="RaidBoss" name="Knight of Darkness" title="Battlefield Nightmare">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418328" hpRegen="10.5" mp="4047" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1673312" hpRegen="10.2" mp="4047.6" mpRegen="3.6" />
+			<attack physical="14444" magical="986" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9532" magical="418" />
 			<speed>
 				<walk ground="80" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="64" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="729" min="1" max="1" chance="8.25" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<item id="730" min="1" max="1" chance="24.75" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="94186" min="1" max="1" chance="15" /> <!-- Life Stone Lv. 2 - Weapon -->
+				<item id="94188" min="1" max="1" chance="45" /> <!-- Life Stone Lv. 2 - Armor -->
+				<item id="94717" min="16" max="24" chance="100" /> <!-- Hellbound Energy - Sealed -->
+				<item id="94719" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="96623" min="1" max="1" chance="27" /> <!-- Dye Powder -->
+				<item id="94706" min="1" max="1" chance="0.01" /> <!-- Talisman of Hellbound Lv. 1 -->
+				<item id="94718" min="1" max="1" chance="5" /> <!-- Hellbound Ring -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25947" level="85" type="Folk" name="Dark Banshee" title="Battlefield Nightmare">
+	<npc id="25947" level="90" type="RaidBoss" name="Dark Banshee" title="Battlefield Nightmare">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418328" hpRegen="10.5" mp="4047" mpRegen="3.6" />
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1673312" hpRegen="10.2" mp="4047.6" mpRegen="3.6" />
+			<attack physical="14444" magical="986" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9532" magical="418" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="49" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="729" min="1" max="1" chance="8.25" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<item id="730" min="1" max="1" chance="24.75" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="94186" min="1" max="1" chance="15" /> <!-- Life Stone Lv. 2 - Weapon -->
+				<item id="94188" min="1" max="1" chance="45" /> <!-- Life Stone Lv. 2 - Armor -->
+				<item id="94717" min="16" max="24" chance="100" /> <!-- Hellbound Energy - Sealed -->
+				<item id="94719" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Hellbound Ring -->
+				<item id="96623" min="1" max="1" chance="27" /> <!-- Dye Powder -->
+				<item id="94706" min="1" max="1" chance="0.01" /> <!-- Talisman of Hellbound Lv. 1 -->
+				<item id="94718" min="1" max="1" chance="5" /> <!-- Hellbound Ring -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25948" level="85" type="Folk" name="Beoro" title="Bee Hive Emperor">
+	<npc id="25948" level="80" type="RaidBoss" name="Beoro" title="Bee Hive Emperor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="420292" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1681168" hpRegen="10.2" mp="3693.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="18" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="70.4" />
 			<height normal="62.56" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="729" min="1" max="3" chance="100" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<item id="730" min="3" max="5" chance="100" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="94096" min="1" max="1" chance="13.5" /> <!-- Regular Pet Training Guide -->
+				<item id="94117" min="1" max="1" chance="1.5" /> <!-- Advanced Pet Training Guide -->
+				<item id="94469" min="1" max="1" chance="0.5831" /> <!-- Pet Book: Blocked Target Change -->
+				<item id="94471" min="1" max="1" chance="0.5831" /> <!-- Pet Book: Strong Bite -->
+				<item id="94472" min="1" max="1" chance="0.5831" /> <!-- Pet Book: Last Dire Claw -->
+				<item id="94475" min="1" max="1" chance="0.5831" /> <!-- Pet Book: Exploding Feather -->
+				<item id="94476" min="1" max="1" chance="0.5838" /> <!-- Pet Book: Pulling Body -->
+				<item id="94477" min="1" max="1" chance="0.5838" /> <!-- Pet Book: Back Explosion -->
+				<item id="94478" min="1" max="1" chance="3.5" /> <!-- Pet Book: Steel Skin -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25949" level="85" type="Folk" name="Hermit Beoro" title="Bee Hive Emperor">
+	<npc id="25949" level="80" type="RaidBoss" name="Hermit Beoro" title="Bee Hive Emperor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="420292" hpRegen="10.5" mp="3693" mpRegen="3.6" />
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1681168" hpRegen="10.2" mp="3693.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="105" />
 				<run ground="360" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="54" />
 			<height normal="66" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="48046" level="1" /> <!-- Wind Attribute Monster -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="729" min="2" max="4" chance="100" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<item id="730" min="4" max="8" chance="100" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="94096" min="1" max="1" chance="36" /> <!-- Regular Pet Training Guide -->
+				<item id="94117" min="1" max="1" chance="4" /> <!-- Advanced Pet Training Guide -->
+				<item id="94469" min="1" max="1" chance="1.666" /> <!-- Pet Book: Blocked Target Change -->
+				<item id="94471" min="1" max="1" chance="1.666" /> <!-- Pet Book: Strong Bite -->
+				<item id="94472" min="1" max="1" chance="1.666" /> <!-- Pet Book: Last Dire Claw -->
+				<item id="94475" min="1" max="1" chance="1.666" /> <!-- Pet Book: Exploding Feather -->
+				<item id="94476" min="1" max="1" chance="1.668" /> <!-- Pet Book: Pulling Body -->
+				<item id="94477" min="1" max="1" chance="1.668" /> <!-- Pet Book: Back Explosion -->
+				<item id="94478" min="1" max="1" chance="10" /> <!-- Pet Book: Steel Skin -->
+				<item id="94642" min="1" max="1" chance="1.5" /> <!-- Pet Earring -->
+				<item id="94643" min="1" max="1" chance="1.5" /> <!-- Pet Ring -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25950" level="85" type="Folk" name="Royda" title="Pet Legion's Grand Master">
+	<npc id="25950" level="80" type="RaidBoss" name="Royda" title="Pet Legion's Grand Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="95759" /> <!-- Helios Stormer (NPC) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="521936" hpRegen="10.5" mp="3486" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="521936.88889" hpRegen="10.2" mp="3486" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19.5" />
 			<height normal="39.9" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="25951" level="85" type="Folk" name="Sin Eater" title="Atingo's Favorite">
+	<npc id="25951" level="80" type="Monster" name="Sin Eater" title="Atingo's Favorite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="31577" hpRegen="10.5" mp="3486" mpRegen="3.6" />
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="31577.21519" hpRegen="10.2" mp="3486" mpRegen="3.6" />
+			<attack physical="3105.728" magical="1590.608" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="819.3" magical="517.0998" />
 			<speed>
 				<walk ground="60" />
 				<run ground="80" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="29.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="729" min="1" max="1" chance="1" /> <!-- Scroll: Enchant A-grade Weapon -->
+				<item id="730" min="1" max="1" chance="4" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="947" min="1" max="1" chance="2" /> <!-- Scroll: Enchant B-grade Weapon -->
+				<item id="948" min="1" max="1" chance="8" /> <!-- Scroll: Enchant B-grade Armor -->
+				<item id="91031" min="1" max="1" chance="0.25" /> <!-- Water Spirit Evolution Stone -->
+				<item id="91032" min="1" max="1" chance="0.25" /> <!-- Fire Spirit Evolution Stone -->
+				<item id="91033" min="1" max="1" chance="0.25" /> <!-- Wind Spirit Evolution Stone -->
+				<item id="91034" min="1" max="1" chance="0.25" /> <!-- Earth Spirit Evolution Stone -->
+				<item id="94096" min="1" max="1" chance="0.009" /> <!-- Regular Pet Training Guide -->
+				<item id="94117" min="1" max="1" chance="0.001" /> <!-- Advanced Pet Training Guide -->
+				<item id="94478" min="1" max="1" chance="0.01" /> <!-- Pet Book: Steel Skin -->
+				<item id="96623" min="1" max="1" chance="0.8" /> <!-- Dye Powder -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

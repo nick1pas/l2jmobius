@@ -1152,64 +1152,90 @@
 			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="22321" level="85" type="Folk" name="Nos" title="Swampland Raider">
+	<npc id="22321" level="75" type="Monster" name="Nos" title="Swampland Raider" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available - Not Available -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available -->
+		<acquire exp="8595" sp="942" attributeExp="41" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="7800.63291" hpRegen="8.5" mp="1345.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25.2" />
 			<height normal="41.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="22322" level="85" type="Folk" name="Nos Lad" title="Swampland Raider">
+	<npc id="22322" level="85" type="Monster" name="Nos Lad" title="Swampland Raider" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available - Not Available -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4041" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="5128" /> <!-- Crokian Blade - Not Available -->
+		<acquire exp="35562" sp="2015" attributeExp="1216" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="13042.40506" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25.2" />
 			<height normal="41.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48045" level="1" /> <!-- Water Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
-	<npc id="22323" level="85" type="Folk" name="Ultimate Knoriks" title="Antharas' Watchman">
+	<npc id="22323" level="85" type="Monster" name="Ultimate Knoriks" title="Antharas' Watchman" element="EARTH">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="9806" hpRegen="10.5" mp="2770" mpRegen="3.6" />
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1879915" sp="7674" attributeExp="1556" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="98065.18987" hpRegen="10.2" mp="2770.2" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="60" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="48047" level="1" /> <!-- Earth Attribute Monster -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="5599" level="11" /> <!-- Shock Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 	</npc>
 	<npc id="22324" level="1" type="Monster" name="Training Dummy">
 		<race>ETC</race>
@@ -1382,82 +1408,102 @@
 			<height normal="31.3" />
 		</collision>
 	</npc>
-	<npc id="22332" level="85" type="Folk" name="Grave Warden" title="Incredible Guardian">
+	<npc id="22332" level="55" type="Monster" name="Grave Warden" title="Transcendent Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="52944" hpRegen="10.5" mp="889" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="891528" sp="249563" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="52944.93671" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="163.64727" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="30.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 	</npc>
-	<npc id="22333" level="85" type="Folk" name="Guard of Honor" title="Incredible Guardian">
+	<npc id="22333" level="65" type="Monster" name="Guard of Honor" title="Transcendent Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38448" /> <!-- Monster Only: Minotaur Two-handed Axe - Not Available - Not Available -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="69412" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38448" /> <!-- Monster Only: Minotaur Two-handed Axe - Not Available -->
+		<acquire exp="1301469" sp="364364" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="69412.65823" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="44.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="22334" level="85" type="Folk" name="Fierce Guard" title="Incredible Guardian">
+	<npc id="22334" level="75" type="Monster" name="Fierce Guard" title="Transcendent Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="84704" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1935450" sp="541800" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="84704.43038" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
 			<speed>
 				<walk ground="51" />
 				<run ground="180" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="31.5" />
 			<height normal="44.7" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
 	</npc>
-	<npc id="22335" level="85" type="Folk" name="Dragon Warden" title="Incredible Guardian">
+	<npc id="22335" level="80" type="Monster" name="Dragon Warden" title="Transcendent Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="121231" hpRegen="10.5" mp="2227" mpRegen="3.6" />
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="2500608" sp="700032" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="121231.01266" hpRegen="10.2" mp="2227.484" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
 	</npc>
 	<npc id="22336" level="85" type="Monster" name="Steel Warrior" element="FIRE">
 		<race>ETC</race>
@@ -1568,23 +1614,38 @@
 			</spoil>
 </dropLists>
 	</npc>
-	<npc id="22339" level="85" type="Folk" name="Steel Swordsman" title="Steel Manager" element="FIRE">
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19282" hpRegen="10.5" mp="11080" mpRegen="3.6" />
+	<npc id="22339" level="85" type="Monster" name="Steel Swordsman" title="Steel Manager" element="FIRE">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1290587" sp="361279" attributeExp="1216" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="115698.10127" hpRegen="10.2" mp="11080.8" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<attack physical="2950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="905.85106382979" magical="797.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22.5" />
 			<height normal="48.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="48044" level="1" /> <!-- Fire Attribute Monster -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="17445" max="19280" chance="70" /> <!-- Adena -->
+				<item id="94717" min="1" max="1" chance="3.4932" /> <!-- Hellbound Energy - Sealed -->
+				<item id="95569" min="1" max="1" chance="8.7329" /> <!-- Adena Pouch - Sealed -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22340" level="85" type="Monster" name="Zamad" element="WATER">
 		<race>ETC</race>
@@ -1760,7 +1821,7 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" isAggressive="true">
 		</ai>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
 				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
@@ -1829,7 +1890,7 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" aggroRange="600" isAggressive="true">
 		</ai>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
 				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->
@@ -1897,7 +1958,7 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="600" isAggressive="false">
 		</ai>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="0.002" /> <!-- Ice core -->
 				<item id="95782" min="10" max="20" chance="0.195" /> <!-- Ice lord weapon crystal -->

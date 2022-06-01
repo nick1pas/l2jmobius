@@ -1,57 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18700" level="85" type="Folk" name="Large Prime Watermelon">
+	<npc id="18700" level="80" type="Monster" name="Large Prime Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="32" hpRegen="10.5" mp="40" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="32.27848" hpRegen="10.2" mp="40" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="50" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="18701" level="85" type="Folk" name="Snow Pumpkin">
+	<npc id="18701" level="80" type="RaidBoss" name="Snow Pumpkin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10960667" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="109607" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="57.5" />
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="18702" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18702" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
@@ -133,229 +136,241 @@
 			<height normal="130" />
 		</collision>
 	</npc>
-	<npc id="18708" level="85" type="Folk" name="Snow Pumpkin">
+	<npc id="18708" level="80" type="RaidBoss" name="Snow Pumpkin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10960667" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="109607" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="57.5" />
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="18709" level="85" type="Folk" name="Snow Pumpkin">
+	<npc id="18709" level="80" type="RaidBoss" name="Snow Pumpkin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10960667" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="109607" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="57.5" />
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="18710" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18710" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18711" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18711" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18712" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18712" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18713" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18713" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18714" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18714" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18715" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18715" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18716" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18716" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18717" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18717" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18718" level="85" type="Folk" name="Royal Watermelon">
+	<npc id="18718" level="80" type="RaidBoss" name="Royal Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3653555" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="365356" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="6211.456" magical="3181.216" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1638.6" magical="1034.1996" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34.2" />
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="18719" level="85" type="Folk" name="Watermelon">
+	<npc id="18719" level="80" type="Monster" name="Watermelon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16" hpRegen="10.5" mp="40" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="15.82278" hpRegen="10.2" mp="40" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="50" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14.25" />
 			<height normal="26.5" />
@@ -380,63 +395,72 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18721" level="85" type="Folk" name="Lavasaurus">
+	<npc id="18721" level="80" type="Monster" name="Lavasaurus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41754" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="41755.06329" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="1" />
 				<run ground="80" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18722" level="85" type="Folk" name="Xilenos Warrior">
+	<npc id="18722" level="80" type="Monster" name="Xilenos Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="97158" lhand="97159" /> <!-- Monster's Weapon: One-handed Blunt Weapon of Silenos Infantryman - Not Available / Monster's Weapon: Silenos Infantryman's Shield - Not Available -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12330" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12330.37975" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18723" level="85" type="Folk" name="Morgos' Soldier">
+	<npc id="18723" level="80" type="Monster" name="Morgos' Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12330" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12330.37975" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25.2" />
 			<height normal="48.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
 	<npc id="18724" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -457,59 +481,68 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18725" level="85" type="Folk" name="Xilenos Warrior">
+	<npc id="18725" level="80" type="Monster" name="Xilenos Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="97158" lhand="97159" /> <!-- Monster's Weapon: One-handed Blunt Weapon of Silenos Infantryman - Not Available / Monster's Weapon: Silenos Infantryman's Shield - Not Available -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12330" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12330.37975" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18726" level="85" type="Folk" name="Morgos' Soldier">
+	<npc id="18726" level="80" type="Monster" name="Morgos' Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12330" hpRegen="10.5" mp="2512" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="12330.37975" hpRegen="10.2" mp="2512.2" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25.2" />
 			<height normal="48.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
-	<npc id="18727" level="85" type="Folk" name="Seal Tombstone">
+	<npc id="18727" level="80" type="Monster" name="Seal Tombstone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3038" hpRegen="10.5" mp="1674" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1884.81013" hpRegen="10.2" mp="1674.8" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="1" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="60.8" />

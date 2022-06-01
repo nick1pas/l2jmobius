@@ -118,24 +118,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1238">
-					<item id="112" min="1" max="1" chance="30.9859" /> <!-- Apprentice's Earring -->
-					<item id="116" min="1" max="1" chance="46.0094" /> <!-- Magic Ring -->
-					<item id="118" min="1" max="1" chance="23.0047" /> <!-- Magic Necklace -->
-				</group>
-				<group chance="0.2172">
-					<item id="92908" min="1" max="1" chance="15.7134" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="3.1427" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="1.5713" /> <!-- Material: Rags - Sealed -->
-					<item id="1788" min="1" max="1" chance="1.0057" /> <!-- Recipe: Bow -->
-					<item id="17" min="10" max="30" chance="78.5669" /> <!-- Wooden Arrow -->
-				</group>
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="92582" min="1" max="1" chance="0.0059" /> <!-- Bow Shaft -->
+				<item id="2" min="1" max="1" chance="0.001" /> <!-- Long Sword -->
+				<item id="13" min="1" max="1" chance="0.012" /> <!-- Short Bow -->
+				<item id="14" min="1" max="1" chance="0.001" /> <!-- Bow -->
+				<item id="67" min="1" max="1" chance="0.001" /> <!-- Orcish Sword -->
+				<item id="153" min="1" max="1" chance="0.001" /> <!-- Sickle -->
+				<item id="253" min="1" max="1" chance="0.012" /> <!-- Spiked Gloves -->
+				<item id="254" min="1" max="1" chance="0.001" /> <!-- Iron Gloves -->
+				<item id="255" min="1" max="1" chance="0.001" /> <!-- Fox Claw Gloves -->
+				<item id="738" min="1" max="1" chance="0.001" /> <!-- Sword of Solidarity -->
+				<item id="946" min="1" max="1" chance="0.001" /> <!-- Skeleton Dagger -->
+				<item id="981" min="1" max="1" chance="0.001" /> <!-- Red Sunset Sword -->
+				<item id="2374" min="1" max="1" chance="0.001" /> <!-- Red Sunset Dagger -->
 			</drop>
 			<spoil>
-				<item id="116" min="1" max="1" chance="4.2011" /> <!-- Magic Ring -->
+				<item id="1788" min="1" max="1" chance="0.0961" /> <!-- Recipe: Bow -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -248,21 +247,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="2" max="6" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1143">
-					<item id="19" min="1" max="1" chance="58.8121" /> <!-- Small Shield -->
-					<item id="42" min="1" max="1" chance="41.1879" /> <!-- Leather Cap -->
-				</group>
-				<group chance="0.1239">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
-				</group>
+				<item id="57" min="2" max="2" chance="70" /> <!-- Adena -->
+				<item id="92582" min="1" max="1" chance="0.0099" /> <!-- Bow Shaft -->
+				<item id="2" min="1" max="1" chance="0.001" /> <!-- Long Sword -->
+				<item id="13" min="1" max="1" chance="0.0202" /> <!-- Short Bow -->
+				<item id="14" min="1" max="1" chance="0.0012" /> <!-- Bow -->
+				<item id="67" min="1" max="1" chance="0.001" /> <!-- Orcish Sword -->
+				<item id="153" min="1" max="1" chance="0.001" /> <!-- Sickle -->
+				<item id="253" min="1" max="1" chance="0.0202" /> <!-- Spiked Gloves -->
+				<item id="254" min="1" max="1" chance="0.0012" /> <!-- Iron Gloves -->
+				<item id="255" min="1" max="1" chance="0.001" /> <!-- Fox Claw Gloves -->
+				<item id="738" min="1" max="1" chance="0.001" /> <!-- Sword of Solidarity -->
+				<item id="946" min="1" max="1" chance="0.001" /> <!-- Skeleton Dagger -->
+				<item id="981" min="1" max="1" chance="0.001" /> <!-- Red Sunset Sword -->
+				<item id="2374" min="1" max="1" chance="0.001" /> <!-- Red Sunset Dagger -->
 			</drop>
 			<spoil>
-				<item id="1060" min="1" max="1" chance="2.5821" /> <!-- HP Replenishing Potion -->
+				<item id="1788" min="1" max="1" chance="0.1611" /> <!-- Recipe: Bow -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -313,24 +314,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="3" max="7" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0077">
-					<item id="14" min="1" max="1" chance="50" /> <!-- Bow -->
-					<item id="92582" min="1" max="1" chance="50" /> <!-- Bow Shaft -->
-				</group>
-				<group chance="0.4101">
-					<item id="92908" min="1" max="1" chance="15.6238" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="3.1248" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="1.5624" /> <!-- Material: Rags - Sealed -->
-					<item id="1796" min="1" max="1" chance="1.5702" /> <!-- Recipe: Leather Tunic -->
-					<item id="17" min="10" max="30" chance="78.1188" /> <!-- Wooden Arrow -->
-				</group>
+				<item id="57" min="2" max="2" chance="70" /> <!-- Adena -->
+				<item id="92493" min="1" max="1" chance="0.0052" /> <!-- Mithril Ring Wire -->
+				<item id="59" min="1" max="1" chance="0.001" /> <!-- Mithril Gaiters -->
+				<item id="128" min="1" max="1" chance="0.001" /> <!-- Knight's Sword -->
+				<item id="179" min="1" max="1" chance="0.001" /> <!-- Mace of Prayer -->
+				<item id="277" min="1" max="1" chance="0.001" /> <!-- Dark Elven Bow -->
+				<item id="416" min="1" max="1" chance="0.001" /> <!-- Reinforced Leather Gaiters -->
+				<item id="436" min="1" max="1" chance="0.001" /> <!-- Tunic of Knowledge -->
+				<item id="882" min="1" max="1" chance="0.001" /> <!-- Mithril Ring -->
 			</drop>
 			<spoil>
-				<item id="1060" min="1" max="1" chance="1.446" /> <!-- HP Replenishing Potion -->
-				<item id="113" min="1" max="1" chance="0.1605" /> <!-- Mage Earring -->
+				<item id="2158" min="1" max="1" chance="0.0279" /> <!-- Recipe: Mithril Ring (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -369,21 +364,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="3" max="8" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.057">
-					<item id="22" min="1" max="1" chance="38.481" /> <!-- Leather Shirt -->
-					<item id="29" min="1" max="1" chance="61.519" /> <!-- Leather Pants -->
-				</group>
-				<group chance="0.1539">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
-				</group>
+				<item id="57" min="2" max="3" chance="70" /> <!-- Adena -->
+				<item id="92582" min="1" max="1" chance="0.0123" /> <!-- Bow Shaft -->
+				<item id="2" min="1" max="1" chance="0.001" /> <!-- Long Sword -->
+				<item id="13" min="1" max="1" chance="0.025" /> <!-- Short Bow -->
+				<item id="14" min="1" max="1" chance="0.0015" /> <!-- Bow -->
+				<item id="67" min="1" max="1" chance="0.001" /> <!-- Orcish Sword -->
+				<item id="153" min="1" max="1" chance="0.001" /> <!-- Sickle -->
+				<item id="253" min="1" max="1" chance="0.025" /> <!-- Spiked Gloves -->
+				<item id="254" min="1" max="1" chance="0.0015" /> <!-- Iron Gloves -->
+				<item id="255" min="1" max="1" chance="0.001" /> <!-- Fox Claw Gloves -->
+				<item id="738" min="1" max="1" chance="0.001" /> <!-- Sword of Solidarity -->
+				<item id="946" min="1" max="1" chance="0.001" /> <!-- Skeleton Dagger -->
+				<item id="981" min="1" max="1" chance="0.001" /> <!-- Red Sunset Sword -->
+				<item id="2374" min="1" max="1" chance="0.001" /> <!-- Red Sunset Dagger -->
 			</drop>
 			<spoil>
-				<item id="1122" min="1" max="1" chance="0.4754" /> <!-- Cotton Shoes -->
+				<item id="1788" min="1" max="1" chance="0.2001" /> <!-- Recipe: Bow -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -755,22 +752,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="4" max="10" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0026">
-					<item id="9" min="1" max="1" chance="33.3333" /> <!-- Cedar Staff -->
-					<item id="92583" min="1" max="1" chance="33.3333" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="33.3334" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="0.2041">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
-				</group>
+				<item id="57" min="3" max="4" chance="70" /> <!-- Adena -->
+				<item id="92581" min="1" max="1" chance="0.0054" /> <!-- Willow Staff Head -->
+				<item id="92585" min="1" max="1" chance="0.0013" /> <!-- Brandish Blade -->
+				<item id="92587" min="1" max="1" chance="0.001" /> <!-- Sword of Reflection Blade -->
+				<item id="4" min="1" max="1" chance="0.0332" /> <!-- Club -->
+				<item id="5" min="1" max="1" chance="0.002" /> <!-- Mace -->
+				<item id="8" min="1" max="1" chance="0.002" /> <!-- Willow Staff -->
+				<item id="120" min="1" max="1" chance="0.001" /> <!-- Sword of Reflection -->
+				<item id="121" min="1" max="1" chance="0.001" /> <!-- Sword of Watershadow -->
+				<item id="154" min="1" max="1" chance="0.001" /> <!-- Dwarven Mace -->
+				<item id="308" min="1" max="1" chance="0.0332" /> <!-- Buffalo's Horn -->
+				<item id="743" min="1" max="1" chance="0.001" /> <!-- Sword of Sentinel -->
+				<item id="744" min="1" max="1" chance="0.001" /> <!-- Staff of Sentinel -->
+				<item id="747" min="1" max="1" chance="0.001" /> <!-- Wand of Adept -->
+				<item id="1333" min="1" max="1" chance="0.001" /> <!-- Brandish -->
+				<item id="2372" min="1" max="1" chance="0.001" /> <!-- Dagger of Adept -->
 			</drop>
 			<spoil>
-				<item id="92483" min="1" max="1" chance="0.0818" /> <!-- Necklace of Anguish Chain -->
+				<item id="1787" min="1" max="1" chance="0.0885" /> <!-- Recipe: Willow Staff -->
+				<item id="1791" min="1" max="1" chance="0.0204" /> <!-- Recipe: Brandish -->
+				<item id="1793" min="1" max="1" chance="0.0081" /> <!-- Recipe: Sword of Reflection -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -876,24 +878,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="4" max="10" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0026">
-					<item id="9" min="1" max="1" chance="33.3333" /> <!-- Cedar Staff -->
-					<item id="92583" min="1" max="1" chance="33.3333" /> <!-- Cedar Staff Head -->
-					<item id="154" min="1" max="1" chance="33.3334" /> <!-- Dwarven Mace -->
-				</group>
-				<group chance="0.3801">
-					<item id="92908" min="1" max="1" chance="24.7899" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="4.958" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="2.479" /> <!-- Material: Rags - Sealed -->
-					<item id="1803" min="1" max="1" chance="1.6666" /> <!-- Recipe: Necklace of Wisdom -->
-					<item id="1831" min="1" max="1" chance="66.1065" /> <!-- Antidote -->
-				</group>
+				<item id="57" min="3" max="4" chance="70" /> <!-- Adena -->
+				<item id="92518" min="1" max="1" chance="0.0098" /> <!-- Leather Boot Lining -->
+				<item id="92521" min="1" max="1" chance="0.0098" /> <!-- Quality Leather Glove Lining -->
+				<item id="92840" min="1" max="1" chance="0.001" /> <!-- Heavy Sword Edge -->
+				<item id="40" min="1" max="1" chance="0.0021" /> <!-- Leather Boots -->
+				<item id="156" min="1" max="1" chance="0.001" /> <!-- Hand Axe -->
+				<item id="166" min="1" max="1" chance="0.001" /> <!-- Heavy Mace -->
+				<item id="604" min="1" max="1" chance="0.0021" /> <!-- Quality Leather Gloves -->
+				<item id="626" min="1" max="1" chance="0.002" /> <!-- Bronze Shield -->
+				<item id="890" min="1" max="1" chance="0.0024" /> <!-- Ring of Devotion -->
+				<item id="5285" min="1" max="1" chance="0.001" /> <!-- Heavy Sword -->
 			</drop>
 			<spoil>
-				<item id="1798" min="1" max="1" chance="0.1501" /> <!-- Recipe: Leather Helmet -->
+				<item id="2176" min="1" max="1" chance="0.0529" /> <!-- Recipe: Leather Boots -->
+				<item id="2179" min="1" max="1" chance="0.0529" /> <!-- Recipe: Quality Leather Gloves -->
+				<item id="5437" min="1" max="1" chance="0.0027" /> <!-- Recipe: Heavy Sword (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1168,24 +1168,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="4" max="11" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0553">
-					<item id="37" min="1" max="1" chance="33.3333" /> <!-- Leather Shoes -->
-					<item id="92508" min="1" max="1" chance="33.3333" /> <!-- Leather Shoe Texture -->
-					<item id="49" min="1" max="1" chance="33.3334" /> <!-- Gloves -->
-				</group>
-				<group chance="0.183">
-					<item id="92908" min="1" max="1" chance="66.6667" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="13.3333" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="6.6667" /> <!-- Material: Rags - Sealed -->
-					<item id="1661" min="1" max="1" chance="13.3333" /> <!-- Thief Key -->
-				</group>
+				<item id="57" min="3" max="4" chance="70" /> <!-- Adena -->
+				<item id="92519" min="1" max="1" chance="0.0101" /> <!-- Bone Helmet Design -->
+				<item id="92594" min="1" max="1" chance="0.001" /> <!-- Trident Edge -->
+				<item id="45" min="1" max="1" chance="0.0015" /> <!-- Bone Helmet -->
+				<item id="101" min="1" max="1" chance="0.001" /> <!-- Scroll of Wisdom -->
+				<item id="291" min="1" max="1" chance="0.001" /> <!-- Trident -->
+				<item id="347" min="1" max="1" chance="0.001" /> <!-- Ring Breastplate -->
+				<item id="376" min="1" max="1" chance="0.001" /> <!-- Iron Plate Gaiters -->
+				<item id="847" min="1" max="1" chance="0.0017" /> <!-- Red Crescent -->
+				<item id="91881" min="1" max="1" chance="0.001" /> <!-- Talwar -->
 			</drop>
 			<spoil>
-				<item id="1831" min="1" max="1" chance="2.6437" /> <!-- Antidote -->
-				<item id="1799" min="1" max="1" chance="0.1171" /> <!-- Recipe: Leather Gloves -->
+				<item id="2177" min="1" max="1" chance="0.0549" /> <!-- Recipe: Bone Helmet (100%) -->
+				<item id="2257" min="1" max="1" chance="0.0042" /> <!-- Recipe: Trident -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1478,24 +1474,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="4" max="11" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.024">
-					<item id="429" min="1" max="1" chance="19.2189" /> <!-- Leather Tunic -->
-					<item id="92509" min="1" max="1" chance="19.2189" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="30.7811" /> <!-- Leather Stockings -->
-					<item id="92510" min="1" max="1" chance="30.7811" /> <!-- Leather Stocking Pattern -->
-				</group>
-				<group chance="0.1689">
-					<item id="92908" min="1" max="1" chance="72.5462" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="14.5092" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.2546" /> <!-- Material: Rags - Sealed -->
-					<item id="1798" min="1" max="1" chance="5.69" /> <!-- Recipe: Leather Helmet -->
-				</group>
+				<item id="57" min="3" max="4" chance="70" /> <!-- Adena -->
+				<item id="92486" min="1" max="1" chance="0.006" /> <!-- Necklace of Devotion Chain -->
+				<item id="92593" min="1" max="1" chance="0.001" /> <!-- Assassin Knife Edge -->
+				<item id="92595" min="1" max="1" chance="0.001" /> <!-- Temptation of Abyss Piece -->
+				<item id="168" min="1" max="1" chance="0.001" /> <!-- Work Hammer -->
+				<item id="221" min="1" max="1" chance="0.001" /> <!-- Assassin Knife -->
+				<item id="313" min="1" max="1" chance="0.001" /> <!-- Temptation of Abyss -->
+				<item id="391" min="1" max="1" chance="0.001" /> <!-- Puma Skin Shirt -->
+				<item id="413" min="1" max="1" chance="0.0012" /> <!-- Puma Skin Gaiters -->
+				<item id="910" min="1" max="1" chance="0.0013" /> <!-- Necklace of Devotion -->
+				<item id="1123" min="1" max="1" chance="0.0014" /> <!-- Blue Buckskin Boots -->
 			</drop>
 			<spoil>
-				<item id="1799" min="1" max="1" chance="0.2352" /> <!-- Recipe: Leather Gloves -->
+				<item id="2151" min="1" max="1" chance="0.032" /> <!-- Recipe: Necklace of Devotion (100%) -->
+				<item id="2256" min="1" max="1" chance="0.0028" /> <!-- Recipe: Assassin Knife (100%) -->
+				<item id="2258" min="1" max="1" chance="0.0028" /> <!-- Recipe: Temptation of Abyss (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3081,23 +3075,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0013">
-					<item id="15" min="1" max="1" chance="50" /> <!-- Short Spear -->
-					<item id="92586" min="1" max="1" chance="50" /> <!-- Short Spear Edge -->
-				</group>
-				<group chance="0.1526">
-					<item id="92908" min="1" max="1" chance="74.7319" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="14.9464" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.4732" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2491" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="2174" min="1" max="1" chance="2.5994" /> <!-- Recipe: Durable Leather Gaiters -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92487" min="1" max="1" chance="0.0027" /> <!-- Necklace  of Magic Chain -->
+				<item id="92531" min="1" max="1" chance="0.001" /> <!-- Mithril Tunic Fabric -->
+				<item id="92603" min="1" max="1" chance="0.001" /> <!-- Shillien Knife Edge -->
+				<item id="92612" min="1" max="1" chance="0.001" /> <!-- Heavy Bone Club Head -->
+				<item id="92697" min="1" max="1" chance="0.001" /> <!-- Brigandine Gaiter Material -->
+				<item id="172" min="1" max="1" chance="0.001" /> <!-- Heavy Bone Club -->
+				<item id="241" min="1" max="1" chance="0.001" /> <!-- Shillien Knife -->
+				<item id="437" min="1" max="1" chance="0.001" /> <!-- Mithril Tunic -->
+				<item id="911" min="1" max="1" chance="0.0011" /> <!-- Necklace of Magic -->
+				<item id="2378" min="1" max="1" chance="0.001" /> <!-- Brigandine Gaiters -->
+				<item id="7881" min="1" max="1" chance="0.001" /> <!-- Lesser Giant's Sword -->
 			</drop>
 			<spoil>
-				<item id="735" min="1" max="1" chance="0.1931" /> <!-- Haste Potion -->
+				<item id="2152" min="1" max="1" chance="0.0144" /> <!-- Recipe: Necklace of Magic (100%) -->
+				<item id="2189" min="1" max="1" chance="0.0036" /> <!-- Recipe: Mithril Tunic (100%) -->
+				<item id="2266" min="1" max="1" chance="0.001" /> <!-- Recipe: Shillien Knife (100%) -->
+				<item id="2275" min="1" max="1" chance="0.001" /> <!-- Recipe: Heavy Bone Club (100%) -->
+				<item id="2972" min="1" max="1" chance="0.0044" /> <!-- Recipe: Brigandine Gaiters (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3144,23 +3140,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0013">
-					<item id="272" min="1" max="1" chance="50" /> <!-- Forest Bow -->
-					<item id="92588" min="1" max="1" chance="50" /> <!-- Forest Bow Shaft -->
-				</group>
-				<group chance="0.6605">
-					<item id="92908" min="1" max="1" chance="21.5827" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="4.3165" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="2.1583" /> <!-- Material: Rags - Sealed -->
-					<item id="1341" min="10" max="30" chance="71.9425" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92604" min="1" max="1" chance="0.001" /> <!-- Gastraphetes Shaft -->
+				<item id="92616" min="1" max="1" chance="0.001" /> <!-- War Pick Head -->
+				<item id="92617" min="1" max="1" chance="0.001" /> <!-- Crucifix of Blood Piece -->
+				<item id="92709" min="1" max="1" chance="0.0015" /> <!-- Salamander Skin Boot Lining -->
+				<item id="92710" min="1" max="1" chance="0.0015" /> <!-- Plate Boot Design -->
+				<item id="278" min="1" max="1" chance="0.001" /> <!-- Gastraphetes -->
+				<item id="294" min="1" max="1" chance="0.001" /> <!-- War Pick -->
+				<item id="318" min="1" max="1" chance="0.001" /> <!-- Crucifix of Blood -->
+				<item id="880" min="1" max="1" chance="0.0015" /> <!-- Black Pearl Ring -->
+				<item id="2427" min="1" max="1" chance="0.001" /> <!-- Salamander Skin Boots -->
+				<item id="2428" min="1" max="1" chance="0.001" /> <!-- Plate Boots -->
 			</drop>
 			<spoil>
-				<item id="2254" min="1" max="1" chance="0.0038" /> <!-- Recipe: Compound Bow -->
-				<item id="92512" min="1" max="1" chance="0.0342" /> <!-- Leather Glove Lining -->
+				<item id="2267" min="1" max="1" chance="0.001" /> <!-- Recipe: Gastraphetes (100%) -->
+				<item id="2279" min="1" max="1" chance="0.001" /> <!-- Recipe: War Pick (100%) -->
+				<item id="2280" min="1" max="1" chance="0.001" /> <!-- Recipe: Crucifix of Blood (100%) -->
+				<item id="2984" min="1" max="1" chance="0.0083" /> <!-- Recipe: Salamander Skin Boots -->
+				<item id="2985" min="1" max="1" chance="0.0083" /> <!-- Recipe: Plate Boots (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3353,21 +3351,26 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0141">
-					<item id="39" min="1" max="1" chance="33.3333" /> <!-- Boots -->
-					<item id="92517" min="1" max="1" chance="33.3333" /> <!-- Boot Lining -->
-					<item id="51" min="1" max="1" chance="33.3334" /> <!-- Bracer -->
-				</group>
-				<group chance="0.1918">
-					<item id="92908" min="1" max="1" chance="75.4399" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.088" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.544" /> <!-- Material: Rags - Sealed -->
-					<item id="2177" min="1" max="1" chance="1.9281" /> <!-- Recipe: Bone Helmet (100%) -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92488" min="1" max="1" chance="0.0024" /> <!-- Tiger's Eye Stone -->
+				<item id="92536" min="1" max="1" chance="0.0016" /> <!-- Mithril Glove Design -->
+				<item id="92550" min="1" max="1" chance="0.0016" /> <!-- Ogre Power Gauntlet Fragment -->
+				<item id="92607" min="1" max="1" chance="0.001" /> <!-- Goat Head Staff Head -->
+				<item id="92610" min="1" max="1" chance="0.001" /> <!-- Tarbar Head -->
+				<item id="61" min="1" max="1" chance="0.001" /> <!-- Mithril Gloves -->
+				<item id="90" min="1" max="1" chance="0.001" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="0.001" /> <!-- Tarbar -->
+				<item id="607" min="1" max="1" chance="0.001" /> <!-- Ogre Power Gauntlets -->
+				<item id="849" min="1" max="1" chance="0.001" /> <!-- Tiger's Eye -->
+				<item id="91893" min="1" max="1" chance="0.001" /> <!-- Épée -->
 			</drop>
+			<spoil>
+				<item id="2153" min="1" max="1" chance="0.013" /> <!-- Recipe: Tiger's Eye (100%) -->
+				<item id="2194" min="1" max="1" chance="0.0086" /> <!-- Recipe: Mithril Gloves (100%) -->
+				<item id="2208" min="1" max="1" chance="0.0086" /> <!-- Recipe: Ogre Power Gauntlets (100%) -->
+				<item id="2270" min="1" max="1" chance="0.001" /> <!-- Recipe: Goat Head Staff (100%) -->
+				<item id="2273" min="1" max="1" chance="0.001" /> <!-- Recipe: Tarbar -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20055" level="21" type="Monster" name="Monster Eye Watchman">
@@ -3425,24 +3428,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0007">
-					<item id="219" min="1" max="1" chance="50" /> <!-- Sword Breaker -->
-					<item id="92590" min="1" max="1" chance="50" /> <!-- Sword Breaker Edge -->
-				</group>
-				<group chance="0.1524">
-					<item id="92908" min="1" max="1" chance="75.9801" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.196" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.598" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2533" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="2178" min="1" max="1" chance="0.9726" /> <!-- Recipe: Dark Stockings (100%) -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="0.1075" /> <!-- Spirit Ore - Sealed -->
+				<item id="92538" min="1" max="1" chance="0.0011" /> <!-- Plate Gaiter Fragment -->
+				<item id="92618" min="1" max="1" chance="0.001" /> <!-- Eye of Infinity Stone -->
+				<item id="319" min="1" max="1" chance="0.001" /> <!-- Eye of Infinity -->
+				<item id="380" min="1" max="1" chance="0.001" /> <!-- Plate Gaiters -->
+				<item id="912" min="1" max="1" chance="0.001" /> <!-- Necklace of Old Forest -->
+				<item id="7890" min="1" max="1" chance="0.001" /> <!-- Priest Mace -->
+				<item id="91878" min="1" max="1" chance="0.001" /> <!-- Katzbalger -->
 			</drop>
 			<spoil>
-				<item id="2176" min="1" max="1" chance="0.045" /> <!-- Recipe: Leather Boots -->
-				<item id="92515" min="1" max="1" chance="0.0118" /> <!-- Piece Bone Gaiter Fragment -->
+				<item id="2196" min="1" max="1" chance="0.0086" /> <!-- Recipe: Plate Gaiters -->
+				<item id="2281" min="1" max="1" chance="0.0015" /> <!-- Recipe: Eye of Infinity (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3719,23 +3717,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0118">
-					<item id="625" min="1" max="1" chance="58.7859" /> <!-- Bone Shield -->
-					<item id="1148" min="1" max="1" chance="41.2141" /> <!-- Durable Leather Helmet -->
-				</group>
-				<group chance="0.1939">
-					<item id="92908" min="1" max="1" chance="76.7263" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3453" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6726" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2558" /> <!-- Material: Sack Shreds - Sealed -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="0.0544" /> <!-- Spirit Ore - Sealed -->
+				<item id="92490" min="1" max="1" chance="0.0021" /> <!-- Elven Ring Piece -->
+				<item id="92537" min="1" max="1" chance="0.001" /> <!-- Half Plate Temper -->
+				<item id="92611" min="1" max="1" chance="0.001" /> <!-- Skull Breaker Head -->
+				<item id="92614" min="1" max="1" chance="0.001" /> <!-- Bich'Hwa Edge -->
+				<item id="92619" min="1" max="1" chance="0.001" /> <!-- Cursed Maingauche Edge -->
+				<item id="169" min="1" max="1" chance="0.001" /> <!-- Skull Breaker -->
+				<item id="261" min="1" max="1" chance="0.001" /> <!-- Bich'Hwa -->
+				<item id="353" min="1" max="1" chance="0.001" /> <!-- Half Plate Armor -->
+				<item id="881" min="1" max="1" chance="0.0012" /> <!-- Elven Ring -->
+				<item id="1660" min="1" max="1" chance="0.001" /> <!-- Cursed Maingauche -->
 			</drop>
 			<spoil>
-				<item id="2177" min="1" max="1" chance="0.0309" /> <!-- Recipe: Bone Helmet (100%) -->
-				<item id="32" min="1" max="1" chance="0.0121" /> <!-- Piece Bone Gaiters -->
+				<item id="2155" min="1" max="1" chance="0.0136" /> <!-- Recipe: Elven Ring (100%) -->
+				<item id="2195" min="1" max="1" chance="0.0022" /> <!-- Recipe: Half Plate Armor -->
+				<item id="2274" min="1" max="1" chance="0.001" /> <!-- Recipe: Skull Breaker (100%) -->
+				<item id="2277" min="1" max="1" chance="0.001" /> <!-- Recipe: Bich'Hwa (100%) -->
+				<item id="2282" min="1" max="1" chance="0.001" /> <!-- Recipe: Cursed Maingauche (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3786,24 +3786,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0007">
-					<item id="87" min="1" max="1" chance="25" /> <!-- Iron Hammer -->
-					<item id="92589" min="1" max="1" chance="25" /> <!-- Iron Hammer Head -->
-					<item id="155" min="1" max="1" chance="25" /> <!-- Flanged Mace -->
-					<item id="177" min="1" max="1" chance="25" /> <!-- Mage Staff -->
-				</group>
-				<group chance="0.5901">
-					<item id="92908" min="1" max="1" chance="25.2101" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="5.042" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="2.521" /> <!-- Material: Rags - Sealed -->
-					<item id="1831" min="1" max="1" chance="67.2269" /> <!-- Antidote -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92489" min="1" max="1" chance="0.0021" /> <!-- Elven Earring Beads -->
+				<item id="92540" min="1" max="1" chance="0.001" /> <!-- Sage's Rag Lining -->
+				<item id="92606" min="1" max="1" chance="0.001" /> <!-- Morning Star Head -->
+				<item id="92608" min="1" max="1" chance="0.001" /> <!-- Winged Spear Blade -->
+				<item id="88" min="1" max="1" chance="0.001" /> <!-- Morning Star -->
+				<item id="93" min="1" max="1" chance="0.001" /> <!-- Winged Spear -->
+				<item id="438" min="1" max="1" chance="0.001" /> <!-- Sage's Rags -->
+				<item id="850" min="1" max="1" chance="0.001" /> <!-- Elven Earring -->
+				<item id="7886" min="1" max="1" chance="0.001" /> <!-- Sword of Magic Fog -->
 			</drop>
 			<spoil>
-				<item id="92515" min="1" max="1" chance="0.0243" /> <!-- Piece Bone Gaiter Fragment -->
+				<item id="2154" min="1" max="1" chance="0.0114" /> <!-- Recipe: Elven Earring (100%) -->
+				<item id="2198" min="1" max="1" chance="0.0025" /> <!-- Recipe: Sage's Rags (100%) -->
+				<item id="2269" min="1" max="1" chance="0.001" /> <!-- Recipe: Morning Star (100%) -->
+				<item id="2271" min="1" max="1" chance="0.001" /> <!-- Recipe: Winged Spear (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3929,24 +3927,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0007">
-					<item id="219" min="1" max="1" chance="50" /> <!-- Sword Breaker -->
-					<item id="92590" min="1" max="1" chance="50" /> <!-- Sword Breaker Edge -->
-				</group>
-				<group chance="0.1572">
-					<item id="92908" min="1" max="1" chance="76.6114" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3223" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6611" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2554" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="2255" min="1" max="1" chance="0.1498" /> <!-- Recipe: Saber (100%) -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92491" min="1" max="1" chance="0.0013" /> <!-- Elven Necklace Beads -->
+				<item id="92539" min="1" max="1" chance="0.001" /> <!-- Salamander Skin Mail Texture -->
+				<item id="92613" min="1" max="1" chance="0.001" /> <!-- Maingauche Edge -->
+				<item id="92625" min="1" max="1" chance="0.001" /> <!-- Ghost Staff Head -->
+				<item id="92633" min="1" max="1" chance="0.001" /> <!-- Atuba Mace Head -->
+				<item id="188" min="1" max="1" chance="0.001" /> <!-- Ghost Staff -->
+				<item id="190" min="1" max="1" chance="0.001" /> <!-- Atuba Mace -->
+				<item id="224" min="1" max="1" chance="0.001" /> <!-- Maingauche -->
+				<item id="396" min="1" max="1" chance="0.001" /> <!-- Salamander Skin Mail -->
+				<item id="913" min="1" max="1" chance="0.001" /> <!-- Elven Necklace -->
 			</drop>
 			<spoil>
-				<item id="2257" min="1" max="1" chance="0.0024" /> <!-- Recipe: Trident -->
-				<item id="27" min="1" max="1" chance="0.0066" /> <!-- Durable Leather Shirt -->
+				<item id="2156" min="1" max="1" chance="0.0068" /> <!-- Recipe: Elven Necklace (100%) -->
+				<item id="2197" min="1" max="1" chance="0.002" /> <!-- Recipe: Salamander Skin Mail (100%) -->
+				<item id="2276" min="1" max="1" chance="0.001" /> <!-- Recipe: Maingauche (100%) -->
+				<item id="2288" min="1" max="1" chance="0.001" /> <!-- Recipe: Ghost Staff (100%) -->
+				<item id="2296" min="1" max="1" chance="0.001" /> <!-- Recipe: Atuba Mace (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4001,25 +3999,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0007">
-					<item id="273" min="1" max="1" chance="50" /> <!-- Compound Bow -->
-					<item id="92591" min="1" max="1" chance="50" /> <!-- Compound Bow Shaft -->
-				</group>
-				<group chance="0.4687">
-					<item id="92908" min="1" max="1" chance="21.5486" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="4.3097" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="2.1549" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.0718" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="955" min="1" max="1" chance="0.0862" /> <!-- Scroll: Enchant D-grade Weapon -->
-					<item id="1341" min="10" max="30" chance="71.8288" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92492" min="1" max="1" chance="0.0013" /> <!-- Onyx Beast's Eye Earring Gemstone -->
+				<item id="92620" min="1" max="1" chance="0.001" /> <!-- Blue Crystal Skull Part -->
+				<item id="92626" min="1" max="1" chance="0.001" /> <!-- Staff of Life Shaft -->
+				<item id="92711" min="1" max="1" chance="0.0017" /> <!-- Sage's Worn Glove Lining -->
+				<item id="92745" min="1" max="1" chance="0.001" /> <!-- Elven Long Sword Blade -->
+				<item id="189" min="1" max="1" chance="0.001" /> <!-- Staff of Life -->
+				<item id="320" min="1" max="1" chance="0.001" /> <!-- Blue Crystal Skull -->
+				<item id="851" min="1" max="1" chance="0.001" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="2451" min="1" max="1" chance="0.001" /> <!-- Sage's Worn Gloves -->
+				<item id="2499" min="1" max="1" chance="0.001" /> <!-- Elven Long Sword -->
 			</drop>
 			<spoil>
-				<item id="2176" min="1" max="1" chance="0.0471" /> <!-- Recipe: Leather Boots -->
-				<item id="34" min="1" max="1" chance="0.008" /> <!-- Bronze Gaiters -->
+				<item id="2157" min="1" max="1" chance="0.0073" /> <!-- Recipe: Onyx Beast's Eye Earring (100%) -->
+				<item id="2283" min="1" max="1" chance="0.001" /> <!-- Recipe: Blue Crystal Skull (100%) -->
+				<item id="2289" min="1" max="1" chance="0.001" /> <!-- Recipe: Staff of Life (100%) -->
+				<item id="2986" min="1" max="1" chance="0.009" /> <!-- Recipe: Sage's Worn Gloves (100%) -->
+				<item id="3020" min="1" max="1" chance="0.001" /> <!-- Recipe: Elven Long Sword (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4070,23 +4067,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0064">
-					<item id="27" min="1" max="1" chance="19.1987" /> <!-- Durable Leather Shirt -->
-					<item id="92514" min="1" max="1" chance="19.1987" /> <!-- Durable Leather Shirt Pattern -->
-					<item id="33" min="1" max="1" chance="30.8013" /> <!-- Durable Leather Gaiters -->
-					<item id="92516" min="1" max="1" chance="30.8013" /> <!-- Durable Leather Gaiter Material -->
-				</group>
-				<group chance="0.2626">
-					<item id="92908" min="1" max="1" chance="76.9231" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.3846" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.6923" /> <!-- Material: Rags - Sealed -->
-				</group>
+				<item id="57" min="4" max="5" chance="70" /> <!-- Adena -->
+				<item id="92493" min="1" max="1" chance="0.002" /> <!-- Mithril Ring Wire -->
+				<item id="92528" min="1" max="1" chance="0.001" /> <!-- Brigandine Temper -->
+				<item id="92615" min="1" max="1" chance="0.001" /> <!-- Reinforced Longbow Shaft -->
+				<item id="92622" min="1" max="1" chance="0.001" /> <!-- Claymore Blade -->
+				<item id="92628" min="1" max="1" chance="0.001" /> <!-- Scallop Jamadhr Edge -->
+				<item id="70" min="1" max="1" chance="0.001" /> <!-- Claymore -->
+				<item id="262" min="1" max="1" chance="0.001" /> <!-- Scallop Jamadhr -->
+				<item id="279" min="1" max="1" chance="0.001" /> <!-- Reinforced Longbow -->
+				<item id="352" min="1" max="1" chance="0.001" /> <!-- Brigandine -->
+				<item id="882" min="1" max="1" chance="0.001" /> <!-- Mithril Ring -->
 			</drop>
 			<spoil>
-				<item id="92513" min="1" max="1" chance="0.0155" /> <!-- Piece Bone Breastplate Fragment -->
+				<item id="2158" min="1" max="1" chance="0.0106" /> <!-- Recipe: Mithril Ring (100%) -->
+				<item id="2186" min="1" max="1" chance="0.0029" /> <!-- Recipe: Brigandine (100%) -->
+				<item id="2278" min="1" max="1" chance="0.001" /> <!-- Recipe: Reinforced Longbow (100%) -->
+				<item id="2285" min="1" max="1" chance="0.001" /> <!-- Recipe: Claymore (100%) -->
+				<item id="2291" min="1" max="1" chance="0.001" /> <!-- Recipe: Scallop Jamadhr (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4188,24 +4186,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0029">
-					<item id="347" min="1" max="1" chance="38.4672" /> <!-- Ring Breastplate -->
-					<item id="376" min="1" max="1" chance="61.5328" /> <!-- Iron Plate Gaiters -->
-				</group>
-				<group chance="0.1377">
-					<item id="92908" min="1" max="1" chance="74.7435" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="14.9487" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.4744" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2491" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="2261" min="1" max="1" chance="0.0928" /> <!-- Recipe: Conjuror's Staff (100%) -->
-					<item id="956" min="1" max="1" chance="2.4915" /> <!-- Scroll: Enchant D-grade Armor -->
-				</group>
+				<item id="57" min="5" max="5" chance="70" /> <!-- Adena -->
+				<item id="92623" min="1" max="1" chance="0.001" /> <!-- Bonebreaker Head -->
+				<item id="92627" min="1" max="1" chance="0.001" /> <!-- Mithril Dagger Blade -->
+				<item id="92708" min="1" max="1" chance="0.0019" /> <!-- Plate Helmet Design -->
+				<item id="159" min="1" max="1" chance="0.001" /> <!-- Bonebreaker -->
+				<item id="225" min="1" max="1" chance="0.001" /> <!-- Mithril Dagger -->
+				<item id="2412" min="1" max="1" chance="0.001" /> <!-- Plate Helmet -->
+				<item id="91892" min="1" max="1" chance="0.001" /> <!-- Grand Épée -->
 			</drop>
 			<spoil>
-				<item id="347" min="1" max="1" chance="0.006" /> <!-- Ring Breastplate -->
+				<item id="2286" min="1" max="1" chance="0.001" /> <!-- Recipe: Bonebreaker (100%) -->
+				<item id="2290" min="1" max="1" chance="0.001" /> <!-- Recipe: Mithril Dagger (100%) -->
+				<item id="2983" min="1" max="1" chance="0.0102" /> <!-- Recipe: Plate Helmet (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4863,21 +4856,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="6" max="15" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0059">
-					<item id="605" min="1" max="1" chance="50" /> <!-- Leather Gauntlets -->
-					<item id="1123" min="1" max="1" chance="50" /> <!-- Blue Buckskin Boots -->
-				</group>
-				<group chance="0.1711">
-					<item id="92908" min="1" max="1" chance="76.5399" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="15.308" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="7.654" /> <!-- Material: Rags - Sealed -->
-					<item id="92914" min="1" max="1" chance="0.2551" /> <!-- Material: Sack Shreds - Sealed -->
-					<item id="2203" min="1" max="1" chance="0.243" /> <!-- Recipe: Reinforced Mithril Boots (100%) -->
-				</group>
+				<item id="57" min="5" max="5" chance="70" /> <!-- Adena -->
+				<item id="92522" min="1" max="1" chance="0.0013" /> <!-- Scale Mail Fragment -->
+				<item id="92534" min="1" max="1" chance="0.0022" /> <!-- Kite Shield Fragment -->
+				<item id="92543" min="1" max="1" chance="0.0016" /> <!-- Square Shield Fragment -->
+				<item id="92707" min="1" max="1" chance="0.0022" /> <!-- Brigandine Shield Fragment -->
+				<item id="92712" min="1" max="1" chance="0.0016" /> <!-- Plate Shield Fragment -->
+				<item id="258" min="1" max="1" chance="0.001" /> <!-- Bagh-Nakh -->
+				<item id="259" min="1" max="1" chance="0.001" /> <!-- Single-edged Jamadhr -->
+				<item id="260" min="1" max="1" chance="0.001" /> <!-- Triple-edged Jamadhr -->
+				<item id="348" min="1" max="1" chance="0.001" /> <!-- Scale Mail -->
+				<item id="629" min="1" max="1" chance="0.001" /> <!-- Kite Shield -->
+				<item id="630" min="1" max="1" chance="0.001" /> <!-- Square Shield -->
+				<item id="2493" min="1" max="1" chance="0.001" /> <!-- Brigandine Shield -->
+				<item id="2494" min="1" max="1" chance="0.001" /> <!-- Plate Shield -->
+				<item id="94881" min="1" max="1" chance="0.001" /> <!-- Brass Pistols -->
 			</drop>
+			<spoil>
+				<item id="2180" min="1" max="1" chance="0.0069" /> <!-- Recipe: Scale Mail (100%) -->
+				<item id="2192" min="1" max="1" chance="0.0118" /> <!-- Recipe: Kite Shield (100%) -->
+				<item id="2201" min="1" max="1" chance="0.009" /> <!-- Recipe: Square Shield (100%) -->
+				<item id="2982" min="1" max="1" chance="0.0118" /> <!-- Recipe: Brigandine Shield (100%) -->
+				<item id="2987" min="1" max="1" chance="0.009" /> <!-- Recipe: Plate Shield (100%) -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20077" level="30" type="Monster" name="Androscorpio Hunter">
@@ -6143,23 +6144,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<group chance="70">
-					<item id="57" min="3" max="8" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0091">
-					<item id="3" min="1" max="1" chance="50" /> <!-- Broadsword -->
-					<item id="92580" min="1" max="1" chance="50" /> <!-- Broadsword Blade -->
-				</group>
-				<group chance="0.28">
-					<item id="92908" min="1" max="1" chance="27.0771" /> <!-- Material: Lump of Wood - Sealed -->
-					<item id="92909" min="1" max="1" chance="5.4154" /> <!-- Material: Pack of Knickknacks - Sealed -->
-					<item id="92910" min="1" max="1" chance="2.7077" /> <!-- Material: Rags - Sealed -->
-					<item id="1802" min="1" max="1" chance="4.6286" /> <!-- Recipe: Necklace of Anguish (100%) -->
-					<item id="1060" min="1" max="1" chance="60.1712" /> <!-- HP Replenishing Potion -->
-				</group>
+				<item id="57" min="3" max="3" chance="70" /> <!-- Adena -->
+				<item id="92493" min="1" max="1" chance="0.0061" /> <!-- Mithril Ring Wire -->
+				<item id="59" min="1" max="1" chance="0.001" /> <!-- Mithril Gaiters -->
+				<item id="128" min="1" max="1" chance="0.001" /> <!-- Knight's Sword -->
+				<item id="179" min="1" max="1" chance="0.001" /> <!-- Mace of Prayer -->
+				<item id="277" min="1" max="1" chance="0.001" /> <!-- Dark Elven Bow -->
+				<item id="416" min="1" max="1" chance="0.001" /> <!-- Reinforced Leather Gaiters -->
+				<item id="436" min="1" max="1" chance="0.001" /> <!-- Tunic of Knowledge -->
+				<item id="882" min="1" max="1" chance="0.001" /> <!-- Mithril Ring -->
 			</drop>
 			<spoil>
-				<item id="92582" min="1" max="1" chance="0.0246" /> <!-- Bow Shaft -->
+				<item id="2158" min="1" max="1" chance="0.033" /> <!-- Recipe: Mithril Ring (100%) -->
 			</spoil>
 		</dropLists>
 	</npc>

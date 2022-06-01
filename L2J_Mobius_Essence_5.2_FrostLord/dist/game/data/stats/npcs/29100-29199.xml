@@ -913,37 +913,27 @@
 			<skill id="4276" level="2" /> <!-- Bow Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29118" level="82" type="Folk" name="Spirit King's Magic">
+	<npc id="29118" level="82" type="Monster" name="Spirit King's Magic" element="EARTH">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="400000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="13829.6" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="569620.25316" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3376.912" magical="1729.488" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="839.46" magical="460.716" />
 			<speed>
 				<walk ground="45" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" noSleepMode="true" canMove="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="29119" level="75" type="RaidBoss" name="Zaken">
@@ -1185,292 +1175,219 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29126" level="84" type="Folk" name="Water Slime">
+	<npc id="29126" level="84" type="Monster" name="Water Slime" element="WATER">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="80000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="113924.05063" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="36" />
 				<run ground="36" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" undying="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="39" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29127" level="84" type="Folk" name="Procella's Guardian">
+	<npc id="29127" level="84" type="Monster" name="Procella's Guardian" element="WIND">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20886123.41772" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29128" level="84" type="Folk" name="Procella's Guardian">
+	<npc id="29128" level="84" type="Monster" name="Procella's Guardian" element="WIND">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20886123.41772" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29129" level="84" type="Folk" name="Procella's Guardian">
+	<npc id="29129" level="84" type="Monster" name="Procella's Guardian" element="WIND">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="14666666" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="20886123.41772" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="133" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29130" level="84" type="Folk" name="Procella's Storm">
+	<npc id="29130" level="84" type="Monster" name="Procella's Storm" element="WIND">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2500000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3560126.58228" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="50" />
 				<run ground="50" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" undying="true" noSleepMode="true" targetable="false" showName="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29131" level="84" type="Folk" name="Petram Piece">
+	<npc id="29131" level="84" type="Monster" name="Petram Piece" element="EARTH">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" noSleepMode="true" canMove="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29132" level="84" type="Folk" name="Petram Fragment">
+	<npc id="29132" level="84" type="Monster" name="Petram Fragment" element="EARTH">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" noSleepMode="true" canMove="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5620" level="8" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 	</npc>
-	<npc id="29133" level="84" type="Folk" name="Spirit King's Magic">
+	<npc id="29133" level="84" type="Monster" name="Spirit King's Magic" element="EARTH">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="4000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="35810" magical="4375.2" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2505" magical="1452" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="5696202.53165" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3899.90824" magical="2663.13177" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="811.3347" magical="593.69952" />
 			<speed>
 				<walk ground="45" />
 				<run ground="190" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" noSleepMode="true" canMove="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29134" level="85" type="Folk" name="Mantis King">
+	<npc id="29134" level="80" type="Monster" name="Mantis King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2505295" hpRegen="10.5" mp="3349" mpRegen="3.6" />
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3567674.05063" hpRegen="10.2" mp="3349.6" mpRegen="3.6" />
+			<attack physical="1552.864" magical="795.304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="409.65" magical="258.5499" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="94" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
 	</npc>
 	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">
 		<!-- Todo: CT2.5 -->
@@ -1538,7 +1455,7 @@
 			<skill id="48368" level="1" /> <!-- Tiron's Knockback -->
 			<skill id="48370" level="1" /> <!-- Tiron's Enhancement -->
 		</skillList>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
 				<item id="57" min="70000" max="400000" chance="70" /> <!-- Adena -->
@@ -1680,7 +1597,7 @@
 			<skill id="48381" level="2" /> <!-- Ice Emperor's Storm -->
 			<skill id="48377" level="2" /> <!-- Ice Emperor's Smash -->
 		</skillList>
-			<dropLists>
+		<dropLists>
 			<drop>
 				<item id="95781" min="1" max="1" chance="50.2" /> <!-- Ice core -->
 				<item id="95782" min="10" max="20" chance="10.0075" /> <!-- Ice lord weapon crystal -->

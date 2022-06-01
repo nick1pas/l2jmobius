@@ -120,20 +120,19 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25902" level="81" type="Folk" name="Lilith' Agent">
+	<npc id="25902" level="81" type="Monster" name="Lilith' Agent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -142,32 +141,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25903" level="81" type="Folk" name="Lilith' Escort">
+	<npc id="25903" level="81" type="Monster" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="5800" lhand="5799" />
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord - Not available / Nephilim Lord -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="56" />
 				<run ground="220" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -176,15 +166,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 		</skillList>
 	</npc>
@@ -224,20 +206,19 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25905" level="81" type="Folk" name="Anakim's Guardian">
+	<npc id="25905" level="81" type="Monster" name="Anakim's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -246,31 +227,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25906" level="81" type="Folk" name="Anakim's Royal Guard">
+	<npc id="25906" level="81" type="Monster" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />
 			</speed>
-			<hitTime>630</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -279,32 +251,23 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
 		</skillList>
 	</npc>
-	<npc id="25907" level="81" type="Folk" name="Anakim's Executor">
+	<npc id="25907" level="81" type="Monster" name="Anakim's Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
-			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2048.8" magical="1365.6" />
+			<vitals hp="2" hpRegen="10.2" mp="18000" mpRegen="3.6" />
+			<attack physical="3239.44" magical="1659.088" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="829.46" magical="455.22" />
 			<speed>
 				<walk ground="65" />
 				<run ground="190" />
 			</speed>
-			<hitTime>630</hitTime>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -313,15 +276,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="25908" level="75" type="RaidBoss" name="Queen Ant Drone Priest" title="Raid Fighter">
