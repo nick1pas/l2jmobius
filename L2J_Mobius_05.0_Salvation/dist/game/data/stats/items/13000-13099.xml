@@ -467,20 +467,38 @@
 	<item id="13029" name="Vitality Replenishing Transformation Herb - Treant" type="EtcItem">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2580" level="1" /> <!-- Vitality Replenishing Herb -->
+		</skills>
 	</item>
 	<item id="13030" name="Vitality Replenishing Transformation Herb - Lava Golem" type="EtcItem">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2580" level="1" /> <!-- Vitality Replenishing Herb -->
+		</skills>
 	</item>
 	<item id="13031" name="Vitality Replenishing Transformation Herb - Yeti" type="EtcItem">
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2580" level="1" /> <!-- Vitality Replenishing Herb -->
+		</skills>
 	</item>
 	<item id="13032" name="Pailaka Instant Shield" type="EtcItem">
 		<!-- Potion of temporary invincibility created with the light of Spirits. Can only be used in the Pailaka instant dungeon. -->
