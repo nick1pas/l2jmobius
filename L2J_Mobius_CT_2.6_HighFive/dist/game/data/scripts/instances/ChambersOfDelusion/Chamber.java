@@ -151,7 +151,6 @@ public abstract class Chamber extends AbstractInstance
 			if (isBigChamber())
 			{
 				final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
-				
 				if (System.currentTimeMillis() < reentertime)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
@@ -194,9 +193,8 @@ public abstract class Chamber extends AbstractInstance
 	protected void changeRoom(InstanceWorld world)
 	{
 		final Party party = world.getParameters().getObject("PartyInside", Party.class);
-		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-		
-		if ((party == null) || (inst == null))
+		final Instance instance = InstanceManager.getInstance().getInstance(world.getInstanceId());
+		if ((party == null) || (instance == null))
 		{
 			return;
 		}
@@ -208,24 +206,21 @@ public abstract class Chamber extends AbstractInstance
 		{
 			return;
 		}
-		
 		// Teleport to raid room 10 min or lesser before instance end time for Tower and Square Chambers
-		else if (isBigChamber() && ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 600000))
+		else if (isBigChamber() && ((instance.getInstanceEndTime() - System.currentTimeMillis()) < 600000))
 		{
 			newRoom = ROOM_ENTER_POINTS.length - 1;
 		}
-		
 		// 10% chance for teleport to raid room if not here already for Northern, Southern, Western and Eastern Chambers
 		else if (!isBigChamber() && !isBossRoom(world) && (getRandom(100) < 10))
 		{
 			newRoom = ROOM_ENTER_POINTS.length - 1;
 		}
-		
 		else
 		{
 			while (newRoom == world.getParameters().getInt("currentRoom", 0)) // otherwise teleport to another room, except current
 			{
-				newRoom = getRandom(ROOM_ENTER_POINTS.length - 1);
+				newRoom = getRandom(ROOM_ENTER_POINTS.length);
 			}
 		}
 		
@@ -243,9 +238,8 @@ public abstract class Chamber extends AbstractInstance
 		// Do not schedule room change for Square and Tower Chambers, if raid room is reached
 		if (isBigChamber() && isBossRoom(world))
 		{
-			inst.setDuration((int) ((inst.getInstanceEndTime() - System.currentTimeMillis()) + 1200000)); // Add 20 min to instance time if raid room is reached
-			
-			for (Npc npc : inst.getNpcs())
+			instance.setDuration((int) ((instance.getInstanceEndTime() - System.currentTimeMillis()) + 1200000)); // Add 20 min to instance time if raid room is reached
+			for (Npc npc : instance.getNpcs())
 			{
 				if (npc.getId() == ROOM_GATEKEEPER_LAST)
 				{
@@ -262,7 +256,6 @@ public abstract class Chamber extends AbstractInstance
 	private void enter(InstanceWorld world)
 	{
 		final Party party = world.getParameters().getObject("PartyInside", Party.class);
-		
 		if (party == null)
 		{
 			return;
@@ -293,7 +286,6 @@ public abstract class Chamber extends AbstractInstance
 	protected void earthQuake(InstanceWorld world)
 	{
 		final Party party = world.getParameters().getObject("PartyInside", Party.class);
-		
 		if (party == null)
 		{
 			return;
@@ -329,8 +321,9 @@ public abstract class Chamber extends AbstractInstance
 		{
 			return;
 		}
-		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
-		final Location ret = inst.getExitLoc();
+		
+		final Instance instance = InstanceManager.getInstance().getInstance(player.getInstanceId());
+		final Location ret = instance.getExitLoc();
 		final String returnPoint = player.getVariables().getString(RETURN, null);
 		if (returnPoint != null)
 		{
@@ -364,7 +357,6 @@ public abstract class Chamber extends AbstractInstance
 	{
 		String htmltext = "";
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		
 		if ((player != null) && (world != null) && (npc.getId() >= ROOM_GATEKEEPER_FIRST) && (npc.getId() <= ROOM_GATEKEEPER_LAST))
 		{
 			switch (event)
@@ -403,7 +395,7 @@ public abstract class Chamber extends AbstractInstance
 					}
 					else
 					{
-						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+						final Instance instance = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						
 						stopRoomChangeTask(world);
 						stopBanishTask(world);
@@ -413,7 +405,7 @@ public abstract class Chamber extends AbstractInstance
 							exitInstance(partyMember);
 						}
 						
-						inst.setEmptyDestroyTime(0);
+						instance.setEmptyDestroyTime(0);
 					}
 					break;
 				}
@@ -495,14 +487,14 @@ public abstract class Chamber extends AbstractInstance
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final Instance instance = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			
 			if (isBigChamber())
 			{
 				markRestriction(world); // Set reenter restriction
-				if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > 300000)
+				if ((instance.getInstanceEndTime() - System.currentTimeMillis()) > 300000)
 				{
-					inst.setDuration(300000); // Finish instance in 5 minutes
+					instance.setDuration(300000); // Finish instance in 5 minutes
 				}
 			}
 			else
@@ -511,7 +503,7 @@ public abstract class Chamber extends AbstractInstance
 				scheduleRoomChange(world, true);
 			}
 			
-			inst.spawnGroup("boxes");
+			instance.spawnGroup("boxes");
 		}
 		
 		return super.onKill(npc, player, isPet);
@@ -547,11 +539,11 @@ public abstract class Chamber extends AbstractInstance
 	
 	protected void scheduleRoomChange(InstanceWorld world, boolean bossRoom)
 	{
-		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+		final Instance instance = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		final long nextInterval = bossRoom ? 60000 : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000;
 		
 		// Schedule next room change only if remaining time is enough
-		if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
+		if ((instance.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
 		{
 			world.setParameter("roomChangeTask", ThreadPool.schedule(new ChangeRoomTask(world), nextInterval - 5000));
 		}
@@ -587,8 +579,8 @@ public abstract class Chamber extends AbstractInstance
 		@Override
 		public void run()
 		{
-			final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
-			if ((inst == null) || ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
+			final Instance instance = InstanceManager.getInstance().getInstance(_world.getInstanceId());
+			if ((instance == null) || ((instance.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
 			{
 				final ScheduledFuture<?> banishTask = _world.getParameters().getObject("banishTask", ScheduledFuture.class);
 				if (banishTask != null)
@@ -598,7 +590,7 @@ public abstract class Chamber extends AbstractInstance
 			}
 			else
 			{
-				for (int objId : inst.getPlayers())
+				for (int objId : instance.getPlayers())
 				{
 					final Player pl = World.getInstance().getPlayer(objId);
 					if ((pl != null) && pl.isOnline())
