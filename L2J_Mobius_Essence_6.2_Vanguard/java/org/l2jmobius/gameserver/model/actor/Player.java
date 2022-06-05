@@ -12002,7 +12002,7 @@ public class Player extends Playable
 	public void setBeastPoints(int value)
 	{
 		// TODO: Implement?
-		_maxBeastPoints = 500;
+		_maxBeastPoints = 1000;
 		
 		// Set current points.
 		_beastPoints = Math.min(_maxBeastPoints, Math.max(0, value));

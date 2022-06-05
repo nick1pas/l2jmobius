@@ -655,8 +655,8 @@ public class EnterWorld implements IClientIncomingPacket
 		// Vanguard beast points init.
 		else if (player.isVanguard())
 		{
-			player.setBeastPoints(500);
-			player.setBeastPoints(player.getVariables().getInt(PlayerVariables.BEAST_POINT_COUNT, 0));
+			player.setBeastPoints(1000);
+			player.setBeastPoints(player.getVariables().getInt(PlayerVariables.BEAST_POINT_COUNT, 1000));
 		}
 		
 		// Sayha's Grace.
