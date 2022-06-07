@@ -138,13 +138,15 @@ public class Hardin extends AbstractNpcAI
 			{
 				player.setOriginalClass(player.getClassId());
 			}
+			
 			// Ertheias can only be female
 			final ClassId newClass = ClassId.getClassId(Integer.parseInt(event.replace("try_", "")));
 			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().isFemale())
 			{
 				player.getAppearance().setFemale();
 			}
-			// Stop Auto Use Skills
+			
+			// Stop auto use.
 			for (Shortcut shortcut : player.getAllShortCuts())
 			{
 				if (!shortcut.isAutoUse())
@@ -185,6 +187,7 @@ public class Hardin extends AbstractNpcAI
 					}
 				}
 			}
+			
 			// Change class
 			player.setClassId(newClass.getId());
 			if (player.isDualClassActive())
@@ -195,6 +198,7 @@ public class Hardin extends AbstractNpcAI
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
+			
 			// Adjustments
 			SkillTreeData.getInstance().cleanSkillUponChangeClass(player);
 			for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))

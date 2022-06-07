@@ -286,14 +286,17 @@ public class Eraton extends AbstractNpcAI
 					player.sendPacket(SystemMessageId.YOU_CANNOT_AWAKEN_WHEN_YOU_ARE_A_HERO_OR_ON_THE_WAIT_LIST_FOR_HERO_STATUS);
 					return;
 				}
+				
 				// TODO: SET 1000 points for Olympiad after change main class.
+				
 				if (player.getOriginalClass() == null)
 				{
 					player.setOriginalClass(player.getClassId());
 				}
 				takeItem(player, STONE_OF_DESTINY);
 				takeItem(player, getCloakItemId(player));
-				// Stop Auto Use Skills
+				
+				// Stop auto use.
 				for (Shortcut shortcut : player.getAllShortCuts())
 				{
 					if (!shortcut.isAutoUse())
@@ -334,6 +337,7 @@ public class Eraton extends AbstractNpcAI
 						}
 					}
 				}
+				
 				player.abortCast();
 				player.stopAllEffectsExceptThoseThatLastThroughDeath();
 				player.stopAllEffects();
