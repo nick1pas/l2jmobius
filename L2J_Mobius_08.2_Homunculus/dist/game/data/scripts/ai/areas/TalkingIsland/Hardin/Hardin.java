@@ -26,14 +26,17 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
+import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 import ai.AbstractNpcAI;
 
@@ -140,6 +143,47 @@ public class Hardin extends AbstractNpcAI
 			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().isFemale())
 			{
 				player.getAppearance().setFemale();
+			}
+			// Stop Auto Use Skills
+			for (Shortcut shortcut : player.getAllShortCuts())
+			{
+				if (!shortcut.isAutoUse())
+				{
+					continue;
+				}
+				
+				player.removeAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+				
+				if (player.getAutoUseSettings().isAutoSkill(shortcut.getId()))
+				{
+					final Skill knownSkill = player.getKnownSkill(shortcut.getId());
+					if (knownSkill != null)
+					{
+						if (knownSkill.isBad())
+						{
+							AutoUseTaskManager.getInstance().removeAutoSkill(player, shortcut.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoBuff(player, shortcut.getId());
+						}
+					}
+				}
+				else
+				{
+					final Item knownItem = player.getInventory().getItemByObjectId(shortcut.getId());
+					if (knownItem != null)
+					{
+						if (knownItem.isPotion())
+						{
+							AutoUseTaskManager.getInstance().removeAutoPotionItem(player, knownItem.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, knownItem.getId());
+						}
+					}
+				}
 			}
 			// Change class
 			player.setClassId(newClass.getId());
