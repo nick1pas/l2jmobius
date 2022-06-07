@@ -879,6 +879,7 @@ public class Player extends Playable
 	
 	/** Map containing all custom skills of this player. */
 	private Map<Integer, Skill> _customSkills = null;
+	public final Set<Integer> _replacedSkills = ConcurrentHashMap.newKeySet(1);
 	
 	private volatile int _actionMask;
 	
@@ -13612,6 +13613,21 @@ public class Player extends Playable
 		{
 			_customSkills.remove(skill.getDisplayId());
 		}
+	}
+	
+	public void addReplacedSkill(int skillId)
+	{
+		_replacedSkills.add(skillId);
+	}
+	
+	public void removeReplacedSkill(int skillId)
+	{
+		_replacedSkills.remove(skillId);
+	}
+	
+	public boolean hasReplacedSkill(int skillId)
+	{
+		return _replacedSkills.contains(skillId);
 	}
 	
 	/**

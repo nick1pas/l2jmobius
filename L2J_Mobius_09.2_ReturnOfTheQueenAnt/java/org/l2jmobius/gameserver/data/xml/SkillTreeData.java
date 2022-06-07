@@ -718,6 +718,11 @@ public class SkillTreeData implements IXmlReader
 				continue;
 			}
 			
+			if (player.hasReplacedSkill(skill.getSkillId()))
+			{
+				continue;
+			}
+			
 			if (player.getLevel() >= skill.getGetLevel())
 			{
 				if (skill.getSkillLevel() > SkillData.getInstance().getMaxLevel(skill.getSkillId()))
@@ -1517,6 +1522,11 @@ public class SkillTreeData implements IXmlReader
 				}
 				
 				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || (!includeByFp && (skill.getSkillId() > 11399) && (skill.getSkillId() < 11405)))
+				{
+					continue;
+				}
+				
+				if (player.hasReplacedSkill(skill.getSkillId()))
 				{
 					continue;
 				}
