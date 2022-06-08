@@ -419,7 +419,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					// Sylph checks
-					if (!CategoryData.getInstance().isInCategory(CategoryType.SYLPH_ALL_CLASS, classidval) && (player.getActiveWeaponItem().getItemType() == WeaponType.PISTOLS))
+					if (!CategoryData.getInstance().isInCategory(CategoryType.SYLPH_ALL_CLASS, classidval) && ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getItemType() == WeaponType.PISTOLS)))
 					{
 						final Item itemToRemove = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 						if (itemToRemove != null)
