@@ -20,27 +20,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid
  */
 public class EnsoulFee
 {
-	private final CrystalType _type;
+	private final Integer _stoneId;
 	
 	private final ItemHolder[] _ensoulFee = new ItemHolder[3];
 	private final ItemHolder[] _resoulFees = new ItemHolder[3];
 	private final List<ItemHolder> _removalFee = new ArrayList<>();
 	
-	public EnsoulFee(CrystalType type)
+	public EnsoulFee(Integer stoneId)
 	{
-		_type = type;
+		_stoneId = stoneId;
 	}
 	
-	public CrystalType getCrystalType()
+	public Integer getStoneId()
 	{
-		return _type;
+		return _stoneId;
 	}
 	
 	public void setEnsoul(int index, ItemHolder item)

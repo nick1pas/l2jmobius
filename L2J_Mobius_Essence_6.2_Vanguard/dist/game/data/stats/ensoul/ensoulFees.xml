@@ -1,51 +1,1348 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/ensoulFees.xsd">
-	<fee crystalType="D">
-		<first itemId="2130" count="107" /> <!-- Gemstone (D-grade-grade) -->
-		<secondary itemId="2130" count="107" /> <!-- Gemstone (D-grade-grade) -->
-		<third itemId="2130" count="535" /> <!-- Gemstone (D-grade-grade) -->
-		<reNormal itemId="2130" count="89" /> <!-- Gemstone (D-grade) -->
-		<reSecondary itemId="2130" count="89" /> <!-- Gemstone (D-grade) -->
-		<reThird itemId="2130" count="89" /> <!-- Gemstone (D-grade) -->
-		<remove itemId="2130" count="89" /> <!-- Gemstone (D-grade) -->
+	<!-- Sigel Soul Crystal Lv. 1 -> Lv. 15 90534 -> 90548 -->
+	<fee stoneId="90534"> <!-- Sigel Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
 	</fee>
-	<fee crystalType="C">
-		<first itemId="2131" count="177" /> <!-- Gemstone (C-grade) -->
-		<secondary itemId="2131" count="177" /> <!-- Gemstone (C-grade) -->
-		<third itemId="2131" count="885" /> <!-- Gemstone (C-grade) -->
-		<reNormal itemId="2131" count="89" /> <!-- Gemstone (C-grade) -->
-		<reSecondary itemId="2131" count="89" /> <!-- Gemstone (C-grade) -->
-		<reThird itemId="2131" count="89" /> <!-- Gemstone (C-grade) -->
-		<remove itemId="2131" count="89" /> <!-- Gemstone (C-grade) -->
+	<fee stoneId="90535"> <!-- Sigel Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
 	</fee>
-	<fee crystalType="B">
-		<first itemId="2132" count="112" /> <!-- Gemstone (B-grade) -->
-		<secondary itemId="2132" count="112" /> <!-- Gemstone (B-grade) -->
-		<third itemId="2132" count="560" /> <!-- Gemstone (B-grade) -->
-		<reNormal itemId="2132" count="56" /> <!-- Gemstone (B-grade) -->
-		<reSecondary itemId="2132" count="56" /> <!-- Gemstone (B-grade) -->
-		<reThird itemId="2132" count="56" /> <!-- Gemstone (B-grade) -->
-		<remove itemId="2132" count="19" /> <!-- Gemstone (B-grade) -->
-		<remove itemId="57" count="700000" /> <!-- Adena -->
+	<fee stoneId="90536"> <!-- Sigel Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
 	</fee>
-	<fee crystalType="A">
-		<first itemId="2133" count="108" /> <!-- Gemstone (A-grade) -->
-		<secondary itemId="2133" count="108" /> <!-- Gemstone (A-grade) -->
-		<third itemId="2133" count="471" /> <!-- Gemstone (A-grade) -->
-		<reNormal itemId="2133" count="50" /> <!-- Gemstone (A-grade) -->
-		<reSecondary itemId="2133" count="50" /> <!-- Gemstone (A-grade) -->
-		<reThird itemId="2133" count="50" /> <!-- Gemstone (A-grade) -->
-		<remove itemId="2133" count="67" /> <!-- Gemstone (A-grade) -->
-		<remove itemId="57" count="800000" /> <!-- Adena -->
+	<fee stoneId="90537"> <!-- Sigel Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
 	</fee>
-	<fee crystalType="S">
-		<first itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
-		<secondary itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
-		<third itemId="2134" count="486" /> <!-- Gemstone (S-grade) -->
-		<reNormal itemId="2134" count="40" /> <!-- Gemstone (S-grade) -->
-		<reSecondary itemId="2134" count="40" /> <!-- Gemstone (S-grade) -->
-		<reThird itemId="2134" count="40" /> <!-- Gemstone (S-grade) -->
-		<remove itemId="2134" count="207" /> <!-- Gemstone (S-grade) -->
-		<remove itemId="57" count="2000000" /> <!-- Adena -->
+	<fee stoneId="90538"> <!-- Sigel Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90539"> <!-- Sigel Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90540"> <!-- Sigel Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90541"> <!-- Sigel Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90542"> <!-- Sigel Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90543"> <!-- Sigel Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90544"> <!-- Sigel Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90545"> <!-- Sigel Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90546"> <!-- Sigel Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90547"> <!-- Sigel Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90548"> <!-- Sigel Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Tyrr Soul Crystal Lv. 1 -> Lv. 15 90554 -> 90568 -->
+	<fee stoneId="90554"> <!-- Tyrr Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90555"> <!-- Tyrr Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90556"> <!-- Tyrr Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90557"> <!-- Tyrr Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90558"> <!-- Tyrr Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90559"> <!-- Tyrr Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90560"> <!-- Tyrr Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90561"> <!-- Tyrr Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90562"> <!-- Tyrr Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90563"> <!-- Tyrr Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90564"> <!-- Tyrr Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90565"> <!-- Tyrr Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90566"> <!-- Tyrr Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90567"> <!-- Tyrr Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90568"> <!-- Tyrr Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Othell Soul Crystal Lv. 1 -> Lv. 15 90574 -> 90588 -->
+	<fee stoneId="90574"> <!-- Othell Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90575"> <!-- Othell Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90576"> <!-- Othell Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90577"> <!-- Othell Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90578"> <!-- Othell Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90579"> <!-- Othell Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90580"> <!-- Othell Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90581"> <!-- Othell Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90582"> <!-- Othell Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90583"> <!-- Othell Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90584"> <!-- Othell Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90585"> <!-- Othell Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90586"> <!-- Othell Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90587"> <!-- Othell Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90588"> <!-- Othell Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Yul Soul Crystal Lv. 1 -> Lv. 15 90594 -> 90608 -->
+	<fee stoneId="90594"> <!-- Yul Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90595"> <!-- Yul Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90596"> <!-- Yul Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90597"> <!-- Yul Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90598"> <!-- Yul Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90599"> <!-- Yul Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90600"> <!-- Yul Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90601"> <!-- Yul Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90602"> <!-- Yul Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90603"> <!-- Yul Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90604"> <!-- Yul Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90605"> <!-- Yul Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90606"> <!-- Yul Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90607"> <!-- Yul Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90608"> <!-- Yul Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Feoh Soul Crystal Lv. 1 -> Lv. 15 90614 -> 90628 -->
+	<fee stoneId="90614"> <!-- Feoh Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90615"> <!-- Feoh Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90616"> <!-- Feoh Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90617"> <!-- Feoh Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90618"> <!-- Feoh Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90619"> <!-- Feoh Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90620"> <!-- Feoh Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90621"> <!-- Feoh Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90622"> <!-- Feoh Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90623"> <!-- Feoh Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90624"> <!-- Feoh Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90625"> <!-- Feoh Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90626"> <!-- Feoh Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90627"> <!-- Feoh Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90628"> <!-- Feoh Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Iss Soul Crystal Lv. 1 -> Lv. 15 90634 -> 90648 -->
+	<fee stoneId="90634"> <!-- Iss Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90635"> <!-- Iss Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90636"> <!-- Iss Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90637"> <!-- Iss Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90638"> <!-- Iss Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90639"> <!-- Iss Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90640"> <!-- Iss Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90641"> <!-- Iss Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90642"> <!-- Iss Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90643"> <!-- Iss Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90644"> <!-- Iss Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90645"> <!-- Iss Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90646"> <!-- Iss Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90647"> <!-- Iss Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90648"> <!-- Iss Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Wynn Soul Crystal Lv. 1 -> Lv. 15 90654 -> 90668 -->
+	<fee stoneId="90654"> <!-- Wynn Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90655"> <!-- Wynn Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90656"> <!-- Wynn Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90657"> <!-- Wynn Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90658"> <!-- Wynn Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90659"> <!-- Wynn Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90660"> <!-- Wynn Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90661"> <!-- Wynn Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90662"> <!-- Wynn Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90663"> <!-- Wynn Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90664"> <!-- Wynn Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90665"> <!-- Wynn Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90666"> <!-- Wynn Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90667"> <!-- Wynn Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90668"> <!-- Wynn Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Aeore Soul Crystal Lv. 1 -> Lv. 15 90674 -> 90688 -->
+	<fee stoneId="90674"> <!-- Aeore Soul Crystal Lv.1 -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90675"> <!-- Aeore Soul Crystal Lv.2 -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90676"> <!-- Aeore Soul Crystal Lv.3 -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90677"> <!-- Aeore Soul Crystal Lv.4 -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90678"> <!-- Aeore Soul Crystal Lv.5 -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90679"> <!-- Aeore Soul Crystal Lv.6 -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90680"> <!-- Aeore Soul Crystal Lv.7 -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90681"> <!-- Aeore Soul Crystal Lv.8 -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90682"> <!-- Aeore Soul Crystal Lv.9 -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90683"> <!-- Aeore Soul Crystal Lv.10 -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="90684"> <!-- Aeore Soul Crystal Lv.11 -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90685"> <!-- Aeore Soul Crystal Lv.12 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90686"> <!-- Aeore Soul Crystal Lv.13 -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90687"> <!-- Aeore Soul Crystal Lv.14 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="90688"> <!-- Aeore Soul Crystal Lv.15 -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Anakim Soul Crystal Lv. 1 -> Lv. 15 91163 -> 92929 -->
+	<fee stoneId="91163"> <!-- Anakim's Soul Crystal Lv.1 (Rare) -->
+		<third itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="40" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91164"> <!-- Anakim's Soul Crystal Lv.2 (Rare) -->
+		<third itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="80" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91165"> <!-- Anakim's Soul Crystal Lv.3 (Rare) -->
+		<third itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="140" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91166"> <!-- Anakim's Soul Crystal Lv.4 (Rare) -->
+		<third itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91167"> <!-- Anakim's Soul Crystal Lv.5 (Rare) -->
+		<third itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="380" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91168"> <!-- Anakim's Soul Crystal Lv.6 (Rare) -->
+		<third itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="530" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91169"> <!-- Anakim's Soul Crystal Lv.7 (Rare) -->
+		<third itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="600" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91170"> <!-- Anakim's Soul Crystal Lv.8 (Rare) -->
+		<third itemId="2132" count="45" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="45" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="710" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91171"> <!-- Anakim's Soul Crystal Lv.9 (Rare) -->
+		<third itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="980" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91172"> <!-- Anakim's Soul Crystal Lv.10 (Rare) -->
+		<third itemId="2132" count="121" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="120" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="92925"> <!-- Anakim's Soul Crystal Lv.11 (Rare) -->
+		<third itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="89" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92926"> <!-- Anakim's Soul Crystal Lv.12 (Rare) -->
+		<third itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="100" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92927"> <!-- Anakim's Soul Crystal Lv.13 (Rare) -->
+		<third itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="119" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92928"> <!-- Anakim's Soul Crystal Lv.14 (Rare) -->
+		<third itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="137" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92929"> <!-- Anakim's Soul Crystal Lv.15 (Rare) -->
+		<third itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="161" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Lilith Soul Crystal Lv. 1 -> Lv. 15 91173 -> 92924 -->
+	<fee stoneId="91173"> <!-- Lilith's Soul Crystal Lv.1 (Rare) -->
+		<third itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="40" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91174"> <!-- Lilith's Soul Crystal Lv.2 (Rare) -->
+		<third itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="80" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91175"> <!-- Lilith's Soul Crystal Lv.3 (Rare) -->
+		<third itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="140" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91176"> <!-- Lilith's Soul Crystal Lv.4 (Rare) -->
+		<third itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91177"> <!-- Lilith's Soul Crystal Lv.5 (Rare) -->
+		<third itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="380" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91178"> <!-- Lilith's Soul Crystal Lv.6 (Rare) -->
+		<third itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="530" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91179"> <!-- Lilith's Soul Crystal Lv.7 (Rare) -->
+		<third itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="600" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91180"> <!-- Lilith's Soul Crystal Lv.8 (Rare) -->
+		<third itemId="2132" count="45" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="45" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="710" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91181"> <!-- Lilith's Soul Crystal Lv.9 (Rare) -->
+		<third itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="980" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="91182"> <!-- Lilith's Soul Crystal Lv.10 (Rare) -->
+		<third itemId="2132" count="121" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="120" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="92920"> <!-- Lilith's Soul Crystal Lv.11 (Rare) -->
+		<third itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="89" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92921"> <!-- Lilith's Soul Crystal Lv.12 (Rare) -->
+		<third itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="100" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92922"> <!-- Lilith's Soul Crystal Lv.13 (Rare) -->
+		<third itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="119" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92923"> <!-- Lilith's Soul Crystal Lv.14 (Rare) -->
+		<third itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="137" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="92924"> <!-- Lilith's Soul Crystal Lv.15 (Rare) -->
+		<third itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="161" /> <!-- A-grade Gemstone -->
+	</fee>
+	<!-- Aden Soul Crystals Weapon 95783 -> 95802 -->
+	<fee stoneId="95783"><!-- Aden's Soul Crystal Lv. 1 - Weapon -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95784"><!-- Aden's Soul Crystal Lv. 2 - Weapon -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95785"><!-- Aden's Soul Crystal Lv. 3 - Weapon -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95786"><!-- Aden's Soul Crystal Lv. 4 - Weapon -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95787"><!-- Aden's Soul Crystal Lv. 5 - Weapon -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95788"><!-- Aden's Soul Crystal Lv. 6 - Weapon -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95789"><!-- Aden's Soul Crystal Lv. 7 - Weapon -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95790"><!-- Aden's Soul Crystal Lv. 8 - Weapon -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95791"><!-- Aden's Soul Crystal Lv. 9 - Weapon -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95792"><!-- Aden's Soul Crystal Lv. 10 - Weapon -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<secondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<reSecondary itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95793"><!-- Aden's Soul Crystal Lv. 11 - Weapon -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95794"><!-- Aden's Soul Crystal Lv. 12 - Weapon -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95795"><!-- Aden's Soul Crystal Lv. 13 - Weapon -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95796"><!-- Aden's Soul Crystal Lv. 14 - Weapon -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95797"><!-- Aden's Soul Crystal Lv. 15 - Weapon -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="8" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95798"><!-- Aden's Soul Crystal Lv. 16 - Weapon -->
+		<first itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="11" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="11" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="11" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="26" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95799"><!-- Aden's Soul Crystal Lv. 17 - Weapon -->
+		<first itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="13" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="13" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="13" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="33" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95800"><!-- Aden's Soul Crystal Lv. 18 - Weapon -->
+		<first itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="19" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="19" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="19" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="40" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95801"><!-- Aden's Soul Crystal Lv. 19 - Weapon -->
+		<first itemId="2133" count="11" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="21" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="49" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95802"><!-- Aden's Soul Crystal Lv. 20 - Weapon -->
+		<first itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+		<secondary itemId="2133" count="30" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="30" /> <!-- A-grade Gemstone -->
+		<reSecondary itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+		<remove itemId="2133" count="128" /> <!-- A-grade Gemstone -->
+	</fee>
+
+	<!-- Hardin Soul Crystals Weapon 95803 -> 95822 -->
+	<fee stoneId="95803"><!-- Hardin's Soul Crystal Lv. 1 Rare -->
+		<third itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="40" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95804"><!-- Hardin's Soul Crystal Lv. 2 Rare -->
+		<third itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="80" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95805"><!-- Hardin's Soul Crystal Lv. 3 Rare -->
+		<third itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="12" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="140" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95806"><!-- Hardin's Soul Crystal Lv. 4 Rare -->
+		<third itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95807"><!-- Hardin's Soul Crystal Lv. 5 Rare -->
+		<third itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="380" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95808"><!-- Hardin's Soul Crystal Lv. 6 Rare -->
+		<third itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="33" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="530" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95809"><!-- Hardin's Soul Crystal Lv. 7 Rare -->
+		<third itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="37" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="600" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95810"><!-- Hardin's Soul Crystal Lv. 8 Rare -->
+		<third itemId="2132" count="45" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="25" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="710" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95811"><!-- Hardin's Soul Crystal Lv. 9 Rare -->
+		<third itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="59" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="980" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95812"><!-- Hardin's Soul Crystal Lv. 10 Rare -->
+		<third itemId="2132" count="121" /> <!-- B-grade Gemstone -->
+		<reThird itemId="2132" count="121" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1210" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="95813"><!-- Hardin's Soul Crystal Lv. 11 Rare -->
+		<third itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="89" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95814"><!-- Hardin's Soul Crystal Lv. 12 Rare -->
+		<third itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="10" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="100" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95815"><!-- Hardin's Soul Crystal Lv. 13 Rare -->
+		<third itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="119" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95816"><!-- Hardin's Soul Crystal Lv. 14 Rare -->
+		<third itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="14" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="137" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95817"><!-- Hardin's Soul Crystal Lv. 15 Rare -->
+		<third itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="16" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="161" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95818"><!-- Hardin's Soul Crystal Lv. 16 Rare -->
+		<third itemId="2133" count="19" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="19" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="183" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95819"><!-- Hardin's Soul Crystal Lv. 17 Rare -->
+		<third itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="209" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95820"><!-- Hardin's Soul Crystal Lv. 18 Rare -->
+		<third itemId="2133" count="22" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="22" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="222" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95821"><!-- Hardin's Soul Crystal Lv. 19 Rare -->
+		<third itemId="2133" count="24" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="24" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="242" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="95822"><!-- Hardin's Soul Crystal Lv. 20 Rare -->
+		<third itemId="2133" count="65" /> <!-- A-grade Gemstone -->
+		<reThird itemId="2133" count="65" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="655" /> <!-- A-grade Gemstone -->
+	</fee>
+
+	<!-- Aden Soul Crystals Armor 96901 -> 96920 -->
+	<fee stoneId="96901"><!-- Aden's Soul Crystal Lv. 1 - Armor -->
+		<first itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="1" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96902"><!-- Aden's Soul Crystal Lv. 2 - Armor -->
+		<first itemId="2132" count="2" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="4" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="3" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96903"><!-- Aden's Soul Crystal Lv. 3 - Armor -->
+		<first itemId="2132" count="5" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="6" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96904"><!-- Aden's Soul Crystal Lv. 4 - Armor -->
+		<first itemId="2132" count="7" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="15" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96905"><!-- Aden's Soul Crystal Lv. 5 - Armor -->
+		<first itemId="2132" count="10" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="20" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="30" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96906"><!-- Aden's Soul Crystal Lv. 6 - Armor -->
+		<first itemId="2132" count="14" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="29" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="41" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96907"><!-- Aden's Soul Crystal Lv. 7 - Armor -->
+		<first itemId="2132" count="16" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="51" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96908"><!-- Aden's Soul Crystal Lv. 8 - Armor -->
+		<first itemId="2132" count="18" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="36" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="64" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96909"><!-- Aden's Soul Crystal Lv. 9 - Armor -->
+		<first itemId="2132" count="24" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="48" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="75" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96910"><!-- Aden's Soul Crystal Lv. 10 - Armor -->
+		<first itemId="2132" count="31" /> <!-- B-grade Gemstone -->
+		<reNormal itemId="2132" count="62" /> <!-- B-grade Gemstone -->
+		<remove itemId="2132" count="100" /> <!-- B-grade Gemstone -->
+	</fee>
+	<fee stoneId="96911"><!-- Aden's Soul Crystal Lv. 11 - Armor -->
+		<first itemId="2133" count="2" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96912"><!-- Aden's Soul Crystal Lv. 12 - Armor -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="12" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96913"><!-- Aden's Soul Crystal Lv. 13 - Armor -->
+		<first itemId="2133" count="3" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="6" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96914"><!-- Aden's Soul Crystal Lv. 14 - Armor -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="17" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96915"><!-- Aden's Soul Crystal Lv. 15 - Armor -->
+		<first itemId="2133" count="4" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="8" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96916"><!-- Aden's Soul Crystal Lv. 16 - Armor -->
+		<first itemId="2133" count="5" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="11" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="26" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96917"><!-- Aden's Soul Crystal Lv. 17 - Armor -->
+		<first itemId="2133" count="7" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="13" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="33" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96918"><!-- Aden's Soul Crystal Lv. 18 - Armor -->
+		<first itemId="2133" count="9" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="19" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="40" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96919"><!-- Aden's Soul Crystal Lv. 19 - Armor -->
+		<first itemId="2133" count="11" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="21" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="49" /> <!-- A-grade Gemstone -->
+	</fee>
+	<fee stoneId="96920"><!-- Aden's Soul Crystal Lv. 20 - Armor -->
+		<first itemId="2133" count="15" /> <!-- A-grade Gemstone -->
+		<reNormal itemId="2133" count="30" /> <!-- A-grade Gemstone -->
+		<remove itemId="2133" count="128" /> <!-- A-grade Gemstone -->
 	</fee>
 </list>

@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.ensoul.EnsoulFee;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.item.type.CrystalType;
 
 /**
  * @author UnAfraid
@@ -40,7 +39,7 @@ import org.l2jmobius.gameserver.model.item.type.CrystalType;
 public class EnsoulData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnsoulData.class.getName());
-	private final Map<CrystalType, EnsoulFee> _ensoulFees = new ConcurrentHashMap<>();
+	private final Map<Integer, EnsoulFee> _ensoulFees = new ConcurrentHashMap<>();
 	private final Map<Integer, EnsoulOption> _ensoulOptions = new ConcurrentHashMap<>();
 	private final Map<Integer, EnsoulStone> _ensoulStones = new ConcurrentHashMap<>();
 	
@@ -86,8 +85,8 @@ public class EnsoulData implements IXmlReader
 	
 	private void parseFees(Node ensoulNode)
 	{
-		final CrystalType type = parseEnum(ensoulNode.getAttributes(), CrystalType.class, "crystalType");
-		final EnsoulFee fee = new EnsoulFee(type);
+		final Integer stoneId = parseInteger(ensoulNode.getAttributes(), "stoneId");
+		final EnsoulFee fee = new EnsoulFee(stoneId);
 		forEach(ensoulNode, IXmlReader::isNode, feeNode ->
 		{
 			switch (feeNode.getNodeName())
@@ -137,7 +136,7 @@ public class EnsoulData implements IXmlReader
 		final int id = parseInteger(attrs, "itemId");
 		final int count = parseInteger(attrs, "count");
 		fee.setEnsoul(index, new ItemHolder(id, count));
-		_ensoulFees.put(fee.getCrystalType(), fee);
+		_ensoulFees.put(fee.getStoneId(), fee);
 	}
 	
 	private void parseReFee(Node ensoulNode, EnsoulFee fee, int index)
@@ -178,21 +177,21 @@ public class EnsoulData implements IXmlReader
 		_ensoulStones.put(stone.getId(), stone);
 	}
 	
-	public ItemHolder getEnsoulFee(CrystalType type, int index)
+	public ItemHolder getEnsoulFee(int stoneId, int index)
 	{
-		final EnsoulFee fee = _ensoulFees.get(type);
+		final EnsoulFee fee = _ensoulFees.get(stoneId);
 		return fee != null ? fee.getEnsoul(index) : null;
 	}
 	
-	public ItemHolder getResoulFee(CrystalType type, int index)
+	public ItemHolder getResoulFee(int stoneId, int index)
 	{
-		final EnsoulFee fee = _ensoulFees.get(type);
+		final EnsoulFee fee = _ensoulFees.get(stoneId);
 		return fee != null ? fee.getResoul(index) : null;
 	}
 	
-	public Collection<ItemHolder> getRemovalFee(CrystalType type)
+	public Collection<ItemHolder> getRemovalFee(int stoneId)
 	{
-		final EnsoulFee fee = _ensoulFees.get(type);
+		final EnsoulFee fee = _ensoulFees.get(stoneId);
 		return fee != null ? fee.getRemovalFee() : Collections.emptyList();
 	}
 	

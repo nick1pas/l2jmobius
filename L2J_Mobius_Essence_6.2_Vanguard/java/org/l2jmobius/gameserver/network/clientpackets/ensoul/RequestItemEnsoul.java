@@ -181,19 +181,19 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			if (itemOption.getType() == 1)
 			{
 				// Normal Soul Crystal
-				fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position);
+				fee = EnsoulData.getInstance().getEnsoulFee(stone.getId(), position);
 				if (((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2)) && (item.getSpecialAbility(position) != null))
 				{
-					fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position);
+					fee = EnsoulData.getInstance().getResoulFee(stone.getId(), position);
 				}
 			}
 			else if (itemOption.getType() == 2)
 			{
 				// Mystic Soul Crystal
-				fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position + 2); // Client Special type position = 0
+				fee = EnsoulData.getInstance().getEnsoulFee(stone.getId(), position + 2); // Client Special type position = 0
 				if ((itemOption.getPosition() == 1) && (item.getAdditionalSpecialAbility(position) != null))
 				{
-					fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position + 2); // Client Special type position = 0
+					fee = EnsoulData.getInstance().getResoulFee(stone.getId(), position + 2); // Client Special type position = 0
 				}
 			}
 			else

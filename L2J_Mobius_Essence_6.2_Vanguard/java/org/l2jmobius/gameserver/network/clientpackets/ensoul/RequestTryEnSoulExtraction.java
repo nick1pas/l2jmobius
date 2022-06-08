@@ -85,8 +85,8 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 		{
 			return;
 		}
-		
-		final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getTemplate().getCrystalType());
+		final int runeId = EnsoulData.getInstance().getStone(_type, option.getId());
+		final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(runeId);
 		if (removalFee.isEmpty())
 		{
 			return;
@@ -115,7 +115,6 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 		iu.addModifiedItem(item);
 		
 		// Add rune in player inventory.
-		final int runeId = EnsoulData.getInstance().getStone(_type, option.getId());
 		if (runeId > 0)
 		{
 			iu.addItem(player.addItem("Rune Extract", runeId, 1, player, true));

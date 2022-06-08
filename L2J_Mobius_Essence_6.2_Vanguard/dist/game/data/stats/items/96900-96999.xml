@@ -13,10 +13,12 @@
 	<item id="96901" name="Aden's Soul Crystal Lv. 1 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i01" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96902" name="Aden's Soul Crystal Lv. 2 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 1 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
@@ -29,18 +31,22 @@
 	<item id="96903" name="Aden's Soul Crystal Lv. 3 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 1 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i01" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96904" name="Aden's Soul Crystal Lv. 4 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 1 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i01" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96905" name="Aden's Soul Crystal Lv. 5 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 1 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
@@ -53,122 +59,152 @@
 	<item id="96906" name="Aden's Soul Crystal Lv. 6 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 6 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i02" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96907" name="Aden's Soul Crystal Lv. 7 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 6 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i02" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96908" name="Aden's Soul Crystal Lv. 8 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 6 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i02" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96909" name="Aden's Soul Crystal Lv. 9 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 6 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i02" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96910" name="Aden's Soul Crystal Lv. 10 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 6 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i02" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96911" name="Aden's Soul Crystal Lv. 11 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 11 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i03" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96912" name="Aden's Soul Crystal Lv. 12 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 11 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i03" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96913" name="Aden's Soul Crystal Lv. 13 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 11 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i03" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96914" name="Aden's Soul Crystal Lv. 14 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 11 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i03" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96915" name="Aden's Soul Crystal Lv. 15 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 11 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i03" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96916" name="Aden's Soul Crystal Lv. 16 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 16 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
-		<set name="icon" val="icon.aden_rune_am_i04" />
-		<set name="default_action" val="NONE" />
+		<set name="icon" val="icon.aden_rune_am_i04" /> 
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96917" name="Aden's Soul Crystal Lv. 17 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 16 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i04" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96918" name="Aden's Soul Crystal Lv. 18 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 16 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i04" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96919" name="Aden's Soul Crystal Lv. 19 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). Can be upgraded through compounding with Aden's Soul Crystal Lv. 1 - Armor. <font color=ff6666>Note!</font> In case of compound failure, Aden's Soul Crystal Lv. 16 - Armor is obtained. <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i04" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96920" name="Aden's Soul Crystal Lv. 20 - Armor" type="EtcItem">
 		<!-- Double-click to imbue <font color=eeaa22>armor</font> with the <font color=eeaa22>Defense Property</font> effect (increases P./ M. Def.). <font color=ff6666>Cannot be used for enhancing sigils/ shields/ sealed equipment.</font> -->
 		<set name="icon" val="icon.aden_rune_am_i04" />
-		<set name="default_action" val="NONE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="96921" name="Hero's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Hero's Mark, a random item from the list or one of various items. -->
