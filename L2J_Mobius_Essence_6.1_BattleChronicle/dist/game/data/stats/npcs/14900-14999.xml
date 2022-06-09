@@ -774,61 +774,70 @@
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 		</skillList>
 	</npc>
-	<npc id="14918" level="85" type="Folk" name="Cat Emperor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="14918" level="85" type="Pet" name="Cat Emperor">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="4600" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="12" />
+			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="14919" level="85" type="Folk" name="Unicorn Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="14919" level="85" type="Pet" name="Unicorn Guardian">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3800" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="14920" level="85" type="Folk" name="Faceless">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="14920" level="85" type="Pet" name="Faceless">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="4300" hpRegen="10.5" mp="1778" mpRegen="3.6" />
+			<attack physical="2226.2521499701" magical="1520.24164482038" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="730.36761" />
 			<speed>
-				<walk ground="160" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.21</sNpcPropHpRate>
+		<ai type="BALANCED" />
 		<collision>
-			<radius normal="0" />
-			<height normal="-3" />
+			<radius normal="11" />
+			<height normal="27" />
 		</collision>
 	</npc>
 </list>
