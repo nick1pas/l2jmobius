@@ -16,7 +16,10 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.instancemanager.events.LetterCollectorManager;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -24,12 +27,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExLetterCollectorUI implements IClientOutgoingPacket
 {
-	public static final ExLetterCollectorUI STATIC_PACKET = new ExLetterCollectorUI();
+	final int _minimumLevel;
 	
-	private static final int LETTER_COLLECTOR_MIN_LEVEL = 5;
-	
-	private ExLetterCollectorUI()
+	public ExLetterCollectorUI(Player player)
 	{
+		_minimumLevel = player.getLevel() <= LetterCollectorManager.getInstance().getMaxLevel() ? LetterCollectorManager.getInstance().getMinLevel() : Config.PLAYER_MAXIMUM_LEVEL;
 	}
 	
 	@Override
@@ -37,7 +39,7 @@ public class ExLetterCollectorUI implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_LETTER_COLLECTOR_UI_LAUNCHER.writeId(packet);
 		packet.writeC(1); // enabled (0x00 - no, 0x01 -yes)
-		packet.writeD(LETTER_COLLECTOR_MIN_LEVEL); // Minimum Level
+		packet.writeD(_minimumLevel); // Minimum Level
 		return true;
 	}
 }

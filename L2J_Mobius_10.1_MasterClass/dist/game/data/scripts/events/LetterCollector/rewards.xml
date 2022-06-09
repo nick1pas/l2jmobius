@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rewards.xsd">
+	<params>
+		<minimum level="95" />
+		<maximum level="-1" /> <!-- -1 = no limit -->
+	</params>
+	<letters>
+		<!-- name of letter, for using down / id of this letter -->
+		<item name="A" id="3875" />
+		<item name="E" id="3877" />
+		<item name="G" id="3879" />
+		<item name="I" id="3881" />
+		<item name="L" id="3882" />
+		<item name="N" id="3883" />
+		<item name="O" id="3884" />
+		<item name="T" id="3886" />
+		<item name="H" id="3880" />
+		<item name="II" id="3888" />
+		<item name="W" id="22894" />
+		<item name="D" id="29545" />
+		<item name="P" id="29825" />
+	</letters>
+	<!-- client id -->
+	<reward id="0">
+		<!-- split letter with ";" / LINEAGE II -> L;I;N;E;A;G;E;II -->
+		<word>L;I;N;E;A;G;E;II</word> <!-- LINEAGE II -->
+		<!-- sumChances - sum item chances cumulatively -->
+		<rewards sumChances="true">
+			<!-- item id; count; chance; / id="-1" = no reward -->
+			<item id="80333" count="1" chance="5" /> <!-- Dragon Necklace -->
+			<item id="80334" count="1" chance="5" /> <!-- Dragon Earring -->
+			<item id="80335" count="1" chance="5" /> <!-- Dragon Ring -->
+			<item id="48296" count="1" chance="5" /> <!-- +10 Eternal Light Armor Capsule -->
+			<item id="48297" count="1" chance="5" /> <!-- +10 Eternal Robe Capsule -->
+			<item id="48295" count="1" chance="5" /> <!-- +10 Eternal Heavy Armor Capsule -->
+			<item id="39573" count="1" chance="5" /> <!-- Sealed Talisman - Insanity -->
+			<item id="37716" count="1" chance="5" /> <!-- Seven Signs' Energy -->
+			<item id="80416" count="1" chance="5" /> <!-- Fortune Box of 10 Billion Adena -->
+			<item id="36414" count="1" chance="5" /> <!-- Dragon Claw -->
+			<item id="47705" count="1" chance="15" /> <!-- Blue Cat's Eye Lv. 3 Jewelry Box -->
+			<item id="47627" count="1" chance="15" /> <!-- Sapphire Lv. 3 Jewelry Box -->
+			<item id="47626" count="1" chance="15" /> <!-- Ruby Lv. 3 Jewelry Box -->
+			<item id="47703" count="1" chance="15" /> <!-- Red Cat's Eye Lv. 3 Jewelry Box -->
+			<item id="47629" count="1" chance="15" /> <!-- Opal Lv. 3 Jewelry Box -->
+			<item id="28360" count="1" chance="15" /> <!-- Cat's Eye Lv. 3 Jewelry Box -->
+			<item id="28362" count="1" chance="15" /> <!-- Amethyst Lv. 3 Jewelry Box -->
+			<item id="47631" count="1" chance="15" /> <!-- Diamond Lv. 3 Jewelry Box -->
+			<item id="47634" count="1" chance="15" /> <!-- Pearl Lv. 3 Jewelry Box -->
+			<item id="47635" count="1" chance="15" /> <!-- Vital Stone Lv. 3 Jewelry Box -->
+			<item id="47630" count="1" chance="15" /> <!-- Obsidian Lv. 3 Jewelry Box -->
+			<item id="47633" count="1" chance="15" /> <!-- Aquamarine Lv. 3 Jewelry Box -->
+			<item id="80423" count="1" chance="30" /> <!-- Balance Artifact Box -->
+			<item id="80420" count="1" chance="30" /> <!-- Attack Artifact Box -->
+			<item id="80421" count="1" chance="30" /> <!-- Protection Artifact Box -->
+			<item id="80422" count="1" chance="30" /> <!-- Support Artifact Box -->
+			<item id="39374" count="1" chance="30" /> <!-- Scroll: 5.000.000 SP -->
+			<item id="46274" count="1" chance="30" /> <!-- Wind Vitality Tonic -->
+			<item id="35563" count="1" chance="30" /> <!-- Giant's Energy -->
+			<item id="38761" count="1" chance="30" /> <!-- Energy of Destruction 3-unit Pack -->
+			<item id="36513" count="1" chance="30" /> <!-- Elcyum Powder -->
+			<item id="27673" count="1" chance="30" /> <!-- Freya's Scroll of Storm -->
+		</rewards>
+	</reward>
+	<reward id="1">
+		<word>D;E;A;T;H</word> <!-- DEATH -->
+		<rewards sumChances="true">
+			<item id="47821" count="1" chance="5" /> <!-- Sayha's Talisman Lv. 10 -->
+			<item id="47820" count="1" chance="5" /> <!-- Sayha's Talisman Lv. 9 -->
+			<item id="37717" count="1" chance="5" /> <!-- Talisman - Seven Signs -->
+			<item id="39572" count="1" chance="5" /> <!-- Talisman - Insanity -->
+			<item id="48032" count="1" chance="5" /> <!-- Sayha's Talisman Lv. 8 -->
+			<item id="80416" count="1" chance="5" /> <!-- Fortune Box of 10 Billion Adena -->
+			<item id="28448" count="1" chance="5" /> <!-- Sayha's Talisman Lv. 7 -->
+			<item id="37715" count="1" chance="5" /> <!-- Talisman - Anakim -->
+			<item id="35649" count="1" chance="15" /> <!-- Sealed Talisman - Longing -->
+			<item id="29152" count="1" chance="15" /> <!-- High-grade Zodiac Agathion Pack -->
+			<item id="29151" count="1" chance="15" /> <!-- Mid-grade Zodiac Agathion Pack -->
+			<item id="28373" count="1" chance="15" /> <!-- Tanzenite Lv. 3 Jewelry Box -->
+			<item id="47632" count="1" chance="15" /> <!-- Emerald Lv. 3 Jewelry Box -->
+			<item id="47636" count="1" chance="15" /> <!-- Garnet Lv. 3 Jewelry Box -->
+			<item id="80423" count="1" chance="30" /> <!-- Balance Artifact Box -->
+			<item id="80420" count="1" chance="30" /> <!-- Attack Artifact Box -->
+			<item id="80421" count="1" chance="30" /> <!-- Protection Artifact Box -->
+			<item id="80422" count="1" chance="30" /> <!-- Support Artifact Box -->
+			<item id="39374" count="1" chance="30" /> <!-- Scroll: 5.000.000 SP -->
+			<item id="46274" count="1" chance="30" /> <!-- Wind Vitality Tonic -->
+			<item id="35563" count="1" chance="30" /> <!-- Giant's Energy -->
+			<item id="38761" count="1" chance="30" /> <!-- Energy of Destruction 3-unit Pack -->
+			<item id="36513" count="1" chance="30" /> <!-- Elcyum Powder -->
+			<item id="27673" count="1" chance="30" /> <!-- Freya's Scroll of Storm -->
+		</rewards>
+	</reward>
+	<reward id="2">
+		<word>K;N;I;G;H;T</word> <!-- KNIGHT -->
+		<rewards sumChances="true">
+			<item id="80416" count="1" chance="5" /> <!-- Fortune Box of 10 Billion Adena -->
+			<item id="28448" count="1" chance="5" /> <!-- Sayha's Talisman Lv. 7 -->
+			<item id="26291" count="1" chance="5" /> <!-- Kaliel's Energy - Longing -->
+			<item id="36731" count="1" chance="5" /> <!-- Life Stone: Giant's Power -->
+			<item id="37714" count="1" chance="5" /> <!-- Talisman - Lilith -->
+			<item id="29150" count="1" chance="15" /> <!-- Low-grade Zodiac Agathion Pack -->
+			<item id="80423" count="1" chance="30" /> <!-- Balance Artifact Box -->
+			<item id="80420" count="1" chance="30" /> <!-- Attack Artifact Box -->
+			<item id="80421" count="1" chance="30" /> <!-- Protection Artifact Box -->
+			<item id="80422" count="1" chance="30" /> <!-- Support Artifact Box -->
+			<item id="36515" count="1" chance="15" /> <!-- Elcyum -->
+			<item id="48215" count="1" chance="30" /> <!-- Circlet Spirit Stone -->
+			<item id="28540" count="1" chance="30" /> <!-- Magnificent Brooch Spirit Stone -->
+			<item id="36514" count="1" chance="30" /> <!-- Elcyum Crystal -->
+			<item id="39374" count="1" chance="30" /> <!-- Scroll: 5.000.000 SP -->
+			<item id="46274" count="1" chance="30" /> <!-- Wind Vitality Tonic -->
+			<item id="35563" count="1" chance="30" /> <!-- Giant's Energy -->
+			<item id="38761" count="1" chance="30" /> <!-- Energy of Destruction 3-unit Pack -->
+			<item id="27673" count="1" chance="30" /> <!-- Freya's Scroll of Storm -->
+		</rewards>
+	</reward>
+</list>
