@@ -81,6 +81,13 @@ public class WorldRegion
 					mob.clearAggroList();
 					mob.getAttackByList().clear();
 					
+					// Teleport to spawn when too far away.
+					final Spawn spawn = mob.getSpawn();
+					if ((spawn != null) && (mob.calculateDistance2D(spawn) > Config.MAX_DRIFT_RANGE))
+					{
+						mob.teleToLocation(spawn);
+					}
+					
 					// Stop the AI tasks.
 					if (mob.hasAI())
 					{
