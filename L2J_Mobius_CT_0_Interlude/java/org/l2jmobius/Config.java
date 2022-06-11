@@ -2005,7 +2005,7 @@ public class Config
 			ALLOW_WEAR = generalConfig.getBoolean("AllowWear", true);
 			WEAR_DELAY = generalConfig.getInt("WearDelay", 5);
 			WEAR_PRICE = generalConfig.getInt("WearPrice", 10);
-			INSTANCE_FINISH_TIME = generalConfig.getInt("DefaultFinishTime", 5);
+			INSTANCE_FINISH_TIME = generalConfig.getInt("DefaultFinishTime", 300) * 1000;
 			RESTORE_PLAYER_INSTANCE = generalConfig.getBoolean("RestorePlayerInstance", false);
 			ALLOW_SUMMON_IN_INSTANCE = generalConfig.getBoolean("AllowSummonInInstance", false);
 			EJECT_DEAD_PLAYER_TIME = generalConfig.getInt("EjectDeadPlayerTime", 60) * 1000;
