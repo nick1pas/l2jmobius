@@ -8459,6 +8459,12 @@ public class Player extends Playable
 				return false;
 			}
 			
+			// Same Command Channel are friends.
+			if (Config.ALT_COMMAND_CHANNEL_FRIENDS && (isInParty() && (getParty().getCommandChannel() != null) && attacker.isInParty() && (attacker.getParty().getCommandChannel() != null) && (getParty().getCommandChannel() == attacker.getParty().getCommandChannel())))
+			{
+				return false;
+			}
+			
 			// Get Player
 			final Player attackerPlayer = attacker.getActingPlayer();
 			final Clan clan = getClan();
