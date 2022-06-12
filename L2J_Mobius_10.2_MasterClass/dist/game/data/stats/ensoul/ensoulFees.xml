@@ -1,95 +1,912 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/ensoulFees.xsd">
-	<fee crystalType="NONE">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
+	<!-- Kain Soul Crystal (Weapon) Lv. 1 -> Lv. 15 46444 -> 46458 -->
+	<fee stoneId="46444"> <!-- Kain Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46445"> <!-- Kain Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46446"> <!-- Kain Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46447"> <!-- Kain Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46448"> <!-- Kain Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46449"> <!-- Kain Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46450"> <!-- Kain Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46451"> <!-- Kain Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46452"> <!-- Kain Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46453"> <!-- Kain Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46454"> <!-- Kain Soul Crystal Lv.11 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46455"> <!-- Kain Soul Crystal Lv.12 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46456"> <!-- Kain Soul Crystal Lv.13 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46457"> <!-- Kain Soul Crystal Lv.14 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46458"> <!-- Kain Soul Crystal Lv.15 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Mermoden Soul Crystal (Weapon) Lv. 1 -> Lv. 15 46459 -> 46473 -->
+	<fee stoneId="46459"> <!-- Mermoden Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46460"> <!-- Mermoden Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46461"> <!-- Mermoden Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46462"> <!-- Mermoden Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46463"> <!-- Mermoden Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46464"> <!-- Mermoden Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46465"> <!-- Mermoden Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46466"> <!-- Mermoden Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46467"> <!-- Mermoden Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46468"> <!-- Mermoden Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46469"> <!-- Mermoden Soul Crystal Lv.11 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46470"> <!-- Mermoden Soul Crystal Lv.12 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46471"> <!-- Mermoden Soul Crystal Lv.13 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46472"> <!-- Mermoden Soul Crystal Lv.14 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46473"> <!-- Mermoden Soul Crystal Lv.15 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Leona Soul Crystal (Weapon) Lv. 1 -> Lv. 15 46474 -> 46488 -->
+	<fee stoneId="46474"> <!-- Leona Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46475"> <!-- Leona Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46476"> <!-- Leona Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46477"> <!-- Leona Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46478"> <!-- Leona Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46479"> <!-- Leona Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46480"> <!-- Leona Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46481"> <!-- Leona Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46482"> <!-- Leona Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46483"> <!-- Leona Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46484"> <!-- Leona Soul Crystal Lv.11 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46485"> <!-- Leona Soul Crystal Lv.12 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46486"> <!-- Leona Soul Crystal Lv.13 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46487"> <!-- Leona Soul Crystal Lv.14 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46488"> <!-- Leona Soul Crystal Lv.15 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Pantheon Soul Crystal (Weapon) Lv. 1 -> Lv. 15 46489 -> 46503 -->
+	<fee stoneId="46489"> <!-- Pantheon Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46490"> <!-- Pantheon Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46491"> <!-- Pantheon Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46492"> <!-- Pantheon Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46493"> <!-- Pantheon Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46494"> <!-- Pantheon Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46495"> <!-- Pantheon Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46496"> <!-- Pantheon Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46497"> <!-- Pantheon Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46498"> <!-- Pantheon Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46499"> <!-- Pantheon Soul Crystal Lv.11 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46500"> <!-- Pantheon Soul Crystal Lv.12 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46501"> <!-- Pantheon Soul Crystal Lv.13 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46502"> <!-- Pantheon Soul Crystal Lv.14 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46503"> <!-- Pantheon Soul Crystal Lv.15 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<!-- Lionel Soul Crystal (Weapon) Lv. 1 -> Lv. 15 46504 -> 46518 -->
+	<fee stoneId="46504"> <!-- Lionel Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46505"> <!-- Lionel Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46506"> <!-- Lionel Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46507"> <!-- Lionel Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46508"> <!-- Lionel Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46509"> <!-- Lionel Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46510"> <!-- Lionel Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46511"> <!-- Lionel Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46512"> <!-- Lionel Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46513"> <!-- Lionel Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46514"> <!-- Lionel Soul Crystal Lv.11 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46515"> <!-- Lionel Soul Crystal Lv.12 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46516"> <!-- Lionel Soul Crystal Lv.13 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46517"> <!-- Lionel Soul Crystal Lv.14 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="46518"> <!-- Lionel Soul Crystal Lv.15 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Practice Soul Crystal (Weapon) Lv.1 46526 -->
+	<fee stoneId="46526"> <!-- Practice Soul Crystal (Weapon) Lv.1 -->
+		<first itemId="36722" count="10" /> <!-- Training Soul Crystal -->
+		<secondary itemId="36722" count="30" /> <!-- Training Soul Crystal -->
+		<reNormal itemId="36722" count="168" /> <!-- Training Soul Crystal -->
+		<reSecondary itemId="36722" count="168" /> <!-- Training Soul Crystal -->
 		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	</fee>		
+	<!-- Mystic Soul Crystal (Weapon) 46553 -->	
+	<fee stoneId="46553"> <!-- Mystic Soul Crystal (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Anakim Soul Crystal (Weapon) Lv. 1 -> Lv. 10 47089 -> 47098 -->
+	<fee stoneId="47089"> <!-- Anakim Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="C">
-		<first itemId="2131" count="177" /> <!-- Gemstone (C-grade) -->
-		<third itemId="2131" count="60" /> <!-- Gemstone (C-grade) -->
-		<reNormal itemId="2131" count="89" /> <!-- Gemstone (C-grade) -->
-		<reThird itemId="2131" count="30" /> <!-- Gemstone (C-grade) -->
-		<remove itemId="57" count="177000" /> <!-- Adena -->
+	<fee stoneId="47090"> <!-- Anakim Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="C">
-		<first itemId="36722" count="10" /> <!-- Soul Crystal Practice Gemstone -->
+	<fee stoneId="47091"> <!-- Anakim Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="B">
-		<first itemId="2132" count="112" /> <!-- Gemstone (B-grade) -->
-		<third itemId="2132" count="38" /> <!-- Gemstone (B-grade) -->
-		<reNormal itemId="2132" count="56" /> <!-- Gemstone (B-grade) -->
-		<reThird itemId="2132" count="19" /> <!-- Gemstone (B-grade) -->
-		<remove itemId="57" count="373333" /> <!-- Adena -->
+	<fee stoneId="47092"> <!-- Anakim Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="A">
-		<first itemId="2133" count="24" /> <!-- Gemstone (A-grade) -->
-		<third itemId="2133" count="8" /> <!-- Gemstone (A-grade) -->
-		<reNormal itemId="2133" count="12" /> <!-- Gemstone (A-grade) -->
-		<reThird itemId="2133" count="4" /> <!-- Gemstone (A-grade) -->
-		<remove itemId="57" count="960000" /> <!-- Adena -->
+	<fee stoneId="47093"> <!-- Anakim Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="S">
-		<first itemId="2134" count="19" /> <!-- Gemstone (S-grade) -->
-		<third itemId="2134" count="7" /> <!-- Gemstone (S-grade) -->
-		<reNormal itemId="2134" count="10" /> <!-- Gemstone (S-grade) -->
-		<reThird itemId="2134" count="4" /> <!-- Gemstone (S-grade) -->
-		<remove itemId="57" count="2533000" /> <!-- Adena -->
+	<fee stoneId="47094"> <!-- Anakim Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="S80">
-		<first itemId="2134" count="48" /> <!-- Gemstone (S-grade) -->
-		<third itemId="2134" count="16" /> <!-- Gemstone (S-grade) -->
-		<reNormal itemId="2134" count="24" /> <!-- Gemstone (S-grade) -->
-		<reThird itemId="2134" count="8" /> <!-- Gemstone (S-grade) -->
-		<remove itemId="57" count="6400000" /> <!-- Adena -->
+	<fee stoneId="47095"> <!-- Anakim Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="R">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
-		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	<fee stoneId="47096"> <!-- Anakim Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="R95">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
-		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	<fee stoneId="47097"> <!-- Anakim Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="R99">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
-		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	<fee stoneId="47098"> <!-- Anakim Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="R110">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
-		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	<!-- Lilith Soul Crystal (Weapon) Lv. 1 -> Lv. 10 47100 -> 47109 -->
+	<fee stoneId="47100"> <!-- Lilith Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
-	<fee crystalType="EVENT">
-		<first itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<secondary itemId="19440" count="170" /> <!-- Gemstone (R-grade) -->
-		<third itemId="19440" count="11" /> <!-- Gemstone (R-grade) -->
-		<reNormal itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reSecondary itemId="19440" count="85" /> <!-- Gemstone (R-grade) -->
-		<reThird itemId="19440" count="7" /> <!-- Gemstone (R-grade) -->
-		<remove itemId="57" count="68000000" /> <!-- Adena -->
+	<fee stoneId="47101"> <!-- Lilith Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47102"> <!-- Lilith Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47103"> <!-- Lilith Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47104"> <!-- Lilith Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47105"> <!-- Lilith Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47106"> <!-- Lilith Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47107"> <!-- Lilith Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47108"> <!-- Lilith Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47109"> <!-- Lilith Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<!-- Soul Crystal of Seven Signs (Weapon) Lv. 4 -> Lv. 10 47110 -> 47116 -->
+	<fee stoneId="47110"> <!-- Soul Crystal of Seven Signs Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47111"> <!-- Soul Crystal of Seven Signs Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47112"> <!-- Soul Crystal of Seven Signs Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47113"> <!-- Soul Crystal of Seven Signs Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47114"> <!-- Soul Crystal of Seven Signs Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47115"> <!-- Soul Crystal of Seven Signs Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47116"> <!-- Soul Crystal of Seven Signs Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47117"> <!-- Soul Crystal of Seven Signs Lv.8 (Weapon) -->
+	<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47118"> <!-- Soul Crystal of Seven Signs Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="47119"> <!-- Soul Crystal of Seven Signs Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>	
+	<!-- Shillien Soul Crystal (Weapon) Lv. 1 -> Lv. 10 48899 -> 48908 -->	
+	<fee stoneId="48899"> <!-- Shillien Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48900"> <!-- Shillien Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48901"> <!-- Shillien Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48902"> <!-- Shillien Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48903"> <!-- Shillien Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48904"> <!-- Shillien Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48905"> <!-- Shillien Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48906"> <!-- Shillien Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48907"> <!-- Shillien Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="48908"> <!-- Shillien Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<!-- Exalted Soul Crystal (Weapon) 81485 -->
+	<fee stoneId="81485"> <!-- Exalted Soul Crystal (Weapon) -->
+		<first itemId="19440" count="11" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="11" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="7" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="7" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="4400000" /> <!-- Adena -->
+	</fee>		
+	<!-- Tersi Soul Crystal (Armor) Lv. 1 -> Lv. 10 82265 -> 82274 -->	
+	<fee stoneId="82265"> <!-- Tersi Soul Crystal Lv.1 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82266"> <!-- Tersi Soul Crystal Lv.2 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82267"> <!-- Tersi Soul Crystal Lv.3 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82268"> <!-- Tersi Soul Crystal Lv.4 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82269"> <!-- Tersi Soul Crystal Lv.5 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82270"> <!-- Tersi Soul Crystal Lv.6 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82271"> <!-- Tersi Soul Crystal Lv.7 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82272"> <!-- Tersi Soul Crystal Lv.8 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82273"> <!-- Tersi Soul Crystal Lv.9 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
+	</fee>
+	<fee stoneId="82274"> <!-- Tersi Soul Crystal Lv.10 (Weapon) -->
+		<first itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<secondary itemId="19440" count="100" /> <!-- R-grade Gemstone -->
+		<reNormal itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<reSecondary itemId="19440" count="50" /> <!-- R-grade Gemstone -->
+		<remove itemId="57" count="36200000" /> <!-- Adena -->
 	</fee>
 </list>
