@@ -20,14 +20,13 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * @author Index
  */
 public class ClientSettings
 {
-	private static final String VARIABLE = "CLIENT_SETTINGS";
-	
 	private final Player _player;
 	private boolean _announceEnabled;
 	private boolean _partyRequestRestrictedFromOthers;
@@ -41,7 +40,7 @@ public class ClientSettings
 	{
 		_player = player;
 		
-		final String variable = _player.getVariables().getString(VARIABLE, "");
+		final String variable = _player.getVariables().getString(PlayerVariables.CLIENT_SETTINGS, "");
 		final StatSet settings = variable.isEmpty() ? new StatSet() : new StatSet(Arrays.stream(variable.split(",")).map(entry -> entry.split("=")).collect(Collectors.toMap(entry -> entry[0].replace("{", "").replace(" ", ""), entry -> entry[1].replace("}", "").replace(" ", ""))));
 		_announceEnabled = settings.getBoolean("ANNOUNCE_ENABLED", true);
 		_partyRequestRestrictedFromOthers = settings.getBoolean("PARTY_REQUEST_RESTRICTED_FROM_OTHERS", false);
@@ -62,7 +61,7 @@ public class ClientSettings
 		settings.set("FRIENDS_REQUEST_RESTRICTED_FROM_OTHERS", _friendRequestRestrictedFromOthers);
 		settings.set("FRIENDS_REQUEST_RESTRICTED_FROM_CLAN", _friendRequestRestrictedFromClan);
 		settings.set("PARTY_CONTRIBUTION_TYPE", _partyContributionType);
-		_player.getVariables().set(VARIABLE, settings.getSet());
+		_player.getVariables().set(PlayerVariables.CLIENT_SETTINGS, settings.getSet());
 	}
 	
 	public boolean isAnnounceEnabled()
