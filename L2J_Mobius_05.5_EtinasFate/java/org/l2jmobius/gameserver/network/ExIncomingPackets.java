@@ -106,6 +106,7 @@ import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBo
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
+import org.l2jmobius.gameserver.network.clientpackets.settings.ExInteractModify;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -460,7 +461,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15D, null, ConnectionState.IN_GAME), // 152
 	REQUEST_BLOCK_LIST_FOR_AD(0x15E, null, ConnectionState.IN_GAME),
 	REQUEST_USER_BAN_INFO(0x15F, null, ConnectionState.IN_GAME),
-	EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
+	EX_INTERACT_MODIFY(0x160, ExInteractModify::new, ConnectionState.IN_GAME), // 152
 	EX_TRY_ENCHANT_ARTIFACT(0x161, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME), // 152
 	EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME); // 152
 	

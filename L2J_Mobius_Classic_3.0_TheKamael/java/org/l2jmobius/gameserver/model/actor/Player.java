@@ -139,6 +139,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
+import org.l2jmobius.gameserver.model.ClientSettings;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.ContactList;
 import org.l2jmobius.gameserver.model.Duel;
@@ -902,6 +903,18 @@ public class Player extends Playable
 			_sellingBuffs = new ArrayList<>();
 		}
 		return _sellingBuffs;
+	}
+	
+	// Player client settings
+	private ClientSettings _clientSettings;
+	
+	public ClientSettings getClientSettings()
+	{
+		if (_clientSettings == null)
+		{
+			_clientSettings = new ClientSettings(this);
+		}
+		return _clientSettings;
 	}
 	
 	/**

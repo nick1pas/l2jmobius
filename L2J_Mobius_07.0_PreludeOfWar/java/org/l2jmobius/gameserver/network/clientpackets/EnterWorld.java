@@ -112,6 +112,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2jmobius.gameserver.network.serverpackets.settings.ExItemAnnounceSetting;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -642,6 +643,10 @@ public class EnterWorld implements IClientIncomingPacket
 		// Auto use restore.
 		player.restoreAutoShortcuts();
 		player.restoreAutoSettings();
+		
+		// Client settings restore.
+		player.getClientSettings();
+		player.sendPacket(new ExItemAnnounceSetting(player.getClientSettings().isAnnounceEnabled()));
 		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())

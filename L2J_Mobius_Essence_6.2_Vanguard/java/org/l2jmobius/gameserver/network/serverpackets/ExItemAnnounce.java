@@ -30,25 +30,54 @@ public class ExItemAnnounce implements IClientOutgoingPacket
 	public static final int RANDOM_CRAFT = 2;
 	
 	private final Item _item;
-	private final Player _player;
 	private final int _type;
+	private final String _announceName;
 	
 	public ExItemAnnounce(Player player, Item item, int type)
 	{
-		_player = player;
 		_item = item;
 		_type = type;
+		if (player.getClientSettings().isAnnounceEnabled())
+		{
+			_announceName = player.getName();
+		}
+		else
+		{
+			switch (player.getLang())
+			{
+				case "ru":
+				{
+					_announceName = "Некто";
+					break;
+				}
+				default:
+				{
+					_announceName = "Someone";
+					break;
+				}
+			}
+		}
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ITEM_ANNOUNCE.writeId(packet);
+		// _type
+		// 0 - enchant
+		// 1 - item get from container
+		// 2 - item get from random creation
+		// 3 - item get from special creation
+		// 4 - item get from workbench?
+		// 5 - item get from festival
+		// 6 - item get from "limited random creation"
+		// 7 - fire and item get from container
+		// 8 and others - null item name by item_id and icon from chest.
 		packet.writeC(_type); // announce type
-		packet.writeString(_player.getName()); // name of player
+		packet.writeString(_announceName); // name of player
 		packet.writeD(_item.getId()); // item id
-		packet.writeD(_item.getEnchantLevel()); // enchant level
-		packet.writeC(0); // name of item
+		packet.writeC(_item.getEnchantLevel()); // enchant level
+		packet.writeD(0); // chest item id
 		return true;
 	}
 }

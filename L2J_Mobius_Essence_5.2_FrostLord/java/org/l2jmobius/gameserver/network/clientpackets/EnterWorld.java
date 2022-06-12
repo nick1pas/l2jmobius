@@ -121,6 +121,7 @@ import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCoun
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeContributionList;
 import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
+import org.l2jmobius.gameserver.network.serverpackets.settings.ExItemAnnounceSetting;
 import org.l2jmobius.gameserver.network.serverpackets.subjugation.ExSubjugationSidebar;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -637,6 +638,10 @@ public class EnterWorld implements IClientIncomingPacket
 		// Auto use restore.
 		player.restoreAutoShortcuts();
 		player.restoreAutoSettings();
+		
+		// Client settings restore.
+		player.getClientSettings();
+		player.sendPacket(new ExItemAnnounceSetting(player.getClientSettings().isAnnounceEnabled()));
 		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())

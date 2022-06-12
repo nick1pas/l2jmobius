@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.BlockList;
+import org.l2jmobius.gameserver.model.ClientSettings;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -134,11 +135,28 @@ public class RequestFriendInvite implements IClientIncomingPacket
 			player.sendPacket(sm);
 			return;
 		}
+		// Check, if tatget blocked sends requests in game.
+		if (checkInviteByIgnoredSettings(friend, player))
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.PREFERENCES_IS_CONFIGURED_TO_REFUSE_FRIEND_REQUESTS_AND_THE_FRIEND_INVITATION_OF_C1_IS_AUTOMATICALLY_REJECTED).addPcName(friend));
+			return;
+		}
 		// Friend request sent.
 		player.onTransactionRequest(friend);
 		friend.sendPacket(new FriendAddRequest(player.getName()));
 		sm = new SystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 		sm.addString(_name);
 		player.sendPacket(sm);
+	}
+	
+	private boolean checkInviteByIgnoredSettings(Player target, Player requestor)
+	{
+		final ClientSettings targetClientSettings = target.getClientSettings();
+		final boolean condition = targetClientSettings.isFriendRequestRestrictedFromOthers();
+		if (condition && !targetClientSettings.isFriendRequestRestrictedFromClan() && (target.getClan() != null) && (requestor.getClan() != null) && (target.getClan() == requestor.getClan()))
+		{
+			return false;
+		}
+		return condition;
 	}
 }

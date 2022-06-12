@@ -22,6 +22,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.model.BlockList;
+import org.l2jmobius.gameserver.model.ClientSettings;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -72,6 +73,12 @@ public class RequestJoinParty implements IClientIncomingPacket
 		if (requestor == null)
 		{
 			return;
+		}
+		
+		final ClientSettings clientSettings = requestor.getClientSettings();
+		if (clientSettings.getPartyContributionType() != _partyDistributionTypeId)
+		{
+			requestor.getClientSettings().setPartyContributionType(_partyDistributionTypeId);
 		}
 		
 		if (FakePlayerData.getInstance().isTalkable(_name))
@@ -147,7 +154,12 @@ public class RequestJoinParty implements IClientIncomingPacket
 			requestor.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return;
 		}
-		
+		if (checkInviteByIgnoredSettings(target, requestor))
+		{
+			requestor.sendPacket(new SystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST).addPcName(target));
+			target.sendPacket(new SystemMessage(SystemMessageId.PARTY_INVITATION_IS_SET_UP_TO_BE_REJECTED_AT_PREFERENCES_THE_PARTY_INVITATION_OF_C1_IS_AUTOMATICALLY_REJECTED).addPcName(requestor));
+			return;
+		}
 		if (target.isCursedWeaponEquipped() || requestor.isCursedWeaponEquipped())
 		{
 			requestor.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -244,5 +256,17 @@ public class RequestJoinParty implements IClientIncomingPacket
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
 		}
+	}
+	
+	private boolean checkInviteByIgnoredSettings(Player target, Player requestor)
+	{
+		ClientSettings targetClientSettings = target.getClientSettings();
+		boolean condition = targetClientSettings.isPartyRequestRestrictedFromOthers();
+		boolean clanCheck = (target.getClan() != null) && (requestor.getClan() != null) && (target.getClan() == requestor.getClan());
+		if (condition && ((!targetClientSettings.isPartyRequestRestrictedFromFriends() && target.getFriendList().contains(requestor.getObjectId())) || (!targetClientSettings.isPartyRequestRestrictedFromClan() && clanCheck)))
+		{
+			condition = false;
+		}
+		return condition;
 	}
 }

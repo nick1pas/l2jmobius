@@ -68,7 +68,7 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
-		requestor.sendPacket(new JoinParty(_response));
+		requestor.sendPacket(new JoinParty(_response, requestor));
 		if (_response == 1)
 		{
 			if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS)

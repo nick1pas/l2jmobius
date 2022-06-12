@@ -118,6 +118,8 @@ import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingChar
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharRankers;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
+import org.l2jmobius.gameserver.network.clientpackets.settings.ExInteractModify;
+import org.l2jmobius.gameserver.network.clientpackets.settings.ExSaveItemAnnounceSetting;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
@@ -480,7 +482,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15C, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
 	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
-	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME),
+	EX_INTERACT_MODIFY(0x15F, ExInteractModify::new, ConnectionState.IN_GAME),
 	EX_TRY_ENCHANT_ARTIFACT(0x160, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME),
 	EX_UPGRADE_SYSTEM_NORMAL_REQUEST(0x161, null, ConnectionState.IN_GAME),
 	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, null, ConnectionState.IN_GAME),
@@ -543,7 +545,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_CRAFT_RANDOM_REFRESH(0x19A, null, ConnectionState.IN_GAME),
 	EX_CRAFT_RANDOM_MAKE(0x19B, null, ConnectionState.IN_GAME),
 	EX_MULTI_SELL_LIST(0x19C, null, ConnectionState.IN_GAME),
-	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19D, null, ConnectionState.IN_GAME),
+	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19D, ExSaveItemAnnounceSetting::new, ConnectionState.IN_GAME),
 	EX_ANTIBOT(0x19E, null, ConnectionState.IN_GAME),
 	EX_DPSVR(0x19F, null, ConnectionState.IN_GAME),
 	EX_TENPROTECT_DECRYPT_ERROR(0x1A0, null, ConnectionState.IN_GAME),

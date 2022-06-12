@@ -17,15 +17,18 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class JoinParty implements IClientOutgoingPacket
 {
 	private final int _response;
+	private final int _type;
 	
-	public JoinParty(int response)
+	public JoinParty(int response, Player requestor)
 	{
 		_response = response;
+		_type = requestor.getClientSettings().getPartyContributionType();
 	}
 	
 	@Override
@@ -33,7 +36,12 @@ public class JoinParty implements IClientOutgoingPacket
 	{
 		OutgoingPackets.JOIN_PARTY.writeId(packet);
 		packet.writeD(_response);
-		packet.writeD(0); // TODO: Find me!
+		packet.writeD(_type);
+		if (_type != 0)
+		{
+			packet.writeD(0); // TODO: Find me!
+			packet.writeD(0); // TODO: Find me!
+		}
 		return true;
 	}
 }

@@ -121,6 +121,7 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPoi
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusReady;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
+import org.l2jmobius.gameserver.network.serverpackets.settings.ExItemAnnounceSetting;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -667,6 +668,10 @@ public class EnterWorld implements IClientIncomingPacket
 		// Auto use restore.
 		player.restoreAutoShortcuts();
 		player.restoreAutoSettings();
+		
+		// Client settings restore.
+		player.getClientSettings();
+		player.sendPacket(new ExItemAnnounceSetting(player.getClientSettings().isAnnounceEnabled()));
 		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
