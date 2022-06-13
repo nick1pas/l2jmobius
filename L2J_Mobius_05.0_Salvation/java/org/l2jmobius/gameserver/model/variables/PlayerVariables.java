@@ -44,6 +44,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_USED";
 	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";
+	public static final String UI_KEY_MAPPING = "UI_KEY_MAPPING";
 	public static final String ATTENDANCE_DATE = "ATTENDANCE_DATE";
 	public static final String ATTENDANCE_INDEX = "ATTENDANCE_INDEX";
 	public static final String DAILY_MISSION_COUNT = "DAILY_MISSION_COUNT";

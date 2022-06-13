@@ -90,6 +90,8 @@ import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProduct
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
+import org.l2jmobius.gameserver.network.clientpackets.settings.RequestKeyMapping;
+import org.l2jmobius.gameserver.network.clientpackets.settings.RequestSaveKeyMapping;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;

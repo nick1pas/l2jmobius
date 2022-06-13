@@ -91,6 +91,8 @@ import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidSe
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
 import org.l2jmobius.gameserver.network.clientpackets.settings.ExInteractModify;
+import org.l2jmobius.gameserver.network.clientpackets.settings.RequestKeyMapping;
+import org.l2jmobius.gameserver.network.clientpackets.settings.RequestSaveKeyMapping;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
