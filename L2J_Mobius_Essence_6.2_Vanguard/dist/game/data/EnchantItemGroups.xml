@@ -210,6 +210,30 @@
 		<current enchant="8" chance="22" />
 		<current enchant="9" chance="20" />
 	</enchantRateGroup>
+	<enchantRateGroup name="SAYHA_CLOAKS"> <!-- Sayha's Cloaks -->
+		<current enchant="0" chance="95" />
+		<current enchant="1" chance="85" />
+		<current enchant="2" chance="75" />
+		<current enchant="3" chance="60" />
+		<current enchant="4" chance="55" />
+		<current enchant="5" chance="40" />
+		<current enchant="6" chance="30" />
+		<current enchant="7" chance="20" />
+		<current enchant="8" chance="10" />
+		<current enchant="9" chance="1" />
+	</enchantRateGroup>
+	<enchantRateGroup name="SPECIAL_SAYHA_CLOAKS"> <!-- Special Sayha's Cloaks -->
+		<current enchant="0" chance="70" />
+		<current enchant="1" chance="60" />
+		<current enchant="2" chance="50" />
+		<current enchant="3" chance="40" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="20" />
+		<current enchant="6" chance="10" />
+		<current enchant="7" chance="5" />
+		<current enchant="8" chance="3" />
+		<current enchant="9" chance="1" />
+	</enchantRateGroup>
 	<enchantRateGroup name="CLOAK_PROTECTION"> <!-- Cloak of protection -->
 		<current enchant="0" chance="85" />
 		<current enchant="1" chance="80" />
@@ -298,7 +322,7 @@
 		</enchantRate>
 		<enchantRate group="TALISMAN_BAIUM">
 			<item itemId="49683" /> <!-- Talisman of Baium -->
-			<item itemId="94119" /> <!-- Talisman of Baium Sealed-->
+			<item itemId="94119" /> <!-- Talisman of Baium Sealed -->
 		</enchantRate>
 		<!-- Other -->
 		<enchantRate group="ADVENTURERS_EQUIPMENT">
@@ -313,6 +337,16 @@
 		</enchantRate>
 		<enchantRate group="CIRCLET_HERO">
 			<item itemId="94166" /> <!-- Circlet of Hero -->
+		</enchantRate>
+		<enchantRate group="SAYHA_CLOAKS">
+			<item itemId="91210" /> <!-- Black Sayha's Cloak -->
+			<item itemId="91211" /> <!-- White Sayha's Cloak -->
+			<item itemId="91212" /> <!-- Red Sayha's Cloak -->
+		</enchantRate>
+		<enchantRate group="SPECIAL_SAYHA_CLOAKS">
+			<item itemId="91719" /> <!-- Special Black Sayha's Cloak -->
+			<item itemId="91720" /> <!-- Special White Sayha's Cloak -->
+			<item itemId="91721" /> <!-- Special Red Sayha's Cloak -->
 		</enchantRate>
 		<enchantRate group="CLOAK_PROTECTION">
 			<item itemId="93301" /> <!-- Cloak of Protection -->
