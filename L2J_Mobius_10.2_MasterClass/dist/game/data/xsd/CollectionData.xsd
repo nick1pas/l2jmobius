@@ -21,7 +21,7 @@
 						<xs:attribute type="xs:integer" name="id" use="required" />
 						<xs:attribute type="xs:integer" name="optionId" use="required" />
 						<xs:attribute type="xs:integer" name="category" use="required" />
-						<xs:attribute type="xs:long" name="completeCount" use="required" />
+						<xs:attribute type="xs:integer" name="completeCount" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

@@ -26,10 +26,10 @@ public class CollectionDataHolder
 	private final int _collectionId;
 	private final int _optionId;
 	private final int _category;
-	private final long _completeCount;
+	private final int _completeCount;
 	private final List<ItemEnchantHolder> _items;
 	
-	public CollectionDataHolder(int collectionId, int optionId, int category, long completeCount, List<ItemEnchantHolder> items)
+	public CollectionDataHolder(int collectionId, int optionId, int category, int completeCount, List<ItemEnchantHolder> items)
 	{
 		_collectionId = collectionId;
 		_optionId = optionId;
@@ -53,7 +53,7 @@ public class CollectionDataHolder
 		return _category;
 	}
 	
-	public long getCompleteCount()
+	public int getCompleteCount()
 	{
 		return _completeCount;
 	}
