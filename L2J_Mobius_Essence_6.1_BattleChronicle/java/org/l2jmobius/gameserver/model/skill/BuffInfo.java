@@ -244,7 +244,7 @@ public class BuffInfo
 			{
 				if (!_hideStartMessage && !_skill.isAura())
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_USED_S1);
 					sm.addSkillName(_skill);
 					_effected.sendPacket(sm);
 				}
@@ -311,7 +311,7 @@ public class BuffInfo
 		// When effects are initialized, the successfully landed.
 		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMessages() && !_skill.isAura())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+			final SystemMessage sm = new SystemMessage(_skill.isToggle() ? SystemMessageId.YOU_VE_USED_S1 : SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 			sm.addSkillName(_skill);
 			_effected.sendPacket(sm);
 		}
