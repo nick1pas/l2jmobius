@@ -88,7 +88,7 @@ public class CollectionData implements IXmlReader
 						final int id = parseInteger(attrs, "id");
 						final int optionId = parseInteger(attrs, "optionId");
 						final int category = parseInteger(attrs, "category");
-						final int completeCount = parseInteger(attrs, "completeCount", Integer.MAX_VALUE);
+						final int completeCount = parseInteger(attrs, "completeCount");
 						final List<ItemEnchantHolder> items = new ArrayList<>();
 						for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 						{
@@ -97,7 +97,7 @@ public class CollectionData implements IXmlReader
 							{
 								final int itemId = parseInteger(attrs, "id");
 								final long itemCount = parseLong(attrs, "count", 1L);
-								final int itemEnchantLevel = parseInteger(attrs, "enchant_level", 0);
+								final int itemEnchantLevel = parseInteger(attrs, "enchantLevel", 0);
 								final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
 								if (item == null)
 								{
