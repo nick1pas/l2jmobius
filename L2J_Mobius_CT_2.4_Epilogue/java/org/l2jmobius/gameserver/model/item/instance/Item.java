@@ -861,16 +861,18 @@ public class Item extends WorldObject
 	}
 	
 	/**
-	 * @param enchantLevel the enchant value to set
+	 * @param level the enchant value to set
 	 */
-	public void setEnchantLevel(int enchantLevel)
+	public void setEnchantLevel(int level)
 	{
-		if (_enchantLevel == enchantLevel)
+		final int newLevel = Math.max(0, level);
+		if (_enchantLevel == newLevel)
 		{
 			return;
 		}
+		
 		clearEnchantStats();
-		_enchantLevel = enchantLevel;
+		_enchantLevel = newLevel;
 		applyEnchantStats();
 		_storedInDb = false;
 	}

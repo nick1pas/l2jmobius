@@ -926,11 +926,12 @@ public class Item extends WorldObject
 	}
 	
 	/**
-	 * @param enchantLevel the enchant value to set
+	 * @param level the enchant value to set
 	 */
-	public void setEnchantLevel(int enchantLevel)
+	public void setEnchantLevel(int level)
 	{
-		if (_enchantLevel == enchantLevel)
+		final int newLevel = Math.max(0, level);
+		if (_enchantLevel == newLevel)
 		{
 			return;
 		}
@@ -958,7 +959,7 @@ public class Item extends WorldObject
 				// Add new skills.
 				if (getLocationSlot() == Inventory.PAPERDOLL_AGATHION1)
 				{
-					for (Skill skill : agathionSkills.getMainSkills(enchantLevel))
+					for (Skill skill : agathionSkills.getMainSkills(newLevel))
 					{
 						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
 						{
@@ -968,7 +969,7 @@ public class Item extends WorldObject
 						update = true;
 					}
 				}
-				for (Skill skill : agathionSkills.getSubSkills(enchantLevel))
+				for (Skill skill : agathionSkills.getSubSkills(newLevel))
 				{
 					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
 					{
@@ -984,7 +985,7 @@ public class Item extends WorldObject
 			}
 		}
 		
-		_enchantLevel = enchantLevel;
+		_enchantLevel = newLevel;
 		applyEnchantStats();
 		_storedInDb = false;
 		

@@ -619,15 +619,17 @@ public class Item extends WorldObject
 	
 	/**
 	 * Sets the level of enchantment of the item.
-	 * @param enchantLevel the new enchant level
+	 * @param level the new enchant level
 	 */
-	public void setEnchantLevel(int enchantLevel)
+	public void setEnchantLevel(int level)
 	{
-		if (_enchantLevel == enchantLevel)
+		final int newLevel = Math.max(0, level);
+		if (_enchantLevel == newLevel)
 		{
 			return;
 		}
-		_enchantLevel = enchantLevel;
+		
+		_enchantLevel = newLevel;
 		_storedInDb = false;
 	}
 	
