@@ -14949,7 +14949,7 @@ public class Player extends Playable
 		getCollections().stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet()).forEach(collectionId ->
 		{
 			final CollectionDataHolder collection = CollectionData.getInstance().getCollection(collectionId);
-			if (getCollections().stream().filter(it -> it.getCollectionId() == collectionId).count() == collection.getItems().size())
+			if (getCollections().stream().filter(it -> it.getCollectionId() == collectionId).count() >= collection.getCompleteCount())
 			{
 				final Options options = OptionData.getInstance().getOptions(collection.getOptionId());
 				if (options != null)
