@@ -32,6 +32,7 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.VariationInstance;
+import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.OptionDataCategory;
 import org.l2jmobius.gameserver.model.options.OptionDataGroup;
@@ -139,6 +140,7 @@ public class VariationData implements IXmlReader
 				});
 				
 				_variations.put(mineralId, variation);
+				((EtcItem) ItemTable.getInstance().getTemplate(mineralId)).setMineral();
 			}));
 			
 			final Map<Integer, List<Integer>> itemGroups = new HashMap<>();

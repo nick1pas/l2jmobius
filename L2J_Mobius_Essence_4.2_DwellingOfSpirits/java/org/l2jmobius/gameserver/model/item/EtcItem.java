@@ -35,6 +35,7 @@ public class EtcItem extends ItemTemplate
 	private int _extractableCountMin;
 	private int _extractableCountMax;
 	private boolean _isInfinite;
+	private boolean _isMineral = false;
 	
 	/**
 	 * Constructor for EtcItem.
@@ -152,5 +153,15 @@ public class EtcItem extends ItemTemplate
 			_extractableItems = new ArrayList<>();
 		}
 		_extractableItems.add(extractableProduct);
+	}
+	
+	public boolean isMineral()
+	{
+		return _isMineral;
+	}
+	
+	public void setMineral()
+	{
+		_isMineral = true;
 	}
 }

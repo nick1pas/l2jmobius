@@ -25,7 +25,6 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
-import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -300,8 +299,8 @@ public class UseItem implements IClientIncomingPacket
 				// Notify events.
 				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
-			// TODO: New item handler for minerals.
-			if (VariationData.getInstance().getVariation(_itemId) != null)
+			
+			if ((etcItem != null) && etcItem.isMineral())
 			{
 				player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 			}

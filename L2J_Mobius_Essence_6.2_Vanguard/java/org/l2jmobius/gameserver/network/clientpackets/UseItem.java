@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
-import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -327,8 +326,8 @@ public class UseItem implements IClientIncomingPacket
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
 			}
-			// TODO: New item handler for minerals?
-			if (VariationData.getInstance().getVariation(_itemId) != null)
+			
+			if ((etcItem != null) && etcItem.isMineral())
 			{
 				player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 			}
