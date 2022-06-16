@@ -296,9 +296,6 @@ public class UseItem implements IClientIncomingPacket
 				{
 					PacketLogger.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
-				
-				// Notify events.
-				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 			else if (handler.useItem(player, item, _ctrlPressed))
 			{
@@ -309,6 +306,9 @@ public class UseItem implements IClientIncomingPacket
 					player.addTimeStampItem(item, reuseDelay);
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
+				
+				// Notify events.
+				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 			
 			if ((etcItem != null) && etcItem.isMineral())

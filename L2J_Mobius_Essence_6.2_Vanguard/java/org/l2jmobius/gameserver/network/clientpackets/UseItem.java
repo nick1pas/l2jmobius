@@ -287,9 +287,6 @@ public class UseItem implements IClientIncomingPacket
 					player.sendPacket(sm);
 					return;
 				}
-				
-				// Notify events.
-				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 			if (player.isCastingNow())
 			{
@@ -326,6 +323,9 @@ public class UseItem implements IClientIncomingPacket
 					player.addTimeStampItem(item, reuseDelay);
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
+				
+				// Notify events.
+				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 			
 			if (etcItem != null)
