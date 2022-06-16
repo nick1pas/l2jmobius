@@ -28,10 +28,12 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulFee;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.item.EtcItem;
 
 /**
  * @author UnAfraid
@@ -175,6 +177,7 @@ public class EnsoulData implements IXmlReader
 		final EnsoulStone stone = new EnsoulStone(id, slotType);
 		forEach(ensoulNode, "option", optionNode -> stone.addOption(parseInteger(optionNode.getAttributes(), "id")));
 		_ensoulStones.put(stone.getId(), stone);
+		((EtcItem) ItemTable.getInstance().getTemplate(stone.getId())).setEnsoulStone();
 	}
 	
 	public ItemHolder getEnsoulFee(int stoneId, int index)

@@ -36,6 +36,7 @@ public class EtcItem extends ItemTemplate
 	private int _extractableCountMax;
 	private boolean _isInfinite;
 	private boolean _isMineral = false;
+	private boolean _isEnsoulStone = false;
 	
 	/**
 	 * Constructor for EtcItem.
@@ -163,5 +164,15 @@ public class EtcItem extends ItemTemplate
 	public void setMineral()
 	{
 		_isMineral = true;
+	}
+	
+	public boolean isEnsoulStone()
+	{
+		return _isEnsoulStone;
+	}
+	
+	public void setEnsoulStone()
+	{
+		_isEnsoulStone = true;
 	}
 }

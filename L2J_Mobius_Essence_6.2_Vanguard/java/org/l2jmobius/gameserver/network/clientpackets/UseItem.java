@@ -54,6 +54,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 import org.l2jmobius.gameserver.network.serverpackets.variation.ExShowVariationMakeWindow;
 
 public class UseItem implements IClientIncomingPacket
@@ -327,9 +328,16 @@ public class UseItem implements IClientIncomingPacket
 				}
 			}
 			
-			if ((etcItem != null) && etcItem.isMineral())
+			if (etcItem != null)
 			{
-				player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
+				if (etcItem.isMineral())
+				{
+					player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
+				}
+				else if (etcItem.isEnsoulStone())
+				{
+					player.sendPacket(ExShowEnsoulWindow.STATIC_PACKET);
+				}
 			}
 		}
 	}
