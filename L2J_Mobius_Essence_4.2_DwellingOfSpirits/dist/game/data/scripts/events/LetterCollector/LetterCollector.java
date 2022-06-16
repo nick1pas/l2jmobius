@@ -88,26 +88,26 @@ public class LetterCollector extends LongTimeEvent implements IXmlReader
 			forEach(listNode, "reward", rewardNode ->
 			{
 				final int id = new StatSet(parseAttributes(rewardNode)).getInt("id");
-				final AtomicReference<List<ItemHolder>> word = new AtomicReference<>(new ArrayList<>());
-				final AtomicReference<List<ItemChanceHolder>> rewards = new AtomicReference<>(new ArrayList<>());
-				AtomicBoolean needToSumAllChance = new AtomicBoolean(false);
-				AtomicReference<Double> chanceSum = new AtomicReference<>(0.0);
+				final List<ItemHolder> word = new ArrayList<>();
+				final List<ItemChanceHolder> rewards = new ArrayList<>();
+				final AtomicBoolean needToSumAllChance = new AtomicBoolean(false);
+				final AtomicReference<Double> chanceSum = new AtomicReference<>(0d);
 				forEach(rewardNode, "word", wordNode ->
 				{
 					String[] letter = wordNode.getTextContent().trim().split(";");
 					for (String token : letter)
 					{
 						int count = 1;
-						for (ItemHolder check : word.get())
+						for (ItemHolder check : word)
 						{
 							if (check.getId() == letters.get(token))
 							{
 								count = Math.toIntExact(check.getCount() + 1);
-								word.get().remove(check);
+								word.remove(check);
 								break;
 							}
 						}
-						word.get().add(new ItemHolder(letters.get(token), count));
+						word.add(new ItemHolder(letters.get(token), count));
 					}
 				});
 				forEach(rewardNode, "rewards", rewardsNode ->
@@ -121,12 +121,12 @@ public class LetterCollector extends LongTimeEvent implements IXmlReader
 						{
 							chanceSum.set(chanceSum.get() + chance);
 						}
-						rewards.get().add(new ItemChanceHolder(itemSet.getInt("id"), chance, itemSet.getLong("count"), (byte) itemSet.getInt("enchantLevel", 0)));
+						rewards.add(new ItemChanceHolder(itemSet.getInt("id"), chance, itemSet.getLong("count"), (byte) itemSet.getInt("enchantLevel", 0)));
 					});
 				});
-				LetterCollectorManager lcm = LetterCollectorManager.getInstance();
-				lcm.addWords(id, word.get());
-				lcm.addRewards(id, new LetterCollectorManager.LetterCollectorRewardHolder(rewards.get(), chanceSum.get() == 0d ? 100d : chanceSum.get()));
+				final LetterCollectorManager lcm = LetterCollectorManager.getInstance();
+				lcm.addWords(id, word);
+				lcm.addRewards(id, new LetterCollectorManager.LetterCollectorRewardHolder(rewards, chanceSum.get() == 0d ? 100d : chanceSum.get()));
 				lcm.setLetters(letters);
 				lcm.setMinLevel(minimumLevel.get());
 				lcm.setMaxLevel(maximumLevel.get());
