@@ -5449,6 +5449,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	@Override
 	public void setXYZ(int newX, int newY, int newZ)
 	{
+		// 0, 0 is not a valid location.
+		if ((newX == 0) && (newY == 0))
+		{
+			return;
+		}
+		
 		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
 		final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
 		
