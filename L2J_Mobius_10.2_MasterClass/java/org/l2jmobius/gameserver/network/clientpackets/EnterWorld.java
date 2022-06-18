@@ -486,7 +486,7 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(player.isDeathKnight() ? ExShowUsm.DEATH_KNIGHT_INTRO : ExShowUsm.ANTHARAS_INTRO);
 			if (!Config.DISABLE_TUTORIAL)
 			{
-				ThreadPool.schedule(() -> player.sendPacket(new ExShowScreenMessage(NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName())), player.isDeathKnight() ? 30000 : 15000);
+				ThreadPool.schedule(() -> player.sendPacket(new ExShowScreenMessage(player.isDeathKnight() ? NpcStringId.TARTI_IS_SAID_TO_TAKE_INTEREST_IN_AN_ADVENTURER_NAMED_S1 : NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName())), player.isDeathKnight() ? 30000 : 15000);
 			}
 		}
 		

@@ -419,7 +419,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if (!Config.DISABLE_TUTORIAL && (qs == null) && (player.getLevel() < 20))
 		{
-			showOnScreenMsg(player, NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
+			showOnScreenMsg(player, player.isDeathKnight() ? NpcStringId.TARTI_IS_SAID_TO_TAKE_INTEREST_IN_AN_ADVENTURER_NAMED_S1 : NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 			return;
 		}
 		
