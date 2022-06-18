@@ -3499,7 +3499,7 @@
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>500</castRange>
+		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
 			<value level="2">-532</value>
@@ -3517,7 +3517,7 @@
 			<value level="14">-659</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
-		<hitTime>15000</hitTime>
+		<hitTime>8000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3618,6 +3618,11 @@
 					<value level="2">10</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
