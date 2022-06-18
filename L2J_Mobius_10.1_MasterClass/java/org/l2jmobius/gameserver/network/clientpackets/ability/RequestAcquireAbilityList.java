@@ -84,7 +84,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((player.getAbilityPoints() == 0) || (player.getAbilityPoints() == player.getAbilityPointsUsed()))
+		if ((player.getAbilityPoints() <= 0) || (player.getAbilityPoints() == player.getAbilityPointsUsed()))
 		{
 			PacketLogger.warning(player + " is trying to learn ability without ability points!");
 			return;
