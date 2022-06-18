@@ -7803,6 +7803,29 @@ public class Player extends Playable
 		
 		// Learn known dualclass skills.
 		restoreDualSkills();
+		
+		// Check ability skill count.
+		int count = 0;
+		for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
+		{
+			final Skill knownSkill = getKnownSkill(sk.getSkillId());
+			if ((knownSkill != null) && (knownSkill.getLevel() == sk.getSkillLevel()))
+			{
+				count++;
+			}
+		}
+		// Too many ability skills. Remove them all.
+		if ((count > (Config.PLAYER_MAXIMUM_LEVEL - 85)) || (count > getAbilityPointsUsed()))
+		{
+			for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
+			{
+				final Skill knownSkill = getKnownSkill(sk.getSkillId());
+				if ((knownSkill != null) && (knownSkill.getLevel() == sk.getSkillLevel()))
+				{
+					removeSkill(knownSkill, false);
+				}
+			}
+		}
 	}
 	
 	/**
