@@ -117,6 +117,8 @@ public class TimedHunting extends AbstractInstance
 		SKILL_REPLACEMENTS.put(45303, 45360); // Wipeout
 		SKILL_REPLACEMENTS.put(36, 45386); // Spinning Slasher
 		SKILL_REPLACEMENTS.put(47011, 47015); // Freezing Wound
+		SKILL_REPLACEMENTS.put(47801, 47891); // Piercing
+		SKILL_REPLACEMENTS.put(47805, 47893); // Wild Scratch
 	}
 	
 	public TimedHunting()
