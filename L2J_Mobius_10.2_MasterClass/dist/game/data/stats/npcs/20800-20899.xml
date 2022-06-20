@@ -536,6 +536,11 @@
 			<radius normal="26" />
 			<height normal="25.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20835" level="92" type="Monster" name="Zaken's Watchman">
 		<parameters>
@@ -754,6 +759,12 @@
 			<radius normal="21" grown="25" />
 			<height normal="44" grown="52.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12" max="29" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="1" chance="0.0018" /> <!-- Weapon Augmenting Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20838" level="45" type="Monster" name="Bloody Bat">
 		<parameters>
@@ -806,6 +817,12 @@
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="11" max="27" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="1" chance="0.00168" /> <!-- Weapon Augmenting Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20839" level="92" type="Monster" name="Dismal Humming">
 		<parameters>

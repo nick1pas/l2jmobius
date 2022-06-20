@@ -657,6 +657,13 @@
 			<radius normal="17" />
 			<height normal="13" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="182" max="425" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="60" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="960" min="1" max="1" chance="40" /> <!-- Scroll: Enchant S-grade Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18912" level="1" type="Monster" name="Scarecrow">
 		<race>CONSTRUCT</race>
@@ -1435,6 +1442,11 @@
 			<radius normal="17" />
 			<height normal="13" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant S-grade Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18935" level="85" type="Monster" name="Divine Protection of Sword">
 		<race>CONSTRUCT</race>

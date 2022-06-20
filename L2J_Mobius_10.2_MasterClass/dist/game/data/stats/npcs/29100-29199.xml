@@ -615,6 +615,31 @@
 			<radius normal="8.5" />
 			<height normal="8.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6577" min="1" max="1" chance="0.536" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
+				<item id="6578" min="1" max="1" chance="3.572" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
+				<item id="6703" min="8" max="24" chance="11.05" /> <!-- Sealed Imperial Crusader Gauntlet Design -->
+				<item id="6704" min="14" max="40" chance="6.548" /> <!-- Sealed Imperial Crusader Boot Design -->
+				<item id="6708" min="20" max="60" chance="4.42" /> <!-- Sealed Draconic Leather Glove Fabric -->
+				<item id="6709" min="28" max="82" chance="3.215" /> <!-- Sealed Draconic Leather Boots Design -->
+				<item id="6712" min="36" max="108" chance="2.456" /> <!-- Sealed Major Arcana Gloves Fabric -->
+				<item id="6713" min="4" max="10" chance="25.258" /> <!-- Sealed Major Arcana Boots Design -->
+				<item id="6676" min="1" max="1" chance="0.694" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6677" min="1" max="1" chance="0.694" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6681" min="1" max="1" chance="0.694" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6682" min="1" max="1" chance="0.694" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6685" min="1" max="1" chance="0.694" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6686" min="1" max="1" chance="0.694" /> <!-- Sealed Major Arcana Boots -->
+				<item id="9458" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Stun Resistance -->
+				<item id="9461" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Poison Resistance -->
+				<item id="9464" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Bleed Resistance -->
+				<item id="9467" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Sleep Resistance -->
+				<item id="9470" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Paralysis Resistance -->
+				<item id="9473" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Hold Resistance -->
+				<item id="9476" min="1" max="1" chance="0.333" /> <!-- Dynasty Earring - Fear Resistance -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29117" level="83" type="Monster" name="Baylor's Treasure Chest">
 		<race>CONSTRUCT</race>
@@ -648,6 +673,21 @@
 			<radius normal="8.5" />
 			<height normal="8.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6577" min="1" max="1" chance="1.072" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
+				<item id="6578" min="1" max="1" chance="7.144" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
+				<item id="6705" min="23" max="67" chance="11.546" /> <!-- Sealed Imperial Crusader Shield Fragment -->
+				<item id="6706" min="60" max="180" chance="5.036" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="11" max="31" chance="28.779" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6714" min="16" max="48" chance="18.886" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6678" min="1" max="1" chance="1.982" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="1.388" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="1.388" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="1.388" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="10170" min="1" max="1" chance="8.45" /> <!-- Baylor's Earring -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29118" level="83" type="GrandBoss" name="Beleth">
 		<race>HUMANOID</race>
@@ -1133,6 +1173,11 @@
 			<radius normal="48" />
 			<height normal="73.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="60000" max="100000" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29130" level="29" type="Monster" name="Lost Guard">
 		<race>HUMANOID</race>

@@ -2020,6 +2020,17 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
+				<item id="4616" min="1" max="1" chance="0.00575" /> <!-- Greater CON Dye <CON +4 DEX -4> -->
+				<item id="45929" min="1" max="1" chance="0.00156" /> <!-- Weapon Augmenting Stone -->
+				<item id="45930" min="1" max="1" chance="0.00028" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="0.0552" /> <!-- Scroll: Enchant B-grade Armor -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="20671" level="62" type="Monster" name="Kadios">
 		<parameters>
@@ -2071,6 +2082,17 @@
 			<radius normal="35" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="14" max="33" chance="70" /> <!-- Adena -->
+				<item id="4616" min="1" max="1" chance="0.00602" /> <!-- Greater CON Dye <CON +4 DEX -4> -->
+				<item id="45929" min="1" max="1" chance="0.00163" /> <!-- Weapon Augmenting Stone -->
+				<item id="45930" min="1" max="1" chance="0.00029" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</drop>
+			<spoil>
+				<item id="947" min="1" max="1" chance="0.0092" /> <!-- Scroll: Enchant B-grade Weapon -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="20672" level="63" type="Monster" name="Trives">
 		<parameters>
@@ -2129,6 +2151,11 @@
 			<radius normal="17" />
 			<height normal="46" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="14" max="33" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20673" level="64" type="Monster" name="Palibati">
 		<parameters>
@@ -2177,6 +2204,14 @@
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="15" max="35" chance="70" /> <!-- Adena -->
+				<item id="6037" min="1" max="1" chance="9.25841" /> <!-- Scroll: Cancel Sleep -->
+				<item id="45929" min="1" max="1" chance="0.00174" /> <!-- Weapon Augmenting Stone -->
+				<item id="45930" min="1" max="1" chance="0.00031" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20675" level="50" type="Monster" name="Tairim">
 		<race>ETC</race>

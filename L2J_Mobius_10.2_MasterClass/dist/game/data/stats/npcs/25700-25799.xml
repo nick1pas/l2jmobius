@@ -783,6 +783,18 @@
 			<radius normal="20" />
 			<height normal="40.599" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="959" min="1" max="1" chance="1.625" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<item id="960" min="1" max="1" chance="16.245" /> <!-- Scroll: Enchant S-grade Armor -->
+				<item id="10223" min="1" max="1" chance="0.186" /> <!-- Icarus Spitter -->
+				<item id="15694" min="1" max="1" chance="1.524" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="1.524" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="1.524" /> <!-- Sealed Moirai Circlet -->
+				<item id="15709" min="1" max="1" chance="2.177" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="2.177" /> <!-- Sealed Moirai Shield -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25714" level="84" type="RaidBoss" name="Kechi" title="Flaming">
 		<parameters>
@@ -960,6 +972,15 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6570" min="1" max="1" chance="4.776" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
+				<item id="6578" min="1" max="1" chance="1.91" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
+				<item id="10223" min="1" max="1" chance="0.394" /> <!-- Icarus Spitter -->
+				<item id="15698" min="1" max="1" chance="1.613" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15701" min="1" max="1" chance="2.581" /> <!-- Sealed Moirai Leather Leggings -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25717" level="84" type="Monster" name="Tears" title="Ice">
 		<race>ELEMENTAL</race>
@@ -4466,6 +4487,16 @@
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17526" min="1" max="1" chance="0.806" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17305" min="1" max="1" chance="0.375" /> <!-- Immortal Breastplate - Heavy armor -->
+				<item id="17307" min="1" max="1" chance="1.501" /> <!-- Immortal Gauntlets - Heavy armor -->
+				<item id="17314" min="1" max="1" chance="1.501" /> <!-- Immortal Leather Boots - Light armor -->
+				<item id="17315" min="1" max="1" chance="1" /> <!-- Immortal Circlet - Robe -->
+				<item id="17316" min="1" max="1" chance="0.375" /> <!-- Immortal Tunic - Robe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25775" level="94" type="RaidBoss" name="Apherus">
 		<!-- TODO: Must be confirmed -->

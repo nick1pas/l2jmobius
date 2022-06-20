@@ -1025,6 +1025,11 @@
 			<radius normal="15" />
 			<height normal="18.3" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="13032" level="80" type="Monster" name="Giant Pig">
 		<race>ANIMAL</race>
@@ -1191,6 +1196,12 @@
 			<radius normal="15" />
 			<height normal="18.3" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga -->
+				<item id="9144" min="1" max="1" chance="100" /> <!-- Pig Chest -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="13036" level="80" type="Chest" name="Treasure Chest">
 		<race>CONSTRUCT</race>
