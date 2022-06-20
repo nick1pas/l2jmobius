@@ -250,34 +250,103 @@
 	</skill>
 	<skill id="32624" toLevel="1" name="Mysterious Ancient Herb">
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48936</itemConsumeId> <!-- Mysterious Ancient Herb -->
 		<operateType>A1</operateType>
+		<magicLevel>110</magicLevel>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>100</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallRandomSkill">
+				<skills>32625,1;32626,1;32627,1</skills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32625" toLevel="1" name="Ancient Knowledge Herb">
 		<!-- Learns ancient knowledge, which strengthens your brain and increases M. Atk./ M. Def. by $s1. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<magicLevel>110</magicLevel>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>100</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32626" toLevel="1" name="Ancient Power Herb">
 		<!-- Possesses ancient powers, which bulk you up and increase P. Atk./ P. Def. by $s1. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<magicLevel>110</magicLevel>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>100</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32627" toLevel="1" name="Ancient Dexterity Herb">
 		<!-- Bestows ancient agility that reduces your size and increases Atk. Spd./ Casting Spd./ Speed by $s1. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY_3</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<magicLevel>110</magicLevel>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>100</hitTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32628" toLevel="1" name="Queen Krosha's Slasher">
 		<operateType>A1</operateType>
@@ -1072,8 +1141,7 @@
 				<KNOCKDOWN>100</KNOCKDOWN>
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
-			</effect>
-						<effect name="BlockActions">
+			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
 			</effect>
 		</effects>
@@ -1449,8 +1517,7 @@
 				<KNOCKDOWN>100</KNOCKDOWN>
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
-			</effect>
-						<effect name="BlockActions">
+			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
 			</effect>
 		</effects>

@@ -418,6 +418,14 @@
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="32624" level="1" /> <!-- Mysterious Ancient Herb -->
+		</skills>
 	</item>
 	<item id="48937" name="Mentee's Vitality Potion of Gratitude" type="EtcItem">
 		<!-- A token of gratitude from a mentee who has grown thanks to his mentor s aid. Recharges a certain amount of Vitality. Can be used only 5 times per week. -->
