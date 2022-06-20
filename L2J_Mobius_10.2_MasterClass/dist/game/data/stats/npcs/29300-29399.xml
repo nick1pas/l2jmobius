@@ -1798,26 +1798,21 @@
 			<height normal="101" />
 		</collision>
 	</npc>
-	<npc id="29328" level="125" type="Folk" name="Torfedo">
+	<npc id="29328" level="125" type="Monster" name="Torfedo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14419824" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="13996" magical="10526" />
+			<vitals hp="144198" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2350" earth="2300" holy="2350" dark="2350" />
-				<attack type="WIND" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="32" />
 			<height normal="63.4" />
@@ -1826,40 +1821,27 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5464" level="1" /> <!-- Wind Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29329" level="125" type="Folk" name="Harane">
+	<npc id="29329" level="125" type="Monster" name="Harane">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14419824" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="19994" magical="8096" />
+			<vitals hp="144198" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2300" earth="2350" holy="2350" dark="2350" />
-				<attack type="EARTH" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="18.5" />
@@ -1868,40 +1850,27 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29330" level="125" type="Folk" name="Escrito" title="Fragment of the Sea of Spores">
+	<npc id="29330" level="125" type="Monster" name="Escrito" title="Fragment of the Sea of Spores">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4665" magical="3508" />
+			<vitals hp="192256.06936" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2350" earth="2300" holy="2350" dark="2350" />
-				<attack type="WIND" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="32" />
 			<height normal="63.4" />
@@ -1910,41 +1879,27 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5464" level="1" /> <!-- Wind Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16512" level="6" /> <!-- Solo Mage Monster -->
 		</skillList>
 	</npc>
-	<npc id="29331" level="125" type="Folk" name="Aranea" title="Fragment of the Sea of Spores">
+	<npc id="29331" level="125" type="Monster" name="Aranea" title="Fragment of the Sea of Spores">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="288385" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6664" magical="2698" />
+			<vitals hp="288384.9711" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2300" earth="2350" holy="2350" dark="2350" />
-				<attack type="EARTH" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="18.5" />
@@ -1953,41 +1908,27 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16511" level="6" /> <!-- Solo Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="29332" level="125" type="Folk" name="Torfedo">
+	<npc id="29332" level="125" type="Monster" name="Torfedo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4665" magical="3508" />
+			<vitals hp="192256.06936" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2350" earth="2300" holy="2350" dark="2350" />
-				<attack type="WIND" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="80" />
@@ -1996,41 +1937,27 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5464" level="1" /> <!-- Wind Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16512" level="6" /> <!-- Solo Mage Monster -->
 		</skillList>
 	</npc>
-	<npc id="29333" level="125" type="Folk" name="Harane">
+	<npc id="29333" level="125" type="Monster" name="Harane">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="288385" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6664" magical="2698" />
+			<vitals hp="288384.9711" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2300" earth="2350" holy="2350" dark="2350" />
-				<attack type="EARTH" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="48" />
 			<height normal="31.4" />
@@ -2039,41 +1966,27 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16511" level="6" /> <!-- Solo Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="29334" level="125" type="Folk" name="Escrito">
+	<npc id="29334" level="125" type="Monster" name="Escrito">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192256" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4665" magical="3508" />
+			<vitals hp="192256.06936" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2350" earth="2300" holy="2350" dark="2350" />
-				<attack type="WIND" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="80" />
@@ -2082,41 +1995,27 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5464" level="1" /> <!-- Wind Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16512" level="6" /> <!-- Solo Mage Monster -->
 		</skillList>
 	</npc>
-	<npc id="29335" level="125" type="Folk" name="Aranea">
+	<npc id="29335" level="125" type="Monster" name="Aranea">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="288385" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="130177" magical="11866" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6664" magical="2698" />
+			<vitals hp="288384.9711" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2300" earth="2350" holy="2350" dark="2350" />
-				<attack type="EARTH" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="48" />
 			<height normal="31.4" />
@@ -2125,19 +2024,10 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attribute -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16511" level="6" /> <!-- Solo Fighter Monster -->
 		</skillList>
 	</npc>
 	<npc id="29336" level="125" type="GrandBoss" name="Lilith" title="Apostle">
@@ -5942,24 +5832,36 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29380" level="85" type="Folk" name="Baylor" title="Warden">
+	<npc id="29380" level="116" type="RaidBoss" name="Baylor" title="Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15971366" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="3321740194048" sp="2989566078" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="15971399.832" hpRegen="12.9" mp="22800" mpRegen="30" />
+			<attack physical="492066" magical="448472" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200864" magical="991184" />
 			<speed>
 				<walk ground="34" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="69.12" />
 			<height normal="93.48" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="33180" level="1" /> <!-- Party's Instance Zone Bonus -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29381" level="125" type="GrandBoss" name="Queen Ant" title="Wasteland Mistress">
 		<race>BUG</race>
@@ -6061,81 +5963,157 @@
 			<height normal="109" />
 		</collision>
 	</npc>
-	<npc id="29385" level="85" type="Folk" name="Eigis" title="Lady of Despair">
+	<npc id="29385" level="127" type="RaidBoss" name="Eigis" title="Lady of Despair">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="761086172" hpRegen="10.5" mp="68076" mpRegen="3.6" />
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="40034117754185" sp="36030705842" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="761086" hpRegen="13.4" mp="68076" mpRegen="30" />
+			<attack physical="639686" magical="583012" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="301296" magical="1458092" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="123" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32909" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46447" min="3" max="3" chance="15.5" /> <!-- Kain's Soul Crystal Lv. 4 - Weapon -->
+				<item id="46448" min="2" max="2" chance="15.5" /> <!-- Kain's Soul Crystal Lv. 5 - Weapon -->
+				<item id="46449" min="1" max="1" chance="15.5" /> <!-- Kain's Soul Crystal Lv. 6 - Weapon -->
+				<item id="46450" min="1" max="1" chance="15.5" /> <!-- Kain's Soul Crystal Lv. 7 - Weapon -->
+				<item id="46462" min="3" max="3" chance="15.5" /> <!-- Mermoden's Soul Crystal Lv. 4 - Weapon -->
+				<item id="46463" min="2" max="2" chance="15.5" /> <!-- Mermoden's Soul Crystal Lv. 5 - Weapon -->
+				<item id="46464" min="1" max="1" chance="15.5" /> <!-- Mermoden's Soul Crystal Lv. 6 - Weapon -->
+				<item id="46465" min="1" max="1" chance="15.5" /> <!-- Mermoden's Soul Crystal Lv. 7 - Weapon -->
+				<item id="46477" min="3" max="3" chance="23" /> <!-- Leona's Soul Crystal Lv. 4 - Weapon -->
+				<item id="46478" min="2" max="2" chance="23" /> <!-- Leona's Soul Crystal Lv. 5 - Weapon -->
+				<item id="46479" min="1" max="1" chance="23" /> <!-- Leona's Soul Crystal Lv. 6 - Weapon -->
+				<item id="46480" min="1" max="1" chance="23" /> <!-- Leona's Soul Crystal Lv. 7 - Weapon -->
+				<item id="46492" min="3" max="3" chance="23" /> <!-- Pantheon's Soul Crystal Lv. 4 - Weapon -->
+				<item id="46493" min="2" max="2" chance="23" /> <!-- Pantheon's Soul Crystal Lv. 5 - Weapon -->
+				<item id="46494" min="1" max="1" chance="23" /> <!-- Pantheon's Soul Crystal Lv. 6 - Weapon -->
+				<item id="46495" min="1" max="1" chance="23" /> <!-- Pantheon's Soul Crystal Lv. 7 - Weapon -->
+				<item id="46507" min="3" max="3" chance="23" /> <!-- Lionel's Soul Crystal Lv. 4 - Weapon -->
+				<item id="46508" min="2" max="2" chance="23" /> <!-- Lionel's Soul Crystal Lv. 5 - Weapon -->
+				<item id="46509" min="1" max="1" chance="23" /> <!-- Lionel's Soul Crystal Lv. 6 - Weapon -->
+				<item id="46510" min="1" max="1" chance="23" /> <!-- Lionel's Soul Crystal Lv. 7 - Weapon -->
+				<item id="80333" min="1" max="1" chance="34" /> <!-- Dragon's Necklace -->
+				<item id="80334" min="1" max="1" chance="33" /> <!-- Dragon's Earring -->
+				<item id="80335" min="1" max="1" chance="33" /> <!-- Dragon's Ring -->
+				<item id="80090" min="2" max="2" chance="7.15" /> <!-- Krishna Shaper -->
+				<item id="80091" min="2" max="2" chance="7.15" /> <!-- Krishna Cutter -->
+				<item id="80092" min="2" max="2" chance="7.15" /> <!-- Krishna Slasher -->
+				<item id="80093" min="2" max="2" chance="7.15" /> <!-- Krishna Avenger -->
+				<item id="80094" min="2" max="2" chance="7.15" /> <!-- Krishna Fighter -->
+				<item id="80095" min="2" max="2" chance="7.15" /> <!-- Krishna Stormer -->
+				<item id="80096" min="2" max="2" chance="7.15" /> <!-- Krishna Thrower -->
+				<item id="80097" min="2" max="2" chance="7.15" /> <!-- Krishna Guardian -->
+				<item id="80098" min="2" max="2" chance="7.15" /> <!-- Krishna Buster -->
+				<item id="80099" min="2" max="2" chance="7.15" /> <!-- Krishna Caster -->
+				<item id="80100" min="2" max="2" chance="7.15" /> <!-- Krishna Retributer -->
+				<item id="80101" min="2" max="2" chance="7.15" /> <!-- Krishna Dual Swords -->
+				<item id="80102" min="2" max="2" chance="7.1" /> <!-- Krishna Dual Daggers -->
+				<item id="80103" min="2" max="2" chance="7.1" /> <!-- Krishna Dual Blunt Weapons -->
+				<item id="80104" min="4" max="4" chance="20" /> <!-- Leviathan Helmet - Heavy armor -->
+				<item id="80105" min="4" max="4" chance="20" /> <!-- Leviathan Breastplate - Heavy armor -->
+				<item id="80106" min="4" max="4" chance="20" /> <!-- Leviathan Gaiters - Heavy armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="29386" level="85" type="Folk" name="Magic Device" title="Owned by Eigis">
+	<npc id="29386" level="126" type="Monster" name="Magic Device" title="Owned by Eigis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="250" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="145.66474" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="56" />
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="29387" level="85" type="Folk" name="Antharas" title="Earth Dragon">
+	<npc id="29387" level="120" type="RaidBoss" name="Antharas" title="Earth Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="87492600" hpRegen="10.5" mp="66584" mpRegen="3.6" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="66257649331200" sp="59631884352" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="87492600.168" hpRegen="13.4" mp="66584" mpRegen="30" />
+			<attack physical="639686" magical="583012" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="301296" magical="1458092" />
 			<speed>
 				<walk ground="60" />
 				<run ground="250" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33" />
 			<height normal="90" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Resistance -->
+			<skill id="32968" level="1" /> <!-- Shield of Limit -->
+		</skillList>
 	</npc>
-	<npc id="29388" level="85" type="Folk" name="Antharas" title="Earth Dragon's Avatar">
+	<npc id="29388" level="120" type="Monster" name="Antharas" title="Earth Dragon's Avatar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7874334" hpRegen="10.5" mp="66584" mpRegen="3.6" />
+			<vitals hp="10837445.08671" hpRegen="13.4" mp="66584" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="60" />
 				<run ground="250" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33" />
 			<height normal="90" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Resistance -->
+			<skill id="32968" level="1" /> <!-- Shield of Limit -->
+		</skillList>
 	</npc>
 	<npc id="29389" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -6156,20 +6134,21 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29390" level="85" type="Folk" name="Antharas' Symbol">
+	<npc id="29390" level="120" type="Monster" name="Antharas' Symbol">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2624778" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2624779.76879" hpRegen="13.4" mp="2355" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="100.5" />

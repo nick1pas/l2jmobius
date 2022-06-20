@@ -5452,24 +5452,19 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26281" level="101" type="Folk" name="Ashen Shadow Expeditionary Force Soldier Recruit" title="Raid Fighter">
+	<npc id="26281" level="101" type="Monster" name="Ashen Shadow Expeditionary Force Soldier Recruit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1786888" hpRegen="11.4" mp="72788" mpRegen="30" />
-			<attack physical="1118002" magical="340486" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="27522" magical="8310" />
+			<vitals hp="1786890.17341" hpRegen="11.4" mp="72788" mpRegen="30" />
+			<attack physical="138238" magical="13872" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5898" magical="2388" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
-				<attack type="DARK" value="400" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -5478,37 +5473,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26282" level="101" type="Folk" name="Ashen Shadow Expeditionary Force Scout" title="Raid Fighter">
+	<npc id="26282" level="101" type="Monster" name="Ashen Shadow Expeditionary Force Scout" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1786888" hpRegen="11.4" mp="72788" mpRegen="30" />
-			<attack physical="559001" magical="340486" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="27522" magical="8310" />
+			<vitals hp="1786890.17341" hpRegen="11.4" mp="72788" mpRegen="30" />
+			<attack physical="138238" magical="13872" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5898" magical="2388" />
 			<speed>
 				<walk ground="60" />
 				<run ground="220" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
-				<attack type="DARK" value="400" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -5517,37 +5497,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26283" level="101" type="Folk" name="Ashen Shadow Expeditionary Force Wizard" title="Raid Fighter">
+	<npc id="26283" level="101" type="Monster" name="Ashen Shadow Expeditionary Force Wizard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1786888" hpRegen="11.4" mp="72788" mpRegen="30" />
-			<attack physical="1118002" magical="340486" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="27522" magical="8310" />
+			<vitals hp="1786890.17341" hpRegen="11.4" mp="72788" mpRegen="30" />
+			<attack physical="138238" magical="13872" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5898" magical="2388" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
-				<attack type="DARK" value="400" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -5556,37 +5521,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26284" level="101" type="Folk" name="Ashen Shadow Expeditionary Force Healer" title="Raid Fighter">
+	<npc id="26284" level="101" type="Monster" name="Ashen Shadow Expeditionary Force Healer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1786888" hpRegen="11.4" mp="72788" mpRegen="30" />
-			<attack physical="1118002" magical="340486" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="27522" magical="8310" />
+			<vitals hp="1786890.17341" hpRegen="11.4" mp="72788" mpRegen="30" />
+			<attack physical="138238" magical="13872" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5898" magical="2388" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="500" water="500" wind="500" earth="500" holy="450" dark="500" />
-				<attack type="DARK" value="400" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -5595,19 +5545,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
-			<skill id="5598" level="12" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5598" level="1" /> <!-- Petrifaction Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
 	</npc>

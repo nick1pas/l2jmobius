@@ -3736,84 +3736,54 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26153" level="96" type="Folk" name="Enhance Death Knight">
+	<npc id="26153" level="96" type="Monster" name="Enhance Death Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="75" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2534672" hpRegen="8.5" mp="23550" mpRegen="30" />
-			<attack physical="675215" magical="152004" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4315" magical="1249" />
+		<equipment rhand="75" /> <!-- Caliburs -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2766548.26498" hpRegen="8.5" mp="23550" mpRegen="3" />
+			<attack physical="3500.58319" magical="2390.44454" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="796.45232" magical="582.80924" />
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
 			</speed>
-			<hitTime>710</hitTime>
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="300" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="12.0" grown="14.5" />
-			<height normal="31.0" grown="36" />
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26154" level="96" type="Folk" name="Enhance Doom Wraith">
+	<npc id="26154" level="96" type="Monster" name="Enhance Doom Wraith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="1472" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2534672" hpRegen="8.5" mp="23550" mpRegen="30" />
-			<attack physical="675215" magical="152004" random="10" critical="4" accuracy="5" attackSpeed="633" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4315" magical="1249" />
+		<equipment rhand="1472" /> <!-- Dreadbane -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2766548.26498" hpRegen="8.5" mp="23550" mpRegen="3" />
+			<attack physical="3500.58319" magical="2390.44454" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="796.45232" magical="582.80924" />
 			<speed>
 				<walk ground="100" />
 				<run ground="230" />
 			</speed>
-			<hitTime>450</hitTime>
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="300" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" noSleepMode="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="15.0" grown="25" />
-			<height normal="45.0" grown="52" />
+			<radius normal="15" grown="25" />
+			<height normal="45" grown="52" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="26155" level="96" type="Monster" name="Enhanced Validus">
@@ -4025,157 +3995,101 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26158" level="91" type="Folk" name="Enhanced Demonic Bathus">
+	<npc id="26158" level="91" type="Monster" name="Enhanced Demonic Bathus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2507240" hpRegen="8.5" mp="22058" mpRegen="30" />
-			<attack physical="62605.9830188506" magical="17783.5231451085" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="271.97" magical="154.62" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2736608.83281" hpRegen="8.5" mp="22058" mpRegen="3" />
+			<attack physical="2946.71599" magical="2012.22503" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="766.6258" magical="560.9835" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
-				<attack type="EARTH" value="200" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="28.0" grown="32" />
+			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26159" level="91" type="Folk" name="Enhanced Demonic Carcass">
+	<npc id="26159" level="91" type="Monster" name="Enhanced Demonic Krakos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="15304" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2507240" hpRegen="8.5" mp="22058" mpRegen="30" />
-			<attack physical="31302.9915094253" magical="8891.76157255424" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="271.97" magical="154.62" />
+		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2736608.83281" hpRegen="8.5" mp="22058" mpRegen="3" />
+			<attack physical="2946.71599" magical="2012.22503" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="766.6258" magical="560.9835" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
-				<attack type="EARTH" value="200" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="25.0" grown="32" />
-			<height normal="36.0" grown="55" />
+			<radius normal="25" grown="32" />
+			<height normal="36" grown="55" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26160" level="91" type="Folk" name="Enhanced Demonic Lotus">
+	<npc id="26160" level="91" type="Monster" name="Enhanced Demonic Lotus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2507240" hpRegen="8.5" mp="22058" mpRegen="30" />
-			<attack physical="62605.9830188506" magical="17783.5231451085" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="271.97" magical="154.62" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2736608.83281" hpRegen="8.5" mp="22058" mpRegen="3" />
+			<attack physical="2946.71599" magical="2012.22503" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="766.6258" magical="560.9835" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
-				<attack type="EARTH" value="200" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="28.0" grown="32" />
+			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26161" level="91" type="Folk" name="Enhanced Demonic Rakzan">
+	<npc id="26161" level="91" type="Monster" name="Enhanced Demonic Rakzan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2507240" hpRegen="8.5" mp="22058" mpRegen="30" />
-			<attack physical="62605.9830188506" magical="17783.5231451085" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="271.97" magical="154.62" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2736608.83281" hpRegen="8.5" mp="22058" mpRegen="3" />
+			<attack physical="2946.71599" magical="2012.22503" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="766.6258" magical="560.9835" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
-				<attack type="EARTH" value="200" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="42.0" grown="48" />
-			<height normal="79.0" grown="93" />
+			<radius normal="42" grown="48" />
+			<height normal="79" grown="93" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="26194" level="101" type="RaidBoss" name="Dimensional Makkum">

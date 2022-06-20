@@ -1501,238 +1501,454 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24837" level="85" type="Folk" name="Nerba Orc Mercenary">
+	<npc id="24837" level="116" type="Monster" name="Nerba Orc Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="15304" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14.4" />
 			<height normal="30.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24838" level="85" type="Folk" name="Tel Mahum Raider">
+	<npc id="24838" level="116" type="Monster" name="Tel Mahum Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38430" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38430" /> <!-- Monster Only: Tiger Bow -->
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="75" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="26.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24839" level="85" type="Folk" name="Wild Monkey">
+	<npc id="24839" level="116" type="Monster" name="Wild Monkey">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38559" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38559" /> <!-- Monster Only: Mahum Throwing Blade -->
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="31" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19.5" />
 			<height normal="39.9" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24840" level="85" type="Folk" name="Dwarf Archaeologist">
+	<npc id="24840" level="116" type="Monster" name="Dwarf Archaeologist">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="30" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11.7" />
 			<height normal="25.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="5465" level="1" /> <!-- Earth Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24841" level="85" type="Folk" name="Nerba Orc Shaman">
+	<npc id="24841" level="116" type="Monster" name="Nerba Orc Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8688" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8688" /> <!-- Daimon Crystal -->
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14.4" />
 			<height normal="33.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24842" level="85" type="Folk" name="Tel Mahum Astrologer">
+	<npc id="24842" level="116" type="Monster" name="Tel Mahum Astrologer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38564" lhand="38432" />
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38564" lhand="38432" /> <!-- Monster Weapon: Invisible Dagger / Monster Only: Tiger Jewel -->
+		<acquire exp="3839010256" sp="3455097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="556031" hpRegen="10.5" mp="3024" mpRegen="3.6" />
+			<vitals hp="556031.21387" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="28.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="16317" level="10" /> <!-- Pull Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="76200" max="83160" chance="100" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24843" level="85" type="Folk" name="Royal Guard">
+	<npc id="24843" level="118" type="Monster" name="Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="65" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="11" />
-			<height normal="39" />
+			<radius normal="11" grown="13.2" />
+			<height normal="39" grown="46.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24844" level="85" type="Folk" name="Royal Guard Captain">
+	<npc id="24844" level="118" type="Monster" name="Royal Guard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="32.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24845" level="85" type="Folk" name="Royal Field Officer">
+	<npc id="24845" level="118" type="Monster" name="Royal Field Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24846" level="85" type="Folk" name="Commander of Operations">
+	<npc id="24846" level="118" type="Monster" name="Commander of Operations">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24847" level="85" type="Folk" name="Elite Wizard">
+	<npc id="24847" level="118" type="Monster" name="Elite Wizard ">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="73" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19" />
 			<height normal="44" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24848" level="85" type="Folk" name="Chief Magician">
+	<npc id="24848" level="118" type="Monster" name="Chief Magician ">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="5002948896" sp="4502604" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="697486" hpRegen="10.5" mp="3107" mpRegen="3.6" />
+			<vitals hp="697486.12717" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="34285" level="1" /> <!-- Hard Hunting Zone -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4671" max="10920" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.781" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="1.249" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.249" /> <!-- Dragon Scale -->
+				<item id="81219" min="1" max="1" chance="1.249" /> <!-- Angel's Feather -->
+				<item id="81343" min="1" max="1" chance="0.17" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.035" /> <!-- Orb of Bloody Soul -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="3.243" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24849" level="112" type="Monster" name="Resurrected Pondus" title="Atelia Protector">
 		<race>DEMONIC</race>
@@ -3483,256 +3699,536 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="24887" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
+	<npc id="24887" level="112" type="Monster" name="Mimic" title="Baium's Treasure">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="51874959360" sp="46687388" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="447704.04624" hpRegen="12.9" mp="2862" mpRegen="30" />
+			<attack physical="1066143" magical="97169" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="334773" magical="165198" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2100000" max="3180000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.518" /> <!-- Spirit Ore -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0002" /> <!-- Enhanced Rune Stone -->
+				<item id="82012" min="1" max="1" chance="0.014" /> <!-- Orb of Anger - 1st floor -->
+				<item id="82265" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 1 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24888" level="114" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="83229373080" sp="74906345" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="598406.93642" hpRegen="12.9" mp="2943" mpRegen="30" />
+			<attack physical="1066143" magical="97169" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="334773" magical="165198" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4455000" max="5427000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.504" /> <!-- Spirit Ore -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0003" /> <!-- Enhanced Rune Stone -->
+				<item id="82013" min="1" max="1" chance="0.028" /> <!-- Orb of Anger - 2nd Floor -->
+				<item id="82265" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 1 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24889" level="116" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="133213592640" sp="119892153" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="834046.24277" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="7290000" max="9000000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0004" /> <!-- Enhanced Rune Stone -->
+				<item id="82014" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 3rd Floor -->
+				<item id="82265" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 1 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24890" level="116" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="146650081440" sp="131985060" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="834046.24277" hpRegen="12.9" mp="3024" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="24891" level="118" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="234683728880" sp="211215245" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1150850.28902" hpRegen="12.9" mp="3107" mpRegen="30" />
+			<attack physical="1230165" magical="112118" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="502160" magical="247796" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="12150000" max="13770000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.504" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.00008" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.00008" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.00008" /> <!-- Enhanced Rune Stone -->
+				<item id="82016" min="1" max="1" chance="0.028" /> <!-- Orb of Anger - 5th Floor -->
+				<item id="82265" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 1 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24892" level="120" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="375346080000" sp="337811472" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="14715000" max="16335000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82265" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 1 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24893" level="120" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="375346080000" sp="337811472" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="17280000" max="18900000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24894" level="122" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="659576273800" sp="593618572" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2140139.88439" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="19845000" max="21465000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="24895" level="124" type="Monster" name="Mimic" title="Baium's Treasure">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1451450.28902" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<hitTime>600</hitTime>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="13.5" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+		</skillList>
+	</npc>
+	<npc id="24896" level="120" type="Monster" name="Heaven's Palace Watcher">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
+		<acquire exp="37534608000" sp="33781104" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="447704" hpRegen="10.5" mp="2862" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24888" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="598407" hpRegen="10.5" mp="2943" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24889" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="834046" hpRegen="10.5" mp="3024" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24890" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="834046" hpRegen="10.5" mp="3024" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24891" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1150851" hpRegen="10.5" mp="3107" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24892" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24893" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24894" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2140140" hpRegen="10.5" mp="3190" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24895" level="85" type="Folk" name="Mimic" title="Baium's Treasure">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1451454" hpRegen="10.5" mp="3190" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.5" />
-			<height normal="13.5" />
-		</collision>
-	</npc>
-	<npc id="24896" level="85" type="Folk" name="Heaven's Palace Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="30" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="7" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24897" level="85" type="Folk" name="Heaven's Palace Pilgrim">
+	<npc id="24897" level="120" type="Monster" name="Heaven's Palace Pilgrim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
+		<acquire exp="37534608000" sp="33781104" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="30" />
+			<radius normal="8" grown="9" />
+			<height normal="30" grown="36.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="7" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24898" level="85" type="Folk" name="Heaven's Palace Guardian">
+	<npc id="24898" level="120" type="Monster" name="Heaven's Palace Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
+		<acquire exp="37534608000" sp="33781104" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="13.5" />
-			<height normal="36.5" />
+			<radius normal="13.5" grown="16" />
+			<height normal="36.5" grown="42.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="7" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24899" level="85" type="Folk" name="Heaven's Palace Herald">
+	<npc id="24899" level="120" type="Monster" name="Heaven's Palace Herald">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
+		<acquire exp="37534608000" sp="33781104" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1574866" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="1574869.9422" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="11" />
-			<height normal="38.5" />
+			<radius normal="11" grown="13" />
+			<height normal="38.5" grown="46.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attribute -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Improved Immunity -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="33195" level="10" /> <!-- Direct Hit Resistance -->
+			<skill id="34065" level="7" /> <!-- Energy of Insolence -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="1728000" max="1890000" chance="70" /> <!-- Adena -->
+				<item id="1785" min="1" max="1" chance="34.3" /> <!-- Soulstone -->
+				<item id="3031" min="1" max="1" chance="35.476" /> <!-- Spirit Ore -->
+				<item id="35566" min="1" max="1" chance="0.0001" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="0.0001" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="39738" min="1" max="1" chance="0.021" /> <!-- Rune Stone -->
+				<item id="81053" min="1" max="1" chance="0.14" /> <!-- Vitality -->
+				<item id="81453" min="1" max="1" chance="0.0001" /> <!-- Enhanced Rune Stone -->
+				<item id="82017" min="1" max="1" chance="0.056" /> <!-- Orb of Anger - 6th Floor -->
+				<item id="82266" min="1" max="1" chance="0.007" /> <!-- Tersi's Soul Crystal Lv. 2 - Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

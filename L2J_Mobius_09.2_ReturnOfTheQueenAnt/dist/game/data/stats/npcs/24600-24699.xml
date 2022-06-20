@@ -630,62 +630,142 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="24618" level="85" type="Folk" name="Dragon Officer">
+	<npc id="24618" level="124" type="Monster" name="Dragon Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="10778329984" sp="9700411" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="2177179.76879" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="92" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="53" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="2" /> <!-- Party Small Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="1" /> <!-- Antharas' Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="31494" max="73657" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.053" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.683" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.683" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.683" /> <!-- Angel’s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Bloody Soul Orb -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.665" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24619" level="85" type="Folk" name="Behemoth Dragon" title="Daymare">
+	<npc id="24619" level="124" type="Monster" name="Behemoth Dragon" title="Daymare">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="107783376720" sp="97005031" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="4354360.11561" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="75.6" />
 			<height normal="65.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="2" /> <!-- Party Small Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="3" /> <!-- Antharas' Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="32064" max="75026" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.072" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.714" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.714" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.714" /> <!-- Angel’s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Bloody Soul Orb -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.665" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24620" level="85" type="Folk" name="Soul Hunter" title="Night Lord">
+	<npc id="24620" level="124" type="Monster" name="Soul Hunter" title="Night Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="107783376720" sp="97005031" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1281141" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<vitals hp="4354360.11561" hpRegen="13.4" mp="3190" mpRegen="30" />
+			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="753240" magical="364523" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="74" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="33104" level="2" /> <!-- Party Small Bonus -->
+			<skill id="33123" level="1" /> <!-- Very Dark Night -->
+			<skill id="33086" level="3" /> <!-- Antharas' Sharp Claw -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="32064" max="75026" chance="70" /> <!-- Adena -->
+				<item id="81216" min="2" max="6" chance="1.072" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="3" chance="1.714" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.714" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.714" /> <!-- Angel’s Feather -->
+				<item id="81343" min="1" max="1" chance="0.85" /> <!-- Shining Aden Treasure Chest -->
+				<item id="81836" min="1" max="1" chance="0.3" /> <!-- Bloody Soul Orb -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="6.665" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24621" level="116" type="Monster" name="Laikel">
 		<race>BUG</race>

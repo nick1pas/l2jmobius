@@ -2071,24 +2071,19 @@
 			<height normal="87" />
 		</collision>
 	</npc>
-	<npc id="26447" level="115" type="Folk" name="Handy Cannon Gunner">
+	<npc id="26447" level="116" type="Monster" name="Handy Cannon Gunner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="578574" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="191358" magical="9966" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="600" distance="10" width="0" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="578573.98844" hpRegen="12.9" mp="25848" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
-				<attack type="DARK" value="1450" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2099,36 +2094,23 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26448" level="115" type="Folk" name="Anchor Warrior">
+	<npc id="26448" level="116" type="Monster" name="Anchor Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="578574" hpRegen="11.4" mp="25460" mpRegen="30" />
-			<attack physical="382715" magical="9966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="578573.98844" hpRegen="12.9" mp="25460" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="43" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
-				<attack type="DARK" value="1450" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2139,36 +2121,23 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26449" level="115" type="Folk" name="Operator">
+	<npc id="26449" level="116" type="Monster" name="Operator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="578574" hpRegen="11.4" mp="25460" mpRegen="30" />
-			<attack physical="382715" magical="9966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="578573.98844" hpRegen="12.9" mp="25460" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
-				<attack type="DARK" value="1450" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2179,36 +2148,23 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26450" level="115" type="Folk" name="Axe Warrior">
+	<npc id="26450" level="116" type="Monster" name="Axe Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="578574" hpRegen="11.4" mp="25460" mpRegen="30" />
-			<attack physical="382715" magical="9966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="578573.98844" hpRegen="12.9" mp="25460" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="43" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1550" dark="1600" />
-				<attack type="DARK" value="1450" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2219,14 +2175,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
@@ -2353,42 +2301,29 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="26454" level="125" type="Folk" name="Zahak">
+	<npc id="26454" level="125" type="Monster" name="Zahak">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="48424000" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="109348" magical="1457528" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="80806" magical="39846" />
+			<vitals hp="48424" hpRegen="13.4" mp="25848" mpRegen="30" />
+			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="150648" magical="729046" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="2350" water="2350" wind="2350" earth="2350" holy="2300" dark="2350" />
-				<attack type="DARK" value="2200" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="16" />
-			<height normal="50" />
+			<radius normal="16" grown="1.2" />
+			<height normal="50" grown="50" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>

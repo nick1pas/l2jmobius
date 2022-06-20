@@ -1977,36 +1977,21 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="29232" level="99" type="Folk" name="Reward" title="Earth Wyrm">
+	<npc id="29232" level="99" type="Monster" name="Reward" title="Earth Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13007.8303806237" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<attack physical="3899.90823712927" magical="1917.45487198718" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="405.66735" magical="296.84976" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14197.47634" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<attack physical="13491.48739" magical="2372.82433" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1051.40069" magical="609.53854" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
 			<hitTime>600</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="true" targetable="false" showName="false" />
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="14765" level="4" /> <!-- Vampiric Rage Resistance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />

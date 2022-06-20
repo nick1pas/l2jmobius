@@ -408,48 +408,25 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26313" level="106" type="Folk" name="Lithra Bud" title="Raid Fighter">
+	<npc id="26313" level="106" type="Monster" name="Lithra Bud" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>PLANT</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3831006" hpRegen="11.4" mp="26228" mpRegen="30" />
-			<attack physical="914348" magical="103326" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="8532" magical="6418" />
+			<vitals hp="3831009.82659" hpRegen="11.4" mp="26228" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="10098" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
-				<attack type="EARTH" value="500" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="true" canMove="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="123" />
 		</collision>
-		<skillList>
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4390" level="1" /> <!-- Mystic Immunity -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16515" level="6" /> <!-- Party Mage Monster -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
-		</skillList>
 	</npc>
 	<npc id="26314" level="106" type="Monster" name="Lithra Aprias" title="Raid Fighter">
 		<race>PLANT</race>
@@ -689,24 +666,19 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26318" level="106" type="Folk" name="Spezion's Despair" title="Raid Fighter">
+	<npc id="26318" level="106" type="Monster" name="Spezion's Despair" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14419824" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="2082836" magical="237326" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="22216" magical="8996" />
+			<vitals hp="144198" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="10098" />
 			<speed>
 				<walk ground="40" />
 				<run ground="200" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
-				<attack type="EARTH" value="500" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -715,38 +687,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="16514" level="6" /> <!-- Party Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="26319" level="106" type="Folk" name="Spezion's Lunacy" title="Raid Fighter">
+	<npc id="26319" level="106" type="Monster" name="Spezion's Lunacy" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14419824" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="2082836" magical="237326" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="22216" magical="8996" />
+			<vitals hp="144198" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="10098" />
 			<speed>
 				<walk ground="40" />
 				<run ground="200" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
-				<attack type="EARTH" value="500" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -755,38 +711,22 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="16514" level="6" /> <!-- Party Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="26320" level="106" type="Folk" name="Spezion's Rage" title="Raid Fighter">
+	<npc id="26320" level="106" type="Monster" name="Spezion's Rage" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14419824" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="2082836" magical="237326" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="22216" magical="8996" />
+			<vitals hp="144198" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="10098" />
 			<speed>
 				<walk ground="40" />
 				<run ground="200" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="650" water="650" wind="600" earth="650" holy="650" dark="650" />
-				<attack type="EARTH" value="500" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -795,18 +735,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="16514" level="6" /> <!-- Party Fighter Monster -->
 		</skillList>
 	</npc>
 	<npc id="26321" level="108" type="RaidBoss" name="Etis van Etina" title="Overlord">
@@ -2484,64 +2413,45 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26353" level="112" type="Folk" name="Halisha's Breath">
+	<npc id="26353" level="116" type="Monster" name="Halisha's Breath">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="876629" hpRegen="12.6" mp="2862" mpRegen="30" />
-			<attack physical="3124230" magical="284760" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="876628.90173" hpRegen="12.9" mp="2862" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
 			</speed>
-			<hitTime>430</hitTime>
-			<attribute>
-				<defence fire="1300" water="1300" wind="1300" earth="1300" holy="1250" dark="1300" />
-				<attack type="DARK" value="1150" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="23" />
-			<height normal="40" />
+			<radius normal="23" grown="32" />
+			<height normal="40" grown="50" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26354" level="112" type="Folk" name="Halisha's Breath">
+	<npc id="26354" level="116" type="Monster" name="Halisha's Breath">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="876629" hpRegen="12.6" mp="2862" mpRegen="30" />
-			<attack physical="3124230" magical="284760" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="88051" magical="43583" />
+			<vitals hp="876628.90173" hpRegen="12.9" mp="2862" mpRegen="30" />
+			<attack physical="246033" magical="224236" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100432" magical="495592" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
 			</speed>
-			<hitTime>430</hitTime>
-			<attribute>
-				<defence fire="1300" water="1300" wind="1300" earth="1300" holy="1250" dark="1300" />
-				<attack type="DARK" value="1150" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2550,16 +2460,7 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 		</skillList>
@@ -3026,24 +2927,20 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26363" level="108" type="Folk" name="Curain" title="Screaming Ghost">
+	<npc id="26363" level="108" type="Monster" name="Curain" title="Screaming Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<acquire exp="2286832176" sp="2052864" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1562147" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="1562150.28902" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3052,41 +2949,27 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16514" level="6" /> <!-- Party Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="26364" level="108" type="Folk" name="Flan" title="Suffering Ghost">
+	<npc id="26364" level="108" type="Monster" name="Flan" title="Suffering Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<acquire exp="3201558048" sp="2881008" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3124295" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="31243" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3095,41 +2978,27 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16514" level="6" /> <!-- Party Fighter Monster -->
 		</skillList>
 	</npc>
-	<npc id="26365" level="108" type="Folk" name="Aschedor" title="Howling Ghost">
+	<npc id="26365" level="108" type="Monster" name="Aschedor" title="Howling Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<acquire exp="3201558048" sp="2881008" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3124295" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="5054" magical="3801" />
+			<vitals hp="31243" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="46" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3138,41 +3007,27 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16515" level="6" /> <!-- Party Mage Monster -->
 		</skillList>
 	</npc>
-	<npc id="26366" level="108" type="Folk" name="Panahon" title="Wailing Ghost">
+	<npc id="26366" level="108" type="Monster" name="Panahon" title="Wailing Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<acquire exp="4573664352" sp="4105728" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6248590" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="5054" magical="3801" />
+			<vitals hp="6248590.17341" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="46" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3181,42 +3036,28 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16515" level="6" /> <!-- Party Mage Monster -->
 		</skillList>
 	</npc>
-	<npc id="26367" level="108" type="Folk" name="Yehan Klodekus' Ghost">
+	<npc id="26367" level="108" type="Monster" name="Yehan Klodekus' Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="13982" />
+		<equipment rhand="13982" /> <!-- Monster Only (Death Knight_pole) -->
+		<acquire exp="2286832176" sp="2052864" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312429" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="2082836" magical="237326" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="312428.90173" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="73" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3225,38 +3066,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26368" level="108" type="Folk" name="Yehan Klanikus' Ghost">
+	<npc id="26368" level="108" type="Monster" name="Yehan Klanikus' Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="13983" />
+		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->
+		<acquire exp="2286832176" sp="2052864" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312429" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="2082836" magical="237326" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="312428.90173" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="73" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3265,38 +3092,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26369" level="108" type="Folk" name="Yehan Klodekus">
+	<npc id="26369" level="108" type="Monster" name="Yehan Klodekus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="13982" />
+		<equipment rhand="13982" /> <!-- Monster Only (Death Knight_pole) -->
+		<acquire exp="22868345088" sp="20575296" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="31242952" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="31243" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="73" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3305,38 +3118,24 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26370" level="108" type="Folk" name="Yehan Klanikus">
+	<npc id="26370" level="108" type="Monster" name="Yehan Klanikus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="13983" />
+		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->
+		<acquire exp="22868345088" sp="20575296" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="31242952" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7220" magical="2923" />
+			<vitals hp="31243" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="73" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3345,56 +3144,31 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26371" level="108" type="Folk" name="Zahak" title="Tauti Underling">
+	<npc id="26371" level="108" type="Monster" name="Zahak" title="Tauti Underling">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3124295" hpRegen="11.4" mp="25848" mpRegen="30" />
-			<attack physical="1041418" magical="118663" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="5054" magical="3801" />
+			<vitals hp="31243" hpRegen="11.4" mp="25848" mpRegen="30" />
+			<attack physical="260354" magical="23732" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="11108" magical="994" />
 			<speed>
 				<walk ground="30" />
 				<run ground="230" />
 			</speed>
 			<hitTime>600</hitTime>
-			<attribute>
-				<defence fire="700" water="700" wind="700" earth="700" holy="650" dark="700" />
-				<attack type="DARK" value="550" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="16" />
-			<height normal="50" />
+			<radius normal="16" grown="1.2" />
+			<height normal="50" grown="50" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="26388" level="107" type="RaidBoss" name="Death Reaper" title="Raid Soul Reaver">
