@@ -870,7 +870,7 @@ public class Pet extends Summon
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(newItem);
-			sendInventoryUpdate(iu);
+			getOwner().sendInventoryUpdate(iu);
 		}
 		
 		return newItem;
@@ -1531,7 +1531,7 @@ public class Pet extends Summon
 				controlItem.updateDatabase();
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(controlItem);
-				sendInventoryUpdate(iu);
+				getOwner().sendInventoryUpdate(iu);
 			}
 		}
 		else
@@ -1677,9 +1677,9 @@ public class Pet extends Summon
 			}
 		}
 		
-		final PetInventoryUpdate petUI = new PetInventoryUpdate();
-		petUI.addItems(items);
-		sendInventoryUpdate(petUI);
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
+		petIU.addItems(items);
+		sendInventoryUpdate(petIU);
 		getStat().recalculateStats(true);
 		if (abortAttack)
 		{

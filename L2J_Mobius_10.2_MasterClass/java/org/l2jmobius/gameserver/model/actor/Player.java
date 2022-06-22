@@ -465,6 +465,11 @@ public class Player extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
+	private final Set<InventoryUpdate> _inventoryUpdates = ConcurrentHashMap.newKeySet(1);
+	private ScheduledFuture<?> _inventoryUpdateTask;
+	private ScheduledFuture<?> _itemListTask;
+	private ScheduledFuture<?> _skillListTask;
+	
 	private boolean _subclassLock = false;
 	protected int _baseClass;
 	protected int _activeClass;
@@ -3790,8 +3795,7 @@ public class Player extends Playable
 	 */
 	public boolean exchangeItemsById(String process, WorldObject reference, int coinId, long cost, int rewardId, long count, boolean sendMessage)
 	{
-		final PlayerInventory inv = _inventory;
-		if (!inv.validateCapacityByItemId(rewardId, count))
+		if (!_inventory.validateCapacityByItemId(rewardId, count))
 		{
 			if (sendMessage)
 			{
@@ -3800,7 +3804,7 @@ public class Player extends Playable
 			return false;
 		}
 		
-		if (!inv.validateWeightByItemId(rewardId, count))
+		if (!_inventory.validateWeightByItemId(rewardId, count))
 		{
 			if (sendMessage)
 			{
@@ -9816,24 +9820,31 @@ public class Player extends Playable
 	
 	public void sendSkillList(int lastLearnedSkillId)
 	{
-		boolean isDisabled = false;
-		final SkillList sl = new SkillList();
-		for (Skill s : getSkillList())
+		if (_skillListTask == null)
 		{
-			if (_clan != null)
+			_skillListTask = ThreadPool.schedule(() ->
 			{
-				isDisabled = s.isClanSkill() && (_clan.getReputationScore() < 0);
-			}
-			
-			sl.addSkill(s.getDisplayId(), s.getReuseDelayGroup(), s.getDisplayLevel(), s.getSubLevel(), s.isPassive(), isDisabled, s.isEnchantable());
+				boolean isDisabled = false;
+				final SkillList skillList = new SkillList();
+				for (Skill skill : getSkillList())
+				{
+					if (_clan != null)
+					{
+						isDisabled = skill.isClanSkill() && (_clan.getReputationScore() < 0);
+					}
+					
+					skillList.addSkill(skill.getDisplayId(), skill.getReuseDelayGroup(), skill.getDisplayLevel(), skill.getSubLevel(), skill.isPassive(), isDisabled, skill.isEnchantable());
+				}
+				if (lastLearnedSkillId > 0)
+				{
+					skillList.setLastLearnedSkillId(lastLearnedSkillId);
+				}
+				
+				sendPacket(skillList);
+				sendPacket(new AcquireSkillList(this));
+				_skillListTask = null;
+			}, 300);
 		}
-		if (lastLearnedSkillId > 0)
-		{
-			sl.setLastLearnedSkillId(lastLearnedSkillId);
-		}
-		sendPacket(sl);
-		
-		sendPacket(new AcquireSkillList(this));
 	}
 	
 	/**
@@ -14176,24 +14187,40 @@ public class Player extends Playable
 		return _questZoneId;
 	}
 	
-	/**
-	 * @param iu
-	 */
 	public void sendInventoryUpdate(InventoryUpdate iu)
 	{
-		sendPacket(iu);
-		sendPacket(new ExAdenaInvenCount(this));
-		sendPacket(new ExUserInfoInvenWeight(this));
+		_inventoryUpdates.add(iu);
+		if (_inventoryUpdateTask == null)
+		{
+			_inventoryUpdateTask = ThreadPool.schedule(() ->
+			{
+				for (InventoryUpdate packet : _inventoryUpdates)
+				{
+					sendPacket(packet);
+					_inventoryUpdates.remove(packet);
+				}
+				sendPacket(new ExAdenaInvenCount(this));
+				sendPacket(new ExUserInfoInvenWeight(this));
+				_inventoryUpdateTask = null;
+			}, 300);
+		}
 	}
 	
 	public void sendItemList()
 	{
-		sendPacket(new ItemList(1, this));
-		sendPacket(new ItemList(2, this));
-		sendPacket(new ExQuestItemList(1, this));
-		sendPacket(new ExQuestItemList(2, this));
-		sendPacket(new ExAdenaInvenCount(this));
-		sendPacket(new ExUserInfoInvenWeight(this));
+		if (_itemListTask == null)
+		{
+			_itemListTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ItemList(1, this));
+				sendPacket(new ItemList(2, this));
+				sendPacket(new ExQuestItemList(1, this));
+				sendPacket(new ExQuestItemList(2, this));
+				sendPacket(new ExAdenaInvenCount(this));
+				sendPacket(new ExUserInfoInvenWeight(this));
+				_itemListTask = null;
+			}, 300);
+		}
 	}
 	
 	public Fishing getFishing()

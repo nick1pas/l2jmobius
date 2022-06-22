@@ -73,6 +73,7 @@ import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.pet.PetDelete;
 import org.l2jmobius.gameserver.network.serverpackets.pet.PetInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetInventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.pet.PetItemList;
 import org.l2jmobius.gameserver.network.serverpackets.pet.PetStatusUpdate;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -1145,12 +1146,12 @@ public abstract class Summon extends Playable
 		return _summonPoints;
 	}
 	
-	public void sendInventoryUpdate(IClientOutgoingPacket iu)
+	public void sendInventoryUpdate(PetInventoryUpdate iu)
 	{
 		final Player owner = _owner;
 		if (owner != null)
 		{
-			owner.sendInventoryUpdate(iu);
+			owner.sendPacket(iu);
 			if (getInventory() != null)
 			{
 				owner.sendPacket(new PetItemList(getInventory().getItems()));
