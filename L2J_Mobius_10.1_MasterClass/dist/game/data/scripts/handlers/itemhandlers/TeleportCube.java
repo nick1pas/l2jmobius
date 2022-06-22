@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
 import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
 import quests.Q10591_NobleMaterial.Q10591_NobleMaterial;
@@ -77,6 +78,8 @@ public class TeleportCube implements IItemHandler
 		{
 			return false;
 		}
+		
+		player.doCast(CommonSkill.TELEPORTATION_CUBE.getSkill());
 		
 		final QuestState qs11024 = player.getQuestState(Q11024_PathOfDestinyBeginning.class.getSimpleName());
 		final QuestState qs11025 = player.getQuestState(Q11025_PathOfDestinyProving.class.getSimpleName());
