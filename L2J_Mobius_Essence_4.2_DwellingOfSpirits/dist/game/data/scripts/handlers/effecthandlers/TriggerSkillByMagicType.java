@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
@@ -90,7 +91,8 @@ public class TriggerSkillByMagicType extends AbstractEffect
 			return;
 		}
 		
-		if (!CommonUtil.contains(_magicTypes, event.getSkill().getMagicType()))
+		final Skill eventSkill = event.getSkill();
+		if (!CommonUtil.contains(_magicTypes, eventSkill.getMagicType()))
 		{
 			return;
 		}
@@ -112,6 +114,15 @@ public class TriggerSkillByMagicType extends AbstractEffect
 		if ((target == null) || !target.isCreature())
 		{
 			return;
+		}
+		
+		// Ignore common skills.
+		for (CommonSkill skill : CommonSkill.values())
+		{
+			if (skill.getId() == eventSkill.getId())
+			{
+				return;
+			}
 		}
 		
 		final Skill triggerSkill;

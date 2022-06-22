@@ -24,6 +24,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.skill.BuffInfo;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,6 +36,7 @@ public class Die implements IClientOutgoingPacket
 	private final int _objectId;
 	private final boolean _isSweepable;
 	private int _flags = 1; // To nearest village.
+	private int _delayFeather = 0;
 	
 	public Die(Creature creature)
 	{
@@ -57,6 +60,16 @@ public class Die implements IClientOutgoingPacket
 				siegeClan = fort.getSiege().getAttackerClan(clan);
 				isInFortDefense = (siegeClan == null) && fort.getSiege().checkIsDefender(clan);
 			}
+			
+			for (BuffInfo effect : creature.getEffectList().getEffects())
+			{
+				final Skill skill = effect.getSkill();
+				if (skill.getId() == 7008)
+				{
+					_delayFeather = effect.getTime();
+				}
+			}
+			
 			// ClanHall check.
 			if ((clan != null) && (clan.getHideoutId() > 0))
 			{
@@ -92,7 +105,7 @@ public class Die implements IClientOutgoingPacket
 		packet.writeD(_objectId);
 		packet.writeQ(_flags);
 		packet.writeD(_isSweepable ? 1 : 0);
-		packet.writeD(0); // Feather item time.
+		packet.writeD(_delayFeather); // Feather item time.
 		packet.writeC(0); // Hide die animation.
 		packet.writeD(0);
 		packet.writeD(0);

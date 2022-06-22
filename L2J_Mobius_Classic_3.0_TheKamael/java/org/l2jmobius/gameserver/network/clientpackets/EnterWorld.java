@@ -503,16 +503,17 @@ public class EnterWorld implements IClientIncomingPacket
 			PetitionManager.getInstance().checkPetitionMessages(player);
 		}
 		
+		player.onPlayerEnter();
+		
+		player.sendPacket(new SkillCoolTime(player));
+		player.sendPacket(new ExVoteSystemInfo(player));
+		
 		if (player.isAlikeDead()) // dead or fake dead
 		{
 			// no broadcast needed since the player will already spawn dead to others
 			player.sendPacket(new Die(player));
 		}
 		
-		player.onPlayerEnter();
-		
-		player.sendPacket(new SkillCoolTime(player));
-		player.sendPacket(new ExVoteSystemInfo(player));
 		for (Item item : player.getInventory().getItems())
 		{
 			if (item.isTimeLimitedItem())
