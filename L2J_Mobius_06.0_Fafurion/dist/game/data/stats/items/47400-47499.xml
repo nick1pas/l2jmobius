@@ -726,7 +726,17 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="47110" min="1" max="1" chance="30" /> <!-- Soul Crystal of Seven Signs Lv. 4 -->
+			<item id="47111" min="1" max="1" chance="25" /> <!-- Soul Crystal of Seven Signs Lv. 5 -->
+			<item id="47112" min="1" max="1" chance="20" /> <!-- Soul Crystal of Seven Signs Lv. 6 -->
+			<item id="47113" min="1" max="1" chance="15" /> <!-- Soul Crystal of Seven Signs Lv. 7 -->
+			<item id="47114" min="1" max="1" chance="10" /> <!-- Soul Crystal of Seven Signs Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="47456" name="Level 4 Box of Gems" type="EtcItem">
 		<!-- Double-click to obtain 1 Level 4 La Vie En Rose Gem. -->
@@ -734,7 +744,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="47104" min="1" max="1" chance="40" /> <!-- Lilith' Soul Crystal Lv. 5 -->
+			<item id="47105" min="1" max="1" chance="30" /> <!-- Lilith' Soul Crystal Lv. 6 -->
+			<item id="47106" min="1" max="1" chance="20" /> <!-- Lilith' Soul Crystal Lv. 7 -->
+			<item id="47107" min="1" max="1" chance="10" /> <!-- Lilith' Soul Crystal Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="47457" name="Level 5 Box of Gems" type="EtcItem">
 		<!-- Double-click to obtain 1 Level 5 La Vie En Rose Gem. -->
@@ -742,7 +761,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
 		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="47093" min="1" max="1" chance="40" /> <!-- Anakim' Soul Crystal Lv. 5 -->
+			<item id="47094" min="1" max="1" chance="30" /> <!-- Anakim' Soul Crystal Lv. 6 -->
+			<item id="47095" min="1" max="1" chance="20" /> <!-- Anakim' Soul Crystal Lv. 7 -->
+			<item id="47096" min="1" max="1" chance="10" /> <!-- Anakim' Soul Crystal Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="47458" name="Shadow Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a Shadow Weapon. -->
