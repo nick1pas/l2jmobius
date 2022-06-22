@@ -11,7 +11,11 @@
 		<skill skillName="Accuracy" skillId="256" skillLevel="2" getLevel="40" levelUpSp="110000">
 			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Deadly Blow" skillId="263" skillLevel="1" getLevel="40" levelUpSp="65000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLevel="1" getLevel="40" levelUpSp="65000">
+			<removeSkill id="3" /> <!-- Power Strike -->
+			<removeSkill id="16" /> <!-- Mortal Blow -->
+			<removeSkill id="56" /> <!-- Power Shot -->
+		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="2" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="3" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="4" getLevel="40" levelUpSp="65000" />

@@ -309,6 +309,7 @@
 		</skill>
 		<skill skillName="Shield Throwing" skillId="47273" skillLevel="5" getLevel="85" levelUpSp="840000000"/>
 		<skill skillName="Shield of Security" skillId="47315" skillLevel="1" getLevel="85" levelUpSp="840000000">
+			<removeSkill id="1621" onlyReplaceByLearn="true" /> <!-- Shield of Sacrifice -->
 			<item id="96605,96606" count="1" /> <!-- Spellbook: Shield of Security -->
 		</skill>
 		
@@ -332,7 +333,8 @@
 		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="7" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="10" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="10" getLevel="86" levelUpSp="840000000" />
-		
+		<skill skillName="Shield Strike" skillId="984" skillLevel="26" getLevel="86" levelUpSp="840000000" />
+
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="57" getLevel="87" levelUpSp="840000000" />
 		<skill skillName="Sanctuary" skillId="97" skillLevel="22" getLevel="87" levelUpSp="840000000">
 			<item id="57" count="500000" /> <!-- Adena -->
@@ -366,6 +368,9 @@
 		<skill skillName="Knight Armor Mastery" skillId="47297" skillLevel="11" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Knight Weapon Mastery" skillId="47298" skillLevel="11" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Knight's Protection" skillId="53010" skillLevel="7" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="59" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Sanctuary" skillId="97" skillLevel="24" getLevel="89" levelUpSp="840000000">

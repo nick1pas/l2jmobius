@@ -162,6 +162,7 @@
 		<skill skillName="Deadly Strike" skillId="1632" skillLevel="6" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Drain HP" skillId="45250" skillLevel="32" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Frantic Pace" skillId="45402" skillLevel="1" getLevel="82" levelUpSp="170000000">
+			<removeSkill id="45187" onlyReplaceByLearn="true" /> <!-- Guard Crush -->
 			<item id="94323,95528" count="1" /> <!-- Spellbook: Frantic Pace -->
 		</skill>
 		<skill skillName="Dragon Slayer Appearance" skillId="54231" skillLevel="1" getLevel="82" levelUpSp="0">
@@ -286,6 +287,9 @@
 		<skill skillName="Drain HP" skillId="45250" skillLevel="38" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Frantic Pace" skillId="45402" skillLevel="4" getLevel="88" levelUpSp="840000000">
 			<item id="57" count="4000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
 		</skill>
 		
 		<skill skillName="Confusion" skillId="2" skillLevel="34" getLevel="89" levelUpSp="840000000" />

@@ -2,7 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="37" parentClassId="35">
 		<skill skillName="Confusion" skillId="2" skillLevel="5" getLevel="40" levelUpSp="72000" />
-		<skill skillName="Double Shot" skillId="19" skillLevel="1" getLevel="40" levelUpSp="72000" />
+		<skill skillName="Double Shot" skillId="19" skillLevel="1" getLevel="40" levelUpSp="72000">
+			<removeSkill id="3" /> <!-- Power Strike -->
+			<removeSkill id="16" /> <!-- Mortal Blow -->
+			<removeSkill id="56" /> <!-- Power Shot -->
+		</skill>
 		<skill skillName="Double Shot" skillId="19" skillLevel="2" getLevel="40" levelUpSp="72000" />
 		<skill skillName="Double Shot" skillId="19" skillLevel="3" getLevel="40" levelUpSp="72000" />
 		<skill skillName="Double Shot" skillId="19" skillLevel="4" getLevel="40" levelUpSp="72000" />

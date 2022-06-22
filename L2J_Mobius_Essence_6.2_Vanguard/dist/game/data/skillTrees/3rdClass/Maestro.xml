@@ -142,6 +142,7 @@
 		</skill>
 		<skill skillName="Blacksmith's Attack" skillId="47227" skillLevel="2" getLevel="80" levelUpSp="18400000" />
 		<skill skillName="Mechanical Masterpiece" skillId="47228" skillLevel="1" getLevel="80" levelUpSp="18400000">
+			<removeSkill id="45245" onlyReplaceByLearn="true" /> <!-- Machine Assistance -->
 			<item id="95862,95870" count="1" /> <!-- Spellbook: Mechanical Masterpiece -->
 		</skill>
 		<skill skillName="White Guardian Transformation" skillId="54102" skillLevel="1" getLevel="80">
@@ -238,7 +239,13 @@
 		</skill>
 		<skill skillName="Dwarven Weapon Mastery" skillId="47235" skillLevel="13" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Dwarven Recovery Mastery" skillId="47237" skillLevel="9" getLevel="88" levelUpSp="840000000" />
-
+		<skill skillName="Master of Combat" skillId="430" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="97104,97112" count="1" /> <!-- Spellbook: Master of Combat -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
+		</skill>
+		
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="54" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Earth Tremor" skillId="45249" skillLevel="14" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Dwarven Weapon Mastery" skillId="47235" skillLevel="14" getLevel="89" levelUpSp="840000000" />

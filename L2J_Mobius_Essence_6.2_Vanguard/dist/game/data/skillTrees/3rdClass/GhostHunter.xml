@@ -80,6 +80,7 @@
 			<item id="96665,96677" count="1" /> <!-- Spellbook: Seclusion -->
 		</skill>
 		<skill skillName="Dark Blow" skillId="47341" skillLevel="1" getLevel="76" levelUpSp="5700000">
+			<removeSkill id="263" onlyReplaceByLearn="true" /> <!-- Deadly Blow -->
 			<item id="96666,96678" count="1" /> <!-- Spellbook: Dark Blow -->
 		</skill>
 		<skill skillName="Backstab Mastery" skillId="47347" skillLevel="1" getLevel="76" levelUpSp="5700000">
@@ -98,7 +99,7 @@
 			<item id="96662,96674" count="1" /> <!-- Spellbook: Fatal Accuracy -->
 		</skill>
 		<skill skillName="Rogue Agility" skillId="47367" skillLevel="1" getLevel="76" autoGet="true" />
-		
+
 		<skill skillName="Confusion" skillId="2" skillLevel="22" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Bleed" skillId="96" skillLevel="8" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Hex" skillId="122" skillLevel="17" getLevel="77" levelUpSp="5700000" />
@@ -280,7 +281,7 @@
 		</skill>
 		<skill skillName="Bloody Weapon" skillId="47285" skillLevel="9" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Acrobatic Body" skillId="47333" skillLevel="9" getLevel="85" levelUpSp="840000000" />
-		
+
 		<skill skillName="Confusion" skillId="2" skillLevel="31" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Power Break" skillId="115" skillLevel="26" getLevel="86" levelUpSp="840000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
@@ -340,7 +341,10 @@
 		<skill skillName="Dark Blow" skillId="47341" skillLevel="4" getLevel="88" levelUpSp="840000000">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
-		
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
+		</skill>
+
 		<skill skillName="Confusion" skillId="2" skillLevel="34" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Power Break" skillId="115" skillLevel="29" getLevel="89" levelUpSp="840000000">
 			<item id="57" count="1000000" /> <!-- Adena -->

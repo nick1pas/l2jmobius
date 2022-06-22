@@ -45,7 +45,11 @@
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Fatal Slasher" skillId="45185" skillLevel="1" getLevel="40" levelUpSp="87000" />
-		<skill skillName="Guard Crush" skillId="45187" skillLevel="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Guard Crush" skillId="45187" skillLevel="1" getLevel="40" levelUpSp="87000">
+			<removeSkill id="3" /> <!-- Power Strike -->
+			<removeSkill id="16" /> <!-- Mortal Blow -->
+			<removeSkill id="56" /> <!-- Power Shot -->
+		</skill>
 		<skill skillName="Drain HP" skillId="45250" skillLevel="6" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Intoxicating Dance" skillId="45395" skillLevel="1" getLevel="40" levelUpSp="87000">
 			<item id="94320,95525" count="1" /> <!-- Spellbook: Intoxicating Dance -->

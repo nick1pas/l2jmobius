@@ -136,6 +136,7 @@
 		</skill>
 		<skill skillName="Deadly Strike" skillId="1632" skillLevel="6" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Frantic Pace" skillId="45402" skillLevel="1" getLevel="82" levelUpSp="170000000">
+			<removeSkill id="45187" onlyReplaceByLearn="true" /> <!-- Guard Crush -->
 			<item id="94323,95528" count="1" /> <!-- Spellbook: Frantic Pace -->
 		</skill>
 		<skill skillName="Slowdown" skillId="47284" skillLevel="7" getLevel="82" levelUpSp="170000000" />
@@ -190,7 +191,10 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0">
 			<item id="57" count="100000000" /> <!-- Adena -->
 		</skill>
-		
+		<skill skillName="Wild Beat" skillId="45400" skillLevel="1" getLevel="85" levelUpSp="840000000">
+			<item id="94321,95526" count="1" /> <!-- Spellbook: Wild Beat -->
+		</skill>
+
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="56" getLevel="86" levelUpSp="840000000" />
 		<skill skillName="Entangle" skillId="102" skillLevel="26" getLevel="86" levelUpSp="840000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
@@ -227,7 +231,10 @@
 		</skill>
 		<skill skillName="Frantic Pace" skillId="45402" skillLevel="4" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Slowdown" skillId="47284" skillLevel="10" getLevel="88" levelUpSp="840000000" />
-		
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
+		</skill>
+
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="59" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Entangle" skillId="102" skillLevel="29" getLevel="89" levelUpSp="840000000">
 			<item id="57" count="1000000" /> <!-- Adena -->

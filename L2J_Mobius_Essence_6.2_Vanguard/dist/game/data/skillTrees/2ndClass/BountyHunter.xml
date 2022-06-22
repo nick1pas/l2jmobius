@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="55" parentClassId="54">
-		<skill skillName="Vortex" skillId="36" skillLevel="1" getLevel="40" levelUpSp="82000" />
+		<skill skillName="Vortex" skillId="36" skillLevel="1" getLevel="40" levelUpSp="82000">
+			<removeSkill id="245" /> <!-- Wild Sweep -->
+		</skill>
 		<skill skillName="Vortex" skillId="36" skillLevel="2" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Vortex" skillId="36" skillLevel="3" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Vortex" skillId="36" skillLevel="4" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Vortex" skillId="36" skillLevel="5" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Fake Death" skillId="60" skillLevel="1" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Weapon Mastery" skillId="141" skillLevel="4" getLevel="40" levelUpSp="82000" />
-		<skill skillName="Fatal Strike" skillId="190" skillLevel="1" getLevel="40" levelUpSp="82000" />
+		<skill skillName="Fatal Strike" skillId="190" skillLevel="1" getLevel="40" levelUpSp="82000">
+			<removeSkill id="3" /> <!-- Power Strike -->
+		</skill>
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="2" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="3" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="4" getLevel="40" levelUpSp="82000" />

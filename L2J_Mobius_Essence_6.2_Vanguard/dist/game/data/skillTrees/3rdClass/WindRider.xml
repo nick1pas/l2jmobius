@@ -76,6 +76,7 @@
 			<item id="96665,96677" count="1" /> <!-- Spellbook: Seclusion -->
 		</skill>
 		<skill skillName="Dark Blow" skillId="47341" skillLevel="1" getLevel="76" levelUpSp="7000000">
+			<removeSkill id="263" onlyReplaceByLearn="true" /> <!-- Deadly Blow -->
 			<item id="96666,96678" count="1" /> <!-- Spellbook: Dark Blow -->
 		</skill>
 		<skill skillName="Critical Attack Mastery" skillId="47346" skillLevel="1" getLevel="76" levelUpSp="7000000">
@@ -285,6 +286,9 @@
 		<skill skillName="Backstab" skillId="47334" skillLevel="11" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Dark Blow" skillId="47341" skillLevel="4" getLevel="88" levelUpSp="840000000">
 			<item id="57" count="10000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="3" getLevel="88" levelUpSp="840000000">
+			<item id="57" count="30000000" /> <!-- Adena -->
 		</skill>
 		
 		<skill skillName="Entangle" skillId="102" skillLevel="29" getLevel="89" levelUpSp="840000000">

@@ -5,13 +5,16 @@
 		<skill skillName="Fake Death" skillId="60" skillLevel="1" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Critical Chance" skillId="137" skillLevel="2" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Weapon Mastery" skillId="141" skillLevel="4" getLevel="40" levelUpSp="95000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="3" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Critical Damage" skillId="193" skillLevel="3" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Silent Move" skillId="221" skillLevel="1" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Accuracy" skillId="256" skillLevel="2" getLevel="40" levelUpSp="95000">
 			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Deadly Blow" skillId="263" skillLevel="1" getLevel="40" levelUpSp="95000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLevel="1" getLevel="40" levelUpSp="95000">
+			<removeSkill id="3" /> <!-- Power Strike -->
+			<removeSkill id="16" /> <!-- Mortal Blow -->
+			<removeSkill id="56" /> <!-- Power Shot -->
+		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="2" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="3" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="4" getLevel="40" levelUpSp="95000" />
@@ -63,7 +66,6 @@
 		<skill skillName="Fast Run" skillId="4" skillLevel="2" getLevel="46" levelUpSp="170000" />
 		<skill skillName="Switch" skillId="12" skillLevel="2" getLevel="46" levelUpSp="170000" />
 		<skill skillName="Unlock" skillId="27" skillLevel="8" getLevel="46" levelUpSp="170000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="4" getLevel="46" levelUpSp="170000" />
 		<skill skillName="Attack Speed Boost" skillId="168" skillLevel="2" getLevel="46" levelUpSp="170000" />
 		<skill skillName="Esprit" skillId="171" skillLevel="3" getLevel="46" levelUpSp="170000" />
 		<skill skillName="Boost Evasion" skillId="198" skillLevel="2" getLevel="46" levelUpSp="170000" />
@@ -105,7 +107,6 @@
 		<skill skillName="Switch" skillId="12" skillLevel="4" getLevel="52" levelUpSp="330000" />
 		<skill skillName="Unlock" skillId="27" skillLevel="9" getLevel="52" levelUpSp="330000" />
 		<skill skillName="Lure" skillId="51" skillLevel="1" getLevel="52" levelUpSp="330000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="5" getLevel="52" levelUpSp="330000" />
 		<skill skillName="Esprit" skillId="171" skillLevel="5" getLevel="52" levelUpSp="330000" />
 		<skill skillName="Critical Damage" skillId="193" skillLevel="4" getLevel="52" levelUpSp="330000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="17" getLevel="52" levelUpSp="330000" />
@@ -135,7 +136,6 @@
 		<skill skillName="Trick" skillId="11" skillLevel="4" getLevel="58" levelUpSp="640000" />
 		<skill skillName="Switch" skillId="12" skillLevel="6" getLevel="58" levelUpSp="640000" />
 		<skill skillName="Bleed" skillId="96" skillLevel="4" getLevel="58" levelUpSp="640000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="6" getLevel="58" levelUpSp="640000" />
 		<skill skillName="Attack Speed Boost" skillId="168" skillLevel="3" getLevel="58" levelUpSp="640000" />
 		<skill skillName="Boost Evasion" skillId="198" skillLevel="3" getLevel="58" levelUpSp="640000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="23" getLevel="58" levelUpSp="640000" />
@@ -177,7 +177,6 @@
 		<skill skillName="Trick" skillId="11" skillLevel="7" getLevel="64" levelUpSp="1400000" />
 		<skill skillName="Switch" skillId="12" skillLevel="9" getLevel="64" levelUpSp="1400000" />
 		<skill skillName="Unlock" skillId="27" skillLevel="12" getLevel="64" levelUpSp="1400000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="7" getLevel="64" levelUpSp="1400000" />
 		<skill skillName="Critical Damage" skillId="193" skillLevel="5" getLevel="64" levelUpSp="1400000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="29" getLevel="64" levelUpSp="1400000" />
 		<skill skillName="Sand Bomb" skillId="412" skillLevel="5" getLevel="64" levelUpSp="1400000" />
@@ -221,7 +220,6 @@
 		<skill skillName="Trick" skillId="11" skillLevel="11" getLevel="72" levelUpSp="3100000" />
 		<skill skillName="Switch" skillId="12" skillLevel="13" getLevel="72" levelUpSp="3100000" />
 		<skill skillName="Unlock" skillId="27" skillLevel="14" getLevel="72" levelUpSp="3100000" />
-		<skill skillName="Vital Force" skillId="148" skillLevel="8" getLevel="72" levelUpSp="3100000" />
 		<skill skillName="Critical Damage" skillId="193" skillLevel="6" getLevel="72" levelUpSp="3100000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="37" getLevel="72" levelUpSp="3100000" />
 		<skill skillName="Sand Bomb" skillId="412" skillLevel="9" getLevel="72" levelUpSp="3100000" />
