@@ -3,7 +3,7 @@
 	<item id="80900" name="Blood-stained Akamanah Dual Blunt" type="Weapon">
 		<!-- An Akamanah weapon stained with the madness of blood. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%. Enables the Soul's Insanity, Soul's Confinement, and Soul's Release skills. Max HP can increase up to 150,000. Its appearance cannot be changed. Cannot be assigned an attribute, crystallized, augmented, or enchanted. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
-		<set name="is_cursed_weapon" val="true"/>
+		<set name="is_cursed_weapon" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
@@ -540,7 +540,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="0" />
 		<skills>
-			<skill id="39560" level="1"/> <!-- R-grade Crystal -->
+			<skill id="39560" level="1" /> <!-- R-grade Crystal -->
 		</skills>
 	</item>
 	<item id="80935" name="Small Good Luck Festival Fairy's Coin Box" additionalName="Not in Use" type="EtcItem">
