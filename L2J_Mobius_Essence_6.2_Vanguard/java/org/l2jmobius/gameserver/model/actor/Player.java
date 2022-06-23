@@ -498,8 +498,6 @@ public class Player extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
-	private final Set<InventoryUpdate> _inventoryUpdates = ConcurrentHashMap.newKeySet(1);
-	private ScheduledFuture<?> _inventoryUpdateTask;
 	private ScheduledFuture<?> _itemListTask;
 	private ScheduledFuture<?> _skillListTask;
 	
@@ -14344,21 +14342,9 @@ public class Player extends Playable
 	
 	public void sendInventoryUpdate(InventoryUpdate iu)
 	{
-		_inventoryUpdates.add(iu);
-		if (_inventoryUpdateTask == null)
-		{
-			_inventoryUpdateTask = ThreadPool.schedule(() ->
-			{
-				for (InventoryUpdate packet : _inventoryUpdates)
-				{
-					sendPacket(packet);
-					_inventoryUpdates.remove(packet);
-				}
-				sendPacket(new ExAdenaInvenCount(this));
-				sendPacket(new ExUserInfoInvenWeight(this));
-				_inventoryUpdateTask = null;
-			}, 300);
-		}
+		sendPacket(iu);
+		sendPacket(new ExAdenaInvenCount(this));
+		sendPacket(new ExUserInfoInvenWeight(this));
 	}
 	
 	public void sendItemList()

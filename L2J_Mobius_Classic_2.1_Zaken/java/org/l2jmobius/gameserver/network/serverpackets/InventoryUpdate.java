@@ -49,15 +49,4 @@ public class InventoryUpdate extends AbstractInventoryUpdate
 		writeItems(packet);
 		return true;
 	}
-	
-	@Override
-	public boolean equals(Object obj)
-	{
-		if (obj instanceof InventoryUpdate)
-		{
-			final InventoryUpdate iu = (InventoryUpdate) obj;
-			return getItems().equals(iu.getItems());
-		}
-		return false;
-	}
 }
