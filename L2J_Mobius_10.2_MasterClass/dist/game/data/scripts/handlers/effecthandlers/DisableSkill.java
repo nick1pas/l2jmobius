@@ -31,36 +31,35 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class DisableSkill extends AbstractEffect
 {
-	private final Set<Integer> disableSkills;
-	private Skill knownSKill;
+	private final Set<Integer> _disabledSkills;
 	
 	public DisableSkill(StatSet params)
 	{
 		final String disable = params.getString("disable");
 		if ((disable != null) && !disable.isEmpty())
 		{
-			disableSkills = new HashSet<>();
+			_disabledSkills = new HashSet<>();
 			for (String slot : disable.split(";"))
 			{
-				disableSkills.add(Integer.parseInt(slot));
+				_disabledSkills.add(Integer.parseInt(slot));
 			}
 		}
 		else
 		{
-			disableSkills = Collections.<Integer> emptySet();
+			_disabledSkills = Collections.emptySet();
 		}
 	}
 	
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		for (int disableSkillId : disableSkills)
+		Skill knownSkill;
+		for (int disableSkillId : _disabledSkills)
 		{
-			knownSKill = effected.getKnownSkill(disableSkillId);
-			if (knownSKill != null)
+			knownSkill = effected.getKnownSkill(disableSkillId);
+			if (knownSkill != null)
 			{
-				effected.disableSkill(knownSKill, 0);
-				
+				effected.disableSkill(knownSkill, 0);
 			}
 		}
 	}
@@ -68,12 +67,13 @@ public class DisableSkill extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		for (int enableSkillId : disableSkills)
+		Skill knownSkill;
+		for (int enableSkillId : _disabledSkills)
 		{
-			knownSKill = effected.getKnownSkill(enableSkillId);
-			if (knownSKill != null)
+			knownSkill = effected.getKnownSkill(enableSkillId);
+			if (knownSkill != null)
 			{
-				effected.enableSkill(knownSKill);
+				effected.enableSkill(knownSkill);
 			}
 		}
 	}
