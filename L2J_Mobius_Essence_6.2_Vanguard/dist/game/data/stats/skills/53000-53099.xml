@@ -122,14 +122,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="53005" toLevel="1" name="Detect Darkness">
+	<skill id="53005" toLevel="2" name="Detect Darkness">
 		<!-- Allows to find invisible enemies nearby. The target can't become invisible and cancel this effect for 2 sec. -->
 		<icon>icon.skill53005</icon>
-		<affectRange>300</affectRange>
+		<affectRange>1000</affectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
-		<magicLevel>76</magicLevel>
-		<abnormalLevel>1</abnormalLevel>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">88</value>
+		</magicLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<mpConsume>70</mpConsume>
 		<operateType>A2</operateType>
@@ -142,6 +148,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>INVISIBLE</affectObject>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">1</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -153,6 +164,14 @@
 			<effect name="Detection" />
 			<effect name="BlockAbnormalSlot">
 				<slot>HIDE</slot>
+			</effect>
+			<effect name="DispelBySlotProbability" fromLevel="2" toLevel="2">
+				<dispel>STEALTH</dispel>
+				<rate>5</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot" fromLevel="2" toLevel="2">
+				<slot>STEALTH</slot>
+				<rate>5</rate>
 			</effect>
 		</effects>
 	</skill>

@@ -31,9 +31,9 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">3</value>
-			<value level="2">0</value>
-			<value level="3">0</value>
-			<value level="4">0</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -75,6 +75,13 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -163,7 +170,7 @@
 		<itemConsumeCount>
 			<value level="1">3</value>
 			<value level="2">3</value>
-			<value level="3">0</value>
+			<value level="3">5</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -286,6 +293,13 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -372,9 +386,9 @@
 			<value level="3">76</value>
 		</magicLevel>
 		<itemConsumeCount>
-			<value level="1">0</value>
+			<value level="1">3</value>
 			<value level="2">3</value>
-			<value level="3">0</value>
+			<value level="3">5</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -457,6 +471,13 @@
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -3887,9 +3908,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="FatalBlow">
-				<power>1006</power>
-				<chanceBoost>250</chanceBoost>
+			<effect name="PhysicalAttack">
+				<power>1000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -3924,14 +3944,6 @@
 		</mpConsume>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<attachToggleGroupId>1</attachToggleGroupId>
-		<reuseDelayGroup>45187</reuseDelayGroup>
-		<attachSkillList>
-			<item>
-				<requiredSkillId>45391</requiredSkillId> <!-- Sword Symphony -->
-				<skillId>45392</skillId> <!-- Sword Attack Range -->
-			</item>
-		</attachSkillList>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4030,6 +4042,14 @@
 			<effect name="Detection" />
 			<effect name="BlockAbnormalSlot">
 				<slot>HIDE</slot>
+			</effect>
+			<effect name="DispelBySlotProbability" fromLevel="3" toLevel="3">
+				<dispel>STEALTH</dispel>
+				<rate>5</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot" fromLevel="3" toLevel="3">
+				<slot>STEALTH</slot>
+				<rate>5</rate>
 			</effect>
 		</effects>
 	</skill>

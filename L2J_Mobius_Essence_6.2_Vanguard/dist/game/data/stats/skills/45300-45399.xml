@@ -4329,7 +4329,15 @@
 	<skill id="45367" toLevel="1" name="Amazing Thunder Storm Mastery">
 		<!-- Thunder Storm is enhanced and replaced by Amazing Thunder Storm. <Amazing Thunder Storm effect> Skill Power is increased. Ignores any defense. Decreases Cooldown. Skill Critical Rate is increased. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>48</existingSkillId> <!-- Thunder Storm -->
+				<replacementSkillId>45368</replacementSkillId> <!-- Amazing Thunder Storm -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45368" toLevel="55" name="Amazing Thunder Storm">
 		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
@@ -5200,35 +5208,17 @@
 	<skill id="45383" toLevel="3" name="Amazing Spike Thrust Mastery">
 		<!-- Spike Thrust is enhanced and replaced by Amazing Spike Thrust. <Amazing Spike Thrust Effect> - Skill Power is increased - Skill Range is increased - Defense Ignore is increased - There is a certain chance to deliver an extra attack - A chance and power of extra attacks depend on the skill level -->
 		<icon>icon.skill0000</icon>
-		<effectPoint>-470</effectPoint>
-		<effectRange>600</effectRange>
-		<hitTime>1080</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">81</value>
 			<value level="3">85</value>
 		</magicLevel>
-		<mpConsume>77</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>POLE</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
-			<effect name="PhysicalAttack">
-				<power>6804</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>30</criticalChance>
-				<overHit>true</overHit>
-				<pDefMod>1.2</pDefMod>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>921</existingSkillId> <!-- Spike Thrust -->
+				<replacementSkillId>45384</replacementSkillId> <!-- Amazing Spike Thrust -->
 			</effect>
 		</effects>
 	</skill>
@@ -5628,19 +5618,18 @@
 		<hitTime>1400</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">55</value>
-			<value level="2">70</value>
+			<value level="1">77</value>
+			<value level="2">80</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">60</value>
-			<value level="2">60</value>
+			<value level="1">70</value>
+			<value level="2">70</value>
 		</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
 		<itemConsumeCount>15</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5671,11 +5660,32 @@
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<isCritical>false</isCritical>
+				<targetType>ENEMY</targetType>
+				<skillId>45392</skillId> <!-- Sword Attack Range -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<isCritical>true</isCritical>
+				<targetType>ENEMY</targetType>
+				<skillId>45392</skillId> <!-- Sword Attack Range -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<skillId>45393</skillId> <!-- Sword Defense -->
 				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
@@ -5691,6 +5701,7 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 			<effect name="TriggerSkillByAvoid">
 				<chance>10</chance>
@@ -5708,29 +5719,17 @@
 				<power>50</power>
 				<ticks>5</ticks>
 			</effect>
+			<effect name="PhysicalAttackRange">
+				<amount>200</amount>
+			</effect>
+			<effect name="SkillBonusRange">
+				<amount>200</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="45392" toLevel="1" name="Sword Attack Range">
 		<icon>icon.sympony_sword</icon>
-		<castRange>200</castRange>
-		<effectRange>200</effectRange>
-		<effectPoint>-400</effectPoint>
 		<operateType>A1</operateType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>5380</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
-				<abnormalType>ROOT_PHYSICALLY;ROOT_MAGICALLY</abnormalType>
-				<damageModifier>1.5</damageModifier>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="45393" toLevel="1" name="Sword Defense">
 		<!-- Received damage $s1 -->

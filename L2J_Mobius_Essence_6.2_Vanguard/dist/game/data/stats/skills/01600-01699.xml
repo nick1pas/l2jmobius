@@ -296,7 +296,7 @@
 			<value level="45">-1280</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1900</hitTime>
+		<hitTime>2400</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">40</value>
@@ -391,12 +391,13 @@
 			<value level="44">97</value>
 			<value level="45">99</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1015,6 +1016,13 @@
 		<isMagic>0</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">1</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="DefenceTrait">
 				<SHOCK>
@@ -1107,6 +1115,8 @@
 		<abnormalType>POSSESSION_SPECIAL</abnormalType>
 		<affectRange>900</affectRange>
 		<hitTime>2000</hitTime>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">80</value>
 			<value level="2">81</value>
@@ -1134,7 +1144,13 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<skillId>1622</skillId> <!-- Blood of Sacrifice -->
-				<skillLevel>1</skillLevel>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
 			</effect>
 		</selfEffects>
 		<effects>
@@ -1212,6 +1228,8 @@
 		<abnormalTime>300</abnormalTime>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<isMagic>1</isMagic>
 		<magicLevel>
 			<value level="1">80</value>
@@ -1505,6 +1523,8 @@
 		<reuseDelay>75000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1664,7 +1684,6 @@
 		<abnormalType>SWORD_SYMPHONY</abnormalType>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<coolTime>500</coolTime>
@@ -1728,14 +1747,6 @@
 		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<attachToggleGroupId>1</attachToggleGroupId>
-		<reuseDelayGroup>1632</reuseDelayGroup>
-		<attachSkillList>
-			<item>
-				<requiredSkillId>45391</requiredSkillId> <!-- Sword Symphony -->
-				<skillId>45392</skillId> <!-- Sword Attack Range -->
-			</item>
-		</attachSkillList>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1772,26 +1783,6 @@
 			<effect name="PhysicalDefence">
 				<amount>-23</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minDamage>1</minDamage>
-				<chance>50</chance>
-				<targetType>TARGET</targetType>
-				<isCritical>false</isCritical>
-				<allowWeapons>SWORD,BLUNT,DUAL</allowWeapons>
-				<skillId>45216</skillId> <!-- Transcendent Deadly Strike -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minDamage>1</minDamage>
-				<chance>50</chance>
-				<targetType>TARGET</targetType>
-				<isCritical>true</isCritical>
-				<allowWeapons>SWORD,BLUNT,DUAL</allowWeapons>
-				<skillId>45216</skillId> <!-- Transcendent Deadly Strike -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

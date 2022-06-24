@@ -5951,16 +5951,30 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<chance>80</chance>
-				<targetType>SELF</targetType>
+				<chance>50</chance>
+				<targetType>ENEMY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>45246</skillId> <!-- Machine Assistance -->
 				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>25</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>45246</skillId> <!-- Machine Assistance -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 		</effects>
 	</skill>

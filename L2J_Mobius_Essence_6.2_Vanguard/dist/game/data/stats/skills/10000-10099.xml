@@ -65,12 +65,10 @@
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">
 		<!-- <Paralyzing skill> A powerful lightning strike. Attacks the target and nearby enemies with $s1 power. Paralyzes for $s2 Critical. -->
 		<icon>icon.skll10094</icon>
-		<affectLimit>10-10</affectLimit>
-		<affectRange>150</affectRange>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<icon>icon.skll10094</icon>
-		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
-		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<isMagic>0</isMagic>
 		<magicLevel>

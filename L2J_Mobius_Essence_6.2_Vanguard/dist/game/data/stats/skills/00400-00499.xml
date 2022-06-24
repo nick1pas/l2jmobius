@@ -782,6 +782,8 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<hitTime>2000</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -1618,6 +1620,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2242,7 +2246,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="430" toLevel="8" name="Master of Combat">
+	<skill id="430" toLevel="3" name="Master of Combat">
 		<!-- Max CP +$s1 Max HP +$s2 Received P. Critical Damage -$s3 Received M. Skill Critical Damage -$s3 -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
@@ -2250,18 +2254,14 @@
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">80</value>
-			<value level="3">80</value>
-			<value level="4">80</value>
-			<value level="5">80</value>
-			<value level="6">80</value>
-			<value level="7">80</value>
-			<value level="8">80</value>
+			<value level="3">88</value>
 		</magicLevel>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
 					<value level="1">200</value>
 					<value level="2">500</value>
+					<value level="3">1000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2269,6 +2269,7 @@
 				<amount>
 					<value level="1">200</value>
 					<value level="2">500</value>
+					<value level="3">1000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2276,6 +2277,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2283,6 +2285,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
+					<value level="3">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

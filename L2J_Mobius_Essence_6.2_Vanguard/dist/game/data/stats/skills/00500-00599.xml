@@ -1366,25 +1366,18 @@
 	<skill id="522" toLevel="4" name="Real Target">
 		<!-- Shock Atk. Rate $s1 For 30 sec., with a certain chance after an attack: Target's Bow Resistance $s2, Shock Resistance $s3 -->
 		<icon>icon.skill0522</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>REAL_TARGET</abnormalType>
+		<castRange>-1</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">2</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-			<value level="4">4</value>
-		</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>REAL_TARGET</abnormalType>
-		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<castRange>700</castRange>
-		<effectPoint>
-			<value level="1">-760</value>
-			<value level="2">-780</value>
-			<value level="3">-800</value>
-			<value level="4">-820</value>
-		</effectPoint>
-		<effectRange>1200</effectRange>
-		<hitTime>1500</hitTime>
-		<isDebuff>true</isDebuff>
+			<value level="4">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">78</value>
 			<value level="2">80</value>
@@ -1397,11 +1390,12 @@
 			<value level="3">61</value>
 			<value level="4">64</value>
 		</mpConsume>
+		<hitTime>1500</hitTime>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
@@ -1412,19 +1406,35 @@
 					<value level="4">5</value>
 				</SHOCK>
 			</effect>
-			<effect name="DefenceTrait">
-				<BOW>
-					<value level="1">-15</value>
-					<value level="2">-20</value>
-					<value level="3">-20</value>
-					<value level="4">-25</value>
-				</BOW>
-				<SHOCK>
-					<value level="1">-10</value>
-					<value level="2">-15</value>
-					<value level="3">-20</value>
-					<value level="4">-25</value>
-				</SHOCK>
+			<effect name="TriggerSkillBySkillAttack" fromLevel="1" toLevel="4">
+				<attackSkillId>19</attackSkillId> <!-- Double Shot -->
+				<attackerType>Creature</attackerType>
+				<minDamage>100</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>45476</skillId> <!-- Bow Vulnerability -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack" fromLevel="1" toLevel="4">
+				<attackSkillId>343</attackSkillId> <!-- Lethal Shot -->
+				<attackerType>Creature</attackerType>
+				<minDamage>100</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>45476</skillId> <!-- Bow Vulnerability -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1634,6 +1644,8 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>673</effectPoint>
 		<hitTime>2500</hitTime>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>79</magicLevel>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
