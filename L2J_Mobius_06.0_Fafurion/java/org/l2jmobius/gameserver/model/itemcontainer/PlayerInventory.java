@@ -479,34 +479,34 @@ public class PlayerInventory extends Inventory
 			{
 				_beautyTickets = item;
 			}
-		}
-		
-		if ((item != null) && (actor != null))
-		{
-			// Send inventory update packet
-			if (update)
+			
+			if (actor != null)
 			{
-				if (!Config.FORCE_INVENTORY_UPDATE)
+				// Send inventory update packet
+				if (update)
 				{
-					final InventoryUpdate playerIU = new InventoryUpdate();
-					if (item.isStackable() && (item.getCount() > count))
+					if (!Config.FORCE_INVENTORY_UPDATE)
 					{
-						playerIU.addModifiedItem(item);
+						final InventoryUpdate playerIU = new InventoryUpdate();
+						if (item.isStackable() && (item.getCount() > count))
+						{
+							playerIU.addModifiedItem(item);
+						}
+						else
+						{
+							playerIU.addNewItem(item);
+						}
+						actor.sendInventoryUpdate(playerIU);
 					}
 					else
 					{
-						playerIU.addNewItem(item);
+						actor.sendItemList();
 					}
-					actor.sendInventoryUpdate(playerIU);
 				}
-				else
-				{
-					actor.sendItemList();
-				}
+				
+				// Notify to scripts
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
 			}
-			
-			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
 		}
 		return item;
 	}

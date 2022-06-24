@@ -461,13 +461,21 @@ public class PlayerInventory extends Inventory
 			{
 				_ancientAdena = item;
 			}
+			
 			if (actor != null)
 			{
 				// Send inventory update packet
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
 					final InventoryUpdate playerIU = new InventoryUpdate();
-					playerIU.addItem(item);
+					if (item.isStackable() && (item.getCount() > count))
+					{
+						playerIU.addModifiedItem(item);
+					}
+					else
+					{
+						playerIU.addNewItem(item);
+					}
 					actor.sendPacket(playerIU);
 				}
 				else

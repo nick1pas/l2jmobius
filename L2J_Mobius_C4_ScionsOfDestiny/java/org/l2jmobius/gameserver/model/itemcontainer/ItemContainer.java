@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * @author Advi
@@ -222,6 +223,7 @@ public abstract class ItemContainer
 		}
 		else // If item hasn't be found in inventory, create new one
 		{
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (int i = 0; i < count; i++)
 			{
 				final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
@@ -248,11 +250,20 @@ public abstract class ItemContainer
 				// Add item in inventory
 				addItem(item);
 				
+				// Add new item to InventoryUpdate.
+				iu.addNewItem(item);
+				
 				// If stackable, end loop as entire count is included in 1 instance of item
 				if (template.isStackable() || !Config.MULTIPLE_ITEM_DROP)
 				{
 					break;
 				}
+			}
+			
+			// If new items where created send InventoryUpdate.
+			if ((item != null) && (!item.isStackable() || (item.getCount() == count)) && (item.getItemLocation() == ItemLocation.INVENTORY))
+			{
+				actor.sendPacket(iu);
 			}
 		}
 		

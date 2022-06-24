@@ -3710,7 +3710,6 @@ public class Player extends Playable
 			{
 				playerIU.addRemovedItem(oldItem);
 			}
-			
 			sendInventoryUpdate(playerIU);
 		}
 		else
@@ -3733,7 +3732,6 @@ public class Player extends Playable
 				{
 					playerIU.addNewItem(newItem);
 				}
-				
 				targetPlayer.sendPacket(playerIU);
 			}
 			else

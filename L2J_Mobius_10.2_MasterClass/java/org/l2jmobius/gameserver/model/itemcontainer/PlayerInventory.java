@@ -51,6 +51,7 @@ import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 
 public class PlayerInventory extends Inventory
 {
@@ -480,34 +481,40 @@ public class PlayerInventory extends Inventory
 			{
 				_beautyTickets = item;
 			}
-		}
-		
-		if ((item != null) && (actor != null))
-		{
-			// Send inventory update packet
-			if (update)
+			
+			if (actor != null)
 			{
-				if (!Config.FORCE_INVENTORY_UPDATE)
+				// Send inventory update packet
+				if (update)
 				{
-					final InventoryUpdate playerIU = new InventoryUpdate();
-					if (item.isStackable() && (item.getCount() > count))
+					if (!Config.FORCE_INVENTORY_UPDATE)
 					{
-						playerIU.addModifiedItem(item);
+						final InventoryUpdate playerIU = new InventoryUpdate();
+						if (item.isStackable() && (item.getCount() > count))
+						{
+							playerIU.addModifiedItem(item);
+						}
+						else
+						{
+							playerIU.addNewItem(item);
+						}
+						actor.sendInventoryUpdate(playerIU);
 					}
 					else
 					{
-						playerIU.addNewItem(item);
+						actor.sendItemList();
 					}
-					actor.sendInventoryUpdate(playerIU);
+					
+					// Einhasad coin UI update.
+					if (item.getId() == Inventory.EINHASAD_COIN_ID)
+					{
+						actor.sendPacket(new ExBloodyCoinCount(actor));
+					}
 				}
-				else
-				{
-					actor.sendItemList();
-				}
+				
+				// Notify to scripts
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
 			}
-			
-			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
 		}
 		return item;
 	}
