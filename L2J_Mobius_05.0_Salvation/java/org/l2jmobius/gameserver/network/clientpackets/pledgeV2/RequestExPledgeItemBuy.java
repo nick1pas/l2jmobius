@@ -84,6 +84,7 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 		if (product.getFame() > 0)
 		{
 			player.setFame(player.getFame() - (product.getFame() * _count));
+			player.broadcastUserInfo();
 		}
 		
 		player.addItem("ClanShop", _itemId, product.getCount() * _count, player, true);
