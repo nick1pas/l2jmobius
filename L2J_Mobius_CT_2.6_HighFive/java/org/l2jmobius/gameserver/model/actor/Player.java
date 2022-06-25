@@ -3012,22 +3012,28 @@ public class Player extends Playable
 			sendPacket(sm);
 		}
 		
-		if (count <= 0)
+		if (count > 0)
 		{
-			return;
-		}
-		
-		_inventory.addAdena(process, count, this, reference);
-		// Send update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItem(_inventory.getAdenaInstance());
-			sendPacket(iu);
-		}
-		else
-		{
-			sendPacket(new ItemList(this, false));
+			_inventory.addAdena(process, count, this, reference);
+			
+			// Send update packet
+			if (!Config.FORCE_INVENTORY_UPDATE)
+			{
+				final InventoryUpdate iu = new InventoryUpdate();
+				if (count == getAdena())
+				{
+					iu.addNewItem(_inventory.getAdenaInstance());
+				}
+				else
+				{
+					iu.addModifiedItem(_inventory.getAdenaInstance());
+				}
+				sendPacket(iu);
+			}
+			else
+			{
+				sendPacket(new ItemList(this, false));
+			}
 		}
 	}
 	

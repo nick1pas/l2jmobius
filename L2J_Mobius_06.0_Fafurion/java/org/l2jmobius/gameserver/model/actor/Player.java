@@ -3126,7 +3126,14 @@ public class Player extends Playable
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItem(_inventory.getAdenaInstance());
+				if (count == getAdena())
+				{
+					iu.addNewItem(_inventory.getAdenaInstance());
+				}
+				else
+				{
+					iu.addModifiedItem(_inventory.getAdenaInstance());
+				}
 				sendInventoryUpdate(iu);
 			}
 			else
