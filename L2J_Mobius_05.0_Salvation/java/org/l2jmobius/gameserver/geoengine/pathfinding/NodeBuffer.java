@@ -47,10 +47,6 @@ public class NodeBuffer
 	private int _gty;
 	private int _gtz;
 	
-	// Pathfinding statistics.
-	private long _timeStamp;
-	private long _lastElapsedTime;
-	
 	private Node _current;
 	
 	/**
@@ -83,9 +79,6 @@ public class NodeBuffer
 	 */
 	public List<Location> findPath(int gox, int goy, int goz, int gtx, int gty, int gtz)
 	{
-		// Set start timestamp.
-		_timeStamp = System.currentTimeMillis();
-		
 		// Set target coordinates.
 		_gtx = gtx;
 		_gty = gty;
@@ -182,13 +175,7 @@ public class NodeBuffer
 		
 		_current = null;
 		
-		_lastElapsedTime = System.currentTimeMillis() - _timeStamp;
 		_lock.unlock();
-	}
-	
-	public long getElapsedTime()
-	{
-		return _lastElapsedTime;
 	}
 	
 	/**
