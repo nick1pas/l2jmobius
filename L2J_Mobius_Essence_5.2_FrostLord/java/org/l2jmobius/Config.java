@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
@@ -65,6 +66,7 @@ import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.holders.ResurrectByPaymentHolder;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -890,6 +892,12 @@ public class Config
 	public static int MAX_CONNECTION_PER_IP;
 	public static boolean ENABLE_CMD_LINE_LOGIN;
 	public static boolean ONLY_CMD_LINE_LOGIN;
+	public static boolean RESURRECT_BY_PAYMENT_ENABLED;
+	public static int RESURRECT_BY_PAYMENT_MAX_FREE_TIMES;
+	public static int RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM;
+	public static Map<Integer, Map<Integer, ResurrectByPaymentHolder>> RESURRECT_BY_PAYMENT_FIRST_RESURRECT_VALUES;
+	public static int RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM;
+	public static Map<Integer, Map<Integer, ResurrectByPaymentHolder>> RESURRECT_BY_PAYMENT_SECOND_RESURRECT_VALUES;
 	
 	// Magic Lamp
 	public static boolean ENABLE_MAGIC_LAMP;
@@ -1654,6 +1662,93 @@ public class Config
 			HP_REGEN_MULTIPLIER = characterConfig.getDouble("HpRegenMultiplier", 100) / 100;
 			MP_REGEN_MULTIPLIER = characterConfig.getDouble("MpRegenMultiplier", 100) / 100;
 			CP_REGEN_MULTIPLIER = characterConfig.getDouble("CpRegenMultiplier", 100) / 100;
+			
+			RESURRECT_BY_PAYMENT_ENABLED = characterConfig.getBoolean("EnabledResurrectByPay", true);
+			if (RESURRECT_BY_PAYMENT_ENABLED)
+			{
+				Map<Integer, ResurrectByPaymentHolder> RESURRECT_DATA = new TreeMap<>();
+				RESURRECT_BY_PAYMENT_MAX_FREE_TIMES = characterConfig.getInt("MaxFreeResurrectionsByDay", 0);
+				RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM = characterConfig.getInt("FirstResurrectItemID", 0);
+				final String[] firstPaymentSplit = characterConfig.getString("FirstResurrectList", "").split(";");
+				RESURRECT_BY_PAYMENT_FIRST_RESURRECT_VALUES = new TreeMap<>();
+				for (String timeData : firstPaymentSplit)
+				{
+					RESURRECT_DATA = new TreeMap<>();
+					final String[] timeSplit = timeData.split(":");
+					if (timeSplit.length != 2)
+					{
+						LOGGER.warning("[FirstResurrectList]: invalid config property -> Level data cannot be parsed. Looking like not exist " + timeSplit[0]);
+						continue;
+					}
+					final String[] dataSplit = timeSplit[1].split("/");
+					for (String data : dataSplit)
+					{
+						while (data.contains(" "))
+						{
+							data = data.replace(" ", "");
+						}
+						final String[] values = data.split(",");
+						if (values.length < 3)
+						{
+							LOGGER.warning("[FirstResurrectList]: invalid config property -> Times data cannot be parsed. Looking like not exist " + timeSplit[0]);
+							continue;
+						}
+						try
+						{
+							final int time = Integer.parseInt(values[0]);
+							final int count = Integer.parseInt(values[1]);
+							final double percent = Double.parseDouble(values[2]);
+							RESURRECT_DATA.put(time, new ResurrectByPaymentHolder(time, count, percent));
+						}
+						catch (Exception e)
+						{
+							LOGGER.warning("[FirstResurrectList]: invalid config property -> Times data cannot be parsed. Look on exception " + timeSplit[0]);
+							e.printStackTrace();
+						}
+					}
+					RESURRECT_BY_PAYMENT_FIRST_RESURRECT_VALUES.put(Integer.parseInt(timeSplit[0]), RESURRECT_DATA);
+				}
+				final String[] secondPaymentSplit = characterConfig.getString("SecondResurrectList", "").split(";");
+				RESURRECT_BY_PAYMENT_SECOND_RESURRECT_VALUES = new TreeMap<>();
+				for (String timeData : secondPaymentSplit)
+				{
+					RESURRECT_DATA = new TreeMap<>();
+					final String[] timeSplit = timeData.split(":");
+					if (timeSplit.length != 2)
+					{
+						LOGGER.warning("[SecondResurrectList]: invalid config property -> Level data cannot be parsed. Looking like not exist " + timeSplit[0]);
+						continue;
+					}
+					final String[] dataSplit = timeSplit[1].split("/");
+					for (String data : dataSplit)
+					{
+						while (data.contains(" "))
+						{
+							data = data.replace(" ", "");
+						}
+						final String[] values = data.split(",");
+						if (values.length < 3)
+						{
+							LOGGER.warning("[SecondResurrectList]: invalid config property -> Times data cannot be parsed. Looking like not exist " + timeSplit[0]);
+							continue;
+						}
+						try
+						{
+							final int time = Integer.parseInt(values[0]);
+							final int count = Integer.parseInt(values[1]);
+							final double percent = Double.parseDouble(values[2]);
+							RESURRECT_DATA.put(time, new ResurrectByPaymentHolder(time, count, percent));
+						}
+						catch (Exception e)
+						{
+							LOGGER.warning("[SecondResurrectList]: invalid config property -> Times data cannot be parsed. Look on exception " + timeSplit[0]);
+							e.printStackTrace();
+						}
+					}
+					RESURRECT_BY_PAYMENT_SECOND_RESURRECT_VALUES.put(Integer.parseInt(timeSplit[0]), RESURRECT_DATA);
+				}
+				RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM = characterConfig.getInt("SecondResurrectItemID", 0);
+			}
 			ENABLE_MODIFY_SKILL_DURATION = characterConfig.getBoolean("EnableModifySkillDuration", false);
 			if (ENABLE_MODIFY_SKILL_DURATION)
 			{

@@ -16,6 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
@@ -29,7 +34,9 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
+import org.l2jmobius.gameserver.model.holders.ResurrectByPaymentHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
@@ -38,8 +45,11 @@ import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Fort.FortFunction;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
@@ -48,11 +58,18 @@ public class RequestRestartPoint implements IClientIncomingPacket
 {
 	protected int _requestedPointType;
 	protected boolean _continuation;
+	protected int _resItemID;
+	protected int _resCount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_requestedPointType = packet.readD();
+		if (packet.getReadableBytes() != 0)
+		{
+			_resItemID = packet.readD();
+			_resCount = packet.readD();
+		}
 		return true;
 	}
 	
@@ -269,6 +286,80 @@ public class RequestRestartPoint implements IClientIncomingPacket
 			case 7: // TODO: Adventurer's Song
 			{
 				break;
+			}
+			case 9:
+			{
+				if (Config.RESURRECT_BY_PAYMENT_ENABLED)
+				{
+					if (!player.isDead())
+					{
+						break;
+					}
+					
+					final int originalValue = player.getVariables().getInt(PlayerVariables.RESURRECT_BY_PAYMENT_COUNT, 0);
+					if (originalValue < Config.RESURRECT_BY_PAYMENT_MAX_FREE_TIMES)
+					{
+						player.getVariables().set(PlayerVariables.RESURRECT_BY_PAYMENT_COUNT, originalValue + 1);
+						player.doRevive(100.0);
+						loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
+						player.teleToLocation(loc, true, instance);
+						break;
+					}
+					
+					final int firstID = Config.RESURRECT_BY_PAYMENT_ENABLED ? Config.RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM : 91663;
+					final int secondID = Config.RESURRECT_BY_PAYMENT_ENABLED ? Config.RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM : 57;
+					Map<Integer, Map<Integer, ResurrectByPaymentHolder>> resMAP = null;
+					Item item = null;
+					if (_resItemID == firstID)
+					{
+						resMAP = Config.RESURRECT_BY_PAYMENT_FIRST_RESURRECT_VALUES;
+						item = player.getInventory().getItemByItemId(Config.RESURRECT_BY_PAYMENT_FIRST_RESURRECT_ITEM);
+					}
+					else if (_resItemID == secondID)
+					{
+						resMAP = Config.RESURRECT_BY_PAYMENT_SECOND_RESURRECT_VALUES;
+						item = player.getInventory().getItemByItemId(Config.RESURRECT_BY_PAYMENT_SECOND_RESURRECT_ITEM);
+					}
+					if ((resMAP == null) || (item == null))
+					{
+						break;
+					}
+					
+					final List<Integer> levelList = new ArrayList<>(resMAP.keySet());
+					for (int level : levelList)
+					{
+						if ((player.getLevel() >= level) && (levelList.lastIndexOf(level) != (levelList.size() - 1)))
+						{
+							continue;
+						}
+						
+						int maxResTime;
+						try
+						{
+							maxResTime = resMAP.get(level).keySet().stream().max(Integer::compareTo).get();
+						}
+						catch (Exception e)
+						{
+							player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							e.printStackTrace();
+							return;
+						}
+						
+						final int getValue = maxResTime <= originalValue ? maxResTime : originalValue + 1;
+						final ResurrectByPaymentHolder rbph = resMAP.get(level).get(getValue);
+						if (item.getCount() < rbph.getAmount())
+						{
+							return;
+						}
+						
+						player.getVariables().set(PlayerVariables.RESURRECT_BY_PAYMENT_COUNT, originalValue + 1);
+						player.destroyItem("item revive", item, rbph.getAmount(), player, true);
+						player.doRevive(rbph.getResurrectPercent());
+						loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
+						player.teleToLocation(loc, true, instance);
+						break;
+					}
+				}
 			}
 			case 27: // to jail
 			{

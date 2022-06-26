@@ -131,7 +131,8 @@ Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Pledge donation system
 
 Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
--Client support
+-Resurrection with payment
+-Frost Lord castle
 
 Customs:
 -Newbie Helper NPC location info

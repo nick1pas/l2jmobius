@@ -132,7 +132,7 @@ Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
 -Hellbound spawns
 
 Frost Lord: https://eu.4game.com/patchnotes/lineage2essence/329/
--Updated skill trees
+-Resurrection with payment
 -Frost Lord castle
 
 Battle Chronicle: https://eu.4game.com/patchnotes/lineage2essence/353/

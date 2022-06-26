@@ -140,6 +140,7 @@ public class DailyTaskManager
 		resetDailyMissionRewards();
 		resetAttendanceRewards();
 		resetVip();
+		resetResurrectionByPayment();
 	}
 	
 	private void onSave()
@@ -665,6 +666,32 @@ public class DailyTaskManager
 			}
 		}
 		LOGGER.info("LimitShopData has been resetted.");
+	}
+	
+	private void resetResurrectionByPayment()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+			{
+				ps.setString(1, PlayerVariables.RESURRECT_BY_PAYMENT_COUNT);
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset payment resurrection count for players: " + e);
+		}
+		
+		// Update data for online players.
+		for (Player player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove(PlayerVariables.RESURRECT_BY_PAYMENT_COUNT);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Daily payment resurrection count for player has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()
