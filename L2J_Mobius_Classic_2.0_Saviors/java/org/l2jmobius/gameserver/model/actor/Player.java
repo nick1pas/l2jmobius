@@ -3060,16 +3060,16 @@ public class Player extends Playable
 			// Send update packet
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				final InventoryUpdate iu = new InventoryUpdate();
 				if (count == getAdena())
 				{
-					iu.addNewItem(_inventory.getAdenaInstance());
+					sendItemList(false);
 				}
 				else
 				{
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(_inventory.getAdenaInstance());
+					sendInventoryUpdate(iu);
 				}
-				sendInventoryUpdate(iu);
 			}
 			else
 			{
