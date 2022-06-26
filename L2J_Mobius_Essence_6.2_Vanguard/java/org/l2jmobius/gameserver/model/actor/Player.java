@@ -3378,7 +3378,7 @@ public class Player extends Playable
 				}
 				else if (item.getEnchantLevel() > 0)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 					sendPacket(sm);

@@ -255,7 +255,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2);
+			sm = new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_S2);
 			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item);
 		}
