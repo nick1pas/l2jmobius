@@ -110,18 +110,58 @@
 	<item id="29908" name="Sealed Bloodthirsty Zariche Weapon Pack" type="EtcItem">
 		<!-- A pack in which the madness of the Demonic Sword Zariche is sealed.\nDouble-click to obtain a Bloodthirsty Zariche weapon. -->
 		<set name="icon" val="icon.zariche_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80698" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Shaper -->
+			<item id="80699" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Cutter -->
+			<item id="80700" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Slasher -->
+			<item id="80701" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Avenger -->
+			<item id="80702" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Fighter -->
+			<item id="80703" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Stormer -->
+			<item id="80704" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Thrower -->
+			<item id="80705" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Shooter -->
+			<item id="80706" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Buster -->
+			<item id="80707" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Caster -->
+			<item id="80708" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Retributer -->
+			<item id="80709" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Dual Swords -->
+			<item id="80710" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Dual Daggers -->
+			<item id="80711" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Zariche Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="29909" name="Sealed Bloodstained Zariche Weapon Pack" type="EtcItem">
 		<!-- A pack in which the madness of the Demonic Sword Zariche is sealed.\nDouble-click to obtain a Bloodstained Zariche weapon. -->
 		<set name="icon" val="icon.zariche_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80873" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Shaper -->
+			<item id="80874" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Cutter -->
+			<item id="80875" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Slasher -->
+			<item id="80876" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Avenger -->
+			<item id="80877" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Fighter -->
+			<item id="80878" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Stormer -->
+			<item id="80879" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Thrower -->
+			<item id="80880" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Shooter -->
+			<item id="80881" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Buster -->
+			<item id="80882" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Caster -->
+			<item id="80883" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Retributer -->
+			<item id="80884" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Dual Swords -->
+			<item id="80885" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Dual Daggers -->
+			<item id="80886" min="1" max="1" chance="7.14" /> <!-- Bloodstained Zariche Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="29910" name="Ghost Pack" type="EtcItem">
 		<!-- Double-click to obtain a rare item. Can be exchanged through the Game Assistant. -->
@@ -130,6 +170,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29911" name="Bloodstained Ghost Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -138,6 +179,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29912" name="Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain a random item. Additionally, you obtain Scroll: Enchant Mysterious Weapon. -->
@@ -146,29 +188,76 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29913" name="Sealed Bloodthirsty Akamanah Weapon Pack" type="EtcItem">
 		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed.\nDouble-click to obtain a Bloodthirsty Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80859" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Shaper -->
+			<item id="80860" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Cutter -->
+			<item id="80861" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Slasher -->
+			<item id="80862" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Avenger -->
+			<item id="80863" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Fighter -->
+			<item id="80864" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Stormer -->
+			<item id="80865" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Thrower -->
+			<item id="80866" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Shooter -->
+			<item id="80867" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Buster -->
+			<item id="80868" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Caster -->
+			<item id="80869" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Retributer -->
+			<item id="80870" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Dual Swords -->
+			<item id="80871" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Dual Daggers -->
+			<item id="80872" min="1" max="1" chance="7.14" /> <!-- Bloodthirsty Akamanah Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="29914" name="Sealed Bloodstained Akamanah Weapon Pack" type="EtcItem">
 		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed.\nDouble-click to obtain a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80887" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Shaper -->
+			<item id="80888" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Cutter -->
+			<item id="80889" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Slasher -->
+			<item id="80890" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Avenger -->
+			<item id="80891" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Fighter -->
+			<item id="80892" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Stormer -->
+			<item id="80893" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Thrower -->
+			<item id="80894" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Shooter -->
+			<item id="80895" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Buster -->
+			<item id="80896" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Caster -->
+			<item id="80897" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Retributer -->
+			<item id="80898" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Dual Swords -->
+			<item id="80899" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Dual Daggers -->
+			<item id="80900" min="1" max="1" chance="7.14" /> <!-- Bloodstained Akamanah Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="29915" name="+18 Supreme Krishna Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +18. -->
 		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="FISH" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29435" level="1" /> <!-- +18 Supreme Krishna Weapon Pack Lv. 1 -->
+		</skills>
 	</item>
 	<item id="29916" name="+20 Supreme Krishna Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +20. -->
@@ -178,7 +267,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="29436" level="1" /> <!-- +20 Supreme Krishna Weapon Pack -->
@@ -192,7 +280,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -210,7 +297,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="29437" level="1" /> <!-- +10 Limited Leviathan Heavy Armor Pack Lv. 1 -->
@@ -224,7 +310,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="29438" level="1" /> <!-- +10 Limited Leviathan Light Armor Pack Lv. 1 -->
@@ -238,7 +323,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="29439" level="1" /> <!-- +10 Limited Leviathan Robe Pack Lv. 1 -->
@@ -252,6 +336,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29922" name="Sealed Mysterious Dragon Slayer" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Dragon Slayer. -->
@@ -270,6 +355,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48957" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Atk. (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29924" name="Artifact Pack - M. Atk. +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Atk. +7 (attack artifact). -->
@@ -279,6 +369,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48958" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Atk. (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29925" name="Artifact Pack - Atk. Spd. +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Atk. Spd. +7 (attack artifact). -->
@@ -288,6 +383,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48959" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Atk. Spd. (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29926" name="Artifact Pack - Casting Spd. +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Casting Spd. +7 (attack artifact). -->
@@ -297,6 +397,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48960" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Casting Spd. (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29927" name="Artifact Pack - P. Def. +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Def. +7 (defense artifact). -->
@@ -306,6 +411,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48961" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Def. (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29928" name="Artifact Pack - M. Def. +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Def. +7 (defense artifact). -->
@@ -315,6 +425,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48962" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Def. (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29929" name="Artifact Pack - Max HP +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Max HP +7 (defense artifact). -->
@@ -324,6 +439,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48963" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Max HP (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29930" name="Artifact Pack - Max MP +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Max MP +7 (defense artifact). -->
@@ -333,6 +453,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48964" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Max MP (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29931" name="Artifact Pack - Acquired XP +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Acquired XP +7 (support artifact). -->
@@ -342,6 +467,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48965" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Acquired XP (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29932" name="Artifact Pack - Vampiric Rage +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Vampiric Rage +7 (support artifact). -->
@@ -351,6 +481,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48966" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Vampiric Rage (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29933" name="Artifact Pack - Speed +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Speed +7 (support artifact). -->
@@ -360,6 +495,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48967" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Speed (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29934" name="Artifact Pack - Received Healing +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received Healing +7 (support artifact). -->
@@ -369,6 +509,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48968" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received Healing (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29935" name="Artifact Pack - P. Atk. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Atk. +7 (balance artifact). -->
@@ -378,6 +523,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48969" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Atk. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29936" name="Artifact Pack - M. Atk. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Atk. +7 (balance artifact). -->
@@ -387,6 +537,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48970" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Atk. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29937" name="Artifact Pack - P. Accuracy +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Accuracy +7 (balance artifact). -->
@@ -396,6 +551,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48971" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Accuracy (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29938" name="Artifact Pack - M. Accuracy +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Accuracy +7 (balance artifact). -->
@@ -405,6 +565,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48972" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Accuracy (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29939" name="Artifact Pack - Standard Attack Critical Rate +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Standard Attack Critical Rate +7 (balance artifact). -->
@@ -414,6 +579,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48973" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Critical Rate for Basic Attacks (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29940" name="Artifact Pack - P. Skill Critical Rate +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Skill Critical Rate +7 (balance artifact). -->
@@ -423,6 +593,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48974" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Skill Critical Rate (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29941" name="Artifact Pack - M. Critical Rate +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Critical Rate +7 (balance artifact). -->
@@ -432,6 +607,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48975" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Critical Rate (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29942" name="Artifact Pack - Recovery Potions' Effect +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Recovery Potions' Effect +7 (balance artifact). -->
@@ -441,6 +621,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48976" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Recovery Potions' Effect (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29943" name="Artifact Pack - Received Damage When Immobilized +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received Damage When Immobilized +7 (balance artifact). -->
@@ -450,6 +635,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48977" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received Damage When Immobilized (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29944" name="Artifact Pack - Standard Attack Critical Damage +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Standard Attack Critical Damage +7 (attack artifact). -->
@@ -459,6 +649,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80647" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Critical Damage for Basic Attacks (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29945" name="Artifact Pack - P. Skill Critical Damage +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Skill Critical Damage +7 (attack artifact). -->
@@ -468,6 +663,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80648" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Skill Critical Damage (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29946" name="Artifact Pack - M. Skill Critical Damage +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Skill Critical Damage +7 (attack artifact). -->
@@ -477,6 +677,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80649" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Skill Critical Damage (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29947" name="Artifact Pack - Bow Resistance +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Bow Resistance +7 (defense artifact). -->
@@ -486,6 +691,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80650" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Bow Resistance (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29948" name="Artifact Pack - Dagger Resistance +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Dagger Resistance +7 (defense artifact). -->
@@ -495,6 +705,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80651" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Dagger Resistance (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29949" name="Artifact Pack - Sword Resistance +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Sword Resistance +7 (defense artifact). -->
@@ -504,6 +719,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80652" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Sword Resistance (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29950" name="Artifact Pack - Vitality Bonus +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Vitality Bonus +7 (support artifact). -->
@@ -513,6 +733,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80653" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Vitality Bonus (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29951" name="Artifact Pack - Vitality Consumption +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Vitality Consumption +7 (support artifact). -->
@@ -522,6 +747,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80654" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Vitality Consumption (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29952" name="Artifact Pack - Skill MP Consumption +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Skill MP Consumption +7 (support artifact). -->
@@ -531,6 +761,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80655" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Skill MP Consumption (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29953" name="Artifact Pack - P. Def. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Def. +7 (balance artifact). -->
@@ -540,6 +775,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80656" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Def. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29954" name="Artifact Pack - M. Def. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Def. +7 (balance artifact). -->
@@ -549,6 +789,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80657" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Def. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29955" name="Artifact Pack - Standard Attack Critical Damage +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Standard Attack Critical Damage +7 (balance artifact). -->
@@ -558,6 +803,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80658" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Critical Damage for Basic Attacks (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29956" name="Artifact Pack - P. Skill Critical Damage +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Skill Critical Damage +7 (balance artifact). -->
@@ -567,6 +817,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80659" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Skill Critical Damage (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29957" name="Artifact Pack - M. Skill Critical Damage +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Skill Critical Damage +7 (balance artifact). -->
@@ -576,6 +831,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80660" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Skill Critical Damage (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29958" name="Artifact Pack - Atk. Spd. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Atk. Spd. +7 (balance artifact). -->
@@ -585,6 +845,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80661" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Atk. Spd. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29959" name="Artifact Pack - Casting Spd. +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Casting Spd. +7 (balance artifact). -->
@@ -594,6 +859,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80662" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Casting Spd. (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29960" name="Artifact Pack - Attribute Attack +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Attribute Attack +7 (attack artifact). -->
@@ -603,6 +873,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81430" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Attribute Attack (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29961" name="Artifact Pack - P. Skill Power +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - P. Skill Power +7 (attack artifact). -->
@@ -612,6 +887,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81431" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - P. Skill Power (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29962" name="Artifact Pack - M. Skill Power +7 (Attack)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - M. Skill Power +7 (attack artifact). -->
@@ -621,6 +901,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81432" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - M. Skill Power (Attack) -->
+		</capsuled_items>
 	</item>
 	<item id="29963" name="Artifact Pack - Attribute Resistance +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Attribute Resistance +7 (defense artifact). -->
@@ -630,6 +915,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81433" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Attribute Resistance (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29964" name="Artifact Pack - Received Damage When Immobilized +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received Damage When Immobilized +7 (defense artifact). -->
@@ -639,6 +929,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81434" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received Damage When Immobilized (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29965" name="Artifact Pack - Received P. Critical Damage +7 (Defense)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received P. Critical Damage +7 (defense artifact). -->
@@ -648,6 +943,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81435" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received P. Critical Damage (Defense) -->
+		</capsuled_items>
 	</item>
 	<item id="29966" name="Artifact Pack - Recovery Potions' Effect +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Recovery Potions' Effect +7 (support artifact). -->
@@ -657,6 +957,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81436" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Recovery Potions' Effect (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29967" name="Artifact Pack - Fixed Damage Resistance +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Fixed Damage Resistance +7 (support artifact). -->
@@ -666,6 +971,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81437" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Fixed Damage Resistance (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29968" name="Artifact Pack - Damage Reflection Resistance +7 (Support)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Damage Reflection Resistance +7 (defense artifact). -->
@@ -675,6 +985,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81438" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Damage Reflection Resistance (Support) -->
+		</capsuled_items>
 	</item>
 	<item id="29969" name="Artifact Pack - Vitality Bonus +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Vitality Bonus +7 (balance artifact). -->
@@ -684,6 +999,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81439" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Vitality Bonus (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29970" name="Artifact Pack - Received Healing +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received Healing +7 (balance artifact). -->
@@ -693,6 +1013,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81440" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received Healing (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29971" name="Artifact Pack - Skill MP Consumption +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Skill MP Consumption +7 (balance artifact). -->
@@ -702,6 +1027,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81441" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Skill MP Consumption (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29972" name="Artifact Pack - Received P. Critical Rate +7 (Balance)" type="EtcItem">
 		<!-- Double-click to obtain Artifact - Received P. Critical Rate +7 (balance artifact). -->
@@ -711,6 +1041,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81442" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /><!-- Artifact - Received P. Critical Rate (Balance) -->
+		</capsuled_items>
 	</item>
 	<item id="29973" name="Pearly Joy Box" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -722,6 +1057,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29974" name="Freya's Vital Rune Pack (30-min.)" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune (30-min). -->
@@ -733,6 +1069,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29975" name="Card Pouch" additionalName="Event" type="EtcItem">
 		<!-- A card pouch with great magic power. Double-click to receive one of the event cards. -->
@@ -742,6 +1079,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29976" name="Night Goblin's Jewel Box" type="EtcItem">
 		<!-- Double-click to obtain 2 Glittering Freya's Ice Roses and 2 Glittering Freya's Scrolls of Storm. Additionally, you can get a useful item. -->
@@ -750,6 +1088,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29977" name="Barter Coin" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
@@ -757,6 +1096,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29978" name="Barter Coin Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 to 5000 Barter Coins. -->
@@ -765,6 +1105,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29979" name="Barter Package" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
@@ -773,6 +1114,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29980" name="Dragon's Relic" type="EtcItem">
 		<!-- Double-click to obtain 3 Glittering Freya's Scrolls of Storm and Glittering Freya's Ice Rose. Additionally, you can get a rare item. -->
@@ -781,6 +1123,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29981" name="Mysterious Magic Stone" type="EtcItem">
 		<!-- Double-click to obtain Shining Magic Stone or Legendary Magic Stone. -->
@@ -789,6 +1132,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29982" name="Shining Magic Stone" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -797,6 +1141,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29983" name="Legendary Magic Stone" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
@@ -805,6 +1150,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29984" name="Freya's Fortune Stick 2021" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -813,6 +1159,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29985" name="Freya's Growth Chest 2021" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -821,6 +1168,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29986" name="Freya's Dragon Chest 2021" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -829,6 +1177,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29987" name="Freya's Treasure Chest 2021" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -837,6 +1186,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29989" name="Valentine Two-handed Blunt Weapon" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Two-handed Blunt Weapon form. -->
@@ -869,6 +1219,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29991" name="Valentine Set Festive Chest" type="EtcItem">
 		<!-- Double-click to obtain Festive Chest (75 pcs.) and Freya's Vital Rune (30-day). (Freya's Vital Rune duration countdown will start immediately after opening the chest.) -->
@@ -877,6 +1228,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29992" name="Golden Lucky Pouch" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -885,6 +1237,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29993" name="Clan Cooperation Pack" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -895,6 +1248,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29994" name="Old Antique" type="EtcItem">
 		<!-- Double-click to obtain one of the antiques. -->
@@ -903,6 +1257,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29995" name="Sacred Antique" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
@@ -911,6 +1266,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29996" name="Great Antique" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
@@ -919,6 +1275,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29997" name="Rare Antique" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->
@@ -927,6 +1284,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29998" name="Fake Antique" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -935,6 +1293,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29999" name="Valentine's Bouquet" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. -->
