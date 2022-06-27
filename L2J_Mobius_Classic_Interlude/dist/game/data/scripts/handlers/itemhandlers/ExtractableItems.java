@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -191,7 +192,12 @@ public class ExtractableItems implements IItemHandler
 		}
 		if (!enchantedItems.isEmpty())
 		{
-			player.sendItemList(false);
+			final InventoryUpdate playerIU = new InventoryUpdate();
+			for (Item i : enchantedItems)
+			{
+				playerIU.addModifiedItem(i);
+			}
+			player.sendPacket(playerIU);
 		}
 		
 		for (Entry<Item, Long> entry : extractedItems.entrySet())
