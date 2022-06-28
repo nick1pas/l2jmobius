@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -138,6 +139,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -513,11 +515,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void onDecay()
 	{
-		decayMe();
-		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
-		if (region != null)
+		if (Config.DISCONNECT_AFTER_DEATH && isPlayer())
 		{
-			region.removeFromZones(this);
+			Disconnection.of(getActingPlayer()).deleteMe().defaultSequence(new SystemMessage(SendMessageLocalisationData.getLocalisation(getActingPlayer(), "60 min. have passed after the death of your character, so you were disconnected from the game.")));
+		}
+		else
+		{
+			decayMe();
+			final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+			if (region != null)
+			{
+				region.removeFromZones(this);
+			}
 		}
 	}
 	

@@ -294,6 +294,7 @@ public class Config
 	public static boolean FREE_TELEPORTING;
 	public static boolean ALT_RECOMMEND;
 	public static int DELETE_DAYS;
+	public static boolean DISCONNECT_AFTER_DEATH;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
 	public static int PARTY_XP_CUTOFF_LEVEL;
@@ -1951,6 +1952,7 @@ public class Config
 			FREE_TELEPORTING = characterConfig.getBoolean("FreeTeleporting", false);
 			ALT_RECOMMEND = characterConfig.getBoolean("AltRecommend", false);
 			DELETE_DAYS = characterConfig.getInt("DeleteCharAfterDays", 7);
+			DISCONNECT_AFTER_DEATH = characterConfig.getBoolean("DisconnectAfterDeath", true);
 			PARTY_XP_CUTOFF_METHOD = characterConfig.getString("PartyXpCutoffMethod", "highfive");
 			PARTY_XP_CUTOFF_PERCENT = characterConfig.getDouble("PartyXpCutoffPercent", 3);
 			PARTY_XP_CUTOFF_LEVEL = characterConfig.getInt("PartyXpCutoffLevel", 20);

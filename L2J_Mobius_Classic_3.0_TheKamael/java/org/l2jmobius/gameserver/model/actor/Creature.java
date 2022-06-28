@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.data.xml.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.enums.AttributeType;
@@ -141,6 +142,7 @@ import org.l2jmobius.gameserver.model.stats.MoveType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
@@ -567,26 +569,33 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void onDecay()
 	{
-		decayMe();
-		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
-		if (region != null)
+		if (Config.DISCONNECT_AFTER_DEATH && isPlayer())
 		{
-			region.removeFromZones(this);
+			Disconnection.of(getActingPlayer()).deleteMe().defaultSequence(new SystemMessage(SendMessageLocalisationData.getLocalisation(getActingPlayer(), "60 min. have passed after the death of your character, so you were disconnected from the game.")));
 		}
-		
-		// Removes itself from the summoned list.
-		if ((_summoner != null))
+		else
 		{
-			_summoner.removeSummonedNpc(getObjectId());
+			decayMe();
+			final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+			if (region != null)
+			{
+				region.removeFromZones(this);
+			}
+			
+			// Removes itself from the summoned list.
+			if ((_summoner != null))
+			{
+				_summoner.removeSummonedNpc(getObjectId());
+			}
+			
+			_onCreatureAttack = null;
+			_onCreatureAttacked = null;
+			_onCreatureDamageDealt = null;
+			_onCreatureDamageReceived = null;
+			_onCreatureAttackAvoid = null;
+			onCreatureSkillFinishCast = null;
+			onCreatureSkillUse = null;
 		}
-		
-		_onCreatureAttack = null;
-		_onCreatureAttacked = null;
-		_onCreatureDamageDealt = null;
-		_onCreatureDamageReceived = null;
-		_onCreatureAttackAvoid = null;
-		onCreatureSkillFinishCast = null;
-		onCreatureSkillUse = null;
 	}
 	
 	@Override

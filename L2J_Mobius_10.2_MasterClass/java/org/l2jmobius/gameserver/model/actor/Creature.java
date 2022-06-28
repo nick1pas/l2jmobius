@@ -140,6 +140,7 @@ import org.l2jmobius.gameserver.model.stats.MoveType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
@@ -566,26 +567,33 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void onDecay()
 	{
-		decayMe();
-		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
-		if (region != null)
+		if (Config.DISCONNECT_AFTER_DEATH && isPlayer())
 		{
-			region.removeFromZones(this);
+			Disconnection.of(getActingPlayer()).deleteMe().defaultSequence(new SystemMessage(SystemMessageId.SIXTY_MIN_HAVE_PASSED_AFTER_THE_DEATH_OF_YOUR_CHARACTER_SO_YOU_WERE_DISCONNECTED_FROM_THE_GAME));
 		}
-		
-		// Removes itself from the summoned list.
-		if ((_summoner != null))
+		else
 		{
-			_summoner.removeSummonedNpc(getObjectId());
+			decayMe();
+			final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+			if (region != null)
+			{
+				region.removeFromZones(this);
+			}
+			
+			// Removes itself from the summoned list.
+			if ((_summoner != null))
+			{
+				_summoner.removeSummonedNpc(getObjectId());
+			}
+			
+			_onCreatureAttack = null;
+			_onCreatureAttacked = null;
+			_onCreatureDamageDealt = null;
+			_onCreatureDamageReceived = null;
+			_onCreatureAttackAvoid = null;
+			onCreatureSkillFinishCast = null;
+			onCreatureSkillUse = null;
 		}
-		
-		_onCreatureAttack = null;
-		_onCreatureAttacked = null;
-		_onCreatureDamageDealt = null;
-		_onCreatureDamageReceived = null;
-		_onCreatureAttackAvoid = null;
-		onCreatureSkillFinishCast = null;
-		onCreatureSkillUse = null;
 	}
 	
 	@Override

@@ -367,6 +367,7 @@ import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
+import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
@@ -4992,6 +4993,11 @@ public class Player extends Playable
 		{
 			final int newRep = getReputation() - (getReputation() / 4);
 			setReputation(newRep < -20 ? newRep : 0);
+		}
+		
+		if (Config.DISCONNECT_AFTER_DEATH)
+		{
+			DecayTaskManager.getInstance().add(this);
 		}
 		
 		return true;
@@ -10099,6 +10105,11 @@ public class Player extends Playable
 	public void doRevive()
 	{
 		super.doRevive();
+		
+		if (Config.DISCONNECT_AFTER_DEATH)
+		{
+			DecayTaskManager.getInstance().cancel(this);
+		}
 		
 		sendPacket(new EtcStatusUpdate(this));
 		_revivePet = false;

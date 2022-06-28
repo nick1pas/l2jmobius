@@ -89,6 +89,11 @@ public class DecayTaskManager implements Runnable
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
+		if (Config.DISCONNECT_AFTER_DEATH && creature.isPlayer())
+		{
+			delay = 3600; // 1 hour
+		}
+		
 		// Add to decay schedules.
 		DECAY_SCHEDULES.put(creature, System.currentTimeMillis() + (delay * 1000));
 	}

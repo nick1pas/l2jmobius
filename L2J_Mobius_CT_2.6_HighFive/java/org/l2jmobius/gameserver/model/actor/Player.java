@@ -331,6 +331,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
@@ -5234,6 +5235,11 @@ public class Player extends Playable
 		if (getKarma() > 0) // && (killer instanceof GuardInstance))
 		{
 			setKarma(getKarma() < 200 ? 0 : (int) (getKarma() - (getKarma() / 4)));
+		}
+		
+		if (Config.DISCONNECT_AFTER_DEATH)
+		{
+			DecayTaskManager.getInstance().add(this);
 		}
 		
 		return true;
@@ -10529,6 +10535,11 @@ public class Player extends Playable
 	public void doRevive()
 	{
 		super.doRevive();
+		
+		if (Config.DISCONNECT_AFTER_DEATH)
+		{
+			DecayTaskManager.getInstance().cancel(this);
+		}
 		
 		updateEffectIcons();
 		sendPacket(new EtcStatusUpdate(this));
