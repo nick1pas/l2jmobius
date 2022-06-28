@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.newhenna;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.CombinationDyeData;
+import org.l2jmobius.gameserver.data.xml.HennaCombinationData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -67,7 +67,7 @@ public class RequestNewHennaCompose implements IClientIncomingPacket
 		}
 		
 		final Henna henna = player.getHenna(_slotOneIndex);
-		final CombinationHenna combinationHennas = CombinationDyeData.getInstance().getByHenna(henna.getDyeId());
+		final CombinationHenna combinationHennas = HennaCombinationData.getInstance().getByHenna(henna.getDyeId());
 		if (combinationHennas == null)
 		{
 			player.sendPacket(new NewHennaPotenCompose(henna.getDyeId(), -1, false));

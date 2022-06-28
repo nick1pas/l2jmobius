@@ -27,19 +27,19 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.item.combination.CombinationItemType;
-import org.l2jmobius.gameserver.model.item.henna.CombinationHennaReward;
 import org.l2jmobius.gameserver.model.item.henna.CombinationHenna;
+import org.l2jmobius.gameserver.model.item.henna.CombinationHennaReward;
 
 /**
  * @author Index
  */
-public class CombinationDyeData implements IXmlReader
+public class HennaCombinationData implements IXmlReader
 {
-	private static final Logger LOGGER = Logger.getLogger(CombinationDyeData.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HennaCombinationData.class.getName());
 	
 	private final List<CombinationHenna> _henna = new ArrayList<>();
 	
-	protected CombinationDyeData()
+	protected HennaCombinationData()
 	{
 		load();
 	}
@@ -48,7 +48,7 @@ public class CombinationDyeData implements IXmlReader
 	public synchronized void load()
 	{
 		_henna.clear();
-		parseDatapackFile("data/CombinationDye.xml");
+		parseDatapackFile("data/stats/hennaCombinations.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _henna.size() + " henna combinations.");
 	}
 	
@@ -98,13 +98,13 @@ public class CombinationDyeData implements IXmlReader
 		return null;
 	}
 	
-	public static final CombinationDyeData getInstance()
+	public static final HennaCombinationData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CombinationDyeData INSTANCE = new CombinationDyeData();
+		protected static final HennaCombinationData INSTANCE = new HennaCombinationData();
 	}
 }
