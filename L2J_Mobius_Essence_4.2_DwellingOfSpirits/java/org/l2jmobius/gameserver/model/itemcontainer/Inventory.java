@@ -1720,24 +1720,17 @@ public abstract class Inventory extends ItemContainer
 	 */
 	private void checkEquipTask()
 	{
-		if (_skillItemTask == null)
+		if ((_skillItemTask == null) && (getOwner() != null) && getOwner().isPlayer() && getOwner().getActingPlayer().hasEnteredWorld())
 		{
-			final Creature owner = getOwner();
-			if ((owner != null) && owner.isPlayer())
+			getOwner().getActingPlayer().setUsingSkillItem(true);
+			_skillItemTask = ThreadPool.schedule(() ->
 			{
-				final Player player = owner.getActingPlayer();
-				if (player.hasEnteredWorld())
-				{
-					_skillItemTask = ThreadPool.schedule(() ->
-					{
-						player.setUsingSkillItem(false);
-						player.getStat().recalculateStats(true);
-						player.updateAbnormalVisualEffects();
-						player.sendSkillList();
-						_skillItemTask = null;
-					}, 50);
-				}
-			}
+				getOwner().getActingPlayer().setUsingSkillItem(false);
+				getOwner().getStat().recalculateStats(true);
+				getOwner().updateAbnormalVisualEffects();
+				getOwner().getActingPlayer().sendSkillList();
+				_skillItemTask = null;
+			}, 50);
 		}
 	}
 	
