@@ -77,14 +77,88 @@
 		</effects>
 	</skill>
 	<skill id="47402" toLevel="3" name="Chain Arrest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>200</affectRange>
+		<castRange>900</castRange>
+		<effectPoint>
+			<value level="1">-405</value>
+			<value level="2">-405</value>
+			<value level="3">-405</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2000</hitTime>
+		<magicLevel>
+			<value level="1">82</value>
+			<value level="2">85</value>
+			<value level="3">88</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">131</value>
+			<value level="2">139</value>
+			<value level="3">147</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">9750</value>
+					<value level="2">10520</value>
+					<value level="3">11304</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.85</pDefMod>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47403</skillId> <!-- Chain Arrest -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47403" toLevel="3" name="Chain Arrest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-405</value>
+			<value level="2">-405</value>
+			<value level="3">-405</value>
+		</effectPoint>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="47404" toLevel="2" name="Flame Arrow">
 		<icon>icon.skill0000</icon>
@@ -386,9 +460,49 @@
 		</effects>
 	</skill>
 	<skill id="47410" toLevel="2" name="Devious Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>200</affectRange>
+		<castRange>900</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-620</value>
+			<value level="2">-770</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2500</hitTime>
+		<magicLevel>
+			<value level="1">85</value>
+			<value level="2">88</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">101</value>
+			<value level="2">108</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>20000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">9147</value>
+					<value level="2">10361</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.90</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47411" toLevel="3" name="Steady Aim">
 		<icon>icon.skill0000</icon>

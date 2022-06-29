@@ -3128,33 +3128,38 @@
 					<value level="3">15</value>
 				</SUPPRESSION>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack" fromLevel="1" toLevel="3">
-				<attackSkillId>19</attackSkillId> <!-- Double Shot -->
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
-				<minDamage>100</minDamage>
+				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
 				<allowWeapons>BOW</allowWeapons>
 				<skillId>47397</skillId> <!-- Bow Vulnerability -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</skillLevel>
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack" fromLevel="1" toLevel="3">
-				<attackSkillId>343</attackSkillId> <!-- Lethal Shot -->
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
-				<minDamage>100</minDamage>
+				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
 				<allowWeapons>BOW</allowWeapons>
 				<skillId>47397</skillId> <!-- Bow Vulnerability -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</skillLevel>
+				<skillLevel>2</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="3" toLevel="3">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>47397</skillId> <!-- Bow Vulnerability -->
+				<skillLevel>3</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 		</effects>
 	</skill>
@@ -3172,8 +3177,8 @@
 		</effectPoint>
 		<effectRange>1200</effectRange>
 		<abnormalTime>30</abnormalTime>
-		<abnormalType>TRUE_AIM</abnormalType>
-		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
+		<abnormalType>REAL_TARGET</abnormalType>
+		<abnormalVisualEffect>V_ARCHER_TRUE_TARGET_AVE</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -3198,13 +3203,171 @@
 		</effects>
 	</skill>
 	<skill id="47398" toLevel="3" name="Deadly Shooter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DEADLY_SHOOTER</abnormalType>
+		<operateType>A2</operateType>
+		<hitTime>2500</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<magicLevel>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+		</mpConsume>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">8</value>
+			<value level="2">9</value>
+			<value level="3">10</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">16</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<FEAR>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">15</value>
+				</FEAR>
+				<HOLD>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">15</value>
+				</HOLD>
+			</effect>
+			<effect name="Accuracy">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">450</value>
+					<value level="3">500</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">90</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>47399</skillId> <!-- Aim Guidance -->
+				<skillLevel>1</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>47399</skillId> <!-- Aim Guidance -->
+				<skillLevel>2</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="3" toLevel="3">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>BOW</allowWeapons>
+				<skillId>47399</skillId> <!-- Aim Guidance -->
+				<skillLevel>3</skillLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47399" toLevel="3" name="Aim Guidance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>REAL_TARGET</abnormalType>
+		<abnormalVisualEffect>V_ARCHER_SHAPE_SHOOTER_AVE</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectRange>1200</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-500</value>
+			<value level="3">-600</value>
+		</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">-30</value>
+					<value level="2">-33</value>
+					<value level="3">-40</value>
+				</BOW>
+			</effect>
+		</effects>
 	</skill>
 </list>

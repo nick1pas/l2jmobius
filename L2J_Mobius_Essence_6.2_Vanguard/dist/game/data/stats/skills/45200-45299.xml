@@ -6407,12 +6407,33 @@
 	</skill>
 	<skill id="45251" toLevel="1" name="Enhanced Assault">
 		<!-- When the Rush skill is used, the stun effect is added (Cooldown: 20 sec.) Increases a chance to stun the enemy after using the Rush Impact skill (Cooldown: 20 sec.) -->
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>994</existingSkillId> <!-- Rush -->
+				<replacementSkillId>45252</replacementSkillId> <!-- Rush -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45252" toLevel="3" name="Rush">
 		<!-- <Shock skill> Charges into the target. With a certain chance, stuns them. Can be used if the distance between the target and the character is more than $s1. -->
 		<icon>icon.skill0493</icon>
-		<operateType>DA1</operateType>
+		<operateType>DA2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<castRange>
+			<value level="1">400</value>
+			<value level="2">450</value>
+			<value level="3">500</value>
+		</castRange>
+		<coolTime>200</coolTime>
+		<effectRange>600</effectRange>
+		<hitTime>800</hitTime>
 		<effectPoint>
 			<value level="1">-300</value>
 			<value level="2">-400</value>
@@ -6423,6 +6444,32 @@
 			<value level="2">40</value>
 			<value level="3">45</value>
 		</mpConsume>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>60</activateRate>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<trait>ANOMALY</trait>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>
+					<value level="1">150</value>
+					<value level="2">120</value>
+					<value level="3">100</value>
+				</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45253" toLevel="3" name="Rush Impact">
 		<!-- <Shock skill> Rushes forward to attack enemies at the front with $s1 power. Stuns them for $s2 Can be used if the distance to the target is more than $s3. -->

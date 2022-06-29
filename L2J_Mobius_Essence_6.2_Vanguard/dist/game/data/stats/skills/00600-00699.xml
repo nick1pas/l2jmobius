@@ -352,7 +352,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="622" toLevel="2" name="Ultimate Escape">
+	<skill id="622" toLevel="3" name="Ultimate Escape">
 		<!-- For $s1 P. Evasion +$s2 M. Evasion +$s2 P. Skill Evasion +$s3 M. Skill Evasion +$s3 Speed +$s4 -->
 		<icon>icon.skill0622</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -361,18 +361,25 @@
 		<effectPoint>
 			<value level="1">200</value>
 			<value level="2">300</value>
+			<value level="3">400</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLevel>
 			<value level="1">28</value>
 			<value level="2">52</value>
+			<value level="3">76</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">40</value>
 			<value level="2">60</value>
+			<value level="3">60</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>
+			<value level="1">900000</value>
+			<value level="2">900000</value>
+			<value level="3">600000</value>
+		</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -382,6 +389,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">35</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -389,6 +397,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">35</value>
+					<value level="3">35</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -397,6 +406,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">30</value>
+					<value level="3">30</value>
 				</amount>
 			</effect>
 			<effect name="SkillEvasion">
@@ -404,14 +414,31 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">30</value>
+					<value level="3">30</value>
 				</amount>
 			</effect>
 			<effect name="Speed">
 				<amount>
 					<value level="1">30</value>
 					<value level="2">40</value>
+					<value level="3">40</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<ANOMALY>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</ANOMALY>
 			</effect>
 		</effects>
 	</skill>
@@ -474,7 +501,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="627" toLevel="5" name="Mental Panic Shot">
+	<skill id="627" toLevel="10" name="Mental Panic Shot">
 		<!-- <Fear Skill> The effect lasts for $s1 Frightens the enemy. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -490,9 +517,14 @@
 			<value level="3">-480</value>
 			<value level="4">-490</value>
 			<value level="5">-500</value>
+			<value level="6">-500</value>
+			<value level="7">-500</value>
+			<value level="8">-500</value>
+			<value level="9">-500</value>
+			<value level="10">-500</value>
 		</effectPoint>
-		<effectRange>600</effectRange>
-		<hitTime>1500</hitTime>
+		<effectRange>900</effectRange>
+		<hitTime>1800</hitTime>
 		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -502,6 +534,11 @@
 			<value level="3">80</value>
 			<value level="4">82</value>
 			<value level="5">84</value>
+			<value level="6">86</value>
+			<value level="7">88</value>
+			<value level="8">89</value>
+			<value level="9">90</value>
+			<value level="10">91</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">40</value>
@@ -509,6 +546,11 @@
 			<value level="3">50</value>
 			<value level="4">55</value>
 			<value level="5">60</value>
+			<value level="6">65</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
@@ -517,6 +559,20 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">2651</value>
+					<value level="2">2739</value>
+					<value level="3">2827</value>
+					<value level="4">2915</value>
+					<value level="5">3005</value>
+					<value level="6">7737</value>
+					<value level="7">7964</value>
+					<value level="8">8078</value>
+					<value level="9">8192</value>
+					<value level="10">8307</value>
+				</power>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="Fear" />
 		</effects>

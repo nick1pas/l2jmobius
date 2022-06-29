@@ -3497,8 +3497,6 @@
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>50</activateRate>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
 		<castRange>600</castRange>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>720</coolTime>
@@ -3532,9 +3530,8 @@
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>ANOMALY</trait>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions" />
 		</effects>

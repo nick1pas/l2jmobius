@@ -1915,6 +1915,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="DeathPoints">
 				<amount>20</amount>
@@ -1965,6 +1973,11 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">5</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="DeathPoints">
 				<amount>100</amount>
@@ -2032,6 +2045,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="DeathPoints">
 				<amount>150</amount>
@@ -2105,6 +2120,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -4174,6 +4197,19 @@
 	<skill id="45365" toLevel="1" name="Amazing Soul Smash Mastery">
 		<!-- Soul Smash is enhanced and replaced by Amazing Soul Smash. <Amazing Soul Smash Effect> Number of attacks is increased. Defense Ignore is increased. -->
 		<icon>icon.skill0477</icon>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>477</existingSkillId> <!-- Soul Smash -->
+				<replacementSkillId>45366</replacementSkillId> <!-- Amazing Soul Smash -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45366" toLevel="10" name="Amazing Soul Smash">
+		<!-- Attacks the target twice with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
+		<icon>icon.skill10013</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -4214,86 +4250,9 @@
 			<value level="9">66</value>
 			<value level="10">70</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
+		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="Op2hWeapon">
-				<weaponType>
-					<item>SWORD</item>
-					<item>ANCIENTSWORD</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">310</value>
-					<value level="2">430</value>
-					<value level="3">981</value>
-					<value level="4">1720</value>
-					<value level="5">2484</value>
-					<value level="6">3271</value>
-					<value level="7">3671</value>
-					<value level="8">4715</value>
-					<value level="9">5035</value>
-					<value level="10">5356</value>
-				</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>1.2</pDefMod>
-				<criticalChance>10</criticalChance>
-				<overHit>true</overHit>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="45366" toLevel="10" name="Amazing Soul Smash">
-		<!-- Attacks the target twice with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
-		<castRange>40</castRange>
-		<coolTime>300</coolTime>
-		<effectPoint>
-			<value level="1">-183</value>
-			<value level="2">-188</value>
-			<value level="3">-193</value>
-			<value level="4">-198</value>
-			<value level="5">-203</value>
-			<value level="6">-208</value>
-			<value level="7">-213</value>
-			<value level="8">-218</value>
-			<value level="9">-223</value>
-			<value level="10">-228</value>
-		</effectPoint>
-		<effectRange>400</effectRange>
-		<hitTime>2100</hitTime>
-		<magicLevel>
-			<value level="1">38</value>
-			<value level="2">39</value>
-			<value level="3">40</value>
-			<value level="4">41</value>
-			<value level="5">42</value>
-			<value level="6">43</value>
-			<value level="7">44</value>
-			<value level="8">45</value>
-			<value level="9">46</value>
-			<value level="10">47</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">18</value>
-			<value level="2">25</value>
-			<value level="3">33</value>
-			<value level="4">40</value>
-			<value level="5">48</value>
-			<value level="6">55</value>
-			<value level="7">59</value>
-			<value level="8">63</value>
-			<value level="9">66</value>
-			<value level="10">70</value>
-		</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4320,8 +4279,25 @@
 					<value level="10">2812</value>
 				</power>
 				<pDefMod>0.85</pDefMod>
-				<overHit>true</overHit>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">163</value>
+					<value level="2">226</value>
+					<value level="3">515</value>
+					<value level="4">903</value>
+					<value level="5">1305</value>
+					<value level="6">1717</value>
+					<value level="7">1927</value>
+					<value level="8">2475</value>
+					<value level="9">2643</value>
+					<value level="10">2812</value>
+				</power>
+				<pDefMod>0.85</pDefMod>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>10</criticalChance>
 			</effect>
 			<!-- TODO: A new effect is needed for this, "increased damage if the target is stunned". -->
 		</effects>
