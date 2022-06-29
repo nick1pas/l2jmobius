@@ -1712,14 +1712,6 @@
 		</effects>
 	</skill>
 	<skill id="50444" toLevel="6" name="Queen Ant's Ring">
-		<!-- 
-		Lv. 1 Max MP +9, P.Accuracy +1, M.Accuracy +1, P.Atk. +4%, M.Atk. +4%, Infection Atk. Rate +10%, Infection Resistance +10%
-		Lv. 2 Max MP +15, P.Accuracy +2, M.Accuracy +2, P.Atk. +6%, M.Atk. +6%, Infection Atk. Rate +15%, Infection Resistance +15%
-		Lv. 3 Max MP +21, P.Accuracy +3, M.Accuracy +3, P.Atk. +7%, M.Atk. +7%, P. Def +35, M.Def +35, P. Critical Damage +10%, M. Skill Critical Damage +5%, Infection Atk. Rate +20%, Infection Resistance +20%
-		Lv. 4 Max MP +30, P.Accuracy +4, M.Accuracy +4, P.Atk. +9%, M.Atk. +9%, P. Def +65, M.Def +65, All Critical Damage +10%, Infection Atk. Rate +20%, Infection Resistance +20%
-		Lv. 5 Max MP +40, P.Accuracy +6, M.Accuracy +6, P.Atk. +11%, M.Atk. +11%, P. Def +95, M.Def +95, All Critical Damage +15%, Infection Atk. Rate +20%, Infection Resistance +20%
-		Lv. 6 Max MP +50, P.Accuracy +10, M.Accuracy +10, P.Atk. +15%, M.Atk. +15%, P. Def +125, M.Def +125, All Critical Damage +20%, Potion Atk. Rate +20%, Infection Atk. Rate +20%, Infection Resistance +20%, Applies the Queen Ant Power buff when hit. (Cooldown: 300 sec.)
-		-->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1807,9 +1799,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalSkillCriticalDamage" fromLevel="3" toLevel="6">
+				<amount>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicCriticalDamage" fromLevel="3" toLevel="6">
 				<amount>
-					<value level="3">5</value>
+					<value level="3">10</value>
 					<value level="4">10</value>
 					<value level="5">15</value>
 					<value level="6">20</value>
@@ -1916,64 +1917,37 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
+			<effect name="DamageByAttack">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">15</value>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-8</value>
+					<value level="5">-10</value>
+					<value level="6">-15</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-8</value>
+					<value level="5">-10</value>
+					<value level="6">-15</value>
 				</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">15</value>
-				</amount>
-				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">15</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="AttackTrait">
+				<SILENCE>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+				</SILENCE>
 				<FEAR>
 					<value level="1">10</value>
 					<value level="2">15</value>
@@ -1984,14 +1958,22 @@
 				</FEAR>
 			</effect>
 			<effect name="DefenceTrait">
-				<SLEEP>
+				<SILENCE>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
 					<value level="4">20</value>
 					<value level="5">20</value>
 					<value level="6">20</value>
-				</SLEEP>
+				</SILENCE>
+				<FEAR>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+				</FEAR>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -2013,20 +1995,20 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="6">
+			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
-				<targetType>ENEMY_ONLY</targetType>
+				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<skillId>50452</skillId> <!-- Core Power -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="6">
+			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
-				<targetType>ENEMY_ONLY</targetType>
+				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<skillId>50452</skillId> <!-- Core Power -->
 				<skillLevel>1</skillLevel>
@@ -2160,6 +2142,16 @@
 				</SHOCK>
 			</effect>
 			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">18</value>
+					<value level="6">23</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
