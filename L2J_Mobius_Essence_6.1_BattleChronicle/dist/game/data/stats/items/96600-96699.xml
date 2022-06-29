@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="96600" name="Beleth' Ring" type="Armor">
-		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.) Boosts the item's parameters after enchanting. Effects of two identical rings do not stack. Safe enchanting to +1 -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -10,7 +9,12 @@
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
-			<skill id="50555" level="1" /> <!-- Beleth' Ring -->
+			<skill id="50555" level="1" type="ON_ENCHANT" type_value="0" />
+			<skill id="50555" level="2" type="ON_ENCHANT" type_value="1" />
+			<skill id="50555" level="3" type="ON_ENCHANT" type_value="2" />
+			<skill id="50555" level="4" type="ON_ENCHANT" type_value="3" />
+			<skill id="50555" level="5" type="ON_ENCHANT" type_value="4" />
+			<skill id="50555" level="6" type="ON_ENCHANT" type_value="5" />
 		</skills>
 		<stats>
 			<stat type="mDef">73</stat>
