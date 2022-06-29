@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="134" parentClassId="130">
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="46" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Weapon Mastery" skillId="463" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Armor Mastery" skillId="464" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Mental Panic" skillId="627" skillLevel="1" getLevel="76" levelUpSp="8000000">
-			<item id="91924" count="1" /> <!-- Scroll: Mental Panic -->
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="1" getLevel="76" levelUpSp="8000000">
+			<item id="91924" count="1" /> <!-- Scroll: Mental Panic Shot -->
 		</skill>
 		<skill skillName="Soul Stigma" skillId="792" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="91925" count="1" /> <!-- Scroll: Soul Stigma -->
@@ -81,24 +80,21 @@
 		<skill skillName="Dexterous Body" skillId="47417" skillLevel="1" getLevel="76" levelUpSp="9800000">
 			<item id="96885,96899" count="1" /> <!-- Spellbook: Dexterous Body -->
 		</skill>
+		<skill skillName="Ultimate Escape" skillId="622" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="96886,96900" count="1" /> <!-- Spellbook: Perfect Mastery -->
+		</skill>
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="47" getLevel="77" levelUpSp="10000000" />
-		
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="48" getLevel="78" levelUpSp="12000000" />
 		<skill skillName="Critical Sense" skillId="626" skillLevel="4" getLevel="78" levelUpSp="12000000" />
-		<skill skillName="Mental Panic" skillId="627" skillLevel="2" getLevel="78" levelUpSp="12000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="2" getLevel="78" levelUpSp="12000000" />
 		<skill skillName="Soul Stigma" skillId="792" skillLevel="2" getLevel="78" levelUpSp="12000000" />
 		<skill skillName="Death Mark" skillId="1435" skillLevel="4" getLevel="78" levelUpSp="12000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="49" getLevel="79" levelUpSp="15000000" />
-
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="50" getLevel="80" levelUpSp="18000000" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLevel="8" getLevel="80" levelUpSp="18000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Mental Panic" skillId="627" skillLevel="3" getLevel="80" levelUpSp="18000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="3" getLevel="80" levelUpSp="18000000" />
 		<skill skillName="Bow Mastery" skillId="767" skillLevel="8" getLevel="80" levelUpSp="18000000">
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
@@ -122,22 +118,18 @@
 			<item id="57" count="40000000" /> <!-- Adena -->
 		</skill>
 		
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="51" getLevel="81" levelUpSp="160000000" />
-
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="52" getLevel="82" levelUpSp="170000000" />
-		<skill skillName="Mental Panic" skillId="627" skillLevel="4" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Soul Stigma" skillId="792" skillLevel="4" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Dragon Slayer Appearance" skillId="54231" skillLevel="1" getLevel="82" levelUpSp="0">
 			<item id="96300,96780" count="1" /> <!-- Spellbook: Dragon Slayer -->
 		</skill>
+		<skill skillName="Chain Arrest" skillId="47402" skillLevel="1" getLevel="82" levelUpSp="840000000">
+			<item id="96877,96891" count="1" /> <!-- Spellbook: Chain Arrest -->
+		</skill>
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="53" getLevel="83" levelUpSp="240000000" />
-
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="54" getLevel="84" levelUpSp="240000000" />
-		<skill skillName="Mental Panic" skillId="627" skillLevel="5" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="5" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Soul Stigma" skillId="792" skillLevel="5" getLevel="84" levelUpSp="240000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="55" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Weapon Mastery" skillId="463" skillLevel="5" getLevel="85" levelUpSp="840000000">
 			<item id="57" count="2000000" /> <!-- Adena -->
 		</skill>
@@ -166,19 +158,30 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0">
 			<item id="57" count="100000000" /> <!-- Adena -->
 		</skill>
+		<skill skillName="Deadly Shooter" skillId="47398" skillLevel="1" getLevel="85" levelUpSp="840000000">
+			<removeSkill id="45172" onlyReplaceByLearn="true" /> <!-- Sharp Aiming -->
+			<item id="96875,96889" count="1" /> <!-- Spellbook: Deadly Shooter -->
+		</skill>
+		<skill skillName="Devious Shot" skillId="47410" skillLevel="1" getLevel="85" levelUpSp="840000000">
+			<removeSkill id="45170" onlyReplaceByLearn="true" /> <!-- Multiple Shot -->
+			<item id="96881,96895" count="1" /> <!-- Spellbook: Devious Shot -->
+		</skill>
+		<skill skillName="Chain Arrest" skillId="47402" skillLevel="2" getLevel="85" levelUpSp="840000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="56" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="6" getLevel="86" levelUpSp="840000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="57" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="7" getLevel="87" levelUpSp="840000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="58" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Detect Darkness" skillId="53005" skillLevel="2" getLevel="88" levelUpSp="840000000">
 			<item id="57" count="30000000" /> <!-- Adena --> <!-- Scroll: Detect Darkness -->
 		</skill>
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="8" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Deadly Shooter" skillId="47398" skillLevel="2" getLevel="88" levelUpSp="840000000" />
+		<skill skillName="Chain Arrest" skillId="47402" skillLevel="3" getLevel="88" levelUpSp="840000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="59" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="9" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Devious Shot" skillId="47410" skillLevel="2" getLevel="89" levelUpSp="840000000" />
 
-		<skill skillName="Emergency Rescue" skillId="70" skillLevel="60" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLevel="10" getLevel="90" levelUpSp="840000000">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
@@ -194,5 +197,8 @@
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0">
 			<item id="57" count="200000000" /> <!-- Adena -->
 		</skill>
+
+		<skill skillName="Mental Panic Shot" skillId="627" skillLevel="10" getLevel="91" levelUpSp="840000000" />
+		<skill skillName="Deadly Shooter" skillId="47398" skillLevel="3" getLevel="91" levelUpSp="840000000" />
 	</skillTree>
 </list>
