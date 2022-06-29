@@ -621,11 +621,17 @@
 	</item>
 	<item id="94041" name="Scroll: Restore Equipment" type="EtcItem">
 		<!-- Restores the original appearance of equipment (weapons/ armor) whose appearances have been modified. -->
-		<set name="icon" val="icon.change_restore_i01" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="icon" val="icon.change_restore_i06" />
+		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="40160" level="1" /> <!-- Equipment Restoration Stone  -->
+		</skills>
 	</item>
 	<item id="94042" name="Emerald Weapon Appearance Stone" additionalName="Sealed" type="EtcItem">
 		<!-- A memorable achievement reward for Lv. 90. Changes the appearance of your weapon into that of Emerald one (except shields and sigils). -->
