@@ -93,9 +93,18 @@ public class Q294_CovertBusiness extends Quest
 				}
 				else
 				{
-					htmltext = "30534-05.htm";
 					st.takeItems(BAT_FANG, -1);
-					st.giveItems(RING_OF_RACCOON, 1);
+					
+					if (!st.hasQuestItems(RING_OF_RACCOON))
+					{
+						htmltext = "30534-05.htm";
+						st.giveItems(RING_OF_RACCOON, 1);
+					}
+					else
+					{
+						htmltext = "30534-06.htm";
+						st.rewardItems(57, 2400);
+					}
 					st.rewardExpAndSp(0, 600);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);

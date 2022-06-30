@@ -91,7 +91,7 @@ public class Q326_VanquishRemnants extends Quest
 					st.takeItems(RED_CROSS_BADGE, -1);
 					st.takeItems(BLUE_CROSS_BADGE, -1);
 					st.takeItems(BLACK_CROSS_BADGE, -1);
-					st.rewardItems(57, ((redBadges * 46) + (blueBadges * 52) + (blackBadges * 58) + ((badgesSum >= 10) ? 4320 : 0)));
+					st.rewardItems(57, ((redBadges * 60) + (blueBadges * 65) + (blackBadges * 70) + ((badgesSum >= 10) ? 4320 : 0)));
 					if (badgesSum >= 100)
 					{
 						if (!st.hasQuestItems(BLACK_LION_MARK))

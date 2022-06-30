@@ -91,7 +91,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			{
 				if (orbs > 0)
 				{
-					st.giveItems(57, orbs * 120);
+					st.giveItems(57, orbs * 125);
 					st.takeItems(ORB, -1);
 				}
 				else

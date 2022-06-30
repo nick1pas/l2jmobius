@@ -108,7 +108,7 @@ public class Q328_SenseForBusiness extends Quest
 					st.takeItems(MONSTER_EYE_CARCASS, -1);
 					st.takeItems(MONSTER_EYE_LENS, -1);
 					st.takeItems(BASILISK_GIZZARD, -1);
-					st.rewardItems(57, (25 * carcasses) + (1000 * lenses) + (60 * gizzards) + ((all >= 10) ? 618 : 0));
+					st.rewardItems(57, (30 * carcasses) + (2000 * lenses) + (75 * gizzards) + ((all >= 10) ? 618 : 0));
 				}
 				break;
 			}

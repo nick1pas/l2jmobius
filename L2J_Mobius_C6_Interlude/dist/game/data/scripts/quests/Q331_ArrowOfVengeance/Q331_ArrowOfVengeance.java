@@ -91,7 +91,7 @@ public class Q331_ArrowOfVengeance extends Quest
 					st.takeItems(MEDUSA_VENOM, -1);
 					st.takeItems(WYRM_TOOTH, -1);
 					
-					int reward = (harpyFeather * 78) + (medusaVenom * 88) + (wyrmTooth * 92);
+					int reward = (harpyFeather * 80) + (medusaVenom * 90) + (wyrmTooth * 100);
 					if ((harpyFeather + medusaVenom + wyrmTooth) > 10)
 					{
 						reward += 3100;

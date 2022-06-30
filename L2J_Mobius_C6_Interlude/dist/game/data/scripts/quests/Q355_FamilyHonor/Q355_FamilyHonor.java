@@ -87,7 +87,7 @@ public class Q355_FamilyHonor extends Quest
 				{
 					htmltext = "30181-4.htm";
 					
-					int reward = 2800 + (count * 120);
+					int reward = count * 232;
 					if (count >= 100)
 					{
 						htmltext = "30181-4a.htm";

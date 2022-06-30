@@ -62,7 +62,7 @@ public class Q627_HeartInSearchOfPower extends Quest
 		REWARDS.put("asofe", new int[]{4043, 13, 6400});
 		REWARDS.put("thon", new int[]{4044, 13, 6400});
 		REWARDS.put("enria", new int[]{4042, 6, 13600});
-		REWARDS.put("mold", new int[]{4041, 3, 17200});
+		REWARDS.put("mold", new int[]{4041, 6, 17200});
 		// @formatter:on
 	}
 	

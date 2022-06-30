@@ -56,7 +56,7 @@ public class Q338_AlligatorHunter extends Quest
 			case "30892-05.htm":
 			{
 				final int pelts = st.getQuestItemsCount(ALLIGATOR_PELT);
-				int reward = pelts * 60;
+				int reward = pelts * 40;
 				if (pelts > 10)
 				{
 					reward += 3430;

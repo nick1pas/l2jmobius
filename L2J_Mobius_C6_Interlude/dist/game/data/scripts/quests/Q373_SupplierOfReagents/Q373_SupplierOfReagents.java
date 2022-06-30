@@ -128,8 +128,8 @@ public class Q373_SupplierOfReagents extends Quest
 	{
 		// @formatter:off
 		{1, 100, 1},
-		{2, 45, 3},
-		{3, 15, 5}
+		{2, 45, 2},
+		{3, 15, 3}
 		// @formatter:on
 	};
 	

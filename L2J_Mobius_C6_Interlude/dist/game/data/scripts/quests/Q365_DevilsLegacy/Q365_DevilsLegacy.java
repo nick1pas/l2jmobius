@@ -190,10 +190,10 @@ public class Q365_DevilsLegacy extends Quest
 						{
 							htmltext = "30095-05.htm";
 							
-							final int reward = st.getQuestItemsCount(PIRATE_TREASURE_CHEST) * 400;
+							final int reward = st.getQuestItemsCount(PIRATE_TREASURE_CHEST) * 1600;
 							
 							st.takeItems(PIRATE_TREASURE_CHEST, -1);
-							st.rewardItems(57, reward + 19800);
+							st.rewardItems(57, reward);
 						}
 						break;
 					}

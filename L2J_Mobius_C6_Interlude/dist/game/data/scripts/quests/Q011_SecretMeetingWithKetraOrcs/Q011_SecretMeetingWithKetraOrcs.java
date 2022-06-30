@@ -66,7 +66,7 @@ public class Q011_SecretMeetingWithKetraOrcs extends Quest
 			case "31371-02.htm":
 			{
 				st.takeItems(MUNITIONS_BOX, 1);
-				st.rewardExpAndSp(79787, 0);
+				st.rewardExpAndSp(79761, 0);
 				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(false);
 				break;

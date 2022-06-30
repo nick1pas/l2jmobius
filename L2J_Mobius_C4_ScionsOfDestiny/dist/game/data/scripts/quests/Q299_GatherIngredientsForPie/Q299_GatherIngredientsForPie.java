@@ -32,6 +32,8 @@ public class Q299_GatherIngredientsForPie extends Quest
 	private static final int FRUIT_BASKET = 7136;
 	private static final int AVELLAN_SPICE = 7137;
 	private static final int HONEY_POUCH = 7138;
+	// Reward resources
+	private static final int VARNISH = 1865;
 	
 	public Q299_GatherIngredientsForPie()
 	{
@@ -93,7 +95,14 @@ public class Q299_GatherIngredientsForPie extends Quest
 				{
 					htmltext = "30620-7.htm";
 					st.takeItems(FRUIT_BASKET, 1);
-					st.rewardItems(57, 25000);
+					if (getRandom(100) < 70)
+					{
+						st.rewardItems(57, 25000);
+					}
+					else
+					{
+						st.giveItems(VARNISH, 50);
+					}
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}

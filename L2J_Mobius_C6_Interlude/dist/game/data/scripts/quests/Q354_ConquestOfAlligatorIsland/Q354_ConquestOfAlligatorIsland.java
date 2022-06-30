@@ -44,6 +44,21 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 		DROPLIST.put(20991, new int[][]{{ALLIGATOR_TOOTH, 1, 0, 600000},{TORN_MAP_FRAGMENT, 1, 0, 100000}}); // Swamp Tribe
 		// @formatter:on
 	}
+	private static final int[][] ADDITIONAL_REWARDS =
+	{
+		// @formatter:off
+		{736, 15},	// SoE
+		{1061, 20},	// Healing Potion
+		{734, 15},	// Haste Potion
+		{735, 15},	// Alacrity Potion
+		{1878, 35},	// Braided Hemp
+		{1875, 15},	// Stone of Purity
+		{1879, 15},	// Cokes
+		{1880, 15},	// Steel
+		{956, 1},	// Enchant Armor D
+		{955, 1},	// Enchant Weapon D
+		// @formatter:on
+	};
 	
 	public Q354_ConquestOfAlligatorIsland()
 	{
@@ -84,10 +99,11 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 				final int amount = st.getQuestItemsCount(ALLIGATOR_TOOTH);
 				if (amount > 0)
 				{
-					int reward = (amount * 220) + 3100;
+					int reward = amount * 300;
 					if (amount >= 100)
 					{
-						reward += 7600;
+						final int[] add_reward = ADDITIONAL_REWARDS[Integer.parseInt(event)];
+						st.rewardItems(add_reward[0], add_reward[1]);
 						htmltext = "30895-05b.htm";
 					}
 					else

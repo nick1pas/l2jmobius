@@ -100,12 +100,18 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		{98, 852}, // Moonstone Earring
 		{100, 401} // Drake Leather Armor
 	};
-	private static final int[][] _rewards_100_lose =
+	private static final int[][] _rewards_100_lose_Baxt =
 	{
 		{50, 951}, // Scroll: Enchant Weapon (C)
 		{80, 500}, // Great Helmet
 		{98, 2437}, // Drake Leather Boots
 		{100, 135} // Samurai Longsword
+	};
+	private static final int[][] _rewards_100_lose_Cliff =
+	{
+		{70, 951}, // Scroll: Enchant Weapon (C)
+		{89, 500}, // Divine Boots
+		{100, 2437}, // Katana
 	};
 	// @formatter:on
 	
@@ -246,10 +252,6 @@ public class Q384_WarehouseKeepersPastime extends Quest
 						if (chance < reward[0])
 						{
 							st.giveItems(reward[1], 1);
-							if (reward[1] == 2437)
-							{
-								st.giveItems(2463, 1);
-							}
 							break;
 						}
 					}
@@ -257,14 +259,32 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				else if (winningLines == 0)
 				{
 					htmltext = getHtmlText(npcId + "-25.htm");
-					
-					final int chance = getRandom(100);
-					for (int[] reward : ((st.get("bet") == "10") ? _rewards_10_lose : _rewards_100_lose))
+					if (npcId == 30685)
 					{
-						if (chance < reward[0])
+						final int chance = getRandom(100);
+						for (int[] reward : ((st.get("bet") == "10") ? _rewards_10_lose : _rewards_100_lose_Baxt))
 						{
-							st.giveItems(reward[1], 1);
-							break;
+							if (chance < reward[0])
+							{
+								st.giveItems(reward[1], 1);
+								if (reward[1] == 2437)
+								{
+									st.giveItems(2463, 1);
+								}
+								break;
+							}
+						}
+					}
+					else
+					{
+						final int chance = getRandom(100);
+						for (int[] reward : ((st.get("bet") == "10") ? _rewards_10_lose : _rewards_100_lose_Cliff))
+						{
+							if (chance < reward[0])
+							{
+								st.giveItems(reward[1], 1);
+								break;
+							}
 						}
 					}
 				}

@@ -51,12 +51,15 @@ public class Q334_TheWishingPotion extends Quest
 	private static final int GLASS_JAGUAR = 20250;
 	private static final int DEMONS_TUNIC_ID = 441;
 	private static final int DEMONS_STOCKINGS_ID = 472;
-	private static final int SCROLL_OF_ESCAPE_ID = 736;
 	private static final int NECKLACE_OF_GRACE_ID = 931;
 	private static final int SPELLBOOK_ICEBOLT_ID = 1049;
 	private static final int SPELLBOOK_BATTLEHEAL_ID = 1050;
+	private static final int DEMONS_TUNIC_FABRIC_ID = 1979;
+	private static final int DEMONS_STOCKINGS_PATTERN_ID = 1980;
 	private static final int DEMONS_BOOTS_ID = 2435;
 	private static final int DEMONS_GLOVES_ID = 2459;
+	private static final int DEMONS_BOOTS_FABRIC_ID = 2952;
+	private static final int DEMONS_GLOVES_FABRIC_ID = 2953;
 	private static final int WISH_POTION_ID = 3467;
 	private static final int ANCIENT_CROWN_ID = 3468;
 	private static final int CERTIFICATE_OF_ROYALTY_ID = 3469;
@@ -432,7 +435,23 @@ public class Q334_TheWishingPotion extends Quest
 				}
 				else
 				{
-					st.giveItems(SCROLL_OF_ESCAPE_ID, 1);
+					final int dropChance = getRandom(100) + 1;
+					if (dropChance <= 25)
+					{
+						st.giveItems(DEMONS_TUNIC_FABRIC_ID, 1);
+					}
+					else if (dropChance <= 50)
+					{
+						st.giveItems(DEMONS_STOCKINGS_PATTERN_ID, 1);
+					}
+					else if (dropChance <= 75)
+					{
+						st.giveItems(DEMONS_BOOTS_FABRIC_ID, 1);
+					}
+					else
+					{
+						st.giveItems(DEMONS_GLOVES_FABRIC_ID, 1);
+					}
 				}
 				st.getPlayer().getTarget().decayMe();
 				htmltext = "30742-01.htm";

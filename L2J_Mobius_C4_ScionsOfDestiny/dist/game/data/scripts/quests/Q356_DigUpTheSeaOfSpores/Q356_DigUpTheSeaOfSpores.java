@@ -57,11 +57,11 @@ public class Q356_DigUpTheSeaOfSpores extends Quest
 				st.startQuest();
 				break;
 			}
-			case "30717-17.htm":
+			case "30717-16.htm":
 			{
 				st.takeItems(HERB_SPORE, -1);
 				st.takeItems(CARN_SPORE, -1);
-				st.rewardItems(57, 20950);
+				st.rewardItems(57, 44000);
 				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(true);
 				break;
