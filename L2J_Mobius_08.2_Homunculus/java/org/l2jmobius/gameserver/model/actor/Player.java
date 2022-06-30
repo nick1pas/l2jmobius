@@ -6959,7 +6959,7 @@ public class Player extends Playable
 	public void removeSymbolSealSkills()
 	{
 		final int classId = getClassId().getId();
-		if (((classId >= 148) && (classId <= 181)) || (classId == 188) || (classId == 189))
+		if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, classId))
 		{
 			for (int i = 0; i < 3; i++)
 			{
@@ -6971,7 +6971,7 @@ public class Player extends Playable
 	public void updateSymbolSealSkills()
 	{
 		final int classId = getClassId().getId();
-		if (((classId >= 148) && (classId <= 181)) || (classId == 188) || (classId == 189))
+		if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, classId))
 		{
 			removeSymbolSealSkills();
 			if (getSymbolSealPoints() > 0)
