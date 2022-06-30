@@ -543,6 +543,7 @@ public class Player extends Playable
 		if (Config.ALT_GAME_NEW_CHAR_ALWAYS_IS_NEWBIE)
 		{
 			player.setNewbie(true);
+			player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
 		}
 		
 		// Add the player in the characters table of the database

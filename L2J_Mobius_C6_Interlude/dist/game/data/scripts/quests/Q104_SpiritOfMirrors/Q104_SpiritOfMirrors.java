@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q104_SpiritOfMirrors extends Quest
@@ -139,19 +140,22 @@ public class Q104_SpiritOfMirrors extends Quest
 							{
 								st.giveItems(SOULSHOT_NO_GRADE, 1000);
 							}
-							
-							if (player.isNewbie())
+							// Give newbie reward if player is eligible
+							int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+							if (player.isNewbie() && (newPlayerRewardsReceived < 2))
 							{
 								st.showQuestionMark(26);
 								if (player.isMageClass())
 								{
 									st.playTutorialVoice("tutorial_voice_027");
 									st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
+									player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 								}
 								else
 								{
 									st.playTutorialVoice("tutorial_voice_026");
 									st.giveItems(SOULSHOT_FOR_BEGINNERS, 7000);
+									player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 								}
 							}
 							

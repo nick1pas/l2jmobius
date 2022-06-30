@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q105_SkirmishWithTheOrcs extends Quest
@@ -51,6 +52,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
 	private static final int RED_SUNSET_STAFF = 754;
 	private static final int RED_SUNSET_SWORD = 981;
+	private static final int LESSER_HEALING_POT = 1060;
 	private static final int ECHO_BATTLE = 4412;
 	private static final int ECHO_LOVE = 4413;
 	private static final int ECHO_SOLITUDE = 4414;
@@ -153,22 +155,26 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 					{
 						st.giveItems(RED_SUNSET_SWORD, 1);
 					}
-					
-					if (player.isNewbie())
+					// Give newbie reward if player is eligible
+					int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+					if (player.isNewbie() && (newPlayerRewardsReceived < 2))
 					{
 						st.showQuestionMark(26);
 						if (player.isMageClass())
 						{
 							st.playTutorialVoice("tutorial_voice_027");
 							st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
+							player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 						}
 						else
 						{
 							st.playTutorialVoice("tutorial_voice_026");
 							st.giveItems(SOULSHOT_FOR_BEGINNERS, 7000);
+							player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 						}
 					}
 					
+					st.rewardItems(LESSER_HEALING_POT, 100);
 					st.giveItems(ECHO_BATTLE, 10);
 					st.giveItems(ECHO_LOVE, 10);
 					st.giveItems(ECHO_SOLITUDE, 10);

@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 public class Q260_HuntTheOrcs extends Quest
 {
@@ -37,6 +38,9 @@ public class Q260_HuntTheOrcs extends Quest
 	// Items
 	private static final int ORC_AMULET = 1114;
 	private static final int ORC_NECKLACE = 1115;
+	// Newbie Items
+	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
+	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
 	
 	public Q260_HuntTheOrcs()
 	{
@@ -113,6 +117,26 @@ public class Q260_HuntTheOrcs extends Quest
 					st.takeItems(ORC_AMULET, -1);
 					st.takeItems(ORC_NECKLACE, -1);
 					st.rewardItems(57, (amulet * 5) + (necklace * 15));
+					// Give newbie reward if player is eligible
+					int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+					if (player.isNewbie() && (st.getInt("Reward") == 0) && (newPlayerRewardsReceived < 2))
+					{
+						st.showQuestionMark(26);
+						st.set("Reward", "1");
+						
+						if (player.isMageClass())
+						{
+							st.playTutorialVoice("tutorial_voice_027");
+							st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
+							player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
+						}
+						else
+						{
+							st.playTutorialVoice("tutorial_voice_026");
+							st.giveItems(SOULSHOT_FOR_BEGINNERS, 6000);
+							player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
+						}
+					}
 				}
 				break;
 			}

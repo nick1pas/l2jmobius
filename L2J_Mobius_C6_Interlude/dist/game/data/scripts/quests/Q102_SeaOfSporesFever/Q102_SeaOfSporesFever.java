@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q102_SeaOfSporesFever extends Quest
@@ -54,6 +55,9 @@ public class Q102_SeaOfSporesFever extends Quest
 	private static final int ECHO_SOLITUDE = 4414;
 	private static final int ECHO_FEAST = 4415;
 	private static final int ECHO_CELEBRATION = 4416;
+	// Newbie Rewards
+	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
+	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
 	
 	public Q102_SeaOfSporesFever()
 	{
@@ -153,6 +157,25 @@ public class Q102_SeaOfSporesFever extends Quest
 							{
 								st.giveItems(SWORD_OF_SENTINEL, 1);
 								st.rewardItems(SOULSHOT_NO_GRADE, 1000);
+							}
+							
+							// Give newbie reward if player is eligible
+							int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+							if (player.isNewbie() && (newPlayerRewardsReceived < 2))
+							{
+								st.showQuestionMark(26);
+								if (player.isMageClass())
+								{
+									st.playTutorialVoice("tutorial_voice_027");
+									st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
+									player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
+								}
+								else
+								{
+									st.playTutorialVoice("tutorial_voice_026");
+									st.giveItems(SOULSHOT_FOR_BEGINNERS, 7000);
+									player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
+								}
 							}
 							
 							st.giveItems(LESSER_HEALING_POT, 100);

@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q107_MercilessPunishment extends Quest
@@ -38,7 +39,6 @@ public class Q107_MercilessPunishment extends Quest
 	private static final int LETTER_TO_ELF = 1558;
 	// Rewards
 	private static final int BUTCHER_SWORD = 1510;
-	private static final int SPIRITSHOT_FOR_BEGINNERS = 5790;
 	private static final int SOULSHOT_FOR_BEGINNERS = 5789;
 	private static final int ECHO_BATTLE = 4412;
 	private static final int ECHO_LOVE = 4413;
@@ -162,20 +162,14 @@ public class Q107_MercilessPunishment extends Quest
 							
 							st.giveItems(BUTCHER_SWORD, 1);
 							st.giveItems(LESSER_HEALING_POTION, 100);
-							
-							if (player.isNewbie())
+							// Give newbie reward if player is eligible
+							int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+							if (player.isNewbie() && (newPlayerRewardsReceived < 2))
 							{
 								st.showQuestionMark(26);
-								if (player.isMageClass())
-								{
-									st.playTutorialVoice("tutorial_voice_027");
-									st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
-								}
-								else
-								{
-									st.playTutorialVoice("tutorial_voice_026");
-									st.giveItems(SOULSHOT_FOR_BEGINNERS, 6000);
-								}
+								st.playTutorialVoice("tutorial_voice_026");
+								st.giveItems(SOULSHOT_FOR_BEGINNERS, 7000);
+								player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 							}
 							
 							st.giveItems(ECHO_BATTLE, 10);

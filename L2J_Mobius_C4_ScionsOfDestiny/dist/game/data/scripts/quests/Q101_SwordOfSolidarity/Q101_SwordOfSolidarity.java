@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class Q101_SwordOfSolidarity extends Quest
@@ -86,18 +87,22 @@ public class Q101_SwordOfSolidarity extends Quest
 				st.takeItems(BROKEN_SWORD_HANDLE, 1);
 				st.giveItems(SWORD_OF_SOLIDARITY, 1);
 				st.giveItems(LESSER_HEALING_POT, 100);
-				if (player.isNewbie())
+				// Give newbie reward if player is eligible
+				int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
+				if (player.isNewbie() && (newPlayerRewardsReceived < 2))
 				{
 					st.showQuestionMark(26);
 					if (player.isMageClass())
 					{
 						st.playTutorialVoice("tutorial_voice_027");
 						st.giveItems(SPIRITSHOT_FOR_BEGINNERS, 3000);
+						player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 					}
 					else
 					{
 						st.playTutorialVoice("tutorial_voice_026");
 						st.giveItems(SOULSHOT_FOR_BEGINNERS, 7000);
+						player.getVariables().set(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, ++newPlayerRewardsReceived);
 					}
 				}
 				st.giveItems(ECHO_BATTLE, 10);
