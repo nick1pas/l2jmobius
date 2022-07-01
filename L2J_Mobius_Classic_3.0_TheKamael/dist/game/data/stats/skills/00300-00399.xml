@@ -2275,7 +2275,7 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
-		<reuseDelay>6000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2297,9 +2297,6 @@
 					<value level="9">3926</value>
 					<value level="10">4004</value>
 				</power>
-			</effect>
-			<effect name="TargetCancel">
-				<chance>80</chance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
