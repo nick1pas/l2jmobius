@@ -16,6 +16,7 @@
  */
 package quests.Q296_TarantulasSpiderSilk;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -123,7 +124,14 @@ public class Q296_TarantulasSpiderSilk extends Quest
 						{
 							htmltext = "30519-05.htm";
 							st.takeItems(TARANTULA_SPIDER_SILK, -1);
-							st.rewardItems(57, ((count >= 10) ? 2000 : 0) + (count * 30));
+							
+							int reward = count * 20;
+							if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (count >= 10))
+							{
+								reward += 2000;
+							}
+							
+							st.rewardItems(57, reward);
 						}
 						break;
 					}

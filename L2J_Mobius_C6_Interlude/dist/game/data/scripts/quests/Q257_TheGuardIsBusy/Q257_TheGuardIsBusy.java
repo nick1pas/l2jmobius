@@ -16,6 +16,7 @@
  */
 package quests.Q257_TheGuardIsBusy;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -104,8 +105,8 @@ public class Q257_TheGuardIsBusy extends Quest
 					st.takeItems(ORC_NECKLACE, -1);
 					st.takeItems(WEREWOLF_FANG, -1);
 					
-					int reward = (10 * amulets) + (20 * (necklaces + fangs));
-					if ((amulets + necklaces + fangs) >= 10)
+					int reward = (5 * amulets) + (10 * fangs) + (15 * necklaces);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && ((amulets + necklaces + fangs) >= 10))
 					{
 						reward += 1000;
 					}

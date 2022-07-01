@@ -16,6 +16,7 @@
  */
 package quests.Q292_BrigandsSweep;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -148,7 +149,13 @@ public class Q292_BrigandsSweep extends Quest
 								st.takeItems(SUSPICIOUS_CONTRACT, -1);
 							}
 							
-							st.rewardItems(57, ((12 * goblinNecklaces) + (36 * goblinPendants) + (33 * goblinLordPendants) + (countAll >= 10 ? 1000 : 0) + ((hasContract) ? 1120 : 0)));
+							int reward = (12 * goblinNecklaces) + (36 * goblinPendants) + (33 * goblinLordPendants) + ((hasContract) ? 1120 : 0);
+							if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (countAll >= 10))
+							{
+								reward += 1000;
+							}
+							
+							st.rewardItems(57, reward);
 						}
 						break;
 					}

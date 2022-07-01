@@ -16,6 +16,7 @@
  */
 package quests.Q317_CatchTheWind;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -87,7 +88,14 @@ public class Q317_CatchTheWind extends Quest
 				{
 					htmltext = "30361-07.htm";
 					st.takeItems(WIND_SHARD, -1);
-					st.rewardItems(57, (40 * shards) + (shards >= 10 ? 2988 : 0));
+					
+					int reward = 30 * shards;
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (shards >= 10))
+					{
+						reward += 2988;
+					}
+					
+					st.rewardItems(57, reward);
 				}
 				break;
 			}

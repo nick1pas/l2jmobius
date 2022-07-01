@@ -16,6 +16,7 @@
  */
 package quests.Q273_InvadersOfTheHolyLand;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -111,7 +112,12 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 						htmltext = "30566-06.htm";
 					}
 					
-					final int reward = (black * 3) + (red * 10) + ((black >= 10) ? ((red >= 1) ? 1800 : 1500) : 0);
+					int reward = (black * 5) + (red * 50);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD)
+					{
+						reward += ((black >= 10) ? ((red >= 1) ? 1800 : 1500) : 0);
+					}
+					
 					st.takeItems(BLACK_SOULSTONE, -1);
 					st.takeItems(RED_SOULSTONE, -1);
 					st.rewardItems(57, reward);

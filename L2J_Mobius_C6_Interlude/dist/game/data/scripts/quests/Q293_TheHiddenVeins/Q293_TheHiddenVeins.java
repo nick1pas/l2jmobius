@@ -16,6 +16,7 @@
  */
 package quests.Q293_TheHiddenVeins;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -146,9 +147,14 @@ public class Q293_TheHiddenVeins extends Quest
 								htmltext = "30535-05.htm";
 							}
 							
-							final int reward = (chrysoliteOres * 5) + (hiddenVeinMaps * 500) + ((chrysoliteOres >= 10) ? 2000 : 0);
 							st.takeItems(CHRYSOLITE_ORE, -1);
 							st.takeItems(HIDDEN_VEIN_MAP, -1);
+							int reward = (chrysoliteOres * 10) + (hiddenVeinMaps * 1000);
+							if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (chrysoliteOres >= 10))
+							{
+								reward += 2000;
+							}
+							
 							st.rewardItems(57, reward);
 							// Give newbie reward if player is eligible
 							int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);

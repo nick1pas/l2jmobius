@@ -16,6 +16,7 @@
  */
 package quests.Q267_WrathOfVerdure;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -98,6 +99,10 @@ public class Q267_WrathOfVerdure extends Quest
 					htmltext = "31853-05.htm";
 					st.takeItems(GOBLIN_CLUB, -1);
 					st.rewardItems(SILVERY_LEAF, count);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (count >= 10))
+					{
+						st.rewardItems(57, 600);
+					}
 				}
 				else
 				{

@@ -16,6 +16,7 @@
  */
 package quests.Q306_CrystalsOfFireAndIce;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -102,7 +103,14 @@ public class Q306_CrystalsOfFireAndIce extends Quest
 					htmltext = "30004-05.htm";
 					st.takeItems(FLAME_SHARD, -1);
 					st.takeItems(ICE_SHARD, -1);
-					st.rewardItems(57, (30 * totalItems) + ((totalItems > 10) ? 5000 : 0));
+					
+					int reward = totalItems * 60;
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (totalItems >= 10))
+					{
+						reward += 5000;
+					}
+					
+					st.rewardItems(57, reward);
 				}
 				break;
 			}

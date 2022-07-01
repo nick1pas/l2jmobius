@@ -16,6 +16,7 @@
  */
 package quests.Q265_ChainsOfSlavery;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -102,7 +103,7 @@ public class Q265_ChainsOfSlavery extends Quest
 				else
 				{
 					int reward = 12 * shackles;
-					if (shackles > 10)
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (shackles >= 10))
 					{
 						reward += 500;
 					}

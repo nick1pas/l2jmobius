@@ -16,6 +16,7 @@
  */
 package quests.Q260_HuntTheOrcs;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -116,7 +117,13 @@ public class Q260_HuntTheOrcs extends Quest
 					htmltext = "30221-05.htm";
 					st.takeItems(ORC_AMULET, -1);
 					st.takeItems(ORC_NECKLACE, -1);
-					st.rewardItems(57, (amulet * 5) + (necklace * 15));
+					int reward = (amulet * 5) + (necklace * 15);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && ((amulet + necklace) >= 10))
+					{
+						reward += 1000;
+					}
+					
+					st.rewardItems(57, reward);
 					// Give newbie reward if player is eligible
 					int newPlayerRewardsReceived = player.getVariables().getInt(PlayerVariables.NEW_PLAYERS_REWARDS_RECEIVED, 0);
 					if (player.isNewbie() && (st.getInt("Reward") == 0) && (newPlayerRewardsReceived < 2))

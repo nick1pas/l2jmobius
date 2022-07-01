@@ -16,6 +16,7 @@
  */
 package quests.Q316_DestroyPlagueCarriers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -106,7 +107,14 @@ public class Q316_DestroyPlagueCarriers extends Quest
 					htmltext = "30155-07.htm";
 					st.takeItems(WERERAT_FANG, -1);
 					st.takeItems(VAROOL_FOULCLAW_FANG, -1);
-					st.rewardItems(57, (ratFangs * 30) + (varoolFangs * 10000) + ((ratFangs > 10) ? 5000 : 0));
+					
+					int reward = (ratFangs * 60) + (varoolFangs * 10000);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (ratFangs >= 10))
+					{
+						reward += 5000;
+					}
+					
+					st.rewardItems(57, reward);
 				}
 				break;
 			}

@@ -16,6 +16,7 @@
  */
 package quests.Q263_OrcSubjugation;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -102,7 +103,14 @@ public class Q263_OrcSubjugation extends Quest
 					htmltext = "30346-05.htm";
 					st.takeItems(ORC_AMULET, -1);
 					st.takeItems(ORC_NECKLACE, -1);
-					st.rewardItems(57, (amulet * 20) + (necklace * 30));
+					int reward = (amulet * 20) + (necklace * 30);
+					if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && ((amulet + necklace) >= 10))
+					{
+						reward += 1000;
+					}
+					
+					st.rewardItems(57, reward);
+					
 				}
 				break;
 			}

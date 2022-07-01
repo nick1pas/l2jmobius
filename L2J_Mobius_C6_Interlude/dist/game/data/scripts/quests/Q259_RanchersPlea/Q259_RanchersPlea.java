@@ -16,6 +16,7 @@
  */
 package quests.Q259_RanchersPlea;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -141,7 +142,12 @@ public class Q259_RanchersPlea extends Quest
 						{
 							htmltext = "30497-05.htm";
 							st.takeItems(GIANT_SPIDER_SKIN, -1);
-							st.rewardItems(ADENA, ((count >= 10) ? 250 : 0) + (count * 25));
+							int reward = count * 25;
+							if (!Config.ALT_VILLAGES_REPEATABLE_QUEST_REWARD && (count >= 10))
+							{
+								reward += 250;
+							}
+							st.rewardItems(ADENA, reward);
 						}
 						break;
 					}
