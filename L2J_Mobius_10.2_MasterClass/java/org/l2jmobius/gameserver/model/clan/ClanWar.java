@@ -280,7 +280,7 @@ public class ClanWar
 	
 	public int getRemainingTime()
 	{
-		return (int) TimeUnit.SECONDS.convert(_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR, TimeUnit.MILLISECONDS);
+		return (int) (((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis()) / 1000L);
 	}
 	
 	public Clan getOpposingClan(Clan clan)
