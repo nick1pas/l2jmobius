@@ -80,7 +80,16 @@ public class SymbolSealData implements IXmlReader
 	
 	public Skill getSkill(int classId, int symbolId)
 	{
-		return _data.get(classId).get(symbolId).getSkill();
+		final List<SymbolSealHolder> data = _data.get(classId);
+		if (data != null)
+		{
+			final SymbolSealHolder symbol = data.get(symbolId);
+			if (symbol != null)
+			{
+				return symbol.getSkill();
+			}
+		}
+		return null;
 	}
 	
 	public static SymbolSealData getInstance()

@@ -6863,7 +6863,11 @@ public class Player extends Playable
 		{
 			for (int i = 0; i < 3; i++)
 			{
-				removeSkill(SymbolSealData.getInstance().getSkill(classId, i));
+				final Skill skill = SymbolSealData.getInstance().getSkill(classId, i);
+				if (skill != null)
+				{
+					removeSkill(skill);
+				}
 			}
 		}
 	}
@@ -6897,7 +6901,11 @@ public class Player extends Playable
 				}
 				for (int i = 0; i < usedSlots; i++)
 				{
-					addSkill(SymbolSealData.getInstance().getSkill(classId, i));
+					final Skill skill = SymbolSealData.getInstance().getSkill(classId, i);
+					if (skill != null)
+					{
+						addSkill(skill);
+					}
 				}
 			}
 		}
