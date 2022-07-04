@@ -159,8 +159,8 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 			packet.writeD(player.getInt("competitions_won")); // win count
 			packet.writeD(player.getInt("competitions_lost")); // lose count
 			packet.writeD(player.getInt("olympiad_points")); // points
-			packet.writeD(player.getInt("count")); // hero counts
-			packet.writeD(player.getInt("legend_count")); // legend counts
+			packet.writeD(player.getInt("legend_count")); // legend count
+			packet.writeD(player.getInt("count")); // hero count
 		}
 	}
 }
