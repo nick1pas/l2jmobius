@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
@@ -75,6 +76,15 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
+		// Check if clan has enough reputation to end the war (10000).
+		if (player.getClan().getReputationScore() <= 10000)
+		{
+			final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+			player.sendPacket(sm);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		for (ClanMember member : playerClan.getMembers())
 		{
 			if ((member == null) || (member.getPlayer() == null))
@@ -92,7 +102,10 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		}
 		
 		// Reduce reputation.
-		playerClan.takeReputationScore(5000);
+		playerClan.takeReputationScore(10000);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_LOST_10_000_REPUTATION_POINTS_FOR_WITHDRAWING_FROM_THE_CLAN_WAR);
+		player.getClan().broadcastToOnlineMembers(sm);
+		
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		for (Player member : playerClan.getOnlineMembers(0))
 		{
@@ -103,5 +116,7 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		{
 			member.broadcastUserInfo();
 		}
+		
+		player.sendPacket(new PledgeReceiveWarList(player.getClan(), 0));
 	}
 }

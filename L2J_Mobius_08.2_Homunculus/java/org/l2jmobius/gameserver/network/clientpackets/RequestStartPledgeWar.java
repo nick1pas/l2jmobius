@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.clan.ClanWar;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestStartPledgeWar implements IClientIncomingPacket
@@ -119,12 +120,34 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ALREADY_BEEN_AT_WAR_WITH_THE_S1_CLAN_5_DAYS_MUST_PASS_BEFORE_YOU_CAN_DECLARE_WAR_AGAIN);
-			sm.addString(clanDeclaredWar.getName());
-			player.sendPacket(sm);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			if (clanWar.getState() == ClanWarState.MUTUAL)
+			{
+				player.sendMessage("You have already been at war with " + clanDeclaredWar.getName() + ".");
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION)
+			{
+				clanWar.mutualClanWarAccepted(clanDeclaredWar, clanDeclaringWar);
+				ClanTable.getInstance().storeClanWars(clanWar);
+				for (ClanMember member : clanDeclaringWar.getMembers())
+				{
+					if ((member != null) && member.isOnline())
+					{
+						member.getPlayer().broadcastUserInfo(UserInfoType.CLAN);
+					}
+				}
+				for (ClanMember member : clanDeclaredWar.getMembers())
+				{
+					if ((member != null) && member.isOnline())
+					{
+						member.getPlayer().broadcastUserInfo(UserInfoType.CLAN);
+					}
+				}
+				
+				player.sendPacket(new PledgeReceiveWarList(player.getClan(), 0));
+				return;
+			}
 		}
 		
 		final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
@@ -144,5 +167,6 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 				member.getPlayer().broadcastUserInfo(UserInfoType.CLAN);
 			}
 		}
+		player.sendPacket(new PledgeReceiveWarList(player.getClan(), 0));
 	}
 }
