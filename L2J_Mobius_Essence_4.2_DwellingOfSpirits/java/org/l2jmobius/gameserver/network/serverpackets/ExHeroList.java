@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
@@ -50,7 +51,7 @@ public class ExHeroList implements IClientOutgoingPacket
 			packet.writeS(hero.getString(Hero.ALLY_NAME, ""));
 			packet.writeD(0); // hero.getInt(Hero.ALLY_CREST, 0)
 			packet.writeD(hero.getInt(Hero.COUNT));
-			packet.writeD(0);
+			packet.writeD(Config.SERVER_ID);
 			packet.writeC(0); // 272
 		}
 		return true;
