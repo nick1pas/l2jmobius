@@ -41,11 +41,10 @@ public class NightmareKamaloka extends AbstractInstance
 	private static final int BENUSTA = 34542;
 	private static final int DARK_RIDER = 26102;
 	private static final int INVISIBLE_NPC = 18919;
-	// Item
+	// Items
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
-	// Skills
-	// private static final int DARK_RIDER_UD = 16574;
-	//@formatter:off
+	private static final ItemHolder BENUSTAS_SHINING_REWARD_BOX = new ItemHolder(81452, 1);
+	// Misc
 	private static final Map<Integer, Integer> BOSS_MAP = new HashMap<>();
 	static
 	{
@@ -55,8 +54,6 @@ public class NightmareKamaloka extends AbstractInstance
 		BOSS_MAP.put(26099, 18170008); // Sirra
 		BOSS_MAP.put(DARK_RIDER, -1); // Dark Rider
 	}
-	//@formatter:on
-	// Misc
 	private static final int TEMPLATE_ID = 258;
 	
 	public NightmareKamaloka()
@@ -65,7 +62,6 @@ public class NightmareKamaloka extends AbstractInstance
 		addStartNpc(BENUSTA);
 		addTalkId(BENUSTA);
 		addSpawnId(INVISIBLE_NPC);
-		// addAttackId(DARK_RIDER_UD);
 		addKillId(BOSS_MAP.keySet());
 	}
 	
@@ -150,6 +146,12 @@ public class NightmareKamaloka extends AbstractInstance
 	}
 	
 	@Override
+	public void onInstanceCreated(Instance instance, Player player)
+	{
+		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
+	}
+	
+	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
@@ -162,6 +164,11 @@ public class NightmareKamaloka extends AbstractInstance
 				{
 					giveItems(member, BENUSTAS_REWARD_BOX);
 				}
+				final Player randomPlayer = instance.getFirstPlayer().getParty().getRandomPlayer();
+				if ((randomPlayer != null) && (getRandom(100) < 80) && (instance.getPlayersCount() == instance.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+				{
+					giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
+				}
 				instance.finishInstance();
 			}
 			else
@@ -171,13 +178,6 @@ public class NightmareKamaloka extends AbstractInstance
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
-	
-	/*
-	 * @Override public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon) { final Instance instance = npc.getInstanceWorld(); if (isInInstance(instance)) { if (npc.getId() == DARK_RIDER_UD) { if ((npc.getCurrentHpPercent() >= 95) && npc.isScriptValue(0)) {
-	 * npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 1)); npc.setScriptValue(1); } else if ((npc.getCurrentHpPercent() >= 75) && npc.isScriptValue(1)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 2)); npc.setScriptValue(2); } else if ((npc.getCurrentHpPercent() >= 50) &&
-	 * npc.isScriptValue(2)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 3)); npc.setScriptValue(3); } else if ((npc.getCurrentHpPercent() >= 25) && npc.isScriptValue(3)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 4)); npc.setScriptValue(4); } } } return
-	 * super.onAttack(npc, attacker, damage, isSummon); }
-	 */
 	
 	public static void main(String[] args)
 	{

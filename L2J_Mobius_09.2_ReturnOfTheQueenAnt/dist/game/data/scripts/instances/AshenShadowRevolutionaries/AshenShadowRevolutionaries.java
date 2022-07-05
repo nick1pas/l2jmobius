@@ -148,6 +148,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	};
 	// Items
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
+	private static final ItemHolder BENUSTAS_SHINING_REWARD_BOX = new ItemHolder(81452, 1);
 	private static final ItemHolder BENUSTAS_REWARD_BOX_110 = new ItemHolder(81741, 1);
 	// Locations
 	private static final Location QUEST_GIVER_LOCATION = new Location(-77648, 155665, -3190, 21220);
@@ -334,6 +335,12 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
+	public void onInstanceCreated(Instance instance, Player player)
+	{
+		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
+	}
+	
+	@Override
 	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
@@ -374,6 +381,11 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 				for (Player member : world.getPlayers())
 				{
 					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
+				}
+				final Player randomPlayer = world.getFirstPlayer().getParty().getRandomPlayer();
+				if ((randomPlayer != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+				{
+					giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
 				}
 				world.spawnGroup("wave_3");
 				world.finishInstance();

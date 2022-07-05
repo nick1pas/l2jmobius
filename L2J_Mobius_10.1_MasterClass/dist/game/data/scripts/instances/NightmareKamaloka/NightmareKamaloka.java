@@ -44,6 +44,7 @@ public class NightmareKamaloka extends AbstractInstance
 	private static final int INVISIBLE_NPC = 18919;
 	// Items
 	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
+	private static final ItemHolder BENUSTAS_SHINING_REWARD_BOX = new ItemHolder(81452, 1);
 	private static final ItemHolder BENUSTAS_REWARD_BOX_110 = new ItemHolder(81741, 1);
 	// Misc
 	private static final Map<Integer, Integer> BOSS_MAP = new HashMap<>();
@@ -160,6 +161,12 @@ public class NightmareKamaloka extends AbstractInstance
 	}
 	
 	@Override
+	public void onInstanceCreated(Instance instance, Player player)
+	{
+		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
+	}
+	
+	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
@@ -171,6 +178,11 @@ public class NightmareKamaloka extends AbstractInstance
 				for (Player member : instance.getPlayers())
 				{
 					giveItems(member, instance.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
+				}
+				final Player randomPlayer = instance.getFirstPlayer().getParty().getRandomPlayer();
+				if ((randomPlayer != null) && (getRandom(100) < 80) && (instance.getPlayersCount() == instance.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+				{
+					giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
 				}
 				instance.finishInstance();
 			}
