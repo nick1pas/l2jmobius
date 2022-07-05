@@ -3581,12 +3581,6 @@ public class Player extends Playable
 			}
 		}
 		
-		// Einhasad coin UI update.
-		if (destoyedItem.getId() == Inventory.EINHASAD_COIN_ID)
-		{
-			sendPacket(new ExBloodyCoinCount(this));
-		}
-		
 		return true;
 	}
 	
@@ -3701,12 +3695,6 @@ public class Player extends Playable
 				sm.addItemName(itemId);
 				sendPacket(sm);
 			}
-		}
-		
-		// Einhasad coin UI update.
-		if (item.getId() == Inventory.EINHASAD_COIN_ID)
-		{
-			sendPacket(new ExBloodyCoinCount(this));
 		}
 		
 		return true;

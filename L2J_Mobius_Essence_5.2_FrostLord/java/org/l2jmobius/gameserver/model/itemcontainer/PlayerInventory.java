@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 
@@ -505,8 +506,13 @@ public class PlayerInventory extends Inventory
 						actor.sendItemList();
 					}
 					
+					// Adena UI update.
+					if (item.getId() == Inventory.ADENA_ID)
+					{
+						actor.sendPacket(new ExAdenaInvenCount(actor));
+					}
 					// LCoin UI update.
-					if (item.getId() == Inventory.LCOIN_ID)
+					else if (item.getId() == Inventory.LCOIN_ID)
 					{
 						actor.sendPacket(new ExBloodyCoinCount(actor));
 					}
@@ -598,9 +604,20 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		// Notify to scripts
 		if (destroyedItem != null)
 		{
+			// Adena UI update.
+			if (destroyedItem.getId() == Inventory.ADENA_ID)
+			{
+				actor.sendPacket(new ExAdenaInvenCount(actor));
+			}
+			// LCoin UI update.
+			else if (destroyedItem.getId() == Inventory.LCOIN_ID)
+			{
+				actor.sendPacket(new ExBloodyCoinCount(actor));
+			}
+			
+			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, destroyedItem), destroyedItem.getTemplate());
 		}
 		

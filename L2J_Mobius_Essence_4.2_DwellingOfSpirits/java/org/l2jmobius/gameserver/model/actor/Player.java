@@ -3515,12 +3515,6 @@ public class Player extends Playable
 			}
 		}
 		
-		// LCoin UI update.
-		if (destoyedItem.getId() == Inventory.LCOIN_ID)
-		{
-			sendPacket(new ExBloodyCoinCount(this));
-		}
-		
 		return true;
 	}
 	
@@ -3635,12 +3629,6 @@ public class Player extends Playable
 				sm.addItemName(itemId);
 				sendPacket(sm);
 			}
-		}
-		
-		// LCoin UI update.
-		if (item.getId() == Inventory.LCOIN_ID)
-		{
-			sendPacket(new ExBloodyCoinCount(this));
 		}
 		
 		return true;
