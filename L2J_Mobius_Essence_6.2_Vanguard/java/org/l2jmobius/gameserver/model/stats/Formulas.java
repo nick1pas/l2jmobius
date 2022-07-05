@@ -432,6 +432,12 @@ public class Formulas
 			return false;
 		}
 		
+		// Cannot interrupt targets affected by Burst or Superior Burst Casting.
+		if (target.hasAbnormalType(AbnormalType.DC_MOD))
+		{
+			return false;
+		}
+		
 		double init = 0;
 		
 		if (Config.ALT_GAME_CANCEL_CAST && target.isCastingNow(SkillCaster::canAbortCast))
