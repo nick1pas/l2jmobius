@@ -1,11 +1,14 @@
 L2J-Mobius Epilogue
-Client (password L2jMobius): https://drive.google.com/u/1/uc?id=10cLvBIhj5mL_ldtRrEYSHpg-FZBv-ady&export=download
-System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/q515p4hl6j0ivxm/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
+
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=10cLvBIhj5mL_ldtRrEYSHpg-FZBv-ady&export=download
+System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 What is done

@@ -1,11 +1,14 @@
 L2J-Mobius Prelude of War
-Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1FpOy82whmZdQacf4ZAjRsyc6sWYq14in&export=download
-System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/94ekkgj1xmr5rb1/L2J_Mobius_07.0_PreludeOfWar_Geodata.zip
+
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1FpOy82whmZdQacf4ZAjRsyc6sWYq14in&export=download
+System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 Working features...

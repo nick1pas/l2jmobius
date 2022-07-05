@@ -1,11 +1,14 @@
 L2J-Mobius Ertheia
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1MhjWZwmgfNVQeuTLWPJsFIDfeZi2300T&export=download
-System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/pzykzq2vpy4po2u/L2J_Mobius_01.0_Ertheia_Geodata.zip
+
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1MhjWZwmgfNVQeuTLWPJsFIDfeZi2300T&export=download
+System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 Working features...

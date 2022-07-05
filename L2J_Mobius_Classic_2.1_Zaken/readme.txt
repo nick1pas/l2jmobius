@@ -1,11 +1,14 @@
 L2J-Mobius Classic Zaken
-Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1LpjE7GPJSZHFN9V5dMP0vC5YUsuAtA21&export=download
-System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/38yzztwmmdq0r07/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
+
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1LpjE7GPJSZHFN9V5dMP0vC5YUsuAtA21&export=download
+System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

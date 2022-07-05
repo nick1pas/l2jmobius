@@ -2,13 +2,15 @@ L2J-Mobius Interlude
 Project concept is to use L2jFrozen as base
 and make improvements, or modernize code, without breaking server functionality.
 
-Client: https://gameborder.net/file/lineage-ii-interlude-client
-System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
-
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/4k2pi3qa8rqt299/L2J_Mobius_C6_Interlude_Geodata.zip
+
+Client: https://gameborder.net/file/lineage-ii-interlude-client
+System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 Prelude: http://legacy.lineage2.com/news/career.html

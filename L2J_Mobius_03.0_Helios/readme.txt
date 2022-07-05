@@ -1,11 +1,14 @@
 L2J-Mobius Helios
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12bg2PXdd3daZl5rIUIDAYSihEdpngsVC&export=download
-System: https://mega.nz/#!Fp8QBYYD!jLmMH7wisNk198-A7AYqhA1VMDru_OXpJbunXpBh4ww
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/sviy5wsbdcgf5ve/L2J_Mobius_03.0_Helios_Geodata.zip
+
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12bg2PXdd3daZl5rIUIDAYSihEdpngsVC&export=download
+System: https://mega.nz/#!Fp8QBYYD!jLmMH7wisNk198-A7AYqhA1VMDru_OXpJbunXpBh4ww
+
+All provided download links are for personal use. Redistribution of these links is bannable.
 
 
 Working features...
