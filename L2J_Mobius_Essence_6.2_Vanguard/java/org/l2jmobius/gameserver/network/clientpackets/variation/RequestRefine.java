@@ -20,7 +20,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.VariationRequest;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.options.Variation;
 import org.l2jmobius.gameserver.model.options.VariationFee;
@@ -28,6 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * Format:(ch) dddd
@@ -119,23 +119,35 @@ public class RequestRefine extends AbstractRefinePacket
 		}
 		
 		// Support for single slot augments.
+		final VariationInstance oldAugment = targetItem.getAugmentation();
 		final int option1 = augment.getOption1Id();
 		final int option2 = augment.getOption2Id();
-		if ((option1 == -1) || (option2 == -1))
+		if (oldAugment != null)
 		{
-			final VariationInstance oldAugment = targetItem.getAugmentation();
-			if (oldAugment != null)
+			if (option1 == -1)
 			{
-				if (option1 == -1)
-				{
-					augment = new VariationInstance(augment.getMineralId(), oldAugment.getOption1Id(), option2);
-				}
-				else
-				{
-					augment = new VariationInstance(augment.getMineralId(), option1, oldAugment.getOption2Id());
-				}
+				augment = new VariationInstance(augment.getMineralId(), oldAugment.getOption1Id(), option2);
 			}
+			else if (option2 == -1)
+			{
+				augment = new VariationInstance(augment.getMineralId(), option1, oldAugment.getOption2Id());
+			}
+			else
+			{
+				augment = new VariationInstance(augment.getMineralId(), option1, option2);
+			}
+			targetItem.removeAugmentation();
 		}
+		else
+		{
+			augment = new VariationInstance(augment.getMineralId(), option1, option2);
+		}
+		
+		// Essence does not support creating a new augment without losing old one.
+		targetItem.setAugmentation(augment, true);
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addModifiedItem(targetItem);
+		player.sendInventoryUpdate(iu);
 		
 		player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
 		
@@ -153,14 +165,5 @@ public class RequestRefine extends AbstractRefinePacket
 		{
 			player.reduceAdena("RequestRefine", adenaFee, player, false);
 		}
-		
-		// Request (continues at ExApplyVariationOption).
-		if (player.getRequest(VariationRequest.class) == null)
-		{
-			player.addRequest(new VariationRequest(player));
-		}
-		final VariationRequest request = player.getRequest(VariationRequest.class);
-		request.setAugmentedItem(_targetItemObjId);
-		request.setAugment(augment);
 	}
 }
