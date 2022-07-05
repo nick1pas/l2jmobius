@@ -1137,9 +1137,10 @@
 	</skill>
 	<skill id="45539" toLevel="1" name="Rolling Dice">
 		<!-- <Fixed cast time skill> For $s1 P. Atk. $s2 There is one of the following effects: - Atk. Spd. $s2 - Speed$s3 - Max HP $s2 -->
+		<abnormalType>ROLLING_DICE</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
 		<icon>icon.rolling_dice</icon>
 		<abnormalTime>1200</abnormalTime>
-		<effectPoint>-500</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>76</magicLevel>
 		<itemConsumeId>3031</itemConsumeId>
@@ -1148,41 +1149,26 @@
 		<mpConsume>150</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>7000</reuseDelay>
-		<basicProperty>PHYSICAL</basicProperty>
+		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="TriggerSkill">
-				<castSkillId>45539</castSkillId>
-				<skillLevel>1</skillLevel>
-				<skillId>45540</skillId>
-				<chance>33</chance>
-			</effect>
-			<effect name="TriggerSkill">
-				<castSkillId>45539</castSkillId>
-				<skillLevel>1</skillLevel>
-				<skillId>45541</skillId>
-				<chance>33</chance>
-			</effect>
-			<effect name="TriggerSkill">
-				<castSkillId>45539</castSkillId>
-				<skillLevel>1</skillLevel>
-				<skillId>45542</skillId>
-				<chance>33</chance>
+			<effect name="CallRandomSkill">
+				<skills>45540,1;45541,1;45542,1</skills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="45540" toLevel="1" name="Rolling Dice - Haste">
 		<!-- P. Atk. $s1 Atk. Spd. $s1 -->
+		<abnormalType>ROLLING_DICE</abnormalType>
+		<abnormalLevel>2</abnormalLevel>
 		<icon>icon.rolling_dice_buff1</icon>
-		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>100</effectPoint>
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
 		<abnormalVisualEffect>H_Y_ROLLING_DICEA_AVE</abnormalVisualEffect>
-		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1198,7 +1184,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatBonusSkillCritical">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1216,14 +1202,14 @@
 	<skill id="45541" toLevel="1" name="Rolling Dice - Wind Walk">
 		<!-- P. Atk. $s1 Speed $s2 -->
 		<icon>icon.rolling_dice_buff2</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>ROLLING_DICE</abnormalType>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>100</effectPoint>
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
 		<abnormalVisualEffect>H_Y_ROLLING_DICEB_AVE</abnormalVisualEffect>
-		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1240,7 +1226,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatBonusSkillCritical">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1258,14 +1244,14 @@
 	<skill id="45542" toLevel="1" name="Rolling Dice - Resilience">
 		<!-- P. Atk. $s1 Max HP $s1 -->
 		<icon>icon.rolling_dice_buff3</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>ROLLING_DICE</abnormalType>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>100</effectPoint>
 		<magicLevel>76</magicLevel>
 		<isMagic>2</isMagic>
 		<operateType>A2</operateType>
 		<abnormalVisualEffect>H_Y_ROLLING_DICEC_AVE</abnormalVisualEffect>
-		<abnormalType>AURA</abnormalType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1282,7 +1268,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatBonusSkillCritical">
+			<effect name="PhysicalSkillCriticalRate">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
