@@ -88,6 +88,7 @@ import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.data.xml.LuckyGameData;
 import org.l2jmobius.gameserver.data.xml.MagicLampData;
+import org.l2jmobius.gameserver.data.xml.MissionLevel;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
@@ -265,6 +266,7 @@ public class GameServer
 		SecondaryAuthData.getInstance();
 		SayuneData.getInstance();
 		ClanRewardData.getInstance();
+		MissionLevel.getInstance();
 		DailyMissionHandler.getInstance().executeScript();
 		DailyMissionData.getInstance();
 		ElementalSpiritData.getInstance();

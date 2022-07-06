@@ -31,12 +31,18 @@ import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
+import org.l2jmobius.gameserver.model.holders.MissionLevelPlayerDataHolder;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw
  */
 public abstract class AbstractDailyMissionHandler extends ListenersContainer
 {
+	public static final int MISSION_LEVEL_POINTS = 97224;
+	private static final int CLAN_EXP = 94481;
+	
 	protected Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	private final Map<Integer, DailyMissionPlayerEntry> _entries = new ConcurrentHashMap<>();
@@ -118,7 +124,21 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	protected void giveRewards(Player player)
 	{
-		_holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
+		_holder.getRewards().stream().filter(i -> i.getId() != MISSION_LEVEL_POINTS).filter(i -> i.getId() != CLAN_EXP).forEach(i -> player.addItem("One Day Reward", i, player, true));
+		if (_holder.getRewards().stream().anyMatch(i -> i.getId() == CLAN_EXP))
+		{
+			int points = (int) _holder.getRewards().stream().filter(i -> i.getId() == CLAN_EXP).iterator().next().getCount();
+			player.getClan().addExp(player.getObjectId(), points);
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2).addItemName(MISSION_LEVEL_POINTS).addLong(points));
+		}
+		if (_holder.getRewards().stream().anyMatch(i -> i.getId() == MISSION_LEVEL_POINTS))
+		{
+			final MissionLevelPlayerDataHolder info = player.getMissionLevelProgress();
+			final int points = (int) _holder.getRewards().stream().filter(i -> i.getId() == MISSION_LEVEL_POINTS).iterator().next().getCount();
+			info.calculateEXP(points);
+			info.storeInfoInVariable(player);
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2).addItemName(MISSION_LEVEL_POINTS).addLong(points));
+		}
 	}
 	
 	protected void storePlayerEntry(DailyMissionPlayerEntry entry)

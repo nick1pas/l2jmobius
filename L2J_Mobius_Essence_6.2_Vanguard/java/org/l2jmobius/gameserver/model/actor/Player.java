@@ -76,6 +76,7 @@ import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
 import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
+import org.l2jmobius.gameserver.data.xml.MissionLevel;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.data.xml.OptionData;
@@ -239,6 +240,7 @@ import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.model.holders.MissionLevelPlayerDataHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PetEvolveHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerCollectionData;
@@ -960,6 +962,8 @@ public class Player extends Playable
 	private final Map<Integer, PetEvolveHolder> _petEvolves = new HashMap<>();
 	
 	private int _clanDonationPoints = 3;
+	
+	private MissionLevelPlayerDataHolder _missionLevelProgress = null;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -15665,5 +15669,23 @@ public class Player extends Playable
 		{
 			LOGGER.log(Level.SEVERE, "Could not restore clan donation points for playerId: " + getObjectId(), e);
 		}
+	}
+	
+	public MissionLevelPlayerDataHolder getMissionLevelProgress()
+	{
+		if (_missionLevelProgress == null)
+		{
+			final String variable = PlayerVariables.MISSION_LEVEL_PROGRESS + MissionLevel.getInstance().getCurrentSeason();
+			if (getVariables().hasVariable(variable))
+			{
+				_missionLevelProgress = new MissionLevelPlayerDataHolder(variable);
+			}
+			else
+			{
+				_missionLevelProgress = new MissionLevelPlayerDataHolder();
+				_missionLevelProgress.storeInfoInVariable(this);
+			}
+		}
+		return _missionLevelProgress;
 	}
 }

@@ -70,6 +70,8 @@ import org.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchant
 import org.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantTry;
 import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
+import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestMissionLevelReceiveReward;
+import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestMissionRewardList;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
 import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalInitTalent;
@@ -771,8 +773,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_REQ_HOMUNCULUS_PROB_LIST(0x233, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_HOST_CASTLE_SIEGE_ALL_RANKING_INFO(0x234, null, ConnectionState.IN_GAME),
 	EX_WORLDCASTLEWAR_CASTLE_SIEGE_ALL_RANKING_INFO(0x235, null, ConnectionState.IN_GAME),
-	EX_MISSION_LEVEL_REWARD_LIST(0x236, null, ConnectionState.IN_GAME),
-	EX_MISSION_LEVEL_RECEIVE_REWARD(0x237, null, ConnectionState.IN_GAME),
+	EX_MISSION_LEVEL_REWARD_LIST(0x236, RequestMissionRewardList::new, ConnectionState.IN_GAME),
+	EX_MISSION_LEVEL_RECEIVE_REWARD(0x237, RequestMissionLevelReceiveReward::new, ConnectionState.IN_GAME),
 	EX_BALROGWAR_TELEPORT(0x238, null, ConnectionState.IN_GAME),
 	EX_BALROGWAR_SHOW_UI(0x239, null, ConnectionState.IN_GAME),
 	EX_BALROGWAR_SHOW_RANKING(0x23A, null, ConnectionState.IN_GAME),

@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/MissionLevel.xsd">
+	<!-- TODO: Find more proper EXP amount for 04 - 30 levels -->
+	<!-- All visible rewards going from client file MissionLevel.dat -->
+	<!-- bonusRewardByLevelUP - retail like - if false - after max level you will get bonus reward one and EXP will not increase -->
+	<!-- year month -->
+	<current season="202112" />
+	<missionLevel season="202110" maxLevel="10" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="65" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97147" itemCount="7" /> <!-- Dye Powder (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202111" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+			<keyReward level="12" itemId="95746" itemCount="2" /> <!-- Enchant Package: Talisman of Aden (Sealed) -->
+			<keyReward level="15" itemId="94212" itemCount="1" /> <!-- Life Stone Lv. 2 - Armor (Sealed) -->
+			<keyReward level="18" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97233" itemCount="1" /> <!-- +2 ~ +5 Talisman of Authority Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202112" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="false" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="2" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="3" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="4" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="5" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="6" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="9" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="10" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="13" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="14" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="15" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="16" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="17" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="18" itemId="93274" itemCount="10" /> <!-- Sayha's Cookie (Sealed) -->
+			<baseReward level="19" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="20" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="93080" itemCount="1" /> <!-- Charging Stone of Regular Craft - 1 Charge (Sealed) -->
+			<keyReward level="6" itemId="94777" itemCount="5" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="9" itemId="49663" itemCount="100" /> <!-- Special HP Recovery Potion -->
+			<keyReward level="12" itemId="93080" itemCount="1" /> <!-- Charging Stone of Regular Craft - 1 Charge (Sealed) -->
+			<keyReward level="15" itemId="94777" itemCount="5" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="18" itemId="49663" itemCount="100" /> <!-- Special HP Recovery Potion -->
+		</keyRewards>
+		<specialReward itemId="91767" itemCount="1" /> <!-- Enchant Kit: Talisman of Aden (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202201" maxLevel="10" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="65" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97147" itemCount="7" /> <!-- Dye Powder (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202202" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+			<keyReward level="12" itemId="95746" itemCount="2" /> <!-- Enchant Package: Talisman of Aden (Sealed) -->
+			<keyReward level="15" itemId="94212" itemCount="1" /> <!-- Life Stone Lv. 2 - Armor (Sealed) -->
+			<keyReward level="18" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97233" itemCount="1" /> <!-- +2 ~ +5 Talisman of Authority Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202203" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="5" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+			<keyReward level="12" itemId="97147" itemCount="1" /> <!-- Dye Powder (Sealed) -->
+			<keyReward level="15" itemId="92020" itemCount="1" /> <!-- Enchant Kit: Talisman of Eva (Sealed) -->
+			<keyReward level="18" itemId="93136" itemCount="3" /> <!-- Package: Agathion Procella (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97357" itemCount="1" /> <!-- +2 ~ +5 Dragon Belt Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202204" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+			<keyReward level="12" itemId="95746" itemCount="2" /> <!-- Enchant Package: Talisman of Aden (Sealed) -->
+			<keyReward level="15" itemId="94212" itemCount="1" /> <!-- Life Stone Lv. 2 - Armor (Sealed) -->
+			<keyReward level="18" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97233" itemCount="1" /> <!-- +2 ~ +5 Talisman of Authority Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202205" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94424" itemCount="1" /> <!-- Life Stone - Accessories (Sealed) -->
+			<keyReward level="12" itemId="94304" itemCount="1" /> <!-- Life Stone - Circlet (Sealed) -->
+			<keyReward level="15" itemId="93135" itemCount="3" /> <!-- Package: Agathion Nebula (Sealed) -->
+			<keyReward level="18" itemId="93122" itemCount="1" /> <!-- Life Stone Lv. 2 - Shield/ Sigil (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97273" itemCount="1" /> <!-- +2 ~ +5 Circlet of Hero Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202206" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="5" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+			<keyReward level="12" itemId="97147" itemCount="1" /> <!-- Dye Powder (Sealed) -->
+			<keyReward level="15" itemId="92020" itemCount="1" /> <!-- Enchant Kit: Talisman of Eva (Sealed) -->
+			<keyReward level="18" itemId="93136" itemCount="3" /> <!-- Package: Agathion Procella (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97357" itemCount="1" /> <!-- +2 ~ +5 Dragon Belt Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202207" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+			<keyReward level="12" itemId="95746" itemCount="2" /> <!-- Enchant Package: Talisman of Aden (Sealed) -->
+			<keyReward level="15" itemId="94212" itemCount="1" /> <!-- Life Stone Lv. 2 - Armor (Sealed) -->
+			<keyReward level="18" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97233" itemCount="1" /> <!-- +2 ~ +5 Talisman of Authority Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202208" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94424" itemCount="1" /> <!-- Life Stone - Accessories (Sealed) -->
+			<keyReward level="12" itemId="94304" itemCount="1" /> <!-- Life Stone - Circlet (Sealed) -->
+			<keyReward level="15" itemId="93135" itemCount="3" /> <!-- Package: Agathion Nebula (Sealed) -->
+			<keyReward level="18" itemId="93122" itemCount="1" /> <!-- Life Stone Lv. 2 - Shield/ Sigil (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97273" itemCount="1" /> <!-- +2 ~ +5 Circlet of Hero Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202209" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="5" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+			<keyReward level="12" itemId="97147" itemCount="1" /> <!-- Dye Powder (Sealed) -->
+			<keyReward level="15" itemId="92020" itemCount="1" /> <!-- Enchant Kit: Talisman of Eva (Sealed) -->
+			<keyReward level="18" itemId="93136" itemCount="3" /> <!-- Package: Agathion Procella (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97357" itemCount="1" /> <!-- +2 ~ +5 Dragon Belt Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202210" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="95747" itemCount="1" /> <!-- Enchant Package: Ring of Insolence (Sealed) -->
+			<keyReward level="9" itemId="95748" itemCount="1" /> <!-- Enchant Package: Dragon Valley's Earring (Sealed) -->
+			<keyReward level="12" itemId="95746" itemCount="2" /> <!-- Enchant Package: Talisman of Aden (Sealed) -->
+			<keyReward level="15" itemId="94212" itemCount="1" /> <!-- Life Stone Lv. 2 - Armor (Sealed) -->
+			<keyReward level="18" itemId="94210" itemCount="1" /> <!-- Life Stone Lv. 2 - Weapon (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97233" itemCount="1" /> <!-- +2 ~ +5 Talisman of Authority Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+	<missionLevel season="202211" maxLevel="50" bonusRewardIsAvailable="true" bonusRewardByLevelUP="true" >
+		<expTable>
+			<exp level="1" amount="20" />
+			<exp level="2" amount="25" />
+			<exp level="3" amount="30" />
+			<exp level="4" amount="35" />
+			<exp level="5" amount="40" />
+			<exp level="6" amount="45" />
+			<exp level="7" amount="50" />
+			<exp level="8" amount="55" />
+			<exp level="9" amount="60" />
+			<exp level="10" amount="60" />
+			<exp level="11" amount="60" />
+			<exp level="12" amount="60" />
+			<exp level="13" amount="60" />
+			<exp level="14" amount="60" />
+			<exp level="15" amount="60" />
+			<exp level="16" amount="60" />
+			<exp level="17" amount="60" />
+			<exp level="18" amount="60" />
+			<exp level="19" amount="60" />
+			<exp level="20" amount="60" />
+			<exp level="21" amount="80" />
+			<exp level="22" amount="80" />
+			<exp level="23" amount="80" />
+			<exp level="24" amount="80" />
+			<exp level="25" amount="80" />
+			<exp level="26" amount="80" />
+			<exp level="27" amount="80" />
+			<exp level="28" amount="80" />
+			<exp level="29" amount="80" />
+			<exp level="30" amount="100" />
+			<exp level="31" amount="100" />
+			<exp level="32" amount="100" />
+			<exp level="33" amount="100" />
+			<exp level="34" amount="100" />
+			<exp level="35" amount="100" />
+			<exp level="36" amount="100" />
+			<exp level="37" amount="100" />
+			<exp level="38" amount="100" />
+			<exp level="39" amount="100" />
+			<exp level="40" amount="100" />
+			<exp level="41" amount="100" />
+			<exp level="42" amount="100" />
+			<exp level="43" amount="100" />
+			<exp level="44" amount="100" />
+			<exp level="45" amount="100" />
+			<exp level="46" amount="100" />
+			<exp level="47" amount="100" />
+			<exp level="48" amount="100" />
+			<exp level="49" amount="100" />
+			<exp level="50" amount="100" />
+		</expTable>
+		<baseRewards>
+			<baseReward level="1" itemId="3031" itemCount="100" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="2" itemId="90907" itemCount="10" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="3" itemId="94271" itemCount="5" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="4" itemId="94269" itemCount="5" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="5" itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="6" itemId="3031" itemCount="200" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="7" itemId="90907" itemCount="20" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="8" itemId="94271" itemCount="10" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="9" itemId="94269" itemCount="10" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="10" itemId="91641" itemCount="30" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="11" itemId="3031" itemCount="300" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="12" itemId="90907" itemCount="30" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="13" itemId="94271" itemCount="15" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="14" itemId="94269" itemCount="15" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="15" itemId="91641" itemCount="50" /> <!-- Sayha's Blessing (Sealed) -->
+			<baseReward level="16" itemId="3031" itemCount="500" /> <!-- Spirit Ore (Sealed) -->
+			<baseReward level="17" itemId="90907" itemCount="50" /> <!-- Soulshot Ticket (Sealed) -->
+			<baseReward level="18" itemId="94271" itemCount="20" /> <!-- Scroll: Boost Defense (Sealed) -->
+			<baseReward level="19" itemId="94269" itemCount="20" /> <!-- Scroll: Boost Attack (Sealed) -->
+			<baseReward level="20" itemId="91641" itemCount="100" /> <!-- Sayha's Blessing (Sealed) -->
+		</baseRewards>
+		<keyRewards>
+			<keyReward level="3" itemId="94777" itemCount="3" /> <!-- Berserker's Scroll (Sealed) -->
+			<keyReward level="6" itemId="92035" itemCount="2" /> <!-- Shiny Jewelry Box (Sealed) -->
+			<keyReward level="9" itemId="94424" itemCount="1" /> <!-- Life Stone - Accessories (Sealed) -->
+			<keyReward level="12" itemId="94304" itemCount="1" /> <!-- Life Stone - Circlet (Sealed) -->
+			<keyReward level="15" itemId="93135" itemCount="3" /> <!-- Package: Agathion Nebula (Sealed) -->
+			<keyReward level="18" itemId="93122" itemCount="1" /> <!-- Life Stone Lv. 2 - Shield/ Sigil (Sealed) -->
+		</keyRewards>
+		<specialReward itemId="97273" itemCount="1" /> <!-- +2 ~ +5 Circlet of Hero Pack (Sealed) -->
+		<bonusReward itemId="91641" itemCount="20" /> <!-- Sayha's Blessing (Sealed) -->
+	</missionLevel>
+</list>

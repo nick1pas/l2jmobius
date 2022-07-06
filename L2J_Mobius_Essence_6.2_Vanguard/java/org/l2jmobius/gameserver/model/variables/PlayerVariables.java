@@ -90,6 +90,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String DYE_POTENTIAL_DAILY_COUNT = "DYE_POTENTIAL_DAILY_COUNT";
 	public static final String DYE_POTENTIAL_DAILY_EXP = "DYE_POTENTIAL_DAILY_EXP";
 	public static final String DYE_POTENTIAL_DAILY_LVL = "DYE_POTENTIAL_DAILY_LVL";
+	public static final String MISSION_LEVEL_PROGRESS = "MISSION_LEVEL_PROGRESS_";
 	
 	private final int _objectId;
 	

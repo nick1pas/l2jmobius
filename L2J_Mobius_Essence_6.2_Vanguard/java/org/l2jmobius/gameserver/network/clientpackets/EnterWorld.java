@@ -628,6 +628,9 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendPacket(new ExWorldChatCnt(player));
 		}
+		
+		// Initial mission level progress for correct show RewardList.
+		player.getMissionLevelProgress();
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		

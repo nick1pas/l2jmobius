@@ -29,6 +29,7 @@ import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -68,6 +69,10 @@ public class DailyMissionData implements IXmlReader
 			{
 				final int itemId = parseInteger(itemNode.getAttributes(), "id");
 				final int itemCount = parseInteger(itemNode.getAttributes(), "count");
+				if ((itemId == AbstractDailyMissionHandler.MISSION_LEVEL_POINTS) && (MissionLevel.getInstance().getCurrentSeason() <= 0))
+				{
+					return;
+				}
 				items.add(new ItemHolder(itemId, itemCount));
 			}));
 			
