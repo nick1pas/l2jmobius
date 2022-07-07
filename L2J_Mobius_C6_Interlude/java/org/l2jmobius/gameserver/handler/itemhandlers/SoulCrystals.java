@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SoulCrystals implements IItemHandler
 {
@@ -93,7 +92,7 @@ public class SoulCrystals implements IItemHandler
 		if (!(target instanceof Monster))
 		{
 			// Send a System Message to the caster
-			player.sendPacket(new SystemMessage(SystemMessageId.INVALID_TARGET));
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			
 			// Send a Server->Client packet ActionFailed to the Player
 			player.sendPacket(ActionFailed.STATIC_PACKET);

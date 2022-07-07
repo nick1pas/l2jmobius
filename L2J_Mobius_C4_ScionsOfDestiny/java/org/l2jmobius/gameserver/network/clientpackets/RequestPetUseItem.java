@@ -156,7 +156,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM));
+			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 		}
 	}
 	

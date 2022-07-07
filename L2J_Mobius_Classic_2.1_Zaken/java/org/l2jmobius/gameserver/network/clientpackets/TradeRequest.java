@@ -121,7 +121,7 @@ public class TradeRequest implements IClientIncomingPacket
 			}
 			if (!npcInRange)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
+				player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 				return;
 			}
 			if (!player.isProcessingRequest())

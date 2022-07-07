@@ -162,7 +162,7 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UPGRADE_ARTIFACT_THE_ITEM_S_UPGRADE_LEVEL_WILL_REMAIN_THE_SAME));
+			player.sendPacket(SystemMessageId.FAILED_TO_UPGRADE_ARTIFACT_THE_ITEM_S_UPGRADE_LEVEL_WILL_REMAIN_THE_SAME);
 			player.sendPacket(new ExTryEnchantArtifactResult(ExTryEnchantArtifactResult.FAIL, targetItem.getEnchantLevel()));
 		}
 	}

@@ -79,7 +79,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final int skillLevel = player.getSkillLevel(Skill.SKILL_CRYSTALLIZE);
 		if (skillLevel <= 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
 			return;
@@ -123,7 +123,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// Check if the char can crystallize C items and return if false;
 		if ((itemToRemove.getTemplate().getCrystalType() == ItemTemplate.CRYSTAL_C) && (skillLevel <= 1))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
 			return;
@@ -132,7 +132,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// Check if the user can crystallize B items and return if false;
 		if ((itemToRemove.getTemplate().getCrystalType() == ItemTemplate.CRYSTAL_B) && (skillLevel <= 2))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
 			return;
@@ -141,7 +141,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// Check if the user can crystallize A items and return if false;
 		if ((itemToRemove.getTemplate().getCrystalType() == ItemTemplate.CRYSTAL_A) && (skillLevel <= 3))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
 			return;
@@ -150,7 +150,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// Check if the user can crystallize S items and return if false;
 		if ((itemToRemove.getTemplate().getCrystalType() == ItemTemplate.CRYSTAL_S) && (skillLevel <= 4))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
 			player.sendPacket(af);
 			return;

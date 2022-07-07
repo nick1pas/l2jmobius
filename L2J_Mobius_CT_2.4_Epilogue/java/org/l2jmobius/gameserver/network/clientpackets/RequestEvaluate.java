@@ -49,43 +49,43 @@ public class RequestEvaluate implements IClientIncomingPacket
 		final Player target = (Player) player.getTarget();
 		if (target == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.SELECT_TARGET));
+			player.sendPacket(SystemMessageId.SELECT_TARGET);
 			return;
 		}
 		
 		if (!(player.getTarget() instanceof Player))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.INVALID_TARGET));
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		if (player.getLevel() < 10)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.ONLY_CHARACTERS_OF_LEVEL_10_OR_ABOVE_ARE_AUTHORIZED_TO_MAKE_RECOMMENDATIONS));
+			player.sendPacket(SystemMessageId.ONLY_CHARACTERS_OF_LEVEL_10_OR_ABOVE_ARE_AUTHORIZED_TO_MAKE_RECOMMENDATIONS);
 			return;
 		}
 		
 		if (player.getTarget() == player)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
 			return;
 		}
 		
 		if (player.getRecomLeft() <= 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER));
+			player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
 			return;
 		}
 		
 		if (target.getRecomHave() >= 255)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION));
+			player.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
 			return;
 		}
 		
 		if (!Config.ALT_RECOMMEND && !player.canRecom(target))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THAT_CHARACTER_HAS_ALREADY_BEEN_RECOMMENDED));
+			player.sendPacket(SystemMessageId.THAT_CHARACTER_HAS_ALREADY_BEEN_RECOMMENDED);
 			return;
 		}
 		

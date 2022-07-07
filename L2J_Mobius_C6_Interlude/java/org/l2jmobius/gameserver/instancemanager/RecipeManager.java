@@ -71,7 +71,7 @@ public class RecipeManager
 			return;
 		}
 		
-		player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING));
+		player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 	}
 	
 	public synchronized void requestMakeItemAbort(Player player)

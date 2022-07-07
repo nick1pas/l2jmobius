@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestExRemoveItemAttribute implements IClientIncomingPacket
@@ -82,7 +81,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 		}
 	}
 	

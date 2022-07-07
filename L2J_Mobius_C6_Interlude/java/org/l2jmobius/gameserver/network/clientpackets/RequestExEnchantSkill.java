@@ -146,13 +146,13 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_EXPERIENCE_EXP_TO_ENCHANT_THAT_SKILL));
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_EXPERIENCE_EXP_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 			return;
 		}
 		if (Rnd.get(100) <= rate)

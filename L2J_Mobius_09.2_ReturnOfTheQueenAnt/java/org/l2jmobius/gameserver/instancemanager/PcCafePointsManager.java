@@ -41,7 +41,7 @@ public class PcCafePointsManager
 		
 		if (player.getPcCafePoints() >= Config.PC_CAFE_MAX_POINTS)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_THE_MAXIMUM_NUMBER_OF_PA_POINTS));
+			player.sendPacket(SystemMessageId.YOU_HAVE_EARNED_THE_MAXIMUM_NUMBER_OF_PA_POINTS);
 			return;
 		}
 		

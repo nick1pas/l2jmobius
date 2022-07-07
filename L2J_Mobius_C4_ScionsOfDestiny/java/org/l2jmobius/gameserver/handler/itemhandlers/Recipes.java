@@ -48,7 +48,7 @@ public class Recipes implements IItemHandler
 		final RecipeList recipe = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
 		if (player.hasRecipeList(recipe.getId()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED));
+			player.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
 		}
 		else if (recipe.isDwarvenRecipe())
 		{
@@ -57,7 +57,7 @@ public class Recipes implements IItemHandler
 				if (recipe.getLevel() > player.getDwarvenCraft())
 				{
 					// Cannot add recipe, because create item level too low.
-					player.sendPacket(new SystemMessage(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE));
+					player.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
 				}
 				else if (player.getDwarvenRecipeBook().size() >= player.getDwarfRecipeLimit())
 				{
@@ -77,7 +77,7 @@ public class Recipes implements IItemHandler
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS));
+				player.sendPacket(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS);
 			}
 		}
 		else if (player.hasCommonCraft())
@@ -85,7 +85,7 @@ public class Recipes implements IItemHandler
 			if (recipe.getLevel() > player.getCommonCraft())
 			{
 				// Cannot add recipe, because create item level too low.
-				player.sendPacket(new SystemMessage(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE));
+				player.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
 			}
 			else if (player.getCommonRecipeBook().size() >= player.getCommonRecipeLimit())
 			{
@@ -105,7 +105,7 @@ public class Recipes implements IItemHandler
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS));
+			player.sendPacket(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS);
 		}
 	}
 	

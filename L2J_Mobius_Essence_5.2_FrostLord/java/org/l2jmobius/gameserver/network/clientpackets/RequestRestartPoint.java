@@ -49,7 +49,6 @@ import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
@@ -340,7 +339,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 						}
 						catch (Exception e)
 						{
-							player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							e.printStackTrace();
 							return;
 						}

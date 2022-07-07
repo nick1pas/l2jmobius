@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.huntpass.HuntPassInfo;
 import org.l2jmobius.gameserver.network.serverpackets.huntpass.HuntPassSayhasSupportInfo;
 
@@ -54,13 +53,13 @@ public class RequestHuntPassBuyPremium implements IClientIncomingPacket
 		final Calendar calendar = Calendar.getInstance();
 		if ((calendar.get(Calendar.DAY_OF_MONTH) == Config.HUNT_PASS_PERIOD) && (calendar.get(Calendar.HOUR_OF_DAY) == 6) && (calendar.get(Calendar.MINUTE) < 30))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THIS_SERVICE_CANNOT_BE_PURCHASED_AT_THE_MOMENT_SEASON_PASS_PREMIUM_SERVICES_IS_AVAILABLE_FOR_PURCHASE_BEFORE_6_30_A_M_ON_THE_BEFORE_THE_SEASON_END));
+			player.sendPacket(SystemMessageId.THIS_SERVICE_CANNOT_BE_PURCHASED_AT_THE_MOMENT_SEASON_PASS_PREMIUM_SERVICES_IS_AVAILABLE_FOR_PURCHASE_BEFORE_6_30_A_M_ON_THE_BEFORE_THE_SEASON_END);
 			return;
 		}
 		
 		if (!player.destroyItemByItemId("L-Coin", 91663, Config.HUNT_PASS_PREMIUM_COST, player, true))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_MONEY_TO_USE_THE_FUNCTION));
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_MONEY_TO_USE_THE_FUNCTION);
 			return;
 		}
 		

@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestChangePetName implements IClientIncomingPacket
 {
@@ -57,12 +56,12 @@ public class RequestChangePetName implements IClientIncomingPacket
 		
 		if (pet.getName() != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SET_THE_NAME_OF_THE_PET));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_THE_NAME_OF_THE_PET);
 			return;
 		}
 		else if (PetNameTable.getInstance().doesPetNameExist(_name, pet.getTemplate().getNpcId()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THIS_IS_ALREADY_IN_USE_BY_ANOTHER_PET));
+			player.sendPacket(SystemMessageId.THIS_IS_ALREADY_IN_USE_BY_ANOTHER_PET);
 			return;
 		}
 		else if ((_name.length() < 3) || (_name.length() > 16))
@@ -72,7 +71,7 @@ public class RequestChangePetName implements IClientIncomingPacket
 		}
 		else if (!PetNameTable.getInstance().isValidPetName(_name))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.AN_INVALID_CHARACTER_IS_INCLUDED_IN_THE_PET_S_NAME));
+			player.sendPacket(SystemMessageId.AN_INVALID_CHARACTER_IS_INCLUDED_IN_THE_PET_S_NAME);
 			return;
 		}
 		

@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.balthusevent.ExBalthusEvent;
 
 /**
@@ -57,7 +56,7 @@ public class RequestEventBalthusToken implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_VE_OBTAINED_S1_LUCKY_COINS));
+			player.sendPacket(SystemMessageId.YOU_VE_OBTAINED_S1_LUCKY_COINS);
 		}
 	}
 }

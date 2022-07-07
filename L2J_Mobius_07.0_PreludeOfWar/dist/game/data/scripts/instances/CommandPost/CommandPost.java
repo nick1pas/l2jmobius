@@ -118,13 +118,13 @@ public class CommandPost extends AbstractInstance
 					
 					if (!party.isLeader(player))
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 						return null;
 					}
 					
 					if (player.isInCommandChannel())
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+						player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 						return null;
 					}
 					
@@ -157,7 +157,7 @@ public class CommandPost extends AbstractInstance
 				}
 				else
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+					player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 				}
 				
 				if (player.getInstanceWorld() != null)

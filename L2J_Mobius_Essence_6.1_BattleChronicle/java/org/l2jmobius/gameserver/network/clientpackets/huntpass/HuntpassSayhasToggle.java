@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.huntpass.HuntPassSayhasSupportInfo;
 
 public class HuntpassSayhasToggle implements IClientIncomingPacket
@@ -55,7 +54,7 @@ public class HuntpassSayhasToggle implements IClientIncomingPacket
 		int timeUsed = huntPass.getUsedSayhaTime();
 		if (player.getVitalityPoints() < 35000)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_CONDITIONS_ARE_NOT_MET_ACTIVATION_IS_IMPOSSIBLE_SAYHA_S_GRACE_SUSTENTION_EFFECT_OF_THE_SEASON_PASS_IS_AVAILABLE_ONLY_IF_YOU_HAVE_MORE_THAN_35_000_SAYHA_S_GRACE_POINTS));
+			player.sendPacket(SystemMessageId.THE_CONDITIONS_ARE_NOT_MET_ACTIVATION_IS_IMPOSSIBLE_SAYHA_S_GRACE_SUSTENTION_EFFECT_OF_THE_SEASON_PASS_IS_AVAILABLE_ONLY_IF_YOU_HAVE_MORE_THAN_35_000_SAYHA_S_GRACE_POINTS);
 			return;
 		}
 		

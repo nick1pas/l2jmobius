@@ -134,27 +134,27 @@ public class SummonFriend implements ISkillHandler
 					
 					if ((GrandBossManager.getInstance().getZone(targetPlayer) != null) && !targetPlayer.isGM())
 					{
-						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 						continue;
 					}
 					// Check for the the target's festival status.
 					if (targetPlayer.isInOlympiadMode())
 					{
-						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
+						activePlayer.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
 						continue;
 					}
 					
 					// Check for the the target's festival status.
 					if (targetPlayer.isFestivalParticipant())
 					{
-						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 						continue;
 					}
 					
 					// Check for the target's jail status, arenas and siege zones.
 					if (targetPlayer.isInsideZone(ZoneId.PVP))
 					{
-						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 						continue;
 					}
 					

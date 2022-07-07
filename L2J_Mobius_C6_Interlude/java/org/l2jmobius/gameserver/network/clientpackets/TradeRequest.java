@@ -237,7 +237,7 @@ public class TradeRequest implements IClientIncomingPacket
 		
 		if (Util.calculateDistance(player, partner, true) > 150)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
+			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

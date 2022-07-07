@@ -283,7 +283,7 @@ public class MultisellData implements IXmlReader
 			{
 				if (player.getPcCafePoints() < amount)
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS));
+					player.sendPacket(SystemMessageId.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS);
 					break;
 				}
 				return true;

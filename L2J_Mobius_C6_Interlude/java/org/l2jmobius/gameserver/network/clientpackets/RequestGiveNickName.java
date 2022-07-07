@@ -50,7 +50,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 		if (player.isNoble() && _target.matches(player.getName()))
 		{
 			player.setTitle(_title);
-			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED));
+			player.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
 			player.broadcastTitleInfo();
 		}
 		// Can the player change/give a title?
@@ -58,7 +58,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 		{
 			if (player.getClan().getLevel() < 3)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE));
+				player.sendPacket(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE);
 				return;
 			}
 			

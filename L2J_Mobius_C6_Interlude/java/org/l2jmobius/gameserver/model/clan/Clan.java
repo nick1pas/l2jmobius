@@ -1459,7 +1459,7 @@ public class Clan
 		// Order of Knights 10000 points per each
 		if ((pledgeType != -1) && (((_reputationScore < 5000) && (pledgeType < SUBUNIT_KNIGHT1)) || ((_reputationScore < 10000) && (pledgeType > SUBUNIT_ROYAL2))))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
+			player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
 			return null;
 		}
 		
@@ -1800,12 +1800,12 @@ public class Clan
 		{
 			if (player.isGood() && target.isEvil())
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 				return false;
 			}
 			if (player.isEvil() && target.isGood())
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 				return false;
 			}
 		}
@@ -1903,12 +1903,12 @@ public class Clan
 		{
 			if (player.isGood() && target.isEvil())
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 				return false;
 			}
 			if (player.isEvil() && target.isGood())
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
+				player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 				return false;
 			}
 		}
@@ -2281,7 +2281,7 @@ public class Clan
 		
 		if (!increaseClanLevel)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET));
+			player.sendPacket(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_INCREASE_THE_CLAN_S_LEVEL_HAVE_NOT_BEEN_MET);
 			return;
 		}
 		

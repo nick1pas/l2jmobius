@@ -294,7 +294,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		final Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 			return "FortWarden-10.htm";
 		}
 		else if (party.getLeader() != player)

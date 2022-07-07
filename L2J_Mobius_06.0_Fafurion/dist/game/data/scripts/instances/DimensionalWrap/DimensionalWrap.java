@@ -134,7 +134,7 @@ public class DimensionalWrap extends AbstractInstance
 				{
 					if (!player.getParty().isLeader(player))
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+						player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					}
 					else
 					{
@@ -173,7 +173,7 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				else if (player.isInParty() && !player.getParty().isLeader(player))
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					break;
 				}
 				switch (player.getParty().getMemberCount())
@@ -216,7 +216,7 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				else if (player.isInParty() && !player.getParty().isLeader(player))
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					break;
 				}
 				switch (player.getParty().getMemberCount())
@@ -259,7 +259,7 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				else if (player.isInParty() && !player.getParty().isLeader(player))
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
+					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 					break;
 				}
 				switch (player.getParty().getMemberCount())

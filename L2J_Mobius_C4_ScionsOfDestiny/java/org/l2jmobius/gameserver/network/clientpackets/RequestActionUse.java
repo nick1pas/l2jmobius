@@ -45,7 +45,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 public class RequestActionUse implements IClientIncomingPacket
@@ -261,37 +260,37 @@ public class RequestActionUse implements IClientIncomingPacket
 					if (player.isDead())
 					{
 						// A strider cannot be ridden when dead
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD));
+						player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD);
 					}
 					else if (pet.isDead())
 					{
 						// A dead strider cannot be ridden.
-						player.sendPacket(new SystemMessage(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN));
+						player.sendPacket(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN);
 					}
 					else if (pet.isInCombat() || pet.isRooted())
 					{
 						// A strider in battle cannot be ridden
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN));
+						player.sendPacket(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN);
 					}
 					else if (player.isInCombat())
 					{
 						// A strider cannot be ridden while in battle
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
+						player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 					}
 					else if (player.isOnEvent())
 					{
 						// A strider cannot be ridden while in event
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
+						player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 					}
 					else if (player.isSitting()) // Like L2OFF you can mount also during movement
 					{
 						// A strider can be ridden only when standing
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING));
+						player.sendPacket(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
 					}
 					else if (player.isFishing())
 					{
 						// You can't mount, dismount, break and drop items while fishing
-						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2));
+						player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 					}
 					else if (!pet.isDead() && !player.isMounted())
 					{

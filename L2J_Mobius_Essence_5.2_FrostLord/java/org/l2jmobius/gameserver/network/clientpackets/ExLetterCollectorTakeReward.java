@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Index, Mobius
@@ -82,7 +81,7 @@ public class ExLetterCollectorTakeReward implements IClientIncomingPacket
 		final ItemHolder rewardItem = getRandomReward(lcrh.getRewards(), lcrh.getChance());
 		if (rewardItem == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+			player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 			return;
 		}
 		

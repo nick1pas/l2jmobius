@@ -1244,7 +1244,7 @@ class OlympiadGameTask implements Runnable
 				}
 				if (otherPlayer != null)
 				{
-					otherPlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED));
+					otherPlayer.sendPacket(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
 				}
 				if (i == 0)
 				{

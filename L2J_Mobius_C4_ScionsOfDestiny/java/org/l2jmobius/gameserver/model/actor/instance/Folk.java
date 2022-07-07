@@ -126,7 +126,7 @@ public class Folk extends Npc
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN));
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 			}
 		}
 		else

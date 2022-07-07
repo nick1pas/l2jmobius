@@ -142,7 +142,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL));
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
 				return;
 			}
 		}
@@ -188,7 +188,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL));
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
 				return;
 			}
 		}
@@ -243,7 +243,7 @@ public class RequestAquireSkill implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION_SCORE));
+				player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION_SCORE);
 				return;
 			}
 			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost);

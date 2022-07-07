@@ -145,7 +145,7 @@ public class UseItem implements IClientIncomingPacket
 		
 		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_QUEST)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
 		}
 		
@@ -172,14 +172,14 @@ public class UseItem implements IClientIncomingPacket
 		// You cannot do anything else while fishing.
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
 		
 		if ((player.getPkKills() > 0) && ((itemId >= 7816) && (itemId <= 7831)))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_UNABLE_TO_EQUIP_THIS_ITEM_WHEN_YOUR_PK_COUNT_IS_GREATER_THAN_OR_EQUAL_TO_ONE));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			player.sendPacket(SystemMessageId.YOU_ARE_UNABLE_TO_EQUIP_THIS_ITEM_WHEN_YOUR_PK_COUNT_IS_GREATER_THAN_OR_EQUAL_TO_ONE);
 			return;
 		}
 		
@@ -205,35 +205,35 @@ public class UseItem implements IClientIncomingPacket
 		// A shield that can only be used by the members of a clan that owns a castle.
 		if (((clan == null) || (clan.getCastleId() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !player.isGM())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			return;
 		}
 		
 		// A shield that can only be used by the members of a clan that owns a clan hall.
 		if (((clan == null) || (clan.getHideoutId() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !player.isGM())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			return;
 		}
 		
 		// Apella armor used by clan members may be worn by a Baron or a higher level Aristocrat.
 		if ((itemId >= 7860) && (itemId <= 7879) && Config.APELLA_ARMORS && ((clan == null) || (player.getPledgeClass() < 5)) && !player.isGM())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			return;
 		}
 		
 		// Clan Oath armor used by all clan members.
 		if ((itemId >= 7850) && (itemId <= 7859) && Config.OATH_ARMORS && (clan == null) && !player.isGM())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			return;
 		}
 		
 		// The Lord's Crown used by castle lords only.
 		if ((itemId == CrownTable.CROWN_OF_THE_LORD) && Config.CASTLE_CROWN && ((clan == null) || (clan.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			return;
 		}
 		
@@ -242,14 +242,14 @@ public class UseItem implements IClientIncomingPacket
 		{
 			if (clan == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
 			
 			final int circletId = CastleManager.getInstance().getCircletByCastleId(clan.getCastleId());
 			if ((player.getPledgeType() == -1) || (circletId != itemId))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
 		}
@@ -293,7 +293,7 @@ public class UseItem implements IClientIncomingPacket
 			// Like L2OFF you can't use equips while you are casting
 			if ((player.isCastingNow() || player.isCastingPotionNow() || player.isMounted()))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL));
+				player.sendPacket(SystemMessageId.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL);
 				return;
 			}
 			

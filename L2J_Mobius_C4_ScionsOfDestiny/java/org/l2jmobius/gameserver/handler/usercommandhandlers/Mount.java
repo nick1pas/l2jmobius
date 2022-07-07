@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -51,22 +50,22 @@ public class Mount implements IUserCommandHandler
 			if (player.isDead())
 			{
 				// A strider cannot be ridden when player is dead.
-				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD));
+				player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD);
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
-				player.sendPacket(new SystemMessage(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN));
+				player.sendPacket(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN);
 			}
 			else if (pet.isInCombat())
 			{
 				// A strider in battle cannot be ridden.
-				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN));
+				player.sendPacket(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN);
 			}
 			else if (player.isInCombat())
 			{
 				// A pet cannot be ridden while player is in battle.
-				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
+				player.sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 			}
 			else if (!player.isInsideRadius3D(pet, 60))
 			{
@@ -75,13 +74,13 @@ public class Mount implements IUserCommandHandler
 			}
 			else if (!GeoEngine.getInstance().canSeeTarget(player, pet))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
+				player.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				return false;
 			}
 			else if (player.isSitting() || player.isMoving())
 			{
 				// A strider can be ridden only when player is standing.
-				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING));
+				player.sendPacket(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
 			}
 			else if (!pet.isDead() && !player.isMounted())
 			{

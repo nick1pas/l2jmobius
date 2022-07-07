@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TradeDone implements IClientIncomingPacket
 {
@@ -83,7 +82,7 @@ public class TradeDone implements IClientIncomingPacket
 			{
 				// Trade partner not found, cancel trade
 				player.cancelActiveTrade();
-				player.sendPacket(new SystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+				player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 				return;
 			}
 			

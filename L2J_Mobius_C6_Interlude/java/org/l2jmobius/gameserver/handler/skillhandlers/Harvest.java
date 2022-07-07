@@ -74,7 +74,7 @@ public class Harvest implements ISkillHandler
 			_target = (Monster) aTargetList;
 			if (_player != _target.getSeeder())
 			{
-				_player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
+				_player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
 				continue;
 			}
 			

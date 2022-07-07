@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * The Class BroadcastingTower.
@@ -81,7 +80,7 @@ public class BroadcastingTower extends Folk
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE));
+				player.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
 			}
 		}
 		else if (command.startsWith("observe"))

@@ -44,7 +44,7 @@ public class RequestFriendInvite implements IClientIncomingPacket
 	{
 		if (player != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST));
+			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 			player.onTransactionResponse();
 		}
 	}

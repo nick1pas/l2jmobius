@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.attributechange.ExChangeAttributeItemList;
 
 /**
@@ -57,13 +56,13 @@ public class ChangeAttributeCrystal implements IItemHandler
 		final Player player = playable.getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP);
 			return false;
 		}
 		
 		if (ITEM_GRADES.get(item.getId()) == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.CHANGING_ATTRIBUTES_HAS_BEEN_FAILED));
+			player.sendPacket(SystemMessageId.CHANGING_ATTRIBUTES_HAS_BEEN_FAILED);
 			return false;
 		}
 		
@@ -78,7 +77,7 @@ public class ChangeAttributeCrystal implements IItemHandler
 		
 		if (itemList.isEmpty())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST));
+			player.sendPacket(SystemMessageId.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST);
 			return false;
 		}
 		

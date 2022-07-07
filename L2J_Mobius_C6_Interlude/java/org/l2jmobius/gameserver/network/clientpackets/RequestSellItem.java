@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestSellItem implements IClientIncomingPacket
 {
@@ -135,7 +134,7 @@ public class RequestSellItem implements IClientIncomingPacket
 			final int count = _items[(i * 3) + 2];
 			if ((count <= 0) || (count > Integer.MAX_VALUE))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				return;
 			}
 			
@@ -153,14 +152,14 @@ public class RequestSellItem implements IClientIncomingPacket
 			// Fix exploit during Sell
 			if (((Integer.MAX_VALUE / count) < price) || (totalPrice > Integer.MAX_VALUE))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				return;
 			}
 			
 			// Check totalPrice
 			if (totalPrice <= 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 				return;
 			}
 			

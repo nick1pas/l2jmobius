@@ -288,7 +288,7 @@ public class AdminData implements IXmlReader
 	{
 		if (isGmOnline(player.isGM()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.GM_LIST));
+			player.sendPacket(SystemMessageId.GM_LIST);
 			for (String name : getAllGmNames(player.isGM()))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.GM_S1);
@@ -298,7 +298,7 @@ public class AdminData implements IXmlReader
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT));
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT);
 		}
 	}
 	

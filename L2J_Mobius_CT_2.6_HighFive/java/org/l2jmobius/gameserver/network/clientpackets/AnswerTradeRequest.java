@@ -60,7 +60,7 @@ public class AnswerTradeRequest implements IClientIncomingPacket
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
-			player.sendPacket(new SystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.setActiveRequester(null);
 			return;
 		}
@@ -68,7 +68,7 @@ public class AnswerTradeRequest implements IClientIncomingPacket
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
-			player.sendPacket(new SystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.setActiveRequester(null);
 			return;
 		}
