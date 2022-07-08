@@ -19,7 +19,6 @@ package ai.others;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -38,76 +37,43 @@ public final class GreedyTreasureChests extends AbstractNpcAI
 	private static final int CHEST_LV110 = 8710;
 	private static final int CHEST_LV120 = 8711;
 	//@formatter:off
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_SV = // Silent Valley
+	private static final int[] MONSTERS = 
 	{
+		// Silent Valley
 		24506, 24507, 24508, 24509, 24510,
-	};
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_IT = // Ivory Tower Crater
-	{
+		// Ivory Tower Crater
 		24421, 24422, 24423, 24424, 24425, 24426,
-	};
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_TC = // Tanor Canyon
-	{
-		20936,20937, 20938, 20939, 20940, 20941, 20942, 20943, 24587,
-	};
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_AI = // Alligator Island
-	{
+		// Tanor Canyon
+		20936, 20937, 20938, 20939, 20940, 20941, 20942, 20943, 24587,
+		// Alligator Island
 		24373, 24376, 24377,	
-	};
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_FS = // Field of Silence
-	{
+		// Field of Silence
 		24517, 24520, 24521, 24522, 24523,
-	};
-	private static final int[] TRIGGER_MOBS_LV110_CHEST_FM = // Forest of Mirrors
-	{
+		// Forest of Mirrors
 		24461, 24462, 24463, 24464, 24465, 24466,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_VS = // Varka Silenos Barracks
-	{
+		// Varka Silenos Barracks
 		24636, 24637, 24638, 24639, 24640, 				  
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_KO = // Ketra OrcOutpost
-	{
+		// Ketra Orc Outpost
 		24631, 24632, 24633, 24634, 24635,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_FW = // Field of Whispers
-	{
+		// Field of Whispers
 		24304, 24305, 24306, 24307, 24308,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_IP = // Isle of Prayer
-	{
+		// Isle of Prayer
 		24445, 24446, 24447, 24448, 24449, 24450, 24451,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_BS = // Breka's Stronghold
-	{
+		// Breka's Stronghold
 		24415, 24416, 24417, 24418, 24419, 24420,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_SM = // Sel Mahum Training Grounds
-	{
+		// Sel Mahum Training Grounds
 		24492, 24493, 24494, 24495,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_PL = // Plains of Lizardman
-	{
+		// Plains of Lizardman
 		24496, 24497, 24498, 24499,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_FOM = // Fields of Massacre
-	{
+		// Fields of Massacre
 		24486, 24487, 24488, 24489, 24490, 24491,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_SS = // Sea Of Spores
-	{
+		// Sea Of Spores
 		24621, 24622, 24623, 24624,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_DV = // Dragon Valley
-	{
+		// Dragon Valley
 		24481, 24482,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_FT = // Fafurion Temple
-	{
+		// Fafurion Temple
 		24318, 24322, 24323, 24325, 24329,
-	};
-	private static final int[] TRIGGER_MOBS_LV120_CHEST_WS = // Wastelands
-	{
+		// Wastelands
 		24500, 24501, 24502, 24503, 24504, 24505,
 	};
 	//@formatter:on
@@ -173,24 +139,7 @@ public final class GreedyTreasureChests extends AbstractNpcAI
 		addTalkId(CHEST_LV120);
 		addKillId(CHEST_LV110);
 		addKillId(CHEST_LV120);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_SV);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_IT);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_TC);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_AI);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_FS);
-		addKillId(TRIGGER_MOBS_LV110_CHEST_FM);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_VS);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_KO);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_FW);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_IP);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_BS);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_SM);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_PL);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_FOM);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_SS);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_DV);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_FT);
-		addKillId(TRIGGER_MOBS_LV120_CHEST_WS);
+		addKillId(MONSTERS);
 	}
 	
 	@Override
@@ -206,255 +155,368 @@ public final class GreedyTreasureChests extends AbstractNpcAI
 		}
 		else if (getRandom(150) == TREASURE_CHEST_CHANCE)
 		{
-			final int npcId = npc.getId();
 			final long currentTime = System.currentTimeMillis();
-			if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_SV, npcId))
+			switch (npc.getId())
 			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SV_1", 0))
+				// Silent Valley
+				case 24506:
+				case 24507:
+				case 24508:
+				case 24509:
+				case 24510:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SV_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SV_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SV_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SV_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SV_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SV_2", 0))
+				// Ivory Tower Crater
+				case 24421:
+				case 24422:
+				case 24423:
+				case 24424:
+				case 24425:
+				case 24426:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SV_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IT_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IT_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IT_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IT_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_IT, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IT_1", 0))
+				// Tanor Canyon
+				case 20936:
+				case 20937:
+				case 20938:
+				case 20939:
+				case 20940:
+				case 20941:
+				case 20942:
+				case 20943:
+				case 24587:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IT_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_TC_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_TC_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_TC_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_TC_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IT_2", 0))
+				// Alligator Island
+				case 24373:
+				case 24376:
+				case 24377:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IT_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_AI_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_AI_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_AI_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_AI_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_TC, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_TC_1", 0))
+				// Field of Silence
+				case 24517:
+				case 24520:
+				case 24521:
+				case 24522:
+				case 24523:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_TC_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FS_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FS_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_TC_2", 0))
+				// Forest of Mirrors
+				case 24461:
+				case 24462:
+				case 24463:
+				case 24464:
+				case 24465:
+				case 24466:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_TC_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_1", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_2", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_3", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_3", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_4", 0))
+					{
+						addSpawn(CHEST_LV110, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_4", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_AI, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_AI_1", 0))
+				// Varka Silenos Barracks
+				case 24636:
+				case 24637:
+				case 24638:
+				case 24639:
+				case 24640:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_AI_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_VS_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_VS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_VS_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_VS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_AI_2", 0))
+				// Ketra Orc Outpost
+				case 24631:
+				case 24632:
+				case 24633:
+				case 24634:
+				case 24635:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_AI_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_KO_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_KO_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_KO_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_KO_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_FS, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FS_1", 0))
+				// Field of Whispers
+				case 24304:
+				case 24305:
+				case 24306:
+				case 24307:
+				case 24308:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FW_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FW_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FW_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FW_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FS_2", 0))
+				// Isle of Prayer
+				case 24445:
+				case 24446:
+				case 24447:
+				case 24448:
+				case 24449:
+				case 24450:
+				case 24451:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IP_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IP_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IP_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IP_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV110_CHEST_FM, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_1", 0))
+				// Breka's Stronghold
+				case 24415:
+				case 24416:
+				case 24417:
+				case 24418:
+				case 24419:
+				case 24420:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_BS_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_BS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_BS_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_BS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_2", 0))
+				// Sel Mahum Training Grounds
+				case 24492:
+				case 24493:
+				case 24494:
+				case 24495:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SM_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SM_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_3", 0))
+				// Plains of Lizardman
+				case 24496:
+				case 24497:
+				case 24498:
+				case 24499:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_3", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_PL_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_PL_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_PL_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_PL_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FM_4", 0))
+				// Fields of Massacre
+				case 24486:
+				case 24487:
+				case 24488:
+				case 24489:
+				case 24490:
+				case 24491:
 				{
-					addSpawn(CHEST_LV110, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FM_4", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FOM_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FOM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FOM_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FOM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_VS, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_VS_1", 0))
+				// Sea Of Spores
+				case 24621:
+				case 24622:
+				case 24623:
+				case 24624:
 				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_VS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SS_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SS_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_VS_2", 0))
+				// Dragon Valley
+				case 24481:
+				case 24482:
 				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_VS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_DV_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_DV_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_DV_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_DV_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_KO, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_KO_1", 0))
+				// Fafurion Temple
+				case 24318:
+				case 24322:
+				case 24323:
+				case 24325:
+				case 24329:
 				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_KO_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FT_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FT_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FT_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FT_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_KO_2", 0))
+				// Wastelands
+				case 24500:
+				case 24501:
+				case 24502:
+				case 24503:
+				case 24504:
+				case 24505:
 				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_KO_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_FW, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FW_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FW_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FW_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FW_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_IP, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IP_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IP_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_IP_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_IP_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_BS, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_BS_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_BS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_BS_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_BS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_SM, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SM_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SM_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_PL, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_PL_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_PL_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_PL_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_PL_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_FOM, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FOM_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FOM_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FOM_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FOM_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_SS, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SS_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_SS_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_SS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_DV, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_DV_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_DV_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_DV_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_DV_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_FT, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FT_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FT_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_FT_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_FT_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-			}
-			else if (CommonUtil.contains(TRIGGER_MOBS_LV120_CHEST_WS, npcId))
-			{
-				if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_1", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_2", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
-				}
-				else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_3", 0))
-				{
-					addSpawn(CHEST_LV120, npc, true, 0, true);
-					GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_3", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_1", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_1", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_2", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_2", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					else if (currentTime > GlobalVariablesManager.getInstance().getLong("TREASURE_CHEST_RESPAWN_WS_3", 0))
+					{
+						addSpawn(CHEST_LV120, npc, true, 0, true);
+						GlobalVariablesManager.getInstance().set("TREASURE_CHEST_RESPAWN_WS_3", Long.toString(currentTime + RESPAWN_DELAY + getRandom(RND_OFFSET)));
+					}
+					break;
 				}
 			}
 		}
