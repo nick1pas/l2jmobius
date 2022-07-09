@@ -33,7 +33,7 @@ public class ExDeleteHomunculusDataResult implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_ACTIVATE_HOMUNCULUS_RESULT.writeId(packet);
+		OutgoingPackets.EX_DELETE_HOMUNCULUS_DATA_RESULT.writeId(packet);
 		packet.writeD(1); // 1 - success
 		packet.writeD(SystemMessageId.THE_HOMUNCULUS_IS_DESTROYED.getId());
 		return true;
