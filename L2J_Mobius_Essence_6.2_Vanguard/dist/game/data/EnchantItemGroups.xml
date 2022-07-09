@@ -52,7 +52,17 @@
 		<current enchant="15" chance="5" />
 	</enchantRateGroup>
 	<!-- Armor - chances of enchant -->
-	<enchantRateGroup name="ARMOR"> <!-- Shield, Sigil, Helmet, Armor upper body, Full armor, Armor lower body, Boots, Gloves -->
+	<enchantRateGroup name="ARMOR_GROUP"> <!-- Shield, Sigil, Helmet, Armor upper body, Full armor, Armor lower body, Boots, Gloves -->
+		<current enchant="0-3" chance="100" />
+		<current enchant="4" chance="60" />
+		<current enchant="5" chance="60" />
+		<current enchant="6" chance="55" />
+		<current enchant="7" chance="45" />
+		<current enchant="8" chance="45" />
+		<current enchant="9" chance="40" />
+	</enchantRateGroup>
+	<!-- Armor - chances of enchant -->
+	<enchantRateGroup name="FULL_ARMOR_GROUP"> <!-- Shield, Sigil, Helmet, Armor upper body, Full armor, Armor lower body, Boots, Gloves -->
 		<current enchant="0-3" chance="100" />
 		<current enchant="4" chance="60" />
 		<current enchant="5" chance="60" />
@@ -292,14 +302,16 @@
 			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
 		</enchantRate>
 		<!-- Armor -->
-		<enchantRate group="ARMOR">
+		<enchantRate group="ARMOR_GROUP">
 			<item slot="lhand" /> <!-- Left hand: Shields, Sigils -->
 			<item slot="head" /> <!-- Head: Helmet -->
 			<item slot="chest" /> <!-- Chest: Armor upper body. -->
-			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
 			<item slot="legs" /> <!-- Legs: Armor lower body. -->
 			<item slot="feet" /> <!-- Feet: Boots -->
 			<item slot="gloves" /> <!-- Gloves: Gloves -->
+		</enchantRate>
+		<enchantRate group="FULL_ARMOR_GROUP">
+			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
 		</enchantRate>
 		<!-- Accessories -->
 		<enchantRate group="D_C_B_A_ACCESSORIES">
