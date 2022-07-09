@@ -79,13 +79,13 @@ public class MultisellData implements IXmlReader
 	public void parseDocument(Document doc, File f)
 	{
 		final EnchantItemGroup magicWeaponGroup = EnchantItemGroupsData.getInstance().getItemGroup("MAGE_WEAPON_GROUP");
-		final int magicWeaponGroupMax = magicWeaponGroup != null ? magicWeaponGroup.getMaximumEnchant() : 0;
+		final int magicWeaponGroupMax = magicWeaponGroup != null ? magicWeaponGroup.getMaximumEnchant() : -2;
 		final EnchantItemGroup weapongroup = EnchantItemGroupsData.getInstance().getItemGroup("FIGHTER_WEAPON_GROUP");
-		final int weaponGroupMax = weapongroup != null ? weapongroup.getMaximumEnchant() : 0;
+		final int weaponGroupMax = weapongroup != null ? weapongroup.getMaximumEnchant() : -2;
 		final EnchantItemGroup fullArmorGroup = EnchantItemGroupsData.getInstance().getItemGroup("FULL_ARMOR_GROUP");
-		final int fullArmorGroupMax = fullArmorGroup != null ? fullArmorGroup.getMaximumEnchant() : 0;
+		final int fullArmorGroupMax = fullArmorGroup != null ? fullArmorGroup.getMaximumEnchant() : -2;
 		final EnchantItemGroup armorGroup = EnchantItemGroupsData.getInstance().getItemGroup("ARMOR_GROUP");
-		final int armorGroupMax = armorGroup != null ? armorGroup.getMaximumEnchant() : 0;
+		final int armorGroupMax = armorGroup != null ? armorGroup.getMaximumEnchant() : -2;
 		
 		try
 		{
@@ -143,11 +143,11 @@ public class MultisellData implements IXmlReader
 									{
 										if (item.isWeapon())
 										{
-											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax : weaponGroupMax);
+											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax > -2 ? magicWeaponGroupMax : enchantmentLevel : weaponGroupMax > -2 ? weaponGroupMax : enchantmentLevel);
 										}
 										else if (item.isArmor())
 										{
-											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
+											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR ? fullArmorGroupMax > -2 ? fullArmorGroupMax : enchantmentLevel : armorGroupMax > -2 ? armorGroupMax : enchantmentLevel);
 										}
 									}
 								}
