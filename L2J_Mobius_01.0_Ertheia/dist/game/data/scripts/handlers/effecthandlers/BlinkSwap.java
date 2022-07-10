@@ -18,6 +18,7 @@ package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.FlyType;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -40,6 +41,12 @@ public class BlinkSwap extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
+	{
+		return (effected != null) && GeoEngine.getInstance().canSeeTarget(effected, effector);
+	}
+	
+	@Override
 	public boolean isInstant()
 	{
 		return true;
@@ -48,8 +55,8 @@ public class BlinkSwap extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final Location effectorLoc = effector.getLocation();
-		final Location effectedLoc = effected.getLocation();
+		final Location effectedLoc = new Location(effected);
+		final Location effectorLoc = new Location(effector);
 		
 		effector.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effector.broadcastPacket(new FlyToLocation(effector, effectedLoc, FlyType.DUMMY));
@@ -57,6 +64,7 @@ public class BlinkSwap extends AbstractEffect
 		effector.abortCast();
 		effector.setXYZ(effectedLoc);
 		effector.broadcastPacket(new ValidateLocation(effector));
+		effector.revalidateZone(true);
 		
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effected.broadcastPacket(new FlyToLocation(effected, effectorLoc, FlyType.DUMMY));
