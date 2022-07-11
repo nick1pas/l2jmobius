@@ -73,7 +73,7 @@ public class ClanHall
 	public class ClanHallFunction
 	{
 		final int _type;
-		private int _lvl;
+		private int _level;
 		protected int _fee;
 		protected int _tempFee;
 		final long _rate;
@@ -92,7 +92,7 @@ public class ClanHall
 		public ClanHallFunction(int type, int lvl, int lease, int tempLease, long rate, long time)
 		{
 			_type = type;
-			_lvl = lvl;
+			_level = lvl;
 			_fee = lease;
 			_tempFee = tempLease;
 			_rate = rate;
@@ -110,12 +110,12 @@ public class ClanHall
 		}
 		
 		/**
-		 * Gets the lvl.
-		 * @return the lvl
+		 * Gets the level.
+		 * @return the level
 		 */
-		public int getLvl()
+		public int getLevel()
 		{
-			return _lvl;
+			return _level;
 		}
 		
 		/**
@@ -146,12 +146,12 @@ public class ClanHall
 		}
 		
 		/**
-		 * Sets the lvl.
-		 * @param lvl the new lvl
+		 * Sets the level.
+		 * @param level the new level
 		 */
-		public void setLvl(int lvl)
+		public void setLevel(int level)
 		{
-			_lvl = lvl;
+			_level = level;
 		}
 		
 		/**
@@ -256,7 +256,7 @@ public class ClanHall
 					statement = con.prepareStatement("INSERT INTO clanhall_functions (hall_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)");
 					statement.setInt(1, _clanHallId);
 					statement.setInt(2, _type);
-					statement.setInt(3, _lvl);
+					statement.setInt(3, _level);
 					statement.setInt(4, _fee);
 					statement.setLong(5, _rate);
 					statement.setLong(6, _endDate);
@@ -264,7 +264,7 @@ public class ClanHall
 				else
 				{
 					statement = con.prepareStatement("UPDATE clanhall_functions SET lvl=?, lease=?, endTime=? WHERE hall_id=? AND type=?");
-					statement.setInt(1, _lvl);
+					statement.setInt(1, _level);
 					statement.setInt(2, _fee);
 					statement.setLong(3, _endDate);
 					statement.setInt(4, _clanHallId);
@@ -676,13 +676,13 @@ public class ClanHall
 	/**
 	 * Update Function.
 	 * @param type the type
-	 * @param lvl the lvl
+	 * @param level the level
 	 * @param lease the lease
 	 * @param rate the rate
 	 * @param addNew the add new
 	 * @return true, if successful
 	 */
-	public boolean updateFunctions(int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(int type, int level, int lease, long rate, boolean addNew)
 	{
 		if (addNew)
 		{
@@ -690,9 +690,9 @@ public class ClanHall
 			{
 				return false;
 			}
-			_functions.put(type, new ClanHallFunction(type, lvl, lease, 0, rate, 0));
+			_functions.put(type, new ClanHallFunction(type, level, lease, 0, rate, 0));
 		}
-		else if ((lvl == 0) && (lease == 0))
+		else if ((level == 0) && (lease == 0))
 		{
 			removeFunction(type);
 		}
@@ -707,12 +707,12 @@ public class ClanHall
 				}
 				
 				_functions.remove(type);
-				_functions.put(type, new ClanHallFunction(type, lvl, lease, diffLease, rate, -1));
+				_functions.put(type, new ClanHallFunction(type, level, lease, diffLease, rate, -1));
 			}
 			else
 			{
 				_functions.get(type).setLease(lease);
-				_functions.get(type).setLvl(lvl);
+				_functions.get(type).setLevel(level);
 				_functions.get(type).dbSave(false);
 			}
 		}

@@ -1008,7 +1008,7 @@ public class Formulas
 					final ClanHall clansHall = ClanHallTable.getInstance().getClanHallById(clanHallIndex);
 					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null))
 					{
-						hpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
+						hpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLevel() / 100);
 					}
 				}
 			}
@@ -1082,7 +1082,7 @@ public class Formulas
 					final ClanHall clansHall = ClanHallTable.getInstance().getClanHallById(clanHallIndex);
 					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null))
 					{
-						mpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
+						mpRegenMultiplier *= 1 + (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLevel() / 100);
 					}
 				}
 			}

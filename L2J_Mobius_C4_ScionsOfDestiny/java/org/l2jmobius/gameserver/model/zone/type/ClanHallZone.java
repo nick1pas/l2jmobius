@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
-import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
+import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 /**
  * A clan hall zone
@@ -77,7 +77,7 @@ public class ClanHallZone extends ZoneRespawn
 			}
 			
 			// Send decoration packet
-			((Player) creature).sendPacket(new ClanHallDecoration(clanHall));
+			((Player) creature).sendPacket(new AgitDecoInfo(clanHall));
 			
 			// Send a message
 			if ((clanHall.getOwnerId() != 0) && (clanHall.getOwnerId() == ((Player) creature).getClanId()))

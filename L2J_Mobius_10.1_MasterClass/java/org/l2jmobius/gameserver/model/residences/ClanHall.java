@@ -57,7 +57,6 @@ public class ClanHall extends AbstractResidence
 	private static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	// Static parameters
-	private final ClanHallGrade _grade;
 	private final ClanHallType _type;
 	private final int _minBid;
 	final int _lease;
@@ -194,15 +193,6 @@ public class ClanHall extends AbstractResidence
 	public void openCloseDoors(boolean open)
 	{
 		_doors.forEach(door -> door.openCloseMe(open));
-	}
-	
-	/**
-	 * Gets the grade of clan hall.
-	 * @return grade of this {@link ClanHall} in {@link ClanHallGrade} enum.
-	 */
-	public ClanHallGrade getGrade()
-	{
-		return _grade;
 	}
 	
 	/**

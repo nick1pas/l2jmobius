@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
-import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
+import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -169,7 +169,7 @@ public class ClanHallManager extends Folk
 					}
 					else
 					{
-						html.setFile("data/html/clanHallManager/tele" + getClanHall().getLocation() + getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLvl() + ".htm");
+						html.setFile("data/html/clanHallManager/tele" + getClanHall().getLocation() + getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLevel() + ".htm");
 					}
 					sendHtmlMessage(player, html);
 				}
@@ -186,7 +186,7 @@ public class ClanHallManager extends Folk
 					{
 						return;
 					}
-					final int valbuy = Integer.parseInt(st.nextToken()) + (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLvl() * 100000);
+					final int valbuy = Integer.parseInt(st.nextToken()) + (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLevel() * 100000);
 					showBuyWindow(player, valbuy);
 				}
 				else if (val.equalsIgnoreCase("support"))
@@ -198,7 +198,7 @@ public class ClanHallManager extends Folk
 					}
 					else
 					{
-						html.setFile("data/html/clanHallManager/support" + getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl() + ".htm");
+						html.setFile("data/html/clanHallManager/support" + getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLevel() + ".htm");
 						html.replace("%mp%", String.valueOf(getCurrentMp()));
 					}
 					sendHtmlMessage(player, html);
@@ -213,7 +213,7 @@ public class ClanHallManager extends Folk
 					html.setFile("data/html/clanHallManager/functions.htm");
 					if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP) != null)
 					{
-						html.replace("%xp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl() + "%");
+						html.replace("%xp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLevel() + "%");
 					}
 					else
 					{
@@ -221,7 +221,7 @@ public class ClanHallManager extends Folk
 					}
 					if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP) != null)
 					{
-						html.replace("%hp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() + "%");
+						html.replace("%hp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLevel() + "%");
 					}
 					else
 					{
@@ -229,7 +229,7 @@ public class ClanHallManager extends Folk
 					}
 					if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP) != null)
 					{
-						html.replace("%mp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() + "%");
+						html.replace("%mp_regen%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLevel() + "%");
 					}
 					else
 					{
@@ -457,7 +457,7 @@ public class ClanHallManager extends Folk
 						html.setFile("data/html/clanHallManager/edit_recovery" + getClanHall().getGrade() + ".htm");
 						if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP) != null)
 						{
-							html.replace("%hp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() + "%");
+							html.replace("%hp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLevel() + "%");
 							html.replace("%hpPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLease()));
 							html.replace("%hpDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getEndTime()));
 							html.replace("%hpRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getRate() / 86400000));
@@ -471,7 +471,7 @@ public class ClanHallManager extends Folk
 						}
 						if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP) != null)
 						{
-							html.replace("%exp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl() + "%");
+							html.replace("%exp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLevel() + "%");
 							html.replace("%expPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLease()));
 							html.replace("%expDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getEndTime()));
 							html.replace("%expRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getRate() / 86400000));
@@ -485,7 +485,7 @@ public class ClanHallManager extends Folk
 						}
 						if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP) != null)
 						{
-							html.replace("%mp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() + "%");
+							html.replace("%mp%", getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLevel() + "%");
 							html.replace("%mpPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLease()));
 							html.replace("%mpDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getEndTime()));
 							html.replace("%mpRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getRate() / 86400000));
@@ -659,7 +659,7 @@ public class ClanHallManager extends Folk
 						html.setFile("data/html/clanHallManager/edit_other" + getClanHall().getGrade() + ".htm");
 						if (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) != null)
 						{
-							html.replace("%tele%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLvl()));
+							html.replace("%tele%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLevel()));
 							html.replace("%telePrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLease()));
 							html.replace("%teleDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getEndTime()));
 							html.replace("%teleRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getRate() / 86400000));
@@ -673,7 +673,7 @@ public class ClanHallManager extends Folk
 						}
 						if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT) != null)
 						{
-							html.replace("%support%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl()));
+							html.replace("%support%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLevel()));
 							html.replace("%supportPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLease()));
 							html.replace("%supportDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getEndTime()));
 							html.replace("%supportRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getRate() / 86400000));
@@ -687,7 +687,7 @@ public class ClanHallManager extends Folk
 						}
 						if (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE) != null)
 						{
-							html.replace("%item%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLvl()));
+							html.replace("%item%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLevel()));
 							html.replace("%itemPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLease()));
 							html.replace("%itemDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getEndTime()));
 							html.replace("%itemRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getRate() / 86400000));
@@ -786,7 +786,7 @@ public class ClanHallManager extends Folk
 						html.setFile("data/html/clanHallManager/deco.htm");
 						if (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) != null)
 						{
-							html.replace("%curtain%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getLvl()));
+							html.replace("%curtain%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getLevel()));
 							html.replace("%curtainPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getLease()));
 							html.replace("%curtainDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getEndTime()));
 							html.replace("%curtainRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getRate() / 86400000));
@@ -800,7 +800,7 @@ public class ClanHallManager extends Folk
 						}
 						if (getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM) != null)
 						{
-							html.replace("%porch%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM).getLvl()));
+							html.replace("%porch%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM).getLevel()));
 							html.replace("%porchPrice%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM).getLease()));
 							html.replace("%porchDate%", format.format(getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM).getEndTime()));
 							html.replace("%porchRate%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_FRONTPLATEFORM).getRate() / 86400000));
@@ -868,11 +868,11 @@ public class ClanHallManager extends Folk
 							return;
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(1);
-						if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl() == 0)
+						if (getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLevel() == 0)
 						{
 							return;
 						}
-						html.setFile("data/html/clanHallManager/support" + getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl() + ".htm");
+						html.setFile("data/html/clanHallManager/support" + getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLevel() + ".htm");
 						html.replace("%mp%", String.valueOf(getCurrentMp()));
 						sendHtmlMessage(player, html);
 					}
@@ -1106,6 +1106,6 @@ public class ClanHallManager extends Folk
 	 */
 	private void revalidateDeco(Player player)
 	{
-		player.sendPacket(new ClanHallDecoration(ClanHallTable.getInstance().getClanHallByOwner(player.getClan())));
+		player.sendPacket(new AgitDecoInfo(ClanHallTable.getInstance().getClanHallByOwner(player.getClan())));
 	}
 }

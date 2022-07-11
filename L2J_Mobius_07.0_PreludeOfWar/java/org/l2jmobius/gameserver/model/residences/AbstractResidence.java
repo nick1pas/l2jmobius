@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -43,9 +44,11 @@ import org.l2jmobius.gameserver.model.zone.type.ResidenceZone;
 public abstract class AbstractResidence extends ListenersContainer implements INamable
 {
 	private static final Logger LOGGER = Logger.getLogger(AbstractResidence.class.getName());
+	
+	protected ClanHallGrade _grade = ClanHallGrade.GRADE_NONE;
+	
 	private final int _residenceId;
 	private String _name;
-	
 	private ResidenceZone _zone = null;
 	private final Map<Integer, ResidenceFunction> _functions = new ConcurrentHashMap<>();
 	private List<SkillLearn> _residentialSkills = new ArrayList<>();
@@ -65,6 +68,15 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	protected void initResidentialSkills()
 	{
 		_residentialSkills = SkillTreeData.getInstance().getAvailableResidentialSkills(getResidenceId());
+	}
+	
+	/**
+	 * Gets the grade of clan hall.
+	 * @return grade of this {@link ClanHall} in {@link ClanHallGrade} enum.
+	 */
+	public ClanHallGrade getGrade()
+	{
+		return _grade;
 	}
 	
 	public int getResidenceId()

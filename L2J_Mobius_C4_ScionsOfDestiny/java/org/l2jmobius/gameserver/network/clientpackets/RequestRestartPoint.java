@@ -153,7 +153,7 @@ public class RequestRestartPoint implements IClientIncomingPacket
 							loc = MapRegionData.getInstance().getTeleToLocation(_player, TeleportWhereType.CLANHALL);
 							if ((ClanHallTable.getInstance().getClanHallByOwner(_player.getClan()) != null) && (ClanHallTable.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
 							{
-								_player.restoreExp(ClanHallTable.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
+								_player.restoreExp(ClanHallTable.getInstance().getClanHallByOwner(_player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLevel());
 							}
 							break;
 						}

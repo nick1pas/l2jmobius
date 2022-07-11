@@ -64,7 +64,7 @@ public abstract class ClanHall
 	public class ClanHallFunction
 	{
 		final int _type;
-		private int _lvl;
+		private int _level;
 		protected int _fee;
 		protected int _tempFee;
 		final long _rate;
@@ -75,7 +75,7 @@ public abstract class ClanHall
 		public ClanHallFunction(int type, int lvl, int lease, int tempLease, long rate, long time, boolean cwh)
 		{
 			_type = type;
-			_lvl = lvl;
+			_level = lvl;
 			_fee = lease;
 			_tempFee = tempLease;
 			_rate = rate;
@@ -88,9 +88,9 @@ public abstract class ClanHall
 			return _type;
 		}
 		
-		public int getLvl()
+		public int getLevel()
 		{
-			return _lvl;
+			return _level;
 		}
 		
 		public int getLease()
@@ -108,9 +108,9 @@ public abstract class ClanHall
 			return _endDate;
 		}
 		
-		public void setLvl(int lvl)
+		public void setLevel(int level)
 		{
-			_lvl = lvl;
+			_level = level;
 		}
 		
 		public void setLease(int lease)
@@ -186,7 +186,7 @@ public abstract class ClanHall
 			{
 				ps.setInt(1, _clanHallId);
 				ps.setInt(2, _type);
-				ps.setInt(3, _lvl);
+				ps.setInt(3, _level);
 				ps.setInt(4, _fee);
 				ps.setLong(5, _rate);
 				ps.setLong(6, _endDate);
@@ -478,7 +478,7 @@ public abstract class ClanHall
 		}
 	}
 	
-	public boolean updateFunctions(Player player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(Player player, int type, int level, int lease, long rate, boolean addNew)
 	{
 		if ((player == null) || ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)))
 		{
@@ -486,21 +486,21 @@ public abstract class ClanHall
 		}
 		if (addNew)
 		{
-			_functions.put(type, new ClanHallFunction(type, lvl, lease, 0, rate, 0, false));
+			_functions.put(type, new ClanHallFunction(type, level, lease, 0, rate, 0, false));
 		}
-		else if ((lvl == 0) && (lease == 0))
+		else if ((level == 0) && (lease == 0))
 		{
 			removeFunction(type);
 		}
 		else if ((lease - _functions.get(type).getLease()) > 0)
 		{
 			_functions.remove(type);
-			_functions.put(type, new ClanHallFunction(type, lvl, lease, 0, rate, -1, false));
+			_functions.put(type, new ClanHallFunction(type, level, lease, 0, rate, -1, false));
 		}
 		else
 		{
 			_functions.get(type).setLease(lease);
-			_functions.get(type).setLvl(lvl);
+			_functions.get(type).setLevel(level);
 			_functions.get(type).dbSave();
 		}
 		return true;
