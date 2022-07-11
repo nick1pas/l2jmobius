@@ -22,6 +22,7 @@ import java.util.Map;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -47,7 +48,15 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 				final int status = DBSpawnManager.getInstance().getNpcStatusId(bossId).ordinal();
 				if (status != 3)
 				{
-					_statuses.put(bossId, status);
+					final Npc npc = DBSpawnManager.getInstance().getNpc(bossId);
+					if ((npc != null) && npc.isInCombat())
+					{
+						_statuses.put(bossId, 2);
+					}
+					else
+					{
+						_statuses.put(bossId, status);
+					}
 				}
 				else
 				{

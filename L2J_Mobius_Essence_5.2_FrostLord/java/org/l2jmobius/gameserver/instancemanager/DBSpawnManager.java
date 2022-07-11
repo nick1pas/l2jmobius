@@ -562,6 +562,16 @@ public class DBSpawnManager
 	}
 	
 	/**
+	 * Gets a specific NPC by id.
+	 * @param id The id of the NPC.
+	 * @return the Npc
+	 */
+	public Npc getNpc(int id)
+	{
+		return _npcs.get(id);
+	}
+	
+	/**
 	 * Gets the npcs.
 	 * @return the npcs
 	 */
