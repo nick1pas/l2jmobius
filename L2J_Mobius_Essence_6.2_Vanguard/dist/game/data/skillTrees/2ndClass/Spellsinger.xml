@@ -9,10 +9,10 @@
 		<skill skillName="Weakness" skillId="1164" skillLevel="6" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Wind Shackle" skillId="1206" skillLevel="6" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Hydro Blast" skillId="1235" skillLevel="1" getLevel="40" levelUpSp="75000">
-			<removeSkill id="1147" /> <!-- Fireball -->
-			<removeSkill id="1177" /> <!-- Wind Strike -->
-			<removeSkill id="1175" /> <!-- Aqua Swirl -->
-			<removeSkill id="1184" /> <!-- Ice Bolt -->
+			<removeSkill id="1147" onlyReplaceByLearn="true" /> <!-- Fireball -->
+			<removeSkill id="1177" onlyReplaceByLearn="true" /> <!-- Wind Strike -->
+			<removeSkill id="1175" onlyReplaceByLearn="true" /> <!-- Aqua Swirl -->
+			<removeSkill id="1184" onlyReplaceByLearn="true" /> <!-- Ice Bolt -->
 		</skill>
 		<skill skillName="Hydro Blast" skillId="1235" skillLevel="2" getLevel="40" levelUpSp="75000" />
 		<skill skillName="Clear Mind" skillId="1297" skillLevel="1" getLevel="40" levelUpSp="75000">
@@ -30,13 +30,13 @@
 		<skill skillName="Sleep" skillId="47462" skillLevel="1" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Sleep" skillId="47462" skillLevel="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Wizard's Attack Mastery" skillId="47463" skillLevel="1" getLevel="40" levelUpSp="84000">
-			<removeSkill id="249" /> <!-- Weapon Mastery -->
-			<removeSkill id="228" /> <!-- Fast Spell Casting -->
+			<removeSkill id="249" onlyReplaceByLearn="true" /> <!-- Weapon Mastery -->
+			<removeSkill id="228" onlyReplaceByLearn="true" /> <!-- Fast Spell Casting -->
 		</skill>
 		<skill skillName="Wizard's Armor Mastery" skillId="47464" skillLevel="1" getLevel="40" levelUpSp="84000">
-			<removeSkill id="47270" /> <!-- Anti Magic -->
-			<removeSkill id="244" /> <!-- Armor Mastery -->
-			<removeSkill id="234" /> <!-- Robe Mastery -->
+			<removeSkill id="47270" onlyReplaceByLearn="true" /> <!-- Anti Magic -->
+			<removeSkill id="244" onlyReplaceByLearn="true" /> <!-- Armor Mastery -->
+			<removeSkill id="234" onlyReplaceByLearn="true" /> <!-- Robe Mastery -->
 		</skill>
 		<skill skillName="Wizard's Recovery Mastery" skillId="47465" skillLevel="1" getLevel="40" levelUpSp="84000">
 			<removeSkill id="164" /> <!-- Quick Recovery -->

@@ -15,11 +15,10 @@
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="3" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="4" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="6" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="4" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="9" getLevel="40" levelUpSp="100000">
-			<removeSkill id="1177" /> <!-- Wind Strike -->
-			<removeSkill id="1184" /> <!-- Ice Bolt -->
-			<removeSkill id="1147" /> <!-- Fireball -->
+			<removeSkill id="1177" onlyReplaceByLearn="true" /> <!-- Wind Strike -->
+			<removeSkill id="1184" onlyReplaceByLearn="true" /> <!-- Ice Bolt -->
+			<removeSkill id="1147" onlyReplaceByLearn="true" /> <!-- Fireball -->
 		</skill>
 		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="1" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="2" getLevel="40" levelUpSp="100000" />
@@ -46,19 +45,19 @@
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="3" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="4" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Summoner's Attack Mastery" skillId="47918" skillLevel="1" getLevel="40" levelUpSp="100000">
-			<removeSkill id="249" /> <!-- Weapon Mastery -->
-			<removeSkill id="228" /> <!-- Fast Spell Casting -->
+			<removeSkill id="249" onlyReplaceByLearn="true" /> <!-- Weapon Mastery -->
+			<removeSkill id="228" onlyReplaceByLearn="true" /> <!-- Fast Spell Casting -->
 		</skill>
 		<skill skillName="Summoner's Armor Mastery" skillId="47919" skillLevel="1" getLevel="40" levelUpSp="100000">
-			<removeSkill id="47270" /> <!-- Anti Magic -->
-			<removeSkill id="244" /> <!-- Armor Mastery -->
-			<removeSkill id="234" /> <!-- Robe Mastery -->
-			<removeSkill id="258" /> <!-- Light Armor Mastery -->
+			<removeSkill id="47270" onlyReplaceByLearn="true" /> <!-- Anti Magic -->
+			<removeSkill id="244" onlyReplaceByLearn="true" /> <!-- Armor Mastery -->
+			<removeSkill id="234" onlyReplaceByLearn="true" /> <!-- Robe Mastery -->
+			<removeSkill id="258" onlyReplaceByLearn="true" /> <!-- Light Armor Mastery -->
 		</skill>
 		<skill skillName="Summoner's Recovery Mastery" skillId="47920" skillLevel="1" getLevel="40" levelUpSp="100000">
-			<removeSkill id="164" /> <!-- Quick Recovery -->
-			<removeSkill id="212" /> <!-- Fast HP Recovery -->
-			<removeSkill id="229" /> <!-- Fast Mana Recovery -->
+			<removeSkill id="164" onlyReplaceByLearn="true" /> <!-- Quick Recovery -->
+			<removeSkill id="212" onlyReplaceByLearn="true" /> <!-- Fast HP Recovery -->
+			<removeSkill id="229" onlyReplaceByLearn="true" /> <!-- Fast Mana Recovery -->
 		</skill>
 		<skill skillName="Higher Mana Gain" skillId="47466" skillLevel="2" getLevel="40" levelUpSp="100000" />
 
@@ -143,7 +142,6 @@
 		<skill skillName="Increased Power of Magic" skillId="1073" skillLevel="2" getLevel="50" levelUpSp="360000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="13" getLevel="50" levelUpSp="360000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="22" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="5" getLevel="50" levelUpSp="360000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="14" getLevel="50" levelUpSp="360000" />
 		<skill skillName="HP Recovery" skillId="45176" skillLevel="2" getLevel="50" levelUpSp="300000">
 			<item id="57" count="1000000" /> <!-- Adena -->
@@ -217,7 +215,6 @@
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="20" getLevel="60" levelUpSp="700000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="31" getLevel="60" levelUpSp="700000" />
 		<skill skillName="Weakness" skillId="1164" skillLevel="12" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Poison" skillId="1168" skillLevel="6" getLevel="60" levelUpSp="700000" />
 		<skill skillName="Blaze" skillId="1220" skillLevel="19" getLevel="60" levelUpSp="700000" />
 		<skill skillName="Summon Mew the Cat" skillId="1225" skillLevel="11" getLevel="60" levelUpSp="700000" />
 		<skill skillName="Summon Kai the Cat" skillId="1276" skillLevel="7" getLevel="60" levelUpSp="700000" />

@@ -12,9 +12,9 @@
 			<item id="57" count="500000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="1" getLevel="40" levelUpSp="65000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
 		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="2" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="3" getLevel="40" levelUpSp="65000" />
@@ -38,11 +38,11 @@
 		<skill skillName="Bloody Weapon" skillId="47285" skillLevel="3" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Freezing Weapon" skillId="47288" skillLevel="2" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Rogue Weapon Mastery" skillId="47331" skillLevel="1" getLevel="40" levelUpSp="65000">
-			<removeSkill id="208" /> <!-- Bow Mastery -->
-			<removeSkill id="209" /> <!-- Dagger Mastery -->
+			<removeSkill id="208" onlyReplaceByLearn="true" /> <!-- Bow Mastery -->
+			<removeSkill id="209" onlyReplaceByLearn="true" /> <!-- Dagger Mastery -->
 		</skill>
 		<skill skillName="Rogue Armor Mastery" skillId="47332" skillLevel="1" getLevel="40" levelUpSp="65000">
-			<removeSkill id="233" /> <!-- Light Armor Mastery -->
+			<removeSkill id="233" onlyReplaceByLearn="true" /> <!-- Light Armor Mastery -->
 		</skill>
 		<skill skillName="Acrobatic Body" skillId="47333" skillLevel="3" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Backstab" skillId="47334" skillLevel="1" getLevel="40" levelUpSp="65000" />
@@ -94,7 +94,7 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="14" getLevel="49" levelUpSp="160000" />
 
 		<skill skillName="Dark Elven Spirit" skillId="129" skillLevel="3" getLevel="50" levelUpSp="230000" />
-		<skill skillName="Critical Chance" skillId="137" skillLevel="1" getLevel="50" levelUpSp="230000" />
+		<skill skillName="Critical Rate" skillId="137" skillLevel="1" getLevel="50" levelUpSp="230000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="15" getLevel="50" levelUpSp="230000" />
 		<skill skillName="Shadow Step" skillId="821" skillLevel="1" getLevel="50" levelUpSp="230000" />
 		<skill skillName="Hide" skillId="922" skillLevel="1" getLevel="50" levelUpSp="230000">
@@ -174,7 +174,7 @@
 		<skill skillName="Power Break" skillId="115" skillLevel="10" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Hex" skillId="122" skillLevel="8" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Dark Elven Spirit" skillId="129" skillLevel="4" getLevel="60" levelUpSp="640000" />
-		<skill skillName="Critical Chance" skillId="137" skillLevel="2" getLevel="60" levelUpSp="640000" />
+		<skill skillName="Critical Rate" skillId="137" skillLevel="2" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLevel="25" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Sand Bomb" skillId="412" skillLevel="3" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Hide" skillId="922" skillLevel="2" getLevel="60" levelUpSp="640000" />

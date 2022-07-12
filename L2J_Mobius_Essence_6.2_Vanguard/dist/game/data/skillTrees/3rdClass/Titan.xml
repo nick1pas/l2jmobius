@@ -162,11 +162,11 @@
 			<item id="94499,95542" count="1" /> <!-- Spellbook: Titanic Weapon -->
 		</skill>
 		<skill skillName="Titanic Sweep" skillId="45416" skillLevel="1" getLevel="80" levelUpSp="13700000" autoGet="false">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="29" /> <!-- Iron Punch -->
-			<removeSkill id="245" /> <!-- Wild Sweep -->
-			<removeSkill id="36" /> <!-- Spinning Slasher -->
-			<removeSkill id="814" /> <!-- Full Swing -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="29" onlyReplaceByLearn="true" /> <!-- Iron Punch -->
+			<removeSkill id="245" onlyReplaceByLearn="true" /> <!-- Wild Sweep -->
+			<removeSkill id="36" onlyReplaceByLearn="true" /> <!-- Spinning Slasher -->
+			<removeSkill id="814" onlyReplaceByLearn="true" /> <!-- Full Swing -->
 			<item id="94500,95543" count="1" /> <!-- Spellbook: Titanic Sweep -->
 		</skill>
 		<skill skillName="Titanic Break" skillId="45417" skillLevel="1" getLevel="80" levelUpSp="13700000" autoGet="false">

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="2" parentClassId="1">
 		<skill skillName="Rising Attack" skillId="1" skillLevel="1" getLevel="40" levelUpSp="55000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
-			<removeSkill id="245" /> <!-- Wild Sweep -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
+			<removeSkill id="245" onlyReplaceByLearn="true" /> <!-- Wild Sweep -->
 		</skill>
 		<skill skillName="Rising Attack" skillId="1" skillLevel="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Rising Attack" skillId="1" skillLevel="3" getLevel="40" levelUpSp="55000" />
@@ -23,10 +23,10 @@
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Dual Sword Mastery" skillId="144" skillLevel="3" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="1" getLevel="40" levelUpSp="55000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
-			<removeSkill id="245" /> <!-- Wild Sweep -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
+			<removeSkill id="245" onlyReplaceByLearn="true" /> <!-- Wild Sweep -->
 		</skill>
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="3" getLevel="40" levelUpSp="55000" />

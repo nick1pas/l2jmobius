@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="24" parentClassId="22">
 		<skill skillName="Double Shot" skillId="19" skillLevel="1" getLevel="40" levelUpSp="85000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
 		</skill>
 		<skill skillName="Double Shot" skillId="19" skillLevel="2" getLevel="40" levelUpSp="85000" />
 		<skill skillName="Double Shot" skillId="19" skillLevel="3" getLevel="40" levelUpSp="85000" />
@@ -38,11 +38,11 @@
 		<skill skillName="Slowdown" skillId="47284" skillLevel="2" getLevel="40" levelUpSp="85000" />
 		<skill skillName="Acrobatic Body" skillId="47333" skillLevel="3" getLevel="40" levelUpSp="85000" />
 		<skill skillName="Archer's Weapon Mastery" skillId="47414" skillLevel="1" getLevel="40" levelUpSp="110000">
-			<removeSkill id="208" /> <!-- Bow Mastery -->
-			<removeSkill id="209" /> <!-- Dagger Mastery -->
+			<removeSkill id="208" onlyReplaceByLearn="true" /> <!-- Bow Mastery -->
+			<removeSkill id="209" onlyReplaceByLearn="true" /> <!-- Dagger Mastery -->
 		</skill>
 		<skill skillName="Archer's Armor Mastery" skillId="47415" skillLevel="1" getLevel="40" levelUpSp="110000">
-			<removeSkill id="233" /> <!-- Light Armor Mastery -->
+			<removeSkill id="233" onlyReplaceByLearn="true" /> <!-- Light Armor Mastery -->
 		</skill>
 		<skill skillName="Stun Shot" skillId="47422" skillLevel="1" getLevel="40" levelUpSp="110000" />
 

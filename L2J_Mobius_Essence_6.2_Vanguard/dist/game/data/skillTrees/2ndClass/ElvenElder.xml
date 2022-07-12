@@ -13,17 +13,17 @@
 		<skill skillName="Weakness" skillId="1164" skillLevel="6" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Wind Shackle" skillId="1206" skillLevel="6" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLevel="1" getLevel="40" levelUpSp="83000">
-			<removeSkill id="1011" /> <!-- Heal -->
+			<removeSkill id="1011" onlyReplaceByLearn="true" /> <!-- Heal -->
 		</skill>
 		<skill skillName="Greater Heal" skillId="1217" skillLevel="2" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLevel="3" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="1" getLevel="40" levelUpSp="83000">
-			<removeSkill id="1015" /> <!-- Battle Heal -->
+			<removeSkill id="1015" onlyReplaceByLearn="true" /> <!-- Battle Heal -->
 		</skill>
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="2" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Battle Heal" skillId="1218" skillLevel="3" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="1" getLevel="40" levelUpSp="83000">
-			<removeSkill id="1027" /> <!-- Group Heal -->
+			<removeSkill id="1027" onlyReplaceByLearn="true" /> <!-- Group Heal -->
 		</skill>
 		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="2" getLevel="40" levelUpSp="83000" />
 		<skill skillName="Greater Group Heal" skillId="1219" skillLevel="3" getLevel="40" levelUpSp="83000" />

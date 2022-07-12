@@ -46,9 +46,9 @@
 			<item id="57" count="1000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Guard Crush" skillId="45187" skillLevel="1" getLevel="40" levelUpSp="120000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
 		</skill>
 		<skill skillName="Sword Symphony" skillId="45391" skillLevel="1" getLevel="40" levelUpSp="120000">
 			<item id="94319,95524" count="1" /> <!-- Spellbook: Sword Symphony -->

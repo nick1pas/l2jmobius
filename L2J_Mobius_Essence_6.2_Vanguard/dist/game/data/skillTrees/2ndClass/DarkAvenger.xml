@@ -18,9 +18,9 @@
 		<skill skillName="Honor" skillId="197" skillLevel="1" getLevel="40" levelUpSp="62000" />
 		<skill skillName="Summon Dark Panther" skillId="283" skillLevel="1" getLevel="40" levelUpSp="62000" />
 		<skill skillName="Shield Strike" skillId="984" skillLevel="1" getLevel="40" levelUpSp="62000">
-			<removeSkill id="3" /> <!-- Power Strike -->
-			<removeSkill id="16" /> <!-- Mortal Blow -->
-			<removeSkill id="56" /> <!-- Power Shot -->
+			<removeSkill id="3" onlyReplaceByLearn="true" /> <!-- Power Strike -->
+			<removeSkill id="16" onlyReplaceByLearn="true" /> <!-- Mortal Blow -->
+			<removeSkill id="56" onlyReplaceByLearn="true" /> <!-- Power Shot -->
 		</skill>
 		<skill skillName="Shield" skillId="1040" skillLevel="3" getLevel="40" levelUpSp="80000" />
 		<skill skillName="Might" skillId="1068" skillLevel="3" getLevel="40" levelUpSp="80000" />
@@ -38,20 +38,20 @@
 		</skill>
 		<skill skillName="Dark Strike" skillId="45257" skillLevel="1" getLevel="40" levelUpSp="62000" />
 		<skill skillName="Knight's Magic Resistance" skillId="47296" skillLevel="1" getLevel="40" levelUpSp="62000">
-			<removeSkill id="147" /> <!-- Magic Resistance -->
+			<removeSkill id="147" onlyReplaceByLearn="true" /> <!-- Magic Resistance -->
 		</skill>
 		<skill skillName="Knight's Armor Mastery" skillId="47297" skillLevel="1" getLevel="40" levelUpSp="62000">
-			<removeSkill id="232" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="232" onlyReplaceByLearn="true" /> <!-- Heavy Armor Mastery -->
 		</skill>
 		<skill skillName="Knight's Weapon Mastery" skillId="47298" skillLevel="1" getLevel="40" levelUpSp="62000">
-			<removeSkill id="217" /> <!-- Sword / Blunt Weapon Mastery -->
+			<removeSkill id="217" onlyReplaceByLearn="true" /> <!-- Sword / Blunt Weapon Mastery -->
 		</skill>
 
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="4" getLevel="41" levelUpSp="72000" />
 		<skill skillName="Aggression" skillId="28" skillLevel="16" getLevel="41" levelUpSp="72000" />
 		<skill skillName="Emergency Rescue" skillId="70" skillLevel="11" getLevel="41" levelUpSp="72000" />
 		<skill skillName="Fortitude" skillId="335" skillLevel="1" getLevel="41" levelUpSp="78000">
-			<removeSkill id="112" /> <!-- Deflect Arrow -->
+			<removeSkill id="112" onlyReplaceByLearn="true" /> <!-- Deflect Arrow -->
 		</skill>
 
 		<skill skillName="Aggression Aura" skillId="18" skillLevel="5" getLevel="42" levelUpSp="72000" />
