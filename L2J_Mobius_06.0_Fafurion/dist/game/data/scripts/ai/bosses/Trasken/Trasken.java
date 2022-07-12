@@ -324,7 +324,7 @@ public class Trasken extends AbstractNpcAI
 		}
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(TRASKEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
+		final int status = GrandBossManager.getInstance().getStatus(TRASKEN);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -334,12 +334,12 @@ public class Trasken extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+				GrandBossManager.getInstance().setStatus(TRASKEN, ALIVE);
 			}
 		}
 		else if (status != ALIVE)
 		{
-			GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+			GrandBossManager.getInstance().setStatus(TRASKEN, ALIVE);
 		}
 	}
 	
@@ -398,7 +398,7 @@ public class Trasken extends AbstractNpcAI
 		}
 		_zoneLair.oustAllPlayers();
 		_zoneLair2.oustAllPlayers();
-		GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+		GrandBossManager.getInstance().setStatus(TRASKEN, ALIVE);
 	}
 	
 	@Override
@@ -575,7 +575,7 @@ public class Trasken extends AbstractNpcAI
 		{
 			case "unlock_trasken":
 			{
-				GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+				GrandBossManager.getInstance().setStatus(TRASKEN, ALIVE);
 				break;
 			}
 			case "exitEarthWyrnCave":
@@ -604,7 +604,7 @@ public class Trasken extends AbstractNpcAI
 				ThreadPool.schedule(npc::decayMe, 10000);
 				cancelQuestTimer("finish", npc, null);
 				
-				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
+				GrandBossManager.getInstance().setStatus(TRASKEN, DEAD);
 				final long respawnTime = (Config.TRASKEN_SPAWN_INTERVAL + getRandom(-Config.TRASKEN_SPAWN_RANDOM, Config.TRASKEN_SPAWN_RANDOM)) * 3600000;
 				final StatSet info = GrandBossManager.getInstance().getStatSet(TRASKEN);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);

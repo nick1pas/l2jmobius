@@ -223,7 +223,7 @@ public class Lindvior extends AbstractNpcAI
 		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LINDVIOR_RAID);
-		final int status = GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID);
+		final int status = GrandBossManager.getInstance().getStatus(LINDVIOR_RAID);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -235,14 +235,14 @@ public class Lindvior extends AbstractNpcAI
 			{
 				_lindviorForSpawn = (GrandBoss) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
-				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
+				GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, ALIVE);
 			}
 		}
 		else
 		{
 			_lindviorForSpawn = (GrandBoss) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
-			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
+			GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, ALIVE);
 		}
 	}
 	
@@ -428,9 +428,9 @@ public class Lindvior extends AbstractNpcAI
 		_zoneLair.oustAllPlayers();
 		_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, false));
 		cancelQuestTimers("attack_generator");
-		if (GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID) != 3)
+		if (GrandBossManager.getInstance().getStatus(LINDVIOR_RAID) != 3)
 		{
-			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
+			GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, ALIVE);
 		}
 	}
 	
@@ -660,7 +660,7 @@ public class Lindvior extends AbstractNpcAI
 				cancelQuestTimers("attack_generator");
 				_lindviorfake.setDead(true);
 				_lindviorfake.deleteMe();
-				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, FIGHTING);
+				GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, FIGHTING);
 				_lionel = addSpawn(LIONEL_HUNTER, 42630, -48231, -792, 855, false, 0, false);
 				
 				_lindvior = (GrandBoss) addSpawn(LINDVIOR_GROUND, CENTER_LOCATION, false, 0, true);
@@ -682,7 +682,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				_lindviorForSpawn = (GrandBoss) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
-				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
+				GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, ALIVE);
 				break;
 			}
 			case "stage_1_activate_generator":
@@ -851,7 +851,7 @@ public class Lindvior extends AbstractNpcAI
 			_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, true));
 			_lionel.deleteMe();
 			
-			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, DEAD);
+			GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, DEAD);
 			final long respawnTime = (Config.LINDVIOR_SPAWN_INTERVAL + getRandom(-Config.LINDVIOR_SPAWN_RANDOM, Config.LINDVIOR_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(LINDVIOR_RAID);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);

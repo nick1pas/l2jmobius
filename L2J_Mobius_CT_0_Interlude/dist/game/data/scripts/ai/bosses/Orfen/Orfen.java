@@ -88,7 +88,7 @@ public class Orfen extends AbstractNpcAI
 		_hasTeleported = false;
 		ZONE = GrandBossManager.getInstance().getZone(POS[0]);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
-		if (GrandBossManager.getInstance().getBossStatus(ORFEN) == DEAD)
+		if (GrandBossManager.getInstance().getStatus(ORFEN) == DEAD)
 		{
 			// load the unlock date and time for Orfen from DB
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -116,7 +116,7 @@ public class Orfen extends AbstractNpcAI
 					loc = POS[3];
 				}
 				final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+				GrandBossManager.getInstance().setStatus(ORFEN, ALIVE);
 				spawnBoss(orfen);
 			}
 		}
@@ -187,7 +187,7 @@ public class Orfen extends AbstractNpcAI
 				loc = POS[3];
 			}
 			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, loc, false, 0);
-			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+			GrandBossManager.getInstance().setStatus(ORFEN, ALIVE);
 			spawnBoss(orfen);
 		}
 		else if (event.equalsIgnoreCase("check_orfen_pos"))
@@ -319,7 +319,7 @@ public class Orfen extends AbstractNpcAI
 		if (npc.getId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
+			GrandBossManager.getInstance().setStatus(ORFEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("orfen_unlock", respawnTime, null, null);
@@ -332,7 +332,7 @@ public class Orfen extends AbstractNpcAI
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == RAIKEL_LEOS))
+		else if ((GrandBossManager.getInstance().getStatus(ORFEN) == ALIVE) && (npc.getId() == RAIKEL_LEOS))
 		{
 			MINIONS.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);

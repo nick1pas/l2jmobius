@@ -117,7 +117,7 @@ public class Kelbim extends AbstractNpcAI
 		
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(KELBIM);
-		final int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
+		final int status = GrandBossManager.getInstance().getStatus(KELBIM);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -129,14 +129,14 @@ public class Kelbim extends AbstractNpcAI
 			{
 				openDoor(DOOR1, 0);
 				openDoor(DOOR2, 0);
-				GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
+				GrandBossManager.getInstance().setStatus(KELBIM, ALIVE);
 			}
 		}
 		else if (status != ALIVE)
 		{
 			openDoor(DOOR1, 0);
 			openDoor(DOOR2, 0);
-			GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
+			GrandBossManager.getInstance().setStatus(KELBIM, ALIVE);
 		}
 	}
 	
@@ -147,7 +147,7 @@ public class Kelbim extends AbstractNpcAI
 		{
 			case "unlock_kelbim":
 			{
-				GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
+				GrandBossManager.getInstance().setStatus(KELBIM, ALIVE);
 				Broadcast.toAllOnlinePlayers(new Earthquake(-55754, 59903, -269, 20, 10));
 				openDoor(DOOR1, 0);
 				openDoor(DOOR2, 0);
@@ -157,7 +157,7 @@ public class Kelbim extends AbstractNpcAI
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
+					GrandBossManager.getInstance().setStatus(KELBIM, ALIVE);
 					for (Creature creature : ZONE.getCharactersInside())
 					{
 						if (creature != null)
@@ -183,7 +183,7 @@ public class Kelbim extends AbstractNpcAI
 			case "stage_1_start":
 			{
 				_bossStage = 1;
-				GrandBossManager.getInstance().setBossStatus(KELBIM, FIGHTING);
+				GrandBossManager.getInstance().setStatus(KELBIM, FIGHTING);
 				playMovie(ZONE.getPlayersInside(), Movie.SC_KELBIM_OPENING);
 				startQuestTimer("stage_1_kelbim_spawn", 25000, null, null);
 				break;
@@ -307,7 +307,7 @@ public class Kelbim extends AbstractNpcAI
 	{
 		if (npc.getId() == ENTER_DEVICE)
 		{
-			final int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
+			final int status = GrandBossManager.getInstance().getStatus(KELBIM);
 			if (status > ALIVE)
 			{
 				return "34052-1.html";
@@ -349,7 +349,7 @@ public class Kelbim extends AbstractNpcAI
 				{
 					if ((status == ALIVE) && member.isInsideRadius3D(npc, 1000))
 					{
-						GrandBossManager.getInstance().setBossStatus(KELBIM, WAITING);
+						GrandBossManager.getInstance().setStatus(KELBIM, WAITING);
 						startQuestTimer("stage_1_start", Config.KELBIM_WAIT_TIME * 60 * 1000, null, null);
 						member.teleToLocation(KELBIM_LOCATION, true);
 					}
@@ -430,7 +430,7 @@ public class Kelbim extends AbstractNpcAI
 		notifyEvent("cancel_timers", null, null);
 		closeDoor(DOOR1, 0);
 		closeDoor(DOOR2, 0);
-		GrandBossManager.getInstance().setBossStatus(KELBIM, DEAD);
+		GrandBossManager.getInstance().setStatus(KELBIM, DEAD);
 		final long respawnTime = (Config.KELBIM_SPAWN_INTERVAL + getRandom(-Config.KELBIM_SPAWN_RANDOM, Config.KELBIM_SPAWN_RANDOM)) * 3600000;
 		final StatSet info = GrandBossManager.getInstance().getStatSet(KELBIM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);

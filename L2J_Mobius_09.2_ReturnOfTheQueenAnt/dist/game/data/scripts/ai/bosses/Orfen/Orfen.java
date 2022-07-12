@@ -84,7 +84,7 @@ public class Orfen extends AbstractNpcAI
 		};
 		registerMobs(mobs);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(ORFEN);
+		final int status = GrandBossManager.getInstance().getStatus(ORFEN);
 		if (status == DEAD)
 		{
 			// load the unlock date and time for Orfen from DB
@@ -99,7 +99,7 @@ public class Orfen extends AbstractNpcAI
 			{
 				// the time has already expired while the server was offline. Immediately spawn Orfen.
 				final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, POS, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+				GrandBossManager.getInstance().setStatus(ORFEN, ALIVE);
 				spawnBoss(orfen);
 			}
 		}
@@ -146,7 +146,7 @@ public class Orfen extends AbstractNpcAI
 		if (event.equalsIgnoreCase("orfen_unlock"))
 		{
 			final GrandBoss orfen = (GrandBoss) addSpawn(ORFEN, POS, false, 0);
-			GrandBossManager.getInstance().setBossStatus(ORFEN, ALIVE);
+			GrandBossManager.getInstance().setStatus(ORFEN, ALIVE);
 			spawnBoss(orfen);
 		}
 		else if (event.equalsIgnoreCase("check_minion_loc"))
@@ -302,7 +302,7 @@ public class Orfen extends AbstractNpcAI
 		if (npc.getId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
+			GrandBossManager.getInstance().setStatus(ORFEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.ORFEN_SPAWN_INTERVAL + getRandom(-Config.ORFEN_SPAWN_RANDOM, Config.ORFEN_SPAWN_RANDOM);
 			respawnTime *= 3600000;
@@ -315,7 +315,7 @@ public class Orfen extends AbstractNpcAI
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(ORFEN) == ALIVE) && (npc.getId() == ARIMA))
+		else if ((GrandBossManager.getInstance().getStatus(ORFEN) == ALIVE) && (npc.getId() == ARIMA))
 		{
 			_minions.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);

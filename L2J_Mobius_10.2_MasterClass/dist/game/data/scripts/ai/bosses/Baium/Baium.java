@@ -642,7 +642,7 @@ public class Baium extends AbstractNpcAI
 	
 	private int getStatus()
 	{
-		return GrandBossManager.getInstance().getBossStatus(BAIUM);
+		return GrandBossManager.getInstance().getStatus(BAIUM);
 	}
 	
 	private void addBoss(GrandBoss grandboss)
@@ -652,7 +652,7 @@ public class Baium extends AbstractNpcAI
 	
 	private void setStatus(int status)
 	{
-		GrandBossManager.getInstance().setBossStatus(BAIUM, status);
+		GrandBossManager.getInstance().setStatus(BAIUM, status);
 	}
 	
 	private void setRespawn(long respawnTime)

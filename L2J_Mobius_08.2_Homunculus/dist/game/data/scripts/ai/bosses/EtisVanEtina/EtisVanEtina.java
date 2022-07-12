@@ -328,7 +328,7 @@ public class EtisVanEtina extends AbstractNpcAI
 		
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ETIS_VAN_ETINA1);
-		final int status = GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1);
+		final int status = GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -338,12 +338,12 @@ public class EtisVanEtina extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+				GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, ALIVE);
 			}
 		}
 		else
 		{
-			GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+			GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, ALIVE);
 		}
 	}
 	
@@ -354,16 +354,16 @@ public class EtisVanEtina extends AbstractNpcAI
 		{
 			case "unlock_etina":
 			{
-				GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+				GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, ALIVE);
 				break;
 			}
 			case "check_activity_task":
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					if (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != ALIVE)
+					if (GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1) != ALIVE)
 					{
-						GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+						GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, ALIVE);
 					}
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
 					{
@@ -381,7 +381,7 @@ public class EtisVanEtina extends AbstractNpcAI
 					}
 					startQuestTimer("end_etina", 2000, null, null);
 				}
-				else if (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) == FIGHTING)
+				else if (GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1) == FIGHTING)
 				{
 					startQuestTimer("check_activity_task", 60000, null, null);
 				}
@@ -505,9 +505,9 @@ public class EtisVanEtina extends AbstractNpcAI
 		closeDoor(DOOR2, 0);
 		closeDoor(DOOR3, 0);
 		closeDoor(DOOR4, 0);
-		if ((GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != DEAD) && (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != ALIVE))
+		if ((GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1) != DEAD) && (GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1) != ALIVE))
 		{
-			GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+			GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, ALIVE);
 		}
 	}
 	
@@ -680,7 +680,7 @@ public class EtisVanEtina extends AbstractNpcAI
 				_collapseTask.cancel(true);
 				_collapseTask = null;
 			}
-			if ((GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) == WAITING) && !_spawned)
+			if ((GrandBossManager.getInstance().getStatus(ETIS_VAN_ETINA1) == WAITING) && !_spawned)
 			{
 				_spawned = true;
 				_spawns.clear();
@@ -696,7 +696,7 @@ public class EtisVanEtina extends AbstractNpcAI
 				_paragon = (Monster) addSpawn(PARAGON, PARAGON_LOC);
 				_paragon.setInvul(true);
 				BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_T_DEFEAT_PARAGON_WHILE_PARAGON_S_MINIONS_ARE_ALIVE, ExShowScreenMessage.TOP_CENTER, 7000, true)));
-				GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, FIGHTING);
+				GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, FIGHTING);
 				_lastAction = System.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null);
 			}
@@ -726,7 +726,7 @@ public class EtisVanEtina extends AbstractNpcAI
 		{
 			notifyEvent("cancel_timers", null, null);
 			BOSS_ZONE.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_ETIS_VAN_ETINA_ENDING));
-			GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, DEAD);
+			GrandBossManager.getInstance().setStatus(ETIS_VAN_ETINA1, DEAD);
 			final long respawnTime = (Config.ETINA_SPAWN_INTERVAL + getRandom(-Config.ETINA_SPAWN_RANDOM, Config.ETINA_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ETIS_VAN_ETINA1);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);

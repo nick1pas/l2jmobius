@@ -85,7 +85,7 @@ public class QueenAnt extends Quest
 		}
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
-		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
+		final Integer status = GrandBossManager.getInstance().getStatus(QUEEN);
 		
 		switch (status)
 		{
@@ -99,7 +99,7 @@ public class QueenAnt extends Quest
 				else
 				{
 					final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-					GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
+					GrandBossManager.getInstance().setStatus(QUEEN, LIVE);
 					GrandBossManager.getInstance().addBoss(queen);
 					spawnBoss(queen);
 				}
@@ -118,7 +118,7 @@ public class QueenAnt extends Quest
 			default:
 			{
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
+				GrandBossManager.getInstance().setStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);
 				break;
@@ -151,7 +151,7 @@ public class QueenAnt extends Quest
 			case QUEEN_SPAWN:
 			{
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN, -21610, 181594, -5734, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN, LIVE);
+				GrandBossManager.getInstance().setStatus(QUEEN, LIVE);
 				GrandBossManager.getInstance().addBoss(queen);
 				spawnBoss(queen);
 				break;
@@ -334,11 +334,11 @@ public class QueenAnt extends Quest
 	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
+		final Integer status = GrandBossManager.getInstance().getStatus(QUEEN);
 		if (npcId == QUEEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
+			GrandBossManager.getInstance().setStatus(QUEEN, DEAD);
 			// Time is 36hour +/- 17hour.
 			final long respawnTime = (Config.QA_RESP_FIRST + getRandom(Config.QA_RESP_SECOND)) * 3600000;
 			startQuestTimer("QUEEN_SPAWN", respawnTime, null, null);

@@ -77,12 +77,12 @@ public class ExTeleportToRaidPosition implements IClientIncomingPacket
 		}
 		
 		final NpcTemplate template = NpcData.getInstance().getTemplate(_raidId);
-		if (template.isType("GrandBoss") && (GrandBossManager.getInstance().getBossStatus(_raidId) != 0))
+		if (template.isType("GrandBoss") && (GrandBossManager.getInstance().getStatus(_raidId) != 0))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;
 		}
-		else if (template.isType("RaidBoss") && (DBSpawnManager.getInstance().getNpcStatusId(_raidId) != RaidBossStatus.ALIVE))
+		else if (template.isType("RaidBoss") && (DBSpawnManager.getInstance().getStatus(_raidId) != RaidBossStatus.ALIVE))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;

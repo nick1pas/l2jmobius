@@ -91,7 +91,7 @@ public class ValakasTeleporters extends AbstractNpcAI
 			{
 				if (valakasAI() != null)
 				{
-					final int status = GrandBossManager.getInstance().getBossStatus(29028);
+					final int status = GrandBossManager.getInstance().getStatus(29028);
 					if ((status == 0) || (status == 1))
 					{
 						if (playerCount >= 200)
@@ -114,7 +114,7 @@ public class ValakasTeleporters extends AbstractNpcAI
 							{
 								final GrandBoss valakas = GrandBossManager.getInstance().getBoss(29028);
 								valakasAI().startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME * 60000, valakas, null);
-								GrandBossManager.getInstance().setBossStatus(29028, 1);
+								GrandBossManager.getInstance().setStatus(29028, 1);
 							}
 						}
 						else

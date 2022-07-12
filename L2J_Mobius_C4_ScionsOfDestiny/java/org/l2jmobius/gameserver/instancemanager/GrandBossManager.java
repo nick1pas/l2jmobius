@@ -217,12 +217,12 @@ public class GrandBossManager
 		return temp.getZoneName().equalsIgnoreCase(zoneType);
 	}
 	
-	public Integer getBossStatus(int bossId)
+	public Integer getStatus(int bossId)
 	{
 		return _bossStatus.get(bossId);
 	}
 	
-	public void setBossStatus(int bossId, int status)
+	public void setStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);
 		LOGGER.info("Updated " + NpcTable.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status);

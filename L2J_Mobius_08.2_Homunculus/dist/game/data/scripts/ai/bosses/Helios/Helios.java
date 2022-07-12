@@ -147,7 +147,7 @@ public class Helios extends AbstractNpcAI
 		_bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
-		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
+		final int status = GrandBossManager.getInstance().getStatus(HELIOS3);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -159,14 +159,14 @@ public class Helios extends AbstractNpcAI
 			{
 				_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
-				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
+				GrandBossManager.getInstance().setStatus(HELIOS3, ALIVE);
 			}
 		}
 		else
 		{
 			_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_tempHelios);
-			GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
+			GrandBossManager.getInstance().setStatus(HELIOS3, ALIVE);
 		}
 	}
 	
@@ -329,14 +329,14 @@ public class Helios extends AbstractNpcAI
 			{
 				_tempHelios = (GrandBoss) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
-				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
+				GrandBossManager.getInstance().setStatus(HELIOS3, ALIVE);
 				break;
 			}
 			case "beginning":
 			{
-				if (GrandBossManager.getInstance().getBossStatus(HELIOS3) == WAITING)
+				if (GrandBossManager.getInstance().getStatus(HELIOS3) == WAITING)
 				{
-					GrandBossManager.getInstance().setBossStatus(HELIOS3, FIGHTING);
+					GrandBossManager.getInstance().setStatus(HELIOS3, FIGHTING);
 					_bossInstance = addSpawn(HELIOS1, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
 					for (SpawnHolder spawn : SPAWNS_MINIONS)
 					{
@@ -348,12 +348,12 @@ public class Helios extends AbstractNpcAI
 			}
 			case "resetRaid":
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
+				final int status = GrandBossManager.getInstance().getStatus(HELIOS3);
 				if ((status > ALIVE) && (status < DEAD))
 				{
 					_bossZone.oustAllPlayers();
 					Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_HEROES_DRAINED_OF_THEIR_POWERS_HAVE_BEEN_BANISHED_FROM_THE_THRONE_OF_HELIOS_BY_HELIOS_POWERS, ExShowScreenMessage.TOP_CENTER, 10000, true));
-					GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
+					GrandBossManager.getInstance().setStatus(HELIOS3, ALIVE);
 					clean();
 				}
 				break;
@@ -481,7 +481,7 @@ public class Helios extends AbstractNpcAI
 			{
 				clean();
 				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
-				GrandBossManager.getInstance().setBossStatus(HELIOS3, DEAD);
+				GrandBossManager.getInstance().setStatus(HELIOS3, DEAD);
 				final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
 				final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
 				info.set("respawn_time", System.currentTimeMillis() + respawnTime);

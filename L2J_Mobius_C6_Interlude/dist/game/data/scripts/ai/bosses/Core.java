@@ -99,7 +99,7 @@ public class Core extends Quest
 		
 		_firstAttacked = false;
 		final StatSet info = GrandBossManager.getInstance().getStatSet(CORE);
-		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
+		if (GrandBossManager.getInstance().getStatus(CORE) == DEAD)
 		{
 			// Load the unlock date and time for Core from DB.
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -112,7 +112,7 @@ public class Core extends Quest
 			{
 				// The time has already expired while the server was offline. Immediately spawn Core.
 				final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
+				GrandBossManager.getInstance().setStatus(CORE, ALIVE);
 				spawnBoss(core);
 			}
 		}
@@ -151,11 +151,11 @@ public class Core extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
+		final Integer status = GrandBossManager.getInstance().getStatus(CORE);
 		if (event.equals("core_unlock"))
 		{
 			final GrandBoss core = (GrandBoss) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
-			GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
+			GrandBossManager.getInstance().setStatus(CORE, ALIVE);
 			spawnBoss(core);
 		}
 		else if (status == null)
@@ -216,7 +216,7 @@ public class Core extends Quest
 			_firstAttacked = false;
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
-			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
+			GrandBossManager.getInstance().setStatus(CORE, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.CORE_RESP_FIRST + getRandom(Config.CORE_RESP_SECOND)) * 3600000;
 			startQuestTimer("core_unlock", respawnTime, null, null);
@@ -227,7 +227,7 @@ public class Core extends Quest
 			startQuestTimer("despawn_minions", 20000, null, null);
 			cancelQuestTimers("spawn_minion");
 		}
-		else if ((GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE) && _minions.contains(npc))
+		else if ((GrandBossManager.getInstance().getStatus(CORE) == ALIVE) && _minions.contains(npc))
 		{
 			_minions.remove(npc);
 			startQuestTimer("spawn_minion", Config.CORE_RESP_MINION * 1000, npc, null);

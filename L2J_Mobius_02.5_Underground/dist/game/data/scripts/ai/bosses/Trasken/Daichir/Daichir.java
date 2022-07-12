@@ -54,11 +54,11 @@ public class Daichir extends AbstractNpcAI
 	{
 		if (event.equals("enterEarthWyrnCave"))
 		{
-			final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
+			final int status = GrandBossManager.getInstance().getStatus(TRASKEN);
 			if (player.isGM())
 			{
 				player.teleToLocation(ENTER_LOCATION, true);
-				GrandBossManager.getInstance().setBossStatus(TRASKEN, FIGHTING);
+				GrandBossManager.getInstance().setStatus(TRASKEN, FIGHTING);
 			}
 			else
 			{
@@ -107,7 +107,7 @@ public class Daichir extends AbstractNpcAI
 					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
 						member.teleToLocation(ENTER_LOCATION, true);
-						GrandBossManager.getInstance().setBossStatus(TRASKEN, FIGHTING);
+						GrandBossManager.getInstance().setStatus(TRASKEN, FIGHTING);
 					}
 				}
 			}

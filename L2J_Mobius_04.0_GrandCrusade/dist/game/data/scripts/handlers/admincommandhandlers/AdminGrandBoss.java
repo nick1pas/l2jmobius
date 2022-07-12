@@ -204,7 +204,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	{
 		if (Arrays.asList(ANTHARAS, VALAKAS, BAIUM, QUEENANT, ORFEN, CORE).contains(grandBossId))
 		{
-			final int bossStatus = GrandBossManager.getInstance().getBossStatus(grandBossId);
+			final int bossStatus = GrandBossManager.getInstance().getStatus(grandBossId);
 			NoRestartZone bossZone = null;
 			String textColor = null;
 			String text = null;

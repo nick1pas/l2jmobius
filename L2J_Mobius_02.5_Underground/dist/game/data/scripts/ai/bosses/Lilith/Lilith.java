@@ -367,7 +367,7 @@ public class Lilith extends AbstractNpcAI
 		
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LILITH);
-		final int status = GrandBossManager.getInstance().getBossStatus(LILITH);
+		final int status = GrandBossManager.getInstance().getStatus(LILITH);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -377,12 +377,12 @@ public class Lilith extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
+				GrandBossManager.getInstance().setStatus(LILITH, ALIVE);
 			}
 		}
 		else if (status != ALIVE)
 		{
-			GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
+			GrandBossManager.getInstance().setStatus(LILITH, ALIVE);
 		}
 	}
 	
@@ -393,14 +393,14 @@ public class Lilith extends AbstractNpcAI
 		{
 			case "unlock_lilith":
 			{
-				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
+				GrandBossManager.getInstance().setStatus(LILITH, ALIVE);
 				break;
 			}
 			case "check_activity_task":
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
+					GrandBossManager.getInstance().setStatus(LILITH, ALIVE);
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
 					{
 						if (creature != null)
@@ -489,9 +489,9 @@ public class Lilith extends AbstractNpcAI
 					}
 					remnant.deleteMe();
 				}
-				if (GrandBossManager.getInstance().getBossStatus(LILITH) != DEAD)
+				if (GrandBossManager.getInstance().getStatus(LILITH) != DEAD)
 				{
-					GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
+					GrandBossManager.getInstance().setStatus(LILITH, ALIVE);
 				}
 				break;
 			}
@@ -509,7 +509,7 @@ public class Lilith extends AbstractNpcAI
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == LILITH_CUBIC))
 		{
-			final int _lilithStatus = GrandBossManager.getInstance().getBossStatus(LILITH);
+			final int _lilithStatus = GrandBossManager.getInstance().getStatus(LILITH);
 			if ((npc.getId() == ENTER_CUBIC) && (_lilithStatus > ALIVE))
 			{
 				return "31118-01.html";
@@ -567,7 +567,7 @@ public class Lilith extends AbstractNpcAI
 			
 			if ((_lilithStatus == ALIVE) && (npc.getId() == ENTER_CUBIC))
 			{
-				GrandBossManager.getInstance().setBossStatus(LILITH, WAITING);
+				GrandBossManager.getInstance().setStatus(LILITH, WAITING);
 				_spawns.clear();
 				for (SpawnHolder spawn : SPAWNS)
 				{
@@ -580,7 +580,7 @@ public class Lilith extends AbstractNpcAI
 			}
 			else if ((_lilithStatus == WAITING) && (npc.getId() == LILITH_CUBIC))
 			{
-				GrandBossManager.getInstance().setBossStatus(LILITH, FIGHTING);
+				GrandBossManager.getInstance().setStatus(LILITH, FIGHTING);
 				// Spawn the rb
 				_lilithBoss = addSpawn(LILITH, 185062, -9605, -5499, 15640, false, 0);
 				GrandBossManager.getInstance().addBoss((GrandBoss) _lilithBoss);
@@ -626,7 +626,7 @@ public class Lilith extends AbstractNpcAI
 			notifyEvent("cancel_timers", null, null);
 			addSpawn(EXIST_CUBIC, 185062, -9605, -5499, 15640, false, 900000); // 15min
 			
-			GrandBossManager.getInstance().setBossStatus(LILITH, DEAD);
+			GrandBossManager.getInstance().setStatus(LILITH, DEAD);
 			final long respawnTime = getRespawnTime();
 			final StatSet info = GrandBossManager.getInstance().getStatSet(LILITH);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);

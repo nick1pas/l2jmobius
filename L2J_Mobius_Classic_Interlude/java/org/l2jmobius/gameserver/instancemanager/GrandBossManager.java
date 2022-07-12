@@ -107,7 +107,7 @@ public class GrandBossManager implements IStorable
 		ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
 	}
 	
-	public int getBossStatus(int bossId)
+	public int getStatus(int bossId)
 	{
 		if (!_bossStatus.containsKey(bossId))
 		{
@@ -116,7 +116,7 @@ public class GrandBossManager implements IStorable
 		return _bossStatus.get(bossId);
 	}
 	
-	public void setBossStatus(int bossId, int status)
+	public void setStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);
 		LOGGER.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status + ".");

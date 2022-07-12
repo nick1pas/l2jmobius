@@ -49,7 +49,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, Player player)
 	{
-		final int belethStatus = GrandBossManager.getInstance().getBossStatus(BELETH);
+		final int belethStatus = GrandBossManager.getInstance().getStatus(BELETH);
 		if (belethStatus == 3)
 		{
 			return "32376-02.htm";
@@ -69,7 +69,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 		final BossZone zone = (BossZone) ZoneManager.getInstance().getZoneById(12018);
 		if (zone != null)
 		{
-			GrandBossManager.getInstance().setBossStatus(BELETH, 1);
+			GrandBossManager.getInstance().setStatus(BELETH, 1);
 			for (Party party : channel.getParties())
 			{
 				if (party == null)

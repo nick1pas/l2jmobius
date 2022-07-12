@@ -87,7 +87,7 @@ public class Valakas extends Quest
 		_zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
-		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
+		final Integer status = GrandBossManager.getInstance().getStatus(VALAKAS);
 		if (status == DEAD)
 		{
 			// Load the unlock date and time for valakas from DB.
@@ -102,7 +102,7 @@ public class Valakas extends Quest
 			{
 				// The time has already expired while the server was offline.
 				// The status needs to be changed to DORMANT.
-				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+				GrandBossManager.getInstance().setStatus(VALAKAS, DORMANT);
 			}
 		}
 		else if (status == FIGHTING)
@@ -156,7 +156,7 @@ public class Valakas extends Quest
 							break;
 						}
 					}
-					final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
+					final Integer status = GrandBossManager.getInstance().getStatus(VALAKAS);
 					if ((status == FIGHTING) && ((System.currentTimeMillis() - lastAttackTime) > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default.
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -164,7 +164,7 @@ public class Valakas extends Quest
 						// delete the actual boss
 						final GrandBoss boss = GrandBossManager.getInstance().deleteBoss(VALAKAS);
 						boss.decayMe();
-						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+						GrandBossManager.getInstance().setStatus(VALAKAS, DORMANT);
 						// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 						_zone.oustAllPlayers();
 						cancelQuestTimer("check_activity_and_do_actions", npc, null);
@@ -271,7 +271,7 @@ public class Valakas extends Quest
 				}
 				case "1110":
 				{
-					GrandBossManager.getInstance().setBossStatus(VALAKAS, FIGHTING);
+					GrandBossManager.getInstance().setStatus(VALAKAS, FIGHTING);
 					startQuestTimer("check_activity_and_do_actions", 60000, npc, null, true);
 					npc.setInvul(false);
 					getRandomSkill(npc);
@@ -356,7 +356,7 @@ public class Valakas extends Quest
 		{
 			// GrandBoss valakas = (GrandBoss) addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
 			// GrandBossManager.getInstance().addBoss(valakas);
-			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+			GrandBossManager.getInstance().setStatus(VALAKAS, DORMANT);
 		}
 		else if (event.equals("remove_players"))
 		{
@@ -589,7 +589,7 @@ public class Valakas extends Quest
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
-		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
+		GrandBossManager.getInstance().setStatus(VALAKAS, DEAD);
 		final long respawnTime = (Config.VALAKAS_RESP_FIRST + getRandom(Config.VALAKAS_RESP_SECOND)) * 3600000;
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// Also save the respawn time so that the info is maintained past restarts.
@@ -996,7 +996,7 @@ public class Valakas extends Quest
 	{
 		int i1 = 0;
 		
-		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
+		final Integer status = GrandBossManager.getInstance().getStatus(VALAKAS);
 		if (status == FIGHTING)
 		{
 			if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4))

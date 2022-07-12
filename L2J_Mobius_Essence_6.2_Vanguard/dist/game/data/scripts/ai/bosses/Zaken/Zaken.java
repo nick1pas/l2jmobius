@@ -50,7 +50,7 @@ public class Zaken extends AbstractNpcAI
 		addKillId(ZAKEN);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
-		final int status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
+		final int status = GrandBossManager.getInstance().getStatus(ZAKEN);
 		if (status == DEAD)
 		{
 			// load the unlock date and time from DB
@@ -83,7 +83,7 @@ public class Zaken extends AbstractNpcAI
 	private void spawnBoss()
 	{
 		final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, ZAKEN_HEADING, false, 0);
-		GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
+		GrandBossManager.getInstance().setStatus(ZAKEN, ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
 		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
 	}
@@ -92,7 +92,7 @@ public class Zaken extends AbstractNpcAI
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
+		GrandBossManager.getInstance().setStatus(ZAKEN, DEAD);
 		// Calculate Min and Max respawn times randomly.
 		final long respawnTime = (Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000;
 		startQuestTimer("zaken_unlock", respawnTime, null, null);

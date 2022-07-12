@@ -750,7 +750,7 @@ public class Antharas extends AbstractNpcAI
 	
 	private int getStatus()
 	{
-		return GrandBossManager.getInstance().getBossStatus(ANTHARAS);
+		return GrandBossManager.getInstance().getStatus(ANTHARAS);
 	}
 	
 	private void addBoss(GrandBoss grandboss)
@@ -760,7 +760,7 @@ public class Antharas extends AbstractNpcAI
 	
 	private void setStatus(int status)
 	{
-		GrandBossManager.getInstance().setBossStatus(ANTHARAS, status);
+		GrandBossManager.getInstance().setStatus(ANTHARAS, status);
 	}
 	
 	private void setRespawn(long respawnTime)

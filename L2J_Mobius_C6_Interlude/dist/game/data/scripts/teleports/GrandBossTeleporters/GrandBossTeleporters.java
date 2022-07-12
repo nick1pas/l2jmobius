@@ -93,10 +93,10 @@ public class GrandBossTeleporters extends Quest
 		{
 			if (antharasAI() != null)
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(29019);
-				final int statusW = GrandBossManager.getInstance().getBossStatus(29066);
-				final int statusN = GrandBossManager.getInstance().getBossStatus(29067);
-				final int statusS = GrandBossManager.getInstance().getBossStatus(29068);
+				final int status = GrandBossManager.getInstance().getStatus(29019);
+				final int statusW = GrandBossManager.getInstance().getStatus(29066);
+				final int statusN = GrandBossManager.getInstance().getStatus(29067);
+				final int statusS = GrandBossManager.getInstance().getStatus(29068);
 				if ((status == 2) || (statusW == 2) || (statusN == 2) || (statusS == 2))
 				{
 					htmltext = "13001-02.htm";
@@ -142,7 +142,7 @@ public class GrandBossTeleporters extends Quest
 			htmltext = "31385-01.htm";
 			if (valakasAI() != null)
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(29028);
+				final int status = GrandBossManager.getInstance().getStatus(29028);
 				if ((status == 0) || (status == 1)) // If entrance to see Valakas is unlocked (he is Dormant or Waiting)
 				{
 					final QuestState st = player.getQuestState(getName());
@@ -166,7 +166,7 @@ public class GrandBossTeleporters extends Quest
 						{
 							final GrandBoss valakas = GrandBossManager.getInstance().getBoss(29028);
 							valakasAI().startQuestTimer("lock_entry_and_spawn_valakas", 60000 * Config.VALAKAS_WAIT_TIME, valakas, null);
-							GrandBossManager.getInstance().setBossStatus(29028, 1);
+							GrandBossManager.getInstance().setStatus(29028, 1);
 						}
 					}
 					else // player cheated, wasn't ported via npc Klein

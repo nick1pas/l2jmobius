@@ -239,14 +239,14 @@ public class VanHalter extends Quest
 		}
 		_setBleedTask = ThreadPool.schedule(new Bleeding(), 2000);
 		
-		final Integer status = GrandBossManager.getInstance().getBossStatus(29062);
+		final Integer status = GrandBossManager.getInstance().getStatus(29062);
 		if (status == INTERVAL)
 		{
 			enterInterval();
 		}
 		else
 		{
-			GrandBossManager.getInstance().setBossStatus(29062, NOTSPAWN);
+			GrandBossManager.getInstance().setStatus(29062, NOTSPAWN);
 		}
 	}
 	
@@ -1246,14 +1246,14 @@ public class VanHalter extends Quest
 			_intervalTask.cancel(false);
 		}
 		
-		final Integer status = GrandBossManager.getInstance().getBossStatus(29062);
+		final Integer status = GrandBossManager.getInstance().getStatus(29062);
 		if (status != INTERVAL)
 		{
 			final long interval = getRandom(Config.HPH_FIXINTERVALOFHALTER, Config.HPH_FIXINTERVALOFHALTER + Config.HPH_RANDOMINTERVALOFHALTER)/* * 3600000 */;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(29062);
 			info.set("respawn_time", (System.currentTimeMillis() + interval));
 			GrandBossManager.getInstance().setStatSet(29062, info);
-			GrandBossManager.getInstance().setBossStatus(29062, INTERVAL);
+			GrandBossManager.getInstance().setStatus(29062, INTERVAL);
 		}
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(29062);
@@ -1348,7 +1348,7 @@ public class VanHalter extends Quest
 		spawnRitualOffering();
 		spawnVanHalter();
 		
-		GrandBossManager.getInstance().setBossStatus(29062, NOTSPAWN);
+		GrandBossManager.getInstance().setStatus(29062, NOTSPAWN);
 		
 		// Set time up.
 		if (_timeUpTask != null)
@@ -1388,7 +1388,7 @@ public class VanHalter extends Quest
 			{
 				case 1:
 				{
-					GrandBossManager.getInstance().setBossStatus(29062, ALIVE);
+					GrandBossManager.getInstance().setStatus(29062, ALIVE);
 					// Set camera.
 					for (Player pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{

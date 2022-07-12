@@ -54,7 +54,7 @@ public class Orfen extends Quest
 		super(-1, "ai/bosses");
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
-		final Integer status = GrandBossManager.getInstance().getBossStatus(ORFEN);
+		final Integer status = GrandBossManager.getInstance().getStatus(ORFEN);
 		
 		addEventId(ORFEN, EventType.ON_KILL);
 		addEventId(ORFEN, EventType.ON_ATTACK);
@@ -71,7 +71,7 @@ public class Orfen extends Quest
 				else
 				{
 					_orfen = (GrandBoss) addSpawn(ORFEN, 55024, 17368, -5412, 0, false, 0);
-					GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
+					GrandBossManager.getInstance().setStatus(ORFEN, LIVE);
 					GrandBossManager.getInstance().addBoss(_orfen);
 				}
 				break;
@@ -92,7 +92,7 @@ public class Orfen extends Quest
 				final int loc_z = -5412;
 				final int heading = 0;
 				_orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
+				GrandBossManager.getInstance().setStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);
 				break;
 			}
@@ -113,7 +113,7 @@ public class Orfen extends Quest
 				final int loc_z = -5412;
 				final int heading = 0;
 				_orfen = (GrandBoss) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ORFEN, LIVE);
+				GrandBossManager.getInstance().setStatus(ORFEN, LIVE);
 				GrandBossManager.getInstance().addBoss(_orfen);
 				break;
 			}
@@ -210,7 +210,7 @@ public class Orfen extends Quest
 		if (npc.getNpcId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
+			GrandBossManager.getInstance().setStatus(ORFEN, DEAD);
 			// Time is 48hour +/- 20hour.
 			final long respawnTime = (Config.ORFEN_RESP_FIRST + getRandom(Config.ORFEN_RESP_SECOND)) * 3600000;
 			cancelQuestTimer("ORFEN_REFRESH", npc, null);

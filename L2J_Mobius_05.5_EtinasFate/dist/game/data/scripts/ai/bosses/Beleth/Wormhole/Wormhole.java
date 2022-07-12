@@ -53,7 +53,7 @@ public class Wormhole extends AbstractNpcAI
 	{
 		if (event.equals("teleport"))
 		{
-			final int status = GrandBossManager.getInstance().getBossStatus(BELETH);
+			final int status = GrandBossManager.getInstance().getStatus(BELETH);
 			if (status == 1)
 			{
 				return "33901-4.html";

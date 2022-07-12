@@ -178,7 +178,7 @@ public class Benom extends Quest
 			}
 			case "BenomRaidRoomSpawn":
 			{
-				if ((_benomIsSpawned == 0) && (GrandBossManager.getInstance().getBossStatus(BENOM) == 0))
+				if ((_benomIsSpawned == 0) && (GrandBossManager.getInstance().getStatus(BENOM) == 0))
 				{
 					_benomInstance = addSpawn(BENOM, 12047, -49211, -3009, 0, false, 0);
 					_benomIsSpawned = 1;
@@ -187,7 +187,7 @@ public class Benom extends Quest
 			}
 			case "BenomRaidSiegeSpawn":
 			{
-				if (GrandBossManager.getInstance().getBossStatus(BENOM) == 0)
+				if (GrandBossManager.getInstance().getStatus(BENOM) == 0)
 				{
 					if (_benomIsSpawned == 0)
 					{
@@ -288,7 +288,7 @@ public class Benom extends Quest
 			}
 			case "BenomBossDespawn":
 			{
-				GrandBossManager.getInstance().setBossStatus(BENOM, ALIVE);
+				GrandBossManager.getInstance().setStatus(BENOM, ALIVE);
 				_benomIsSpawned = 0;
 				_benomInstance.deleteMe();
 				break;
@@ -328,7 +328,7 @@ public class Benom extends Quest
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
-		GrandBossManager.getInstance().setBossStatus(BENOM, DEAD);
+		GrandBossManager.getInstance().setStatus(BENOM, DEAD);
 		cancelQuestTimer("BenomWalk", npc, null);
 		cancelQuestTimer("BenomWalkFinish", npc, null);
 		cancelQuestTimer("BenomBossDespawn", npc, null);

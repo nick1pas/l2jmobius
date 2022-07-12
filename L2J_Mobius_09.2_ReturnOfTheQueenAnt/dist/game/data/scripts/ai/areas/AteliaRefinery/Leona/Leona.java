@@ -53,11 +53,11 @@ public class Leona extends AbstractNpcAI
 	{
 		if (event.equals("teleport"))
 		{
-			final int status = GrandBossManager.getInstance().getBossStatus(ETINA_RAID);
+			final int status = GrandBossManager.getInstance().getStatus(ETINA_RAID);
 			if (player.isGM())
 			{
 				player.teleToLocation(ENTER_LOC, true);
-				GrandBossManager.getInstance().setBossStatus(ETINA_RAID, 1);
+				GrandBossManager.getInstance().setStatus(ETINA_RAID, 1);
 			}
 			else
 			{
@@ -106,7 +106,7 @@ public class Leona extends AbstractNpcAI
 					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
 						member.teleToLocation(ENTER_LOC, false);
-						GrandBossManager.getInstance().setBossStatus(ETINA_RAID, 1);
+						GrandBossManager.getInstance().setStatus(ETINA_RAID, 1);
 					}
 				}
 			}

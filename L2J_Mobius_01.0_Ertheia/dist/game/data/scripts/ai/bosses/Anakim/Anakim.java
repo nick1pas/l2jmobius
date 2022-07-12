@@ -341,7 +341,7 @@ public class Anakim extends AbstractNpcAI
 		
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ANAKIM);
-		final int status = GrandBossManager.getInstance().getBossStatus(ANAKIM);
+		final int status = GrandBossManager.getInstance().getStatus(ANAKIM);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -351,12 +351,12 @@ public class Anakim extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+				GrandBossManager.getInstance().setStatus(ANAKIM, ALIVE);
 			}
 		}
 		else if (status != ALIVE)
 		{
-			GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+			GrandBossManager.getInstance().setStatus(ANAKIM, ALIVE);
 		}
 	}
 	
@@ -367,14 +367,14 @@ public class Anakim extends AbstractNpcAI
 		{
 			case "unlock_anakim":
 			{
-				GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+				GrandBossManager.getInstance().setStatus(ANAKIM, ALIVE);
 				break;
 			}
 			case "check_activity_task":
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+					GrandBossManager.getInstance().setStatus(ANAKIM, ALIVE);
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
 					{
 						if (creature != null)
@@ -463,9 +463,9 @@ public class Anakim extends AbstractNpcAI
 					}
 					remnant.deleteMe();
 				}
-				if (GrandBossManager.getInstance().getBossStatus(ANAKIM) != DEAD)
+				if (GrandBossManager.getInstance().getStatus(ANAKIM) != DEAD)
 				{
-					GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+					GrandBossManager.getInstance().setStatus(ANAKIM, ALIVE);
 				}
 				break;
 			}
@@ -483,7 +483,7 @@ public class Anakim extends AbstractNpcAI
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == ANAKIM_CUBIC))
 		{
-			final int _anakimStatus = GrandBossManager.getInstance().getBossStatus(ANAKIM);
+			final int _anakimStatus = GrandBossManager.getInstance().getStatus(ANAKIM);
 			if ((npc.getId() == ENTER_CUBIC) && (_anakimStatus > ALIVE))
 			{
 				return "31101-01.html";
@@ -541,7 +541,7 @@ public class Anakim extends AbstractNpcAI
 			
 			if ((_anakimStatus == ALIVE) && (npc.getId() == ENTER_CUBIC))
 			{
-				GrandBossManager.getInstance().setBossStatus(ANAKIM, WAITING);
+				GrandBossManager.getInstance().setStatus(ANAKIM, WAITING);
 				_spawns.clear();
 				for (SpawnHolder spawn : SPAWNS)
 				{
@@ -554,7 +554,7 @@ public class Anakim extends AbstractNpcAI
 			}
 			else if ((_anakimStatus == WAITING) && (npc.getId() == ANAKIM_CUBIC))
 			{
-				GrandBossManager.getInstance().setBossStatus(ANAKIM, FIGHTING);
+				GrandBossManager.getInstance().setStatus(ANAKIM, FIGHTING);
 				// Spawn the rb
 				_anakimBoss = addSpawn(ANAKIM, 185080, -12613, -5499, 16550, false, 0);
 				GrandBossManager.getInstance().addBoss((GrandBoss) _anakimBoss);
@@ -610,7 +610,7 @@ public class Anakim extends AbstractNpcAI
 			notifyEvent("cancel_timers", null, null);
 			addSpawn(EXIST_CUBIC, 185082, -12606, -5499, 6133, false, 900000); // 15min
 			
-			GrandBossManager.getInstance().setBossStatus(ANAKIM, DEAD);
+			GrandBossManager.getInstance().setStatus(ANAKIM, DEAD);
 			final long respawnTime = getRespawnTime();
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ANAKIM);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);

@@ -47,7 +47,7 @@ public class QueenAnt extends AbstractNpcAI
 		addKillId(QUEEN_ANT);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN_ANT);
-		if (GrandBossManager.getInstance().getBossStatus(QUEEN_ANT) == DEAD)
+		if (GrandBossManager.getInstance().getStatus(QUEEN_ANT) == DEAD)
 		{
 			// Load the unlock date and time for queen ant from DB.
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -58,7 +58,7 @@ public class QueenAnt extends AbstractNpcAI
 			else // The time has already expired while the server was offline. Immediately spawn queen ant.
 			{
 				final GrandBoss queen = (GrandBoss) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, ALIVE);
+				GrandBossManager.getInstance().setStatus(QUEEN_ANT, ALIVE);
 				spawnBoss(queen);
 			}
 		}
@@ -88,7 +88,7 @@ public class QueenAnt extends AbstractNpcAI
 		if ("queen_unlock".equals(event))
 		{
 			final GrandBoss queen = (GrandBoss) addSpawn(QUEEN_ANT, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-			GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, ALIVE);
+			GrandBossManager.getInstance().setStatus(QUEEN_ANT, ALIVE);
 			spawnBoss(queen);
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -98,7 +98,7 @@ public class QueenAnt extends AbstractNpcAI
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		GrandBossManager.getInstance().setBossStatus(QUEEN_ANT, DEAD);
+		GrandBossManager.getInstance().setStatus(QUEEN_ANT, DEAD);
 		
 		// Calculate Min and Max respawn times randomly.
 		final long respawnTime = (Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM)) * 3600000;

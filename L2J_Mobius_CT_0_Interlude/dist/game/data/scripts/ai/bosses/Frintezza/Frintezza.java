@@ -290,7 +290,7 @@ public class Frintezza extends AbstractNpcAI
 		addStartNpc(CUBE);
 		addTalkId(CUBE);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
-		final int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
+		final int status = GrandBossManager.getInstance().getStatus(FRINTEZZA);
 		if (status == DEAD)
 		{
 			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
@@ -300,12 +300,12 @@ public class Frintezza extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
+				GrandBossManager.getInstance().setStatus(FRINTEZZA, DORMANT);
 			}
 		}
 		else if (status != DORMANT)
 		{
-			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
+			GrandBossManager.getInstance().setStatus(FRINTEZZA, DORMANT);
 		}
 		
 		// tempfix for messed door cords
@@ -489,7 +489,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("loc_check"))
 		{
-			if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING)
+			if (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING)
 			{
 				if (!_zone.isInsideZone(npc))
 				{
@@ -503,7 +503,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("camera_1"))
 		{
-			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
+			GrandBossManager.getInstance().setStatus(FRINTEZZA, FIGHTING);
 			_frintezzaDummy = addSpawn(29052, 174240, -89805, -5022, 16048, false, 0);
 			_frintezzaDummy.setInvul(true);
 			_frintezzaDummy.setImmobilized(true);
@@ -1230,7 +1230,7 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("close", 1000, npc, null);
 			startQuestTimer("room1_del", 1000, npc, null);
 			startQuestTimer("room2_del", 1000, npc, null);
-			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
+			GrandBossManager.getInstance().setStatus(FRINTEZZA, DORMANT);
 		}
 		else if (event.equalsIgnoreCase("frintezza_despawn"))
 		{
@@ -1250,7 +1250,7 @@ public class Frintezza extends AbstractNpcAI
 				startQuestTimer("room2_del", 1000, npc, null);
 				startQuestTimer("room3_del", 1000, npc, null);
 				startQuestTimer("minions_despawn", 1000, npc, null);
-				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
+				GrandBossManager.getInstance().setStatus(FRINTEZZA, DORMANT);
 				cancelQuestTimers("frintezza_despawn");
 			}
 		}
@@ -1283,7 +1283,7 @@ public class Frintezza extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("frintezza_unlock"))
 		{
-			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
+			GrandBossManager.getInstance().setStatus(FRINTEZZA, DORMANT);
 		}
 		else if (event.equalsIgnoreCase("remove_players"))
 		{
@@ -1305,15 +1305,15 @@ public class Frintezza extends AbstractNpcAI
 		}
 		
 		String htmltext = "";
-		if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == DEAD)
+		if (GrandBossManager.getInstance().getStatus(FRINTEZZA) == DEAD)
 		{
 			htmltext = "<html><body>There is nothing beyond the Magic Force Field. Come back later.<br>(You may not enter because Frintezza is not inside the Imperial Tomb.)</body></html>";
 		}
-		else if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == DORMANT)
+		else if (GrandBossManager.getInstance().getStatus(FRINTEZZA) == DORMANT)
 		{
 			if (player.isGM() && (player.getParty() == null)) // For single GM testing. Will lock boss for all other players.
 			{
-				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
+				GrandBossManager.getInstance().setStatus(FRINTEZZA, WAITING);
 				startQuestTimer("close", 0, npc, null);
 				startQuestTimer("room1_spawn", 5000, npc, null);
 				startQuestTimer("room_final", 2100000, npc, null);
@@ -1341,7 +1341,7 @@ public class Frintezza extends AbstractNpcAI
 				{
 					player.destroyItemByItemId("Quest", 8073, 1, player, true);
 					final CommandChannel cc = player.getParty().getCommandChannel();
-					GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
+					GrandBossManager.getInstance().setStatus(FRINTEZZA, WAITING);
 					startQuestTimer("close", 0, npc, null);
 					startQuestTimer("room1_spawn", 5000, npc, null);
 					startQuestTimer("room_final", 2100000, npc, null);
@@ -1403,7 +1403,7 @@ public class Frintezza extends AbstractNpcAI
 			npc.setCurrentHpMp(npc.getMaxHp(), 0);
 			return null;
 		}
-		if ((npc.getId() == SCARLET1) && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
+		if ((npc.getId() == SCARLET1) && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)) && (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
 			_secondMorph = 1;
@@ -1412,7 +1412,7 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("stop_npc", 1000, npc, null);
 			startQuestTimer("morph_01", 1100, npc, null);
 		}
-		else if ((npc.getId() == SCARLET1) && (_secondMorph == 1) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
+		else if ((npc.getId() == SCARLET1) && (_secondMorph == 1) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
 			_thirdMorph = 1;
@@ -1422,7 +1422,7 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("morph_05a", 2000, npc, null);
 			startQuestTimer("morph_05", 2100, npc, null);
 		}
-		else if ((npc.getId() == SCARLET2) && (_secondMorph == 1) && (_thirdMorph == 1) && (_onCheck == 0) && (damage >= npc.getCurrentHp()) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
+		else if ((npc.getId() == SCARLET2) && (_secondMorph == 1) && (_thirdMorph == 1) && (_onCheck == 0) && (damage >= npc.getCurrentHp()) && (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING))
 		{
 			_onCheck = 1;
 			startQuestTimer("check_hp", 0, npc, null);
@@ -1449,14 +1449,14 @@ public class Frintezza extends AbstractNpcAI
 		{
 			return null;
 		}
-		else if ((npc.getId() == SCARLET2) && (_onCheck == 0) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
+		else if ((npc.getId() == SCARLET2) && (_onCheck == 0) && (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING))
 		{
 			_onCheck = 1;
 			startQuestTimer("stop_pc", 0, npc, null);
 			startQuestTimer("stop_npc", 0, npc, null);
 			startQuestTimer("morph_16", 0, npc, null);
 		}
-		else if ((npc.getId() == SCARLET2) && (_onCheck == 1) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
+		else if ((npc.getId() == SCARLET2) && (_onCheck == 1) && (GrandBossManager.getInstance().getStatus(FRINTEZZA) == FIGHTING))
 		{
 			cancelQuestTimers("loc_check");
 			cancelQuestTimers("spawn_minion");
@@ -1466,7 +1466,7 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("room3_del", 60000, npc, null);
 			startQuestTimer("minions_despawn", 60000, npc, null);
 			startQuestTimer("remove_players", 900000, npc, null);
-			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
+			GrandBossManager.getInstance().setStatus(FRINTEZZA, DEAD);
 			long respawnTime = Config.FRINTEZZA_SPAWN_INTERVAL + getRandom(-Config.FRINTEZZA_SPAWN_RANDOM, Config.FRINTEZZA_SPAWN_RANDOM);
 			respawnTime *= 3600000;
 			startQuestTimer("frintezza_unlock", respawnTime, npc, null);

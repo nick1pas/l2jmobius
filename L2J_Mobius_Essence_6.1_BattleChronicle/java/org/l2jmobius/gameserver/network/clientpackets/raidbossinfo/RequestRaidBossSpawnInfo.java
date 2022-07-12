@@ -48,7 +48,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 			final GrandBoss boss = GrandBossManager.getInstance().getBoss(bossId);
 			if (boss == null)
 			{
-				final RaidBossStatus status = DBSpawnManager.getInstance().getNpcStatusId(bossId);
+				final RaidBossStatus status = DBSpawnManager.getInstance().getStatus(bossId);
 				if (status != RaidBossStatus.UNDEFINED)
 				{
 					final Npc npc = DBSpawnManager.getInstance().getNpc(bossId);
@@ -71,7 +71,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 			{
 				if (boss.isDead() || !boss.isSpawned())
 				{
-					if ((bossId == BAIUM) && (GrandBossManager.getInstance().getBossStatus(BAIUM) == 0))
+					if ((bossId == BAIUM) && (GrandBossManager.getInstance().getStatus(BAIUM) == 0))
 					{
 						_statuses.put(bossId, RaidBossStatus.ALIVE);
 					}

@@ -103,7 +103,7 @@ public class Baium extends Quest
 		_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
-		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
+		final Integer status = GrandBossManager.getInstance().getStatus(LIVE_BAIUM);
 		if (status == DEAD)
 		{
 			// Load the unlock date and time for baium from DB.
@@ -118,7 +118,7 @@ public class Baium extends Quest
 			{
 				// The time has already expired while the server was offline. Delete the saved time and immediately spawn the stone-baium. Also the state need not be changed from ASLEEP.
 				addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
-				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
+				GrandBossManager.getInstance().setStatus(LIVE_BAIUM, ASLEEP);
 			}
 		}
 		else if (status == AWAKE)
@@ -158,7 +158,7 @@ public class Baium extends Quest
 	{
 		if (event.equals("baium_unlock"))
 		{
-			GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP);
+			GrandBossManager.getInstance().setStatus(LIVE_BAIUM, ASLEEP);
 			addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
 		}
 		else if (event.equals("skill_range") && (npc != null))
@@ -237,7 +237,7 @@ public class Baium extends Quest
 					}
 					_minions.clear();
 					addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0); // Spawn stone-baium.
-					GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, ASLEEP); // Mark that Baium is not awake any more.
+					GrandBossManager.getInstance().setStatus(LIVE_BAIUM, ASLEEP); // Mark that Baium is not awake any more.
 					_zone.oustAllPlayers();
 					cancelQuestTimer("baium_despawn", npc, null);
 				}
@@ -245,7 +245,7 @@ public class Baium extends Quest
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4135, 1));
-					if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) != AWAKE)
+					if (GrandBossManager.getInstance().getStatus(LIVE_BAIUM) != AWAKE)
 					{
 						cancelQuestTimer("baium_despawn", npc, null);
 					}
@@ -269,13 +269,13 @@ public class Baium extends Quest
 			return "<html><body>Angelic Vortex:<br>You may not enter while admin disabled this zone</body></html>";
 		}
 		
-		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
+		final Integer status = GrandBossManager.getInstance().getStatus(LIVE_BAIUM);
 		if ((npcId == STONE_BAIUM) && (status == ASLEEP))
 		{
 			if (Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM || _zone.isPlayerAllowed(player))
 			{
 				// Once Baium is awaken, no more people may enter until he dies, the server reboots, or 30 minutes pass with no attacks made against Baium.
-				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, AWAKE);
+				GrandBossManager.getInstance().setStatus(LIVE_BAIUM, AWAKE);
 				npc.deleteMe();
 				final GrandBoss baium = (GrandBoss) addSpawn(LIVE_BAIUM, npc);
 				GrandBossManager.getInstance().addBoss(baium);
@@ -385,7 +385,7 @@ public class Baium extends Quest
 		addSpawn(29055, 115203, 16620, 10078, 0, false, 900000); // Should we teleport everyone out if the cubic despawns??
 		// Lock baium for 5 days and 1 to 8 hours [i.e. 432,000,000 + 1*3,600,000 + random-less-than(8*3,600,000) millisecs]
 		final long respawnTime = (Config.BAIUM_RESP_FIRST + getRandom(Config.BAIUM_RESP_SECOND)) * 3600000;
-		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
+		GrandBossManager.getInstance().setStatus(LIVE_BAIUM, DEAD);
 		startQuestTimer("baium_unlock", respawnTime, null, null);
 		// Also save the respawn time so that the info is maintained past reboots.
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);

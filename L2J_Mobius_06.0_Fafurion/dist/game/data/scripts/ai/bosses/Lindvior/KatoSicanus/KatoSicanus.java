@@ -53,12 +53,12 @@ public class KatoSicanus extends AbstractNpcAI
 	{
 		if (event.equals("teleport"))
 		{
-			final int status = GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID);
+			final int status = GrandBossManager.getInstance().getStatus(LINDVIOR_RAID);
 			if (player.isGM())
 			{
 				player.teleToLocation(LINDVIOR_LOCATION, true);
 				addSpawn(INVISIBLE, 46707, -28586, -1400, 0, false, 60000, false);
-				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, 1);
+				GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, 1);
 			}
 			else
 			{
@@ -115,7 +115,7 @@ public class KatoSicanus extends AbstractNpcAI
 					{
 						member.teleToLocation(LINDVIOR_LOCATION, true);
 						addSpawn(INVISIBLE, 46707, -28586, -1400, 0, false, 0, false);
-						GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, 1);
+						GrandBossManager.getInstance().setStatus(LINDVIOR_RAID, 1);
 					}
 				}
 			}

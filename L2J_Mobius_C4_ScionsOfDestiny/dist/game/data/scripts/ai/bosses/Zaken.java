@@ -164,7 +164,7 @@ public class Zaken extends Quest
 		_zone = GrandBossManager.getInstance().getZone(55312, 219168, -3223);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
-		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
+		final Integer status = GrandBossManager.getInstance().getStatus(ZAKEN);
 		if (status == DEAD)
 		{
 			// Load the unlock date and time for zaken from DB.
@@ -179,7 +179,7 @@ public class Zaken extends Quest
 			{
 				// The time has already expired while the server was offline. Immediately spawn Zaken.
 				final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
-				GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
+				GrandBossManager.getInstance().setStatus(ZAKEN, ALIVE);
 				spawnBoss(zaken);
 			}
 		}
@@ -575,10 +575,10 @@ public class Zaken extends Quest
 			}
 			case "zaken_unlock":
 			{
-				if (GrandBossManager.getInstance().getBossStatus(ZAKEN) != DEAD)
+				if (GrandBossManager.getInstance().getStatus(ZAKEN) != DEAD)
 				{
 					final GrandBoss zaken = (GrandBoss) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
-					GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
+					GrandBossManager.getInstance().setStatus(ZAKEN, ALIVE);
 					spawnBoss(zaken);
 				}
 				break;
@@ -827,11 +827,11 @@ public class Zaken extends Quest
 	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
+		final Integer status = GrandBossManager.getInstance().getStatus(ZAKEN);
 		if (npcId == ZAKEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
+			GrandBossManager.getInstance().setStatus(ZAKEN, DEAD);
 			// Time is 36hour +/- 17hour.
 			final long respawnTime = (Config.ZAKEN_RESP_FIRST + getRandom(Config.ZAKEN_RESP_SECOND)) * 3600000;
 			startQuestTimer("zaken_unlock", respawnTime, null, null);

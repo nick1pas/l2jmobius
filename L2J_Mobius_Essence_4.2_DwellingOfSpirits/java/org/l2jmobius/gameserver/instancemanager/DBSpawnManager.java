@@ -505,11 +505,11 @@ public class DBSpawnManager
 	}
 	
 	/**
-	 * Gets the raid npc status id.
+	 * Gets the raid npc status.
 	 * @param npcId the npc id
-	 * @return the raid npc status id
+	 * @return the raid npc status
 	 */
-	public RaidBossStatus getNpcStatusId(int npcId)
+	public RaidBossStatus getStatus(int npcId)
 	{
 		if (_npcs.containsKey(npcId))
 		{

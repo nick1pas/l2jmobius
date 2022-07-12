@@ -200,12 +200,12 @@ public class GrandBossManager implements IStorable
 		return (player != null) && (getZone(player.getX(), player.getY(), player.getZ()) != null);
 	}
 	
-	public int getBossStatus(int bossId)
+	public int getStatus(int bossId)
 	{
 		return _bossStatus.get(bossId);
 	}
 	
-	public void setBossStatus(int bossId, int status)
+	public void setStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);
 		LOGGER.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status);
