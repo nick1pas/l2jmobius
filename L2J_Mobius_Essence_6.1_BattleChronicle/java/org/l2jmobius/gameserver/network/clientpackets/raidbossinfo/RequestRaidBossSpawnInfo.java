@@ -34,6 +34,8 @@ import org.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpa
  */
 public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 {
+	private static final int BAIUM = 29020;
+	
 	private final Map<Integer, RaidBossStatus> _statuses = new HashMap<>();
 	
 	@Override
@@ -69,7 +71,14 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 			{
 				if (boss.isDead() || !boss.isSpawned())
 				{
-					_statuses.put(bossId, RaidBossStatus.DEAD);
+					if ((bossId == BAIUM) && (GrandBossManager.getInstance().getBossStatus(BAIUM) == 0))
+					{
+						_statuses.put(bossId, RaidBossStatus.ALIVE);
+					}
+					else
+					{
+						_statuses.put(bossId, RaidBossStatus.DEAD);
+					}
 				}
 				else if (boss.isInCombat())
 				{

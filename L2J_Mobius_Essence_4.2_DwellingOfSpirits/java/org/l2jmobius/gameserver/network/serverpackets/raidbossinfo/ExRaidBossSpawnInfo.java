@@ -21,7 +21,6 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
-import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,7 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 {
-	private static final int BAIUM = 29020;
 	
 	private final Map<Integer, RaidBossStatus> _statuses;
 	
@@ -47,7 +45,7 @@ public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 		for (Entry<Integer, RaidBossStatus> entry : _statuses.entrySet())
 		{
 			packet.writeD(entry.getKey());
-			packet.writeD((entry.getKey() == BAIUM) && (GrandBossManager.getInstance().getBossStatus(BAIUM) == 0) ? 1 : entry.getValue().ordinal());
+			packet.writeD(entry.getValue().ordinal());
 			packet.writeD(0);
 		}
 		return true;
