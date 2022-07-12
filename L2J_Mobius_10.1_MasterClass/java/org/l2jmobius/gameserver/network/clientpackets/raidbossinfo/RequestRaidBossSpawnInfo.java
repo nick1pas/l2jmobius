@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -33,7 +34,7 @@ import org.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpa
  */
 public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 {
-	private final Map<Integer, Integer> _statuses = new HashMap<>();
+	private final Map<Integer, RaidBossStatus> _statuses = new HashMap<>();
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -45,13 +46,13 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 			final GrandBoss boss = GrandBossManager.getInstance().getBoss(bossId);
 			if (boss == null)
 			{
-				final int status = DBSpawnManager.getInstance().getNpcStatusId(bossId).ordinal();
-				if (status != 3)
+				final RaidBossStatus status = DBSpawnManager.getInstance().getNpcStatusId(bossId);
+				if (status != RaidBossStatus.UNDEFINED)
 				{
 					final Npc npc = DBSpawnManager.getInstance().getNpc(bossId);
 					if ((npc != null) && npc.isInCombat())
 					{
-						_statuses.put(bossId, 2);
+						_statuses.put(bossId, RaidBossStatus.COMBAT);
 					}
 					else
 					{
@@ -60,6 +61,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 				}
 				else
 				{
+					_statuses.put(bossId, RaidBossStatus.DEAD);
 					// PacketLogger.warning("Could not find spawn info for boss " + bossId + ".");
 				}
 			}
@@ -67,15 +69,15 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 			{
 				if (boss.isDead() || !boss.isSpawned())
 				{
-					_statuses.put(bossId, 0);
+					_statuses.put(bossId, RaidBossStatus.DEAD);
 				}
 				else if (boss.isInCombat())
 				{
-					_statuses.put(bossId, 2);
+					_statuses.put(bossId, RaidBossStatus.COMBAT);
 				}
 				else
 				{
-					_statuses.put(bossId, 1);
+					_statuses.put(bossId, RaidBossStatus.ALIVE);
 				}
 			}
 		}
