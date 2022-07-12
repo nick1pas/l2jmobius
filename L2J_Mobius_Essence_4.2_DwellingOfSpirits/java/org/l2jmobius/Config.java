@@ -2155,7 +2155,7 @@ public class Config
 			AUTO_PLAY_ATTACK_ACTION = generalConfig.getBoolean("AutoPlayAttackAction", true);
 			RESUME_AUTO_PLAY = generalConfig.getBoolean("ResumeAutoPlay", false);
 			SHARING_LOCATION_COST = generalConfig.getInt("ShareLocationLcoinCost", 1);
-			TELEPORT_SHARE_LOCATION_COST = generalConfig.getInt("ShareLocationLcoinCost", 1);
+			TELEPORT_SHARE_LOCATION_COST = generalConfig.getInt("TeleportShareLocationLcoinCost", 1);
 			
 			// Load FloodProtector config file
 			final PropertiesParser floodProtectorConfig = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
