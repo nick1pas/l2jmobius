@@ -19,6 +19,8 @@ package org.l2jmobius.gameserver.model.actor.knownlist;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Boat;
+import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
 /**
  * @author Maktakien
@@ -28,6 +30,20 @@ public class BoatKnownList extends CreatureKnownList
 	public BoatKnownList(Creature creature)
 	{
 		super(creature);
+	}
+	
+	@Override
+	public boolean addKnownObject(WorldObject object)
+	{
+		if (super.addKnownObject(object))
+		{
+			if (object.isPlayer())
+			{
+				object.getActingPlayer().sendPacket(new VehicleInfo((Boat) getActiveObject()));
+			}
+			return true;
+		}
+		return false;
 	}
 	
 	@Override

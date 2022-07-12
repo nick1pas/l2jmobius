@@ -32,7 +32,8 @@
 								<xs:attribute type="xs:int" name="spawnX" use="required"/>
 								<xs:attribute type="xs:int" name="spawnY" use="required"/>
 								<xs:attribute type="xs:short" name="spawnZ" use="required"/>
-								<xs:attribute type="xs:int" name="heading" use="required"/>
+								<xs:attribute type="xs:int" name="dockHeadingA" use="required"/>
+								<xs:attribute type="xs:int" name="dockHeadingB" use="optional"/>
 								<xs:attribute type="xs:byte" name="pathIdA" use="required"/>
 								<xs:attribute type="xs:short" name="ticketA" use="required"/>
 								<xs:attribute type="xs:int" name="xTeleNoTicketA" use="required"/>

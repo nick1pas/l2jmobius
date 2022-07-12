@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.knownlist.BoatKnownList;
@@ -45,10 +46,12 @@ import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 public class Boat extends Creature
 {
 	public float boatSpeed;
+	public int dockHeadingA;
+	public int dockHeadingB;
 	public VehicleDeparture vd = null;
 	private int lastx = -1;
 	private int lasty = -1;
-	protected int cycle = 0;
+	protected int cycle = 1;
 	protected int runstate = 0;
 	protected BoatPathHolder pathA;
 	protected BoatPathHolder pathB;
@@ -352,10 +355,20 @@ public class Boat extends Creature
 				if (cycle == 1)
 				{
 					sm = new CreatureSay(0, ChatType.SHOUT, pathA.npc, pathA.sysmessb);
+					// Proper dock heading.
+					if (dockHeadingA != -1)
+					{
+						setHeading(dockHeadingA);
+					}
 				}
 				else
 				{
 					sm = new CreatureSay(0, ChatType.SHOUT, pathB.npc, pathB.sysmessb);
+					// Proper dock heading.
+					if (dockHeadingB != -1)
+					{
+						setHeading(dockHeadingB);
+					}
 				}
 				ps = new PlaySound(0, "itemsound.ship_arrival_departure", this);
 				for (Player player : knownPlayers)
@@ -372,8 +385,16 @@ public class Boat extends Creature
 	
 	public void spawn()
 	{
-		cycle = 1;
+		// Add to World.
+		setSpawned(true);
+		setWorldRegion(World.getInstance().getRegion(getLocation()));
+		World.getInstance().storeObject(this);
+		getWorldRegion().addVisibleObject(this);
+		
+		// Start AI.
 		beginCycle();
+		
+		// Broadcast vehicle info to nearby players.
 		final Collection<Player> knownPlayers = getKnownList().getKnownPlayers().values();
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
