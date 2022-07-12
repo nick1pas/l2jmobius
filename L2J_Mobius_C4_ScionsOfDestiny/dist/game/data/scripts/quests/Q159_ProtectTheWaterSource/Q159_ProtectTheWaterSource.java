@@ -140,7 +140,7 @@ public class Q159_ProtectTheWaterSource extends Quest
 		{
 			st.setCond(2);
 		}
-		else if (st.isCond(2) && st.dropItems(PLAGUE_DUST, 1, 5, 400000))
+		else if (st.isCond(3) && st.dropItems(PLAGUE_DUST, 1, 5, 400000))
 		{
 			st.setCond(4);
 		}
