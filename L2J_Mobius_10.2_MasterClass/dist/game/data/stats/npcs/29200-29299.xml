@@ -158,7 +158,6 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="443936" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="75762.9315245988" magical="21379.1984705962" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
@@ -1389,7 +1388,6 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<acquire exp="12919925114880" sp="11627932504" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="496750105" hpRegen="23998" mp="56888" mpRegen="30" />
 			<attack physical="1322653" magical="1163085" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1981,6 +1979,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="14197.47634" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="13491.48739" magical="2372.82433" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2971,6 +2970,7 @@
 	<npc id="29244" level="99" type="Monster" name="Beleth">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="46873844" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="5" critical="4" accuracy="10" attackSpeed="253" type="BLUNT" range="80" distance="80" width="120" />
@@ -3012,6 +3012,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="15281" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="421864600" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="5" critical="4" accuracy="10" attackSpeed="253" type="BLUNT" range="80" distance="80" width="120" />
@@ -3053,6 +3054,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="22781091564" sp="36449746" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="421864600" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="5" critical="4" accuracy="10" attackSpeed="253" type="BLUNT" range="80" distance="80" width="120" />
@@ -3092,6 +3094,7 @@
 	<npc id="29247" level="99" type="Monster" name="Beleth">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="421864600" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="5902" magical="1038" random="5" critical="4" accuracy="10" attackSpeed="253" type="BLUNT" range="80" distance="80" width="120" />
@@ -3133,6 +3136,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="13982" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="42186460" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="10" critical="4" accuracy="5" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
@@ -3172,6 +3176,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="13983" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="42186460" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3211,6 +3216,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="22781091564" sp="36449747" raidPoints="300" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="421864600" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="5902" magical="1038" random="5" critical="4" accuracy="10" attackSpeed="253" type="BLUNT" range="80" distance="80" width="120" />
@@ -3258,6 +3264,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="17393795496" sp="27830073" raidPoints="21" />
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="53568223" hpRegen="8.5" mp="47100" mpRegen="30" />
 			<attack physical="47220" magical="8305" random="10" critical="4" accuracy="10" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
