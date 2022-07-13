@@ -78,7 +78,7 @@ public class Baium extends AbstractNpcAI
 	private static final int DEAD = 3;
 	// Locations
 	private static final Location BAIUM_GIFT_LOC = new Location(115910, 17337, 10105);
-	private static final Location BAIUM_LOC = new Location(116033, 17447, 10107, -25348);
+	private static final Location BAIUM_LOC = new Location(116033, 17447, 10107, 40188);
 	private static final Location TELEPORT_CUBIC_LOC = new Location(115017, 15549, 10090);
 	private static final Location TELEPORT_IN_LOC = new Location(114077, 15882, 10078);
 	private static final Location[] TELEPORT_OUT_LOC =
