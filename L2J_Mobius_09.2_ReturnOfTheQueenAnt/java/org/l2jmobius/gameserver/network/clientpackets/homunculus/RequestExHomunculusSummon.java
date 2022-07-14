@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusSummonResult;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusList;
-import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExSummonHomunculusCouponResult;
 
 /**
  * @author Mobius
@@ -71,7 +70,7 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				if (chance > TEMPLATE.getMaxChance())
 				{
 					player.sendMessage("Homunculus is not created!");
-					player.sendPacket(new ExSummonHomunculusCouponResult(0, 0));
+					player.sendPacket(new ExHomunculusSummonResult(0));
 					return;
 				}
 				for (int i = 0; i < TEMPLATE.getCreationChance().size(); i++)
@@ -101,8 +100,8 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_SP_POINTS, 0);
 				player.getVariables().set(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
 				player.sendPacket(new ExShowHomunculusBirthInfo(player));
+				player.sendPacket(new ExHomunculusSummonResult(1));
 				player.sendPacket(new ExShowHomunculusList(player));
-				player.sendPacket(new ExHomunculusSummonResult());
 			}
 		}
 	}

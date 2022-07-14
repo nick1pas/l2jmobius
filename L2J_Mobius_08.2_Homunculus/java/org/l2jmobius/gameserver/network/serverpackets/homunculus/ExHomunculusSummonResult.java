@@ -23,15 +23,18 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class ExHomunculusSummonResult implements IClientOutgoingPacket
 {
-	public ExHomunculusSummonResult()
+	private final int _success;
+	
+	public ExHomunculusSummonResult(int success)
 	{
+		_success = success;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HOMUNCULUS_SUMMON_RESULT.writeId(packet);
-		packet.writeD(1); // 1 - success
+		packet.writeD(_success); // 1 - success
 		packet.writeD(SystemMessageId.A_NEW_HOMUNCULUS_IS_CREATED.getId());
 		return true;
 	}
