@@ -25,9 +25,11 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
+import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeDonationInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgedonation.ExPledgeDonationRequest;
 
 /**
@@ -63,7 +65,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 		{
 			case 0:
 			{
-				if (player.reduceAdena("pledge donation", 10000, null, true))
+				if (player.reduceAdena("Pledge donation", 100000, null, true))
 				{
 					clan.addExp(player.getObjectId(), 9);
 				}
@@ -77,15 +79,9 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 			{
 				if (player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1) >= 100)
 				{
-					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 100, player, null) != null)
-					{
-						clan.addExp(player.getObjectId(), 30);
-						player.setHonorCoins(player.getHonorCoins() + 100);
-					}
-					else
-					{
-						player.sendPacket(new ExPledgeDonationRequest(false, _type, 2));
-					}
+					player.destroyItemByItemId("Pledge donation", Inventory.LCOIN_ID, 100, player, true);
+					clan.addExp(player.getObjectId(), 30);
+					player.setHonorCoins(player.getHonorCoins() + 100);
 				}
 				else
 				{
@@ -97,15 +93,9 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 			{
 				if (player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1) >= 500)
 				{
-					if (player.getInventory().destroyItemByItemId("pledge donation", Inventory.LCOIN_ID, 500, player, null) != null)
-					{
-						clan.addExp(player.getObjectId(), 150);
-						player.setHonorCoins(player.getHonorCoins() + 500);
-					}
-					else
-					{
-						player.sendPacket(new ExPledgeDonationRequest(false, _type, 2));
-					}
+					player.destroyItemByItemId("Pledge donation", Inventory.LCOIN_ID, 500, player, true);
+					clan.addExp(player.getObjectId(), 150);
+					player.setHonorCoins(player.getHonorCoins() + 500);
 				}
 				else
 				{
@@ -114,24 +104,22 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 				break;
 			}
 		}
-		player.setClanDonationPoints(Math.max(player.getClanDonationPoints() - 1, 0));
+		player.getVariables().set(PlayerVariables.CLAN_DONATION_POINTS, Math.max(player.getClanDonationPoints() - 1, 0));
 		criticalSuccess(player, clan, _type);
 		player.sendPacket(new ExBloodyCoinCount(player));
 		player.sendItemList();
 		player.sendPacket(new ExPledgeDonationRequest(true, _type, player.getClanDonationPoints()));
+		player.sendPacket(new ExPledgeDonationInfo(player.getClanDonationPoints(), true));
 	}
 	
 	private void criticalSuccess(Player player, Clan clan, int type)
 	{
 		if (type == 1)
 		{
-			if (Rnd.get(100) < 10)
+			if (Rnd.get(100) < 5)
 			{
 				player.setHonorCoins(player.getHonorCoins() + 200);
-				clan.getMembers().forEach(clanMember ->
-				{
-					sendMail(clanMember.getObjectId(), 1, player.getName());
-				});
+				clan.getMembers().forEach(clanMember -> sendMail(clanMember.getObjectId(), 1, player.getName()));
 			}
 		}
 		else if (type == 2)
@@ -139,10 +127,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 			if (Rnd.get(100) < 5)
 			{
 				player.setHonorCoins(player.getHonorCoins() + 1000);
-				clan.getMembers().forEach(clanMember ->
-				{
-					sendMail(clanMember.getObjectId(), 5, player.getName());
-				});
+				clan.getMembers().forEach(clanMember -> sendMail(clanMember.getObjectId(), 5, player.getName()));
 			}
 		}
 	}
@@ -151,7 +136,7 @@ public class RequestExPledgeDonationRequest implements IClientIncomingPacket
 	{
 		final Message msg = new Message(charId, "Clan Rewards for " + donator + " Donation", "The entire clan receives rewards for " + donator + " donation.", MailType.PLEDGE_DONATION_CRITICAL_SUCCESS);
 		final Mail attachment = msg.createAttachments();
-		attachment.addItem("Pledge reward", 95672, amount, null, null);
+		attachment.addItem("Pledge reward", 95672, amount, null, donator); // Honor Coin Pouch
 		MailManager.getInstance().sendMessage(msg);
 	}
 }

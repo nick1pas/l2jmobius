@@ -361,23 +361,28 @@ public class DailyTaskManager
 	
 	private void resetClanDonationPoints()
 	{
+		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_pledge_donation WHERE points < ?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE points var = ?"))
 			{
-				ps.setInt(1, 4);
+				ps.setString(1, PlayerVariables.CLAN_DONATION_POINTS);
 				ps.execute();
-			}
-			for (Player player : World.getInstance().getPlayers())
-			{
-				player.setClanDonationPoints(3);
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "Could not reset clan donation points: ", e);
 		}
-		LOGGER.info("Weekly caln contributions cleaned.");
+		
+		// Update data for online players.
+		for (Player player : World.getInstance().getPlayers())
+		{
+			player.getVariables().remove(PlayerVariables.CLAN_DONATION_POINTS);
+			player.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Daily clan donation points have been reset.");
 	}
 	
 	private void resetWorldChatPoints()

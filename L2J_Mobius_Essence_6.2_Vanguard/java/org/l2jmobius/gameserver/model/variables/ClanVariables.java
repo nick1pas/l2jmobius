@@ -39,6 +39,8 @@ public class ClanVariables extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM clan_variables WHERE clanId = ?";
 	private static final String INSERT_QUERY = "INSERT INTO clan_variables (clanId, var, val) VALUES (?, ?, ?)";
 	private static final String DELETE_WEAKLY_QUERY = "DELETE FROM clan_variables WHERE var LIKE 'CONTRIBUTION_WEEKLY_%' AND clanId = ?";
+	
+	// Public variable names.
 	public static final String CONTRIBUTION = "CONTRIBUTION_";
 	public static final String CONTRIBUTION_WEEKLY = "CONTRIBUTION_WEEKLY_";
 	

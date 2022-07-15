@@ -460,11 +460,6 @@ public class Player extends Playable
 	private static final String INSERT_SUBJUGATION = "REPLACE INTO character_purge (`charId`, `category`, `points`, `keys`) VALUES (?, ?, ?, ?)";
 	private static final String RESTORE_SUBJUGATION = "SELECT * FROM character_purge WHERE charId=?";
 	
-	// Pledge donation:
-	private static final String DELETE_CLAN_DONATION = "DELETE FROM character_pledge_donation WHERE charId=?";
-	private static final String INSERT_CLAN_DONATION = "REPLACE INTO character_pledge_donation (`charId`, `points`) VALUES (?, ?)";
-	private static final String RESTORE_CLAN_DONATION = "SELECT * FROM character_pledge_donation WHERE charId=?";
-	
 	// Elemental Spirits:
 	private static final String RESTORE_ELEMENTAL_SPIRITS = "SELECT * FROM character_spirits WHERE charId=?";
 	
@@ -945,8 +940,6 @@ public class Player extends Playable
 	private final Map<Integer, PurgePlayerHolder> _purgePoints = new HashMap<>();
 	
 	private final Map<Integer, PetEvolveHolder> _petEvolves = new HashMap<>();
-	
-	private int _clanDonationPoints = 3;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -7084,9 +7077,6 @@ public class Player extends Playable
 		// Purge.
 		restoreSubjugation();
 		
-		// Clan donation.
-		restoreClanDonation();
-		
 		// Load Premium Item List.
 		loadPremiumItemList();
 		
@@ -7240,9 +7230,6 @@ public class Player extends Playable
 		
 		// Purge.
 		storeSubjugation();
-		
-		// Pledge donation.
-		storePledgeDonation();
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
 		if (vars != null)
@@ -15351,54 +15338,6 @@ public class Player extends Playable
 	
 	public int getClanDonationPoints()
 	{
-		return _clanDonationPoints;
-	}
-	
-	public void setClanDonationPoints(int points)
-	{
-		_clanDonationPoints = points;
-	}
-	
-	public void storePledgeDonation()
-	{
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			try (PreparedStatement st = con.prepareStatement(DELETE_CLAN_DONATION))
-			{
-				st.setInt(1, getObjectId());
-				st.execute();
-			}
-			
-			try (PreparedStatement st = con.prepareStatement(INSERT_CLAN_DONATION))
-			{
-				st.setInt(1, getObjectId());
-				st.setInt(2, getClanDonationPoints());
-				st.execute();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not store clan donation points for playerId " + getObjectId() + ": ", e);
-		}
-	}
-	
-	private void restoreClanDonation()
-	{
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement(RESTORE_CLAN_DONATION))
-		{
-			statement.setInt(1, getObjectId());
-			try (ResultSet rset = statement.executeQuery())
-			{
-				if (rset.next())
-				{
-					setClanDonationPoints(rset.getInt("points"));
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not restore clan donation points for playerId: " + getObjectId(), e);
-		}
+		return getVariables().getInt(PlayerVariables.CLAN_DONATION_POINTS, 3);
 	}
 }

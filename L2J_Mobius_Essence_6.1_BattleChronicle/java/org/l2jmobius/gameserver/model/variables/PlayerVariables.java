@@ -38,7 +38,7 @@ public class PlayerVariables extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM character_variables WHERE charId = ?";
 	private static final String INSERT_QUERY = "INSERT INTO character_variables (charId, var, val) VALUES (?, ?, ?)";
 	
-	// Public variable names
+	// Public variable names.
 	public static final String INSTANCE_ORIGIN = "INSTANCE_ORIGIN";
 	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_USED";
@@ -81,6 +81,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_MEN = "STAT_MEN";
 	public static final String RESURRECT_BY_PAYMENT_COUNT = "RESURRECT_BY_PAYMENT_COUNT";
 	public static final String CLAN_JOIN_TIME = "CLAN_JOIN_TIME";
+	public static final String CLAN_DONATION_POINTS = "CLAN_DONATION_POINTS";
 	public static final String HENNA1_DURATION = "HENNA1_DURATION";
 	public static final String HENNA2_DURATION = "HENNA2_DURATION";
 	public static final String HENNA3_DURATION = "HENNA3_DURATION";
