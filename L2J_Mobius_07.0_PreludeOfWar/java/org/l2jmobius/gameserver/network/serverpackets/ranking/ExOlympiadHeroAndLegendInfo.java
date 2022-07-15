@@ -55,7 +55,7 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 				try (ResultSet rset = statement.executeQuery())
 				{
 					int i = 1;
-					final boolean writedCount = false;
+					boolean wroteCount = false;
 					while (rset.next())
 					{
 						if (i == 1)
@@ -102,9 +102,10 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 						}
 						else
 						{
-							if (!writedCount)
+							if (!wroteCount)
 							{
 								packet.writeD(Hero.getInstance().getHeroes().size() - 1);
+								wroteCount = true;
 							}
 							if (Hero.getInstance().getHeroes().size() > 1)
 							{
