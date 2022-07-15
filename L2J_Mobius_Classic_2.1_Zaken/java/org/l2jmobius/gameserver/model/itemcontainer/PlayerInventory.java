@@ -32,6 +32,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
+import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -46,6 +47,7 @@ import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 public class PlayerInventory extends Inventory
 {
@@ -850,7 +852,12 @@ public class PlayerInventory extends Inventory
 	public void refreshWeight()
 	{
 		super.refreshWeight();
+		
 		_owner.refreshOverloaded(true);
+		
+		final StatusUpdate su = new StatusUpdate(_owner);
+		su.addUpdate(StatusUpdateType.CUR_LOAD, _owner.getCurrentLoad());
+		_owner.sendPacket(su);
 	}
 	
 	/**

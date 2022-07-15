@@ -38,6 +38,7 @@ public enum StatusUpdateType
 	MAX_HP(0x0A, Creature::getMaxHp),
 	CUR_MP(0x0B, creature -> (int) creature.getCurrentMp()),
 	MAX_MP(0x0C, Creature::getMaxMp),
+	CUR_LOAD(0x0E, Creature::getCurrentLoad),
 	
 	P_ATK(0x11, Creature::getPAtk),
 	ATK_SPD(0x12, Creature::getPAtkSpd),
