@@ -420,11 +420,11 @@ public class AdminEnchant implements IAdminCommandHandler
 					// if enchant value is 0 - show "blank instead of 0
 					if (currentEnch != 0)
 					{
-						getVars = getVars.replace("%ar" + i + "_ench%", Integer.toString(currentEnch));// send ench value
+						getVars = getVars.replace("%ar" + i + "_ench%", Integer.toString(currentEnch)); // send ench value
 					}
 					else
 					{
-						getVars = getVars.replace("%ar" + i + "_ench%", " ");// send "space" so displays icon correctly
+						getVars = getVars.replace("%ar" + i + "_ench%", " "); // send "space" so displays icon correctly
 					}
 				}
 			}
@@ -458,11 +458,11 @@ public class AdminEnchant implements IAdminCommandHandler
 					// if enchant value is 0 - show "blank instead of 0
 					if (currentEnch != 0)
 					{
-						getVars = getVars.replace("%ag" + i + "_ench%", Integer.toString(currentEnch));// send ench value
+						getVars = getVars.replace("%ag" + i + "_ench%", Integer.toString(currentEnch)); // send ench value
 					}
 					else
 					{
-						getVars = getVars.replace("%ag" + i + "_ench%", " ");// send "space" so displays icon correctly
+						getVars = getVars.replace("%ag" + i + "_ench%", " "); // send "space" so displays icon correctly
 					}
 				}
 			}

@@ -69,7 +69,7 @@ public class RequestServerLogin extends AbstractClientPacket
 		_key1 = readD();
 		_key2 = readD();
 		
-		_server_id = readC();// = rawPacket[9] &0xff;
+		_server_id = readC(); // = rawPacket[9] &0xff;
 	}
 	
 	@Override

@@ -29,7 +29,7 @@ public class ExCollectionOpenUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_COLLECTION_OPEN_UI.writeId(packet);
-		packet.writeC(0);// unk and may be unk D too
+		packet.writeC(0); // unk and may be unk D too
 		return true;
 	}
 }

@@ -37,7 +37,7 @@ public class ExCollectionList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_COLLECTION_LIST.writeId(packet);
 		packet.writeC(_category);
-		packet.writeD(0);// size & loop body
+		packet.writeD(0); // size & loop body
 		return true;
 	}
 }
