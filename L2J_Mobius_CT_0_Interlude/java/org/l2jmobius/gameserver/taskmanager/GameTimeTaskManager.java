@@ -40,12 +40,15 @@ public class GameTimeTaskManager extends Thread
 	
 	private final long _referenceTime;
 	private boolean _isNight;
+	private int _gameTicks;
+	private int _gameTime;
+	private int _gameHour;
 	
 	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 		super.setDaemon(true);
-		super.setPriority(NORM_PRIORITY);
+		super.setPriority(MAX_PRIORITY);
 		
 		final Calendar c = Calendar.getInstance();
 		c.set(Calendar.HOUR_OF_DAY, 0);
@@ -62,7 +65,11 @@ public class GameTimeTaskManager extends Thread
 	{
 		while (true)
 		{
-			if ((getGameHour() < 6) != _isNight)
+			_gameTicks = (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
+			_gameTime = (_gameTicks % TICKS_PER_IG_DAY) / MILLIS_IN_TICK;
+			_gameHour = _gameTime / 60;
+			
+			if ((_gameHour < 6) != _isNight)
 			{
 				_isNight = !_isNight;
 				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
@@ -70,7 +77,7 @@ public class GameTimeTaskManager extends Thread
 			
 			try
 			{
-				Thread.sleep(10000);
+				Thread.sleep(MILLIS_IN_TICK);
 			}
 			catch (InterruptedException e)
 			{
@@ -89,22 +96,22 @@ public class GameTimeTaskManager extends Thread
 	 */
 	public int getGameTicks()
 	{
-		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
+		return _gameTicks;
 	}
 	
 	public int getGameTime()
 	{
-		return (getGameTicks() % TICKS_PER_IG_DAY) / MILLIS_IN_TICK;
+		return _gameTime;
 	}
 	
 	public int getGameHour()
 	{
-		return getGameTime() / 60;
+		return _gameHour;
 	}
 	
 	public int getGameMinute()
 	{
-		return getGameTime() % 60;
+		return _gameTime % 60;
 	}
 	
 	public static final GameTimeTaskManager getInstance()
