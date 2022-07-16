@@ -245,6 +245,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MpVampiricAttack", MpVampiricAttack::new);
 		EffectHandler.getInstance().registerHandler("Mute", Mute::new);
 		EffectHandler.getInstance().registerHandler("NewHennaSlot", NewHennaSlot::new);
+		EffectHandler.getInstance().registerHandler("NightStatModifier", NightStatModifier::new);
 		EffectHandler.getInstance().registerHandler("NoblesseBless", NoblesseBless::new);
 		EffectHandler.getInstance().registerHandler("OpenChest", OpenChest::new);
 		EffectHandler.getInstance().registerHandler("OpenCommonRecipeBook", OpenCommonRecipeBook::new);
@@ -350,7 +351,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);
 		EffectHandler.getInstance().registerHandler("StatAddForLevel", StatAddForLevel::new);
 		EffectHandler.getInstance().registerHandler("StatAddForMp", StatAddForMp::new);
-		EffectHandler.getInstance().registerHandler("StatAddForNight", StatAddForNight::new);
 		EffectHandler.getInstance().registerHandler("StatAddForStat", StatAddForStat::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSpeed", StatBonusSpeed::new);

@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 /**
  * @author Mobius
  */
-public class StatAddForNight extends AbstractEffect
+public class NightStatModifier extends AbstractEffect
 {
 	private static final AtomicBoolean DAY_TIME = new AtomicBoolean(GameTimeTaskManager.getInstance().isNight());
 	private static final Set<Creature> NIGHT_STAT_CHARACTERS = ConcurrentHashMap.newKeySet();
@@ -49,7 +49,7 @@ public class StatAddForNight extends AbstractEffect
 	private final int _amount;
 	protected final StatModifierType _mode;
 	
-	public StatAddForNight(StatSet params)
+	public NightStatModifier(StatSet params)
 	{
 		_stat = params.getEnum("stat", Stat.class);
 		_amount = params.getInt("amount");
