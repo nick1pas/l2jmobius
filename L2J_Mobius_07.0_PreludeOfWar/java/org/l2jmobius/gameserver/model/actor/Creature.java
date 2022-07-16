@@ -67,6 +67,8 @@ import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
+import org.l2jmobius.gameserver.geoengine.pathfinding.PathFinding;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -821,7 +823,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		int x = xValue;
 		int y = yValue;
-		int z = zValue;
+		int z = _isFlying ? zValue : GeoEngine.getInstance().getHeight(x, y, zValue);
 		int heading = headingValue;
 		Instance instance = instanceValue;
 		
@@ -2688,7 +2690,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<Location> geoPath;
+		public List<AbstractNodeLoc> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -3464,7 +3466,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			
 			// Movement checks.
-			if (Config.PATHFINDING && !(this instanceof FriendlyNpc))
+			if ((Config.PATHFINDING > 0) && !(this instanceof FriendlyNpc))
 			{
 				final double originalDistance = distance;
 				final int originalX = x;
@@ -3508,7 +3510,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				if (((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
+					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld(), isPlayer());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						if (isPlayer() && !_isFlying && !isInWater)
@@ -3552,7 +3554,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			
 			// If no distance to go through, the movement is canceled
-			if ((distance < 1) && (Config.PATHFINDING || isPlayable()))
+			if ((distance < 1) && ((Config.PATHFINDING > 0) || isPlayable()))
 			{
 				if (isSummon())
 				{

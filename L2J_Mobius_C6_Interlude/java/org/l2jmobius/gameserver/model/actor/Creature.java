@@ -42,6 +42,8 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
+import org.l2jmobius.gameserver.geoengine.pathfinding.PathFinding;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
@@ -577,7 +579,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Adjust position a bit.
 		int x = xValue;
 		int y = yValue;
-		int z = zValue;
+		int z = _isFlying ? zValue : GeoEngine.getInstance().getHeight(x, y, zValue);
 		if (Config.RESPAWN_RANDOM_ENABLED && allowRandomOffset)
 		{
 			x += Rnd.get(-Config.RESPAWN_RANDOM_MAX_OFFSET, Config.RESPAWN_RANDOM_MAX_OFFSET);
@@ -4237,7 +4239,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		public int _heading;
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<Location> geoPath;
+		public List<AbstractNodeLoc> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -5376,7 +5378,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// Movement checks.
-			if (Config.PATHFINDING)
+			if (Config.PATHFINDING > 0)
 			{
 				final double originalDistance = distance;
 				final int originalX = x;
@@ -5440,7 +5442,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (((originalDistance - distance) > 30) && !_isAfraid && !isInBoat)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayer());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						if (isPlayer() && !_isFlying && !isInWater)
@@ -5484,7 +5486,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// If no distance to go through, the movement is cancelled
-			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || _isAfraid || (this instanceof RiftInvader)))
+			if ((distance < 1) && ((Config.PATHFINDING > 0) || isPlayable() || _isAfraid || (this instanceof RiftInvader)))
 			{
 				if (isSummon())
 				{
@@ -6944,7 +6946,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					}
 					
 					// Check if the target is behind a wall
-					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && Config.PATHFINDING && !GeoEngine.getInstance().canSeeTarget(this, target))
+					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && (Config.PATHFINDING > 0) && !GeoEngine.getInstance().canSeeTarget(this, target))
 					{
 						skipped++;
 						continue;

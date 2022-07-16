@@ -47,8 +47,8 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldX = activeChar.getX();
 			final int worldY = activeChar.getY();
 			final int worldZ = activeChar.getZ();
-			final int geoX = GeoEngine.getGeoX(worldX);
-			final int geoY = GeoEngine.getGeoY(worldY);
+			final int geoX = GeoEngine.getInstance().getGeoX(worldX);
+			final int geoY = GeoEngine.getInstance().getGeoY(worldY);
 			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeight(worldX, worldY, worldZ));
@@ -63,8 +63,8 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldX = activeChar.getX();
 			final int worldY = activeChar.getY();
 			final int worldZ = activeChar.getZ();
-			final int geoX = GeoEngine.getGeoX(worldX);
-			final int geoY = GeoEngine.getGeoY(worldY);
+			final int geoX = GeoEngine.getInstance().getGeoX(worldX);
+			final int geoY = GeoEngine.getInstance().getGeoY(worldY);
 			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeight(worldX, worldY, worldZ));

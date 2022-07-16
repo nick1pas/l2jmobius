@@ -400,7 +400,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			if (GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) //
-				&& GeoEngine.getInstance().canSee(newlocx, newlocy, newlocz, npc.getCollisionHeight(), randX, randY, newlocz, 0))
+				&& GeoEngine.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()))
 			{
 				newlocx = randX;
 				newlocy = randY;

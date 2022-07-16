@@ -55,8 +55,8 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int worldX = activeChar.getX();
 				final int worldY = activeChar.getY();
 				final int worldZ = activeChar.getZ();
-				final int geoX = GeoEngine.getGeoX(worldX);
-				final int geoY = GeoEngine.getGeoY(worldY);
+				final int geoX = GeoEngine.getInstance().getGeoX(worldX);
+				final int geoY = GeoEngine.getInstance().getGeoY(worldY);
 				
 				if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 				{
@@ -73,8 +73,8 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int worldX = activeChar.getX();
 				final int worldY = activeChar.getY();
 				final int worldZ = activeChar.getZ();
-				final int geoX = GeoEngine.getGeoX(worldX);
-				final int geoY = GeoEngine.getGeoY(worldY);
+				final int geoX = GeoEngine.getInstance().getGeoX(worldX);
+				final int geoY = GeoEngine.getInstance().getGeoY(worldY);
 				
 				if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 				{

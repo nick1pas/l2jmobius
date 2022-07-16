@@ -792,7 +792,7 @@ public class AttackableAI extends CreatureAI
 					if (!_actor.isInsideRadius2D(newX, newY, originalAttackTarget.getZ(), collision))
 					{
 						final int newZ = _actor.getZ() + 30;
-						if (!Config.PATHFINDING || GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), newX, newY, newZ, _actor.getInstanceId()))
+						if ((Config.PATHFINDING <= 0) || GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), newX, newY, newZ, _actor.getInstanceId()))
 						{
 							moveTo(newX, newY, newZ);
 						}

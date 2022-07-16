@@ -2938,7 +2938,7 @@ public class Formulas
 	 */
 	public static double calcFallDam(Creature creature, int fallHeight)
 	{
-		if (!Config.FALL_DAMAGE || (fallHeight < 0))
+		if (!Config.ENABLE_FALLING_DAMAGE || (fallHeight < 0))
 		{
 			return 0;
 		}

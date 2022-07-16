@@ -52,7 +52,7 @@ public class Ground implements ITargetTypeHandler
 					return null;
 				}
 				
-				if (!GeoEngine.getInstance().canSeeLocation(creature, worldPosition))
+				if (!GeoEngine.getInstance().canSeeTarget(creature, worldPosition))
 				{
 					if (sendMessage)
 					{

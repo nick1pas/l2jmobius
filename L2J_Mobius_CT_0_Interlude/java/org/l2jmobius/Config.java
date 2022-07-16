@@ -60,7 +60,6 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -1020,18 +1019,16 @@ public class Config
 	// GeoEngine
 	// --------------------------------------------------
 	public static Path GEODATA_PATH;
-	public static GeoType GEODATA_TYPE;
-	public static boolean PATHFINDING;
+	public static Path PATHNODE_PATH;
+	public static int PATHFINDING;
 	public static String PATHFIND_BUFFERS;
-	public static int MOVE_WEIGHT;
-	public static int MOVE_WEIGHT_DIAG;
-	public static int OBSTACLE_WEIGHT;
-	public static int OBSTACLE_WEIGHT_DIAG;
-	public static int HEURISTIC_WEIGHT;
-	public static int HEURISTIC_WEIGHT_DIAG;
-	public static int MAX_ITERATIONS;
-	public static int PART_OF_CHARACTER_HEIGHT;
-	public static int MAX_OBSTACLE_HEIGHT;
+	public static float LOW_WEIGHT;
+	public static float MEDIUM_WEIGHT;
+	public static float HIGH_WEIGHT;
+	public static boolean ADVANCED_DIAGONAL_STRATEGY;
+	public static float DIAGONAL_WEIGHT;
+	public static int MAX_POSTFILTER_PASSES;
+	public static boolean DEBUG_PATH;
 	
 	// --------------------------------------------------
 	// Custom Settings
@@ -2466,19 +2463,17 @@ public class Config
 			
 			// Load GeoEngine config file (if exists)
 			final PropertiesParser geoEngineConfig = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-			GEODATA_PATH = Paths.get(geoEngineConfig.getString("GeoDataPath", "./data/geodata"));
-			GEODATA_TYPE = Enum.valueOf(GeoType.class, geoEngineConfig.getString("GeoDataType", "L2J"));
-			PATHFINDING = geoEngineConfig.getBoolean("PathFinding", true);
-			PATHFIND_BUFFERS = geoEngineConfig.getString("PathFindBuffers", "1200x10;2000x10;3000x5;5000x3;10000x3");
-			MOVE_WEIGHT = geoEngineConfig.getInt("MoveWeight", 10);
-			MOVE_WEIGHT_DIAG = geoEngineConfig.getInt("MoveWeightDiag", 14);
-			OBSTACLE_WEIGHT = geoEngineConfig.getInt("ObstacleWeight", 30);
-			OBSTACLE_WEIGHT_DIAG = (int) (OBSTACLE_WEIGHT * Math.sqrt(2));
-			HEURISTIC_WEIGHT = geoEngineConfig.getInt("HeuristicWeight", 12);
-			HEURISTIC_WEIGHT_DIAG = geoEngineConfig.getInt("HeuristicWeightDiag", 18);
-			MAX_ITERATIONS = geoEngineConfig.getInt("MaxIterations", 3500);
-			PART_OF_CHARACTER_HEIGHT = geoEngineConfig.getInt("PartOfCharacterHeight", 75);
-			MAX_OBSTACLE_HEIGHT = geoEngineConfig.getInt("MaxObstacleHeight", 32);
+			GEODATA_PATH = Paths.get(Config.DATAPACK_ROOT.getPath() + "/" + geoEngineConfig.getString("GeoDataPath", "geodata"));
+			PATHNODE_PATH = Paths.get(Config.DATAPACK_ROOT.getPath() + "/" + geoEngineConfig.getString("PathnodePath", "pathnode"));
+			PATHFINDING = geoEngineConfig.getInt("PathFinding", 0);
+			PATHFIND_BUFFERS = geoEngineConfig.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			LOW_WEIGHT = geoEngineConfig.getFloat("LowWeight", 0.5f);
+			MEDIUM_WEIGHT = geoEngineConfig.getFloat("MediumWeight", 2);
+			HIGH_WEIGHT = geoEngineConfig.getFloat("HighWeight", 3);
+			ADVANCED_DIAGONAL_STRATEGY = geoEngineConfig.getBoolean("AdvancedDiagonalStrategy", true);
+			DIAGONAL_WEIGHT = geoEngineConfig.getFloat("DiagonalWeight", 0.707f);
+			MAX_POSTFILTER_PASSES = geoEngineConfig.getInt("MaxPostfilterPasses", 3);
+			DEBUG_PATH = geoEngineConfig.getBoolean("DebugPath", false);
 			
 			// Load AllowedPlayerRaces config file (if exists)
 			final PropertiesParser allowedPlayerRacesConfig = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);

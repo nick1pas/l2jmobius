@@ -605,7 +605,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			// Check if the WorldObject is inside the Faction Range of the actor
 			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && actor.isInsideRadius2D(npc, npc.getFactionRange()) && target.isInsideRadius2D(npc, npc.getFactionRange()))
 			{
-				if (Config.PATHFINDING)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(npc, target))
 					{

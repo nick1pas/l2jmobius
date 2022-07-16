@@ -25,6 +25,3 @@ b - Make it work
 
 To make geodata work:
 * unpack your geodata files into "/data/geodata" folder (or any other folder)
-* open "/config/main/GeoEngine.ini" with your favorite text editor and then edit following configs:
-- GeoDataPath = set path to your geodata, if elsewhere than "./data/geodata/"
-- GeoDataType = set the geodata format, which you are using.

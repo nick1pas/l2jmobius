@@ -4330,7 +4330,7 @@ public class Player extends Playable
 			}
 			else if (isAutoAttackable(player))
 			{
-				if (Config.PATHFINDING)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
@@ -4344,7 +4344,7 @@ public class Player extends Playable
 					player.onActionRequest();
 				}
 			}
-			else if (Config.PATHFINDING)
+			else if (Config.PATHFINDING > 0)
 			{
 				if (GeoEngine.getInstance().canSeeTarget(player, this))
 				{
@@ -4423,7 +4423,7 @@ public class Player extends Playable
 				}
 				else if (isAutoAttackable(player))
 				{
-					if (Config.PATHFINDING)
+					if (Config.PATHFINDING > 0)
 					{
 						if (GeoEngine.getInstance().canSeeTarget(player, this))
 						{
@@ -4461,7 +4461,7 @@ public class Player extends Playable
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 				}
-				else if (Config.PATHFINDING)
+				else if (Config.PATHFINDING > 0)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{

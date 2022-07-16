@@ -201,7 +201,7 @@ public abstract class Summon extends Playable
 		{
 			if (isAutoAttackable(player))
 			{
-				if (Config.PATHFINDING)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
@@ -220,7 +220,7 @@ public abstract class Summon extends Playable
 				// This Action Failed packet avoids player getting stuck when clicking three or more times
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				
-				if (Config.PATHFINDING)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{

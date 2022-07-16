@@ -9020,7 +9020,7 @@ public class Player extends Playable
 		{
 			if (sklTargetType == TargetType.GROUND)
 			{
-				if (!GeoEngine.getInstance().canSeeLocation(this, _currentSkillWorldPosition))
+				if (!GeoEngine.getInstance().canSeeTarget(this, _currentSkillWorldPosition))
 				{
 					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 					sendPacket(ActionFailed.STATIC_PACKET);
