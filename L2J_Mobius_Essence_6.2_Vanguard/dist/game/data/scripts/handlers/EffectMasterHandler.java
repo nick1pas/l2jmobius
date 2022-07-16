@@ -46,7 +46,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AgathionSlot", AgathionSlot::new);
 		EffectHandler.getInstance().registerHandler("AreaDamage", AreaDamage::new);
 		EffectHandler.getInstance().registerHandler("AreaOfEffectDamageDefence", AreaOfEffectDamageDefence::new);
-		EffectHandler.getInstance().registerHandler("AreaOfEffectDamageModifier", AreaOfEffectDamageModifier::new);
+		EffectHandler.getInstance().registerHandler("AreaOfEffectDamageModify", AreaOfEffectDamageModify::new);
 		EffectHandler.getInstance().registerHandler("ArtifactSlot", ArtifactSlot::new);
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
@@ -248,7 +248,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MpVampiricAttack", MpVampiricAttack::new);
 		EffectHandler.getInstance().registerHandler("Mute", Mute::new);
 		EffectHandler.getInstance().registerHandler("NewHennaSlot", NewHennaSlot::new);
-		EffectHandler.getInstance().registerHandler("NightStatModifier", NightStatModifier::new);
+		EffectHandler.getInstance().registerHandler("NightStatModify", NightStatModify::new);
 		EffectHandler.getInstance().registerHandler("NoblesseBless", NoblesseBless::new);
 		EffectHandler.getInstance().registerHandler("OpenChest", OpenChest::new);
 		EffectHandler.getInstance().registerHandler("OpenCommonRecipeBook", OpenCommonRecipeBook::new);

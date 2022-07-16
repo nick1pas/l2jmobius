@@ -144,8 +144,8 @@ public enum Stat
 	DEFENCE_CRITICAL_DAMAGE_ADD("defCritDamageAdd"), // Resistance to critical damage in value (Example: +100 will be 100 more critical damage, NOT 100% more).
 	DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE("defCAtkSkill"),
 	DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE_ADD("defCAtkSkillAdd"),
-	AREA_OF_EFFECT_DAMAGE_MODIFIER("aoeDamageMofifier"),
 	AREA_OF_EFFECT_DAMAGE_DEFENCE("aoeDamageDefence"),
+	AREA_OF_EFFECT_DAMAGE_MODIFY("aoeDamageModify"),
 	BLOW_RATE("blowRate"),
 	BLOW_RATE_DEFENCE("blowRateDefence"),
 	INSTANT_KILL_RESIST("instantKillResist"),

@@ -201,7 +201,7 @@ public class Formulas
 		// AoE modifiers.
 		if (skill.isBad() && (skill.getAffectLimit() > 0))
 		{
-			damage *= attacker.getStat().getMul(Stat.AREA_OF_EFFECT_DAMAGE_MODIFIER, 1) - target.getStat().getValue(Stat.AREA_OF_EFFECT_DAMAGE_DEFENCE, 0);
+			damage *= attacker.getStat().getMul(Stat.AREA_OF_EFFECT_DAMAGE_MODIFY, 1) - target.getStat().getValue(Stat.AREA_OF_EFFECT_DAMAGE_DEFENCE, 0);
 		}
 		
 		return damage;

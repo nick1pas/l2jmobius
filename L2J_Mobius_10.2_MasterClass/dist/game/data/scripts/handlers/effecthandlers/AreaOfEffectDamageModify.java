@@ -22,10 +22,10 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 /**
  * @author quangnguyen
  */
-public class AreaOfEffectDamageModifier extends AbstractStatPercentEffect
+public class AreaOfEffectDamageModify extends AbstractStatPercentEffect
 {
-	public AreaOfEffectDamageModifier(StatSet params)
+	public AreaOfEffectDamageModify(StatSet params)
 	{
-		super(params, Stat.AREA_OF_EFFECT_DAMAGE_MODIFIER);
+		super(params, Stat.AREA_OF_EFFECT_DAMAGE_MODIFY);
 	}
 }
