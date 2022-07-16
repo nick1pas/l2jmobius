@@ -33,8 +33,8 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
 import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
-import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
+import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToLocationInVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
@@ -442,7 +442,7 @@ abstract class AbstractAI implements Ctrl
 			{
 				if (_clientMovingToPawnOffset == offset)
 				{
-					if (GameTimeTaskManager.getGameTicks() < _moveToPawnTimeout)
+					if (GameTimeTaskManager.getInstance().getGameTicks() < _moveToPawnTimeout)
 					{
 						return;
 					}
@@ -452,7 +452,7 @@ abstract class AbstractAI implements Ctrl
 				else if (_actor.isOnGeodataPath())
 				{
 					// minimum time to calculate new route is 2 seconds
-					if (GameTimeTaskManager.getGameTicks() < (_moveToPawnTimeout + 10))
+					if (GameTimeTaskManager.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
 					{
 						return;
 					}
@@ -465,7 +465,7 @@ abstract class AbstractAI implements Ctrl
 			
 			setTarget(pawn);
 			
-			_moveToPawnTimeout = GameTimeTaskManager.getGameTicks();
+			_moveToPawnTimeout = GameTimeTaskManager.getInstance().getGameTicks();
 			_moveToPawnTimeout += /* 1000 */ 200 / GameTimeTaskManager.MILLIS_IN_TICK;
 			
 			if ((pawn == null) || (_accessor == null))

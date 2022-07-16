@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.MovementTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -168,7 +169,7 @@ public abstract class Vehicle extends Creature
 						
 						m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 						_move = m;
-						GameTimeTaskManager.getInstance().registerMovingObject(this);
+						MovementTaskManager.getInstance().registerMovingObject(this);
 						
 						// Make sure vehicle is not stuck.
 						if (_monitorTask == null)

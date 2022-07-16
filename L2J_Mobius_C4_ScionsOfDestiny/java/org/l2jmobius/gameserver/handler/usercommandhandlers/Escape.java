@@ -117,7 +117,7 @@ public class Escape implements IUserCommandHandler
 		// Continue execution later.
 		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player);
 		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, unstuckTimer));
-		player.setSkillCastEndTime(10 + GameTimeTaskManager.getGameTicks() + (unstuckTimer / GameTimeTaskManager.MILLIS_IN_TICK));
+		player.setSkillCastEndTime(10 + GameTimeTaskManager.getInstance().getGameTicks() + (unstuckTimer / GameTimeTaskManager.MILLIS_IN_TICK));
 		
 		return true;
 	}

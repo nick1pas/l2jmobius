@@ -129,7 +129,7 @@ public class Party
 	public void setPendingInvitation(boolean value)
 	{
 		_pendingInvitation = value;
-		_pendingInviteTimeout = GameTimeTaskManager.getGameTicks() + (Player.REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
+		_pendingInviteTimeout = GameTimeTaskManager.getInstance().getGameTicks() + (Player.REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
 	}
 	
 	/**
@@ -139,7 +139,7 @@ public class Party
 	 */
 	public boolean isInvitationRequestExpired()
 	{
-		return (_pendingInviteTimeout <= GameTimeTaskManager.getGameTicks());
+		return (_pendingInviteTimeout <= GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**

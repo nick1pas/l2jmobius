@@ -17,38 +17,35 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Calendar;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import org.l2jmobius.gameserver.model.actor.Creature;
 
 /**
- * Game Time task manager class.
- * @author Forsaiken
+ * GameTime task manager class.
+ * @author Forsaiken, Mobius
  */
 public class GameTimeTaskManager extends Thread
 {
 	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
-	public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
+	public static final int TICKS_PER_SECOND = 10; // Not able to change this without checking through code.
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	public static final int IG_DAYS_PER_DAY = 6;
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
 	
-	private static final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
+	private boolean _isNight;
 	
 	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 		super.setDaemon(true);
-		super.setPriority(MAX_PRIORITY);
+		super.setPriority(NORM_PRIORITY);
 		
 		final Calendar c = Calendar.getInstance();
 		c.set(Calendar.HOUR_OF_DAY, 0);
@@ -58,6 +55,41 @@ public class GameTimeTaskManager extends Thread
 		_referenceTime = c.getTimeInMillis();
 		
 		super.start();
+	}
+	
+	@Override
+	public void run()
+	{
+		while (true)
+		{
+			if ((getGameHour() < 6) != _isNight)
+			{
+				_isNight = !_isNight;
+				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+			}
+			
+			try
+			{
+				Thread.sleep(10000);
+			}
+			catch (InterruptedException e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+			}
+		}
+	}
+	
+	public boolean isNight()
+	{
+		return _isNight;
+	}
+	
+	/**
+	 * @return The actual GameTime tick. Directly taken from current time.
+	 */
+	public int getGameTicks()
+	{
+		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
 	}
 	
 	public int getGameTime()
@@ -73,107 +105,6 @@ public class GameTimeTaskManager extends Thread
 	public int getGameMinute()
 	{
 		return getGameTime() % 60;
-	}
-	
-	public boolean isNight()
-	{
-		return getGameHour() < 6;
-	}
-	
-	/**
-	 * The true GameTime tick. Directly taken from current time. This represents the tick of the time.
-	 * @return
-	 */
-	public int getGameTicks()
-	{
-		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
-	}
-	
-	/**
-	 * Add a Creature to movingObjects of GameTimeTaskManager.
-	 * @param creature The Creature to add to movingObjects of GameTimeTaskManager
-	 */
-	public void registerMovingObject(Creature creature)
-	{
-		if (creature == null)
-		{
-			return;
-		}
-		
-		_movingObjects.add(creature);
-	}
-	
-	/**
-	 * Move all Creatures contained in movingObjects of GameTimeTaskManager.<br>
-	 * <br>
-	 * <b><u>Concept</u>:</b><br>
-	 * <br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager.<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b><br>
-	 * <ul>
-	 * <li>Update the position of each Creature</li>
-	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
-	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
-	 * </ul>
-	 */
-	private void moveObjects()
-	{
-		_movingObjects.removeIf(Creature::updatePosition);
-	}
-	
-	public void stopTimer()
-	{
-		super.interrupt();
-		LOGGER.info(getClass().getSimpleName() + ": Stopped.");
-	}
-	
-	@Override
-	public void run()
-	{
-		LOGGER.info(getClass().getSimpleName() + ": Started.");
-		
-		long nextTickTime;
-		long sleepTime;
-		boolean isNight = isNight();
-		
-		if (isNight)
-		{
-			ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
-		}
-		
-		while (true)
-		{
-			nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
-			
-			try
-			{
-				moveObjects();
-			}
-			catch (Throwable e)
-			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
-			}
-			
-			sleepTime = nextTickTime - System.currentTimeMillis();
-			if (sleepTime > 0)
-			{
-				try
-				{
-					Thread.sleep(sleepTime);
-				}
-				catch (Exception e)
-				{
-					// Ignore.
-				}
-			}
-			
-			if (isNight() != isNight)
-			{
-				isNight = !isNight;
-				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
-			}
-		}
 	}
 	
 	public static final GameTimeTaskManager getInstance()

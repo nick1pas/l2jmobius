@@ -7943,9 +7943,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HitAtNight">
+			<effect name="StatAddForNight">
+				<stat>ACCURACY_COMBAT</stat>
 				<amount>3</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -7967,6 +7967,10 @@
 			<effect name="MaxCp">
 				<amount>10</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatAddForNight">
+				<stat>ACCURACY_COMBAT</stat>
+				<amount>3</amount>
 			</effect>
 		</effects>
 	</skill>

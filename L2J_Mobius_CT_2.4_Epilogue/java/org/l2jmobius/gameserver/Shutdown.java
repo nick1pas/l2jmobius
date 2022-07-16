@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.telnet.TelnetServer;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.MovementTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -149,10 +150,21 @@ public class Shutdown extends Thread
 			}
 			
 			// ensure all services are stopped
+			
 			try
 			{
-				GameTimeTaskManager.getInstance().stopTimer();
-				LOGGER.info("Game Time Controller: Timer stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				MovementTaskManager.getInstance().interrupt();
+				LOGGER.info("Movement Task Manager: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+			}
+			catch (Throwable t)
+			{
+				// ignore
+			}
+			
+			try
+			{
+				GameTimeTaskManager.getInstance().interrupt();
+				LOGGER.info("Game Time Task Manager: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)
 			{

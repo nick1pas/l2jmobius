@@ -230,6 +230,9 @@ public class GameServer
 		printSection("ThreadPool");
 		ThreadPool.init();
 		
+		// Start game time task manager early
+		GameTimeTaskManager.getInstance();
+		
 		printSection("IdManager");
 		IdManager.getInstance();
 		if (!IdManager.hasInitialized())
@@ -238,7 +241,6 @@ public class GameServer
 			throw new Exception("Could not initialize the ID factory!");
 		}
 		
-		// load script engines
 		printSection("Scripting Engine");
 		EventDispatcher.getInstance();
 		ScriptEngineManager.getInstance();
@@ -247,8 +249,6 @@ public class GameServer
 		TelnetServer.getInstance();
 		
 		printSection("World");
-		// Start game time task manager early.
-		GameTimeTaskManager.getInstance();
 		World.getInstance();
 		MapRegionManager.getInstance();
 		ZoneManager.getInstance();

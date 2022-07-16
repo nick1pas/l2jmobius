@@ -173,6 +173,9 @@ public class GameServer
 		printSection("ThreadPool");
 		ThreadPool.init();
 		
+		// Start game time task manager early
+		GameTimeTaskManager.getInstance();
+		
 		printSection("IdManager");
 		IdManager.getInstance();
 		if (!IdManager.hasInitialized())
@@ -196,7 +199,6 @@ public class GameServer
 		TeleportLocationTable.getInstance();
 		PartyMatchWaitingList.getInstance();
 		PartyMatchRoomList.getInstance();
-		GameTimeTaskManager.getInstance();
 		CharNameTable.getInstance();
 		ExperienceData.getInstance();
 		DuelManager.getInstance();

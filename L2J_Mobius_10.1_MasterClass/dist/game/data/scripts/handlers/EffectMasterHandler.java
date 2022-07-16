@@ -185,7 +185,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HealOverTime", HealOverTime::new);
 		EffectHandler.getInstance().registerHandler("HealPercent", HealPercent::new);
 		EffectHandler.getInstance().registerHandler("Hide", Hide::new);
-		EffectHandler.getInstance().registerHandler("HitAtNight", HitAtNight::new);
 		EffectHandler.getInstance().registerHandler("HitNumber", HitNumber::new);
 		EffectHandler.getInstance().registerHandler("Hp", Hp::new);
 		EffectHandler.getInstance().registerHandler("HpByLevel", HpByLevel::new);
@@ -350,6 +349,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);
 		EffectHandler.getInstance().registerHandler("StatAddForLevel", StatAddForLevel::new);
 		EffectHandler.getInstance().registerHandler("StatAddForMp", StatAddForMp::new);
+		EffectHandler.getInstance().registerHandler("StatAddForNight", StatAddForNight::new);
 		EffectHandler.getInstance().registerHandler("StatAddForStat", StatAddForStat::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSpeed", StatBonusSpeed::new);

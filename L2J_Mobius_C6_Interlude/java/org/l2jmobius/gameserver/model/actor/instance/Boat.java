@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleDeparture;
 import org.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.MovementTaskManager;
 
 /**
  * @author Maktakien
@@ -96,14 +97,14 @@ public class Boat extends Creature
 		m._zDestination = z; // this is what was requested from client
 		m._heading = 0;
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
-		m._moveStartTime = GameTimeTaskManager.getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeTaskManager
-		// The GameTimeTaskManager manage objects movement
-		GameTimeTaskManager.getInstance().registerMovingObject(this);
+		// Add the Creature to moving objects of the MovementTaskManager.
+		// The MovementTaskManager manages object movement.
+		MovementTaskManager.getInstance().registerMovingObject(this);
 	}
 	
 	public void evtArrived()

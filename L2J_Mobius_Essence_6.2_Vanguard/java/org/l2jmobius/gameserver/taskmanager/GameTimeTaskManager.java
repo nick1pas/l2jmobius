@@ -17,42 +17,35 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Calendar;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Game Time task manager class.
- * @author Forsaiken
+ * GameTime task manager class.
+ * @author Forsaiken, Mobius
  */
 public class GameTimeTaskManager extends Thread
 {
 	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
 	
-	public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
+	public static final int TICKS_PER_SECOND = 10; // Not able to change this without checking through code.
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	public static final int IG_DAYS_PER_DAY = 6;
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
-	private static final int SHADOW_SENSE_ID = 294;
 	
-	private static final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
-	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
+	private boolean _isNight;
 	
 	protected GameTimeTaskManager()
 	{
 		super("GameTimeTaskManager");
 		super.setDaemon(true);
-		super.setPriority(MAX_PRIORITY);
+		super.setPriority(NORM_PRIORITY);
 		
 		final Calendar c = Calendar.getInstance();
 		c.set(Calendar.HOUR_OF_DAY, 0);
@@ -62,6 +55,41 @@ public class GameTimeTaskManager extends Thread
 		_referenceTime = c.getTimeInMillis();
 		
 		super.start();
+	}
+	
+	@Override
+	public void run()
+	{
+		while (true)
+		{
+			if ((getGameHour() < 6) != _isNight)
+			{
+				_isNight = !_isNight;
+				EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(_isNight));
+			}
+			
+			try
+			{
+				Thread.sleep(10000);
+			}
+			catch (InterruptedException e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+			}
+		}
+	}
+	
+	public boolean isNight()
+	{
+		return _isNight;
+	}
+	
+	/**
+	 * @return The actual GameTime tick. Directly taken from current time.
+	 */
+	public int getGameTicks()
+	{
+		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
 	}
 	
 	public int getGameTime()
@@ -77,134 +105,6 @@ public class GameTimeTaskManager extends Thread
 	public int getGameMinute()
 	{
 		return getGameTime() % 60;
-	}
-	
-	public boolean isNight()
-	{
-		return getGameHour() < 6;
-	}
-	
-	/**
-	 * The true GameTime tick. Directly taken from current time. This represents the tick of the time.
-	 * @return
-	 */
-	public int getGameTicks()
-	{
-		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
-	}
-	
-	/**
-	 * Add a Creature to movingObjects of GameTimeTaskManager.
-	 * @param creature The Creature to add to movingObjects of GameTimeTaskManager
-	 */
-	public void registerMovingObject(Creature creature)
-	{
-		if (creature == null)
-		{
-			return;
-		}
-		
-		_movingObjects.add(creature);
-	}
-	
-	/**
-	 * Move all Creatures contained in movingObjects of GameTimeTaskManager.<br>
-	 * <br>
-	 * <b><u>Concept</u>:</b><br>
-	 * <br>
-	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeTaskManager.<br>
-	 * <br>
-	 * <b><u>Actions</u>:</b><br>
-	 * <ul>
-	 * <li>Update the position of each Creature</li>
-	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
-	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
-	 * </ul>
-	 */
-	private void moveObjects()
-	{
-		_movingObjects.removeIf(Creature::updatePosition);
-	}
-	
-	public void stopTimer()
-	{
-		super.interrupt();
-		LOGGER.info(getClass().getSimpleName() + ": Stopped.");
-	}
-	
-	@Override
-	public void run()
-	{
-		LOGGER.info(getClass().getSimpleName() + ": Started.");
-		
-		long nextTickTime;
-		long sleepTime;
-		boolean isNight = isNight();
-		
-		EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
-		
-		while (true)
-		{
-			nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
-			
-			try
-			{
-				moveObjects();
-			}
-			catch (Throwable e)
-			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
-			}
-			
-			sleepTime = nextTickTime - System.currentTimeMillis();
-			if (sleepTime > 0)
-			{
-				try
-				{
-					Thread.sleep(sleepTime);
-				}
-				catch (InterruptedException e)
-				{
-				}
-			}
-			
-			if (isNight() != isNight)
-			{
-				isNight = !isNight;
-				EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
-				notifyShadowSense();
-			}
-		}
-	}
-	
-	public synchronized void addShadowSenseCharacter(Creature creature)
-	{
-		if (!_shadowSenseCharacters.contains(creature))
-		{
-			_shadowSenseCharacters.add(creature);
-			if (isNight())
-			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
-				msg.addSkillName(SHADOW_SENSE_ID);
-				creature.sendPacket(msg);
-			}
-		}
-	}
-	
-	public void removeShadowSenseCharacter(Creature creature)
-	{
-		_shadowSenseCharacters.remove(creature);
-	}
-	
-	private void notifyShadowSense()
-	{
-		final SystemMessage msg = new SystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
-		msg.addSkillName(SHADOW_SENSE_ID);
-		for (Creature creature : _shadowSenseCharacters)
-		{
-			creature.getStat().recalculateStats(true);
-			creature.sendPacket(msg);
-		}
 	}
 	
 	public static final GameTimeTaskManager getInstance()

@@ -168,7 +168,7 @@ public class RequestActionUse implements IClientIncomingPacket
 				{
 					if (pet.isAttackDisabled())
 					{
-						if (pet.getAttackEndTime() > GameTimeTaskManager.getGameTicks())
+						if (pet.getAttackEndTime() > GameTimeTaskManager.getInstance().getGameTicks())
 						{
 							pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 						}

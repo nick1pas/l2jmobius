@@ -47,7 +47,7 @@ public class FloodProtectorAction
 	/**
 	 * Next game tick when new request is allowed.
 	 */
-	private volatile int _nextGameTick = GameTimeTaskManager.getGameTicks();
+	private volatile int _nextGameTick = GameTimeTaskManager.getInstance().getGameTicks();
 	/**
 	 * Request counter.
 	 */
@@ -84,7 +84,7 @@ public class FloodProtectorAction
 			return true;
 		}
 		
-		final int curTick = GameTimeTaskManager.getGameTicks();
+		final int curTick = GameTimeTaskManager.getInstance().getGameTicks();
 		if ((curTick < _nextGameTick) || _punishmentInProgress)
 		{
 			if (_config.LOG_FLOODING && !_logged && LOGGER.isLoggable(Level.WARNING))

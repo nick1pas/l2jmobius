@@ -126,6 +126,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.MovementTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -845,7 +846,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 				
 				// Verify if the bow can be use
-				if (_disableBowAttackEndTime <= GameTimeTaskManager.getGameTicks())
+				if (_disableBowAttackEndTime <= GameTimeTaskManager.getInstance().getGameTicks())
 				{
 					// Verify if Player owns enough MP
 					final int saMpConsume = (int) getStat().calcStat(Stat.MP_CONSUME, 0, null, null);
@@ -862,7 +863,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					getStatus().reduceMp(mpConsume);
 					
 					// Set the period of bow non re-use
-					_disableBowAttackEndTime = (5 * GameTimeTaskManager.TICKS_PER_SECOND) + GameTimeTaskManager.getGameTicks();
+					_disableBowAttackEndTime = (5 * GameTimeTaskManager.TICKS_PER_SECOND) + GameTimeTaskManager.getInstance().getGameTicks();
 				}
 				else
 				{
@@ -874,7 +875,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			else if (this instanceof Npc)
 			{
-				if (_disableBowAttackEndTime > GameTimeTaskManager.getGameTicks())
+				if (_disableBowAttackEndTime > GameTimeTaskManager.getInstance().getGameTicks())
 				{
 					return;
 				}
@@ -924,7 +925,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 		final int timeAtk = calculateTimeBetweenAttacks(target, weaponItem);
 		final int timeToHit = timeAtk / 2;
-		_attackEndTime = GameTimeTaskManager.getGameTicks();
+		_attackEndTime = GameTimeTaskManager.getInstance().getGameTicks();
 		_attackEndTime += (timeAtk / GameTimeTaskManager.MILLIS_IN_TICK);
 		_attackEndTime -= 1;
 		int ssGrade = 0;
@@ -1110,7 +1111,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		ThreadPool.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk);
 		
 		// Calculate and set the disable delay of the bow in function of the Attack Speed
-		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeTaskManager.MILLIS_IN_TICK) + GameTimeTaskManager.getGameTicks();
+		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeTaskManager.MILLIS_IN_TICK) + GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Add this hit to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -1548,14 +1549,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (skill.isPotion())
 		{
 			// Set the _castEndTime and _castInterruptTim. +10 ticks for lag situations, will be reseted in onMagicFinalizer
-			_castPotionEndTime = 10 + GameTimeTaskManager.getGameTicks() + ((coolTime + hitTime) / GameTimeTaskManager.MILLIS_IN_TICK);
-			_castPotionInterruptTime = -2 + GameTimeTaskManager.getGameTicks() + (hitTime / GameTimeTaskManager.MILLIS_IN_TICK);
+			_castPotionEndTime = 10 + GameTimeTaskManager.getInstance().getGameTicks() + ((coolTime + hitTime) / GameTimeTaskManager.MILLIS_IN_TICK);
+			_castPotionInterruptTime = -2 + GameTimeTaskManager.getInstance().getGameTicks() + (hitTime / GameTimeTaskManager.MILLIS_IN_TICK);
 		}
 		else
 		{
 			// Set the _castEndTime and _castInterruptTim. +10 ticks for lag situations, will be reseted in onMagicFinalizer
-			_castEndTime = 10 + GameTimeTaskManager.getGameTicks() + ((coolTime + hitTime) / GameTimeTaskManager.MILLIS_IN_TICK);
-			_castInterruptTime = -2 + GameTimeTaskManager.getGameTicks() + (hitTime / GameTimeTaskManager.MILLIS_IN_TICK);
+			_castEndTime = 10 + GameTimeTaskManager.getInstance().getGameTicks() + ((coolTime + hitTime) / GameTimeTaskManager.MILLIS_IN_TICK);
+			_castInterruptTime = -2 + GameTimeTaskManager.getInstance().getGameTicks() + (hitTime / GameTimeTaskManager.MILLIS_IN_TICK);
 		}
 		
 		// Init the reuse time of the skill
@@ -4837,7 +4838,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			return true;
 		}
-		return _castEndTime > GameTimeTaskManager.getGameTicks();
+		return _castEndTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -4846,7 +4847,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isCastingPotionNow()
 	{
-		return _castPotionEndTime > GameTimeTaskManager.getGameTicks();
+		return _castPotionEndTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -4855,7 +4856,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean canAbortCast()
 	{
-		return _castInterruptTime > GameTimeTaskManager.getGameTicks();
+		return _castInterruptTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -4864,7 +4865,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isAttackingNow()
 	{
-		return _attackEndTime > GameTimeTaskManager.getGameTicks();
+		return _attackEndTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -4954,10 +4955,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * client send regularly a Client->Server ValidatePosition packet to eventually correct the gap on the server. But, it's always the server position that is used in range calculation.<br>
 	 * At the end of the estimated movement time, the Creature position is automatically set to the destination position even if the movement is not finished.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: The current Z position is obtained FROM THE CLIENT by the Client->Server ValidatePosition Packet. But x and y positions must be calculated to avoid that players try to modify their movement speed.</b></font>
-	 * @param gameTicks number of ticks since the server start
 	 * @return True if the movement is finished
 	 */
-	public boolean updatePosition(int gameTicks)
+	public boolean updatePosition()
 	{
 		// Get movement data
 		final MoveData m = _move;
@@ -4979,6 +4979,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			m._xAccurate = getX();
 			m._yAccurate = getY();
 		}
+		
+		final int gameTicks = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Check if the position has already been calculated
 		if (m._moveTimestamp == gameTicks)
@@ -5089,7 +5091,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		return distFraction > 1;
+		if (distFraction > 1)
+		{
+			getKnownList().updateKnownObjects();
+			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+			return true;
+		}
+		
+		return false;
 	}
 	
 	/**
@@ -5527,14 +5536,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			setHeading(Util.calculateHeadingFrom(cos, sin));
 		}
 		
-		m._moveStartTime = GameTimeTaskManager.getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeTaskManager
-		// The GameTimeTaskManager manage objects movement
-		GameTimeTaskManager.getInstance().registerMovingObject(this);
+		// Add the Creature to moving objects of the MovementTaskManager.
+		// The MovementTaskManager manages object movement.
+		MovementTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
 		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)
@@ -5607,14 +5616,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeTaskManager.TICKS_PER_SECOND * distance) / speed);
 		m._heading = 0; // initial value for coordinate sync
-		m._moveStartTime = GameTimeTaskManager.getGameTicks();
+		m._moveStartTime = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeTaskManager
-		// The GameTimeTaskManager manage objects movement
-		GameTimeTaskManager.getInstance().registerMovingObject(this);
+		// Add the Creature to moving objects of the GameTimeTaskManager.
+		// The MovementTaskManager manages object movement.
+		MovementTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
 		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)

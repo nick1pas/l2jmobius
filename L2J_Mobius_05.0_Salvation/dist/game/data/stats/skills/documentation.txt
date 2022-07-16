@@ -153,7 +153,6 @@ Heal: Increases current HP by a given amount.
 HealOverTime: Increases current HP by a given amount over time.
 HealPercent: Increases current HP by a given percentage amount.
 Hide: Hide effect.
-HitAtNight: Used by Shadow Sense to modify Accuracy at night. (l2jmobius)
 HitNumber: Polearm attack max hit creatures.
 HpByLevel: recovers certain amount of HP, but current implementation is wrong... final amount should be computed from skill power and character level difference
 HpCpHealCritical: HpCp heal effects always trigger Magic Critical Hit.
@@ -312,6 +311,7 @@ SpeedLimit: Increase a character's max Speed limit. (l2jmobius)
 SpModify: Bonus SP stat.
 Spoil: Spoils a mob activating its extra sweep drop.
 StatAddForLevel: Adds a fixed amount of a Stat for a specific player level. (l2jmobius)
+StatAddForNight: Modify a specific stat at night time. (l2jmobius)
 StatBonusSkillCritical: Changes skill critical rate to depend on the specified base stat.
 StatBonusSpeed: Changes Speed stat to depend on the specified base stat.
 StatByMoveType: Adds stat based on your movement type (standing, running, walking).

@@ -97,7 +97,7 @@ public abstract class Effect
 			{
 				if (_periodfirsttime == 0)
 				{
-					setPeriodStartTicks(GameTimeTaskManager.getGameTicks());
+					setPeriodStartTicks(GameTimeTaskManager.getInstance().getGameTicks());
 				}
 				else
 				{
@@ -146,7 +146,7 @@ public abstract class Effect
 		_abnormalEffect = template.abnormalEffect;
 		_stackType = template.stackType;
 		_stackOrder = template.stackOrder;
-		_periodStartTicks = GameTimeTaskManager.getGameTicks();
+		_periodStartTicks = GameTimeTaskManager.getInstance().getGameTicks();
 		_periodfirsttime = 0;
 		scheduleEffect();
 	}
@@ -170,7 +170,7 @@ public abstract class Effect
 	{
 		if (_currentFuture != null)
 		{
-			_periodStartTicks = GameTimeTaskManager.getGameTicks() - (newfirsttime * GameTimeTaskManager.TICKS_PER_SECOND);
+			_periodStartTicks = GameTimeTaskManager.getInstance().getGameTicks() - (newfirsttime * GameTimeTaskManager.TICKS_PER_SECOND);
 			_currentFuture.cancel(false);
 			_currentFuture = null;
 			_currentTask = null;
@@ -188,7 +188,7 @@ public abstract class Effect
 	
 	public int getTime()
 	{
-		return (GameTimeTaskManager.getGameTicks() - _periodStartTicks) / GameTimeTaskManager.TICKS_PER_SECOND;
+		return (GameTimeTaskManager.getInstance().getGameTicks() - _periodStartTicks) / GameTimeTaskManager.TICKS_PER_SECOND;
 	}
 	
 	/**

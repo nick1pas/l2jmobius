@@ -166,6 +166,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.CreatureSeeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.MovementTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -2772,7 +2773,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						case MAGIC_ATTACK:
 						case MAGIC_ATTACK_SPEED:
 						case MAGICAL_DEFENCE:
-						case HIT_AT_NIGHT:
 						{
 							info.addComponentType(UserInfoType.STATS);
 							break;
@@ -3600,9 +3600,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeTaskManager
-		// The GameTimeTaskManager manage objects movement
-		GameTimeTaskManager.getInstance().registerMovingObject(this);
+		// Add the Creature to moving objects of the MovementTaskManager.
+		// The MovementTaskManager manages object movement.
+		MovementTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
 		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)
@@ -3679,9 +3679,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Set the Creature _move object to MoveData object
 		_move = m;
 		
-		// Add the Creature to movingObjects of the GameTimeTaskManager
-		// The GameTimeTaskManager manage objects movement
-		GameTimeTaskManager.getInstance().registerMovingObject(this);
+		// Add the Creature to moving objects of the GameTimeTaskManager.
+		// The MovementTaskManager manages object movement.
+		MovementTaskManager.getInstance().registerMovingObject(this);
 		
 		// Create a task to notify the AI that Creature arrives at a check point of the movement
 		if ((ticksToMove * GameTimeTaskManager.MILLIS_IN_TICK) > 3000)

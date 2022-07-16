@@ -38,6 +38,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.ai.CreatureAI;
+import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -728,12 +729,12 @@ public class Player extends Playable
 	
 	public boolean isSpawnProtected()
 	{
-		return (_protectEndTime != 0) && (_protectEndTime > GameTimeTaskManager.getGameTicks());
+		return (_protectEndTime != 0) && (_protectEndTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	public boolean isTeleportProtected()
 	{
-		return (_teleportProtectEndTime != 0) && (_teleportProtectEndTime > GameTimeTaskManager.getGameTicks());
+		return (_teleportProtectEndTime != 0) && (_teleportProtectEndTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -4242,7 +4243,7 @@ public class Player extends Playable
 			return;
 		}
 		
-		_protectEndTime = protect ? GameTimeTaskManager.getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
+		_protectEndTime = protect ? GameTimeTaskManager.getInstance().getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
 		if (protect)
 		{
 			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_SPAWN_PROTECTION - 1) * 1000);
@@ -4255,7 +4256,7 @@ public class Player extends Playable
 	 */
 	public void setTeleportProtection(boolean protect)
 	{
-		_teleportProtectEndTime = protect ? GameTimeTaskManager.getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
+		_teleportProtectEndTime = protect ? GameTimeTaskManager.getInstance().getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
 		if (protect)
 		{
 			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_TELEPORT_PROTECTION - 1) * 1000);
@@ -4307,7 +4308,7 @@ public class Player extends Playable
 	 */
 	public void setRecentFakeDeath(boolean protect)
 	{
-		_recentFakeDeathEndTime = protect ? GameTimeTaskManager.getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
+		_recentFakeDeathEndTime = protect ? GameTimeTaskManager.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * GameTimeTaskManager.TICKS_PER_SECOND) : 0;
 	}
 	
 	/**
@@ -4316,7 +4317,7 @@ public class Player extends Playable
 	 */
 	public boolean isRecentFakeDeath()
 	{
-		return _recentFakeDeathEndTime > GameTimeTaskManager.getGameTicks();
+		return _recentFakeDeathEndTime > GameTimeTaskManager.getInstance().getGameTicks();
 	}
 	
 	/**
@@ -6588,7 +6589,7 @@ public class Player extends Playable
 	 */
 	public boolean isProcessingRequest()
 	{
-		return (_activeRequester != null) || (_requestExpireTime > GameTimeTaskManager.getGameTicks());
+		return (_activeRequester != null) || (_requestExpireTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -6597,7 +6598,7 @@ public class Player extends Playable
 	 */
 	public boolean isProcessingTransaction()
 	{
-		return (_activeRequester != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeTaskManager.getGameTicks());
+		return (_activeRequester != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -6606,7 +6607,7 @@ public class Player extends Playable
 	 */
 	public void onTransactionRequest(Player partner)
 	{
-		_requestExpireTime = GameTimeTaskManager.getGameTicks() + (REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
+		_requestExpireTime = GameTimeTaskManager.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeTaskManager.TICKS_PER_SECOND);
 		if (partner != null)
 		{
 			partner.setActiveRequester(this);
@@ -7133,7 +7134,7 @@ public class Player extends Playable
 	@Override
 	public boolean isInvul()
 	{
-		return _isInvul || _isTeleporting || (_protectEndTime > GameTimeTaskManager.getGameTicks()) || (_teleportProtectEndTime > GameTimeTaskManager.getGameTicks());
+		return _isInvul || _isTeleporting || (_protectEndTime > GameTimeTaskManager.getInstance().getGameTicks()) || (_teleportProtectEndTime > GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**
@@ -12538,7 +12539,7 @@ public class Player extends Playable
 	}
 	
 	@Override
-	public boolean updatePosition(int gameTicks)
+	public boolean updatePosition()
 	{
 		// Get movement data
 		final MoveData m = _move;
@@ -12558,6 +12559,8 @@ public class Player extends Playable
 		{
 			m._moveTimestamp = m._moveStartTime;
 		}
+		
+		final int gameTicks = GameTimeTaskManager.getInstance().getGameTicks();
 		
 		// Check if the position has alreday be calculated
 		if (m._moveTimestamp == gameTicks)
@@ -12585,7 +12588,14 @@ public class Player extends Playable
 		m._moveTimestamp = gameTicks;
 		revalidateZone(false);
 		
-		return distFraction > 1;
+		if (distFraction > 1)
+		{
+			getKnownList().updateKnownObjects();
+			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+			return true;
+		}
+		
+		return false;
 	}
 	
 	/**
@@ -14539,7 +14549,7 @@ public class Player extends Playable
 	 */
 	public boolean isRequestExpired()
 	{
-		return (_requestExpireTime <= GameTimeTaskManager.getGameTicks());
+		return (_requestExpireTime <= GameTimeTaskManager.getInstance().getGameTicks());
 	}
 	
 	/**

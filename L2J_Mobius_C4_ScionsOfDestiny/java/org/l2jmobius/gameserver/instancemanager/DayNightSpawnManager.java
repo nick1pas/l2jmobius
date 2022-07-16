@@ -115,6 +115,7 @@ public class DayNightSpawnManager
 						i++;
 					}
 				}
+				
 				LOGGER.info("DayNightSpawnManager: Removed " + i + " " + unspawnLogInfo + " creatures");
 			}
 			
@@ -151,14 +152,14 @@ public class DayNightSpawnManager
 			{
 				spawnDayCreatures();
 				specialNightBoss(0);
-				ShadowSenseMsg(0);
+				shadowSenseMsg(0);
 				break;
 			}
 			case 1:
 			{
 				spawnNightCreatures();
 				specialNightBoss(1);
-				ShadowSenseMsg(1);
+				shadowSenseMsg(1);
 				break;
 			}
 			default:
@@ -262,7 +263,7 @@ public class DayNightSpawnManager
 		}
 	}
 	
-	private void ShadowSenseMsg(int mode)
+	private void shadowSenseMsg(int mode)
 	{
 		final Skill skill = SkillTable.getInstance().getSkill(294, 1);
 		if (skill == null)
@@ -294,7 +295,6 @@ public class DayNightSpawnManager
 		{
 			final RaidBoss raidboss = (RaidBoss) spawnDat.doSpawn();
 			_bosses.put(spawnDat, raidboss);
-			
 			return raidboss;
 		}
 		return null;
