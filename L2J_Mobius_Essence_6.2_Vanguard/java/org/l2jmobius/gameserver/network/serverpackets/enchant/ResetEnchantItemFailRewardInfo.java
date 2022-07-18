@@ -68,7 +68,7 @@ public class ResetEnchantItemFailRewardInfo implements IClientOutgoingPacket
 		{
 			addedItem.setEnchantLevel(0);
 		}
-		else if (enchantScroll.isBlessedDown() /* || ((request.getSupportItem() != null) && (enchantSupportItem != null) && enchantSupportItem.isDown()) */)
+		else if (enchantScroll.isBlessedDown() || enchantScroll.isCursed() /* || ((request.getSupportItem() != null) && (enchantSupportItem != null) && enchantSupportItem.isDown()) */)
 		{
 			addedItem.setEnchantLevel(enchantItem.getEnchantLevel() - 1);
 		}

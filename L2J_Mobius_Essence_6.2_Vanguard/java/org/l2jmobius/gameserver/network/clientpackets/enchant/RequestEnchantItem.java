@@ -184,8 +184,14 @@ public class RequestEnchantItem implements IClientIncomingPacket
 				case SUCCESS:
 				{
 					final ItemTemplate it = item.getTemplate();
+					if (scrollTemplate.isCursed())
+					{
+						// Blessed enchant: Enchant value down by 1.
+						client.sendPacket(SystemMessageId.THE_ENCHANT_VALUE_IS_DECREASED_BY_1);
+						item.setEnchantLevel(item.getEnchantLevel() - 1);
+					}
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
-					if (scrollTemplate.getChance(player, item) > 0)
+					else if (scrollTemplate.getChance(player, item) > 0)
 					{
 						if (supportTemplate != null)
 						{
@@ -314,10 +320,10 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							player.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() /* || ((supportTemplate != null) && supportTemplate.isDown()) */ || ((supportTemplate != null) && supportTemplate.isBlessed()))
+						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || scrollTemplate.isCursed() /* || ((supportTemplate != null) && supportTemplate.isDown()) */ || ((supportTemplate != null) && supportTemplate.isBlessed()))
 						{
 							// Blessed enchant: Enchant value down by 1.
-							if (scrollTemplate.isBlessedDown() /* || ((supportTemplate != null) && supportTemplate.isDown()) */)
+							if (scrollTemplate.isBlessedDown() || scrollTemplate.isCursed() /* || ((supportTemplate != null) && supportTemplate.isDown()) */)
 							{
 								client.sendPacket(SystemMessageId.THE_ENCHANT_VALUE_IS_DECREASED_BY_1);
 								item.setEnchantLevel(item.getEnchantLevel() - 1);

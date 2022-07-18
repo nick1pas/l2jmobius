@@ -167,8 +167,14 @@ public class ExRequestMultiEnchantItemList implements IClientIncomingPacket
 					}
 					case SUCCESS:
 					{
+						if (scrollTemplate.isCursed())
+						{
+							// Blessed enchant: Enchant value down by 1.
+							client.sendPacket(SystemMessageId.THE_ENCHANT_VALUE_IS_DECREASED_BY_1);
+							enchantItem.setEnchantLevel(enchantItem.getEnchantLevel() - 1);
+						}
 						// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
-						if (scrollTemplate.getChance(player, enchantItem) > 0)
+						else if (scrollTemplate.getChance(player, enchantItem) > 0)
 						{
 							enchantItem.setEnchantLevel(enchantItem.getEnchantLevel() + Math.min(Rnd.get(scrollTemplate.getRandomEnchantMin(), scrollTemplate.getRandomEnchantMax()), scrollTemplate.getMaxEnchantLevel()));
 							enchantItem.updateDatabase();
@@ -206,10 +212,10 @@ public class ExRequestMultiEnchantItemList implements IClientIncomingPacket
 								}
 							}
 						}
-						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown())
+						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || scrollTemplate.isCursed())
 						{
 							// Blessed enchant: Enchant value down by 1.
-							if (scrollTemplate.isBlessedDown())
+							if (scrollTemplate.isBlessedDown() || scrollTemplate.isCursed())
 							{
 								client.sendPacket(SystemMessageId.THE_ENCHANT_VALUE_IS_DECREASED_BY_1);
 								enchantItem.setEnchantLevel(enchantItem.getEnchantLevel() - 1);
