@@ -46,28 +46,19 @@ public class ExHomunculusCouponProbabilityList implements IClientOutgoingPacket
 			return false;
 		}
 		
-		HomunculusCreationTemplate creationTemplate = null;
-		for (int i = 1; i < HomunculusCreationData.getInstance().size(); i++)
-		{
-			if (HomunculusCreationData.getInstance().getTemplate(i).isInstanceHaveCoupon(_couponId))
-			{
-				creationTemplate = HomunculusCreationData.getInstance().getTemplate(i);
-			}
-		}
+		final HomunculusCreationTemplate creationTemplate = HomunculusCreationData.getInstance().getTemplateByItemId(_couponId);
 		if (creationTemplate == null)
 		{
 			return false;
 		}
 		
 		OutgoingPackets.EX_HOMUNCULUS_COUPON_PROB_LIST.writeId(packet);
-		final int size = creationTemplate.getCreationChance().size();
 		packet.writeD(_couponId);
-		packet.writeD(size);
+		packet.writeD(creationTemplate.getCreationChance().size());
 		for (int type = 0; type < 3; type++)
 		{
-			for (int i = 0; i < size; i++)
+			for (Double[] homunculusChance : creationTemplate.getCreationChance())
 			{
-				final Double[] homunculusChance = creationTemplate.getCreationChance().get(i);
 				if (HomunculusData.getInstance().getTemplate(homunculusChance[0].intValue()).getType() == type)
 				{
 					packet.writeD(homunculusChance[0].intValue());

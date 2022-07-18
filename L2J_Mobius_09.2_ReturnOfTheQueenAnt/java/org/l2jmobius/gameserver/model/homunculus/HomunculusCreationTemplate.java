@@ -130,7 +130,7 @@ public class HomunculusCreationTemplate
 		return false;
 	}
 	
-	public long getCreationLime()
+	public long getCreationTime()
 	{
 		return _time;
 	}

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.homunculus.HomunculusSlotTemplate;
  */
 public class HomunculusSlotData implements IXmlReader
 {
-	private final Map<Integer, HomunculusSlotTemplate> _templates = new HashMap<>();
+	private static final Map<Integer, HomunculusSlotTemplate> TEMPLATES = new HashMap<>();
 	
 	protected HomunculusSlotData()
 	{
@@ -47,9 +47,9 @@ public class HomunculusSlotData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_templates.clear();
+		TEMPLATES.clear();
 		parseDatapackFile("data/HomunculusSlotData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " templates.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + TEMPLATES.size() + " templates.");
 	}
 	
 	@Override
@@ -74,18 +74,17 @@ public class HomunculusSlotData implements IXmlReader
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						
-						final int slotId = set.getInt("slotId");
-						final Boolean isEnabled = set.getBoolean("isEnabled", false);
 						List<ItemHolder> fee = Collections.emptyList();
-						
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							if ("fee".equalsIgnoreCase(c.getNodeName()))
 							{
 								fee = getItemList(c);
+								break;
 							}
 						}
-						_templates.put(slotId, new HomunculusSlotTemplate(slotId, fee, isEnabled));
+						final int slotId = set.getInt("slotId");
+						TEMPLATES.put(slotId, new HomunculusSlotTemplate(slotId, fee, set.getBoolean("isEnabled", false)));
 					}
 				}
 			}
@@ -109,12 +108,7 @@ public class HomunculusSlotData implements IXmlReader
 	
 	public HomunculusSlotTemplate getTemplate(int id)
 	{
-		return _templates.get(id);
-	}
-	
-	public int size()
-	{
-		return _templates.size();
+		return TEMPLATES.get(id);
 	}
 	
 	public static HomunculusSlotData getInstance()

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -37,12 +38,12 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExSummonHomuncu
  */
 public class RequestExSummonHomunculusCouponResult implements IClientIncomingPacket
 {
-	private int _item_id;
+	private int _itemId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_item_id = packet.readD();
+		_itemId = packet.readD();
 		return true;
 	}
 	
@@ -61,35 +62,28 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 			PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus withouts avaible slots!");
 			return;
 		}
-		HomunculusCreationTemplate creationTemplate = null;
-		for (int i = 1; i < HomunculusCreationData.getInstance().size(); i++)
-		{
-			if (HomunculusCreationData.getInstance().getTemplate(i).isInstanceHaveCoupon(_item_id))
-			{
-				creationTemplate = HomunculusCreationData.getInstance().getTemplate(i);
-			}
-		}
-		if ((creationTemplate == null) || (creationTemplate.getItemFee().size() == 0))
+		
+		final HomunculusCreationTemplate creationTemplate = HomunculusCreationData.getInstance().getTemplateByItemId(_itemId);
+		if ((creationTemplate == null) || creationTemplate.getItemFee().isEmpty())
 		{
 			PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus with not existing coupon!");
 			return;
 		}
 		
 		// Take items.
-		for (int i = 0; i < creationTemplate.getItemFee().size(); i++)
+		for (ItemHolder itemHolder : creationTemplate.getItemFee())
 		{
-			final ItemHolder humu = creationTemplate.getItemFee().get(i);
-			if (player.getInventory().getItemByItemId(humu.getId()).getCount() < humu.getCount())
+			final Item item = player.getInventory().getItemByItemId(itemHolder.getId());
+			if ((item == null) || (item.getCount() < itemHolder.getCount()))
 			{
 				return;
 			}
 		}
-		for (int i = 0; i < creationTemplate.getItemFee().size(); i++)
+		for (ItemHolder itemHolder : creationTemplate.getItemFee())
 		{
-			final ItemHolder humu = creationTemplate.getItemFee().get(i);
-			if (!player.destroyItemByItemId("Homunculus Coupon Creation", humu.getId(), humu.getCount(), player, true))
+			if (!player.destroyItemByItemId("Homunculus Coupon Creation", itemHolder.getId(), itemHolder.getCount(), player, true))
 			{
-				PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus without " + humu + "!");
+				PacketLogger.info("Player " + player.getObjectId() + " " + player.getName() + ", trying create homunculus without " + itemHolder + "!");
 				return;
 			}
 		}
@@ -105,9 +99,8 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 				player.sendPacket(new ExSummonHomunculusCouponResult(0, 0));
 				return;
 			}
-			for (int i = 0; i < creationTemplate.getCreationChance().size(); i++)
+			for (Double[] homuHolder : creationTemplate.getCreationChance())
 			{
-				final Double[] homuHolder = creationTemplate.getCreationChance().get(i);
 				current += homuHolder[1];
 				if (current >= chance)
 				{

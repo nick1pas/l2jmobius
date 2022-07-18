@@ -18,10 +18,9 @@ package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -37,7 +36,9 @@ import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
  */
 public class HomunculusCreationData implements IXmlReader
 {
-	private final Map<Integer, HomunculusCreationTemplate> _templates = new HashMap<>();
+	private static final List<HomunculusCreationTemplate> TEMPLATES = new ArrayList<>();
+	
+	private HomunculusCreationTemplate _defaultTemplate;
 	
 	protected HomunculusCreationData()
 	{
@@ -47,9 +48,10 @@ public class HomunculusCreationData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_templates.clear();
+		TEMPLATES.clear();
+		_defaultTemplate = null;
 		parseDatapackFile("data/HomunculusCreationData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " templates.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + TEMPLATES.size() + " templates.");
 	}
 	
 	@Override
@@ -115,7 +117,12 @@ public class HomunculusCreationData implements IXmlReader
 							}
 						}
 						
-						_templates.put(slotId, new HomunculusCreationTemplate(slotId, isEnabled, grade, isEvent, itemFees, hpFee, spFee, vpFee, time, chances));
+						final HomunculusCreationTemplate template = new HomunculusCreationTemplate(slotId, isEnabled, grade, isEvent, itemFees, hpFee, spFee, vpFee, time, chances);
+						TEMPLATES.add(template);
+						if (_defaultTemplate == null)
+						{
+							_defaultTemplate = template;
+						}
 					}
 				}
 			}
@@ -153,14 +160,26 @@ public class HomunculusCreationData implements IXmlReader
 		return chanceList;
 	}
 	
-	public HomunculusCreationTemplate getTemplate(int id)
+	public HomunculusCreationTemplate getTemplateByItemId(int itemId)
 	{
-		return _templates.get(id);
+		for (HomunculusCreationTemplate template : TEMPLATES)
+		{
+			if (template.isInstanceHaveCoupon(itemId))
+			{
+				return template;
+			}
+		}
+		return null;
 	}
 	
-	public int size()
+	public HomunculusCreationTemplate getDefaultTemplate()
 	{
-		return _templates.size();
+		return _defaultTemplate;
+	}
+	
+	public Collection<HomunculusCreationTemplate> getTemplates()
+	{
+		return TEMPLATES;
 	}
 	
 	public static HomunculusCreationData getInstance()
@@ -172,4 +191,5 @@ public class HomunculusCreationData implements IXmlReader
 	{
 		protected static final HomunculusCreationData INSTANCE = new HomunculusCreationData();
 	}
+	
 }

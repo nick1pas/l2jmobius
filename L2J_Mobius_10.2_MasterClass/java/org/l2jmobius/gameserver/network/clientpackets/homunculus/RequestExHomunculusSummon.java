@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.data.xml.HomunculusData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.homunculus.Homunculus;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -37,8 +36,6 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusSummon implements IClientIncomingPacket
 {
-	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -60,22 +57,21 @@ public class RequestExHomunculusSummon implements IClientIncomingPacket
 		final int vpPoints = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP_POINTS, 0);
 		final int homunculusCreateTime = (int) (player.getVariables().getLong(PlayerVariables.HOMUNCULUS_CREATION_TIME, 0) / 1000);
 		
-		if ((homunculusCreateTime > 0) && ((System.currentTimeMillis() / 1000) >= homunculusCreateTime) && (hpPoints == TEMPLATE.getHPFeeCount()) && (spPoints == TEMPLATE.getSPFeeCount()) && (vpPoints == TEMPLATE.getVPFeeCount()))
+		if ((homunculusCreateTime > 0) && ((System.currentTimeMillis() / 1000) >= homunculusCreateTime) && (hpPoints == HomunculusCreationData.getInstance().getDefaultTemplate().getHPFeeCount()) && (spPoints == HomunculusCreationData.getInstance().getDefaultTemplate().getSPFeeCount()) && (vpPoints == HomunculusCreationData.getInstance().getDefaultTemplate().getVPFeeCount()))
 		{
 			double chance = Rnd.get(100.0);
 			double current = 0;
 			int homunculusId = 0;
 			while (homunculusId == 0)
 			{
-				if (chance > TEMPLATE.getMaxChance())
+				if (chance > HomunculusCreationData.getInstance().getDefaultTemplate().getMaxChance())
 				{
 					player.sendMessage("Homunculus is not created!");
 					player.sendPacket(new ExHomunculusSummonResult(0));
 					return;
 				}
-				for (int i = 0; i < TEMPLATE.getCreationChance().size(); i++)
+				for (Double[] homuHolder : HomunculusCreationData.getInstance().getDefaultTemplate().getCreationChance())
 				{
-					final Double[] homuHolder = TEMPLATE.getCreationChance().get(i);
 					current += homuHolder[1];
 					if (current >= chance)
 					{

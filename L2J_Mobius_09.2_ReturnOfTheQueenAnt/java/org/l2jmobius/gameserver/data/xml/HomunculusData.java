@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.homunculus.HomunculusTemplate;
  */
 public class HomunculusData implements IXmlReader
 {
-	private final Map<Integer, HomunculusTemplate> _templates = new HashMap<>();
+	private static final Map<Integer, HomunculusTemplate> TEMPLATES = new HashMap<>();
 	
 	protected HomunculusData()
 	{
@@ -41,9 +41,9 @@ public class HomunculusData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_templates.clear();
+		TEMPLATES.clear();
 		parseDatapackFile("data/HomunculusData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _templates.size() + " templates.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + TEMPLATES.size() + " templates.");
 	}
 	
 	@Override
@@ -53,18 +53,13 @@ public class HomunculusData implements IXmlReader
 		{
 			final StatSet set = new StatSet(parseAttributes(homunculusNode));
 			final int id = set.getInt("id");
-			_templates.put(id, new HomunculusTemplate(id, set.getInt("type"), set.getInt("basicSkillId"), set.getInt("basicSkillLevel"), set.getInt("skillId1"), set.getInt("skillId2"), set.getInt("skillId3"), set.getInt("skillId4"), set.getInt("skillId5"), set.getInt("hpLevel1"), set.getInt("atkLevel1"), set.getInt("defLevel1"), set.getInt("expToLevel2"), set.getInt("hpLevel2"), set.getInt("atkLevel2"), set.getInt("defLevel2"), set.getInt("expToLevel3"), set.getInt("hpLevel3"), set.getInt("atkLevel3"), set.getInt("defLevel3"), set.getInt("expToLevel4"), set.getInt("hpLevel4"), set.getInt("atkLevel4"), set.getInt("defLevel4"), set.getInt("expToLevel5"), set.getInt("hpLevel5"), set.getInt("atkLevel5"), set.getInt("defLevel5"), set.getInt("expToLevel6"), set.getInt("critRate")));
+			TEMPLATES.put(id, new HomunculusTemplate(id, set.getInt("type"), set.getInt("basicSkillId"), set.getInt("basicSkillLevel"), set.getInt("skillId1"), set.getInt("skillId2"), set.getInt("skillId3"), set.getInt("skillId4"), set.getInt("skillId5"), set.getInt("hpLevel1"), set.getInt("atkLevel1"), set.getInt("defLevel1"), set.getInt("expToLevel2"), set.getInt("hpLevel2"), set.getInt("atkLevel2"), set.getInt("defLevel2"), set.getInt("expToLevel3"), set.getInt("hpLevel3"), set.getInt("atkLevel3"), set.getInt("defLevel3"), set.getInt("expToLevel4"), set.getInt("hpLevel4"), set.getInt("atkLevel4"), set.getInt("defLevel4"), set.getInt("expToLevel5"), set.getInt("hpLevel5"), set.getInt("atkLevel5"), set.getInt("defLevel5"), set.getInt("expToLevel6"), set.getInt("critRate")));
 		}));
 	}
 	
 	public HomunculusTemplate getTemplate(int id)
 	{
-		return _templates.get(id);
-	}
-	
-	public int size()
-	{
-		return _templates.size();
+		return TEMPLATES.get(id);
 	}
 	
 	public static HomunculusData getInstance()

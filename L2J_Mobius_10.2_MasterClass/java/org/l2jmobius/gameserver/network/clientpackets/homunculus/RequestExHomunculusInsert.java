@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.HomunculusCreationData;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.homunculus.HomunculusCreationTemplate;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -32,11 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculu
  */
 public class RequestExHomunculusInsert implements IClientIncomingPacket
 {
-	private static final HomunculusCreationTemplate TEMPLATE = HomunculusCreationData.getInstance().getTemplate(0);
-	private static final short HP_COST = (short) TEMPLATE.getHPFeeCountByUse();
-	private static final long SP_COST = TEMPLATE.getSPFeeCountByUse();
-	private static final int VP_COST = TEMPLATE.getVPFeeByUse();
-	
 	private int _type;
 	
 	@Override
@@ -61,9 +55,9 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 		{
 			case 0:
 			{
-				if ((player.getCurrentHp() > HP_COST) && (hpPoints < TEMPLATE.getHPFeeCount()))
+				if ((player.getCurrentHp() > HomunculusCreationData.getInstance().getDefaultTemplate().getHPFeeCountByUse()) && (hpPoints < HomunculusCreationData.getInstance().getDefaultTemplate().getHPFeeCount()))
 				{
-					int newHp = (int) (player.getCurrentHp()) - HP_COST;
+					int newHp = (int) (player.getCurrentHp()) - HomunculusCreationData.getInstance().getDefaultTemplate().getHPFeeCountByUse();
 					player.setCurrentHp(newHp, true);
 					hpPoints += 1;
 					player.getVariables().set(PlayerVariables.HOMUNCULUS_HP_POINTS, hpPoints);
@@ -76,9 +70,9 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 			}
 			case 1:
 			{
-				if ((player.getSp() >= SP_COST) && (spPoints < TEMPLATE.getSPFeeCount()))
+				if ((player.getSp() >= HomunculusCreationData.getInstance().getDefaultTemplate().getSPFeeCountByUse()) && (spPoints < HomunculusCreationData.getInstance().getDefaultTemplate().getSPFeeCount()))
 				{
-					player.setSp(player.getSp() - SP_COST);
+					player.setSp(player.getSp() - HomunculusCreationData.getInstance().getDefaultTemplate().getSPFeeCountByUse());
 					spPoints += 1;
 					player.getVariables().set(PlayerVariables.HOMUNCULUS_SP_POINTS, spPoints);
 				}
@@ -90,9 +84,9 @@ public class RequestExHomunculusInsert implements IClientIncomingPacket
 			}
 			case 2:
 			{
-				if ((player.getVitalityPoints() >= VP_COST) && (vpPoints < TEMPLATE.getVPFeeCount()))
+				if ((player.getVitalityPoints() >= HomunculusCreationData.getInstance().getDefaultTemplate().getVPFeeByUse()) && (vpPoints < HomunculusCreationData.getInstance().getDefaultTemplate().getVPFeeCount()))
 				{
-					int newVitality = player.getVitalityPoints() - VP_COST;
+					int newVitality = player.getVitalityPoints() - HomunculusCreationData.getInstance().getDefaultTemplate().getVPFeeByUse();
 					player.setVitalityPoints(newVitality, true);
 					vpPoints += 1;
 					player.getVariables().set(PlayerVariables.HOMUNCULUS_VP_POINTS, vpPoints);

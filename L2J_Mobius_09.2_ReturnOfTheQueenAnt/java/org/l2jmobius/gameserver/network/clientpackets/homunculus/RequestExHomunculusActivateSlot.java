@@ -72,18 +72,16 @@ public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 		}
 		
 		final List<ItemHolder> fee = template.getPrice();
-		for (int i = 0; i < fee.size(); i++)
+		for (ItemHolder feeHolder : fee)
 		{
-			final ItemHolder feeHolder = fee.get(i);
 			if ((activeChar.getInventory().getItemByItemId(feeHolder.getId()) == null) || ((activeChar.getInventory().getItemByItemId(feeHolder.getId()) != null) && (activeChar.getInventory().getItemByItemId(feeHolder.getId()).getCount() < feeHolder.getCount())))
 			{
 				activeChar.sendPacket(new ExActivateHomunculusResult(false));
 				return;
 			}
 		}
-		for (int i = 0; i < fee.size(); i++)
+		for (ItemHolder feeHolder : fee)
 		{
-			final ItemHolder feeHolder = fee.get(i);
 			if (!activeChar.destroyItemByItemId("Homunclus slot unlock", feeHolder.getId(), feeHolder.getCount(), activeChar, true))
 			{
 				Logger.getLogger(getClass().getSimpleName() + " player " + activeChar.getName() + " " + activeChar.getObjectId() + " trying unlock slot without items!");
@@ -92,7 +90,6 @@ public class RequestExHomunculusActivateSlot implements IClientIncomingPacket
 			}
 		}
 		
-		// activeChar.sendItemList();
 		activeChar.broadcastUserInfo();
 		activeChar.getVariables().set(PlayerVariables.HOMUNCULUS_OPENED_SLOT_COUNT, _slot);
 		activeChar.sendPacket(new ExHomunculusPointInfo(activeChar));
