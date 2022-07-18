@@ -35,7 +35,6 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNode;
 import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.geoengine.pathfinding.PathFinding;
-import org.l2jmobius.gameserver.geoengine.pathfinding.utils.FastNodeList;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -114,7 +113,7 @@ public class GeoPathFinding extends PathFinding
 		// load) level of intelligence though.
 		
 		// List of Visited Nodes.
-		final FastNodeList visited = new FastNodeList(550);
+		final List<GeoNode> visited = new ArrayList<>(550);
 		
 		// List of Nodes to Visit.
 		final LinkedList<GeoNode> toVisit = new LinkedList<>();
@@ -152,7 +151,7 @@ public class GeoPathFinding extends PathFinding
 			}
 			for (GeoNode n : neighbors)
 			{
-				if (!visited.containsRev(n) && !toVisit.contains(n))
+				if ((visited.lastIndexOf(n) == -1) && !toVisit.contains(n))
 				{
 					added = false;
 					n.setParent(node);
