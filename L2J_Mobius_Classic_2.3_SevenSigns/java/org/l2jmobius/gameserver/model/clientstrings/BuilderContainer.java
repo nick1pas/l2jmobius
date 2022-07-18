@@ -69,12 +69,12 @@ final class BuilderContainer extends Builder
 			}
 		}
 		
-		final FastStringBuilder fsb = new FastStringBuilder(buildTextLen);
+		final StringBuilder sb = new StringBuilder(buildTextLen);
 		for (i = 0; i < buildersLength; i++)
 		{
-			fsb.append(builds[i]);
+			sb.append(builds[i]);
 		}
-		return fsb.toString();
+		return sb.toString();
 	}
 	
 	@Override
