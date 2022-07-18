@@ -38,7 +38,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -512,7 +511,7 @@ public class Player extends Playable
 	/** The PvP Flag state of the Player (0=White, 1=Purple) */
 	private byte _pvpFlag;
 	
-	private final List<DamageTakenHolder> _lastDamageTaken = new CopyOnWriteArrayList<>();
+	private final List<DamageTakenHolder> _lastDamageTaken = new ArrayList<>(21);
 	
 	/** The Fame of this Player */
 	private int _fame;
@@ -5078,16 +5077,22 @@ public class Player extends Playable
 			return;
 		}
 		
-		_lastDamageTaken.add(new DamageTakenHolder(attacker, skillId, damage));
-		while (_lastDamageTaken.size() > 20)
+		synchronized (_lastDamageTaken)
 		{
-			_lastDamageTaken.remove(0);
+			_lastDamageTaken.add(new DamageTakenHolder(attacker, skillId, damage));
+			if (_lastDamageTaken.size() > 20)
+			{
+				_lastDamageTaken.remove(0);
+			}
 		}
 	}
 	
 	public void clearDamageTaken()
 	{
-		_lastDamageTaken.clear();
+		synchronized (_lastDamageTaken)
+		{
+			_lastDamageTaken.clear();
+		}
 	}
 	
 	private Collection<Item> onDieDropItem(Creature killer)
@@ -10298,7 +10303,7 @@ public class Player extends Playable
 			instance.doRevive(this);
 		}
 		
-		_lastDamageTaken.clear();
+		clearDamageTaken();
 	}
 	
 	@Override
