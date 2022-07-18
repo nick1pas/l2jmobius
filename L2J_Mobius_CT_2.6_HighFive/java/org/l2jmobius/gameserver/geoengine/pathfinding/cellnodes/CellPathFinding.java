@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.geoengine.pathfinding.cellnodes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.ListIterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -113,7 +113,7 @@ public class CellPathFinding extends PathFinding
 		{
 			if (_debugItems == null)
 			{
-				_debugItems = new CopyOnWriteArrayList<>();
+				_debugItems = new LinkedList<>();
 			}
 			else
 			{
@@ -178,28 +178,35 @@ public class CellPathFinding extends PathFinding
 			_postFilterPlayableUses++;
 		}
 		
-		boolean remove;
+		ListIterator<AbstractNodeLoc> middlePoint;
+		int currentX;
+		int currentY;
+		int currentZ;
 		int pass = 0;
+		boolean remove;
 		do
 		{
 			pass++;
 			_postFilterPasses++;
 			
 			remove = false;
-			final Iterator<AbstractNodeLoc> endPoint = path.iterator();
-			endPoint.next();
-			int currentX = x;
-			int currentY = y;
-			int currentZ = z;
+			middlePoint = path.listIterator();
+			currentX = x;
+			currentY = y;
+			currentZ = z;
 			
-			int midPoint = 0;
-			while (endPoint.hasNext())
+			while (middlePoint.hasNext())
 			{
-				final AbstractNodeLoc locMiddle = path.get(midPoint);
-				final AbstractNodeLoc locEnd = endPoint.next();
+				final AbstractNodeLoc locMiddle = middlePoint.next();
+				if (!middlePoint.hasNext())
+				{
+					break;
+				}
+				
+				final AbstractNodeLoc locEnd = path.get(middlePoint.nextIndex());
 				if (GeoEngine.getInstance().canMoveToTarget(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instanceId))
 				{
-					path.remove(midPoint);
+					middlePoint.remove();
 					remove = true;
 					if (debug)
 					{
@@ -211,7 +218,6 @@ public class CellPathFinding extends PathFinding
 					currentX = locMiddle.getX();
 					currentY = locMiddle.getY();
 					currentZ = locMiddle.getZ();
-					midPoint++;
 				}
 			}
 		}
@@ -230,7 +236,7 @@ public class CellPathFinding extends PathFinding
 	
 	private List<AbstractNodeLoc> constructPath(AbstractNode<NodeLoc> node)
 	{
-		final List<AbstractNodeLoc> path = new CopyOnWriteArrayList<>();
+		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = Integer.MIN_VALUE;
 		int previousDirectionY = Integer.MIN_VALUE;
 		int directionX;
@@ -266,16 +272,17 @@ public class CellPathFinding extends PathFinding
 				previousDirectionX = directionX;
 				previousDirectionY = directionY;
 				
-				path.add(0, tempNode.getLoc());
+				path.addFirst(tempNode.getLoc());
 				tempNode.setLoc(null);
 			}
 			
 			tempNode = tempNode.getParent();
 		}
+		
 		return path;
 	}
 	
-	private final CellNodeBuffer alloc(int size, boolean playable)
+	private CellNodeBuffer alloc(int size, boolean playable)
 	{
 		CellNodeBuffer current = null;
 		for (BufferInfo i : _allBuffers)
@@ -327,7 +334,7 @@ public class CellPathFinding extends PathFinding
 		return current;
 	}
 	
-	private final void dropDebugItem(int itemId, int num, AbstractNodeLoc loc)
+	private void dropDebugItem(int itemId, int num, AbstractNodeLoc loc)
 	{
 		final Item item = new Item(IdManager.getInstance().getNextId(), itemId);
 		item.setCount(num);
@@ -335,7 +342,7 @@ public class CellPathFinding extends PathFinding
 		_debugItems.add(item);
 	}
 	
-	private static final class BufferInfo
+	private static class BufferInfo
 	{
 		final int mapSize;
 		final int count;
