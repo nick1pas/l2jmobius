@@ -129,7 +129,7 @@ public class RequestExSummonHomunculusCouponResult implements IClientIncomingPac
 		{
 			player.sendPacket(new ExShowHomunculusBirthInfo(player));
 			player.sendPacket(new ExShowHomunculusList(player));
-			player.sendPacket(new ExSummonHomunculusCouponResult(homunculus.getSlot()));
+			player.sendPacket(new ExSummonHomunculusCouponResult(1, homunculus.getSlot()));
 		}
 	}
 }

@@ -26,17 +26,12 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExSummonHomunculusCouponResult implements IClientOutgoingPacket
 {
 	private final int _slot;
-	private int _success;
+	private final int _success;
 	
-	public ExSummonHomunculusCouponResult(int slot)
+	public ExSummonHomunculusCouponResult(int success, int slot)
 	{
-		_slot = slot;
-	}
-	
-	public ExSummonHomunculusCouponResult(int slot, int success)
-	{
-		_slot = slot;
 		_success = success;
+		_slot = slot;
 	}
 	
 	@Override
