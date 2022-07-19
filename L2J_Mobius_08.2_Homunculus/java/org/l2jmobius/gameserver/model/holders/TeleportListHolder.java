@@ -16,23 +16,33 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.Location;
+
 /**
- * @author NviX
+ * @author NviX, Index
  */
 public class TeleportListHolder
 {
 	private final int _locId;
-	private final int _x;
-	private final int _y;
-	private final int _z;
+	private final List<Location> _locations;
 	private final int _price;
 	
 	public TeleportListHolder(int locId, int x, int y, int z, int price)
 	{
 		_locId = locId;
-		_x = x;
-		_y = y;
-		_z = z;
+		_locations = new ArrayList<>(1);
+		_locations.add(new Location(x, y, z));
+		_price = price;
+	}
+	
+	public TeleportListHolder(int locId, List<Location> locations, int price)
+	{
+		_locId = locId;
+		_locations = locations;
 		_price = price;
 	}
 	
@@ -41,23 +51,18 @@ public class TeleportListHolder
 		return _locId;
 	}
 	
-	public int getX()
+	public List<Location> getLocations()
 	{
-		return _x;
-	}
-	
-	public int getY()
-	{
-		return _y;
-	}
-	
-	public int getZ()
-	{
-		return _z;
+		return _locations;
 	}
 	
 	public int getPrice()
 	{
 		return _price;
+	}
+	
+	public Location getLocation()
+	{
+		return _locations.get(Rnd.get(_locations.size()));
 	}
 }

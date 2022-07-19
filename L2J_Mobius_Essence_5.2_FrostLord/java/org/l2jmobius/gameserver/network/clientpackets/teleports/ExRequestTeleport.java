@@ -98,9 +98,10 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
+		final Location location = teleport.getLocation();
 		if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
 		{
-			final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
+			final Castle castle = CastleManager.getInstance().getCastle(location.getX(), location.getY(), location.getZ());
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
@@ -142,7 +143,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		player.abortCast();
 		player.stopMove(null);
 		
-		player.setTeleportLocation(new Location(teleport.getX(), teleport.getY(), teleport.getZ()));
+		player.setTeleportLocation(location);
 		player.doCast(CommonSkill.TELEPORT.getSkill());
 	}
 }

@@ -17,13 +17,16 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 
@@ -34,7 +37,7 @@ public class TeleportListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(TeleportListData.class.getName());
 	private final Map<Integer, TeleportListHolder> _teleports = new HashMap<>();
-	private int _teleportsCount = 0;
+	private int _teleportCount = 0;
 	
 	protected TeleportListData()
 	{
@@ -46,8 +49,8 @@ public class TeleportListData implements IXmlReader
 	{
 		_teleports.clear();
 		parseDatapackFile("data/TeleportListData.xml");
-		_teleportsCount = _teleports.size();
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _teleportsCount + " teleports.");
+		_teleportCount = _teleports.size();
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _teleportCount + " teleports.");
 	}
 	
 	@Override
@@ -57,12 +60,19 @@ public class TeleportListData implements IXmlReader
 		{
 			final StatSet set = new StatSet(parseAttributes(teleportNode));
 			final int tpId = set.getInt("id");
-			final int x = set.getInt("x");
-			final int y = set.getInt("y");
-			final int z = set.getInt("z");
 			final int tpPrice = set.getInt("price");
 			final boolean special = set.getBoolean("special", false);
-			_teleports.put(tpId, new TeleportListHolder(tpId, x, y, z, tpPrice, special));
+			final List<Location> locations = new ArrayList<>();
+			forEach(teleportNode, "location", locationsNode ->
+			{
+				final StatSet locationSet = new StatSet(parseAttributes(locationsNode));
+				locations.add(new Location(locationSet.getInt("x"), locationSet.getInt("y"), locationSet.getInt("z")));
+			});
+			if (locations.isEmpty())
+			{
+				locations.add(new Location(set.getInt("x"), set.getInt("y"), set.getInt("z")));
+			}
+			_teleports.put(tpId, new TeleportListHolder(tpId, locations, tpPrice, special));
 		}));
 	}
 	
@@ -71,9 +81,9 @@ public class TeleportListData implements IXmlReader
 		return _teleports.get(teleportId);
 	}
 	
-	public int getTeleportsCount()
+	public int getTeleportCount()
 	{
-		return _teleportsCount;
+		return _teleportCount;
 	}
 	
 	public static TeleportListData getInstance()

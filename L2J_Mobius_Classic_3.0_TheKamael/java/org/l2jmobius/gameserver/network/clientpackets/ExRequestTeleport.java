@@ -20,6 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
@@ -94,9 +95,10 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
+		final Location location = teleport.getLocation();
 		if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
 		{
-			final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
+			final Castle castle = CastleManager.getInstance().getCastle(location.getX(), location.getY(), location.getZ());
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
@@ -120,6 +122,6 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		
 		player.abortCast();
 		player.stopMove(null);
-		player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
+		player.teleToLocation(location);
 	}
 }
