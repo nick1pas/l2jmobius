@@ -1746,6 +1746,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>50</criticalChance>
+				<pDefMod>0.8</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -2001,9 +2002,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="TargetCancel">
-				<chance>60</chance>
-			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">3878</value>
@@ -2562,9 +2560,6 @@
 			<effect name="Bluff">
 				<chance>80</chance>
 			</effect>
-			<effect name="TargetCancel">
-				<chance>80</chance>
-			</effect>
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
 			</effect>
@@ -2673,9 +2668,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="TargetCancel">
-				<chance>60</chance>
-			</effect>
 			<effect name="PhysicalAttack">
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>

@@ -20,9 +20,9 @@
 		</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<affectLimit>10-10</affectLimit>
-		<affectRange>200</affectRange>
-		<activateRate>80</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>400</affectRange>
+		<activateRate>90</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicLevel>
@@ -37,7 +37,7 @@
 			<value level="2">127</value>
 			<value level="3">132</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>700</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -47,7 +47,7 @@
 			<value level="3">-4232</value>
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
-		<effectRange>1100</effectRange>
+		<effectRange>1200</effectRange>
 		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
@@ -62,7 +62,7 @@
 				<delay>600</delay>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
 			</effect>
 			<effect name="GetAgro" />
 		</effects>
