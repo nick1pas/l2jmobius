@@ -641,13 +641,10 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 			{
 				skillLearn.getRemoveSkills().forEach(skillId ->
 				{
-					if (player.getSkillLevel(skillId) > 0)
+					final Skill skillToRemove = player.getKnownSkill(skillId);
+					if (skillToRemove != null)
 					{
-						final Skill skillToRemove = player.getKnownSkill(skillId);
-						if (skillToRemove != null)
-						{
-							player.removeSkill(skillToRemove, true);
-						}
+						player.removeSkill(skillToRemove, true);
 					}
 				});
 			}
