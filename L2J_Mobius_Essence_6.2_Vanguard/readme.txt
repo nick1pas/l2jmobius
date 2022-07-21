@@ -6,7 +6,7 @@ Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-w
 Geodata: https://www.mediafire.com/file/cjpnxf1l9s82ymn/L2J_Mobius_Essence_6.2_Vanguard_Geodata.zip
 
 Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1pXp5jfSyd-tm5hxVyxO8vvOrCos5QJH1&export=download
-System: https://mega.nz/file/d9dUHC4Z#syBrAZ6Wp4kbYggizVmPfROT6MJ-m8yIOJqLfwsNGfo
+System: https://mega.nz/file/MtUE1T6K#yt6P9XkfTbp7Sko7TG54-9vk6r5mAm732mwhbNhwO88
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 

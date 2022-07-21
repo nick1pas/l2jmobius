@@ -6,7 +6,7 @@ Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-w
 Geodata: https://www.mediafire.com/file/s9tml6w2iu7z55h/L2J_Mobius_10.2_MasterClass_Geodata.zip
 
 Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1pXp5jfSyd-tm5hxVyxO8vvOrCos5QJH1&export=download
-System: https://mega.nz/file/44lDXKpJ#p3OobCPnBB35oWaWLMT2gTbPt2GZ12iKAfLgVlvxA9c
+System: https://mega.nz/file/QwsjjJLQ#vvg45gwevALzoPmfsZY-nnUFLYvLn5UXEo6XegENiLA
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
