@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stat;
 /**
  * @author Sdw
  */
-public class HpRegen extends AbstractStatEffect
+public class HpRegen extends AbstractConditionalHpEffect
 {
 	public HpRegen(StatSet params)
 	{

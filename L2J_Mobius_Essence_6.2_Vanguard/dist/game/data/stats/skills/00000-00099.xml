@@ -6252,8 +6252,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpDrain">
-				<power>
+			<effect name="HpRegen">
+				<amount>
 					<value level="1">0.25</value>
 					<value level="2">0.5</value>
 					<value level="3">0.75</value>
@@ -6314,8 +6314,9 @@
 					<value level="58">14.50</value>
 					<value level="59">14.75</value>
 					<value level="60">15</value>
-				</power>
-				<percentage>30</percentage>
+				</amount>
+				<mode>DIFF</mode>
+				<hpPercent>60</hpPercent>
 			</effect>
 		</effects>
 	</skill>
