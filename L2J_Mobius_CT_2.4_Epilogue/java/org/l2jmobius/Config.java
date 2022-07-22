@@ -741,7 +741,6 @@ public class Config
 	public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
 	public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
-	public static boolean ENABLE_GUARD_RETURN;
 	public static boolean ALLOW_WYVERN_UPGRADER;
 	public static List<Integer> LIST_PET_RENT_NPC;
 	public static double RAID_HP_REGEN_MULTIPLIER;
@@ -2234,7 +2233,6 @@ public class Config
 			AGGRO_DISTANCE_CHECK_INSTANCES = npcConfig.getBoolean("AggroDistanceCheckInstances", false);
 			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = npcConfig.getBoolean("AggroDistanceCheckRestoreLife", true);
 			GUARD_ATTACK_AGGRO_MOB = npcConfig.getBoolean("GuardAttackAggroMob", false);
-			ENABLE_GUARD_RETURN = npcConfig.getBoolean("EnableGuardReturn", false);
 			ALLOW_WYVERN_UPGRADER = npcConfig.getBoolean("AllowWyvernUpgrader", false);
 			final String[] listPetRentNpc = npcConfig.getString("ListPetRentNpc", "30827").split(",");
 			LIST_PET_RENT_NPC = new ArrayList<>(listPetRentNpc.length);

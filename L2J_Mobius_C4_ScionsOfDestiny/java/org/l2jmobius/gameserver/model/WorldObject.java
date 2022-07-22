@@ -580,6 +580,11 @@ public abstract class WorldObject
 		return false;
 	}
 	
+	public boolean isWalker()
+	{
+		return false;
+	}
+	
 	/**
 	 * Calculates 2D distance between this WorldObject and given x, y, z.
 	 * @param x the X coordinate

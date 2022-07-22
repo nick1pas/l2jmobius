@@ -24,7 +24,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.TerritoryTable;
-import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
@@ -449,7 +448,7 @@ public class Spawn
 		final WaterZone water = ZoneData.getInstance().getZone(newlocx, newlocy, newlocz, WaterZone.class);
 		
 		// If random spawn system is enabled.
-		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS && npc.isMonster() && !npc.isQuestMonster() && (WalkerRouteData.getInstance().getRouteForNpc(npc.getNpcId()) == null) && (getInstanceId() == 0) && !npc.isRaid() && !npc.isMinion() && !npc.isFlying() && (water == null) && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getNpcId()))
+		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS && npc.isMonster() && !npc.isQuestMonster() && !npc.isWalker() && (getInstanceId() == 0) && !npc.isRaid() && !npc.isMinion() && !npc.isFlying() && (water == null) && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getNpcId()))
 		{
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);

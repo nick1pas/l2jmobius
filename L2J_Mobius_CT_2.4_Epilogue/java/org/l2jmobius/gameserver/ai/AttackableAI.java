@@ -27,7 +27,6 @@ import java.util.concurrent.Future;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -602,30 +601,29 @@ public class AttackableAI extends CreatureAI
 			npc.getAttackByList().clear();
 		}
 		
+		// If this is a festival monster, then it remains in the same location.
+		// if (npc instanceof FestivalMonster)
+		// {
+		// return;
+		// }
+		
 		// Check if the mob should not return to spawn point
-		if (!npc.canReturnToSpawnPoint())
+		if (!npc.canReturnToSpawnPoint()
+		/* || npc.isReturningToSpawnPoint() */ ) // Commented because sometimes it stops movement.
 		{
 			return;
 		}
 		
-		// Check if the actor is a GuardInstance
-		if ((npc instanceof Guard) && !npc.isWalker())
+		// Order this attackable to return to its spawn because there's no target to attack
+		if (!npc.isWalker() && ((getTarget() == null) || getTarget().isInvisible() || (getTarget().isPlayer() && !getTarget().getActingPlayer().isAlikeDead())))
 		{
-			if (Config.ENABLE_GUARD_RETURN && (npc.getSpawn() != null) && (Util.calculateDistance(npc, npc.getSpawn(), false, false) > 50) && /* !npc.isInsideZone(ZoneId.SIEGE) && */!npc.isCastingNow())
-			{
-				// Custom guard teleport to spawn.
-				npc.clearAggroList();
-				npc.doCast(SkillData.getInstance().getSkill(1050, 1));
-			}
-			else
-			{
-				// Order to the GuardInstance to return to its home location because there's no target to attack
-				npc.returnHome();
-			}
+			npc.setWalking();
+			npc.returnHome();
+			return;
 		}
 		
-		// If this is a festival monster, then it remains in the same location.
-		if (npc instanceof FestivalMonster)
+		// Do not leave dead player
+		if ((getTarget() != null) && getTarget().isPlayer() && getTarget().getActingPlayer().isAlikeDead())
 		{
 			return;
 		}
@@ -681,7 +679,6 @@ public class AttackableAI extends CreatureAI
 		// Order to the Monster to random walk (1/100)
 		else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
 		{
-			
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
 				if (cast(sk))

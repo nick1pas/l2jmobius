@@ -660,7 +660,6 @@ public class Config
 	public static boolean ALLOW_RAID_BOSS_PETRIFIED;
 	public static boolean ALLOW_LOW_LEVEL_TRADE;
 	public static boolean USE_CHAT_FILTER;
-	public static int MONSTER_RETURN_DELAY;
 	public static boolean SCROLL_STACKABLE;
 	public static boolean ALLOW_CHAR_KILL_PROTECT;
 	public static int CLAN_LEADER_COLOR;
@@ -1929,7 +1928,6 @@ public class Config
 		HERO_COUNT = customServerConfig.getInt("HeroCount", 1);
 		CRUMA_TOWER_LEVEL_RESTRICT = customServerConfig.getInt("CrumaTowerLevelRestrict", 56);
 		ALLOW_RAID_BOSS_PETRIFIED = customServerConfig.getBoolean("AllowRaidBossPetrified", true);
-		MONSTER_RETURN_DELAY = customServerConfig.getInt("MonsterReturnDelay", 1200);
 		SCROLL_STACKABLE = customServerConfig.getBoolean("ScrollStackable", false);
 		ALLOW_CHAR_KILL_PROTECT = customServerConfig.getBoolean("AllowLowLvlProtect", false);
 		CLAN_LEADER_COLOR_ENABLED = customServerConfig.getBoolean("ClanLeaderNameColorEnabled", true);

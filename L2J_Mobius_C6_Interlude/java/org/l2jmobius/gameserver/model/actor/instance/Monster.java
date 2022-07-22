@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.MonsterKnownList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.util.MinionList;
 
 /**
@@ -66,18 +65,6 @@ public class Monster extends Attackable
 			setKnownList(new MonsterKnownList(this));
 		}
 		return (MonsterKnownList) super.getKnownList();
-	}
-	
-	public void returnHome()
-	{
-		ThreadPool.schedule(() ->
-		{
-			final Spawn mobSpawn = getSpawn();
-			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius2D(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), Config.MAX_DRIFT_RANGE))
-			{
-				teleToLocation(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ());
-			}
-		}, Config.MONSTER_RETURN_DELAY * 1000);
 	}
 	
 	/**

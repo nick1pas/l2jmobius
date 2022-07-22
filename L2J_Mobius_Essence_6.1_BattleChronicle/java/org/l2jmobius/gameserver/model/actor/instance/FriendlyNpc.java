@@ -43,6 +43,7 @@ public class FriendlyNpc extends Attackable
 	{
 		super(template);
 		setInstanceType(InstanceType.FriendlyNpc);
+		setCanReturnToSpawnPoint(false);
 	}
 	
 	@Override

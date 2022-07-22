@@ -100,15 +100,14 @@ public class FortSiegeGuard extends Attackable
 		return false;
 	}
 	
-	/**
-	 * This method forces guard to return to home location previously set
-	 */
+	@Override
 	public void returnHome()
 	{
 		if (getWalkSpeed() <= 0)
 		{
 			return;
 		}
+		
 		if (!isInsideRadius2D(getSpawn().getX(), getSpawn().getY(), getSpawn().getZ(), 40))
 		{
 			setReturningToSpawnPoint(true);

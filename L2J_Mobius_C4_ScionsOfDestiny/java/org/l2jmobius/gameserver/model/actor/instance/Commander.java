@@ -110,9 +110,7 @@ public class Commander extends Attackable
 		return _homeY;
 	}
 	
-	/**
-	 * This method forces guard to return to home location previously set
-	 */
+	@Override
 	public void returnHome()
 	{
 		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 40))

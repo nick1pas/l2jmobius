@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -741,6 +742,10 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
+		if (_actor.isNpc() && _actor.isAttackable())
+		{
+			((Attackable) _actor).setReturningToSpawnPoint(false);
+		}
 		clientStoppedMoving();
 		
 		// If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE

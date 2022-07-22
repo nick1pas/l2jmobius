@@ -41,6 +41,7 @@ public class QuestGuard extends Guard
 	{
 		super(template);
 		setInstanceType(InstanceType.QuestGuard);
+		setCanReturnToSpawnPoint(false);
 	}
 	
 	@Override

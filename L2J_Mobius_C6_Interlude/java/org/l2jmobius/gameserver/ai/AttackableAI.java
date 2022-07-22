@@ -478,21 +478,29 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		// Check if the actor is a Guard
-		if (_actor instanceof Guard)
-		{
-			// Order to the Guard to return to its home location because there's no target to attack
-			((Guard) _actor).returnHome();
-		}
-		
 		// If this is a festival monster, then it remains in the same location.
-		if (_actor instanceof FestivalMonster)
+		// if (npc instanceof FestivalMonster)
+		// {
+		// return;
+		// }
+		
+		// Check if the mob should not return to spawn point
+		if (!npc.canReturnToSpawnPoint()
+		/* || npc.isReturningToSpawnPoint() */ ) // Commented because sometimes it stops movement.
 		{
 			return;
 		}
 		
-		// Check if the mob should not return to spawn point
-		if (!npc.canReturnToSpawnPoint())
+		// Order this attackable to return to its spawn because there's no target to attack
+		if (!npc.isWalker() && ((getTarget() == null) || (getTarget().isPlayer() && (!getTarget().getActingPlayer().isAlikeDead() || getTarget().getActingPlayer().getAppearance().isInvisible()))))
+		{
+			npc.setWalking();
+			npc.returnHome();
+			return;
+		}
+		
+		// Do not leave dead player
+		if ((getTarget() != null) && getTarget().isPlayer() && getTarget().getActingPlayer().isAlikeDead())
 		{
 			return;
 		}
@@ -570,11 +578,6 @@ public class AttackableAI extends CreatureAI
 			}
 			else
 			{
-				if ((Config.MONSTER_RETURN_DELAY > 0) && (npc instanceof Monster) && !npc.isAlikeDead() && !npc.isDead() && (npc.getSpawn() != null) && !npc.isInsideRadius2D(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), Config.MAX_DRIFT_RANGE))
-				{
-					((Monster) _actor).returnHome();
-				}
-				
 				// If NPC with fixed coord
 				x1 = (npc.getSpawn().getX() + Rnd.get(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;
 				y1 = (npc.getSpawn().getY() + Rnd.get(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;

@@ -1690,6 +1690,7 @@ public class Attackable extends Npc
 		
 		if (hasAI() && (getSpawn() != null))
 		{
+			setReturningToSpawnPoint(true);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
 		}
 	}

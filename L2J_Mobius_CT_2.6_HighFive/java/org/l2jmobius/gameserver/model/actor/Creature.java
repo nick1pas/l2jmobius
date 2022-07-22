@@ -4433,10 +4433,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Movement checks.
 			if ((Config.PATHFINDING > 0) && !(this instanceof QuestGuard))
 			{
-				final double originalDistance = distance;
-				final int originalX = x;
-				final int originalY = y;
+				int originalX = x;
+				int originalY = y;
 				final int originalZ = z;
+				final double originalDistance = distance;
 				final int gtx = (originalX - World.WORLD_X_MIN) >> 4;
 				final int gty = (originalY - World.WORLD_Y_MIN) >> 4;
 				if (isOnGeodataPath())
@@ -4476,31 +4476,55 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					// Path calculation -- overrides previous movement check
 					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayer());
-					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
+					boolean found = (m.geoPath != null) && (m.geoPath.size() > 1);
+					
+					// If not found and it is an Attackable, attempt to find closest path to move location.
+					if (!found && isAttackable())
 					{
-						if (isPlayer() && !_isFlying && !isInWater)
+						int xMin = Math.min(curX, originalX);
+						int xMax = Math.max(curX, originalX);
+						int yMin = Math.min(curY, originalY);
+						int yMax = Math.max(curY, originalY);
+						final int maxDiff = Math.min(Math.max(xMax - xMin, yMax - yMin), 500);
+						xMin -= maxDiff;
+						xMax += maxDiff;
+						yMin -= maxDiff;
+						yMax += maxDiff;
+						int destinationX = 0;
+						int destinationY = 0;
+						double shortDistance = Double.MAX_VALUE;
+						double tempDistance;
+						List<AbstractNodeLoc> tempPath;
+						for (int sX = xMin; sX < xMax; sX += 500)
 						{
-							return;
+							for (int sY = yMin; sY < yMax; sY += 500)
+							{
+								tempDistance = Math.sqrt(Math.pow(sX - originalX, 2) + Math.pow(sY - originalY, 2));
+								if (tempDistance < shortDistance)
+								{
+									tempPath = PathFinding.getInstance().findPath(curX, curY, curZ, sX, sY, originalZ, getInstanceId(), false);
+									found = (tempPath != null) && (tempPath.size() > 1);
+									if (found)
+									{
+										shortDistance = tempDistance;
+										m.geoPath = tempPath;
+										destinationX = sX;
+										destinationY = sY;
+									}
+								}
+							}
 						}
-						// if (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140))
-						// {
-						// return;
-						// }
-						// if (isSummon() && !((Summon) this).getFollowStatus())
-						// {
-						// return;
-						// }
-						
-						m.disregardingGeodata = true;
-						
-						x = originalX;
-						y = originalY;
-						z = originalZ;
-						distance = originalDistance;
+						found = (m.geoPath != null) && (m.geoPath.size() > 1);
+						if (found)
+						{
+							originalX = destinationX;
+							originalY = destinationY;
+						}
 					}
-					else
+					
+					if (found)
 					{
-						m.onGeodataPathIndex = 0; // on first segment
+						m.onGeodataPathIndex = 0; // On first segment.
 						m.geoPathGtx = gtx;
 						m.geoPathGty = gty;
 						m.geoPathAccurateTx = originalX;
@@ -4514,6 +4538,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
 						sin = dy / distance;
 						cos = dx / distance;
+					}
+					else // No path found.
+					{
+						if (isPlayer() && !_isFlying && !isInWater)
+						{
+							return;
+						}
+						
+						m.disregardingGeodata = true;
+						
+						x = originalX;
+						y = originalY;
+						z = originalZ;
+						distance = originalDistance;
 					}
 				}
 			}

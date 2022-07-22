@@ -68,6 +68,12 @@ public class NpcWalker extends Npc
 		((NpcWalkerAI) getAI()).setHomeZ(getZ());
 	}
 	
+	@Override
+	public boolean isWalker()
+	{
+		return true;
+	}
+	
 	/**
 	 * Sends a chat to all _knowObjects.
 	 * @param chat message to say

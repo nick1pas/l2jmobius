@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.SoulCrystal;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
@@ -2686,6 +2687,17 @@ public class Attackable extends Npc
 	public void setCommandChannelLastAttack(long channelLastAttack)
 	{
 		_commandChannelLastAttack = channelLastAttack;
+	}
+	
+	public void returnHome()
+	{
+		clearAggroList();
+		
+		if (hasAI() && (getSpawn() != null))
+		{
+			setReturningToSpawnPoint(true);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(getSpawn().getX(), getSpawn().getY(), getSpawn().getZ()));
+		}
 	}
 	
 	private static class CommandChannelTimer implements Runnable

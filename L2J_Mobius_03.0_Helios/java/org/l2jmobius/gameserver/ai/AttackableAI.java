@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Defender;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
@@ -468,16 +467,23 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the mob should not return to spawn point
-		if (!npc.canReturnToSpawnPoint())
+		if (!npc.canReturnToSpawnPoint()
+		/* || npc.isReturningToSpawnPoint() */ ) // Commented because sometimes it stops movement.
 		{
 			return;
 		}
 		
-		// Check if the actor is a guard
-		if (((npc instanceof Guard) || (npc instanceof Defender)) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
+		// Order this attackable to return to its spawn because there's no target to attack
+		if (!npc.isWalker() && ((getTarget() == null) || getTarget().isInvisible() || (getTarget().isPlayer() && !getTarget().getActingPlayer().isAlikeDead())))
 		{
-			// Order to the GuardInstance to return to its home location because there's no target to attack
 			npc.returnHome();
+			return;
+		}
+		
+		// Do not leave dead player
+		if ((getTarget() != null) && getTarget().isPlayer() && getTarget().getActingPlayer().isAlikeDead())
+		{
+			return;
 		}
 		
 		// Minions following leader
@@ -651,13 +657,19 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		Creature target = npc.getMostHated();
+		if (target == null)
+		{
+			setIntention(AI_INTENTION_ACTIVE);
+			return;
+		}
+		
 		if (getTarget() != target)
 		{
 			setTarget(target);
 		}
 		
 		// Check if target is dead or if timeout is expired to stop this attack
-		if ((target == null) || target.isAlikeDead())
+		if (target.isAlikeDead())
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			npc.stopHating(target);
