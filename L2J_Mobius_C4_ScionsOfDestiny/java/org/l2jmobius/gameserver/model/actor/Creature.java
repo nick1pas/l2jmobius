@@ -5408,7 +5408,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayer());
 					boolean found = (m.geoPath != null) && (m.geoPath.size() > 1);
 					
-					// If not found and it is an Attackable, attempt to find closest path to move location.
+					// If path not found and this is an Attackable, attempt to find closest path to destination.
 					if (!found && isNpc() && isAttackable())
 					{
 						int xMin = Math.min(curX, originalX);
@@ -5429,7 +5429,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						{
 							for (int sY = yMin; sY < yMax; sY += 500)
 							{
-								tempDistance = Math.sqrt(Math.pow(sX - originalX, 2) + Math.pow(sY - originalY, 2));
+								tempDistance = Math.hypot(sX - originalX, sY - originalY);
 								if (tempDistance < shortDistance)
 								{
 									tempPath = PathFinding.getInstance().findPath(curX, curY, curZ, sX, sY, originalZ, getInstanceId(), false);
