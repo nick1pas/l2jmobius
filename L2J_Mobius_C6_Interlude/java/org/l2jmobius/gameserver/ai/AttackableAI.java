@@ -492,7 +492,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Order this attackable to return to its spawn because there's no target to attack
-		if (!npc.isWalker() && ((getTarget() == null) || (getTarget().isPlayer() && (!getTarget().getActingPlayer().isAlikeDead() || getTarget().getActingPlayer().getAppearance().isInvisible()))))
+		if (!npc.isWalker() && ((getTarget() == null) || (getTarget().isPlayer() && ((!Config.ATTACKABLES_CAMP_PLAYER_CORPSES && getTarget().getActingPlayer().isAlikeDead()) || getTarget().getActingPlayer().getAppearance().isInvisible()))))
 		{
 			npc.setWalking();
 			npc.returnHome();

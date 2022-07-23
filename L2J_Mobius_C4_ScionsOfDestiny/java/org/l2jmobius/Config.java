@@ -178,6 +178,7 @@ public class Config
 	public static boolean SHOW_NPC_LEVEL;
 	public static boolean SHOW_NPC_AGGRESSION;
 	public static boolean SHOW_NPC_CLAN_CREST;
+	public static boolean ATTACKABLES_CAMP_PLAYER_CORPSES;
 	public static int ZONE_TOWN;
 	public static int DEFAULT_PUNISH;
 	public static int DEFAULT_PUNISH_PARAM;
@@ -1486,6 +1487,7 @@ public class Config
 		SHOW_NPC_LEVEL = generalConfig.getBoolean("ShowNpcLevel", false);
 		SHOW_NPC_AGGRESSION = generalConfig.getBoolean("ShowNpcAggression", false);
 		SHOW_NPC_CLAN_CREST = generalConfig.getBoolean("ShowNpcClanCrest", false);
+		ATTACKABLES_CAMP_PLAYER_CORPSES = generalConfig.getBoolean("AttackablesCampPlayerCorpses", false);
 		FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
 		FORCE_COMPLETE_STATUS_UPDATE = generalConfig.getBoolean("ForceCompletePlayerStatusUpdate", true);
 		CHAR_DATA_STORE_INTERVAL = generalConfig.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;

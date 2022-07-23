@@ -623,6 +623,7 @@ public class Config
 	public static boolean ALT_GAME_VIEWNPC;
 	public static boolean SHOW_NPC_LEVEL;
 	public static boolean SHOW_NPC_AGGRESSION;
+	public static boolean ATTACKABLES_CAMP_PLAYER_CORPSES;
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
 	public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
 	public static int MIN_NPC_LEVEL_DMG_PENALTY;
@@ -2125,6 +2126,7 @@ public class Config
 			ALT_GAME_VIEWNPC = npcConfig.getBoolean("AltGameViewNpc", false);
 			SHOW_NPC_LEVEL = npcConfig.getBoolean("ShowNpcLevel", false);
 			SHOW_NPC_AGGRESSION = npcConfig.getBoolean("ShowNpcAggression", false);
+			ATTACKABLES_CAMP_PLAYER_CORPSES = npcConfig.getBoolean("AttackablesCampPlayerCorpses", false);
 			SHOW_CREST_WITHOUT_QUEST = npcConfig.getBoolean("ShowCrestWithoutQuest", false);
 			ENABLE_RANDOM_ENCHANT_EFFECT = npcConfig.getBoolean("EnableRandomEnchantEffect", false);
 			MIN_NPC_LEVEL_DMG_PENALTY = npcConfig.getInt("MinNPCLevelForDmgPenalty", 78);
