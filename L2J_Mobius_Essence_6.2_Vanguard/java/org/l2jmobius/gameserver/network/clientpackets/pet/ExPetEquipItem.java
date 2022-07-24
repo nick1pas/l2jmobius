@@ -73,11 +73,11 @@ public class ExPetEquipItem implements IClientIncomingPacket
 		}
 		
 		final Item item = player.getInventory().getItemByObjectId(_objectId);
-		
 		if (item == null)
 		{
 			return;
 		}
+		
 		// No UseItem is allowed while the player is in special conditions
 		if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
 		{
