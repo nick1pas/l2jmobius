@@ -2896,6 +2896,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -2941,6 +2942,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="202" /> <!-- Mace of Underworld -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -2985,6 +2987,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3030,6 +3033,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3075,6 +3079,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3161,22 +3166,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24876" level="120" type="Monster" name="Conquest Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<acquire exp="5385168000" sp="4846608" />
+		<equipment rhand="193" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -3202,21 +3214,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24877" level="120" type="Monster" name="Conquest Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="326" /> <!-- Heathen's Book -->
 		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -3242,21 +3262,28 @@
 		</dropLists>
 	</npc>
 	<npc id="24878" level="120" type="Monster" name="Conquest Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -3282,21 +3309,28 @@
 		</dropLists>
 	</npc>
 	<npc id="24879" level="120" type="Monster" name="Conquest Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -3322,21 +3356,28 @@
 		</dropLists>
 	</npc>
 	<npc id="24880" level="120" type="Monster" name="Conquest Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="5385168000" sp="4846608" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="HOLY" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -3362,21 +3403,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24881" level="120" type="Monster" name="Atron of the Conquest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="140" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="12" />
@@ -3402,21 +3451,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24882" level="120" type="Monster" name="Craigo of the Conquest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="35" />
 				<run ground="170" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="18" />
@@ -3442,19 +3499,22 @@
 		</dropLists>
 	</npc>
 	<npc id="24883" level="120" type="Monster" name="Daril of the Conquest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="140" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3482,21 +3542,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24884" level="120" type="Monster" name="Seo of the Conquest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="25" />
@@ -3522,21 +3590,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24885" level="120" type="Monster" name="Powerful Conquest Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="100" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="17" />
@@ -3562,21 +3638,29 @@
 		</dropLists>
 	</npc>
 	<npc id="24886" level="120" type="Monster" name="Powerful Conquest Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="874926.01156" hpRegen="13.4" mp="2862" mpRegen="30" />
-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="753240" magical="364523" />
+			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
+			<attribute>
+				<attack type="EARTH" value="2130" />
+				<defence fire="1980" water="1980" wind="1980" earth="1980" holy="1980" dark="1980" />
+			</attribute>
 			<speed>
 				<walk ground="19" />
 				<run ground="80" />
 			</speed>
-			<hitTime>600</hitTime>
 		</stats>
 		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="7" />
 			<height normal="13" />

@@ -2902,6 +2902,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -2947,6 +2948,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="202" /> <!-- Mace of Underworld -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -2991,6 +2993,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3036,6 +3039,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3081,6 +3085,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<acquire exp="29896920000" sp="26907120" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1124904" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<speed>
@@ -3184,11 +3189,16 @@
 				<run ground="170" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="39" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
@@ -3209,11 +3219,6 @@
 				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
-			<clanList>
-				<clan>VALLEY_OF_SAINTS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24877" level="120" type="Monster" name="Herald of Splendor">
 		<race>DIVINE</race>
@@ -3233,11 +3238,16 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="31.8" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
@@ -3258,11 +3268,6 @@
 				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
-			<clanList>
-				<clan>VALLEY_OF_SAINTS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24878" level="120" type="Monster" name="Believer of Splendor">
 		<race>DIVINE</race>
@@ -3282,11 +3287,16 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="34.2" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
@@ -3307,11 +3317,6 @@
 				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
-			<clanList>
-				<clan>VALLEY_OF_SAINTS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24879" level="120" type="Monster" name="Observer of Splendor">
 		<race>DIVINE</race>
@@ -3331,11 +3336,16 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="33" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
@@ -3356,11 +3366,6 @@
 				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
-			<clanList>
-				<clan>VALLEY_OF_SAINTS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24880" level="120" type="Monster" name="Wiseman of Splendor">
 		<race>DIVINE</race>
@@ -3380,11 +3385,16 @@
 				<run ground="160" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>VALLEY_OF_SAINTS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="30.6" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
@@ -3405,16 +3415,12 @@
 				<item id="81344" min="1" max="1" chance="5.0344" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="false">
-			<clanList>
-				<clan>VALLEY_OF_SAINTS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24881" level="120" type="Monster" name="Springs' Dwarf Hero">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3428,11 +3434,16 @@
 				<run ground="100" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13.2" />
 			<height normal="27" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3453,16 +3464,12 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24882" level="120" type="Monster" name="Springs Scavenger">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3476,11 +3483,16 @@
 				<run ground="100" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13.2" />
 			<height normal="27" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3501,16 +3513,12 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24883" level="120" type="Monster" name="Springs Dwarf Defender">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3524,11 +3532,16 @@
 				<run ground="120" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14.4" />
 			<height normal="23.4" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3549,16 +3562,12 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24884" level="120" type="Monster" name="Springs Dwarf Berserker">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3572,11 +3581,16 @@
 				<run ground="120" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="30.6" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3597,16 +3611,12 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24885" level="120" type="Monster" name="Springs Dwarf Priest">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3620,11 +3630,16 @@
 				<run ground="100" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="10.8" />
 			<height normal="23.4" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3645,16 +3660,12 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24886" level="120" type="Monster" name="Springs Yeti">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="5923684800" sp="5331312" />
+		<mpReward value="3" type="PER" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="874926" hpRegen="10.5" mp="3190" mpRegen="3.6" />
 			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3668,11 +3679,16 @@
 				<run ground="170" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>HOT_SPRINGS</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="27.5" />
 		</collision>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3693,11 +3709,6 @@
 				<item id="81344" min="1" max="1" chance="5.4246" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
-			<clanList>
-				<clan>HOT_SPRINGS</clan>
-			</clanList>
-		</ai>
 	</npc>
 	<npc id="24887" level="112" type="Monster" name="Mimic" title="Baium's Treasure">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
