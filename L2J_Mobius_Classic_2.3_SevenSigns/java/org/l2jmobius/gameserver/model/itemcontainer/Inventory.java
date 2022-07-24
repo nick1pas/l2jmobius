@@ -1261,11 +1261,11 @@ public abstract class Inventory extends ItemContainer
 		{
 			return PAPERDOLL_UNDER;
 		}
-		else if (slot == ItemTemplate.SLOT_R_EAR)
+		else if ((slot == ItemTemplate.SLOT_LR_EAR) || (slot == ItemTemplate.SLOT_R_EAR))
 		{
 			return PAPERDOLL_REAR;
 		}
-		else if ((slot == ItemTemplate.SLOT_LR_EAR) || (slot == ItemTemplate.SLOT_L_EAR))
+		else if (slot == ItemTemplate.SLOT_L_EAR)
 		{
 			return PAPERDOLL_LEAR;
 		}
@@ -1273,7 +1273,7 @@ public abstract class Inventory extends ItemContainer
 		{
 			return PAPERDOLL_NECK;
 		}
-		else if ((slot == ItemTemplate.SLOT_R_FINGER) || (slot == ItemTemplate.SLOT_LR_FINGER))
+		else if ((slot == ItemTemplate.SLOT_LR_FINGER) || (slot == ItemTemplate.SLOT_R_FINGER))
 		{
 			return PAPERDOLL_RFINGER;
 		}

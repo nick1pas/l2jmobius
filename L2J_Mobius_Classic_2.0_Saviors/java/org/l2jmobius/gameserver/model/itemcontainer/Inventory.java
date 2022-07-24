@@ -1141,11 +1141,11 @@ public abstract class Inventory extends ItemContainer
 			{
 				return PAPERDOLL_UNDER;
 			}
+			case ItemTemplate.SLOT_LR_EAR:
 			case ItemTemplate.SLOT_R_EAR:
 			{
 				return PAPERDOLL_REAR;
 			}
-			case ItemTemplate.SLOT_LR_EAR:
 			case ItemTemplate.SLOT_L_EAR:
 			{
 				return PAPERDOLL_LEAR;
@@ -1154,8 +1154,8 @@ public abstract class Inventory extends ItemContainer
 			{
 				return PAPERDOLL_NECK;
 			}
-			case ItemTemplate.SLOT_R_FINGER:
 			case ItemTemplate.SLOT_LR_FINGER:
+			case ItemTemplate.SLOT_R_FINGER:
 			{
 				return PAPERDOLL_RFINGER;
 			}
