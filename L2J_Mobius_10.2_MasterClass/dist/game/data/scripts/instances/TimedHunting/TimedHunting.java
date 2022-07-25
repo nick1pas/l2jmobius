@@ -39,7 +39,7 @@ public class TimedHunting extends AbstractInstance
 	{
 		1007, // Isle of Souls
 		1013, // Corroded Fields
-		1020, // Corroded Fields
+		1020, // Tower of Insolence
 	};
 	
 	public TimedHunting()

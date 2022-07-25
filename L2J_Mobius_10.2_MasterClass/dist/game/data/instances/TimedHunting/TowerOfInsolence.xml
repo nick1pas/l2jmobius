@@ -17,6 +17,11 @@
 	<reenter apply="ON_ENTER">
 		<reset day="THURSDAY" hour="6" minute="30" />
 	</reenter>
+	<doorlist>
+		<door id="15180100">
+			<openStatus default="close" />
+		</door>
+	</doorlist>
 	<spawnlist>
 		<group name="teleports">
 			<!-- 1st Floor -->
@@ -3121,6 +3126,9 @@
 			<npc id="24875" x="-152211" y="16859" z="-9398" heading="63334" respawnTime="60sec" /> <!-- Guardian of the Insolence Seal -->
 			<npc id="24875" x="-152227" y="15178" z="-9398" heading="64668" respawnTime="60sec" /> <!-- Guardian of the Insolence Seal -->
 			<npc id="24875" x="-152233" y="15651" z="-9398" heading="64668" respawnTime="60sec" /> <!-- Guardian of the Insolence Seal -->
+		</group>
+		<group name="bathin" spawnByDefault="false">
+			<npc id="26445" x="-147656" y="10993" z="-9418" /> <!-- Bathin -->
 		</group>
 	</spawnlist>
 </instance>
