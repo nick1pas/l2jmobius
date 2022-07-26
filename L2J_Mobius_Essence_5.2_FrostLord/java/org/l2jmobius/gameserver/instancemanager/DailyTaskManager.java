@@ -363,7 +363,7 @@ public class DailyTaskManager
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE points var = ?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 			{
 				ps.setString(1, PlayerVariables.CLAN_DONATION_POINTS);
 				ps.execute();
