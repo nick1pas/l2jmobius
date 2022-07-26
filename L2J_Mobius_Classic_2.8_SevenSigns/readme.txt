@@ -1,12 +1,12 @@
-L2J-Mobius Classic Zaken
+L2J-Mobius Classic Seven Signs
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/38yzztwmmdq0r07/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
+Geodata: http://www.mediafire.com/file/i0irxa6tda1np71/L2J_Mobius_Classic_2.8_SevenSigns_Geodata.zip
 
-Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1LpjE7GPJSZHFN9V5dMP0vC5YUsuAtA21&export=download
-System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1-LrJURgBxEAQKt_Rox-1Yf1_alEg2PJ1&export=download
+System: https://mega.nz/#!B10W0QSR!xon-5i8Z8g5-VoJPTt16leYVIVV8GosQE_OSH1j7pnM
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
@@ -70,6 +70,27 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Giants Cave
 -Zaken boss AI
 -Newbie quest changes
+
+Antharas: https://eu.4game.com/lineage2classic/play/antharas/
+-Parsed new system messages and npc strings from client.
+-Parsed new skills from client
+-Parsed new items from client
+-Parsed new NPCs from L2Wiki and client
+-Clan Arena
+-New Agathion item support
+
+Seven Signs: https://eu.4gameforum.com/threads/658543/
+-Parsed new system messages and npc strings from client
+-Parsed new skills from client
+-Parsed new items from client
+-Parsed new NPCs from client
+-Updated skiltrees and skills from L2Wiki
+-Updated experience values from L2Wiki
+-Elemental Spirits
+-Elemental Spirit boss instances
+-Land of Winds spawns
+-Goddard territory spawns
+-Goddard clanhalls
 
 Customs:
 -Newbie Helper NPC location info
