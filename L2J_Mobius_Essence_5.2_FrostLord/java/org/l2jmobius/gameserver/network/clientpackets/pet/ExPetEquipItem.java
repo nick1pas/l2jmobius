@@ -164,6 +164,27 @@ public class ExPetEquipItem implements IClientIncomingPacket
 				}
 			}
 			
+			// Pets cannot use enchanted weapons.
+			if (item.isWeapon() && item.isEnchanted())
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
+			// Pets cannot use time-limited items.
+			if (item.isTimeLimitedItem() || item.isShadowItem())
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
+			// Pets cannot use Event items.
+			if ((item.getTemplate().getAdditionalName() != null) && item.getTemplate().getAdditionalName().toLowerCase().contains("event"))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
 			final Item oldItem = pet.getInventory().getPaperdollItemByItemId((int) item.getTemplate().getBodyPart());
 			if (oldItem != null)
 			{
