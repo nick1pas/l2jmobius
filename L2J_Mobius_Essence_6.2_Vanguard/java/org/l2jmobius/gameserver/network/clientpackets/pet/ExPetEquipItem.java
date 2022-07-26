@@ -18,6 +18,8 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetSkillList;
+import org.l2jmobius.gameserver.network.serverpackets.pet.PetInfo;
 
 /**
  * Written by Berezkin Nikolay, on 25.04.2021
@@ -161,6 +163,7 @@ public class ExPetEquipItem implements IClientIncomingPacket
 					return;
 				}
 			}
+			
 			final Item oldItem = pet.getInventory().getPaperdollItemByItemId((int) item.getTemplate().getBodyPart());
 			if (oldItem != null)
 			{
@@ -189,6 +192,10 @@ public class ExPetEquipItem implements IClientIncomingPacket
 				Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
 				pet.useEquippableItem(transferedItem, false);
 			}
+			
+			pet.getStat().recalculateStats(true);
+			player.sendPacket(new PetInfo(pet, 1));
+			player.sendPacket(new ExPetSkillList(false, pet));
 		}
 	}
 }

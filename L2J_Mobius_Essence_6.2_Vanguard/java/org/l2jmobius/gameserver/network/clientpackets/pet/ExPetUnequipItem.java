@@ -15,6 +15,7 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.pet.ExPetSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.pet.PetInfo;
 
 /**
@@ -172,8 +173,10 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 			{
 				pet.transferItem("UnequipFromPet", item.getObjectId(), 1, player.getInventory(), player, null);
 			}
+			
 			pet.getStat().recalculateStats(true);
-			pet.getOwner().sendPacket(new PetInfo(pet, 1));
+			player.sendPacket(new PetInfo(pet, 1));
+			player.sendPacket(new ExPetSkillList(false, pet));
 		}
 	}
 }

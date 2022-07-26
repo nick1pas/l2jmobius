@@ -1680,7 +1680,7 @@ public class Pet extends Summon
 		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		petIU.addItems(items);
 		sendInventoryUpdate(petIU);
-		getStat().recalculateStats(true);
+		
 		if (abortAttack)
 		{
 			abortAttack();
