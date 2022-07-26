@@ -15,21 +15,6 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23235" toLevel="1" name="Release Agathion's Seal - Singer and Dancer">
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLevel>85</magicLevel>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="SummonAgathion">
-				<npcId>1594</npcId> <!-- Singer & Dancer Agathion -->
-			</effect>
-		</effects>
-	</skill>
 	<skill id="23298" toLevel="1" name="Flame Hawk">
 		<!-- For 10 seconds, inflames the target and inflicts damage of 150 every second. -->
 		<icon>icon.skill0771</icon>

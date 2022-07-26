@@ -1776,29 +1776,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3588" toLevel="1" name="Stun">
-		<!-- Infinity Fang Skill -->
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>9</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>25</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<effectPoint>-100</effectPoint>
-		<isDebuff>1</isDebuff>
-		<lvlBonusRate>10</lvlBonusRate>
-		<magicLevel>80</magicLevel>
-		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<trait>SHOCK</trait>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="BlockActions" />
-		</effects>
-	</skill>
 	<skill id="3589" toLevel="1" name="Special Ability: Infinity Dagger">
 		<!-- Max HP +15%, Max MP +25%, Max CP +30%, P. Critical Rate +20, P. Critical Damage +20%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
