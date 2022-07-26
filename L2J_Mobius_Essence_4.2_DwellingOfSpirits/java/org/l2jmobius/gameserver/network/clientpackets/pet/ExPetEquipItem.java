@@ -195,8 +195,9 @@ public class ExPetEquipItem implements IClientIncomingPacket
 				// Create and Bind the next action to the AI
 				player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () ->
 				{
-					Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
+					final Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
 					pet.useEquippableItem(transferedItem, false);
+					sendInfos(pet, player);
 				}));
 			}
 			else if (player.isAttackingNow())
@@ -204,19 +205,24 @@ public class ExPetEquipItem implements IClientIncomingPacket
 				// Equip or unEquip.
 				ThreadPool.schedule(() ->
 				{
-					Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
+					final Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
 					pet.useEquippableItem(transferedItem, false);
+					sendInfos(pet, player);
 				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{
-				Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
+				final Item transferedItem = player.transferItem("UnequipFromPet", item.getObjectId(), 1, pet.getInventory(), null);
 				pet.useEquippableItem(transferedItem, false);
+				sendInfos(pet, player);
 			}
-			
-			pet.getStat().recalculateStats(true);
-			player.sendPacket(new PetInfo(pet, 1));
-			player.sendPacket(new ExPetSkillList(false, pet));
 		}
+	}
+	
+	private void sendInfos(Pet pet, Player player)
+	{
+		pet.getStat().recalculateStats(true);
+		player.sendPacket(new PetInfo(pet, 1));
+		player.sendPacket(new ExPetSkillList(false, pet));
 	}
 }

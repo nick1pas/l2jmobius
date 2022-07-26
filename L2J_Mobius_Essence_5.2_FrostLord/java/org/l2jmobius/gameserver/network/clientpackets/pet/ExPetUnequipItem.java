@@ -156,27 +156,34 @@ public class ExPetUnequipItem implements IClientIncomingPacket
 					return;
 				}
 			}
+			
 			if (player.isCastingNow())
 			{
 				// Create and Bind the next action to the AI
 				player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () ->
 				{
 					pet.transferItem("UnequipFromPet", item.getObjectId(), 1, player.getInventory(), player, null);
+					sendInfos(pet, player);
 				}));
 			}
 			else if (player.isAttackingNow())
 			{
 				// Equip or unEquip.
 				pet.transferItem("UnequipFromPet", item.getObjectId(), 1, player.getInventory(), player, null);
+				sendInfos(pet, player);
 			}
 			else
 			{
 				pet.transferItem("UnequipFromPet", item.getObjectId(), 1, player.getInventory(), player, null);
+				sendInfos(pet, player);
 			}
-			
-			pet.getStat().recalculateStats(true);
-			player.sendPacket(new PetInfo(pet, 1));
-			player.sendPacket(new ExPetSkillList(false, pet));
 		}
+	}
+	
+	private void sendInfos(Pet pet, Player player)
+	{
+		pet.getStat().recalculateStats(true);
+		player.sendPacket(new PetInfo(pet, 1));
+		player.sendPacket(new ExPetSkillList(false, pet));
 	}
 }
