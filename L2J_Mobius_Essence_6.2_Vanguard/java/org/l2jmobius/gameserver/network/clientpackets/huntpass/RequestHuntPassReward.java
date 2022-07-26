@@ -94,7 +94,11 @@ public class RequestHuntPassReward implements IClientIncomingPacket
 		}
 		
 		huntpass.addSayhaTime(calc);
-		player.addItem("HuntPassReward", reward, player, true);
+		if (reward.getId() != 72286) // Sayha's Grace Sustention Points
+		{
+			player.addItem("HuntPassReward", reward, player, true);
+		}
+		
 		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_RECEIVED_S1_SAYHA_S_GRACE_SUSTENTION_POINTS);
 		msg.addInt((int) (count));
 		player.sendPacket(msg);
