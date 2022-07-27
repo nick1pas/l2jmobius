@@ -180,16 +180,14 @@ public class HuntPass
 			final int seasonPasspoint = 1;
 			int calculate = seasonPasspoint + getPoints();
 			boolean hasNewLevel = false;
-			int calculateMe = getPoints();
-			while (calculateMe >= Config.HUNT_PASS_POINTS_FOR_STEP)
+			while (calculate >= Config.HUNT_PASS_POINTS_FOR_STEP)
 			{
-				calculateMe = calculateMe - Config.HUNT_PASS_POINTS_FOR_STEP;
+				calculate = calculate - Config.HUNT_PASS_POINTS_FOR_STEP;
 				setCurrentStep(getCurrentStep() + 1);
 				hasNewLevel = true;
 			}
 			if (hasNewLevel)
 			{
-				calculate %= Config.HUNT_PASS_POINTS_FOR_STEP;
 				setRewardAlert(true);
 				_user.sendPacket(new HuntPassSimpleInfo(_user));
 			}
