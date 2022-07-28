@@ -14613,6 +14613,10 @@ public class Player extends Playable
 					sendPacket(new ExActivateAutoShortcut(shortcut, true));
 				}
 			}
+			else if (shortcut.getType() == ShortcutType.ACTION)
+			{
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+			}
 			else
 			{
 				final Item item = getInventory().getItemByObjectId(shortcut.getId());
@@ -14637,6 +14641,13 @@ public class Player extends Playable
 			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
 			if (!positions.contains(position))
 			{
+				continue;
+			}
+			
+			if (shortcut.getType() == ShortcutType.ACTION)
+			{
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				AutoUseTaskManager.getInstance().addAutoAction(this, shortcut.getId());
 				continue;
 			}
 			
