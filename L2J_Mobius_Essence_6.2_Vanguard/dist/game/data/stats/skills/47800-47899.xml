@@ -1144,10 +1144,11 @@
 		</effects>
 	</skill>
 	<skill id="47871" toLevel="1" name="Change Armor">
+		<!-- Changes the Vanguard Rider's armor appearance. When activated, the default appearance is shown. When deactivated, the Vanguard Rider's armor appearance is shown. If no upper armor is equipped, the Vanguard Rider's armor is not used. -->	
 		<icon>icon.s_orc_armor_change</icon>
 		<operateType>T</operateType>
 		<abnormalType>CHANGEBODY</abnormalType>
-		<abnormalVisualEffect>DK_CHANGE_ARMOR</abnormalVisualEffect>
+		<abnormalVisualEffect>VANGUARD_CHANGE_ARMOR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
