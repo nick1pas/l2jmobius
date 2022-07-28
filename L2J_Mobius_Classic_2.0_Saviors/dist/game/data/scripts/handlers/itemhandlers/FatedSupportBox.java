@@ -59,7 +59,7 @@ public class FatedSupportBox implements IItemHandler
 		
 		if (!player.isInventoryUnder80(false))
 		{
-			player.sendPacket(SystemMessageId.EMPTY_458);
+			player.sendMessage("You do not meet the requirements to participate in an auction.");
 			return false;
 		}
 		

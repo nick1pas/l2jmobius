@@ -338,7 +338,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 			final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);
 			if (playerClanHall != null)
 			{
-				player.sendPacket(SystemMessageId.EMPTY_457);
+				player.sendMessage("You do not meet the requirements to participate in an auction.");
 				return;
 			}
 			

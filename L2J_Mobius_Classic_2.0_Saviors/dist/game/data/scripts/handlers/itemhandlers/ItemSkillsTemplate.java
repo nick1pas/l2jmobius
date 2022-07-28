@@ -80,7 +80,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			{
 				if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
 				{
-					playable.getActingPlayer().sendPacket(SystemMessageId.EMPTY_458);
+					playable.getActingPlayer().sendMessage("Not enough space in inventory. Unable to process this request until your inventory's weight is less than 80% and slot count is less than 90% of capacity.");
 					return false;
 				}
 				
