@@ -59,7 +59,7 @@ public class FatedSupportBox implements IItemHandler
 		
 		if (!player.isInventoryUnder80(false))
 		{
-			player.sendMessage("You do not meet the requirements to participate in an auction.");
+			player.sendMessage("Not enough space in inventory. Unable to process this request until your inventory's weight is less than 80% and slot count is less than 90% of capacity.");
 			return false;
 		}
 		
