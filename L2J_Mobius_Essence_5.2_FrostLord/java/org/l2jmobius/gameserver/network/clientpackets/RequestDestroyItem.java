@@ -102,7 +102,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			if (player.isGM())
 			{
 				final WorldObject obj = World.getInstance().findObject(_objectId);
-				if (obj.isItem())
+				if ((obj != null) && obj.isItem())
 				{
 					if (_count > ((Item) obj).getCount())
 					{
