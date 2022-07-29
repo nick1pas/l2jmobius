@@ -3305,8 +3305,8 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3;SPEED_DOWN,3;ATTACK_TIME_DOWN,3;CASTING_TIME_DOWN,3</value>
-					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7;ROOT_PHYSICALLY,7;ROOT_MAGICALLY,7;SILENCE,7;SILENCE_ALL,7;SILENCE_PHYSICAL,7</value>
+					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3;SPEED_DOWN,3;ATTACK_TIME_UP,3;CASTING_TIME_UP,3</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_UP,7;CASTING_TIME_UP,7;ROOT_PHYSICALLY,7;ROOT_MAGICALLY,7;SILENCE,7;SILENCE_ALL,7;SILENCE_PHYSICAL,7</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -3363,7 +3363,7 @@
 				</power>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>PA_DOWN,10;MA_DOWN,10;PD_DOWN,10;MD_DOWN,10;ATTACK_TIME_DOWN,10;CASTING_TIME_DOWN,10;SPEED_DOWN,10</dispel>
+				<dispel>PA_DOWN,10;MA_DOWN,10;PD_DOWN,10;MD_DOWN,10;SPEED_DOWN,10;ATTACK_TIME_UP,10;CASTING_TIME_UP,10</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -3407,7 +3407,7 @@
 			<effect name="DispelBySlot">
 				<dispel>
 					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
-					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_UP,7;CASTING_TIME_UP,7</value>
 				</dispel>
 			</effect>
 		</effects>
