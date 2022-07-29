@@ -782,7 +782,6 @@ public class Config
 	public static boolean ANTIFEED_DUALBOX;
 	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
 	public static int ANTIFEED_INTERVAL;
-	public static boolean ANNOUNCE_GAINAK_SIEGE;
 	
 	// --------------------------------------------------
 	// Rate Settings

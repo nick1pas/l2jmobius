@@ -705,7 +705,6 @@ public class Config
 	public static int ANTIFEED_INTERVAL;
 	public static boolean VAMPIRIC_ATTACK_AFFECTS_PVP;
 	public static boolean MP_VAMPIRIC_ATTACK_AFFECTS_PVP;
-	public static boolean ANNOUNCE_GAINAK_SIEGE;
 	
 	// --------------------------------------------------
 	// Rate Settings
@@ -2353,7 +2352,6 @@ public class Config
 			PVP_PVP_TIME = pvpConfig.getInt("PvPVsPvPTime", 60000);
 			MAX_REPUTATION = pvpConfig.getInt("MaxReputation", 500);
 			REPUTATION_INCREASE = pvpConfig.getInt("ReputationIncrease", 100);
-			ANNOUNCE_GAINAK_SIEGE = pvpConfig.getBoolean("AnnounceGainakSiege", false);
 			
 			// Load Olympiad config file (if exists)
 			final PropertiesParser olympiadConfig = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
