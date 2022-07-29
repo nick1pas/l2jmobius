@@ -57,19 +57,19 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		_isOnline = _player.isOnline() ? _player.getObjectId() : 0;
 	}
 	
-	public PledgeShowMemberListUpdate(ClanMember player)
+	public PledgeShowMemberListUpdate(ClanMember member)
 	{
-		_player = player.getPlayer();
-		_name = player.getName();
-		_level = player.getLevel();
-		_classId = player.getClassId();
-		_isOnline = player.isOnline() ? player.getObjectId() : 0;
-		_pledgeType = player.getPledgeType();
+		_player = member.getPlayer();
+		_name = member.getName();
+		_level = member.getLevel();
+		_classId = member.getClassId();
+		_isOnline = member.isOnline() ? member.getObjectId() : 0;
+		_pledgeType = member.getPledgeType();
 		if (_pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
 			_hasSponsor = _player.getSponsor() != 0 ? 1 : 0;
 		}
-		else if (player.isOnline())
+		else if (member.isOnline())
 		{
 			_hasSponsor = _player.isClanLeader() ? 1 : 0;
 		}

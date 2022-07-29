@@ -451,9 +451,9 @@ public class ClanTable
 	public void checkSurrender(Clan clan1, Clan clan2)
 	{
 		int count = 0;
-		for (ClanMember player : clan1.getMembers())
+		for (ClanMember member : clan1.getMembers())
 		{
-			if ((player != null) && (player.getPlayer().getWantsPeace() == 1))
+			if ((member != null) && (member.getPlayer().getWantsPeace() == 1))
 			{
 				count++;
 			}
