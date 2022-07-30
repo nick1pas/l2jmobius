@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
+import quests.Q10295_RespectForGraves.Q10295_RespectForGraves;
 
 /**
  * @author quangnguyen
@@ -66,7 +66,7 @@ public class Q10297_MemoryOfTheGloriousPast extends Quest
 		addKillId(VANOR_SILENOS, VANOR_SILENOS_SOLDIER, VANOR_SILENOS_SCOUT, VANOR_SILENOS_WARRIOR, VANOR_SILENOS_SHAMAN, VANOR_SILENOS_CHIEFTAIN, VANOR_MERCENARY_OF_GLORY, GUARD_OF_HONOR);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
+		addCondCompletedQuest(Q10295_RespectForGraves.class.getSimpleName(), "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_56_64_MEMORY_OF_THE_GLORIOUS_PAST);
 	}
 	

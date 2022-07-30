@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
+import quests.Q10295_RespectForGraves.Q10295_RespectForGraves;
 
 /**
  * @author quangnguyen
@@ -71,7 +71,7 @@ public class Q10296_LetsPayRespectsToOurFallenBrethren extends Quest
 		addKillId(ACHER_OF_DESTRUCTION, GRAVEYARD_LICH, DISMAL_POLE, GRAVEYARD_PREDATOR, DOOM_KNIGHT, DOOM_SCOUT, DOOM_SERVANT, DOOM_GUARD, DOOM_ARCHER, DOOM_TROOPER, DOOM_WARRIOR, GUARD_BUTCHER);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
+		addCondCompletedQuest(Q10295_RespectForGraves.class.getSimpleName(), "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_52_58_LET_S_PAY_RESPECTS_TO_OUR_FALLEN_BRETHREN);
 	}
 	

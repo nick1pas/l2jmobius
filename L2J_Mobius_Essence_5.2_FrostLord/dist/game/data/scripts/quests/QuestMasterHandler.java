@@ -28,7 +28,7 @@ import quests.Q10291_MoreExperience.Q10291_MoreExperience;
 import quests.Q10292_SecretGarden.Q10292_SecretGarden;
 import quests.Q10293_DeathMysteries.Q10293_DeathMysteries;
 import quests.Q10294_SporeInfestedPlace.Q10294_SporeInfestedPlace;
-import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
+import quests.Q10295_RespectForGraves.Q10295_RespectForGraves;
 import quests.Q10296_LetsPayRespectsToOurFallenBrethren.Q10296_LetsPayRespectsToOurFallenBrethren;
 import quests.Q10297_MemoryOfTheGloriousPast.Q10297_MemoryOfTheGloriousPast;
 import quests.Q10298_TracesOfBattle.Q10298_TracesOfBattle;
@@ -80,7 +80,7 @@ public class QuestMasterHandler
 		Q10292_SecretGarden.class,
 		Q10293_DeathMysteries.class,
 		Q10294_SporeInfestedPlace.class,
-		Q10295_RespectforGraves.class,
+		Q10295_RespectForGraves.class,
 		Q10296_LetsPayRespectsToOurFallenBrethren.class,
 		Q10297_MemoryOfTheGloriousPast.class,
 		Q10298_TracesOfBattle.class,

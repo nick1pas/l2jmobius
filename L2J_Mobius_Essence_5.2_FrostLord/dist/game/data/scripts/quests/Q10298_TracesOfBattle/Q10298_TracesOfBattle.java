@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
+import quests.Q10295_RespectForGraves.Q10295_RespectForGraves;
 
 /**
  * @author quangnguyen
@@ -67,7 +67,7 @@ public class Q10298_TracesOfBattle extends Quest
 		addKillId(GRAVEYARD_WANDERER, ARCHER_OF_GREED, HATAR_RATMAN_THIEF, HATAR_RATMAN_BOSS, HATAR_HANISHEE, DEPRIVE, TAIK_ORC_SUPPLY, VIOLLENT_FARCRAN, FIERCE_GUARD);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
+		addCondCompletedQuest(Q10295_RespectForGraves.class.getSimpleName(), "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_64_70_TRACES_OF_BATTLE);
 	}
 	

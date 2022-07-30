@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10295_Respect_forGraves;
+package quests.Q10295_RespectForGraves;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 /**
  * @author quangnguyen
  */
-public class Q10295_RespectforGraves extends Quest
+public class Q10295_RespectForGraves extends Quest
 {
 	// NPC
 	private static final int ORVEN = 30857;
@@ -62,7 +62,7 @@ public class Q10295_RespectforGraves extends Quest
 	private static final int MIN_LEVEL = 45;
 	private static final int MAX_LEVEL = 52;
 	
-	public Q10295_RespectforGraves()
+	public Q10295_RespectForGraves()
 	{
 		super(10295);
 		addStartNpc(ORVEN);
