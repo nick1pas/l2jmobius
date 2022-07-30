@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10295_RespectforGraves.Q10295_RespectforGraves;
+import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
 
 /**
  * @author quangnguyen

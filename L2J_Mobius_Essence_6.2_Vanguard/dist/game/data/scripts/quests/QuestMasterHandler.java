@@ -28,7 +28,7 @@ import quests.Q10291_MoreExperience.Q10291_MoreExperience;
 import quests.Q10292_SecretGarden.Q10292_SecretGarden;
 import quests.Q10293_DeathMysteries.Q10293_DeathMysteries;
 import quests.Q10294_SporeInfestedPlace.Q10294_SporeInfestedPlace;
-import quests.Q10295_RespectforGraves.Q10295_RespectforGraves;
+import quests.Q10295_Respect_forGraves.Q10295_RespectforGraves;
 import quests.Q10296_LetsPayRespectsToOurFallenBrethren.Q10296_LetsPayRespectsToOurFallenBrethren;
 import quests.Q10297_MemoryOfTheGloriousPast.Q10297_MemoryOfTheGloriousPast;
 import quests.Q10298_TracesOfBattle.Q10298_TracesOfBattle;
