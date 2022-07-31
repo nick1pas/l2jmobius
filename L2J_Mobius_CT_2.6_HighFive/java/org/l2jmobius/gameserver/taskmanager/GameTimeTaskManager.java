@@ -17,8 +17,6 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
@@ -29,8 +27,6 @@ import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
  */
 public class GameTimeTaskManager extends Thread
 {
-	private static final Logger LOGGER = Logger.getLogger(GameTimeTaskManager.class.getName());
-	
 	public static final int TICKS_PER_SECOND = 10; // Not able to change this without checking through code.
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	public static final int IG_DAYS_PER_DAY = 6;
@@ -81,7 +77,7 @@ public class GameTimeTaskManager extends Thread
 			}
 			catch (InterruptedException e)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+				// Ingore.
 			}
 		}
 	}

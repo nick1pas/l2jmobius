@@ -18,8 +18,6 @@ package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 
@@ -29,8 +27,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
  */
 public class MovementTaskManager extends Thread
 {
-	private static final Logger LOGGER = Logger.getLogger(MovementTaskManager.class.getName());
-	
 	private static final Set<Creature> MOVING_OBJECTS = ConcurrentHashMap.newKeySet();
 	
 	protected MovementTaskManager()
@@ -65,9 +61,9 @@ public class MovementTaskManager extends Thread
 				MOVING_OBJECTS.removeIf(Creature::updatePosition);
 				Thread.sleep(100);
 			}
-			catch (Throwable e)
+			catch (InterruptedException e)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
+				// Ingore.
 			}
 		}
 	}
