@@ -51,6 +51,7 @@ import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
@@ -319,12 +320,12 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, Item item, Inventory inventory)
 		{
-			if (!inventory.getOwner().isPlayer())
+			if (!inventory.getOwner().isPlayable())
 			{
 				return;
 			}
 			
-			final Player player = (Player) inventory.getOwner();
+			final Playable playable = (Playable) inventory.getOwner();
 			final ItemTemplate it = item.getTemplate();
 			final Map<Integer, Skill> addedSkills = new HashMap<>(1);
 			final Map<Integer, Skill> removedSkills = new HashMap<>(1);
@@ -334,11 +335,11 @@ public abstract class Inventory extends ItemContainer
 			// Remove augmentation bonuses on unequip
 			if (item.isAugmented())
 			{
-				item.getAugmentation().removeBonus(player);
+				item.getAugmentation().removeBonus(playable);
 			}
 			
 			// Recalculate all stats
-			player.getStat().recalculateStats(true);
+			playable.getStat().recalculateStats(true);
 			
 			// Clear enchant bonus
 			item.clearEnchantStats();
@@ -415,7 +416,7 @@ public abstract class Inventory extends ItemContainer
 						
 						for (ItemSkillHolder holder : otherNormalSkills)
 						{
-							if (player.getSkillLevel(holder.getSkillId()) != 0)
+							if (playable.getSkillLevel(holder.getSkillId()) != 0)
 							{
 								continue;
 							}
@@ -439,13 +440,13 @@ public abstract class Inventory extends ItemContainer
 								addedSkills.put(skill.getId(), skill);
 							}
 							
-							if (skill.isActive() && !player.hasSkillReuse(skill.getReuseHashCode()))
+							if (skill.isActive() && !playable.hasSkillReuse(skill.getReuseHashCode()))
 							{
 								final int equipDelay = item.getEquipReuseDelay();
 								if (equipDelay > 0)
 								{
-									player.addTimeStamp(skill, equipDelay);
-									player.disableSkill(skill, equipDelay);
+									playable.addTimeStamp(skill, equipDelay);
+									playable.disableSkill(skill, equipDelay);
 								}
 								updateTimestamp = true;
 							}
@@ -486,7 +487,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Check passive skill conditions.
-						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							removedSkills.putIfAbsent(skill.getId(), skill);
 							update = true;
@@ -505,7 +506,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Check passive skill conditions.
-						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							removedSkills.putIfAbsent(skill.getId(), skill);
 							update = true;
@@ -515,12 +516,12 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			// Must check for toggle and isRemovedOnUnequipWeapon skill item conditions.
-			for (Skill skill : player.getAllSkills())
+			for (Skill skill : playable.getAllSkills())
 			{
-				if ((skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player)) //
+				if ((skill.isToggle() && playable.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, playable, playable)) //
 					|| (it.isWeapon() && skill.isRemovedOnUnequipWeapon()))
 				{
-					player.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
+					playable.stopSkillEffects(SkillFinishType.REMOVED, skill.getId());
 					update = true;
 				}
 			}
@@ -528,55 +529,58 @@ public abstract class Inventory extends ItemContainer
 			// Apply skill, if item has "skills on unequip" and it is not a secondary agathion.
 			if ((slot < PAPERDOLL_AGATHION2) || (slot > PAPERDOLL_AGATHION5))
 			{
-				it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
+				it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(playable, playable));
 			}
 			
 			if (update)
 			{
 				for (Skill skill : removedSkills.values())
 				{
-					player.removeSkill(skill, false, skill.isPassive());
+					playable.removeSkill(skill, skill.isPassive());
 				}
 				
 				for (Skill skill : addedSkills.values())
 				{
-					player.addSkill(skill, false);
+					playable.addSkill(skill);
 				}
 				
-				player.sendSkillList();
+				if (playable.isPlayer())
+				{
+					playable.getActingPlayer().sendSkillList();
+				}
 			}
 			
-			if (updateTimestamp)
+			if (updateTimestamp && playable.isPlayer())
 			{
-				player.sendPacket(new SkillCoolTime(player));
+				playable.sendPacket(new SkillCoolTime(playable.getActingPlayer()));
 			}
 			
 			if (item.isWeapon())
 			{
-				player.unchargeAllShots();
+				playable.unchargeAllShots();
 			}
 		}
 		
 		@Override
 		public void notifyEquiped(int slot, Item item, Inventory inventory)
 		{
-			if (!inventory.getOwner().isPlayer())
+			if (!inventory.getOwner().isPlayable())
 			{
 				return;
 			}
 			
-			final Player player = (Player) inventory.getOwner();
+			final Playable playable = (Playable) inventory.getOwner();
 			final Map<Integer, Skill> addedSkills = new HashMap<>(1);
 			boolean updateTimestamp = false;
 			
 			// Apply augmentation bonuses on equip
 			if (item.isAugmented())
 			{
-				item.getAugmentation().applyBonus(player);
+				item.getAugmentation().applyBonus(playable);
 			}
 			
 			// Recalculate all stats
-			player.getStat().recalculateStats(true);
+			playable.getStat().recalculateStats(true);
 			
 			// Apply enchant stats
 			item.applyEnchantStats();
@@ -591,7 +595,7 @@ public abstract class Inventory extends ItemContainer
 				{
 					for (ItemSkillHolder holder : onEnchantSkills)
 					{
-						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 						{
 							continue;
 						}
@@ -608,7 +612,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Check passive skill conditions.
-						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							continue;
 						}
@@ -635,7 +639,7 @@ public abstract class Inventory extends ItemContainer
 					{
 						for (ItemSkillHolder holder : onBlessingSkills)
 						{
-							if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+							if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 							{
 								continue;
 							}
@@ -652,7 +656,7 @@ public abstract class Inventory extends ItemContainer
 							}
 							
 							// Check passive skill conditions.
-							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 							{
 								continue;
 							}
@@ -678,7 +682,7 @@ public abstract class Inventory extends ItemContainer
 				{
 					for (ItemSkillHolder holder : normalSkills)
 					{
-						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 						{
 							continue;
 						}
@@ -690,7 +694,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Check passive skill conditions.
-						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							continue;
 						}
@@ -708,13 +712,13 @@ public abstract class Inventory extends ItemContainer
 							addedSkills.put(skill.getId(), skill);
 						}
 						
-						if (skill.isActive() && !player.hasSkillReuse(skill.getReuseHashCode()))
+						if (skill.isActive() && !playable.hasSkillReuse(skill.getReuseHashCode()))
 						{
 							final int equipDelay = item.getEquipReuseDelay();
 							if (equipDelay > 0)
 							{
-								player.addTimeStamp(skill, equipDelay);
-								player.disableSkill(skill, equipDelay);
+								playable.addTimeStamp(skill, equipDelay);
+								playable.disableSkill(skill, equipDelay);
 							}
 							updateTimestamp = true;
 						}
@@ -741,7 +745,7 @@ public abstract class Inventory extends ItemContainer
 				{
 					for (ItemSkillHolder holder : otherEnchantSkills)
 					{
-						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 						{
 							continue;
 						}
@@ -758,7 +762,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Check passive skill conditions.
-						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							continue;
 						}
@@ -782,7 +786,7 @@ public abstract class Inventory extends ItemContainer
 				{
 					for (ItemSkillHolder holder : otherBlessingSkills)
 					{
-						if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+						if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 						{
 							continue;
 						}
@@ -796,7 +800,7 @@ public abstract class Inventory extends ItemContainer
 							}
 							
 							// Check passive skill conditions.
-							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+							if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 							{
 								continue;
 							}
@@ -821,22 +825,25 @@ public abstract class Inventory extends ItemContainer
 			// Apply skill, if item has "skills on equip" and it is not a secondary agathion.
 			if ((slot < PAPERDOLL_AGATHION2) || (slot > PAPERDOLL_AGATHION5))
 			{
-				item.getTemplate().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
+				item.getTemplate().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(playable, playable));
 			}
 			
 			if (!addedSkills.isEmpty())
 			{
 				for (Skill skill : addedSkills.values())
 				{
-					player.addSkill(skill, false);
+					playable.addSkill(skill);
 				}
 				
-				player.sendSkillList();
+				if (playable.isPlayer())
+				{
+					playable.getActingPlayer().sendSkillList();
+				}
 			}
 			
-			if (updateTimestamp)
+			if (updateTimestamp && playable.isPlayer())
 			{
-				player.sendPacket(new SkillCoolTime(player));
+				playable.sendPacket(new SkillCoolTime(playable.getActingPlayer()));
 			}
 		}
 	}
@@ -853,16 +860,16 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, Item item, Inventory inventory)
 		{
-			if (!inventory.getOwner().isPlayer())
+			if (!inventory.getOwner().isPlayable())
 			{
 				return;
 			}
 			
-			final Player player = (Player) inventory.getOwner();
+			final Playable playable = (Playable) inventory.getOwner();
 			boolean update = false;
 			
 			// Verify and apply normal set
-			if (verifyAndApply(player, item, Item::getId))
+			if (verifyAndApply(playable, item, Item::getId))
 			{
 				update = true;
 			}
@@ -872,26 +879,26 @@ public abstract class Inventory extends ItemContainer
 			if (itemVisualId > 0)
 			{
 				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(itemVisualId);
-				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndApply(player, item, Item::getVisualId))
+				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndApply(playable, item, Item::getVisualId))
 				{
 					update = true;
 				}
 			}
 			
-			if (update)
+			if (update && playable.isPlayer())
 			{
-				player.sendSkillList();
+				playable.getActingPlayer().sendSkillList();
 			}
 			
-			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH))
+			if (playable.isPlayer() && ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH)))
 			{
-				player.updateActiveBroochJewel();
+				playable.getActingPlayer().updateActiveBroochJewel();
 			}
 		}
 		
-		private static boolean applySkills(Player player, Item item, ArmorSet armorSet, Function<Item, Integer> idProvider)
+		private static boolean applySkills(Playable playable, Item item, ArmorSet armorSet, Function<Item, Integer> idProvider)
 		{
-			final long piecesCount = armorSet.getPiecesCount(player, idProvider);
+			final long piecesCount = armorSet.getPiecesCount(playable, idProvider);
 			if (piecesCount >= armorSet.getMinimumPieces())
 			{
 				// Applying all skills that matching the conditions
@@ -899,12 +906,12 @@ public abstract class Inventory extends ItemContainer
 				boolean update = false;
 				for (ArmorsetSkillHolder holder : armorSet.getSkills())
 				{
-					if (player.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
+					if (playable.getSkillLevel(holder.getSkillId()) >= holder.getSkillLevel())
 					{
 						continue;
 					}
 					
-					if (holder.validateConditions(player, armorSet, idProvider))
+					if (holder.validateConditions(playable, armorSet, idProvider))
 					{
 						final Skill itemSkill = holder.getSkill();
 						if (itemSkill == null)
@@ -913,21 +920,21 @@ public abstract class Inventory extends ItemContainer
 							continue;
 						}
 						
-						if (itemSkill.isPassive() && !itemSkill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						if (itemSkill.isPassive() && !itemSkill.checkConditions(SkillConditionScope.PASSIVE, playable, playable))
 						{
 							continue;
 						}
 						
-						player.addSkill(itemSkill, false);
+						playable.addSkill(itemSkill);
 						if (itemSkill.isActive() && (item != null))
 						{
-							if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
+							if (!playable.hasSkillReuse(itemSkill.getReuseHashCode()))
 							{
 								final int equipDelay = item.getEquipReuseDelay();
 								if (equipDelay > 0)
 								{
-									player.addTimeStamp(itemSkill, equipDelay);
-									player.disableSkill(itemSkill, equipDelay);
+									playable.addTimeStamp(itemSkill, equipDelay);
+									playable.disableSkill(itemSkill, equipDelay);
 								}
 							}
 							updateTimeStamp = true;
@@ -935,22 +942,22 @@ public abstract class Inventory extends ItemContainer
 						update = true;
 					}
 				}
-				if (updateTimeStamp)
+				if (updateTimeStamp && playable.isPlayer())
 				{
-					player.sendPacket(new SkillCoolTime(player));
+					playable.sendPacket(new SkillCoolTime(playable.getActingPlayer()));
 				}
 				return update;
 			}
 			return false;
 		}
 		
-		private static boolean verifyAndApply(Player player, Item item, Function<Item, Integer> idProvider)
+		private static boolean verifyAndApply(Playable playable, Item item, Function<Item, Integer> idProvider)
 		{
 			boolean update = false;
 			final List<ArmorSet> armorSets = ArmorSetData.getInstance().getSets(idProvider.apply(item));
 			for (ArmorSet armorSet : armorSets)
 			{
-				if (applySkills(player, item, armorSet, idProvider))
+				if (applySkills(playable, item, armorSet, idProvider))
 				{
 					update = true;
 				}
@@ -958,7 +965,7 @@ public abstract class Inventory extends ItemContainer
 			return update;
 		}
 		
-		private static boolean verifyAndRemove(Player player, Item item, Function<Item, Integer> idProvider)
+		private static boolean verifyAndRemove(Playable playable, Item item, Function<Item, Integer> idProvider)
 		{
 			boolean update = false;
 			final List<ArmorSet> armorSets = ArmorSetData.getInstance().getSets(idProvider.apply(item));
@@ -967,7 +974,7 @@ public abstract class Inventory extends ItemContainer
 				// Remove all skills that doesn't matches the conditions
 				for (ArmorsetSkillHolder holder : armorSet.getSkills())
 				{
-					if (!holder.validateConditions(player, armorSet, idProvider))
+					if (!holder.validateConditions(playable, armorSet, idProvider))
 					{
 						final Skill itemSkill = holder.getSkill();
 						if (itemSkill == null)
@@ -977,7 +984,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						// Update if a skill has been removed.
-						if (player.removeSkill(itemSkill, false, itemSkill.isPassive()) != null)
+						if (playable.removeSkill(itemSkill, itemSkill.isPassive()) != null)
 						{
 							update = true;
 						}
@@ -985,7 +992,7 @@ public abstract class Inventory extends ItemContainer
 				}
 				
 				// Attempt to apply lower level skills if possible
-				if (applySkills(player, item, armorSet, idProvider))
+				if (applySkills(playable, item, armorSet, idProvider))
 				{
 					update = true;
 				}
@@ -997,16 +1004,16 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, Item item, Inventory inventory)
 		{
-			if (!inventory.getOwner().isPlayer())
+			if (!inventory.getOwner().isPlayable())
 			{
 				return;
 			}
 			
-			final Player player = (Player) inventory.getOwner();
+			final Playable playable = (Playable) inventory.getOwner();
 			boolean remove = false;
 			
 			// Verify and remove normal set bonus
-			if (verifyAndRemove(player, item, Item::getId))
+			if (verifyAndRemove(playable, item, Item::getId))
 			{
 				remove = true;
 			}
@@ -1016,21 +1023,26 @@ public abstract class Inventory extends ItemContainer
 			if (itemVisualId > 0)
 			{
 				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(itemVisualId);
-				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndRemove(player, item, Item::getVisualId))
+				if ((stone != null) && (stone.getType() == AppearanceType.FIXED) && verifyAndRemove(playable, item, Item::getVisualId))
 				{
 					remove = true;
 				}
 			}
 			
+			if (!playable.isPlayer())
+			{
+				return;
+			}
+			
 			if (remove)
 			{
-				player.checkItemRestriction();
-				player.sendSkillList();
+				playable.getActingPlayer().checkItemRestriction();
+				playable.getActingPlayer().sendSkillList();
 			}
 			
 			if ((item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) || (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_BROOCH))
 			{
-				player.updateActiveBroochJewel();
+				playable.getActingPlayer().updateActiveBroochJewel();
 			}
 		}
 	}
@@ -1198,6 +1210,7 @@ public abstract class Inventory extends ItemContainer
 	{
 		_paperdoll = new Item[PAPERDOLL_TOTALSLOTS];
 		_paperdollListeners = new ArrayList<>();
+		
 		if (this instanceof PlayerInventory)
 		{
 			addPaperdollListener(ArmorSetListener.getInstance());
@@ -1207,6 +1220,11 @@ public abstract class Inventory extends ItemContainer
 			addPaperdollListener(BroochListener.getInstance());
 			addPaperdollListener(AgathionBraceletListener.getInstance());
 			addPaperdollListener(ArtifactBookListener.getInstance());
+		}
+		else if (this instanceof PetInventory)
+		{
+			addPaperdollListener(ArmorSetListener.getInstance());
+			addPaperdollListener(ItemSkillsListener.getInstance());
 		}
 		
 		// common
@@ -2704,12 +2722,12 @@ public abstract class Inventory extends ItemContainer
 	
 	public int getArmorMinEnchant()
 	{
-		if ((getOwner() == null) || !getOwner().isPlayer())
+		if ((getOwner() == null) || !getOwner().isPlayable())
 		{
 			return 0;
 		}
 		
-		final Player player = getOwner().getActingPlayer();
+		final Playable player = (Playable) getOwner();
 		return _paperdollCache.getMaxSetEnchant(player);
 	}
 	

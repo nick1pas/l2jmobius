@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.function.Function;
 
 import org.l2jmobius.gameserver.model.ArmorSet;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
@@ -58,34 +58,34 @@ public class ArmorsetSkillHolder extends SkillHolder
 		return _isOptional;
 	}
 	
-	public boolean validateConditions(Player player, ArmorSet armorSet, Function<Item, Integer> idProvider)
+	public boolean validateConditions(Playable playable, ArmorSet armorSet, Function<Item, Integer> idProvider)
 	{
-		// Player's doesn't have full busy (1 of 3) artifact real slot
-		if (_artifactSlotMask > armorSet.getArtifactSlotMask(player, _artifactBookSlot))
+		// Playable doesn't have full busy (1 of 3) artifact real slot
+		if (_artifactSlotMask > armorSet.getArtifactSlotMask(playable, _artifactBookSlot))
 		{
 			return false;
 		}
 		
-		// Player doesn't have enough items equipped to use this skill
-		if (_minimumPieces > armorSet.getPiecesCount(player, idProvider))
+		// Playable doesn't have enough items equipped to use this skill
+		if (_minimumPieces > armorSet.getPiecesCount(playable, idProvider))
 		{
 			return false;
 		}
 		
-		// Player's set enchantment isn't enough to use this skill
-		if (_minEnchant > armorSet.getLowestSetEnchant(player))
+		// Playable set enchantment isn't enough to use this skill
+		if (_minEnchant > armorSet.getLowestSetEnchant(playable))
 		{
 			return false;
 		}
 		
-		// Player doesn't have the required item to use this skill
-		if (_isOptional && !armorSet.hasOptionalEquipped(player, idProvider))
+		// Playable doesn't have the required item to use this skill
+		if (_isOptional && !armorSet.hasOptionalEquipped(playable, idProvider))
 		{
 			return false;
 		}
 		
-		// Player already knows that skill
-		if (player.getSkillLevel(getSkillId()) == getSkillLevel())
+		// Playable already knows that skill
+		if (playable.getSkillLevel(getSkillId()) == getSkillLevel())
 		{
 			return false;
 		}

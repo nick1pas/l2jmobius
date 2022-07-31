@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.model.ArmorSet;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
@@ -82,7 +83,7 @@ public final class PaperdollCache
 		return value;
 	}
 	
-	public int getMaxSetEnchant(Player player)
+	public int getMaxSetEnchant(Playable playable)
 	{
 		if (_maxSetEnchant >= 0)
 		{
@@ -94,7 +95,7 @@ public final class PaperdollCache
 		{
 			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 			{
-				final int enchantEffect = set.getLowestSetEnchant(player);
+				final int enchantEffect = set.getLowestSetEnchant(playable);
 				if (enchantEffect > maxSetEnchant)
 				{
 					maxSetEnchant = enchantEffect;

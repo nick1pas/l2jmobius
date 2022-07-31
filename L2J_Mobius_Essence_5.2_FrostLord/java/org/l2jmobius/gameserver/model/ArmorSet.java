@@ -22,11 +22,10 @@ import java.util.Set;
 import java.util.function.Function;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 
 /**
@@ -162,18 +161,18 @@ public class ArmorSet
 	}
 	
 	/**
-	 * @param player
+	 * @param playable
 	 * @return true if all parts of set are enchanted to +6 or more
 	 */
-	public int getLowestSetEnchant(Player player)
+	public int getLowestSetEnchant(Playable playable)
 	{
-		// Player don't have full set
-		if (getPiecesCountById(player) < _minimumPieces)
+		// Playable don't have full set
+		if (getPiecesCountById(playable) < _minimumPieces)
 		{
 			return 0;
 		}
 		
-		final PlayerInventory inv = player.getInventory();
+		final Inventory inv = playable.getInventory();
 		int enchantLevel = Byte.MAX_VALUE;
 		for (int armorSlot : ARMORSET_SLOTS)
 		{
@@ -192,13 +191,13 @@ public class ArmorSet
 	
 	/**
 	 * Condition for 3 Lv. Set Effect Applied Skill
-	 * @param player
+	 * @param playable
 	 * @param bookSlot
 	 * @return total paperdoll(busy) count for 1 of 3 artifact book slots
 	 */
-	public int getArtifactSlotMask(Player player, int bookSlot)
+	public int getArtifactSlotMask(Playable playable, int bookSlot)
 	{
-		final PlayerInventory inv = player.getInventory();
+		final Inventory inv = playable.getInventory();
 		int slotMask = 0;
 		switch (bookSlot)
 		{
@@ -242,23 +241,23 @@ public class ArmorSet
 		return slotMask;
 	}
 	
-	public boolean hasOptionalEquipped(Player player, Function<Item, Integer> idProvider)
+	public boolean hasOptionalEquipped(Playable playable, Function<Item, Integer> idProvider)
 	{
-		return player.getInventory().getPaperdollItems().stream().anyMatch(item -> CommonUtil.contains(_optionalItems, idProvider.apply(item)));
+		return playable.getInventory().getPaperdollItems().stream().anyMatch(item -> CommonUtil.contains(_optionalItems, idProvider.apply(item)));
 	}
 	
 	/**
-	 * @param player
+	 * @param playable
 	 * @param idProvider
-	 * @return the amount of set visual items that player has equipped
+	 * @return the amount of set visual items that playable has equipped
 	 */
-	public long getPiecesCount(Player player, Function<Item, Integer> idProvider)
+	public long getPiecesCount(Playable playable, Function<Item, Integer> idProvider)
 	{
-		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, idProvider.apply(item)));
+		return playable.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, idProvider.apply(item)));
 	}
 	
-	public long getPiecesCountById(Player player)
+	public long getPiecesCountById(Playable playable)
 	{
-		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, item.getId()));
+		return playable.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, item.getId()));
 	}
 }

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.enums.SkillFinishType;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -157,11 +157,11 @@ public class Options
 		_activationSkills.add(holder);
 	}
 	
-	public void apply(Player player)
+	public void apply(Playable playable)
 	{
 		if (hasEffects())
 		{
-			final BuffInfo info = new BuffInfo(player, player, null, true, null, this);
+			final BuffInfo info = new BuffInfo(playable, playable, null, true, null, this);
 			for (AbstractEffect effect : _effects)
 			{
 				if (effect.isInstant())
@@ -174,7 +174,7 @@ public class Options
 				else
 				{
 					effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
-					effect.pump(player, info.getSkill());
+					effect.pump(playable, info.getSkill());
 					if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 					{
 						info.addEffect(effect);
@@ -183,44 +183,47 @@ public class Options
 			}
 			if (!info.getEffects().isEmpty())
 			{
-				player.getEffectList().add(info);
+				playable.getEffectList().add(info);
 			}
 		}
 		if (hasActiveSkills())
 		{
 			for (Skill skill : _activeSkill)
 			{
-				addSkill(player, skill);
+				addSkill(playable, skill);
 			}
 		}
 		if (hasPassiveSkills())
 		{
 			for (Skill skill : _passiveSkill)
 			{
-				addSkill(player, skill);
+				addSkill(playable, skill);
 			}
 		}
 		if (hasActivationSkills())
 		{
 			for (OptionSkillHolder holder : _activationSkills)
 			{
-				player.addTriggerSkill(holder);
+				playable.addTriggerSkill(holder);
 			}
 		}
 		
-		player.getStat().recalculateStats(true);
-		player.sendSkillList();
+		playable.getStat().recalculateStats(true);
+		if (playable.isPlayer())
+		{
+			playable.getActingPlayer().sendSkillList();
+		}
 	}
 	
-	public void remove(Player player)
+	public void remove(Playable playable)
 	{
 		if (hasEffects())
 		{
-			for (BuffInfo info : player.getEffectList().getOptions())
+			for (BuffInfo info : playable.getEffectList().getOptions())
 			{
 				if (info.getOption() == this)
 				{
-					player.getEffectList().remove(info, SkillFinishType.NORMAL, true, true);
+					playable.getEffectList().remove(info, SkillFinishType.NORMAL, true, true);
 				}
 			}
 		}
@@ -228,45 +231,48 @@ public class Options
 		{
 			for (Skill skill : _activeSkill)
 			{
-				player.removeSkill(skill, false, false);
+				playable.removeSkill(skill, false);
 			}
 		}
 		if (hasPassiveSkills())
 		{
 			for (Skill skill : _passiveSkill)
 			{
-				player.removeSkill(skill, false, true);
+				playable.removeSkill(skill, true);
 			}
 		}
 		if (hasActivationSkills())
 		{
 			for (OptionSkillHolder holder : _activationSkills)
 			{
-				player.removeTriggerSkill(holder);
+				playable.removeTriggerSkill(holder);
 			}
 		}
 		
-		player.getStat().recalculateStats(true);
-		player.sendSkillList();
+		playable.getStat().recalculateStats(true);
+		if (playable.isPlayer())
+		{
+			playable.getActingPlayer().sendSkillList();
+		}
 	}
 	
-	private void addSkill(Player player, Skill skill)
+	private void addSkill(Playable playable, Skill skill)
 	{
 		boolean updateTimeStamp = false;
-		player.addSkill(skill, false);
+		playable.addSkill(skill);
 		if (skill.isActive())
 		{
-			final long remainingTime = player.getSkillRemainingReuseTime(skill.getReuseHashCode());
+			final long remainingTime = playable.getSkillRemainingReuseTime(skill.getReuseHashCode());
 			if (remainingTime > 0)
 			{
-				player.addTimeStamp(skill, remainingTime);
-				player.disableSkill(skill, remainingTime);
+				playable.addTimeStamp(skill, remainingTime);
+				playable.disableSkill(skill, remainingTime);
 			}
 			updateTimeStamp = true;
 		}
-		if (updateTimeStamp)
+		if (updateTimeStamp && playable.isPlayer())
 		{
-			player.sendPacket(new SkillCoolTime(player));
+			playable.sendPacket(new SkillCoolTime(playable.getActingPlayer()));
 		}
 	}
 }

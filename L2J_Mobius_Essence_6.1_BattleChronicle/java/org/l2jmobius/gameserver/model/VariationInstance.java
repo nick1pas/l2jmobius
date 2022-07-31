@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model;
 
 import org.l2jmobius.gameserver.data.xml.OptionData;
-import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.options.Options;
 
 /**
@@ -59,27 +59,27 @@ public class VariationInstance
 		return _option2 == null ? -1 : _option2.getId();
 	}
 	
-	public void applyBonus(Player player)
+	public void applyBonus(Playable playable)
 	{
 		if (_option1 != null)
 		{
-			_option1.apply(player);
+			_option1.apply(playable);
 		}
 		if (_option2 != null)
 		{
-			_option2.apply(player);
+			_option2.apply(playable);
 		}
 	}
 	
-	public void removeBonus(Player player)
+	public void removeBonus(Playable playable)
 	{
 		if (_option1 != null)
 		{
-			_option1.remove(player);
+			_option1.remove(playable);
 		}
 		if (_option2 != null)
 		{
-			_option2.remove(player);
+			_option2.remove(playable);
 		}
 	}
 }
