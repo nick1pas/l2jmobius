@@ -27,11 +27,14 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.SkillFinishType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -93,6 +96,9 @@ public class EffectList
 	private final Creature _owner;
 	/** Hidden buffs count, prevents iterations. */
 	private final AtomicInteger _hiddenBuffs = new AtomicInteger();
+	/** Delay task **/
+	private ScheduledFuture<?> _updateEffectIconTask;
+	private final AtomicBoolean _updateAbnormalStatus = new AtomicBoolean();
 	
 	/**
 	 * Constructor for effect list.
@@ -1074,70 +1080,84 @@ public class EffectList
 	 */
 	public void updateEffectIcons(boolean partyOnly)
 	{
-		final Player player = _owner.getActingPlayer();
-		if (player != null)
+		if (!partyOnly)
 		{
-			final Party party = player.getParty();
-			final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
-			final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
-			final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
-			if (!_actives.isEmpty())
+			_updateAbnormalStatus.compareAndSet(false, true);
+		}
+		
+		if (_updateEffectIconTask == null)
+		{
+			_updateEffectIconTask = ThreadPool.schedule(() ->
 			{
-				for (BuffInfo info : _actives)
+				final Player player = _owner.getActingPlayer();
+				if (player != null)
 				{
-					if ((info != null) && info.isInUse())
+					final Party party = player.getParty();
+					final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && _updateAbnormalStatus.get()) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
+					final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
+					final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
+					if (!_actives.isEmpty())
 					{
-						if (info.getSkill().isHealingPotionSkill())
+						for (BuffInfo info : _actives)
 						{
-							shortBuffStatusUpdate(info);
+							if ((info != null) && info.isInUse())
+							{
+								if (info.getSkill().isHealingPotionSkill())
+								{
+									shortBuffStatusUpdate(info);
+								}
+								else
+								{
+									asu.ifPresent(a -> a.addSkill(info));
+									ps.filter(p -> !info.getSkill().isToggle()).ifPresent(p -> p.addSkill(info));
+									os.ifPresent(o -> o.addSkill(info));
+								}
+							}
 						}
-						else
+					}
+					
+					// Send icon update for player buff bar.
+					asu.ifPresent(_owner::sendPacket);
+					
+					// Player or summon is in party. Broadcast packet to everyone in the party.
+					if (party != null)
+					{
+						ps.ifPresent(party::broadcastPacket);
+					}
+					else // Not in party, then its a summon info for its owner.
+					{
+						ps.ifPresent(player::sendPacket);
+					}
+					
+					// Send icon update to all olympiad observers.
+					if (os.isPresent())
+					{
+						final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
+						if ((game != null) && game.isBattleStarted())
 						{
-							asu.ifPresent(a -> a.addSkill(info));
-							ps.filter(p -> !info.getSkill().isToggle()).ifPresent(p -> p.addSkill(info));
-							os.ifPresent(o -> o.addSkill(info));
+							os.ifPresent(game.getStadium()::broadcastPacketToObservers);
 						}
 					}
 				}
-			}
-			
-			// Send icon update for player buff bar.
-			asu.ifPresent(_owner::sendPacket);
-			
-			// Player or summon is in party. Broadcast packet to everyone in the party.
-			if (party != null)
-			{
-				ps.ifPresent(party::broadcastPacket);
-			}
-			else // Not in party, then its a summon info for its owner.
-			{
-				ps.ifPresent(player::sendPacket);
-			}
-			
-			// Send icon update to all olympiad observers.
-			if (os.isPresent())
-			{
-				final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
-				if ((game != null) && game.isBattleStarted())
+				
+				// Update effect icons for everyone targeting this owner.
+				final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(_owner);
+				for (Creature creature : _owner.getStatus().getStatusListener())
 				{
-					os.ifPresent(game.getStadium()::broadcastPacketToObservers);
+					if ((creature != null) && creature.isPlayer())
+					{
+						creature.sendPacket(upd);
+					}
 				}
-			}
-		}
-		
-		// Update effect icons for everyone targeting this owner.
-		final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(_owner);
-		for (Creature creature : _owner.getStatus().getStatusListener())
-		{
-			if ((creature != null) && creature.isPlayer())
-			{
-				creature.sendPacket(upd);
-			}
-		}
-		
-		if (_owner.isPlayer() && (_owner.getTarget() == _owner))
-		{
-			_owner.sendPacket(upd);
+				
+				if (_owner.isPlayer() && (_owner.getTarget() == _owner))
+				{
+					_owner.sendPacket(upd);
+				}
+				
+				_updateAbnormalStatus.set(false);
+				_updateEffectIconTask = null;
+			}, 300);
 		}
 	}
 	

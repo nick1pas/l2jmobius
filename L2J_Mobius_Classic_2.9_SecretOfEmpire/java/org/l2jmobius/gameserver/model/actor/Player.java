@@ -449,6 +449,8 @@ public class Player extends Playable
 	
 	private ScheduledFuture<?> _itemListTask;
 	private ScheduledFuture<?> _skillListTask;
+	private ScheduledFuture<?> _storageCountTask;
+	private ScheduledFuture<?> _abnormalVisualEffectTask;
 	
 	private boolean _subclassLock = false;
 	protected int _baseClass;
@@ -2296,7 +2298,7 @@ public class Player extends Playable
 		
 		if (getInventoryLimit() != oldInvLimit)
 		{
-			sendPacket(new ExStorageMaxCount(this));
+			sendStorageMaxCount();
 		}
 	}
 	
@@ -8685,8 +8687,15 @@ public class Player extends Playable
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		sendPacket(new ExUserInfoAbnormalVisualEffect(this));
-		broadcastCharInfo();
+		if (_abnormalVisualEffectTask == null)
+		{
+			_abnormalVisualEffectTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ExUserInfoAbnormalVisualEffect(this));
+				broadcastCharInfo();
+				_abnormalVisualEffectTask = null;
+			}, 50);
+		}
 	}
 	
 	/**
@@ -9507,6 +9516,18 @@ public class Player extends Playable
 		}
 	}
 	
+	public void sendStorageMaxCount()
+	{
+		if (_storageCountTask == null)
+		{
+			_storageCountTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ExStorageMaxCount(this));
+				_storageCountTask = null;
+			}, 300);
+		}
+	}
+	
 	/**
 	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<br>
 	 * 2. This method no longer changes the active _classIndex of the player. This is only done by the calling of setActiveClass() method as that should be the only way to do so.
@@ -9948,7 +9969,7 @@ public class Player extends Playable
 			sendPacket(new ShortCutInit(this));
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			sendPacket(new SkillCoolTime(this));
-			sendPacket(new ExStorageMaxCount(this));
+			sendStorageMaxCount();
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
 		}
 		finally

@@ -389,6 +389,8 @@ public class Player extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
+	private ScheduledFuture<?> _skillListTask;
+	
 	private boolean _subclassLock = false;
 	protected int _baseClass;
 	protected int _activeClass;
@@ -9574,34 +9576,41 @@ public class Player extends Playable
 	
 	public void sendSkillList()
 	{
-		boolean isDisabled = false;
-		final SkillList sl = new SkillList();
-		for (Skill s : getAllSkills())
+		if (_skillListTask == null)
 		{
-			if (s == null)
+			_skillListTask = ThreadPool.schedule(() ->
 			{
-				continue;
-			}
-			
-			if (_clan != null)
-			{
-				isDisabled = s.isClanSkill() && (_clan.getReputationScore() < 0);
-			}
-			
-			boolean isEnchantable = SkillData.getInstance().isEnchantable(s.getId());
-			if (isEnchantable)
-			{
-				final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(s.getId());
-				if ((esl == null) || (s.getLevel() < esl.getBaseLevel()))
+				boolean isDisabled = false;
+				final SkillList skillList = new SkillList();
+				for (Skill skill : getAllSkills())
 				{
-					isEnchantable = false;
+					if (skill == null)
+					{
+						continue;
+					}
+					
+					if (_clan != null)
+					{
+						isDisabled = skill.isClanSkill() && (_clan.getReputationScore() < 0);
+					}
+					
+					boolean isEnchantable = SkillData.getInstance().isEnchantable(skill.getId());
+					if (isEnchantable)
+					{
+						final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skill.getId());
+						if ((esl == null) || (skill.getLevel() < esl.getBaseLevel()))
+						{
+							isEnchantable = false;
+						}
+					}
+					
+					skillList.addSkill(skill.getDisplayId(), skill.getDisplayLevel(), skill.isPassive(), isDisabled, isEnchantable);
 				}
-			}
-			
-			sl.addSkill(s.getDisplayId(), s.getDisplayLevel(), s.isPassive(), isDisabled, isEnchantable);
+				
+				sendPacket(skillList);
+				_skillListTask = null;
+			}, 300);
 		}
-		
-		sendPacket(sl);
 	}
 	
 	/**

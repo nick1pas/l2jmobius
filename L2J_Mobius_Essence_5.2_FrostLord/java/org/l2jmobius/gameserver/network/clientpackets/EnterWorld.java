@@ -91,7 +91,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -467,7 +466,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Expand Skill
-		player.sendPacket(new ExStorageMaxCount(player));
+		player.sendStorageMaxCount();
 		
 		// Send Equipped Items
 		player.sendPacket(new ExUserInfoEquipSlot(player));

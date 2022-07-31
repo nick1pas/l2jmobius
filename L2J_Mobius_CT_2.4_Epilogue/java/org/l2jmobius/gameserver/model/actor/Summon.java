@@ -16,7 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -78,6 +82,9 @@ public abstract class Summon extends Playable
 	private boolean _previousFollowStatus = true;
 	protected boolean _restoreSummon = true;
 	private int _shotsMask = 0;
+	private ScheduledFuture<?> _abnormalEffectTask;
+	private ScheduledFuture<?> _statusUpdateTask;
+	private final AtomicInteger _statusUpdateValue = new AtomicInteger();
 	
 	// @formatter:off
 	private static final int[] PASSIVE_SUMMONS =
@@ -194,7 +201,17 @@ public abstract class Summon extends Playable
 	@Override
 	public void updateAbnormalEffect()
 	{
-		World.getInstance().forEachVisibleObject(this, Player.class, player -> player.sendPacket(new SummonInfo(this, player, 1)));
+		if (_abnormalEffectTask == null)
+		{
+			_abnormalEffectTask = ThreadPool.schedule(() ->
+			{
+				if (isSpawned())
+				{
+					World.getInstance().forEachVisibleObject(this, Player.class, player -> player.sendPacket(new SummonInfo(this, player, 1)));
+				}
+				_abnormalEffectTask = null;
+			}, 50);
+		}
 	}
 	
 	/**
@@ -837,18 +854,28 @@ public abstract class Summon extends Playable
 			return;
 		}
 		
-		sendPacket(new PetInfo(this, value));
-		sendPacket(new PetStatusUpdate(this));
-		if (isSpawned())
+		_statusUpdateValue.set(value);
+		if (_statusUpdateTask == null)
 		{
-			broadcastNpcInfo(value);
+			_statusUpdateTask = ThreadPool.schedule(() ->
+			{
+				if (isSpawned())
+				{
+					sendPacket(new PetInfo(this, _statusUpdateValue.get()));
+					sendPacket(new PetStatusUpdate(this));
+					broadcastNpcInfo(_statusUpdateValue.get());
+					
+					final Party party = _owner.getParty();
+					if (party != null)
+					{
+						party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
+					}
+					
+					updateEffectIcons(true);
+				}
+				_statusUpdateTask = null;
+			}, 50);
 		}
-		final Party party = _owner.getParty();
-		if (party != null)
-		{
-			party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
-		}
-		updateEffectIcons(true);
 	}
 	
 	public void broadcastNpcInfo(int value)

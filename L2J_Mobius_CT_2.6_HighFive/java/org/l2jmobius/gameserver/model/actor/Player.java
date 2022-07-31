@@ -442,6 +442,8 @@ public class Player extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
+	private ScheduledFuture<?> _skillListTask;
+	
 	private boolean _subclassLock = false;
 	protected int _baseClass;
 	protected int _activeClass;
@@ -9932,77 +9934,84 @@ public class Player extends Playable
 	
 	public void sendSkillList()
 	{
-		boolean isDisabled = false;
-		final SkillList sl = new SkillList();
-		for (Skill s : getAllSkills())
+		if (_skillListTask == null)
 		{
-			if ((s == null) || ((_transformation != null) && !s.isPassive()) || (hasTransformSkill(s.getId()) && s.isPassive()))
+			_skillListTask = ThreadPool.schedule(() ->
 			{
-				continue;
-			}
-			if (_clan != null)
-			{
-				isDisabled = s.isClanSkill() && (_clan.getReputationScore() < 0);
-			}
-			
-			boolean isEnchantable = SkillData.getInstance().isEnchantable(s.getId());
-			if (isEnchantable)
-			{
-				final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(s.getId());
-				if ((esl == null) || (s.getLevel() < esl.getBaseLevel()))
+				boolean isDisabled = false;
+				final SkillList skillList = new SkillList();
+				for (Skill skill : getAllSkills())
 				{
-					isEnchantable = false;
-				}
-			}
-			
-			sl.addSkill(s.getDisplayId(), s.getDisplayLevel(), s.isPassive(), isDisabled, isEnchantable);
-		}
-		
-		if (_transformation != null)
-		{
-			final Map<Integer, Integer> ts = new TreeMap<>();
-			for (SkillHolder holder : _transformation.getTemplate(this).getSkills())
-			{
-				ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
-				if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
-				{
-					ts.put(holder.getSkillId(), holder.getSkillLevel());
-				}
-			}
-			
-			for (AdditionalSkillHolder holder : _transformation.getTemplate(this).getAdditionalSkills())
-			{
-				if (getLevel() >= holder.getMinLevel())
-				{
-					ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
-					if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
+					if ((skill == null) || ((_transformation != null) && !skill.isPassive()) || (hasTransformSkill(skill.getId()) && skill.isPassive()))
 					{
-						ts.put(holder.getSkillId(), holder.getSkillLevel());
+						continue;
+					}
+					if (_clan != null)
+					{
+						isDisabled = skill.isClanSkill() && (_clan.getReputationScore() < 0);
+					}
+					
+					boolean isEnchantable = SkillData.getInstance().isEnchantable(skill.getId());
+					if (isEnchantable)
+					{
+						final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skill.getId());
+						if ((esl == null) || (skill.getLevel() < esl.getBaseLevel()))
+						{
+							isEnchantable = false;
+						}
+					}
+					
+					skillList.addSkill(skill.getDisplayId(), skill.getDisplayLevel(), skill.isPassive(), isDisabled, isEnchantable);
+				}
+				
+				if (_transformation != null)
+				{
+					final Map<Integer, Integer> ts = new TreeMap<>();
+					for (SkillHolder holder : _transformation.getTemplate(this).getSkills())
+					{
+						ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
+						if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
+						{
+							ts.put(holder.getSkillId(), holder.getSkillLevel());
+						}
+					}
+					
+					for (AdditionalSkillHolder holder : _transformation.getTemplate(this).getAdditionalSkills())
+					{
+						if (getLevel() >= holder.getMinLevel())
+						{
+							ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
+							if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
+							{
+								ts.put(holder.getSkillId(), holder.getSkillLevel());
+							}
+						}
+					}
+					
+					// Add collection skills.
+					if (_transformation.isFlying())
+					{
+						for (SkillLearn skill : SkillTreeData.getInstance().getCollectSkillTree().values())
+						{
+							if ((getKnownSkill(skill.getSkillId()) != null) && (!ts.containsKey(skill.getSkillId()) || (ts.get(skill.getSkillId()) < skill.getSkillLevel())))
+							{
+								ts.put(skill.getSkillId(), skill.getSkillLevel());
+							}
+						}
+					}
+					
+					for (Entry<Integer, Integer> transformSkill : ts.entrySet())
+					{
+						final Skill sk = SkillData.getInstance().getSkill(transformSkill.getKey(), transformSkill.getValue());
+						addTransformSkill(sk);
+						skillList.addSkill(transformSkill.getKey(), transformSkill.getValue(), false, false, false);
 					}
 				}
-			}
-			
-			// Add collection skills.
-			if (_transformation.isFlying())
-			{
-				for (SkillLearn skill : SkillTreeData.getInstance().getCollectSkillTree().values())
-				{
-					if ((getKnownSkill(skill.getSkillId()) != null) && (!ts.containsKey(skill.getSkillId()) || (ts.get(skill.getSkillId()) < skill.getSkillLevel())))
-					{
-						ts.put(skill.getSkillId(), skill.getSkillLevel());
-					}
-				}
-			}
-			
-			for (Entry<Integer, Integer> transformSkill : ts.entrySet())
-			{
-				final Skill sk = SkillData.getInstance().getSkill(transformSkill.getKey(), transformSkill.getValue());
-				addTransformSkill(sk);
-				sl.addSkill(transformSkill.getKey(), transformSkill.getValue(), false, false, false);
-			}
+				
+				sendPacket(skillList);
+				_skillListTask = null;
+			}, 300);
 		}
-		
-		sendPacket(sl);
 	}
 	
 	/**

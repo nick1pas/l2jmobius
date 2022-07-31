@@ -50,7 +50,6 @@ import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
 import org.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2jmobius.gameserver.network.serverpackets.ExAlchemySkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
-import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -677,7 +676,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		// If skill is expand type then sends packet:
 		if ((_id >= 1368) && (_id <= 1372))
 		{
-			player.sendPacket(new ExStorageMaxCount(player));
+			player.sendStorageMaxCount();
 		}
 		
 		// Notify scripts of the skill learn.

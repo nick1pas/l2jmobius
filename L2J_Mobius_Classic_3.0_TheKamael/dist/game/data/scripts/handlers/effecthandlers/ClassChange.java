@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
-import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
@@ -93,7 +92,7 @@ public class ClassChange extends AbstractEffect
 			player.sendPacket(msg);
 			
 			player.broadcastUserInfo();
-			player.sendPacket(new ExStorageMaxCount(player));
+			player.sendStorageMaxCount();
 			player.sendPacket(new AcquireSkillList(player));
 			player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 			

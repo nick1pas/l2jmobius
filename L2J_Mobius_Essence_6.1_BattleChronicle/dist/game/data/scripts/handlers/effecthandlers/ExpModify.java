@@ -16,13 +16,11 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
-import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 
 /**
  * @author Mobius
@@ -54,8 +52,6 @@ public class ExpModify extends AbstractStatAddEffect
 			return;
 		}
 		
-		player.sendPacket(new ExUserBoostStat(player, BonusExpType.VITALITY));
-		player.sendPacket(new ExUserBoostStat(player, BonusExpType.BUFFS));
-		player.sendPacket(new ExUserBoostStat(player, BonusExpType.PASSIVE));
+		player.sendUserBoostStat();
 	}
 }

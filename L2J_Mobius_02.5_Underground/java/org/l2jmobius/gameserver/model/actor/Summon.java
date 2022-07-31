@@ -16,7 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
@@ -82,6 +86,9 @@ public abstract class Summon extends Playable
 	private boolean _previousFollowStatus = true;
 	protected boolean _restoreSummon = true;
 	private int _summonPoints = 0;
+	private ScheduledFuture<?> _abnormalEffectTask;
+	private ScheduledFuture<?> _statusUpdateTask;
+	private final AtomicInteger _statusUpdateValue = new AtomicInteger();
 	
 	// @formatter:off
 	private static final int[] PASSIVE_SUMMONS =
@@ -193,26 +200,36 @@ public abstract class Summon extends Playable
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		World.getInstance().forEachVisibleObject(this, Player.class, player ->
+		if (_abnormalEffectTask == null)
 		{
-			if (player == _owner)
+			_abnormalEffectTask = ThreadPool.schedule(() ->
 			{
-				player.sendPacket(new PetInfo(this, 1));
-				return;
-			}
-			
-			final AbstractMaskPacket<NpcInfoType> packet;
-			if (isPet())
-			{
-				packet = new ExPetInfo(this, player, 1);
-			}
-			else
-			{
-				packet = new SummonInfo(this, player, 1);
-			}
-			packet.addComponentType(NpcInfoType.ABNORMALS);
-			player.sendPacket(packet);
-		});
+				if (isSpawned())
+				{
+					World.getInstance().forEachVisibleObject(this, Player.class, player ->
+					{
+						if (player == _owner)
+						{
+							player.sendPacket(new PetInfo(this, 1));
+							return;
+						}
+						
+						final AbstractMaskPacket<NpcInfoType> packet;
+						if (isPet())
+						{
+							packet = new ExPetInfo(this, player, 1);
+						}
+						else
+						{
+							packet = new SummonInfo(this, player, 1);
+						}
+						packet.addComponentType(NpcInfoType.ABNORMALS);
+						player.sendPacket(packet);
+					});
+				}
+				_abnormalEffectTask = null;
+			}, 50);
+		}
 	}
 	
 	/**
@@ -826,16 +843,25 @@ public abstract class Summon extends Playable
 			return;
 		}
 		
-		sendPacket(new PetInfo(this, value));
-		sendPacket(new PetStatusUpdate(this));
-		if (isSpawned())
+		_statusUpdateValue.set(value);
+		if (_statusUpdateTask == null)
 		{
-			broadcastNpcInfo(value);
-		}
-		final Party party = _owner.getParty();
-		if (party != null)
-		{
-			party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
+			_statusUpdateTask = ThreadPool.schedule(() ->
+			{
+				if (isSpawned())
+				{
+					sendPacket(new PetInfo(this, _statusUpdateValue.get()));
+					sendPacket(new PetStatusUpdate(this));
+					broadcastNpcInfo(_statusUpdateValue.get());
+					
+					final Party party = _owner.getParty();
+					if (party != null)
+					{
+						party.broadcastToPartyMembers(_owner, new ExPartyPetWindowUpdate(this));
+					}
+				}
+				_statusUpdateTask = null;
+			}, 50);
 		}
 	}
 	

@@ -83,6 +83,7 @@ import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.data.xml.SymbolSealData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.AdminTeleportType;
+import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.enums.BroochJewel;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -318,6 +319,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExStopScenePlayer;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
+import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
@@ -467,6 +469,9 @@ public class Player extends Playable
 	
 	private ScheduledFuture<?> _itemListTask;
 	private ScheduledFuture<?> _skillListTask;
+	private ScheduledFuture<?> _storageCountTask;
+	private ScheduledFuture<?> _userBoostStatTask;
+	private ScheduledFuture<?> _abnormalVisualEffectTask;
 	
 	private boolean _subclassLock = false;
 	protected int _baseClass;
@@ -2310,7 +2315,7 @@ public class Player extends Playable
 		
 		if (getInventoryLimit() != oldInvLimit)
 		{
-			sendPacket(new ExStorageMaxCount(this));
+			sendStorageMaxCount();
 		}
 	}
 	
@@ -9036,8 +9041,15 @@ public class Player extends Playable
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
-		sendPacket(new ExUserInfoAbnormalVisualEffect(this));
-		broadcastCharInfo();
+		if (_abnormalVisualEffectTask == null)
+		{
+			_abnormalVisualEffectTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ExUserInfoAbnormalVisualEffect(this));
+				broadcastCharInfo();
+				_abnormalVisualEffectTask = null;
+			}, 50);
+		}
 	}
 	
 	/**
@@ -9857,6 +9869,32 @@ public class Player extends Playable
 		}
 	}
 	
+	public void sendStorageMaxCount()
+	{
+		if (_storageCountTask == null)
+		{
+			_storageCountTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ExStorageMaxCount(this));
+				_storageCountTask = null;
+			}, 300);
+		}
+	}
+	
+	public void sendUserBoostStat()
+	{
+		if (_userBoostStatTask == null)
+		{
+			_userBoostStatTask = ThreadPool.schedule(() ->
+			{
+				sendPacket(new ExUserBoostStat(this, BonusExpType.VITALITY));
+				sendPacket(new ExUserBoostStat(this, BonusExpType.BUFFS));
+				sendPacket(new ExUserBoostStat(this, BonusExpType.PASSIVE));
+				_userBoostStatTask = null;
+			}, 300);
+		}
+	}
+	
 	/**
 	 * 1. Add the specified class ID as a subclass (up to the maximum number of <b>three</b>) for this character.<br>
 	 * 2. This method no longer changes the active _classIndex of the player. This is only done by the calling of setActiveClass() method as that should be the only way to do so.
@@ -10311,7 +10349,7 @@ public class Player extends Playable
 			sendPacket(new ShortCutInit(this));
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			sendPacket(new SkillCoolTime(this));
-			sendPacket(new ExStorageMaxCount(this));
+			sendStorageMaxCount();
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
 		}
 		finally

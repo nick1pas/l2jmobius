@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
-import org.l2jmobius.gameserver.enums.BonusExpType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -422,13 +421,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		// Send exp bonus change.
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
-			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.VITALITY));
-			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.BUFFS));
-			_player.sendPacket(new ExUserBoostStat(_player, BonusExpType.PASSIVE));
-			if (Config.ENABLE_VITALITY)
-			{
-				_player.sendPacket(new ExVitalityEffectInfo(_player));
-			}
+			_player.sendUserBoostStat();
 		}
 		
 		return true;
