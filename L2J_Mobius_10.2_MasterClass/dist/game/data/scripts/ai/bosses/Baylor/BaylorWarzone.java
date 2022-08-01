@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -48,7 +47,8 @@ public class BaylorWarzone extends AbstractInstance
 	// NPCs
 	private static final int BAYLOR = 29213;
 	private static final int BAYLOR_110 = 29380;
-	private static final int PRISON_GUARD = 29104;
+	private static final int PRISON_GUARD = 29217;
+	private static final int PRISON_GUARD_110 = 29214;
 	private static final int BENUSTA = 34542;
 	private static final int INVISIBLE_NPC_1 = 29106;
 	private static final int INVISIBLE_NPC_2 = 29108;
@@ -77,7 +77,7 @@ public class BaylorWarzone extends AbstractInstance
 		addInstanceCreatedId(TEMPLATE_IDS);
 		addSpellFinishedId(INVISIBLE_NPC_1);
 		addCreatureSeeId(INVISIBLE_NPC_1);
-		setCreatureKillId(this::onBossKill, BAYLOR, BAYLOR_110);
+		addKillId(BAYLOR, BAYLOR_110);
 	}
 	
 	@Override
@@ -253,7 +253,7 @@ public class BaylorWarzone extends AbstractInstance
 						getTimers().addTimer("START_SCENE_15", 1500, invisNpc, null);
 					});
 					
-					world.getAliveNpcs(PRISON_GUARD).forEach(guard ->
+					world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? PRISON_GUARD : PRISON_GUARD_110).forEach(guard ->
 					{
 						final int random = getRandom(100);
 						if (random >= 20)
@@ -336,7 +336,7 @@ public class BaylorWarzone extends AbstractInstance
 		if (isInInstance(world))
 		{
 			world.getAliveNpcs(INVISIBLE_NPC_1, INVISIBLE_NPC_2, INVISIBLE_NPC_3).forEach(Npc::deleteMe);
-			world.getAliveNpcs(PRISON_GUARD).forEach(guard -> guard.doDie(null));
+			world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? PRISON_GUARD : PRISON_GUARD_110).forEach(guard -> guard.doDie(null));
 			npc.deleteMe();
 		}
 		return super.onSpellFinished(npc, player, skill);
@@ -346,6 +346,7 @@ public class BaylorWarzone extends AbstractInstance
 	public void onInstanceCreated(Instance instance, Player player)
 	{
 		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
+		instance.getParameters().set("ONE_BAYLOR_KILLED", false);
 		getTimers().addTimer("BATTLE_PORT", 3000, e ->
 		{
 			instance.getPlayers().forEach(p -> p.teleToLocation(BATTLE_PORT));
@@ -353,14 +354,13 @@ public class BaylorWarzone extends AbstractInstance
 		});
 	}
 	
-	public void onBossKill(OnCreatureDeath event)
+	@Override
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			final List<Npc> baylors = world.getAliveNpcs(world.getTemplateId() == TEMPLATE_IDS[0] ? BAYLOR : BAYLOR_110);
-			if (baylors.isEmpty())
+			if (world.getParameters().getBoolean("ONE_BAYLOR_KILLED", false))
 			{
 				for (Player member : world.getPlayers())
 				{
@@ -375,9 +375,11 @@ public class BaylorWarzone extends AbstractInstance
 			}
 			else
 			{
+				world.getParameters().set("ONE_BAYLOR_KILLED", true);
 				world.setReenterTime();
 			}
 		}
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

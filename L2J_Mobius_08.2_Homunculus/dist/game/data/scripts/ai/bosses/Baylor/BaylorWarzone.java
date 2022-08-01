@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
-import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -47,7 +46,7 @@ public class BaylorWarzone extends AbstractInstance
 {
 	// NPCs
 	private static final int BAYLOR = 29213;
-	private static final int PRISON_GUARD = 29104;
+	private static final int PRISON_GUARD = 29217;
 	private static final int BENUSTA = 34542;
 	private static final int INVISIBLE_NPC_1 = 29106;
 	private static final int INVISIBLE_NPC_2 = 29108;
@@ -71,7 +70,7 @@ public class BaylorWarzone extends AbstractInstance
 		addInstanceCreatedId(TEMPLATE_ID);
 		addSpellFinishedId(INVISIBLE_NPC_1);
 		addCreatureSeeId(INVISIBLE_NPC_1);
-		setCreatureKillId(this::onBossKill, BAYLOR);
+		addKillId(BAYLOR);
 	}
 	
 	@Override
@@ -335,6 +334,7 @@ public class BaylorWarzone extends AbstractInstance
 	public void onInstanceCreated(Instance instance, Player player)
 	{
 		instance.getParameters().set("INITIAL_PARTY_MEMBERS", player.getParty() != null ? player.getParty().getMemberCount() : 1);
+		instance.getParameters().set("ONE_BAYLOR_KILLED", false);
 		getTimers().addTimer("BATTLE_PORT", 3000, e ->
 		{
 			instance.getPlayers().forEach(p -> p.teleToLocation(BATTLE_PORT));
@@ -342,13 +342,13 @@ public class BaylorWarzone extends AbstractInstance
 		});
 	}
 	
-	public void onBossKill(OnCreatureDeath event)
+	@Override
+	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			if (world.getAliveNpcs(BAYLOR).isEmpty())
+			if (world.getParameters().getBoolean("ONE_BAYLOR_KILLED", false))
 			{
 				for (Player member : world.getPlayers())
 				{
@@ -363,9 +363,11 @@ public class BaylorWarzone extends AbstractInstance
 			}
 			else
 			{
+				world.getParameters().set("ONE_BAYLOR_KILLED", true);
 				world.setReenterTime();
 			}
 		}
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
