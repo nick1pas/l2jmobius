@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.quest;
 
-import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,7 +59,6 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.scripting.ManagedScript;
-import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
  * @author Luis Arias
@@ -1761,12 +1759,6 @@ public class Quest extends ManagedScript
 	public String onAggro(Npc npc, Player player, boolean isPet)
 	{
 		return null;
-	}
-	
-	@Override
-	public Path getScriptPath()
-	{
-		return ScriptEngineManager.getInstance().getCurrentLoadingScript();
 	}
 	
 	public QuestState getClanLeaderQuestState(Player player, Npc npc)

@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.quest;
 
-import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -63,7 +62,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
-import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -2467,12 +2465,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String getScriptName()
 	{
 		return getName();
-	}
-	
-	@Override
-	public Path getScriptPath()
-	{
-		return ScriptEngineManager.getInstance().getCurrentLoadingScript();
 	}
 	
 	@Override

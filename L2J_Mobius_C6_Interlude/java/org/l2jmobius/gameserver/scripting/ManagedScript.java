@@ -20,7 +20,6 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  * Abstract class for classes that are meant to be implemented by scripts.<br>
  * @author KenM
@@ -35,11 +34,9 @@ public abstract class ManagedScript
 	
 	public ManagedScript()
 	{
-		_scriptFile = getScriptPath();
+		_scriptFile = Path.of(ScriptEngineManager.getInstance().getCurrentLoadingScript().toUri());
 		setLastLoadTime(System.currentTimeMillis());
 	}
-	
-	public abstract Path getScriptPath();
 	
 	/**
 	 * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<br>
@@ -50,7 +47,7 @@ public abstract class ManagedScript
 	{
 		try
 		{
-			ScriptEngineManager.getInstance().executeScript(getScriptFile());
+			ScriptEngineManager.getInstance().executeScript(_scriptFile);
 			return true;
 		}
 		catch (Exception e)
