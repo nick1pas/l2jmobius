@@ -346,7 +346,10 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer() && !instantCast)
 		{
 			// Send a system message to the player.
-			caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+			if (!_skill.isHidingMessages())
+			{
+				caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+			}
 			
 			// Show the gauge bar for casting.
 			caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));

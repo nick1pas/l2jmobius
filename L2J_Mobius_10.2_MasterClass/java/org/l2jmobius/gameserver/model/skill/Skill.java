@@ -210,6 +210,7 @@ public class Skill implements IIdentifiable
 	private final double _magicCriticalRate;
 	private final SkillBuffType _buffType;
 	private final boolean _displayInList;
+	private final boolean _isHidingMessages;
 	
 	public Skill(StatSet set)
 	{
@@ -401,6 +402,7 @@ public class Skill implements IIdentifiable
 		_magicCriticalRate = set.getDouble("magicCriticalRate", 0);
 		_buffType = _isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : _isDebuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
 		_displayInList = set.getBoolean("displayInList", true);
+		_isHidingMessages = set.getBoolean("isHidingMessages", false);
 	}
 	
 	public TraitType getTraitType()
@@ -921,7 +923,7 @@ public class Skill implements IIdentifiable
 	
 	public boolean isHidingMessages()
 	{
-		return _operateType.isHidingMessages();
+		return _isHidingMessages || _operateType.isHidingMessages();
 	}
 	
 	public boolean isNotBroadcastable()

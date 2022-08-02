@@ -180,6 +180,7 @@
 		<coolTime>500</coolTime>
 		<hitTime>2300</hitTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<isHidingMessages>true</isHidingMessages>
 		<reuseDelay>1500</reuseDelay>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -237,6 +238,7 @@
 		<hitTime>2300</hitTime>
 		<nextAction>ATTACK</nextAction>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<isHidingMessages>true</isHidingMessages>
 		<reuseDelay>1500</reuseDelay>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -477,6 +479,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -533,6 +536,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -623,6 +627,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>6550</power>
@@ -647,6 +652,7 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>6550</power>
@@ -730,6 +736,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -785,6 +792,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -863,7 +871,7 @@
 		<!-- <Suppression/ changing skill> Uses spirit powers to attack enemies. Power $s1. Critical. <Freezing Effect> Duration: 3 sec. Atk. Spd. -200 Casting Spd. -200 Speed -50 Used only in the transcendent instance zones. -->
 		<icon>icon.freezing_wound</icon>
 		<castRange>600</castRange>
-				<affectLimit>5-12</affectLimit>
+		<affectLimit>5-12</affectLimit>
 		<effectPoint>
 			<value level="1">-2010</value>
 			<value level="2">-2510</value>
@@ -948,6 +956,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -989,6 +998,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<isHidingMessages>true</isHidingMessages>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
