@@ -81,6 +81,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_WIT = "STAT_WIT";
 	public static final String STAT_MEN = "STAT_MEN";
 	public static final String RESURRECT_BY_PAYMENT_COUNT = "RESURRECT_BY_PAYMENT_COUNT";
+	public static final String PURGE_LAST_CATEGORY = "PURGE_LAST_CATEGORY";
 	public static final String CLAN_JOIN_TIME = "CLAN_JOIN_TIME";
 	public static final String CLAN_DONATION_POINTS = "CLAN_DONATION_POINTS";
 	public static final String HENNA1_DURATION = "HENNA1_DURATION";

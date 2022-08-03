@@ -684,7 +684,7 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExCollectionInfo(player, category));
 		}
 		
-		player.sendPacket(new ExSubjugationSidebar(1, player.getPurgePoints().get(1)));
+		player.sendPacket(new ExSubjugationSidebar(player, player.getPurgePoints().get(player.getPurgeLastCategory())));
 		
 		player.sendPacket(new ItemDeletionInfo());
 		

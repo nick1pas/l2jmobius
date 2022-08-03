@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * Written by Berezkin Nikolay, on 13.04.2021 01 00 00 00 //category 01 00 00 00 1901 00 00 //points 00 00 00 00 4600 00 00 //70 max keys ?
+ * Written by Berezkin Nikolay, 40 keys max according to retail.
  */
 public class ExSubjugationList implements IClientOutgoingPacket
 {
@@ -48,7 +48,7 @@ public class ExSubjugationList implements IClientOutgoingPacket
 			packet.writeD(integerPurgePlayerHolderEntry.getKey());
 			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getPoints() : 0);
 			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getKeys() : 0);
-			packet.writeD(70);
+			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getMaxPeriodicKeys() : 40);
 		}
 		return true;
 	}

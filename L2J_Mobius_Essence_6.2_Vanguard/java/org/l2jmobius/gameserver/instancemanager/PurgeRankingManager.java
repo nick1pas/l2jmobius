@@ -72,7 +72,7 @@ public class PurgeRankingManager
 		if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) && ((System.currentTimeMillis() - lastPurgeRewards) > (604800000 /* 1 week */ - 600000 /* task delay x2 */)))
 		{
 			GlobalVariablesManager.getInstance().set(GlobalVariablesManager.PURGE_REWARD_TIME, System.currentTimeMillis());
-			for (int category = 1; category <= 7; category++)
+			for (int category = 1; category <= 9; category++)
 			{
 				if (getTop5(category) != null)
 				{
@@ -117,6 +117,16 @@ public class PurgeRankingManager
 							}
 							case 7:
 							{
+								reward = 96724;
+								break;
+							}
+							case 8:
+							{
+								reward = 97225;
+								break;
+							}
+							case 9:
+							{
 								reward = 96456;
 								break;
 							}
@@ -150,7 +160,7 @@ public class PurgeRankingManager
 						if (onlinePlayer != null)
 						{
 							onlinePlayer.getPurgePoints().clear();
-							onlinePlayer.sendPacket(new ExSubjugationSidebar(category, new PurgePlayerHolder(0, 0)));
+							onlinePlayer.sendPacket(new ExSubjugationSidebar(null, new PurgePlayerHolder(0, 0, 0)));
 						}
 						
 						counter++;
@@ -163,7 +173,7 @@ public class PurgeRankingManager
 		_ranking.clear();
 		
 		// Restore ranking.
-		for (int category = 1; category <= 7; category++)
+		for (int category = 1; category <= 9; category++)
 		{
 			restoreByCategories(category);
 		}

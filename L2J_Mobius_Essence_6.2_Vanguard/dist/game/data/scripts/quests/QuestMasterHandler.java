@@ -35,6 +35,10 @@ import quests.Q10298_TracesOfBattle.Q10298_TracesOfBattle;
 import quests.Q10299_GetIncrediblePower.Q10299_GetIncrediblePower;
 import quests.Q10300_ExploringTheCrumaTower.Q10300_ExploringTheCrumaTower;
 import quests.Q10301_NotSoSilentValley.Q10301_NotSoSilentValley;
+import quests.Q10311_BestMedicine.Q10311_BestMedicine;
+import quests.Q10312_GordesLegend.Q10312_GordesLegend;
+import quests.Q10313_CunningMorgos.Q10313_CunningMorgos;
+import quests.Q10314_MorgosRetributionXilenos.Q10314_MorgosRetributionXilenos;
 import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10950_FiercestFlame.Q10950_FiercestFlame;
 import quests.Q10951_NewFlameOfOrcs.Q10951_NewFlameOfOrcs;
@@ -90,6 +94,10 @@ public class QuestMasterHandler
 		Q10299_GetIncrediblePower.class,
 		Q10300_ExploringTheCrumaTower.class,
 		Q10301_NotSoSilentValley.class,
+		Q10311_BestMedicine.class,
+		Q10312_GordesLegend.class,
+		Q10313_CunningMorgos.class,
+		Q10314_MorgosRetributionXilenos.class,
 		Q10950_FiercestFlame.class,
 		Q10951_NewFlameOfOrcs.class,
 		Q10952_ProtectAtAllCosts.class,

@@ -460,7 +460,7 @@ public class Player extends Playable
 	
 	// Purge list:
 	private static final String DELETE_SUBJUGATION = "DELETE FROM character_purge WHERE charId=?";
-	private static final String INSERT_SUBJUGATION = "REPLACE INTO character_purge (`charId`, `category`, `points`, `keys`) VALUES (?, ?, ?, ?)";
+	private static final String INSERT_SUBJUGATION = "REPLACE INTO character_purge (`charId`, `category`, `points`, `keys`, `remainingKeys`) VALUES (?, ?, ?, ?, ?)";
 	private static final String RESTORE_SUBJUGATION = "SELECT * FROM character_purge WHERE charId=?";
 	
 	// Elemental Spirits:
@@ -15529,6 +15529,7 @@ public class Player extends Playable
 						st.setInt(2, category);
 						st.setInt(3, data.getPoints());
 						st.setInt(4, data.getKeys());
+						st.setInt(5, data.getMaxPeriodicKeys());
 						st.addBatch();
 					}
 					catch (Exception e)
@@ -15561,7 +15562,7 @@ public class Player extends Playable
 			{
 				while (rset.next())
 				{
-					_purgePoints.put(rset.getInt("category"), new PurgePlayerHolder(rset.getInt("points"), rset.getInt("keys")));
+					_purgePoints.put(rset.getInt("category"), new PurgePlayerHolder(rset.getInt("points"), rset.getInt("keys"), rset.getInt("remainingKeys")));
 					
 				}
 			}
@@ -15570,6 +15571,16 @@ public class Player extends Playable
 		{
 			LOGGER.log(Level.SEVERE, "Could not restore subjugation data for playerId: " + getObjectId(), e);
 		}
+	}
+	
+	public int getPurgeLastCategory()
+	{
+		return getVariables().getInt(PlayerVariables.PURGE_LAST_CATEGORY, 1);
+	}
+	
+	public void setPurgeLastCategory(int category)
+	{
+		getVariables().set(PlayerVariables.PURGE_LAST_CATEGORY, category);
 	}
 	
 	public int getClanDonationPoints()

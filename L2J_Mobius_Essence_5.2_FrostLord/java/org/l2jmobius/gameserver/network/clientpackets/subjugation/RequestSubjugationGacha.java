@@ -61,7 +61,7 @@ public class RequestSubjugationGacha implements IClientIncomingPacket
 		{
 			player.getInventory().reduceAdena("Purge Gacha", 20000L * _amount, player, null);
 			final int curKeys = playerKeys.getKeys() - _amount;
-			player.getPurgePoints().put(_category, new PurgePlayerHolder(playerKeys.getPoints(), curKeys));
+			player.getPurgePoints().put(_category, new PurgePlayerHolder(playerKeys.getPoints(), curKeys, 0));
 			Map<Integer, Integer> rewards = new HashMap<>();
 			for (int i = 0; i < _amount; i++)
 			{

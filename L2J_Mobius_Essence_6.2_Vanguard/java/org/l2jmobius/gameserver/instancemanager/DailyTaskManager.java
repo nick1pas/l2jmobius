@@ -138,6 +138,7 @@ public class DailyTaskManager
 		resetRecommends();
 		resetTrainingCamp();
 		resetTimedHuntingZones();
+		resetMorgosMilitaryBase();
 		resetDailyMissionRewards();
 		resetAttendanceRewards();
 		resetVip();
@@ -724,6 +725,32 @@ public class DailyTaskManager
 		}
 		
 		LOGGER.info("Daily Henna Count has been resetted.");
+	}
+	
+	private void resetMorgosMilitaryBase()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
+			{
+				ps.setString(1, "MORGOS_MILITARY_FREE");
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset MorgosMilitaryBase: " + e);
+		}
+		
+		// Update data for online players.
+		for (Player player : World.getInstance().getPlayers())
+		{
+			player.getAccountVariables().remove("MORGOS_MILITARY_FREE");
+			player.getAccountVariables().storeMe();
+		}
+		
+		LOGGER.info("MorgosMilitaryBase has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()

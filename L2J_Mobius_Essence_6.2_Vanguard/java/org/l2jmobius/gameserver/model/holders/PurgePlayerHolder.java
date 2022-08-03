@@ -17,17 +17,19 @@
 package org.l2jmobius.gameserver.model.holders;
 
 /**
- * Written by Berezkin Nikolay, on 04.05.2021
+ * Written by Berezkin Nikolay, Serenitty
  */
 public class PurgePlayerHolder
 {
 	private final int _points;
 	private final int _keys;
+	private int _getMaxPeriodicKeys;
 	
-	public PurgePlayerHolder(int points, int keys)
+	public PurgePlayerHolder(int points, int keys, int remainingKeys)
 	{
 		_points = points;
 		_keys = keys;
+		_getMaxPeriodicKeys = remainingKeys;
 	}
 	
 	public int getPoints()
@@ -38,5 +40,14 @@ public class PurgePlayerHolder
 	public int getKeys()
 	{
 		return _keys;
+	}
+	
+	public int getMaxPeriodicKeys()
+	{
+		if ((_keys == 0) && (_getMaxPeriodicKeys == 0))
+		{
+			_getMaxPeriodicKeys += 40;
+		}
+		return _getMaxPeriodicKeys;
 	}
 }

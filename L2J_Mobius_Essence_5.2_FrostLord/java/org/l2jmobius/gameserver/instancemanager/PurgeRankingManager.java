@@ -150,7 +150,7 @@ public class PurgeRankingManager
 						if (onlinePlayer != null)
 						{
 							onlinePlayer.getPurgePoints().clear();
-							onlinePlayer.sendPacket(new ExSubjugationSidebar(category, new PurgePlayerHolder(0, 0)));
+							onlinePlayer.sendPacket(new ExSubjugationSidebar(null, new PurgePlayerHolder(0, 0, 0)));
 						}
 						
 						counter++;
