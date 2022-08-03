@@ -16,9 +16,12 @@
  */
 package events.RedLibra.Eraton;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
@@ -373,6 +376,20 @@ public class Eraton extends AbstractNpcAI
 				{
 					takeItems(player, CHAOS_POMANDER.getId(), -1);
 				}
+				
+				// Set new classId and reset olympiad points.
+				try (Connection con = DatabaseFactory.getConnection();
+					PreparedStatement ps = con.prepareStatement("UPDATE olympiad_nobles SET olympiad_points=?, class_id=? WHERE charId='" + player.getObjectId() + "'"))
+				{
+					ps.setInt(1, Config.ALT_OLY_START_POINTS);
+					ps.setInt(2, classId);
+					ps.executeUpdate();
+				}
+				catch (Exception e)
+				{
+					LOGGER.warning("Eraton: Set new classId and reset olympiad points: " + e.getMessage());
+				}
+				
 				player.restoreDualSkills();
 				player.store(false);
 				player.broadcastUserInfo();
