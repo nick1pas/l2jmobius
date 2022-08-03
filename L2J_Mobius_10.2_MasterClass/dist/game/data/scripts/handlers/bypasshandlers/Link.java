@@ -41,6 +41,18 @@ public class Link implements IBypassHandler
 		VALID_LINKS.add("common/attribute_info.htm");
 		VALID_LINKS.add("common/augmentation_01.htm");
 		VALID_LINKS.add("common/augmentation_02.htm");
+		VALID_LINKS.add("common/augmentation_03.htm");
+		VALID_LINKS.add("common/augmentation_03_01.htm");
+		VALID_LINKS.add("common/augmentation_03_02.htm");
+		VALID_LINKS.add("common/augmentation_03_03.htm");
+		VALID_LINKS.add("common/augmentation_03_04.htm");
+		VALID_LINKS.add("common/augmentation_03_05.htm");
+		VALID_LINKS.add("common/augmentation_03_06.htm");
+		VALID_LINKS.add("common/augmentation_03_07.htm");
+		VALID_LINKS.add("common/augmentation_03_08.htm");
+		VALID_LINKS.add("common/augmentation_03_09.htm");
+		VALID_LINKS.add("common/augmentation_03_10.htm");
+		VALID_LINKS.add("common/augmentation_03_11.htm");
 		VALID_LINKS.add("common/augmentation_exchange.htm");
 		VALID_LINKS.add("common/crafting_01.htm");
 		VALID_LINKS.add("common/crafting_02.htm");
