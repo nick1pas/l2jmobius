@@ -141,7 +141,6 @@ import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.EnsoulWindow;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
@@ -477,7 +476,6 @@ public class MasterHandler
 			Buy.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			EnsoulWindow.class,
 			FindPvP.class,
 			Freight.class,
 			ItemAuctionLink.class,

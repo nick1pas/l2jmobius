@@ -47,21 +47,21 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to remove or not
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
-		packet.writeH(_player.getINT() - _player.getHennaValue(BaseStat.INT)); // equip INT
+		packet.writeD(_player.getINT() - _player.getHennaValue(BaseStat.INT)); // equip INT
 		packet.writeD(_player.getSTR()); // current STR
-		packet.writeH(_player.getSTR() - _player.getHennaValue(BaseStat.STR)); // equip STR
+		packet.writeD(_player.getSTR() - _player.getHennaValue(BaseStat.STR)); // equip STR
 		packet.writeD(_player.getCON()); // current CON
-		packet.writeH(_player.getCON() - _player.getHennaValue(BaseStat.CON)); // equip CON
+		packet.writeD(_player.getCON() - _player.getHennaValue(BaseStat.CON)); // equip CON
 		packet.writeD(_player.getMEN()); // current MEN
-		packet.writeH(_player.getMEN() - _player.getHennaValue(BaseStat.MEN)); // equip MEN
+		packet.writeD(_player.getMEN() - _player.getHennaValue(BaseStat.MEN)); // equip MEN
 		packet.writeD(_player.getDEX()); // current DEX
-		packet.writeH(_player.getDEX() - _player.getHennaValue(BaseStat.DEX)); // equip DEX
+		packet.writeD(_player.getDEX() - _player.getHennaValue(BaseStat.DEX)); // equip DEX
 		packet.writeD(_player.getWIT()); // current WIT
-		packet.writeH(_player.getWIT() - _player.getHennaValue(BaseStat.WIT)); // equip WIT
+		packet.writeD(_player.getWIT() - _player.getHennaValue(BaseStat.WIT)); // equip WIT
 		packet.writeD(0); // current LUC
-		packet.writeH(0); // equip LUC
+		packet.writeD(0); // equip LUC
 		packet.writeD(0); // current CHA
-		packet.writeH(0); // equip CHA
+		packet.writeD(0); // equip CHA
 		packet.writeD(0);
 		return true;
 	}

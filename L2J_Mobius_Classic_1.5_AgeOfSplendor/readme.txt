@@ -1,67 +1,14 @@
-L2J-Mobius Classic Saviors
+L2J-Mobius Classic Age of Splendor
 
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/jstiuq52oq0h3wk/L2J_Mobius_Classic_2.0_Saviors_Geodata.zip
+Geodata: https://www.mediafire.com/file/5iyeoe1ulm3wn4f/L2J_Mobius_Classic_1.5_AgeOfSplendor_Geodata.zip
 
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1qoqzeN0_7V7evSID5yMsyYUyBNfaO_Y3&export=download
-System: https://mega.nz/file/c89UkKhI#0LuNXnkih9pmZkTaDcyUwRW6to7_q5wZUZCXJ-qVKig
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1LzYyHwnv-uJqWX7_SCC-6QnOsnwHYspa&export=download
+System: https://mega.nz/file/xlNQkKxQ#8WACAPMPJ_rocFI0iAtftVsK6iscbZRnXc4TyD_aNbY
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
 
-Saviors: https://eu.4game.com/lineage2classic/play/saviors/
--Classic packet compatibility
--Parsed item data from client
--Proper Daily Mission rewards
--Zone changes to match starting locations
--Parsed recipes from client
--Parsed skill names from client
--Parsed NPC names from client
--Temporary NPC info from Interlude retail files
--Temporary spawns from Interlude retail files
--Further manual spawn fixes
--Skilltrees info from L2Wiki
--Parsed NPC droplists from L2Wiki
--Further manual NPC corrections from L2Wiki
--Retail NPC dialogs
--Retail NPC buylists
--Basic Tutorial quest
--Added 156 quest scripts
--Village Master AI scripts
--Fixed skill levels to match retail
--Added new class mounts
--Fisherman NPC updates
--Fixed fishing to match retail
--Added new fishing zone locations
--Quest Fishing Specialist's Request
--Olympiad NPC updates
--Dimensional Merchant updates
--Classic gatekeeper teleports
--Admin menu teleport and shop cleanups
--Blacksmith NPC updates
--New Race Track arena zone
--Giran Luxury Shop updates
--Grandboss scripts and stats
--Whisper of Dreams quests
--Moon Knight quest
--Item augmentation support
--Retail Henna list
--Floran Agricultural Area clan halls
--Maille Lizardmen Barracks clan halls
--Augmentation chances from L2Wiki
--Working Runes system
--Added new Savior skills
--Classic 3rd class quests
--Dungeon of Abyss
--Attendance rewards
--Various retail Classic events
--Classic Olympiad shedule
--Ruin area herb drops
-
-Customs:
--Newbie Helper NPC location info
--Newbie Helper buff support until 40 level
--Test Server Helper NPCs
--Fake players engine
+This is based on a downgraded version of L2jMobius Saviors project.

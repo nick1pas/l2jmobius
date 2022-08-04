@@ -319,7 +319,6 @@ public class LoginServerThread extends Thread
 									sendPacket(pig);
 									wcToRemove.gameClient.setConnectionState(ConnectionState.AUTHENTICATED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
-									wcToRemove.gameClient.sendPacket(LoginFail.LOGIN_SUCCESS);
 									final CharSelectionInfo cl = new CharSelectionInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
 									wcToRemove.gameClient.sendPacket(cl);
 									wcToRemove.gameClient.setCharSelection(cl.getCharInfo());

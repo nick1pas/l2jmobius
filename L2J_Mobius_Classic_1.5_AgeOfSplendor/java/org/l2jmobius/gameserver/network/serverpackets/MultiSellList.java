@@ -58,7 +58,6 @@ public class MultiSellList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
-		packet.writeC(0); // Helios
 		packet.writeD(_list.getId()); // list id
 		packet.writeC(0); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
@@ -66,7 +65,6 @@ public class MultiSellList extends AbstractItemPacket
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
 		packet.writeC(_list.isChanceMultisell() ? 1 : 0); // new multisell window
-		packet.writeD(32); // Helios - Always 32
 		while (_size-- > 0)
 		{
 			ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
@@ -89,7 +87,6 @@ public class MultiSellList extends AbstractItemPacket
 			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
 			writeItemAugment(packet, itemEnchantment);
 			writeItemElemental(packet, itemEnchantment);
-			writeItemEnsoulOptions(packet, itemEnchantment);
 			packet.writeH(entry.getProducts().size());
 			packet.writeH(entry.getIngredients().size());
 			for (ItemChanceHolder product : entry.getProducts())
@@ -113,7 +110,6 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeD((int) Math.ceil(product.getChance())); // chance
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
-				writeItemEnsoulOptions(packet, displayItemEnchantment);
 			}
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
@@ -133,7 +129,6 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeH(ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
-				writeItemEnsoulOptions(packet, displayItemEnchantment);
 			}
 		}
 		return true;

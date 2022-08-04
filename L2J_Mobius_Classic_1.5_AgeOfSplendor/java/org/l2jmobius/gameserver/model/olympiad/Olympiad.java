@@ -132,12 +132,19 @@ public class Olympiad extends ListenersContainer
 	
 	protected Olympiad()
 	{
-		load();
-		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.OLYMPIAD_ID);
-		
-		if (_period == 0)
+		if (Config.OLYMPIAD_ENABLED)
 		{
-			init();
+			load();
+			AntiFeedManager.getInstance().registerEvent(AntiFeedManager.OLYMPIAD_ID);
+			
+			if (_period == 0)
+			{
+				init();
+			}
+		}
+		else
+		{
+			LOGGER.log(Level.INFO, "Disabled.");
 		}
 	}
 	

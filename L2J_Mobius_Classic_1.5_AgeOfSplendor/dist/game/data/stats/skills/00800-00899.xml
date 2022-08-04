@@ -1068,29 +1068,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="821" toLevel="1" name="Shadow Step">
-		<!-- Moves a character behind enemy's back. Cancels the target. -->
-		<icon>icon.skill0821</icon>
-		<castRange>600</castRange>
-		<coolTime>200</coolTime>
-		<effectPoint>-1</effectPoint>
-		<effectRange>1100</effectRange>
-		<hitTime>100</hitTime>
-		<magicLevel>40</magicLevel>
-		<mpConsume>50</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="TeleportToTarget" />
-			<effect name="TargetCancel" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="822" toLevel="3" name="Repair Golem">
 		<!-- Repairs the summoned golem to recover the golem's HP by $s1. -->
 		<icon>icon.skill0822</icon>

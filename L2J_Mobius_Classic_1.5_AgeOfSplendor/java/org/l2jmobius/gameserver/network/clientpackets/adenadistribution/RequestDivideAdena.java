@@ -95,7 +95,7 @@ public class RequestDivideAdena implements IClientIncomingPacket
 		final List<Player> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 		if (player.getAdena() < targets.size())
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA);
 			cancelDistribution(request);
 			return;
 		}

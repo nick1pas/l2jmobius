@@ -18,18 +18,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
-import java.util.Arrays;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.ItemTable;
-import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -75,8 +71,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 				return false;
 			}
 			
-			final int option1 = packet.readD();
-			final int option2 = packet.readD();
 			final short attackAttributeId = (short) packet.readH();
 			final int attackAttributeValue = packet.readH();
 			final int defenceFire = packet.readH();
@@ -86,20 +80,9 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			final int defenceHoly = packet.readH();
 			final int defenceDark = packet.readH();
 			final int visualId = packet.readD();
-			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.readC()];
-			for (int k = 0; k < soulCrystalOptions.length; k++)
-			{
-				soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
-			}
-			final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.readC()];
-			for (int k = 0; k < soulCrystalSpecialOptions.length; k++)
-			{
-				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
-			}
 			
 			final TradeItem item = new TradeItem(template, cnt, price);
 			item.setEnchant(enchantLevel);
-			item.setAugmentation(option1, option2);
 			item.setAttackElementType(AttributeType.findByClientId(attackAttributeId));
 			item.setAttackElementPower(attackAttributeValue);
 			item.setElementDefAttr(AttributeType.FIRE, defenceFire);
@@ -109,8 +92,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			item.setElementDefAttr(AttributeType.HOLY, defenceHoly);
 			item.setElementDefAttr(AttributeType.DARK, defenceDark);
 			item.setVisualId(visualId);
-			item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
-			item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
 			_items[i] = item;
 		}
 		return true;

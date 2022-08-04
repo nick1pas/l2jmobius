@@ -332,26 +332,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="619" toLevel="1" name="Cancel Transformation">
-		<!-- Undo the transformation. -->
-		<icon>icon.skilltransform2</icon>
-		<effectPoint>10</effectPoint>
-		<hitTime>2500</hitTime>
-		<magicLevel>56</magicLevel>
-		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanUntransform" />
-		</conditions>
-		<effects>
-			<effect name="DispelBySlot">
-				<dispel>TRANSFORM,-1</dispel>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
 		<!-- Increases Evasion by $s2 and Speed by $s3 for $s1. -->
 		<icon>icon.skill0622</icon>

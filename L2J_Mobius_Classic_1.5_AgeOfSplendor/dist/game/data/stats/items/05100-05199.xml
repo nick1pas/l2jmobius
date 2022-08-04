@@ -254,20 +254,6 @@
 			<skill id="2081" level="1" /> <!-- Soulshot Compressed Package (B-grade) -->
 		</skills>
 	</item>
-	<item id="5138" name="Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- 300 compressed Soulshots. A-grade. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="200" />
-		<set name="price" val="26400" />
-		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SOULSHOT" />
-		<skills>
-			<skill id="2082" level="1" /> <!-- Soulshot Compressed Package (A-grade) -->
-		</skills>
-	</item>
 	<item id="5140" name="Spiritshot Compressed Package (No-grade)" type="EtcItem">
 		<!-- 300 compressed spiritshots. No-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
@@ -322,20 +308,6 @@
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<skills>
 			<skill id="2087" level="1" /> <!-- Spiritshot Compressed Package (B-grade) -->
-		</skills>
-	</item>
-	<item id="5144" name="Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- 300 compressed spiritshots. A-grade. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="200" />
-		<set name="price" val="39600" />
-		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPIRITSHOT" />
-		<skills>
-			<skill id="2088" level="1" /> <!-- Spiritshot Compressed Package (A-grade) -->
 		</skills>
 	</item>
 	<item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" type="EtcItem">
@@ -394,20 +366,6 @@
 			<skill id="2093" level="1" /> <!-- Blessed Spiritshot Compressed Package (B-grade) -->
 		</skills>
 	</item>
-	<item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- 300 compressed blessed spiritshots. A-grade. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="200" />
-		<set name="price" val="95700" />
-		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPIRITSHOT" />
-		<skills>
-			<skill id="2094" level="1" /> <!-- Blessed Spiritshot Compressed Package (A-grade) -->
-		</skills>
-	</item>
 	<item id="5152" name="Magic Compressor" type="EtcItem">
 		<!-- Magic tool needed to compress soulshots, spiritshots etc. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -459,20 +417,6 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="150000" />
-		<set name="recipe_id" val="483" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="handler" val="Recipes" />
-	</item>
 	<item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
@@ -511,20 +455,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="100000" />
 		<set name="recipe_id" val="487" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="150000" />
-		<set name="recipe_id" val="488" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
@@ -571,20 +501,6 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="150000" />
-		<set name="recipe_id" val="493" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="handler" val="Recipes" />
-	</item>
 	<item id="5192" name="Magic Rope (D-grade)" type="EtcItem">
 		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
@@ -612,16 +528,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="250" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5195" name="Magic Rope (A-grade)" type="EtcItem">
-		<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-		<set name="icon" val="icon.etc_braided_hemp_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="2" />
-		<set name="price" val="400" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>

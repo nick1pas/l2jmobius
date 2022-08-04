@@ -461,7 +461,7 @@ public class Q11000_MoonKnight extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID, 1));
+			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}
@@ -479,7 +479,7 @@ public class Q11000_MoonKnight extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID, 1));
+			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}

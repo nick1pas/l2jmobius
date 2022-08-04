@@ -544,6 +544,7 @@ public class Config
 	public static int WORLD_CHAT_MIN_LEVEL;
 	public static int WORLD_CHAT_POINTS_PER_DAY;
 	public static Duration WORLD_CHAT_INTERVAL;
+	public static boolean OLYMPIAD_ENABLED;
 	public static int ALT_OLY_START_TIME;
 	public static int ALT_OLY_MIN;
 	public static long ALT_OLY_CPERIOD;
@@ -2297,6 +2298,7 @@ public class Config
 			
 			// Load Olympiad config file (if exists)
 			final PropertiesParser olympiadConfig = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
+			OLYMPIAD_ENABLED = olympiadConfig.getBoolean("OlympiadEnabled", false);
 			ALT_OLY_START_TIME = olympiadConfig.getInt("AltOlyStartTime", 20);
 			ALT_OLY_MIN = olympiadConfig.getInt("AltOlyMin", 0);
 			ALT_OLY_CPERIOD = olympiadConfig.getLong("AltOlyCPeriod", 14400000);

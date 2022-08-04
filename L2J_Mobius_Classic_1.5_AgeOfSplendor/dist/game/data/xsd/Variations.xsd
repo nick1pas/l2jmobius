@@ -2,7 +2,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="variations">
+				<xs:element name="variations" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="variation" maxOccurs="unbounded" minOccurs="0">
@@ -43,7 +43,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="itemGroups">
+				<xs:element name="itemGroups" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="itemGroup" maxOccurs="unbounded" minOccurs="0">
@@ -61,7 +61,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="fees">
+				<xs:element name="fees" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="fee" maxOccurs="unbounded" minOccurs="0">

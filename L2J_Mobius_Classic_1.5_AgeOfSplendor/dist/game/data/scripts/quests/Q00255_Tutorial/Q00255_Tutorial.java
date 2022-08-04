@@ -178,7 +178,7 @@ public class Q00255_Tutorial extends Quest
 			{
 				if (qs.isMemoState(1))
 				{
-					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0));
+					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1));
 					player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 					player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 				}
@@ -200,7 +200,7 @@ public class Q00255_Tutorial extends Quest
 						playTutorialVoice(player, "tutorial_voice_026");
 					}
 					htmltext = (npc != null ? npc.getId() : player.getTarget().getId()) + "-3.html";
-					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
+					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3));
 				}
 				break;
 			}
@@ -343,7 +343,7 @@ public class Q00255_Tutorial extends Quest
 			qs.setMemoState(3);
 			playSound(player, "ItemSound.quest_tutorial");
 			playTutorialVoice(player, "tutorial_voice_013");
-			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2, 0));
+			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2));
 		}
 	}
 	

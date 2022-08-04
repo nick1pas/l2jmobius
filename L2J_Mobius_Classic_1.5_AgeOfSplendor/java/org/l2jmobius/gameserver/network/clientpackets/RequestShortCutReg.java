@@ -57,7 +57,7 @@ public class RequestShortCutReg implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_page > 19) || (_page < 0))
+		if ((_page > 10) || (_page < 0))
 		{
 			return;
 		}

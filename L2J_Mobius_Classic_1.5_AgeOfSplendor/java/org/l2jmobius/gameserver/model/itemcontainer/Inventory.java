@@ -324,9 +324,6 @@ public abstract class Inventory extends ItemContainer
 			// Clear enchant bonus
 			item.clearEnchantStats();
 			
-			// Clear SA Bonus
-			item.clearSpecialAbilities();
-			
 			if (it.hasSkills())
 			{
 				final List<ItemSkillHolder> onEnchantSkills = it.getSkills(ItemSkillType.ON_ENCHANT);
@@ -524,9 +521,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// Apply enchant stats
 			item.applyEnchantStats();
-			
-			// Apply SA skill
-			item.applySpecialAbilities();
 			
 			if (item.getTemplate().hasSkills())
 			{

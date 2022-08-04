@@ -120,36 +120,6 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="305" name="Tallum Glaive" type="Weapon">
-		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="CHRYSOLITE" />
-		<set name="weight" val="1840" />
-		<set name="price" val="20741000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="true" />
-		<set name="commissionItemType" val="SPEAR" />
-		<set name="isAppearanceable" val="true" />
-		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>
-		<stats>
-			<stat type="pAtk">232</stat>
-			<stat type="mAtk">114</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
-		</stats>
-	</item>
 	<item id="308" name="Buffalo's Horn" type="Weapon">
 		<set name="icon" val="icon.weapon_buffalo_horn_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -868,43 +838,6 @@
 			<stat type="pDef">175</stat>
 		</stats>
 	</item>
-	<item id="365" name="Dark Crystal Breastplate" type="Armor">
-		<set name="icon" val="icon.armor_t74_u_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="CRYSTAL" />
-		<set name="weight" val="7700" />
-		<set name="price" val="3562000" />
-		<set name="enchant_enabled" val="true" />
-		<set name="isAppearanceable" val="true" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
-		<stats>
-			<stat type="pDef">171</stat>
-		</stats>
-	</item>
-	<item id="374" name="Armor of Nightmare" type="Armor">
-		<!-- Full body armor. -->
-		<set name="icon" val="icon.armor_t80_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="704" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="9580" />
-		<set name="price" val="8804000" />
-		<set name="commissionItemType" val="FULL_BODY" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="true" />
-		<stats>
-			<stat type="pDef">293</stat>
-		</stats>
-	</item>
 	<item id="376" name="Iron Plate Gaiters" type="Armor">
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,24 +1052,6 @@
 		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">109</stat>
-		</stats>
-	</item>
-	<item id="388" name="Dark Crystal Gaiters" type="Armor">
-		<set name="icon" val="icon.armor_t74_l_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="legs" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="178" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="CRYSTAL" />
-		<set name="weight" val="3320" />
-		<set name="price" val="2226000" />
-		<set name="enchant_enabled" val="true" />
-		<set name="isAppearanceable" val="true" />
-		<set name="commissionItemType" val="ARMOR_PANTS" />
-		<stats>
-			<stat type="pDef">107</stat>
 		</stats>
 	</item>
 	<item id="390" name="Cotton Shirt" type="Armor">

@@ -38,16 +38,6 @@ public class Link implements IBypassHandler
 	{
 		VALID_LINKS.add("common/craft_01.htm");
 		VALID_LINKS.add("common/craft_02.htm");
-		VALID_LINKS.add("common/runes_01.htm");
-		VALID_LINKS.add("common/runes_01.htm");
-		VALID_LINKS.add("common/sealed_runes_02.htm");
-		VALID_LINKS.add("common/sealed_runes_03.htm");
-		VALID_LINKS.add("common/sealed_runes_04.htm");
-		VALID_LINKS.add("common/sealed_runes_05.htm");
-		VALID_LINKS.add("common/sealed_runes_06.htm");
-		VALID_LINKS.add("common/sealed_runes_07.htm");
-		VALID_LINKS.add("common/sealed_runes_08.htm");
-		VALID_LINKS.add("common/sealed_runes_09.htm");
 		VALID_LINKS.add("common/skill_enchant_help_01.htm");
 		VALID_LINKS.add("common/skill_enchant_help_02.htm");
 		VALID_LINKS.add("common/skill_enchant_help_03.htm");

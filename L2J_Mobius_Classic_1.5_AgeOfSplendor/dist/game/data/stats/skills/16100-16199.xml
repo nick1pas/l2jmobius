@@ -75,24 +75,6 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16106" toLevel="2" name="Orc Thunder">
-		<!-- Pulls the target into your reach. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">65</value>
-		</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>2000</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>
-			<value level="1">-150</value>
-			<value level="2">-200</value>
-		</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16107" toLevel="3" name="Fatal Blow">
 		<!-- Powerful blow on a vital spot. Possible to achieve Critical. -->
 		<operateType>A1</operateType>

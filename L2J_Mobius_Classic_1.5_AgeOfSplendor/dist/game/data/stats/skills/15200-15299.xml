@@ -497,45 +497,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15235" toLevel="2" name="Wind of Darkness">
-		<!-- Creates a powerful wind around a character, throwing back enemies. -->
-		<icon>icon.skill4107</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<hitTime>1000</hitTime>
-		<coolTime>3000</coolTime>
-		<effectPoint>
-			<value level="1">-200</value>
-			<value level="2">-250</value>
-		</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLevel>96</magicLevel>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1</abnormalTime>
-		<affectRange>250</affectRange>
-		<affectLimit>10-10</affectLimit>
-		<reuseDelay>10000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>180000</power>
-			</effect>
-			<effect name="MagicalAttackByAbnormalSlot">
-				<power>500</power>
-				<abnormalType>PD_DOWN</abnormalType>
-			</effect>
-			<effect name="KnockBack">
-				<distance>200</distance>
-				<speed>400</speed>
-				<knockDown>true</knockDown>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="15236" toLevel="2" name="Dark Thrust">
 		<!-- Launches a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>

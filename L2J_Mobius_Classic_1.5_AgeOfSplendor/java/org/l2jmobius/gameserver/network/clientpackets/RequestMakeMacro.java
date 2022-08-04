@@ -41,7 +41,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 		final String _name = packet.readS();
 		final String _desc = packet.readS();
 		final String _acronym = packet.readS();
-		final int icon = packet.readD();
+		final int icon = packet.readC();
 		int count = packet.readC();
 		if (count > MAX_MACRO_LENGTH)
 		{

@@ -19,7 +19,6 @@ package quests.Q00416_PathOfTheOrcShaman;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -27,8 +26,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.network.NpcStringId;
-import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
@@ -61,7 +58,8 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 	private static final int MASK_OF_MEDIUM = 1631;
 	// Quest Monsters
 	private static final int DURKA_SPIRIT = 27056;
-	private static final int BLACK_LEOPARD = 27319;
+	// Does not exist in client.
+	// private static final int BLACK_LEOPARD = 27319;
 	// Misc
 	private static final int MIN_LEVEL = 19;
 	// Mobs
@@ -83,7 +81,8 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 		addStartNpc(TATARU_ZU_HESTUI);
 		addTalkId(TATARU_ZU_HESTUI, UMOS, DUDA_MARA_TOTEM_SPIRIT, HESTUI_TOTEM_SPIRIT);
 		addKillId(MOBS.keySet());
-		addKillId(BLACK_LEOPARD);
+		// Does not exist in client.
+		// addKillId(BLACK_LEOPARD);
 		registerQuestItems(FIRE_CHARM, KASHA_BEAR_PELT, KASHA_BLADE_SPIDER_HUSK, FIRST_FIERY_EGG, HESTUI_MASK, SECOND_FIERY_EGG, TOTEM_SPIRIT_CLAW, TATARUS_LETTER, FLAME_CHARM, GRIZZLY_BLOOD, BLOOD_CAULDRON, SPIRIT_NET, BOUND_DURKA_SPIRIT, DURKA_PARASITE, TOTEM_SPIRIT_BLOOD);
 	}
 	
@@ -249,9 +248,14 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 			{
 				if (qs.isMemoState(101))
 				{
-					qs.setMemoState(102);
-					qs.setCond(14, true);
-					htmltext = event;
+					// Skip unexisting panther kills.
+					// qs.setMemoState(102);
+					// qs.setCond(14, true);
+					// htmltext = event;
+					// Same as 32057-05.html
+					qs.setMemoState(110);
+					qs.setCond(21, true);
+					htmltext = "32057-05.html";
 				}
 				break;
 			}
@@ -278,44 +282,45 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		if (npc.getId() == BLACK_LEOPARD)
-		{
-			switch (qs.getMemoState())
-			{
-				case 102:
-				{
-					qs.setMemoState(103);
-					break;
-				}
-				case 103:
-				{
-					qs.setMemoState(104);
-					qs.setCond(15, true);
-					if (getRandom(100) < 66)
-					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(qs.getPlayer().getName()));
-					}
-					break;
-				}
-				case 105:
-				{
-					qs.setMemoState(106);
-					qs.setCond(17, true);
-					if (getRandom(100) < 66)
-					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(qs.getPlayer().getName()));
-					}
-					break;
-				}
-				case 107:
-				{
-					qs.setMemoState(108);
-					qs.setCond(19, true);
-					break;
-				}
-			}
-			return super.onKill(npc, player, isSummon);
-		}
+		// Does not exist in client.
+		// if (npc.getId() == BLACK_LEOPARD)
+		// {
+		// switch (qs.getMemoState())
+		// {
+		// case 102:
+		// {
+		// qs.setMemoState(103);
+		// break;
+		// }
+		// case 103:
+		// {
+		// qs.setMemoState(104);
+		// qs.setCond(15, true);
+		// if (getRandom(100) < 66)
+		// {
+		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(qs.getPlayer().getName()));
+		// }
+		// break;
+		// }
+		// case 105:
+		// {
+		// qs.setMemoState(106);
+		// qs.setCond(17, true);
+		// if (getRandom(100) < 66)
+		// {
+		// npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(qs.getPlayer().getName()));/
+		// }
+		// break;
+		// }
+		// case 107:
+		// {
+		// qs.setMemoState(108);
+		// qs.setCond(19, true);
+		// break;
+		// }
+		// }
+		// return super.onKill(npc, player, isSummon);
+		// }
 		
 		final ItemChanceHolder item = MOBS.get(npc.getId());
 		if (item.getCount() == qs.getCond())

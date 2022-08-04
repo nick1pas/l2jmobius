@@ -74,7 +74,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 						giveItems(player, BONE_GAITERS, 1);
 						giveAdena(player, 3000 + (10 * getQuestItemsCount(player, CRACKED_SKULL)), true);
 						qs.exitQuest(false, true);
-						showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
+						showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
 						htmltext = event;
 					}
 					break;

@@ -2725,7 +2725,6 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" shield="134" shieldRate="20" />
@@ -3754,9 +3753,6 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="3285" max="6703" chance="70" /> <!-- Adena -->
-				<item id="5494" min="1" max="1" chance="0.864" /> <!-- Sealed Dark Crystal Shield Fragment -->
-				<item id="5525" min="1" max="1" chance="0.634" /> <!-- Sealed Dark Crystal Helmet Design -->
-				<item id="5526" min="1" max="1" chance="0.634" /> <!-- Sealed Tallum Helmet Design -->
 			</drop>
 			<spoil>
 				<item id="1877" min="1" max="1" chance="26.6382" /> <!-- Adamantite Nugget -->
@@ -3824,15 +3820,10 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="3405" max="6948" chance="70" /> <!-- Adena -->
-					<item id="5496" min="1" max="1" chance="0.763" /> <!-- Sealed Dark Crystal Boot Lining -->
-					<item id="5497" min="1" max="1" chance="0.763" /> <!-- Sealed Tallum Boot Lining -->
-					<item id="5508" min="1" max="1" chance="0.763" /> <!-- Sealed Dark Crystal Glove Design -->
-					<item id="5509" min="1" max="1" chance="0.763" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
 				<item id="4077" min="1" max="1" chance="31.0559" /> <!-- Doom Shield Fragment -->
 				<item id="4087" min="1" max="1" chance="16.2002" /> <!-- Stockings of Doom Pattern -->
-				<item id="5494" min="1" max="1" chance="14.499" /> <!-- Sealed Dark Crystal Shield Fragment -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4097,7 +4088,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20977" level="63" type="Monster" name="Elmoreden's Lady" title="Slave of Avarice">
+	<npc id="20977" level="63" type="Monster" name="Elmoreden's Lady">
 		<!-- L2wiki: https://l2wiki.com/classic/Elmoreden%27s_Lady -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4354,7 +4345,6 @@
 				<item id="57" min="5672" max="13239" chance="70" /> <!-- Adena -->
 				<item id="1875" min="1" max="1" chance="31.89" /> <!-- Stone of Purity -->
 				<item id="4081" min="1" max="1" chance="16.78" /> <!-- Doom Plate Armor Temper -->
-				<item id="2133" min="1" max="1" chance="1.588" /> <!-- Gemstone (A-grade) -->
 			</drop>
 			<spoil>
 				<item id="4989" min="1" max="1" chance="13.09" /> <!-- Recipe: Stockings of Doom (60%) -->
@@ -4559,8 +4549,6 @@
 				<item id="57" min="7547" max="17632" chance="70" /> <!-- Adena -->
 				<item id="1875" min="1" max="1" chance="29.81" /> <!-- Stone of Purity -->
 				<item id="4121" min="1" max="1" chance="9.86" /> <!-- Bow of Peril Shaft -->
-				<item id="2133" min="1" max="1" chance="1.501" /> <!-- Gemstone (A-grade) -->
-				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="75" chance="92.53" /> <!-- Coal -->
@@ -4625,7 +4613,6 @@
 				<item id="57" min="3950" max="9213" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="24.02" /> <!-- Oriharukon Ore -->
 				<item id="4089" min="3" max="9" chance="7.677" /> <!-- Doom Helmet Pattern -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4179" min="1" max="1" chance="24.38" /> <!-- Recipe: Zubei's Helmet -->
@@ -4648,7 +4635,6 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
 		<acquire exp="92129" sp="2763" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1274.309416" hpRegen="8.5" mp="1276.17" mpRegen="3" />

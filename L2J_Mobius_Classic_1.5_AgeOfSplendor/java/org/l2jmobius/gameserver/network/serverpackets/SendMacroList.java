@@ -49,7 +49,7 @@ public class SendMacroList implements IClientOutgoingPacket
 			packet.writeS(_macro.getName()); // Macro Name
 			packet.writeS(_macro.getDescr()); // Desc
 			packet.writeS(_macro.getAcronym()); // acronym
-			packet.writeD(_macro.getIcon()); // icon
+			packet.writeC(_macro.getIcon()); // icon
 			packet.writeC(_macro.getCommands().size()); // count
 			int i = 1;
 			for (MacroCmd cmd : _macro.getCommands())

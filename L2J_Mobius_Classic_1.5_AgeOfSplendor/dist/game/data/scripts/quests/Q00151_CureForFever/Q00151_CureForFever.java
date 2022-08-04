@@ -102,7 +102,7 @@ public class Q00151_CureForFever extends Quest
 						{
 							giveItems(player, ROUND_SHIELD, 1);
 							qs.exitQuest(false, true);
-							showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
+							showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
 							htmltext = "30050-06.html";
 						}
 						else if (qs.isCond(2) && hasQuestItems(player, POISON_SAC))

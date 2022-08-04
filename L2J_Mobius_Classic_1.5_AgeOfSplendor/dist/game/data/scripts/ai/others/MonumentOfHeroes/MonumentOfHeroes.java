@@ -18,6 +18,7 @@ package ai.others.MonumentOfHeroes;
 
 import java.util.List;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -59,9 +60,12 @@ public class MonumentOfHeroes extends AbstractNpcAI
 	
 	private MonumentOfHeroes()
 	{
-		addStartNpc(MONUMENT);
-		addFirstTalkId(MONUMENT);
-		addTalkId(MONUMENT);
+		if (Config.OLYMPIAD_ENABLED)
+		{
+			addStartNpc(MONUMENT);
+			addFirstTalkId(MONUMENT);
+			addTalkId(MONUMENT);
+		}
 	}
 	
 	@Override

@@ -79,7 +79,9 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		final long tickets = _type == LuckyGameType.LUXURY ? player.getInventory().getInventoryItemCount(LUXURY_FORTUNE_READING_TICKET, -1) : player.getInventory().getInventoryItemCount(FORTUNE_READING_TICKET, -1);
 		if (tickets < _reading)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_TICKETS_YOU_CANNOT_CONTINUE_THE_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.THE_NUMBER_OF_COINS_YOU_HAVE_S1_IS_NOT_ENOUGH_TO_PLAY_THE_GAME);
+			msg.addLong(tickets);
+			player.sendPacket(msg);
 			player.sendPacket(_type == LuckyGameType.LUXURY ? ExBettingLuckyGameResult.LUXURY_INVALID_ITEM_COUNT : ExBettingLuckyGameResult.NORMAL_INVALID_ITEM_COUNT);
 			return;
 		}

@@ -419,24 +419,6 @@
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing the power of magic attack. Used with A-grade weapons. -->
-		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
-		<set name="default_action" val="SPIRITSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="290" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="BlessedSpiritShot" />
-		<set name="crystal_type" val="A" />
-		<set name="enchant_enabled" val="true" />
-		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="commissionItemType" val="SPIRITSHOT" />
-		<skills>
-			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
-		</skills>
-	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
@@ -475,20 +457,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="100000" />
 		<set name="recipe_id" val="325" />
-		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="150000" />
-		<set name="recipe_id" val="326" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />

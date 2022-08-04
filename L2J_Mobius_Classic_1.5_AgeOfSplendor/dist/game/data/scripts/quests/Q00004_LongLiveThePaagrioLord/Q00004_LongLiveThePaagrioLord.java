@@ -116,7 +116,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 						else
 						{
 							// Newbie Guide
-							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
+							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 							rewardItems(player, CLUB, 1);
 							qs.exitQuest(false, true);
 							htmltext = "30578-06.html";

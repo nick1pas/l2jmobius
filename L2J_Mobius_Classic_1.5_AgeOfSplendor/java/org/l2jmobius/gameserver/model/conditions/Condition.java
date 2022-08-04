@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
-import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -113,11 +112,6 @@ public abstract class Condition implements ConditionListener
 	public boolean test(Creature caster, Creature target, ItemTemplate item)
 	{
 		return test(caster, target, null, null);
-	}
-	
-	public boolean test(Creature caster, DailyMissionDataHolder onewayreward)
-	{
-		return test(caster, null, null, null);
 	}
 	
 	public boolean test(Creature caster, Creature target, Skill skill, ItemTemplate item)

@@ -16,6 +16,7 @@
  */
 package handlers.usercommandhandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -37,6 +38,12 @@ public class OlympiadStat implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, Player player)
 	{
+		if (!Config.OLYMPIAD_ENABLED)
+		{
+			player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			return false;
+		}
+		
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
@@ -46,7 +53,7 @@ public class OlympiadStat implements IUserCommandHandler
 		final WorldObject target = player.getTarget();
 		if ((target == null) || !target.isPlayer() || (target.getActingPlayer().getClassId().level() < 2))
 		{
-			player.sendPacket(SystemMessageId.COMMAND_AVAILABLE_FOR_THOSE_WHO_HAVE_COMPLETED_2ND_CLASS_TRANSFER);
+			player.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_IN_CASE_A_TARGET_IS_AWAKENED_NOBLESSE_OR_EXALTED);
 			return false;
 		}
 		

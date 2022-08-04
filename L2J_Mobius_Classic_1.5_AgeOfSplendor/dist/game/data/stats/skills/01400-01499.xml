@@ -406,35 +406,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1410" toLevel="1" name="Salvation">
-		<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. Consumes 200 Spirit Ore. -->
-		<icon>icon.skill1410</icon>
-		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>3600</abnormalTime>
-		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
-		<castRange>400</castRange>
-		<effectPoint>1</effectPoint>
-		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>200</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLevel>79</magicLevel>
-		<mpConsume>87</mpConsume>
-		<mpInitialConsume>18</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>3600000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="ResurrectionSpecial">
-				<power>100</power>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="1411" toLevel="3" name="Mystic Immunity">
 		<!-- Becomes invincible from debuffs for $s1. Can only be used on party members. -->
 		<icon>icon.skill1411</icon>

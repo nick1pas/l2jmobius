@@ -48,7 +48,7 @@ public class Q00261_CollectorsDream extends Quest
 	private static final int MIN_LEVEL = 15;
 	private static final int MAX_LEG_COUNT = 8;
 	// Message
-	private static final ExShowScreenMessage MESSAGE = new ExShowScreenMessage(NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
+	private static final ExShowScreenMessage MESSAGE = new ExShowScreenMessage(NpcStringId.LAST_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 	
 	public Q00261_CollectorsDream()
 	{

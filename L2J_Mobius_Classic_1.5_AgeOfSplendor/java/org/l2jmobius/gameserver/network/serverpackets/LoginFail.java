@@ -33,20 +33,13 @@ public class LoginFail implements IClientOutgoingPacket
 	public static final int ACCESS_FAILED_TRY_LATER4 = 9;
 	public static final int ACCESS_FAILED_TRY_LATER5 = 10;
 	
-	public static final LoginFail LOGIN_SUCCESS = new LoginFail(-1, NO_TEXT);
-	
 	private final int _reason;
-	private final int _success;
 	
+	/**
+	 * @param reason
+	 */
 	public LoginFail(int reason)
 	{
-		_success = 0;
-		_reason = reason;
-	}
-	
-	public LoginFail(int success, int reason)
-	{
-		_success = success;
 		_reason = reason;
 	}
 	
@@ -54,7 +47,6 @@ public class LoginFail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.LOGIN_FAIL.writeId(packet);
-		packet.writeD(_success);
 		packet.writeD(_reason);
 		return true;
 	}

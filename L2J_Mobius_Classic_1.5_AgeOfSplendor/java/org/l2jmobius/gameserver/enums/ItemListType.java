@@ -26,8 +26,7 @@ public enum ItemListType implements IUpdateTypeComponent
 	AUGMENT_BONUS(1),
 	ELEMENTAL_ATTRIBUTE(2),
 	ENCHANT_EFFECT(4),
-	VISUAL_ID(8),
-	SOUL_CRYSTAL(16);
+	VISUAL_ID(8);
 	
 	private final int _mask;
 	

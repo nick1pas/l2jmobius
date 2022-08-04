@@ -104,32 +104,6 @@
 			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
 		</skills>
 	</item>
-	<item id="6840" name="Circlet of Adena" type="Armor">
-		<!-- Lion Circlet. Can be worn by the lord of Town of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
-		<set name="price" val="500000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="true" />
-		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{5}}}" />
-		<cond msgId="1518">
-			<and>
-				<player castle="5" />
-				<player pledgeClass="2" /> <!-- Heir -->
-			</and>
-		</cond>
-		<skills>
-			<skill id="3633" level="2" /> <!-- Residential Stun Immunity -->
-		</skills>
-	</item>
 	<item id="6841" name="Lord's Crown" type="Armor">
 		<!-- Hair Accessory, Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_crown_i00" />
@@ -154,24 +128,6 @@
 		<skills>
 			<skill id="3632" level="1" /> <!-- Clan Gate -->
 		</skills>
-	</item>
-	<item id="6842" name="Wings of Destiny Circlet" type="Armor">
-		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.accessory_hero_cap_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="enchant_enabled" val="true" />
-		<set name="commissionItemType" val="HAIR_ACCESSORY" />
-		<set name="isAppearanceable" val="true" />
-		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player isHero="true" />
-		</cond>
 	</item>
 	<item id="6843" name="Cat Ears" type="Armor">
 		<!-- Cat-ear shaped hair accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->

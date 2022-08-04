@@ -296,7 +296,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6118" toLevel="1" name="Christmas Blessing">
+	<skill id="6118" toLevel="1" name="Winter Holiday Blessing">
 		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
@@ -1124,64 +1124,6 @@
 		<trait>BLEED</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="6156" toLevel="1" name="Mood Melody">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
-		<icon>icon.bm_magmeld</icon>
-		<operateType>A2</operateType>
-		<castRange>400</castRange>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3600</abnormalTime>
-		<abnormalType>G_EV_BUFF1</abnormalType>
-		<effectPoint>1</effectPoint>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLevel>-2</magicLevel>
-		<isMagic>1</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<blockedInOlympiad>true</blockedInOlympiad>
-		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>33</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>75</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>33</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>35</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="VampiricAttack">
-				<amount>9</amount>
-				<chance>80</chance>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="6166" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->

@@ -22,7 +22,6 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -75,8 +74,6 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 				packet.writeS(member.getName());
 			}
 		}
-		packet.writeD(World.getInstance().getPartyCount()); // Helios
-		packet.writeD(World.getInstance().getPartyMemberCount()); // Helios
 		return true;
 	}
 }

@@ -106,8 +106,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
-import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -603,8 +601,6 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendPacket(new ExWorldChatCnt(player));
 		}
-		player.sendPacket(new ExOneDayReceiveRewardList(player));
-		player.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
 		
 		// Handle soulshots, disable all on EnterWorld
 		player.sendPacket(new ExAutoSoulShot(0, true, 0));

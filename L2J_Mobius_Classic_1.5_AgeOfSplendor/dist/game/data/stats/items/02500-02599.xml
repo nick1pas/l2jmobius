@@ -1,32 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="2500" name="Dark Legion's Edge" type="Weapon">
-		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1320" />
-		<set name="price" val="20741000" />
-		<set name="change_weaponId" val="9340" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="true" />
-		<stats>
-			<stat type="pAtk">232</stat>
-			<stat type="mAtk">114</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="2501" name="Bone Club" type="Weapon">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -98,33 +71,6 @@
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">83</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="2504" name="Meteor Shower" type="Weapon">
-		<set name="icon" val="icon.weapon_meteor_shower_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1600" />
-		<set name="price" val="14098000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="true" />
-		<set name="isAppearanceable" val="true" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<stats>
-			<stat type="pAtk">213</stat>
-			<stat type="mAtk">107</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -236,24 +182,6 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<skills>
 			<skill id="2157" level="1" /> <!-- Spiritshot (B-grade) -->
-		</skills>
-	</item>
-	<item id="2513" name="Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing the power of magic attack. Used with A-grade weapons. -->
-		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
-		<set name="default_action" val="SPIRITSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="120" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="SpiritShot" />
-		<set name="crystal_type" val="A" />
-		<set name="enchant_enabled" val="true" />
-		<set name="commissionItemType" val="SPIRITSHOT" />
-		<set name="etcitem_type" val="SOULSHOT" />
-		<skills>
-			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
 	</item>
 	<item id="2516" name="Saber*Saber" type="Weapon">

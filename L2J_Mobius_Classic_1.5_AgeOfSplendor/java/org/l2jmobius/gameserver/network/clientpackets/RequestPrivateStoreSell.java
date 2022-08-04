@@ -32,6 +32,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class RequestPrivateStoreSell implements IClientIncomingPacket
 {
+	private static final int BATCH_LENGTH = 32; // length of the one item
+	
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
 	
@@ -39,39 +41,26 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_storePlayerId = packet.readD();
-		final int itemsCount = packet.readD();
-		if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET))
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
 			return false;
 		}
-		_items = new ItemRequest[itemsCount];
-		for (int i = 0; i < itemsCount; i++)
+		_items = new ItemRequest[count];
+		for (int i = 0; i < count; i++)
 		{
-			final int slot = packet.readD();
+			final int objectId = packet.readD();
 			final int itemId = packet.readD();
 			packet.readH(); // TODO analyse this
 			packet.readH(); // TODO analyse this
-			final long count = packet.readQ();
+			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			packet.readD(); // visual id
-			packet.readD(); // option 1
-			packet.readD(); // option 2
-			final int soulCrystals = packet.readC();
-			for (int s = 0; s < soulCrystals; s++)
-			{
-				packet.readD(); // soul crystal option
-			}
-			final int soulCrystals2 = packet.readC();
-			for (int s = 0; s < soulCrystals2; s++)
-			{
-				packet.readD(); // sa effect
-			}
-			if (/* (slot < 1) || */ (itemId < 1) || (count < 1) || (price < 0))
+			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;
 			}
-			_items[i] = new ItemRequest(slot, itemId, count, price);
+			_items[i] = new ItemRequest(objectId, itemId, cnt, price);
 		}
 		return true;
 	}

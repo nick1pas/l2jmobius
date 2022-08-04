@@ -85,7 +85,7 @@ public class Q00002_WhatWomenWant extends Quest
 				giveAdena(player, 450, true);
 				qs.exitQuest(false, true);
 				// Newbie Guide
-				showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
+				showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 				addExpAndSp(player, 4254, 335);
 				giveAdena(player, 1850, true);
 				break;

@@ -127,7 +127,7 @@ public class Q00005_MinersFavor extends Quest
 							giveItems(player, NECKLACE, 1);
 							qs.exitQuest(false, true);
 							// Newbie Guide
-							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
+							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 							htmltext = "30554-06.html";
 						}
 						break;

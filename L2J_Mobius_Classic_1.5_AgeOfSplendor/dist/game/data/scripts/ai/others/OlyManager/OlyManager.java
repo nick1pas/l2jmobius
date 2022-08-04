@@ -60,10 +60,13 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	
 	private OlyManager()
 	{
-		addStartNpc(MANAGER);
-		addFirstTalkId(MANAGER);
-		addTalkId(MANAGER);
-		BypassHandler.getInstance().registerHandler(this);
+		if (Config.OLYMPIAD_ENABLED)
+		{
+			addStartNpc(MANAGER);
+			addFirstTalkId(MANAGER);
+			addTalkId(MANAGER);
+			BypassHandler.getInstance().registerHandler(this);
+		}
 	}
 	
 	@Override

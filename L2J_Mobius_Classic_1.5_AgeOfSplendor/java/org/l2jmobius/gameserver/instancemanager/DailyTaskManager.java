@@ -30,10 +30,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
-import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
-import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
@@ -127,7 +125,6 @@ public class DailyTaskManager
 		resetWorldChatPoints();
 		resetRecommends();
 		resetTrainingCamp();
-		resetDailyMissionRewards();
 		resetAttendanceRewards();
 		resetVip();
 	}
@@ -435,11 +432,6 @@ public class DailyTaskManager
 			
 			player.getAccountVariables().restoreMe();
 		}
-	}
-	
-	private void resetDailyMissionRewards()
-	{
-		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
 	private void resetAttendanceRewards()

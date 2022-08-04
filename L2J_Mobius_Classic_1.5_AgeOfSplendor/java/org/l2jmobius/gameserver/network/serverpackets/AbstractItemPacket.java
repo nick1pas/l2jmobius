@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.enums.ItemListType;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.item.WarehouseItem;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
@@ -63,6 +62,21 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeItem(packet, new ItemInfo(item));
 	}
 	
+	protected void writeTradeItem(PacketWriter packet, TradeItem item)
+	{
+		packet.writeH(item.getItem().getType1());
+		packet.writeD(item.getObjectId()); // ObjectId
+		packet.writeD(item.getItem().getDisplayId()); // ItemId
+		packet.writeQ(item.getCount()); // Quantity
+		packet.writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+		packet.writeC(item.getCustomType1()); // Filler (always 0)
+		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+		packet.writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
+		packet.writeH(0); // Equipped : 00-No, 01-yes
+		packet.writeH(item.getCustomType2());
+		writeItemElementalAndEnchant(packet, new ItemInfo(item));
+	}
+	
 	protected void writeItem(PacketWriter packet, ItemInfo item)
 	{
 		final int mask = calculateMask(item);
@@ -97,10 +111,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			packet.writeD(item.getVisualId()); // Item remodel visual ID
 		}
-		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
-		{
-			writeItemEnsoulOptions(packet, item);
-		}
 	}
 	
 	protected static int calculateMask(ItemInfo item)
@@ -128,10 +138,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
-		}
-		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
-		{
-			mask |= ItemListType.SOUL_CRYSTAL.getMask();
 		}
 		return mask;
 	}
@@ -191,28 +197,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeItemEnsoulOptions(PacketWriter packet, ItemInfo item)
-	{
-		if (item != null)
-		{
-			packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalOptions())
-			{
-				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-			}
-			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			{
-				packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-			}
-		}
-		else
-		{
-			packet.writeC(0); // Size of regular soul crystal options.
-			packet.writeC(0); // Size of special soul crystal options.
-		}
-	}
-	
 	protected void writeInventoryBlock(PacketWriter packet, PlayerInventory inventory)
 	{
 		if (inventory.hasInventoryBlock())
@@ -228,5 +212,18 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			packet.writeH(0);
 		}
+	}
+	
+	protected void writeCommissionItem(PacketWriter packet, ItemInfo item)
+	{
+		packet.writeD(0); // Always 0
+		packet.writeD(item.getItem().getId());
+		packet.writeQ(item.getCount());
+		packet.writeH(item.getItem().getType2());
+		packet.writeQ(item.getItem().getBodyPart());
+		packet.writeH(item.getEnchantLevel());
+		packet.writeH(item.getCustomType2());
+		writeItemElementalAndEnchant(packet, item);
+		packet.writeD(item.getVisualId());
 	}
 }

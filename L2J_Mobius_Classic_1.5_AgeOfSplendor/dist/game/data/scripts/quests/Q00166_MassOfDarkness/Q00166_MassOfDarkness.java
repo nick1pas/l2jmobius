@@ -94,7 +94,7 @@ public class Q00166_MassOfDarkness extends Quest
 					{
 						if (qs.isCond(2) && hasQuestItems(player, UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
 						{
-							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
+							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
 							giveAdena(player, 50, true);
 							qs.exitQuest(false, true);
 							htmltext = "30130-05.html";

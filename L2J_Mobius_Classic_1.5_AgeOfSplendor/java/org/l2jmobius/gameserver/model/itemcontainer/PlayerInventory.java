@@ -1095,10 +1095,6 @@ public class PlayerInventory extends Inventory
 		{
 			item.giveSkillsToOwner();
 			item.applyEnchantStats();
-			if (item.isEquipped())
-			{
-				item.applySpecialAbilities();
-			}
 		}
 	}
 	
