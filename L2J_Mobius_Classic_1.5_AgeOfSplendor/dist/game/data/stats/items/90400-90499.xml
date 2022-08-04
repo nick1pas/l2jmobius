@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="90494" name="Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
+		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>
