@@ -71,6 +71,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HUNTING_ZONE_ENTRY = "HUNTING_ZONE_ENTRY_";
 	public static final String HUNTING_ZONE_TIME = "HUNTING_ZONE_TIME_";
 	public static final String HUNTING_ZONE_REMAIN_REFILL = "HUNTING_ZONE_REMAIN_REFILL_";
+	public static final String IS_LEGEND = "IS_LEGEND";
 	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
 	public static final String HOMUNCULUS_HP_POINTS = "HOMUNCULUS_HP_POINTS";
 	public static final String HOMUNCULUS_SP_POINTS = "HOMUNCULUS_SP_POINTS";

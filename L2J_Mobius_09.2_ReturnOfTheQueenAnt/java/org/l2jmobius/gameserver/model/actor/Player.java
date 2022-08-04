@@ -99,6 +99,7 @@ import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.NextActionType;
+import org.l2jmobius.gameserver.enums.OlympiadMode;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
@@ -308,7 +309,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCoinInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
@@ -365,6 +365,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoSho
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
@@ -9298,7 +9299,10 @@ public class Player extends Playable
 	
 	public void enterObserverMode(Location loc)
 	{
-		setLastLocation();
+		if (!isInOlympiadMode())
+		{
+			setLastLocation();
+		}
 		
 		// Remove Hide.
 		getEffectList().stopEffects(AbnormalType.HIDE);
@@ -9351,7 +9355,7 @@ public class Player extends Playable
 		{
 			standUp();
 		}
-		if (!_observerMode)
+		if (!_observerMode && !isInOlympiadMode())
 		{
 			setLastLocation();
 		}
@@ -9362,7 +9366,7 @@ public class Player extends Playable
 		setInvisible(true);
 		setInstance(OlympiadGameManager.getInstance().getOlympiadTask(id).getStadium().getInstance());
 		teleToLocation(loc, false);
-		sendPacket(new ExOlympiadMode(3));
+		sendPacket(new ExOlympiadMode(OlympiadMode.SPECTATOR));
 		broadcastUserInfo();
 	}
 	
@@ -9398,7 +9402,7 @@ public class Player extends Playable
 		_olympiadGameId = -1;
 		_observerMode = false;
 		setTarget(null);
-		sendPacket(new ExOlympiadMode(0));
+		sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
 		setInstance(null);
 		teleToLocation(_lastLoc, true);
 		if (!isGM())
@@ -9581,14 +9585,24 @@ public class Player extends Playable
 		return _olympiadStart;
 	}
 	
+	public boolean isInOlympiadMode()
+	{
+		return _inOlympiadMode;
+	}
+	
 	public boolean isHero()
 	{
 		return _hero;
 	}
 	
-	public boolean isInOlympiadMode()
+	public boolean isLegend()
 	{
-		return _inOlympiadMode;
+		return getVariables().getBoolean(PlayerVariables.IS_LEGEND, false);
+	}
+	
+	public void setLegend(boolean legend)
+	{
+		getVariables().set(PlayerVariables.IS_LEGEND, legend);
 	}
 	
 	public boolean isInDuel()

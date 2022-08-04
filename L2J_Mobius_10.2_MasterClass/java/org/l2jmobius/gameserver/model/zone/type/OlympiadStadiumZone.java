@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
 
 /**
  * An olympiad stadium

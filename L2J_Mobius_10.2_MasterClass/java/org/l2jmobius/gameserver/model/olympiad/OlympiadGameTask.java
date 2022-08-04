@@ -23,6 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchInfo;
 
 /**
  * @author DS
@@ -116,7 +117,7 @@ public class OlympiadGameTask implements Runnable
 	
 	public boolean isBattleStarted()
 	{
-		return _state == OlympiadGameState.BATTLE_IN_PROGRESS;
+		return (_state == OlympiadGameState.BATTLE_IN_PROGRESS) || (_state == OlympiadGameState.ROUND_2) || (_state == OlympiadGameState.ROUND_3);
 	}
 	
 	public boolean isBattleFinished()
@@ -163,6 +164,8 @@ public class OlympiadGameTask implements Runnable
 	{
 		try
 		{
+			final String player1 = _game.getPlayerNames()[0];
+			final String player2 = _game.getPlayerNames()[1];
 			int delay = 1; // schedule next call after 1s
 			switch (_state)
 			{
@@ -170,7 +173,7 @@ public class OlympiadGameTask implements Runnable
 				case BEGIN:
 				{
 					_state = OlympiadGameState.TELEPORT_TO_ARENA;
-					_countDown = Config.ALT_OLY_WAIT_TIME;
+					_countDown = Config.OLYMPIAD_WAIT_TIME;
 					break;
 				}
 				// Teleport to arena countdown
@@ -198,6 +201,7 @@ public class OlympiadGameTask implements Runnable
 				// Game start, port players to arena
 				case GAME_STARTED:
 				{
+					_stadium.makeZonePvPForCharsInside(false);
 					if (!startGame())
 					{
 						_state = OlympiadGameState.GAME_STOPPED;
@@ -215,7 +219,7 @@ public class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						if (_countDown == 55) // 55sec
+						if (_countDown == 50) // 55sec
 						{
 							_game.healPlayers();
 						}
@@ -232,6 +236,7 @@ public class OlympiadGameTask implements Runnable
 					{
 						_game.makePlayersInvul();
 						_game.resetDamage();
+						_game.resetDamageFinal();
 						_stadium.openDoors();
 						
 						_state = OlympiadGameState.BATTLE_COUNTDOWN_SECOND;
@@ -255,15 +260,33 @@ public class OlympiadGameTask implements Runnable
 					{
 						_state = OlympiadGameState.BATTLE_STARTED;
 						_game.removePlayersInvul();
-						_stadium.broadcastPacket(new SystemMessage(SystemMessageId.HIDDEN_MSG_START_OLYMPIAD));
 					}
 					break;
 				}
 				// Beginning of the battle
 				case BATTLE_STARTED:
 				{
-					_countDown = 0;
+					_countDown = (int) Config.OLYMPIAD_BATTLE / 1000;
+					
+					_game.broadcastPacket(new ExOlympiadMatchInfo(player1, player2, 0, 0, 1, 100));
+					
+					final SystemMessage round1 = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_ROUND_1);
+					_stadium.broadcastPacket(round1);
+					final SystemMessage start = new SystemMessage(SystemMessageId.HIDDEN_MSG_START_OLYMPIAD);
+					_stadium.broadcastPacket(start);
+					_game.broadcastOlympiadInfo(_stadium);
+					_state = OlympiadGameState.ROUND_1; // set state first, used in zone update
+					if (!startBattle())
+					{
+						_state = OlympiadGameState.GAME_STOPPED;
+					}
+					break;
+				}
+				case ROUND_1:
+				{
 					_state = OlympiadGameState.BATTLE_IN_PROGRESS; // set state first, used in zone update
+					_countDown = (int) Config.OLYMPIAD_BATTLE / 1000;
+					_stadium.makeZonePvPForCharsInside(true);
 					if (!startBattle())
 					{
 						_state = OlympiadGameState.GAME_STOPPED;
@@ -273,8 +296,8 @@ public class OlympiadGameTask implements Runnable
 				// Checks during battle
 				case BATTLE_IN_PROGRESS:
 				{
-					_countDown += 1000;
-					final int remaining = (int) ((Config.ALT_OLY_BATTLE - _countDown) / 1000);
+					_countDown -= 1;
+					final int remaining = (int) Config.OLYMPIAD_BATTLE / 1000;
 					for (int announceTime : BATTLE_END_TIME_SECOND)
 					{
 						if (announceTime == remaining)
@@ -285,10 +308,119 @@ public class OlympiadGameTask implements Runnable
 							break;
 						}
 					}
-					
-					if (checkBattle() || (_countDown > Config.ALT_OLY_BATTLE))
+					if (roundCheck() || (_countDown <= 0))
+					{
+						round1();
+						_game.makePlayersInvul();
+						_state = OlympiadGameState.WAIT_TIME_1;
+						_stadium.makeZonePvPForCharsInside(false);
+						_countDown = 20;
+					}
+					else if (checkBattle())
 					{
 						_state = OlympiadGameState.GAME_STOPPED;
+					}
+					break;
+				}
+				case WAIT_TIME_1:
+				{
+					_countDown -= 1;
+					if (_countDown == 14)
+					{
+						_game.buffPlayers();
+						_game.portPlayersToSpots(_stadium.getZone().getSpawns(), _stadium.getInstance());
+						_game.broadcastOlympiadInfo(_stadium);
+					}
+					if (_countDown <= 0)
+					{
+						_game.removePlayersInvul();
+						_state = OlympiadGameState.ROUND_2;
+						_countDown = (int) Config.OLYMPIAD_BATTLE / 1000;
+						final SystemMessage round2 = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_ROUND_2);
+						_stadium.broadcastPacket(round2);
+						final SystemMessage start = new SystemMessage(SystemMessageId.HIDDEN_MSG_START_OLYMPIAD);
+						_stadium.broadcastPacket(start);
+						_stadium.makeZonePvPForCharsInside(true);
+						_game.broadcastOlympiadInfo(_stadium);
+					}
+					break;
+				}
+				case ROUND_2:
+				{
+					_countDown -= 1;
+					final int remaining = (int) Config.OLYMPIAD_BATTLE / 1000;
+					for (int announceTime : BATTLE_END_TIME_SECOND)
+					{
+						if (announceTime == remaining)
+						{
+							final SystemMessage sm = new SystemMessage(SystemMessageId.THE_GAME_ENDS_IN_S1_SEC);
+							sm.addInt(announceTime);
+							_stadium.broadcastPacket(sm);
+							break;
+						}
+					}
+					if (roundCheck() || (_countDown <= 0))
+					{
+						round2();
+						if (_game.isMatchEnd())
+						{
+							_state = OlympiadGameState.GAME_STOPPED;
+							break;
+						}
+						_state = OlympiadGameState.WAIT_TIME_2;
+						_game.makePlayersInvul();
+						_stadium.makeZonePvPForCharsInside(false);
+						_countDown = 20;
+					}
+					else if (checkBattle())
+					{
+						_state = OlympiadGameState.GAME_STOPPED;
+					}
+					break;
+				}
+				case WAIT_TIME_2:
+				{
+					_countDown -= 1;
+					if (_countDown == 14)
+					{
+						_game.buffPlayers();
+						_game.roundTwoCleanUp();
+						_game.broadcastOlympiadInfo(_stadium);
+						_game.portPlayersToSpots(_stadium.getZone().getSpawns(), _stadium.getInstance());
+					}
+					if (_countDown <= 0)
+					{
+						_state = OlympiadGameState.ROUND_3;
+						_game.removePlayersInvul();
+						_countDown = (int) Config.OLYMPIAD_BATTLE / 1000;
+						final SystemMessage round2 = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_ROUND_3);
+						_stadium.broadcastPacket(round2);
+						final SystemMessage start = new SystemMessage(SystemMessageId.HIDDEN_MSG_START_OLYMPIAD);
+						_stadium.broadcastPacket(start);
+						_stadium.makeZonePvPForCharsInside(true);
+						_game.broadcastOlympiadInfo(_stadium);
+					}
+					break;
+				}
+				case ROUND_3:
+				{
+					_countDown -= 1;
+					final int remaining = (int) Config.OLYMPIAD_BATTLE / 1000;
+					for (int announceTime : BATTLE_END_TIME_SECOND)
+					{
+						if (announceTime == remaining)
+						{
+							final SystemMessage sm = new SystemMessage(SystemMessageId.THE_GAME_ENDS_IN_S1_SEC);
+							sm.addInt(announceTime);
+							_stadium.broadcastPacket(sm);
+							break;
+						}
+					}
+					if (roundCheck() || (_countDown <= 0) || checkBattle())
+					{
+						round3();
+						_game.makePlayersInvul();
+						_stadium.makeZonePvPForCharsInside(false);
 					}
 					break;
 				}
@@ -425,7 +557,7 @@ public class OlympiadGameTask implements Runnable
 			{
 				// game successfully started
 				_game.broadcastOlympiadInfo(_stadium);
-				_stadium.broadcastPacket(new SystemMessage(SystemMessageId.THE_MATCH_HAS_BEGUN_FIGHT));
+				// _stadium.broadcastPacket(new SystemMessage(SystemMessageId.THE_MATCH_HAS_BEGUN_FIGHT));
 				_stadium.updateZoneStatusForCharactersInside();
 				return true;
 			}
@@ -435,6 +567,82 @@ public class OlympiadGameTask implements Runnable
 			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		return false;
+	}
+	
+	private boolean roundCheck()
+	{
+		try
+		{
+			return _game.roundWinner();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+		return true;
+	}
+	
+	private void round1()
+	{
+		try
+		{
+			_game.validateRound1Winner(_stadium);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+	}
+	
+	private void round2()
+	{
+		try
+		{
+			_game.validateRound2Winner(_stadium);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+	}
+	
+	private void round3()
+	{
+		try
+		{
+			_game.validateRound3Winner(_stadium);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+		
+		try
+		{
+			_game.makePlayersInvul();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+		
+		try
+		{
+			_stadium.updateZoneStatusForCharactersInside();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+		
+		try
+		{
+			_state = OlympiadGameState.GAME_STOPPED;
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
 	}
 	
 	/**

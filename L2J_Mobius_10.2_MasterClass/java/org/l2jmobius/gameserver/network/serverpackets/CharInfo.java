@@ -196,7 +196,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.getTeam().getId()); // Confirmed
 		packet.writeD(_player.getClanCrestLargeId());
 		packet.writeC(_player.getNobleLevel()); // Confirmed
-		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
+		packet.writeC(_player.isLegend() ? 4 : _player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2? 4 = legend
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // Confirmed
 		final ILocational baitLocation = _player.getFishing().getBaitLocation();

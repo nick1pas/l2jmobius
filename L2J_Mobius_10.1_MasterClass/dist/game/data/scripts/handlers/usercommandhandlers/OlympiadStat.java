@@ -16,12 +16,15 @@
  */
 package handlers.usercommandhandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadRecord;
 
 /**
  * Olympiad Stat user command.
@@ -37,14 +40,25 @@ public class OlympiadStat implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, Player player)
 	{
+		if (!Config.OLYMPIAD_ENABLED)
+		{
+			player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
+			return false;
+		}
+		
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
 		final int nobleObjId = player.getObjectId();
-		final WorldObject target = player.getTarget();
-		if ((target == null) || !target.isPlayer() || (target.getActingPlayer().getNobleLevel() == 0))
+		WorldObject target = player.getTarget();
+		if ((target == null) || !target.isPlayer())
+		{
+			player.sendPacket(new ExOlympiadRecord(player, 1, OlympiadManager.getInstance().isRegistered(player) ? 1 : 0));
+			return true;
+		}
+		else if ((target.getActingPlayer().getNobleLevel() == 0))
 		{
 			player.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_WHEN_THE_TARGET_IS_AN_AWAKENED_NOBLESSE_EXALTED);
 			return false;
@@ -60,6 +74,7 @@ public class OlympiadStat implements IUserCommandHandler
 		final SystemMessage sm2 = new SystemMessage(SystemMessageId.THIS_WEEK_YOU_CAN_PARTICIPATE_IN_A_TOTAL_OF_S1_MATCHES);
 		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
 		player.sendPacket(sm2);
+		player.sendPacket(new ExOlympiadRecord(player, 1, OlympiadManager.getInstance().isRegistered(player) ? 1 : 0));
 		return true;
 	}
 	

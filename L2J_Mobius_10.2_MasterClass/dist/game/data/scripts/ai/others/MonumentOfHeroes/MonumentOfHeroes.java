@@ -67,6 +67,23 @@ public class MonumentOfHeroes extends AbstractNpcAI
 		30404, // Infinity Dual Dagger (Dual Daggers)
 		30405, // Infinity Dual Blunt Weapon (Dual Blunt Weapon)
 	};
+	private static final int[] WEAPONS_LEGEND =
+	{
+		48554, // Legend's Infinity Shaper (dagger)
+		48555, // Legend's Infinity Cutter (1-H Sword)
+		48556, // Legend's Infinity Slasher (2-H Sword)
+		48557, // Legend's Infinity Avenger (1-H Blunt Weapon)
+		48558, // Legend's Infinity Fighter (Fist)
+		48559, // Legend's Infinity Stormer (Polearm)
+		48560, // Legend's Infinity Thrower (bow)
+		48561, // Legend's Infinity Guardian (crossbow)
+		48562, // Legend's Infinity Buster (magic sword)
+		48563, // Legend's Infinity Caster (magic blunt weapon)
+		48564, // Legend's Infinity Retributer (two-handed magic blunt weapon)
+		48565, // Legend's Infinity Dual Sword (Dual Swords)
+		48566, // Legend's Infinity Dual Dagger (Dual Daggers)
+		48567, // Legend's Infinity Dual Blunt Weapon (Dual Blunt Weapon)
+	};
 	
 	private MonumentOfHeroes()
 	{
@@ -143,7 +160,18 @@ public class MonumentOfHeroes extends AbstractNpcAI
 			}
 			case "heroWeapon":
 			{
-				if (Hero.getInstance().isHero(player.getObjectId()))
+				if (player.isLegend())
+				{
+					if (player.isInventoryUnder80(false))
+					{
+						htmltext = hasAtLeastOneQuestItem(player, WEAPONS_LEGEND) || hasAtLeastOneQuestItem(player, WEAPONS) ? "MonumentOfHeroes-weaponHave.html" : "MonumentOfHeroes-weaponListLegend.html";
+					}
+					else
+					{
+						player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+					}
+				}
+				else if (Hero.getInstance().isHero(player.getObjectId()))
 				{
 					if (player.isInventoryUnder80(false))
 					{
@@ -265,6 +293,25 @@ public class MonumentOfHeroes extends AbstractNpcAI
 			case "give_30403": // Infinity Dual Sword (Dual Swords)
 			case "give_30404": // Infinity Dual Dagger (Dual Daggers)
 			case "give_30405": // Infinity Dual Blunt Weapon (Dual Blunt Weapon)
+			{
+				final int weaponId = Integer.parseInt(event.replace("give_", ""));
+				giveItems(player, weaponId, 1);
+				break;
+			}
+			case "give_48554": // Infinity Shaper (dagger)
+			case "give_48555": // Infinity Cutter (1-H Sword)
+			case "give_48556": // Infinity Slasher (2-H Sword)
+			case "give_48557": // Infinity Avenger (1-H Blunt Weapon)
+			case "give_48558": // Infinity Fighter (Fist)
+			case "give_48559": // Infinity Stormer (Polearm)
+			case "give_48560": // Infinity Thrower (bow)
+			case "give_48561": // Infinity Shooter (crossbow)
+			case "give_48562": // Infinity Buster (magic sword)
+			case "give_48563": // Infinity Caster (magic blunt weapon)
+			case "give_48564": // Infinity Retributer (two-handed magic blunt weapon)
+			case "give_48565": // Infinity Dual Sword (Dual Swords)
+			case "give_48566": // Infinity Dual Dagger (Dual Daggers)
+			case "give_48567": // Infinity Dual Blunt Weapon (Dual Blunt Weapon)
 			{
 				final int weaponId = Integer.parseInt(event.replace("give_", ""));
 				giveItems(player, weaponId, 1);

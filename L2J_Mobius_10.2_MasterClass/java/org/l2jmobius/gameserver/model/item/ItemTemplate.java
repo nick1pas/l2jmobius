@@ -940,7 +940,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 	
 	public boolean isOlyRestrictedItem()
 	{
-		return _isOlyRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
+		return _isOlyRestricted || Config.OLYMPIAD_RESTRICTED_ITEMS.contains(_itemId);
 	}
 	
 	/**

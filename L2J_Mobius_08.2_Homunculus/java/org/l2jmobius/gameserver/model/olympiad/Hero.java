@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -71,7 +72,7 @@ public class Hero
 	private static final String INSERT_HERO = "INSERT INTO heroes (charId, class_id, count, legend_count, played, claimed) VALUES (?,?,?,?,?,?)";
 	private static final String UPDATE_HERO = "UPDATE heroes SET count = ?, legend_count = ?, played = ?, claimed = ? WHERE charId = ?";
 	private static final String GET_CLAN_ALLY = "SELECT characters.clanid AS clanid, coalesce(clan_data.ally_Id, 0) AS allyId FROM characters LEFT JOIN clan_data ON clan_data.clan_id = characters.clanid WHERE characters.charId = ?";
-	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390, 48551, 48552) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
+	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390, 48551, 48552, 48554, 48555, 48556, 48557, 48558, 48559, 48560, 48561, 48562, 48563, 48564, 48565, 48566, 48567) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
 	
 	private static final Map<Integer, StatSet> HEROES = new ConcurrentHashMap<>();
 	private static final Map<Integer, StatSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
@@ -95,7 +96,10 @@ public class Hero
 	
 	protected Hero()
 	{
-		init();
+		if (Config.OLYMPIAD_ENABLED)
+		{
+			init();
+		}
 	}
 	
 	private void init()
@@ -607,6 +611,10 @@ public class Hero
 			}
 			
 			player.setHero(false);
+			if (player.isLegend())
+			{
+				player.setLegend(false);
+			}
 			
 			for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 			{
@@ -644,19 +652,17 @@ public class Hero
 		
 		for (StatSet hero : newHeroes)
 		{
+			final int legendId = RankManager.getInstance().getOlyRankList().get(1).getInt("charId", 0);
 			final int charId = hero.getInt(Olympiad.CHAR_ID);
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
 				final StatSet oldHero = COMPLETE_HEROS.get(charId);
-				if (hero.getInt(LEGEND_COUNT, 0) == 1)
+				final int count = oldHero.getInt(COUNT);
+				oldHero.set(COUNT, count + 1);
+				if (charId == legendId)
 				{
-					final int count = oldHero.getInt(LEGEND_COUNT);
-					oldHero.set(LEGEND_COUNT, count + 1);
-				}
-				else
-				{
-					final int count = oldHero.getInt(COUNT);
-					oldHero.set(COUNT, count + 1);
+					final int legendCount = oldHero.getInt(LEGEND_COUNT);
+					oldHero.set(LEGEND_COUNT, legendCount + 1);
 				}
 				oldHero.set(PLAYED, 1);
 				oldHero.set(CLAIMED, false);
@@ -667,13 +673,10 @@ public class Hero
 				final StatSet newHero = new StatSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
-				if (hero.getInt(LEGEND_COUNT, 0) == 1)
+				newHero.set(COUNT, 1);
+				if (charId == legendId)
 				{
 					newHero.set(LEGEND_COUNT, 1);
-				}
-				else
-				{
-					newHero.set(COUNT, 1);
 				}
 				newHero.set(PLAYED, 1);
 				newHero.set(CLAIMED, false);
@@ -918,6 +921,7 @@ public class Hero
 	 */
 	public void claimHero(Player player)
 	{
+		final int legendId = RankManager.getInstance().getOlyRankList().get(1).getInt("charId", 0);
 		StatSet hero = HEROES.get(player.getObjectId());
 		if (hero == null)
 		{
@@ -938,6 +942,19 @@ public class Hero
 		}
 		
 		player.setHero(true);
+		if (player.getObjectId() == legendId)
+		{
+			player.setLegend(true);
+			player.getVariables().set(ALLY_NAME, false);
+			if ((clan != null) && (clan.getLevel() >= 5))
+			{
+				clan.addReputationScore(100000);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION);
+				sm.addString(CharNameTable.getInstance().getNameById(player.getObjectId()));
+				sm.addInt(Config.HERO_POINTS);
+				clan.broadcastToOnlineMembers(sm);
+			}
+		}
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20016)); // Hero Animation
 		player.sendPacket(new UserInfo(player));
 		player.broadcastUserInfo();

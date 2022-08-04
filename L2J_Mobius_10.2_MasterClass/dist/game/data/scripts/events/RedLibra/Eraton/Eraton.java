@@ -386,7 +386,7 @@ public class Eraton extends AbstractNpcAI
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement ps = con.prepareStatement("UPDATE olympiad_nobles SET olympiad_points=?, class_id=? WHERE charId='" + player.getObjectId() + "'"))
 				{
-					ps.setInt(1, Config.ALT_OLY_START_POINTS);
+					ps.setInt(1, Config.OLYMPIAD_START_POINTS);
 					ps.setInt(2, classId);
 					ps.executeUpdate();
 				}

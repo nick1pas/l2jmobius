@@ -27,7 +27,9 @@ import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.OlympiadMode;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -35,11 +37,14 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
+import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchResult;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchInfo;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchResult;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 
 /**
  * @author GodKratos, Pere, DS
@@ -48,9 +53,18 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 {
 	protected int _damageP1 = 0;
 	protected int _damageP2 = 0;
+	protected int _damageP1Final = 0;
+	protected int _damageP2Final = 0;
 	
 	protected Participant _playerOne;
 	protected Participant _playerTwo;
+	
+	String round_1_winner;
+	String round_2_winner;
+	String round_3_winner;
+	int player1Wins = 0;
+	int player2Wins = 0;
+	boolean matchEnd;
 	
 	protected OlympiadGameNormal(int id, Participant[] opponents)
 	{
@@ -162,8 +176,25 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		boolean result = true;
 		try
 		{
-			result &= portPlayerToArena(_playerOne, spawns.get(0), _stadiumId, instance);
-			result &= portPlayerToArena(_playerTwo, spawns.get(spawns.size() / 2), _stadiumId, instance);
+			result &= portPlayerToArena(_playerOne, spawns.get(0), _stadiumId, instance, OlympiadMode.BLUE);
+			result &= portPlayerToArena(_playerTwo, spawns.get(spawns.size() / 2), _stadiumId, instance, OlympiadMode.RED);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "", e);
+			return false;
+		}
+		return result;
+	}
+	
+	@Override
+	protected final boolean portPlayersToSpots(List<Location> spawns, Instance instance)
+	{
+		boolean result = true;
+		try
+		{
+			result &= portPlayerToSpot(_playerOne, spawns.get(0), _stadiumId);
+			result &= portPlayerToSpot(_playerTwo, spawns.get(spawns.size() / 2), _stadiumId);
 		}
 		catch (Exception e)
 		{
@@ -333,6 +364,407 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
+	public final boolean roundWinner()
+	{
+		if (!checkBattleStatus())
+		{
+			return true;
+		}
+		
+		boolean playerOneLost = true;
+		try
+		{
+			if (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId)
+			{
+				playerOneLost = _playerOne.getPlayer().isDead();
+			}
+		}
+		catch (Exception e)
+		{
+			playerOneLost = true;
+		}
+		
+		boolean playerTwoLost = true;
+		try
+		{
+			if (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId)
+			{
+				playerTwoLost = _playerTwo.getPlayer().isDead();
+			}
+		}
+		catch (Exception e)
+		{
+			playerTwoLost = true;
+		}
+		
+		return playerOneLost || playerTwoLost;
+	}
+	
+	@Override
+	public void matchEnd(boolean value)
+	{
+		matchEnd = value;
+	}
+	
+	@Override
+	public boolean isMatchEnd()
+	{
+		return matchEnd;
+	}
+	
+	@Override
+	protected void validateRound1Winner(OlympiadStadium stadium)
+	{
+		if (_aborted)
+		{
+			return;
+		}
+		
+		SystemMessage sm;
+		
+		try
+		{
+			double playerOneHp = 0;
+			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())
+			{
+				playerOneHp = _playerOne.getPlayer().getCurrentHp() + _playerOne.getPlayer().getCurrentCp();
+				if (playerOneHp < 0.5)
+				{
+					playerOneHp = 0;
+				}
+			}
+			
+			double playerTwoHp = 0;
+			if ((_playerTwo.getPlayer() != null) && !_playerTwo.getPlayer().isDead())
+			{
+				playerTwoHp = _playerTwo.getPlayer().getCurrentHp() + _playerTwo.getPlayer().getCurrentCp();
+				if (playerTwoHp < 0.5)
+				{
+					playerTwoHp = 0;
+				}
+			}
+			
+			// if players crashed, search if they've relogged
+			_playerOne.updatePlayer();
+			_playerTwo.updatePlayer();
+			
+			_damageP1Final += _damageP1;
+			_damageP2Final += _damageP2;
+			
+			if (((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline()) && ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline()))
+			{
+				_playerOne.updateStat(COMP_DRAWN, 1);
+				_playerTwo.updateStat(COMP_DRAWN, 1);
+				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
+				stadium.broadcastPacket(sm);
+			}
+			else if ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerOne.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerTwo.getPlayer().setCurrentCp(_playerTwo.getPlayer().getMaxCp() * 0.7);
+				_playerTwo.getPlayer().setCurrentHp(_playerTwo.getPlayer().getMaxHp() * 0.7);
+				_playerTwo.getPlayer().setCurrentMp(_playerTwo.getPlayer().getMaxMp() * 0.7);
+				_playerTwo.getPlayer().sendPacket(loose);
+				_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 20));
+				_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 20));
+				ThreadPool.schedule(() ->
+				{
+					SkillCaster.triggerCast(_playerOne.getPlayer(), _playerOne.getPlayer(), CommonSkill.OLYMPIAD_WIN.getSkill());
+				}, 2000);
+				ThreadPool.schedule(() ->
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 100));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 100));
+				}, 20000);
+				round_1_winner = _playerOne.getName();
+				player1Wins += 1;
+			}
+			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP2 > _damageP1) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerTwo.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerOne.getPlayer().sendPacket(loose);
+				_playerOne.getPlayer().setCurrentCp(_playerOne.getPlayer().getMaxCp() * 0.7);
+				_playerOne.getPlayer().setCurrentHp(_playerOne.getPlayer().getMaxHp() * 0.7);
+				_playerOne.getPlayer().setCurrentMp(_playerOne.getPlayer().getMaxMp() * 0.7);
+				_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 1, 1, 20));
+				_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 1, 1, 20));
+				ThreadPool.schedule(() ->
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 1, 1, 100));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 1, 1, 100));
+				}, 20000);
+				ThreadPool.schedule(() ->
+				{
+					_playerTwo.getPlayer().useMagic(CommonSkill.OLYMPIAD_WIN.getSkill(), null, false, false);
+				}, 2000);
+				round_1_winner = _playerTwo.getName();
+				player2Wins += 1;
+			}
+			else
+			{
+				round_1_winner = null;
+				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(_tie);
+				_playerOne.getPlayer().broadcastPacket(_tie);
+			}
+			resetDamage();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception on validateRound1Winner(): " + e.getMessage(), e);
+		}
+	}
+	
+	@Override
+	protected void validateRound2Winner(OlympiadStadium stadium)
+	{
+		if (_aborted)
+		{
+			return;
+		}
+		
+		SystemMessage sm;
+		
+		try
+		{
+			double playerOneHp = 0;
+			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())
+			{
+				playerOneHp = _playerOne.getPlayer().getCurrentHp() + _playerOne.getPlayer().getCurrentCp();
+				if (playerOneHp < 0.5)
+				{
+					playerOneHp = 0;
+				}
+			}
+			
+			double playerTwoHp = 0;
+			if ((_playerTwo.getPlayer() != null) && !_playerTwo.getPlayer().isDead())
+			{
+				playerTwoHp = _playerTwo.getPlayer().getCurrentHp() + _playerTwo.getPlayer().getCurrentCp();
+				if (playerTwoHp < 0.5)
+				{
+					playerTwoHp = 0;
+				}
+			}
+			
+			// if players crashed, search if they've relogged
+			_playerOne.updatePlayer();
+			_playerTwo.updatePlayer();
+			
+			_damageP1Final += _damageP1;
+			_damageP2Final += _damageP2;
+			
+			if (((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline()) && ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline()))
+			{
+				_playerOne.updateStat(COMP_DRAWN, 1);
+				_playerTwo.updateStat(COMP_DRAWN, 1);
+				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
+				stadium.broadcastPacket(sm);
+			}
+			else if ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerOne.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerTwo.getPlayer().sendPacket(loose);
+				round_2_winner = _playerOne.getName();
+				player1Wins += 1;
+				
+				if (round_1_winner.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 0, 2, 20));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 0, 2, 20));
+					matchEnd(true);
+				}
+				else
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 20));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 20));
+					ThreadPool.schedule(() ->
+					{
+						_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 100));
+						_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 100));
+					}, 20000);
+				}
+				ThreadPool.schedule(() ->
+				{
+					SkillCaster.triggerCast(_playerOne.getPlayer(), _playerOne.getPlayer(), CommonSkill.OLYMPIAD_WIN.getSkill());
+				}, 2000);
+			}
+			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP2 > _damageP1) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerTwo.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerOne.getPlayer().sendPacket(loose);
+				round_2_winner = _playerTwo.getName();
+				player2Wins += 1;
+				
+				if (round_1_winner.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 2, 2, 20));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 2, 2, 20));
+					matchEnd(true);
+				}
+				else
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 20));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 20));
+					ThreadPool.schedule(() ->
+					{
+						_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 100));
+						_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 1, 2, 100));
+					}, 20000);
+				}
+				ThreadPool.schedule(() ->
+				{
+					_playerTwo.getPlayer().useMagic(CommonSkill.OLYMPIAD_WIN.getSkill(), null, false, false);
+				}, 2000);
+			}
+			else
+			{
+				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(_tie);
+				_playerOne.getPlayer().broadcastPacket(_tie);
+			}
+			resetDamage();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception on validateRound2Winner(): " + e.getMessage(), e);
+		}
+	}
+	
+	@Override
+	protected void validateRound3Winner(OlympiadStadium stadium)
+	{
+		if (_aborted)
+		{
+			return;
+		}
+		
+		SystemMessage sm;
+		
+		try
+		{
+			double playerOneHp = 0;
+			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())
+			{
+				playerOneHp = _playerOne.getPlayer().getCurrentHp() + _playerOne.getPlayer().getCurrentCp();
+				if (playerOneHp < 0.5)
+				{
+					playerOneHp = 0;
+				}
+			}
+			
+			double playerTwoHp = 0;
+			if ((_playerTwo.getPlayer() != null) && !_playerTwo.getPlayer().isDead())
+			{
+				playerTwoHp = _playerTwo.getPlayer().getCurrentHp() + _playerTwo.getPlayer().getCurrentCp();
+				if (playerTwoHp < 0.5)
+				{
+					playerTwoHp = 0;
+				}
+			}
+			
+			// if players crashed, search if they've relogged
+			_playerOne.updatePlayer();
+			_playerTwo.updatePlayer();
+			
+			_damageP1Final += _damageP1;
+			_damageP2Final += _damageP2;
+			
+			if (((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline()) && ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline()))
+			{
+				_playerOne.updateStat(COMP_DRAWN, 1);
+				_playerTwo.updateStat(COMP_DRAWN, 1);
+				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
+				stadium.broadcastPacket(sm);
+			}
+			else if ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerOne.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerTwo.getPlayer().sendPacket(loose);
+				round_3_winner = _playerOne.getName();
+				player1Wins += 1;
+				if (round_3_winner.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
+				}
+				else
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
+				}
+				ThreadPool.schedule(() ->
+				{
+					SkillCaster.triggerCast(_playerOne.getPlayer(), _playerOne.getPlayer(), CommonSkill.OLYMPIAD_WIN.getSkill());
+				}, 2000);
+				
+			}
+			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+			{
+				final SystemMessage KO = new SystemMessage(((_damageP2 > _damageP1) && (playerTwoHp != 0) && (playerOneHp != 0)) ? SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIME_OVER : SystemMessageId.HIDDEN_MSG_OLYMPIAD_KNOCK_DOWN);
+				_playerOne.getPlayer().sendPacket(KO);
+				_playerTwo.getPlayer().sendPacket(KO);
+				final SystemMessage win = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_VICTORY);
+				_playerTwo.getPlayer().sendPacket(win);
+				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
+				_playerOne.getPlayer().sendPacket(loose);
+				round_3_winner = _playerTwo.getName();
+				player2Wins += 1;
+				if (round_3_winner.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
+				}
+				else
+				{
+					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
+					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
+				}
+				ThreadPool.schedule(() ->
+				{
+					SkillCaster.triggerCast(_playerTwo.getPlayer(), _playerTwo.getPlayer(), CommonSkill.OLYMPIAD_WIN.getSkill());
+				}, 2000);
+			}
+			else
+			{
+				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(_tie);
+				_playerOne.getPlayer().broadcastPacket(_tie);
+			}
+			resetDamage();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception on validateRound3Winner(): " + e.getMessage(), e);
+		}
+	}
+	
+	@Override
 	protected void validateWinner(OlympiadStadium stadium)
 	{
 		if (_aborted)
@@ -342,7 +774,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		
 		ExOlympiadMatchResult result = null;
 		
-		boolean tie = false;
+		boolean tie = round_1_winner == null ? true : false;
 		int winside = 0;
 		
 		final List<OlympiadInfo> list1 = new ArrayList<>(1);
@@ -358,9 +790,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		{
 			pointDiff = 1;
 		}
-		else if (pointDiff > Config.ALT_OLY_MAX_POINTS)
+		else if (pointDiff > Config.OLYMPIAD_MAX_POINTS)
 		{
-			pointDiff = Config.ALT_OLY_MAX_POINTS;
+			pointDiff = Config.OLYMPIAD_MAX_POINTS;
 		}
 		
 		int points;
@@ -375,13 +807,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				{
 					try
 					{
-						points = Math.min(playerOnePoints / 3, Config.ALT_OLY_MAX_POINTS);
+						points = Math.min(playerOnePoints / 3, Config.OLYMPIAD_MAX_POINTS);
 						removePointsFromParticipant(_playerOne, points);
 						list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - points, -points));
 						
 						winside = 2;
 						
-						if (Config.ALT_OLY_LOG_FIGHTS)
+						if (Config.OLYMPIAD_LOG_FIGHTS)
 						{
 							LOGGER_OLYMPIAD.info(_playerOne.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
@@ -395,7 +827,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				{
 					try
 					{
-						points = Math.min(playerTwoPoints / 3, Config.ALT_OLY_MAX_POINTS);
+						points = Math.min(playerTwoPoints / 3, Config.OLYMPIAD_MAX_POINTS);
 						removePointsFromParticipant(_playerTwo, points);
 						list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - points, -points));
 						
@@ -408,7 +840,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 							winside = 1;
 						}
 						
-						if (Config.ALT_OLY_LOG_FIGHTS)
+						if (Config.OLYMPIAD_LOG_FIGHTS)
 						{
 							LOGGER_OLYMPIAD.info(_playerTwo.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
@@ -420,11 +852,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				}
 				if (winside == 1)
 				{
-					result = new ExOlympiadMatchResult(tie, winside, list1, list2);
+					result = new ExOlympiadMatchResult(tie, winside, list1, list2, 0, 0, 0);
 				}
 				else
 				{
-					result = new ExOlympiadMatchResult(tie, winside, list2, list1);
+					result = new ExOlympiadMatchResult(tie, winside, list2, list1, 0, 0, 0);
 				}
 				stadium.broadcastPacket(result);
 				return;
@@ -449,17 +881,17 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					_playerOne.updateStat(COMP_WON, 1);
 					addPointsToParticipant(_playerOne, pointDiff);
-					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints + pointDiff, pointDiff));
+					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints + pointDiff, pointDiff));
 					
 					_playerTwo.updateStat(COMP_LOST, 1);
 					removePointsFromParticipant(_playerTwo, pointDiff);
-					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints - pointDiff, -pointDiff));
 					
 					winside = 1;
 					
-					rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+					rewardParticipant(_playerOne.getPlayer(), Config.OLYMPIAD_WINNER_REWARD); // Winner
 					
-					if (Config.ALT_OLY_LOG_FIGHTS)
+					if (Config.OLYMPIAD_LOG_FIGHTS)
 					{
 						LOGGER_OLYMPIAD.info(_playerTwo.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
@@ -475,17 +907,17 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					_playerTwo.updateStat(COMP_WON, 1);
 					addPointsToParticipant(_playerTwo, pointDiff);
-					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints + pointDiff, pointDiff));
+					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints + pointDiff, pointDiff));
 					
 					_playerOne.updateStat(COMP_LOST, 1);
 					removePointsFromParticipant(_playerOne, pointDiff);
-					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints - pointDiff, -pointDiff));
 					
 					winside = 2;
 					
-					rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+					rewardParticipant(_playerTwo.getPlayer(), Config.OLYMPIAD_WINNER_REWARD); // Winner
 					
-					if (Config.ALT_OLY_LOG_FIGHTS)
+					if (Config.OLYMPIAD_LOG_FIGHTS)
 					{
 						LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
@@ -498,15 +930,15 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					_playerOne.updateStat(COMP_LOST, 1);
 					removePointsFromParticipant(_playerOne, pointDiff);
-					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+					list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints - pointDiff, -pointDiff));
 					
 					_playerTwo.updateStat(COMP_LOST, 1);
 					removePointsFromParticipant(_playerTwo, pointDiff);
-					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+					list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints - pointDiff, -pointDiff));
 					
 					tie = true;
 					
-					if (Config.ALT_OLY_LOG_FIGHTS)
+					if (Config.OLYMPIAD_LOG_FIGHTS)
 					{
 						LOGGER_OLYMPIAD.info("both crash," + _playerOne.getName() + "," + _playerOne + ",0,0,0,0," + _playerTwo + "," + pointDiff + "," + getType());
 					}
@@ -519,11 +951,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				
 				if (winside == 1)
 				{
-					result = new ExOlympiadMatchResult(tie, winside, list1, list2);
+					result = new ExOlympiadMatchResult(tie, winside, list1, list2, 0, 0, 0);
 				}
 				else
 				{
-					result = new ExOlympiadMatchResult(tie, winside, list2, list1);
+					result = new ExOlympiadMatchResult(tie, winside, list2, list1, 0, 0, 0);
 				}
 				stadium.broadcastPacket(result);
 				
@@ -577,7 +1009,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 			}
-			else if ((_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+			else if ((player1Wins == 2) || (_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 			{
 				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerOne.getName());
@@ -587,10 +1019,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerTwo.updateStat(COMP_LOST, 1);
 				
 				addPointsToParticipant(_playerOne, pointDiff);
-				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints + pointDiff, pointDiff));
+				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints + pointDiff, pointDiff));
 				
 				removePointsFromParticipant(_playerTwo, pointDiff);
-				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - pointDiff, -pointDiff));
+				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints - pointDiff, -pointDiff));
 				winner = _playerOne.getName() + " won";
 				
 				winside = 1;
@@ -598,13 +1030,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 1, _startTime, _fightTime, getType());
 				
-				rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
-				rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
+				rewardParticipant(_playerOne.getPlayer(), Config.OLYMPIAD_WINNER_REWARD); // Winner
+				rewardParticipant(_playerTwo.getPlayer(), Config.OLYMPIAD_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
 			}
-			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+			else if ((player2Wins == 2) || (_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 			{
 				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerTwo.getName());
@@ -614,10 +1046,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerOne.updateStat(COMP_LOST, 1);
 				
 				addPointsToParticipant(_playerTwo, pointDiff);
-				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints + pointDiff, pointDiff));
+				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints + pointDiff, pointDiff));
 				
 				removePointsFromParticipant(_playerOne, pointDiff);
-				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - pointDiff, -pointDiff));
+				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints - pointDiff, -pointDiff));
 				
 				winner = _playerTwo.getName() + " won";
 				winside = 2;
@@ -625,8 +1057,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 2, _startTime, _fightTime, getType());
 				
-				rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
-				rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
+				rewardParticipant(_playerTwo.getPlayer(), Config.OLYMPIAD_WINNER_REWARD); // Winner
+				rewardParticipant(_playerOne.getPlayer(), Config.OLYMPIAD_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -639,14 +1071,14 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 				
-				int value = Math.min(playerOnePoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
+				int value = Math.min(playerOnePoints / getDivider(), Config.OLYMPIAD_MAX_POINTS);
 				
 				removePointsFromParticipant(_playerOne, value);
-				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - value, -value));
+				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1Final, playerOnePoints - value, -value));
 				
-				value = Math.min(playerTwoPoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
+				value = Math.min(playerTwoPoints / getDivider(), Config.OLYMPIAD_MAX_POINTS);
 				removePointsFromParticipant(_playerTwo, value);
-				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - value, -value));
+				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2Final, playerTwoPoints - value, -value));
 				
 				tie = true;
 			}
@@ -658,15 +1090,16 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			
 			if (winside == 1)
 			{
-				result = new ExOlympiadMatchResult(tie, winside, list1, list2);
+				result = new ExOlympiadMatchResult(tie, winside, list1, list2, round_1_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, round_2_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, (round_3_winner != null) && round_3_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : (round_3_winner == null) ? 0 : 3);
 			}
 			else
 			{
-				result = new ExOlympiadMatchResult(tie, winside, list2, list1);
+				result = new ExOlympiadMatchResult(tie, winside, list2, list1, round_1_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, round_2_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, (round_3_winner != null) && round_3_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : (round_3_winner == null) ? 0 : 2);
 			}
+			
 			stadium.broadcastPacket(result);
 			
-			if (Config.ALT_OLY_LOG_FIGHTS)
+			if (Config.OLYMPIAD_LOG_FIGHTS)
 			{
 				LOGGER_OLYMPIAD.info(winner + "," + _playerOne.getName() + "," + _playerOne + "," + _playerTwo + "," + playerOneHp + "," + playerTwoHp + "," + _damageP1 + "," + _damageP2 + "," + pointDiff + "," + getType());
 			}
@@ -750,6 +1183,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		_damageP2 = 0;
 	}
 	
+	@Override
+	public void resetDamageFinal()
+	{
+		_damageP1Final = 0;
+		_damageP2Final = 0;
+	}
+	
 	protected void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
@@ -789,6 +1229,41 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			player2.setCurrentHp(player2.getMaxHp());
 			player2.setCurrentMp(player2.getMaxMp());
 		}
+	}
+	
+	@Override
+	protected void buffPlayers()
+	{
+		final Player player1 = _playerOne.getPlayer();
+		if (player1 != null)
+		{
+			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_MELODY.getSkill());
+		}
+		
+		final Player player2 = _playerTwo.getPlayer();
+		if (player2 != null)
+		{
+			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_MELODY.getSkill());
+		}
+	}
+	
+	@Override
+	protected void roundTwoCleanUp()
+	{
+		ThreadPool.schedule(() ->
+		{
+			if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId))
+			{
+				roundTwoClean(_playerOne.getPlayer());
+			}
+			
+			if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId))
+			{
+				roundTwoClean(_playerTwo.getPlayer());
+			}
+		}, 1000);
 	}
 	
 	@Override

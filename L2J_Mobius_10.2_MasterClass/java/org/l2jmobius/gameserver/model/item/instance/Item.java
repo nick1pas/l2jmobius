@@ -1995,16 +1995,16 @@ public class Item extends WorldObject
 		{
 			if (_itemTemplate.isWeapon())
 			{
-				if ((Config.ALT_OLY_WEAPON_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_WEAPON_ENCHANT_LIMIT))
+				if ((Config.OLYMPIAD_WEAPON_ENCHANT_LIMIT >= 0) && (enchant > Config.OLYMPIAD_WEAPON_ENCHANT_LIMIT))
 				{
-					enchant = Config.ALT_OLY_WEAPON_ENCHANT_LIMIT;
+					enchant = Config.OLYMPIAD_WEAPON_ENCHANT_LIMIT;
 				}
 			}
 			else
 			{
-				if ((Config.ALT_OLY_ARMOR_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ARMOR_ENCHANT_LIMIT))
+				if ((Config.OLYMPIAD_ARMOR_ENCHANT_LIMIT >= 0) && (enchant > Config.OLYMPIAD_ARMOR_ENCHANT_LIMIT))
 				{
-					enchant = Config.ALT_OLY_ARMOR_ENCHANT_LIMIT;
+					enchant = Config.OLYMPIAD_ARMOR_ENCHANT_LIMIT;
 				}
 			}
 		}

@@ -45,11 +45,6 @@ public class OlympiadManager
 	{
 	}
 	
-	public static OlympiadManager getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
 	public Set<Integer> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
@@ -65,7 +60,7 @@ public class OlympiadManager
 		List<Set<Integer>> result = null;
 		for (Entry<Integer, Set<Integer>> classList : _classBasedRegisters.entrySet())
 		{
-			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.ALT_OLY_CLASSED))
+			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.OLYMPIAD_CLASSED))
 			{
 				if (result == null)
 				{
@@ -80,7 +75,7 @@ public class OlympiadManager
 	
 	protected final boolean hasEnoughRegisteredNonClassed()
 	{
-		return _nonClassBasedRegisters.size() >= Config.ALT_OLY_NONCLASSED;
+		return _nonClassBasedRegisters.size() >= Config.OLYMPIAD_NONCLASSED;
 	}
 	
 	protected final void clearRegistered()
@@ -341,11 +336,6 @@ public class OlympiadManager
 		return _nonClassBasedRegisters.size() + _classBasedRegisters.size();
 	}
 	
-	private static class SingletonHolder
-	{
-		protected static final OlympiadManager INSTANCE = new OlympiadManager();
-	}
-	
 	private int getClassGroup(Player player)
 	{
 		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
@@ -388,5 +378,15 @@ public class OlympiadManager
 		{
 			return player.getBaseClass();
 		}
+	}
+	
+	public static OlympiadManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final OlympiadManager INSTANCE = new OlympiadManager();
 	}
 }

@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.OlympiadMode;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -39,11 +40,11 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 
 /**
  * @author godson, GodKratos, Pere, DS
@@ -163,7 +164,7 @@ public abstract class AbstractOlympiadGame
 		return null;
 	}
 	
-	protected static boolean portPlayerToArena(Participant par, Location loc, int id, Instance instance)
+	protected static boolean portPlayerToArena(Participant par, Location loc, int id, Instance instance, OlympiadMode mode)
 	{
 		final Player player = par.getPlayer();
 		if ((player == null) || !player.isOnline())
@@ -173,6 +174,7 @@ public abstract class AbstractOlympiadGame
 		
 		try
 		{
+			player.setPvpFlag(0);
 			player.setLastLocation();
 			if (player.isSitting())
 			{
@@ -185,7 +187,32 @@ public abstract class AbstractOlympiadGame
 			player.setOlympiadStart(false);
 			player.setOlympiadSide(par.getSide());
 			player.teleToLocation(loc, instance);
-			player.sendPacket(new ExOlympiadMode(2));
+			player.sendPacket(new ExOlympiadMode(mode));
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+			return false;
+		}
+		return true;
+	}
+	
+	protected static boolean portPlayerToSpot(Participant par, Location loc, int id)
+	{
+		final Player player = par.getPlayer();
+		if ((player == null) || !player.isOnline())
+		{
+			return false;
+		}
+		
+		try
+		{
+			if (player.isSitting())
+			{
+				player.standUp();
+			}
+			player.setTarget(null);
+			player.teleToLocation(loc);
 		}
 		catch (Exception e)
 		{
@@ -299,6 +326,48 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
+	protected void roundTwoClean(Player player)
+	{
+		try
+		{
+			if (player == null)
+			{
+				return;
+			}
+			
+			// Remove Debuffs
+			player.getEffectList().stopEffects(info -> info.getSkill().isDebuff(), true, true);
+			
+			// Abort casting if player casting
+			player.abortAttack();
+			player.abortCast();
+			
+			// Force the character to be visible
+			player.setInvisible(false);
+			
+			// Heal Player fully
+			player.setCurrentCp(player.getMaxCp());
+			player.setCurrentHp(player.getMaxHp());
+			player.setCurrentMp(player.getMaxMp());
+			
+			// enable skills with cool time <= 15 minutes
+			for (Skill skill : player.getAllSkills())
+			{
+				if (skill.getReuseDelay() <= 900000)
+				{
+					player.enableSkill(skill);
+				}
+			}
+			
+			player.sendSkillList();
+			player.sendPacket(new SkillCoolTime(player));
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
+		}
+	}
+	
 	protected void cleanEffects(Player player)
 	{
 		try
@@ -371,7 +440,8 @@ public abstract class AbstractOlympiadGame
 			player.setOlympiadStart(false);
 			player.setOlympiadSide(-1);
 			player.setOlympiadGameId(-1);
-			player.sendPacket(new ExOlympiadMode(0));
+			player.sendPacket(new ExOlympiadMode(OlympiadMode.SPECTATOR));
+			player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
 			
 			// Add Clan Skills
 			final Clan clan = player.getClan();
@@ -420,6 +490,7 @@ public abstract class AbstractOlympiadGame
 		{
 			return;
 		}
+		
 		final Location loc = player.getLastLocation();
 		if (loc != null)
 		{
@@ -481,6 +552,8 @@ public abstract class AbstractOlympiadGame
 	
 	protected abstract boolean portPlayersToArena(List<Location> spawns, Instance instance);
 	
+	protected abstract boolean portPlayersToSpots(List<Location> spawns, Instance instance);
+	
 	protected abstract void cleanEffects();
 	
 	protected abstract void portPlayersBack();
@@ -489,9 +562,15 @@ public abstract class AbstractOlympiadGame
 	
 	protected abstract void clearPlayers();
 	
+	protected abstract void matchEnd(boolean value);
+	
+	protected abstract boolean isMatchEnd();
+	
 	protected abstract void handleDisconnect(Player player);
 	
 	protected abstract void resetDamage();
+	
+	protected abstract void resetDamageFinal();
 	
 	protected abstract void addDamage(Player player, int damage);
 	
@@ -499,11 +578,23 @@ public abstract class AbstractOlympiadGame
 	
 	protected abstract boolean haveWinner();
 	
+	protected abstract boolean roundWinner();
+	
 	protected abstract void validateWinner(OlympiadStadium stadium);
+	
+	protected abstract void validateRound1Winner(OlympiadStadium stadium);
+	
+	protected abstract void validateRound2Winner(OlympiadStadium stadium);
+	
+	protected abstract void validateRound3Winner(OlympiadStadium stadium);
 	
 	protected abstract int getDivider();
 	
 	protected abstract void healPlayers();
+	
+	protected abstract void buffPlayers();
+	
+	protected abstract void roundTwoCleanUp();
 	
 	protected abstract void untransformPlayers();
 	

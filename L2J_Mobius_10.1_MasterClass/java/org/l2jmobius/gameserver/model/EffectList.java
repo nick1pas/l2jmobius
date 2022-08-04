@@ -50,9 +50,9 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.SkillBuffType;
 import org.l2jmobius.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PartySpelled;
 import org.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadSpelledInfo;
 
 /**
  * Effect lists.<br>

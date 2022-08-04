@@ -18,7 +18,7 @@ package ai.others.OlyBuffer;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.model.skill.SkillCaster;
 
 import ai.AbstractNpcAI;
@@ -32,13 +32,10 @@ public class OlyBuffer extends AbstractNpcAI
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;
 	// Skills
-	private static final SkillHolder BUFF = new SkillHolder(32415, 1); // Fantasia Harmony
-	private static final SkillHolder[] BUFFS =
+	private static final CommonSkill[] BUFFS =
 	{
-		new SkillHolder(32411, 1), // Olympiad - Horn Melody
-		new SkillHolder(32412, 1), // Olympiad - Drum Melody
-		new SkillHolder(32413, 1), // Olympiad - Pipe Organ Melody
-		new SkillHolder(32414, 1), // Olympiad - Guitar Melody
+		CommonSkill.OLYMPIAD_HARMONY,
+		CommonSkill.OLYMPIAD_MELODY,
 	};
 	
 	private OlyBuffer()
@@ -66,7 +63,7 @@ public class OlyBuffer extends AbstractNpcAI
 		{
 			case "buff":
 			{
-				applyBuffs(npc, player, BUFF);
+				applyBuffs(npc, player);
 				break;
 			}
 		}
@@ -75,13 +72,12 @@ public class OlyBuffer extends AbstractNpcAI
 		return "olympiad_master003.htm";
 	}
 	
-	private void applyBuffs(Npc npc, Player player, SkillHolder skill)
+	private void applyBuffs(Npc npc, Player player)
 	{
-		for (SkillHolder holder : BUFFS)
+		for (CommonSkill holder : BUFFS)
 		{
 			SkillCaster.triggerCast(npc, player, holder.getSkill());
 		}
-		SkillCaster.triggerCast(npc, player, skill.getSkill());
 	}
 	
 	public static void main(String[] args)

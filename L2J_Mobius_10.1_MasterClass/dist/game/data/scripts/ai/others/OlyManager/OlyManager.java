@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchList;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
 
 import ai.AbstractNpcAI;
 
@@ -188,7 +188,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 					if (tradePoints > 0)
 					{
 						player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR);
-						giveItems(player, Config.ALT_OLY_COMP_RITEM, tradePoints * Config.ALT_OLY_MARK_PER_POINT);
+						giveItems(player, Config.OLYMPIAD_COMP_RITEM, tradePoints * Config.OLYMPIAD_MARK_PER_POINT);
 					}
 				}
 				else

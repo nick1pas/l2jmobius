@@ -31,11 +31,9 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
-import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
-import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchEnd;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadUserInfo;
 
 /**
  * @author JIV
@@ -127,6 +125,32 @@ public class OlympiadStadium
 		}
 	}
 	
+	public void makeZonePvPForCharsInside(boolean value)
+	{
+		if (_task == null)
+		{
+			return;
+		}
+		if (value)
+		{
+			for (Player player : _instance.getPlayers())
+			{
+				player.setInsideZone(ZoneId.PVP, true);
+				player.setOlympiadStart(true);
+				_task.getGame().sendOlympiadInfo(player);
+			}
+		}
+		else
+		{
+			for (Player player : _instance.getPlayers())
+			{
+				player.setInsideZone(ZoneId.PVP, false);
+				player.setOlympiadStart(false);
+				_task.getGame().sendOlympiadInfo(player);
+			}
+		}
+	}
+	
 	public void updateZoneStatusForCharactersInside()
 	{
 		if (_task == null)
@@ -135,15 +159,16 @@ public class OlympiadStadium
 		}
 		
 		final boolean battleStarted = _task.isBattleStarted();
-		final SystemMessage sm;
-		if (battleStarted)
-		{
-			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-		}
-		else
-		{
-			sm = new SystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-		}
+		final boolean battleEnded = _task.isBattleFinished();
+		// final SystemMessage sm;
+		// if (battleStarted)
+		// {
+		// sm = new SystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+		// }
+		// else
+		// {
+		// sm = new SystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+		// }
 		
 		for (Player player : _instance.getPlayers())
 		{
@@ -155,12 +180,16 @@ public class OlympiadStadium
 			if (battleStarted)
 			{
 				player.setInsideZone(ZoneId.PVP, true);
-				player.sendPacket(sm);
+				// player.sendPacket(sm);
 			}
 			else
 			{
 				player.setInsideZone(ZoneId.PVP, false);
-				player.sendPacket(sm);
+				// player.sendPacket(sm);
+				// player.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
+			}
+			if (battleEnded)
+			{
 				player.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
 			}
 		}

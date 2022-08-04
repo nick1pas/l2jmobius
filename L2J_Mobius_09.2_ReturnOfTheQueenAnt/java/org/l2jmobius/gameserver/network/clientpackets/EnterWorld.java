@@ -55,6 +55,7 @@ import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -119,6 +120,7 @@ import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusReady;
 import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExShowHomunculusBirthInfo;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadInfo;
 import org.l2jmobius.gameserver.network.serverpackets.settings.ExItemAnnounceSetting;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -638,6 +640,12 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.disableExpGain();
 			player.sendMessage("Experience gain is disabled.");
+		}
+		
+		// Send packet that olympiad is opened.
+		if (Config.OLYMPIAD_ENABLED && Olympiad.getInstance().inCompPeriod())
+		{
+			player.sendPacket(new ExOlympiadInfo(1));
 		}
 		
 		player.updateSymbolSealSkills();

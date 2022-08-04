@@ -296,7 +296,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_player.getPvpFlag());
 			packet.writeD(_player.getReputation()); // Reputation
 			packet.writeC(_player.getNobleLevel());
-			packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
+			packet.writeC(_player.isLegend() ? 4 : _player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2? 4 = legend
 			packet.writeC(_player.getPledgeClass());
 			packet.writeD(_player.getPkKills());
 			packet.writeD(_player.getPvpKills());

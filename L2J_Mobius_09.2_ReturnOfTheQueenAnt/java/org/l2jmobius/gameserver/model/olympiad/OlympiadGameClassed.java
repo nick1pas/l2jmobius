@@ -41,7 +41,7 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 	@Override
 	protected int getDivider()
 	{
-		return Config.ALT_OLY_DIVIDER_CLASSED;
+		return Config.OLYMPIAD_DIVIDER_CLASSED;
 	}
 	
 	protected static OlympiadGameClassed createGame(int id, List<Set<Integer>> classList)
@@ -72,5 +72,14 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 			return new OlympiadGameClassed(id, opponents);
 		}
 		return null;
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see org.l2jmobius.gameserver.model.olympiad.AbstractOlympiadGame#validateRound3Winner(org.l2jmobius.gameserver.model.olympiad.OlympiadStadium)
+	 */
+	@Override
+	protected void validateRound3Winner(OlympiadStadium stadium)
+	{
 	}
 }
