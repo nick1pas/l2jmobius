@@ -18,6 +18,7 @@
 package org.l2jmobius;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -68,7 +69,7 @@ public class Config
 	public static int KARMA_MAX_KARMA;
 	public static float KARMA_LOST_MULTIPLIER;
 	public static int KARMA_DROP_CHANCE;
-	public static Set<Integer> KARMA_PROTECTED_ITEMS;
+	public static Set<Integer> KARMA_PROTECTED_ITEMS = new HashSet<>();
 	// ThreadPool
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
@@ -117,6 +118,7 @@ public class Config
 		KARMA_MAX_KARMA = karmaConfig.getInt("KarmaMax", 10000);
 		KARMA_LOST_MULTIPLIER = karmaConfig.getFloat("KarmaLostMultiplier", 1);
 		KARMA_DROP_CHANCE = karmaConfig.getInt("KarmaDropChance", 5);
+		KARMA_PROTECTED_ITEMS.clear();
 		KARMA_PROTECTED_ITEMS.addAll(Arrays.stream(karmaConfig.getIntArray("KarmaProtectedItems", ";")).boxed().collect(Collectors.toList()));
 		
 		// Load threadpool config file (if exists)
