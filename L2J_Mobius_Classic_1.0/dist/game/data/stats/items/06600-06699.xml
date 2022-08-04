@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6660" name="Queen Ant's Ring" type="Armor">
+		<!-- MP +9, Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="123200" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="6661" name="Orfen's Earring" type="Armor">
+		<!-- MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="1300000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="1" /> <!-- Orfen's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">51</stat>
+			<stat type="maxMp">19</stat>
+		</stats>
+	</item>
+	<item id="6662" name="Ring of Core" type="Armor">
+		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P. / M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="1" /> <!-- Ring of Core -->
+		</skills>
+		<stats>
+			<stat type="mDef">32</stat>
+			<stat type="maxMp">9</stat>
+		</stats>
+	</item>
+</list>

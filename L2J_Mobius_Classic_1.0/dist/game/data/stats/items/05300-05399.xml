@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5342" name="Echo Crystal - Sad Song" type="EtcItem">
+		<set name="icon" val="icon.etc_echo_crystal_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="44000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2584" level="1" /> <!-- Item - Special Sound Crystal -->
+		</skills>
+	</item>
+	<item id="5343" name="Echo Crystal - Holy Song" type="EtcItem">
+		<set name="icon" val="icon.etc_echo_crystal_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="44000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2585" level="1" /> <!-- Item - Special Sound Crystal -->
+		</skills>
+	</item>
+</list>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29985" name="Lindvior's Treasure Chest" type="EtcItem">
+		<!-- Double-click to receive Lindvior? Treasures. -->
+		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29986" name="Lineage II Chest" type="EtcItem">
+		<!-- A reward box given for collecting all the letters of the word ?ineage II? -->
+		<set name="icon" val="icon.ev_10th_present2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55319" level="1" /> <!-- Lineage II Chest -->
+		</skills>
+	</item>
+	<item id="29987" name="Memories Chest" type="EtcItem">
+		<!-- A reward box given for collecting all the letters of the word ?emories? -->
+		<set name="icon" val="icon.ev_10th_present2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55321" level="1" /> <!-- Memories Chest -->
+		</skills>
+	</item>
+	<item id="29988" name="Chronicle Chest" type="EtcItem">
+		<!-- A reward box given for collecting all the letters of the word ?hronicle? -->
+		<set name="icon" val="icon.ev_10th_present2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55320" level="1" /> <!-- Chronicle Chest -->
+		</skills>
+	</item>
+</list>

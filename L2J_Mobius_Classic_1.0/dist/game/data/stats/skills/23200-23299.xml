@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="23234" toLevel="1" name="Singer and Dancer Agathion Cute Trick">
+		<!-- See Agathion's cute trick. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>85</magicLevel>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
+</list>

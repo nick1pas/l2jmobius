@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8871" name="Strategy Guide" type="EtcItem">
+		<!-- This book contains information about the methods and strategies used to lead a Command Channel. Use it to create a Command Channel. Lv. 20 or above. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="default_action" val="CREATE_MPCC" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="45000" />
+		<cond msgId="113" addName="1">
+			<player level="20" />
+		</cond>
+	</item>
+	<item id="8872" name="Flash Gunpowder" type="EtcItem">
+		<!-- This specially processed gunpowder doesn't create smoke. It is consumed while using the swoop cannon skill. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="20" />
+		<set name="price" val="1500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8890" name="Spellbook: Summon Attractive Cubic" type="EtcItem">
+		<!-- Spellbook needed to learn Summon Attractive Cubic. Used by a Temple Knight. Required level: 62 -->
+		<set name="icon" val="icon.etc_spell_books_summon_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="7700" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="8891" name="Spellbook: Aura Flash" type="EtcItem">
+		<!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. Required level: 58 -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="6750" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

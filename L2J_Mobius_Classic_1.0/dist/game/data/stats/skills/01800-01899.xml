@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="1800" toLevel="1" name="Pirate">
+		<!-- This pirate once ruled ancient lands of Giran. His own crew excited a riot, but didn't manage to cope with their captain that became even more powerful with the dark forces. Zaken killed all the remaining rebels and disappeared. (Consumes 1 Elemental Stone.) -->
+		<icon>icon.skill1800</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>PIRATE_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>56</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>3000</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>49543</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="MaxHp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1801" toLevel="1" name="Dark Assassin">
+		<!-- This is an organization of assassins created by Mercenary Captain Sieghardt Ein for making contract murders and carrying out secret orders. Sieghardt Ein, having become a member of Dawn, has disappeared without a trace, but the organization created by him still leads its shadowy deals. (Consumes 1 Elemental Stone.) -->
+		<icon>icon.skill1801</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>DARK_ASSASSIN_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>56</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<hitTime>3000</hitTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>49543</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1802" toLevel="1" name="White Assassin">
+		<!-- Rune noble Erica Ken Weber is the right hand of Sieghardt Ein. She wasn't influenced by the organizations of dark assassins. For her quest she created an organization of white assassins, continuing to be an informer. (Consumes 2 Elemental Stones.) -->
+		<icon>icon.skill1802</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>56</magicLevel>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<hitTime>3000</hitTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>49543</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>
