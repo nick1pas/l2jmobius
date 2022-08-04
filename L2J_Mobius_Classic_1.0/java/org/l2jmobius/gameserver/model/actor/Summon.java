@@ -680,7 +680,7 @@ public abstract class Summon extends Playable
 		// Check if this skill is enabled (e.g. reuse time)
 		if (isSkillDisabled(skill))
 		{
-			sendPacket(SystemMessageId.THAT_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
+			sendPacket(SystemMessageId.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
 			return false;
 		}
 		
@@ -994,7 +994,7 @@ public abstract class Summon extends Playable
 		
 		if (isBetrayed())
 		{
-			sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}

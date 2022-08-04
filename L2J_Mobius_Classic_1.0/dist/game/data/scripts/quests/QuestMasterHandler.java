@@ -32,7 +32,6 @@ import quests.Q00105_SkirmishWithOrcs.Q00105_SkirmishWithOrcs;
 import quests.Q00106_ForgottenTruth.Q00106_ForgottenTruth;
 import quests.Q00107_MercilessPunishment.Q00107_MercilessPunishment;
 import quests.Q00108_JumbleTumbleDiamondFuss.Q00108_JumbleTumbleDiamondFuss;
-import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
 import quests.Q00151_CureForFever.Q00151_CureForFever;
 import quests.Q00152_ShardsOfGolem.Q00152_ShardsOfGolem;
 import quests.Q00153_DeliverGoods.Q00153_DeliverGoods;
@@ -102,7 +101,6 @@ import quests.Q00294_CovertBusiness.Q00294_CovertBusiness;
 import quests.Q00295_DreamingOfTheSkies.Q00295_DreamingOfTheSkies;
 import quests.Q00296_TarantulasSpiderSilk.Q00296_TarantulasSpiderSilk;
 import quests.Q00297_GatekeepersFavor.Q00297_GatekeepersFavor;
-import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00303_CollectArrowheads.Q00303_CollectArrowheads;
 import quests.Q00306_CrystalOfFireAndIce.Q00306_CrystalOfFireAndIce;
 import quests.Q00313_CollectSpores.Q00313_CollectSpores;
@@ -118,16 +116,8 @@ import quests.Q00328_SenseForBusiness.Q00328_SenseForBusiness;
 import quests.Q00329_CuriosityOfADwarf.Q00329_CuriosityOfADwarf;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
-import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
-import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
-import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
-import quests.Q00356_DigUpTheSeaOfSpores.Q00356_DigUpTheSeaOfSpores;
-import quests.Q00358_IllegitimateChildOfTheGoddess.Q00358_IllegitimateChildOfTheGoddess;
-import quests.Q00360_PlunderTheirSupplies.Q00360_PlunderTheirSupplies;
 import quests.Q00369_CollectorOfJewels.Q00369_CollectorOfJewels;
 import quests.Q00370_AnElderSowsSeeds.Q00370_AnElderSowsSeeds;
-import quests.Q00374_WhisperOfDreamsPart1.Q00374_WhisperOfDreamsPart1;
-import quests.Q00375_WhisperOfDreamsPart2.Q00375_WhisperOfDreamsPart2;
 import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
 import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
 import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
@@ -147,7 +137,6 @@ import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
-import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 
 /**
  * @author NosBit
@@ -171,7 +160,6 @@ public class QuestMasterHandler
 		Q00106_ForgottenTruth.class,
 		Q00107_MercilessPunishment.class,
 		Q00108_JumbleTumbleDiamondFuss.class,
-		Q00127_FishingSpecialistsRequest.class,
 		Q00151_CureForFever.class,
 		Q00152_ShardsOfGolem.class,
 		Q00153_DeliverGoods.class,
@@ -241,7 +229,6 @@ public class QuestMasterHandler
 		Q00295_DreamingOfTheSkies.class,
 		Q00296_TarantulasSpiderSilk.class,
 		Q00297_GatekeepersFavor.class,
-		Q00300_HuntingLetoLizardman.class,
 		Q00303_CollectArrowheads.class,
 		Q00306_CrystalOfFireAndIce.class,
 		Q00313_CollectSpores.class,
@@ -257,14 +244,6 @@ public class QuestMasterHandler
 		Q00329_CuriosityOfADwarf.class,
 		Q00331_ArrowOfVengeance.class,
 		Q00333_HuntOfTheBlackLion.class,
-		Q00374_WhisperOfDreamsPart1.class,
-		Q00375_WhisperOfDreamsPart2.class,
-		Q00344_1000YearsTheEndOfLamentation.class,
-		Q00354_ConquestOfAlligatorIsland.class,
-		Q00355_FamilyHonor.class,
-		Q00356_DigUpTheSeaOfSpores.class,
-		Q00358_IllegitimateChildOfTheGoddess.class,
-		Q00360_PlunderTheirSupplies.class,
 		Q00369_CollectorOfJewels.class,
 		Q00370_AnElderSowsSeeds.class,
 		Q00401_PathOfTheWarrior.class,
@@ -286,7 +265,6 @@ public class QuestMasterHandler
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
-		Q11000_MoonKnight.class,
 	};
 	
 	public static void main(String[] args)

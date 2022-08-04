@@ -307,7 +307,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6209" toLevel="4" name="Grade Penalty">
+	<skill id="6209" toLevel="4" name="Weapon Grade Penalty">
 		<!-- The equipped weapon's grade doesn't match your Lv., so the following penalties are incurred: Decrease in Accuracy by $s1, Critical Rate by $s2, Critical Damage by $s3, Atk. Spd. by $s4, and P. Atk. by $s5. -->
 		<icon>
 			<value level="1">icon.skill6209_1</value>
@@ -362,7 +362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6213" toLevel="4" name="Grade Penalty">
+	<skill id="6213" toLevel="4" name="Armor Grade Penalty">
 		<!-- When equipped with armor or accessories whose grade doesn't fit with your Lv., a penalty is incurred with decreases in evasion by $s1, Atk. Spd./Casting Spd./Speed by $s2. -->
 		<icon>
 			<value level="1">icon.skill6213_1</value>
@@ -1134,7 +1134,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6267" toLevel="1" name="Soul Sucking">
+	<skill id="6267" toLevel="1" name="Soul Drain">
 		<!-- Absorbs opponent's HP to add to one's own. -->
 		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>

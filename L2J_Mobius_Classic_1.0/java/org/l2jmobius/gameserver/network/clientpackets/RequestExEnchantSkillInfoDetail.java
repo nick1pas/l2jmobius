@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.enums.SkillEnchantType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
+import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
  * @author -Wooden-
@@ -37,8 +38,17 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 	{
 		_type = SkillEnchantType.values()[packet.readD()];
 		_skillId = packet.readD();
-		_skillLevel = packet.readH();
-		_skillSubLevel = packet.readH();
+		final int level = packet.readD();
+		if (level < 100)
+		{
+			_skillLevel = level;
+			_skillSubLevel = 0;
+		}
+		else
+		{
+			_skillLevel = client.getPlayer().getKnownSkill(_skillId).getLevel();
+			_skillSubLevel = SkillEnchantConverter.levelToUnderground(level);
+		}
 		return true;
 	}
 	

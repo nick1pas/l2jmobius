@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 
@@ -118,15 +117,12 @@ public class DailyTaskManager
 		}
 		
 		// Daily tasks.
-		resetClanBonus();
 		resetDailySkills();
 		resetDailyItems();
 		resetDailyPrimeShopData();
 		resetWorldChatPoints();
 		resetRecommends();
 		resetTrainingCamp();
-		resetAttendanceRewards();
-		resetVip();
 	}
 	
 	private void onSave()
@@ -235,12 +231,6 @@ public class DailyTaskManager
 			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
 		}
 		LOGGER.info("Vitality resetted");
-	}
-	
-	private void resetClanBonus()
-	{
-		ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
-		LOGGER.info("Daily clan bonus has been resetted.");
 	}
 	
 	private void resetDailySkills()
@@ -413,78 +403,6 @@ public class DailyTaskManager
 			}
 			
 			LOGGER.info("Training Camp daily time has been resetted.");
-		}
-	}
-	
-	private void resetVip()
-	{
-		// Delete all entries for received gifts
-		AccountVariables.deleteVipPurchases(AccountVariables.VIP_ITEM_BOUGHT);
-		
-		// Checks the tier expiration for online players
-		// offline players get handled on next time they log in.
-		for (Player player : World.getInstance().getPlayers())
-		{
-			if (player.getVipTier() > 0)
-			{
-				VipManager.getInstance().checkVipTierExpiration(player);
-			}
-			
-			player.getAccountVariables().restoreMe();
-		}
-	}
-	
-	private void resetAttendanceRewards()
-	{
-		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
-		{
-			// Update data for offline players.
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				try (PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var=?"))
-				{
-					ps.setString(1, "ATTENDANCE_DATE");
-					ps.execute();
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
-			}
-			
-			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
-			{
-				player.getAccountVariables().remove("ATTENDANCE_DATE");
-				player.getAccountVariables().storeMe();
-			}
-			
-			LOGGER.info("Account shared Attendance Rewards has been resetted.");
-		}
-		else
-		{
-			// Update data for offline players.
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var=?"))
-				{
-					ps.setString(1, PlayerVariables.ATTENDANCE_DATE);
-					ps.execute();
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Attendance Rewards: " + e);
-			}
-			
-			// Update data for online players.
-			for (Player player : World.getInstance().getPlayers())
-			{
-				player.getVariables().remove(PlayerVariables.ATTENDANCE_DATE);
-				player.getVariables().storeMe();
-			}
-			
-			LOGGER.info("Attendance Rewards has been resetted.");
 		}
 	}
 	

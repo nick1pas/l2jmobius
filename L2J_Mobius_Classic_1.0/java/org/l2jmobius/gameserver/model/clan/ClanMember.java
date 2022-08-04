@@ -23,9 +23,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -834,23 +832,7 @@ public class ClanMember
 	
 	public int getOnlineStatus()
 	{
-		return !isOnline() ? 0 : _onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
-	}
-	
-	public boolean isRewardClaimed(ClanRewardType type)
-	{
-		final PlayerVariables vars = getVariables();
-		final int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
-		return (claimedRewards & type.getMask()) == type.getMask();
-	}
-	
-	public void setRewardClaimed(ClanRewardType type)
-	{
-		final PlayerVariables vars = getVariables();
-		int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
-		claimedRewards |= type.getMask();
-		vars.set("CLAIMED_CLAN_REWARDS", claimedRewards);
-		vars.storeMe();
+		return isOnline() ? 1 : 0;
 	}
 	
 	private PlayerVariables getVariables()

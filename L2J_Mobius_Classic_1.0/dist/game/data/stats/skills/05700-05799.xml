@@ -22,7 +22,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
+	<skill id="5701" toLevel="7" name="Decrease P. Atk.">
 		<!-- P. Atk. is decreased. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>9</abnormalLevel>
@@ -1242,7 +1242,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5737" toLevel="6" name="Power Strike">
+	<skill id="5737" toLevel="6" name="Power Stamp">
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1347,7 +1347,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="5740" toLevel="1" name="Pet Regeneration">
+	<skill id="5740" toLevel="1" name="Recovery Pot">
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1818,7 +1818,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5750" toLevel="12" name="Blaze">
+	<skill id="5750" toLevel="12" name="Flash">
 		<!-- Inflicts a swift magic attack upon contacted enemies nearby. Power $s1. -->
 		<icon>icon.skill1417</icon>
 		<castRange>40</castRange>
@@ -2000,7 +2000,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5752" toLevel="12" name="Blaze">
+	<skill id="5752" toLevel="12" name="Flare">
 		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
@@ -2192,7 +2192,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5760" toLevel="9" name="Critical Blow">
+	<skill id="5760" toLevel="9" name="Critical Hit">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1. -->
 		<icon>icon.skill5760</icon>
 		<abnormalLevel>

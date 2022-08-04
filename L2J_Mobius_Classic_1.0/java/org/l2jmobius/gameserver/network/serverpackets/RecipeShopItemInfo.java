@@ -41,8 +41,6 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getMaxMp());
 		packet.writeD(0xffffffff);
 		packet.writeQ(0);
-		packet.writeC(0); // Trigger offering window if 1
-		packet.writeQ(0);
 		return true;
 	}
 }

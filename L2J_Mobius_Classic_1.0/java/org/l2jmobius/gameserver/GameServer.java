@@ -48,12 +48,10 @@ import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
-import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
-import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.CubicData;
@@ -98,7 +96,6 @@ import org.l2jmobius.gameserver.data.xml.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
-import org.l2jmobius.gameserver.data.xml.VipData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ConditionHandler;
 import org.l2jmobius.gameserver.handler.EffectHandler;
@@ -145,7 +142,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -241,7 +237,6 @@ public class GameServer
 		SecondaryAuthData.getInstance();
 		CombinationItemsData.getInstance();
 		SayuneData.getInstance();
-		ClanRewardData.getInstance();
 		
 		printSection("Skills");
 		SkillConditionHandler.getInstance().executeScript();
@@ -273,8 +268,6 @@ public class GameServer
 		AppearanceItemData.getInstance();
 		ItemCommissionManager.getInstance();
 		LuckyGameData.getInstance();
-		AttendanceRewardData.getInstance();
-		VipData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
@@ -292,7 +285,6 @@ public class GameServer
 		CharSummonTable.getInstance().init();
 		BeautyShopData.getInstance();
 		MentorManager.getInstance();
-		VipManager.getInstance();
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{

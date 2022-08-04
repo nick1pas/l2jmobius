@@ -32,8 +32,6 @@ import org.l2jmobius.gameserver.network.clientpackets.appearance.RequestExCancel
 import org.l2jmobius.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingEnchantSupportItem;
 import org.l2jmobius.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingTargetItem;
 import org.l2jmobius.gameserver.network.clientpackets.appearance.RequestShapeShiftingItem;
-import org.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAttendanceCheck;
-import org.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAttendanceItemList;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
@@ -62,9 +60,6 @@ import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorList;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
-import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRGamePoint;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresentBuyProduct;
@@ -336,24 +331,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_ALCHEMY_CONVERSION(0x101, null, ConnectionState.IN_GAME),
 	SEND_EXECUTED_UI_EVENTS_COUNT(0x102, null, ConnectionState.IN_GAME),
 	EX_SEND_CLIENT_INI(0x103, null, ConnectionState.IN_GAME),
-	REQUEST_EX_AUTO_FISH(0x104, ExRequestAutoFish::new, ConnectionState.IN_GAME),
-	REQUEST_VIP_ATTENDANCE_ITEM_LIST(0x105, RequestVipAttendanceItemList::new, ConnectionState.IN_GAME),
-	REQUEST_VIP_ATTENDANCE_CHECK(0x106, RequestVipAttendanceCheck::new, ConnectionState.IN_GAME),
-	REQUEST_ITEM_ENSOUL(0x107, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_PRODUCT_LIST(0x108, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_LUCKY_GAME_INFO(0x109, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_LUCKY_GAME_ITEM_LIST(0x10A, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_LUCKY_GAME_BONUS(0x10B, null, ConnectionState.IN_GAME),
-	EXREQUEST_VIPINFO(0x10C, null, ConnectionState.IN_GAME),
-	REQUEST_CAPTCHA_ANSWER(0x10D, null, ConnectionState.IN_GAME),
-	REQUEST_REFRESH_CAPTCHA_IMAGE(0x10E, null, ConnectionState.IN_GAME),
-	REQUEST_TODO_LIST(0x10F, null, ConnectionState.IN_GAME),
-	REQUEST_TODO_LIST_HTML(0x110, null, ConnectionState.IN_GAME),
-	REQUEST_ONE_DAY_REWARD_RECEIVE(0x111, null, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_OPEN(0x112, RequestPledgeBonusOpen::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x113, RequestPledgeBonusRewardList::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD(0x114, RequestPledgeBonusReward::new, ConnectionState.IN_GAME),
-	REQUEST_SSO_AUTHN_TOKEN(0x115, null, ConnectionState.IN_GAME);
+	REQUEST_EX_AUTO_FISH(0x104, ExRequestAutoFish::new, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

@@ -25,24 +25,23 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
- * @author KenM
+ * @author KenM, Mobius
  */
 public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 {
 	private final SkillEnchantType _type;
 	private final int _skillId;
 	private final int _skillLevel;
-	private final int _skillSubLevel;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
 	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLevel, int skillSubLevel, Player player)
 	{
 		_type = type;
 		_skillId = skillId;
-		_skillLevel = skillLevel;
-		_skillSubLevel = skillSubLevel;
+		_skillLevel = skillSubLevel > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLevel) : skillLevel;
 		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLevel % 1000);
 	}
 	
@@ -52,9 +51,8 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
-		packet.writeH(_skillLevel);
-		packet.writeH(_skillSubLevel);
-		if (_enchantSkillHolder != null)
+		packet.writeD(_skillLevel);
+		if ((_enchantSkillHolder != null) && (_type != SkillEnchantType.UNTRAIN))
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));
 			packet.writeD(_enchantSkillHolder.getChance(_type));

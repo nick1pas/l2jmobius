@@ -48,11 +48,11 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	{
 		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_LHAND,
+		Inventory.PAPERDOLL_RHAND, // this is correct?
 		Inventory.PAPERDOLL_GLOVES,
 		Inventory.PAPERDOLL_CHEST,
 		Inventory.PAPERDOLL_LEGS,
 		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_HAIR,
 		Inventory.PAPERDOLL_HAIR2,
 	};
@@ -169,7 +169,8 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(i == _activeId ? 1 : 0);
 			packet.writeC(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND) > 127 ? 127 : charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND));
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
-			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
+			// Mobius: Maybe use 2x writeH?
+			// packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0); // Currently on retail when you are on character select you don't see your transformation.
 			packet.writeD(0); // Pet NpcId

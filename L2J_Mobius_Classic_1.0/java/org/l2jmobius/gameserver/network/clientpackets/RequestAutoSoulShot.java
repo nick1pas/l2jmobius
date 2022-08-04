@@ -42,8 +42,8 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemId = packet.readD();
-		_enable = packet.readD() == 1;
 		_type = packet.readD();
+		_enable = _type == 1;
 		return true;
 	}
 	
@@ -92,7 +92,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (soulshotCount > item.getCount())
 							{
-								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
+								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 								return;
 							}
 						}
@@ -110,7 +110,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (spiritshotCount > item.getCount())
 							{
-								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
+								player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 								return;
 							}
 						}
@@ -148,7 +148,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					}
 					else
 					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 					}
 				}
 				else if (isPlayerShot(item.getTemplate()))

@@ -50,14 +50,14 @@ public class GMHennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GMHENNA_INFO.writeId(packet);
-		packet.writeD(_player.getHennaValue(BaseStat.INT)); // equip INT
-		packet.writeD(_player.getHennaValue(BaseStat.STR)); // equip STR
-		packet.writeD(_player.getHennaValue(BaseStat.CON)); // equip CON
-		packet.writeD(_player.getHennaValue(BaseStat.MEN)); // equip MEN
-		packet.writeD(_player.getHennaValue(BaseStat.DEX)); // equip DEX
-		packet.writeD(_player.getHennaValue(BaseStat.WIT)); // equip WIT
-		packet.writeD(0); // equip LUC
-		packet.writeD(0); // equip CHA
+		packet.writeC(_player.getHennaValue(BaseStat.INT)); // equip INT
+		packet.writeC(_player.getHennaValue(BaseStat.STR)); // equip STR
+		packet.writeC(_player.getHennaValue(BaseStat.CON)); // equip CON
+		packet.writeC(_player.getHennaValue(BaseStat.MEN)); // equip MEN
+		packet.writeC(_player.getHennaValue(BaseStat.DEX)); // equip DEX
+		packet.writeC(_player.getHennaValue(BaseStat.WIT)); // equip WIT
+		packet.writeC(0); // equip LUC
+		packet.writeC(0); // equip CHA
 		packet.writeD(3); // Slots
 		packet.writeD(_hennas.size()); // Size
 		for (Henna henna : _hennas)

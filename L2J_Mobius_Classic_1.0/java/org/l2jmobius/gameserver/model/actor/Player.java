@@ -21,8 +21,6 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -66,7 +64,6 @@ import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
-import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
@@ -216,7 +213,6 @@ import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
-import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -270,7 +266,6 @@ import org.l2jmobius.gameserver.model.stats.MoveType;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.model.vip.VipManager;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -347,7 +342,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
-import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -562,8 +556,6 @@ public class Player extends Playable
 	private ScheduledFuture<?> _recoGiveTask;
 	/** Recommendation Two Hours bonus **/
 	protected boolean _recoTwoHoursGiven = false;
-	
-	private ScheduledFuture<?> _onlineTimeUpdateTask;
 	
 	private final PlayerInventory _inventory = new PlayerInventory(this);
 	private final PlayerFreight _freight = new PlayerFreight(this);
@@ -852,7 +844,6 @@ public class Player extends Playable
 	private boolean _hasCharmOfCourage = false;
 	
 	private final Set<Integer> _whisperers = ConcurrentHashMap.newKeySet();
-	private byte _vipTier = 0;
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
 	
@@ -5441,7 +5432,6 @@ public class Player extends Playable
 		stopChargeTask();
 		stopFameTask();
 		stopRecoGiveTask();
-		stopOnlineTimeUpdateTask();
 	}
 	
 	@Override
@@ -6802,7 +6792,6 @@ public class Player extends Playable
 			
 			player.loadRecommendations();
 			player.startRecoGiveTask();
-			player.startOnlineTimeUpdateTask();
 			
 			player.setOnlineStatus(true, false);
 			
@@ -8411,7 +8400,7 @@ public class Player extends Playable
 		// Check if the caster is sitting
 		if (_waitTypeSitting)
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+			sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
@@ -13797,11 +13786,6 @@ public class Player extends Playable
 			_taskWarnUserTakeBreak.cancel(false);
 			_taskWarnUserTakeBreak = null;
 		}
-		if ((_onlineTimeUpdateTask != null) && !_onlineTimeUpdateTask.isDone() && !_onlineTimeUpdateTask.isCancelled())
-		{
-			_onlineTimeUpdateTask.cancel(false);
-			_onlineTimeUpdateTask = null;
-		}
 		for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
 		{
 			final ScheduledFuture<?> task = entry.getValue();
@@ -13860,33 +13844,6 @@ public class Player extends Playable
 		synchronized (_timerHolders)
 		{
 			_timerHolders.remove(timer);
-		}
-	}
-	
-	private void startOnlineTimeUpdateTask()
-	{
-		if (_onlineTimeUpdateTask != null)
-		{
-			stopOnlineTimeUpdateTask();
-		}
-		
-		_onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
-	}
-	
-	private void updateOnlineTime()
-	{
-		if (_clan != null)
-		{
-			_clan.addMemberOnlineTime(this);
-		}
-	}
-	
-	private void stopOnlineTimeUpdateTask()
-	{
-		if (_onlineTimeUpdateTask != null)
-		{
-			_onlineTimeUpdateTask.cancel(true);
-			_onlineTimeUpdateTask = null;
 		}
 	}
 	
@@ -13953,120 +13910,5 @@ public class Player extends Playable
 	{
 		final TrainingHolder trainingHolder = getTraingCampInfo();
 		return (trainingHolder != null) && (trainingHolder.getEndTime() > System.currentTimeMillis());
-	}
-	
-	public AttendanceInfoHolder getAttendanceInfo()
-	{
-		// Get reset time.
-		final Calendar calendar = Calendar.getInstance();
-		if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) && (calendar.get(Calendar.MINUTE) < 30))
-		{
-			calendar.add(Calendar.DAY_OF_MONTH, -1);
-		}
-		calendar.set(Calendar.HOUR_OF_DAY, 6);
-		calendar.set(Calendar.MINUTE, 30);
-		calendar.set(Calendar.SECOND, 0);
-		calendar.set(Calendar.MILLISECOND, 0);
-		
-		// Get last player reward time.
-		final long receiveDate;
-		int rewardIndex;
-		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
-		{
-			receiveDate = getAccountVariables().getLong(PlayerVariables.ATTENDANCE_DATE, 0);
-			rewardIndex = getAccountVariables().getInt(PlayerVariables.ATTENDANCE_INDEX, 0);
-		}
-		else
-		{
-			receiveDate = getVariables().getLong(PlayerVariables.ATTENDANCE_DATE, 0);
-			rewardIndex = getVariables().getInt(PlayerVariables.ATTENDANCE_INDEX, 0);
-		}
-		
-		// Check if player can receive reward today.
-		boolean canBeRewarded = false;
-		if (calendar.getTimeInMillis() > receiveDate)
-		{
-			canBeRewarded = true;
-			// Reset index if max is reached.
-			if (rewardIndex >= AttendanceRewardData.getInstance().getRewardsCount())
-			{
-				rewardIndex = 0;
-			}
-		}
-		
-		return new AttendanceInfoHolder(rewardIndex, canBeRewarded);
-	}
-	
-	public void setAttendanceInfo(int rewardIndex)
-	{
-		// At 6:30 next day, another reward may be taken.
-		final Calendar nextReward = Calendar.getInstance();
-		nextReward.set(Calendar.MINUTE, 30);
-		if (nextReward.get(Calendar.HOUR_OF_DAY) >= 6)
-		{
-			nextReward.add(Calendar.DATE, 1);
-		}
-		nextReward.set(Calendar.HOUR_OF_DAY, 6);
-		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
-		{
-			getAccountVariables().set(PlayerVariables.ATTENDANCE_DATE, nextReward.getTimeInMillis());
-			getAccountVariables().set(PlayerVariables.ATTENDANCE_INDEX, rewardIndex);
-		}
-		else
-		{
-			getVariables().set(PlayerVariables.ATTENDANCE_DATE, nextReward.getTimeInMillis());
-			getVariables().set(PlayerVariables.ATTENDANCE_INDEX, rewardIndex);
-		}
-	}
-	
-	public byte getVipTier()
-	{
-		return _vipTier;
-	}
-	
-	public void setVipTier(byte vipTier)
-	{
-		_vipTier = vipTier;
-	}
-	
-	public long getVipPoints()
-	{
-		return getAccountVariables().getLong(AccountVariables.VIP_POINTS, 0L);
-	}
-	
-	public long getVipTierExpiration()
-	{
-		return getAccountVariables().getLong(AccountVariables.VIP_EXPIRATION, 0L);
-	}
-	
-	public void setVipTierExpiration(long expiration)
-	{
-		getAccountVariables().set(AccountVariables.VIP_EXPIRATION, expiration);
-	}
-	
-	public void updateVipPoints(long points)
-	{
-		if (points == 0)
-		{
-			return;
-		}
-		final int currentVipTier = VipManager.getInstance().getVipTier(getVipPoints());
-		getAccountVariables().set(AccountVariables.VIP_POINTS, getVipPoints() + points);
-		final byte newTier = VipManager.getInstance().getVipTier(getVipPoints());
-		if (newTier != currentVipTier)
-		{
-			_vipTier = newTier;
-			if (newTier > 0)
-			{
-				getAccountVariables().set(AccountVariables.VIP_EXPIRATION, Instant.now().plus(30, ChronoUnit.DAYS).toEpochMilli());
-				VipManager.getInstance().manageTier(this);
-			}
-			else
-			{
-				getAccountVariables().set(AccountVariables.VIP_EXPIRATION, 0L);
-			}
-		}
-		getAccountVariables().storeMe(); // force to store to prevent falty purchases after a crash.
-		sendPacket(new ReceiveVipInfo(this));
 	}
 }

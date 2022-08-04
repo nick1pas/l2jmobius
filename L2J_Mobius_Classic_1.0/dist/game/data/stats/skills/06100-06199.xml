@@ -12,7 +12,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6103" toLevel="5" name="Showdown with the Turkey - 2 Consecutive Wins">
+	<skill id="6103" toLevel="5" name="Showdown with the Turkey - 1st Win">
 		<!-- $s1st win. -->
 		<icon>
 			<value level="1">icon.xmas_pcwin1_i00</value>
@@ -256,7 +256,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6116" toLevel="1" name="Attacks the Turkey">
+	<skill id="6116" toLevel="1" name="Attack Turkey">
 		<!-- Attacks the Turkey -->
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
@@ -295,22 +295,6 @@
 		<castRange>500</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="6118" toLevel="1" name="Winter Holiday Blessing">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
-		<icon>icon.etc_x_mas_tree_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>1</effectPoint>
-	</skill>
-	<skill id="6119" toLevel="1" name="Blessing of Plenty">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
-		<icon>icon.skill5662</icon>
-		<operateType>A1</operateType>
-		<castRange>400</castRange>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
 		<!-- Santa's reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->

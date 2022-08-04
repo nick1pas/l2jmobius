@@ -44,10 +44,6 @@ public class AccountVariables extends AbstractVariables
 	public static final String HWIDSLIT_VAR = "	";
 	public static final String PRIME_SHOP_PRODUCT_COUNT = "PSPCount";
 	public static final String PRIME_SHOP_PRODUCT_DAILY_COUNT = "PSPDailyCount";
-	public static final String VIP_POINTS = "VipPoints";
-	public static final String VIP_TIER = "VipTier";
-	public static final String VIP_EXPIRATION = "VipExpiration";
-	public static final String VIP_ITEM_BOUGHT = "Vip_Item_Bought";
 	
 	private final String _accountName;
 	

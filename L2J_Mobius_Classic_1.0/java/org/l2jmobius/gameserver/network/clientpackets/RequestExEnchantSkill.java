@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillResult;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
  * @author -Wooden-
@@ -55,16 +56,19 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int type = packet.readD();
-		if ((type < 0) || (type >= SkillEnchantType.values().length))
-		{
-			LOGGER.log(Level.WARNING, "Client: " + client + " send incorrect type " + type + " on packet: " + getClass().getSimpleName());
-			return false;
-		}
-		
 		_type = SkillEnchantType.values()[type];
 		_skillId = packet.readD();
-		_skillLevel = packet.readH();
-		_skillSubLevel = packet.readH();
+		final int level = packet.readD();
+		if (level < 100)
+		{
+			_skillLevel = level;
+			_skillSubLevel = 0;
+		}
+		else
+		{
+			_skillLevel = client.getPlayer().getKnownSkill(_skillId).getLevel();
+			_skillSubLevel = SkillEnchantConverter.levelToUnderground(level);
+		}
 		return true;
 	}
 	
@@ -140,7 +144,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 					return;
 				}
 			}
-			else if ((skill.getSubLevel() + 1) != _skillSubLevel)
+			else if ((_type != SkillEnchantType.UNTRAIN) && ((skill.getSubLevel() + 1) != _skillSubLevel))
 			{
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLevel + " expected: " + (skill.getSubLevel() + 1) + " for skill " + _skillId);
 				return;
@@ -148,33 +152,35 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		}
 		
 		final EnchantSkillHolder enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(_skillSubLevel % 1000);
-		
-		// Verify if player has all the ingredients
-		for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
+		if (_type != SkillEnchantType.UNTRAIN) // TODO: Fix properly
 		{
-			if (player.getInventory().getInventoryItemCount(holder.getId(), 0) < holder.getCount())
+			// Verify if player has all the ingredients
+			for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+				if (player.getInventory().getInventoryItemCount(holder.getId(), 0) < holder.getCount())
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+			}
+			
+			// Consume all ingredients
+			for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
+			{
+				if (!player.destroyItemByItemId("Skill enchanting", holder.getId(), holder.getCount(), player, true))
+				{
+					return;
+				}
+			}
+			
+			if (player.getSp() < enchantSkillHolder.getSp(_type))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
+			
+			player.getStat().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
 		}
-		
-		// Consume all ingredients
-		for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
-		{
-			if (!player.destroyItemByItemId("Skill enchanting", holder.getId(), holder.getCount(), player, true))
-			{
-				return;
-			}
-		}
-		
-		if (player.getSp() < enchantSkillHolder.getSp(_type))
-		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-			return;
-		}
-		
-		player.getStat().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
 		
 		switch (_type)
 		{
@@ -247,6 +253,32 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 					{
 						LOGGER_ENCHANT.log(Level.INFO, "Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
 					}
+				}
+				break;
+			}
+			case UNTRAIN:
+			{
+				// TODO: Fix properly
+				final Skill enchantedSkill;
+				final SystemMessage sm;
+				if ((_skillSubLevel % 1000) < 1)
+				{
+					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
+					sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
+				}
+				else
+				{
+					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
+					sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
+				}
+				player.removeSkill(enchantedSkill);
+				player.addSkill(enchantedSkill, true);
+				player.sendPacket(sm.addSkillName(_skillId));
+				player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
+				
+				if (Config.LOG_SKILL_ENCHANTS)
+				{
+					LOGGER_ENCHANT.log(Level.INFO, "Untrain success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
 				}
 				break;
 			}

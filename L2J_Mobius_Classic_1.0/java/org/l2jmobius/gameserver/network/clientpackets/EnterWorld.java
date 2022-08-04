@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -73,7 +72,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
-import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
@@ -105,7 +103,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -602,41 +599,10 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExWorldChatCnt(player));
 		}
 		
-		// Handle soulshots, disable all on EnterWorld
-		player.sendPacket(new ExAutoSoulShot(0, true, 0));
-		player.sendPacket(new ExAutoSoulShot(0, true, 1));
-		player.sendPacket(new ExAutoSoulShot(0, true, 2));
-		player.sendPacket(new ExAutoSoulShot(0, true, 3));
-		
 		// Fix for equipped item skills
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			player.updateAbnormalVisualEffects();
-		}
-		
-		if (Config.ENABLE_ATTENDANCE_REWARDS)
-		{
-			ThreadPool.schedule(() ->
-			{
-				// Check if player can receive reward today.
-				final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
-				if (attendanceInfo.isRewardAvailable())
-				{
-					final int lastRewardIndex = attendanceInfo.getRewardIndex() + 1;
-					player.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
-					player.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
-					player.sendMessage("Click on General Menu -> Attendance Check.");
-					if (Config.ATTENDANCE_POPUP_WINDOW)
-					{
-						player.sendPacket(new ExVipAttendanceItemList(player));
-					}
-				}
-			}, Config.ATTENDANCE_REWARD_DELAY * 60 * 1000);
-			
-			if (Config.ATTENDANCE_POPUP_START)
-			{
-				player.sendPacket(new ExVipAttendanceItemList(player));
-			}
 		}
 		
 		// Delayed HWID checks.

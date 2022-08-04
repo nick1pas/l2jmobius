@@ -47,17 +47,17 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to draw or not 0 is false and 1 is true
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
-		packet.writeD(_player.getINT() + _player.getHennaValue(BaseStat.INT)); // equip INT
+		packet.writeC(_player.getINT() + _player.getHennaValue(BaseStat.INT)); // equip INT
 		packet.writeD(_player.getSTR()); // current STR
-		packet.writeD(_player.getSTR() + _player.getHennaValue(BaseStat.STR)); // equip STR
+		packet.writeC(_player.getSTR() + _player.getHennaValue(BaseStat.STR)); // equip STR
 		packet.writeD(_player.getCON()); // current CON
-		packet.writeD(_player.getCON() + _player.getHennaValue(BaseStat.CON)); // equip CON
+		packet.writeC(_player.getCON() + _player.getHennaValue(BaseStat.CON)); // equip CON
 		packet.writeD(_player.getMEN()); // current MEN
-		packet.writeD(_player.getMEN() + _player.getHennaValue(BaseStat.MEN)); // equip MEN
+		packet.writeC(_player.getMEN() + _player.getHennaValue(BaseStat.MEN)); // equip MEN
 		packet.writeD(_player.getDEX()); // current DEX
-		packet.writeD(_player.getDEX() + _player.getHennaValue(BaseStat.DEX)); // equip DEX
+		packet.writeC(_player.getDEX() + _player.getHennaValue(BaseStat.DEX)); // equip DEX
 		packet.writeD(_player.getWIT()); // current WIT
-		packet.writeD(_player.getWIT() + _player.getHennaValue(BaseStat.WIT)); // equip WIT
+		packet.writeC(_player.getWIT() + _player.getHennaValue(BaseStat.WIT)); // equip WIT
 		packet.writeD(0); // TODO: Find me!
 		return true;
 	}

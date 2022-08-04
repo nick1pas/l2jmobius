@@ -89,7 +89,6 @@ public class Config
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-	private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
 	private static final String ATTRIBUTE_SYSTEM_FILE = "./config/AttributeSystem.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
@@ -133,7 +132,6 @@ public class Config
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
 	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
-	private static final String CUSTOM_VIP_CONFIG_FILE = "./config/Custom/VipSystem.ini";
 	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
 	private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
 	private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -153,13 +151,6 @@ public class Config
 	// --------------------------------------------------
 	public static ServerMode SERVER_MODE = ServerMode.NONE;
 	
-	public static boolean ENABLE_ATTENDANCE_REWARDS;
-	public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
-	public static boolean VIP_ONLY_ATTENDANCE_REWARDS;
-	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
-	public static int ATTENDANCE_REWARD_DELAY;
-	public static boolean ATTENDANCE_POPUP_START;
-	public static boolean ATTENDANCE_POPUP_WINDOW;
 	public static boolean PLAYER_DELEVEL;
 	public static int DELEVEL_MINIMUM;
 	public static boolean DECREASE_SKILL_LEVEL;
@@ -274,7 +265,6 @@ public class Config
 	public static int ALT_MAX_NUM_OF_CLANS_IN_ALLY;
 	public static int ALT_CLAN_MEMBERS_FOR_WAR;
 	public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
-	public static long ALT_CLAN_MEMBERS_TIME_FOR_BONUS;
 	public static boolean REMOVE_CASTLE_CIRCLETS;
 	public static int ALT_PARTY_MAX_MEMBERS;
 	public static int ALT_PARTY_RANGE;
@@ -1248,7 +1238,6 @@ public class Config
 	public static boolean PREMIUM_ONLY_FISHING;
 	public static boolean PC_CAFE_ENABLED;
 	public static boolean PC_CAFE_ONLY_PREMIUM;
-	public static boolean PC_CAFE_ONLY_VIP;
 	public static int PC_CAFE_MAX_POINTS;
 	public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
 	public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
@@ -1256,13 +1245,6 @@ public class Config
 	public static boolean PC_CAFE_RANDOM_POINT;
 	public static boolean PC_CAFE_REWARD_LOW_EXP_KILLS;
 	public static int PC_CAFE_LOW_EXP_KILLS_CHANCE;
-	public static boolean VIP_SYSTEM_ENABLED;
-	public static boolean VIP_SYSTEM_PRIME_AFFECT;
-	public static int VIP_SYSTEM_MAX_TIER;
-	public static int VIP_SYSTEM_GOLD_DROP_MIN;
-	public static int VIP_SYSTEM_GOLD_DROP_MAX;
-	public static int VIP_SYSTEM_SILVER_DROP_MIN;
-	public static int VIP_SYSTEM_SILVER_DROP_MAX;
 	public static boolean SELLBUFF_ENABLED;
 	public static int SELLBUFF_MP_MULTIPLER;
 	public static int SELLBUFF_PAYMENT_ID;
@@ -1527,16 +1509,6 @@ public class Config
 			ALLOW_WYVERN_DURING_SIEGE = featureConfig.getBoolean("AllowRideWyvernDuringSiege", true);
 			ALLOW_MOUNTS_DURING_SIEGE = featureConfig.getBoolean("AllowRideMountsDuringSiege", false);
 			
-			// Load Attendance config file (if exists)
-			final PropertiesParser attandanceConfig = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
-			ENABLE_ATTENDANCE_REWARDS = attandanceConfig.getBoolean("EnableAttendanceRewards", false);
-			PREMIUM_ONLY_ATTENDANCE_REWARDS = attandanceConfig.getBoolean("PremiumOnlyAttendanceRewards", false);
-			VIP_ONLY_ATTENDANCE_REWARDS = attandanceConfig.getBoolean("VipOnlyAttendanceRewards", false);
-			ATTENDANCE_REWARDS_SHARE_ACCOUNT = attandanceConfig.getBoolean("AttendanceRewardsShareAccount", false);
-			ATTENDANCE_REWARD_DELAY = attandanceConfig.getInt("AttendanceRewardDelay", 30);
-			ATTENDANCE_POPUP_START = attandanceConfig.getBoolean("AttendancePopupStart", true);
-			ATTENDANCE_POPUP_WINDOW = attandanceConfig.getBoolean("AttendancePopupWindow", false);
-			
 			// Load AttributeSystem config file (if exists)
 			final PropertiesParser attributeConfig = new PropertiesParser(ATTRIBUTE_SYSTEM_FILE);
 			S_WEAPON_STONE = attributeConfig.getInt("SWeaponStone", 50);
@@ -1794,7 +1766,6 @@ public class Config
 			ALT_MAX_NUM_OF_CLANS_IN_ALLY = characterConfig.getInt("AltMaxNumOfClansInAlly", 3);
 			ALT_CLAN_MEMBERS_FOR_WAR = characterConfig.getInt("AltClanMembersForWar", 15);
 			ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = characterConfig.getBoolean("AltMembersCanWithdrawFromClanWH", false);
-			ALT_CLAN_MEMBERS_TIME_FOR_BONUS = characterConfig.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
 			REMOVE_CASTLE_CIRCLETS = characterConfig.getBoolean("RemoveCastleCirclets", true);
 			ALT_PARTY_MAX_MEMBERS = characterConfig.getInt("AltPartyMaxMembers", 7);
 			ALT_PARTY_RANGE = characterConfig.getInt("AltPartyRange", 1500);
@@ -3228,7 +3199,6 @@ public class Config
 			final PropertiesParser pcCafeConfig = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
 			PC_CAFE_ENABLED = pcCafeConfig.getBoolean("PcCafeEnabled", false);
 			PC_CAFE_ONLY_PREMIUM = pcCafeConfig.getBoolean("PcCafeOnlyPremium", false);
-			PC_CAFE_ONLY_VIP = pcCafeConfig.getBoolean("PcCafeOnlyVip", false);
 			PC_CAFE_MAX_POINTS = pcCafeConfig.getInt("MaxPcCafePoints", 200000);
 			if (PC_CAFE_MAX_POINTS < 0)
 			{
@@ -3255,22 +3225,6 @@ public class Config
 			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
 			{
 				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
-			}
-			
-			final PropertiesParser vipSystemConfig = new PropertiesParser(CUSTOM_VIP_CONFIG_FILE);
-			VIP_SYSTEM_ENABLED = vipSystemConfig.getBoolean("VipEnabled", false);
-			if (VIP_SYSTEM_ENABLED)
-			{
-				VIP_SYSTEM_PRIME_AFFECT = vipSystemConfig.getBoolean("PrimeAffectPoints", false);
-				VIP_SYSTEM_MAX_TIER = vipSystemConfig.getInt("MaxVipLevel", 7);
-				VIP_SYSTEM_SILVER_DROP_MIN = vipSystemConfig.getInt("VipSilverDropMin", 1);
-				VIP_SYSTEM_SILVER_DROP_MAX = vipSystemConfig.getInt("VipSilverDropMax", 5);
-				VIP_SYSTEM_GOLD_DROP_MIN = vipSystemConfig.getInt("VipGoldenDropMin", 1);
-				VIP_SYSTEM_GOLD_DROP_MAX = vipSystemConfig.getInt("VipGoldenDropMax", 5);
-				if (VIP_SYSTEM_MAX_TIER > 7)
-				{
-					VIP_SYSTEM_MAX_TIER = 7;
-				}
 			}
 			
 			// Load PremiumSystem config file (if exists)

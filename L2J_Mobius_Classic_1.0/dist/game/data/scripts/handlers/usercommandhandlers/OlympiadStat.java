@@ -53,7 +53,7 @@ public class OlympiadStat implements IUserCommandHandler
 		final WorldObject target = player.getTarget();
 		if ((target == null) || !target.isPlayer() || (target.getActingPlayer().getClassId().level() < 2))
 		{
-			player.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_IN_CASE_A_TARGET_IS_AWAKENED_NOBLESSE_OR_EXALTED);
+			player.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_WHEN_THE_TARGET_IS_AN_AWAKENED_NOBLESSE_EXALTED);
 			return false;
 		}
 		

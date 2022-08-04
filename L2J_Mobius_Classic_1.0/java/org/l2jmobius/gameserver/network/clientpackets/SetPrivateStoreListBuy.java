@@ -80,7 +80,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			final int defenceHoly = packet.readH();
 			final int defenceDark = packet.readH();
 			final int visualId = packet.readD();
-			
 			final TradeItem item = new TradeItem(template, cnt, price);
 			item.setEnchant(enchantLevel);
 			item.setAttackElementType(AttributeType.findByClientId(attackAttributeId));

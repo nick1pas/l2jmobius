@@ -14,24 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets.vip;
+package org.l2jmobius.gameserver.util;
 
-import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
-
-public class ExRequestVipInfo implements IClientIncomingPacket
+/**
+ * Convert different client enchant levels
+ * @author Mobius
+ */
+public class SkillEnchantConverter
 {
-	@Override
-	public boolean read(GameClient client, PacketReader packet)
+	public static int levelToErtheia(int enchantLevel)
 	{
-		return true;
+		return ((enchantLevel % 1000) + ((enchantLevel / 1000) * 100));
 	}
 	
-	@Override
-	public void run(GameClient client)
+	public static int levelToUnderground(int enchantLevel)
 	{
-		client.sendPacket(new ReceiveVipInfo(client.getPlayer()));
+		return ((enchantLevel % 100) + ((enchantLevel / 100) * 1000));
 	}
 }

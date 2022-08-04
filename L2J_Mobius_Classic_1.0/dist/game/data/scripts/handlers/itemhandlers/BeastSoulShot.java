@@ -49,14 +49,14 @@ public class BeastSoulShot implements IItemHandler
 		final Player activeOwner = playable.getActingPlayer();
 		if (!activeOwner.hasSummon())
 		{
-			activeOwner.sendPacket(SystemMessageId.SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+			activeOwner.sendPacket(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
 		
 		final Summon pet = playable.getPet();
 		if ((pet != null) && pet.isDead())
 		{
-			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
+			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
@@ -71,7 +71,7 @@ public class BeastSoulShot implements IItemHandler
 		
 		if ((pet == null) && aliveServitor.isEmpty())
 		{
-			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
+			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
@@ -103,7 +103,7 @@ public class BeastSoulShot implements IItemHandler
 			// Not enough Soulshots to use.
 			if (!activeOwner.disableAutoShot(itemId))
 			{
-				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
+				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 			}
 			return false;
 		}
@@ -113,7 +113,7 @@ public class BeastSoulShot implements IItemHandler
 		{
 			if (!activeOwner.disableAutoShot(itemId))
 			{
-				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
+				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 			}
 			return false;
 		}

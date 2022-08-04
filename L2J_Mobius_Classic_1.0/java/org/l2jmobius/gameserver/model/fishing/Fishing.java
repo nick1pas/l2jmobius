@@ -155,7 +155,7 @@ public class Fishing
 		{
 			if (Config.PREMIUM_ONLY_FISHING && !_player.hasPremiumStatus())
 			{
-				_player.sendPacket(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING_2);
+				_player.sendMessage("You reel your line in and stop fishing.");
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				stopFishing(FishingEndType.ERROR);
 				return;
@@ -174,7 +174,7 @@ public class Fishing
 		final int maxPLayerLevel = baitData.getMaxPlayerLevel();
 		if ((_player.getLevel() < minPlayerLevel) || (_player.getLevel() > maxPLayerLevel))
 		{
-			_player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);
+			_player.sendMessage("You do not meet the fishing level requirements.");
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;
@@ -200,7 +200,7 @@ public class Fishing
 		
 		if (_player.isTransformed() || _player.isInBoat())
 		{
-			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
+			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;

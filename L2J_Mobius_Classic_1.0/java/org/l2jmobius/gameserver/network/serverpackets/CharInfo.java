@@ -138,7 +138,8 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			final VariationInstance augment = _player.getInventory().getPaperdollAugmentation(slot);
 			packet.writeD(augment != null ? augment.getOption1Id() : 0); // Confirmed
-			packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
+			// Mobius: Maybe use 2x writeH ?
+			// packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
 		}
 		
 		packet.writeC(_armorEnchant);

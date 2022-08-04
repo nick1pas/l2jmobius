@@ -56,7 +56,6 @@ import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.status.AttackableStatus;
 import org.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAggroRangeEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
@@ -585,23 +584,10 @@ public class Attackable extends Npc
 								exp = attacker.getStat().getValue(Stat.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS[attacker.getClassId().getId()];
 								sp = attacker.getStat().getValue(Stat.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS[attacker.getClassId().getId()];
 								attacker.addExpAndSp(exp, sp, useVitalityRate());
-								if (exp > 0)
+								if ((exp > 0) && useVitalityRate())
 								{
-									final Clan clan = attacker.getClan();
-									if (clan != null)
-									{
-										double finalExp = exp;
-										if (useVitalityRate())
-										{
-											finalExp *= attacker.getStat().getExpBonusMultiplier();
-										}
-										clan.addHuntingPoints(attacker, this, finalExp);
-									}
-									if (useVitalityRate())
-									{
-										attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
-										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
-									}
+									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
+									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
 								}
 							}
 						}

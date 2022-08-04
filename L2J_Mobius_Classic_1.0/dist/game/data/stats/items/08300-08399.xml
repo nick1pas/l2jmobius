@@ -36,30 +36,6 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8350" name="Souvenir Maracas" type="Weapon">
-		<!-- Chronicle IV Souvenir! Cannot be dropped. -->
-		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="commissionItemType" val="DUALSWORD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="is_dropable" val="false" />
-		<skills>
-			<skill id="3045" level="14" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
-		</skills>
-		<stats>
-			<stat type="pAtk">1</stat>
-			<stat type="mAtk">1</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="8388" name="Spellbook: Greater Might" type="EtcItem">
 		<!-- Spellbook needed to learn Great Might. Used by Prophets. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />

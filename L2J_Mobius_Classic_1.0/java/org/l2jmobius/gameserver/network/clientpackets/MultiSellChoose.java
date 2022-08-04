@@ -623,7 +623,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				{
 					if (player.getPcCafePoints() < totalCount)
 					{
-						player.sendPacket(SystemMessageId.YOU_ARE_SHORT_OF_PA_POINTS);
+						player.sendPacket(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS);
 						return false;
 					}
 					return true;

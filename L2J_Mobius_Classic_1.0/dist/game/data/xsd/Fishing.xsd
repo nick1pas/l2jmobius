@@ -21,7 +21,7 @@
 						<xs:attribute type="xs:double" name="max" use="required" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="baits">
+				<xs:element name="baits" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="bait" maxOccurs="unbounded" minOccurs="1">
@@ -50,7 +50,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="rods">
+				<xs:element name="rods" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="rod" maxOccurs="unbounded" minOccurs="1">

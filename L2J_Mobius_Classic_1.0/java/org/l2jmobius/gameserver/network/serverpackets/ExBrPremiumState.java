@@ -37,7 +37,7 @@ public class ExBrPremiumState implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_BR_PREMIUM_STATE.writeId(packet);
 		packet.writeD(_player.getObjectId());
-		packet.writeC(_player.hasPremiumStatus() || (_player.getVipTier() > 0) ? 1 : 0);
+		packet.writeC(_player.hasPremiumStatus() ? 1 : 0);
 		return true;
 	}
 }

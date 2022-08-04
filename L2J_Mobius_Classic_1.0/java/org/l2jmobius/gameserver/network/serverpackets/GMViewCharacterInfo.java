@@ -90,8 +90,12 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		{
 			final VariationInstance augment = _player.getInventory().getPaperdollAugmentation(slot);
 			packet.writeD(augment != null ? augment.getOption1Id() : 0); // Confirmed
-			packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
+			// Mobius: Maybe use 2x writeH?
+			// packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
 		}
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		packet.writeC(_player.getInventory().getTalismanSlots()); // CT2.3
 		packet.writeC(_player.getInventory().canEquipCloak() ? 1 : 0); // CT2.3
 		packet.writeD(0);

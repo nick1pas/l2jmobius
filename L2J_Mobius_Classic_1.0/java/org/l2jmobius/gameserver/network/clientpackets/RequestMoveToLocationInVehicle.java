@@ -88,7 +88,7 @@ public class RequestMoveToLocationInVehicle implements IClientIncomingPacket
 		
 		if (player.hasSummon())
 		{
-			player.sendPacket(SystemMessageId.YOU_SHOULD_RELEASE_YOUR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN);
+			player.sendPacket(SystemMessageId.YOU_SHOULD_RELEASE_YOUR_PET_OR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

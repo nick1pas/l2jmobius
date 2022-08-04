@@ -44,8 +44,7 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 		for (Skill skill : _skills)
 		{
 			packet.writeD(skill.isPassive() ? 1 : 0);
-			packet.writeH(skill.getDisplayLevel());
-			packet.writeH(skill.getSubLevel());
+			packet.writeD(skill.getDisplayLevel());
 			packet.writeD(skill.getDisplayId());
 			packet.writeD(0);
 			packet.writeC(isDisabled && skill.isClanSkill() ? 1 : 0);

@@ -71,11 +71,12 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 			if (containsMask(slot))
 			{
 				final VariationInstance augment = inventory.getPaperdollAugmentation(slot.getSlot());
-				packet.writeH(22); // 10 + 4 * 3
+				packet.writeH(18); // 2 + 4 * 4
 				packet.writeD(inventory.getPaperdollObjectId(slot.getSlot()));
 				packet.writeD(inventory.getPaperdollItemId(slot.getSlot()));
 				packet.writeD(augment != null ? augment.getOption1Id() : 0);
-				packet.writeD(augment != null ? augment.getOption2Id() : 0);
+				// Mobius: Maybe use 2x writeH?
+				// packet.writeD(augment != null ? augment.getOption2Id() : 0);
 				packet.writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
 			}
 		}

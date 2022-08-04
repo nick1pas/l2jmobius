@@ -85,7 +85,8 @@ public class MultiSellList extends AbstractItemPacket
 			packet.writeC(entry.isStackable() ? 1 : 0);
 			// Those values will be passed down to MultiSellChoose packet.
 			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
-			writeItemAugment(packet, itemEnchantment);
+			packet.writeD((itemEnchantment != null) && (itemEnchantment.getAugmentation() != null) ? itemEnchantment.getAugmentation().getOption1Id() : 0);
+			packet.writeD((itemEnchantment != null) && (itemEnchantment.getAugmentation() != null) ? itemEnchantment.getAugmentation().getOption2Id() : 0);
 			writeItemElemental(packet, itemEnchantment);
 			packet.writeH(entry.getProducts().size());
 			packet.writeH(entry.getIngredients().size());
@@ -108,7 +109,8 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeQ(_list.getProductCount(product));
 				packet.writeH(product.getEnchantmentLevel() > 0 ? product.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				packet.writeD((int) Math.ceil(product.getChance())); // chance
-				writeItemAugment(packet, displayItemEnchantment);
+				packet.writeD((displayItemEnchantment != null) && (displayItemEnchantment.getAugmentation() != null) ? displayItemEnchantment.getAugmentation().getOption1Id() : 0);
+				packet.writeD((displayItemEnchantment != null) && (displayItemEnchantment.getAugmentation() != null) ? displayItemEnchantment.getAugmentation().getOption2Id() : 0);
 				writeItemElemental(packet, displayItemEnchantment);
 			}
 			for (ItemChanceHolder ingredient : entry.getIngredients())
@@ -127,7 +129,8 @@ public class MultiSellList extends AbstractItemPacket
 				}
 				packet.writeQ(_list.getIngredientCount(ingredient));
 				packet.writeH(ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
-				writeItemAugment(packet, displayItemEnchantment);
+				packet.writeD((displayItemEnchantment != null) && (displayItemEnchantment.getAugmentation() != null) ? displayItemEnchantment.getAugmentation().getOption1Id() : 0);
+				packet.writeD((displayItemEnchantment != null) && (displayItemEnchantment.getAugmentation() != null) ? displayItemEnchantment.getAugmentation().getOption2Id() : 0);
 				writeItemElemental(packet, displayItemEnchantment);
 			}
 		}

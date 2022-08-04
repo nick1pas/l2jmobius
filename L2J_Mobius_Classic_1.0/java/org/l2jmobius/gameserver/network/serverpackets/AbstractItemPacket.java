@@ -146,8 +146,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	{
 		if ((item != null) && (item.getAugmentation() != null))
 		{
-			packet.writeD(item.getAugmentation().getOption1Id());
-			packet.writeD(item.getAugmentation().getOption2Id());
+			packet.writeH(item.getAugmentation().getOption1Id());
+			packet.writeH(item.getAugmentation().getOption2Id());
 		}
 		else
 		{
@@ -193,7 +193,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		// Enchant Effects
 		for (int op : item.getEnchantOptions())
 		{
-			packet.writeD(op);
+			packet.writeH(op);
 		}
 	}
 	

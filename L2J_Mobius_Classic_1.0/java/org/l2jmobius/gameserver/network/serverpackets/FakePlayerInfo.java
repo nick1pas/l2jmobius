@@ -104,7 +104,6 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		final int slot : getPaperdollOrderAugument())
 		{
 			packet.writeD(0);
-			packet.writeD(0);
 		}
 		packet.writeC(_fpcHolder.getArmorEnchantLevel());
 		for (@SuppressWarnings("unused")
