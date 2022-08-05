@@ -335,8 +335,8 @@
 																		<xs:element maxOccurs="unbounded" name="value">
 																			<xs:complexType>
 																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					<xs:extension base="xs:unsignedInt">
+																						<xs:attribute name="level" type="xs:unsignedInt" use="required" />
 																					</xs:extension>
 																				</xs:simpleContent>
 																			</xs:complexType>
@@ -1471,8 +1471,36 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="MAX_HP" type="xs:unsignedByte" />
-															<xs:element name="MAX_MP" type="xs:unsignedByte" />
+															<xs:element name="MAX_HP">	
+															<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="MAX_MP">
+															<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="pAtkSpeedAmount">
 																<xs:complexType>
 																	<xs:sequence>
@@ -1742,7 +1770,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="min" type="xs:unsignedShort" />
+															<xs:element name="min" type="xs:unsignedInt" />
 															<xs:element name="addStat" type="xs:string" />
 															<xs:element name="staticChance" type="xs:boolean" />
 															<xs:element name="pAtkMod" type="xs:decimal" />
@@ -2265,7 +2293,7 @@
 																	<xs:element maxOccurs="unbounded" name="value">
 																		<xs:complexType>
 																			<xs:simpleContent>
-																				<xs:extension base="xs:unsignedByte">
+																				<xs:extension base="xs:unsignedShort">
 																					<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 																				</xs:extension>
 																			</xs:simpleContent>

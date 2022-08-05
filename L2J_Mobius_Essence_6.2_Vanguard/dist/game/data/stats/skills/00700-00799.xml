@@ -2364,9 +2364,10 @@
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
 		<activateRate>90</activateRate>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>100</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<coolTime>700</coolTime>
 		<effectPoint>-6100</effectPoint>
 		<hitTime>1300</hitTime>
@@ -2376,7 +2377,6 @@
 		<mpConsume>94</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2393,8 +2393,7 @@
 			<effect name="PhysicalAttack">
 				<power>8409</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>50</criticalChance>
-				<overHit>true</overHit>
+				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
@@ -2406,16 +2405,16 @@
 				<mode>PER</mode>
 				<heal>true</heal>
 			</effect>
-			<effect name="HealEffect">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>30</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 			<effect name="DefenceTrait">
 				<ANOMALY>-30</ANOMALY>
+			</effect>
+			<effect name="HealEffect">
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2590,7 +2589,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2670,7 +2668,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -2701,19 +2698,20 @@
 	<skill id="771" toLevel="1" name="Flame Hawk">
 		<!-- <Infection Skill> Fires an arrow imbued with the phoenix energy. Attacks the target and enemies at the front with 8049 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 10% of the target's defense. Critical. -->
 		<icon>icon.skill0771</icon>
-		<affectLimit>5-12</affectLimit>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<affectLimit>10-10</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>-1220</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<fanRange>0;0;900;40</fanRange>
 		<hitTime>3500</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>147</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2729,8 +2727,7 @@
 				<power>8049</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>23298</skillId> <!-- Flame Hawk -->
@@ -2741,18 +2738,19 @@
 	<skill id="772" toLevel="1" name="Arrow Rain">
 		<!-- <Infection Skill> Causes arrows to rain down from the sky. Attacks the target and nearby enemies with 7043 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 10% of the target's defense. Critical. -->
 		<icon>icon.skill0772</icon>
-		<affectLimit>1-20</affectLimit>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
+		<affectLimit>20-20</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>-1220</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>147</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2768,8 +2766,7 @@
 				<power>7043</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>23299</skillId> <!-- Arrow Rain -->
@@ -2780,12 +2777,11 @@
 	<skill id="773" toLevel="1" name="Ghost Piercing">
 		<!-- <Infection Skill> Shoots ghost arrows. Attacks the target and enemies at the front with 8452 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 5% of the target's defense. Critical. -->
 		<icon>icon.skill0773</icon>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>900</affectRange>
+		<affectLimit>10-10</affectLimit>
 		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>-1220</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<fanRange>0;0;900;100</fanRange>
 		<hitTime>3000</hitTime>
 		<magicLevel>80</magicLevel>
@@ -2807,8 +2803,7 @@
 			<effect name="PhysicalAttack">
 				<power>8452</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<pDefMod>0.9</pDefMod>
-				<overHit>true</overHit>
+				<pDefMod>0.95</pDefMod>
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="CallSkill">

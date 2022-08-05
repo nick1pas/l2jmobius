@@ -230,18 +230,14 @@
 	<skill id="1506" toLevel="1" name="Eva's Blessing">
 		<!-- The character takes the Eva's gift. Recovers all HP/ CP/ MP There is a certain chance to remove debuffs and anomaly states. -->
 		<icon>icon.skill1506</icon>
-		<castRange>400</castRange>
 		<effectPoint>668</effectPoint>
-		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>80</magicLevel>
-		<mpConsume>58</mpConsume>
-		<mpInitialConsume>15</mpInitialConsume>
+		<mpConsume>73</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_NOT</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CpHealPercent">
@@ -255,7 +251,7 @@
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
-				<rate>40</rate>
+				<rate>50</rate>
 				<max>10</max>
 			</effect>
 		</effects>
@@ -264,19 +260,15 @@
 		<!-- The power of Shillien is granted. The effect lasts for 20 min. M. Atk. +15% -->
 		<icon>icon.skill1507</icon>
 		<abnormalLevel>5</abnormalLevel>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK_SPECIAL</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>80</magicLevel>
-		<mpConsume>29</mpConsume>
-		<mpInitialConsume>8</mpInitialConsume>
+		<mpConsume>37</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -615,7 +607,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2304,10 +2295,12 @@
 		</magicLevel>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">450000</value>
+		</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2370,23 +2363,20 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLevel>
-		<abnormalTime>2400</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
-		<affectRange>1000</affectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
-			<value level="3">35</value>
+			<value level="3">76</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -2553,23 +2543,7 @@
 			<value level="14">-840</value>
 			<value level="15">-850</value>
 		</effectPoint>
-		<effectRange>
-			<value level="1">1100</value>
-			<value level="2">1200</value>
-			<value level="3">1300</value>
-			<value level="4">1400</value>
-			<value level="5">1400</value>
-			<value level="6">1500</value>
-			<value level="7">1500</value>
-			<value level="8">1500</value>
-			<value level="9">1500</value>
-			<value level="10">1500</value>
-			<value level="11">1500</value>
-			<value level="12">1500</value>
-			<value level="13">1600</value>
-			<value level="14">1600</value>
-			<value level="15">1600</value>
-		</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLevel>
@@ -2608,33 +2582,12 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
+		<isMagic>1</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
-		<activateRate>-1</activateRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">-10</value>
-					<value level="2">-12</value>
-					<value level="3">-14</value>
-					<value level="4">-16</value>
-					<value level="5">-17</value>
-					<value level="6">-18</value>
-					<value level="7">-19</value>
-					<value level="8">-20</value>
-					<value level="9">-21</value>
-					<value level="10">-22</value>
-					<value level="11">-23</value>
-					<value level="12">-23</value>
-					<value level="13">-23</value>
-					<value level="14">-23</value>
-					<value level="15">-23</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DefenceTrait">
 				<SWORD>
 					<value level="1">-20</value>
@@ -2824,7 +2777,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -2897,11 +2849,12 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">7</value>
+			<value level="2">10</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>
 			<value level="1">76</value>
@@ -2911,36 +2864,33 @@
 			<value level="1">73</value>
 			<value level="2">81</value>
 		</mpConsume>
-		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="TriggerSkillByDamage">
-				<!-- Counter Critical -->
-				<attackerType>Creature</attackerType>
-				<chance>80</chance>
-				<targetType>SELF</targetType>
-				<minDamage>300</minDamage>
-				<skillId>6059</skillId> <!-- Counter Critical -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>
-					<value level="1">-30</value>
-					<value level="2">-40</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">-30</value>
 					<value level="2">-20</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<minDamage>100</minDamage>
+				<skillId>6059</skillId> <!-- Counter Critical -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -3254,21 +3204,18 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
-		<affectRange>1000</affectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
-			<value level="3">50</value>
+			<value level="3">76</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -3283,8 +3230,7 @@
 	<skill id="1550" toLevel="2" name="Mass Cure">
 		<!-- Removes Infection/ Suppression from party members. -->
 		<icon>icon.skill1550</icon>
-		<affectRange>1000</affectRange>
-		<effectPoint>1000</effectPoint>
+		<affectRange>1200</affectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -3295,18 +3241,16 @@
 			<value level="1">80</value>
 			<value level="2">85</value>
 		</mpConsume>
-		<mpInitialConsume>17</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3;SPEED_DOWN,3;ATTACK_TIME_UP,3;CASTING_TIME_UP,3</value>
-					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_UP,7;CASTING_TIME_UP,7;ROOT_PHYSICALLY,7;ROOT_MAGICALLY,7;SILENCE,7;SILENCE_ALL,7;SILENCE_PHYSICAL,7</value>
+					<value level="1">INFECTION,7;SUPPRESSION,7;POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_DOWN,7;CASTING_TIME_DOWN,7</value>
+					<value level="2">INFECTION,9;SUPPRESSION,9;POISON,9;BLEEDING,9;DOT_MP,9;SPEED_DOWN,9;ATTACK_TIME_DOWN,9;CASTING_TIME_DOWN,9;ROOT_PHYSICALLY,9;ROOT_MAGICALLY,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9</value>
 				</dispel>
 			</effect>
 		</effects>
@@ -3314,16 +3258,14 @@
 	<skill id="1551" toLevel="1" name="Mass Purify">
 		<!-- Removes Paralysis/ Shock/ Sleep/ Fear/ Imprisonment from party members. -->
 		<icon>icon.skill1551</icon>
-		<affectRange>1000</affectRange>
+		<affectRange>1200</affectRange>
 		<effectPoint>1000</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>76</magicLevel>
 		<mpConsume>80</mpConsume>
-		<mpInitialConsume>17</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -3336,8 +3278,7 @@
 	<skill id="1552" toLevel="2" name="Mass Vitalize">
 		<!-- Restores party member's HP with $s1 power. Removes debuffs from party members. <Removable Debuffs> P. Atk. is decreased. M. Atk. is decreased. P. Def. is decreased. M. Def. is decreased. -->
 		<icon>icon.skill1552</icon>
-		<affectRange>1000</affectRange>
-		<effectPoint>1000</effectPoint>
+		<affectRange>1200</affectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -3348,7 +3289,6 @@
 			<value level="1">80</value>
 			<value level="2">85</value>
 		</mpConsume>
-		<mpInitialConsume>39</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3363,18 +3303,18 @@
 				</power>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>PA_DOWN,10;MA_DOWN,10;PD_DOWN,10;MD_DOWN,10;SPEED_DOWN,10;ATTACK_TIME_UP,10;CASTING_TIME_UP,10</dispel>
+				<dispel>PA_DOWN,10;MA_DOWN,10;PD_DOWN,10;MD_DOWN,10;ATTACK_TIME_DOWN,10;CASTING_TIME_DOWN,10;SPEED_DOWN,10</dispel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1553" toLevel="2" name="Chain Heal">
 		<!-- Heals the target and the 10 most injured allies around the target by up to 30% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<icon>icon.skill1553</icon>
-		<affectLimit>9-0</affectLimit>
-		<affectRange>300</affectRange>
+		<affectLimit>11-11</affectLimit>
+		<affectRange>1200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>1301</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
@@ -3390,9 +3330,8 @@
 			<value level="1">194</value>
 			<value level="2">214</value>
 		</mpConsume>
-		<mpInitialConsume>39</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>RANGE_SORT_BY_HP</affectScope>
@@ -3403,12 +3342,6 @@
 					<value level="1">30</value>
 					<value level="2">35</value>
 				</power>
-			</effect>
-			<effect name="DispelBySlot">
-				<dispel>
-					<value level="1">POISON,3;BLEEDING,3;DOT_MP,3</value>
-					<value level="2">POISON,7;BLEEDING,7;DOT_MP,7;SPEED_DOWN,7;ATTACK_TIME_UP,7;CASTING_TIME_UP,7</value>
-				</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -3489,6 +3422,7 @@
 		<icon>icon.skill1556</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
+		<abnormalType>MP_SHIELD</abnormalType>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<effectPoint>
 			<value level="1">138</value>
@@ -3515,9 +3449,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<abnormalType>MP_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3555,15 +3487,13 @@
 			<value level="4">113</value>
 			<value level="5">113</value>
 		</mpConsume>
-		<mpInitialConsume>7</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
 		<isSharedWithSummon>false</isSharedWithSummon>
 		<conditions>
 			<condition name="OpHaveSummon" />
@@ -3585,35 +3515,47 @@
 					<value level="5">70</value>
 				</MAGIC_ATTACK>
 				<PHYSICAL_DEFENCE>
-					<value level="1">35</value>
-					<value level="2">40</value>
-					<value level="3">45</value>
-					<value level="4">50</value>
-					<value level="5">60</value>
+					<value level="1">50</value>
+					<value level="2">55</value>
+					<value level="3">60</value>
+					<value level="4">65</value>
+					<value level="5">70</value>
 				</PHYSICAL_DEFENCE>
 				<MAGICAL_DEFENCE>
+					<value level="1">50</value>
+					<value level="2">55</value>
+					<value level="3">60</value>
+					<value level="4">65</value>
+					<value level="5">70</value>
+				</MAGICAL_DEFENCE>
+				<PHYSICAL_ATTACK_SPEED>
 					<value level="1">35</value>
 					<value level="2">40</value>
 					<value level="3">45</value>
 					<value level="4">50</value>
 					<value level="5">60</value>
-				</MAGICAL_DEFENCE>
-				<PHYSICAL_ATTACK_SPEED>
-					<value level="1">30</value>
-					<value level="2">35</value>
-					<value level="3">40</value>
-					<value level="4">45</value>
-					<value level="5">50</value>
 				</PHYSICAL_ATTACK_SPEED>
 				<MAGIC_ATTACK_SPEED>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">45</value>
+					<value level="4">50</value>
+					<value level="5">60</value>
+				</MAGIC_ATTACK_SPEED>
+				<MAX_HP>
 					<value level="1">30</value>
 					<value level="2">35</value>
 					<value level="3">40</value>
 					<value level="4">45</value>
 					<value level="5">50</value>
-				</MAGIC_ATTACK_SPEED>
-				<MAX_HP>10</MAX_HP>
-				<MAX_MP>10</MAX_MP>
+				</MAX_HP>
+				<MAX_MP>
+					<value level="1">30</value>
+					<value level="2">35</value>
+					<value level="3">40</value>
+					<value level="4">45</value>
+					<value level="5">50</value>
+				</MAX_MP>
 			</effect>
 		</effects>
 	</skill>

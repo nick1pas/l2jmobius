@@ -4,6 +4,7 @@
 		<icon>icon.s_impale</icon>
 		<castRange>120</castRange>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-200</value>
 			<value level="2">-300</value>
@@ -14,7 +15,7 @@
 			<value level="7">-650</value>
 			<value level="8">-700</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<magicLevel>
@@ -39,7 +40,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -135,9 +135,10 @@
 	</skill>
 	<skill id="47803" toLevel="10" name="Threatening Swing">
 		<icon>icon.s_brandish</icon>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectLimit>20-20</affectLimit>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-440</value>
@@ -150,7 +151,7 @@
 			<value level="9">-710</value>
 			<value level="10">-740</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<magicLevel>
@@ -179,7 +180,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -290,6 +290,7 @@
 		<icon>icon.s_wild_scratch</icon>
 		<castRange>150</castRange>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-500</value>
@@ -302,7 +303,7 @@
 			<value level="9">-880</value>
 			<value level="10">-900</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<magicLevel>
@@ -331,7 +332,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -348,8 +348,9 @@
 					<value level="9">9488</value>
 					<value level="10">9773</value>
 				</power>
-				<pDefMod>0.90</pDefMod>
+				<pDefMod>0.9</pDefMod>
 				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
 	</skill>
@@ -591,10 +592,8 @@
 			<value level="2">40</value>
 			<value level="3">50</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -642,9 +641,7 @@
 			<value level="2">40</value>
 			<value level="3">50</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -683,7 +680,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -824,7 +820,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -887,7 +882,6 @@
 			<value level="15">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -954,30 +948,29 @@
 			<value level="15">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">30</value>
-					<value level="3">45</value>
-					<value level="4">65</value>
-					<value level="5">85</value>
-					<value level="6">110</value>
-					<value level="7">130</value>
-					<value level="8">145</value>
-					<value level="9">155</value>
-					<value level="10">165</value>
-					<value level="11">175</value>
-					<value level="12">185</value>
-					<value level="13">195</value>
-					<value level="14">205</value>
-					<value level="15">220</value>
+					<value level="3">40</value>
+					<value level="4">50</value>
+					<value level="5">60</value>
+					<value level="6">70</value>
+					<value level="7">80</value>
+					<value level="8">90</value>
+					<value level="9">100</value>
+					<value level="10">110</value>
+					<value level="11">120</value>
+					<value level="12">130</value>
+					<value level="13">140</value>
+					<value level="14">145</value>
+					<value level="15">150</value>
 				</amount>
 				<mode>DIFF</mode>
-				<weaponType>
-					<item>POLE</item>
-				</weaponType>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="AreaOfEffectDamageDefence">
 				<amount>
@@ -1005,7 +998,6 @@
 		<icon>icon.s_wild_instinct</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
 				<IMPRISON>
@@ -1144,7 +1136,7 @@
 		</effects>
 	</skill>
 	<skill id="47871" toLevel="1" name="Change Armor">
-		<!-- Changes the Vanguard Rider's armor appearance. When activated, the default appearance is shown. When deactivated, the Vanguard Rider's armor appearance is shown. If no upper armor is equipped, the Vanguard Rider's armor is not used. -->	
+		<!-- Changes the Vanguard Rider's armor appearance. When activated, the default appearance is shown. When deactivated, the Vanguard Rider's armor appearance is shown. If no upper armor is equipped, the Vanguard Rider's armor is not used. -->
 		<icon>icon.s_orc_armor_change</icon>
 		<operateType>T</operateType>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -1156,7 +1148,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<hitTime>1500</hitTime>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

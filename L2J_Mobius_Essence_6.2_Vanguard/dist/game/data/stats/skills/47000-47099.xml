@@ -39,6 +39,8 @@
 		<!-- <Changing skill> With a certain chance, recovers 5% of MP after a range attack. Uses spirit powers in combat. Attacks the enemy twice with $s1 power. Critical. -->
 		<icon>icon.double_impact</icon>
 		<castRange>600</castRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-250</value>
@@ -76,7 +78,7 @@
 			<value level="34">-900</value>
 			<value level="35">-910</value>
 		</effectPoint>
-		<effectRange>900</effectRange>
+		<effectRange>1200</effectRange>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">24</value>
@@ -153,10 +155,10 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1500</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>2300</hitTime>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -174,16 +176,11 @@
 	</skill>
 	<skill id="47003" toLevel="35" name="Dual Blow">
 		<icon>icon.double_impact</icon>
-		<castRange>100</castRange>
-		<effectRange>900</effectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<coolTime>500</coolTime>
-		<hitTime>2300</hitTime>
+		<isMagic>0</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<isHidingMessages>true</isHidingMessages>
-		<reuseDelay>1500</reuseDelay>
 		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isHidingMessages>true</isHidingMessages>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -225,23 +222,59 @@
 					<value level="34">4039</value>
 					<value level="35">4096</value>
 				</power>
-				<criticalChance>25</criticalChance>
+				<criticalChance>10</criticalChance>
+				<pDefMod>0.95</pDefMod>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">315</value>
+					<value level="2">371</value>
+					<value level="3">427</value>
+					<value level="4">483</value>
+					<value level="5">763</value>
+					<value level="6">1001</value>
+					<value level="7">1183</value>
+					<value level="8">1367</value>
+					<value level="9">1553</value>
+					<value level="10">1742</value>
+					<value level="11">1933</value>
+					<value level="12">2126</value>
+					<value level="13">2321</value>
+					<value level="14">2452</value>
+					<value level="15">2584</value>
+					<value level="16">2717</value>
+					<value level="17">2850</value>
+					<value level="18">2985</value>
+					<value level="19">3120</value>
+					<value level="20">3255</value>
+					<value level="21">3314</value>
+					<value level="22">3369</value>
+					<value level="23">3423</value>
+					<value level="24">3478</value>
+					<value level="25">3533</value>
+					<value level="26">3589</value>
+					<value level="27">3644</value>
+					<value level="28">3700</value>
+					<value level="29">3756</value>
+					<value level="30">3812</value>
+					<value level="31">3868</value>
+					<value level="32">3925</value>
+					<value level="33">3982</value>
+					<value level="34">4039</value>
+					<value level="35">4096</value>
+				</power>
+				<criticalChance>10</criticalChance>
+				<pDefMod>0.95</pDefMod>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47004" toLevel="35" name="Dual Blow">
 		<icon>icon.double_impact</icon>
-		<castRange>600</castRange>
-		<effectRange>900</effectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<coolTime>500</coolTime>
-		<hitTime>2300</hitTime>
-		<nextAction>ATTACK</nextAction>
+		<isMagic>0</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<isHidingMessages>true</isHidingMessages>
-		<reuseDelay>1500</reuseDelay>
 		<operateType>A1</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isHidingMessages>true</isHidingMessages>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -283,7 +316,8 @@
 					<value level="34">4039</value>
 					<value level="35">4096</value>
 				</power>
-				<criticalChance>25</criticalChance>
+				<criticalChance>10</criticalChance>
+				<pDefMod>0.95</pDefMod>
 			</effect>
 			<effect name="PhysicalAttack">
 				<power>
@@ -323,7 +357,8 @@
 					<value level="34">4039</value>
 					<value level="35">4096</value>
 				</power>
-				<criticalChance>25</criticalChance>
+				<criticalChance>10</criticalChance>
+				<pDefMod>0.95</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1142,16 +1177,18 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -1183,8 +1220,6 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -1193,12 +1228,16 @@
 			<value level="3">40</value>
 			<value level="4">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1223,16 +1262,17 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">40</value>
@@ -1261,8 +1301,6 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -1270,12 +1308,15 @@
 			<value level="2">30</value>
 			<value level="3">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1293,14 +1334,12 @@
 		<!-- M. Def. $s1 -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>
-			<value level="1">2</value>
-			<value level="2">3</value>
+			<value level="1">1</value>
+			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -1308,12 +1347,15 @@
 			<value level="2">40</value>
 			<value level="3">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1321,7 +1363,7 @@
 				<amount>
 					<value level="1">250</value>
 					<value level="2">350</value>
-					<value level="3">380</value>
+					<value level="2">380</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1338,12 +1380,10 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">2</value>
+			<value level="1">3</value>
 			<value level="2">20</value>
 			<value level="3">40</value>
 			<value level="4">76</value>
@@ -1351,7 +1391,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1377,8 +1416,6 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -1390,7 +1427,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1416,16 +1452,18 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
@@ -1457,8 +1495,6 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
@@ -1467,12 +1503,16 @@
 			<value level="3">40</value>
 			<value level="4">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1497,21 +1537,22 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
-			<value level="3">30</value>
+			<value level="3">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1519,7 +1560,6 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
-					<value level="3">20</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1535,21 +1575,22 @@
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">30</value>
 			<value level="2">40</value>
-			<value level="3">30</value>
+			<value level="3">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1557,7 +1598,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
-					<value level="3">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1565,7 +1606,7 @@
 				<amount>
 					<value level="1">-20</value>
 					<value level="2">-15</value>
-					<value level="3">-15</value>
+					<value level="3">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1581,7 +1622,7 @@
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
-					<value level="3">10</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1589,7 +1630,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
-					<value level="3">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1597,7 +1638,7 @@
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
-					<value level="3">8</value>
+					<value level="3">9</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1618,24 +1659,28 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
-		<castRange>400</castRange>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>
 			<value level="3">40</value>
+			<value level="4">76</value>
 		</magicLevel>
-		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">5</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1644,27 +1689,30 @@
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
+					<value level="4">-21</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-7</value>
-					<value level="3">-10</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
+					<value level="4">-21</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+					<value level="4">-11</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -2460,7 +2508,6 @@
 			<value level="15">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2508,7 +2555,6 @@
 			<value level="15">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -2648,6 +2694,29 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-2</value>
+					<value level="4">-2</value>
+					<value level="5">-2</value>
+					<value level="6">-3</value>
+					<value level="7">-3</value>
+					<value level="8">-4</value>
+					<value level="9">-4</value>
+					<value level="10">-4</value>
+					<value level="11">-4</value>
+					<value level="12">-5</value>
+					<value level="13">-5</value>
+					<value level="14">-5</value>
+					<value level="15">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="47083" toLevel="5" name="Quick Reload">
@@ -2679,7 +2748,6 @@
 			<value level="2">55</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalAttackRange">
 				<amount>

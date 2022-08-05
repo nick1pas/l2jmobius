@@ -19,24 +19,23 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>WA_UNBREAKABLE_SONIC_AVE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<basicProperty>NONE</basicProperty>
 		<effectPoint>
 			<value level="1">-410</value>
 			<value level="2">-420</value>
 			<value level="3">-430</value>
 			<value level="4">-440</value>
 		</effectPoint>
-		<effectRange>900</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<trait>ANOMALY</trait>
 		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalMute" />
+			<effect name="PhysicalAttackMute" />
 			<effect name="Root" />
 			<effect name="BlockActions" />
 			<effect name="BlockControl" />
@@ -185,19 +184,17 @@
 	<skill id="45503" toLevel="1" name="Death Sting">
 		<!-- Magic is blocked. -->
 		<icon>icon.skill0990</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<castRange>700</castRange>
 		<effectPoint>-415</effectPoint>
-		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<trait>SILENCE</trait>
 		<operateType>A2</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -225,11 +222,10 @@
 			<value level="4">-550</value>
 		</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<trait>ROOT_PHYSICALLY</trait>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -279,22 +275,18 @@
 		<icon>icon.skill0516</icon>
 		<castRange>40</castRange>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<abnormalVisualEffect>SPEED_DOWN</abnormalVisualEffect>
 		<activateRate>70</activateRate>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-200</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
 		<trait>ANOMALY</trait>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -310,12 +302,12 @@
 	<skill id="45507" toLevel="9" name="Blizzard">
 		<!-- Speed -50% -->
 		<icon>icon.skill1290</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-2100</value>
 			<value level="2">-2110</value>
@@ -327,15 +319,11 @@
 			<value level="8">-2210</value>
 			<value level="9">-2240</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
-		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -366,15 +354,12 @@
 			<value level="9">-170</value>
 			<value level="10">-195</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
-		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -462,7 +447,7 @@
 		<activateRate>80</activateRate>
 		<castRange>700</castRange>
 		<effectPoint>-405</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<trait>ANOMALY</trait>
@@ -509,10 +494,20 @@
 	<skill id="45514" toLevel="9" name="Inferno">
 		<!-- HP is draining. -->
 		<icon>icon.skill1289</icon>
-		<abnormalLevel>10</abnormalLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+			<value level="4">2</value>
+			<value level="5">2</value>
+			<value level="6">2</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">3</value>
+		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<abnormalVisualEffect>DOT_FIRE</abnormalVisualEffect>
 		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-2100</value>
@@ -525,18 +520,17 @@
 			<value level="8">-2170</value>
 			<value level="9">-2180</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<lvlBonusRate>20</lvlBonusRate>
 		<effects>
 			<effect name="DamOverTime">
 				<power>
@@ -839,8 +833,8 @@
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>35</activateRate>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectLimit>20-20</affectLimit>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-845</value>
@@ -852,7 +846,6 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<trait>INFECTION</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -914,7 +907,7 @@
 			<value level="14">-435</value>
 			<value level="15">-440</value>
 		</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -963,7 +956,7 @@
 			<value level="1">-420</value>
 			<value level="2">-445</value>
 		</effectPoint>
-		<effectRange>450</effectRange>
+		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<trait>INFECTION</trait>
@@ -996,7 +989,32 @@
 	<skill id="45530" toLevel="1" name="Tranquillity">
 		<!-- For party members for $s1: Max HP $s2 Recovers $s4 HP per $s3 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>12</abnormalTime>
+		<magicLevel>76</magicLevel>
+		<mpConsume>105</mpConsume>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effectPoint>100</effectPoint>
+		<affectRange>1200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
+				<heal>true</heal>
+			</effect>
+			<effect name="HealOverTime">
+				<power>50000</power>
+				<ticks>3</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45531" toLevel="1" name="Tranquillity">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -1011,31 +1029,42 @@
 	<skill id="45533" toLevel="1" name="Exclusion">
 		<!-- <Knockback/ Suppression skill> Knocks nearby enemies back. Deals magic damage with 130 power. For $s1 Greatly decreases Atk. Spd./ Casting Spd./ Speed. -->
 		<icon>icon.expel</icon>
-		<basicProperty>PHYSICAL</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<isMagic>1</isMagic>
+		<castRange>600</castRange>
 		<effectPoint>-500</effectPoint>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>200</affectRange>
-		<effectRange>200</effectRange>
-		<hitTime>2000</hitTime>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>250</affectRange>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
 		<magicLevel>76</magicLevel>
 		<mpConsume>105</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<reuseDelay>300000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>90000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="MagicalAttack">
 				<power>130</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>45537</skillId> <!-- Exclusion - Knockback -->
+				<skillId>45535</skillId> <!-- Exclusion - Debuff -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>45535</skillId> <!-- Exclusion - Debuff -->
+				<skillId>45537</skillId> <!-- Buff disable -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1044,37 +1073,64 @@
 		<!-- For the target and nearby enemies For $s1 HP Recovery Potions' Effect $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-	</skill>
-	<skill id="45535" toLevel="1" name="Exclusion">
-		<!-- Greatly decreases Atk. Spd./ Casting Spd./ Speed. -->
-		<icon>icon.expel</icon>
-		<affectLimit>5-12</affectLimit>
+		<mpConsume>105</mpConsume>
+		<castRange>600</castRange>
+		<effectRange>1200</effectRange>
+		<reuseDelay>90000</reuseDelay>
+		<basicProperty>MAGIC</basicProperty>
+		<isMagic>1</isMagic>
+		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>8</abnormalTime>
-		<activateRate>60</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<effectPoint>-500</effectPoint>
-		<effectRange>200</effectRange>
-		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
-		<trait>ANOMALY</trait>
+		<hitTime>3000</hitTime>
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
+		<magicLevel>76</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
+			<effect name="MagicalAttack">
+				<power>130</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45535" toLevel="1" name="Exclusion">
+		<!-- Greatly decreases Atk. Spd./ Casting Spd./ Speed. -->
+		<icon>icon.expel</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<activateRate>60</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-500</effectPoint>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-100</amount>
-				<mode>DIFF</mode>
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>-100</amount>
-				<mode>DIFF</mode>
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>-100</amount>
+				<amount>-50</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -1085,27 +1141,25 @@
 	</skill>
 	<skill id="45537" toLevel="1" name="Exclusion">
 		<icon>icon.expel</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1</abnormalTime>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<activateRate>60</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
+		<abnormalTime>10</abnormalTime>
+		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-500</effectPoint>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>200</affectRange>
-		<effectRange>200</effectRange>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<trait>SHOCK</trait>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<trait>ANOMALY</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="KnockBack">
-				<distance>50</distance>
-				<speed>400</speed>
-				<knockDown>true</knockDown>
+			<effect name="DispelBySlot">
+				<dispel>SPEED_UP,9</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>SPEED_UP</slot>
+			</effect>
+			<effect name="DisableSkill">
+				<disable>994;45159;45252;45253;47822;47824</disable>
 			</effect>
 		</effects>
 	</skill>
@@ -1113,34 +1167,34 @@
 		<!-- <Skill with fixed cooldown> Decreases CP of the target and nearby enemies for $s1 and deals three magic strikes with $s2 power. For $s3: M. Def. $s4 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<abnormalTime>2</abnormalTime>
 		<mpConsume>131</mpConsume>
-		<castRange>700</castRange>
+		<castRange>900</castRange>
+		<effectRange>1200</effectRange>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-400</effectPoint>
 		<isMagic>1</isMagic>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>450</affectRange>
-		<abnormalLevel>1</abnormalLevel>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<affectRange>350</affectRange>
 		<hitTime>4000</hitTime>
-		<itemConsumeCount>100</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLevel>80</magicLevel>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxCp">
-				<amount>0.7</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttack">
 				<power>380</power>
 			</effect>
-			<effect name="MagicalDefence" abnormalTime="3">
-				<amount>-30</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">
+				<skillId>45545</skillId> <!-- Meteor -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1361,7 +1415,6 @@
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1387,6 +1440,14 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
 			<effect name="Synergy">
 				<!-- Party Solidarity -->
 				<optionalSlots>DANCE_OF_FURY;DANCE_OF_FIRE;DANCE_OF_WARRIOR;SONG_OF_EARTH;SONG_OF_WIND;SONG_OF_HUNTER</optionalSlots>
@@ -1399,14 +1460,58 @@
 		</effects>
 	</skill>
 	<skill id="45545" toLevel="1" name="Meteor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<effectPoint>-400</effectPoint>
+  		<activateRate>1500</activateRate>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectLimit>20-20</affectLimit>
+		<affectRange>350</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<hitTime>1500</hitTime>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>380</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>45546</skillId> <!-- Meteor -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45546" toLevel="1" name="Meteor">
 		<!-- The meteor deals continuous damage. M. Def. $s1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalTime>3</abnormalTime>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalType>MD_DOWN</abnormalType>
+  		<activateRate>3000</activateRate>
+  		<affectScope>RANGE</affectScope>
+  		<targetType>ENEMY_ONLY</targetType>
+		<affectLimit>20-20</affectLimit>
+		<affectRange>350</affectRange>
+		<castRange>900</castRange>
+		<effectRange>1200</effectRange>
+		<effectPoint>-400</effectPoint>
+		<isMagic>1</isMagic>
+		<basicProperty>MAGIC</basicProperty>
+		<hitTime>3000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>380</power>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45547" toLevel="15" name="Hellfire">
 		<!-- <Skill with fixed cooldown> Sticks the sword into the ground and summons a burning flame. The flame burns nearby enemies with $s1 power. The effect lasts for 10 sec. P. Def. -40% M. Def. -40% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->

@@ -8,7 +8,7 @@
 			<value level="2">-555</value>
 			<value level="3">-605</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLevel>
 			<value level="1">82</value>
@@ -23,7 +23,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>0</isMagic>
 		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -63,13 +63,11 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
-		<effectRange>1200</effectRange>
 		<abnormalTime>5</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<basicProperty>NONE</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="DisableSkill">
 				<disable>994;45159;45252;45253;47822;47824</disable>
@@ -167,9 +165,10 @@
 			<value level="1">-1220</value>
 			<value level="2">-1220</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
-		<affectRange>200</affectRange>
-		<affectLimit>1-20</affectLimit>
+		<effectRange>1200</effectRange>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;40</fanRange>
 		<hitTime>3500</hitTime>
 		<magicLevel>
 			<value level="1">85</value>
@@ -182,10 +181,10 @@
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>0</isMagic>
 		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -200,7 +199,7 @@
 					<value level="1">10903</value>
 					<value level="2">11551</value>
 				</power>
-				<criticalChance>15</criticalChance>
+				<criticalChance>20</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.90</pDefMod>
 			</effect>
@@ -215,6 +214,7 @@
 	</skill>
 	<skill id="47405" toLevel="2" name="Flame Arrow">
 		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -222,22 +222,17 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
 		<abnormalVisualEffect>DOT_FIRE</abnormalVisualEffect>
-		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-1220</value>
 			<value level="2">-1220</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<trait>INFECTION</trait>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
 				<power>
@@ -255,9 +250,9 @@
 			<value level="1">-1220</value>
 			<value level="2">-1220</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<affectRange>200</affectRange>
-		<affectLimit>1-20</affectLimit>
+		<affectLimit>20-20</affectLimit>
 		<hitTime>3500</hitTime>
 		<magicLevel>
 			<value level="1">85</value>
@@ -270,7 +265,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>0</isMagic>
 		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -357,9 +352,8 @@
 			<value level="1">-1220</value>
 			<value level="2">-1220</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
-		<affectRange>200</affectRange>
-		<affectLimit>1-20</affectLimit>
+		<effectRange>1200</effectRange>
+		<fanRange>0;0;900;35</fanRange>
 		<hitTime>3500</hitTime>
 		<magicLevel>
 			<value level="1">85</value>
@@ -372,10 +366,10 @@
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>0</isMagic>
 		<trait>SUPPRESSION</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -405,6 +399,7 @@
 	</skill>
 	<skill id="47409" toLevel="2" name="Piercing Arrow">
 		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -413,21 +408,16 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>60</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-1220</value>
 			<value level="2">-1220</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
-		<isMagic>0</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
 		<trait>ANOMALY</trait>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
 				<amount>
@@ -533,7 +523,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -613,7 +602,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>
@@ -690,7 +678,6 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>
@@ -763,7 +750,6 @@
 			<value level="13">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -834,7 +820,6 @@
 			<value level="13">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -907,9 +892,50 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="47417" toLevel="1" name="Dexterous Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<magicLevel>76</magicLevel>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>65</min>
+				<max>74</max>
+				<mulStat>PHYSICAL_ATTACK</mulStat>
+				<amount>5</amount>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>75</min>
+				<max>84</max>
+				<mulStat>PHYSICAL_ATTACK</mulStat>
+				<amount>10</amount>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>85</min>
+				<mulStat>PHYSICAL_ATTACK</mulStat>
+				<amount>20</amount>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>85</min>
+				<mulStat>DEFENCE_CRITICAL_RATE</mulStat>
+				<amount>5</amount>
+			</effect>
+			<effect name="StatMulForBaseStat">
+				<baseStat>DEX</baseStat>
+				<min>85</min>
+				<mulStat>DEFENCE_PHYSICAL_SKILL_CRITICAL_DAMAGE</mulStat>
+				<amount>5</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47418" toLevel="1" name="Dexterous Body">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -950,7 +976,7 @@
 			<value level="11">-420</value>
 			<value level="12">-440</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
@@ -982,8 +1008,8 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isMagic>0</isMagic>
 		<reuseDelay>20000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1009,7 +1035,6 @@
 					<value level="11">8192</value>
 					<value level="12">8307</value>
 				</power>
-				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>47423</skillId> <!-- Stun Shot -->
@@ -1032,13 +1057,13 @@
 	</skill>
 	<skill id="47423" toLevel="12" name="Stun Shot">
 		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-210</value>
 			<value level="2">-230</value>
@@ -1053,11 +1078,9 @@
 			<value level="11">-420</value>
 			<value level="12">-440</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<trait>ANOMALY</trait>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1068,6 +1091,7 @@
 	</skill>
 	<skill id="47424" toLevel="3" name="Thorn Shot">
 		<icon>icon.skill0000</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1076,18 +1100,15 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-505</value>
 			<value level="2">-555</value>
 			<value level="3">-605</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
-		<trait>ANOMALY</trait>
+		<trait>SUPPRESSION</trait>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1169,38 +1190,26 @@
 	</skill>
 	<skill id="47440" toLevel="1" name="Faery Shield">
 		<icon>icon.skill0000</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
+		<abnormalType>MP_SHIELD</abnormalType>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
-		<effectPoint>
-			<value level="1">200</value>
-		</effectPoint>
+		<effectPoint>184</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLevel>
-			<value level="1">86</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">125</value>
-		</mpConsume>
+		<magicLevel>86</magicLevel>
+		<mpConsume>125</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<abnormalType>MP_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ManaHealPercent">
-				<power>
-					<value level="1">30</value>
-				</power>
+				<power>30</power>
 			</effect>
 			<effect name="MpShield">
-				<amount>
-					<value level="1">70</value>
-				</amount>
+				<amount>70</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1258,14 +1267,15 @@
 			<value level="3">128</value>
 		</mpConsume>
 		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-1000</effectPoint>
+		<effectPoint>-500</effectPoint>
 		<isMagic>1</isMagic>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>300</affectRange>
-		<abnormalLevel>1</abnormalLevel>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
 		<hitTime>6000</hitTime>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1298,15 +1308,17 @@
 			<value level="2">-2110</value>
 			<value level="3">-2120</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1340,14 +1352,15 @@
 			<value level="3">128</value>
 		</mpConsume>
 		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-1000</effectPoint>
+		<effectPoint>-500</effectPoint>
 		<isMagic>1</isMagic>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>300</affectRange>
-		<abnormalLevel>1</abnormalLevel>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
 		<hitTime>6000</hitTime>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1380,15 +1393,17 @@
 			<value level="2">-2110</value>
 			<value level="3">-2120</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1422,14 +1437,15 @@
 			<value level="3">128</value>
 		</mpConsume>
 		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-1000</effectPoint>
+		<effectPoint>-500</effectPoint>
 		<isMagic>1</isMagic>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>300</affectRange>
-		<abnormalLevel>1</abnormalLevel>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
 		<hitTime>6000</hitTime>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1462,15 +1478,17 @@
 			<value level="2">-2110</value>
 			<value level="3">-2120</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1504,14 +1522,15 @@
 			<value level="3">128</value>
 		</mpConsume>
 		<castRange>700</castRange>
+		<effectRange>1200</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-1000</effectPoint>
+		<effectPoint>-500</effectPoint>
 		<isMagic>1</isMagic>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectLimit>1-20</affectLimit>
-		<affectRange>300</affectRange>
-		<abnormalLevel>1</abnormalLevel>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
 		<hitTime>6000</hitTime>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1544,15 +1563,17 @@
 			<value level="2">-2110</value>
 			<value level="3">-2120</value>
 		</effectPoint>
-		<effectRange>1400</effectRange>
+		<effectRange>1200</effectRange>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<reuseDelay>30000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>20-20</affectLimit>
+		<fanRange>0;0;750;35</fanRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="StatUp">
 				<amount>
@@ -1599,7 +1620,7 @@
 	</skill>
 	<skill id="47461" toLevel="6" name="Heavy Sleep">
 		<icon>icon.skill0000</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
@@ -1614,7 +1635,7 @@
 			<value level="5">-850</value>
 			<value level="6">-900</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1671,7 +1692,7 @@
 			<value level="11">-850</value>
 			<value level="12">-900</value>
 		</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>1200</effectRange>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1720,7 +1741,6 @@
 	<skill id="47463" toLevel="13" name="Wizard's Attack Mastery">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -1961,7 +1981,6 @@
 	<skill id="47466" toLevel="7" name="Higher Mana Gain">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">40</value>

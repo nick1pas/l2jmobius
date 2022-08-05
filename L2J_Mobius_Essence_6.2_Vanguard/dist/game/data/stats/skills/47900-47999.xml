@@ -4,19 +4,12 @@
 		<icon>icon.skill0000</icon>
 		<hitTime>4500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>
-			<value level="1">50</value>
-		</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLevel>
-			<value level="1">76</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">186</value>
-		</mpConsume>
+		<magicLevel>76</magicLevel>
+		<mpConsume>186</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -44,19 +37,12 @@
 		<icon>icon.skill0000</icon>
 		<hitTime>4500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>
-			<value level="1">50</value>
-		</itemConsumeCount>
+		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLevel>
-			<value level="1">76</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">186</value>
-		</mpConsume>
+		<magicLevel>76</magicLevel>
+		<mpConsume>186</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -156,16 +142,12 @@
 			<value level="1">86</value>
 			<value level="2">90</value>
 		</magicLevel>
-		<mpInitialConsume>
-			<value level="1">13</value>
-			<value level="2">13</value>
-		</mpInitialConsume>
+		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>T</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
 			<effect name="MpConsumePerLevel">
-				<power>0.2</power>
+				<power>3.8</power> <!-- ~13 MP -->
 				<ticks>5</ticks>
 			</effect>
 			<effect name="TransferDamageToSummon">
@@ -186,16 +168,11 @@
 	<skill id="47917" toLevel="5" name="Ray of Light">
 		<icon>icon.skill0000</icon>
 		<castRange>700</castRange>
-		<effectRange>1250</effectRange>
-		<effectPoint>
-			<value level="1">-450</value>
-			<value level="2">-455</value>
-			<value level="3">-460</value>
-			<value level="4">-465</value>
-			<value level="5">-470</value>
-		</effectPoint>
+		<effectRange>1200</effectRange>
+		<effectPoint>-500</effectPoint>
 		<hitTime>6500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<basicProperty>MAGIC</basicProperty>
 		<magicLevel>
 			<value level="1">82</value>
 			<value level="2">84</value>
@@ -216,7 +193,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalAttackRange">
+			<effect name="MagicalAttack">
 				<power>
 					<value level="1">202</value>
 					<value level="2">207</value>
@@ -230,7 +207,6 @@
 	<skill id="47918" toLevel="13" name="Summoner's Attack Mastery">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -332,7 +308,6 @@
 	<skill id="47919" toLevel="13" name="Summoner's Armor Mastery">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
@@ -477,7 +452,6 @@
 	<skill id="47920" toLevel="8" name="Summoner's Recovery Mastery">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">50</value>
