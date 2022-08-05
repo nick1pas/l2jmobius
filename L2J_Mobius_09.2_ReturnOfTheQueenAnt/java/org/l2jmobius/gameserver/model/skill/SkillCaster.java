@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
@@ -411,6 +412,19 @@ public class SkillCaster implements Runnable
 		// Trigger any skill cast start effects.
 		if (target.isCreature())
 		{
+			// Tempfix for the delayed TriggerSkillByDualRange effect skill.
+			final List<AbstractEffect> effects = _skill.getEffects(EffectScope.GENERAL);
+			if ((effects != null) && !effects.isEmpty())
+			{
+				for (AbstractEffect effect : effects)
+				{
+					if (effect.getEffectType() == EffectType.DUAL_RANGE)
+					{
+						effect.instant(caster, (Creature) target, _skill, null);
+						return false;
+					}
+				}
+			}
 			_skill.applyEffectScope(EffectScope.START, new BuffInfo(caster, (Creature) target, _skill, false, _item, null), true, false);
 		}
 		
