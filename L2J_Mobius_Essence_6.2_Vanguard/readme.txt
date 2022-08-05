@@ -3,7 +3,7 @@ L2J-Mobius Vanguard
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/cjpnxf1l9s82ymn/L2J_Mobius_Essence_6.2_Vanguard_Geodata.zip
+Geodata: https://www.mediafire.com/file/8eyws8j7uyskh6m/L2J_Mobius_Essence_6.2_Vanguard_Geodata.zip
 
 Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1pXp5jfSyd-tm5hxVyxO8vvOrCos5QJH1&export=download
 System: https://mega.nz/file/ot9WERSB#yt6P9XkfTbp7Sko7TG54-9vk6r5mAm732mwhbNhwO88
