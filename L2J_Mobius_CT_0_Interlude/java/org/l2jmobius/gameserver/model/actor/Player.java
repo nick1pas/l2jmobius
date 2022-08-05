@@ -63,7 +63,6 @@ import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
-import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.FishData;
 import org.l2jmobius.gameserver.data.xml.HennaData;
@@ -117,7 +116,6 @@ import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.ContactList;
 import org.l2jmobius.gameserver.model.Duel;
-import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroList;
@@ -9594,17 +9592,7 @@ public class Player extends Playable
 						isDisabled = skill.isClanSkill() && (_clan.getReputationScore() < 0);
 					}
 					
-					boolean isEnchantable = SkillData.getInstance().isEnchantable(skill.getId());
-					if (isEnchantable)
-					{
-						final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skill.getId());
-						if ((esl == null) || (skill.getLevel() < esl.getBaseLevel()))
-						{
-							isEnchantable = false;
-						}
-					}
-					
-					skillList.addSkill(skill.getDisplayId(), skill.getDisplayLevel(), skill.isPassive(), isDisabled, isEnchantable);
+					skillList.addSkill(skill.getDisplayId(), skill.getDisplayLevel(), skill.isPassive(), isDisabled);
 				}
 				
 				sendPacket(skillList);

@@ -19,18 +19,24 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.data.sql.EnchantSkillGroupsTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.status.FolkStatus;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -122,6 +128,7 @@ public class Folk extends Npc
 				else
 				{
 					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+					player.sendPacket(AcquireSkillDone.STATIC_PACKET);
 				}
 			}
 		}
@@ -129,5 +136,61 @@ public class Folk extends Npc
 		{
 			player.sendPacket(asl);
 		}
+	}
+	
+	/**
+	 * This method displays EnchantSkillList to the player.
+	 * @param player The player who requested the method.
+	 */
+	public void showEnchantSkillList(Player player)
+	{
+		if (!getTemplate().canTeach(player.getClassId()))
+		{
+			showNoTeachHtml(player);
+			return;
+		}
+		
+		if (player.getClassId().level() < 3)
+		{
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			html.setHtml("<html><body>You must have 3rd class change quest completed.</body></html>");
+			player.sendPacket(html);
+			return;
+		}
+		
+		final ExEnchantSkillList esl = new ExEnchantSkillList();
+		int count = 0;
+		for (EnchantSkillLearn s : EnchantSkillGroupsTable.getInstance().getAvailableEnchantSkills(player))
+		{
+			final Skill sk = SkillData.getInstance().getSkill(s.getId(), s.getLevel());
+			if (sk == null)
+			{
+				continue;
+			}
+			count++;
+			esl.addSkill(s.getId(), s.getLevel(), s.getSpCost(), s.getExp());
+		}
+		if (count == 0)
+		{
+			player.sendPacket(SystemMessageId.THERE_IS_NO_SKILL_THAT_ENABLES_ENCHANT);
+			final int level = player.getLevel();
+			if (level < 74)
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+				sm.addInt(74);
+				player.sendPacket(sm);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+			}
+			player.sendPacket(AcquireSkillDone.STATIC_PACKET);
+		}
+		else
+		{
+			player.sendPacket(esl);
+		}
+		
+		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

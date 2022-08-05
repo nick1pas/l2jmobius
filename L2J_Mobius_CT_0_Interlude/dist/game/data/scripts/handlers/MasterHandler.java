@@ -133,6 +133,7 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
+import handlers.bypasshandlers.EnchantSkillList;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
@@ -414,6 +415,7 @@ public class MasterHandler
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
+			EnchantSkillList.class,
 			Festival.class,
 			FindPvP.class,
 			Freight.class,

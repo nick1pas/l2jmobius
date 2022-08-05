@@ -102,6 +102,7 @@ What is done
 -Added support for merchant sell bypass.
 -Adjusted all shop merchants.
 -Removed all non existing skill enchants.
+-Fixed skill enchanting.
 
 TODO: Important (project unusable due to the following)
 -Adjust all skills according to Interlude description.

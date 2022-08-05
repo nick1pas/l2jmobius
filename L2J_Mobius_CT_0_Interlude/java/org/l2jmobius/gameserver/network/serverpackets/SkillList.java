@@ -32,21 +32,19 @@ public class SkillList implements IClientOutgoingPacket
 		public int level;
 		public boolean passive;
 		public boolean disabled;
-		public boolean enchanted;
 		
-		Skill(int pId, int pLevel, boolean pPassive, boolean pDisabled, boolean pEnchanted)
+		Skill(int pId, int pLevel, boolean pPassive, boolean pDisabled)
 		{
 			id = pId;
 			level = pLevel;
 			passive = pPassive;
 			disabled = pDisabled;
-			enchanted = pEnchanted;
 		}
 	}
 	
-	public void addSkill(int id, int level, boolean passive, boolean disabled, boolean enchanted)
+	public void addSkill(int id, int level, boolean passive, boolean disabled)
 	{
-		_skills.add(new Skill(id, level, passive, disabled, enchanted));
+		_skills.add(new Skill(id, level, passive, disabled));
 	}
 	
 	@Override

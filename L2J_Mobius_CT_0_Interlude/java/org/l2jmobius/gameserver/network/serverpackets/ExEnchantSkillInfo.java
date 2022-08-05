@@ -20,59 +20,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
-import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
-import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
-	private final List<Integer> _routes = new ArrayList<>(); // skill levels for each route
+	private final List<Req> _reqs;
 	private final int _id;
 	private final int _level;
-	private boolean _maxEnchanted = false;
+	private final int _spCost;
+	private final int _xpCost;
+	private final int _rate;
 	
-	public ExEnchantSkillInfo(int id, int level)
+	class Req
 	{
+		public int id;
+		public int count;
+		public int type;
+		public int unk;
+		
+		Req(int pType, int pId, int pCount, int pUnk)
+		{
+			id = pId;
+			type = pType;
+			count = pCount;
+			unk = pUnk;
+		}
+	}
+	
+	public ExEnchantSkillInfo(int id, int level, int spCost, int xpCost, int rate)
+	{
+		_reqs = new ArrayList<>();
 		_id = id;
 		_level = level;
-		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
-		// do we have this skill?
-		if (enchantLearn != null)
-		{
-			// skill already enchanted?
-			if (_level > 100)
-			{
-				_maxEnchanted = enchantLearn.isMaxEnchant(_level);
-				// get detail for next level
-				final EnchantSkillHolder esd = enchantLearn.getEnchantSkillHolder(_level);
-				// if it exists add it
-				if (esd != null)
-				{
-					_routes.add(_level); // current enchant add firts
-				}
-				final int skillLevel = (_level % 100);
-				for (int route : enchantLearn.getAllRoutes())
-				{
-					if (((route * 100) + skillLevel) == _level)
-					{
-						continue;
-					}
-					// add other levels of all routes - same level as enchanted
-					// level
-					_routes.add((route * 100) + skillLevel);
-				}
-			}
-			else
-			// not already enchanted
-			{
-				for (int route : enchantLearn.getAllRoutes())
-				{
-					// add first level (+1) of all routes
-					_routes.add((route * 100) + 1);
-				}
-			}
-		}
+		_spCost = spCost;
+		_xpCost = xpCost;
+		_rate = rate;
+	}
+	
+	public void addRequirement(int type, int id, int count, int unk)
+	{
+		_reqs.add(new Req(type, id, count, unk));
 	}
 	
 	@Override
@@ -81,12 +68,16 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
 		packet.writeD(_id);
 		packet.writeD(_level);
-		packet.writeD(_maxEnchanted ? 0 : 1);
-		packet.writeD(_level > 100 ? 1 : 0); // enchanted?
-		packet.writeD(_routes.size());
-		for (int level : _routes)
+		packet.writeD(_spCost);
+		packet.writeQ(_xpCost);
+		packet.writeD(_rate);
+		packet.writeD(_reqs.size());
+		for (Req temp : _reqs)
 		{
-			packet.writeD(level);
+			packet.writeD(temp.type);
+			packet.writeD(temp.id);
+			packet.writeD(temp.count);
+			packet.writeD(temp.unk);
 		}
 		return true;
 	}

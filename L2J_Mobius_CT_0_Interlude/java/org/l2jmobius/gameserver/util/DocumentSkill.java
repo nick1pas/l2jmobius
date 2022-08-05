@@ -25,7 +25,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.skill.EffectScope;
@@ -132,6 +131,18 @@ public class DocumentSkill extends DocumentBase
 		}
 	}
 	
+	/**
+	 * CT2.4 compatibility.
+	 * @param group id identifier.
+	 * @return amount of levels expected.
+	 */
+	private int getEnchantGroupSize(int group)
+	{
+		// 1, 2 = 30
+		// 5, 6 = 15
+		return group < 3 ? 30 : 15;
+	}
+	
 	private void parseSkill(Node node)
 	{
 		Node n = node;
@@ -150,35 +161,35 @@ public class DocumentSkill extends DocumentBase
 		final int lastLvl = Integer.parseInt(levels);
 		if (attrs.getNamedItem("enchantGroup1") != null)
 		{
-			enchantLevels1 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 1, Integer.parseInt(attrs.getNamedItem("enchantGroup1").getNodeValue()));
+			enchantLevels1 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup1").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup2") != null)
 		{
-			enchantLevels2 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 2, Integer.parseInt(attrs.getNamedItem("enchantGroup2").getNodeValue()));
+			enchantLevels2 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup2").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup3") != null)
 		{
-			enchantLevels3 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 3, Integer.parseInt(attrs.getNamedItem("enchantGroup3").getNodeValue()));
+			enchantLevels3 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup3").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup4") != null)
 		{
-			enchantLevels4 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 4, Integer.parseInt(attrs.getNamedItem("enchantGroup4").getNodeValue()));
+			enchantLevels4 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup4").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup5") != null)
 		{
-			enchantLevels5 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 5, Integer.parseInt(attrs.getNamedItem("enchantGroup5").getNodeValue()));
+			enchantLevels5 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup5").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup6") != null)
 		{
-			enchantLevels6 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 6, Integer.parseInt(attrs.getNamedItem("enchantGroup6").getNodeValue()));
+			enchantLevels6 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup6").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup7") != null)
 		{
-			enchantLevels7 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 7, Integer.parseInt(attrs.getNamedItem("enchantGroup7").getNodeValue()));
+			enchantLevels7 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup7").getNodeValue()));
 		}
 		if (attrs.getNamedItem("enchantGroup8") != null)
 		{
-			enchantLevels8 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 8, Integer.parseInt(attrs.getNamedItem("enchantGroup8").getNodeValue()));
+			enchantLevels8 = getEnchantGroupSize(Integer.parseInt(attrs.getNamedItem("enchantGroup8").getNodeValue()));
 		}
 		
 		_currentSkill.id = skillId;
@@ -268,7 +279,7 @@ public class DocumentSkill extends DocumentBase
 			_currentSkill.enchsets2[i] = new StatSet();
 			// currentSkill.enchsets2[i] = currentSkill.sets[currentSkill.sets.length-1];
 			_currentSkill.enchsets2[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets2[i].set("level", i + 201);
+			_currentSkill.enchsets2[i].set("level", i + 141); // C6 adaptation.
 			_currentSkill.enchsets2[i].set("name", _currentSkill.name);
 			// currentSkill.enchsets2[i].set("skillType", "NOTDONE");
 			
@@ -298,7 +309,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets3[i] = new StatSet();
 			_currentSkill.enchsets3[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets3[i].set("level", i + 301);
+			_currentSkill.enchsets3[i].set("level", i + 181); // C6 adaptation.
 			_currentSkill.enchsets3[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -327,7 +338,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets4[i] = new StatSet();
 			_currentSkill.enchsets4[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets4[i].set("level", i + 401);
+			_currentSkill.enchsets4[i].set("level", i + 221); // C6 adaptation.
 			_currentSkill.enchsets4[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -356,7 +367,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets5[i] = new StatSet();
 			_currentSkill.enchsets5[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets5[i].set("level", i + 501);
+			_currentSkill.enchsets5[i].set("level", i + 261); // C6 adaptation.
 			_currentSkill.enchsets5[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -385,7 +396,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets6[i] = new StatSet();
 			_currentSkill.enchsets6[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets6[i].set("level", i + 601);
+			_currentSkill.enchsets6[i].set("level", i + 301); // C6 adaptation.
 			_currentSkill.enchsets6[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -414,7 +425,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets7[i] = new StatSet();
 			_currentSkill.enchsets7[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets7[i].set("level", i + 701);
+			_currentSkill.enchsets7[i].set("level", i + 341); // C6 adaptation.
 			_currentSkill.enchsets7[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -443,7 +454,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets8[i] = new StatSet();
 			_currentSkill.enchsets8[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets8[i].set("level", i + 801);
+			_currentSkill.enchsets8[i].set("level", i + 381); // C6 adaptation.
 			_currentSkill.enchsets8[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())

@@ -14,12 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package handlers.bypasshandlers;
 
-public enum EnchantSkillType
+import org.l2jmobius.gameserver.handler.IBypassHandler;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.actor.instance.Folk;
+
+/**
+ * @author Mobius
+ */
+public class EnchantSkillList implements IBypassHandler
 {
-	NORMAL,
-	SAFE,
-	UNTRAIN,
-	CHANGE_ROUTE,
+	private static final String[] COMMANDS =
+	{
+		"EnchantSkillList"
+	};
+	
+	@Override
+	public boolean useBypass(String command, Player player, Creature target)
+	{
+		if (!(target instanceof Folk))
+		{
+			return false;
+		}
+		
+		((Folk) target).showEnchantSkillList(player);
+		
+		return true;
+	}
+	
+	@Override
+	public String[] getBypassList()
+	{
+		return COMMANDS;
+	}
 }

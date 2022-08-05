@@ -16,27 +16,39 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Set;
-import java.util.TreeMap;
-
-import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
-import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import org.l2jmobius.gameserver.model.actor.Player;
 
 public class EnchantSkillLearn
 {
-	private final int _id;
-	private final int _baseLevel;
-	private final TreeMap<Integer, Integer> _enchantRoutes = new TreeMap<>();
+	// these two build the primary key
+	private final int id;
+	private final int level;
+	// not needed, just for easier debug
+	private final String name;
+	private final int spCost;
+	private final int baseLevel;
+	private final int minSkillLevel;
+	private final int exp;
+	private final byte rate76;
+	private final byte rate77;
+	private final byte rate78;
+	private final byte rate79;
+	private final byte rate80;
 	
-	public EnchantSkillLearn(int id, int baseLevel)
+	public EnchantSkillLearn(int id, int level, int minSkillLevel, int baseLevel, String name, int spCost, int exp, byte rate76, byte rate77, byte rate78, byte rate79, byte rate80)
 	{
-		_id = id;
-		_baseLevel = baseLevel;
-	}
-	
-	public void addNewEnchantRoute(int route, int group)
-	{
-		_enchantRoutes.put(route, group);
+		this.id = id;
+		this.level = level;
+		this.baseLevel = baseLevel;
+		this.minSkillLevel = minSkillLevel;
+		this.name = name.intern();
+		this.spCost = spCost;
+		this.exp = exp;
+		this.rate76 = rate76;
+		this.rate77 = rate77;
+		this.rate78 = rate78;
+		this.rate79 = rate79;
+		this.rate80 = rate80;
 	}
 	
 	/**
@@ -44,7 +56,15 @@ public class EnchantSkillLearn
 	 */
 	public int getId()
 	{
-		return _id;
+		return id;
+	}
+	
+	/**
+	 * @return Returns the level.
+	 */
+	public int getLevel()
+	{
+		return level;
 	}
 	
 	/**
@@ -52,67 +72,74 @@ public class EnchantSkillLearn
 	 */
 	public int getBaseLevel()
 	{
-		return _baseLevel;
+		return baseLevel;
 	}
 	
-	public static int getEnchantRoute(int level)
+	/**
+	 * @return Returns the minSkillLevel.
+	 */
+	public int getMinSkillLevel()
 	{
-		return (int) Math.floor(level / 100);
+		return minSkillLevel;
 	}
 	
-	public static int getEnchantIndex(int level)
+	/**
+	 * @return Returns the name.
+	 */
+	public String getName()
 	{
-		return (level % 100) - 1;
+		return name;
 	}
 	
-	public static int getEnchantType(int level)
+	/**
+	 * @return Returns the spCost.
+	 */
+	public int getSpCost()
 	{
-		return ((level - 1) / 100) - 1;
+		return spCost;
 	}
 	
-	public EnchantSkillGroup getFirstRouteGroup()
+	public int getExp()
 	{
-		return EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.firstEntry().getValue());
+		return exp;
 	}
 	
-	public Set<Integer> getAllRoutes()
+	public byte getRate(Player ply)
 	{
-		return _enchantRoutes.keySet();
-	}
-	
-	public int getMinSkillLevel(int level)
-	{
-		return (level % 100) == 1 ? _baseLevel : level - 1;
-	}
-	
-	public boolean isMaxEnchant(int level)
-	{
-		final int enchantType = getEnchantRoute(level);
-		if ((enchantType < 1) || !_enchantRoutes.containsKey(enchantType))
+		byte result;
+		switch (ply.getLevel())
 		{
-			return false;
+			case 76:
+			{
+				result = rate76;
+				break;
+			}
+			case 77:
+			{
+				result = rate77;
+				break;
+			}
+			case 78:
+			{
+				result = rate78;
+				break;
+			}
+			case 79:
+			{
+				result = rate79;
+				break;
+			}
+			case 80:
+			{
+				result = rate80;
+				break;
+			}
+			default:
+			{
+				result = rate80;
+				break;
+			}
 		}
-		final int index = getEnchantIndex(level);
-		return (index + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size();
-	}
-	
-	public EnchantSkillHolder getEnchantSkillHolder(int level)
-	{
-		final int enchantType = getEnchantRoute(level);
-		if ((enchantType < 1) || !_enchantRoutes.containsKey(enchantType))
-		{
-			return null;
-		}
-		final int index = getEnchantIndex(level);
-		final EnchantSkillGroup group = EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType));
-		if (index < 0)
-		{
-			return group.getEnchantGroupDetails().get(0);
-		}
-		else if (index >= group.getEnchantGroupDetails().size())
-		{
-			return group.getEnchantGroupDetails().get(EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size() - 1);
-		}
-		return group.getEnchantGroupDetails().get(index);
+		return result;
 	}
 }

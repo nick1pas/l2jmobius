@@ -52,7 +52,7 @@ public class RequestAcquireSkillInfo implements IClientIncomingPacket
 	{
 		if ((_id <= 0) || (_level <= 0))
 		{
-			PacketLogger.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Invalid Id: " + _id + " or level: " + _level + "!");
+			// PacketLogger.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Invalid Id: " + _id + " or level: " + _level + "!");
 			return;
 		}
 		
