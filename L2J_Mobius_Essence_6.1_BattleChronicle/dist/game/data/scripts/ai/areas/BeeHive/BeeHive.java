@@ -83,7 +83,7 @@ public class BeeHive extends AbstractNpcAI
 		}
 		
 		final Pet pet = attacker.getPet();
-		if ((pet.getCurrentFed() == 0) || pet.isDead() || pet.isAffectedBySkill(SKILLS[0]) || pet.isAffectedBySkill(SKILLS[1]))
+		if ((pet == null) || (pet.getCurrentFed() == 0) || pet.isDead() || pet.isAffectedBySkill(SKILLS[0]) || pet.isAffectedBySkill(SKILLS[1]))
 		{
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
