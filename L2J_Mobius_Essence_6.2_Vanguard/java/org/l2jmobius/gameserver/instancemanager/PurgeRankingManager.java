@@ -112,7 +112,7 @@ public class PurgeRankingManager
 							}
 							case 6:
 							{
-								reward = 96465;
+								reward = 95465;
 								break;
 							}
 							case 7:
@@ -127,7 +127,7 @@ public class PurgeRankingManager
 							}
 							case 9:
 							{
-								reward = 96456;
+								reward = 95466;
 								break;
 							}
 							default:
