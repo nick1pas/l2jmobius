@@ -86,42 +86,30 @@ public class EnchantSkillLearn
 		return _exp;
 	}
 	
-	public byte getRate(Player ply)
+	public byte getRate(Player player)
 	{
-		byte result;
-		switch (ply.getLevel())
+		switch (player.getLevel())
 		{
 			case 76:
 			{
-				result = _rate76;
-				break;
+				return _rate76;
 			}
 			case 77:
 			{
-				result = _rate77;
-				break;
+				return _rate77;
 			}
 			case 78:
 			{
-				result = _rate78;
-				break;
+				return _rate78;
 			}
 			case 79:
 			{
-				result = _rate79;
-				break;
-			}
-			case 80:
-			{
-				result = _rate80;
-				break;
+				return _rate79;
 			}
 			default:
 			{
-				result = _rate80;
-				break;
+				return _rate80;
 			}
 		}
-		return result;
 	}
 }
