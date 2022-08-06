@@ -9,6 +9,7 @@
 			<value level="3">84</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="CraftRate">
 				<amount>
@@ -28,12 +29,13 @@
 			<value level="3">84</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="CraftRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">20</value>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
 				</amount>
 			</effect>
 		</effects>
@@ -49,17 +51,17 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<affectLimit>10-10</affectLimit>
-		<affectRange>300</affectRange>
+		<affectRange>200</affectRange>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<magicLevel>
 			<value level="1">78</value>
 			<value level="2">81</value>
 			<value level="3">84</value>
 		</magicLevel>
 		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">123</value>
 			<value level="2">127</value>
@@ -75,10 +77,10 @@
 			<value level="3">-4232</value>
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
-		<effectRange>1200</effectRange>
+		<effectRange>1100</effectRange>
 		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
@@ -99,6 +101,7 @@
 		<!-- Received Vital Point Attack Rate -$s1 Received P. Critical Rate -$s2 -->
 		<icon>icon.skill53004</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">78</value>
@@ -107,16 +110,6 @@
 			<value level="5">84</value>
 		</magicLevel>
 		<effects>
-			<effect name="FatalBlowRate">
-				<amount>
-					<value level="1">-20</value>
-					<value level="2">-25</value>
-					<value level="3">-30</value>
-					<value level="4">-35</value>
-					<value level="5">-40</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="DefenceCriticalRate">
 				<amount>
 					<value level="1">-30</value>
@@ -147,11 +140,13 @@
 		<mpConsume>70</mpConsume>
 		<operateType>A2</operateType>
 		<abnormalTime>2</abnormalTime>
+		<activateRate>-1</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>INVISIBLE</affectObject>
 		<itemConsumeCount>
 			<value level="1">0</value>
@@ -242,11 +237,13 @@
 			<value level="4">4</value>
 		</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
+		<effectRange>900</effectRange>
 		<isMagic>5</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -274,10 +271,11 @@
 		<!-- M. Atk. +10 M. Critical Rate +5% HP Recovery Rate +5% -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MAtk">
 				<amount>10</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>5</amount>
@@ -298,6 +296,7 @@
 			<value level="3">70</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="FatalBlowRate">
 				<amount>
@@ -312,9 +311,18 @@
 	<skill id="53010" toLevel="7" name="Knight's Protection">
 		<!-- The effect lasts for $s1 Shield Defense Rate +$s2 Shield Defense +$s3 -->
 		<icon>icon.skill10012</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>KNIGHT_SHIELD</abnormalType>
+		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
 		<magicLevel>
 			<value level="1">50</value>
@@ -337,6 +345,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -369,21 +378,6 @@
 	<skill id="53011" toLevel="2" name="Knight's Fortress">
 		<!-- P. Atk. $s1 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A2</operateType>
-		<reuseDelay>9000</reuseDelay>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">100</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
+		<operateType>A1</operateType>
 	</skill>
 </list>

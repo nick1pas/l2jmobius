@@ -10,9 +10,10 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<effectPoint>-800</effectPoint>
 		<activateRate>80</activateRate>
-		<affectLimit>20-20</affectLimit>
-		<effectRange>1200</effectRange>
-		<fanRange>0;0;450;40</fanRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>600</affectRange>
+		<effectRange>800</effectRange>
+		<fanRange>0;0;600;60</fanRange>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>20000</reuseDelay>
 		<trait>ANOMALY</trait>
@@ -227,8 +228,13 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

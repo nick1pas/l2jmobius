@@ -30,12 +30,6 @@
 			<condition name="OpNotAffectedBySkill">
 				<skillId>1802</skillId> <!-- White Assassin Transformation -->
 			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54102</skillId> <!-- White Guardian Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54231</skillId> <!-- Dragon Slayer Appearance -->
-			</condition>
 		</conditions>
 		<effects>
 			<effect name="MaxHp">
@@ -71,7 +65,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>2</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
@@ -113,12 +107,6 @@
 			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>1802</skillId> <!-- White Assassin Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54102</skillId> <!-- White Guardian Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54231</skillId> <!-- Dragon Slayer Appearance -->
 			</condition>
 		</conditions>
 		<effects>
@@ -197,12 +185,6 @@
 			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54102</skillId> <!-- White Guardian Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54231</skillId> <!-- Dragon Slayer Appearance -->
 			</condition>
 		</conditions>
 		<effects>
@@ -612,7 +594,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
-				<amount>50</amount>
+				<amount>13</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
@@ -1329,8 +1311,6 @@
 	<skill id="1896" toLevel="4" name="Full Knockdown">
 		<!-- <Knockback skill> Attacks the target with $s1 power, knocking them down for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill1896</icon>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1356,6 +1336,7 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1414,11 +1395,11 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STIGMA_OF_SILEN</abnormalType>
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>600</castRange>
-		<affectLimit>10-10</affectLimit>
+		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
-		<isMagic>1</isMagic>
 		<effectPoint>
 			<value level="1">-2000</value>
 			<value level="2">-2500</value>
@@ -1436,7 +1417,7 @@
 			<value level="14">-4200</value>
 			<value level="15">-4250</value>
 		</effectPoint>
-		<effectRange>1200</effectRange>
+		<effectRange>200</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1476,9 +1457,31 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-25</value>
+					<value level="7">-25</value>
+					<value level="8">-25</value>
+					<value level="9">-25</value>
+					<value level="10">-25</value>
+					<value level="11">-30</value>
+					<value level="12">-30</value>
+					<value level="13">-30</value>
+					<value level="14">-30</value>
+					<value level="15">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceTrait">
 				<SWORD>
 					<value level="1">-20</value>
@@ -1660,7 +1663,6 @@
 		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns the enemies affected by the skill for $s2 -->
 		<icon>icon.skill1898</icon>
 		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-5800</value>
@@ -1673,8 +1675,8 @@
 			<value level="8">-6325</value>
 			<value level="9">-6400</value>
 		</effectPoint>
-		<effectRange>400</effectRange>
-		<fanRange>0;0;200;135</fanRange>
+		<effectRange>800</effectRange>
+		<fanRange>0;0;600;60</fanRange>
 		<hitTime>800</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
@@ -1698,11 +1700,13 @@
 			<value level="8">97</value>
 			<value level="9">99</value>
 		</mpConsume>
-		<operateType>A1</operateType>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA1</operateType>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<targetType>ENEMY</targetType>
-		<affectScope>FAN</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipShield" />
@@ -1720,6 +1724,7 @@
 					<value level="8">2556</value>
 					<value level="9">2608</value>
 				</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>45488</skillId> <!-- Shield Charge -->

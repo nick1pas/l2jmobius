@@ -13,13 +13,13 @@
 		<activateRate>190</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
 			<value level="3">84</value>
 		</magicLevel>
 		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">69</value>
 			<value level="2">73</value>
@@ -35,7 +35,7 @@
 			<value level="3">-4265</value>
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
-		<effectRange>1200</effectRange>
+		<effectRange>1100</effectRange>
 		<trait>PULL</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -48,7 +48,18 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
 			<effect name="GetAgro" />
+			<effect name="CallSkill">
+				<skillId>47278</skillId> <!-- Chain Strike (Shock) -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">

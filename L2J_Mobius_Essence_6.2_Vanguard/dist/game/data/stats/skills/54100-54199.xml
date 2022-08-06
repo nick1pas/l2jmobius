@@ -58,8 +58,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
-		<coolTime>500</coolTime>
-		<hitTime>500</hitTime>
+		<hitTime>3500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -67,20 +66,6 @@
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>3031</itemConsumeId>
 		<itemConsumeCount>100</itemConsumeCount>
-		<conditions>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>1800</skillId> <!-- Pirate Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54102</skillId> <!-- White Guardian Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54231</skillId> <!-- Dragon Slayer Appearance -->
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>15</amount>

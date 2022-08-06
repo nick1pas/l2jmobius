@@ -896,14 +896,18 @@
 		<!-- When activated P. Atk. $s1 Prevents preemptive attacks from monsters. Constantly consumes MP. -->
 		<icon>icon.skill0915</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalType>DANCE_OF_SHADOW</abnormalType>
+		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<affectRange>1000</affectRange>
+		<effectPoint>679</effectPoint>
 		<hitTime>2</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLevel>74</magicLevel>
+		<mpConsume>73</mpConsume>
 		<operateType>T</operateType>
 		<reuseDelay>1</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
 			<effect name="ManaDamOverTime">
@@ -911,6 +915,9 @@
 				<ticks>5</ticks>
 			</effect>
 			<effect name="SilentMove">
+				<chance>100</chance>
+			</effect>
+			<effect name="Hide">
 				<chance>100</chance>
 			</effect>
 			<effect name="PAtk">
@@ -923,15 +930,10 @@
 		<!-- For $s1, transfers magical damage back to the enemy caster. -->
 		<icon>icon.skill0916</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>8</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<hitTime>1000</hitTime>
-		<itemConsumeCount>
-			<value level="1">0</value>
-			<value level="2">1</value>
-			<value level="3">2</value>
-			<value level="4">2</value>
-		</itemConsumeCount>
+		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLevel>
 			<value level="1">60</value>
@@ -948,7 +950,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<isMagic>1</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -978,6 +980,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -989,7 +992,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
+			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1012,6 +1015,7 @@
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1038,6 +1042,7 @@
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1240,9 +1245,6 @@
 	<skill id="921" toLevel="15" name="Spike Thrust">
 		<!-- Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0921</icon>
-		<castRange>80</castRange>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -1296,8 +1298,10 @@
 			<value level="14">69</value>
 			<value level="15">70</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1328,7 +1332,8 @@
 				</power>
 				<pDefMod>0.9</pDefMod>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
+				<criticalChance>30</criticalChance>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1352,7 +1357,7 @@
 			<value level="4">76</value>
 		</magicLevel>
 		<operateType>A2</operateType>
-		<mpConsume>30</mpConsume>
+		<mpConsume>38</mpConsume>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>180000</reuseDelay>
@@ -3581,14 +3586,16 @@
 	<skill id="964" toLevel="1" name="Children of Shillien">
 		<!-- M. Atk. +20 MP Recovery Rate +5% -->
 		<icon>icon.skill0294</icon>
+		<magicLevel>14</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MAtk">
-				<amount>20</amount>
+			<effect name="MagicalAttackSpeed">
+				<amount>13</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>5</amount>
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -4383,8 +4390,6 @@
 		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<effectPoint>
 			<value level="1">-2200</value>
 			<value level="2">-2350</value>
@@ -4483,8 +4488,10 @@
 			<value level="29">69</value>
 			<value level="30">70</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4509,25 +4516,26 @@
 					<value level="13">2495</value>
 					<value level="14">2625</value>
 					<value level="15">2755</value>
-					<value level="16">4226</value>
-					<value level="17">4285</value>
-					<value level="18">4344</value>
-					<value level="19">4401</value>
-					<value level="20">4460</value>
-					<value level="21">4519</value>
-					<value level="22">4577</value>
-					<value level="23">4635</value>
-					<value level="24">4694</value>
-					<value level="25">4752</value>
-					<value level="26">4811</value>
-					<value level="27">4870</value>
-					<value level="28">4929</value>
-					<value level="29">4987</value>
-					<value level="30">5045</value>
+					<value level="16">4103</value>
+					<value level="17">4160</value>
+					<value level="18">4217</value>
+					<value level="19">4273</value>
+					<value level="20">4330</value>
+					<value level="21">4387</value>
+					<value level="22">4444</value>
+					<value level="23">4500</value>
+					<value level="24">4557</value>
+					<value level="25">4614</value>
+					<value level="26">4671</value>
+					<value level="27">4728</value>
+					<value level="28">4785</value>
+					<value level="29">4842</value>
+					<value level="30">4898</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
 				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="GetAgro" />
 		</effects>
@@ -4805,14 +4813,15 @@
 		<castRange>700</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-415</effectPoint>
-		<effectRange>1200</effectRange>
-		<hitTime>3000</hitTime>
+		<effectRange>1400</effectRange>
+		<hitTime>3500</hitTime>
 		<magicLevel>79</magicLevel>
 		<mpConsume>97</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>20000</reuseDelay>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -4825,6 +4834,7 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>13006</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>45503</skillId> <!-- Death Sting -->
@@ -4885,6 +4895,7 @@
 			<value level="7">70</value>
 			<value level="8">79</value>
 		</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="EquipWeapon">
@@ -4926,7 +4937,7 @@
 				<attackerType>Creature</attackerType>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<chance>30</chance>
+				<chance>15</chance>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
@@ -4944,11 +4955,12 @@
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<minDamage>1</minDamage>
-				<chance>50</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 			</effect>
 			<effect name="TriggerSkillByMagicType">
+				<!-- Cancel Shadow Move -->
 				<magicTypes>0</magicTypes>
 				<skillId>6813</skillId> <!-- Sonic Focus -->
 				<skillLevel>
@@ -4963,7 +4975,7 @@
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<minDamage>1</minDamage>
-				<chance>25</chance>
+				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 			</effect>
@@ -4983,6 +4995,7 @@
 			<value level="8">79</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="FocusEnergy">
 				<amount>
@@ -4997,6 +5010,7 @@
 				</amount>
 			</effect>
 			<effect name="TriggerSkillByAttack">
+				<!-- Focus Force -->
 				<isCritical>false</isCritical>
 				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
@@ -5016,6 +5030,7 @@
 				<chance>15</chance>
 			</effect>
 			<effect name="TriggerSkillByAttack">
+				<!-- Focus Force -->
 				<isCritical>true</isCritical>
 				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
@@ -5040,9 +5055,9 @@
 		<!-- Charges into the target, if the distance between the target and the character is more than $s1. -->
 		<icon>icon.skill0484</icon>
 		<castRange>
-			<value level="1">400</value>
-			<value level="2">450</value>
-			<value level="3">500</value>
+			<value level="1">500</value>
+			<value level="2">600</value>
+			<value level="3">700</value>
 		</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -5064,10 +5079,9 @@
 		</mpConsume>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<conditions>
 			<condition name="OpCheckCastRange">
 				<distance>

@@ -151,37 +151,39 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<magicLevel>76</magicLevel>
-		<abnormalType>ABSORB</abnormalType>
-		<abnormalVisualEffect>V_KNIGHT_PHOENIX</abnormalVisualEffect>
 		<hitTime>3000</hitTime>
-		<effectRange>700</effectRange>
+		<effectRange>900</effectRange>
 		<coolTime>800</coolTime>
-		<affectLimit>20-20</affectLimit>
-		<affectRange>700</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
 		<mpConsume>101</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
-			<effect name="AbsorbDamage"> <!-- TODO: FIX IT - barrier 5k HP + 200% of HP -->
+			<effect name="AbsorbDamage">
 				<amount>5000</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47308" toLevel="1" name="Hell">
 		<icon>icon.hell</icon>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
-		<affectLimit>20-20</affectLimit>
+		<affectLimit>1-20</affectLimit>
 		<affectRange>300</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-6100</effectPoint>
+		<effectRange>1100</effectRange>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<hitTime>2000</hitTime>
@@ -189,15 +191,20 @@
 		<mpConsume>82</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>90000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<pveEffects>
+			<effect name="PhysicalAttack">
+				<power>11580</power>
+			</effect>
+		</pveEffects>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>11638</power>
+				<power>10580</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.75</pDefMod>
-				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>47309</skillId> <!-- Hell -->
@@ -208,19 +215,23 @@
 	<skill id="47309" toLevel="1" name="Hell">
 		<!-- A powerful blow renders you unable to carry a weapon -->
 		<icon>icon.hell</icon>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>70</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-11800</effectPoint>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DISARM</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<pvpEffects>
 			<effect name="MaxHp">
 				<amount>-30</amount>
@@ -230,10 +241,10 @@
 				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Disarm">
-			</effect>
 		</pvpEffects>
 		<effects>
+			<effect name="Disarm">
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
 				<rate>25</rate>
@@ -245,27 +256,23 @@
 		<icon>icon.shelter</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
-		<abnormalType>KNIGHT_AURA</abnormalType>
-		<abnormalVisualEffect>V_KNIGHT_SHELTER_02</abnormalVisualEffect>
 		<magicLevel>76</magicLevel>
 		<hitTime>3000</hitTime>
-		<effectRange>700</effectRange>
+		<effectRange>900</effectRange>
 		<coolTime>800</coolTime>
-		<affectLimit>20-20</affectLimit>
-		<affectRange>700</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
 		<mpConsume>101</mpConsume>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
-			<effect name="TransferDamageToPlayer">
-				<amount>50</amount>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>47311</skillId> <!-- Shelter -->
 				<skillLevel>1</skillLevel>
@@ -276,17 +283,31 @@
 		<icon>icon.shelter</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
-		<abnormalType>ABSORB</abnormalType>
-		<abnormalVisualEffect>V_KNIGHT_SHELTER_02</abnormalVisualEffect>
 		<magicLevel>76</magicLevel>
+		<hitTime>3000</hitTime>
+		<effectRange>900</effectRange>
+		<coolTime>800</coolTime>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<mpConsume>101</mpConsume>
 		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<isTriggeredSkill>true</isTriggeredSkill>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="AbsorbDamage"> <!-- TODO: FIX IT - barrier 5k HP + 200% of HP -->
+			<effect name="TransferDamageToPlayer">
+				<amount>50</amount>
+			</effect>
+			<effect name="AbsorbDamage">
 				<amount>5000</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>200</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -379,12 +400,9 @@
 	</skill>
 	<skill id="47315" toLevel="1" name="Shield of Security">
 		<icon>icon.shield_of_safety</icon>
-		<staticReuse>true</staticReuse>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
-		<effectRange>1200</effectRange>
-		<affectLimit>10-10</affectLimit>
-		<affectRange>1200</affectRange>
+		<effectRange>1000</effectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<magicLevel>85</magicLevel>
@@ -394,6 +412,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -407,24 +426,27 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HealEffect">
-				<amount>30</amount>
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47316" toLevel="1" name="Lunatic Crusher">
 		<icon>icon.skill0997</icon>
-		<affectLimit>10-10</affectLimit>
-		<affectRange>200</affectRange>
+		<affectLimit>1-20</affectLimit>
+		<affectRange>250</affectRange>
 		<effectPoint>-6100</effectPoint>
+		<effectRange>1000</effectRange>
 		<coolTime>500</coolTime>
 		<hitTime>1300</hitTime>
 		<magicLevel>85</magicLevel>
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<mpConsume>112</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -449,14 +471,21 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
 		<effectPoint>-1100</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
+		<lvlBonusRate>1</lvlBonusRate>
 		<magicLevel>85</magicLevel>
 		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
 		<trait>ANOMALY</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
@@ -467,7 +496,7 @@
 		<icon>icon.keeping_of_eva</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
-		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
+		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<magicLevel>85</magicLevel>
@@ -477,6 +506,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -601,6 +631,7 @@
 			<value level="12">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -641,6 +672,7 @@
 			<value level="12">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -739,49 +771,22 @@
 			<value level="10">90</value>
 		</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">80</value>
-					<value level="2">130</value>
-					<value level="3">270</value>
-					<value level="4">360</value>
-					<value level="5">480</value>
-					<value level="6">620</value>
-					<value level="7">650</value>
-					<value level="8">700</value>
-					<value level="9">750</value>
-					<value level="10">800</value>
-				</amount>
+				<amount>80</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HpRegen">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">8</value>
-					<value level="5">9</value>
-					<value level="6">10</value>
-					<value level="7">12</value>
-					<value level="8">13</value>
-					<value level="9">14</value>
-					<value level="10">15</value>
-				</amount>
+				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Breath">
-				<amount>
-					<value fromLevel="1" toLevel="3">180</value>
-					<value fromLevel="4" toLevel="10">300</value>
-				</amount>
+				<amount>180</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AreaDamage">
-				<amount>
-					<value fromLevel="1" toLevel="3">-60</value>
-					<value fromLevel="4" toLevel="10">-100</value>
-				</amount>
+				<amount>-60</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -833,13 +838,12 @@
 			<value level="11">75</value>
 			<value level="12">80</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -864,8 +868,22 @@
 					<value level="11">8500</value>
 					<value level="12">9000</value>
 				</power>
-				<criticalChance>20</criticalChance>
+				<criticalChance>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">5</value>
+					<value level="8">5</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
+					<value level="12">5</value>
+				</criticalChance>
 				<chanceBoost>400</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -917,12 +935,12 @@
 			<value level="11">75</value>
 			<value level="12">80</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -947,8 +965,22 @@
 					<value level="11">10200</value>
 					<value level="12">10800</value>
 				</power>
-				<criticalChance>20</criticalChance>
+				<criticalChance>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+					<value level="7">5</value>
+					<value level="8">5</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
+					<value level="12">5</value>
+				</criticalChance>
 				<chanceBoost>400</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>47336</skillId> <!-- Blood Stab -->
@@ -959,7 +991,8 @@
 	<skill id="47336" toLevel="1" name="Blood Stab">
 		<icon>icon.skill10542_1</icon>
 		<effectPoint>-1000</effectPoint>
-		<isTriggeredSkill>true</isTriggeredSkill>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1307,13 +1340,12 @@
 			<value level="4">62</value>
 			<value level="5">65</value>
 		</mpConsume>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<effects>
 			<effect name="FatalBlow">
 				<power>
@@ -1421,6 +1453,7 @@
 	<skill id="47345" toLevel="1" name="Bluff Mastery">
 		<icon>icon.skill10562</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
@@ -1447,10 +1480,11 @@
 	<skill id="47347" toLevel="1" name="Backstab Mastery">
 		<icon>icon.skill10656</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 		<effects>
 			<effect name="AttackTrait">
-				<INFECTION>20</INFECTION>
+				<INFECTION>10</INFECTION>
 			</effect>
 			<effect name="ReplaceSkillBySkill">
 				<existingSkillId>47334</existingSkillId> <!-- Backstab -->
@@ -1462,6 +1496,7 @@
 		<icon>icon.skill19557</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
+		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
 		<magicLevel>76</magicLevel>
 		<mpConsume>50</mpConsume>
@@ -1474,9 +1509,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DefenceTrait">
-				<PULL>100</PULL>
-			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
@@ -1539,6 +1571,7 @@
 		<icon>icon.skill1913</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
+		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
 		<magicLevel>84</magicLevel>
 		<mpConsume>50</mpConsume>
@@ -1546,16 +1579,11 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>5</amount>
@@ -1563,25 +1591,23 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<minDamage>1</minDamage>
-				<chance>40</chance>
+				<chance>60</chance>
 				<skillId>47352</skillId> <!-- Bloody Nightmare -->
 				<skillLevel>1</skillLevel>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<minDamage>1</minDamage>
-				<chance>20</chance>
+				<chance>40</chance>
 				<skillId>47352</skillId> <!-- Bloody Nightmare -->
 				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
 			</effect>
 		</effects>
 	</skill>
@@ -1602,6 +1628,7 @@
 		<isDebuff>true</isDebuff>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1631,6 +1658,11 @@
 			<effect name="CallSkill">
 				<skillId>47352</skillId> <!-- Bloody Nightmare -->
 				<skillLevel>2</skillLevel>
+				<skillLevelScaleTo>2</skillLevelScaleTo>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>47352</skillId> <!-- Bloody Nightmare -->
+				<skillLevel>2</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
@@ -1647,13 +1679,13 @@
 		<mpConsume>100</mpConsume>
 		<itemConsumeCount>15</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<basicProperty>PHYSICAL</basicProperty>
-		<isMagic>0</isMagic>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>12000</power>
@@ -1676,9 +1708,10 @@
 		<effectPoint>-1000</effectPoint>
 		<effectRange>1100</effectRange>
 		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="FatalBlowRateDefence">
@@ -1745,7 +1778,7 @@
 		<icon>icon.skill0321</icon>
 		<castRange>40</castRange>
 		<affectLimit>3-3</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>300</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-2000</effectPoint>
 		<effectRange>400</effectRange>
@@ -1754,34 +1787,37 @@
 		<mpConsume>100</mpConsume>
 		<itemConsumeCount>15</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="FatalBlow">
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<chanceBoost>9999</chanceBoost>
+				<chanceBoost>999</chanceBoost>
 			</effect>
-			<effect name="FatalBlow">
-				<power>15000</power>
-				<criticalChance>20</criticalChance>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<chanceBoost>9999</chanceBoost>
+			<effect name="CallSkill">
+				<skillId>47358</skillId> <!-- Revenge Counterattack -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="47358" toLevel="1" name="Revenge Counterattack">
 		<icon>icon.skill0321</icon>
+		<castRange>700</castRange>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1000</hitTime>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>10000</reuseDelay>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>2.0</pAtkMod>
@@ -1823,6 +1859,7 @@
 	<skill id="47362" toLevel="1" name="Shadow Assault">
 		<icon>icon.skill19162</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 		<effects>
 			<effect name="ReplaceSkillBySkill">
@@ -1860,6 +1897,7 @@
 			<value level="1">76</value>
 			<value level="2">80</value>
 		</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkill">
@@ -1915,8 +1953,16 @@
 	<skill id="47367" toLevel="1" name="Rogue Agility">
 		<icon>icon.skill0000</icon>
 		<magicLevel>76</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>47339</castSkillId> <!-- Seclusion -->
+				<skillId>47359</skillId> <!-- Seclusion: Enhancement -->
+				<skillLevel>1</skillLevel>
+				<chance>50</chance>
+				<targetType>TARGET</targetType>
+			</effect>
 			<effect name="StatMulForBaseStat">
 				<baseStat>DEX</baseStat>
 				<min>65</min>
@@ -1934,7 +1980,7 @@
 			<effect name="StatMulForBaseStat">
 				<baseStat>DEX</baseStat>
 				<min>85</min>
-				<max>150</max>
+				<max>99</max>
 				<mulStat>PHYSICAL_ATTACK</mulStat>
 				<amount>30</amount>
 			</effect>
@@ -1955,17 +2001,9 @@
 			<effect name="StatMulForBaseStat">
 				<baseStat>DEX</baseStat>
 				<min>85</min>
-				<max>150</max>
+				<max>99</max>
 				<mulStat>BLOW_RATE</mulStat>
 				<amount>40</amount>
-			</effect>
-			<!-- TODO: FIX IT - That must works only if DEX 85+ At that moment works always -->
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>47339</castSkillId> <!-- Seclusion -->
-				<skillId>47359</skillId> <!-- Seclusion: Enhancement -->
-				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
@@ -2116,6 +2154,7 @@
 				<DAGGER>10</DAGGER>
 				<DUALFIST>10</DUALFIST>
 				<ANCIENTSWORD>10</ANCIENTSWORD>
+				<DUALDAGGER>10</DUALDAGGER>
 				<BLUNT>10</BLUNT>
 				<POLE>10</POLE>
 				<DUAL>10</DUAL>
@@ -2145,7 +2184,7 @@
 					<value level="14">14</value>
 					<value level="15">15</value>
 				</skillLevel>
-				<chance>20</chance>
+				<chance>10</chance>
 				<targetType>TARGET</targetType>
 			</effect>
 		</effects>
@@ -2226,7 +2265,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="PhysicalAttack">
 				<amount>
@@ -2248,7 +2287,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2323,7 +2362,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2367,6 +2406,7 @@
 				<DAGGER>10</DAGGER>
 				<DUALFIST>10</DUALFIST>
 				<ANCIENTSWORD>10</ANCIENTSWORD>
+				<DUALDAGGER>10</DUALDAGGER>
 				<BLUNT>10</BLUNT>
 				<POLE>10</POLE>
 				<DUAL>10</DUAL>
@@ -2396,7 +2436,7 @@
 					<value level="14">14</value>
 					<value level="15">15</value>
 				</skillLevel>
-				<chance>20</chance>
+				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 			</effect>
 		</effects>
@@ -2472,7 +2512,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="PhysicalAttack">
 				<amount>
@@ -2494,7 +2534,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2569,7 +2609,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2613,6 +2653,7 @@
 				<DAGGER>10</DAGGER>
 				<DUALFIST>10</DUALFIST>
 				<ANCIENTSWORD>10</ANCIENTSWORD>
+				<DUALDAGGER>10</DUALDAGGER>
 				<BLUNT>10</BLUNT>
 				<POLE>10</POLE>
 				<DUAL>10</DUAL>
@@ -2642,7 +2683,7 @@
 					<value level="14">14</value>
 					<value level="15">15</value>
 				</skillLevel>
-				<chance>20</chance>
+				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 			</effect>
 		</effects>
@@ -2718,7 +2759,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="PhysicalAttack">
 				<amount>
@@ -2740,7 +2781,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2815,7 +2856,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -2859,6 +2900,7 @@
 				<DAGGER>10</DAGGER>
 				<DUALFIST>10</DUALFIST>
 				<ANCIENTSWORD>10</ANCIENTSWORD>
+				<DUALDAGGER>10</DUALDAGGER>
 				<BLUNT>10</BLUNT>
 				<POLE>10</POLE>
 				<DUAL>10</DUAL>
@@ -2883,7 +2925,7 @@
 					<value level="9">9</value>
 					<value level="10">10</value>
 				</skillLevel>
-				<chance>20</chance>
+				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 			</effect>
 		</effects>
@@ -2944,7 +2986,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="PhysicalAttack">
 				<amount>
@@ -2961,7 +3003,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -3021,7 +3063,7 @@
 				</amount>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<pDefMod>0.9</pDefMod>
-				<criticalChance>15</criticalChance>
+				<criticalChance>10</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -3029,6 +3071,7 @@
 		<icon>icon.skill0000</icon>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>TRUE_AIM</abnormalType>
+		<castRange>-1</castRange>
 		<hitTime>1500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
@@ -3051,6 +3094,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3121,7 +3165,6 @@
 	</skill>
 	<skill id="47397" toLevel="3" name="Bow Vulnerability">
 		<icon>icon.skill0000</icon>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3137,11 +3180,13 @@
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>V_ARCHER_TRUE_TARGET_AVE</abnormalVisualEffect>
 		<operateType>A2</operateType>
-		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>

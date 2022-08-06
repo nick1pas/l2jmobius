@@ -158,6 +158,7 @@
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>JDK_BODY_FIRE_1</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLevel>76</magicLevel>
@@ -166,6 +167,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<hitTime>1500</hitTime>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -200,18 +202,6 @@
 				<amount>20</amount>
 				<attribute>HOLY</attribute>
 			</effect>
-			<effect name="DefenceTrait">
-				<DAGGER>8</DAGGER>
-				<RAPIER>8</RAPIER>
-				<ANCIENTSWORD>8</ANCIENTSWORD>
-				<DUAL>8</DUAL>
-				<POLE>8</POLE>
-				<FIST>8</FIST>
-				<SWORD>8</SWORD>
-				<BLUNT>8</BLUNT>
-				<BOW>8</BOW>
-				<PISTOLS>8</PISTOLS>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="54207" toLevel="1" name="Mount Night Mare">
@@ -223,6 +213,7 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -519,18 +510,6 @@
 		<itemConsumeId>3031</itemConsumeId>
 		<itemConsumeCount>20</itemConsumeCount>
 		<conditions>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>1800</skillId> <!-- Pirate Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54102</skillId> <!-- White Guardian Transformation -->
-			</condition>
-			<condition name="OpNotAffectedBySkill">
-				<skillId>54231</skillId> <!-- Dragon Slayer Appearance -->
-			</condition>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>54230</skillId> <!-- Castle Guardian Transformation -->
 			</condition>
