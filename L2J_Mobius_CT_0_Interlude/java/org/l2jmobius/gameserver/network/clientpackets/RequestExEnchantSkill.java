@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.sql.EnchantSkillGroupsTable;
+import org.l2jmobius.gameserver.data.sql.EnchantSkillTreesTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -103,7 +103,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		byte rate = 0;
 		int baseLevel = 1;
 		
-		for (EnchantSkillLearn s : EnchantSkillGroupsTable.getInstance().getAvailableEnchantSkills(player))
+		for (EnchantSkillLearn s : EnchantSkillTreesTable.getInstance().getAvailableEnchantSkills(player))
 		{
 			final Skill sk = SkillData.getInstance().getSkill(s.getId(), s.getLevel());
 			if ((sk == null) || (sk != skill) || !trainer.getTemplate().canTeach(player.getClassId()))

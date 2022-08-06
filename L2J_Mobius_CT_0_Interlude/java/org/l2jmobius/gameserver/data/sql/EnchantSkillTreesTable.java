@@ -34,13 +34,13 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  * @author Mobius
  * @implNote Adapted from old C6 project
  */
-public class EnchantSkillGroupsTable
+public class EnchantSkillTreesTable
 {
-	private static final Logger LOGGER = Logger.getLogger(EnchantSkillGroupsTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EnchantSkillTreesTable.class.getName());
 	
 	private final List<EnchantSkillLearn> _enchantSkillTrees = new ArrayList<>();
 	
-	protected EnchantSkillGroupsTable()
+	protected EnchantSkillTreesTable()
 	{
 		load();
 	}
@@ -77,10 +77,10 @@ public class EnchantSkillGroupsTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("EnchantSkillGroupsTable: Error while creating enchant skill table " + e);
+			LOGGER.warning("EnchantSkillTreesTable: Error while creating enchant skill table " + e);
 		}
 		
-		LOGGER.info("EnchantSkillGroupsTable: Loaded " + _enchantSkillTrees.size() + " enchant skills.");
+		LOGGER.info("EnchantSkillTreesTable: Loaded " + _enchantSkillTrees.size() + " enchant skills.");
 	}
 	
 	public List<EnchantSkillLearn> getAvailableEnchantSkills(Player player)
@@ -182,13 +182,13 @@ public class EnchantSkillGroupsTable
 		return 0;
 	}
 	
-	public static EnchantSkillGroupsTable getInstance()
+	public static EnchantSkillTreesTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantSkillGroupsTable INSTANCE = new EnchantSkillGroupsTable();
+		protected static final EnchantSkillTreesTable INSTANCE = new EnchantSkillTreesTable();
 	}
 }

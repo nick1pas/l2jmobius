@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.data.sql.EnchantSkillGroupsTable;
+import org.l2jmobius.gameserver.data.sql.EnchantSkillTreesTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.AcquireSkillType;
@@ -160,7 +160,7 @@ public class Folk extends Npc
 		
 		final ExEnchantSkillList esl = new ExEnchantSkillList();
 		int count = 0;
-		for (EnchantSkillLearn s : EnchantSkillGroupsTable.getInstance().getAvailableEnchantSkills(player))
+		for (EnchantSkillLearn s : EnchantSkillTreesTable.getInstance().getAvailableEnchantSkills(player))
 		{
 			final Skill sk = SkillData.getInstance().getSkill(s.getId(), s.getLevel());
 			if (sk == null)

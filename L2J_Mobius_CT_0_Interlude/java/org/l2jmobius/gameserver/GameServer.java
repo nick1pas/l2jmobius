@@ -46,7 +46,7 @@ import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.CrestTable;
-import org.l2jmobius.gameserver.data.sql.EnchantSkillGroupsTable;
+import org.l2jmobius.gameserver.data.sql.EnchantSkillTreesTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -225,7 +225,7 @@ public class GameServer
 		
 		printSection("Skills");
 		EffectHandler.getInstance().executeScript();
-		EnchantSkillGroupsTable.getInstance();
+		EnchantSkillTreesTable.getInstance();
 		SkillTreeData.getInstance();
 		SkillData.getInstance();
 		PetSkillData.getInstance();
