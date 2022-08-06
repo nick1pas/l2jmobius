@@ -20,88 +20,70 @@ import org.l2jmobius.gameserver.model.actor.Player;
 
 public class EnchantSkillLearn
 {
-	// these two build the primary key
-	private final int id;
-	private final int level;
-	// not needed, just for easier debug
-	private final String name;
-	private final int spCost;
-	private final int baseLevel;
-	private final int minSkillLevel;
-	private final int exp;
-	private final byte rate76;
-	private final byte rate77;
-	private final byte rate78;
-	private final byte rate79;
-	private final byte rate80;
+	// These two build the primary key.
+	private final int _id;
+	private final int _level;
+	// Not needed, just for easier debugging.
+	private final String _name;
+	private final int _spCost;
+	private final int _baseLevel;
+	private final int _minSkillLevel;
+	private final int _exp;
+	private final byte _rate76;
+	private final byte _rate77;
+	private final byte _rate78;
+	private final byte _rate79;
+	private final byte _rate80;
 	
 	public EnchantSkillLearn(int id, int level, int minSkillLevel, int baseLevel, String name, int spCost, int exp, byte rate76, byte rate77, byte rate78, byte rate79, byte rate80)
 	{
-		this.id = id;
-		this.level = level;
-		this.baseLevel = baseLevel;
-		this.minSkillLevel = minSkillLevel;
-		this.name = name.intern();
-		this.spCost = spCost;
-		this.exp = exp;
-		this.rate76 = rate76;
-		this.rate77 = rate77;
-		this.rate78 = rate78;
-		this.rate79 = rate79;
-		this.rate80 = rate80;
+		_id = id;
+		_level = level;
+		_baseLevel = baseLevel;
+		_minSkillLevel = minSkillLevel;
+		_name = name.intern();
+		_spCost = spCost;
+		_exp = exp;
+		_rate76 = rate76;
+		_rate77 = rate77;
+		_rate78 = rate78;
+		_rate79 = rate79;
+		_rate80 = rate80;
 	}
 	
-	/**
-	 * @return Returns the id.
-	 */
 	public int getId()
 	{
-		return id;
+		return _id;
 	}
 	
-	/**
-	 * @return Returns the level.
-	 */
 	public int getLevel()
 	{
-		return level;
+		return _level;
 	}
 	
-	/**
-	 * @return Returns the minLevel.
-	 */
 	public int getBaseLevel()
 	{
-		return baseLevel;
+		return _baseLevel;
 	}
 	
-	/**
-	 * @return Returns the minSkillLevel.
-	 */
 	public int getMinSkillLevel()
 	{
-		return minSkillLevel;
+		return _minSkillLevel;
 	}
 	
-	/**
-	 * @return Returns the name.
-	 */
 	public String getName()
 	{
-		return name;
+		return _name;
 	}
 	
-	/**
-	 * @return Returns the spCost.
-	 */
 	public int getSpCost()
 	{
-		return spCost;
+		return _spCost;
 	}
 	
 	public int getExp()
 	{
-		return exp;
+		return _exp;
 	}
 	
 	public byte getRate(Player ply)
@@ -111,32 +93,32 @@ public class EnchantSkillLearn
 		{
 			case 76:
 			{
-				result = rate76;
+				result = _rate76;
 				break;
 			}
 			case 77:
 			{
-				result = rate77;
+				result = _rate77;
 				break;
 			}
 			case 78:
 			{
-				result = rate78;
+				result = _rate78;
 				break;
 			}
 			case 79:
 			{
-				result = rate79;
+				result = _rate79;
 				break;
 			}
 			case 80:
 			{
-				result = rate80;
+				result = _rate80;
 				break;
 			}
 			default:
 			{
-				result = rate80;
+				result = _rate80;
 				break;
 			}
 		}
