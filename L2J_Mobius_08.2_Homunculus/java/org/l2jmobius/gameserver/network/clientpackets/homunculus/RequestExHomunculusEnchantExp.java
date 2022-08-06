@@ -50,13 +50,14 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (player.getVariables().getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0) == 0)
+		
+		if ((player.getVariables().getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0) == 0) || (player.getHomunculusList().get(_slot).getExp() >= player.getHomunculusList().get(_slot).getTemplate().getExpToLevel6()))
 		{
 			player.sendPacket(new ExHomunculusEnchantEXPResult(false, false));
 		}
 		else
 		{
-			int points = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0) - 1;
+			final int points = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, 0) - 1;
 			player.getVariables().set(PlayerVariables.HOMUNCULUS_UPGRADE_POINTS, points);
 			final Homunculus homunculus = player.getHomunculusList().get(_slot);
 			if (homunculus == null)
@@ -74,6 +75,7 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 					if (homunculus.getExp() >= homunculus.getTemplate().getExpToLevel2())
 					{
 						homunculus.setLevel(2);
+						player.getHomunculusList().refreshStats(true);
 						player.sendPacket(new ExHomunculusEnchantEXPResult(true, true));
 					}
 					else
@@ -87,6 +89,7 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 					if (homunculus.getExp() >= homunculus.getTemplate().getExpToLevel3())
 					{
 						homunculus.setLevel(3);
+						player.getHomunculusList().refreshStats(true);
 						player.sendPacket(new ExHomunculusEnchantEXPResult(true, true));
 					}
 					else
@@ -100,6 +103,7 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 					if (homunculus.getExp() >= homunculus.getTemplate().getExpToLevel4())
 					{
 						homunculus.setLevel(4);
+						player.getHomunculusList().refreshStats(true);
 						player.sendPacket(new ExHomunculusEnchantEXPResult(true, true));
 					}
 					else
@@ -113,6 +117,7 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 					if (homunculus.getExp() >= homunculus.getTemplate().getExpToLevel5())
 					{
 						homunculus.setLevel(5);
+						player.getHomunculusList().refreshStats(true);
 						player.sendPacket(new ExHomunculusEnchantEXPResult(true, true));
 					}
 					else
@@ -136,7 +141,6 @@ public class RequestExHomunculusEnchantExp implements IClientIncomingPacket
 				}
 			}
 			player.getHomunculusList().update(homunculus);
-			player.getHomunculusList().refreshStats(true);
 			player.sendPacket(new ExShowHomunculusList(player));
 		}
 	}
