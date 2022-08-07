@@ -377,7 +377,7 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="isFemale" type="xs:boolean" />
-														<xs:element minOccurs="0" name="residencesId">
+														<xs:element minOccurs="0" name="residenceIds">
 															<xs:complexType>
 																<xs:sequence>
 																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedByte" />

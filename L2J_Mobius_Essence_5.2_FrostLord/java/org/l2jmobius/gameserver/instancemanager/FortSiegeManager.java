@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -60,7 +61,7 @@ public class FortSiegeManager
 	private int _siegeLength = 60; // Time in minute. Changeable in fortsiege.properties
 	private int _countDownLength = 10; // Time in minute. Changeable in fortsiege.properties
 	private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties
-	private List<FortSiege> _sieges;
+	private final Map<Integer, FortSiege> _sieges = new ConcurrentHashMap<>();
 	
 	protected FortSiegeManager()
 	{
@@ -255,18 +256,19 @@ public class FortSiegeManager
 		return _countDownLength;
 	}
 	
-	public List<FortSiege> getSieges()
+	public Collection<FortSiege> getSieges()
 	{
-		if (_sieges == null)
-		{
-			_sieges = new CopyOnWriteArrayList<>();
-		}
-		return _sieges;
+		return _sieges.values();
+	}
+	
+	public FortSiege getSiege(int fortId)
+	{
+		return _sieges.get(fortId);
 	}
 	
 	public void addSiege(FortSiege fortSiege)
 	{
-		getSieges().add(fortSiege);
+		_sieges.put(fortSiege.getFort().getResidenceId(), fortSiege);
 	}
 	
 	public boolean isCombat(int itemId)

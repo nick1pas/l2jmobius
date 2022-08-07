@@ -98,7 +98,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpHaveSummon", OpHaveSummonSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpHaveSummonedNpc", OpHaveSummonedNpcSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpHome", OpHomeSkillCondition::new);
-		SkillConditionHandler.getInstance().registerHandler("OpInSiegeTime", OpInSiegeTimeSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpInSiege", OpInSiegeSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpInstantzone", OpInstantzoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpMainjob", OpMainjobSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNeedAgathion", OpNeedAgathionSkillCondition::new);

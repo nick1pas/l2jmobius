@@ -33,12 +33,12 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class OpCheckResidenceSkillCondition implements ISkillCondition
 {
-	private final Set<Integer> _residencesId = new HashSet<>();
+	private final Set<Integer> _residenceIds = new HashSet<>();
 	private final boolean _isWithin;
 	
 	public OpCheckResidenceSkillCondition(StatSet params)
 	{
-		_residencesId.addAll(params.getList("residencesId", Integer.class));
+		_residenceIds.addAll(params.getList("residenceIds", Integer.class));
 		_isWithin = params.getBoolean("isWithin");
 	}
 	
@@ -53,7 +53,7 @@ public class OpCheckResidenceSkillCondition implements ISkillCondition
 				final ClanHall clanHall = ClanHallData.getInstance().getClanHallByClan(clan);
 				if (clanHall != null)
 				{
-					return _isWithin ? _residencesId.contains(clanHall.getResidenceId()) : !_residencesId.contains(clanHall.getResidenceId());
+					return _isWithin ? _residenceIds.contains(clanHall.getResidenceId()) : !_residenceIds.contains(clanHall.getResidenceId());
 				}
 			}
 		}

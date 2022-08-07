@@ -384,7 +384,7 @@
 															<xs:element name="range" type="xs:unsignedShort" />
 															<xs:element name="direction" type="xs:string" />
 															<xs:element name="transformId" type="xs:unsignedShort" />
-															<xs:element name="residencesId">
+															<xs:element name="residenceIds">
 																<xs:complexType>
 																	<xs:sequence>
 																		<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedByte" />

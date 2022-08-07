@@ -184,10 +184,9 @@ public class SkillData implements IXmlReader
 	
 	/**
 	 * @param addNoble
-	 * @param hasCastle
 	 * @return an array with siege skills. If addNoble == true, will add also Advanced headquarters.
 	 */
-	public List<Skill> getSiegeSkills(boolean addNoble, boolean hasCastle)
+	public List<Skill> getSiegeSkills(boolean addNoble)
 	{
 		final List<Skill> temp = new LinkedList<>();
 		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
@@ -197,11 +196,9 @@ public class SkillData implements IXmlReader
 		{
 			temp.add(_skills.get(getSkillHashCode(326, 1))); // Build Advanced Headquarters
 		}
-		if (hasCastle)
-		{
-			temp.add(_skills.get(getSkillHashCode(844, 1))); // Outpost Construction
-			temp.add(_skills.get(getSkillHashCode(845, 1))); // Outpost Demolition
-		}
+		temp.add(_skills.get(getSkillHashCode(15283, 1))); // Summon Jacquard
+		temp.add(_skills.get(getSkillHashCode(15284, 1))); // Summon Brakel
+		temp.add(_skills.get(getSkillHashCode(15285, 1))); // Summon Loken
 		return temp;
 	}
 	

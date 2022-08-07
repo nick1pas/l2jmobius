@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -263,7 +264,7 @@ public class SiegeManager
 		return _bloodAllianceReward;
 	}
 	
-	public List<Siege> getSieges()
+	public Collection<Siege> getSieges()
 	{
 		final List<Siege> sieges = new LinkedList<>();
 		for (Castle castle : CastleManager.getInstance().getCastles())
@@ -271,6 +272,18 @@ public class SiegeManager
 			sieges.add(castle.getSiege());
 		}
 		return sieges;
+	}
+	
+	public Siege getSiege(int castleId)
+	{
+		for (Castle castle : CastleManager.getInstance().getCastles())
+		{
+			if (castle.getResidenceId() == castleId)
+			{
+				return castle.getSiege();
+			}
+		}
+		return null;
 	}
 	
 	private void loadTrapUpgrade(int castleId)

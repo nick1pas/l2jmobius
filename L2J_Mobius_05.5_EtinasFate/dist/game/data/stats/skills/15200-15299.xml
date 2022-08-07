@@ -1563,10 +1563,19 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>64</time>
+			<condition name="OpInSiege">
+				<residenceIds>
+					<item>64</item>
+				</residenceIds>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>33767</npcId> <!-- Jacquard -->
+				<npcCount>1</npcCount>
+				<despawnDelay>300000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15284" toLevel="1" name="Summon Brakel">
 		<!-- Summons Brakel, the Herald from the Fortress of Resistance. The Clan Hall Siege for the contestable Fortress of Resistance runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Brakel teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
@@ -1580,10 +1589,19 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>21</time>
+			<condition name="OpInSiege">
+				<residenceIds>
+					<item>21</item>
+				</residenceIds>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>33769</npcId> <!-- Brakel -->
+				<npcCount>1</npcCount>
+				<despawnDelay>300000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15285" toLevel="1" name="Summon Loken">
 		<!-- Summons Loken, the Herald from Devastated Castle. The Clan Hall Siege for the contestable Devastated Castle runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Loken teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
@@ -1597,10 +1615,19 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>34</time>
+			<condition name="OpInSiege">
+				<residenceIds>
+					<item>34</item>
+				</residenceIds>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>33771</npcId> <!-- Loken -->
+				<npcCount>1</npcCount>
+				<despawnDelay>300000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15286" toLevel="1" name="Blood Siphon Master">
 		<!-- Steals a large portion of the target's HP. -->
