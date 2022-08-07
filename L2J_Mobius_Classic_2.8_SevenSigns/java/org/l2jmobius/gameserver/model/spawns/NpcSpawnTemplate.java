@@ -54,6 +54,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	private final int _count;
 	private final Duration _respawnTime;
 	private final Duration _respawnTimeRandom;
+	private final int _chaseRange;
 	private List<ChanceLocation> _locations;
 	private SpawnTerritory _zone;
 	private StatSet _parameters;
@@ -73,6 +74,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		_count = template._count;
 		_respawnTime = template._respawnTime;
 		_respawnTimeRandom = template._respawnTimeRandom;
+		_chaseRange = template._chaseRange;
 		_spawnAnimation = template._spawnAnimation;
 		_saveInDB = template._saveInDB;
 		_dbName = template._dbName;
@@ -90,6 +92,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		_count = set.getInt("count", 1);
 		_respawnTime = set.getDuration("respawnTime", null);
 		_respawnTimeRandom = set.getDuration("respawnRandom", null);
+		_chaseRange = set.getInt("chaseRange", 0);
 		_spawnAnimation = set.getBoolean("spawnAnimation", false);
 		_saveInDB = set.getBoolean("dbSave", false);
 		_dbName = set.getString("dbName", null);
@@ -193,6 +196,11 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	public Duration getRespawnTimeRandom()
 	{
 		return _respawnTimeRandom;
+	}
+	
+	public int getChaseRange()
+	{
+		return _chaseRange;
 	}
 	
 	public List<ChanceLocation> getLocation()

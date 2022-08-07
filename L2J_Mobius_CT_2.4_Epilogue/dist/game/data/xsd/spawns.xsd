@@ -50,6 +50,7 @@
 											<xs:attribute name="count" type="xs:positiveInteger" use="optional" />
 											<xs:attribute name="respawnDelay" type="xs:nonNegativeInteger" use="optional" />
 											<xs:attribute name="respawnRandom" type="xs:nonNegativeInteger" use="optional" />
+											<xs:attribute name="chaseRange" type="xs:nonNegativeInteger" use="optional" />
 											<xs:attribute name="periodOfDay" use="optional">
 												<xs:simpleType>
 													<xs:restriction base="xs:token">

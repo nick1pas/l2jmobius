@@ -335,6 +335,11 @@ public class SpawnTable implements IXmlReader
 									spawnInfo.set("respawnRandom", parseInteger(attrs, "respawnRandom"));
 								}
 								
+								if (attrs.getNamedItem("chaseRange") != null)
+								{
+									spawnInfo.set("chaseRange", parseInteger(attrs, "chaseRange"));
+								}
+								
 								if (attrs.getNamedItem("periodOfDay") != null)
 								{
 									final String period = attrs.getNamedItem("periodOfDay").getNodeValue();
@@ -371,6 +376,7 @@ public class SpawnTable implements IXmlReader
 			spawnDat.setXYZ(spawnInfo.getInt("x", 0), spawnInfo.getInt("y", 0), spawnInfo.getInt("z", 0));
 			spawnDat.setHeading(spawnInfo.getInt("heading", -1));
 			spawnDat.setRespawnDelay(spawnInfo.getInt("respawnDelay", 0), spawnInfo.getInt("respawnRandom", 0));
+			spawnDat.setChaseRange(spawnInfo.getInt("chaseRange", 0));
 			spawnDat.setLocationId(spawnInfo.getInt("locId", 0));
 			final String territoryName = spawnInfo.getString("territoryName", "");
 			final String spawnName = spawnInfo.getString("spawnName", "");

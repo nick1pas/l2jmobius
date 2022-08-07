@@ -71,6 +71,8 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	private int _respawnMinDelay;
 	/** Maximum respawn delay */
 	private int _respawnMaxDelay;
+	/** Maximum distance monsters can be pulled away from spawn. */
+	private int _chaseRange;
 	/** The generic constructor of Npc managed by this Spawn */
 	private Constructor<? extends Npc> _constructor;
 	/** If True an Npc is respawned each time that another is killed */
@@ -538,6 +540,16 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	public boolean hasRespawnRandom()
 	{
 		return _respawnMinDelay != _respawnMaxDelay;
+	}
+	
+	public void setChaseRange(int chaseRange)
+	{
+		_chaseRange = chaseRange;
+	}
+	
+	public int getChaseRange()
+	{
+		return _chaseRange;
 	}
 	
 	public void setSpawnTerritory(NpcSpawnTerritory territory)

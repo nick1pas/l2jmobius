@@ -517,6 +517,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		return _respawnMinDelay != _respawnMaxDelay;
 	}
 	
+	public int getChaseRange()
+	{
+		return _spawnTemplate.getChaseRange();
+	}
+	
 	public Npc getLastSpawn()
 	{
 		if (!_spawnedNpcs.isEmpty())
