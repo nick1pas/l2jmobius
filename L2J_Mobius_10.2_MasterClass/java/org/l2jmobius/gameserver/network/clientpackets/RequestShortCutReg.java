@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 public class RequestShortCutReg implements IClientIncomingPacket
 {
@@ -68,6 +69,58 @@ public class RequestShortCutReg implements IClientIncomingPacket
 		{
 			return;
 		}
+		
+		// Delete the shortcut.
+		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
+		player.deleteShortCut(_slot, _page);
+		if (oldShortcut != null)
+		{
+			boolean removed = true;
+			// Keep other similar shortcuts activated.
+			if (oldShortcut.isAutoUse())
+			{
+				player.removeAutoShortcut(_slot, _page);
+				for (Shortcut shortcut : player.getAllShortCuts())
+				{
+					if ((oldShortcut.getId() == shortcut.getId()) && (oldShortcut.getType() == shortcut.getType()))
+					{
+						player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+						removed = false;
+					}
+				}
+			}
+			// Remove auto used ids.
+			if (removed)
+			{
+				switch (oldShortcut.getType())
+				{
+					case SKILL:
+					{
+						AutoUseTaskManager.getInstance().removeAutoBuff(player, oldShortcut.getId());
+						AutoUseTaskManager.getInstance().removeAutoSkill(player, oldShortcut.getId());
+						break;
+					}
+					case ITEM:
+					{
+						if (player.getInventory().getItemByObjectId(oldShortcut.getId()).isPotion())
+						{
+							AutoUseTaskManager.getInstance().removeAutoPotionItem(player, oldShortcut.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+						}
+						break;
+					}
+					case ACTION:
+					{
+						AutoUseTaskManager.getInstance().removeAutoAction(player, oldShortcut.getId());
+						break;
+					}
+				}
+			}
+		}
+		player.restoreAutoShortcutVisual();
 		
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _level, _subLevel, _characterType);
 		sc.setAutoUse(_active);
