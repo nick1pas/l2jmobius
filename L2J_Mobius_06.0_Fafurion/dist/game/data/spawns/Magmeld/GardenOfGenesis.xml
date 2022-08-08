@@ -1,4 +1,4 @@
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+﻿<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="dimension_2621_genesis_gardenm1">
 		<territories>
 			<territory name="dimension_2621_genesis_garden" minZ="-2067" maxZ="-1867">
@@ -8,7 +8,7 @@
 				<node x="206885" y="111343" />
 			</territory>
 		</territories>
-		<npc id="33565" x="207036" y="111212" z="-2032" respawnTime="1sec" /> <!-- Hermuncus' Minion -->
+		<npc id="33565" x="207036" y="111212" z="-2032" respawnTime="1sec" /> <!-- Hermuncus' Minion - Dimension Keeper -->
 	</spawn>
 	<spawn name="magmeld05_2621_ga_centerm1">
 		<territories>
@@ -57,16 +57,16 @@
 				<node x="208233" y="110465" />
 			</territory>
 		</territories>
-		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
-		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
+		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Sentry -->
+		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Commander -->
 		<npc id="22950" x="209008" y="110944" z="-2056" heading="27648" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path1" />
 			</parameters>
 		</npc>
 		<npc id="22951" respawnTime="90sec" respawnRandom="30sec" /> <!-- Garden Destroyer -->
-		<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+		<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 	</spawn>
 	<spawn name="magmeld05_2621_gc_centerm1">
 		<territories>
@@ -92,16 +92,16 @@
 				<node x="205260" y="117558" />
 			</territory>
 		</territories>
-		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
-		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
+		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Sentry -->
+		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Commander -->
 		<npc id="22950" x="205932" y="116648" z="-2104" heading="7168" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path2" />
 			</parameters>
 		</npc>
 		<npc id="22951" respawnTime="90sec" respawnRandom="30sec" /> <!-- Garden Destroyer -->
-		<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+		<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 	</spawn>
 	<spawn name="magmeld05_2621_03m1">
 		<territories>
@@ -112,16 +112,16 @@
 				<node x="212421" y="122661" />
 			</territory>
 		</territories>
-		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
-		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
+		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Sentry -->
+		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Commander -->
 		<npc id="22950" x="214856" y="122284" z="-2040" heading="-8192" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path3" />
 			</parameters>
 		</npc>
 		<npc id="22951" respawnTime="90sec" respawnRandom="30sec" /> <!-- Garden Destroyer -->
-		<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+		<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 	</spawn>
 	<spawn name="magmeld05_2621_04m1">
 		<territories>
@@ -134,16 +134,16 @@
 				<node x="217665" y="114549" />
 			</territory>
 		</territories>
-		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
-		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
+		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Sentry -->
+		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Commander -->
 		<npc id="22950" x="221420" y="113788" z="-2064" heading="-23552" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path4" />
 			</parameters>
 		</npc>
 		<npc id="22951" respawnTime="90sec" respawnRandom="30sec" /> <!-- Garden Destroyer -->
-		<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+		<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 	</spawn>
 	<spawn name="magmeld05_doorspawn_01m1">
 		<territories>
@@ -217,7 +217,7 @@
 				<node x="206995" y="113040" />
 			</territory>
 		</territories>
-		<npc id="33090" x="207548" y="112632" z="-2016" /> <!-- Teleport Device -->
+		<npc id="33090" x="207548" y="112632" z="-2016" /> <!-- Teleport Device - Garden of Genesis -->
 	</spawn>
 	<spawn name="magmeld05_2621_Abirdm1">
 		<territories>
@@ -240,7 +240,7 @@
 					<node x="216154" y="112778" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A_factorm1">
@@ -299,11 +299,11 @@
 					<node x="213737" y="113924" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D04m1">
@@ -320,11 +320,11 @@
 					<node x="213737" y="116665" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D03m1">
@@ -341,11 +341,11 @@
 					<node x="211666" y="115307" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D01m1">
@@ -362,11 +362,11 @@
 					<node x="211680" y="114313" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Cpartym1">
@@ -379,7 +379,7 @@
 					<node x="216160" y="121005" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B_factorm1">
@@ -428,14 +428,14 @@
 					<node x="215641" y="121538" />
 				</territory>
 			</territories>
-			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Dm1">
@@ -485,7 +485,7 @@
 					<node x="216072" y="121148" />
 				</territory>
 			</territories>
-			<npc id="22955" respawnTime="45sec" respawnRandom="15sec" /> <!-- Sun Gardener -->
+			<npc id="22955" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Sun Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C04m1">
@@ -499,7 +499,7 @@
 					<node x="217875" y="119660" />
 				</territory>
 			</territories>
-			<npc id="22955" respawnTime="50sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
+			<npc id="22955" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C01m1">
@@ -514,7 +514,7 @@
 					<node x="216061" y="119335" />
 				</territory>
 			</territories>
-			<npc id="22955" respawnTime="45sec" respawnRandom="15sec" /> <!-- Sun Gardener -->
+			<npc id="22955" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Sun Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C02m1">
@@ -529,7 +529,7 @@
 					<node x="217861" y="118943" />
 				</territory>
 			</territories>
-			<npc id="22955" respawnTime="50sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
+			<npc id="22955" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Dpartym1">
@@ -546,7 +546,7 @@
 					<node x="215526" y="114476" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B04m1">
@@ -559,11 +559,11 @@
 					<node x="217807" y="113030" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B02m1">
@@ -576,11 +576,11 @@
 					<node x="217800" y="111157" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B03m1">
@@ -593,11 +593,11 @@
 					<node x="216014" y="113043" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B01m1">
@@ -610,11 +610,11 @@
 					<node x="216006" y="111170" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Apartym1">
@@ -627,7 +627,7 @@
 					<node x="207970" y="120977" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A03m1">
@@ -640,11 +640,11 @@
 					<node x="207839" y="121252" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A04m1">
@@ -657,11 +657,11 @@
 					<node x="209632" y="121239" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A01m1">
@@ -674,11 +674,11 @@
 					<node x="207823" y="119407" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="65sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A02m1">
@@ -691,11 +691,11 @@
 					<node x="209625" y="119366" />
 				</territory>
 			</territories>
-			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" /> <!-- Garden Scout -->
-			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" /> <!-- Sun Garden Manager -->
-			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" /> <!-- Sun Gardener -->
-			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22953" respawnTime="50sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Scout -->
+			<npc id="22954" respawnTime="70sec" respawnRandom="18sec" chaseRange="2000" /> <!-- Sun Garden Manager -->
+			<npc id="22955" respawnTime="55sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Sun Gardener -->
+			<npc id="22956" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22957" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_BpartyNm1">
@@ -708,7 +708,7 @@
 					<node x="216154" y="112778" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A_factor_Nm1">
@@ -767,11 +767,11 @@
 					<node x="213737" y="113924" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D04Nm1">
@@ -788,11 +788,11 @@
 					<node x="213737" y="116665" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D03Nm1">
@@ -809,11 +809,11 @@
 					<node x="211666" y="115307" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D01Nm1">
@@ -830,11 +830,11 @@
 					<node x="211680" y="114313" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_CpartyNm1">
@@ -847,7 +847,7 @@
 					<node x="216160" y="121005" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B_factor_Nm1">
@@ -896,14 +896,14 @@
 					<node x="215641" y="121538" />
 				</territory>
 			</territories>
-			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
+			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout - Bewildered -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_DNm1">
@@ -953,7 +953,7 @@
 					<node x="216072" y="121148" />
 				</territory>
 			</territories>
-			<npc id="22960" respawnTime="45sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
+			<npc id="22960" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C04Nm1">
@@ -967,7 +967,7 @@
 					<node x="217875" y="119660" />
 				</territory>
 			</territories>
-			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" /> <!-- Moon Gardener -->
+			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Moon Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C01Nm1">
@@ -982,7 +982,7 @@
 					<node x="216061" y="119335" />
 				</territory>
 			</territories>
-			<npc id="22960" respawnTime="45sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
+			<npc id="22960" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C02Nm1">
@@ -997,7 +997,7 @@
 					<node x="217861" y="118943" />
 				</territory>
 			</territories>
-			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" /> <!-- Moon Gardener -->
+			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Moon Gardener -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_DpartyNm1">
@@ -1014,7 +1014,7 @@
 					<node x="215526" y="114476" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B04Nm1">
@@ -1027,11 +1027,11 @@
 					<node x="217807" y="113030" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B02Nm1">
@@ -1044,11 +1044,11 @@
 					<node x="217800" y="111157" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B03Nm1">
@@ -1061,11 +1061,11 @@
 					<node x="216014" y="113043" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_B01Nm1">
@@ -1078,11 +1078,11 @@
 					<node x="216006" y="111170" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="80sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="35sec" respawnRandom="20sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_ApartyNm1">
@@ -1095,7 +1095,7 @@
 					<node x="207970" y="120977" />
 				</territory>
 			</territories>
-			<npc id="23160" respawnTime="5min" respawnRandom="2min" /> <!-- Garden Chief Priest -->
+			<npc id="23160" respawnTime="5min" respawnRandom="2min" chaseRange="3000" /> <!-- Garden Chief Priest -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A03Nm1">
@@ -1108,11 +1108,11 @@
 					<node x="207839" y="121252" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="85sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="85sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A04Nm1">
@@ -1125,11 +1125,11 @@
 					<node x="209632" y="121239" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="30sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A01Nm1">
@@ -1142,11 +1142,11 @@
 					<node x="207823" y="119407" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="85sec" respawnRandom="25sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="85sec" respawnRandom="25sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="55sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_A02Nm1">
@@ -1159,11 +1159,11 @@
 					<node x="209625" y="119366" />
 				</territory>
 			</territories>
-			<npc id="22958" respawnTime="90sec" respawnRandom="30sec" /> <!-- Moon Garden Manager -->
-			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" /> <!-- Moon Gardener -->
-			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Sentry -->
-			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" /> <!-- Garden Commander -->
-			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Warrior -->
+			<npc id="22958" respawnTime="90sec" respawnRandom="30sec" chaseRange="2000" /> <!-- Moon Garden Manager -->
+			<npc id="22960" respawnTime="50sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Moon Gardener -->
+			<npc id="22961" respawnTime="45sec" respawnRandom="10sec" chaseRange="2000" /> <!-- Garden Sentry -->
+			<npc id="22962" respawnTime="50sec" respawnRandom="7sec" chaseRange="2000" /> <!-- Garden Commander -->
+			<npc id="22963" respawnTime="45sec" respawnRandom="15sec" chaseRange="2000" /> <!-- Garden Warrior -->
 		</group>
 	</spawn>
 </list>

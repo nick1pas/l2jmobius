@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="BeastFarmNPCs">
 		<group name="NPCs">
-			<npc id="31537" x="53531" y="-82696" z="-2704" heading="61739" respawnTime="60sec" /> <!-- Tunatun -->
+			<npc id="31537" x="53531" y="-82696" z="-2704" heading="61739" respawnTime="60sec" /> <!-- Tunatun - Beast Herder -->
 			<npc id="31366" x="53519" y="-82516" z="-2704" heading="64884" respawnTime="60sec" /> <!-- Feed Seller -->
 			<npc id="31366" x="53354" y="-91735" z="-2072" heading="14325" respawnTime="60sec" /> <!-- Feed Seller -->
 			<npc id="31366" x="53335" y="-90646" z="-2064" heading="56189" respawnTime="60sec" /> <!-- Feed Seller -->
@@ -109,14 +109,14 @@
 					<node x="49683" y="-92235" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_2">
 			<territories>
@@ -124,14 +124,14 @@
 					<node x="46908" y="-91397" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_3">
 			<territories>
@@ -139,14 +139,14 @@
 					<node x="44498" y="-89083" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_4">
 			<territories>
@@ -154,14 +154,14 @@
 					<node x="44070" y="-84339" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_5">
 			<territories>
@@ -169,14 +169,14 @@
 					<node x="56026" y="-73771" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_6">
 			<territories>
@@ -184,14 +184,14 @@
 					<node x="45730" y="-78765" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_7">
 			<territories>
@@ -199,14 +199,14 @@
 					<node x="47331" y="-79580" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_8">
 			<territories>
@@ -214,14 +214,14 @@
 					<node x="46768" y="-81711" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_9">
 			<territories>
@@ -229,14 +229,14 @@
 					<node x="49263" y="-82389" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_10">
 			<territories>
@@ -244,14 +244,14 @@
 					<node x="51538" y="-81567" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_11">
 			<territories>
@@ -259,14 +259,14 @@
 					<node x="48853" y="-77604" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_12">
 			<territories>
@@ -274,14 +274,14 @@
 					<node x="51206" y="-76298" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_13">
 			<territories>
@@ -289,14 +289,14 @@
 					<node x="52594" y="-79028" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_14">
 			<territories>
@@ -304,14 +304,14 @@
 					<node x="55091" y="-78005" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_15">
 			<territories>
@@ -319,14 +319,14 @@
 					<node x="54337" y="-80441" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_16">
 			<territories>
@@ -334,14 +334,14 @@
 					<node x="56977" y="-79755" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_17">
 			<territories>
@@ -349,14 +349,14 @@
 					<node x="58483" y="-77495" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_18">
 			<territories>
@@ -364,14 +364,14 @@
 					<node x="58823" y="-83552" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_19">
 			<territories>
@@ -379,14 +379,14 @@
 					<node x="57969" y="-86823" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_20">
 			<territories>
@@ -394,14 +394,14 @@
 					<node x="56413" y="-84716" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_21">
 			<territories>
@@ -409,14 +409,14 @@
 					<node x="53231" y="-85391" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_22">
 			<territories>
@@ -424,14 +424,14 @@
 					<node x="51209" y="-85333" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_23">
 			<territories>
@@ -439,14 +439,14 @@
 					<node x="55959" y="-82463" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_24">
 			<territories>
@@ -454,14 +454,14 @@
 					<node x="53411" y="-88042" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_25">
 			<territories>
@@ -469,14 +469,14 @@
 					<node x="51084" y="-87782" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_26">
 			<territories>
@@ -484,14 +484,14 @@
 					<node x="49995" y="-90332" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_27">
 			<territories>
@@ -499,14 +499,14 @@
 					<node x="46168" y="-87250" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_28">
 			<territories>
@@ -514,14 +514,14 @@
 					<node x="46381" y="-84342" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_29">
 			<territories>
@@ -529,14 +529,14 @@
 					<node x="48666" y="-84935" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_30">
 			<territories>
@@ -544,14 +544,14 @@
 					<node x="42654" y="-88756" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_31">
 			<territories>
@@ -559,14 +559,14 @@
 					<node x="53791" y="-75807" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_32">
 			<territories>
@@ -574,14 +574,14 @@
 					<node x="56244" y="-76431" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_33">
 			<territories>
@@ -589,14 +589,14 @@
 					<node x="45001" y="-93075" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 		<group name="Monster_Groups_34">
 			<territories>
@@ -604,88 +604,88 @@
 					<node x="51054" y="-79961" />
 				</territory>
 			</territories>
-			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Red Kookaburra -->
-			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Blue Kookaburra -->
-			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Cougar -->
-			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Cougar -->
-			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Buffalo -->
-			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- White Buffalo -->
-			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" /> <!-- Grandel -->
-			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" /> <!-- Black Grandel -->
+			<npc id="24651" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Red Kookaburra -->
+			<npc id="24652" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Blue Kookaburra -->
+			<npc id="24653" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Cougar -->
+			<npc id="24654" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Cougar -->
+			<npc id="24655" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Buffalo -->
+			<npc id="24656" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- White Buffalo -->
+			<npc id="24657" count="1" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Grandel -->
+			<npc id="24658" count="2" respawnTime="30sec" respawnRandom="0sec" chaseRange="900" /> <!-- Black Grandel -->
 		</group>
 	</spawn>
 	<spawn name="BeastFarmDefenders">
 		<group name="Defender_1">
-			<npc id="24659" x="47151" y="-77562" z="-3291" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="47151" y="-77562" z="-3291" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_2">
-			<npc id="24659" x="46031" y="-80146" z="-3493" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="46031" y="-80146" z="-3493" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_3">
-			<npc id="24659" x="47657" y="-83404" z="-3081" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="47657" y="-83404" z="-3081" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_4">
-			<npc id="24659" x="48123" y="-81045" z="-3298" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="48123" y="-81045" z="-3298" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_5">
-			<npc id="24659" x="49631" y="-80394" z="-3184" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="49631" y="-80394" z="-3184" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_6">
-			<npc id="24659" x="50042" y="-79569" z="-3298" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="50042" y="-79569" z="-3298" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_7">
-			<npc id="24659" x="50879" y="-77847" z="-3398" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="50879" y="-77847" z="-3398" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_8">
-			<npc id="24659" x="52949" y="-76962" z="-3431" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="52949" y="-76962" z="-3431" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_9">
-			<npc id="24659" x="53478" y="-77628" z="-3397" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="53478" y="-77628" z="-3397" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_10">
-			<npc id="24659" x="53915" y="-79120" z="-3260" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="53915" y="-79120" z="-3260" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_11">
-			<npc id="24659" x="55500" y="-79570" z="-3214" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="55500" y="-79570" z="-3214" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_12">
-			<npc id="24659" x="55681" y="-80909" z="-3010" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="55681" y="-80909" z="-3010" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_13">
-			<npc id="24659" x="58449" y="-79286" z="-3273" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="58449" y="-79286" z="-3273" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_14">
-			<npc id="24659" x="56935" y="-78224" z="-3251" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="56935" y="-78224" z="-3251" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_15">
-			<npc id="24659" x="58071" y="-81705" z="-2722" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="58071" y="-81705" z="-2722" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_16">
-			<npc id="24659" x="55925" y="-87400" z="-2333" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="55925" y="-87400" z="-2333" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_17">
-			<npc id="24659" x="54871" y="-83902" z="-2764" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="54871" y="-83902" z="-2764" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_18">
-			<npc id="24659" x="51032" y="-83231" z="-2767" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="51032" y="-83231" z="-2767" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_19">
-			<npc id="24659" x="50009" y="-83872" z="-2937" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="50009" y="-83872" z="-2937" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_20">
-			<npc id="24659" x="52846" y="-80620" z="-2837" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="52846" y="-80620" z="-2837" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_21">
-			<npc id="24659" x="48677" y="-89901" z="-2445" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="48677" y="-89901" z="-2445" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_22">
-			<npc id="24659" x="46728" y="-88852" z="-2552" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="46728" y="-88852" z="-2552" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_23">
-			<npc id="24659" x="44067" y="-87554" z="-2626" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="44067" y="-87554" z="-2626" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 		<group name="Defender_24">
-			<npc id="24659" x="47268" y="-85875" z="-2600" heading="36000" respawnTime="60sec" /> <!-- Beast Farm Defender -->
+			<npc id="24659" x="47268" y="-85875" z="-2600" heading="36000" respawnTime="60sec" chaseRange="500" /> <!-- Beast Devourer - Beast Farm Defender -->
 		</group>
 	</spawn>
 </list>

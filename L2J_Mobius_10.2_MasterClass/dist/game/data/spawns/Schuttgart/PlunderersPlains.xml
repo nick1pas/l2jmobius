@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="PlunderersPlains">
 		<group name="plunderers_plains_01">
@@ -24,10 +24,10 @@
 				</territory>
 			</territories>
 			<!-- Room 1 -->
-			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_02">
 			<territories>
@@ -44,10 +44,10 @@
 				</territory>
 			</territories>
 			<!-- Room 2 -->
-			<npc id="24218" count="25" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="25" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="25" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="25" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_03">
 			<territories>
@@ -68,10 +68,10 @@
 				</territory>
 			</territories>
 			<!-- Room 3 -->
-			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_04">
 			<territories>
@@ -87,10 +87,10 @@
 				</territory>
 			</territories>
 			<!-- Room 4 -->
-			<npc id="24218" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_05">
 			<territories>
@@ -118,10 +118,10 @@
 				</territory>
 			</territories>
 			<!-- Room 5 -->
-			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_06">
 			<territories>
@@ -153,10 +153,10 @@
 				</territory>
 			</territories>
 			<!-- Room 6 -->
-			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="30" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_07">
 			<territories>
@@ -171,10 +171,10 @@
 				</territory>
 			</territories>
 			<!-- Room 7 -->
-			<npc id="24218" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="5" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_08">
 			<territories>
@@ -198,10 +198,10 @@
 				</territory>
 			</territories>
 			<!-- Room 8 -->
-			<npc id="24218" count="25" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="25" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="25" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="15" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="25" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_09">
 			<territories>
@@ -221,10 +221,10 @@
 				</territory>
 			</territories>
 			<!-- Room 9 -->
-			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_10">
 			<territories>
@@ -247,10 +247,10 @@
 				</territory>
 			</territories>
 			<!-- Room 10 -->
-			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 		<group name="plunderers_plains_11">
 			<territories>
@@ -272,10 +272,10 @@
 				</territory>
 			</territories>
 			<!-- Room 11 -->
-			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Scout -->
-			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Warrior -->
-			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Slaughterer -->
-			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" /> <!-- Valanga Orc Shaman -->
+			<npc id="24218" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Scout -->
+			<npc id="24219" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Warrior -->
+			<npc id="24220" count="10" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Slaughterer -->
+			<npc id="24221" count="20" respawnTime="50sec" respawnRandom="10sec" chaseRange="1000" /> <!-- Valanga Orc Shaman -->
 		</group>
 	</spawn>
 </list>
