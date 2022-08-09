@@ -332,6 +332,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import org.l2jmobius.gameserver.network.serverpackets.ExUserViewInfoParameter;
 import org.l2jmobius.gameserver.network.serverpackets.ExVitalExInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
@@ -4214,6 +4215,7 @@ public class Player extends Playable
 	{
 		// Send user info to the current player
 		sendPacket(new UserInfo(this));
+		sendPacket(new ExUserViewInfoParameter(this));
 		
 		// Broadcast char info to known players
 		broadcastCharInfo();
