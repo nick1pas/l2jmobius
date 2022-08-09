@@ -17,7 +17,6 @@
 package ai.areas.PaganTemple;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 
@@ -55,7 +54,7 @@ public class PaganKeys extends AbstractNpcAI
 		{
 			case ZOMBIE_WORKER:
 			{
-				if (Rnd.get(100) < ANTEROOM_KEY_CHANCE)
+				if (getRandom(100) < ANTEROOM_KEY_CHANCE)
 				{
 					if (Config.AUTO_LOOT)
 					{
@@ -70,7 +69,7 @@ public class PaganKeys extends AbstractNpcAI
 			}
 			case TRIOLS_LAYPERSON:
 			{
-				if (Rnd.get(100) < CHAPEL_KEY_CHANCE)
+				if (getRandom(100) < CHAPEL_KEY_CHANCE)
 				{
 					if (Config.AUTO_LOOT)
 					{
@@ -85,7 +84,7 @@ public class PaganKeys extends AbstractNpcAI
 			}
 			case TRIOLS_PRIEST:
 			{
-				if (Rnd.get(100) < KEY_OF_DARKNESS_CHANCE)
+				if (getRandom(100) < KEY_OF_DARKNESS_CHANCE)
 				{
 					if (Config.AUTO_LOOT)
 					{
