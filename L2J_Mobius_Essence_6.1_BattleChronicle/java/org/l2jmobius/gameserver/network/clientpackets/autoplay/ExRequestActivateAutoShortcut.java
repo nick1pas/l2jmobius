@@ -114,6 +114,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 				else // auto potion
 				{
 					AutoUseTaskManager.getInstance().removeAutoPotionItem(player, item.getId());
+					AutoUseTaskManager.getInstance().removeAutoPetPotionItem(player, item.getId());
 				}
 			}
 			// auto skill
@@ -147,12 +148,23 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		else
 		{
 			// auto potion
-			if ((_page == 23) && (_slot == 1))
+			if (_page == 23)
 			{
-				if (Config.ENABLE_AUTO_POTION && (item != null) && item.isPotion())
+				if (_slot == 1)
 				{
-					AutoUseTaskManager.getInstance().addAutoPotionItem(player, item.getId());
-					return;
+					if (Config.ENABLE_AUTO_POTION && (item != null) && item.isPotion())
+					{
+						AutoUseTaskManager.getInstance().addAutoPotionItem(player, item.getId());
+						return;
+					}
+				}
+				else if (_slot == 2)
+				{
+					if (Config.ENABLE_AUTO_PET_POTION && (item != null) && item.isPotion())
+					{
+						AutoUseTaskManager.getInstance().addAutoPetPotionItem(player, item.getId());
+						return;
+					}
 				}
 			}
 			// auto skill

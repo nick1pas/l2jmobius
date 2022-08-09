@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
+import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
@@ -158,6 +159,34 @@ public class AutoUseTaskManager implements Runnable
 						if ((handler != null) && handler.useItem(player, item, false) && (reuseDelay > 0))
 						{
 							player.addTimeStampItem(item, reuseDelay);
+						}
+					}
+				}
+			}
+			
+			if (Config.ENABLE_AUTO_PET_POTION && !isInPeaceZone)
+			{
+				final Pet pet = player.getPet();
+				if ((pet != null) && (pet.getCurrentHpPercent() <= player.getAutoPlaySettings().getAutoPetPotionPercent()))
+				{
+					POTIONS: for (Integer itemId : player.getAutoUseSettings().getAutoPetPotionItems())
+					{
+						final Item item = player.getInventory().getItemByItemId(itemId.intValue());
+						if (item == null)
+						{
+							player.getAutoUseSettings().getAutoPetPotionItems().remove(itemId);
+							continue POTIONS;
+						}
+						
+						final int reuseDelay = item.getReuseDelay();
+						if ((reuseDelay <= 0) || (player.getItemRemainingReuseTime(item.getObjectId()) <= 0))
+						{
+							final EtcItem etcItem = item.getEtcItem();
+							final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
+							if ((handler != null) && handler.useItem(player, item, false) && (reuseDelay > 0))
+							{
+								player.addTimeStampItem(item, reuseDelay);
+							}
 						}
 					}
 				}
@@ -462,6 +491,18 @@ public class AutoUseTaskManager implements Runnable
 	public void removeAutoPotionItem(Player player, int itemId)
 	{
 		player.getAutoUseSettings().getAutoPotionItems().remove(itemId);
+		stopAutoUseTask(player);
+	}
+	
+	public void addAutoPetPotionItem(Player player, int itemId)
+	{
+		player.getAutoUseSettings().getAutoPetPotionItems().add(itemId);
+		startAutoUseTask(player);
+	}
+	
+	public void removeAutoPetPotionItem(Player player, int itemId)
+	{
+		player.getAutoUseSettings().getAutoPetPotionItems().remove(itemId);
 		stopAutoUseTask(player);
 	}
 	

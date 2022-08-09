@@ -28,6 +28,7 @@ public class AutoUseSettingsHolder
 {
 	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
+	private final Collection<Integer> _autoPetPotionItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoActions = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoBuffs = ConcurrentHashMap.newKeySet();
 	private final List<Integer> _autoSkills = new CopyOnWriteArrayList<>();
@@ -45,6 +46,11 @@ public class AutoUseSettingsHolder
 	public Collection<Integer> getAutoPotionItems()
 	{
 		return _autoPotionItems;
+	}
+	
+	public Collection<Integer> getAutoPetPotionItems()
+	{
+		return _autoPetPotionItems;
 	}
 	
 	public Collection<Integer> getAutoActions()
@@ -99,6 +105,6 @@ public class AutoUseSettingsHolder
 	
 	public boolean isEmpty()
 	{
-		return _autoSupplyItems.isEmpty() && _autoPotionItems.isEmpty() && _autoSkills.isEmpty() && _autoActions.isEmpty();
+		return _autoSupplyItems.isEmpty() && _autoPotionItems.isEmpty() && _autoPetPotionItems.isEmpty() && _autoSkills.isEmpty() && _autoActions.isEmpty();
 	}
 }

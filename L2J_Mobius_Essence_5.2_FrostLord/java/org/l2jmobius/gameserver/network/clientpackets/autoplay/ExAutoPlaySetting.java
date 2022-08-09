@@ -39,6 +39,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 	private int _nextTargetMode;
 	private boolean _shortRange;
 	private int _potionPercent;
+	private int _petPotionPercent;
 	private boolean _respectfulHunting;
 	
 	@Override
@@ -50,7 +51,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		_nextTargetMode = packet.readH();
 		_shortRange = packet.readC() == 1;
 		_potionPercent = packet.readD();
-		packet.readD(); // 272
+		_petPotionPercent = packet.readD(); // 272
 		_respectfulHunting = packet.readC() == 1;
 		return true;
 	}
@@ -72,7 +73,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _shortRange, _potionPercent, _respectfulHunting));
+		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _shortRange, _potionPercent, _respectfulHunting, _petPotionPercent));
 		player.getAutoPlaySettings().setAutoPotionPercent(_potionPercent);
 		
 		if (!Config.ENABLE_AUTO_PLAY)
@@ -80,7 +81,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<Integer> settings = new ArrayList<>(7);
+		final List<Integer> settings = new ArrayList<>(8);
 		settings.add(0, _options);
 		settings.add(1, _active ? 1 : 0);
 		settings.add(2, _pickUp ? 1 : 0);
@@ -88,6 +89,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		settings.add(4, _shortRange ? 1 : 0);
 		settings.add(5, _potionPercent);
 		settings.add(6, _respectfulHunting ? 1 : 0);
+		settings.add(7, _petPotionPercent);
 		player.getVariables().setIntegerList(PlayerVariables.AUTO_USE_SETTINGS, settings);
 		
 		player.getAutoPlaySettings().setOptions(_options);
@@ -95,6 +97,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		player.getAutoPlaySettings().setNextTargetMode(_nextTargetMode);
 		player.getAutoPlaySettings().setShortRange(_shortRange);
 		player.getAutoPlaySettings().setRespectfulHunting(_respectfulHunting);
+		player.getAutoPlaySettings().setAutoPetPotionPercent(_petPotionPercent);
 		
 		if (_active)
 		{

@@ -32,8 +32,9 @@ public class ExAutoPlaySettingSend implements IClientOutgoingPacket
 	private final boolean _shortRange;
 	private final int _potionPercent;
 	private final boolean _respectfulHunting;
+	private final int _petPotionPercent;
 	
-	public ExAutoPlaySettingSend(int options, boolean active, boolean pickUp, int nextTargetMode, boolean shortRange, int potionPercent, boolean respectfulHunting)
+	public ExAutoPlaySettingSend(int options, boolean active, boolean pickUp, int nextTargetMode, boolean shortRange, int potionPercent, boolean respectfulHunting, int petPotionPercent)
 	{
 		_options = options;
 		_active = active;
@@ -42,6 +43,7 @@ public class ExAutoPlaySettingSend implements IClientOutgoingPacket
 		_shortRange = shortRange;
 		_potionPercent = potionPercent;
 		_respectfulHunting = respectfulHunting;
+		_petPotionPercent = petPotionPercent;
 	}
 	
 	@Override
@@ -54,7 +56,7 @@ public class ExAutoPlaySettingSend implements IClientOutgoingPacket
 		packet.writeH(_nextTargetMode);
 		packet.writeC(_shortRange ? 1 : 0);
 		packet.writeD(_potionPercent);
-		packet.writeD(0); // 272
+		packet.writeD(_petPotionPercent); // 272
 		packet.writeC(_respectfulHunting ? 1 : 0);
 		return true;
 	}

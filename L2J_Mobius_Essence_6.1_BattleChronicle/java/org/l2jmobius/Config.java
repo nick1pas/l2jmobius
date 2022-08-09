@@ -621,6 +621,7 @@ public class Config
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
 	public static boolean ENABLE_AUTO_PLAY;
 	public static boolean ENABLE_AUTO_POTION;
+	public static boolean ENABLE_AUTO_PET_POTION;
 	public static boolean ENABLE_AUTO_SKILL;
 	public static boolean ENABLE_AUTO_ITEM;
 	public static boolean AUTO_PLAY_ATTACK_ACTION;
@@ -2253,6 +2254,7 @@ public class Config
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = generalConfig.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_AUTO_PLAY = generalConfig.getBoolean("EnableAutoPlay", true);
 			ENABLE_AUTO_POTION = generalConfig.getBoolean("EnableAutoPotion", true);
+			ENABLE_AUTO_PET_POTION = generalConfig.getBoolean("EnableAutoPetPotion", true);
 			ENABLE_AUTO_SKILL = generalConfig.getBoolean("EnableAutoSkill", true);
 			ENABLE_AUTO_ITEM = generalConfig.getBoolean("EnableAutoItem", true);
 			AUTO_PLAY_ATTACK_ACTION = generalConfig.getBoolean("AutoPlayAttackAction", true);
