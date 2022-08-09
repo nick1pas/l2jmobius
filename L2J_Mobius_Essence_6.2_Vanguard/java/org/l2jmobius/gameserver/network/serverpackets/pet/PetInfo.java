@@ -168,14 +168,15 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
 		packet.writeC(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
 		packet.writeD(-1);
-		packet.writeD(0);
+		packet.writeD(0); // "Transformation ID - Confirmed" - Used to bug Fenrir after 64 level.
+		packet.writeC(0); // Used Summon Points
+		packet.writeC(0); // Maximum Summon Points
 		final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeH(aves.size()); // Confirmed
 		for (AbnormalVisualEffect ave : aves)
 		{
 			packet.writeH(ave.getClientId()); // Confirmed
 		}
-		packet.writeH(0); // visibility
 		packet.writeC(_statusMask);
 		if (_summon.isPet())
 		{
