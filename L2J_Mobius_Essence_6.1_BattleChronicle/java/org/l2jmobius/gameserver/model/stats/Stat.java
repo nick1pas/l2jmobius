@@ -324,6 +324,7 @@ public enum Stat
 	// Which base stat ordinal should alter skill critical formula.
 	STAT_BONUS_SKILL_CRITICAL("statSkillCritical"),
 	STAT_BONUS_SPEED("statSpeed"),
+	CRAFTING_CRITICAL("craftingCritical"),
 	SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
 	WORLD_CHAT_POINTS("worldChatPoints"),
 	ATTACK_DAMAGE("attackDamage"),

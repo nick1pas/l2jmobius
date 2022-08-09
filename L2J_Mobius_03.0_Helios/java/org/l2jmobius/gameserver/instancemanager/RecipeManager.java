@@ -666,7 +666,11 @@ public class RecipeManager
 				itemCount *= 2;
 			}
 			
-			_target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
+			final Item item = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
+			if (item.isEquipable() && (itemCount == 1) && (Rnd.get(100) < _player.getStat().getValue(Stat.CRAFTING_CRITICAL)))
+			{
+				_target.getInventory().addItem("Manufacture Critical", itemId, itemCount, _target, _player);
+			}
 			
 			// inform customer of earned item
 			SystemMessage sm = null;
