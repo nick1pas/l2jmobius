@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopItemInfo implements IClientOutgoingPacket
@@ -27,6 +28,8 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 	private final Boolean _success;
 	private final long _manufacturePrice;
 	private final long _offeringMaximumAdena;
+	private final double _craftRate;
+	private final double _craftCritical;
 	
 	public RecipeShopItemInfo(Player manufacturer, int recipeId, boolean success, long manufacturePrice, long offeringMaximumAdena)
 	{
@@ -35,6 +38,8 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 		_success = success;
 		_manufacturePrice = manufacturePrice;
 		_offeringMaximumAdena = offeringMaximumAdena;
+		_craftRate = _manufacturer.getStat().getValue(Stat.CRAFT_RATE, 0);
+		_craftCritical = _manufacturer.getStat().getValue(Stat.CRAFTING_CRITICAL, 0);
 	}
 	
 	public RecipeShopItemInfo(Player manufacturer, int recipeId, long manufacturePrice, long offeringMaximumAdena)
@@ -44,6 +49,8 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 		_success = null;
 		_manufacturePrice = manufacturePrice;
 		_offeringMaximumAdena = offeringMaximumAdena;
+		_craftRate = _manufacturer.getStat().getValue(Stat.CRAFT_RATE, 0);
+		_craftCritical = _manufacturer.getStat().getValue(Stat.CRAFTING_CRITICAL, 0);
 	}
 	
 	@Override
@@ -58,6 +65,10 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 		packet.writeQ(_manufacturePrice);
 		packet.writeC(_offeringMaximumAdena > 0 ? 1 : 0); // Trigger offering window if 1
 		packet.writeQ(_offeringMaximumAdena);
+		packet.writeF(Math.min(_craftRate, 100.0));
+		packet.writeC(_craftCritical > 0 ? 1 : 0);
+		packet.writeF(Math.min(_craftCritical, 100.0));
+		packet.writeC(0); // find me
 		return true;
 	}
 }

@@ -20,17 +20,22 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopSellList implements IClientOutgoingPacket
 {
 	private final Player _buyer;
 	private final Player _manufacturer;
+	private final double _craftRate;
+	private final double _craftCritical;
 	
 	public RecipeShopSellList(Player buyer, Player manufacturer)
 	{
 		_buyer = buyer;
 		_manufacturer = manufacturer;
+		_craftRate = _manufacturer.getStat().getValue(Stat.CRAFT_RATE, 0);
+		_craftCritical = _manufacturer.getStat().getValue(Stat.CRAFTING_CRITICAL, 0);
 	}
 	
 	@Override
@@ -53,6 +58,9 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 				packet.writeD(item.getKey());
 				packet.writeD(0); // CanCreate?
 				packet.writeQ(item.getValue());
+				packet.writeF(Math.min(_craftRate, 100.0));
+				packet.writeC(_craftCritical > 0 ? 1 : 0);
+				packet.writeF(Math.min(_craftCritical, 100.0));
 			}
 		}
 		return true;
