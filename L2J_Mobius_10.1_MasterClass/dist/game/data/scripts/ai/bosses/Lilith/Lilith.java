@@ -59,7 +59,7 @@ public class Lilith extends AbstractNpcAI
 	// NPCs
 	private static final int LILITH = 29336;
 	private static final int EXIST_CUBIC = 31124;
-	private static final int LILITH_CUBIC = 31110;
+	private static final int LILITH_CUBIC = 31118;
 	//@formatter:off
 	private static final int[] LILITH_MINIONS = {29337, 29338, 29339};
 	//@formatter:on	

@@ -60,7 +60,7 @@ public class Anakim extends AbstractNpcAI
 	// NPCs
 	private static final int ANAKIM = 29348;
 	private static final int EXIST_CUBIC = 31109;
-	private static final int ANAKIM_CUBIC = 31111;
+	private static final int ANAKIM_CUBIC = 31101;
 	//@formatter:off
     private static final int[] ANAKIM_MINIONS = {29349, 29350, 29351};
     //@formatter:on	
