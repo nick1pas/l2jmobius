@@ -72,6 +72,6 @@ public class TriggerSkillByDualRange extends AbstractEffect
 			return;
 		}
 		
-		effector.getActingPlayer().useMagic(triggerSkill, null, false, true);
+		effector.getActingPlayer().useMagic(triggerSkill, null, false, triggerSkill.getCastRange() > 600);
 	}
 }
