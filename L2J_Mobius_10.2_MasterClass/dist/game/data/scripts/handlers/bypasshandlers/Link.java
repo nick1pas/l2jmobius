@@ -67,6 +67,10 @@ public class Link implements IBypassHandler
 		VALID_LINKS.add("common/skill_enchant_help_02.htm");
 		VALID_LINKS.add("common/skill_enchant_help_03.htm");
 		VALID_LINKS.add("common/smelting_trade001.htm");
+		VALID_LINKS.add("common/upgrade_equipment_01.htm");
+		VALID_LINKS.add("common/upgrade_equipment_02.htm");
+		VALID_LINKS.add("common/upgrade_equipment_03.htm");
+		VALID_LINKS.add("common/upgrade_equipment_04.htm");
 		VALID_LINKS.add("common/weapon_sa_01.htm");
 		VALID_LINKS.add("common/welcomeback002.htm");
 		VALID_LINKS.add("common/welcomeback003.htm");
