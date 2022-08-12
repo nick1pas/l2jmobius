@@ -400,6 +400,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			{
 				newlocx = randX;
 				newlocy = randY;
+				setXYZ(newlocx, newlocy, newlocz);
 			}
 		}
 		
