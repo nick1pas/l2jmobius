@@ -306,51 +306,52 @@ public class SpawnTable implements IXmlReader
 									continue;
 								}
 								
-								final StatSet spawnInfo = new StatSet();
-								spawnInfo.set("npcTemplateid", templateId);
-								spawnInfo.set("x", x);
-								spawnInfo.set("y", y);
-								spawnInfo.set("z", z);
-								spawnInfo.set("territoryName", territoryName);
-								spawnInfo.set("spawnName", spawnName);
+								final Node countNode = attrs.getNamedItem("count");
+								final int count = countNode == null ? 1 : parseInteger(attrs, "count");
 								
-								// trying to read optional parameters
-								if (attrs.getNamedItem("heading") != null)
+								for (int i = 0; i < count; i++)
 								{
-									spawnInfo.set("heading", parseInteger(attrs, "heading"));
-								}
-								
-								if (attrs.getNamedItem("count") != null)
-								{
-									spawnInfo.set("count", parseInteger(attrs, "count"));
-								}
-								
-								if (attrs.getNamedItem("respawnDelay") != null)
-								{
-									spawnInfo.set("respawnDelay", parseInteger(attrs, "respawnDelay"));
-								}
-								
-								if (attrs.getNamedItem("respawnRandom") != null)
-								{
-									spawnInfo.set("respawnRandom", parseInteger(attrs, "respawnRandom"));
-								}
-								
-								if (attrs.getNamedItem("chaseRange") != null)
-								{
-									spawnInfo.set("chaseRange", parseInteger(attrs, "chaseRange"));
-								}
-								
-								if (attrs.getNamedItem("periodOfDay") != null)
-								{
-									final String period = attrs.getNamedItem("periodOfDay").getNodeValue();
-									if (period.equalsIgnoreCase("day") || period.equalsIgnoreCase("night"))
+									final StatSet spawnInfo = new StatSet();
+									spawnInfo.set("npcTemplateid", templateId);
+									spawnInfo.set("x", x);
+									spawnInfo.set("y", y);
+									spawnInfo.set("z", z);
+									spawnInfo.set("territoryName", territoryName);
+									spawnInfo.set("spawnName", spawnName);
+									
+									// trying to read optional parameters
+									if (attrs.getNamedItem("heading") != null)
 									{
-										spawnInfo.set("periodOfDay", period.equalsIgnoreCase("day") ? 1 : 2);
+										spawnInfo.set("heading", parseInteger(attrs, "heading"));
 									}
+									
+									if (attrs.getNamedItem("respawnDelay") != null)
+									{
+										spawnInfo.set("respawnDelay", parseInteger(attrs, "respawnDelay"));
+									}
+									
+									if (attrs.getNamedItem("respawnRandom") != null)
+									{
+										spawnInfo.set("respawnRandom", parseInteger(attrs, "respawnRandom"));
+									}
+									
+									if (attrs.getNamedItem("chaseRange") != null)
+									{
+										spawnInfo.set("chaseRange", parseInteger(attrs, "chaseRange"));
+									}
+									
+									if (attrs.getNamedItem("periodOfDay") != null)
+									{
+										final String period = attrs.getNamedItem("periodOfDay").getNodeValue();
+										if (period.equalsIgnoreCase("day") || period.equalsIgnoreCase("night"))
+										{
+											spawnInfo.set("periodOfDay", period.equalsIgnoreCase("day") ? 1 : 2);
+										}
+									}
+									
+									spawnInfo.set("fileName", f.getPath());
+									_spanwCount += addSpawn(spawnInfo, map);
 								}
-								
-								spawnInfo.set("fileName", f.getPath());
-								_spanwCount += addSpawn(spawnInfo, map);
 							}
 						}
 					}
