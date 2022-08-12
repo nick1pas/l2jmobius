@@ -128,8 +128,7 @@ public class NpcActionShift implements IActionShiftHandler
 					}
 					html.replace("%spawnai%", "<font color=FF0000>" + template.getSpawnTemplate().getAI() + "</font>");
 				}
-				
-				html.replace("%spawn%", npc.getSpawn().getX() + " " + npc.getSpawn().getY() + " " + npc.getSpawn().getZ());
+				html.replace("%spawn%", (template != null ? template.getSpawnLocation().getX() : npc.getSpawn().getX()) + " " + (template != null ? template.getSpawnLocation().getY() : npc.getSpawn().getY()) + " " + (template != null ? template.getSpawnLocation().getZ() : npc.getSpawn().getZ()));
 				if (npc.getSpawn().getRespawnMinDelay() == 0)
 				{
 					html.replace("%resp%", "None");

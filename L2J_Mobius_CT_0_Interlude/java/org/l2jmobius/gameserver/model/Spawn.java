@@ -81,6 +81,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	private final Deque<Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private boolean _randomWalk = false; // Is random walk
 	private int _spawnTemplateId = 0;
+	private Location _spawnLocation = null;
 	
 	/**
 	 * Constructor of Spawn.<br>
@@ -382,9 +383,14 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		else
 		{
 			// The Npc is spawned at the exact position (Lox, Locy, Locz)
-			newlocx = getX();
-			newlocy = getY();
-			newlocz = getZ();
+			newlocx = _spawnLocation != null ? _spawnLocation.getX() : getX();
+			newlocy = _spawnLocation != null ? _spawnLocation.getY() : getY();
+			newlocz = _spawnLocation != null ? _spawnLocation.getZ() : getZ();
+			
+			if (_spawnLocation == null)
+			{
+				_spawnLocation = new Location(newlocx, newlocy, newlocz);
+			}
 		}
 		
 		// Check if npc is in water.
@@ -616,6 +622,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	public int getNpcSpawnTemplateId()
 	{
 		return _spawnTemplateId;
+	}
+	
+	public Location getSpawnLocation()
+	{
+		return _spawnLocation;
 	}
 	
 	@Override

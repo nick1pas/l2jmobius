@@ -32,6 +32,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 
 /**
  * Spawn data retriever.
@@ -194,16 +195,17 @@ public class SpawnTable
 		{
 			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
 			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
-			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+			final NpcSpawnTemplate npcSpawnTemplate = spawn.getNpcSpawnTemplate();
+			final File spawnFile = npcSpawnTemplate != null ? npcSpawnTemplate.getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try
 			{
 				final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
 				final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 				final String spawnId = String.valueOf(spawn.getId());
-				final String spawnX = String.valueOf(spawn.getX());
-				final String spawnY = String.valueOf(spawn.getY());
-				final String spawnZ = String.valueOf(spawn.getZ());
+				final String spawnX = String.valueOf(npcSpawnTemplate != null ? npcSpawnTemplate.getSpawnLocation().getX() : spawn.getX());
+				final String spawnY = String.valueOf(npcSpawnTemplate != null ? npcSpawnTemplate.getSpawnLocation().getY() : spawn.getY());
+				final String spawnZ = String.valueOf(npcSpawnTemplate != null ? npcSpawnTemplate.getSpawnLocation().getZ() : spawn.getZ());
 				boolean found = false; // in XML you can have more than one spawn with same coords
 				boolean isMultiLine = false; // in case spawn has more stats
 				boolean lastLineFound = false; // used to check for empty file

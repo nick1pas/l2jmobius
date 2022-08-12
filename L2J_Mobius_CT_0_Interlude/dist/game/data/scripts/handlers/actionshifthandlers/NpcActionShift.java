@@ -111,7 +111,8 @@ public class NpcActionShift implements IActionShiftHandler
 				else
 				{
 					html.replace("%spawntype%", "Fixed");
-					html.replace("%spawn%", ((Npc) target).getSpawn().getX() + " " + ((Npc) target).getSpawn().getY() + " " + ((Npc) target).getSpawn().getZ());
+					final Location spawnLoc = ((Npc) target).getSpawn().getSpawnLocation() != null ? ((Npc) target).getSpawn().getSpawnLocation() : ((Npc) target).getSpawn();
+					html.replace("%spawn%", spawnLoc.getX() + " " + spawnLoc.getY() + " " + spawnLoc.getZ());
 				}
 				if (((Npc) target).getSpawn().getRespawnMinDelay() == 0)
 				{

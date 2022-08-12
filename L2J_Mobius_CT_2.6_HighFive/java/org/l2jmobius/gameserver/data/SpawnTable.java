@@ -42,6 +42,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
@@ -592,6 +593,7 @@ public class SpawnTable implements IXmlReader
 			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
 			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 			final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
+			final Location spawnLocation = spawn.getSpawnLocation();
 			final File spawnFile = npcSpawnTemplateId > 0 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try
@@ -599,9 +601,9 @@ public class SpawnTable implements IXmlReader
 				final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
 				final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 				final String spawnId = String.valueOf(spawn.getId());
-				final String spawnX = String.valueOf(spawn.getX());
-				final String spawnY = String.valueOf(spawn.getY());
-				final String spawnZ = String.valueOf(spawn.getZ());
+				final String spawnX = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getX());
+				final String spawnY = String.valueOf(spawnLocation != null ? spawnLocation.getY() : spawn.getY());
+				final String spawnZ = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getZ());
 				boolean found = false; // in XML you can have more than one spawn with same coords
 				boolean isMultiLine = false; // in case spawn has more stats
 				boolean lastLineFound = false; // used to check for empty file
