@@ -4638,6 +4638,43 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
+		// Absorb HP from the damage inflicted
+		final boolean isPvP = isPlayable() && target.isPlayable();
+		if (!isPvP || Config.VAMPIRIC_ATTACK_AFFECTS_PVP)
+		{
+			if ((skill == null) || Config.VAMPIRIC_ATTACK_WORKS_WITH_SKILLS)
+			{
+				final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+				if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
+				{
+					int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
+					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+					if (absorbDamage > 0)
+					{
+						setCurrentHp(_status.getCurrentHp() + absorbDamage);
+					}
+				}
+			}
+		}
+		
+		// Absorb MP from the damage inflicted.
+		if (!isPvP || Config.MP_VAMPIRIC_ATTACK_AFFECTS_PVP)
+		{
+			if ((skill != null) || Config.MP_VAMPIRIC_ATTACK_WORKS_WITH_MELEE)
+			{
+				final double absorbMpPercent = _stat.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
+				if (absorbMpPercent > 0)
+				{
+					int absorbDamage = (int) Math.min((absorbMpPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+					if (absorbDamage > 0)
+					{
+						setCurrentMp(_status.getCurrentMp() + absorbDamage);
+					}
+				}
+			}
+		}
+		
 		// Target receives the damage.
 		target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect);
 		
@@ -4661,43 +4698,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				else
 				{
 					reflectedDamage = Math.min(reflectedDamage, target.getStat().getPDef());
-				}
-			}
-			
-			// Absorb HP from the damage inflicted
-			final boolean isPvP = isPlayable() && target.isPlayable();
-			if (!isPvP || Config.VAMPIRIC_ATTACK_AFFECTS_PVP)
-			{
-				if ((skill == null) || Config.VAMPIRIC_ATTACK_WORKS_WITH_SKILLS)
-				{
-					final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
-					if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
-					{
-						int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
-						absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-						if (absorbDamage > 0)
-						{
-							setCurrentHp(_status.getCurrentHp() + absorbDamage);
-						}
-					}
-				}
-			}
-			
-			// Absorb MP from the damage inflicted.
-			if (!isPvP || Config.MP_VAMPIRIC_ATTACK_AFFECTS_PVP)
-			{
-				if ((skill != null) || Config.MP_VAMPIRIC_ATTACK_WORKS_WITH_MELEE)
-				{
-					final double absorbMpPercent = _stat.getValue(Stat.ABSORB_MANA_DAMAGE_PERCENT, 0);
-					if (absorbMpPercent > 0)
-					{
-						int absorbDamage = (int) Math.min((absorbMpPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
-						absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-						if (absorbDamage > 0)
-						{
-							setCurrentMp(_status.getCurrentMp() + absorbDamage);
-						}
-					}
 				}
 			}
 			
