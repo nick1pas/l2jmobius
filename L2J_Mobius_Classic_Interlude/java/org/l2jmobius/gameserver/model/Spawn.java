@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -69,6 +70,8 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	private int _respawnMinDelay;
 	/** Maximum respawn delay */
 	private int _respawnMaxDelay;
+	/** Respawn Pattern **/
+	private SchedulingPattern _respawnPattern;
 	/** The generic constructor of Npc managed by this Spawn */
 	private Constructor<? extends Npc> _constructor;
 	/** If True an Npc is respawned each time that another is killed */
@@ -192,6 +195,14 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	public int getRespawnMaxDelay()
 	{
 		return _respawnMaxDelay;
+	}
+	
+	/**
+	 * @return respawn pattern
+	 */
+	public SchedulingPattern getRespawnPattern()
+	{
+		return _respawnPattern;
 	}
 	
 	/**
@@ -501,6 +512,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			_respawnMinDelay = 0;
 			_respawnMaxDelay = 0;
 		}
+	}
+	
+	public void setRespawnPattern(SchedulingPattern respawnPattern)
+	{
+		_respawnPattern = respawnPattern;
 	}
 	
 	public void setRespawnDelay(int delay)

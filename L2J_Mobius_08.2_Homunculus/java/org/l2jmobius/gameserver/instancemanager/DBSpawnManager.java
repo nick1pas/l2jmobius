@@ -32,6 +32,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -121,6 +122,7 @@ public class DBSpawnManager
 					
 					int respawn = 0;
 					int respawnRandom = 0;
+					SchedulingPattern respawnPattern = null;
 					if (spawnTemplate.getRespawnTime() != null)
 					{
 						respawn = (int) spawnTemplate.getRespawnTime().getSeconds();
@@ -129,10 +131,15 @@ public class DBSpawnManager
 					{
 						respawnRandom = (int) spawnTemplate.getRespawnTimeRandom().getSeconds();
 					}
+					if (spawnTemplate.getRespawnPattern() != null)
+					{
+						respawnPattern = spawnTemplate.getRespawnPattern();
+					}
 					
-					if (respawn > 0)
+					if ((respawn > 0) || (respawnPattern != null))
 					{
 						spawn.setRespawnDelay(respawn, respawnRandom);
+						spawn.setRespawnPattern(respawnPattern);
 						spawn.startRespawn();
 					}
 					else
@@ -211,14 +218,27 @@ public class DBSpawnManager
 		{
 			npc.setDBStatus(RaidBossStatus.DEAD);
 			
-			final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
-			final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
-			final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
-			final long respawnTime = System.currentTimeMillis() + respawnDelay;
+			final SchedulingPattern respawnPattern = npc.getSpawn().getRespawnPattern();
+			int respawnMinDelay, respawnMaxDelay, respawnDelay;
+			long respawnTime;
+			
+			if (respawnPattern != null)
+			{
+				respawnTime = respawnPattern.next(System.currentTimeMillis());
+				respawnMinDelay = respawnMaxDelay = respawnDelay = (int) (respawnTime - System.currentTimeMillis());
+			}
+			else
+			{
+				respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
+				respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
+				respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
+				respawnTime = System.currentTimeMillis() + respawnDelay;
+			}
+			
 			info.set("currentHP", npc.getMaxHp());
 			info.set("currentMP", npc.getMaxMp());
 			info.set("respawnTime", respawnTime);
-			if (!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0)))
+			if ((!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) || (respawnPattern != null))
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 				_schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));

@@ -25,6 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.time.SchedulingPattern;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -54,6 +55,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	private final int _count;
 	private final Duration _respawnTime;
 	private final Duration _respawnTimeRandom;
+	private final SchedulingPattern _respawnPattern;
 	private final int _chaseRange;
 	private List<ChanceLocation> _locations;
 	private SpawnTerritory _zone;
@@ -74,6 +76,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		_count = template._count;
 		_respawnTime = template._respawnTime;
 		_respawnTimeRandom = template._respawnTimeRandom;
+		_respawnPattern = template._respawnPattern;
 		_chaseRange = template._chaseRange;
 		_spawnAnimation = template._spawnAnimation;
 		_saveInDB = template._saveInDB;
@@ -92,6 +95,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		_count = set.getInt("count", 1);
 		_respawnTime = set.getDuration("respawnTime", null);
 		_respawnTimeRandom = set.getDuration("respawnRandom", null);
+		_respawnPattern = (set.getString("respawnPattern", null) == null) || set.getString("respawnPattern", null).isEmpty() ? null : new SchedulingPattern(set.getString("respawnPattern", null));
 		_chaseRange = set.getInt("chaseRange", 0);
 		_spawnAnimation = set.getBoolean("spawnAnimation", false);
 		_saveInDB = set.getBoolean("dbSave", false);
@@ -196,6 +200,11 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 	public Duration getRespawnTimeRandom()
 	{
 		return _respawnTimeRandom;
+	}
+	
+	public SchedulingPattern getRespawnPattern()
+	{
+		return _respawnPattern;
 	}
 	
 	public int getChaseRange()
