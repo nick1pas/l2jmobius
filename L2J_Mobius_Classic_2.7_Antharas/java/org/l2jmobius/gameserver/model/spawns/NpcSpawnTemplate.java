@@ -95,7 +95,8 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		_count = set.getInt("count", 1);
 		_respawnTime = set.getDuration("respawnTime", null);
 		_respawnTimeRandom = set.getDuration("respawnRandom", null);
-		_respawnPattern = (set.getString("respawnPattern", null) == null) || set.getString("respawnPattern", null).isEmpty() ? null : new SchedulingPattern(set.getString("respawnPattern", null));
+		final String pattern = set.getString("respawnPattern", null);
+		_respawnPattern = (pattern == null) || pattern.isEmpty() ? null : new SchedulingPattern(pattern);
 		_chaseRange = set.getInt("chaseRange", 0);
 		_spawnAnimation = set.getBoolean("spawnAnimation", false);
 		_saveInDB = set.getBoolean("dbSave", false);
@@ -381,6 +382,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		spawn.setLocation(loc);
 		int respawn = 0;
 		int respawnRandom = 0;
+		SchedulingPattern respawnPattern = null;
 		if (_respawnTime != null)
 		{
 			respawn = (int) _respawnTime.getSeconds();
@@ -389,10 +391,15 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 		{
 			respawnRandom = (int) _respawnTimeRandom.getSeconds();
 		}
+		if (_respawnPattern != null)
+		{
+			respawnPattern = _respawnPattern;
+		}
 		
-		if (respawn > 0)
+		if ((respawn > 0) || (respawnPattern != null))
 		{
 			spawn.setRespawnDelay(respawn, respawnRandom);
+			spawn.setRespawnPattern(respawnPattern);
 			spawn.startRespawn();
 		}
 		else

@@ -219,13 +219,16 @@ public class DBSpawnManager
 			npc.setDBStatus(RaidBossStatus.DEAD);
 			
 			final SchedulingPattern respawnPattern = npc.getSpawn().getRespawnPattern();
-			int respawnMinDelay, respawnMaxDelay, respawnDelay;
-			long respawnTime;
-			
+			final int respawnMinDelay;
+			final int respawnMaxDelay;
+			final int respawnDelay;
+			final long respawnTime;
 			if (respawnPattern != null)
 			{
 				respawnTime = respawnPattern.next(System.currentTimeMillis());
-				respawnMinDelay = respawnMaxDelay = respawnDelay = (int) (respawnTime - System.currentTimeMillis());
+				respawnMinDelay = (int) (respawnTime - System.currentTimeMillis());
+				respawnMaxDelay = respawnMinDelay;
+				respawnDelay = respawnMinDelay;
 			}
 			else
 			{
