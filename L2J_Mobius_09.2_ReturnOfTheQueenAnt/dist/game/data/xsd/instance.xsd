@@ -185,8 +185,8 @@
 										</xs:simpleType>
 									</xs:attribute>
 									<xs:attribute name="time" type="xs:long" />
-									<xs:attribute name="hour" type="xs:positiveInteger" />
-									<xs:attribute name="minute" type="xs:positiveInteger" />
+									<xs:attribute name="hour" type="xs:nonNegativeInteger" />
+									<xs:attribute name="minute" type="xs:nonNegativeInteger" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
