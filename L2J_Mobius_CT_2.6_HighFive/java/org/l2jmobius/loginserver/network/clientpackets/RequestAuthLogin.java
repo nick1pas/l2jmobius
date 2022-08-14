@@ -38,10 +38,7 @@ import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
 import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 /**
- * <pre>
  * Format: x 0 (a leading null) x: the rsa encrypted block with the login an password.
- * 
- * <pre>
  */
 public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 {

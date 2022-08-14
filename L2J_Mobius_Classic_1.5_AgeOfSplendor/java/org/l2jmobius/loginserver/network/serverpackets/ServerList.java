@@ -65,7 +65,7 @@ public class ServerList implements IOutgoingPacket
 	
 	private final List<ServerData> _servers;
 	private final int _lastServer;
-	private final Map<Integer, Integer> _charsOnServers;
+	private Map<Integer, Integer> _charsOnServers;
 	
 	class ServerData
 	{
@@ -118,7 +118,20 @@ public class ServerList implements IOutgoingPacket
 		{
 			_servers.add(new ServerData(client, gsi));
 		}
-		_charsOnServers = client.getCharsOnServ();
+		
+		// Wait 300ms to reply with character list.
+		int i = 0;
+		while ((_charsOnServers == null) && (i++ < 3))
+		{
+			try
+			{
+				Thread.sleep(100);
+			}
+			catch (InterruptedException ignored)
+			{
+			}
+			_charsOnServers = client.getCharsOnServ();
+		}
 	}
 	
 	@Override
