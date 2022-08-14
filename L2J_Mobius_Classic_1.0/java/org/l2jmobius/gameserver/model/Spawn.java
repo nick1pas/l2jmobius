@@ -536,6 +536,10 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	
 	public int getChaseRange()
 	{
+		if (_spawnTemplate == null)
+		{
+			return 0;
+		}
 		return _spawnTemplate.getChaseRange();
 	}
 	

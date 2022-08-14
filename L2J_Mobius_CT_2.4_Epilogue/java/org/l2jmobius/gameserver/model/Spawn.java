@@ -72,7 +72,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	/** Maximum respawn delay */
 	private int _respawnMaxDelay;
 	/** Maximum distance monsters can be pulled away from spawn. */
-	private int _chaseRange;
+	private int _chaseRange = 0;
 	/** The generic constructor of Npc managed by this Spawn */
 	private Constructor<? extends Npc> _constructor;
 	/** If True an Npc is respawned each time that another is killed */
