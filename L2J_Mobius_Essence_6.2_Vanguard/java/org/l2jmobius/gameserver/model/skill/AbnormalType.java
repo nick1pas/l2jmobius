@@ -558,7 +558,14 @@ public enum AbnormalType
 	PA_UP2(602),
 	PD_UP2(603),
 	BR_CLAN_XP(998),
-	BR_CLAN_ATTACK(999);
+	BR_CLAN_ATTACK(999),
+	RANK(-1),
+	DWARF_GOLEM(-1),
+	MAGIC_CIRCLE(-1),
+	GOLDEN_STONE(-1),
+	GOLDEN_STONE_DEBUFF(-1),
+	PROVOKE(-1),
+	BLOODY_FREEZING_WEAPON(-1);
 	
 	private int _clientId;
 	
