@@ -67,6 +67,8 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%hpmax%", String.valueOf(npc.getMaxHp()));
 			html.replace("%mp%", String.valueOf((int) npc.getCurrentMp()));
 			html.replace("%mpmax%", String.valueOf(npc.getMaxMp()));
+			html.replace("%exp%", String.valueOf((int) npc.getTemplate().getExp()));
+			html.replace("%sp%", String.valueOf((int) npc.getTemplate().getSP()));
 			
 			html.replace("%patk%", String.valueOf(npc.getPAtk()));
 			html.replace("%matk%", String.valueOf(npc.getMAtk()));
@@ -141,11 +143,13 @@ public class NpcActionShift implements IActionShiftHandler
 				{
 					html.replace("%resp%", (npc.getSpawn().getRespawnMinDelay() / 1000) + " sec");
 				}
+				html.replace("%chaseRange%", npc.getSpawn().getChaseRange());
 			}
 			else
 			{
 				html.replace("%spawn%", "<font color=FF0000>null</font>");
 				html.replace("%resp%", "<font color=FF0000>--</font>");
+				html.replace("%chaseRange%", "<font color=FF0000>--</font>");
 			}
 			
 			html.replace("%spawnfile%", "<font color=FF0000>--</font>");
