@@ -1,1493 +1,2356 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_001" minZ="-3024" maxZ="-3024">
-				<node x="51320" y="211800" />
-				<node x="51272" y="210792" />
-				<node x="52568" y="210744" />
-				<node x="52360" y="211624" />
+			<territory name="devils_isle_21_24_0001" minZ="-3748" maxZ="-3448">
+				<node x="45672" y="205256"/>
+				<node x="46168" y="205048"/>
+				<node x="46696" y="205048"/>
+				<node x="47032" y="205416"/>
+				<node x="47064" y="205976"/>
+				<node x="46904" y="206504"/>
+				<node x="46056" y="206392"/>
+				<node x="45816" y="205976"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_002" minZ="-3344" maxZ="-3344">
-				<node x="48840" y="211560" />
-				<node x="49304" y="211544" />
-				<node x="49304" y="212376" />
-				<node x="48856" y="212424" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_003" minZ="-3344" maxZ="-3344">
-				<node x="48488" y="212008" />
-				<node x="48424" y="212952" />
-				<node x="47240" y="213032" />
-				<node x="47240" y="211960" />
-			</territory>
-		</territories>
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_004" minZ="-3344" maxZ="-3344">
-				<node x="49656" y="213016" />
-				<node x="50872" y="212984" />
-				<node x="50920" y="211960" />
-				<node x="49592" y="211992" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_005" minZ="-3344" maxZ="-3344">
-				<node x="51240" y="212968" />
-				<node x="51192" y="212040" />
-				<node x="51960" y="211960" />
-				<node x="51992" y="212968" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_006" minZ="-3344" maxZ="-3344">
-				<node x="52264" y="212104" />
-				<node x="52216" y="213064" />
-				<node x="53544" y="213144" />
-				<node x="53608" y="212120" />
+			<territory name="devils_isle_21_24_0002" minZ="-3796" maxZ="-3496">
+				<node x="46168" y="208088"/>
+				<node x="45432" y="208104"/>
+				<node x="45272" y="207800"/>
+				<node x="45336" y="207464"/>
+				<node x="45672" y="206952"/>
+				<node x="46136" y="206888"/>
+				<node x="46248" y="207352"/>
 			</territory>
 		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_007" minZ="-3712" maxZ="-3712">
-				<node x="43208" y="210008" />
-				<node x="43160" y="210776" />
-				<node x="44280" y="213144" />
-				<node x="44184" y="209960" />
+			<territory name="devils_isle_21_24_0003" minZ="-3620" maxZ="-3320">
+				<node x="48744" y="205896"/>
+				<node x="48744" y="206968"/>
+				<node x="47608" y="206936"/>
+				<node x="47672" y="206152"/>
+				<node x="48008" y="205848"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_008" minZ="-3712" maxZ="-3712">
-				<node x="42696" y="209992" />
-				<node x="41672" y="210072" />
-				<node x="41592" y="210792" />
-				<node x="42664" y="210792" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_009" minZ="-3712" maxZ="-3712">
-				<node x="43000" y="212280" />
-				<node x="43592" y="212264" />
-				<node x="43176" y="213096" />
-				<node x="43624" y="212792" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_010" minZ="-3600" maxZ="-3600">
-				<node x="45608" y="209976" />
-				<node x="45640" y="211176" />
-				<node x="47688" y="211144" />
-				<node x="47736" y="210056" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories >
-			<territory name="giran08_2124_011" minZ="-3600" maxZ="-3600">
-				<node x="46584" y="208744" />
-				<node x="46648" y="209528" />
-				<node x="47816" y="209576" />
-				<node x="47704" y="208808" />
-			</territory>
-		</territories>
 
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0004" minZ="-3620" maxZ="-3320">
+				<node x="48760" y="207000"/>
+				<node x="48728" y="207976"/>
+				<node x="47880" y="207800"/>
+				<node x="47496" y="207432"/>
+				<node x="47608" y="206936"/>
+			</territory>
+		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloddy Purple -->
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Cliper -->
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Pearl Horror -->
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Bloddy Purple -->
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Sairon -->
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Demon Warrior -->
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Nightmare -->
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Midnight Sairon -->
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Daymen -->
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Guardian Spirit -->
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" /> <!-- Seer -->
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="600sec" /> <!-- Midnight Nightmare -->
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_012" minZ="-3728" maxZ="-3760">
-				<node x="46152" y="212872" />
-				<node x="46200" y="212408" />
-				<node x="45144" y="212328" />
-				<node x="45320" y="212952" />
+			<territory name="devils_isle_21_24_0005" minZ="-3700" maxZ="-3400">
+				<node x="46664" y="209608"/>
+				<node x="46552" y="209048"/>
+				<node x="46600" y="208696"/>
+				<node x="47480" y="208744"/>
+				<node x="47912" y="209032"/>
+				<node x="47912" y="209560"/>
+				<node x="47448" y="209720"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_013" minZ="-3600" maxZ="-3600">
-				<node x="47720" y="210104" />
-				<node x="48008" y="211016" />
-				<node x="45560" y="211064" />
-				<node x="45704" y="210056" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_014" minZ="-3712" maxZ="-3712">
-				<node x="41816" y="213096" />
-				<node x="42552" y="212856" />
-				<node x="42120" y="211992" />
-				<node x="41624" y="212440" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_015" minZ="-3520" maxZ="-3520">
-				<node x="48680" y="205880" />
-				<node x="47576" y="206264" />
-				<node x="48744" y="207864" />
-				<node x="47576" y="207496" />
-				<node x="48856" y="207064" />
-				<node x="47512" y="207272" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_016" minZ="-3760" maxZ="-3760">
-				<node x="45304" y="214104" />
-				<node x="46152" y="213992" />
-				<node x="46232" y="214488" />
-				<node x="45416" y="214536" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_017" minZ="-3760" maxZ="-3760">
-				<node x="45208" y="213544" />
-				<node x="45480" y="213144" />
-				<node x="46136" y="213240" />
-				<node x="46104" y="213640" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_018" minZ="-3648" maxZ="-3648">
-				<node x="46840" y="205048" />
-				<node x="45608" y="205256" />
-				<node x="46008" y="206440" />
-				<node x="47016" y="206440" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_019" minZ="-3696" maxZ="-3696">
-				<node x="46216" y="208088" />
-				<node x="45192" y="207816" />
-				<node x="45880" y="206840" />
-				<node x="46216" y="207496" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24025" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24027" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24026" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24033" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24032" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24034" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_020" minZ="-3927" maxZ="-3934">
-				<node x="44440" y="216952" />
-				<node x="44408" y="215896" />
-				<node x="43304" y="215992" />
-				<node x="43304" y="216952" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_021" minZ="-3584" maxZ="-3584">
-				<node x="49080" y="215128" />
-				<node x="48760" y="216088" />
-				<node x="49736" y="216792" />
-				<node x="50440" y="216200" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_022" minZ="-2464" maxZ="-2464">
-				<node x="53096" y="209656" />
-				<node x="53016" y="210280" />
-				<node x="53720" y="210280" />
-				<node x="53736" y="209672" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_023" minZ="-2464" maxZ="-2464">
-				<node x="53912" y="210232" />
-				<node x="53864" y="209688" />
-				<node x="54632" y="210264" />
-				<node x="54648" y="209672" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_024" minZ="-2464" maxZ="-2464">
-				<node x="53064" y="211128" />
-				<node x="53080" y="210392" />
-				<node x="53976" y="210424" />
-				<node x="53928" y="211144" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-		
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
-		<territories>
-			<territory name="giran08_2124_025" minZ="-2464" maxZ="-2464">
-				<node x="51736" y="211624" />
-				<node x="52776" y="211688" />
-				<node x="52744" y="210328" />
-				<node x="51672" y="210344" />
-			</territory>
-		</territories>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_026" minZ="-2464" maxZ="-2464">
-				<node x="52776" y="208232" />
-				<node x="52776" y="209576" />
-				<node x="51672" y="209608" />
-				<node x="51720" y="208312" />
+			<territory name="devils_isle_21_24_0006" minZ="-3700" maxZ="-3400">
+				<node x="46856" y="211192"/>
+				<node x="46232" y="211240"/>
+				<node x="45576" y="211160"/>
+				<node x="45352" y="210776"/>
+				<node x="45368" y="210360"/>
+				<node x="45688" y="209992"/>
+				<node x="46264" y="210104"/>
+				<node x="47112" y="209960"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_027" minZ="-2464" maxZ="-2464">
-				<node x="54136" y="209496" />
-				<node x="54168" y="208808" />
-				<node x="53064" y="208808" />
-				<node x="53048" y="209512" />
+			<territory name="devils_isle_21_24_0007" minZ="-3700" maxZ="-3400">
+				<node x="47128" y="209960"/>
+				<node x="46872" y="211192"/>
+				<node x="47608" y="211224"/>
+				<node x="48008" y="211000"/>
+				<node x="48088" y="210408"/>
+				<node x="47912" y="210136"/>
+				<node x="47528" y="209912"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
 
-		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-		</group>
-	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_028" minZ="-3728" maxZ="-3728">
-				<node x="51272" y="209416" />
-				<node x="51288" y="208072" />
-				<node x="50184" y="208056" />
-				<node x="50184" y="209416" />
+			<territory name="devils_isle_21_24_0008" minZ="-3700" maxZ="-3400">
+				<node x="44344" y="210840"/>
+				<node x="44280" y="210104"/>
+				<node x="43640" y="209800"/>
+				<node x="42936" y="210104"/>
+				<node x="43032" y="210680"/>
+				<node x="43400" y="210888"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_029" minZ="-3728" maxZ="-3728">
-				<node x="51256" y="207832" />
-				<node x="50168" y="207848" />
-				<node x="50168" y="206440" />
-				<node x="51224" y="206472" />
+			<territory name="devils_isle_21_24_0009" minZ="-3812" maxZ="-3512">
+				<node x="42776" y="210728"/>
+				<node x="42392" y="210968"/>
+				<node x="41576" y="210840"/>
+				<node x="41544" y="210248"/>
+				<node x="41736" y="210008"/>
+				<node x="42456" y="209864"/>
+				<node x="42808" y="210008"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
 	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_030" minZ="-3728" maxZ="-3728">
-				<node x="52168" y="205192" />
-				<node x="50808" y="205176" />
-				<node x="50792" y="206280" />
-				<node x="52200" y="206168" />
+			<territory name="devils_isle_21_24_0010" minZ="-3812" maxZ="-3512">
+				<node x="42456" y="211992"/>
+				<node x="41768" y="211912"/>
+				<node x="41576" y="212584"/>
+				<node x="41736" y="213048"/>
+				<node x="42184" y="213160"/>
+				<node x="42568" y="213032"/>
+				<node x="42680" y="212344"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_031" minZ="-3728" maxZ="-3728">
-				<node x="50008" y="205192" />
-				<node x="49288" y="205208" />
-				<node x="49304" y="206280" />
-				<node x="50008" y="206296" />
+			<territory name="devils_isle_21_24_0011" minZ="-3812" maxZ="-3512">
+				<node x="43016" y="213064"/>
+				<node x="42936" y="212856"/>
+				<node x="42952" y="212152"/>
+				<node x="43464" y="212168"/>
+				<node x="43608" y="212296"/>
+				<node x="43624" y="213128"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_032" minZ="-3632" maxZ="-3632">
-				<node x="53304" y="206248" />
-				<node x="54168" y="206248" />
-				<node x="54168" y="205160" />
-				<node x="53320" y="205160" />
+			<territory name="devils_isle_21_24_0012" minZ="-3700" maxZ="-3400">
+				<node x="46104" y="211464"/>
+				<node x="46344" y="211464"/>
+				<node x="46248" y="211976"/>
+				<node x="45544" y="212104"/>
+				<node x="45320" y="211832"/>
+				<node x="45560" y="211672"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_033" minZ="-3632" maxZ="-3632">
-				<node x="52904" y="206440" />
-				<node x="52920" y="207544" />
-				<node x="54248" y="207512" />
-				<node x="54280" y="206424" />
+			<territory name="devils_isle_21_24_0013" minZ="-3828" maxZ="-3528">
+				<node x="45128" y="212264"/>
+				<node x="46248" y="212360"/>
+				<node x="46200" y="213032"/>
+				<node x="45320" y="212968"/>
+				<node x="45080" y="212552"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
 	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_034" minZ="-3632" maxZ="-3632">
-				<node x="51464" y="207544" />
-				<node x="52168" y="207560" />
-				<node x="52184" y="206456" />
-				<node x="51464" y="206440" />
+			<territory name="devils_isle_21_24_0014" minZ="-3860" maxZ="-3560">
+				<node x="45112" y="213672"/>
+				<node x="46136" y="213672"/>
+				<node x="46168" y="213176"/>
+				<node x="45704" y="213144"/>
+				<node x="45240" y="213240"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24046" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24048" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24047" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24049" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_035" minZ="-3424" maxZ="-3424">
-				<node x="49512" y="214328" />
-				<node x="50744" y="214344" />
-				<node x="50776" y="213240" />
-				<node x="49528" y="213192" />
+			<territory name="devils_isle_21_24_0015" minZ="-3860" maxZ="-3560">
+				<node x="46312" y="214872"/>
+				<node x="46264" y="213992"/>
+				<node x="46104" y="213848"/>
+				<node x="45432" y="213832"/>
+				<node x="45144" y="213960"/>
+				<node x="45416" y="214616"/>
+				<node x="45832" y="214664"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24025" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24026" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24027" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24032" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24033" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24034" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_036" minZ="-2704" maxZ="-2704">
-				<node x="50440" y="210856" />
-				<node x="50488" y="209768" />
-				<node x="49144" y="209752" />
-				<node x="49112" y="210872" />
+			<territory name="devils_isle_21_24_0016" minZ="-3860" maxZ="-3560">
+				<node x="45720" y="215512"/>
+				<node x="45736" y="215208"/>
+				<node x="45288" y="215208"/>
+				<node x="45240" y="215512"/>
+				<node x="45128" y="215400"/>
+				<node x="44984" y="215448"/>
+				<node x="44840" y="215672"/>
+				<node x="44632" y="215736"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24054" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24055" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_037" minZ="-3424" maxZ="-3424">
-				<node x="47272" y="214328" />
-				<node x="48616" y="214344" />
-				<node x="48616" y="213240" />
-				<node x="47256" y="213224" />
+			<territory name="devils_isle_21_24_0017" minZ="-4020" maxZ="-3720">
+				<node x="43224" y="214552"/>
+				<node x="44472" y="214552"/>
+				<node x="44472" y="215656"/>
+				<node x="43224" y="215656"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24050" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24052" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24051" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24053" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_038" minZ="-3932" maxZ="-3932">
-				<node x="44648" y="216536" />
-				<node x="45704" y="216648" />
-				<node x="45512" y="215928" />
-				<node x="44776" y="215736" />
+			<territory name="devils_isle_21_24_0018" minZ="-4029" maxZ="-3729">
+				<node x="44456" y="215848"/>
+				<node x="44472" y="216968"/>
+				<node x="43256" y="216984"/>
+				<node x="43224" y="215864"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_039" minZ="-3932" maxZ="-3932">
-				<node x="44456" y="217176" />
-				<node x="43320" y="217208" />
-				<node x="43272" y="218024" />
-				<node x="44440" y="218200" />
+			<territory name="devils_isle_21_24_0019" minZ="-4020" maxZ="-3720">
+				<node x="44760" y="216904"/>
+				<node x="45736" y="216888"/>
+				<node x="45784" y="217288"/>
+				<node x="45560" y="217400"/>
+				<node x="44776" y="217400"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
-		<group name="dayTime" spawnByDefault="false">
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_040" minZ="-3584" maxZ="-3584">
-				<node x="44424" y="220808" />
-				<node x="44584" y="219944" />
-				<node x="45816" y="220104" />
-				<node x="45704" y="220952" />
+			<territory name="devils_isle_21_24_0020" minZ="-4036" maxZ="-3736">
+				<node x="45736" y="217544"/>
+				<node x="45720" y="218312"/>
+				<node x="45192" y="218120"/>
+				<node x="44888" y="218168"/>
+				<node x="44904" y="217768"/>
+				<node x="44776" y="217688"/>
+				<node x="44776" y="217496"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_041" minZ="-3584" maxZ="-3584">
-				<node x="48616" y="216344" />
-				<node x="48168" y="216536" />
-				<node x="48472" y="215592" />
-				<node x="47895" y="215720" />
+			<territory name="devils_isle_21_24_0021" minZ="-4004" maxZ="-3704">
+				<node x="43256" y="218120"/>
+				<node x="43368" y="217176"/>
+				<node x="44424" y="217160"/>
+				<node x="44456" y="218264"/>
+				<node x="43912" y="218120"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24039" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24040" count="1" respawnTime="115sec" respawnRandom="300sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_042" minZ="-3584" maxZ="-3584">
-				<node x="48472" y="217608" />
-				<node x="49256" y="217000" />
-				<node x="49496" y="217512" />
-				<node x="48456" y="217784" />
+			<territory name="devils_isle_21_24_0022" minZ="-3684" maxZ="-3384">
+				<node x="45848" y="220120"/>
+				<node x="45832" y="220856"/>
+				<node x="45304" y="220984"/>
+				<node x="44696" y="220936"/>
+				<node x="44456" y="220792"/>
+				<node x="44360" y="220312"/>
+				<node x="44728" y="219944"/>
+				<node x="45272" y="219896"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="Devil Isle" ai="DayNightSpawns">
+	<spawn name="DevilIsle" ai="DayNightSpawns">
 		<territories>
-			<territory name="giran08_2124_043" minZ="-3584" maxZ="-3584">
-				<node x="46072" y="220840" />
-				<node x="46072" y="220088" />
-				<node x="46904" y="219880" />
-				<node x="47144" y="221032" />
+			<territory name="devils_isle_21_24_0023" minZ="-3684" maxZ="-3384">
+				<node x="46024" y="220072"/>
+				<node x="46088" y="220936"/>
+				<node x="47272" y="221016"/>
+				<node x="47208" y="220296"/>
+				<node x="46872" y="219864"/>
 			</territory>
 		</territories>
-		
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24028" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24029" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24030" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24031" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-		
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24035" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24036" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24037" count="1" respawnTime="115sec" respawnRandom="60sec" />
-			<npc id="24038" count="1" respawnTime="115sec" respawnRandom="60sec" />
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
-	
-	<spawn name="m2" ai="DayNightSpawns">
-	
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0024" minZ="-3860" maxZ="-3560">
+				<node x="46136" y="218296"/>
+				<node x="46200" y="217608"/>
+				<node x="46344" y="217432"/>
+				<node x="46232" y="216840"/>
+				<node x="47064" y="216856"/>
+				<node x="47240" y="217032"/>
+				<node x="47304" y="217416"/>
+				<node x="46904" y="217880"/>
+				<node x="46872" y="218168"/>
+				<node x="46504" y="218328"/>
+			</territory>
+		</territories>
 		<group name="dayTime" spawnByDefault="false">
-			<npc id="24028" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" />
-			<npc id="24028" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" />
-			<npc id="24028" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" />
-			<npc id="24028" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" />
-			<npc id="24028" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" />
-			<npc id="24028" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" />
-			<npc id="24028" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" />
-			<npc id="24028" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" />
-			<npc id="24028" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" />
-			<npc id="24028" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" />
-			<npc id="24028" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" />
-			<npc id="24028" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" />
-			<npc id="24029" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" />
-			<npc id="24029" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" />
-			<npc id="24029" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" />
-			<npc id="24029" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" />
-			<npc id="24029" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" />
-			<npc id="24029" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" />
-			<npc id="24029" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" />
-			<npc id="24029" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" />
-			<npc id="24029" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" />
-			<npc id="24029" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" />
-			<npc id="24029" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" />
-			<npc id="24030" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" />
-			<npc id="24030" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" />
-			<npc id="24030" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" />
-			<npc id="24030" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" />
-			<npc id="24030" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" />
-			<npc id="24030" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" />
-			<npc id="24030" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" />
-			<npc id="24030" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" />
-			<npc id="24030" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" />
-			<npc id="24030" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" />
-			<npc id="24030" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" />
-			<npc id="24030" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" />
-			<npc id="24031" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" />
-			<npc id="24031" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" />
-			<npc id="24031" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" />
-			<npc id="24031" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" />
-			<npc id="24031" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" />
-			<npc id="24031" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" />
-			<npc id="24031" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" />
-			<npc id="24031" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" />
-			<npc id="24031" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" />
-			<npc id="24031" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" />
-			<npc id="24039" x="46859" y="215738" z="-3752" heading="3900" respawnTime="60sec" />
-			<npc id="24050" x="53040" y="212989" z="-3344" heading="5001" respawnTime="60sec" />
-			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" />
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
-	
 		<group name="nightTime" spawnByDefault="false">
-			<npc id="24034" x="44998" y="210610" z="-3624" heading="33772" respawnTime="60sec" />
-			<npc id="24040" x="46721" y="205870" z="-3641" heading="2858" respawnTime="300sec" />
-			<npc id="24035" x="45832" y="211768" z="-3648" heading="27931" respawnTime="60sec" />
-			<npc id="24035" x="43463" y="214814" z="-3904" heading="49804" respawnTime="60sec" />
-			<npc id="24035" x="43388" y="214591" z="-3904" heading="61325" respawnTime="60sec" />
-			<npc id="24035" x="47233" y="216311" z="-3752" heading="56840" respawnTime="60sec" />
-			<npc id="24035" x="47194" y="216087" z="-3752" heading="49118" respawnTime="60sec" />
-			<npc id="24035" x="45655" y="217139" z="-3920" heading="62153" respawnTime="60sec" />
-			<npc id="24035" x="45273" y="217542" z="-3944" heading="4777" respawnTime="60sec" />
-			<npc id="24035" x="46325" y="217839" z="-3752" heading="13302" respawnTime="60sec" />
-			<npc id="24035" x="49061" y="218927" z="-3584" heading="13553" respawnTime="60sec" />
-			<npc id="24035" x="48531" y="219776" z="-3584" heading="27287" respawnTime="60sec" />
-			<npc id="24035" x="49749" y="219929" z="-3576" heading="60746" respawnTime="60sec" />
-			<npc id="24035" x="49464" y="220572" z="-3584" heading="11187" respawnTime="60sec" />
-			<npc id="24036" x="44283" y="215563" z="-3904" heading="19382" respawnTime="60sec" />
-			<npc id="24036" x="46512" y="216013" z="-3752" heading="43501" respawnTime="60sec" />
-			<npc id="24036" x="46488" y="216827" z="-3752" heading="37991" respawnTime="60sec" />
-			<npc id="24036" x="44283" y="217160" z="-3904" heading="46881" respawnTime="60sec" />
-			<npc id="24036" x="45107" y="217281" z="-3928" heading="30606" respawnTime="60sec" />
-			<npc id="24036" x="45043" y="217703" z="-3952" heading="29864" respawnTime="60sec" />
-			<npc id="24036" x="46530" y="218277" z="-3752" heading="19973" respawnTime="60sec" />
-			<npc id="24036" x="48667" y="219193" z="-3584" heading="7945" respawnTime="60sec" />
-			<npc id="24036" x="48578" y="219435" z="-3584" heading="40348" respawnTime="60sec" />
-			<npc id="24036" x="49284" y="220572" z="-3584" heading="38673" respawnTime="60sec" />
-			<npc id="24036" x="49824" y="220329" z="-3584" heading="25678" respawnTime="60sec" />
-			<npc id="24037" x="44073" y="215095" z="-3904" heading="42934" respawnTime="60sec" />
-			<npc id="24037" x="44036" y="215509" z="-3904" heading="578" respawnTime="60sec" />
-			<npc id="24037" x="46644" y="216167" z="-3752" heading="63603" respawnTime="60sec" />
-			<npc id="24037" x="46350" y="216471" z="-3752" heading="15086" respawnTime="60sec" />
-			<npc id="24037" x="45028" y="217089" z="-3920" heading="41574" respawnTime="60sec" />
-			<npc id="24037" x="45016" y="217708" z="-3952" heading="17139" respawnTime="60sec" />
-			<npc id="24037" x="46333" y="217720" z="-3752" heading="4821" respawnTime="60sec" />
-			<npc id="24037" x="49216" y="217459" z="-3584" heading="48113" respawnTime="60sec" />
-			<npc id="24037" x="48732" y="219344" z="-3584" heading="24509" respawnTime="60sec" />
-			<npc id="24037" x="48350" y="220443" z="-3584" heading="57257" respawnTime="60sec" />
-			<npc id="24037" x="49554" y="220653" z="-3584" heading="13487" respawnTime="60sec" />
-			<npc id="24037" x="49734" y="219924" z="-3576" heading="4703" respawnTime="60sec" />
-			<npc id="24038" x="44215" y="214835" z="-3904" heading="64486" respawnTime="60sec" />
-			<npc id="24038" x="46356" y="216801" z="-3752" heading="41579" respawnTime="60sec" />
-			<npc id="24038" x="46564" y="216575" z="-3752" heading="63099" respawnTime="60sec" />
-			<npc id="24038" x="44912" y="217346" z="-3928" heading="21004" respawnTime="60sec" />
-			<npc id="24038" x="44858" y="217666" z="-3944" heading="35918" respawnTime="60sec" />
-			<npc id="24038" x="46757" y="217096" z="-3752" heading="4188" respawnTime="60sec" />
-			<npc id="24038" x="48519" y="219308" z="-3584" heading="65088" respawnTime="60sec" />
-			<npc id="24038" x="48187" y="219763" z="-3584" heading="63034" respawnTime="60sec" />
-			<npc id="24038" x="49030" y="220285" z="-3584" heading="37644" respawnTime="60sec" />
-			<npc id="24038" x="49550" y="220520" z="-3584" heading="60289" respawnTime="60sec" />
-			<npc id="24040" x="46859" y="215738" z="-3752" heading="3900" respawnTime="300sec" />
-			<npc id="24054" x="53341" y="209686" z="-2464" heading="51603" respawnTime="60sec" />
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0025" minZ="-3860" maxZ="-3560">
+				<node x="46216" y="216632"/>
+				<node x="46936" y="216616"/>
+				<node x="47272" y="216328"/>
+				<node x="47304" y="216040"/>
+				<node x="46968" y="215480"/>
+				<node x="46552" y="215256"/>
+				<node x="46152" y="215208"/>
+				<node x="46168" y="215688"/>
+				<node x="46344" y="215896"/>
+				<node x="46152" y="216120"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0026" minZ="-4004" maxZ="-3704">
+				<node x="44632" y="215944"/>
+				<node x="44632" y="216552"/>
+				<node x="44760" y="216632"/>
+				<node x="45752" y="216616"/>
+				<node x="45848" y="216216"/>
+				<node x="45800" y="216056"/>
+				<node x="45496" y="215944"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0027" minZ="-3684" maxZ="-3384">
+				<node x="50536" y="219624"/>
+				<node x="50312" y="220392"/>
+				<node x="50056" y="220744"/>
+				<node x="49544" y="220936"/>
+				<node x="49064" y="220904"/>
+				<node x="48664" y="220408"/>
+				<node x="48760" y="220024"/>
+				<node x="49192" y="219592"/>
+				<node x="49432" y="219432"/>
+				<node x="49816" y="219320"/>
+				<node x="50152" y="219544"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0028" minZ="-3684" maxZ="-3384">
+				<node x="49176" y="219400"/>
+				<node x="48424" y="219144"/>
+				<node x="48472" y="218376"/>
+				<node x="49160" y="218264"/>
+				<node x="49544" y="218792"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0029" minZ="-3684" maxZ="-3384">
+				<node x="48376" y="219352"/>
+				<node x="48712" y="219752"/>
+				<node x="48488" y="220472"/>
+				<node x="47912" y="220488"/>
+				<node x="47944" y="219960"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0030" minZ="-3684" maxZ="-3384">
+				<node x="48424" y="216984"/>
+				<node x="48376" y="217720"/>
+				<node x="49144" y="217928"/>
+				<node x="49464" y="217624"/>
+				<node x="49432" y="217032"/>
+				<node x="49160" y="216808"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0031" minZ="-3684" maxZ="-3384">
+				<node x="48408" y="216952"/>
+				<node x="49128" y="216776"/>
+				<node x="48744" y="216392"/>
+				<node x="48536" y="215960"/>
+				<node x="48056" y="216376"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0032" minZ="-3684" maxZ="-3384">
+				<node x="50136" y="216648"/>
+				<node x="49848" y="216856"/>
+				<node x="49464" y="216760"/>
+				<node x="49144" y="216584"/>
+				<node x="48808" y="216248"/>
+				<node x="48648" y="215800"/>
+				<node x="48728" y="215304"/>
+				<node x="48920" y="215112"/>
+				<node x="49352" y="215144"/>
+				<node x="50024" y="215400"/>
+				<node x="50280" y="215736"/>
+				<node x="50472" y="216168"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24028" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24029" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24030" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24031" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24035" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24036" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24037" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24038" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0033" minZ="-3524" maxZ="-3224">
+				<node x="47272" y="213736"/>
+				<node x="47256" y="213224"/>
+				<node x="47944" y="213240"/>
+				<node x="47944" y="213736"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0034" minZ="-3524" maxZ="-3224">
+				<node x="48024" y="213240"/>
+				<node x="48648" y="213224"/>
+				<node x="48664" y="213720"/>
+				<node x="47960" y="213736"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0035" minZ="-3524" maxZ="-3224">
+				<node x="47272" y="213784"/>
+				<node x="47944" y="213752"/>
+				<node x="47944" y="214344"/>
+				<node x="47272" y="214360"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0036" minZ="-3524" maxZ="-3224">
+				<node x="48008" y="214344"/>
+				<node x="48648" y="214344"/>
+				<node x="48664" y="213784"/>
+				<node x="47960" y="213752"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0037" minZ="-3524" maxZ="-3224">
+				<node x="49512" y="213784"/>
+				<node x="49496" y="213240"/>
+				<node x="50136" y="213240"/>
+				<node x="50136" y="213752"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0038" minZ="-3524" maxZ="-3224">
+				<node x="50200" y="213240"/>
+				<node x="50760" y="213224"/>
+				<node x="50760" y="213768"/>
+				<node x="50216" y="213752"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0039" minZ="-3524" maxZ="-3224">
+				<node x="50136" y="213848"/>
+				<node x="50136" y="214344"/>
+				<node x="49512" y="214344"/>
+				<node x="49496" y="213864"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0040" minZ="-3524" maxZ="-3224">
+				<node x="50216" y="214360"/>
+				<node x="50760" y="214344"/>
+				<node x="50776" y="213864"/>
+				<node x="50200" y="213864"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0041" minZ="-3444" maxZ="-3144">
+				<node x="48776" y="212504"/>
+				<node x="48744" y="211912"/>
+				<node x="49384" y="211912"/>
+				<node x="49400" y="212504"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0042" minZ="-3444" maxZ="-3144">
+				<node x="48760" y="211816"/>
+				<node x="49384" y="211816"/>
+				<node x="49384" y="211432"/>
+				<node x="48760" y="211528"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0043" minZ="-3444" maxZ="-3144">
+				<node x="47752" y="212440"/>
+				<node x="47208" y="212440"/>
+				<node x="47208" y="211960"/>
+				<node x="47880" y="211944"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0044" minZ="-3444" maxZ="-3144">
+				<node x="47960" y="211960"/>
+				<node x="48584" y="211944"/>
+				<node x="48584" y="212440"/>
+				<node x="47848" y="212456"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0045" minZ="-3444" maxZ="-3144">
+				<node x="47192" y="212520"/>
+				<node x="47192" y="213048"/>
+				<node x="47896" y="213064"/>
+				<node x="47784" y="212520"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0046" minZ="-3444" maxZ="-3144">
+				<node x="47880" y="212520"/>
+				<node x="48584" y="212504"/>
+				<node x="48584" y="213080"/>
+				<node x="47976" y="213064"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0047" minZ="-3444" maxZ="-3144">
+				<node x="49576" y="212456"/>
+				<node x="49560" y="211960"/>
+				<node x="50248" y="211944"/>
+				<node x="50264" y="212440"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0048" minZ="-3444" maxZ="-3144">
+				<node x="50312" y="212440"/>
+				<node x="50328" y="211960"/>
+				<node x="50952" y="211944"/>
+				<node x="50952" y="212456"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0049" minZ="-3444" maxZ="-3144">
+				<node x="50264" y="212472"/>
+				<node x="50232" y="213032"/>
+				<node x="49576" y="213048"/>
+				<node x="49528" y="212536"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0050" minZ="-3444" maxZ="-3144">
+				<node x="50296" y="212472"/>
+				<node x="50968" y="212520"/>
+				<node x="51000" y="213048"/>
+				<node x="50312" y="213064"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0051" minZ="-3444" maxZ="-3144">
+				<node x="51160" y="212040"/>
+				<node x="52024" y="212040"/>
+				<node x="52056" y="212472"/>
+				<node x="51176" y="212456"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0052" minZ="-3444" maxZ="-3144">
+				<node x="52072" y="212568"/>
+				<node x="52024" y="213016"/>
+				<node x="51176" y="213032"/>
+				<node x="51176" y="212552"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0053" minZ="-3444" maxZ="-3144">
+				<node x="52216" y="212568"/>
+				<node x="52216" y="212088"/>
+				<node x="52904" y="212056"/>
+				<node x="52904" y="212584"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0054" minZ="-3444" maxZ="-3144">
+				<node x="53000" y="212072"/>
+				<node x="53608" y="212088"/>
+				<node x="53608" y="212568"/>
+				<node x="52936" y="212584"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0055" minZ="-3444" maxZ="-3144">
+				<node x="52168" y="212648"/>
+				<node x="52904" y="212632"/>
+				<node x="52904" y="213208"/>
+				<node x="52200" y="213176"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0056" minZ="-3444" maxZ="-3144">
+				<node x="52936" y="212616"/>
+				<node x="53608" y="212632"/>
+				<node x="53656" y="213176"/>
+				<node x="52968" y="213192"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24050" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24052" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24051" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24053" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0057" minZ="-3124" maxZ="-2824">
+				<node x="51240" y="211288"/>
+				<node x="51240" y="210680"/>
+				<node x="51896" y="210712"/>
+				<node x="51880" y="211304"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0058" minZ="-3124" maxZ="-2824">
+				<node x="51976" y="210696"/>
+				<node x="52616" y="210712"/>
+				<node x="52600" y="211272"/>
+				<node x="51928" y="211304"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0059" minZ="-3124" maxZ="-2824">
+				<node x="51224" y="211352"/>
+				<node x="51848" y="211384"/>
+				<node x="51864" y="211864"/>
+				<node x="51192" y="211864"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0060" minZ="-3124" maxZ="-2824">
+				<node x="51944" y="211368"/>
+				<node x="52616" y="211352"/>
+				<node x="52600" y="211832"/>
+				<node x="51912" y="211864"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0061" minZ="-2804" maxZ="-2504">
+				<node x="49112" y="210280"/>
+				<node x="49128" y="209752"/>
+				<node x="49784" y="209752"/>
+				<node x="49832" y="210280"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0062" minZ="-2804" maxZ="-2504">
+				<node x="49848" y="209736"/>
+				<node x="50488" y="209768"/>
+				<node x="50520" y="210280"/>
+				<node x="49912" y="210264"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0063" minZ="-2804" maxZ="-2504">
+				<node x="49768" y="210904"/>
+				<node x="49128" y="210872"/>
+				<node x="49128" y="210360"/>
+				<node x="49848" y="210344"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0064" minZ="-2804" maxZ="-2504">
+				<node x="50520" y="210328"/>
+				<node x="50472" y="210872"/>
+				<node x="49864" y="210904"/>
+				<node x="49912" y="210344"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0065" minZ="-2564" maxZ="-2264">
+				<node x="51672" y="208248"/>
+				<node x="52216" y="208248"/>
+				<node x="52280" y="208840"/>
+				<node x="51688" y="208872"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0066" minZ="-2564" maxZ="-2264">
+				<node x="52264" y="208248"/>
+				<node x="52792" y="208248"/>
+				<node x="52776" y="208872"/>
+				<node x="52328" y="208840"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0067" minZ="-2564" maxZ="-2264">
+				<node x="51688" y="208952"/>
+				<node x="52264" y="208920"/>
+				<node x="52184" y="209608"/>
+				<node x="51688" y="209624"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0068" minZ="-2564" maxZ="-2264">
+				<node x="52264" y="209624"/>
+				<node x="52776" y="209608"/>
+				<node x="52776" y="208936"/>
+				<node x="52344" y="208936"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0069" minZ="-2564" maxZ="-2264">
+				<node x="51672" y="210328"/>
+				<node x="52200" y="210328"/>
+				<node x="52216" y="210984"/>
+				<node x="51688" y="210968"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0070" minZ="-2564" maxZ="-2264">
+				<node x="52248" y="210984"/>
+				<node x="52264" y="210312"/>
+				<node x="52792" y="210328"/>
+				<node x="52776" y="210952"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0071" minZ="-2564" maxZ="-2264">
+				<node x="52216" y="211016"/>
+				<node x="51688" y="211016"/>
+				<node x="51640" y="211688"/>
+				<node x="52280" y="211704"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0072" minZ="-2564" maxZ="-2264">
+				<node x="52248" y="211016"/>
+				<node x="52776" y="211032"/>
+				<node x="52808" y="211672"/>
+				<node x="52312" y="211688"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0073" minZ="-2564" maxZ="-2264">
+				<node x="52984" y="209688"/>
+				<node x="53752" y="209656"/>
+				<node x="53752" y="210280"/>
+				<node x="53000" y="210264"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0074" minZ="-2564" maxZ="-2264">
+				<node x="54024" y="210280"/>
+				<node x="54024" y="209672"/>
+				<node x="54680" y="209672"/>
+				<node x="54680" y="210248"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0075" minZ="-2564" maxZ="-2264">
+				<node x="53512" y="208776"/>
+				<node x="53048" y="208792"/>
+				<node x="53048" y="209528"/>
+				<node x="53528" y="209528"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0076" minZ="-2564" maxZ="-2264">
+				<node x="54136" y="208792"/>
+				<node x="54152" y="209512"/>
+				<node x="53624" y="209528"/>
+				<node x="53544" y="208808"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0077" minZ="-2564" maxZ="-2264">
+				<node x="53480" y="211096"/>
+				<node x="53032" y="211112"/>
+				<node x="53048" y="210408"/>
+				<node x="53464" y="210408"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0078" minZ="-2564" maxZ="-2264">
+				<node x="53528" y="210408"/>
+				<node x="53960" y="210392"/>
+				<node x="53944" y="211112"/>
+				<node x="53496" y="211112"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24052" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24054" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24053" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24055" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0079" minZ="-3828" maxZ="-3528">
+				<node x="50168" y="208040"/>
+				<node x="50664" y="208040"/>
+				<node x="50680" y="208744"/>
+				<node x="50152" y="208664"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0080" minZ="-3828" maxZ="-3528">
+				<node x="50728" y="208008"/>
+				<node x="51304" y="208040"/>
+				<node x="51272" y="208680"/>
+				<node x="50744" y="208744"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0081" minZ="-3828" maxZ="-3528">
+				<node x="50168" y="208744"/>
+				<node x="50664" y="208824"/>
+				<node x="50648" y="209416"/>
+				<node x="50168" y="209432"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0082" minZ="-3828" maxZ="-3528">
+				<node x="50760" y="208792"/>
+				<node x="51272" y="208728"/>
+				<node x="51272" y="209416"/>
+				<node x="50728" y="209432"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0083" minZ="-3828" maxZ="-3528">
+				<node x="50168" y="206456"/>
+				<node x="50632" y="206440"/>
+				<node x="50664" y="207144"/>
+				<node x="50168" y="207112"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0084" minZ="-3828" maxZ="-3528">
+				<node x="50712" y="206440"/>
+				<node x="51256" y="206456"/>
+				<node x="51272" y="207128"/>
+				<node x="50696" y="207144"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0085" minZ="-3828" maxZ="-3528">
+				<node x="50648" y="207848"/>
+				<node x="50168" y="207864"/>
+				<node x="50168" y="207192"/>
+				<node x="50680" y="207160"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0086" minZ="-3828" maxZ="-3528">
+				<node x="50712" y="207160"/>
+				<node x="51272" y="207176"/>
+				<node x="51272" y="207848"/>
+				<node x="50728" y="207864"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0087" minZ="-3828" maxZ="-3528">
+				<node x="49304" y="205208"/>
+				<node x="50024" y="205208"/>
+				<node x="50008" y="205736"/>
+				<node x="49272" y="205800"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0088" minZ="-3828" maxZ="-3528">
+				<node x="49272" y="205832"/>
+				<node x="49288" y="206296"/>
+				<node x="49992" y="206312"/>
+				<node x="50008" y="205784"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0089" minZ="-3828" maxZ="-3528">
+				<node x="50776" y="205160"/>
+				<node x="51480" y="205160"/>
+				<node x="51368" y="205656"/>
+				<node x="50760" y="205752"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0090" minZ="-3828" maxZ="-3528">
+				<node x="51544" y="205144"/>
+				<node x="52200" y="205160"/>
+				<node x="52184" y="205752"/>
+				<node x="51432" y="205656"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0091" minZ="-3828" maxZ="-3528">
+				<node x="51368" y="205720"/>
+				<node x="51464" y="206264"/>
+				<node x="50792" y="206296"/>
+				<node x="50776" y="205848"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0092" minZ="-3828" maxZ="-3528">
+				<node x="51448" y="205752"/>
+				<node x="52168" y="205832"/>
+				<node x="52168" y="206280"/>
+				<node x="51528" y="206264"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0093" minZ="-3732" maxZ="-3432">
+				<node x="54168" y="205656"/>
+				<node x="54168" y="205176"/>
+				<node x="53304" y="205144"/>
+				<node x="53304" y="205768"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0094" minZ="-3732" maxZ="-3432">
+				<node x="53304" y="205800"/>
+				<node x="53288" y="206264"/>
+				<node x="54168" y="206280"/>
+				<node x="54184" y="205720"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0095" minZ="-3732" maxZ="-3432">
+				<node x="52904" y="206936"/>
+				<node x="52888" y="206408"/>
+				<node x="53576" y="206424"/>
+				<node x="53560" y="206936"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0096" minZ="-3732" maxZ="-3432">
+				<node x="53608" y="206936"/>
+				<node x="53656" y="206440"/>
+				<node x="54280" y="206424"/>
+				<node x="54312" y="206968"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0097" minZ="-3732" maxZ="-3432">
+				<node x="53560" y="206984"/>
+				<node x="52904" y="206984"/>
+				<node x="52888" y="207544"/>
+				<node x="53576" y="207544"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0098" minZ="-3732" maxZ="-3432">
+				<node x="53608" y="206984"/>
+				<node x="54312" y="207032"/>
+				<node x="54296" y="207560"/>
+				<node x="53640" y="207528"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0099" minZ="-3828" maxZ="-3528">
+				<node x="52184" y="206968"/>
+				<node x="52168" y="206440"/>
+				<node x="51464" y="206440"/>
+				<node x="51432" y="206952"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0100" minZ="-3828" maxZ="-3528">
+				<node x="51448" y="207064"/>
+				<node x="52168" y="207048"/>
+				<node x="52184" y="207544"/>
+				<node x="51464" y="207560"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24046" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24048" count="1" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24047" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+			<npc id="24049" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0001" minZ="-3748" maxZ="-3448">
+				<node x="45672" y="205256"/>
+				<node x="46168" y="205048"/>
+				<node x="46696" y="205048"/>
+				<node x="47032" y="205416"/>
+				<node x="47064" y="205976"/>
+				<node x="46904" y="206504"/>
+				<node x="46056" y="206392"/>
+				<node x="45816" y="205976"/>
+			</territory>
+			<territory name="devils_isle_21_24_0002" minZ="-3796" maxZ="-3496">
+				<node x="46168" y="208088"/>
+				<node x="45432" y="208104"/>
+				<node x="45272" y="207800"/>
+				<node x="45336" y="207464"/>
+				<node x="45672" y="206952"/>
+				<node x="46136" y="206888"/>
+				<node x="46248" y="207352"/>
+			</territory>
+			<territory name="devils_isle_21_24_0003" minZ="-3620" maxZ="-3320">
+				<node x="48744" y="205896"/>
+				<node x="48744" y="206968"/>
+				<node x="47608" y="206936"/>
+				<node x="47672" y="206152"/>
+				<node x="48008" y="205848"/>
+			</territory>
+			<territory name="devils_isle_21_24_0004" minZ="-3620" maxZ="-3320">
+				<node x="48760" y="207000"/>
+				<node x="48728" y="207976"/>
+				<node x="47880" y="207800"/>
+				<node x="47496" y="207432"/>
+				<node x="47608" y="206936"/>
+			</territory>
+			<territory name="devils_isle_21_24_0005" minZ="-3700" maxZ="-3400">
+				<node x="46664" y="209608"/>
+				<node x="46552" y="209048"/>
+				<node x="46600" y="208696"/>
+				<node x="47480" y="208744"/>
+				<node x="47912" y="209032"/>
+				<node x="47912" y="209560"/>
+				<node x="47448" y="209720"/>
+			</territory>
+			<territory name="devils_isle_21_24_0006" minZ="-3700" maxZ="-3400">
+				<node x="46856" y="211192"/>
+				<node x="46232" y="211240"/>
+				<node x="45576" y="211160"/>
+				<node x="45352" y="210776"/>
+				<node x="45368" y="210360"/>
+				<node x="45688" y="209992"/>
+				<node x="46264" y="210104"/>
+				<node x="47112" y="209960"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24039" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24040" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0007" minZ="-3700" maxZ="-3400">
+				<node x="47128" y="209960"/>
+				<node x="46872" y="211192"/>
+				<node x="47608" y="211224"/>
+				<node x="48008" y="211000"/>
+				<node x="48088" y="210408"/>
+				<node x="47912" y="210136"/>
+				<node x="47528" y="209912"/>
+			</territory>
+			<territory name="devils_isle_21_24_0008" minZ="-3700" maxZ="-3400">
+				<node x="44344" y="210840"/>
+				<node x="44280" y="210104"/>
+				<node x="43640" y="209800"/>
+				<node x="42936" y="210104"/>
+				<node x="43032" y="210680"/>
+				<node x="43400" y="210888"/>
+			</territory>
+			<territory name="devils_isle_21_24_0009" minZ="-3812" maxZ="-3512">
+				<node x="42776" y="210728"/>
+				<node x="42392" y="210968"/>
+				<node x="41576" y="210840"/>
+				<node x="41544" y="210248"/>
+				<node x="41736" y="210008"/>
+				<node x="42456" y="209864"/>
+				<node x="42808" y="210008"/>
+			</territory>
+			<territory name="devils_isle_21_24_0010" minZ="-3812" maxZ="-3512">
+				<node x="42456" y="211992"/>
+				<node x="41768" y="211912"/>
+				<node x="41576" y="212584"/>
+				<node x="41736" y="213048"/>
+				<node x="42184" y="213160"/>
+				<node x="42568" y="213032"/>
+				<node x="42680" y="212344"/>
+			</territory>
+			<territory name="devils_isle_21_24_0011" minZ="-3812" maxZ="-3512">
+				<node x="43016" y="213064"/>
+				<node x="42936" y="212856"/>
+				<node x="42952" y="212152"/>
+				<node x="43464" y="212168"/>
+				<node x="43608" y="212296"/>
+				<node x="43624" y="213128"/>
+			</territory>
+			<territory name="devils_isle_21_24_0012" minZ="-3700" maxZ="-3400">
+				<node x="46104" y="211464"/>
+				<node x="46344" y="211464"/>
+				<node x="46248" y="211976"/>
+				<node x="45544" y="212104"/>
+				<node x="45320" y="211832"/>
+				<node x="45560" y="211672"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24039" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24040" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0013" minZ="-3828" maxZ="-3528">
+				<node x="45128" y="212264"/>
+				<node x="46248" y="212360"/>
+				<node x="46200" y="213032"/>
+				<node x="45320" y="212968"/>
+				<node x="45080" y="212552"/>
+			</territory>
+			<territory name="devils_isle_21_24_0014" minZ="-3860" maxZ="-3560">
+				<node x="45112" y="213672"/>
+				<node x="46136" y="213672"/>
+				<node x="46168" y="213176"/>
+				<node x="45704" y="213144"/>
+				<node x="45240" y="213240"/>
+			</territory>
+			<territory name="devils_isle_21_24_0015" minZ="-3860" maxZ="-3560">
+				<node x="46312" y="214872"/>
+				<node x="46264" y="213992"/>
+				<node x="46104" y="213848"/>
+				<node x="45432" y="213832"/>
+				<node x="45144" y="213960"/>
+				<node x="45416" y="214616"/>
+				<node x="45832" y="214664"/>
+			</territory>
+			<territory name="devils_isle_21_24_0016" minZ="-3860" maxZ="-3560">
+				<node x="45720" y="215512"/>
+				<node x="45736" y="215208"/>
+				<node x="45288" y="215208"/>
+				<node x="45240" y="215512"/>
+				<node x="45128" y="215400"/>
+				<node x="44984" y="215448"/>
+				<node x="44840" y="215672"/>
+				<node x="44632" y="215736"/>
+			</territory>
+			<territory name="devils_isle_21_24_0017" minZ="-4020" maxZ="-3720">
+				<node x="43224" y="214552"/>
+				<node x="44472" y="214552"/>
+				<node x="44472" y="215656"/>
+				<node x="43224" y="215656"/>
+			</territory>
+			<territory name="devils_isle_21_24_0018" minZ="-4029" maxZ="-3729">
+				<node x="44456" y="215848"/>
+				<node x="44472" y="216968"/>
+				<node x="43256" y="216984"/>
+				<node x="43224" y="215864"/>
+			</territory>
+			<territory name="devils_isle_21_24_0019" minZ="-4020" maxZ="-3720">
+				<node x="44760" y="216904"/>
+				<node x="45736" y="216888"/>
+				<node x="45784" y="217288"/>
+				<node x="45560" y="217400"/>
+				<node x="44776" y="217400"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24039" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24040" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0020" minZ="-4036" maxZ="-3736">
+				<node x="45736" y="217544"/>
+				<node x="45720" y="218312"/>
+				<node x="45192" y="218120"/>
+				<node x="44888" y="218168"/>
+				<node x="44904" y="217768"/>
+				<node x="44776" y="217688"/>
+				<node x="44776" y="217496"/>
+			</territory>
+			<territory name="devils_isle_21_24_0021" minZ="-4004" maxZ="-3704">
+				<node x="43256" y="218120"/>
+				<node x="43368" y="217176"/>
+				<node x="44424" y="217160"/>
+				<node x="44456" y="218264"/>
+				<node x="43912" y="218120"/>
+			</territory>
+			<territory name="devils_isle_21_24_0022" minZ="-3684" maxZ="-3384">
+				<node x="45848" y="220120"/>
+				<node x="45832" y="220856"/>
+				<node x="45304" y="220984"/>
+				<node x="44696" y="220936"/>
+				<node x="44456" y="220792"/>
+				<node x="44360" y="220312"/>
+				<node x="44728" y="219944"/>
+				<node x="45272" y="219896"/>
+			</territory>
+			<territory name="devils_isle_21_24_0023" minZ="-3684" maxZ="-3384">
+				<node x="46024" y="220072"/>
+				<node x="46088" y="220936"/>
+				<node x="47272" y="221016"/>
+				<node x="47208" y="220296"/>
+				<node x="46872" y="219864"/>
+			</territory>
+			<territory name="devils_isle_21_24_0024" minZ="-3860" maxZ="-3560">
+				<node x="46136" y="218296"/>
+				<node x="46200" y="217608"/>
+				<node x="46344" y="217432"/>
+				<node x="46232" y="216840"/>
+				<node x="47064" y="216856"/>
+				<node x="47240" y="217032"/>
+				<node x="47304" y="217416"/>
+				<node x="46904" y="217880"/>
+				<node x="46872" y="218168"/>
+				<node x="46504" y="218328"/>
+			</territory>
+			<territory name="devils_isle_21_24_0025" minZ="-3860" maxZ="-3560">
+				<node x="46216" y="216632"/>
+				<node x="46936" y="216616"/>
+				<node x="47272" y="216328"/>
+				<node x="47304" y="216040"/>
+				<node x="46968" y="215480"/>
+				<node x="46552" y="215256"/>
+				<node x="46152" y="215208"/>
+				<node x="46168" y="215688"/>
+				<node x="46344" y="215896"/>
+				<node x="46152" y="216120"/>
+			</territory>
+			<territory name="devils_isle_21_24_0026" minZ="-4004" maxZ="-3704">
+				<node x="44632" y="215944"/>
+				<node x="44632" y="216552"/>
+				<node x="44760" y="216632"/>
+				<node x="45752" y="216616"/>
+				<node x="45848" y="216216"/>
+				<node x="45800" y="216056"/>
+				<node x="45496" y="215944"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24039" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24040" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+	</spawn>
+	<spawn name="DevilIsle" ai="DayNightSpawns">
+		<territories>
+			<territory name="devils_isle_21_24_0027" minZ="-3684" maxZ="-3384">
+				<node x="50536" y="219624"/>
+				<node x="50312" y="220392"/>
+				<node x="50056" y="220744"/>
+				<node x="49544" y="220936"/>
+				<node x="49064" y="220904"/>
+				<node x="48664" y="220408"/>
+				<node x="48760" y="220024"/>
+				<node x="49192" y="219592"/>
+				<node x="49432" y="219432"/>
+				<node x="49816" y="219320"/>
+				<node x="50152" y="219544"/>
+			</territory>
+			<territory name="devils_isle_21_24_0028" minZ="-3684" maxZ="-3384">
+				<node x="49176" y="219400"/>
+				<node x="48424" y="219144"/>
+				<node x="48472" y="218376"/>
+				<node x="49160" y="218264"/>
+				<node x="49544" y="218792"/>
+			</territory>
+			<territory name="devils_isle_21_24_0029" minZ="-3684" maxZ="-3384">
+				<node x="48376" y="219352"/>
+				<node x="48712" y="219752"/>
+				<node x="48488" y="220472"/>
+				<node x="47912" y="220488"/>
+				<node x="47944" y="219960"/>
+			</territory>
+			<territory name="devils_isle_21_24_0030" minZ="-3684" maxZ="-3384">
+				<node x="48424" y="216984"/>
+				<node x="48376" y="217720"/>
+				<node x="49144" y="217928"/>
+				<node x="49464" y="217624"/>
+				<node x="49432" y="217032"/>
+				<node x="49160" y="216808"/>
+			</territory>
+			<territory name="devils_isle_21_24_0031" minZ="-3684" maxZ="-3384">
+				<node x="48408" y="216952"/>
+				<node x="49128" y="216776"/>
+				<node x="48744" y="216392"/>
+				<node x="48536" y="215960"/>
+				<node x="48056" y="216376"/>
+			</territory>
+			<territory name="devils_isle_21_24_0032" minZ="-3684" maxZ="-3384">
+				<node x="50136" y="216648"/>
+				<node x="49848" y="216856"/>
+				<node x="49464" y="216760"/>
+				<node x="49144" y="216584"/>
+				<node x="48808" y="216248"/>
+				<node x="48648" y="215800"/>
+				<node x="48728" y="215304"/>
+				<node x="48920" y="215112"/>
+				<node x="49352" y="215144"/>
+				<node x="50024" y="215400"/>
+				<node x="50280" y="215736"/>
+				<node x="50472" y="216168"/>
+			</territory>
+		</territories>
+		<group name="dayTime" spawnByDefault="false">
+			<npc id="24039" count="2" respawnTime="80sec" respawnRandom="20sec"/>
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="24040" count="2" respawnTime="80sec" respawnRandom="20sec"/>
 		</group>
 	</spawn>
 </list>
