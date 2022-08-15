@@ -59,12 +59,12 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	protected Participant _playerOne;
 	protected Participant _playerTwo;
 	
-	String round_1_winner;
-	String round_2_winner;
-	String round_3_winner;
-	int player1Wins = 0;
-	int player2Wins = 0;
-	boolean matchEnd;
+	String _winnerRound1 = "";
+	String _winnerRound2 = "";
+	String _winnerRound3 = "";
+	int _player1Wins = 0;
+	int _player2Wins = 0;
+	boolean _matchEnd;
 	
 	protected OlympiadGameNormal(int id, Participant[] opponents)
 	{
@@ -403,13 +403,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	public void matchEnd(boolean value)
 	{
-		matchEnd = value;
+		_matchEnd = value;
 	}
 	
 	@Override
 	public boolean isMatchEnd()
 	{
-		return matchEnd;
+		return _matchEnd;
 	}
 	
 	@Override
@@ -481,8 +481,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 100));
 					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 0, 1, 100));
 				}, 20000);
-				round_1_winner = _playerOne.getName();
-				player1Wins += 1;
+				_winnerRound1 = _playerOne.getName();
+				_player1Wins += 1;
 			}
 			else if ((_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 			{
@@ -507,15 +507,15 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				{
 					_playerTwo.getPlayer().useMagic(CommonSkill.OLYMPIAD_WIN.getSkill(), null, false, false);
 				}, 2000);
-				round_1_winner = _playerTwo.getName();
-				player2Wins += 1;
+				_winnerRound1 = _playerTwo.getName();
+				_player2Wins += 1;
 			}
 			else
 			{
-				round_1_winner = null;
-				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
-				_playerTwo.getPlayer().broadcastPacket(_tie);
-				_playerOne.getPlayer().broadcastPacket(_tie);
+				_winnerRound1 = "";
+				final SystemMessage tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(tie);
+				_playerOne.getPlayer().broadcastPacket(tie);
 			}
 			resetDamage();
 		}
@@ -580,10 +580,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerOne.getPlayer().sendPacket(win);
 				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
 				_playerTwo.getPlayer().sendPacket(loose);
-				round_2_winner = _playerOne.getName();
-				player1Wins += 1;
+				_winnerRound2 = _playerOne.getName();
+				_player1Wins += 1;
 				
-				if (round_1_winner.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
+				if (_winnerRound1.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
 				{
 					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 0, 2, 20));
 					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 0, 2, 20));
@@ -613,10 +613,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerTwo.getPlayer().sendPacket(win);
 				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
 				_playerOne.getPlayer().sendPacket(loose);
-				round_2_winner = _playerTwo.getName();
-				player2Wins += 1;
+				_winnerRound2 = _playerTwo.getName();
+				_player2Wins += 1;
 				
-				if (round_1_winner.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
+				if (_winnerRound1.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
 				{
 					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 2, 2, 20));
 					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 0, 2, 2, 20));
@@ -639,9 +639,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 			else
 			{
-				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
-				_playerTwo.getPlayer().broadcastPacket(_tie);
-				_playerOne.getPlayer().broadcastPacket(_tie);
+				final SystemMessage tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(tie);
+				_playerOne.getPlayer().broadcastPacket(tie);
 			}
 			resetDamage();
 		}
@@ -706,9 +706,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerOne.getPlayer().sendPacket(win);
 				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
 				_playerTwo.getPlayer().sendPacket(loose);
-				round_3_winner = _playerOne.getName();
-				player1Wins += 1;
-				if (round_3_winner.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
+				_winnerRound3 = _playerOne.getName();
+				_player1Wins += 1;
+				if (_winnerRound3.toLowerCase().equalsIgnoreCase(_playerOne.getName()))
 				{
 					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
 					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 2, 1, 3, 0));
@@ -733,9 +733,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				_playerTwo.getPlayer().sendPacket(win);
 				final SystemMessage loose = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_DEFEAT);
 				_playerOne.getPlayer().sendPacket(loose);
-				round_3_winner = _playerTwo.getName();
-				player2Wins += 1;
-				if (round_3_winner.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
+				_winnerRound3 = _playerTwo.getName();
+				_player2Wins += 1;
+				if (_winnerRound3.toLowerCase().equalsIgnoreCase(_playerTwo.getName()))
 				{
 					_playerOne.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
 					_playerTwo.getPlayer().sendPacket(new ExOlympiadMatchInfo(_playerOne.getName(), _playerTwo.getName(), 1, 2, 3, 0));
@@ -752,9 +752,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 			else
 			{
-				final SystemMessage _tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
-				_playerTwo.getPlayer().broadcastPacket(_tie);
-				_playerOne.getPlayer().broadcastPacket(_tie);
+				final SystemMessage tie = new SystemMessage(SystemMessageId.HIDDEN_MSG_OLYMPIAD_TIE);
+				_playerTwo.getPlayer().broadcastPacket(tie);
+				_playerOne.getPlayer().broadcastPacket(tie);
 			}
 			resetDamage();
 		}
@@ -774,7 +774,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		
 		ExOlympiadMatchResult result = null;
 		
-		boolean tie = round_1_winner == null ? true : false;
+		boolean tie = _winnerRound1.isEmpty();
 		int winside = 0;
 		
 		final List<OlympiadInfo> list1 = new ArrayList<>(1);
@@ -1009,7 +1009,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 			}
-			else if ((player1Wins == 2) || (_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+			else if ((_player1Wins == 2) || (_playerTwo.getPlayer() == null) || !_playerTwo.getPlayer().isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 			{
 				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerOne.getName());
@@ -1036,7 +1036,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
 			}
-			else if ((player2Wins == 2) || (_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+			else if ((_player2Wins == 2) || (_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 			{
 				sm = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 				sm.addString(_playerTwo.getName());
@@ -1090,11 +1090,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			
 			if (winside == 1)
 			{
-				result = new ExOlympiadMatchResult(tie, winside, list1, list2, round_1_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, round_2_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, (round_3_winner != null) && round_3_winner.equalsIgnoreCase(_playerOne.getName()) ? 2 : (round_3_winner == null) ? 0 : 3);
+				result = new ExOlympiadMatchResult(tie, winside, list1, list2, _winnerRound1.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, _winnerRound2.equalsIgnoreCase(_playerOne.getName()) ? 2 : 3, !_winnerRound3.isEmpty() && _winnerRound3.equalsIgnoreCase(_playerOne.getName()) ? 2 : _winnerRound3.isEmpty() ? 0 : 3);
 			}
 			else
 			{
-				result = new ExOlympiadMatchResult(tie, winside, list2, list1, round_1_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, round_2_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, (round_3_winner != null) && round_3_winner.equalsIgnoreCase(_playerTwo.getName()) ? 3 : (round_3_winner == null) ? 0 : 2);
+				result = new ExOlympiadMatchResult(tie, winside, list2, list1, _winnerRound1.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, _winnerRound2.equalsIgnoreCase(_playerTwo.getName()) ? 3 : 2, !_winnerRound3.isEmpty() && _winnerRound3.equalsIgnoreCase(_playerTwo.getName()) ? 3 : _winnerRound3.isEmpty() ? 0 : 2);
 			}
 			
 			stadium.broadcastPacket(result);
