@@ -117,7 +117,7 @@ public class NpcActionShift implements IActionShiftHandler
 				if (template != null)
 				{
 					final String fileName = template.getSpawnTemplate().getFile().getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/');
-					html.replace("%spawnfile%", fileName);
+					html.replace("%spawnfile%", fileName.replace("data/spawns/", ""));
 					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // used String.valueOf because it can be null
 					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null
 					if (template.getSpawnTemplate().getAI() != null)
