@@ -1141,6 +1141,10 @@
 				<item id="57" min="439" max="485" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18540" level="63" type="Monster" name="Kishan's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1168,6 +1172,10 @@
 				<item id="57" min="1171" max="1295" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18541" level="63" type="Monster" name="Kishan's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1190,6 +1198,9 @@
 			<radius normal="9" />
 			<height normal="41.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
 	<npc id="18542" level="69" type="RaidBoss" name="Noma" title="Keber's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1211,6 +1222,10 @@
 			<radius normal="35" />
 			<height normal="48.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="12" /> <!-- HP Increase 4x -->
+		</skillList>
 	</npc>
 	<npc id="18543" level="69" type="Monster" name="Noma's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1238,6 +1253,10 @@
 				<item id="57" min="836" max="924" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18544" level="69" type="Monster" name="Noma's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1264,6 +1283,10 @@
 				<item id="57" min="2233" max="2468" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18545" level="69" type="Monster" name="Noma's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1286,6 +1309,9 @@
 			<radius normal="15" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+		</skillList>
 	</npc>
 	<npc id="18546" level="75" type="RaidBoss" name="Spall" title="Keber's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1307,6 +1333,10 @@
 			<radius normal="36.3" />
 			<height normal="65.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4408" level="12" /> <!-- HP Increase 4x -->
+		</skillList>
 	</npc>
 	<npc id="18547" level="75" type="Monster" name="Spall's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1333,6 +1363,10 @@
 				<item id="57" min="1188" max="1313" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18548" level="75" type="Monster" name="Spall's Minion" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1359,6 +1393,10 @@
 				<item id="57" min="3135" max="3465" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase 2x -->
+		</skillList>
 	</npc>
 	<npc id="18549" level="75" type="Monster" name="Spall's Minion" title="Brainwashed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1380,6 +1418,9 @@
 			<radius normal="30.8" />
 			<height normal="51.065" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 	</npc>
 	<npc id="18550" level="85" type="Folk" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1400,8 +1441,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18551" level="80" type="Monster" name="Keber's Seal Stone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18551" level="80" type="Folk" name="Keber's Seal Stone">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="5786" />
@@ -1415,11 +1455,14 @@
 			</speed>
 			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="true" />
+		<status attackable="false" randomWalk="false" targetable="false" talkable="false" undying="true" showName="false" />
 		<collision>
 			<radius normal="25" />
 			<height normal="62.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 	</npc>
 	<npc id="18552" level="69" type="RaidBoss" name="Keber" title="Maddened">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1441,6 +1484,10 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="12" /> <!-- HP Increase 4x -->
+		</skillList>
 	</npc>
 	<npc id="18553" level="75" type="RaidBoss" name="Keber" title="Maddened">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1462,6 +1509,10 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="12" /> <!-- HP Increase 4x -->
+		</skillList>
 	</npc>
 	<npc id="18554" level="85" type="Monster" name="Otherworldly Shard" title="Full of Energy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
