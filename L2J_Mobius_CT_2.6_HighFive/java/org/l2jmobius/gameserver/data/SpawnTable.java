@@ -600,50 +600,89 @@ public class SpawnTable implements IXmlReader
 			{
 				final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
 				final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-				final String spawnId = String.valueOf(spawn.getId());
-				final String spawnX = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getX());
-				final String spawnY = String.valueOf(spawnLocation != null ? spawnLocation.getY() : spawn.getY());
-				final String spawnZ = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getZ());
+				
 				boolean found = false; // in XML you can have more than one spawn with same coords
 				boolean isMultiLine = false; // in case spawn has more stats
 				boolean lastLineFound = false; // used to check for empty file
 				int lineCount = 0;
 				String currentLine;
-				while ((currentLine = reader.readLine()) != null)
+				
+				final NpcSpawnTerritory npcSpawnTerritory = spawn.getSpawnTerritory();
+				if (npcSpawnTerritory == null)
 				{
-					if (!found)
+					final String spawnId = String.valueOf(spawn.getId());
+					final String spawnX = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getX());
+					final String spawnY = String.valueOf(spawnLocation != null ? spawnLocation.getY() : spawn.getY());
+					final String spawnZ = String.valueOf(spawnLocation != null ? spawnLocation.getX() : spawn.getZ());
+					
+					while ((currentLine = reader.readLine()) != null)
 					{
-						if (isMultiLine)
+						if (!found)
 						{
-							if (currentLine.contains("</npc>"))
+							if (isMultiLine)
 							{
-								found = true;
+								if (currentLine.contains("</npc>"))
+								{
+									found = true;
+								}
+								continue;
 							}
-							continue;
+							if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ))
+							{
+								if (!currentLine.contains("/>") && !currentLine.contains("</npc>"))
+								{
+									isMultiLine = true;
+								}
+								else
+								{
+									found = true;
+								}
+								continue;
+							}
 						}
-						if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ))
+						writer.write(currentLine + Config.EOL);
+						if (currentLine.contains("</list>"))
 						{
-							if (!currentLine.contains("/>") && !currentLine.contains("</npc>"))
-							{
-								isMultiLine = true;
-							}
-							else
-							{
-								found = true;
-							}
-							continue;
+							lastLineFound = true;
 						}
-					}
-					writer.write(currentLine + Config.EOL);
-					if (currentLine.contains("</list>"))
-					{
-						lastLineFound = true;
-					}
-					if (!lastLineFound)
-					{
-						lineCount++;
+						if (!lastLineFound)
+						{
+							lineCount++;
+						}
 					}
 				}
+				else
+				{
+					SEARCH: while ((currentLine = reader.readLine()) != null)
+					{
+						if (!found)
+						{
+							if (isMultiLine)
+							{
+								if (currentLine.contains("</spawn>"))
+								{
+									found = true;
+								}
+								continue;
+							}
+							if (currentLine.contains('"' + npcSpawnTerritory.getName() + '"'))
+							{
+								isMultiLine = true;
+								continue SEARCH;
+							}
+						}
+						writer.write(currentLine + Config.EOL);
+						if (currentLine.contains("</list>"))
+						{
+							lastLineFound = true;
+						}
+						if (!lastLineFound)
+						{
+							lineCount++;
+						}
+					}
+				}
+				
 				writer.close();
 				reader.close();
 				spawnFile.delete();
