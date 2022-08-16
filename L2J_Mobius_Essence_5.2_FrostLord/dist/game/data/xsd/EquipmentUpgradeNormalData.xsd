@@ -36,7 +36,7 @@
 			<xs:element type="itemType" name="item"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="failure_itemsType">
+	<xs:complexType name="failureItemsType">
 		<xs:sequence>
 			<xs:element type="itemType" name="item"/>
 		</xs:sequence>
@@ -45,7 +45,7 @@
 		<xs:sequence>
 			<xs:element type="upgradeItemType" name="upgradeItem"/>
 			<xs:element type="successItemsType" name="successItems"/>
-			<xs:element type="failure_itemsType" name="failure_items" minOccurs="0"/>
+			<xs:element type="failureItemsType" name="failureItems" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute type="xs:string" name="id" use="optional"/>
 		<xs:attribute type="xs:string" name="type" use="optional"/>

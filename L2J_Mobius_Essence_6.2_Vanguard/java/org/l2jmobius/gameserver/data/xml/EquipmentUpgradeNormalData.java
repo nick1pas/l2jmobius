@@ -131,7 +131,7 @@ public class EquipmentUpgradeNormalData implements IXmlReader
 				final StatSet successSet = new StatSet(parseAttributes(itemNode));
 				onSuccessItems.get().add(new ItemEnchantHolder(successSet.getInt("id"), successSet.getLong("count"), successSet.getInt("enchantLevel")));
 			}));
-			forEach(upgradeNode, "failure_items", failureItemNode -> forEach(failureItemNode, "item", itemNode ->
+			forEach(upgradeNode, "failureItems", failureItemNode -> forEach(failureItemNode, "item", itemNode ->
 			{
 				final StatSet successSet = new StatSet(parseAttributes(itemNode));
 				onFailureItems.get().add(new ItemEnchantHolder(successSet.getInt("id"), successSet.getLong("count"), successSet.getInt("enchantLevel")));
