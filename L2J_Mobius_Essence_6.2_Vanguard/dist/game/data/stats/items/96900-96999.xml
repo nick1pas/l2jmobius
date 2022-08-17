@@ -847,6 +847,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93448" min="3" max="3" chance="100" /> <!-- A-grade Weapon Coupon - Sealed x3 -->
+			<item id="93449" min="5" max="5" chance="100" /> <!-- A-grade Armor Coupon - Sealed x5 -->
+			<item id="96972" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 1+ - Sealed x1 -->
+			<item id="96969" min="1" max="1" chance="100" /> <!-- Equipment Pack: Talisman - Lv. 40+ - Sealed x1 -->
+			<item id="96970" min="1" max="1" chance="100" /> <!-- Jewel Box - Lv. 50+ - Sealed x1 -->
+			<item id="96971" min="1" max="1" chance="100" /> <!-- Agathion Pack - Lv. 60+ - Sealed x1 -->
+		</capsuled_items>
 	</item>
 	<item id="96969" name="Equipment Pack: Talisman - Lv. 40+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -857,6 +866,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="40" />
+		</cond>
+		<capsuled_items>
+			<item id="9589" min="1" max="1" chance="100" /> <!-- Talisman Bracelet Lv. 1 x1 -->
+			<item id="91745" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Aden - Sealed x1 -->
+			<item id="92018" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Eva - Sealed x1 -->
+			<item id="92403" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Speed - Sealed x1 -->
+			<item id="91061" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- +3 Talisman of Authority - Sealed x1 -->
+		</capsuled_items>
 	</item>
 	<item id="96970" name="Jewel Box - Lv. 50+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -867,6 +887,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="50" />
+		</cond>
+		<capsuled_items>
+			<item id="90311" min="1" max="1" chance="100" /> <!-- Brooch Lv. 1 x1 -->
+			<item id="92068" min="1" max="1" chance="100" /> <!-- Onyx Lv. 3 - Sealed x1 -->
+			<item id="92088" min="1" max="1" chance="100" /> <!-- Zircon Lv. 3 - Sealed x1 -->
+			<item id="92078" min="1" max="1" chance="100" /> <!-- Spinel Lv. 3 - Sealed x1 -->
+			<item id="92098" min="1" max="1" chance="100" /> <!-- Moonstone Lv. 3 - Sealed x1 -->
+		</capsuled_items>
 	</item>
 	<item id="96971" name="Agathion Pack - Lv. 60+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -877,6 +908,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="60" />
+		</cond>
+		<capsuled_items>
+			<item id="90888" min="1" max="1" chance="100" /> <!-- Agathion Bracelet Lv. 1 x1 -->
+			<item id="93128" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Ignis - Sealed x1 -->
+			<item id="93131" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Petram - Sealed x1 -->
+			<item id="93129" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Nebula - Sealed x1 -->
+			<item id="93130" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Agathion Procella - Sealed x1 -->
+		</capsuled_items>
 	</item>
 	<item id="96972" name="Growth Support Box - Lv. 1+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -887,6 +929,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3031" min="2000" max="2000" chance="100" /> <!-- Spirit Ore - Sealed x2000 -->
+			<item id="90907" min="100" max="100" chance="100" /> <!-- Soulshot Ticket - Sealed x100 -->
+			<item id="94269" min="10" max="10" chance="100" /> <!-- Scroll: Boost Attack - Sealed x10 -->
+			<item id="96973" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 50+ -->
+		</capsuled_items>
 	</item>
 	<item id="96973" name="Growth Support Box - Lv. 50+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -897,6 +946,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="50" />
+		</cond>
+		<capsuled_items>
+			<item id="3031" min="2000" max="2000" chance="100" /> <!-- Spirit Ore - Sealed x2000 -->
+			<item id="90907" min="100" max="100" chance="100" /> <!-- Soulshot Ticket - Sealed x100 -->
+			<item id="94269" min="20" max="20" chance="100" /> <!-- Scroll: Boost Attack - Sealed x20 -->
+			<item id="91712" min="20" max="20" chance="100" /> <!-- Sayha's Storm Lv. 3 - Sealed x20 -->
+			<item id="93068" min="1" max="1" chance="100" /> <!-- Red Lantern - 1st Place - Sealed x1 -->
+			<item id="96974" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 60+ -->
+		</capsuled_items>
 	</item>
 	<item id="96974" name="Growth Support Box - Lv. 60+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -907,6 +968,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="60" />
+		</cond>
+		<capsuled_items>
+			<item id="3031" min="5000" max="5000" chance="100" /> <!-- Spirit Ore - Sealed x5000 -->
+			<item id="90907" min="200" max="200" chance="100" /> <!-- Soulshot Ticket - Sealed x200 -->
+			<item id="94269" min="50" max="50" chance="100" /> <!-- Scroll: Boost Attack - Sealed x50 -->
+			<item id="91712" min="50" max="50" chance="100" /> <!-- Sayha's Storm Lv. 3 - Sealed x50 -->
+			<item id="93068" min="10" max="10" chance="100" /> <!-- Red Lantern - 1st Place - Sealed x10 -->
+			<item id="96975" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 70+ -->
+		</capsuled_items>
 	</item>
 	<item id="96975" name="Growth Support Box - Lv. 70+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -917,6 +990,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="70" />
+		</cond>
+		<capsuled_items>
+			<item id="3031" min="10000" max="10000" chance="100" /> <!-- Spirit Ore - Sealed x10000 -->
+			<item id="90907" min="500" max="500" chance="100" /> <!-- Soulshot Ticket - Sealed x500 -->
+			<item id="94269" min="50" max="50" chance="100" /> <!-- Scroll: Boost Attack - Sealed x50 -->
+			<item id="91712" min="50" max="50" chance="100" /> <!-- Sayha's Storm Lv. 3 - Sealed x50 -->
+			<item id="93068" min="40" max="40" chance="100" /> <!-- Red Lantern - 1st Place - Sealed x40 -->
+			<item id="96976" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 76+ -->
+		</capsuled_items>
 	</item>
 	<item id="96976" name="Growth Support Box - Lv. 76+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -927,6 +1012,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
+		<capsuled_items>
+			<item id="3031" min="10000" max="10000" chance="100" /> <!-- Spirit Ore - Sealed x10000 -->
+			<item id="90907" min="1000" max="1000" chance="100" /> <!-- Soulshot Ticket - Sealed x1000 -->
+			<item id="94269" min="100" max="100" chance="100" /> <!-- Scroll: Boost Attack - Sealed x100 -->
+			<item id="91712" min="100" max="100" chance="100" /> <!-- Sayha's Storm Lv. 3 - Sealed x100 -->
+			<item id="93068" min="80" max="80" chance="100" /> <!-- Red Lantern - 1st Place - Sealed x80 -->
+			<item id="96977" min="1" max="1" chance="100" /> <!-- Growth Support Box - Lv. 80+ -->
+		</capsuled_items>
 	</item>
 	<item id="96977" name="Growth Support Box - Lv. 80+" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to get more information about the contents. -->
@@ -937,6 +1034,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="40" />
+		</cond>
+		<capsuled_items>
+			<item id="3031" min="10000" max="10000" chance="100" /> <!-- Spirit Ore - Sealed x10000 -->
+			<item id="90907" min="1000" max="1000" chance="100" /> <!-- Soulshot Ticket - Sealed x1000 -->
+			<item id="94269" min="200" max="200" chance="100" /> <!-- Scroll: Boost Attack - Sealed x200 -->
+			<item id="91712" min="200" max="200" chance="100" /> <!-- Sayha's Storm Lv. 3 - Sealed x200 -->
+			<item id="93068" min="150" max="150" chance="100" /> <!-- Red Lantern - 1st Place - Sealed x150 -->
+		</capsuled_items>
+		
 	</item>
 	<item id="96978" name="Aden's Treasure Chest (Time-limited)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
