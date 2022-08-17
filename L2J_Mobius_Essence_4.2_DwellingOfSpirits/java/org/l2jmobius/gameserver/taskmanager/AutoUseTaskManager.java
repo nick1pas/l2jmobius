@@ -390,7 +390,7 @@ public class AutoUseTaskManager implements Runnable
 	private boolean canCastBuff(Player player, WorldObject target, Skill skill)
 	{
 		// Summon check.
-		if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
+		if ((skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER) || (skill.getTargetType() == TargetType.SUMMON))
 		{
 			if (!player.hasServitors())
 			{
