@@ -27,28 +27,33 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class NpcHtmlMessage extends AbstractHtmlPacket
 {
 	private final int _itemId;
+	private final int _size;
 	
 	public NpcHtmlMessage()
 	{
 		_itemId = 0;
+		_size = 0;
 	}
 	
 	public NpcHtmlMessage(int npcObjId)
 	{
 		super(npcObjId);
 		_itemId = 0;
+		_size = 0;
 	}
 	
 	public NpcHtmlMessage(String html)
 	{
 		super(html);
 		_itemId = 0;
+		_size = 0;
 	}
 	
 	public NpcHtmlMessage(int npcObjId, String html)
 	{
 		super(npcObjId, html);
 		_itemId = 0;
+		_size = 0;
 	}
 	
 	public NpcHtmlMessage(int npcObjId, int itemId)
@@ -59,6 +64,7 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 			throw new IllegalArgumentException();
 		}
 		_itemId = itemId;
+		_size = 0;
 	}
 	
 	public NpcHtmlMessage(int npcObjId, int itemId, String html)
@@ -69,6 +75,24 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 			throw new IllegalArgumentException();
 		}
 		_itemId = itemId;
+		_size = 0;
+	}
+	
+	/**
+	 * @param npcObjId
+	 * @param itemId
+	 * @param html
+	 * @param windowSize 0 - default, 1 - huge, 2 - max
+	 */
+	public NpcHtmlMessage(int npcObjId, int itemId, String html, int windowSize)
+	{
+		super(npcObjId, html);
+		if (itemId < 0)
+		{
+			throw new IllegalArgumentException();
+		}
+		_itemId = itemId;
+		_size = windowSize;
 	}
 	
 	@Override
@@ -78,7 +102,8 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 		packet.writeD(getNpcObjId());
 		packet.writeS(getHtml());
 		packet.writeD(_itemId);
-		packet.writeD(0); // TODO: Find me!
+		packet.writeD(0); // play sound - 0 = enabled, 1 = disabled
+		packet.writeC(_size);
 		return true;
 	}
 	
