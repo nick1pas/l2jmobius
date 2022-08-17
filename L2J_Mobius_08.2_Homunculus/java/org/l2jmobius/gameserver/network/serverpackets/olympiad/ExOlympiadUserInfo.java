@@ -29,10 +29,10 @@ public class ExOlympiadUserInfo implements IClientOutgoingPacket
 {
 	private final Player _player;
 	private Participant _par = null;
-	private int _curHp;
-	private int _maxHp;
-	private int _curCp;
-	private int _maxCp;
+	private final int _curHp;
+	private final int _maxHp;
+	private final int _curCp;
+	private final int _maxCp;
 	
 	public ExOlympiadUserInfo(Player player)
 	{

@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS `olympiad_fights` (
   `charTwoId` int(10) unsigned NOT NULL,
   `charOneClass` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `charTwoClass` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `charOneLevel` int(5) unsigned NOT NULL DEFAULT '0',
+  `charTwoLevel` int(5) unsigned NOT NULL DEFAULT '0',
   `winner` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `start` bigint(13) unsigned NOT NULL DEFAULT '0',
   `time` bigint(13) unsigned NOT NULL DEFAULT '0',

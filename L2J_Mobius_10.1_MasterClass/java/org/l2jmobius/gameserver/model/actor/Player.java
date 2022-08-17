@@ -258,6 +258,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.PlayerRefund;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadFightHistory;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -849,6 +850,8 @@ public class Player extends Playable
 	/** Map containing all custom skills of this player. */
 	private Map<Integer, Skill> _customSkills = null;
 	public final Set<Integer> _replacedSkills = ConcurrentHashMap.newKeySet(1);
+	
+	private final OlympiadFightHistory _olympiadFightHistory = new OlympiadFightHistory(this);
 	
 	private volatile int _actionMask;
 	
@@ -13619,6 +13622,11 @@ public class Player extends Playable
 	public boolean hasReplacedSkill(int skillId)
 	{
 		return _replacedSkills.contains(skillId);
+	}
+	
+	public OlympiadFightHistory getOlympiadFightHistory()
+	{
+		return _olympiadFightHistory;
 	}
 	
 	/**

@@ -22,12 +22,10 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class ExOlympiadMatchMakingResult implements IClientOutgoingPacket
 {
-	private final int _gameRuleType;
 	private final int _type;
 	
-	public ExOlympiadMatchMakingResult(int cGameRuleType, int type)
+	public ExOlympiadMatchMakingResult(int type)
 	{
-		_gameRuleType = 0;
 		_type = type;
 	}
 	
@@ -36,7 +34,7 @@ public class ExOlympiadMatchMakingResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_OLYMPIAD_INFO.writeId(packet);
 		packet.writeC(_type);
-		packet.writeD(_gameRuleType);
+		packet.writeD(0);
 		return true;
 	}
 }

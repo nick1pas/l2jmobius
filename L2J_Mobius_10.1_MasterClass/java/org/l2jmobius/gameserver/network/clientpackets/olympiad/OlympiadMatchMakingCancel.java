@@ -24,12 +24,10 @@ import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchMa
 
 public class OlympiadMatchMakingCancel implements IClientIncomingPacket
 {
-	private byte _gameRuleType;
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_gameRuleType = (byte) packet.readC();
+		packet.readC(); // gameRuleType
 		return true;
 	}
 	
@@ -42,6 +40,6 @@ public class OlympiadMatchMakingCancel implements IClientIncomingPacket
 			return;
 		}
 		
-		player.sendPacket(new ExOlympiadMatchMakingResult(_gameRuleType, 0));
+		player.sendPacket(new ExOlympiadMatchMakingResult(0));
 	}
 }

@@ -25,52 +25,60 @@ import org.l2jmobius.gameserver.model.actor.Player;
  */
 public class Participant
 {
-	private final int objectId;
-	private Player player;
-	private final String name;
-	private final int side;
-	private final int baseClass;
-	private boolean disconnected = false;
-	private boolean defaulted = false;
-	private final StatSet stats;
-	public String clanName;
-	public int clanId;
+	private final int _objectId;
+	private Player _player;
+	private final String _name;
+	private final int _side;
+	private final int _baseClass;
+	private boolean _disconnected = false;
+	private boolean _defaulted = false;
+	private final StatSet _stats;
+	private final int _level;
+	private final String _clanName;
+	private final int _clanId;
 	
 	public Participant(Player plr, int olympiadSide)
 	{
-		objectId = plr.getObjectId();
-		player = plr;
-		name = plr.getName();
-		side = olympiadSide;
-		baseClass = plr.getBaseClass();
-		stats = Olympiad.getNobleStats(objectId);
-		clanName = plr.getClan() != null ? plr.getClan().getName() : "";
-		clanId = plr.getClanId();
+		_objectId = plr.getObjectId();
+		_player = plr;
+		_name = plr.getName();
+		_side = olympiadSide;
+		_baseClass = plr.getBaseClass();
+		_stats = Olympiad.getNobleStats(_objectId);
+		_clanName = plr.getClan() != null ? plr.getClan().getName() : "";
+		_clanId = plr.getClanId();
+		_level = plr.getLevel();
 	}
 	
 	public Participant(int objId, int olympiadSide)
 	{
-		objectId = objId;
-		player = null;
-		name = "-";
-		side = olympiadSide;
-		baseClass = 0;
-		stats = null;
-		clanName = "";
-		clanId = 0;
+		_objectId = objId;
+		_player = null;
+		_name = "-";
+		_side = olympiadSide;
+		_baseClass = 0;
+		_stats = null;
+		_clanName = "";
+		_clanId = 0;
+		_level = 0;
+	}
+	
+	public int getLevel()
+	{
+		return _level;
 	}
 	
 	/**
-	 * Updates the reference to {@link #player}, if it's null or appears off-line.
+	 * Updates the reference to {@link #_player}, if it's null or appears off-line.
 	 * @return {@code true} if after the update the player isn't null, {@code false} otherwise.
 	 */
 	public boolean updatePlayer()
 	{
-		if ((player == null) || !player.isOnline())
+		if ((_player == null) || !_player.isOnline())
 		{
-			player = World.getInstance().getPlayer(getObjectId());
+			_player = World.getInstance().getPlayer(getObjectId());
 		}
-		return (player != null);
+		return (_player != null);
 	}
 	
 	/**
@@ -79,7 +87,7 @@ public class Participant
 	 */
 	public void updateStat(String statName, int increment)
 	{
-		stats.set(statName, Math.max(stats.getInt(statName) + increment, 0));
+		_stats.set(statName, Math.max(_stats.getInt(statName) + increment, 0));
 	}
 	
 	/**
@@ -87,7 +95,7 @@ public class Participant
 	 */
 	public String getName()
 	{
-		return name;
+		return _name;
 	}
 	
 	/**
@@ -95,7 +103,7 @@ public class Participant
 	 */
 	public String getClanName()
 	{
-		return clanName;
+		return _clanName;
 	}
 	
 	/**
@@ -103,7 +111,7 @@ public class Participant
 	 */
 	public int getClanId()
 	{
-		return clanId;
+		return _clanId;
 	}
 	
 	/**
@@ -111,7 +119,7 @@ public class Participant
 	 */
 	public Player getPlayer()
 	{
-		return player;
+		return _player;
 	}
 	
 	/**
@@ -119,7 +127,7 @@ public class Participant
 	 */
 	public int getObjectId()
 	{
-		return objectId;
+		return _objectId;
 	}
 	
 	/**
@@ -127,7 +135,7 @@ public class Participant
 	 */
 	public StatSet getStats()
 	{
-		return stats;
+		return _stats;
 	}
 	
 	/**
@@ -135,7 +143,7 @@ public class Participant
 	 */
 	public void setPlayer(Player noble)
 	{
-		player = noble;
+		_player = noble;
 	}
 	
 	/**
@@ -143,7 +151,7 @@ public class Participant
 	 */
 	public int getSide()
 	{
-		return side;
+		return _side;
 	}
 	
 	/**
@@ -151,7 +159,7 @@ public class Participant
 	 */
 	public int getBaseClass()
 	{
-		return baseClass;
+		return _baseClass;
 	}
 	
 	/**
@@ -159,7 +167,7 @@ public class Participant
 	 */
 	public boolean isDisconnected()
 	{
-		return disconnected;
+		return _disconnected;
 	}
 	
 	/**
@@ -167,7 +175,7 @@ public class Participant
 	 */
 	public void setDisconnected(boolean value)
 	{
-		disconnected = value;
+		_disconnected = value;
 	}
 	
 	/**
@@ -175,7 +183,7 @@ public class Participant
 	 */
 	public boolean isDefaulted()
 	{
-		return defaulted;
+		return _defaulted;
 	}
 	
 	/**
@@ -183,6 +191,6 @@ public class Participant
 	 */
 	public void setDefaulted(boolean value)
 	{
-		defaulted = value;
+		_defaulted = value;
 	}
 }

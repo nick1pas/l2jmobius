@@ -1192,17 +1192,24 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	
 	protected void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
+		final int winnerFormat1 = one.getPlayer().getOlympiadFightHistory().getWinnerFormat(one, two, winner);
+		one.getPlayer().getOlympiadFightHistory().addOlympiadFight(two, winnerFormat1);
+		final int winnerFormat2 = two.getPlayer().getOlympiadFightHistory().getWinnerFormat(one, two, winner);
+		two.getPlayer().getOlympiadFightHistory().addOlympiadFight(one, winnerFormat2);
+		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, charOneLevel, charTwoLevel, winner, start, time, classed) values(?,?,?,?,?,?,?,?,?,?)"))
 		{
 			statement.setInt(1, one.getObjectId());
 			statement.setInt(2, two.getObjectId());
 			statement.setInt(3, one.getBaseClass());
 			statement.setInt(4, two.getBaseClass());
-			statement.setInt(5, winner);
-			statement.setLong(6, startTime);
-			statement.setLong(7, fightTime);
-			statement.setInt(8, (type == CompetitionType.CLASSED ? 1 : 0));
+			statement.setInt(5, one.getLevel());
+			statement.setInt(6, two.getLevel());
+			statement.setInt(7, winner);
+			statement.setLong(8, startTime != 0 ? startTime : System.currentTimeMillis());
+			statement.setLong(9, fightTime);
+			statement.setInt(10, (type == CompetitionType.CLASSED ? 1 : 0));
 			statement.execute();
 		}
 		catch (SQLException e)

@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.network.clientpackets.olympiad;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.OlympiadMode;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x12
@@ -45,6 +47,10 @@ public class RequestOlympiadObserverEnd implements IClientIncomingPacket
 		if (player.inObserverMode())
 		{
 			player.leaveOlympiadObserverMode();
+		}
+		else
+		{
+			player.sendPacket(new ExOlympiadMode(OlympiadMode.NONE));
 		}
 	}
 }

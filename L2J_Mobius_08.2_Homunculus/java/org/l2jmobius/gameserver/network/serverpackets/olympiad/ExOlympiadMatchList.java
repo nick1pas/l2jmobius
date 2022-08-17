@@ -82,7 +82,7 @@ public class ExOlympiadMatchList implements IClientOutgoingPacket
 					packet.writeD(0);
 				}
 				
-				packet.writeD(curGame.isRunning() ? 2 : 1); // (1 = Standby, 2 = Playing)
+				packet.writeD(curGame.isBattleStarted() || curGame.isBattleFinished() ? 1 : 2); // (1 = Standby, 2 = Playing)
 				packet.writeS(game.getPlayerNames()[0]); // Player 1 Name
 				packet.writeS(game.getPlayerNames()[1]); // Player 2 Name
 			}

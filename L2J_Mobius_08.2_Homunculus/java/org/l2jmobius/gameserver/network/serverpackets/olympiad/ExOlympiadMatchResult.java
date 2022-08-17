@@ -68,26 +68,32 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 		for (OlympiadInfo info : _winnerList)
 		{
 			packet.writeS(info.getName());
-			packet.writeS(info.getClanName());
-			packet.writeD(info.getClanId());
+			
+			// New UI doesn't support clan name/id
+			packet.writeH(0); // clan name
+			packet.writeD(0); // clan id
+			
 			packet.writeD(info.getClassId());
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
-			packet.writeD(0); // Helios
+			packet.writeD(1); // Helios
 		}
 		packet.writeD(_loseTeam);
 		packet.writeD(_loserList.size());
 		for (OlympiadInfo info : _loserList)
 		{
 			packet.writeS(info.getName());
-			packet.writeS(info.getClanName());
-			packet.writeD(info.getClanId());
+			
+			// New UI doesn't support clan name/id
+			packet.writeH(0); // clan name
+			packet.writeD(0); // clan id
+			
 			packet.writeD(info.getClassId());
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
-			packet.writeD(0); // Helios
+			packet.writeD(1); // Helios
 		}
 		packet.writeC(_round1winner); // Round 1 outcome
 		packet.writeC(_round2winner); // Round 2 outcome

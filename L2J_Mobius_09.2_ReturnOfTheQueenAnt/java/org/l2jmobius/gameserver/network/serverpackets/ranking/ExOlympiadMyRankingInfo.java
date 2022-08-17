@@ -20,9 +20,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
@@ -31,12 +33,13 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadFight;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author NviX
+ * @author NviX, dontknowdontcare
  */
 public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 {
@@ -116,7 +119,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		}
 		catch (SQLException e)
 		{
-			PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
+			PacketLogger.warning("Olympiad my ranking: Couldn't load data: " + e.getMessage());
 		}
 		int heroCount = 0;
 		int legendCount = 0;
@@ -139,7 +142,31 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		packet.writeD(previousPoints); // Points on previous cycle
 		packet.writeD(heroCount); // Hero counts
 		packet.writeD(legendCount); // Legend counts
-		packet.writeD(0); // change to 1 causes shows nothing
+		
+		List<OlympiadFight> fightList = _player.getOlympiadFightHistory().getFights();
+		if (fightList == null)
+		{
+			fightList = new ArrayList<>();
+		}
+		
+		packet.writeD(fightList.size());
+		int count = 1;
+		for (OlympiadFight fight : fightList)
+		{
+			if (count > 3)
+			{
+				break;
+			}
+			
+			packet.writeH(fight.getOpponentName().length() + 1);
+			packet.writeS(fight.getOpponentName());
+			packet.writeC(fight.getWinner());
+			packet.writeD(fight.getOpponentLevel());
+			packet.writeD(fight.getOpponentClassId());
+			
+			count++;
+		}
+		
 		return true;
 	}
 }

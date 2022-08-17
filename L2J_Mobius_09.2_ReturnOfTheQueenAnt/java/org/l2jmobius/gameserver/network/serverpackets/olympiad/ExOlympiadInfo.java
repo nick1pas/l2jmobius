@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class ExOlympiadInfo implements IClientOutgoingPacket
 {
-	private static int _open;
+	private final int _open;
 	
 	public ExOlympiadInfo(int open)
 	{
