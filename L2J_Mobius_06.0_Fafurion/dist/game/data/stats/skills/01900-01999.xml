@@ -371,11 +371,11 @@
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Undying Will -->
 				<attackerType>Creature</attackerType>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
+				<hpPercent>30</hpPercent>
 				<skillId>1918</skillId> <!-- Undying Will -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -400,7 +400,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>20</amount>
+				<amount>30</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>

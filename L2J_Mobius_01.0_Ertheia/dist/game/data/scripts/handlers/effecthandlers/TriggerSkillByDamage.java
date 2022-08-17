@@ -92,7 +92,7 @@ public class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
-		if ((_hpPercent < 100) && (event.getAttacker().getCurrentHpPercent() > _hpPercent))
+		if ((_hpPercent < 100) && (event.getTarget().getCurrentHpPercent() > _hpPercent))
 		{
 			return;
 		}
@@ -102,10 +102,11 @@ public class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
+		Skill triggerSkill = _skill.getSkill();
 		WorldObject target = null;
 		try
 		{
-			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getTarget(), event.getAttacker(), _skill.getSkill(), false, false, false);
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getTarget(), event.getAttacker(), triggerSkill, false, false, false);
 		}
 		catch (Exception e)
 		{
@@ -116,25 +117,16 @@ public class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
-		final Skill triggerSkill;
-		if (_skillLevelScaleTo <= 0)
+		if (_skillLevelScaleTo > 0)
 		{
-			triggerSkill = _skill.getSkill();
-		}
-		else
-		{
-			final BuffInfo buffInfo = ((Creature) target).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			final BuffInfo buffInfo = ((Creature) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
 			if (buffInfo != null)
 			{
-				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
-			}
-			else
-			{
-				triggerSkill = _skill.getSkill();
+				triggerSkill = SkillData.getInstance().getSkill(triggerSkill.getId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
 			}
 		}
 		
-		SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
+		SkillCaster.triggerCast(event.getTarget(), (Creature) target, triggerSkill);
 	}
 	
 	@Override
