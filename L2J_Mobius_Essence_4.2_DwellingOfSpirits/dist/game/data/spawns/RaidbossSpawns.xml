@@ -1,5 +1,4 @@
 ﻿<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/spawns.xsd">
-	<!-- Author: Manax, Kulrat -->
 	<spawn name="17_21">
 		<group>
 			<npc id="25909" x="-88881" y="105145" z="-3342" heading="53988" dbSave="true" dbName="Carcs" respawnTime="24hour" respawnRandom="12hour" /> <!-- Carcs - Elite -->
@@ -156,13 +155,17 @@
 			<npc id="25431" x="144117" y="-24105" z="-2080" heading="16674" dbSave="true" dbName="Flamestone Golem" respawnTime="24hour" respawnRandom="12hour" /> <!-- Flamestone Golem - Elite -->
 		</group>
 	</spawn>
-
-
 	<spawn name="24_17">
 		<group>
 			<npc id="25749" x="133116" y="6719" z="-4349" heading="8473" dbSave="true" dbName="Tayga Feron King" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tayga Feron King - Elite -->
 			<npc id="25750" x="138787" y="3154" z="-4521" heading="885" dbSave="true" dbName="Tayga Marga Shaman" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tayga Marga Shaman - Elite -->
 			<npc id="25751" x="135224" y="11894" z="-4150" heading="46378" dbSave="true" dbName="Tayga Septon Champion" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tayga Septon Champion - Elite -->
+		</group>
+	</spawn>
+	<spawn name="GrandBosses">
+		<group name="Epic">
+			<npc id="25283" x="185059" y="-9610" z="-5488" heading="15640" dbSave="true" dbName="Lilith" respawnPattern="0 19 * * 1 | 0 19 * * 4" />
+			<npc id="25286" x="-6675" y="18505" z="-5488" heading="16550" dbSave="true" dbName="Anakim" respawnPattern="0 19 * * 2 | 0 19 * * 5" />
 		</group>
 	</spawn>
 </list>
