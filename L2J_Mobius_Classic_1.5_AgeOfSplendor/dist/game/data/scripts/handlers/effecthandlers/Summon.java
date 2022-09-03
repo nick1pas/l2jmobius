@@ -94,14 +94,14 @@ public class Summon extends AbstractEffect
 		summon.setItemConsume(_consumeItem);
 		summon.setItemConsumeInterval(consumeItemInterval);
 		
-		if (summon.getLevel() >= ExperienceData.getInstance().getMaxLevel())
+		final int maxPetLevel = ExperienceData.getInstance().getMaxPetLevel();
+		if (summon.getLevel() >= maxPetLevel)
 		{
-			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1));
-			LOGGER.warning(getClass().getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxLevel() + ". Please rectify.");
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(maxPetLevel - 1));
 		}
 		else
 		{
-			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxPetLevel()));
+			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % maxPetLevel));
 		}
 		
 		// Summons must have their master buffs upon spawn.
