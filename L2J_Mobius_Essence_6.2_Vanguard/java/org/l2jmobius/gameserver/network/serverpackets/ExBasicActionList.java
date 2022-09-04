@@ -140,10 +140,12 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		1144, 1145, 1146, 1147,
 		1148, 1149, 1150, 1151,
 		1152, 1153, 1154, 1155,
+		1168, 1169, 1170, 1171,
+		1172, 1173,
 		5000, 5001, 5002, 5003,
 		5004, 5005, 5006, 5007,
 		5008, 5009, 5010, 5011,
-		5012, 5013, 5014, 5015
+		5012, 5013, 5014, 5015,
 	};
 	//@formatter:on
 	public static final ExBasicActionList STATIC_PACKET = new ExBasicActionList(DEFAULT_ACTION_LIST);

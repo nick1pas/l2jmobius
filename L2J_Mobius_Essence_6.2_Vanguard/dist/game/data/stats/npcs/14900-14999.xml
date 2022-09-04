@@ -775,6 +775,11 @@
 		</skillList>
 	</npc>
 	<npc id="14918" level="85" type="Pet" name="Cat Emperor">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" />
+			<skill name="Buff1" id="47902" level="1" />
+			<skill name="PhysicalSpecial1" id="47903" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -795,8 +800,19 @@
 			<radius normal="12" />
 			<height normal="15.9" />
 		</collision>
+		<skillList>
+			<skill id="47902" level="1" /> <!-- Emperor's Blessing -->
+			<skill id="47903" level="1" /> <!-- Outcry -->
+			<skill id="4025" level="12" /> <!-- Master Recharge -->
+			<skill id="47923" level="1" /> <!-- Cat Emperor Lv1 (Basic Effect) -->
+		</skillList>
 	</npc>
 	<npc id="14919" level="85" type="Pet" name="Unicorn Guard">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" />
+			<skill name="Buff1" id="47905" level="1" />
+			<skill name="PhysicalSpecial1" id="47906" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -817,8 +833,19 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
+		<skillList>
+			<skill id="47905" level="1" /> <!-- Guard's Blessing -->
+			<skill id="47906" level="1" /> <!-- Trample -->
+			<skill id="4025" level="12" /> <!-- Master Recharge -->
+			<skill id="47924" level="1" /> <!-- Unicorn Guard Lv1 (Basic Effect) -->
+		</skillList>
 	</npc>
 	<npc id="14920" level="85" type="Pet" name="Lord Raise">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="12" />
+			<skill name="Buff1" id="47908" level="1" />
+			<skill name="PhysicalSpecial1" id="47909" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -839,5 +866,11 @@
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<skillList>
+			<skill id="47908" level="1" /> <!-- Lord's Blessing -->
+			<skill id="47909" level="1" /> <!-- Specter's Dance -->
+			<skill id="4025" level="12" /> <!-- Master Recharge -->
+			<skill id="47925" level="1" /> <!-- Lord Raise Lv1 (Basic Effect) -->
+		</skillList>
 	</npc>
 </list>
