@@ -3,10 +3,10 @@ L2J-Mobius Master Class Chapter 2
 JDK: https://www.mediafire.com/file/kb2nfx54wojys4f/bellsoft-jdk17.0.2%252B9-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/ra86nufa4oo2w9s/L2J_Mobius_10.2_MasterClass_Geodata.zip
+Geodata: https://www.mediafire.com/file/ai74r89czoj6rye/L2J_Mobius_10.2_MasterClass_Geodata.zip
 
-Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1pXp5jfSyd-tm5hxVyxO8vvOrCos5QJH1&export=download
-System: https://mega.nz/file/4oNhyYpC#vvg45gwevALzoPmfsZY-nnUFLYvLn5UXEo6XegENiLA
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1-8CWkwP7ZZlcmiykFdL_B9WvdSYXaKvI&export=download
+System: https://mega.nz/file/dplgmYRa#vvg45gwevALzoPmfsZY-nnUFLYvLn5UXEo6XegENiLA
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
