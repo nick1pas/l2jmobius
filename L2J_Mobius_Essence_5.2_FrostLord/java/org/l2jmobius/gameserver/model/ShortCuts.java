@@ -30,9 +30,6 @@ import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
-import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class ShortCuts implements IRestorable
@@ -119,21 +116,6 @@ public class ShortCuts implements IRestorable
 			return;
 		}
 		deleteShortCutFromDb(old);
-		if (old.getType() == ShortcutType.ITEM)
-		{
-			final Item item = _owner.getInventory().getItemByObjectId(old.getId());
-			if ((item != null) && (item.getItemType() == EtcItemType.SOULSHOT) && _owner.removeAutoSoulShot(item.getId()))
-			{
-				_owner.sendPacket(new ExAutoSoulShot(item.getId(), false, 0));
-			}
-		}
-		
-		_owner.sendPacket(new ShortCutInit(_owner));
-		
-		for (int shotId : _owner.getAutoSoulShot())
-		{
-			_owner.sendPacket(new ExAutoSoulShot(shotId, true, 0));
-		}
 	}
 	
 	public synchronized void deleteShortCutByObjectId(int objectId)
