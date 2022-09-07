@@ -1865,7 +1865,7 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			if ((xValue == 0) && (yValue == 0))
 			{
-				LOGGER.log(Level.SEVERE, "addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
+				LOGGER.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
 				return null;
 			}
 			
@@ -1904,11 +1904,8 @@ public abstract class AbstractScript extends ManagedScript
 				summoner.addSummonedNpc(npc);
 			}
 			
-			// Make sure info is broadcasted in instances
-			if (npc.getInstanceId() > 0)
-			{
-				npc.broadcastInfo();
-			}
+			// Fixes invisible NPCs spawned by script.
+			npc.broadcastInfo();
 			
 			return npc;
 		}

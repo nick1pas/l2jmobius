@@ -2175,7 +2175,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	{
 		try
 		{
-			final Spawn spawn = new Spawn(npcId);
 			if ((xValue == 0) && (yValue == 0))
 			{
 				LOGGER.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
@@ -2200,6 +2199,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 				y += offset;
 			}
 			
+			final Spawn spawn = new Spawn(npcId);
 			spawn.setInstanceId(instance);
 			spawn.setHeading(heading);
 			spawn.setXYZ(x, y, zValue);
@@ -2215,6 +2215,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			{
 				summoner.addSummonedNpc(npc);
 			}
+			
+			// Fixes invisible NPCs spawned by script.
+			npc.broadcastInfo();
+			
 			return npc;
 		}
 		catch (Exception e)
