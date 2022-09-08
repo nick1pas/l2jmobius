@@ -346,7 +346,6 @@ public class Config
 	public static int RIFT_ENTER_COST_COMMANDER;
 	public static int RIFT_ENTER_COST_HERO;
 	public static float RIFT_BOSS_ROOM_TIME_MUTIPLY;
-	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
@@ -1541,7 +1540,6 @@ public class Config
 		SHOW_NPC_AGGRESSION = generalConfig.getBoolean("ShowNpcAggression", false);
 		SHOW_NPC_CLAN_CREST = generalConfig.getBoolean("ShowNpcClanCrest", false);
 		ATTACKABLES_CAMP_PLAYER_CORPSES = generalConfig.getBoolean("AttackablesCampPlayerCorpses", false);
-		FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
 		FORCE_COMPLETE_STATUS_UPDATE = generalConfig.getBoolean("ForceCompletePlayerStatusUpdate", true);
 		CHAR_DATA_STORE_INTERVAL = generalConfig.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
 		UPDATE_ITEMS_ON_CHAR_STORE = generalConfig.getBoolean("UpdateItemsOnCharStore", false);

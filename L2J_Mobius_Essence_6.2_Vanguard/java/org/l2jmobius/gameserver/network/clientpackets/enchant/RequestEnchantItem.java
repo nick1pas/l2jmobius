@@ -411,7 +411,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								player.sendPacket(sm);
 							}
 							
-							if (!Config.FORCE_INVENTORY_UPDATE && (crystals != null))
+							if (crystals != null)
 							{
 								iu.addItem(crystals);
 							}

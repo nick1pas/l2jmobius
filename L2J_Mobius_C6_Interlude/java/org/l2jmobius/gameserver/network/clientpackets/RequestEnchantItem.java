@@ -715,25 +715,17 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					sm.addNumber(count);
 					player.sendPacket(sm);
 					
-					if (!Config.FORCE_INVENTORY_UPDATE)
+					final InventoryUpdate iu = new InventoryUpdate();
+					if (destroyItem.getCount() == 0)
 					{
-						final InventoryUpdate iu = new InventoryUpdate();
-						if (destroyItem.getCount() == 0)
-						{
-							iu.addRemovedItem(destroyItem);
-						}
-						else
-						{
-							iu.addModifiedItem(destroyItem);
-						}
-						iu.addItem(crystals);
-						
-						player.sendPacket(iu);
+						iu.addRemovedItem(destroyItem);
 					}
 					else
 					{
-						player.sendPacket(new ItemList(player, true));
+						iu.addModifiedItem(destroyItem);
 					}
+					iu.addItem(crystals);
+					player.sendPacket(iu);
 					
 					final StatusUpdate su = new StatusUpdate(player.getObjectId());
 					su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());

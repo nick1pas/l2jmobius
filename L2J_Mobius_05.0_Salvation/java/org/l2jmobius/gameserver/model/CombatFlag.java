@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -84,16 +83,10 @@ public class CombatFlag
 		_player.sendPacket(sm);
 		
 		// Refresh inventory
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItem(_item);
-			_player.sendInventoryUpdate(iu);
-		}
-		else
-		{
-			_player.sendItemList();
-		}
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addItem(_item);
+		_player.sendInventoryUpdate(iu);
+		
 		// Refresh player stats
 		_player.broadcastUserInfo();
 		_player.setCombatFlagEquipped(true);

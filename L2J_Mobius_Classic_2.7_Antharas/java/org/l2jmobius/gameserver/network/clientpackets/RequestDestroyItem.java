@@ -207,22 +207,15 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!Config.FORCE_INVENTORY_UPDATE)
+		final InventoryUpdate iu = new InventoryUpdate();
+		if (removedItem.getCount() == 0)
 		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			if (removedItem.getCount() == 0)
-			{
-				iu.addRemovedItem(removedItem);
-			}
-			else
-			{
-				iu.addModifiedItem(removedItem);
-			}
-			player.sendInventoryUpdate(iu);
+			iu.addRemovedItem(removedItem);
 		}
 		else
 		{
-			player.sendItemList();
+			iu.addModifiedItem(removedItem);
 		}
+		player.sendInventoryUpdate(iu);
 	}
 }

@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -24,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TerritoryWard
@@ -153,16 +151,9 @@ public class TerritoryWard
 		_player.sendPacket(sm);
 		
 		// Refresh inventory
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addItem(_item);
-			_player.sendPacket(iu);
-		}
-		else
-		{
-			_player.sendPacket(new ItemList(_player, false));
-		}
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addItem(_item);
+		_player.sendPacket(iu);
 		
 		// Refresh player stats
 		_player.broadcastUserInfo();

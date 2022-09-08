@@ -21,7 +21,6 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skill.SkillType;
 
@@ -37,14 +36,8 @@ public class ZakenPlayer implements ISkillHandler
 	{
 		try
 		{
-			for (WorldObject target1 : targets)
+			for (Creature target : targets)
 			{
-				if (!(target1 instanceof Creature))
-				{
-					continue;
-				}
-				
-				final Creature target = (Creature) target1;
 				switch (Rnd.get(14) + 1)
 				{
 					case 1:

@@ -283,7 +283,7 @@ public class ExRequestMultiEnchantItemList implements IClientIncomingPacket
 								_failureReward.put(_failureReward.size() + 1, itemHolder);
 							}
 							
-							if (!Config.FORCE_INVENTORY_UPDATE && (crystals != null))
+							if (crystals != null)
 							{
 								iu.addItem(crystals);
 							}

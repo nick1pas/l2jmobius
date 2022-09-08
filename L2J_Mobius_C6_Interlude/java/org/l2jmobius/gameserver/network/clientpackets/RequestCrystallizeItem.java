@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
@@ -29,7 +28,6 @@ import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
@@ -193,33 +191,25 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		player.sendPacket(sm);
 		
 		// send inventory update
-		if (!Config.FORCE_INVENTORY_UPDATE)
+		final InventoryUpdate iu = new InventoryUpdate();
+		if (removedItem.getCount() == 0)
 		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			if (removedItem.getCount() == 0)
-			{
-				iu.addRemovedItem(removedItem);
-			}
-			else
-			{
-				iu.addModifiedItem(removedItem);
-			}
-			
-			if (createditem.getCount() != crystalAmount)
-			{
-				iu.addModifiedItem(createditem);
-			}
-			else
-			{
-				iu.addNewItem(createditem);
-			}
-			
-			player.sendPacket(iu);
+			iu.addRemovedItem(removedItem);
 		}
 		else
 		{
-			player.sendPacket(new ItemList(player, false));
+			iu.addModifiedItem(removedItem);
 		}
+		
+		if (createditem.getCount() != crystalAmount)
+		{
+			iu.addModifiedItem(createditem);
+		}
+		else
+		{
+			iu.addNewItem(createditem);
+		}
+		player.sendPacket(iu);
 		
 		// status & user info
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());

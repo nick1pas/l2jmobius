@@ -475,7 +475,6 @@ public class Config
 	public static boolean ORDER_QUEST_LIST_BY_QUESTID;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
 	public static boolean MULTIPLE_ITEM_DROP;
-	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
 	public static boolean CHECK_HTML_ENCODING;
 	public static boolean CACHE_CHAR_NAMES;
@@ -1988,7 +1987,6 @@ public class Config
 			ORDER_QUEST_LIST_BY_QUESTID = generalConfig.getBoolean("OrderQuestListByQuestId", true);
 			AUTODELETE_INVALID_QUEST_DATA = generalConfig.getBoolean("AutoDeleteInvalidQuestData", false);
 			MULTIPLE_ITEM_DROP = generalConfig.getBoolean("MultipleItemDrop", true);
-			FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = generalConfig.getBoolean("LazyCache", true);
 			CHECK_HTML_ENCODING = generalConfig.getBoolean("CheckHtmlEncoding", true);
 			CACHE_CHAR_NAMES = generalConfig.getBoolean("CacheCharNames", true);

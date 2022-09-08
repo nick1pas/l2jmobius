@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -165,7 +164,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
@@ -184,16 +183,13 @@ public class RequestPackageSend implements IClientIncomingPacket
 				continue;
 			}
 			
-			if (playerIU != null)
+			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
-				if ((oldItem.getCount() > 0) && (oldItem != newItem))
-				{
-					playerIU.addModifiedItem(oldItem);
-				}
-				else
-				{
-					playerIU.addRemovedItem(oldItem);
-				}
+				playerIU.addModifiedItem(oldItem);
+			}
+			else
+			{
+				playerIU.addRemovedItem(oldItem);
 			}
 			
 			// Remove item objects from the world.
@@ -204,7 +200,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		warehouse.deleteMe();
 		
 		// Send updated item list to the player
-		player.sendPacket(playerIU != null ? playerIU : new ItemList(player, false));
+		player.sendPacket(playerIU);
 		
 		// Update current load status on player
 		final StatusUpdate su = new StatusUpdate(player);

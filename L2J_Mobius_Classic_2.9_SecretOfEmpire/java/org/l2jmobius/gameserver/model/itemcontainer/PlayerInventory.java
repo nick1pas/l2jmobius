@@ -441,16 +441,9 @@ public class PlayerInventory extends Inventory
 			if (actor != null)
 			{
 				// Send inventory update packet
-				if (!Config.FORCE_INVENTORY_UPDATE)
-				{
-					final InventoryUpdate playerIU = new InventoryUpdate();
-					playerIU.addItem(addedItem);
-					actor.sendInventoryUpdate(playerIU);
-				}
-				else
-				{
-					actor.sendItemList();
-				}
+				final InventoryUpdate playerIU = new InventoryUpdate();
+				playerIU.addItem(addedItem);
+				actor.sendInventoryUpdate(playerIU);
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, addedItem), actor, addedItem.getTemplate());
@@ -515,23 +508,16 @@ public class PlayerInventory extends Inventory
 				// Send inventory update packet
 				if (update)
 				{
-					if (!Config.FORCE_INVENTORY_UPDATE)
+					final InventoryUpdate playerIU = new InventoryUpdate();
+					if (item.isStackable() && (item.getCount() > count))
 					{
-						final InventoryUpdate playerIU = new InventoryUpdate();
-						if (item.isStackable() && (item.getCount() > count))
-						{
-							playerIU.addModifiedItem(item);
-						}
-						else
-						{
-							playerIU.addNewItem(item);
-						}
-						actor.sendInventoryUpdate(playerIU);
+						playerIU.addModifiedItem(item);
 					}
 					else
 					{
-						actor.sendItemList();
+						playerIU.addNewItem(item);
 					}
+					actor.sendInventoryUpdate(playerIU);
 				}
 				
 				// Notify to scripts
@@ -1216,14 +1202,7 @@ public class PlayerInventory extends Inventory
 		}
 		finally
 		{
-			if (Config.FORCE_INVENTORY_UPDATE)
-			{
-				_owner.sendItemList();
-			}
-			else
-			{
-				_owner.sendInventoryUpdate(iu);
-			}
+			_owner.sendInventoryUpdate(iu);
 		}
 	}
 	

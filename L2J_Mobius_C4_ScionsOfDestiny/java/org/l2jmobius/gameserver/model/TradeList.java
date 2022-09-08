@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -760,31 +759,16 @@ public class TradeList
 		else
 		{
 			// Prepare inventory update packet
-			final InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-			final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate ownerIU = new InventoryUpdate();
+			final InventoryUpdate partnerIU = new InventoryUpdate();
 			
 			// Transfer items
 			partnerList.TransferItems(_owner, partnerIU, ownerIU);
 			TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 			
 			// Send inventory update packet
-			if (ownerIU != null)
-			{
-				_owner.sendPacket(ownerIU);
-			}
-			else
-			{
-				_owner.sendPacket(new ItemList(_owner, false));
-			}
-			
-			if (partnerIU != null)
-			{
-				_partner.sendPacket(partnerIU);
-			}
-			else
-			{
-				_partner.sendPacket(new ItemList(_partner, false));
-			}
+			_owner.sendPacket(ownerIU);
+			_partner.sendPacket(partnerIU);
 			
 			// Update current load as well
 			StatusUpdate playerSU = new StatusUpdate(_owner.getObjectId());

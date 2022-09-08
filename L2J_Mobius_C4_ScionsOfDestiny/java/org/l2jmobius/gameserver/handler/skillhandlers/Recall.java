@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skill.SkillType;
@@ -71,14 +70,8 @@ public class Recall implements ISkillHandler
 				}
 			}
 			
-			for (WorldObject target1 : targets)
+			for (Creature target : targets)
 			{
-				if (!(target1 instanceof Creature))
-				{
-					continue;
-				}
-				
-				final Creature target = (Creature) target1;
 				if (target instanceof Player)
 				{
 					final Player targetChar = (Player) target;

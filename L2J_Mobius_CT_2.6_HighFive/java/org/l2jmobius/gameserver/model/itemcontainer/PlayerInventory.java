@@ -482,23 +482,16 @@ public class PlayerInventory extends Inventory
 			if (actor != null)
 			{
 				// Send inventory update packet
-				if (!Config.FORCE_INVENTORY_UPDATE)
+				final InventoryUpdate playerIU = new InventoryUpdate();
+				if (item.isStackable() && (item.getCount() > count))
 				{
-					final InventoryUpdate playerIU = new InventoryUpdate();
-					if (item.isStackable() && (item.getCount() > count))
-					{
-						playerIU.addModifiedItem(item);
-					}
-					else
-					{
-						playerIU.addNewItem(item);
-					}
-					actor.sendPacket(playerIU);
+					playerIU.addModifiedItem(item);
 				}
 				else
 				{
-					actor.sendPacket(new ItemList(actor, false));
+					playerIU.addNewItem(item);
 				}
+				actor.sendPacket(playerIU);
 				
 				// Update current load as well
 				final StatusUpdate su = new StatusUpdate(actor);

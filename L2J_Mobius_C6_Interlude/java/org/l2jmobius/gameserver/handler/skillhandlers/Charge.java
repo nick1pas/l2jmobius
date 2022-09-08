@@ -20,7 +20,6 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.Effect;
@@ -36,13 +35,13 @@ public class Charge implements ISkillHandler
 	@Override
 	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		for (WorldObject target1 : targets)
+		for (Creature target : targets)
 		{
-			if (!(target1 instanceof Player))
+			if (!(target instanceof Player))
 			{
 				continue;
 			}
-			final Player target = (Player) target1;
+			
 			skill.applyEffects(creature, target, false, false, false);
 		}
 		

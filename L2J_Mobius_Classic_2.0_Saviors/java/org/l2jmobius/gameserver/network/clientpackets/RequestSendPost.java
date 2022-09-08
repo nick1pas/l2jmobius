@@ -310,7 +310,7 @@ public class RequestSendPost implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (AttachmentItem i : _items)
 		{
 			// Check validity of requested item
@@ -328,28 +328,19 @@ public class RequestSendPost implements IClientIncomingPacket
 				continue;
 			}
 			newItem.setItemLocation(newItem.getItemLocation(), msg.getId());
-			if (playerIU != null)
+			
+			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
-				if ((oldItem.getCount() > 0) && (oldItem != newItem))
-				{
-					playerIU.addModifiedItem(oldItem);
-				}
-				else
-				{
-					playerIU.addRemovedItem(oldItem);
-				}
+				playerIU.addModifiedItem(oldItem);
+			}
+			else
+			{
+				playerIU.addRemovedItem(oldItem);
 			}
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendInventoryUpdate(playerIU);
-		}
-		else
-		{
-			player.sendItemList(false);
-		}
+		player.sendInventoryUpdate(playerIU);
 		
 		return true;
 	}

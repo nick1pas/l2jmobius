@@ -591,31 +591,17 @@ public class TradeList
 		else
 		{
 			// Prepare inventory update packet
-			final InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-			final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate ownerIU = new InventoryUpdate();
+			final InventoryUpdate partnerIU = new InventoryUpdate();
 			
 			// Transfer items
 			partnerList.TransferItems(_owner, partnerIU, ownerIU);
 			TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 			
-			// Send inventory update packet
-			if (ownerIU != null)
-			{
-				_owner.sendInventoryUpdate(ownerIU);
-			}
-			else
-			{
-				_owner.sendItemList();
-			}
+			// Send inventory update packets
+			_owner.sendInventoryUpdate(ownerIU);
+			_partner.sendInventoryUpdate(partnerIU);
 			
-			if (partnerIU != null)
-			{
-				_partner.sendInventoryUpdate(partnerIU);
-			}
-			else
-			{
-				_partner.sendItemList();
-			}
 			success = true;
 		}
 		

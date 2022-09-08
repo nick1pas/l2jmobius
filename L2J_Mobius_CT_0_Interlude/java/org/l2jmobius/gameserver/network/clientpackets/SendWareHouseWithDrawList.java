@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -165,7 +164,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
 			final Item oldItem = warehouse.getItemByObjectId(i.getId());
@@ -181,28 +180,18 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 				return;
 			}
 			
-			if (playerIU != null)
+			if (newItem.getCount() > i.getCount())
 			{
-				if (newItem.getCount() > i.getCount())
-				{
-					playerIU.addModifiedItem(newItem);
-				}
-				else
-				{
-					playerIU.addNewItem(newItem);
-				}
+				playerIU.addModifiedItem(newItem);
+			}
+			else
+			{
+				playerIU.addNewItem(newItem);
 			}
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendPacket(playerIU);
-		}
-		else
-		{
-			player.sendPacket(new ItemList(player, false));
-		}
+		player.sendPacket(playerIU);
 		
 		// Update current load status on player
 		final StatusUpdate su = new StatusUpdate(player);

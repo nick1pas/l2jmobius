@@ -21,7 +21,6 @@ import java.util.List;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
@@ -53,7 +52,7 @@ public class Spoil implements ISkillHandler
 			return;
 		}
 		
-		for (WorldObject target1 : targets)
+		for (Creature target1 : targets)
 		{
 			if (!(target1 instanceof Monster))
 			{
@@ -70,7 +69,7 @@ public class Spoil implements ISkillHandler
 			boolean spoil = false;
 			if (!target.isDead())
 			{
-				spoil = Formulas.calcMagicSuccess(creature, (Creature) target1, skill);
+				spoil = Formulas.calcMagicSuccess(creature, target1, skill);
 				if (spoil)
 				{
 					target.setSpoil(true);

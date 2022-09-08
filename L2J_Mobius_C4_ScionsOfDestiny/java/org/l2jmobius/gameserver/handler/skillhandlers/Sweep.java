@@ -18,10 +18,8 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -30,7 +28,6 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -52,9 +49,9 @@ public class Sweep implements ISkillHandler
 		}
 		
 		final Player player = (Player) creature;
-		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		boolean send = false;
-		for (WorldObject target1 : targets)
+		for (Creature target1 : targets)
 		{
 			if (!(target1 instanceof Attackable))
 			{
@@ -88,10 +85,7 @@ public class Sweep implements ISkillHandler
 					else
 					{
 						final Item item = player.getInventory().addItem("Sweep", ritem.getId(), ritem.getCount(), player, target);
-						if (iu != null)
-						{
-							iu.addItem(item);
-						}
+						iu.addItem(item);
 						send = true;
 						SystemMessage smsg;
 						if (ritem.getCount() > 1)
@@ -113,14 +107,7 @@ public class Sweep implements ISkillHandler
 			
 			if (send)
 			{
-				if (iu != null)
-				{
-					player.sendPacket(iu);
-				}
-				else
-				{
-					player.sendPacket(new ItemList(player, false));
-				}
+				player.sendPacket(iu);
 			}
 		}
 	}

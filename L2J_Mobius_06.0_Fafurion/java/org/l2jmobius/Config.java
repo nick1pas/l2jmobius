@@ -479,7 +479,6 @@ public class Config
 	public static ItemHolder EXALTED_FOR_GLORY_ITEM_MAX;
 	public static ItemHolder EXALTED_FOR_HONOR_ITEM_MAX;
 	public static boolean MULTIPLE_ITEM_DROP;
-	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
 	public static boolean CHECK_HTML_ENCODING;
 	public static boolean CACHE_CHAR_NAMES;
@@ -2060,7 +2059,6 @@ public class Config
 			EXALTED_FOR_GLORY_ITEM_MAX = new ItemHolder(Integer.parseInt(generalConfig.getString("ExaltedForGloryItemMax", "45872,80").split(",")[0]), Integer.parseInt(generalConfig.getString("ExaltedForGloryItemMax", "45872,80").split(",")[1]));
 			EXALTED_FOR_HONOR_ITEM_MAX = new ItemHolder(Integer.parseInt(generalConfig.getString("ExaltedForHonorItemMax", "45873,100").split(",")[0]), Integer.parseInt(generalConfig.getString("ExaltedForHonorItemMax", "45873,100").split(",")[1]));
 			MULTIPLE_ITEM_DROP = generalConfig.getBoolean("MultipleItemDrop", true);
-			FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = generalConfig.getBoolean("LazyCache", true);
 			CHECK_HTML_ENCODING = generalConfig.getBoolean("CheckHtmlEncoding", true);
 			CACHE_CHAR_NAMES = generalConfig.getBoolean("CacheCharNames", true);

@@ -186,7 +186,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (Item item : attachments.getItems())
 		{
 			if (item == null)
@@ -207,16 +207,13 @@ public class RequestPostAttachment implements IClientIncomingPacket
 				return;
 			}
 			
-			if (playerIU != null)
+			if (newItem.isStackable() && (newItem.getCount() > count))
 			{
-				if (newItem.isStackable() && (newItem.getCount() > count))
-				{
-					playerIU.addModifiedItem(newItem);
-				}
-				else
-				{
-					playerIU.addNewItem(newItem);
-				}
+				playerIU.addModifiedItem(newItem);
+			}
+			else
+			{
+				playerIU.addNewItem(newItem);
 			}
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
@@ -226,10 +223,8 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendPacket(playerIU);
-		}
+		player.sendPacket(playerIU);
+		
 		// Send full list to avoid duplicates.
 		player.sendPacket(new ItemList(player, false));
 		

@@ -163,7 +163,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		}
 		
 		// Proceed to the transfer
-		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
@@ -182,16 +182,13 @@ public class RequestPackageSend implements IClientIncomingPacket
 				continue;
 			}
 			
-			if (playerIU != null)
+			if ((oldItem.getCount() > 0) && (oldItem != newItem))
 			{
-				if ((oldItem.getCount() > 0) && (oldItem != newItem))
-				{
-					playerIU.addModifiedItem(oldItem);
-				}
-				else
-				{
-					playerIU.addRemovedItem(oldItem);
-				}
+				playerIU.addModifiedItem(oldItem);
+			}
+			else
+			{
+				playerIU.addRemovedItem(oldItem);
 			}
 			
 			// Remove item objects from the world.
@@ -202,13 +199,6 @@ public class RequestPackageSend implements IClientIncomingPacket
 		warehouse.deleteMe();
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendInventoryUpdate(playerIU);
-		}
-		else
-		{
-			player.sendItemList();
-		}
+		player.sendInventoryUpdate(playerIU);
 	}
 }

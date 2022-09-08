@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -31,7 +30,6 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -58,7 +56,7 @@ public class Harvest implements ISkillHandler
 		_player = (Player) creature;
 		
 		final List<Creature> targetList = skill.getTargetList(creature);
-		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetList == null)
 		{
 			return;
@@ -100,10 +98,7 @@ public class Harvest implements ISkillHandler
 							else
 							{
 								final Item item = _player.getInventory().addItem("Manor", ritem.getId(), ritem.getCount(), _player, _target);
-								if (iu != null)
-								{
-									iu.addItem(item);
-								}
+								iu.addItem(item);
 								send = true;
 								total += ritem.getCount();
 							}
@@ -124,14 +119,7 @@ public class Harvest implements ISkillHandler
 								_player.getParty().broadcastToPartyMembers(_player, smsg);
 							}
 							
-							if (iu != null)
-							{
-								_player.sendPacket(iu);
-							}
-							else
-							{
-								_player.sendPacket(new ItemList(_player, false));
-							}
+							_player.sendPacket(iu);
 						}
 					}
 				}

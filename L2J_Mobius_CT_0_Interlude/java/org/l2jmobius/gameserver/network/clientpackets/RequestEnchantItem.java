@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -409,45 +408,37 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			final StatusUpdate su = new StatusUpdate(player);
 			su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 			player.sendPacket(su);
-			if (!Config.FORCE_INVENTORY_UPDATE)
+			if (scroll.getCount() == 0)
 			{
-				if (scroll.getCount() == 0)
-				{
-					iu.addRemovedItem(scroll);
-				}
-				else
-				{
-					iu.addModifiedItem(scroll);
-				}
-				
-				if (item.getCount() == 0)
-				{
-					iu.addRemovedItem(item);
-				}
-				else
-				{
-					iu.addModifiedItem(item);
-				}
-				
-				if (support != null)
-				{
-					if (support.getCount() == 0)
-					{
-						iu.addRemovedItem(support);
-					}
-					else
-					{
-						iu.addModifiedItem(support);
-					}
-				}
-				
-				player.sendPacket(iu);
+				iu.addRemovedItem(scroll);
 			}
 			else
 			{
-				player.sendPacket(new ItemList(player, true));
+				iu.addModifiedItem(scroll);
 			}
 			
+			if (item.getCount() == 0)
+			{
+				iu.addRemovedItem(item);
+			}
+			else
+			{
+				iu.addModifiedItem(item);
+			}
+			
+			if (support != null)
+			{
+				if (support.getCount() == 0)
+				{
+					iu.addRemovedItem(support);
+				}
+				else
+				{
+					iu.addModifiedItem(support);
+				}
+			}
+			
+			player.sendPacket(iu);
 			player.broadcastUserInfo();
 			player.setActiveEnchantItemId(Player.ID_NONE);
 		}

@@ -3059,22 +3059,15 @@ public class Player extends Playable
 			_inventory.addAdena(process, count, this, reference);
 			
 			// Send update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
+			if (count == getAdena())
 			{
-				if (count == getAdena())
-				{
-					sendItemList();
-				}
-				else
-				{
-					final InventoryUpdate iu = new InventoryUpdate();
-					iu.addModifiedItem(_inventory.getAdenaInstance());
-					sendInventoryUpdate(iu);
-				}
+				sendItemList();
 			}
 			else
 			{
-				sendItemList();
+				final InventoryUpdate iu = new InventoryUpdate();
+				iu.addModifiedItem(_inventory.getAdenaInstance());
+				sendInventoryUpdate(iu);
 			}
 		}
 	}
@@ -3107,16 +3100,9 @@ public class Player extends Playable
 			}
 			
 			// Send update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItem(adenaItem);
-				sendInventoryUpdate(iu);
-			}
-			else
-			{
-				sendItemList();
-			}
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addItem(adenaItem);
+			sendInventoryUpdate(iu);
 			
 			if (sendMessage)
 			{
@@ -3157,16 +3143,9 @@ public class Player extends Playable
 			}
 			
 			// Send update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItem(beautyTickets);
-				sendInventoryUpdate(iu);
-			}
-			else
-			{
-				sendItemList();
-			}
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addItem(beautyTickets);
+			sendInventoryUpdate(iu);
 			
 			if (sendMessage)
 			{
@@ -3209,16 +3188,10 @@ public class Player extends Playable
 		if (count > 0)
 		{
 			_inventory.addAncientAdena(process, count, this, reference);
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItem(_inventory.getAncientAdenaInstance());
-				sendInventoryUpdate(iu);
-			}
-			else
-			{
-				sendItemList();
-			}
+			
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addItem(_inventory.getAncientAdenaInstance());
+			sendInventoryUpdate(iu);
 		}
 	}
 	
@@ -3249,16 +3222,9 @@ public class Player extends Playable
 				return false;
 			}
 			
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				final InventoryUpdate iu = new InventoryUpdate();
-				iu.addItem(ancientAdenaItem);
-				sendInventoryUpdate(iu);
-			}
-			else
-			{
-				sendItemList();
-			}
+			final InventoryUpdate iu = new InventoryUpdate();
+			iu.addItem(ancientAdenaItem);
+			sendInventoryUpdate(iu);
 			
 			if (sendMessage)
 			{
@@ -3465,23 +3431,16 @@ public class Player extends Playable
 		}
 		
 		// Send inventory update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		if (destoyedItem.isStackable() && (destoyedItem.getCount() > 0))
 		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			if (destoyedItem.isStackable() && (destoyedItem.getCount() > 0))
-			{
-				playerIU.addModifiedItem(destoyedItem);
-			}
-			else
-			{
-				playerIU.addRemovedItem(destoyedItem);
-			}
-			sendInventoryUpdate(playerIU);
+			playerIU.addModifiedItem(destoyedItem);
 		}
 		else
 		{
-			sendItemList();
+			playerIU.addRemovedItem(destoyedItem);
 		}
+		sendInventoryUpdate(playerIU);
 		
 		// Sends message to client if requested
 		if (sendMessage)
@@ -3581,23 +3540,16 @@ public class Player extends Playable
 		}
 		
 		// Send inventory update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		if (item.isStackable() && (item.getCount() > 0))
 		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			if (item.isStackable() && (item.getCount() > 0))
-			{
-				playerIU.addModifiedItem(item);
-			}
-			else
-			{
-				playerIU.addRemovedItem(item);
-			}
-			sendInventoryUpdate(playerIU);
+			playerIU.addModifiedItem(item);
 		}
 		else
 		{
-			sendItemList();
+			playerIU.addRemovedItem(item);
 		}
+		sendInventoryUpdate(playerIU);
 		
 		// Sends message to client if requested
 		if (sendMessage)
@@ -3643,45 +3595,31 @@ public class Player extends Playable
 		}
 		
 		// Send inventory update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		if ((oldItem.getCount() > 0) && (oldItem != newItem))
 		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			if ((oldItem.getCount() > 0) && (oldItem != newItem))
-			{
-				playerIU.addModifiedItem(oldItem);
-			}
-			else
-			{
-				playerIU.addRemovedItem(oldItem);
-			}
-			sendInventoryUpdate(playerIU);
+			playerIU.addModifiedItem(oldItem);
 		}
 		else
 		{
-			sendItemList();
+			playerIU.addRemovedItem(oldItem);
 		}
+		sendInventoryUpdate(playerIU);
 		
 		// Send target update packet
 		if (target instanceof PlayerInventory)
 		{
 			final Player targetPlayer = ((PlayerInventory) target).getOwner();
-			if (!Config.FORCE_INVENTORY_UPDATE)
+			final InventoryUpdate targetIU = new InventoryUpdate();
+			if (newItem.getCount() > count)
 			{
-				final InventoryUpdate playerIU = new InventoryUpdate();
-				if (newItem.getCount() > count)
-				{
-					playerIU.addModifiedItem(newItem);
-				}
-				else
-				{
-					playerIU.addNewItem(newItem);
-				}
-				targetPlayer.sendPacket(playerIU);
+				targetIU.addModifiedItem(newItem);
 			}
 			else
 			{
-				targetPlayer.sendItemList();
+				targetIU.addNewItem(newItem);
 			}
+			targetPlayer.sendPacket(targetIU);
 		}
 		return newItem;
 	}
@@ -3770,16 +3708,9 @@ public class Player extends Playable
 		}
 		
 		// Send inventory update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(droppedItem);
-			sendInventoryUpdate(playerIU);
-		}
-		else
-		{
-			sendItemList();
-		}
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		playerIU.addItem(droppedItem);
+		sendInventoryUpdate(playerIU);
 		
 		// Sends message to client if requested
 		if (sendMessage)
@@ -3844,16 +3775,9 @@ public class Player extends Playable
 		}
 		
 		// Send inventory update packet
-		if (!Config.FORCE_INVENTORY_UPDATE)
-		{
-			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(invitem);
-			sendInventoryUpdate(playerIU);
-		}
-		else
-		{
-			sendItemList();
-		}
+		final InventoryUpdate playerIU = new InventoryUpdate();
+		playerIU.addItem(invitem);
+		sendInventoryUpdate(playerIU);
 		
 		// Sends message to client if requested
 		if (sendMessage)
