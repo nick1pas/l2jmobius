@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -307,7 +308,13 @@ public class Weapon extends ItemTemplate
 				// notify quests of a skill use
 				if (caster.isPlayer())
 				{
-					World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc));
+					World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc ->
+					{
+						if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_SEE, npc))
+						{
+							EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc);
+						}
+					});
 				}
 				if (caster.isPlayer())
 				{

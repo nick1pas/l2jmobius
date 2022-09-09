@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemAdd;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemDestroy;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.inventory.OnPlayerItemDrop;
@@ -446,9 +447,9 @@ public class PlayerInventory extends Inventory
 				_ancientAdena = addedItem;
 			}
 			
-			if (actor != null)
+			// Notify to scripts
+			if ((actor != null) && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_ADD, actor))
 			{
-				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, addedItem), actor);
 			}
 		}
@@ -499,7 +500,10 @@ public class PlayerInventory extends Inventory
 				actor.sendPacket(su);
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_ADD, actor))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor);
+				}
 			}
 		}
 		return item;
@@ -531,7 +535,11 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getTemplate());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_TRANSFER, item.getTemplate()))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getTemplate());
+		}
+		
 		return item;
 	}
 	
@@ -573,7 +581,7 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		if (destroyedItem != null)
+		if ((destroyedItem != null) && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_DESTROY, destroyedItem.getTemplate()))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, destroyedItem), destroyedItem.getTemplate());
 		}
@@ -646,7 +654,7 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		if (droppedItem != null)
+		if ((droppedItem != null) && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_DROP, droppedItem.getTemplate()))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, droppedItem, droppedItem.getLocation()), droppedItem.getTemplate());
 		}
@@ -679,10 +687,11 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		if (item != null)
+		if ((item != null) && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_DROP, item.getTemplate()))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
 		}
+		
 		return item;
 	}
 	

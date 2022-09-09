@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSelect;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
@@ -155,11 +156,14 @@ public class CharacterSelect implements IClientIncomingPacket
 					client.setPlayer(cha);
 					cha.setOnlineStatus(true, true);
 					
-					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
-					if ((terminate != null) && terminate.terminate())
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SELECT, Containers.Players()))
 					{
-						Disconnection.of(cha).defaultSequence(LeaveWorld.STATIC_PACKET);
-						return;
+						final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
+						if ((terminate != null) && terminate.terminate())
+						{
+							Disconnection.of(cha).defaultSequence(LeaveWorld.STATIC_PACKET);
+							return;
+						}
 					}
 					
 					client.sendPacket(new SSQInfo());

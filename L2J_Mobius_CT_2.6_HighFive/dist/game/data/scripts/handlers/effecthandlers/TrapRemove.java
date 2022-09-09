@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Trap;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.trap.OnTrapAction;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -83,7 +84,11 @@ public class TrapRemove extends AbstractEffect
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, info.getEffector(), TrapAction.TRAP_DISARMED), trap);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_TRAP_ACTION, trap))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, info.getEffector(), TrapAction.TRAP_DISARMED), trap);
+		}
+		
 		trap.unSummon();
 		if (info.getEffector().isPlayer())
 		{

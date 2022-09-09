@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
@@ -897,7 +898,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					}
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+					}
 				}
 				else if (_pOneCrash && !_pTwoCrash)
 				{
@@ -921,8 +925,12 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					{
 						LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
+					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+					}
 				}
 				else if (_pOneCrash && _pTwoCrash)
 				{
@@ -960,8 +968,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				stadium.broadcastPacket(result);
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, getType()), Olympiad.getInstance());
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, getType()), Olympiad.getInstance());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, getType()), Olympiad.getInstance());
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, getType()), Olympiad.getInstance());
+				}
 				return;
 			}
 			catch (Exception e)
@@ -1034,7 +1045,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				rewardParticipant(_playerTwo.getPlayer(), Config.OLYMPIAD_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
+				}
 			}
 			else if ((_player2Wins == 2) || (_playerOne.getPlayer() == null) || !_playerOne.getPlayer().isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 			{
@@ -1061,7 +1075,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				rewardParticipant(_playerOne.getPlayer(), Config.OLYMPIAD_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
+				}
 			}
 			else
 			{

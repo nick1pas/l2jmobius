@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnElementalSpiritLearn;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
@@ -73,7 +74,12 @@ public class AttributeMaster extends AbstractNpcAI
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			player.sendPacket(userInfo);
 			player.sendPacket(new ElementalSpiritInfo(player, player.getActiveElementalSpiritType(), (byte) 0x01));
-			EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritLearn(player), player);
+			
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_ELEMENTAL_SPIRIT_LEARN, player))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritLearn(player), player);
+			}
+			
 			return "learn.htm";
 		}
 		return null;

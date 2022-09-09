@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonSpawn;
 import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.Weapon;
@@ -141,7 +142,10 @@ public abstract class Summon extends Playable
 		rechargeShots(true, true, false);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SUMMON_SPAWN, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
+		}
 	}
 	
 	@Override

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeAdd;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -83,7 +84,11 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 				MentorManager.getInstance().addMentor(mentor.getObjectId(), mentee.getObjectId());
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTEE_ADD, mentor))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
+				}
+				
 				mentor.sendPacket(new SystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addString(mentee.getName()));
 				mentor.sendPacket(new ExMentorList(mentor));
 				mentee.sendPacket(new SystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addString(mentor.getName()));

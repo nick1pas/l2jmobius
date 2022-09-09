@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.clan.ClanWar;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanDestroy;
@@ -214,7 +215,11 @@ public class ClanTable
 		player.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanCreate(player, clan));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_CREATE))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanCreate(player, clan));
+		}
+		
 		return clan;
 	}
 	
@@ -327,7 +332,10 @@ public class ClanTable
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_DESTROY))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
+		}
 	}
 	
 	public void scheduleRemoveClan(int clanId)
@@ -383,7 +391,10 @@ public class ClanTable
 		final Clan clan1 = getInstance().getClan(clanId1);
 		final Clan clan2 = getInstance().getClan(clanId2);
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CLAN_WAR_FINISH))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
+		}
 		
 		clan1.deleteWar(clan2.getId());
 		clan2.deleteWar(clan1.getId());

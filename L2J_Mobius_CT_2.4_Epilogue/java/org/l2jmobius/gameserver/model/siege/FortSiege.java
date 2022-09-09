@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.FortCommander;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeStart;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -293,7 +294,10 @@ public class FortSiege implements Siegable
 		LOGGER.info("Siege of " + _fort.getName() + " fort finished.");
 		
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeFinish(this), getFort());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_FORT_SIEGE_FINISH, getFort()))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeFinish(this), getFort());
+		}
 	}
 	
 	/**
@@ -342,7 +346,10 @@ public class FortSiege implements Siegable
 		LOGGER.info("Siege of " + _fort.getName() + " fort started.");
 		
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeStart(this), getFort());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_FORT_SIEGE_START, getFort()))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeStart(this), getFort());
+		}
 	}
 	
 	/**

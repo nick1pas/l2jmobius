@@ -34,6 +34,7 @@ import org.l2jmobius.gameserver.model.actor.instance.VillageMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSkillLearn;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -656,9 +657,12 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		// Notify scripts of the skill learn.
 		if (trainer != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, _skillType), trainer);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SKILL_LEARN, trainer))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, _skillType), trainer);
+			}
 		}
-		else
+		else if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SKILL_LEARN, player))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, _skillType), player);
 		}

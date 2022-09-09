@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleportRequest;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -241,10 +242,13 @@ public class TeleportHolder
 		}
 		
 		// Notify listeners
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnNpcTeleportRequest(player, npc, loc), npc, TerminateReturn.class);
-		if ((term != null) && term.terminate())
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_TELEPORT_REQUEST, npc))
 		{
-			return;
+			final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnNpcTeleportRequest(player, npc, loc), npc, TerminateReturn.class);
+			if ((term != null) && term.terminate())
+			{
+				return;
+			}
 		}
 		
 		// Check rest of conditions

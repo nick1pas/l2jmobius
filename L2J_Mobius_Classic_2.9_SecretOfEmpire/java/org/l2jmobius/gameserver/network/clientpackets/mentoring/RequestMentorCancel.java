@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeLeft;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeRemove;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -75,7 +76,10 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					MentorManager.getInstance().deleteMentor(player.getObjectId(), mentee.getObjectId());
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeRemove(player, mentee), player);
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTEE_REMOVE, player))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeRemove(player, mentee), player);
+					}
 				}
 			}
 			else if (player.isMentee())
@@ -94,7 +98,11 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeLeft(mentor, player), player);
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTEE_LEFT, player))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeLeft(mentor, player), player);
+					}
+					
 					mentor.getPlayer().sendPacket(new SystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString(_name));
 				}
 			}

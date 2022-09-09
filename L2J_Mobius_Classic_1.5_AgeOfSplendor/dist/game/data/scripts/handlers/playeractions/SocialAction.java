@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAskCoupleAction;
@@ -93,7 +94,10 @@ public class SocialAction implements IPlayerActionHandler
 			player.broadcastPacket(new org.l2jmobius.gameserver.network.serverpackets.SocialAction(player.getObjectId(), id));
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSocialAction(player, id), player);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SOCIAL_ACTION, player))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSocialAction(player, id), player);
+			}
 		}
 		
 		return true;

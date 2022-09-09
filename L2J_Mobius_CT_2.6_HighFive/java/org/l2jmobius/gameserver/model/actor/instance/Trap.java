@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.actor.tasks.npc.trap.TrapTask;
 import org.l2jmobius.gameserver.model.actor.tasks.npc.trap.TrapTriggerTask;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.trap.OnTrapAction;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.Weapon;
@@ -368,7 +369,11 @@ public class Trap extends Npc
 		_playersWhoDetectedMe.add(detector.getObjectId());
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_TRAP_ACTION, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
+		}
+		
 		if (detector.isPlayable())
 		{
 			sendInfo(detector.getActingPlayer());
@@ -396,7 +401,11 @@ public class Trap extends Npc
 		broadcastPacket(new TrapInfo(this, null));
 		setTarget(target);
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_TRAP_ACTION, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
+		}
+		
 		ThreadPool.schedule(new TrapTriggerTask(this), 500);
 	}
 	

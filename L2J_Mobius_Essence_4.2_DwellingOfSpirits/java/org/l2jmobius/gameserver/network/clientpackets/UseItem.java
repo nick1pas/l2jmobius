@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemUse;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.item.EtcItem;
@@ -308,7 +309,10 @@ public class UseItem implements IClientIncomingPacket
 				}
 				
 				// Notify events.
-				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_ITEM_USE, item.getTemplate()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
+				}
 			}
 			
 			if ((etcItem != null) && etcItem.isMineral())

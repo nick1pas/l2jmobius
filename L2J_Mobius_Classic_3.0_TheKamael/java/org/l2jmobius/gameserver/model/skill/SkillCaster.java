@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
@@ -531,15 +532,18 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Notify skill is casted.
-		if (caster.onCreatureSkillFinishCast == null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SKILL_FINISH_CAST, caster))
 		{
-			caster.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+			if (caster.onCreatureSkillFinishCast == null)
+			{
+				caster.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+			}
+			caster.onCreatureSkillFinishCast.setCaster(caster);
+			caster.onCreatureSkillFinishCast.setTarget(target);
+			caster.onCreatureSkillFinishCast.setSkill(_skill);
+			caster.onCreatureSkillFinishCast.setSimultaneously(_skill.isWithoutAction());
+			EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillFinishCast, caster);
 		}
-		caster.onCreatureSkillFinishCast.setCaster(caster);
-		caster.onCreatureSkillFinishCast.setTarget(target);
-		caster.onCreatureSkillFinishCast.setSkill(_skill);
-		caster.onCreatureSkillFinishCast.setSimultaneously(_skill.isWithoutAction());
-		EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillFinishCast, caster);
 		
 		// Call the skill's effects and AI interraction and stuff.
 		callSkill(caster, target, _targets, _skill, _item);
@@ -687,7 +691,10 @@ public class SkillCaster implements Runnable
 				// Mobs in range 1000 see spell
 				World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_SEE, npcMob))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
+					}
 					
 					// On Skill See logic
 					if (npcMob.isAttackable() && !npcMob.isFakePlayer())
@@ -878,15 +885,18 @@ public class SkillCaster implements Runnable
 				skill.activateSkill(creature, item, targets);
 				
 				// Notify skill is casted.
-				if (creature.onCreatureSkillFinishCast == null)
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SKILL_FINISH_CAST, creature))
 				{
-					creature.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+					if (creature.onCreatureSkillFinishCast == null)
+					{
+						creature.onCreatureSkillFinishCast = new OnCreatureSkillFinishCast();
+					}
+					creature.onCreatureSkillFinishCast.setCaster(creature);
+					creature.onCreatureSkillFinishCast.setTarget(target);
+					creature.onCreatureSkillFinishCast.setSkill(skill);
+					creature.onCreatureSkillFinishCast.setSimultaneously(skill.isWithoutAction());
+					EventDispatcher.getInstance().notifyEvent(creature.onCreatureSkillFinishCast, creature);
 				}
-				creature.onCreatureSkillFinishCast.setCaster(creature);
-				creature.onCreatureSkillFinishCast.setTarget(target);
-				creature.onCreatureSkillFinishCast.setSkill(skill);
-				creature.onCreatureSkillFinishCast.setSimultaneously(skill.isWithoutAction());
-				EventDispatcher.getInstance().notifyEvent(creature.onCreatureSkillFinishCast, creature);
 			}
 		}
 		catch (Exception e)
@@ -995,18 +1005,21 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		if (caster.onCreatureSkillUse == null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SKILL_USE, caster))
 		{
-			caster.onCreatureSkillUse = new OnCreatureSkillUse();
-		}
-		caster.onCreatureSkillUse.setCaster(caster);
-		caster.onCreatureSkillUse.setSkill(skill);
-		caster.onCreatureSkillUse.setSimultaneously(skill.isWithoutAction());
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillUse, caster, TerminateReturn.class);
-		if ((term != null) && term.terminate())
-		{
-			caster.sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
+			if (caster.onCreatureSkillUse == null)
+			{
+				caster.onCreatureSkillUse = new OnCreatureSkillUse();
+			}
+			caster.onCreatureSkillUse.setCaster(caster);
+			caster.onCreatureSkillUse.setSkill(skill);
+			caster.onCreatureSkillUse.setSimultaneously(skill.isWithoutAction());
+			final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(caster.onCreatureSkillUse, caster, TerminateReturn.class);
+			if ((term != null) && term.terminate())
+			{
+				caster.sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
+			}
 		}
 		
 		// Check if creature is already casting

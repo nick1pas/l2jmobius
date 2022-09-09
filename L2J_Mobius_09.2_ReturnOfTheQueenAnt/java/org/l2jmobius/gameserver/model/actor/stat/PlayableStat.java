@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.item.Weapon;
@@ -43,10 +44,13 @@ public class PlayableStat extends CreatureStat
 	
 	public boolean addExp(long amount)
 	{
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + amount), getActiveChar(), TerminateReturn.class);
-		if ((term != null) && term.terminate())
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYABLE_EXP_CHANGED, getActiveChar()))
 		{
-			return false;
+			final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + amount), getActiveChar(), TerminateReturn.class);
+			if ((term != null) && term.terminate())
+			{
+				return false;
+			}
 		}
 		
 		if (((getExp() + amount) < 0) || ((amount > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1))))

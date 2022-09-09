@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.enums.PlayerAction;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.DoorRequestHolder;
@@ -55,10 +56,13 @@ public class DlgAnswer implements IClientIncomingPacket
 			return;
 		}
 		
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayerDlgAnswer(player, _messageId, _answer, _requesterId), player, TerminateReturn.class);
-		if ((term != null) && term.terminate())
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_DLG_ANSWER, player))
 		{
-			return;
+			final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayerDlgAnswer(player, _messageId, _answer, _requesterId), player, TerminateReturn.class);
+			if ((term != null) && term.terminate())
+			{
+				return;
+			}
 		}
 		
 		if (_messageId == SystemMessageId.S1_3.getId())

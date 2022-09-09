@@ -1924,7 +1924,11 @@ public class Player extends Playable
 	 */
 	public void setPkKills(int pkKills)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPKChanged(this, _pkKills, pkKills), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_PK_CHANGED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPKChanged(this, _pkKills, pkKills), this);
+		}
+		
 		_pkKills = pkKills;
 	}
 	
@@ -2034,7 +2038,10 @@ public class Player extends Playable
 	public void setReputation(int value)
 	{
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), value), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_REPUTATION_CHANGED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), value), this);
+		}
 		
 		int reputation = value;
 		if (reputation > Config.MAX_REPUTATION) // Max count of positive reputation
@@ -2202,7 +2209,10 @@ public class Player extends Playable
 				}
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemEquip(this, item), item.getTemplate());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_EQUIP, item.getTemplate()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemEquip(this, item), item.getTemplate());
+				}
 			}
 			else
 			{
@@ -2241,7 +2251,11 @@ public class Player extends Playable
 	 */
 	public void setPvpKills(int pvpKills)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPChanged(this, _pvpKills, pvpKills), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_PVP_CHANGED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPChanged(this, _pvpKills, pvpKills), this);
+		}
+		
 		_pvpKills = pvpKills;
 	}
 	
@@ -2269,7 +2283,10 @@ public class Player extends Playable
 			newFame = 0;
 		}
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, newFame), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_FAME_CHANGED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFameChanged(this, _fame, newFame), this);
+		}
 		
 		_fame = newFame;
 	}
@@ -4762,7 +4779,10 @@ public class Player extends Playable
 			{
 				if (pk != null)
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_PVP_KILL, this))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
+					}
 					
 					// pvp/pk item rewards
 					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
@@ -6630,7 +6650,10 @@ public class Player extends Playable
 				return null;
 			}
 			
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLoad(player), player);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_LOAD, player))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLoad(player), player);
+			}
 			
 			if (player.isGM())
 			{
@@ -7841,7 +7864,11 @@ public class Player extends Playable
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_HENNA_REMOVE, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
+		}
+		
 		return true;
 	}
 	
@@ -7895,7 +7922,11 @@ public class Player extends Playable
 				broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_HENNA_ADD, this))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
+				}
+				
 				return true;
 			}
 		}
@@ -9521,7 +9552,7 @@ public class Player extends Playable
 	public boolean modifySubClass(int classIndex, int newClassId, boolean isDualClass)
 	{
 		// Notify to scripts before class is removed.
-		if (!getSubClasses().isEmpty()) // also null check
+		if (!getSubClasses().isEmpty() && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_PROFESSION_CANCEL, this))
 		{
 			final int classId = getSubClasses().get(classIndex).getClassId();
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
@@ -9692,7 +9723,10 @@ public class Player extends Playable
 		setTemplate(pcTemplate);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionChange(this, pcTemplate, isSubClassActive()), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_PROFESSION_CHANGE, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionChange(this, pcTemplate, isSubClassActive()), this);
+		}
 	}
 	
 	/**
@@ -9855,7 +9889,11 @@ public class Player extends Playable
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			sendPacket(new SkillCoolTime(this));
 			sendStorageMaxCount();
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
+			
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_SUB_CHANGE, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
+			}
 		}
 		finally
 		{
@@ -10027,16 +10065,20 @@ public class Player extends Playable
 			LOGGER.log(Level.SEVERE, "", e);
 		}
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
-		
+		// Notify to scripts
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_LOGIN, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogin(this), this);
+		}
 		if (isMentee())
 		{
-			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, true), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTEE_STATUS, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, true), this);
+			}
 		}
-		else if (isMentor())
+		else if (isMentor() && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTOR_STATUS, this))
 		{
-			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, true), this);
 		}
 	}
@@ -10702,7 +10744,10 @@ public class Player extends Playable
 	@Override
 	public boolean deleteMe()
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_LOGOUT, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
+		}
 		
 		try
 		{
@@ -11089,14 +11134,16 @@ public class Player extends Playable
 			player.removeSnooped(this);
 		}
 		
+		// Notify to scripts
 		if (isMentee())
 		{
-			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, false), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTEE_STATUS, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeStatus(this, false), this);
+			}
 		}
-		else if (isMentor())
+		else if (isMentor() && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MENTOR_STATUS, this))
 		{
-			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, false), this);
 		}
 		
@@ -13404,7 +13451,11 @@ public class Player extends Playable
 	 */
 	public void setAbilityPointsUsed(int points)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAbilityPointsChanged(this, getAbilityPointsUsed(), points), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ABILITY_POINTS_CHANGED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAbilityPointsChanged(this, getAbilityPointsUsed(), points), this);
+		}
+		
 		getVariables().set(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_USED_MAIN_CLASS, points);
 	}
 	

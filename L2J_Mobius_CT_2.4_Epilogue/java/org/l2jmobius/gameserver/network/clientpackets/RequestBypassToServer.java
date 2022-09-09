@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -215,7 +216,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			else if (_command.startsWith("manor_menu_select"))
 			{
 				final Npc lastNpc = player.getLastFolkNPC();
-				if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(player))
+				if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(player) && EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MANOR_BYPASS, lastNpc))
 				{
 					final String[] split = _command.substring(_command.indexOf('?') + 1).split("&");
 					final int ask = Integer.parseInt(split[0].split("=")[1]);
@@ -274,7 +275,10 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			}
 		}
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, _command), player);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_BYPASS, player))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, _command), player);
+		}
 	}
 	
 	/**

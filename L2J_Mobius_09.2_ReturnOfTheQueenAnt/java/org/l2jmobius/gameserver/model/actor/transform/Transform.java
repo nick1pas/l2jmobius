@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
 import org.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import org.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
@@ -331,7 +332,10 @@ public class Transform implements IIdentifiable
 				player.broadcastUserInfo();
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_TRANSFORM, player))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, getId()), player);
+				}
 			}
 			else
 			{
@@ -396,8 +400,12 @@ public class Transform implements IIdentifiable
 				
 				player.broadcastUserInfo();
 				player.sendPacket(new ExUserInfoEquipSlot(player));
+				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, 0), player);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_TRANSFORM, player))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerTransform(player, 0), player);
+				}
 			}
 			else
 			{

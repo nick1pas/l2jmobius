@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -55,7 +56,10 @@ public class UnsummonAgathion extends AbstractEffect
 				player.sendPacket(new ExUserInfoCubic(player));
 				player.broadcastCharInfo();
 				
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerUnsummonAgathion(player, agathionId));
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_UNSUMMON_AGATHION))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerUnsummonAgathion(player, agathionId));
+				}
 			}
 		}
 	}

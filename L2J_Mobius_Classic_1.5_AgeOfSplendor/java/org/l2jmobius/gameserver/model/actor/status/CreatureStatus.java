@@ -25,6 +25,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureHpChange;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -314,7 +315,11 @@ public class CreatureStatus
 			{
 				_creature.broadcastStatusUpdate();
 			}
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getActiveChar(), oldHp, _currentHp), getActiveChar());
+			
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_HP_CHANGE, getActiveChar()))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getActiveChar(), oldHp, _currentHp), getActiveChar());
+			}
 		}
 		
 		return hpWasChanged;

@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureZoneExit;
@@ -427,7 +428,11 @@ public abstract class ZoneType extends ListenersContainer
 			if (_characterList.putIfAbsent(creature.getObjectId(), creature) == null)
 			{
 				// Notify to scripts.
-				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(creature, this), this);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_ZONE_ENTER, this))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(creature, this), this);
+				}
+				
 				// Notify Zone implementation.
 				onEnter(creature);
 			}
@@ -448,7 +453,10 @@ public abstract class ZoneType extends ListenersContainer
 		if (_characterList.containsKey(creature.getObjectId()))
 		{
 			// Notify to scripts.
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneExit(creature, this), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_ZONE_EXIT, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneExit(creature, this), this);
+			}
 			
 			// Unregister player.
 			_characterList.remove(creature.getObjectId());

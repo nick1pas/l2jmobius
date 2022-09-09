@@ -22,6 +22,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveRouteFinished;
 
 /**
@@ -92,7 +93,10 @@ public class WalkInfo
 			if (_currentNode == getRoute().getNodesCount()) // Last node arrived
 			{
 				// Notify quest
-				EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveRouteFinished(npc), npc);
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MOVE_ROUTE_FINISHED, npc))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveRouteFinished(npc), npc);
+				}
 				
 				if (!getRoute().repeatWalk())
 				{

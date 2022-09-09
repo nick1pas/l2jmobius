@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.item.PlayerItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -324,7 +325,11 @@ public class CharacterCreate implements IClientIncomingPacket
 		// Register all shortcuts for actions, skills and items for this new character.
 		InitialShortcutData.getInstance().registerAllShortcuts(newChar);
 		
-		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CREATE, Containers.Players()))
+		{
+			EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
+		}
+		
 		newChar.setOnlineStatus(true, false);
 		if (Config.SHOW_INTRO_VIDEO)
 		{

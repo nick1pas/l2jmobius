@@ -200,7 +200,10 @@ public class Guard extends Attackable
 					
 					if (hasListener(EventType.ON_NPC_FIRST_TALK))
 					{
-						EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(this, player), this);
+						if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_FIRST_TALK, this))
+						{
+							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(this, player), this);
+						}
 					}
 					else
 					{

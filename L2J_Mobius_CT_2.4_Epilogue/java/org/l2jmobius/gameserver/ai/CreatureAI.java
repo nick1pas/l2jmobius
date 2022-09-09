@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveFinished;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.item.Weapon;
@@ -698,11 +699,14 @@ public class CreatureAI extends AbstractAI
 			WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 			
 			// Notify to scripts
-			if (_onNpcMoveFinished == null)
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_MOVE_FINISHED, npc))
 			{
-				_onNpcMoveFinished = new OnNpcMoveFinished(npc);
+				if (_onNpcMoveFinished == null)
+				{
+					_onNpcMoveFinished = new OnNpcMoveFinished(npc);
+				}
+				EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
 			}
-			EventDispatcher.getInstance().notifyEventAsync(_onNpcMoveFinished, npc);
 		}
 		
 		// If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE

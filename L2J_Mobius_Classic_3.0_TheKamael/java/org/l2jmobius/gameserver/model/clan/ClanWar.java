@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SurrenderPledgeWar;
@@ -59,7 +60,12 @@ public class ClanWar
 		_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
 		attacker.addWar(attacked.getId(), this);
 		attacked.addWar(attacker.getId(), this);
-		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(attacker, attacked));
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CLAN_WAR_START))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(attacker, attacked));
+		}
+		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DECLARED_A_CLAN_WAR_WITH_S1);
 		sm.addString(attacked.getName());
 		attacker.broadcastToOnlineMembers(sm);

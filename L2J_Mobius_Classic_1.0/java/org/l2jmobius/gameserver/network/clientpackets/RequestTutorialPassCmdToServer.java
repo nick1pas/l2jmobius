@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.handler.BypassHandler;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -57,6 +58,10 @@ public class RequestTutorialPassCmdToServer implements IClientIncomingPacket
 				handler.useBypass(_bypass, player, null);
 			}
 		}
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, _bypass), player);
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_BYPASS, player))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerBypass(player, _bypass), player);
+		}
 	}
 }

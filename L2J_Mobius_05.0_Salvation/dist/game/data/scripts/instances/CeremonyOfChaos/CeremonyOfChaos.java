@@ -842,7 +842,11 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		final StatSet params = new StatSet();
 		params.set("time", 30);
 		getTimers().addTimer("match_end_countdown", params, 30000, null, null);
-		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, memberList));
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CEREMONY_OF_CHAOS_MATCH_RESULT))
+		{
+			EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, memberList));
+		}
 	}
 	
 	private void teleportPlayersOut()

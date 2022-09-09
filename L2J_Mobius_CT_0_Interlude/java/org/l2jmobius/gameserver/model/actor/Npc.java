@@ -1201,9 +1201,12 @@ public class Npc extends Creature
 		
 		if (isTeleporting())
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_TELEPORT, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
+			}
 		}
-		else
+		else if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SPAWN, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSpawn(this), this);
 		}
@@ -1463,7 +1466,7 @@ public class Npc extends Creature
 	@Override
 	protected final void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
-		if ((target != null) && target.isPlayable())
+		if ((target != null) && target.isPlayable() && EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_FINISHED, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillFinished(this, target.getActingPlayer(), skill), this);
 		}
@@ -1684,7 +1687,10 @@ public class Npc extends Creature
 	 */
 	public void sendScriptEvent(String eventName, WorldObject receiver, WorldObject reference)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (Npc) receiver, reference), receiver);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_EVENT_RECEIVED, receiver))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (Npc) receiver, reference), receiver);
+		}
 	}
 	
 	/**

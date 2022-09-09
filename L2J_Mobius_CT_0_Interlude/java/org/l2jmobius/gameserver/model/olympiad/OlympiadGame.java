@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.siege.Castle;
@@ -690,7 +691,10 @@ class OlympiadGame
 					broadcastMessage(_sm2, false);
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, _type), Olympiad.getInstance());
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, _type), Olympiad.getInstance());
+					}
 				}
 				catch (Exception e)
 				{
@@ -733,7 +737,10 @@ class OlympiadGame
 					broadcastMessage(_sm2, false);
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, _type), Olympiad.getInstance());
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, _type), Olympiad.getInstance());
+					}
 				}
 				catch (Exception e)
 				{
@@ -768,8 +775,11 @@ class OlympiadGame
 					}
 					
 					// Notify to scripts
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, _type), Olympiad.getInstance());
-					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, _type), Olympiad.getInstance());
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerOne, _type), Olympiad.getInstance());
+						EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(null, _playerTwo, _type), Olympiad.getInstance());
+					}
 				}
 				catch (Exception e)
 				{
@@ -852,7 +862,10 @@ class OlympiadGame
 				_playerOne.sendPacket(sm);
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, _type), Olympiad.getInstance());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, _type), Olympiad.getInstance());
+				}
 			}
 			catch (Exception e)
 			{
@@ -892,7 +905,10 @@ class OlympiadGame
 				_playerTwo.sendPacket(sm);
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, _type), Olympiad.getInstance());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_OLYMPIAD_MATCH_RESULT, Olympiad.getInstance()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, _type), Olympiad.getInstance());
+				}
 			}
 			catch (Exception e)
 			{

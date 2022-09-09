@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.clan.OnPlayerClanCreate;
@@ -212,7 +213,11 @@ public class ClanTable
 		player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanCreate(player, clan));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_CREATE))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanCreate(player, clan));
+		}
+		
 		return clan;
 	}
 	
@@ -323,7 +328,10 @@ public class ClanTable
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_DESTROY))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanDestroy(leaderMember, clan));
+		}
 	}
 	
 	public void scheduleRemoveClan(int clanId)
@@ -358,7 +366,10 @@ public class ClanTable
 		final Clan clan1 = getClan(clanId1);
 		final Clan clan2 = getClan(clanId2);
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(clan1, clan2));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CLAN_WAR_START))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(clan1, clan2));
+		}
 		
 		clan1.setEnemyClan(clan2);
 		clan2.setAttackerClan(clan1);
@@ -397,7 +408,10 @@ public class ClanTable
 		final Clan clan1 = getClan(clanId1);
 		final Clan clan2 = getClan(clanId2);
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CLAN_WAR_FINISH))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
+		}
 		
 		clan1.deleteEnemyClan(clan2);
 		clan2.deleteAttackerClan(clan1);

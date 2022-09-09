@@ -59,6 +59,7 @@ import org.l2jmobius.gameserver.model.actor.instance.FlameTower;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
 import org.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -345,7 +346,10 @@ public class Siege implements Siegable
 			_castle.getZone().setSiegeInstance(null);
 			
 			// Notify to scripts.
-			EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeFinish(this), getCastle());
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CASTLE_SIEGE_FINISH, getCastle()))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeFinish(this), getCastle());
+			}
 		}
 	}
 	
@@ -467,7 +471,10 @@ public class Siege implements Siegable
 				updatePlayerSiegeStateFlags(false);
 				
 				// Notify to scripts.
-				EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeOwnerChange(this), getCastle());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_CASTLE_SIEGE_OWNER_CHANGE, getCastle()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeOwnerChange(this), getCastle());
+				}
 			}
 		}
 	}
@@ -527,7 +534,10 @@ public class Siege implements Siegable
 			Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_eu.17"));
 			
 			// Notify to scripts.
-			EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CASTLE_SIEGE_START, getCastle()))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnCastleSiegeStart(this), getCastle());
+			}
 		}
 	}
 	

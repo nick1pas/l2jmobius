@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SayuneEntry;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMoveRequest;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -178,11 +179,14 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		if (_movementMode == 1)
 		{
 			player.setCursorKeyMovement(false);
-			final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(player, new Location(_targetX, _targetY, _targetZ)), player, TerminateReturn.class);
-			if ((terminate != null) && terminate.terminate())
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_MOVE_REQUEST, player))
 			{
-				player.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
+				final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(player, new Location(_targetX, _targetY, _targetZ)), player, TerminateReturn.class);
+				if ((terminate != null) && terminate.terminate())
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
 			}
 		}
 		else // 0

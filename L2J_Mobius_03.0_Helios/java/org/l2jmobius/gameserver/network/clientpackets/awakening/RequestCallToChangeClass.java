@@ -20,6 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCallToChangeClass;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -50,6 +51,9 @@ public class RequestCallToChangeClass implements IClientIncomingPacket
 			return;
 		}
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerCallToChangeClass(player), player);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CALL_TO_CHANGE_CLASS, player))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerCallToChangeClass(player), player);
+		}
 	}
 }

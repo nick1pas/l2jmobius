@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerRestore;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -50,7 +51,11 @@ public class CharacterRestore implements IClientIncomingPacket
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);
 		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
-		final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
-		EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), client));
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_RESTORE))
+		{
+			final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
+			EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), client));
+		}
 	}
 }

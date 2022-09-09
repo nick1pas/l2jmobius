@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChangeToAwakenedClass;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -48,7 +49,10 @@ public class RequestChangeToAwakenedClass implements IClientIncomingPacket
 		
 		if (_change)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerChangeToAwakenedClass(player), player);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CHANGE_TO_AWAKENED_CLASS, player))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerChangeToAwakenedClass(player), player);
+			}
 		}
 		else
 		{

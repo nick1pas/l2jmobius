@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.actor.instance.RiftInvader;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObject;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableFactionCall;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
@@ -554,7 +555,7 @@ public class AttackableAI extends CreatureAI
 						}
 						return;
 					}
-					if (target.isPlayable())
+					if (target.isPlayable() && EventDispatcher.getInstance().hasListener(EventType.ON_NPC_HATE, getActiveChar()))
 					{
 						final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), target.getActingPlayer(), target.isSummon()), getActiveChar(), TerminateReturn.class);
 						if ((term != null) && term.terminate())
@@ -896,7 +897,11 @@ public class AttackableAI extends CreatureAI
 							// By default, when a faction member calls for help, attack the caller's attacker.
 							// Notify the AI with EVT_AGGRESSION
 							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
-							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
+							
+							if (EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_FACTION_CALL, called))
+							{
+								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
+							}
 						}
 						else if (called.getAI()._intention != AI_INTENTION_ATTACK)
 						{

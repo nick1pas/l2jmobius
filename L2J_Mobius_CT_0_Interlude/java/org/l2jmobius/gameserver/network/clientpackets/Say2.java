@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
 import org.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -186,10 +187,13 @@ public class Say2 implements IClientIncomingPacket
 			return;
 		}
 		
-		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(player, World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
-		if (filter != null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CHAT))
 		{
-			_text = filter.getFilteredText();
+			final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(player, World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
+			if (filter != null)
+			{
+				_text = filter.getFilteredText();
+			}
 		}
 		
 		// Say Filter implementation

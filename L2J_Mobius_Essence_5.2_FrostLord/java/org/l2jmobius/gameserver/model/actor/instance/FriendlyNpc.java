@@ -72,7 +72,7 @@ public class FriendlyNpc extends Attackable
 			super.addDamage(attacker, damage, skill);
 		}
 		
-		if (attacker.isAttackable())
+		if (attacker.isAttackable() && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_ATTACK, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(null, this, damage, skill, false), this);
 		}
@@ -96,9 +96,9 @@ public class FriendlyNpc extends Attackable
 			return false;
 		}
 		
-		if ((killer != null) && killer.isAttackable())
+		// Notify to scripts.
+		if ((killer != null) && killer.isAttackable() && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_KILL, this))
 		{
-			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(null, this, false), this);
 		}
 		return true;

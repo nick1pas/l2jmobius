@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -344,7 +345,7 @@ public class Fishing
 				_player.sendPacket(SystemMessageId.THE_BAIT_HAS_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);
 			}
 			
-			if (consumeBait)
+			if (consumeBait && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_FISHING, _player))
 			{
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerFishing(_player, reason), _player);
 			}

@@ -1057,9 +1057,12 @@ public class Npc extends Creature
 		_isRandomWalkingEnabled = !WalkingManager.getInstance().isTargeted(this) && getTemplate().isRandomWalkEnabled();
 		if (isTeleporting())
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_TELEPORT, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
+			}
 		}
-		else
+		else if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SPAWN, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSpawn(this), this);
 		}
@@ -1162,7 +1165,10 @@ public class Npc extends Creature
 		WalkingManager.getInstance().onDeath(this);
 		
 		// Notify DP scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnNpcDespawn(this), this);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_DESPAWN, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcDespawn(this), this);
+		}
 		
 		// Remove from instance world
 		final Instance instance = getInstanceWorld();
@@ -1334,7 +1340,7 @@ public class Npc extends Creature
 	@Override
 	public void notifyQuestEventSkillFinished(Skill skill, WorldObject target)
 	{
-		if (target != null)
+		if ((target != null) && EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_FINISHED, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillFinished(this, target.getActingPlayer(), skill), this);
 		}
@@ -1535,7 +1541,10 @@ public class Npc extends Creature
 	 */
 	public void sendScriptEvent(String eventName, WorldObject receiver, WorldObject reference)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (Npc) receiver, reference), receiver);
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_EVENT_RECEIVED, receiver))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (Npc) receiver, reference), receiver);
+		}
 	}
 	
 	/**

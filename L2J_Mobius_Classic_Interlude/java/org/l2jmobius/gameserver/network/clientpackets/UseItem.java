@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemUse;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.item.EtcItem;
@@ -286,9 +287,6 @@ public class UseItem implements IClientIncomingPacket
 				{
 					PacketLogger.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
-				
-				// Notify events.
-				EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 			}
 			else if (handler.useItem(player, item, _ctrlPressed))
 			{
@@ -298,6 +296,12 @@ public class UseItem implements IClientIncomingPacket
 				{
 					player.addTimeStampItem(item, reuseDelay);
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
+				}
+				
+				// Notify events.
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_ITEM_USE, item.getTemplate()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnItemUse(player, item), item.getTemplate());
 				}
 			}
 		}

@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -93,10 +94,13 @@ public abstract class Playable extends Creature
 	@Override
 	public boolean doDie(Creature killer)
 	{
-		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
-		if ((returnBack != null) && returnBack.terminate())
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_DEATH, this))
 		{
-			return false;
+			final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
+			if ((returnBack != null) && returnBack.terminate())
+			{
+				return false;
+			}
 		}
 		
 		// killing is only possible one time

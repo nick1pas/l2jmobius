@@ -539,9 +539,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
+		
 		spawnMe(getX(), getY(), getZ());
 		setTeleporting(false);
-		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_TELEPORTED, this))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
+		}
 	}
 	
 	/**
@@ -926,34 +931,37 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			
 			// Notify to scripts
-			if (_onCreatureAttack == null)
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_ATTACK, this))
 			{
-				_onCreatureAttack = new OnCreatureAttack();
+				if (_onCreatureAttack == null)
+				{
+					_onCreatureAttack = new OnCreatureAttack();
+				}
+				_onCreatureAttack.setAttacker(this);
+				_onCreatureAttack.setTarget(target);
+				final TerminateReturn attackReturn = EventDispatcher.getInstance().notifyEvent(_onCreatureAttack, this, TerminateReturn.class);
+				if ((attackReturn != null) && attackReturn.terminate())
+				{
+					getAI().setIntention(AI_INTENTION_ACTIVE);
+					sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
 			}
-			_onCreatureAttack.setAttacker(this);
-			_onCreatureAttack.setTarget(target);
-			
-			final TerminateReturn attackReturn = EventDispatcher.getInstance().notifyEvent(_onCreatureAttack, this, TerminateReturn.class);
-			if ((attackReturn != null) && attackReturn.terminate())
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_ATTACKED, target))
 			{
-				getAI().setIntention(AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			// Notify to scripts
-			if (_onCreatureAttacked == null)
-			{
-				_onCreatureAttacked = new OnCreatureAttacked();
-			}
-			_onCreatureAttacked.setAttacker(this);
-			_onCreatureAttacked.setTarget(target);
-			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(_onCreatureAttacked, target, TerminateReturn.class);
-			if ((attackedReturn != null) && attackedReturn.terminate())
-			{
-				getAI().setIntention(AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
+				if (_onCreatureAttacked == null)
+				{
+					_onCreatureAttacked = new OnCreatureAttacked();
+				}
+				_onCreatureAttacked.setAttacker(this);
+				_onCreatureAttacked.setTarget(target);
+				final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(_onCreatureAttacked, target, TerminateReturn.class);
+				if ((attackedReturn != null) && attackedReturn.terminate())
+				{
+					getAI().setIntention(AI_INTENTION_ACTIVE);
+					sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
 			}
 			
 			if (!isAlikeDead())
@@ -1623,32 +1631,35 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return;
 		}
 		
-		if (_onCreatureSkillUse == null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SKILL_USE, this))
 		{
-			_onCreatureSkillUse = new OnCreatureSkillUse();
-		}
-		_onCreatureSkillUse.setCaster(this);
-		_onCreatureSkillUse.setSkill(skill);
-		_onCreatureSkillUse.setSimultaneously(simultaneously);
-		_onCreatureSkillUse.setTarget(target);
-		_onCreatureSkillUse.setTargets(targets);
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(_onCreatureSkillUse, this, TerminateReturn.class);
-		if ((term != null) && term.terminate())
-		{
-			if (simultaneously)
+			if (_onCreatureSkillUse == null)
 			{
-				setCastingSimultaneouslyNow(false);
+				_onCreatureSkillUse = new OnCreatureSkillUse();
 			}
-			else
+			_onCreatureSkillUse.setCaster(this);
+			_onCreatureSkillUse.setSkill(skill);
+			_onCreatureSkillUse.setSimultaneously(simultaneously);
+			_onCreatureSkillUse.setTarget(target);
+			_onCreatureSkillUse.setTargets(targets);
+			final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(_onCreatureSkillUse, this, TerminateReturn.class);
+			if ((term != null) && term.terminate())
 			{
-				setCastingNow(false);
+				if (simultaneously)
+				{
+					setCastingSimultaneouslyNow(false);
+				}
+				else
+				{
+					setCastingNow(false);
+				}
+				if (isPlayer())
+				{
+					sendPacket(ActionFailed.STATIC_PACKET);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
+				}
+				return;
 			}
-			if (isPlayer())
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				getAI().setIntention(AI_INTENTION_ACTIVE);
-			}
-			return;
 		}
 		
 		// TODO: Unhardcode using event listeners!
@@ -2307,11 +2318,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			setDead(true);
 		}
 		
-		EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
-		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), this, TerminateReturn.class);
-		if ((returnBack != null) && returnBack.terminate())
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_DEATH, this))
 		{
-			return false;
+			EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
+		}
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_KILLED, this))
+		{
+			final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), this, TerminateReturn.class);
+			if ((returnBack != null) && returnBack.terminate())
+			{
+				return false;
+			}
 		}
 		
 		// Calculate rewards for main damage dealer.
@@ -5697,7 +5714,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				// Mobs in range 1000 see spell
 				World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, targets, isSummon()), npcMob);
+					if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_SEE, npcMob))
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, targets, isSummon()), npcMob);
+					}
 					
 					// On Skill See logic
 					if (npcMob.isAttackable())
@@ -6412,7 +6432,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void notifyDamageReceived(double damage, Creature attacker, Skill skill, boolean critical, boolean damageOverTime)
 	{
-		if (attacker != null)
+		if ((attacker != null) && EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_DAMAGE_DEALT, attacker))
 		{
 			if (_onCreatureDamageDealt == null)
 			{
@@ -6426,18 +6446,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			_onCreatureDamageDealt.setDamageOverTime(damageOverTime);
 			EventDispatcher.getInstance().notifyEvent(_onCreatureDamageDealt, attacker);
 		}
-		
-		if (_onCreatureDamageReceived == null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_DAMAGE_RECEIVED, this))
 		{
-			_onCreatureDamageReceived = new OnCreatureDamageReceived();
+			if (_onCreatureDamageReceived == null)
+			{
+				_onCreatureDamageReceived = new OnCreatureDamageReceived();
+			}
+			_onCreatureDamageReceived.setAttacker(attacker);
+			_onCreatureDamageReceived.setTarget(this);
+			_onCreatureDamageReceived.setDamage(damage);
+			_onCreatureDamageReceived.setSkill(skill);
+			_onCreatureDamageReceived.setCritical(critical);
+			_onCreatureDamageReceived.setDamageOverTime(damageOverTime);
+			EventDispatcher.getInstance().notifyEventAsync(_onCreatureDamageReceived, this);
 		}
-		_onCreatureDamageReceived.setAttacker(attacker);
-		_onCreatureDamageReceived.setTarget(this);
-		_onCreatureDamageReceived.setDamage(damage);
-		_onCreatureDamageReceived.setSkill(skill);
-		_onCreatureDamageReceived.setCritical(critical);
-		_onCreatureDamageReceived.setDamageOverTime(damageOverTime);
-		EventDispatcher.getInstance().notifyEventAsync(_onCreatureDamageReceived, this);
 	}
 	
 	/**
@@ -6447,14 +6469,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void notifyAttackAvoid(Creature target, boolean isDot)
 	{
-		if (_onCreatureAttackAvoid == null)
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_ATTACK_AVOID, target))
 		{
-			_onCreatureAttackAvoid = new OnCreatureAttackAvoid();
+			if (_onCreatureAttackAvoid == null)
+			{
+				_onCreatureAttackAvoid = new OnCreatureAttackAvoid();
+			}
+			_onCreatureAttackAvoid.setAttacker(this);
+			_onCreatureAttackAvoid.setTarget(target);
+			_onCreatureAttackAvoid.setDamageOverTime(isDot);
+			EventDispatcher.getInstance().notifyEvent(_onCreatureAttackAvoid, target);
 		}
-		_onCreatureAttackAvoid.setAttacker(this);
-		_onCreatureAttackAvoid.setTarget(target);
-		_onCreatureAttackAvoid.setDamageOverTime(isDot);
-		EventDispatcher.getInstance().notifyEvent(_onCreatureAttackAvoid, target);
 	}
 	
 	/**
@@ -6702,7 +6727,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			if (!creature.isInvisible())
 			{
 				final WorldRegion worldRegion = getWorldRegion();
-				if ((worldRegion != null) && worldRegion.areNeighborsActive() && _seenCreatures.add(creature))
+				if ((worldRegion != null) && worldRegion.areNeighborsActive() && _seenCreatures.add(creature) && EventDispatcher.getInstance().hasListener(EventType.ON_CREATURE_SEE, this))
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnCreatureSee(this, creature), this);
 				}

@@ -56,6 +56,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceCreated;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceDestroy;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceEnter;
@@ -130,9 +131,9 @@ public class Instance implements IIdentifiable, INamable
 			}
 		}
 		
-		if (!isDynamic())
+		// Notify DP scripts
+		if (!isDynamic() && EventDispatcher.getInstance().hasListener(EventType.ON_INSTANCE_CREATED, _template))
 		{
-			// Notify DP scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), _template);
 		}
 	}
@@ -220,7 +221,11 @@ public class Instance implements IIdentifiable, INamable
 	public void setStatus(int value)
 	{
 		_parameters.set("INSTANCE_STATUS", value);
-		EventDispatcher.getInstance().notifyEventAsync(new OnInstanceStatusChange(this, value), _template);
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_INSTANCE_STATUS_CHANGE, _template))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnInstanceStatusChange(this, value), _template);
+		}
 	}
 	
 	/**
@@ -836,7 +841,7 @@ public class Instance implements IIdentifiable, INamable
 		_ejectDeadTasks.clear();
 		
 		// Notify DP scripts
-		if (!isDynamic())
+		if (!isDynamic() && EventDispatcher.getInstance().hasListener(EventType.ON_INSTANCE_DESTROY, _template))
 		{
 			EventDispatcher.getInstance().notifyEvent(new OnInstanceDestroy(this), _template);
 		}
@@ -1073,7 +1078,7 @@ public class Instance implements IIdentifiable, INamable
 				}
 				
 				// Notify DP scripts
-				if (!isDynamic())
+				if (!isDynamic() && EventDispatcher.getInstance().hasListener(EventType.ON_INSTANCE_ENTER, _template))
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnInstanceEnter(player, this), _template);
 				}
@@ -1083,7 +1088,7 @@ public class Instance implements IIdentifiable, INamable
 				removePlayer(player);
 				
 				// Notify DP scripts
-				if (!isDynamic())
+				if (!isDynamic() && EventDispatcher.getInstance().hasListener(EventType.ON_INSTANCE_LEAVE, _template))
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnInstanceLeave(player, this), _template);
 				}

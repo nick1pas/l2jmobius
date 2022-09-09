@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFactionCall;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableHate;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
@@ -404,10 +405,13 @@ public class AttackableAI extends CreatureAI
 						}
 						else if (t.isPlayable())
 						{
-							final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), t.getActingPlayer(), t.isSummon()), getActiveChar(), TerminateReturn.class);
-							if ((term != null) && term.terminate())
+							if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_HATE, getActiveChar()))
 							{
-								return;
+								final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), t.getActingPlayer(), t.isSummon()), getActiveChar(), TerminateReturn.class);
+								if ((term != null) && term.terminate())
+								{
+									return;
+								}
 							}
 							
 							// Get the hate level of the Attackable against this Creature target contained in _aggroList
@@ -750,7 +754,11 @@ public class AttackableAI extends CreatureAI
 							// By default, when a faction member calls for help, attack the caller's attacker.
 							// Notify the AI with EVT_AGGRESSION
 							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
-							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
+							
+							if (EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_FACTION_CALL, called))
+							{
+								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
+							}
 						}
 						else if (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK)
 						{

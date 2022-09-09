@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -965,7 +966,11 @@ public class Hero
 		loadDiary(player.getObjectId());
 		HERO_MESSAGE.put(player.getObjectId(), "");
 		
-		EventDispatcher.getInstance().notifyEvent(new OnPlayerTakeHero(player));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_TAKE_HERO))
+		{
+			EventDispatcher.getInstance().notifyEvent(new OnPlayerTakeHero(player));
+		}
+		
 		updateHeroes(false);
 	}
 	

@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanJoin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeaderChange;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeft;
@@ -235,7 +236,11 @@ public class Clan implements IIdentifiable, INamable
 		final Player exLeader = exMember.getPlayer();
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeaderChange(exMember, member, this));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_LEADER_CHANGE))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeaderChange(exMember, member, this));
+		}
+		
 		if (exLeader != null)
 		{
 			if (exLeader.isFlying())
@@ -368,7 +373,10 @@ public class Clan implements IIdentifiable, INamable
 		addSkillEffects(player);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanJoin(member, this));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_JOIN))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanJoin(member, this));
+		}
 	}
 	
 	/**
@@ -531,7 +539,10 @@ public class Clan implements IIdentifiable, INamable
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeft(exMember, this));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_LEFT))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeft(exMember, this));
+		}
 	}
 	
 	public Collection<ClanMember> getMembers()
@@ -2559,7 +2570,11 @@ public class Clan implements IIdentifiable, INamable
 		changeLevel(_level + 1);
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(player, this));
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_CLAN_LEVELUP))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLvlUp(player, this));
+		}
+		
 		return true;
 	}
 	

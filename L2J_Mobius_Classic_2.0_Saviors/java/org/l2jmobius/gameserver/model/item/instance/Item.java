@@ -62,6 +62,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
@@ -298,9 +299,9 @@ public class Item extends WorldObject
 		// Remove the Item from the world
 		World.getInstance().removeVisibleObject(this, oldregion);
 		
-		if (creature.isPlayer())
+		// Notify to scripts
+		if (creature.isPlayer() && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_PICKUP, getTemplate()))
 		{
-			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(creature.getActingPlayer(), this), getTemplate());
 		}
 	}
@@ -977,7 +978,11 @@ public class Item extends WorldObject
 		}
 		
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getTemplate());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_AUGMENT, getTemplate()))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getTemplate());
+		}
+		
 		return true;
 	}
 	
@@ -1007,7 +1012,10 @@ public class Item extends WorldObject
 		}
 		
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getTemplate());
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_AUGMENT, getTemplate()))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getTemplate());
+		}
 	}
 	
 	public void restoreAttributes()
@@ -1537,7 +1545,10 @@ public class Item extends WorldObject
 			_owner = null;
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getTemplate());
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_DROP, getTemplate()))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getTemplate());
+			}
 		}
 	}
 	
@@ -2037,9 +2048,12 @@ public class Item extends WorldObject
 			
 			if (event != null)
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnItemBypassEvent(this, player, event), getTemplate());
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_ITEM_BYPASS_EVENT, getTemplate()))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnItemBypassEvent(this, player, event), getTemplate());
+				}
 			}
-			else
+			else if (EventDispatcher.getInstance().hasListener(EventType.ON_ITEM_TALK, getTemplate()))
 			{
 				EventDispatcher.getInstance().notifyEventAsync(new OnItemTalk(this, player), getTemplate());
 			}

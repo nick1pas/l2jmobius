@@ -38,6 +38,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -1128,7 +1129,7 @@ public abstract class Inventory extends ItemContainer
 		if (old != null)
 		{
 			final Creature owner = getOwner();
-			if ((owner != null) && owner.isPlayer())
+			if ((owner != null) && owner.isPlayer() && EventDispatcher.getInstance().hasListener(EventType.ON_PLAYER_ITEM_UNEQUIP, old.getTemplate()))
 			{
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemUnequip(owner.getActingPlayer(), old), old.getTemplate());
 			}

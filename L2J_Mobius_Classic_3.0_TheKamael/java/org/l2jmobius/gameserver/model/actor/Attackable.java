@@ -60,6 +60,7 @@ import org.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAggroRangeEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
@@ -294,9 +295,9 @@ public class Attackable extends Npc
 			return false;
 		}
 		
-		if ((killer != null) && (killer.getActingPlayer() != null))
+		// Notify to scripts.
+		if ((killer != null) && (killer.getActingPlayer() != null) && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_KILL, this))
 		{
-			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this);
 		}
 		
@@ -797,7 +798,7 @@ public class Attackable extends Npc
 				addDamageHate(attacker, damage, (int) hateValue);
 				
 				final Player player = attacker.getActingPlayer();
-				if (player != null)
+				if ((player != null) && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_ATTACK, this))
 				{
 					EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(player, this, damage, skill, attacker.isSummon()), this);
 				}
@@ -861,7 +862,10 @@ public class Attackable extends Npc
 			}
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, attacker.isSummon()), this);
+			if (EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_AGGRO_RANGE_ENTER, this))
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAggroRangeEnter(this, targetPlayer, attacker.isSummon()), this);
+			}
 		}
 		else if ((targetPlayer == null) && (aggro == 0))
 		{

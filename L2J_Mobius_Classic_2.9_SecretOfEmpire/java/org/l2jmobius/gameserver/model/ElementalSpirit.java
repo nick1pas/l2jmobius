@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnElementalSpiritUpgrade;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritAbsorbItemHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
@@ -157,7 +158,11 @@ public class ElementalSpirit
 		_data.setLevel(1);
 		_data.setExperience(0);
 		_template = ElementalSpiritData.getInstance().getSpirit(_data.getType(), _data.getStage());
-		EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(_owner, this), _owner);
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_ELEMENTAL_SPIRIT_UPGRADE, _owner))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(_owner, this), _owner);
+		}
 	}
 	
 	public void resetCharacteristics()

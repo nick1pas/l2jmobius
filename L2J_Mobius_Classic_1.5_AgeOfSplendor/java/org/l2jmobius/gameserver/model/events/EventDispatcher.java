@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 
 /**
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public class EventDispatcher
 {
@@ -34,6 +34,47 @@ public class EventDispatcher
 	
 	protected EventDispatcher()
 	{
+	}
+	
+	/**
+	 * @param type EventType
+	 * @return {@code true} if global containers have a listener of the given type.
+	 */
+	public boolean hasListener(EventType type)
+	{
+		return Containers.Global().hasListener(type);
+	}
+	
+	/**
+	 * @param type EventType
+	 * @param container ListenersContainer
+	 * @return {@code true} if container has a listener of the given type.
+	 */
+	public boolean hasListener(EventType type, ListenersContainer container)
+	{
+		return Containers.Global().hasListener(type) || ((container != null) && container.hasListener(type));
+	}
+	
+	/**
+	 * @param type EventType
+	 * @param containers ListenersContainer...
+	 * @return {@code true} if containers have a listener of the given type.
+	 */
+	public boolean hasListener(EventType type, ListenersContainer... containers)
+	{
+		boolean hasListeners = Containers.Global().hasListener(type);
+		if (!hasListeners)
+		{
+			for (ListenersContainer container : containers)
+			{
+				if (container.hasListener(type))
+				{
+					hasListeners = true;
+					break;
+				}
+			}
+		}
+		return hasListeners;
 	}
 	
 	/**
@@ -79,13 +120,28 @@ public class EventDispatcher
 	{
 		try
 		{
-			return Containers.Global().hasListener(event.getType()) || ((container != null) && container.hasListener(event.getType())) ? notifyEventImpl(event, container, callbackClass) : null;
+			return notifyEventImpl(event, container, callbackClass);
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
 		}
 		return null;
+	}
+	
+	/**
+	 * Executing current listener notification asynchronously
+	 * @param event
+	 * @param container
+	 */
+	public void notifyEventAsync(IBaseEvent event, ListenersContainer container)
+	{
+		if (event == null)
+		{
+			throw new NullPointerException("Event cannot be null!");
+		}
+		
+		ThreadPool.execute(() -> notifyEventToSingleContainer(event, container, null));
 	}
 	
 	/**
@@ -100,37 +156,45 @@ public class EventDispatcher
 			throw new NullPointerException("Event cannot be null!");
 		}
 		
-		boolean hasListeners = Containers.Global().hasListener(event.getType());
-		if (!hasListeners)
-		{
-			for (ListenersContainer container : containers)
-			{
-				if (container.hasListener(event.getType()))
-				{
-					hasListeners = true;
-					break;
-				}
-			}
-		}
-		
-		if (hasListeners)
-		{
-			ThreadPool.execute(() -> notifyEventToMultipleContainers(event, containers, null));
-		}
+		ThreadPool.execute(() -> notifyEventToMultipleContainers(event, containers, null));
 	}
 	
 	/**
-	 * Scheduling current listener notification asynchronously after specified delay.
+	 * @param <T>
 	 * @param event
 	 * @param container
-	 * @param delay
+	 * @param callbackClass
+	 * @return
 	 */
-	public void notifyEventAsyncDelayed(IBaseEvent event, ListenersContainer container, long delay)
+	private <T extends AbstractEventReturn> T notifyEventToSingleContainer(IBaseEvent event, ListenersContainer container, Class<T> callbackClass)
 	{
-		if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType()))
+		if (event == null)
 		{
-			ThreadPool.schedule(() -> notifyEvent(event, container, null), delay);
+			throw new NullPointerException("Event cannot be null!");
 		}
+		
+		try
+		{
+			// Local listener container.
+			T callback = null;
+			if (container != null)
+			{
+				callback = notifyToListeners(container.getListeners(event.getType()), event, callbackClass, callback);
+			}
+			
+			// Global listener container.
+			if ((callback == null) || !callback.abort())
+			{
+				callback = notifyToListeners(Containers.Global().getListeners(event.getType()), event, callbackClass, callback);
+			}
+			
+			return callback;
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+		}
+		return null;
 	}
 	
 	/**
@@ -152,7 +216,7 @@ public class EventDispatcher
 			T callback = null;
 			if (containers != null)
 			{
-				// Local listeners container first.
+				// Local listener containers.
 				for (ListenersContainer container : containers)
 				{
 					if ((callback == null) || !callback.abort())
@@ -191,8 +255,8 @@ public class EventDispatcher
 			throw new NullPointerException("Event cannot be null!");
 		}
 		
+		// Local listener container.
 		T callback = null;
-		// Local listener container first.
 		if (container != null)
 		{
 			callback = notifyToListeners(container.getListeners(event.getType()), event, callbackClass, callback);

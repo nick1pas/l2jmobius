@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.attackable.OnAttackableKill;
 import org.l2jmobius.gameserver.model.skill.Skill;
@@ -49,7 +50,7 @@ public class QuestGuard extends Guard
 	{
 		super.addDamage(attacker, damage, skill);
 		
-		if (attacker.isAttackable())
+		if (attacker.isAttackable() && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_ATTACK, this))
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(null, this, damage, skill, false), this);
 		}
@@ -64,9 +65,9 @@ public class QuestGuard extends Guard
 			return false;
 		}
 		
-		if (killer.isAttackable())
+		// Delayed notification
+		if (killer.isAttackable() && EventDispatcher.getInstance().hasListener(EventType.ON_ATTACKABLE_KILL, this))
 		{
-			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(null, this, false), this, _onKillDelay);
 		}
 		return true;

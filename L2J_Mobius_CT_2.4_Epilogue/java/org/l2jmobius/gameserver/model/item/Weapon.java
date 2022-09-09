@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionGameChance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
@@ -434,7 +435,13 @@ public class Weapon extends ItemTemplate
 				target
 			};
 			
-			World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc));
+			World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc ->
+			{
+				if (EventDispatcher.getInstance().hasListener(EventType.ON_NPC_SKILL_SEE, npc))
+				{
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc);
+				}
+			});
 		}
 		if (caster.isPlayer())
 		{
