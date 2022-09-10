@@ -17,26 +17,15 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * @author Sdw
+ * @author NasSeKa
  */
-public class VampiricDefence extends AbstractEffect
+public class VampiricDefence extends AbstractStatPercentEffect
 {
-	private final int _amount;
-	
 	public VampiricDefence(StatSet params)
 	{
-		_amount = params.getInt("amount", 0);
-	}
-	
-	@Override
-	public void pump(Creature effected, Skill skill)
-	{
-		effected.getStat().mergeAdd(Stat.ABSORB_DAMAGE_DEFENCE, 1 - (_amount / 100));
+		super(params, Stat.ABSORB_DAMAGE_DEFENCE);
 	}
 }

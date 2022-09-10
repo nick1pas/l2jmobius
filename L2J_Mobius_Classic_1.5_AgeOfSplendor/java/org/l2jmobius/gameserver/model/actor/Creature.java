@@ -4654,11 +4654,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			if ((skill == null) || Config.VAMPIRIC_ATTACK_WORKS_WITH_SKILLS)
 			{
-				final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
+				final double absorbHpPercent = getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0);
 				if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stat.ABSORB_DAMAGE_CHANCE)))
 				{
 					int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
 					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+					absorbDamage *= target.getStat().getValue(Stat.ABSORB_DAMAGE_DEFENCE, 1);
 					if (absorbDamage > 0)
 					{
 						setCurrentHp(_status.getCurrentHp() + absorbDamage);
