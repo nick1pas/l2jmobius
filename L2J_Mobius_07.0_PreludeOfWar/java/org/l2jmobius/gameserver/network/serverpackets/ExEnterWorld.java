@@ -49,7 +49,7 @@ public class ExEnterWorld implements IClientOutgoingPacket
 		packet.writeD(_epochInSeconds);
 		packet.writeD(-_zoneIdOffsetSeconds);
 		packet.writeD(_daylight);
-		packet.writeD(Config.SERVER_ID);
+		packet.writeD(Config.MAX_FREE_TELEPORT_LEVEL);
 		return true;
 	}
 }
