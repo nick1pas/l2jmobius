@@ -159,10 +159,15 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
-						final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
-						if (player != null)
+						
+						// Disconnect offline trader.
+						if (Config.OFFLINE_DISCONNECT_SAME_ACCOUNT)
 						{
-							Disconnection.of(player).storeMe().deleteMe();
+							final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
+							if (player != null)
+							{
+								Disconnection.of(player).storeMe().deleteMe();
+							}
 						}
 					}
 				}

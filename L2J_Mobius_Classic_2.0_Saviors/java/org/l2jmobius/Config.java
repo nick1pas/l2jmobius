@@ -1056,6 +1056,7 @@ public class Config
 	public static boolean RESTORE_OFFLINERS;
 	public static int OFFLINE_MAX_DAYS;
 	public static boolean OFFLINE_DISCONNECT_FINISHED;
+	public static boolean OFFLINE_DISCONNECT_SAME_ACCOUNT;
 	public static boolean OFFLINE_SET_NAME_COLOR;
 	public static int OFFLINE_NAME_COLOR;
 	public static boolean OFFLINE_FAME;
@@ -3214,6 +3215,7 @@ public class Config
 			RESTORE_OFFLINERS = offlineTradeConfig.getBoolean("RestoreOffliners", false);
 			OFFLINE_MAX_DAYS = offlineTradeConfig.getInt("OfflineMaxDays", 10);
 			OFFLINE_DISCONNECT_FINISHED = offlineTradeConfig.getBoolean("OfflineDisconnectFinished", true);
+			OFFLINE_DISCONNECT_SAME_ACCOUNT = offlineTradeConfig.getBoolean("OfflineDisconnectSameAccount", false);
 			STORE_OFFLINE_TRADE_IN_REALTIME = offlineTradeConfig.getBoolean("StoreOfflineTradeInRealtime", true);
 			
 			// Load PasswordChange config file (if exists)

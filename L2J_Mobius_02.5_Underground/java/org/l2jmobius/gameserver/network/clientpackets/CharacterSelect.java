@@ -102,6 +102,13 @@ public class CharacterSelect implements IClientIncomingPacket
 						return;
 					}
 					
+					// Disconnect offline trader.
+					final Player player = World.getInstance().getPlayer(info.getObjectId());
+					if (player != null)
+					{
+						Disconnection.of(player).storeMe().deleteMe();
+					}
+					
 					// Banned?
 					if (PunishmentManager.getInstance().hasPunishment(info.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.BAN) //
 						|| PunishmentManager.getInstance().hasPunishment(client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN) //
