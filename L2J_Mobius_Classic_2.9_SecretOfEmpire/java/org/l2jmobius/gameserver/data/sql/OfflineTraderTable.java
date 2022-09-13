@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.TradeItem;
@@ -293,6 +294,10 @@ public class OfflineTraderTable
 					player.setPrivateStoreType(type);
 					player.setOnlineStatus(true, true);
 					player.restoreEffects();
+					if (!Config.OFFLINE_ABNORMAL_EFFECTS.isEmpty())
+					{
+						player.getEffectList().startAbnormalVisualEffect(Config.OFFLINE_ABNORMAL_EFFECTS.get(Rnd.get(Config.OFFLINE_ABNORMAL_EFFECTS.size())));
+					}
 					player.broadcastUserInfo();
 					nTraders++;
 				}

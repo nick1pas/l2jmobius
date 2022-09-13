@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -1122,6 +1123,7 @@ public class Config
 	public static int OFFLINE_MAX_DAYS;
 	public static boolean OFFLINE_DISCONNECT_FINISHED;
 	public static boolean OFFLINE_DISCONNECT_SAME_ACCOUNT;
+	public static List<AbnormalVisualEffect> OFFLINE_ABNORMAL_EFFECTS = new ArrayList<>();
 	public static boolean OFFLINE_SET_NAME_COLOR;
 	public static int OFFLINE_NAME_COLOR;
 	public static boolean OFFLINE_FAME;
@@ -3339,6 +3341,15 @@ public class Config
 			OFFLINE_DISCONNECT_SAME_ACCOUNT = offlineTradeConfig.getBoolean("OfflineDisconnectSameAccount", false);
 			STORE_OFFLINE_TRADE_IN_REALTIME = offlineTradeConfig.getBoolean("StoreOfflineTradeInRealtime", true);
 			ENABLE_OFFLINE_COMMAND = offlineTradeConfig.getBoolean("EnableOfflineCommand", true);
+			OFFLINE_ABNORMAL_EFFECTS.clear();
+			final String offlineAbnormalEffects = offlineTradeConfig.getString("OfflineAbnormalEffect", "").trim();
+			if (!offlineAbnormalEffects.isEmpty())
+			{
+				for (String ave : offlineAbnormalEffects.split(","))
+				{
+					OFFLINE_ABNORMAL_EFFECTS.add(Enum.valueOf(AbnormalVisualEffect.class, ave.trim()));
+				}
+			}
 			
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser passwordChangeConfig = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);

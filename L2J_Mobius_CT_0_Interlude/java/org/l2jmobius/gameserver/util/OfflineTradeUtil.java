@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.World;
@@ -149,6 +150,12 @@ public class OfflineTradeUtil
 		
 		player.storeMe();
 		LOGGER_ACCOUNTING.info("Entering offline mode, " + client);
+		
+		if (!Config.OFFLINE_ABNORMAL_EFFECTS.isEmpty())
+		{
+			player.startAbnormalVisualEffect(true, Config.OFFLINE_ABNORMAL_EFFECTS.get(Rnd.get(Config.OFFLINE_ABNORMAL_EFFECTS.size())));
+		}
+		
 		return true;
 	}
 }
