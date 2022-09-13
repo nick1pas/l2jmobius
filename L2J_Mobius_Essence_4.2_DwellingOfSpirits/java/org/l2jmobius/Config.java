@@ -1102,6 +1102,7 @@ public class Config
 	public static int OFFLINE_NAME_COLOR;
 	public static boolean OFFLINE_FAME;
 	public static boolean STORE_OFFLINE_TRADE_IN_REALTIME;
+	public static boolean ENABLE_OFFLINE_COMMAND;
 	public static boolean DISPLAY_SERVER_TIME;
 	public static int BUFFER_MAX_SCHEMES;
 	public static int BUFFER_STATIC_BUFF_COST;
@@ -3330,6 +3331,7 @@ public class Config
 			OFFLINE_DISCONNECT_FINISHED = offlineTradeConfig.getBoolean("OfflineDisconnectFinished", true);
 			OFFLINE_DISCONNECT_SAME_ACCOUNT = offlineTradeConfig.getBoolean("OfflineDisconnectSameAccount", false);
 			STORE_OFFLINE_TRADE_IN_REALTIME = offlineTradeConfig.getBoolean("StoreOfflineTradeInRealtime", true);
+			ENABLE_OFFLINE_COMMAND = offlineTradeConfig.getBoolean("EnableOfflineCommand", true);
 			
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser passwordChangeConfig = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);

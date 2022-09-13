@@ -27,8 +27,13 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAns
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
+import org.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
  * @author Dezmond_snz
@@ -86,6 +91,40 @@ public class DlgAnswer implements IClientIncomingPacket
 				
 				// The 'useConfirm' must be disabled here, as we don't want to repeat that process.
 				AdminCommandHandler.getInstance().useAdminCommand(player, cmd, false);
+			}
+		}
+		else if (_messageId == SystemMessageId.DO_YOU_WISH_TO_EXIT_THE_GAME.getId())
+		{
+			if ((_answer == 0) || !Config.ENABLE_OFFLINE_COMMAND || (!Config.OFFLINE_TRADE_ENABLE && !Config.OFFLINE_CRAFT_ENABLE))
+			{
+				return;
+			}
+			
+			if (!player.isInStoreMode())
+			{
+				player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			if ((player.getInstanceId() > 0) || player.isInVehicle() || !player.canLogout())
+			{
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			// Remove player from boss zone.
+			player.removeFromBossZone();
+			
+			// Unregister from olympiad.
+			if (OlympiadManager.getInstance().isRegistered(player))
+			{
+				OlympiadManager.getInstance().unRegisterNoble(player);
+			}
+			
+			if (!OfflineTradeUtil.enteredOfflineMode(player))
+			{
+				Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			}
 		}
 		else if ((_messageId == SystemMessageId.C1_IS_MAKING_AN_ATTEMPT_TO_RESURRECT_YOU_IF_YOU_CHOOSE_THIS_PATH_S2_EXPERIENCE_POINTS_WILL_BE_RETURNED_TO_YOU_DO_YOU_WANT_TO_BE_RESURRECTED.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))

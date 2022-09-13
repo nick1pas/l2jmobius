@@ -281,6 +281,7 @@ import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
 import handlers.voicedcommandhandlers.Lang;
+import handlers.voicedcommandhandlers.Offline;
 import handlers.voicedcommandhandlers.Premium;
 import handlers.voicedcommandhandlers.Wedding;
 
@@ -526,6 +527,7 @@ public class MasterHandler
 			Config.CHAT_ADMIN ? ChatAdmin.class : null,
 			Config.MULTILANG_ENABLE && Config.MULTILANG_VOICED_ALLOW ? Lang.class : null,
 			Config.ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null,
+			Config.ENABLE_OFFLINE_COMMAND && (Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) ? Offline.class : null,
 			Config.PREMIUM_SYSTEM_ENABLED ? Premium.class : null,
 			Config.AUTO_POTIONS_ENABLED ? AutoPotion.class : null,
 		},

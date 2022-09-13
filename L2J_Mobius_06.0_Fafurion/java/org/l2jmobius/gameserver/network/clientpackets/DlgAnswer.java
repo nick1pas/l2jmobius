@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.PlayerAction;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -26,8 +27,13 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAns
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
+import org.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
  * @author Dezmond_snz
@@ -78,6 +84,37 @@ public class DlgAnswer implements IClientIncomingPacket
 				
 				// The 'useConfirm' must be disabled here, as we don't want to repeat that process.
 				AdminCommandHandler.getInstance().useAdminCommand(player, cmd, false);
+			}
+		}
+		else if (_messageId == SystemMessageId.DO_YOU_WISH_TO_EXIT_THE_GAME.getId())
+		{
+			if ((_answer == 0) || !Config.ENABLE_OFFLINE_COMMAND || (!Config.OFFLINE_TRADE_ENABLE && !Config.OFFLINE_CRAFT_ENABLE))
+			{
+				return;
+			}
+			
+			if (!player.isInStoreMode())
+			{
+				player.sendPacket(SystemMessageId.PRIVATE_STORE_ALREADY_CLOSED);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			if (player.isInInstance() || player.isInVehicle() || !player.canLogout())
+			{
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			// Unregister from olympiad.
+			if (OlympiadManager.getInstance().isRegistered(player))
+			{
+				OlympiadManager.getInstance().unRegisterNoble(player);
+			}
+			
+			if (!OfflineTradeUtil.enteredOfflineMode(player))
+			{
+				Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			}
 		}
 		else if ((_messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_RESURRECT_YOU_AND_RESTORE_XP_S2_S3_ACCEPT.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))
