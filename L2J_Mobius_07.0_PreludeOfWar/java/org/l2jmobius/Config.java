@@ -133,6 +133,7 @@ public class Config
 	private static final String CUSTOM_NOBLESS_MASTER_CONFIG_FILE = "./config/Custom/NoblessMaster.ini";
 	private static final String CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
+	private static final String CUSTOM_ONLINE_INFO_CONFIG_FILE = "./config/Custom/OnlineInfo.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
 	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
@@ -1238,6 +1239,7 @@ public class Config
 	public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
 	public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
 	public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
+	public static boolean ENABLE_ONLINE_COMMAND;
 	public static boolean ALLOW_CHANGE_PASSWORD;
 	public static boolean ALLOW_HUMAN;
 	public static boolean ALLOW_ELF;
@@ -3404,6 +3406,10 @@ public class Config
 					OFFLINE_ABNORMAL_EFFECTS.add(Enum.valueOf(AbnormalVisualEffect.class, ave.trim()));
 				}
 			}
+			
+			// Load OnlineInfo config file (if exists)
+			final PropertiesParser onlineInfoConfig = new PropertiesParser(CUSTOM_ONLINE_INFO_CONFIG_FILE);
+			ENABLE_ONLINE_COMMAND = onlineInfoConfig.getBoolean("EnableOnlineCommand", false);
 			
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser passwordChangeConfig = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
