@@ -169,26 +169,27 @@ public class NightmareKamaloka extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
+		final Instance world = npc.getInstanceWorld();
+		if (isInInstance(world))
 		{
-			final int nextDoorId = instance.getTemplateId() == TEMPLATE_IDS[0] ? BOSS_MAP.getOrDefault(npc.getId(), -1) : BOSS_MAP_110.getOrDefault(npc.getId(), -1);
+			final int nextDoorId = world.getTemplateId() == TEMPLATE_IDS[0] ? BOSS_MAP.getOrDefault(npc.getId(), -1) : BOSS_MAP_110.getOrDefault(npc.getId(), -1);
 			if (nextDoorId == -1)
 			{
-				for (Player member : instance.getPlayers())
+				for (Player member : world.getPlayers())
 				{
-					giveItems(member, instance.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
+					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
-				final Player randomPlayer = instance.getFirstPlayer().getParty().getRandomPlayer();
-				if ((randomPlayer != null) && (getRandom(100) < 80) && (instance.getPlayersCount() == instance.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+				final Party party = world.getFirstPlayer().getParty();
+				final Player randomPlayer = party != null ? party.getRandomPlayer() : null;
+				if ((randomPlayer != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 				{
 					giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
 				}
-				instance.finishInstance();
+				world.finishInstance();
 			}
 			else
 			{
-				instance.openCloseDoor(nextDoorId, true);
+				world.openCloseDoor(nextDoorId, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

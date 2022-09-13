@@ -441,7 +441,8 @@ public class KrofinNest extends AbstractInstance
 		{
 			final boolean kroshaFirstFormMinionsSpawnedTwice = world.getParameters().getBoolean("KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE", false);
 			final boolean kroshaFinalFormSpawned = world.getParameters().getBoolean("KROSHA_FINAL_FORM_SPAWNED", false);
-			final Player randomPl = world.getFirstPlayer().getParty().getRandomPlayer();
+			final Party party = world.getFirstPlayer().getParty();
+			final Player randomPlayer = party != null ? party.getRandomPlayer() : null;
 			if (world.getStatus() == 5)
 			{
 				if (CommonUtil.contains(KROSHA_FIRST_FORM_MINIONS, npc.getId()))
@@ -473,9 +474,9 @@ public class KrofinNest extends AbstractInstance
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX);
 					}
-					if ((randomPl != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+					if ((randomPlayer != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 					{
-						giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
+						giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
 					}
 					showOnScreenMsg(world, NpcStringId.THE_WATER_POWER_PROTECTING_QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.finishInstance();
@@ -486,9 +487,9 @@ public class KrofinNest extends AbstractInstance
 					{
 						giveItems(member, BENUSTAS_REWARD_BOX_110);
 					}
-					if ((randomPl != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
+					if ((randomPlayer != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 					{
-						giveItems(randomPl, BENUSTAS_SHINING_REWARD_BOX);
+						giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
 					}
 					showOnScreenMsg(world, NpcStringId.THE_WATER_POWER_PROTECTING_QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
 					world.finishInstance();

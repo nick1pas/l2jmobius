@@ -366,7 +366,8 @@ public class BaylorWarzone extends AbstractInstance
 				{
 					giveItems(member, world.getTemplateId() == TEMPLATE_IDS[0] ? BENUSTAS_REWARD_BOX : BENUSTAS_REWARD_BOX_110);
 				}
-				final Player randomPlayer = world.getFirstPlayer().getParty().getRandomPlayer();
+				final Party party = world.getFirstPlayer().getParty();
+				final Player randomPlayer = party != null ? party.getRandomPlayer() : null;
 				if ((randomPlayer != null) && (getRandom(100) < 80) && (world.getPlayersCount() == world.getParameters().getInt("INITIAL_PARTY_MEMBERS", 0)))
 				{
 					giveItems(randomPlayer, BENUSTAS_SHINING_REWARD_BOX);
