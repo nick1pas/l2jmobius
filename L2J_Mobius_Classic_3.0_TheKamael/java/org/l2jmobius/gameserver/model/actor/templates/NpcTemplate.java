@@ -837,6 +837,9 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				groupRate = Math.min(groupRate, rateChance);
 			}
 			
+			// bonus drop rate effect
+			groupRate *= killer.getStat().getMul(Stat.BONUS_DROP_RATE, 1);
+			
 			if ((Rnd.nextDouble() * 100) < (group.getChance() * groupRate))
 			{
 				double totalChance = 0; // total group chance is 100
@@ -1159,6 +1162,13 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 			{
 				rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
 			}
+		}
+		
+		// bonus drop amount effect
+		rateAmount *= killer.getStat().getMul(Stat.BONUS_DROP_AMOUNT, 1);
+		if (itemId == Inventory.ADENA_ID)
+		{
+			rateAmount *= killer.getStat().getMul(Stat.BONUS_DROP_ADENA, 1);
 		}
 		
 		// finally
