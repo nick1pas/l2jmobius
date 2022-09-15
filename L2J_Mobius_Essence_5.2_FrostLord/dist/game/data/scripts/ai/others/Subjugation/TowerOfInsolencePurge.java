@@ -62,7 +62,7 @@ public class TowerOfInsolencePurge extends AbstractNpcAI
 			final int pointsForMob = isHotTime ? PURGE_DATA.getNpcs().get(npc.getId()) * 2 : PURGE_DATA.getNpcs().get(npc.getId());
 			final int currentPurgePoints = (killer.getPurgePoints().get(CATEGORY) == null) ? 0 : killer.getPurgePoints().get(CATEGORY).getPoints();
 			final int currentKeys = (killer.getPurgePoints().get(CATEGORY) == null) ? 0 : killer.getPurgePoints().get(CATEGORY).getKeys();
-			final int remainingKeys = (killer.getPurgePoints().get(CATEGORY) == null) ? 0 : killer.getPurgePoints().get(CATEGORY).getMaxPeriodicKeys();
+			final int remainingKeys = (killer.getPurgePoints().get(CATEGORY) == null) ? 0 : killer.getPurgePoints().get(CATEGORY).getRemainingKeys();
 			killer.getPurgePoints().put(CATEGORY, new PurgePlayerHolder(Math.min(PURGE_MAX_POINT, currentPurgePoints + pointsForMob), currentKeys, remainingKeys));
 			lastCategory(killer);
 			checkPurgeComplete(killer);
@@ -77,7 +77,7 @@ public class TowerOfInsolencePurge extends AbstractNpcAI
 		final int keys = player.getPurgePoints().get(CATEGORY).getKeys();
 		if ((points >= PURGE_MAX_POINT) && (keys < MAX_KEYS))
 		{
-			player.getPurgePoints().put(CATEGORY, new PurgePlayerHolder(points - PURGE_MAX_POINT, keys + 1, player.getPurgePoints().get(CATEGORY).getMaxPeriodicKeys() - 1));
+			player.getPurgePoints().put(CATEGORY, new PurgePlayerHolder(points - PURGE_MAX_POINT, keys + 1, player.getPurgePoints().get(CATEGORY).getRemainingKeys() - 1));
 		}
 	}
 	

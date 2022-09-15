@@ -15599,7 +15599,7 @@ public class Player extends Playable
 						st.setInt(2, category);
 						st.setInt(3, data.getPoints());
 						st.setInt(4, data.getKeys());
-						st.setInt(5, data.getMaxPeriodicKeys());
+						st.setInt(5, data.getRemainingKeys());
 						st.addBatch();
 					}
 					catch (Exception e)

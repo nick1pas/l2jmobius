@@ -23,13 +23,13 @@ public class PurgePlayerHolder
 {
 	private final int _points;
 	private final int _keys;
-	private int _getMaxPeriodicKeys;
+	private int _remainingKeys;
 	
 	public PurgePlayerHolder(int points, int keys, int remainingKeys)
 	{
 		_points = points;
 		_keys = keys;
-		_getMaxPeriodicKeys = remainingKeys;
+		_remainingKeys = remainingKeys;
 	}
 	
 	public int getPoints()
@@ -42,12 +42,12 @@ public class PurgePlayerHolder
 		return _keys;
 	}
 	
-	public int getMaxPeriodicKeys()
+	public int getRemainingKeys()
 	{
-		if ((_keys == 0) && (_getMaxPeriodicKeys == 0))
+		if ((_keys == 0) && (_remainingKeys == 0))
 		{
-			_getMaxPeriodicKeys += 40;
+			_remainingKeys = 40;
 		}
-		return _getMaxPeriodicKeys;
+		return _remainingKeys;
 	}
 }

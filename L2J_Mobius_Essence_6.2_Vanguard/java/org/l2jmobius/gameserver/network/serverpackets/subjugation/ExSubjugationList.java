@@ -48,7 +48,7 @@ public class ExSubjugationList implements IClientOutgoingPacket
 			packet.writeD(integerPurgePlayerHolderEntry.getKey());
 			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getPoints() : 0);
 			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getKeys() : 0);
-			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getMaxPeriodicKeys() : 40);
+			packet.writeD(integerPurgePlayerHolderEntry.getValue() != null ? integerPurgePlayerHolderEntry.getValue().getRemainingKeys() : 40);
 		}
 		return true;
 	}
