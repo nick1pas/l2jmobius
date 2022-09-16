@@ -82,16 +82,17 @@ public class TimedHuntingZoneData implements IXmlReader
 							int maxAddedTime = 0;
 							int resetDelay = 0;
 							int entryItemId = 57;
-							int entryFee = 10000;
+							int entryFee = 150000;
 							int minLevel = 1;
 							int maxLevel = 999;
-							int remainRefillTime = 3600;
 							int refillTimeMax = 3600;
 							int instanceId = 0;
 							boolean soloInstance = true;
 							boolean weekly = false;
 							Location enterLocation = null;
 							Location exitLocation = null;
+							boolean pvpZone = false;
+							boolean noPvpZone = false;
 							for (Node zoneNode = listNode.getFirstChild(); zoneNode != null; zoneNode = zoneNode.getNextSibling())
 							{
 								switch (zoneNode.getNodeName())
@@ -143,11 +144,6 @@ public class TimedHuntingZoneData implements IXmlReader
 										maxLevel = Integer.parseInt(zoneNode.getTextContent());
 										break;
 									}
-									case "remainRefillTime":
-									{
-										remainRefillTime = Integer.parseInt(zoneNode.getTextContent());
-										break;
-									}
 									case "refillTimeMax":
 									{
 										refillTimeMax = Integer.parseInt(zoneNode.getTextContent());
@@ -168,9 +164,19 @@ public class TimedHuntingZoneData implements IXmlReader
 										weekly = Boolean.parseBoolean(zoneNode.getTextContent());
 										break;
 									}
+									case "pvpZone":
+									{
+										pvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
+										break;
+									}
+									case "noPvpZone":
+									{
+										noPvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
+										break;
+									}
 								}
 							}
-							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, enterLocation, exitLocation));
+							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, refillTimeMax, instanceId, soloInstance, weekly, enterLocation, exitLocation, pvpZone, noPvpZone));
 						}
 					}
 				}

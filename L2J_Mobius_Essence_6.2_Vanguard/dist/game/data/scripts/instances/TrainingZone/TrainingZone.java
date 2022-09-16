@@ -875,7 +875,7 @@ public class TrainingZone extends AbstractInstance
 	public void onInstanceLeave(Player player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, true, false, 3600, 0, NpcStringId.TIME_LEFT));
-		player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+		player.sendPacket(new TimedHuntingZoneExit(player.getLastTimeZone().getZoneId()));
 		removeBuffs(player);
 		instance.getParameters().remove("TRAINIG_AREA_TELEPORT");
 		instance.finishInstance();

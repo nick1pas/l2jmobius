@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneClose;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
 
 /**
@@ -85,7 +84,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			player.sendMessage("Cannot use time-limited hunting zones while waiting for the Olympiad.");
 			return;
 		}
-		if (player.isOnEvent() || (player.getBlockCheckerArena() > -1))
+		if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1))
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while registered on an event.");
 			return;
@@ -148,9 +147,6 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			}
 			
 			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, endTime - currentTime);
-			
-			// Close window.
-			player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
 			
 			if (instanceId == 0)
 			{

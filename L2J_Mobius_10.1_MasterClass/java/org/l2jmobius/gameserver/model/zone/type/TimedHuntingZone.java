@@ -16,20 +16,21 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneClose;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneExit;
 
 /**
  * @author Mobius
+ * @author dontknowdontcare
  */
 public class TimedHuntingZone extends ZoneType
 {
@@ -43,9 +44,29 @@ public class TimedHuntingZone extends ZoneType
 	{
 		if (!creature.isPlayer())
 		{
+			if (creature.isPlayable())
+			{
+				Playable summon = (Playable) creature;
+				for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+				{
+					if (!summon.isInTimedHuntingZone(holder.getZoneId()))
+					{
+						continue;
+					}
+					if (holder.isPvpZone())
+					{
+						summon.setInsideZone(ZoneId.PVP, true);
+					}
+					else if (holder.isNoPvpZone())
+					{
+						summon.setInsideZone(ZoneId.NO_PVP, true);
+					}
+					break;
+				}
+			}
 			return;
 		}
-		
+		// Check summons spawning or porting inside.
 		final Player player = creature.getActingPlayer();
 		if (player != null)
 		{
@@ -57,16 +78,25 @@ public class TimedHuntingZone extends ZoneType
 				{
 					continue;
 				}
-				
 				final int remainingTime = player.getTimedHuntingZoneRemainingTime(holder.getZoneId());
 				if (remainingTime > 0)
 				{
+					player.setLastTimeZone(holder);
 					player.startTimedHuntingZone(holder.getZoneId(), remainingTime);
+					if (holder.isPvpZone())
+					{
+						player.setInsideZone(ZoneId.PVP, true);
+						player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+						player.updateRelationsToVisiblePlayers(true);
+					}
+					else if (holder.isNoPvpZone())
+					{
+						player.setInsideZone(ZoneId.NO_PVP, true);
+					}
 					return;
 				}
 				break;
 			}
-			
 			if (!player.isGM())
 			{
 				player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
@@ -79,22 +109,56 @@ public class TimedHuntingZone extends ZoneType
 	{
 		if (!creature.isPlayer())
 		{
+			if (creature.isPlayable())
+			{
+				final Playable summon = (Playable) creature;
+				for (final TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
+				{
+					if (!summon.isInTimedHuntingZone(holder.getZoneId()))
+					{
+						continue;
+					}
+					if (holder.isPvpZone())
+					{
+						summon.setInsideZone(ZoneId.PVP, false);
+					}
+					else if (holder.isNoPvpZone())
+					{
+						summon.setInsideZone(ZoneId.NO_PVP, false);
+					}
+					break;
+				}
+			}
 			return;
 		}
 		
 		final Player player = creature.getActingPlayer();
-		if (player != null)
+		if (player == null)
 		{
-			player.setInsideZone(ZoneId.TIMED_HUNTING, false);
-			
-			ThreadPool.schedule(() ->
-			{
-				if (!player.isInTimedHuntingZone(player.getX(), player.getY()))
-				{
-					player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
-					player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
-				}
-			}, 1000);
+			return;
 		}
+		
+		// We default to zone 6 aka Primeval Isle so we spawn in rune town by default.
+		int nZoneId = 6;
+		
+		final TimedHuntingZoneHolder lastTimeZone = player.getLastTimeZone();
+		if (lastTimeZone != null)
+		{
+			nZoneId = lastTimeZone.getZoneId();
+			if (lastTimeZone.isPvpZone())
+			{
+				player.setInsideZone(ZoneId.PVP, false);
+				player.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+				player.updateRelationsToVisiblePlayers(true);
+			}
+			else if (lastTimeZone.isNoPvpZone())
+			{
+				player.setInsideZone(ZoneId.NO_PVP, false);
+			}
+			player.setLastTimeZone(null);
+		}
+		
+		player.setInsideZone(ZoneId.TIMED_HUNTING, false);
+		player.sendPacket(new TimedHuntingZoneExit(nZoneId));
 	}
 }

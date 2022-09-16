@@ -25,8 +25,7 @@ import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneList;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneChargeResult;
 
 /**
  * @author Mobius
@@ -64,7 +63,7 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		
 		final long currentTime = System.currentTimeMillis();
-		final long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
+		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= holder.getMaximumAddedTime()))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
@@ -72,24 +71,37 @@ public class AddHuntingTime extends AbstractEffect
 			return;
 		}
 		
-		final long remainRefill = player.getVariables().getInt(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, holder.getRemainRefillTime());
-		if ((_time < remainRefill) || (remainRefill == 0))
+		long remainRefillTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, holder.getRefillTimeMax());
+		remainRefillTime -= _time / 1000;
+		if (remainRefillTime < 0)
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
-			player.sendMessage("You cannot exceed the time zone limit.");
+			player.sendMessage("Time for this zone can be extended no further.");
 			return;
 		}
+		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, remainRefillTime);
 		
-		final long remainTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, holder.getInitialTime());
-		player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime + _time);
-		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, remainRefill - (_time / 1000));
-		
+		final long remainTime;
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
+			remainTime = _time + player.getTimedHuntingZoneRemainingTime(_zoneId);
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime);
 			player.startTimedHuntingZone(_zoneId, endTime);
-			player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
+		}
+		else
+		{
+			if ((endTime + holder.getResetDelay()) < currentTime)
+			{
+				endTime = currentTime + holder.getInitialTime();
+			}
+			else if (endTime < currentTime)
+			{
+				endTime = currentTime;
+			}
+			remainTime = (endTime - currentTime) + _time;
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime);
 		}
 		
-		player.sendPacket(new TimedHuntingZoneList(player));
+		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) remainRefillTime));
 	}
 }

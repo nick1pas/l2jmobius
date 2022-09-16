@@ -33,7 +33,6 @@ public class TimedHuntingZoneHolder
 	private final int _entryFee;
 	private final int _minLevel;
 	private final int _maxLevel;
-	private final int _remainRefillTime;
 	private final int _refillTimeMax;
 	private final int _instanceId;
 	private final boolean _soloInstance;
@@ -42,8 +41,10 @@ public class TimedHuntingZoneHolder
 	private final Location _exitLocation;
 	private final int _mapX;
 	private final int _mapY;
+	private final boolean _pvpZone;
+	private final boolean _noPvpZone;
 	
-	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int remainRefillTime, int refillTimeMax, int instanceId, boolean soloInstance, boolean weekly, Location enterLocation, Location exitLocation)
+	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int refillTimeMax, int instanceId, boolean soloInstance, boolean weekly, Location enterLocation, Location exitLocation, boolean pvpZone, boolean noPvpZone)
 	{
 		_id = id;
 		_name = name;
@@ -54,13 +55,14 @@ public class TimedHuntingZoneHolder
 		_entryFee = entryFee;
 		_minLevel = minLevel;
 		_maxLevel = maxLevel;
-		_remainRefillTime = remainRefillTime;
 		_refillTimeMax = refillTimeMax;
 		_instanceId = instanceId;
 		_soloInstance = soloInstance;
 		_weekly = weekly;
 		_enterLocation = enterLocation;
 		_exitLocation = exitLocation;
+		_pvpZone = pvpZone;
+		_noPvpZone = noPvpZone;
 		_mapX = ((_enterLocation.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
 		_mapY = ((_enterLocation.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 	}
@@ -110,11 +112,6 @@ public class TimedHuntingZoneHolder
 		return _maxLevel;
 	}
 	
-	public int getRemainRefillTime()
-	{
-		return _remainRefillTime;
-	}
-	
 	public int getRefillTimeMax()
 	{
 		return _refillTimeMax;
@@ -143,6 +140,16 @@ public class TimedHuntingZoneHolder
 	public Location getExitLocation()
 	{
 		return _exitLocation;
+	}
+	
+	public boolean isPvpZone()
+	{
+		return _pvpZone;
+	}
+	
+	public boolean isNoPvpZone()
+	{
+		return _noPvpZone;
 	}
 	
 	public int getMapX()

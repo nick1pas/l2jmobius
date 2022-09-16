@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneClose;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
 
 /**
@@ -157,9 +156,6 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			{
 				QuestManager.getInstance().getQuest("TimedHunting").notifyEvent("ENTER " + _zoneId, null, player);
 			}
-			
-			// Close window.
-			player.sendPacket(TimedHuntingZoneClose.STATIC_PACKET);
 			
 			// Send time icon.
 			player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));

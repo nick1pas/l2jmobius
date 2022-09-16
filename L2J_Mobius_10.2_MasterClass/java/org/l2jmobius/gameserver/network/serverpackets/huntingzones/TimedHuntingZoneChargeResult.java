@@ -21,20 +21,28 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mobius
+ * @author dontknowdontcare
  */
-public class TimedHuntingZoneClose implements IClientOutgoingPacket
+public class TimedHuntingZoneChargeResult implements IClientOutgoingPacket
 {
-	public static final TimedHuntingZoneClose STATIC_PACKET = new TimedHuntingZoneClose();
+	private final int _zoneId;
+	private final int _secondsLeft;
+	private final int _newExtensionValue;
 	
-	public TimedHuntingZoneClose()
+	public TimedHuntingZoneChargeResult(int zoneId, int secondsLeft, int newExtensionValue)
 	{
+		_zoneId = zoneId;
+		_secondsLeft = secondsLeft;
+		_newExtensionValue = newExtensionValue;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_CLOSE.writeId(packet);
+		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_CHARGE_RESULT.writeId(packet);
+		packet.writeD(_zoneId);
+		packet.writeD(_secondsLeft); // Remaining Time in zone.
+		packet.writeD(_newExtensionValue); // New Extension value.
 		return true;
 	}
 }

@@ -244,7 +244,7 @@ public class TimedHunting extends AbstractInstance
 			instance.setParameter("TimedHuntingTaskFinished", false);
 		}
 		player.sendPacket(new ExSendUIEvent(player, true, false, 600, 0, NpcStringId.TIME_LEFT));
-		player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
+		player.sendPacket(new TimedHuntingZoneExit(player.getLastTimeZone().getZoneId()));
 		
 		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, BUFF);
 		instance.setParameter("PlayerIsOut", true);
