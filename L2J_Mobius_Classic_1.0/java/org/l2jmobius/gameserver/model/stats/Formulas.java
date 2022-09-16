@@ -1113,8 +1113,8 @@ public class Formulas
 		
 		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod * blowRateDefenseMod;
 		
-		// Blow rate is capped at 80%
-		return Rnd.get(100) < Math.min(rate, 80);
+		// Blow rate change is limited (%).
+		return Rnd.get(100) < Math.min(rate, Config.BLOW_RATE_CHANCE_LIMIT);
 	}
 	
 	public static List<BuffInfo> calcCancelStealEffects(Creature creature, Creature target, Skill skill, DispelSlotType slot, int rate, int max)
