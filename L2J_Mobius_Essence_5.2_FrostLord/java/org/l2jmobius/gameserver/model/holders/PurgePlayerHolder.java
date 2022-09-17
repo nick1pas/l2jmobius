@@ -34,6 +34,10 @@ public class PurgePlayerHolder
 	
 	public int getPoints()
 	{
+		if (_remainingKeys == 0)
+		{
+			return 0;
+		}
 		return _points;
 	}
 	
