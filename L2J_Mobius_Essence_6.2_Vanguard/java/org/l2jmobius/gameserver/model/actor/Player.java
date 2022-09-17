@@ -443,8 +443,8 @@ public class Player extends Playable
 	private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
 	private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 	private static final String DELETE_CHAR_HENNA = "DELETE FROM character_hennas WHERE charId=? AND slot=? AND class_index=?";
-	private static final String ADD_CHAR_HENNA_POTENS = "REPLACE INTO character_potens (charId,enchant_level,enchant_exp,poten_id) VALUES (?,?,?,?)";
-	private static final String RESTORE_CHAR_HENNA_POTENS = "SELECT poten_id,enchant_level,enchant_exp FROM character_potens WHERE charId=?";
+	private static final String ADD_CHAR_HENNA_POTENS = "REPLACE INTO character_potens (charId,slot_position,poten_id,enchant_level,enchant_exp) VALUES (?,?,?,?,?)";
+	private static final String RESTORE_CHAR_HENNA_POTENS = "SELECT slot_position,poten_id,enchant_level,enchant_exp FROM character_potens WHERE charId=?";
 	
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
@@ -8062,6 +8062,7 @@ public class Player extends Playable
 		
 		// Calculate henna modifiers of this player.
 		recalcHennaStats();
+		applyDyePotenSkills();
 	}
 	
 	/**
@@ -8289,15 +8290,12 @@ public class Player extends Playable
 			{
 				while (rset.next())
 				{
-					final int potenId = rset.getInt("poten_id");
-					if (potenId > 0)
-					{
-						_hennaPoten[pos] = new HennaPoten();
-						_hennaPoten[pos].setEnchantLevel(rset.getInt("enchant_level"));
-						_hennaPoten[pos].setEnchantExp(rset.getInt("enchant_exp"));
-						_hennaPoten[pos].setPotenId(potenId);
-						pos++;
-					}
+					_hennaPoten[pos] = new HennaPoten();
+					_hennaPoten[pos].setSlotPosition(rset.getInt("slot_position"));
+					_hennaPoten[pos].setEnchantLevel(rset.getInt("enchant_level"));
+					_hennaPoten[pos].setEnchantExp(rset.getInt("enchant_exp"));
+					_hennaPoten[pos].setPotenId(rset.getInt("poten_id"));
+					pos++;
 				}
 			}
 		}
@@ -8318,15 +8316,16 @@ public class Player extends Playable
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			if ((_hennaPoten[i] != null) && (_hennaPoten[i].getPotenId() > 0))
+			if ((_hennaPoten[i] != null) && (_hennaPoten[i].getSlotPosition() > 0))
 			{
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA_POTENS))
 				{
 					statement.setInt(1, getObjectId());
-					statement.setInt(2, _hennaPoten[i].getEnchantLevel());
-					statement.setInt(3, _hennaPoten[i].getEnchantExp());
-					statement.setInt(4, _hennaPoten[i].getPotenId());
+					statement.setInt(2, _hennaPoten[i].getSlotPosition());
+					statement.setInt(3, _hennaPoten[i].getPotenId());
+					statement.setInt(4, _hennaPoten[i].getEnchantLevel());
+					statement.setInt(5, _hennaPoten[i].getEnchantExp());
 					statement.execute();
 				}
 				catch (Exception e)
@@ -8422,7 +8421,7 @@ public class Player extends Playable
 	
 	public int getAvailableHennaSlots()
 	{
-		return (int) getStat().getValue(Stat.HENNA_SLOTS_AVAILABLE, 3);
+		return (int) getStat().getValue(Stat.HENNA_SLOTS_AVAILABLE, 4);
 	}
 	
 	public void setDyePotentialDailyStep(int dailyStep)
@@ -8443,26 +8442,6 @@ public class Player extends Playable
 	public int getDyePotentialDailyCount()
 	{
 		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_COUNT, 5);
-	}
-	
-	public void setDyePotentialDailyExp(int dailyExp)
-	{
-		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_EXP, dailyExp);
-	}
-	
-	public int getDyePotentialDailyExp()
-	{
-		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_EXP, 0);
-	}
-	
-	public void setDyePotentialenchantStep(int enchantlvl)
-	{
-		getVariables().set(PlayerVariables.DYE_POTENTIAL_DAILY_LVL, enchantlvl);
-	}
-	
-	public int getDyePotentialenchantStep()
-	{
-		return getVariables().getInt(PlayerVariables.DYE_POTENTIAL_DAILY_LVL, 0);
 	}
 	
 	/**

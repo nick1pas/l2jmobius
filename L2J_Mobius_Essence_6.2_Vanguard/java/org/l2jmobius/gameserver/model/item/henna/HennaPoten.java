@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.item.henna;
 
+import org.l2jmobius.gameserver.data.xml.HennaPatternPotentialData;
+
 /**
  * @author Serenitty
  */
@@ -25,6 +27,7 @@ public class HennaPoten
 	private int _potenId;
 	private int _enchantLevel = 1;
 	private int _enchantExp;
+	private int _slotPosition;
 	
 	public HennaPoten()
 	{
@@ -43,6 +46,16 @@ public class HennaPoten
 	public void setPotenId(int val)
 	{
 		_potenId = val;
+	}
+	
+	public int getSlotPosition()
+	{
+		return _slotPosition;
+	}
+	
+	public void setSlotPosition(int val)
+	{
+		_slotPosition = val;
 	}
 	
 	public int getPotenId()
@@ -67,12 +80,17 @@ public class HennaPoten
 	
 	public int getEnchantExp()
 	{
+		if (_enchantExp > HennaPatternPotentialData.getInstance().getMaxPotenExp())
+		{
+			_enchantExp = HennaPatternPotentialData.getInstance().getMaxPotenExp();
+			return _enchantExp;
+		}
 		return _enchantExp;
 	}
 	
 	public boolean isPotentialAvailable()
 	{
-		return (_henna != null) && (_henna.getPatternLevel() > 0);
+		return (_henna != null) && (_enchantLevel > 1);
 	}
 	
 	public int getActiveStep()
@@ -81,6 +99,12 @@ public class HennaPoten
 		{
 			return 0;
 		}
-		return Math.min(_enchantLevel, _henna.getPatternLevel());
+		
+		if (_enchantExp == HennaPatternPotentialData.getInstance().getMaxPotenExp())
+		{
+			return Math.min(_enchantLevel, _henna.getPatternLevel());
+		}
+		
+		return Math.min(_enchantLevel - 1, _henna.getPatternLevel());
 	}
 }

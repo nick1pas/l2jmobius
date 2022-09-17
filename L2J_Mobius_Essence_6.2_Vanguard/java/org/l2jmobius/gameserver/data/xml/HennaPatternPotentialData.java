@@ -47,6 +47,7 @@ public class HennaPatternPotentialData implements IXmlReader
 	private final Map<Integer, DyePotential> _potentials = new HashMap<>();
 	
 	private int MAX_POTEN_LEVEL = 0;
+	private int MAX_POTEN_EXP = 0;
 	
 	protected HennaPatternPotentialData()
 	{
@@ -145,6 +146,10 @@ public class HennaPatternPotentialData implements IXmlReader
 									{
 										MAX_POTEN_LEVEL = level;
 									}
+									if (MAX_POTEN_EXP < exp)
+									{
+										MAX_POTEN_EXP = exp;
+									}
 								}
 							}
 							break;
@@ -197,6 +202,11 @@ public class HennaPatternPotentialData implements IXmlReader
 	public int getMaxPotenLevel()
 	{
 		return MAX_POTEN_LEVEL;
+	}
+	
+	public int getMaxPotenExp()
+	{
+		return MAX_POTEN_EXP;
 	}
 	
 	public DyePotential getPotential(int potenId)

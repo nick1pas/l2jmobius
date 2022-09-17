@@ -34,11 +34,13 @@ import org.l2jmobius.gameserver.network.serverpackets.newhenna.NewHennaPotenEnch
 public class RequestNewHennaPotenEnchant implements IClientIncomingPacket
 {
 	private int _slotId;
+	private int _costItemId;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_slotId = packet.readC();
+		_costItemId = packet.readD();
 		return true;
 	}
 	
@@ -51,23 +53,42 @@ public class RequestNewHennaPotenEnchant implements IClientIncomingPacket
 			return;
 		}
 		
+		int dailyStep = player.getDyePotentialDailyStep();
+		final DyePotentialFee currentFee = HennaPatternPotentialData.getInstance().getFee(dailyStep);
+		int dailyCount = player.getDyePotentialDailyCount();
 		if ((_slotId < 1) || (_slotId > 4))
 		{
 			return;
 		}
 		
-		int dailyStep = player.getDyePotentialDailyStep();
-		final DyePotentialFee currentFee = HennaPatternPotentialData.getInstance().getFee(dailyStep);
-		int dailyCount = player.getDyePotentialDailyCount();
+		final HennaPoten hennaPattern = player.getHennaPoten(_slotId);
+		int enchantExp = hennaPattern.getEnchantExp();
+		final int fullExpNeeded = HennaPatternPotentialData.getInstance().getExpForLevel(hennaPattern.getEnchantLevel());
+		if ((enchantExp >= fullExpNeeded) && (hennaPattern.getEnchantLevel() == 20))
+		{
+			player.sendPacket(new NewHennaPotenEnchant(_slotId, hennaPattern.getEnchantLevel(), hennaPattern.getEnchantExp(), dailyStep, dailyCount, hennaPattern.getActiveStep(), true));
+			return;
+		}
+		
 		if ((currentFee == null) || (dailyCount <= 0))
 		{
 			return;
 		}
 		
-		if (!player.destroyItemByItemId(getClass().getSimpleName(), currentFee.getItem().getId(), currentFee.getItem().getCount(), player, true))
+		int costItemID = 0;
+		if (_costItemId == 97147) // Dye Powder
+		{
+			costItemID = _costItemId;
+		}
+		else
+		{
+			costItemID = currentFee.getItem().getId();
+		}
+		if (!player.destroyItemByItemId(getClass().getSimpleName(), costItemID, currentFee.getItem().getCount(), player, true))
 		{
 			return;
 		}
+		
 		dailyCount -= 1;
 		if ((dailyCount <= 0) && (dailyStep != HennaPatternPotentialData.getInstance().getMaxPotenEnchantStep()))
 		{
@@ -84,6 +105,7 @@ public class RequestNewHennaPotenEnchant implements IClientIncomingPacket
 		{
 			player.setDyePotentialDailyCount(dailyCount);
 		}
+		
 		double totalChance = 0;
 		double random = Rnd.nextDouble() * 100;
 		for (Entry<Integer, Double> entry : currentFee.getEnchantExp().entrySet())
@@ -91,21 +113,22 @@ public class RequestNewHennaPotenEnchant implements IClientIncomingPacket
 			totalChance += entry.getValue();
 			if (random <= totalChance)
 			{
-				final HennaPoten poten = player.getHennaPoten(_slotId);
+				
 				final int increase = entry.getKey();
-				int newEnchantExp = poten.getEnchantExp() + increase;
-				final int tatooExpNeeded = HennaPatternPotentialData.getInstance().getExpForLevel(poten.getEnchantLevel());
-				if (newEnchantExp >= tatooExpNeeded)
+				int newEnchantExp = hennaPattern.getEnchantExp() + increase;
+				final int PatternExpNeeded = HennaPatternPotentialData.getInstance().getExpForLevel(hennaPattern.getEnchantLevel());
+				if ((newEnchantExp >= PatternExpNeeded) && (hennaPattern.getEnchantLevel() < 20))
 				{
-					newEnchantExp -= tatooExpNeeded;
-					if (poten.getEnchantLevel() < HennaPatternPotentialData.getInstance().getMaxPotenLevel())
+					newEnchantExp -= PatternExpNeeded;
+					if (hennaPattern.getEnchantLevel() < HennaPatternPotentialData.getInstance().getMaxPotenLevel())
 					{
-						poten.setEnchantLevel(poten.getEnchantLevel() + 1);
+						hennaPattern.setEnchantLevel(hennaPattern.getEnchantLevel() + 1);
 						player.applyDyePotenSkills();
 					}
 				}
-				poten.setEnchantExp(newEnchantExp);
-				player.sendPacket(new NewHennaPotenEnchant(_slotId, poten.getEnchantLevel(), poten.getEnchantExp(), dailyStep, dailyCount, poten.getActiveStep(), true));
+				hennaPattern.setEnchantExp(newEnchantExp);
+				hennaPattern.setSlotPosition(_slotId);
+				player.sendPacket(new NewHennaPotenEnchant(_slotId, hennaPattern.getEnchantLevel(), hennaPattern.getEnchantExp(), dailyStep, dailyCount, hennaPattern.getActiveStep(), true));
 				return;
 			}
 		}

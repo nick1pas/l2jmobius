@@ -30,19 +30,16 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class NewHennaList implements IClientOutgoingPacket
 {
 	private final HennaPoten[] _hennaId;
-	private final int _activeslots;
 	private final int _dailyStep;
 	private final int _dailyCount;
-	@SuppressWarnings("unused")
-	private final int _enchantExp;
+	private final int _availableSlots;
 	
 	public NewHennaList(Player player)
 	{
 		_dailyStep = player.getDyePotentialDailyStep();
 		_dailyCount = player.getDyePotentialDailyCount();
 		_hennaId = player.getHennaPotenList();
-		_activeslots = player.getAvailableHennaSlots();
-		_enchantExp = player.getDyePotentialDailyExp();
+		_availableSlots = player.getAvailableHennaSlots();
 	}
 	
 	@Override
@@ -56,13 +53,12 @@ public class NewHennaList implements IClientOutgoingPacket
 		{
 			final HennaPoten hennaPoten = _hennaId[i - 1];
 			final Henna henna = _hennaId[i - 1].getHenna();
-			int isactiveStep = hennaPoten.getActiveStep();
-			packet.writeD(henna != null ? henna.getDyeId() : 0x00);
-			packet.writeD(isactiveStep == 0 ? 0 : hennaPoten.getPotenId());
-			packet.writeC(_activeslots);
+			packet.writeD(henna != null ? henna.getDyeId() : 0);
+			packet.writeD(hennaPoten.getPotenId());
+			packet.writeC(i == _availableSlots ? 0 : 1);
 			packet.writeH(hennaPoten.getEnchantLevel());
 			packet.writeD(hennaPoten.getEnchantExp());
-			packet.writeH(isactiveStep);
+			packet.writeH(hennaPoten.getActiveStep());
 		}
 		return true;
 	}
