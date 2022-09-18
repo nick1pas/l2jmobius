@@ -62,8 +62,10 @@ import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.ResurrectByPaymentHolder;
 import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
@@ -760,9 +762,13 @@ public class Config
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static int EVENT_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double BLESSING_CHANCE;
+	public static boolean BOSS_DROP_ENABLED;
+	public static int BOSS_DROP_MIN_LEVEL;
+	public static int BOSS_DROP_MAX_LEVEL;
+	public static List<DropHolder> BOSS_DROP_LIST = new ArrayList<>();
 	public static boolean LCOIN_DROP_ENABLED;
 	public static double LCOIN_DROP_CHANCE;
-	public static int LCOIN_MIN_MOB_LV;
+	public static int LCOIN_MIN_MOB_LEVEL;
 	public static int LCOIN_MIN_QUANTITY;
 	public static int LCOIN_MAX_QUANTITY;
 	public static float RATE_KARMA_LOST;
@@ -2483,9 +2489,21 @@ public class Config
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = ratesConfig.getDouble("DropItemMinLevelGapChance", 10);
 			EVENT_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("EventItemMaxLevelDifference", 9);
 			BLESSING_CHANCE = ratesConfig.getDouble("BlessingChance", 15.0);
+			BOSS_DROP_ENABLED = ratesConfig.getBoolean("BossDropEnable", false);
+			BOSS_DROP_MIN_LEVEL = ratesConfig.getInt("BossDropMinLevel", 40);
+			BOSS_DROP_MAX_LEVEL = ratesConfig.getInt("BossDropMaxLevel", 999);
+			BOSS_DROP_LIST.clear();
+			for (String s : ratesConfig.getString("BossDropList", "").trim().split(";"))
+			{
+				if (s.isEmpty())
+				{
+					continue;
+				}
+				BOSS_DROP_LIST.add(new DropHolder(DropType.DROP, Integer.parseInt(s.split(",")[0]), Integer.parseInt(s.split(",")[1]), Integer.parseInt(s.split(",")[2]), (Double.parseDouble(s.split(",")[3]))));
+			}
 			LCOIN_DROP_ENABLED = ratesConfig.getBoolean("LCoinDropEnable", false);
 			LCOIN_DROP_CHANCE = ratesConfig.getDouble("LCoinDropChance", 15.0);
-			LCOIN_MIN_MOB_LV = ratesConfig.getInt("LCoinMinimumMonsterLevel", 40);
+			LCOIN_MIN_MOB_LEVEL = ratesConfig.getInt("LCoinMinimumMonsterLevel", 40);
 			LCOIN_MIN_QUANTITY = ratesConfig.getInt("LCoinMinDropQuantity", 1);
 			LCOIN_MAX_QUANTITY = ratesConfig.getInt("LCoinMaxDropQuantity", 5);
 			

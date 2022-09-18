@@ -61,8 +61,10 @@ import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
@@ -740,6 +742,10 @@ public class Config
 	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static int EVENT_ITEM_MAX_LEVEL_DIFFERENCE;
+	public static boolean BOSS_DROP_ENABLED;
+	public static int BOSS_DROP_MIN_LEVEL;
+	public static int BOSS_DROP_MAX_LEVEL;
+	public static List<DropHolder> BOSS_DROP_LIST = new ArrayList<>();
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
@@ -2326,6 +2332,18 @@ public class Config
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = ratesConfig.getDouble("DropItemMinLevelGapChance", 10);
 			EVENT_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("EventItemMaxLevelDifference", 9);
+			BOSS_DROP_ENABLED = ratesConfig.getBoolean("BossDropEnable", false);
+			BOSS_DROP_MIN_LEVEL = ratesConfig.getInt("BossDropMinLevel", 85);
+			BOSS_DROP_MAX_LEVEL = ratesConfig.getInt("BossDropMaxLevel", 999);
+			BOSS_DROP_LIST.clear();
+			for (String s : ratesConfig.getString("BossDropList", "").trim().split(";"))
+			{
+				if (s.isEmpty())
+				{
+					continue;
+				}
+				BOSS_DROP_LIST.add(new DropHolder(DropType.DROP, Integer.parseInt(s.split(",")[0]), Integer.parseInt(s.split(",")[1]), Integer.parseInt(s.split(",")[2]), (Double.parseDouble(s.split(",")[3]))));
+			}
 			
 			// Load PvP config file (if exists)
 			final PropertiesParser pvpConfig = new PropertiesParser(PVP_CONFIG_FILE);

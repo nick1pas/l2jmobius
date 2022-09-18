@@ -97,6 +97,8 @@ public class NpcData implements IXmlReader
 						NamedNodeMap attrs = listNode.getAttributes();
 						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
+						final int level = parseInteger(attrs, "level", 85);
+						final String type = parseString(attrs, "type", "Folk");
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
 						Set<Integer> clans = null;
@@ -105,8 +107,8 @@ public class NpcData implements IXmlReader
 						List<DropGroupHolder> dropGroups = null;
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
-						set.set("level", parseByte(attrs, "level"));
-						set.set("type", parseString(attrs, "type", "Folk"));
+						set.set("level", level);
+						set.set("type", type);
 						set.set("name", parseString(attrs, "name"));
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
@@ -658,6 +660,16 @@ public class NpcData implements IXmlReader
 						
 						// Clean old drop lists.
 						template.removeDrops();
+						
+						// Add configurable item drop for bosses.
+						if ((Config.BOSS_DROP_ENABLED) && (type.contains("RaidBoss") && (level >= Config.BOSS_DROP_MIN_LEVEL) && (level <= Config.BOSS_DROP_MAX_LEVEL)))
+						{
+							if (dropLists == null)
+							{
+								dropLists = new ArrayList<>();
+							}
+							dropLists.addAll(Config.BOSS_DROP_LIST);
+						}
 						
 						// Set new drop lists.
 						if (dropLists != null)

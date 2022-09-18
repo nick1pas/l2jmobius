@@ -674,18 +674,18 @@ public class NpcData implements IXmlReader
 						// Clean old drop lists.
 						template.removeDrops();
 						
-						// Add LCoin drop for bosses.
-						if (type.contains("boss"))
+						// Add configurable item drop for bosses.
+						if ((Config.BOSS_DROP_ENABLED) && (type.contains("RaidBoss") && (level >= Config.BOSS_DROP_MIN_LEVEL) && (level <= Config.BOSS_DROP_MAX_LEVEL)))
 						{
 							if (dropLists == null)
 							{
 								dropLists = new ArrayList<>();
 							}
-							dropLists.add(new DropHolder(DropType.DROP, Inventory.LCOIN_ID, 1, 1, 100));
+							dropLists.addAll(Config.BOSS_DROP_LIST);
 						}
 						
 						// Add configurable LCoin drop for monsters.
-						if ((Config.LCOIN_DROP_ENABLED) && (type.contains("Monster") && !type.contains("boss")) && (level >= Config.LCOIN_MIN_MOB_LV))
+						if ((Config.LCOIN_DROP_ENABLED) && (type.contains("Monster") && !type.contains("boss")) && (level >= Config.LCOIN_MIN_MOB_LEVEL))
 						{
 							if (dropLists == null)
 							{
