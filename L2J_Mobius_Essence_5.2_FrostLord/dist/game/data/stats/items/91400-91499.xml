@@ -59,6 +59,7 @@
 		<set name="icon" val="icon.bm_elmoaden_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -71,6 +72,7 @@
 		<!-- Can be exchanged for various items through the Game Assistant. -->
 		<set name="icon" val="icon.bm_elmoaden_token" />
 		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -80,6 +82,7 @@
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -89,6 +92,7 @@
 		<set name="icon" val="icon.bm_elmoaden_gold_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -98,6 +102,7 @@
 		<set name="icon" val="icon.bm_elmoaden_silver_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -109,6 +114,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91413" name="High Quality Elmoreden XP Scroll" additionalName="Sealed" type="EtcItem">
@@ -118,6 +124,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91414" name="+5 Dragon Pendant Lv. 2" additionalName="30-day" type="Armor">
@@ -224,7 +231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="91422" name="Queen Ant Doll Lv. 3" additionalName="" type="EtcItem">
+	<item id="91422" name="Queen Ant Doll Lv. 3" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 3>. P. Atk. +12%. P. Critical Damage +10%. P. Skill Critical Damage +10%. Max HP +15%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -237,7 +244,7 @@
 			<skill id="39303" level="3" /> <!-- Queen Ant Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91423" name="Baium Doll Lv. 3" additionalName="" type="EtcItem">
+	<item id="91423" name="Baium Doll Lv. 3" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 3>. Skill Cooldown -4%. P. Def. +15%. M. Def. +15%. Silence Resistance +45%. Fear Resistance +45%. Paralysis Resistance +25%. Knockdown Resistance +25%. Pull Resistance +25%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -250,7 +257,7 @@
 			<skill id="39302" level="3" /> <!-- Baium Doll's Sorcery -->
 		</skills>
 	</item>
-	<item id="91424" name="Orfen Doll Lv. 3" additionalName="" type="EtcItem">
+	<item id="91424" name="Orfen Doll Lv. 3" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 3>. M. Atk. +15%. M. Skill Critical Damage +10%. Max MP +15%. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="material" val="PAPER" />
@@ -476,6 +483,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -490,6 +498,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -505,6 +514,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -520,6 +530,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -535,6 +546,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -550,6 +562,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -565,6 +578,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -580,6 +594,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -595,6 +610,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -610,6 +626,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -625,6 +642,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -640,6 +658,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -655,6 +674,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -670,6 +690,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -685,6 +706,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -700,6 +722,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -714,6 +737,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -727,6 +751,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -740,6 +765,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -753,8 +779,9 @@
 		<set name="icon" val="BranchSys2.icon.br_soccer_ball_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="51262" level="1" /> <!-- Victory Balls Basket -->
@@ -1116,21 +1143,21 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91494" name="Scroll: Critical Creation Lv. 3" additionalName="" type="EtcItem">
+	<item id="91494" name="Scroll: Critical Creation Lv. 3" type="EtcItem">
 		<!-- A scroll for learning the Critical Creation Lv. 3 skill. <Class>. Maestro. <Skill effect>. Increases craft critical success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91495" name="Scroll: Master of Creation Lv. 2" additionalName="" type="EtcItem">
+	<item id="91495" name="Scroll: Master of Creation Lv. 2" type="EtcItem">
 		<!-- A scroll for learning the Master of Creation Lv. 2 skill. <Class>. Maestro. <Skill effect>. Increases craft success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91496" name="Scroll: Master of Creation Lv. 3" additionalName="" type="EtcItem">
+	<item id="91496" name="Scroll: Master of Creation Lv. 3" type="EtcItem">
 		<!-- A scroll for learning the Master of Creation Lv. 3 skill. <Class>. Maestro. <Skill effect>. Increases craft success rate. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />

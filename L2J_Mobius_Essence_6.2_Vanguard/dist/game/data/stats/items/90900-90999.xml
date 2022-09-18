@@ -228,8 +228,9 @@
 		<!-- For 5 minutes, Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/ SP bonuses. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
@@ -314,7 +315,7 @@
 			<skill id="39359" level="1" /> <!-- Shining Jewelry Box -->
 		</skills>
 	</item>
-	<item id="90923" name="Shining Ore" additionalName="" type="EtcItem">
+	<item id="90923" name="Shining Ore" type="EtcItem">
 		<!-- A certain amount of Shining Ore and a Jewel Lv. 3-5 can be exchanged for a Jewelry Box Lv. 3-5 by the Game Assistant. -->
 		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
 		<set name="is_dropable" val="false" />
@@ -452,7 +453,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="90934" name="Brooch Lv. 3" additionalName="" type="Armor">
+	<item id="90934" name="Brooch Lv. 3" type="Armor">
 		<!-- Activates 4 jewel slots. Inventory Slots +12. Can be compounded with another Brooch of the same level. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -469,7 +470,7 @@
 			<skill id="13653" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 3 Off. -->
 		</skills>
 	</item>
-	<item id="90935" name="Jewel Box Lv. 4" additionalName="" type="EtcItem">
+	<item id="90935" name="Jewel Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

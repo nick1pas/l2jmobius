@@ -518,6 +518,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -536,6 +537,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -555,6 +557,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -574,6 +577,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -593,6 +597,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -612,6 +617,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -625,8 +631,8 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -636,8 +642,8 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -651,9 +657,11 @@
 		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="1" /> <!-- Adventurer's Mark -->
@@ -669,9 +677,11 @@
 		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="2" /> <!-- Adventurer's Mark -->
@@ -687,9 +697,11 @@
 		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="3" /> <!-- Adventurer's Mark -->
@@ -705,9 +717,11 @@
 		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="4" /> <!-- Adventurer's Mark -->
@@ -733,6 +747,7 @@
 		<set name="icon" val="icon.ev_chicken_ticket_i01" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="600000" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -741,6 +756,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -751,6 +767,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -761,6 +778,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -784,6 +802,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -797,6 +816,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -915,6 +935,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -930,6 +951,7 @@
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
@@ -937,7 +959,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -952,6 +974,7 @@
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
@@ -959,7 +982,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -977,6 +1000,8 @@
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="630" />
@@ -984,8 +1009,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
-		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">25</stat>
 			<stat type="mAtk">28</stat>
@@ -999,6 +1023,7 @@
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
@@ -1006,7 +1031,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1024,6 +1049,7 @@
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
@@ -1031,7 +1057,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">27</stat>
 			<stat type="mAtk">21</stat>
@@ -1055,6 +1081,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">38</stat>
 			<stat type="mAtk">21</stat>
@@ -1079,6 +1106,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">64</stat>
 			<stat type="mAtk">21</stat>

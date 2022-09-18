@@ -386,6 +386,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
@@ -720,12 +721,12 @@
 	<item id="94645" name="Zaken Doll Lv. 1" additionalName="Sealed" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 1> Skill Critical Rate +10 Recovery Potions' Effect +20 Skill Critical Damage +100 Vampiric Rage +1% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_zaken_doll_30d" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="50463" level="1" /> <!-- Zaken Doll's Sorcery -->
@@ -734,10 +735,11 @@
 	<item id="94646" name="Zaken Doll Lv. 2" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 2> Skill Critical Rate +40 Recovery Potions' Effect +50 Skill Critical Damage +200 Vampiric Rage +2% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_zaken_doll_30d" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="50463" level="2" /> <!-- Zaken Doll's Sorcery -->
@@ -746,10 +748,11 @@
 	<item id="94647" name="Zaken Doll Lv. 3" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 3> Skill Critical Rate +60 Recovery Potions' Effect +80 Skill Critical Damage +300 Vampiric Rage +3% (with a certain chance) Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_zaken_doll_30d" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="50463" level="3" /> <!-- Zaken Doll's Sorcery -->

@@ -1241,7 +1241,6 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
@@ -1258,7 +1257,6 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
@@ -1468,12 +1466,13 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="price" val="0" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="true" />
 		<skills>
 			<skill id="40109" level="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 		</skills>
@@ -1485,12 +1484,13 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="price" val="0" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-		<set name="is_sellable" val="true" />
 		<skills>
 			<skill id="40110" level="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 		</skills>

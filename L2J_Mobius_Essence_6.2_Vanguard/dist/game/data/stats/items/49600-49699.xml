@@ -987,6 +987,7 @@
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1160,7 +1161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="49687" name="Chic Silver Chapeau (Str+1 Int+1)" additionalName="" type="Armor">
+	<item id="49687" name="Chic Silver Chapeau (Str+1 Int+1)" type="Armor">
 		<!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Cooldown: 2 h.). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
 		<set name="default_action" val="EQUIP" />

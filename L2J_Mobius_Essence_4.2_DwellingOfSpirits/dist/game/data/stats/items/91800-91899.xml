@@ -526,6 +526,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="50133" level="1" /> <!-- Improved Scroll of Escape -->
+		</skills>
 	</item>
 	<item id="91840" name="XP Growth Scroll" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -534,6 +539,7 @@
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -593,6 +599,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91846" name="Home Furnishing Guide II" additionalName="Event" type="EtcItem">
@@ -602,6 +609,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91847" name="Struggle for Better Home" additionalName="Event" type="EtcItem">
@@ -611,6 +619,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91848" name="Piggy-Bank" additionalName="Event" type="EtcItem">

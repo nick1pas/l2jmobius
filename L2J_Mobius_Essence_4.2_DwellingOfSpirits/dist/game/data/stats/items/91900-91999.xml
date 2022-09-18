@@ -283,6 +283,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">35</stat>
 			<stat type="mAtk">21</stat>
@@ -302,6 +303,7 @@
 		<set name="weight" val="1300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="soulshots" val="1" />
@@ -320,12 +322,13 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="35000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -339,12 +342,13 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="35000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -358,12 +362,13 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="35000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -516,12 +521,13 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_dropable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<skills>
 			<skill id="51387" level="5" /> <!-- Adventurer's Mark -->
 		</skills>
@@ -701,6 +707,8 @@
 		<!-- A spellbook for learning the Mount Griffin skill. Required level: 76 (after the 3rd class change). <Classes>. Kamael classes after the 3rd class change. <Skill effect>. Allows to mount Griffin. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
@@ -713,6 +721,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -727,6 +736,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -747,6 +757,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">6</stat>
@@ -769,6 +780,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">11</stat>

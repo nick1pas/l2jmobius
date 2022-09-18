@@ -762,8 +762,9 @@
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -961,6 +962,7 @@
 		<set name="icon" val="icon.ev_festival_goldcoin" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
@@ -1020,11 +1022,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="90189" name="Blue Spinel" additionalName="" type="EtcItem">
+	<item id="90189" name="Blue Spinel" type="EtcItem">
 		<!-- Reward. Obtained from helping Grocer Pink. Can be exchanged for rare items. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="is_sellable" val="false" />
@@ -1136,8 +1139,9 @@
 		<!-- For 5 min., Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10, Sayha's Grace Consumption -30%. The effect disappears after logout. -->
 		<set name="icon" val="icon.ev_mopp_herb" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90199" name="Hunter's Memo" additionalName="Not Available" type="EtcItem">

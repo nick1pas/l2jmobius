@@ -1153,6 +1153,7 @@
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1162,8 +1163,9 @@
 		<set name="icon" val="icon.bm_goblin_buff_herong" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="91393" name="Forgotten Manuscript - Page 1" type="EtcItem">
 		<!-- A page of some forgotten manuscript. All four pages can be exchanged for the book through Magic Books Trader Lorenzo in Aden. -->

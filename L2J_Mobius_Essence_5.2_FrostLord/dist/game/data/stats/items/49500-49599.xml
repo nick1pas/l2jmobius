@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="49500" name="Blessed Scroll of Escape" additionalName="" type="EtcItem">
+	<item id="49500" name="Blessed Scroll of Escape" type="EtcItem">
 		<!-- Teleports to the nearest village. Its casting time is very short. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -286,7 +286,7 @@
 			<item id="90895" min="1" max="1" chance="100" /> <!-- Agathion Aries -->
 		</capsuled_items>
 	</item>
-	<item id="49521" name="Refined Romantic Chapeau (STR+1 INT+1)" additionalName="" type="Armor">
+	<item id="49521" name="Refined Romantic Chapeau (STR+1 INT+1)" type="Armor">
 		<!-- STR +1, INT +1 when equipped. Activates Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 h.). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -295,7 +295,7 @@
 		<set name="material" val="WOOD" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49522" name="Pirate King Hat (STR+1 INT+1)" additionalName="" type="Armor">
+	<item id="49522" name="Pirate King Hat (STR+1 INT+1)" type="Armor">
 		<!-- STR +1, INT +1 when equipped. Activates Pirate King Hat Skill: Teleport (Cooldown: 2 h.). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys2.icon.zaken_hair_accessary" />
 		<set name="default_action" val="EQUIP" />
@@ -304,7 +304,7 @@
 		<set name="material" val="WOOD" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49523" name="Demon's Circlet (STR +1, INT +1)" additionalName="" type="Armor">
+	<item id="49523" name="Demon's Circlet (STR +1, INT +1)" type="Armor">
 		<!-- STR +1, INT +1 when equipped. Enables Demon's Circlet: Teleport (cooldown: 2 h.). Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -546,6 +546,9 @@
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="49544" name="Pirate" additionalName="Not Available" type="Armor">
 		<!-- You look as if you were in warrior's armor. Required level: 45. -->
@@ -808,6 +811,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1233,6 +1237,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>

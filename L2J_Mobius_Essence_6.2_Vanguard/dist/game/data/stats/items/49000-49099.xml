@@ -148,7 +148,7 @@
 		<set name="weight" val="4" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49012" name="HP Replenishing Potion" additionalName="" type="EtcItem">
+	<item id="49012" name="HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -157,7 +157,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49013" name="High-grade HP Replenishing Potion" additionalName="" type="EtcItem">
+	<item id="49013" name="High-grade HP Replenishing Potion" type="EtcItem">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -166,7 +166,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49014" name="Facelifting Potion A" additionalName="" type="EtcItem">
+	<item id="49014" name="Facelifting Potion A" type="EtcItem">
 		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -174,7 +174,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49015" name="Facelifting Potion B" additionalName="" type="EtcItem">
+	<item id="49015" name="Facelifting Potion B" type="EtcItem">
 		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -182,7 +182,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49016" name="Facelifting Potion C" additionalName="" type="EtcItem">
+	<item id="49016" name="Facelifting Potion C" type="EtcItem">
 		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -190,7 +190,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49017" name="Dye Potion A" additionalName="" type="EtcItem">
+	<item id="49017" name="Dye Potion A" type="EtcItem">
 		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -198,7 +198,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49018" name="Dye Potion B" additionalName="" type="EtcItem">
+	<item id="49018" name="Dye Potion B" type="EtcItem">
 		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -206,7 +206,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49019" name="Dye Potion C" additionalName="" type="EtcItem">
+	<item id="49019" name="Dye Potion C" type="EtcItem">
 		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -214,7 +214,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49020" name="Dye Potion D" additionalName="" type="EtcItem">
+	<item id="49020" name="Dye Potion D" type="EtcItem">
 		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -222,7 +222,7 @@
 		<set name="weight" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49021" name="Facelifting Potion Pack" additionalName="" type="EtcItem">
+	<item id="49021" name="Facelifting Potion Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Facelifting Potion A/ B/ C. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -236,7 +236,7 @@
 			<item id="49016" min="1" max="1" chance="33.34" /> <!-- Facelifting Potion C (Exchangeable) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="49022" name="Dye Potion Pack" additionalName="" type="EtcItem">
+	<item id="49022" name="Dye Potion Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Dye Potion A/ B/ C/ D. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -251,7 +251,7 @@
 			<item id="49020" min="1" max="1" chance="25" /> <!-- Dye Potion D - Event -->
 		</capsuled_items>
 	</item>
-	<item id="49023" name="Scroll: Empower" additionalName="" type="EtcItem">
+	<item id="49023" name="Scroll: Empower" type="EtcItem">
 		<!-- Double-click for a buff that increases your magic. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -259,7 +259,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49024" name="Scroll: Might" additionalName="" type="EtcItem">
+	<item id="49024" name="Scroll: Might" type="EtcItem">
 		<!-- Double-click for a buff that increases your P. Atk. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -267,7 +267,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49025" name="Scroll: Shield" additionalName="" type="EtcItem">
+	<item id="49025" name="Scroll: Shield" type="EtcItem">
 		<!-- Double-click for a buff that increases your defenses. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1113,7 +1113,7 @@
 			<skill id="32000" level="1" /> <!-- Rice Cake of Fighting Spirit -->
 		</skills>
 	</item>
-	<item id="49081" name="XP Growth Scroll" additionalName="" type="EtcItem">
+	<item id="49081" name="XP Growth Scroll" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. Acquired XP +30%. Acquired SP +30%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1231,6 +1231,7 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1250,6 +1251,7 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1269,6 +1271,7 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1288,6 +1291,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1307,6 +1311,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1326,6 +1331,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1345,6 +1351,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1364,6 +1371,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1383,6 +1391,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1402,6 +1411,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1421,6 +1431,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />

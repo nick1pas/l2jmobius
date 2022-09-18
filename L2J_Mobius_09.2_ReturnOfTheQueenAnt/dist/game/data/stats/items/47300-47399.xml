@@ -714,7 +714,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47345" name="Blessed Eternal Sigil" additionalName="" type="Armor">
+	<item id="47345" name="Blessed Eternal Sigil" type="Armor">
 		<set name="icon" val="icon.elos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1104,7 +1104,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="47372" name="Skill Power Talisman" additionalName="" type="Armor">
+	<item id="47372" name="Skill Power Talisman" type="Armor">
 		<!-- Skill Power +4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1120,7 +1120,7 @@
 			<skill id="13959" level="1" /> <!-- Mammon's Talisman - Skill Power -->
 		</skills>
 	</item>
-	<item id="47373" name="Talisman of Attribute Attack" additionalName="" type="Armor">
+	<item id="47373" name="Talisman of Attribute Attack" type="Armor">
 		<!-- Attribute Attack +40. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1136,7 +1136,7 @@
 			<skill id="13960" level="1" /> <!-- Mammon's Talisman - Attack Attribute -->
 		</skills>
 	</item>
-	<item id="47374" name="Skill Cooldown Talisman" additionalName="" type="Armor">
+	<item id="47374" name="Skill Cooldown Talisman" type="Armor">
 		<!-- Skill Cooldown -4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1152,7 +1152,7 @@
 			<skill id="13961" level="1" /> <!-- Mammon's Talisman - Skill Cooldown -->
 		</skills>
 	</item>
-	<item id="47375" name="Skill Power Talisman Pack" additionalName="" type="EtcItem">
+	<item id="47375" name="Skill Power Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain Mammon's Talisman - Skill Power (30-day). -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />
@@ -1167,7 +1167,7 @@
 			<item id="47372" min="1" max="1" chance="100" /> <!-- Mammon's Talisman (30-day) - Skill Power -->
 		</capsuled_items>
 	</item>
-	<item id="47376" name="Talisman of Attribute Attack Pack" additionalName="" type="EtcItem">
+	<item id="47376" name="Talisman of Attribute Attack Pack" type="EtcItem">
 		<!-- Double-click to obtain Mammon's Talisman Box - Attribute Attack 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />
@@ -1182,7 +1182,7 @@
 			<item id="47373" min="1" max="1" chance="100" /> <!-- Mammon's Talisman (30-day) - Attribute Attack -->
 		</capsuled_items>
 	</item>
-	<item id="47377" name="Skill Cooldown Talisman Pack" additionalName="" type="EtcItem">
+	<item id="47377" name="Skill Cooldown Talisman Pack" type="EtcItem">
 		<!-- Double-click to obtain Mammon's Talisman Box - Skill Cooldown 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />

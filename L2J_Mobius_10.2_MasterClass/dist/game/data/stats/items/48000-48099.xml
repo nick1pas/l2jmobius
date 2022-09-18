@@ -692,7 +692,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<set name="price" val="0" />
 		<skills>
 			<skill id="35080" level="1" /> <!-- Advanced Seed Bracelet -->
 			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
@@ -720,7 +719,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="48064" name="Superior Seed Bracelet Lv. 1" additionalName="" type="Armor">
+	<item id="48064" name="Superior Seed Bracelet Lv. 1" type="Armor">
 		<!-- When equipped, unlocks the agathion's main slot and 1 additional slot. Can be enchanted through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. 3. Vitality bonus +5%. <Enchanting>. 1. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
