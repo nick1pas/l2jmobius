@@ -38,10 +38,10 @@ public class OfflineShop implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{
+		"offline",
 		"offline_shop"
 	};
 	
-	@SuppressWarnings("null")
 	@Override
 	public boolean useVoicedCommand(String command, Player player, String target)
 	{
@@ -66,7 +66,7 @@ public class OfflineShop implements IVoicedCommandHandler
 		}
 		
 		final TradeList storeListBuy = player.getBuyList();
-		if ((storeListBuy == null) && (storeListBuy.getItemCount() == 0))
+		if ((storeListBuy == null) || (storeListBuy.getItemCount() == 0))
 		{
 			player.sendMessage("Your buy list is empty.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -74,7 +74,7 @@ public class OfflineShop implements IVoicedCommandHandler
 		}
 		
 		final TradeList storeListSell = player.getSellList();
-		if ((storeListSell == null) && (storeListSell.getItemCount() == 0))
+		if ((storeListSell == null) || (storeListSell.getItemCount() == 0))
 		{
 			player.sendMessage("Your sell list is empty.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -143,7 +143,6 @@ public class OfflineShop implements IVoicedCommandHandler
 			
 			player.sendMessage("Your private store has succesfully been flagged as an offline shop and will remain active for ever.");
 			player.logout();
-			
 			return true;
 		}
 		

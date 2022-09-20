@@ -85,77 +85,74 @@ public class hitConditionBonus
 		factory.setIgnoringElementContentWhitespace(true);
 		factory.setIgnoringComments(true);
 		final File file = new File(Config.DATAPACK_ROOT, "data/stats/hitConditionBonus.xml");
-		Document doc = null;
 		if (file.exists())
 		{
 			try
 			{
-				doc = factory.newDocumentBuilder().parse(file);
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning("[hitConditionBonus] Could not parse file: " + e.getMessage());
-			}
-			
-			String name;
-			for (@SuppressWarnings("null")
-			Node list = doc.getFirstChild(); list != null; list = list.getNextSibling())
-			{
-				if ("hitConditionBonus".equalsIgnoreCase(list.getNodeName()) || "list".equalsIgnoreCase(list.getNodeName()))
+				String name;
+				final Document doc = factory.newDocumentBuilder().parse(file);
+				for (Node list = doc.getFirstChild(); list != null; list = list.getNextSibling())
 				{
-					for (Node cond = list.getFirstChild(); cond != null; cond = cond.getNextSibling())
+					if ("hitConditionBonus".equalsIgnoreCase(list.getNodeName()) || "list".equalsIgnoreCase(list.getNodeName()))
 					{
-						int bonus = 0;
-						name = cond.getNodeName();
-						try
+						for (Node cond = list.getFirstChild(); cond != null; cond = cond.getNextSibling())
 						{
-							if (cond.hasAttributes())
+							int bonus = 0;
+							name = cond.getNodeName();
+							try
 							{
-								bonus = Integer.parseInt(cond.getAttributes().getNamedItem("val").getNodeValue());
+								if (cond.hasAttributes())
+								{
+									bonus = Integer.parseInt(cond.getAttributes().getNamedItem("val").getNodeValue());
+								}
 							}
-						}
-						catch (Exception e)
-						{
-							LOGGER.warning("[hitConditionBonus] Could not parse condition: " + e.getMessage());
-						}
-						finally
-						{
-							switch (name)
+							catch (Exception e)
 							{
-								case "front":
+								LOGGER.warning("[hitConditionBonus] Could not parse condition: " + e.getMessage());
+							}
+							finally
+							{
+								switch (name)
 								{
-									frontBonus = bonus;
-									break;
-								}
-								case "side":
-								{
-									sideBonus = bonus;
-									break;
-								}
-								case "back":
-								{
-									backBonus = bonus;
-									break;
-								}
-								case "high":
-								{
-									highBonus = bonus;
-									break;
-								}
-								case "low":
-								{
-									lowBonus = bonus;
-									break;
-								}
-								case "dark":
-								{
-									darkBonus = bonus;
-									break;
+									case "front":
+									{
+										frontBonus = bonus;
+										break;
+									}
+									case "side":
+									{
+										sideBonus = bonus;
+										break;
+									}
+									case "back":
+									{
+										backBonus = bonus;
+										break;
+									}
+									case "high":
+									{
+										highBonus = bonus;
+										break;
+									}
+									case "low":
+									{
+										lowBonus = bonus;
+										break;
+									}
+									case "dark":
+									{
+										darkBonus = bonus;
+										break;
+									}
 								}
 							}
 						}
 					}
 				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning("[hitConditionBonus] Could not parse file: " + e.getMessage());
 			}
 		}
 		else
