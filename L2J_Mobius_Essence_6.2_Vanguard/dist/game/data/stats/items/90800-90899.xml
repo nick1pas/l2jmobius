@@ -1377,6 +1377,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="86400" />
 		<set name="bodypart" val="agathion" />
+		<skills>
+			<skill id="17613" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aries -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90895" name="Agathion Aries" type="Armor">
 		<!-- Equipping it in the main slot summons Agathion Aries and enables its primary skills. -->
@@ -1388,6 +1392,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="agathion" />
+		<skills>
+			<skill id="17613" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aries -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90896" name="Agathion Joy" additionalName="Sealed" type="Armor">
 		<!-- Equipping it in the main slot summons Agathion Joy and enables its primary skills. -->

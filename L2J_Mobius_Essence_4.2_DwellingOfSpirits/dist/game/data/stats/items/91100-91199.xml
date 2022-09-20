@@ -128,6 +128,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51028" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Pisces -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91112" name="Agathion Cancer" additionalName="30-day" type="Armor">
 		<!-- Available for 30 d. Equipping it in the main slot summons Agathion Cancer and enables its primary skills. -->
@@ -141,6 +145,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51029" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91113" name="Inventory Expansion Ticket - Lv. 1" type="EtcItem">
 		<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 1 by the Fishing Guildsmen. -->

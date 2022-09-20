@@ -744,6 +744,15 @@
 		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLevel>85</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16073</npcId> <!-- Agathion Rudolph -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51036" toLevel="1" name="Rudolph's Blessing">
 		<!-- Atk. Spd. and Casting Spd. +5%, Acquired XP/ SP +10%. -->

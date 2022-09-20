@@ -28,8 +28,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91603" min="1" max="1" chance="100" /> <!-- Doll of Border - Frintezza (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="91603" name="Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
 		<!-- A 30-day item. When in inventory, improves the character's stats. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. <Frintezza Doll Spell>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
@@ -39,6 +42,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="1" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="91604" name="Frintezza Doll" additionalName="Lv. 1" type="EtcItem">
 		<!-- When in inventory, improves the character's stats. Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. <Frintezza Doll Spell Lv. 1>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
@@ -46,6 +55,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="2" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="91605" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- When in inventory, improves the character's stats. Cannot be dropped. <Frintezza Doll Spell Lv. 2>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +20%, Speed +5. -->
@@ -53,6 +68,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="3" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="91606" name="High Quality Agathion Virgo" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Virgo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Land Dragon) by Pona. -->
@@ -75,6 +96,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54015" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Capricorn -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91608" name="High Quality Agathion Libra" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Libra that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Land Dragon) by Pona. -->
@@ -86,6 +111,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54016" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Libra -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91609" name="High Quality Agathion Taurus" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Taurus that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Land Dragon) by Pona. -->
@@ -97,6 +126,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54009" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Taurus -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91610" name="High Quality Agathion Leo" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Leo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Land Dragon) by Pona. -->
@@ -108,6 +141,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54010" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Leo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91611" name="High Quality Agathion Scorpio" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Scorpio that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Land Dragon) by Pona. -->
@@ -119,6 +156,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54011" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Scorpio -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91612" name="High Quality Agathion Aquarius" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Aquarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Land Dragon) by Pona. -->
@@ -130,6 +171,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54014" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aquarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91613" name="High Quality Agathion Sagittarius" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Sagittarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Land Dragon) by Pona. -->
@@ -141,6 +186,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54012" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Sagittarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91614" name="High Quality Agathion Virgo" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Virgo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Fire Dragon) by Pona. -->
@@ -152,6 +201,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54013" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91615" name="High Quality Agathion Capricorn" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Capricorn that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Fire Dragon) by Pona. -->
@@ -163,6 +216,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54015" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Capricorn -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91616" name="High Quality Agathion Libra" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Libra that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Fire Dragon) by Pona. -->
@@ -174,6 +231,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54016" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Libra -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91617" name="High Quality Agathion Taurus" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Taurus that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Fire Dragon) by Pona. -->
@@ -185,6 +246,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54009" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Taurus -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91618" name="High Quality Agathion Leo" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Leo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Fire Dragon) by Pona. -->
@@ -196,6 +261,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54010" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Leo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91619" name="High Quality Agathion Scorpio" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Scorpio that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Fire Dragon) by Pona. -->
@@ -207,6 +276,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54011" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Scorpio -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91620" name="High Quality Agathion Aquarius" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Aquarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Fire Dragon) by Pona. -->
@@ -218,6 +291,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54014" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aquarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91621" name="High Quality Agathion Sagittarius" additionalName="Land Dragon" type="Armor">
 		<!-- Agathion Sagittarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Fire Dragon) by Pona. -->
@@ -229,6 +306,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54012" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Sagittarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91622" name="High Quality Agathion Gemini" type="Armor">
 		<!-- Agathion Gemini that contains the dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases the Sayha's Grace effect and Max HP/ MP. Starting from +6, increases Max CP. -->
@@ -240,6 +321,10 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="54017" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Gemini -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="91623" name="Stable Scroll: Enchant High Quality Agathion" type="EtcItem">
 		<!-- Only for High Quality Zodiac Agathion. Increases M. Def. Can be enchanted maximum to +10. Starting from +1, the Agathion special abilities are enhanced with each enchant level. In case of failure the item will not be destroyed, and its enchant value remains the same. -->
@@ -249,6 +334,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51049" level="1" /> <!-- Stable Scroll: Enchant Agathion -->
+		</skills>
 	</item>
 	<item id="91624" name="Agathion Gift Box" type="EtcItem">
 		<!-- Double-click to obtain various S-grade items, special items and materials, materials for Agathion enchantment. -->
@@ -258,6 +348,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51339" level="1" /> <!-- Agathion Gift Box -->
+		</skills>
 	</item>
 	<item id="91625" name="Weapon Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain an S-grade weapon. -->
@@ -356,6 +450,10 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51363" level="1" /> <!-- Master Fisherman's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91636" name="Goldberg's Room Key" type="EtcItem">
 		<!-- A shiny key lost by Goldberg's Steward. Take it to Sora in Aden to go to Goldberg's room. -->
@@ -410,13 +508,18 @@
 	<item id="91641" name="Sayha's Blessing" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +35,000. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39191" level="1" /> <!-- Sayha's Blessing -->
+		</skills>
 	</item>
 	<item id="91642" name="15th Anniversary Gift Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Manuscript Chest, Dragon Dye Box, Spirit Transformation Scroll - Singer, Transformation Scroll: White Assassin, Rice Cake of Fighting Spirit. -->
@@ -427,6 +530,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51378" level="1" /> <!-- Anniversary Gift Box -->
+		</skills>
 	</item>
 	<item id="91643" name="Chronicle Chest" type="EtcItem">
 		<!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
@@ -438,6 +545,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51379" level="1" /> <!-- Chronicle Chest -->
+		</skills>
 	</item>
 	<item id="91644" name="Chronicle Cube Gift" type="EtcItem">
 		<!-- Double-click to obtain Dandy's Home Run Ball and Chronicle Chest. -->
@@ -471,6 +582,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -489,6 +601,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -508,6 +621,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -527,6 +641,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -546,6 +661,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -565,6 +681,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -578,8 +695,8 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -589,24 +706,26 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="91654" name="Adventurer's Mark Lv. 1" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +5%, MP Recovery Bonus +10%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="1" />
@@ -615,17 +734,18 @@
 	<item id="91655" name="Adventurer's Mark Lv. 2" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +10%, MP Recovery Bonus +15%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="2" />
@@ -634,17 +754,18 @@
 	<item id="91656" name="Adventurer's Mark Lv. 3" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +15%, MP Recovery Bonus +20%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="3" />
@@ -653,17 +774,18 @@
 	<item id="91657" name="Adventurer's Mark Lv. 4" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +20%, MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="4" />
@@ -679,12 +801,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51388" level="1" /> <!-- Chicken Box -->
+		</skills>
 	</item>
 	<item id="91659" name="Yummy Chicken" type="EtcItem">
 		<!-- Very delicious chicken from Chicken Box. Sell it in the GM shop to obtain a gift certificate that can be exchange for the real (and by that we mean real real!) chicken! The number of certificates is limited to 1000, so if you have Yummy Chicken, don't hesitate to sell it! The GM shop is located on the Monster Race Track, and it will work only until all 1000 coupons are distributed. Can be sold for a certain sum of adena. -->
 		<set name="icon" val="icon.ev_chicken_ticket_i01" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="600000" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -693,6 +820,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -703,6 +831,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -713,6 +842,7 @@
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -736,7 +866,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51396" level="1" /> <!-- Scroll: 10,000 SP -->
+		</skills>
 	</item>
 	<item id="91665" name="Scroll: 100,000 SP" type="EtcItem">
 		<!-- Double-click to recover 100,000 SP. -->
@@ -745,7 +880,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51397" level="1" /> <!-- Scroll: 100,000 SP -->
+		</skills>
 	</item>
 	<item id="91666" name="Sayha's Storm Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +100%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
@@ -756,6 +896,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51398" level="1" /> <!-- Sayha's Storm Lv. 1 - (Event) -->
+		</skills>
 	</item>
 	<item id="91667" name="White Sayha's Cloak +7" additionalName="30 days" type="Armor">
 		<!-- Available for 30 days. Max HP/ MP +15%, Acquired XP/ SP +20%, P. Def. +8%, P./ M. Critical Damage +5%. -->
@@ -778,6 +923,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40099" level="1" /> <!-- Red Lantern - 1st Place -->
+		</skills>
 	</item>
 	<item id="91669" name="Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- <Reward for achieving the 2nd place in the Magic Lantern event>. XP +30,000,000, SP +810,000. Can be exchanged by the Dimensional Merchant for the Purple Lantern (transferable to other characters on the account). -->
@@ -788,6 +937,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40100" level="1" /> <!-- Purple Lantern - 2nd Place -->
+		</skills>
 	</item>
 	<item id="91670" name="Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- <Reward for achieving the 3rd place in the Magic Lantern event>. XP +10,000,000, SP +270,000. Can be exchanged by the Dimensional Merchant for the Blue Lantern (transferable to other characters on the account). -->
@@ -798,6 +951,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40101" level="1" /> <!-- Blue Lantern - 3rd Place -->
+		</skills>
 	</item>
 	<item id="91671" name="Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- <Reward for achieving the 4th place in the Magic Lantern event>. XP +5,000,000, SP +135,000. Can be exchanged by the Dimensional Merchant for the Green Lantern (transferable to other characters on the account). -->
@@ -808,6 +965,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40102" level="1" /> <!-- Green Lantern - 4th Place -->
+		</skills>
 	</item>
 	<item id="91672" name="Adena Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain a random amount of adena. -->
@@ -820,6 +981,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51403" level="1" /> <!-- Adena Fortune Box -->
+		</skills>
 	</item>
 	<item id="91673" name="Reinforced Spear" type="Weapon">
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
@@ -834,6 +999,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -849,6 +1015,7 @@
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
@@ -856,7 +1023,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -871,6 +1038,7 @@
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
@@ -878,7 +1046,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -896,6 +1064,8 @@
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="630" />
@@ -903,8 +1073,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
-		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">25</stat>
 			<stat type="mAtk">28</stat>
@@ -918,6 +1087,7 @@
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
@@ -925,7 +1095,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -943,6 +1113,7 @@
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
@@ -950,7 +1121,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="bodypart" val="rhand" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">27</stat>
 			<stat type="mAtk">21</stat>
@@ -974,6 +1145,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">38</stat>
 			<stat type="mAtk">21</stat>
@@ -998,6 +1170,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">64</stat>
 			<stat type="mAtk">21</stat>
@@ -1081,6 +1254,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="51413" level="1" /> <!-- Blessed Scroll of Escape (Event) -->
+		</skills>
 	</item>
 	<item id="91690" name="Maliss' HP Recovery Potion" additionalName="Event" type="EtcItem">
 		<!-- Instantly recovers 500 HP. The remaining points are used to recover CP. -->
@@ -1091,6 +1269,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51414" level="1" /> <!-- Maliss' HP Recovery Potion (Event) -->
+		</skills>
 	</item>
 	<item id="91691" name="Maliss' MP Recovery Potion" additionalName="Event" type="EtcItem">
 		<!-- Instantly recovers MP. -->
@@ -1101,30 +1287,61 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51415" level="1" /> <!-- Maliss' MP Recovery Potion (Event) -->
+		</skills>
 	</item>
 	<item id="91692" name="Blessing of Plenty - 100% (Event)" additionalName="3 days" type="EtcItem">
 		<!-- Available for 3 days. L-Coin drop rate +100%. -->
 		<set name="icon" val="icon.aden_bless_rune_i01" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="4320" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51416" level="1" /> <!-- Blessing of Plenty - 100% (Event) Lv. 1 -->
+		</skills>
 	</item>
 	<item id="91693" name="Blessing of Plenty - 100%" additionalName="1 day" type="EtcItem">
 		<!-- Available for 1 day. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51416" level="2" /> <!-- Blessing of Plenty - 100% (Event) Lv. 2 -->
+		</skills>
 	</item>
 	<item id="91694" name="Blessing of Plenty - 100%" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51416" level="2" /> <!-- Blessing of Plenty - 100% (Event) Lv. 2 -->
+		</skills>
 	</item>
 	<item id="91695" name="Mark of Aden's Braveheart" type="EtcItem">
 		<!-- Can be sold for adena. -->
@@ -1137,11 +1354,15 @@
 	<item id="91696" name="Growth Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain a rare item including various enchant scrolls and materials, +16 Weapon Pack (B-grade), Queen Ant's Ring, Orfen's Earring, Ring of Core, Baium's Ring. -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51417" level="1" /> <!-- Growth Treasure Chest -->
+		</skills>
 	</item>
 	<item id="91697" name="Samurai Long Sword +7" type="EtcItem">
 		<!-- Double-click to obtain Samurai Long Sword enchanted to +7. -->
@@ -1152,6 +1373,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="135" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Samurai Long Sword -->
+		</capsuled_items>
 	</item>
 	<item id="91698" name="Demon's Staff +7" type="EtcItem">
 		<!-- Double-click to obtain Demon's Staff enchanted to +7. -->
@@ -1162,6 +1387,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="206" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Demon's Staff -->
+		</capsuled_items>
 	</item>
 	<item id="91699" name="Mace of Underworld +7" type="EtcItem">
 		<!-- Double-click to obtain Mace of Underworld enchanted to +7. -->
@@ -1172,5 +1401,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="202" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- +7 Mace of Underworld -->
+		</capsuled_items>
 	</item>
 </list>

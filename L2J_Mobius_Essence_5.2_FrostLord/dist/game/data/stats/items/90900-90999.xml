@@ -136,6 +136,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="51035" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Rudolph -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90910" name="Christmas Red Sox" additionalName="Sealed" type="EtcItem">
 		<!-- Can be exchanged through the Fishing Guildsmen for XP Growth Scroll (Event), Angel Cat's Energy (30-day), Special Pirate Fruit (Event). -->

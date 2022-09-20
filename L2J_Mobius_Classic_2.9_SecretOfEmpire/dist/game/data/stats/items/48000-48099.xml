@@ -68,10 +68,15 @@
 	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51047" level="1" /> <!-- Scroll: Enchant Agathion -->
+		</skills>
 	</item>
 	<item id="48047" name="Quality Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Can not use for items with enchant level more than +8. -->
@@ -80,6 +85,11 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51048" level="1" /> <!-- Scroll: Enchant High-grade Agathion -->
+		</skills>
 	</item>
 	<item id="48048" name="Agathion - Virgo" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Virgo. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Def. increased. Starting from +6, bonus to mental attacks. Cannot be dropped or sold. -->
@@ -91,6 +101,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54013" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48049" name="Agathion - Capricorn" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Caprocorn. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Critical Rate increased. Starting from +6, cooldown of M. Skills and songs/dances decreased. Cannot be dropped or sold. -->
@@ -102,6 +117,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54015" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Capricorn -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48050" name="Agathion - Libra" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Libra. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Casting Spd. increased. Starting from +6, MP Consumption for M. Skills and songs/dances decreased. Cannot be dropped or sold. -->
@@ -113,6 +133,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54016" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Libra -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48052" name="Agathion - Taurus" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Taurus. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. Starting from +6, bonus to stun attacks. Cannot be dropped or sold. -->
@@ -124,6 +149,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54009" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Taurus -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48053" name="Agathion - Leo" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Leo. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Atk. increased. Starting from +6, bonus to paralyse attacks. Cannot be dropped or sold. -->
@@ -135,6 +165,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54010" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Leo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48054" name="Agathion - Gemini" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Gemini. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Effect of Sayha Grace increased. Starting from +6, Max HP/ MP increased. Cannot be dropped or sold. -->
@@ -146,6 +181,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54017" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Gemini -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48055" name="Agathion - Scorpio" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Scorpio. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Critical Rate increased. Starting from +6, cooldown of P. Skills and songs/dances decreased. Cannot be dropped or sold. -->
@@ -157,6 +197,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54011" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Scorpio -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48056" name="Agathion - Aquarius" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Auarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. Starting from +6, bonus to hold/sleep. Cannot be dropped or sold. -->
@@ -168,6 +213,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54014" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aquarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48058" name="Agathion - Sagittarius" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Sagittarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Atk. Spd. increased. Starting from +6, MP Consumption for P. Skills and songs/dances decreased. Cannot be dropped or sold. -->
@@ -179,6 +229,11 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54012" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Sagittarius -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="48066" name="Zodiac Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain a random Zodiac Agathion. Cannot be dropped or sold. -->
@@ -189,5 +244,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51046" level="1" /> <!-- Zodiac Agathion Box -->
+		</skills>
 	</item>
 </list>

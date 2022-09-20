@@ -124,6 +124,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="51035" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Rudolph -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90910" name="Christmas Red Sox" type="EtcItem">
 		<!-- Can be exchanged through the Fishermen's Guild for Rice Cake of Flaming Fighting Spirit (Event), Angel Cat's Energy (30-day), Special Pirate Fruit (Event). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
@@ -189,8 +193,9 @@
 		<!-- Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, P./ M. Atk. Spd. +10%, Speed +10. Duration: 5 minutes. The effect is removed if the game is reloaded. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
