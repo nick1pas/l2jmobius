@@ -57,6 +57,7 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 				packet.writeH(member.getClassId().getId());
 				packet.writeC(1); // Unk
 				packet.writeH(member.getRace().ordinal());
+				packet.writeD(0); // 196?
 				final Summon pet = member.getPet();
 				packet.writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
 				if (pet != null)

@@ -285,7 +285,7 @@ public class Weapon extends ItemTemplate
 			}
 			
 			// Skill condition not met
-			if (!skill.checkCondition(caster, target))
+			if (!skill.checkCondition(caster, target, true))
 			{
 				return;
 			}

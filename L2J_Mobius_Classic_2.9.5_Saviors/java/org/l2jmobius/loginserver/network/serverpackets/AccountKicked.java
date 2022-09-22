@@ -44,4 +44,3 @@ public class AccountKicked implements IOutgoingPacket
 		return true;
 	}
 }
-

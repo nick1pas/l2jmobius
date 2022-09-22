@@ -45,6 +45,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			packet.writeD(sc.getType().ordinal());
 			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
+			packet.writeC(0); // 196?
 			switch (sc.getType())
 			{
 				case ITEM:

@@ -54,18 +54,13 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		Skill skill = player.getKnownSkill(_magicId);
 		if (skill == null)
 		{
-			if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) //
-				|| ((_magicId > 1565) && (_magicId < 1570))) // subClass change SkillTree
+			if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) || ((_magicId > 1565) && (_magicId < 1570))) // subClass change SkillTree
 			{
 				skill = SkillData.getInstance().getSkill(_magicId, 1);
 			}
 			else
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
-				// if (_magicId > 0)
-				// {
-				// PacketLogger.warning("Skill Id " + _magicId + " not found in player: " + player);
-				// }
 				return;
 			}
 		}
@@ -86,7 +81,6 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 		}
 		
 		player.onActionRequest();
-		
 		player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 	}
 }

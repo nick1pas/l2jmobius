@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Fort.FortFunction;
+import org.l2jmobius.gameserver.model.skill.CommonSkill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 
@@ -245,9 +246,14 @@ public class RequestRestartPoint implements IClientIncomingPacket
 					PacketLogger.warning("Player [" + player.getName() + "] called RestartPointPacket - Fixed and he isn't festival participant!");
 					return;
 				}
-				if (player.isGM() || player.destroyItemByItemId("Feather", 10649, 1, player, false) || player.destroyItemByItemId("Feather", 13300, 1, player, false) || player.destroyItemByItemId("Feather", 13128, 1, player, false))
+				if (player.isGM())
 				{
-					player.doRevive(100.00);
+					player.doRevive(100);
+				}
+				else if (player.destroyItemByItemId("Feather", 10649, 1, player, false) /* || player.destroyItemByItemId("Feather", 13300, 1, player, false) || player.destroyItemByItemId("Feather", 13128, 1, player, false) */)
+				{
+					player.doRevive(100);
+					CommonSkill.FEATHER_OF_BLESSING.getSkill().applyEffects(player, player);
 				}
 				else
 				{

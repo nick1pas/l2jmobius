@@ -30,15 +30,14 @@ import org.l2jmobius.gameserver.enums.ShortcutType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.interfaces.IRestorable;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.EtcItemType;
-import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
-import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class ShortCuts implements IRestorable
 {
 	private static final Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
-	private static final int MAX_SHORTCUTS_PER_BAR = 12;
+	
+	public static final int MAX_SHORTCUTS_PER_BAR = 12;
+	
 	private final Player _owner;
 	private final Map<Integer, Shortcut> _shortCuts = new ConcurrentHashMap<>();
 	
@@ -117,21 +116,6 @@ public class ShortCuts implements IRestorable
 			return;
 		}
 		deleteShortCutFromDb(old);
-		if (old.getType() == ShortcutType.ITEM)
-		{
-			final Item item = _owner.getInventory().getItemByObjectId(old.getId());
-			if ((item != null) && (item.getItemType() == EtcItemType.SOULSHOT) && _owner.removeAutoSoulShot(item.getId()))
-			{
-				_owner.sendPacket(new ExAutoSoulShot(item.getId(), false, 0));
-			}
-		}
-		
-		_owner.sendPacket(new ShortCutInit(_owner));
-		
-		for (int shotId : _owner.getAutoSoulShot())
-		{
-			_owner.sendPacket(new ExAutoSoulShot(shotId, true, 0));
-		}
 	}
 	
 	public synchronized void deleteShortCutByObjectId(int objectId)
@@ -230,6 +214,7 @@ public class ShortCuts implements IRestorable
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
 				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel, 1);
+				newsc.setAutoUse(sc.isAutoUse());
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

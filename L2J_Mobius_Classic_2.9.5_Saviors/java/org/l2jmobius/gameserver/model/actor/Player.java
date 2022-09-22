@@ -222,6 +222,9 @@ import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.model.holders.AutoPlaySettingsHolder;
+import org.l2jmobius.gameserver.model.holders.AutoUseSettingsHolder;
+import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ElementalSpiritDataHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
@@ -294,6 +297,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFrom
 import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
+import org.l2jmobius.gameserver.network.serverpackets.ExDieInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
@@ -349,11 +353,15 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOtherDone;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.vip.ReceiveVipInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
@@ -413,7 +421,7 @@ public class Player extends Playable
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
 	
-	// Character Recipe List Save
+	// Character Recipe List Save:
 	private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
 	private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
 	private static final String RESTORE_CHAR_RECIPE_SHOP = "SELECT * FROM character_recipeshoplist WHERE charId=? ORDER BY `index`";
@@ -483,6 +491,8 @@ public class Player extends Playable
 	
 	/** The PvP Flag state of the Player (0=White, 1=Purple) */
 	private byte _pvpFlag;
+	
+	private final List<DamageTakenHolder> _lastDamageTaken = new ArrayList<>(21);
 	
 	/** The Fame of this Player */
 	private int _fame;
@@ -716,8 +726,6 @@ public class Player extends Playable
 	
 	private final Map<Integer, String> _chars = new ConcurrentSkipListMap<>();
 	
-	// private byte _updateKnownCounter = 0;
-	
 	private int _expertiseArmorPenalty = 0;
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
@@ -865,6 +873,10 @@ public class Player extends Playable
 	private ElementalType _activeElementalSpiritType;
 	
 	private byte _vipTier = 0;
+	
+	private final AutoPlaySettingsHolder _autoPlaySettings = new AutoPlaySettingsHolder();
+	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
+	private boolean _resumedAutoPlay = false;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -2425,7 +2437,7 @@ public class Player extends Playable
 		
 		try
 		{
-			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, id))
+			if ((_lvlJoinedAcademy != 0) && (_clan != null) && CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, id))
 			{
 				if (_lvlJoinedAcademy <= 16)
 				{
@@ -2732,6 +2744,7 @@ public class Player extends Playable
 			sendPacket(new ShortCutInit(this));
 			sendMessage("You have learned " + skillCounter + " new skills.");
 		}
+		restoreAutoShortcutVisual();
 		
 		return skillCounter;
 	}
@@ -4844,6 +4857,8 @@ public class Player extends Playable
 	@Override
 	public boolean doDie(Creature killer)
 	{
+		Collection<Item> droppedItems = null;
+		
 		if (killer != null)
 		{
 			final Player pk = killer.getActingPlayer();
@@ -4948,7 +4963,7 @@ public class Player extends Playable
 				final boolean insidePvpZone = isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE);
 				if ((pk == null) || !pk.isCursedWeaponEquipped())
 				{
-					onDieDropItem(killer); // Check if any item should be dropped
+					droppedItems = onDieDropItem(killer); // Check if any item should be dropped
 					if (!insidePvpZone && (pk != null))
 					{
 						final Clan pkClan = pk.getClan();
@@ -4969,6 +4984,8 @@ public class Player extends Playable
 				}
 			}
 		}
+		
+		sendPacket(new ExDieInfo(droppedItems == null ? Collections.emptyList() : droppedItems, _lastDamageTaken));
 		
 		if (isMounted())
 		{
@@ -5019,11 +5036,37 @@ public class Player extends Playable
 		return true;
 	}
 	
-	private void onDieDropItem(Creature killer)
+	public void addDamageTaken(Creature attacker, int skillId, double damage)
 	{
-		if (isOnEvent() || (killer == null))
+		if (attacker == this)
 		{
 			return;
+		}
+		
+		synchronized (_lastDamageTaken)
+		{
+			_lastDamageTaken.add(new DamageTakenHolder(attacker, skillId, damage));
+			if (_lastDamageTaken.size() > 20)
+			{
+				_lastDamageTaken.remove(0);
+			}
+		}
+	}
+	
+	public void clearDamageTaken()
+	{
+		synchronized (_lastDamageTaken)
+		{
+			_lastDamageTaken.clear();
+		}
+	}
+	
+	private Collection<Item> onDieDropItem(Creature killer)
+	{
+		final List<Item> droppedItems = new ArrayList<>();
+		if (isOnEvent() || (killer == null))
+		{
+			return droppedItems;
 		}
 		
 		final Player pk = killer.getActingPlayer();
@@ -5031,7 +5074,7 @@ public class Player extends Playable
 		// || _clan.isAtWarWith(((Player)killer).getClanId())
 		))
 		{
-			return;
+			return droppedItems;
 		}
 		
 		if ((!isInsideZone(ZoneId.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM))
@@ -5096,6 +5139,8 @@ public class Player extends Playable
 					if (Rnd.get(100) < itemDropPercent)
 					{
 						dropItem("DieDrop", itemDrop, killer, true);
+						droppedItems.add(itemDrop);
+						
 						if (isKarmaDrop)
 						{
 							LOGGER.warning(getName() + " has karma and dropped id = " + itemDrop.getId() + ", count = " + itemDrop.getCount());
@@ -5113,6 +5158,8 @@ public class Player extends Playable
 				}
 			}
 		}
+		
+		return droppedItems;
 	}
 	
 	public void onPlayerKill(Playable target)
@@ -8444,7 +8491,7 @@ public class Player extends Playable
 		}
 		
 		// Check if all casting conditions are completed
-		if (!usedSkill.checkCondition(this, target))
+		if (!usedSkill.checkCondition(this, target, true))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
@@ -9873,6 +9920,14 @@ public class Player extends Playable
 			// 9. Resend a class change animation effect to broadcast to all nearby players.
 			for (Skill oldSkill : getAllSkills())
 			{
+				if (oldSkill.isBad())
+				{
+					AutoUseTaskManager.getInstance().removeAutoSkill(this, oldSkill.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().removeAutoBuff(this, oldSkill.getId());
+				}
 				removeSkill(oldSkill, false, true);
 			}
 			
@@ -10178,6 +10233,8 @@ public class Player extends Playable
 		{
 			instance.doRevive(this);
 		}
+		
+		clearDamageTaken();
 	}
 	
 	@Override
@@ -10395,7 +10452,7 @@ public class Player extends Playable
 			setLastServerPosition(getX(), getY(), getZ());
 		}
 		
-		// Force a revalidation
+		// Force a revalidation.
 		revalidateZone(true);
 		
 		checkItemRestriction();
@@ -10405,14 +10462,14 @@ public class Player extends Playable
 			setTeleportProtection(true);
 		}
 		
-		// Trained beast is lost after teleport
+		// Trained beast is lost after teleport.
 		for (TamedBeast tamedBeast : _tamedBeast)
 		{
 			tamedBeast.deleteMe();
 		}
 		_tamedBeast.clear();
 		
-		// Modify the position of the pet if necessary
+		// Modify the position of the pet if necessary.
 		if (_pet != null)
 		{
 			_pet.setFollowStatus(false);
@@ -10433,13 +10490,19 @@ public class Player extends Playable
 			s.updateAndBroadcastStatus(0);
 		});
 		
-		// Show movie if available
+		// Show movie if available.
 		if (_movieHolder != null)
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
 		}
 		
-		// send info to nearby players
+		// Stop auto play.
+		AutoPlayTaskManager.getInstance().stopAutoPlay(this);
+		AutoUseTaskManager.getInstance().stopAutoUseTask(this);
+		sendPacket(new ExAutoPlaySettingSend(_autoPlaySettings.getOptions(), false, _autoPlaySettings.doPickup(), _autoPlaySettings.getNextTargetMode(), _autoPlaySettings.isShortRange(), _autoPlaySettings.getAutoPotionPercent(), _autoPlaySettings.isRespectfulHunting()));
+		restoreAutoShortcutVisual();
+		
+		// Send info to nearby players.
 		broadcastInfo();
 	}
 	
@@ -12046,6 +12109,7 @@ public class Player extends Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_BECAUSE_YOU_DO_NOT_HAVE_A_TELEPORT_ITEM);
 			return;
 		}
+		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(13016);
 		sendPacket(sm);
@@ -14262,5 +14326,219 @@ public class Player extends Playable
 	public boolean isInBattle()
 	{
 		return AttackStanceTaskManager.getInstance().hasAttackStanceTask(this);
+	}
+	
+	public AutoPlaySettingsHolder getAutoPlaySettings()
+	{
+		return _autoPlaySettings;
+	}
+	
+	public AutoUseSettingsHolder getAutoUseSettings()
+	{
+		return _autoUseSettings;
+	}
+	
+	public void setResumedAutoPlay(boolean value)
+	{
+		_resumedAutoPlay = value;
+	}
+	
+	public boolean hasResumedAutoPlay()
+	{
+		return _resumedAutoPlay;
+	}
+	
+	public void restoreAutoSettings()
+	{
+		if (!Config.ENABLE_AUTO_PLAY || !getVariables().contains(PlayerVariables.AUTO_USE_SETTINGS))
+		{
+			return;
+		}
+		
+		final List<Integer> settings = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SETTINGS);
+		if (settings.isEmpty())
+		{
+			return;
+		}
+		
+		final int options = settings.get(0);
+		final boolean active = Config.RESUME_AUTO_PLAY && (settings.get(1) == 1);
+		final boolean pickUp = settings.get(2) == 1;
+		final int nextTargetMode = settings.get(3);
+		final boolean shortRange = settings.get(4) == 1;
+		final int potionPercent = settings.get(5);
+		final boolean respectfulHunting = settings.get(6) == 1;
+		
+		getAutoPlaySettings().setAutoPotionPercent(potionPercent);
+		getAutoPlaySettings().setOptions(options);
+		getAutoPlaySettings().setPickup(pickUp);
+		getAutoPlaySettings().setNextTargetMode(nextTargetMode);
+		getAutoPlaySettings().setShortRange(shortRange);
+		getAutoPlaySettings().setRespectfulHunting(respectfulHunting);
+		
+		sendPacket(new ExAutoPlaySettingSend(options, active, pickUp, nextTargetMode, shortRange, potionPercent, respectfulHunting));
+		
+		if (active)
+		{
+			AutoPlayTaskManager.getInstance().doAutoPlay(this);
+		}
+		
+		_resumedAutoPlay = true;
+	}
+	
+	public void restoreAutoShortcutVisual()
+	{
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			return;
+		}
+		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
+		for (Shortcut shortcut : getAllShortCuts())
+		{
+			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			if (!positions.contains(position))
+			{
+				continue;
+			}
+			
+			if (shortcut.getType() == ShortcutType.SKILL)
+			{
+				final Skill knownSkill = getKnownSkill(shortcut.getId());
+				if (knownSkill != null)
+				{
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				}
+			}
+			else if (shortcut.getType() == ShortcutType.ACTION)
+			{
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+			}
+			else
+			{
+				final Item item = getInventory().getItemByObjectId(shortcut.getId());
+				if (item != null)
+				{
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				}
+			}
+		}
+	}
+	
+	public void restoreAutoShortcuts()
+	{
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			return;
+		}
+		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
+		for (Shortcut shortcut : getAllShortCuts())
+		{
+			final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			if (!positions.contains(position))
+			{
+				continue;
+			}
+			
+			if (shortcut.getType() == ShortcutType.ACTION)
+			{
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				AutoUseTaskManager.getInstance().addAutoAction(this, shortcut.getId());
+				continue;
+			}
+			
+			final Skill knownSkill = getKnownSkill(shortcut.getId());
+			if (knownSkill != null)
+			{
+				shortcut.setAutoUse(true);
+				sendPacket(new ExActivateAutoShortcut(shortcut, true));
+				if (knownSkill.isBad())
+				{
+					AutoUseTaskManager.getInstance().addAutoSkill(this, shortcut.getId());
+				}
+				else
+				{
+					AutoUseTaskManager.getInstance().addAutoBuff(this, shortcut.getId());
+				}
+			}
+			else
+			{
+				final Item item = getInventory().getItemByObjectId(shortcut.getId());
+				if (item != null)
+				{
+					shortcut.setAutoUse(true);
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+					if (item.isPotion())
+					{
+						AutoUseTaskManager.getInstance().addAutoPotionItem(this, item.getId());
+					}
+					else
+					{
+						AutoUseTaskManager.getInstance().addAutoSupplyItem(this, item.getId());
+					}
+				}
+			}
+		}
+	}
+	
+	public synchronized void addAutoShortcut(int slot, int page)
+	{
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
+		final Shortcut usedShortcut = getShortCut(slot, page);
+		if (usedShortcut == null)
+		{
+			final Integer position = slot + (page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			positions.remove(position);
+		}
+		else
+		{
+			for (Shortcut shortcut : getAllShortCuts())
+			{
+				if ((usedShortcut.getId() == shortcut.getId()) && (usedShortcut.getType() == shortcut.getType()))
+				{
+					shortcut.setAutoUse(true);
+					sendPacket(new ExActivateAutoShortcut(shortcut, true));
+					final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+					if (!positions.contains(position))
+					{
+						positions.add(position);
+					}
+				}
+			}
+		}
+		
+		getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
+	}
+	
+	public synchronized void removeAutoShortcut(int slot, int page)
+	{
+		if (!getVariables().contains(PlayerVariables.AUTO_USE_SHORTCUTS))
+		{
+			return;
+		}
+		
+		final List<Integer> positions = getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
+		final Shortcut usedShortcut = getShortCut(slot, page);
+		if (usedShortcut == null)
+		{
+			final Integer position = slot + (page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			positions.remove(position);
+		}
+		else
+		{
+			for (Shortcut shortcut : getAllShortCuts())
+			{
+				if ((usedShortcut.getId() == shortcut.getId()) && (usedShortcut.getType() == shortcut.getType()))
+				{
+					shortcut.setAutoUse(false);
+					sendPacket(new ExActivateAutoShortcut(shortcut, false));
+					final Integer position = shortcut.getSlot() + (shortcut.getPage() * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+					positions.remove(position);
+				}
+			}
+		}
+		
+		getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
 	}
 }

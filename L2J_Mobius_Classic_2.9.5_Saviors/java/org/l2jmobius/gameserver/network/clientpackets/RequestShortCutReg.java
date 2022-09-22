@@ -16,12 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.List;
+
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.ShortcutType;
+import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
+import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 public class RequestShortCutReg implements IClientIncomingPacket
 {
@@ -32,15 +38,17 @@ public class RequestShortCutReg implements IClientIncomingPacket
 	private int _level;
 	private int _subLevel;
 	private int _characterType; // 1 - player, 2 - pet
+	private boolean _active;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int typeId = packet.readD();
 		_type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-		final int slot = packet.readD();
-		_slot = slot % 12;
-		_page = slot / 12;
+		final int position = packet.readD();
+		_slot = position % ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_page = position / ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_active = packet.readC() == 1; // 228
 		_id = packet.readD();
 		_level = packet.readH();
 		_subLevel = packet.readH(); // Sublevel
@@ -57,13 +65,94 @@ public class RequestShortCutReg implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_page > 19) || (_page < 0))
+		if ((_page > 23) || (_page < 0))
 		{
 			return;
 		}
 		
+		// Delete the shortcut.
+		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
+		player.deleteShortCut(_slot, _page);
+		if (oldShortcut != null)
+		{
+			boolean removed = true;
+			// Keep other similar shortcuts activated.
+			if (oldShortcut.isAutoUse())
+			{
+				player.removeAutoShortcut(_slot, _page);
+				for (Shortcut shortcut : player.getAllShortCuts())
+				{
+					if ((oldShortcut.getId() == shortcut.getId()) && (oldShortcut.getType() == shortcut.getType()))
+					{
+						player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+						removed = false;
+					}
+				}
+			}
+			// Remove auto used ids.
+			if (removed)
+			{
+				switch (oldShortcut.getType())
+				{
+					case SKILL:
+					{
+						AutoUseTaskManager.getInstance().removeAutoBuff(player, oldShortcut.getId());
+						AutoUseTaskManager.getInstance().removeAutoSkill(player, oldShortcut.getId());
+						break;
+					}
+					case ITEM:
+					{
+						if (player.getInventory().getItemByObjectId(oldShortcut.getId()).isPotion())
+						{
+							AutoUseTaskManager.getInstance().removeAutoPotionItem(player, oldShortcut.getId());
+						}
+						else
+						{
+							AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+						}
+						break;
+					}
+					case ACTION:
+					{
+						AutoUseTaskManager.getInstance().removeAutoAction(player, oldShortcut.getId());
+						break;
+					}
+				}
+			}
+		}
+		player.restoreAutoShortcutVisual();
+		
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _level, _subLevel, _characterType);
+		sc.setAutoUse(_active);
 		player.registerShortCut(sc);
 		player.sendPacket(new ShortCutRegister(sc));
+		player.sendPacket(new ExActivateAutoShortcut(sc, _active));
+		
+		// When id is not auto used, deactivate auto shortcuts.
+		if (!player.getAutoUseSettings().isAutoSkill(_id) && !player.getAutoUseSettings().getAutoSupplyItems().contains(_id))
+		{
+			final List<Integer> positions = player.getVariables().getIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS);
+			final Integer position = _slot + (_page * ShortCuts.MAX_SHORTCUTS_PER_BAR);
+			if (!positions.contains(position))
+			{
+				return;
+			}
+			
+			positions.remove(position);
+			player.getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
+			return;
+		}
+		
+		// Activate if any other similar shortcut is activated.
+		for (Shortcut shortcut : player.getAllShortCuts())
+		{
+			if (!shortcut.isAutoUse() || (shortcut.getId() != _id) || (shortcut.getType() != _type))
+			{
+				continue;
+			}
+			
+			player.addAutoShortcut(_slot, _page);
+			break;
+		}
 	}
 }

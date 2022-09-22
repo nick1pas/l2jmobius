@@ -39,6 +39,7 @@ public class ShortCutRegister implements IClientOutgoingPacket
 		OutgoingPackets.SHORT_CUT_REGISTER.writeId(packet);
 		packet.writeD(_shortcut.getType().ordinal());
 		packet.writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+		packet.writeC(0); // 196?
 		switch (_shortcut.getType())
 		{
 			case ITEM:
@@ -71,6 +72,7 @@ public class ShortCutRegister implements IClientOutgoingPacket
 			{
 				packet.writeD(_shortcut.getId());
 				packet.writeD(_shortcut.getCharacterType());
+				break;
 			}
 		}
 		return true;

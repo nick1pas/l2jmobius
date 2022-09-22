@@ -50,6 +50,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	{
 		(byte) 0x00,
 		(byte) 0x00,
+		(byte) 0x00,
 		(byte) 0x00
 	};
 	private int _initSize = 5;
@@ -133,7 +134,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		OutgoingPackets.USER_INFO.writeId(packet);
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(24);
+		packet.writeH(25); // 196 - 25
 		packet.writeB(_masks);
 		if (containsMask(UserInfoType.RELATION))
 		{
@@ -283,7 +284,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		}
 		if (containsMask(UserInfoType.SOCIAL))
 		{
-			packet.writeH(22);
+			packet.writeH(30); // 196?
 			packet.writeC(_player.getPvpFlag());
 			packet.writeD(_player.getReputation()); // Reputation
 			packet.writeC(_player.isNoble() ? 1 : 0);
@@ -293,14 +294,33 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getPvpKills());
 			packet.writeH(_player.getRecomLeft());
 			packet.writeH(_player.getRecomHave());
+			packet.writeD(0); // 196
+			packet.writeD(0); // 196?
 		}
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
-			packet.writeH(15);
-			packet.writeD(_player.getVitalityPoints());
-			packet.writeC(0); // Vita Bonus
-			packet.writeD(_player.getFame());
-			packet.writeD(_player.getRaidbossPoints());
+			packet.writeH(19); // 196
+			// packet.writeD(_player.getVitalityPoints());
+			// packet.writeC(0); // Vita Bonus
+			// packet.writeD(_player.getFame());
+			// packet.writeD(_player.getRaidbossPoints());
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
 		}
 		if (containsMask(UserInfoType.SLOTS))
 		{
@@ -335,11 +355,15 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		}
 		if (containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
-			packet.writeH(9);
+			packet.writeH(13);
 			packet.writeH(0);
 			packet.writeH(0);
 			packet.writeH(_player.getInventoryLimit());
 			packet.writeC(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
 		}
 		if (containsMask(UserInfoType.TRUE_HERO))
 		{

@@ -2493,10 +2493,8 @@
 			<item id="91406" count="1" />
 		</items>
 	</reward>
-	<!-- TODO: aquireitem handler
 	<reward id="3000" reward_id="819" name="Hero's way I" requiredCompletion="80">
-		When you reach Lv. 80, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<handler name="level">
 			<param name="level">80</param>
 		</handler>
 		<items>
@@ -2504,8 +2502,8 @@
 		</items>
 	</reward>
 	<reward id="3001" reward_id="820" name="Hero's way II" requiredCompletion="81">
-		When you reach Lv. 81, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 81, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">81</param>
 		</handler>
 		<items>
@@ -2513,8 +2511,8 @@
 		</items>
 	</reward>
 	<reward id="3002" reward_id="821" name="Hero's way III" requiredCompletion="82">
-		When you reach Lv. 82, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 82, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">82</param>
 		</handler>
 		<items>
@@ -2522,8 +2520,8 @@
 		</items>
 	</reward>
 	<reward id="3003" reward_id="822" name="Hero's way IV" requiredCompletion="83">
-		When you reach Lv. 83, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 83, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">83</param>
 		</handler>
 		<items>
@@ -2531,8 +2529,8 @@
 		</items>
 	</reward>
 	<reward id="3004" reward_id="823" name="Hero's way V" requiredCompletion="84">
-		When you reach Lv. 84, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 84, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">84</param>
 		</handler>
 		<items>
@@ -2540,8 +2538,8 @@
 		</items>
 	</reward>
 	<reward id="3005" reward_id="824" name="Hero's way VI" requiredCompletion="85">
-		When you reach Lv. 85, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 85, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">85</param>
 		</handler>
 		<items>
@@ -2549,13 +2547,12 @@
 		</items>
 	</reward>
 	<reward id="3006" reward_id="825" name="Hero's way VII" requiredCompletion="86">
-		When you reach Lv. 86, you will get 1 special token for learning certification skill.
-		<handler name="aquireitem">
+		<!-- When you reach Lv. 86, you will get 1 special token for learning certification skill. -->
+		<handler name="level">
 			<param name="level">86</param>
 		</handler>
 		<items>
 			<item id="91481" count="160" />
 		</items>
 	</reward>
-	-->
 </list>

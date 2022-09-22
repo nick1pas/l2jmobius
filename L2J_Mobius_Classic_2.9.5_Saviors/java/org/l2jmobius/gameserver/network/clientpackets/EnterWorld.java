@@ -78,6 +78,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
+import org.l2jmobius.gameserver.network.serverpackets.ExEnterWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -325,6 +326,9 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExVitalityEffectInfo(player));
 		}
 		
+		// Send time.
+		player.sendPacket(new ExEnterWorld());
+		
 		// Send Macro List
 		player.getMacros().sendAllMacros();
 		
@@ -497,16 +501,17 @@ public class EnterWorld implements IClientIncomingPacket
 			PetitionManager.getInstance().checkPetitionMessages(player);
 		}
 		
+		player.onPlayerEnter();
+		
+		player.sendPacket(new SkillCoolTime(player));
+		player.sendPacket(new ExVoteSystemInfo(player));
+		
 		if (player.isAlikeDead()) // dead or fake dead
 		{
 			// no broadcast needed since the player will already spawn dead to others
 			player.sendPacket(new Die(player));
 		}
 		
-		player.onPlayerEnter();
-		
-		player.sendPacket(new SkillCoolTime(player));
-		player.sendPacket(new ExVoteSystemInfo(player));
 		for (Item item : player.getInventory().getItems())
 		{
 			if (item.isTimeLimitedItem())
@@ -614,6 +619,10 @@ public class EnterWorld implements IClientIncomingPacket
 		player.sendPacket(new ExAutoSoulShot(0, true, 1));
 		player.sendPacket(new ExAutoSoulShot(0, true, 2));
 		player.sendPacket(new ExAutoSoulShot(0, true, 3));
+		
+		// Auto use restore.
+		player.restoreAutoShortcuts();
+		player.restoreAutoSettings();
 		
 		// Client settings restore.
 		player.getClientSettings();

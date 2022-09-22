@@ -21,14 +21,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.enums.UpgradeType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
+import org.l2jmobius.gameserver.model.holders.ItemEnchantHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
@@ -37,7 +40,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 public class EquipmentUpgradeData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EquipmentUpgradeData.class.getName());
-	private static final Map<Integer, EquipmentUpgradeHolder> _upgrades = new HashMap<>();
+	private static final Map<UpgradeType, Map<Integer, EquipmentUpgradeHolder>> _upgrades = new HashMap<>();
 	
 	protected EquipmentUpgradeData()
 	{
@@ -48,8 +51,13 @@ public class EquipmentUpgradeData implements IXmlReader
 	public void load()
 	{
 		_upgrades.clear();
-		parseDatapackFile("data/EquipmentUpgradeData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.size() + " upgrade equipment data.");
+		_upgrades.put(UpgradeType.RARE, new HashMap<>());
+		_upgrades.put(UpgradeType.NORMAL, new HashMap<>());
+		_upgrades.put(UpgradeType.SPECIAL, new HashMap<>());
+		parseDatapackDirectory("data/stats/upgrade", false);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.get(UpgradeType.RARE).size() + " rare upgrade equipment data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.get(UpgradeType.NORMAL).size() + " normal upgrade equipment data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.get(UpgradeType.SPECIAL).size() + " special upgrade equipment data.");
 	}
 	
 	@Override
@@ -58,12 +66,24 @@ public class EquipmentUpgradeData implements IXmlReader
 		forEach(doc, "list", listNode -> forEach(listNode, "upgrade", upgradeNode ->
 		{
 			final StatSet set = new StatSet(parseAttributes(upgradeNode));
-			final int id = set.getInt("id");
-			final String[] item = set.getString("item").split(",");
+			final int id = set.getInt("id"); // Upgrade ID
+			final UpgradeType type = UpgradeType.valueOf(set.getString("type")); // Type
+			
+			final String[] item = set.getString("item").split(","); // Required Item
 			final int requiredItemId = Integer.parseInt(item[0]);
-			final int requiredItemEnchant = Integer.parseInt(item[1]);
-			final String materials = set.getString("materials");
+			ItemEnchantHolder requiredItem = null;
+			if (ItemTable.getInstance().getTemplate(requiredItemId) == null)
+			{
+				LOGGER.info(getClass().getSimpleName() + ": Required item with id " + requiredItemId + " does not exist.");
+			}
+			else
+			{
+				requiredItem = new ItemEnchantHolder(requiredItemId, 1, Integer.parseInt(item[1]));
+			}
+			
+			final String materials = set.getString("materials"); // Materials
 			final List<ItemHolder> materialList = new ArrayList<>();
+			
 			if (!materials.isEmpty())
 			{
 				for (String mat : materials.split(";"))
@@ -80,24 +100,70 @@ public class EquipmentUpgradeData implements IXmlReader
 					}
 				}
 			}
-			final long adena = set.getLong("adena", 0);
-			final String[] resultItem = set.getString("result").split(",");
-			final int resultItemId = Integer.parseInt(resultItem[0]);
-			final int resultItemEnchant = Integer.parseInt(resultItem[1]);
-			if (ItemTable.getInstance().getTemplate(requiredItemId) == null)
+			
+			final long adena = set.getLong("adena", 0); // Cost of Upgrade
+			
+			final List<ItemEnchantHolder> resultItems = new ArrayList<>();
+			final String[] result = set.getString("result").split(","); // Result
+			final int resultId = Integer.parseInt(result[0]);
+			
+			if (ItemTable.getInstance().getTemplate(resultId) == null)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Required item with id " + requiredItemId + " does not exist.");
+				LOGGER.info(getClass().getSimpleName() + ": Result item with id " + resultId + " does not exist.");
 			}
 			else
 			{
-				_upgrades.put(id, new EquipmentUpgradeHolder(id, requiredItemId, requiredItemEnchant, materialList, adena, resultItemId, resultItemEnchant));
+				resultItems.add(new ItemEnchantHolder(resultId, 1, Integer.parseInt(result[1])));
+			}
+			
+			final int chance = set.getInt("chance", 100);
+			
+			final String onFailed = set.getString("on_fail", "");
+			final List<ItemEnchantHolder> onFailedList = new ArrayList<>();
+			if (!Objects.equals(onFailed, ""))
+			{
+				for (String fail : onFailed.split(";"))
+				{
+					final String[] failValues = fail.split(",");
+					final int failItemId = Integer.parseInt(failValues[0]);
+					if (ItemTable.getInstance().getTemplate(failItemId) == null)
+					{
+						LOGGER.info(getClass().getSimpleName() + ": Material item with id " + failItemId + " does not exist.");
+					}
+					else
+					{
+						onFailedList.add(new ItemEnchantHolder(failItemId, Long.parseLong(failValues[1])));
+					}
+				}
+			}
+			
+			final String bonus = set.getString("bonus", "");
+			final List<ItemEnchantHolder> bonusItems = new ArrayList<>();
+			
+			if (!Objects.equals(bonus, ""))
+			{
+				final int bonusId = Integer.parseInt(bonus.split(",")[0]);
+				if (ItemTable.getInstance().getTemplate(bonusId) == null)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Required bonus with id " + bonusId + " does not exist.");
+				}
+				else
+				{
+					bonusItems.add(new ItemEnchantHolder(bonusId, Integer.parseInt(bonus.split(",")[1])));
+				}
+			}
+			final int bonusChance = set.getInt("chance_bonus", 0);
+			
+			if ((requiredItem != null) || !resultItems.isEmpty() || !materialList.isEmpty())
+			{
+				_upgrades.get(type).put(id, new EquipmentUpgradeHolder(id, requiredItem, adena, resultItems, chance, materialList, onFailedList.isEmpty() ? null : onFailedList, bonusItems.isEmpty() ? null : bonusItems, bonusChance));
 			}
 		}));
 	}
 	
-	public EquipmentUpgradeHolder getUpgrade(int id)
+	public EquipmentUpgradeHolder getUpgrade(UpgradeType type, int id)
 	{
-		return _upgrades.get(id);
+		return _upgrades.get(type).get(id);
 	}
 	
 	public static EquipmentUpgradeData getInstance()

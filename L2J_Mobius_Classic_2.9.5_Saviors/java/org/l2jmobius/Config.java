@@ -97,6 +97,7 @@ public class Config
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+	private static final String GAME_ASSISTANT_CONFIG_FILE = "./config/GameAssistant.ini";
 	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
@@ -136,7 +137,6 @@ public class Config
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_ONLINE_INFO_CONFIG_FILE = "./config/Custom/OnlineInfo.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
-	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 	private static final String CUSTOM_VIP_CONFIG_FILE = "./config/Custom/VipSystem.ini";
 	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
 	private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
@@ -305,6 +305,7 @@ public class Config
 	public static boolean OFFSET_ON_TELEPORT_ENABLED;
 	public static int MAX_OFFSET_ON_TELEPORT;
 	public static boolean TELEPORT_WHILE_SIEGE_IN_PROGRESS;
+	public static boolean TELEPORT_WHILE_PLAYER_IN_COMBAT;
 	public static boolean PETITIONING_ALLOWED;
 	public static int MAX_PETITIONS_PER_PLAYER;
 	public static int MAX_PETITIONS_PENDING;
@@ -619,6 +620,11 @@ public class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
+	public static boolean ENABLE_AUTO_PLAY;
+	public static boolean ENABLE_AUTO_POTION;
+	public static boolean ENABLE_AUTO_SKILL;
+	public static boolean ENABLE_AUTO_ITEM;
+	public static boolean RESUME_AUTO_PLAY;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -868,6 +874,7 @@ public class Config
 	public static int TRAINING_CAMP_MAX_LEVEL;
 	public static double TRAINING_CAMP_EXP_MULTIPLIER;
 	public static double TRAINING_CAMP_SP_MULTIPLIER;
+	public static boolean GAME_ASSISTANT_ENABLED;
 	public static boolean SHOW_LICENCE;
 	public static boolean SHOW_PI_AGREEMENT;
 	public static boolean ACCEPT_NEW_GAMESERVER;
@@ -1867,6 +1874,7 @@ public class Config
 			OFFSET_ON_TELEPORT_ENABLED = characterConfig.getBoolean("OffsetOnTeleportEnabled", true);
 			MAX_OFFSET_ON_TELEPORT = characterConfig.getInt("MaxOffsetOnTeleport", 50);
 			TELEPORT_WHILE_SIEGE_IN_PROGRESS = characterConfig.getBoolean("TeleportWhileSiegeInProgress", true);
+			TELEPORT_WHILE_PLAYER_IN_COMBAT = characterConfig.getBoolean("TeleportWhilePlayerInCombat", false);
 			PETITIONING_ALLOWED = characterConfig.getBoolean("PetitioningAllowed", true);
 			MAX_PETITIONS_PER_PLAYER = characterConfig.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = characterConfig.getInt("MaxPetitionsPending", 25);
@@ -1920,6 +1928,40 @@ public class Config
 			TRAINING_CAMP_MAX_LEVEL = trainingCampConfig.getInt("TrainingCampMaxLevel", 127);
 			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampConfig.getDouble("TrainingCampExpMultiplier", 1.0);
 			TRAINING_CAMP_SP_MULTIPLIER = trainingCampConfig.getDouble("TrainingCampSpMultiplier", 1.0);
+			
+			// Load GameAssistant config file (if exists)
+			final PropertiesParser gameAssistantConfig = new PropertiesParser(GAME_ASSISTANT_CONFIG_FILE);
+			PC_CAFE_ENABLED = gameAssistantConfig.getBoolean("PcCafeEnabled", false);
+			PC_CAFE_ONLY_PREMIUM = gameAssistantConfig.getBoolean("PcCafeOnlyPremium", false);
+			PC_CAFE_ONLY_VIP = gameAssistantConfig.getBoolean("PcCafeOnlyVip", false);
+			PC_CAFE_MAX_POINTS = gameAssistantConfig.getInt("MaxPcCafePoints", 200000);
+			if (PC_CAFE_MAX_POINTS < 0)
+			{
+				PC_CAFE_MAX_POINTS = 0;
+			}
+			PC_CAFE_ENABLE_DOUBLE_POINTS = gameAssistantConfig.getBoolean("DoublingAcquisitionPoints", false);
+			PC_CAFE_DOUBLE_POINTS_CHANCE = gameAssistantConfig.getInt("DoublingAcquisitionPointsChance", 1);
+			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
+			{
+				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
+			}
+			PC_CAFE_POINT_RATE = gameAssistantConfig.getDouble("AcquisitionPointsRate", 1.0);
+			PC_CAFE_RANDOM_POINT = gameAssistantConfig.getBoolean("AcquisitionPointsRandom", false);
+			if (PC_CAFE_POINT_RATE < 0)
+			{
+				PC_CAFE_POINT_RATE = 1;
+			}
+			PC_CAFE_REWARD_LOW_EXP_KILLS = gameAssistantConfig.getBoolean("RewardLowExpKills", true);
+			PC_CAFE_LOW_EXP_KILLS_CHANCE = gameAssistantConfig.getInt("RewardLowExpKillsChance", 50);
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
+			}
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
+			}
+			GAME_ASSISTANT_ENABLED = gameAssistantConfig.getBoolean("GameAssistantEnabled", false);
 			
 			// Load General config file (if exists)
 			final PropertiesParser generalConfig = new PropertiesParser(GENERAL_CONFIG_FILE);
@@ -1993,6 +2035,7 @@ public class Config
 			GRID_NEIGHBOR_TURNON_TIME = generalConfig.getInt("GridNeighborTurnOnTime", 1);
 			GRID_NEIGHBOR_TURNOFF_TIME = generalConfig.getInt("GridNeighborTurnOffTime", 90);
 			CORRECT_PRICES = generalConfig.getBoolean("CorrectPrices", true);
+			ENABLE_FALLING_DAMAGE = generalConfig.getBoolean("EnableFallingDamage", true);
 			PEACE_ZONE_MODE = generalConfig.getInt("PeaceZoneMode", 0);
 			DEFAULT_GLOBAL_CHAT = generalConfig.getString("GlobalChat", "ON");
 			DEFAULT_TRADE_CHAT = generalConfig.getString("TradeChat", "ON");
@@ -2079,7 +2122,11 @@ public class Config
 			BOTREPORT_RESETPOINT_HOUR = generalConfig.getString("BotReportPointsResetHour", "00:00").split(":");
 			BOTREPORT_REPORT_DELAY = generalConfig.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = generalConfig.getBoolean("AllowReportsFromSameClanMembers", false);
-			ENABLE_FALLING_DAMAGE = generalConfig.getBoolean("EnableFallingDamage", true);
+			ENABLE_AUTO_PLAY = generalConfig.getBoolean("EnableAutoPlay", true);
+			ENABLE_AUTO_POTION = generalConfig.getBoolean("EnableAutoPotion", true);
+			ENABLE_AUTO_SKILL = generalConfig.getBoolean("EnableAutoSkill", true);
+			ENABLE_AUTO_ITEM = generalConfig.getBoolean("EnableAutoItem", true);
+			RESUME_AUTO_PLAY = generalConfig.getBoolean("ResumeAutoPlay", false);
 			
 			// Load FloodProtector config file
 			final PropertiesParser floodProtectorConfig = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
@@ -3275,39 +3322,6 @@ public class Config
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser passwordChangeConfig = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
 			ALLOW_CHANGE_PASSWORD = passwordChangeConfig.getBoolean("AllowChangePassword", false);
-			
-			// Load PcCafe config file (if exists)
-			final PropertiesParser pcCafeConfig = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
-			PC_CAFE_ENABLED = pcCafeConfig.getBoolean("PcCafeEnabled", false);
-			PC_CAFE_ONLY_PREMIUM = pcCafeConfig.getBoolean("PcCafeOnlyPremium", false);
-			PC_CAFE_ONLY_VIP = pcCafeConfig.getBoolean("PcCafeOnlyVip", false);
-			PC_CAFE_MAX_POINTS = pcCafeConfig.getInt("MaxPcCafePoints", 200000);
-			if (PC_CAFE_MAX_POINTS < 0)
-			{
-				PC_CAFE_MAX_POINTS = 0;
-			}
-			PC_CAFE_ENABLE_DOUBLE_POINTS = pcCafeConfig.getBoolean("DoublingAcquisitionPoints", false);
-			PC_CAFE_DOUBLE_POINTS_CHANCE = pcCafeConfig.getInt("DoublingAcquisitionPointsChance", 1);
-			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
-			{
-				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
-			}
-			PC_CAFE_POINT_RATE = pcCafeConfig.getDouble("AcquisitionPointsRate", 1.0);
-			PC_CAFE_RANDOM_POINT = pcCafeConfig.getBoolean("AcquisitionPointsRandom", false);
-			if (PC_CAFE_POINT_RATE < 0)
-			{
-				PC_CAFE_POINT_RATE = 1;
-			}
-			PC_CAFE_REWARD_LOW_EXP_KILLS = pcCafeConfig.getBoolean("RewardLowExpKills", true);
-			PC_CAFE_LOW_EXP_KILLS_CHANCE = pcCafeConfig.getInt("RewardLowExpKillsChance", 50);
-			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
-			{
-				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
-			}
-			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
-			{
-				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
-			}
 			
 			final PropertiesParser vipSystemConfig = new PropertiesParser(CUSTOM_VIP_CONFIG_FILE);
 			VIP_SYSTEM_ENABLED = vipSystemConfig.getBoolean("VipEnabled", false);

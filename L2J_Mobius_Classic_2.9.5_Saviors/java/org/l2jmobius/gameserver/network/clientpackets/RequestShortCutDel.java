@@ -17,8 +17,11 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.ShortCuts;
+import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 
 /**
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
@@ -31,9 +34,9 @@ public class RequestShortCutDel implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int id = packet.readD();
-		_slot = id % 12;
-		_page = id / 12;
+		final int position = packet.readD();
+		_slot = position % ShortCuts.MAX_SHORTCUTS_PER_BAR;
+		_page = position / ShortCuts.MAX_SHORTCUTS_PER_BAR;
 		return true;
 	}
 	
@@ -46,12 +49,58 @@ public class RequestShortCutDel implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_page > 19) || (_page < 0))
+		if ((_page > 23) || (_page < 0))
 		{
 			return;
 		}
 		
+		// Delete the shortcut.
+		final Shortcut oldShortcut = player.getShortCut(_slot, _page);
 		player.deleteShortCut(_slot, _page);
-		// client needs no confirmation. this packet is just to inform the server
+		
+		if (oldShortcut != null)
+		{
+			boolean removed = true;
+			
+			// Keep other similar shortcuts activated.
+			if (oldShortcut.isAutoUse())
+			{
+				player.removeAutoShortcut(_slot, _page);
+				for (Shortcut shortcut : player.getAllShortCuts())
+				{
+					if ((oldShortcut.getId() == shortcut.getId()) && (oldShortcut.getType() == shortcut.getType()))
+					{
+						player.addAutoShortcut(shortcut.getSlot(), shortcut.getPage());
+						removed = false;
+					}
+				}
+			}
+			
+			// Remove auto used ids.
+			if (removed)
+			{
+				switch (oldShortcut.getType())
+				{
+					case SKILL:
+					{
+						AutoUseTaskManager.getInstance().removeAutoBuff(player, oldShortcut.getId());
+						AutoUseTaskManager.getInstance().removeAutoSkill(player, oldShortcut.getId());
+						break;
+					}
+					case ITEM:
+					{
+						AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, oldShortcut.getId());
+						break;
+					}
+					case ACTION:
+					{
+						AutoUseTaskManager.getInstance().removeAutoAction(player, oldShortcut.getId());
+						break;
+					}
+				}
+			}
+		}
+		
+		player.restoreAutoShortcutVisual();
 	}
 }
