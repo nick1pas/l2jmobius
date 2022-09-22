@@ -227,7 +227,7 @@ public class CellPathFinding extends PathFinding
 		
 		if (debug)
 		{
-			path.forEach(n -> dropDebugItem(65, 1, n));
+			path.forEach(n -> dropDebugItem(1061, 1, n));
 		}
 		
 		_findSuccess++;
