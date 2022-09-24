@@ -65,8 +65,10 @@ public class RequestVipAttendanceCheck implements IClientIncomingPacket
 		// Check login delay.
 		if (player.getUptime() < (Config.ATTENDANCE_REWARD_DELAY * 60 * 1000))
 		{
-			// player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN);
-			player.sendMessage("You can redeem your reward " + Config.ATTENDANCE_REWARD_DELAY + " minutes after logging in.");
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_CAN_REDEEM_YOUR_REWARD_S1_MINUTES_AFTER_LOGGING_IN_S2_MINUTES_LEFT);
+			msg.addInt(Config.ATTENDANCE_REWARD_DELAY);
+			msg.addInt(Config.ATTENDANCE_REWARD_DELAY - Math.toIntExact(player.getUptime() / 1000 / 60));
+			player.sendPacket(msg);
 			return;
 		}
 		
