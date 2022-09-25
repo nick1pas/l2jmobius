@@ -7,7 +7,7 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<minions name="Privates">
-				<npc id="20739" count="3" respawnTime="0" weightPoint="1" /> <!-- Bepook's Pet -->
+				<npc id="20739" count="5" respawnTime="0" weightPoint="1" /> <!-- Bepook's Pet -->
 			</minions>
 			<param name="ShoutMsg1" value="1000092" />
 			<param name="ShoutMsg2" value="1000093" />
@@ -331,6 +331,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<attack physical="109.141846" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="1310.8316" mp="372" hpRegen="1" mpRegen="1.8"/>
 			<defence physical="110.8983545" magical="89.26566" />
 			<speed>
 				<walk ground="40" />
@@ -443,6 +444,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="605.1554" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
 			<attack physical="78.56365455" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="126.506578" magical="84.15638" />
 			<speed>
@@ -554,6 +556,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="605.1554" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
 			<attack physical="174.5684404" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="126.506578" magical="84.15638" />
 			<speed>
@@ -938,8 +941,8 @@
 			<param name="MoveAroundSocial1" value="90" />
 			<param name="MoveAroundSocial2" value="90" />
 			<minions name="Privates">
-				<npc id="20756" count="1" respawnTime="300" weightPoint="1" />
-				<npc id="20757" count="1" respawnTime="300" weightPoint="1" />
+				<npc id="20756" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="20757" count="1" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
@@ -1084,6 +1087,7 @@
 		<equipment rhand="3" /> <!-- Broadsword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<attack physical="82.490331" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="670.9062" mp="343" hpRegen="3.5" mpRegen="1.5"/>
 			<defence physical="98.44333636" magical="79.24022" />
 			<speed>
 				<walk ground="50" />
@@ -1119,6 +1123,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="4" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20759" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20760" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1327,6 +1335,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="6" /> <!-- NPC HP Drain -->
+			<minions name="Privates">
+				<npc id="20762" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1459,6 +1470,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="4" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20764" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20765" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2010,6 +2025,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4066" level="6" /> <!-- NPC Twister -->
+			<minions name="Privates">
+				<npc id="20772" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -2148,6 +2166,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<minions name="Privates">
+				<npc id="20774" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>

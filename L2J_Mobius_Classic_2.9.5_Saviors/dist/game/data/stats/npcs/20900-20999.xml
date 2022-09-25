@@ -490,7 +490,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20926" level="25" type="Monster" name="Arachnid Predator">
+	<npc id="20926" level="25" type="Monster" name="Poison Araneid">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1140,6 +1140,9 @@
 			<param name="SpiritShotRate" value="10" />
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="DDMagic" id="4039" level="3" />
+			<minions name="Privates">
+				<npc id="20934" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -1211,6 +1214,11 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4103" level="2" />
+			<minions name="Privates">
+				<npc id="20937" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20938" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20939" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2040,7 +2048,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<minions name="Privates">
 				<npc id="20945" count="2" respawnTime="0" weightPoint="1" /> <!-- Cadeine -->
-				<npc id="20946" count="2" respawnTime="0" weightPoint="1" /> <!-- Sanhidro -->
+				<npc id="20946" count="1" respawnTime="0" weightPoint="1" /> <!-- Sanhidro -->
 			</minions>
 			<skill name="PhysicalSpecial" id="4032" level="5" /> <!-- NPC Strike -->
 		</parameters>
@@ -2268,7 +2276,7 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<minions name="Privates">
-				<npc id="20948" count="2" respawnTime="0" weightPoint="1" /> <!-- Bartal -->
+				<npc id="20948" count="1" respawnTime="0" weightPoint="1" /> <!-- Bartal -->
 				<npc id="20949" count="2" respawnTime="0" weightPoint="1" /> <!-- Luminun -->
 			</minions>
 			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
@@ -2494,7 +2502,7 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<minions name="Privates">
-				<npc id="20951" count="2" respawnTime="0" weightPoint="1" /> <!-- Pobby's Maid -->
+				<npc id="20951" count="1" respawnTime="0" weightPoint="1" /> <!-- Pobby's Maid -->
 				<npc id="20952" count="2" respawnTime="0" weightPoint="1" /> <!-- Pobby's Escort -->
 			</minions>
 			<skill name="PhysicalSpecial" id="4073" level="5" /> <!-- Stun -->
@@ -4010,8 +4018,8 @@
 			<param name="MoveAroundSocial2" value="0" />
 			<minions name="Privates">
 				<npc id="20978" count="2" respawnTime="0" weightPoint="1" />
-				<npc id="20979" count="2" respawnTime="0" weightPoint="1" />
-				<npc id="21073" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="20979" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="21073" count="1" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
@@ -4214,6 +4222,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="20981" count="2" respawnTime="0" weightPoint="1"/>
+				<npc id="20982" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -4422,9 +4434,9 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
 			<minions name="Privates">
-				<npc id="20984" count="2" respawnTime="0" weightPoint="1" />
-				<npc id="20985" count="2" respawnTime="0" weightPoint="1" />
-				<npc id="21074" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="20984" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="20985" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="21074" count="1" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
 		<race>DIVINE</race>
@@ -4492,6 +4504,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="20985" count="2" respawnTime="0" weightPoint="1"/>
+				<npc id="21074" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -4608,8 +4624,8 @@
 			<param name="MoveAroundSocial1" value="50" />
 			<param name="MoveAroundSocial2" value="50" />
 			<minions name="Privates">
-				<npc id="20987" count="2" respawnTime="120" weightPoint="1" />
-				<npc id="20988" count="2" respawnTime="120" weightPoint="1" />
+				<npc id="20987" count="4" respawnTime="0" weightPoint="1" />
+				<npc id="20988" count="4" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
@@ -5124,6 +5140,7 @@
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<attack physical="493.7975486" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<vitals hp="1201.9668" mp="584" hpRegen="5.5" mpRegen="2.1"/>
 			<defence physical="173.43552" magical="126.91259" />
 			<speed>
 				<walk ground="18" />
@@ -5151,7 +5168,7 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<minions name="Privates">
-				<npc id="20995" count="4" respawnTime="0" weightPoint="1" />
+				<npc id="20995" count="6" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="SetHateGroup" value="attacker_group" />
 			<param name="SetHateGroupRatio" value="35" />

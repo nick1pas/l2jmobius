@@ -841,6 +841,9 @@
 			<skill name="SelfRangeDDMagic" id="4033" level="6" /> <!-- NPC Burn -->
 			<skill name="SelfBuff" id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="6" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20812" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -965,6 +968,9 @@
 			<skill name="SelfRangeDDMagic" id="4033" level="6" /> <!-- NPC Burn -->
 			<skill name="SelfBuff" id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<minions name="Privates">
+				<npc id="20815" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1481,6 +1487,11 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="20820" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20822" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20818" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1561,6 +1572,9 @@
 			<skill name="DDMagic1" id="4078" level="6" /> <!-- NPC Flamestrike -->
 			<skill name="DDMagic2" id="4069" level="6" /> <!-- NPC Curve Beam Cannon -->
 			<skill name="DeBuff" id="4118" level="6" /> <!-- Paralysis -->
+			<minions name="Privates">
+				<npc id="21061" count="3" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1853,6 +1867,12 @@
 			<skill name="SelfRangeDDMagic" id="4033" level="7" /> <!-- NPC Burn -->
 			<skill name="SelfBuff" id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="20828" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20827" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="20826" count="2" respawnTime="0" weightPoint="1"/>
+				<npc id="20823" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3954,6 +3974,7 @@
 			<skill name="DDMagic" id="4087" level="7" /> <!-- NPC Blaze -->
 			<skill name="SleepMagic" id="4046" level="7" /> <!-- Sleep -->
 		</parameters>
+		<acquire exp="83569" sp="2507" raidPoints="0"/>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->

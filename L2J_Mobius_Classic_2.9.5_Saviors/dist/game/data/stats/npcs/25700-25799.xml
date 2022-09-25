@@ -2719,204 +2719,197 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25787" level="35" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="2652750" sp="79582" raidPoints="5" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="242295.147" hpRegen="53.11445383" mp="371251.305" mpRegen="1.8" />
-			<attack physical="162.8490599" magical="51.7199871" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="602.4666649" magical="293.9111987" />
+	<npc id="25787" level="25" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="5305500" sp="159165" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="622596.2666" hpRegen="6.25" mp="218600" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="94.8599943076772" attackSpeed="253" magical="14.7084115800642" random="30" range="40" />
+			<defence physical="334.84104" magical="163.34" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="36" /> <!-- Raid Boss (Lv. 25) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<ai aggroRange="0" />
+		<dropLists>
+			<drop>
+				<item id="955" min="1" max="1" chance="47.07" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="2" max="8" chance="46.38" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="33812" min="1" max="1" chance="3.338" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
+				<item id="33806" min="1" max="1" chance="3.278" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+				<item id="90012" min="1" max="1" chance="2.246" /> <!-- Common Life Stone -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25788" level="35" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
 		<collision>
-			<radius normal="37.5" />
+			<radius normal="38" />
 			<height normal="72" />
 		</collision>
+		<acquire exp="9525600" sp="285768" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="687732.623" hpRegen="6.25" mp="241470" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="226.005912729696" attackSpeed="253" magical="48.7999361067281" random="30" range="40" />
+			<defence physical="445.32861" magical="217.24" shield="0" shieldRate="0" />
+			<speed>
+				<walk ground="63" />
+				<run ground="175" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="37" /> <!-- Raid Boss (Lv. 35) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="956" min="2" max="8" chance="45.91" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="955" min="1" max="1" chance="44.28" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="91526" min="1" max="1" chance="5.04" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="4.942" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="4.934" /> <!-- Armor Varnish (D-grade) -->
-				<item id="33812" min="1" max="1" chance="3.04" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
-				<item id="33806" min="1" max="1" chance="3.032" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
-				<item id="90012" min="1" max="1" chance="2.067" /> <!-- Common Life Stone -->
+				<item id="956" min="2" max="8" chance="27.72" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="955" min="1" max="1" chance="26.73" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="90012" min="1" max="1" chance="5.471" /> <!-- Common Life Stone -->
+				<item id="33806" min="1" max="1" chance="4.976" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+				<item id="33812" min="1" max="1" chance="4.976" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25788" level="45" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="4762800" sp="142884" raidPoints="5" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="267644.14065" hpRegen="108.3563982" mp="410092.185" mpRegen="2.1" />
-			<attack physical="599.1164226" magical="94.61867765" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="999.2457614" magical="487.4784559" />
+	<npc id="25789" level="45" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="15746400" sp="472392" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="759685.7395" hpRegen="6.25" mp="266734" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="464.466362543078" attackSpeed="253" magical="158.437647988608" random="30" range="40" />
+			<defence physical="573.38409" magical="279.72" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="37.5" />
-			<height normal="72" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="38" /> <!-- Raid Boss (Lv. 45) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="956" min="2" max="8" chance="26.09" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="955" min="1" max="1" chance="25.72" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="91526" min="1" max="1" chance="10.048" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="9.937" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="9.93" /> <!-- Armor Varnish (D-grade) -->
-				<item id="90012" min="1" max="1" chance="5.055" /> <!-- Common Life Stone -->
-				<item id="33812" min="1" max="1" chance="4.543" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
-				<item id="33806" min="1" max="1" chance="4.529" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+				<item id="952" min="2" max="8" chance="21.47" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="951" min="1" max="1" chance="21.18" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="90013" min="1" max="1" chance="2.213" /> <!-- Mid-grade Life Stone -->
+				<item id="33807" min="1" max="1" chance="2.178" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+				<item id="33813" min="1" max="1" chance="2.167" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25789" level="55" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="7873200" sp="236196" raidPoints="5" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="295646.13931" hpRegen="178.4276342" mp="452998.755" mpRegen="2.4" />
-			<attack physical="896.8607767" magical="141.6415533" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1495.843372" magical="729.7418166" />
+	<npc id="25790" level="55" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="23522400" sp="705672" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="864339.4328" hpRegen="6.25" mp="303479" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="822.283847118733" attackSpeed="253" magical="388.653480410427" random="30" range="40" />
+			<defence physical="713.98287" magical="348.3" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="37.5" />
-			<height normal="72" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="39" /> <!-- Raid Boss (Lv. 55) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="951" min="1" max="1" chance="20.68" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="952" min="2" max="8" chance="19.94" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="91526" min="1" max="1" chance="10.048" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="9.96" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="9.945" /> <!-- Armor Varnish (D-grade) -->
-				<item id="90013" min="1" max="1" chance="2.067" /> <!-- Mid-grade Life Stone -->
-				<item id="33813" min="1" max="1" chance="2.011" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
-				<item id="33807" min="1" max="1" chance="1.995" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+				<item id="952" min="2" max="8" chance="28.18" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="951" min="1" max="1" chance="27.42" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="90013" min="1" max="1" chance="5.446" /> <!-- Mid-grade Life Stone -->
+				<item id="33813" min="1" max="1" chance="3.37" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
+				<item id="33807" min="1" max="1" chance="3.334" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25790" level="65" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="52925400" sp="1587762" raidPoints="5" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="420467.42646" hpRegen="294.2109061" mp="515402.76" mpRegen="2.7" />
-			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2092.259531" magical="1020.701298" />
+	<npc id="25791" level="65" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="32853600" sp="985608" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="1095553.9978" hpRegen="6.25" mp="384661" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="1269.93205526796" attackSpeed="253" magical="659.985595188552" random="30" range="40" />
+			<defence physical="859.0845" magical="419.1" shield="0" shieldRate="0" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="63" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="23" />
-			<height normal="64" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="40" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="951" min="1" max="3" chance="51.18" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="952" min="5" max="15" chance="49.87" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="91528" min="1" max="1" chance="10.053" /> <!-- Weapon Varnish (C-grade) -->
-				<item id="91535" min="1" max="1" chance="10.009" /> <!-- Armor Varnish (C-grade) -->
-				<item id="91542" min="1" max="1" chance="9.937" /> <!-- Accessory Varnish (C-grade) -->
-				<item id="33807" min="1" max="1" chance="8.032" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
-				<item id="33813" min="1" max="3" chance="7.97" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
-				<item id="90013" min="1" max="1" chance="4.99" /> <!-- Mid-grade Life Stone -->
+				<item id="948" min="2" max="8" chance="16.78" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="16.16" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="90014" min="1" max="1" chance="3.341" /> <!-- High-grade Life Stone -->
+				<item id="33808" min="1" max="1" chance="2.257" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="33814" min="1" max="1" chance="2.222" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25791" level="75" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="639533.32367" hpRegen="310.756323" mp="653275.14" mpRegen="3" />
-			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2788.494256" magical="1360.356908" />
+	<npc id="25792" type="RaidBoss" level="75" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="43740000" sp="1312200" raidPoints="0" />
+		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
+			<vitals hp="1590062.3618" hpRegen="6.25" mp="558288" mpRegen="2.4" />
+			<attack type="SWORD" critical="40" physical="1662.16594596409" attackSpeed="253" magical="941.257306822256" random="30" range="40" />
+			<defence physical="998.10183" magical="486.92" shield="0" shieldRate="0" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="63" />
 				<run ground="175" />
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="23" />
-			<height normal="64" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="41" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="50009" level="41" /> <!-- Raid Boss (Lv. 25) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="947" min="1" max="3" chance="49.5" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-				<item id="948" min="5" max="15" chance="49.31" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="90014" min="1" max="1" chance="10.025" /> <!-- High-grade Life Stone -->
-				<item id="91528" min="1" max="1" chance="10.024" /> <!-- Weapon Varnish (C-grade) -->
-				<item id="91535" min="1" max="1" chance="10.016" /> <!-- Armor Varnish (C-grade) -->
-				<item id="91542" min="1" max="1" chance="9.968" /> <!-- Accessory Varnish (C-grade) -->
-				<item id="33808" min="1" max="1" chance="4.529" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
-				<item id="33814" min="1" max="3" chance="4.47" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="729" min="1" max="1" chance="27.22" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="730" min="1" max="3" chance="26.54" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="90014" min="1" max="3" chance="7.694" /> <!-- High-grade Life Stone -->
+				<item id="33809" min="1" max="1" chance="2.225" /> <!-- Improved Scroll: Enchant Weapon (A-grade) -->
+				<item id="33815" min="1" max="1" chance="2.178" /> <!-- Improved Scroll: Enchant Armor (A-grade) -->
 			</drop>
 		</dropLists>
-	</npc>
-	<npc id="25792" level="80" type="Folk" name="Death Knight" title="Raid Soul Drinker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1674864" hpRegen="10.5" mp="558288" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="175" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="23" />
-			<height normal="64" />
-		</collision>
 	</npc>
 	<npc id="25793" level="80" type="Folk" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

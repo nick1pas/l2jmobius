@@ -2402,6 +2402,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SelfRangeDDMagic" id="4072" level="6" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="21060" count="2" respawnTime="0" weightPoint="1"/>
+				<npc id="21059" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3033,6 +3037,9 @@
 			<skill name="SelfRangeDDMagic" id="4033" level="7" /> <!-- NPC Burn -->
 			<skill name="SelfBuff" id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="7" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20830" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3220,6 +3227,9 @@
 			<skill name="SelfRangeDDMagic" id="4033" level="8" /> <!-- NPC Burn -->
 			<skill name="SelfBuff" id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="8" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20831" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3278,6 +3288,7 @@
 			<skill name="DDMagic2" id="4066" level="8" /> <!-- NPC Twister -->
 			<skill name="DeBuff" id="4118" level="8" /> <!-- Paralysis -->
 		</parameters>
+		<acquire exp="89226" sp="2676" raidPoints="0"/>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
@@ -3353,6 +3364,12 @@
 			<skill name="W_LongRangeDDMagic" id="4158" level="8" /> <!-- NPC Prominence - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
 			<skill name="DeBuff" id="4102" level="2" /> <!-- Surrender To Fire -->
+			<minions name="Privates">
+				<npc id="21069" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="21066" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="21065" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="21064" count="2" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3767,8 +3784,8 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SelfRangeDDMagic" id="4072" level="7" /> <!-- Stun -->
 			<minions name="Privates">
-				<npc id="21079" count="2" respawnTime="0" weightPoint="1" />
-				<npc id="21080" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21079" count="4" respawnTime="0" weightPoint="1" />
+				<npc id="21080" count="1" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
 		<race>DEMONIC</race>
@@ -3976,7 +3993,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4118" level="8" /> <!-- Paralysis -->
 			<minions name="Privates">
-				<npc id="21082" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21082" count="1" respawnTime="0" weightPoint="1" />
 				<npc id="21083" count="2" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
@@ -4647,6 +4664,10 @@
 			<skill name="W_LongRangeDDMagic" id="4152" level="8" /> <!-- NPC HP Drain - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
 			<skill name="DeBuff" id="4117" level="8" /> <!-- Paralysis -->
+			<minions name="Privates">
+				<npc id="21091" count="1" respawnTime="0" weightPoint="1"/>
+				<npc id="21092" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>

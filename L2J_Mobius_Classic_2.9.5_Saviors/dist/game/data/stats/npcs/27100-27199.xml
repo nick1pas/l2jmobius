@@ -105,7 +105,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="27103" level="54" type="Monster" name="Unicorn" title="Quest Monster">
+	<npc id="27103" level="38" type="Monster" name="Unicorn" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -114,26 +114,18 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
-			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="148.44287" magical="108.62405" />
+			<vitals hp="360.10522" hpRegen="4.5" mp="505.335" mpRegen="1.8" />
+			<attack physical="166.06476" magical="113.4007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="152.46752" magical="111.56912" />
 			<speed>
-				<walk ground="27" />
+				<walk ground="80" />
 				<run ground="140" />
 			</speed>
-			<hitTime>710</hitTime>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -142,31 +134,6 @@
 			<radius normal="11" />
 			<height normal="18" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="205" min="1" max="1" chance="0.003" /> <!-- Ghoul's Staff -->
-				<item id="206" min="1" max="1" chance="0.003" /> <!-- Demon's Staff -->
-				<item id="228" min="1" max="1" chance="0.003" /> <!-- Crystal Dagger -->
-				<item id="299" min="1" max="1" chance="0.003" /> <!-- Orcish Poleaxe -->
-				<item id="2503" min="1" max="1" chance="0.003" /> <!-- Yaksa Mace -->
-				<item id="57" min="946" max="2207" chance="70" /> <!-- Adena -->
-				<item id="1873" min="1" max="1" chance="8.323" /> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="4.122" /> <!-- Mithril Ore -->
-				<item id="1874" min="1" max="1" chance="1.441" /> <!-- Oriharukon Ore -->
-				<item id="1875" min="1" max="1" chance="1.427" /> <!-- Stone of Purity -->
-				<item id="2969" min="1" max="1" chance="0.3" /> <!-- Yaksa Mace Head -->
-				<item id="2122" min="1" max="1" chance="0.3" /> <!-- Orcish Poleaxe Blade -->
-				<item id="2118" min="1" max="1" chance="0.3" /> <!-- Demon's Staff Head -->
-				<item id="2117" min="1" max="1" chance="0.3" /> <!-- Ghoul's Staff Head -->
-				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="4593" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +2 Str -2> - 2nd Class Transfer -->
-				<item id="4594" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +2 CON -2> - 2nd Class Transfer -->
-				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
-			</drop>
-			<spoil>
-				<item id="4044" min="1" max="1" chance="45.59" /> <!-- Thons -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="27104" level="39" type="Monster" name="Shadow Turen" title="Quest Monster">
 		<parameters>
@@ -508,7 +475,7 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<minions name="Privates">
-				<npc id="27111" count="6" respawnTime="60" weightPoint="1" />
+				<npc id="27111" count="4" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
 		<race>BEAST</race>
@@ -553,7 +520,7 @@
 			<param name="MoveAroundSocial1" value="110" />
 			<param name="MoveAroundSocial2" value="110" />
 			<minions name="Privates">
-				<npc id="27115" count="2" respawnTime="60" weightPoint="1" />
+				<npc id="27115" count="3" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
 		<race>DEMONIC</race>
@@ -3241,6 +3208,11 @@
 		</collision>
 	</npc>
 	<npc id="27181" level="60" type="Monster" name="Imperial Gravekeeper" title="Quest Monster">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27180" count="4" respawnTime="0" weightPoint="1"/>
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->

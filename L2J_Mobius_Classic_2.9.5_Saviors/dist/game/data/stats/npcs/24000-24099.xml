@@ -476,6 +476,11 @@
 		</dropLists>
 	</npc>
 	<npc id="24018" level="78" type="Monster" name="Hekaton Prime" title="Giants' Cave Master">
+		<parameters>
+			<minions name="Privates">
+				<npc id="24019" count="1" respawnTime="0" weightPoint="1"/>
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<acquire exp="1444329" sp="43329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
