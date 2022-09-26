@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.Q10999_LoserPriest3.Q10999_LoserPriest3;
-
 /**
  * Future: Dwarves (10993)
  * @author Stayway
@@ -52,7 +50,7 @@ public class Q10993_FutureDwarves extends Quest
 		addTalkId(PIPPI, GERALD, SILVERA);
 		addCondMinLevel(MIN_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.DWARF, "no-race.html"); // Custom
-		addCondCompletedQuest(Q10999_LoserPriest3.class.getSimpleName(), "30650-04.html");
+		// addCondCompletedQuest(Q10999_LoserPriest3.class.getSimpleName(), "30650-04.html");
 		setQuestNameNpcStringId(NpcStringId.LV_19_FUTURE_DWARVES);
 	}
 	

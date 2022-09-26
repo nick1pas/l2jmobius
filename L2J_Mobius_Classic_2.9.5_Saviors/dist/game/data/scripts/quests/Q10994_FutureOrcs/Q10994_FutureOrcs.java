@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.Q11023_RedGemNecklace3.Q11023_RedGemNecklace3;
-
 /**
  * Future: Future Orcs (10994)
  * @author Stayway
@@ -51,7 +49,7 @@ public class Q10994_FutureOrcs extends Quest
 		addTalkId(USKA, KARUKIA, GANTAKAI, HESTUI);
 		addCondMinLevel(MIN_LEVEL, "no-level.html"); // Custom
 		addCondRace(Race.ORC, "no-race.html"); // Custom
-		addCondCompletedQuest(Q11023_RedGemNecklace3.class.getSimpleName(), "30560-04.html");
+		// addCondCompletedQuest(Q11023_RedGemNecklace3.class.getSimpleName(), "30560-04.html");
 		setQuestNameNpcStringId(NpcStringId.LV_19_FUTURE_ORCS);
 	}
 	
