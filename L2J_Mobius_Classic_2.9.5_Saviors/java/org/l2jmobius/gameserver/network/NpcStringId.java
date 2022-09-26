@@ -10768,6 +10768,207 @@ public class NpcStringId
 	@ClientString(id = 99799, message = "Trust me, give me some Nectar and I'll become a giant Snowy Squash!")
 	public static NpcStringId TRUST_ME_GIVE_ME_SOME_NECTAR_AND_I_LL_BECOME_A_GIANT_SNOWY_SQUASH;
 	
+	@ClientString(id = 103101, message = "|Lv. 2~20| Unbearable Wolves' Howling")
+	public static NpcStringId LV_2_20_UNBEARABLE_WOLVES_HOWLING;
+	
+	@ClientString(id = 103102, message = "|Lv. 2~20| Unbearable Wolves' Howling (In progress)")
+	public static NpcStringId LV_2_20_UNBEARABLE_WOLVES_HOWLING_IN_PROGRESS;
+	
+	@ClientString(id = 103103, message = "|Lv. 2~20| Unbearable Wolves' Howling (Completed)")
+	public static NpcStringId LV_2_20_UNBEARABLE_WOLVES_HOWLING_COMPLETED;
+	
+	@ClientString(id = 103104, message = "|Lv. 2~20| Unbearable Wolves' Howling")
+	public static NpcStringId LV_2_20_UNBEARABLE_WOLVES_HOWLING_2;
+	
+	@ClientString(id = 103111, message = "Kill Wolves and Bearded Keltirs.")
+	public static NpcStringId KILL_WOLVES_AND_BEARDED_KELTIRS;
+	
+	@ClientString(id = 103112, message = "Talk to Armor Merchant Jackson.")
+	public static NpcStringId TALK_TO_ARMOR_MERCHANT_JACKSON;
+	
+	@ClientString(id = 103201, message = "|Lv. 15~20| Spider Hunt")
+	public static NpcStringId LV_15_20_SPIDER_HUNT;
+	
+	@ClientString(id = 103202, message = "|Lv. 15~20| Spider Hunt (In progress)")
+	public static NpcStringId LV_15_20_SPIDER_HUNT_IN_PROGRESS;
+	
+	@ClientString(id = 103203, message = "|Lv. 15~20| Spider Hunt (Completed)")
+	public static NpcStringId LV_15_20_SPIDER_HUNT_COMPLETED;
+	
+	@ClientString(id = 103204, message = "|Lv. 15~20| Spider Hunt")
+	public static NpcStringId LV_15_20_SPIDER_HUNT_2;
+	
+	@ClientString(id = 103211, message = "Kill Giant Spiders.")
+	public static NpcStringId KILL_GIANT_SPIDERS;
+	
+	@ClientString(id = 103212, message = "Talk to Captain Bathis.")
+	public static NpcStringId TALK_TO_CAPTAIN_BATHIS;
+	
+	@ClientString(id = 103301, message = "|Lv. 2~20| Troubled Forest")
+	public static NpcStringId LV_2_20_TROUBLED_FOREST;
+	
+	@ClientString(id = 103302, message = "|Lv. 2~20| Troubled Forest (In progress)")
+	public static NpcStringId LV_2_20_TROUBLED_FOREST_IN_PROGRESS;
+	
+	@ClientString(id = 103303, message = "|Lv. 2~20| Troubled Forest (Completed)")
+	public static NpcStringId LV_2_20_TROUBLED_FOREST_COMPLETED;
+	
+	@ClientString(id = 103304, message = "|Lv. 2~20| Troubled Forest")
+	public static NpcStringId LV_2_20_TROUBLED_FOREST_2;
+	
+	@ClientString(id = 103311, message = "Kill Orcs and Goblins.")
+	public static NpcStringId KILL_ORCS_AND_GOBLINS;
+	
+	@ClientString(id = 103312, message = "Talk to Grocer Herbiel.")
+	public static NpcStringId TALK_TO_GROCER_HERBIEL;
+	
+	@ClientString(id = 103401, message = "|Lv. 15~20| Spider Web")
+	public static NpcStringId LV_15_20_SPIDER_WEB;
+	
+	@ClientString(id = 103402, message = "|Lv. 15~20| Spider Web (In progress)")
+	public static NpcStringId LV_15_20_SPIDER_WEB_IN_PROGRESS;
+	
+	@ClientString(id = 103403, message = "|Lv. 15~20| Spider Web (Completed)")
+	public static NpcStringId LV_15_20_SPIDER_WEB_COMPLETED;
+	
+	@ClientString(id = 103404, message = "|Lv. 15~20| Spider Web")
+	public static NpcStringId LV_15_20_SPIDER_WEB_2;
+	
+	@ClientString(id = 103501, message = "|Lv. 2~20| Cleaning-up the Grounds")
+	public static NpcStringId LV_2_20_CLEANING_UP_THE_GROUNDS;
+	
+	@ClientString(id = 103502, message = "|Lv. 2~20| Cleaning-up the Grounds (In progress)")
+	public static NpcStringId LV_2_20_CLEANING_UP_THE_GROUNDS_IN_PROGRESS;
+	
+	@ClientString(id = 103503, message = "|Lv. 2~20| Cleaning-up the Grounds (Completed)")
+	public static NpcStringId LV_2_20_CLEANING_UP_THE_GROUNDS_COMPLETED;
+	
+	@ClientString(id = 103504, message = "|Lv. 2~20| Cleaning-up the Grounds")
+	public static NpcStringId LV_2_20_CLEANING_UP_THE_GROUNDS_2;
+	
+	@ClientString(id = 103511, message = "Kill monsters near the village.")
+	public static NpcStringId KILL_MONSTERS_NEAR_THE_VILLAGE;
+	
+	@ClientString(id = 103512, message = "Talk to Grocer Vollodos.")
+	public static NpcStringId TALK_TO_GROCER_VOLLODOS;
+	
+	@ClientString(id = 103601, message = "|Lv. 15~20| Terrible swamp monsters")
+	public static NpcStringId LV_15_20_TERRIBLE_SWAMP_MONSTERS;
+	
+	@ClientString(id = 103602, message = "|Lv. 15~20| Terrible swamp monsters (In progress)")
+	public static NpcStringId LV_15_20_TERRIBLE_SWAMP_MONSTERS_IN_PROGRESS;
+	
+	@ClientString(id = 103603, message = "|Lv. 15~20| Terrible swamp monsters (Completed)")
+	public static NpcStringId LV_15_20_TERRIBLE_SWAMP_MONSTERS_COMPLETED;
+	
+	@ClientString(id = 103604, message = "|Lv. 15~20| Terrible swamp monsters")
+	public static NpcStringId LV_15_20_TERRIBLE_SWAMP_MONSTERS_2;
+	
+	@ClientString(id = 103611, message = "Kill Zombies and Dark Horrors.")
+	public static NpcStringId KILL_ZOMBIES_AND_DARK_HORRORS;
+	
+	@ClientString(id = 103701, message = "|Lv. 2~20| Plundered Graves")
+	public static NpcStringId LV_2_20_PLUNDERED_GRAVES;
+	
+	@ClientString(id = 103702, message = "|Lv. 2~20| Plundered Graves (In progress)")
+	public static NpcStringId LV_2_20_PLUNDERED_GRAVES_IN_PROGRESS;
+	
+	@ClientString(id = 103703, message = "|Lv. 2~20| Plundered Graves (Completed)")
+	public static NpcStringId LV_2_20_PLUNDERED_GRAVES_COMPLETED;
+	
+	@ClientString(id = 103704, message = "|Lv. 2~20| Plundered Graves")
+	public static NpcStringId LV_2_20_PLUNDERED_GRAVES_2;
+	
+	@ClientString(id = 103711, message = "Track down grave robbers.")
+	public static NpcStringId TRACK_DOWN_GRAVE_ROBBERS;
+	
+	@ClientString(id = 103712, message = "Talk to Accessory Merchant Uska.")
+	public static NpcStringId TALK_TO_ACCESSORY_MERCHANT_USKA;
+	
+	@ClientString(id = 103801, message = "|Lv. 15~20| Conspiracy")
+	public static NpcStringId LV_15_20_CONSPIRACY;
+	
+	@ClientString(id = 103802, message = "|Lv. 15~20| Conspiracy (In progress)")
+	public static NpcStringId LV_15_20_CONSPIRACY_IN_PROGRESS;
+	
+	@ClientString(id = 103803, message = "|Lv. 15~20| Conspiracy (Completed)")
+	public static NpcStringId LV_15_20_CONSPIRACY_COMPLETED;
+	
+	@ClientString(id = 103804, message = "|Lv. 15~20| Conspiracy")
+	public static NpcStringId LV_15_20_CONSPIRACY_2;
+	
+	@ClientString(id = 103811, message = "Expose a plot of Maraku Werewolves.")
+	public static NpcStringId EXPOSE_A_PLOT_OF_MARAKU_WEREWOLVES;
+	
+	@ClientString(id = 103901, message = "|Lv. 2~20| Dangerous Predators")
+	public static NpcStringId LV_2_20_DANGEROUS_PREDATORS;
+	
+	@ClientString(id = 103902, message = "|Lv. 2~20| Dangerous Predators (In progress)")
+	public static NpcStringId LV_2_20_DANGEROUS_PREDATORS_IN_PROGRESS;
+	
+	@ClientString(id = 103903, message = "|Lv. 2~20| Dangerous Predators (Completed)")
+	public static NpcStringId LV_2_20_DANGEROUS_PREDATORS_COMPLETED;
+	
+	@ClientString(id = 103904, message = "|Lv. 2~20| Dangerous Predators")
+	public static NpcStringId LV_2_20_DANGEROUS_PREDATORS_2;
+	
+	@ClientString(id = 103911, message = "Kill Wolves and Bearded Keltirs.")
+	public static NpcStringId KILL_WOLVES_AND_BEARDED_KELTIRS_2;
+	
+	@ClientString(id = 103912, message = "Talk to Head Priest of the Earth Gerald.")
+	public static NpcStringId TALK_TO_HEAD_PRIEST_OF_THE_EARTH_GERALD;
+	
+	@ClientString(id = 104001, message = "|Lv. 15~20| Poison Extraction")
+	public static NpcStringId LV_15_20_POISON_EXTRACTION;
+	
+	@ClientString(id = 104002, message = "|Lv. 15~20| Poison Extraction (In progress)")
+	public static NpcStringId LV_15_20_POISON_EXTRACTION_IN_PROGRESS;
+	
+	@ClientString(id = 104003, message = "|Lv. 15~20| Poison Extraction (Completed)")
+	public static NpcStringId LV_15_20_POISON_EXTRACTION_COMPLETED;
+	
+	@ClientString(id = 104004, message = "|Lv. 15~20| Poison Extraction")
+	public static NpcStringId LV_15_20_POISON_EXTRACTION_2;
+	
+	@ClientString(id = 104501, message = "|Lv. 76| Saga of Legend")
+	public static NpcStringId LV_76_SAGA_OF_LEGEND;
+	
+	@ClientString(id = 104502, message = "|Lv. 76| Saga of Legend (In progress)")
+	public static NpcStringId LV_76_SAGA_OF_LEGEND_IN_PROGRESS;
+	
+	@ClientString(id = 104503, message = "|Lv. 76| Saga of Legend (Completed)")
+	public static NpcStringId LV_76_SAGA_OF_LEGEND_COMPLETED;
+	
+	@ClientString(id = 104504, message = "|Lv. 76| Saga of Legend")
+	public static NpcStringId LV_76_SAGA_OF_LEGEND_2;
+	
+	@ClientString(id = 104505, message = "Orven's Request")
+	public static NpcStringId ORVEN_S_REQUEST;
+	
+	@ClientString(id = 104601, message = "|Lv.50~| The Blue Hawk's Quest")
+	public static NpcStringId LV_50_THE_BLUE_HAWK_S_QUEST;
+	
+	@ClientString(id = 104602, message = "|Lv.50~| The Blue Hawk's Quest (in progress)")
+	public static NpcStringId LV_50_THE_BLUE_HAWK_S_QUEST_IN_PROGRESS;
+	
+	@ClientString(id = 104603, message = "|Lv.50~| The Blue Hawk's Quest (completed)")
+	public static NpcStringId LV_50_THE_BLUE_HAWK_S_QUEST_COMPLETED;
+	
+	@ClientString(id = 104604, message = "|Lv.50~| The Blue Hawk's Quest")
+	public static NpcStringId LV_50_THE_BLUE_HAWK_S_QUEST_2;
+	
+	@ClientString(id = 104605, message = "Exploration of Primeval Isle")
+	public static NpcStringId EXPLORATION_OF_PRIMEVAL_ISLE;
+	
+	@ClientString(id = 104606, message = "Go to Kairen")
+	public static NpcStringId GO_TO_KAIREN;
+	
+	@ClientString(id = 104607, message = "50")
+	public static NpcStringId FIFTY;
+	
+	@ClientString(id = 104608, message = "Primeval Isle")
+	public static NpcStringId PRIMEVAL_ISLE;
+	
 	@ClientString(id = 100101, message = "|Lv.2~20| Tombs of Ancestors")
 	public static NpcStringId LV_2_20_TOMBS_OF_ANCESTORS;
 	
@@ -31653,6 +31854,72 @@ public class NpcStringId
 	
 	@ClientString(id = 1803729, message = "Blue has ruined everything.")
 	public static NpcStringId BLUE_HAS_RUINED_EVERYTHING;
+	
+	@ClientString(id = 1803730, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Armor Merchant Jackson.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON;
+	
+	@ClientString(id = 1803731, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Herbiel.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_HERBIEL;
+	
+	@ClientString(id = 1803732, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Grocer Vollodos.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_GROCER_VOLLODOS;
+	
+	@ClientString(id = 1803733, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Accessory Merchant Uska.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ACCESSORY_MERCHANT_USKA;
+	
+	@ClientString(id = 1803734, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Head Priest of the Earth Gerald.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_HEAD_PRIEST_OF_THE_EARTH_GERALD;
+	
+	@ClientString(id = 1803735, message = "You've killed all the monsters.\nUse the Scroll of Escape in your inventory to return to Captain Bathis in Gludio.")
+	public static NpcStringId YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO;
+	
+	@ClientString(id = 1803736, message = "Do you think a talking cake is a miracle? It's only the beginning!")
+	public static NpcStringId DO_YOU_THINK_A_TALKING_CAKE_IS_A_MIRACLE_IT_S_ONLY_THE_BEGINNING;
+	
+	@ClientString(id = 1803737, message = "A perfect day to eat some cake!")
+	public static NpcStringId A_PERFECT_DAY_TO_EAT_SOME_CAKE;
+	
+	@ClientString(id = 1803738, message = "Wow! Today you've gained more points than anyone else: $s1! Congratulations!")
+	public static NpcStringId WOW_TODAY_YOU_VE_GAINED_MORE_POINTS_THAN_ANYONE_ELSE_S1_CONGRATULATIONS;
+	
+	@ClientString(id = 1803739, message = "Come on! Let's celebrate the Lineage 2 15th anniversary!")
+	public static NpcStringId COME_ON_LET_S_CELEBRATE_THE_LINEAGE_2_15TH_ANNIVERSARY;
+	
+	@ClientString(id = 1803740, message = "Take out your forks!")
+	public static NpcStringId TAKE_OUT_YOUR_FORKS;
+	
+	@ClientString(id = 1803741, message = "The victory will be yours, $s1! The reward awaits you!")
+	public static NpcStringId THE_VICTORY_WILL_BE_YOURS_S1_THE_REWARD_AWAITS_YOU;
+	
+	@ClientString(id = 1803742, message = "It's time for me to go... See you next time!")
+	public static NpcStringId IT_S_TIME_FOR_ME_TO_GO_SEE_YOU_NEXT_TIME;
+	
+	@ClientString(id = 1803743, message = "Too many rascals around lately... You aren't one of them, are you?")
+	public static NpcStringId TOO_MANY_RASCALS_AROUND_LATELY_YOU_AREN_T_ONE_OF_THEM_ARE_YOU;
+	
+	@ClientString(id = 1803744, message = "I've been having a nap when you've appeared.")
+	public static NpcStringId I_VE_BEEN_HAVING_A_NAP_WHEN_YOU_VE_APPEARED;
+	
+	@ClientString(id = 1803745, message = "That scoundrel Zaken is spreading terror in the southern seas.")
+	public static NpcStringId THAT_SCOUNDREL_ZAKEN_IS_SPREADING_TERROR_IN_THE_SOUTHERN_SEAS;
+	
+	@ClientString(id = 1803746, message = "Who dared enter my house? You are from Zaken, aren't you?")
+	public static NpcStringId WHO_DARED_ENTER_MY_HOUSE_YOU_ARE_FROM_ZAKEN_AREN_T_YOU;
+	
+	@ClientString(id = 1803747, message = "You are not as hopeless as I thought. So, let us be friends, shall we?")
+	public static NpcStringId YOU_ARE_NOT_AS_HOPELESS_AS_I_THOUGHT_SO_LET_US_BE_FRIENDS_SHALL_WE;
+	
+	@ClientString(id = 1803748, message = "I'll kill anyone who stands in my way!")
+	public static NpcStringId I_LL_KILL_ANYONE_WHO_STANDS_IN_MY_WAY;
+	
+	@ClientString(id = 1803749, message = "You've received the Blue Gemstone. Now talk to Newbie Helper.")
+	public static NpcStringId YOU_VE_RECEIVED_THE_BLUE_GEMSTONE_NOW_TALK_TO_NEWBIE_HELPER;
+	
+	@ClientString(id = 1803750, message = "You will receive rewards for completing quests.\nClick the Quest button in the right bottom corner of your screen to open Quest Window.")
+	public static NpcStringId YOU_WILL_RECEIVE_REWARDS_FOR_COMPLETING_QUESTS_NCLICK_THE_QUEST_BUTTON_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_OPEN_QUEST_WINDOW;
+	
+	@ClientString(id = 1803751, message = "You've finished the tutorial.\nTake your 1st class transfer and complete your training with Bathis to become stronger.")
+	public static NpcStringId YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER;
 	
 	@ClientString(id = 1810363, message = "You are too far from the corpse.")
 	public static NpcStringId YOU_ARE_TOO_FAR_FROM_THE_CORPSE;

@@ -71,7 +71,18 @@ import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
+import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
+import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
+import quests.Q10982_SpiderHunt.Q10982_SpiderHunt;
+import quests.Q10983_TroubledForest.Q10983_TroubledForest;
+import quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb;
+import quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround;
+import quests.Q10986_SwampMonster.Q10986_SwampMonster;
+import quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves;
+import quests.Q10988_Conspiracy.Q10988_Conspiracy;
+import quests.Q10989_DangerousPredators.Q10989_DangerousPredators;
+import quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
 import quests.Q10993_FutureDwarves.Q10993_FutureDwarves;
 import quests.Q10994_FutureOrcs.Q10994_FutureOrcs;
 import quests.not_done.Q00630_PirateTreasureHunt;
@@ -159,6 +170,7 @@ public class QuestMasterHandler
 		Q00914_RequestFromTheRedLibraGuildLv5.class, // TODO: Not done.
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
+		Q10673_SagaOfLegend.class,
 		Q10861_MonsterArenaTheBirthOfAWarrior.class, // TODO: Not done.
 		Q10862_MonsterArenaChallenge10Battles.class, // TODO: Not done.
 		Q10863_MonsterArenaNewChallenge15Battles.class, // TODO: Not done.
@@ -169,6 +181,16 @@ public class QuestMasterHandler
 		Q10868_TheDarkSideOfPower.class, // TODO: Not done.
 		Q10870_UnfinishedDevice.class, // TODO: Not done.
 		Q10871_DeathToThePirateKing.class, // TODO: Not done.
+		Q10981_UnbearableWolvesHowling.class,
+		Q10982_SpiderHunt.class,
+		Q10983_TroubledForest.class,
+		Q10984_CollectSpiderweb.class,
+		Q10985_CleaningUpTheGround.class,
+		Q10986_SwampMonster.class,
+		Q10987_PlunderedGraves.class,
+		Q10988_Conspiracy.class,
+		Q10989_DangerousPredators.class,
+		Q10990_PoisonExtraction.class,
 		Q10993_FutureDwarves.class,
 		Q10994_FutureOrcs.class,
 	};
