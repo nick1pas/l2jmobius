@@ -156,7 +156,7 @@ public class Fishing
 		{
 			if (Config.PREMIUM_ONLY_FISHING && !_player.hasPremiumStatus())
 			{
-				_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+				_player.sendPacket(SystemMessageId.FISHING_WILL_END_BECAUSE_THE_CONDITIONS_HAVE_NOT_BEEN_MET);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				stopFishing(FishingEndType.ERROR);
 				return;

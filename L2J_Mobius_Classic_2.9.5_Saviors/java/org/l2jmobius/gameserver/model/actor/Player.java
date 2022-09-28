@@ -2247,7 +2247,7 @@ public class Player extends Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -5953,7 +5953,7 @@ public class Player extends Playable
 			final Item unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(unequippedItem.getEnchantLevel());
 				sm.addItemName(unequippedItem);
 			}
@@ -5994,7 +5994,7 @@ public class Player extends Playable
 				final Item unequippedItem = unequipped.get(0);
 				if (unequippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addInt(unequippedItem.getEnchantLevel());
 					sm.addItemName(unequippedItem);
 				}
@@ -9381,7 +9381,7 @@ public class Player extends Playable
 		}
 		if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2)) || (getCurrentMp() < (getMaxMp() / 2))))
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
+			_noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
 			return false;
 		}
 		if (_isInDuel || _startingDuel)
@@ -11607,7 +11607,7 @@ public class Player extends Playable
 		
 		if (elementalCrit)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ATTACK_CRITICAL_IS_ACTIVATED);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_SKILL_CRITICAL_HAS_BEEN_ACTIVATED);
 			sm.addElementalSpirit(getActiveElementalSpiritType());
 			sendPacket(sm);
 		}
@@ -11631,7 +11631,7 @@ public class Player extends Playable
 		{
 			if (elementalDamage != 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2);
+				sm = new SystemMessage(SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
 			}
 			else
 			{
@@ -11719,7 +11719,7 @@ public class Player extends Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 					sm.addInt(equippedItem.getEnchantLevel());
 					sm.addItemName(equippedItem);
 				}

@@ -43,7 +43,7 @@ public class WarnUserTakeBreakTask implements Runnable
 			if (_player.isOnline())
 			{
 				final long hours = TimeUnit.MILLISECONDS.toHours(_player.getUptime() + 60000);
-				_player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_PLAYING_FOR_S1_HOUR_S_HOW_ABOUT_MAKING_A_BREAK).addLong(hours));
+				_player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_PLAYING_FOR_S1_HOUR_S_HOW_ABOUT_TAKING_A_BREAK).addLong(hours));
 			}
 			else
 			{

@@ -125,7 +125,7 @@ public class ExUpgradeSystemNormalRequest implements IClientIncomingPacket
 				{
 					addItem.setEnchantLevel(item.getEnchantLevel());
 				}
-				player.sendPacket(new SystemMessage(SystemMessageId.C1_HAS_SUCCEEDED_IN_UPGRADING_EQUIPMENT_AND_OBTAINED_A_S2).addPcName(player).addItemName(addItem));
+				player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE).addPcName(player).addItemName(addItem));
 			}
 			if (upgradeHolder.getBonus() != null)
 			{
@@ -141,7 +141,7 @@ public class ExUpgradeSystemNormalRequest implements IClientIncomingPacket
 						{
 							addItem.setEnchantLevel(item.getEnchantLevel());
 						}
-						player.sendPacket(new SystemMessage(SystemMessageId.C1_HAS_SUCCEEDED_IN_UPGRADING_EQUIPMENT_AND_OBTAINED_A_S2).addPcName(player).addItemName(addItem));
+						player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE).addPcName(player).addItemName(addItem));
 					}
 				}
 			}
@@ -158,7 +158,7 @@ public class ExUpgradeSystemNormalRequest implements IClientIncomingPacket
 					{
 						addItem.setEnchantLevel(item.getEnchantLevel());
 					}
-					player.sendPacket(new SystemMessage(SystemMessageId.C1_HAS_SUCCEEDED_IN_UPGRADING_EQUIPMENT_AND_OBTAINED_A_S2).addPcName(player).addItemName(addItem));
+					player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE).addPcName(player).addItemName(addItem));
 				}
 			}
 		}

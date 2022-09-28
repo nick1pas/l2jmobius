@@ -74,12 +74,12 @@ public class ElementalSpirit
 		
 		_data.addExperience(experience);
 		_owner.sendPacket(new ExElementalSpiritGetExp(_data.getType(), _data.getExperience()));
-		_owner.sendPacket(new SystemMessage(SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt(experience).addElementalSpirit(getType()));
+		_owner.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_S_S2_SKILL_XP).addInt(experience).addElementalSpirit(getType()));
 		
 		if (_data.getExperience() > getExperienceToNextLevel())
 		{
 			levelUp();
-			_owner.sendPacket(new SystemMessage(SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(_data.getType()).addByte(_data.getLevel()));
+			_owner.sendPacket(new SystemMessage(SystemMessageId.S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(_data.getType()).addByte(_data.getLevel()));
 			_owner.sendPacket(new ElementalSpiritInfo(_owner, _owner.getActiveElementalSpiritType(), (byte) 0));
 			final UserInfo userInfo = new UserInfo(_owner);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);

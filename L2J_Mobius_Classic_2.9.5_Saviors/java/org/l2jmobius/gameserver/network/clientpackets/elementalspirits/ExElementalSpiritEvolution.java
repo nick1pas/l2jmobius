@@ -85,17 +85,17 @@ public class ExElementalSpiritEvolution implements IClientIncomingPacket
 		}
 		if (player.isInBattle())
 		{
-			player.sendPacket(SystemMessageId.UNABLE_TO_EVOLVE_DURING_BATTLE);
+			player.sendPacket(SystemMessageId.CANNOT_EVOLVE_DURING_BATTLE);
 			return false;
 		}
 		if (!spirit.canEvolve())
 		{
-			player.sendPacket(SystemMessageId.THIS_SPIRIT_CANNOT_EVOLVE);
+			player.sendPacket(SystemMessageId.SPIRIT_CANNOT_BE_EVOLVED);
 			return false;
 		}
 		if (!consumeEvolveItems(player, spirit))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS_FOR_EVOLUTION);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_EVOLVE);
 			return false;
 		}
 		return true;

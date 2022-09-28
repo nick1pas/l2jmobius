@@ -192,7 +192,7 @@ public class AdminClan implements IAdminCommandHandler
 				player = World.getInstance().getPlayer(val);
 				if (player == null)
 				{
-					activeChar.sendPacket(SystemMessageId.INCORRECT_NAME_PLEASE_TRY_AGAIN);
+					activeChar.sendPacket(SystemMessageId.NAME_IS_NOT_ALLOWED_PLEASE_CHOOSE_ANOTHER_NAME);
 					return null;
 				}
 			}

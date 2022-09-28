@@ -213,7 +213,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 			}

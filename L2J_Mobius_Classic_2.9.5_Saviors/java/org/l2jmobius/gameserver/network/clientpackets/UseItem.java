@@ -254,9 +254,9 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.EMPTY_15);
-					sm.addItemName(item);
-					player.sendPacket(sm);
+					// final SystemMessage sm = new SystemMessage(SystemMessageId.EMPTY_15);
+					// sm.addItemName(item);
+					// player.sendPacket(sm);
 					return;
 				}
 			}

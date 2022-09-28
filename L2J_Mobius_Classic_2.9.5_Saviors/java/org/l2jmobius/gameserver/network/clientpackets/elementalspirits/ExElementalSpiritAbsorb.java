@@ -74,7 +74,7 @@ public class ExElementalSpiritAbsorb implements IClientIncomingPacket
 		final boolean canAbsorb = checkConditions(player, spirit);
 		if (canAbsorb)
 		{
-			client.sendPacket(SystemMessageId.SUCCESFUL_ABSORPTION);
+			client.sendPacket(SystemMessageId.DRAIN_SUCCESSFUL);
 			spirit.addExperience(absorbItem.getExperience() * _amount);
 			final UserInfo userInfo = new UserInfo(player);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
@@ -92,17 +92,17 @@ public class ExElementalSpiritAbsorb implements IClientIncomingPacket
 		}
 		if (player.isInBattle())
 		{
-			player.sendPacket(SystemMessageId.UNABLE_TO_ABSORB_DURING_BATTLE);
+			player.sendPacket(SystemMessageId.CANNOT_DRAIN_DURING_BATTLE);
 			return false;
 		}
 		if ((spirit.getLevel() == spirit.getMaxLevel()) && (spirit.getExperience() == spirit.getExperienceToNextLevel()))
 		{
-			player.sendPacket(SystemMessageId.UNABLE_TO_ABSORB_BECAUSE_REACHED_MAXIMUM_LEVEL);
+			player.sendPacket(SystemMessageId.YOU_HAVE_REACHED_THE_HIGHEST_LEVEL_AND_CANNOT_ABSORB_ANY_FURTHER);
 			return false;
 		}
 		if ((_amount < 1) || !player.destroyItemByItemId("Absorb", _itemId, _amount, player, true))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS_TO_ABSORB);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_ABSORB);
 			return false;
 		}
 		return true;

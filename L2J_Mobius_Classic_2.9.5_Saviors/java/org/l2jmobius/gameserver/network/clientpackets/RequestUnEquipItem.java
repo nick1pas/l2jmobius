@@ -109,7 +109,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			final Item unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(unequippedItem.getEnchantLevel());
 			}
 			else

@@ -64,7 +64,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 		if (canExtract)
 		{
 			final int amount = spirit.getExtractAmount();
-			client.sendPacket(new SystemMessage(SystemMessageId.EXTRACTED_S1_S2_SUCCESSFULLY).addItemName(spirit.getExtractItem()).addInt(amount));
+			client.sendPacket(new SystemMessage(SystemMessageId.EXTRACTED_S1_X_S2_SUCCESSFULLY).addItemName(spirit.getExtractItem()).addInt(amount));
 			spirit.reduceLevel();
 			player.addItem("Extract", spirit.getExtractItem(), amount, player, true);
 			
@@ -80,12 +80,12 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 	{
 		if ((spirit.getLevel() < 2) || (spirit.getExtractAmount() < 1))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_ATTRIBUTE_XP_FOR_EXTRACTION);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SKILL_XP_TO_EXTRACT);
 			return false;
 		}
 		if (!player.getInventory().validateCapacity(1))
 		{
-			player.sendPacket(SystemMessageId.UNABLE_TO_EXTRACT_BECAUSE_INVENTORY_IS_FULL);
+			player.sendPacket(SystemMessageId.INVENTORY_IS_FULL_CANNOT_EXTRACT);
 			return false;
 		}
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -95,12 +95,12 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 		}
 		if (player.isInBattle())
 		{
-			player.sendPacket(SystemMessageId.UNABLE_TO_EVOLVE_DURING_BATTLE);
+			player.sendPacket(SystemMessageId.CANNOT_EVOLVE_DURING_BATTLE);
 			return false;
 		}
 		if (!player.reduceAdena("Extract", ElementalSpiritData.EXTRACT_FEE, player, true))
 		{
-			player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS_TO_EXTRACT);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_EXTRACT);
 			return false;
 		}
 		return true;

@@ -122,7 +122,7 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 		
 		// Send result packet.
 		
-		player.sendPacket(new SystemMessage(SystemMessageId.C1_HAS_SUCCEEDED_IN_UPGRADING_EQUIPMENT_AND_OBTAINED_A_S2).addPcName(player).addItemName(addedItem));
+		player.sendPacket(new SystemMessage(SystemMessageId.C1_YOU_OBTAINED_S2_THROUGH_EQUIPMENT_UPGRADE).addPcName(player).addItemName(addedItem));
 		player.sendPacket(new InventoryUpdate());
 		player.sendPacket(new ExUpgradeSystemResult(addedItem.getObjectId(), 1));
 	}

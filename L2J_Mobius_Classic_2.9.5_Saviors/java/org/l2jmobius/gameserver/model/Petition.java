@@ -76,14 +76,14 @@ public class Petition
 			else
 			{
 				// Ending petition consultation with <Player>.
-				SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CONSULTATION_WITH_C1_HAS_ENDED);
+				SystemMessage sm = new SystemMessage(SystemMessageId.ENDED_THE_CUSTOMER_CONSULTATION_WITH_C1);
 				sm.addString(_petitioner.getName());
 				_responder.sendPacket(sm);
 				
 				if (endState == PetitionState.PETITIONER_CANCEL)
 				{
 					// Receipt No. <ID> petition cancelled.
-					sm = new SystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED);
+					sm = new SystemMessage(SystemMessageId.CANCELED_THE_QUERY_NO_S1);
 					sm.addInt(_id);
 					_responder.sendPacket(sm);
 				}
@@ -93,7 +93,7 @@ public class Petition
 		// End petition consultation and inform them, if they are still online. And if petitioner is online, enable Evaluation button
 		if ((_petitioner != null) && _petitioner.isOnline())
 		{
-			_petitioner.sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
+			_petitioner.sendPacket(SystemMessageId.GM_HAS_REPLIED_TO_YOUR_QUESTION_PLEASE_LEAVE_A_REVIEW_ON_OUR_CUSTOMER_QUERY_SERVICE);
 			_petitioner.sendPacket(PetitionVotePacket.STATIC_PACKET);
 		}
 		

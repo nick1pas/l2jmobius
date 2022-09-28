@@ -286,7 +286,7 @@ public class BotReportTable
 			{
 				if (rcdRep.getPointsLeft() == 0)
 				{
-					reporter.sendPacket(SystemMessageId.YOU_HAVE_USED_ALL_AVAILABLE_POINTS_POINTS_ARE_RESET_EVERYDAY_AT_NOON);
+					reporter.sendPacket(SystemMessageId.YOU_VE_SPENT_ALL_POINTS_THE_POINTS_WILL_BE_RESET_AT_06_30_SO_THAT_YOU_CAN_USE_THEM_AGAIN);
 					return false;
 				}
 				
