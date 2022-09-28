@@ -84,7 +84,7 @@ public class Q10986_SwampMonster extends Quest
 		addTalkId(VOLODOS, CAPTAIN_BATHIS);
 		addKillId(MARSH_ZOMBIE, MARSH_ZOMBIE_SCOUT, DARK_HORROR, LESSER_DARK_HORROR);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_15_20_TERRIBLE_SWAMP_MONSTERS);
+		setQuestNameNpcStringId(NpcStringId.LV_15_20_SWAMP_MONSTER);
 	}
 	
 	@Override
@@ -157,7 +157,7 @@ public class Q10986_SwampMonster extends Quest
 					giveItems(player, MOON_BOOTS);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
-						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						showOnScreenMsg(player, NpcStringId.COMPLETED_THE_TUTORIAL_NOW_TRY_THE_FIRST_CLASS_TRANSFER_AND_CARRY_OUT_THE_ADVENTURER_S_JOURNEY_MISSIONS_TO_GROW_YOUR_CHARACTER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
@@ -180,7 +180,7 @@ public class Q10986_SwampMonster extends Quest
 					giveItems(player, MOON_SHOES);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
-						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						showOnScreenMsg(player, NpcStringId.COMPLETED_THE_TUTORIAL_NOW_TRY_THE_FIRST_CLASS_TRANSFER_AND_CARRY_OUT_THE_ADVENTURER_S_JOURNEY_MISSIONS_TO_GROW_YOUR_CHARACTER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
@@ -203,7 +203,7 @@ public class Q10986_SwampMonster extends Quest
 					giveItems(player, MOON_SANDALS);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
-						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						showOnScreenMsg(player, NpcStringId.COMPLETED_THE_TUTORIAL_NOW_TRY_THE_FIRST_CLASS_TRANSFER_AND_CARRY_OUT_THE_ADVENTURER_S_JOURNEY_MISSIONS_TO_GROW_YOUR_CHARACTER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
@@ -246,7 +246,7 @@ public class Q10986_SwampMonster extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_ZOMBIES_AND_DARK_HORRORS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.HUNT_ZOMBIE_AND_DARK_HORROR.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

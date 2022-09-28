@@ -61,7 +61,7 @@ public class Q10987_PlunderedGraves extends Quest
 		addTalkId(NEWBIE_GUIDE, USKA);
 		addKillId(KASHA_WOLF, KASHA_TIMBER_WOLF, GOBLIN_TOMB_RAIDER, RAKECLAW_IMP_HUNTER);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_2_20_PLUNDERED_GRAVES);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_SUSPICIOUS_MEN);
 	}
 	
 	@Override
@@ -144,7 +144,7 @@ public class Q10987_PlunderedGraves extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.TRACK_DOWN_GRAVE_ROBBERS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.EXPEL_GRAVE_ROBBER.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

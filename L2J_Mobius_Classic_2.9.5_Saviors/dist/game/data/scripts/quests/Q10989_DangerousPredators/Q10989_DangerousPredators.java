@@ -60,7 +60,7 @@ public class Q10989_DangerousPredators extends Quest
 		addTalkId(NEWBIE_GUIDE, GERALD);
 		addKillId(LONGTAIL_KELTIR, ELDER_LONGTAIL_KELTIR, BLACK_WOLF);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_2_20_DANGEROUS_PREDATORS);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_DISRUPTORS);
 	}
 	
 	@Override
@@ -143,7 +143,7 @@ public class Q10989_DangerousPredators extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_WOLVES_AND_BEARDED_KELTIRS_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.HUNT_WOLVES_AND_KELTIRS_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

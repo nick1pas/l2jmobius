@@ -59,7 +59,7 @@ public class Q10981_UnbearableWolvesHowling extends Quest
 		addTalkId(NEWBIE_GUIDE, JACKSON);
 		addKillId(BEARDED_KELTIR, WOLF);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_2_20_UNBEARABLE_WOLVES_HOWLING);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_LOUD_WOLVES);
 	}
 	
 	@Override
@@ -142,7 +142,7 @@ public class Q10981_UnbearableWolvesHowling extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_WOLVES_AND_BEARDED_KELTIRS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.HUNT_WOLVES_AND_KELTIRS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

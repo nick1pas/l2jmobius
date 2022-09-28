@@ -112,7 +112,7 @@ public class Q10673_SagaOfLegend extends Quest
 		addKillId(MOBS);
 		addCondMinLevel(MIN_LEVEL, "30857-00.htm");
 		addCondInCategory(CategoryType.THIRD_CLASS_GROUP, "30857-00.htm");
-		setQuestNameNpcStringId(NpcStringId.LV_76_SAGA_OF_LEGEND);
+		setQuestNameNpcStringId(NpcStringId.LV_76_LEGEND_CONTINUES);
 	}
 	
 	@Override

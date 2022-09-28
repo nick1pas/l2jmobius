@@ -60,7 +60,7 @@ public class Q10985_CleaningUpTheGround extends Quest
 		addTalkId(NEWBIE_GUIDE, VOLODOS);
 		addKillId(ASHEN_WOLF, GOBLIN, IMP);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_2_20_CLEANING_UP_THE_GROUNDS);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_CLEAN_THE_YARD);
 	}
 	
 	@Override
@@ -143,7 +143,7 @@ public class Q10985_CleaningUpTheGround extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_NEAR_THE_VILLAGE.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.DRIVE_OUT_MONSTERS_AROUND_THE_VILLAGE.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

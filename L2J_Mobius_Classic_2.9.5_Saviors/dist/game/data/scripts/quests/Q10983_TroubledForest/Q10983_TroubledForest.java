@@ -59,7 +59,7 @@ public class Q10983_TroubledForest extends Quest
 		addTalkId(NEWBIE_GUIDE, HERBIEL);
 		addKillId(GOBLIN_RAIDER, KABOO_ORC);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_2_20_TROUBLED_FOREST);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_TROUBLEMAKER_OF_FOREST);
 	}
 	
 	@Override
@@ -142,7 +142,7 @@ public class Q10983_TroubledForest extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_ORCS_AND_GOBLINS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.HUNT_ORCS_AND_GOBLIN_GOBLINS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);
