@@ -83,8 +83,6 @@ import quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves;
 import quests.Q10988_Conspiracy.Q10988_Conspiracy;
 import quests.Q10989_DangerousPredators.Q10989_DangerousPredators;
 import quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
-import quests.Q10993_FutureDwarves.Q10993_FutureDwarves;
-import quests.Q10994_FutureOrcs.Q10994_FutureOrcs;
 import quests.not_done.Q00630_PirateTreasureHunt;
 import quests.not_done.Q00664_QuarrelsTime;
 import quests.not_done.Q00910_RequestFromTheRedLibraGuildLv1;
@@ -191,8 +189,6 @@ public class QuestMasterHandler
 		Q10988_Conspiracy.class,
 		Q10989_DangerousPredators.class,
 		Q10990_PoisonExtraction.class,
-		Q10993_FutureDwarves.class,
-		Q10994_FutureOrcs.class,
 	};
 	
 	public static void main(String[] args)
