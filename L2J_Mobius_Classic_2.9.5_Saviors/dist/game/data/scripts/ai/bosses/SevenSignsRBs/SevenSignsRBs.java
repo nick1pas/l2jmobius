@@ -272,5 +272,4 @@ public class SevenSignsRBs extends AbstractNpcAI
 	{
 		new SevenSignsRBs();
 	}
-	
 }

@@ -14,27 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.SevenSignsRBs;
+package ai.bosses.SevenSignsRBs;
 
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
+import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 
-import instances.AbstractInstance;
+import ai.AbstractNpcAI;
 
 /**
  * @author RobikBobik
  * @NOTE: Retail like work
- * @TODO: When one RB die, the second will be invul for 5 minutes.
  */
-public class SevenSignsRBs extends AbstractInstance
+public class SevenSignsRBs extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ANAKIM_GATEKEEPER_SPIRIT = 31089;
@@ -42,17 +43,14 @@ public class SevenSignsRBs extends AbstractInstance
 	private static final int GATEKEEPER_SPIRIT_OUT_TELEPORT = 31088;
 	private static final int ANAKIM = 25286;
 	private static final int LILITH = 25283;
-	
 	// Misc
-	private static final int ANAKIM_TEMPLATE_ID = 200;
-	private static final int LILITH_TEMPLATE_ID = 199;
-	
 	private static final int MAX_PLAYERS_IN_ZONE = 300;
-	
 	private static final NoRestartZone ANAKIM_ZONE = ZoneManager.getInstance().getZoneById(70052, NoRestartZone.class);
 	private static final NoRestartZone LILITH_ZONE = ZoneManager.getInstance().getZoneById(70053, NoRestartZone.class);
-	
 	// TELEPORTS
+	private static final Location TELEPORT_TO_LILITH = new Location(185657, -10112, -5496);
+	private static final Location TELEPORT_TO_ANAKIM = new Location(-7283, 19086, -5496);
+	
 	private static final Location[] TELEPORT_TO_DARK_ELVEN =
 	{
 		new Location(12168, 17149, -4575),
@@ -61,19 +59,20 @@ public class SevenSignsRBs extends AbstractInstance
 		new Location(11169, 15922, -4585),
 	};
 	
-	// TODO: When teleport from instance done. Enable it
-	/*
-	 * private static final Location[] TELEPORT_TO_ADEN = { new Location(148053, 26935, -2206), new Location(148053, 28017, -2269), new Location(146558, 28017, -2269), new Location(146558, 26935, -2206), };
-	 */
+	private static final Location[] TELEPORT_TO_ADEN =
+	{
+		new Location(148053, 26935, -2206),
+		new Location(148053, 28017, -2269),
+		new Location(146558, 28017, -2269),
+		new Location(146558, 26935, -2206),
+	};
 	
 	public SevenSignsRBs()
 	{
-		super(ANAKIM_TEMPLATE_ID, LILITH_TEMPLATE_ID);
 		addStartNpc(ANAKIM_GATEKEEPER_SPIRIT, LILITH_GATEKEEPER_SPIRIT);
 		addTalkId(ANAKIM_GATEKEEPER_SPIRIT, LILITH_GATEKEEPER_SPIRIT, GATEKEEPER_SPIRIT_OUT_TELEPORT);
 		addKillId(ANAKIM, LILITH);
 		addAttackId(ANAKIM, LILITH);
-		addInstanceLeaveId(ANAKIM_TEMPLATE_ID, LILITH_TEMPLATE_ID);
 	}
 	
 	@Override
@@ -83,6 +82,11 @@ public class SevenSignsRBs extends AbstractInstance
 		{
 			case "ANAKIM_ENTER":
 			{
+				if (DBSpawnManager.getInstance().getStatus(ANAKIM) != RaidBossStatus.ALIVE)
+				{
+					player.sendMessage("Anakim is not present at the moment");
+					break;
+				}
 				if (player.isInParty())
 				{
 					final Party party = player.getParty();
@@ -90,7 +94,7 @@ public class SevenSignsRBs extends AbstractInstance
 					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - ANAKIM_ZONE.getPlayersInside().size()))
 					{
-						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
+						player.sendMessage("Anakims Sanctum reached " + MAX_PLAYERS_IN_ZONE + " players. You cannot enter now.");
 					}
 					else
 					{
@@ -100,13 +104,13 @@ public class SevenSignsRBs extends AbstractInstance
 							{
 								player.sendMessage("Player " + member.getName() + " must go closer to Gatekeeper Spirit.");
 							}
-							enterInstance(member, npc, ANAKIM_TEMPLATE_ID);
+							member.teleToLocation(TELEPORT_TO_ANAKIM);
 						}
 					}
 				}
 				else if (player.isGM())
 				{
-					enterInstance(player, npc, ANAKIM_TEMPLATE_ID);
+					player.teleToLocation(TELEPORT_TO_ANAKIM);
 					player.sendMessage("SYS: You have entered as GM/Admin to Anakim Instance");
 				}
 				else
@@ -114,13 +118,19 @@ public class SevenSignsRBs extends AbstractInstance
 					if (!player.isInsideRadius3D(npc, 1000))
 					{
 						player.sendMessage("You must go closer to Gatekeeper Spirit.");
+						break;
 					}
-					enterInstance(player, npc, ANAKIM_TEMPLATE_ID);
+					player.teleToLocation(TELEPORT_TO_ANAKIM);
 				}
 				break;
 			}
 			case "LILITH_ENTER":
 			{
+				if (DBSpawnManager.getInstance().getStatus(LILITH) != RaidBossStatus.ALIVE)
+				{
+					player.sendMessage("Lilith is not present at the moment");
+					break;
+				}
 				if (player.isInParty())
 				{
 					final Party party = player.getParty();
@@ -128,7 +138,7 @@ public class SevenSignsRBs extends AbstractInstance
 					final List<Player> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - LILITH_ZONE.getPlayersInside().size()))
 					{
-						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
+						player.sendMessage("Lilith Sanctum reached " + MAX_PLAYERS_IN_ZONE + " players. You cannot enter now.");
 					}
 					else
 					{
@@ -138,13 +148,13 @@ public class SevenSignsRBs extends AbstractInstance
 							{
 								player.sendMessage("Player " + member.getName() + " must go closer to Gatekeeper Spirit.");
 							}
-							enterInstance(member, npc, LILITH_TEMPLATE_ID);
+							member.teleToLocation(TELEPORT_TO_LILITH);
 						}
 					}
 				}
 				else if (player.isGM())
 				{
-					enterInstance(player, npc, LILITH_TEMPLATE_ID);
+					player.teleToLocation(TELEPORT_TO_LILITH);
 					player.sendMessage("SYS: You have entered as GM/Admin to Anakim Instance");
 				}
 				else
@@ -152,8 +162,9 @@ public class SevenSignsRBs extends AbstractInstance
 					if (!player.isInsideRadius3D(npc, 1000))
 					{
 						player.sendMessage("You must go closer to Gatekeeper Spirit.");
+						break;
 					}
-					enterInstance(player, npc, LILITH_TEMPLATE_ID);
+					player.teleToLocation(TELEPORT_TO_LILITH);
 				}
 				break;
 			}
@@ -181,34 +192,55 @@ public class SevenSignsRBs extends AbstractInstance
 			}
 			case "TELEPORT_OUT":
 			{
-				// TODO: Different teleport location from instance.
-				// switch (player.getInstanceId())
-				// {
-				// case ANAKIM_TEMPLATE_ID:
-				// {
-				// final Location destination = TELEPORT_TO_DARK_ELVEN[getRandom(TELEPORT_TO_DARK_ELVEN.length)];
-				// player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
-				// break;
-				// }
-				// case LILITH_TEMPLATE_ID:
-				// {
-				// final Location destination = TELEPORT_TO_ADEN[getRandom(TELEPORT_TO_ADEN.length)];
-				// player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
-				// break;
-				// }
-				// }
-				final Location destination = TELEPORT_TO_DARK_ELVEN[getRandom(TELEPORT_TO_DARK_ELVEN.length)];
-				player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
+				if (ANAKIM_ZONE.isInsideZone(player.getLocation()))
+				{
+					final Location destination = TELEPORT_TO_DARK_ELVEN[getRandom(TELEPORT_TO_DARK_ELVEN.length)];
+					player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
+					break;
+				}
+				if (LILITH_ZONE.isInsideZone(player.getLocation()))
+				{
+					final Location destination = TELEPORT_TO_ADEN[getRandom(TELEPORT_TO_ADEN.length)];
+					player.teleToLocation(destination.getX() + getRandom(100), destination.getY() + getRandom(100), destination.getZ());
+					break;
+				}
 				break;
 			}
 			case "ANAKIM_DEATH_CAST_LILITH_INVUL":
 			{
-				// TODO: When one RB die, the second will be invul for 5 minutes.
+				if (DBSpawnManager.getInstance().getStatus(LILITH) == RaidBossStatus.ALIVE)
+				{
+					Npc LILITH_NPC = DBSpawnManager.getInstance().getNpcs().get(LILITH);
+					LILITH_NPC.setInvul(true);
+					LILITH_NPC.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+					startQuestTimer("LILITH_INVUL_END", 300000, null, player);
+				}
+				
 				break;
 			}
 			case "LILITH_DEATH_CAST_ANAKIM_INVUL":
 			{
-				// TODO: When one RB die, the second will be invul for 5 minutes.
+				if (DBSpawnManager.getInstance().getStatus(ANAKIM) == RaidBossStatus.ALIVE)
+				{
+					Npc ANAKIM_NPC = DBSpawnManager.getInstance().getNpcs().get(ANAKIM);
+					ANAKIM_NPC.setInvul(true);
+					ANAKIM_NPC.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+					startQuestTimer("ANAKIM_INVUL_END", 300000, null, player);
+				}
+				break;
+			}
+			case "LILITH_INVUL_END":
+			{
+				Npc LILITH_NPC = DBSpawnManager.getInstance().getNpcs().get(LILITH);
+				LILITH_NPC.setInvul(false);
+				LILITH_NPC.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+				break;
+			}
+			case "ANAKIM_INVUL_END":
+			{
+				Npc ANAKIM_NPC = DBSpawnManager.getInstance().getNpcs().get(ANAKIM);
+				ANAKIM_NPC.setInvul(false);
+				ANAKIM_NPC.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				break;
 			}
 		}
@@ -222,25 +254,16 @@ public class SevenSignsRBs extends AbstractInstance
 		{
 			case ANAKIM:
 			{
-				// TODO:
-				// startQuestTimer("ANAKIM_DEATH_CAST_LILITH_INVUL", 1000, null, null);
-				startQuestTimer("REMOVE_PLAYERS_FROM_ZONE_ANAKIM", 600000, null, player);
+				startQuestTimer("ANAKIM_DEATH_CAST_LILITH_INVUL", 1000, null, null);
 				addSpawn(GATEKEEPER_SPIRIT_OUT_TELEPORT, -6664, 18501, -5495, 0, false, 600000, false, npc.getInstanceId());
 				break;
 			}
 			case LILITH:
 			{
-				// TODO:
-				// startQuestTimer("LILITH_DEATH_CAST_ANAKIM_INVUL", 1000, null, null);
-				startQuestTimer("REMOVE_PLAYERS_FROM_ZONE_LILITH", 600000, null, player);
+				startQuestTimer("LILITH_DEATH_CAST_ANAKIM_INVUL", 1000, null, null);
 				addSpawn(GATEKEEPER_SPIRIT_OUT_TELEPORT, 185062, -9612, -5493, 0, false, 600000, false, npc.getInstanceId());
 				break;
 			}
-		}
-		final Instance world = npc.getInstanceWorld();
-		if (world != null)
-		{
-			world.finishInstance();
 		}
 		return super.onKill(npc, player, isSummon);
 	}
