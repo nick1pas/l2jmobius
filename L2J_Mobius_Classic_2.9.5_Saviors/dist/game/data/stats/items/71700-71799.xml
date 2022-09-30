@@ -7,4 +7,671 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="71701" name="Fire Dragon's Pendant" additionalName="Lv. 1" type="Armor">
+		<!-- Pendant imbued with the power of the Fire Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="71702" name="Water Dragon's Pendant" additionalName="Lv. 1" type="Armor">
+		<!-- Pendant imbued with the power of the Water Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="71703" name="Wind Dragon's Pendant" additionalName="Lv. 1" type="Armor">
+		<!-- Pendant imbued with the power of the Wind Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="71704" name="Earth Dragon's Pendant" additionalName="Lv. 1" type="Armor">
+		<!-- Pendant imbued with the power of the Earth Dragon. Can enchant up to +10 with Pendant Varnish/Shining Pendant Varnish, and can combine 2 pendants of the same level through the Dimensional Merchant. Various effects are added when combined, and the stats of the options increase when enchanted. Starting from +1, it disappears if it fails. Note: The enchant level of the material item is reset to 0 when combining, so make sure to not use an enchanted pendant. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+	</item>
+	<item id="71705" name="Shadow Master" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71706" name="Navy Admiral" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71707" name="skeleton" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_skeleton" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71708" name="Alice" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_alice" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71709" name="Demon" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71710" name="Steampunk" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_steampunk" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71711" name="Nymph" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71712" name="Maid" type="Armor">
+		<!-- Transformation system outfit. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_maid" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71713" name="+16 No-grade Weapon Exchange Coupon" additionalName="Event" type="EtcItem">
+		<!-- Exchange for a +16 No-grade weapon at the L2 Store. -->
+		<set name="icon" val="BranchIcon.Icon.rp_necklace_of_einhasad_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71714" name="+7 C-Grade Weapon Exchange Coupon" additionalName="Event" type="EtcItem">
+		<!-- Exchange for a +7 C-grade weapon at the L2 Store. -->
+		<set name="icon" val="BranchIcon.Icon.rp_ring_of_maphr_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71715" name="Enhanced Compound Bow Box" type="EtcItem">
+		<!-- Double-click to obtain a +16 Compound Bow and an Infinite Wooden Quiver. -->
+		<set name="icon" val="icon.weapon_composition_bow_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71716" name="+7 Eminence Bow" type="EtcItem">
+		<!-- Double-click to obtain a +7 Eminence Bow and an Infinite Steel Quiver. -->
+		<set name="icon" val="icon.weapon_eminence_bow_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71717" name="ADEN Gacha Ticket" additionalName="Event" type="EtcItem">
+		<!-- Obtain 300 L2 Coins through the Dimensional Merchant. Additionally, obtain 1 of various items. -->
+		<set name="icon" val="icon.bm_jewel_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71718" name="Transformation Sealbook: Shadow Master" additionalName="Normal-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Normal Shadow Master Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71719" name="Transformation Sealbook: Shadow Master" additionalName="Advanced-Not Available" type="EtcItem">
+		<!-- Use it to obtain an Advanced Shadow Master Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71720" name="Transformation Sealbook: Shadow Master" additionalName="Rare-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Rare Shadow Master Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71721" name="Transformation Sealbook: Shadow Master" additionalName="Legendary" type="EtcItem">
+		<!-- Use it to obtain a Legendary Shadow Master Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71722" name="Transformation Sealbook: Shadow Master" additionalName="Mythic" type="EtcItem">
+		<!-- Use it to obtain a Mythic Shadow Master Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71723" name="Transformation Sealbook: Navy Admiral" additionalName="Normal-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Normal Navy Admiral Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71724" name="Transformation Sealbook: Navy Admiral" additionalName="Advanced-Not Available" type="EtcItem">
+		<!-- Use it to obtain an Advanced Navy Admiral Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71725" name="Transformation Sealbook: Navy Admiral" additionalName="Rare-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Rare Navy Admiral Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71726" name="Transformation Sealbook: Navy Admiral" additionalName="Legendary" type="EtcItem">
+		<!-- Use it to obtain a Legendary Navy Admiral Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71727" name="Transformation Sealbook: Navy Admiral" additionalName="Mythic" type="EtcItem">
+		<!-- Use it to obtain a Mythic Navy Admiral Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71728" name="Transformation Sealbook: Nymph" additionalName="Normal-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Normal Nymph Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71729" name="Transformation Sealbook: Nymph" additionalName="Advanced-Not Available" type="EtcItem">
+		<!-- Use it to obtain an Advanced Nymph Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71730" name="Transformation Sealbook: Nymph" additionalName="Rare-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Rare Nymph Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71731" name="Transformation Sealbook: Nymph" additionalName="Legendary" type="EtcItem">
+		<!-- Use it to obtain a Legendary Nymph Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71732" name="Transformation Sealbook: Nymph" additionalName="Mythic" type="EtcItem">
+		<!-- Use it to obtain a Mythic Nymph Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71733" name="Transformation Sealbook: Devil" additionalName="Normal-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Normal Devil Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71734" name="Transformation Sealbook: Devil" additionalName="Advanced-Not Available" type="EtcItem">
+		<!-- Use it to obtain an Advanced Devil Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71735" name="Transformation Sealbook: Devil" additionalName="Rare-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Rare Devil Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71736" name="Transformation Sealbook: Devil" additionalName="Legendary-Not Available" type="EtcItem">
+		<!-- Use it to obtain a Legendary Devil Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71737" name="Transformation Sealbook: Devil" additionalName="Mythic" type="EtcItem">
+		<!-- Use it to obtain a Mythic Devil Transformation. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71738" name="Fire Dragon Pendant Chest +6" additionalName="Event" type="EtcItem">
+		<!-- Double-click to get Fire Dragon Pendant +6.  -->
+		<set name="icon" val="icon.bm_pendant_pve_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71739" name="+8 S-grade Weapon Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to get a +8 enchanted S-grade weapon at random. -->
+		<set name="icon" val="icon.bm_gold_lure_special_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71740" name="+5 Dragon Pendant Lv. 4 Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to get a +5 enchanted Dragon Pendant Lv. 4 Attack or Magic type at random. -->
+		<set name="icon" val="icon.bm_pendant_pve_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71741" name="Dragon Scroll" additionalName="Event" type="EtcItem">
+		<!-- For 20 min., P./M. Atk. +150, P./M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P./M. Def. +200, Max HP/MP/CP +500. The effect remains active even after death. Cooldown 1 minute. -->
+		<set name="icon" val="icon.ev_charge_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="59634" level="1" /> <!-- Dragon Scroll (Event) -->
+		</skills>
+	</item>
+	<item id="71742" name="Dimensional Talisman Lv.1" type="Armor">
+		<!-- When equipped, P./M. Def. +25, P./M. Evasion +1, Max HP/MP/CP +150, Speed +5, Atk. Spd./Casting Spd. +10, XP/SP Gain +5%. Allows use of Dimension Guard - Lv. 1 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71743" name="Dimensional Talisman Lv. 2" type="Armor">
+		<!-- When equipped, P./M. Def. +30, P./M. Evasion +2, Max HP/MP/CP +200, Speed +7, Atk. Spd./Casting Spd. +15, XP/SP Gain +7%. Applies the Dimensional Power of Border - Lv. 1 (has a chance to increase Attack Abilities on attack) and allows using the Dimension Guard - Lv. 2 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71744" name="Dimensional Talisman Lv. 3" type="Armor">
+		<!-- When equipped, P./M. Def. +35, P./M. Evasion +2, Max HP/MP/CP +250, Speed +7, Atk. Spd./Casting Spd. +15, XP/SP Gain +10%. Applies the Dimensional Power of Border - Lv. 2 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 3 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71745" name="Dimensional Talisman Lv. 4" type="Armor">
+		<!-- When equipped, P./M. Def. +40, P./M. Evasion +2, Max HP/MP/CP +300, Speed +7, Atk. Spd./Casting Spd. +15, XP/SP Gain +12%. Applies the Dimensional Power of Border - Lv. 3 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 4 (temporarily decreases the chance of getting hit by Deadly Stabs). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71746" name="Dimensional Talisman Lv. 5" type="EtcItem">
+		<!-- When equipped, P./M. Def. +45, P./M. Evasion +3, Max HP/MP/CP +400, Speed +8, Atk. Spd./Casting Spd. +20, XP/SP Gain +15%. Applies the Dimensional Power of Border - Lv. 4 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 5 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71747" name="Dimensional Talisman Lv. 6" type="EtcItem">
+		<!-- When equipped, P./M. Def. +50, P./M. Evasion +3, Max HP/MP/CP +500, Speed +8, Atk. Spd./Casting Spd. +30, XP/SP Gain +17%. Applies the Dimensional Power of Border - Lv. 5 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 6 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71748" name="Dimensional Talisman Lv. 7" type="EtcItem">
+		<!-- When equipped, P./M. Def. +70, P./M. Evasion +4, Max HP/MP/CP +1000, Speed +9, Atk. Spd. +40, Casting Spd. +50, XP/SP Gain +20%. Applies the Dimensional Power of Border - Lv. 6 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 7 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71749" name="Dimensional Talisman Lv. 8" type="Armor">
+		<!-- When equipped, P./M. Def. +80, P./M. Evasion +4, Max HP/MP/CP +1300, Speed +9, Atk. Spd. +40, Casting Spd. +65, XP/SP Gain +25%. Applies the Dimensional Power of Border - Lv. 7 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 8 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71750" name="Dimensional Talisman Lv. 9" type="Armor">
+		<!-- When equipped, P./M. Def. +90, P./M. Evasion +4, Max HP/MP/CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, XP/SP Gain +30%. Applies the Dimensional Power of Border - Lv. 8 (has a chance to increase Attack Abilities on attack) and allows use of Dimension Guard - Lv. 9 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). Can be upgraded to a higher-grade Talisman through Veruti in the Town of Giran. When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71751" name="Dimensional Talisman Lv. 10" type="Armor">
+		<!-- When equipped, P./M. Def. +100, P./M. Evasion +5, Max HP/MP/CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, XP/SP Gain +40%. Applies the Dimensional Power of Border - Lv. 9 (has a chance to increase Attack Abilities on attack) and allows se of Dimension Guard - Lv. 10 (temporarily decreases the chance of getting hit by Deadly Stabs and P./M. Critical Damage Received, and increases M. Def). and the Dimensional Barrier (defending enemy attacks 10 times for 15 sec). When both the Dimensional Power and the Talisman of Border are equipped, only the Dimensional Power is applied.  -->
+		<set name="icon" val="icon.bm_dimension_tallisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71752" name="Dimensional Soul" type="EtcItem">
+		<!-- Material to craft and upgrade Dimensional Talismans. Enchant a Dimensional Talisman through Veruti in the Town of Giran, or go to Ferris of Aden to upgrade a Talisman of Border to a Dimensional Talisman. -->
+		<set name="icon" val="icon.bm_dimension_soul" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71753" name="Talisman of Border Box" type="EtcItem">
+		<!-- The power of the Border is sealed within the box. Double-click to obtain a Talisman of Border Lv. 1. -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71754" name="Box Full of Blessing" type="EtcItem">
+		<!-- Double-click to obtain 1 Sayha's Blessing and 1 out of various items. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71767" name="Samurai Black Long Sword" additionalName="30-day" type="Weapon">
+		<!-- 30-day. Cannot be enchanted or bestow special characteristics. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1380" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">155</stat>
+			<stat type="mAtk">70</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="71768" name="Samurai Black Long Sword (30-day) Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Samurai Black Long Sword (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The Samurai Black Long Sword obtained from the box cannot be exchanged, dropped, or sold in a private store. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="71769" name="Timed Weapon Exchange Coupon (B-grade)" additionalName="Event" type="EtcItem">
+		<!-- Exchange for a 30-day B-grade weapon through the Dimensional Merchant. Exchanged weapons cannot be enchanted, exchanged, or dropped. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="71770" name="Newbie Pack" additionalName="Event" type="EtcItem">
+		<!-- Obtain Samurai Black Long Sword (30-day), 5000 Mysterious No-grade Soulshots, and 15 Special Hero's Fruits. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="71771" name="Hunting Support Pack" additionalName="Event" type="EtcItem">
+		<!-- Obtain 10 Dandy's Home Run Balls, 10 Hero's XP/SP Scrolls, 1 Newbie Amulet (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="71772" name="Royal Equipment Pack" additionalName="Event" type="EtcItem">
+		<!-- Obtain 2 B-grade Weapon Exchange Coupons (15-day), Timed Armor Set Boxes (30-day), and Timed Rare Accessories (30-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="71773" name="Newbie Amulet" additionalName="30-day" type="EtcItem">
+		<!-- 30-day. Increases XP and SP gain by +50% while hunting. Can only be used by characters Lv. 39 or below. \nCannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="BranchSys2.lcon.br_life_rune_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71774" name="Aden Supply Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following: Baium's Talisman, Zaken's Earring, Queen Ant's Ring, Top-grade Jewel Box, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Buff Scroll. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71777" name="Baium's Mystery Box" type="EtcItem">
+		<!-- Obtain 1 reward item at random. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
 </list>
