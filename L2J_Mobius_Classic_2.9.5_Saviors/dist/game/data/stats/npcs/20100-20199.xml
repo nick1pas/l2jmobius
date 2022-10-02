@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20100" level="13" type="Monster" name="Skeleton Archer">
 		<parameters>
@@ -1185,7 +1185,7 @@
 			<attack physical="12.34006" magical="8.42666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="51.60553" magical="37.76269" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="37" />
 				<run ground="100" />
 			</speed>
 			<hitTime>350</hitTime>
@@ -1201,8 +1201,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="20" />
-			<height normal="10" />
+			<radius normal="18" />
+			<height normal="8.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1709,8 +1709,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="16" />
-			<height normal="50" />
+			<radius normal="48" />
+			<height normal="97" />
 		</collision>
 	</npc>
 	<npc id="20139" level="75" type="Monster" name="Divine Angel">
@@ -1924,7 +1924,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20143" level="12" type="Monster" name="Grizzly Bear">
+	<npc id="20143" level="12" type="Monster" name="Bear">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24000" level="80" type="Folk" name="Leona Blackbird" title="Dragon's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -410,7 +410,7 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 		</skillList>
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -630,7 +630,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -735,7 +735,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2261" mpRegen="3.6" />
+			<vitals hp="3388" hpRegen="10.5" mp="2261" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
@@ -1133,8 +1133,8 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="20" />
-			<height normal="34" />
+			<radius normal="24" />
+			<height normal="43.8" />
 		</collision>
 		
 		<dropLists>
@@ -1185,8 +1185,8 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="24" />
-			<height normal="40" />
+			<radius normal="19.2" />
+			<height normal="31.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1230,8 +1230,8 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 		</skillList>
 		<collision>
-			<radius normal="10.2" />
-			<height normal="22.5" />
+			<radius normal="8.4" />
+			<height normal="18" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1278,8 +1278,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="13" />
-			<height normal="33.4" />
+			<radius normal="11" />
+			<height normal="27.8" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -2051,7 +2051,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2070,7 +2070,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2089,7 +2089,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2108,7 +2108,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2127,7 +2127,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2146,7 +2146,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2165,7 +2165,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2184,7 +2184,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2203,7 +2203,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2222,7 +2222,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="180" />
@@ -2241,7 +2241,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2260,7 +2260,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2279,7 +2279,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2298,7 +2298,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="180" />
@@ -2317,7 +2317,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2336,7 +2336,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2355,7 +2355,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2374,7 +2374,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2393,7 +2393,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2412,7 +2412,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="180" />
@@ -2431,7 +2431,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="180" />
@@ -2450,7 +2450,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="180" />
@@ -2469,7 +2469,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2488,7 +2488,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2507,7 +2507,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2526,7 +2526,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2545,7 +2545,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2564,7 +2564,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2583,7 +2583,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
+			<vitals hp="3094" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />

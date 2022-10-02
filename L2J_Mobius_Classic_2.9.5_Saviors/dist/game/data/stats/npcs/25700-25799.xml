@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25735" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25735" level="90" type="RaidBoss" name="Gigantic Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -22,7 +22,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25736" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25736" level="90" type="RaidBoss" name="Gigantic Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -44,7 +44,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25737" level="90" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25737" level="90" type="RaidBoss" name="Gigantic Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -201,7 +201,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="120" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="1043476" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -221,7 +221,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="206" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="1043476" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -2719,7 +2719,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25787" level="25" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+	<npc id="25787" level="25" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="38" />
 			<height normal="72" />
@@ -2751,7 +2751,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25788" level="35" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+	<npc id="25788" level="35" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="38" />
 			<height normal="72" />
@@ -2783,7 +2783,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25789" level="45" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+	<npc id="25789" level="45" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="38" />
 			<height normal="72" />
@@ -2815,7 +2815,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25790" level="55" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+	<npc id="25790" level="55" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="38" />
 			<height normal="72" />
@@ -2847,7 +2847,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25791" level="65" name="Death Knight" title="Raid Soul Drinker" type="RaidBoss">
+	<npc id="25791" level="65" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="38" />
 			<height normal="72" />
@@ -2881,8 +2881,8 @@
 	</npc>
 	<npc id="25792" type="RaidBoss" level="75" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
-			<radius normal="38" />
-			<height normal="72" />
+			<radius normal="23" />
+			<height normal="64" />
 		</collision>
 		<acquire exp="43740000" sp="1312200" raidPoints="0" />
 		<stats str="40" con="43" dex="30" int="21" men="25" wit="20">
@@ -2890,7 +2890,7 @@
 			<attack type="SWORD" critical="40" physical="1662.16594596409" attackSpeed="253" magical="941.257306822256" random="30" range="40" />
 			<defence physical="998.10183" magical="486.92" shield="0" shieldRate="0" />
 			<speed>
-				<walk ground="63" />
+				<walk ground="80" />
 				<run ground="175" />
 			</speed>
 		</stats>
@@ -2950,7 +2950,7 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="21.0" />
+			<radius normal="21" />
 			<height normal="43.5" />
 		</collision>
 		<skillList>
@@ -3018,8 +3018,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="47.0" />
+			<radius normal="24" />
+			<height normal="47" />
 		</collision>
 		<skillList>
 			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
@@ -3062,7 +3062,7 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="18.0" />
+			<radius normal="18" />
 			<height normal="47.5" />
 		</collision>
 		<skillList>
@@ -3096,8 +3096,8 @@
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="45.0" />
+			<radius normal="24" />
+			<height normal="45" />
 		</collision>
 		<skillList>
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->

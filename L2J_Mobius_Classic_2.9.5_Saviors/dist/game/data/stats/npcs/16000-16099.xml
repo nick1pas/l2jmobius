@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="16049" level="55" type="Folk" name="Agathion Love">
+	<npc id="16049" level="55" type="Folk" name="Love Agathion">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -33,7 +33,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="16055" level="55" type="Folk" name="Griffin">
+	<npc id="16055" level="55" type="Folk" name="Griffon">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -131,12 +131,12 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="16073" level="80" type="Folk" name="Agathion Rudolph">
+	<npc id="16073" level="80" type="Folk" name="Rudolph Agathion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
+			<vitals hp="1764" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -146,7 +146,7 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0.01" />
+			<radius normal="01" />
 			<height normal="5.271" />
 		</collision>
 	</npc>

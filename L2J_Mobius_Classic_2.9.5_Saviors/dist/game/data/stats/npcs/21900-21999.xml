@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21900" level="79" type="Monster" name="Ancient Holy Ground's Deadman">
+	<npc id="21900" level="79" type="Monster" name="Ancient Holy Ground Dead">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -51,7 +51,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21901" level="79" type="Monster" name="Lillim Slayer">
+	<npc id="21901" level="79" type="Monster" name="Lilim Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -107,7 +107,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21902" level="80" type="Monster" name="Lillim Shaman">
+	<npc id="21902" level="80" type="Monster" name="Lilim Sorcerer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -162,7 +162,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21903" level="80" type="Monster" name="Lillim Royal Knight">
+	<npc id="21903" level="80" type="Monster" name="Lilim Royal Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -620,7 +620,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21912" level="80" type="Monster" name="Nephilim Escort">
+	<npc id="21912" level="80" type="Monster" name="Nephilim Royal Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -670,5 +670,654 @@
 				<item id="5430" min="1" max="1" chance="1.484" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
 			</spoil>
 		</dropLists>
+	</npc>
+	<npc id="21913" level="85" type="Folk" name="Lilith" title="Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="224799" hpRegen="10.5" mp="1679" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="42.5" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="21914" level="85" type="Folk" name="Lilith's Escort">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord - Not Available / Nephilim Lord -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="74933" hpRegen="10.5" mp="1679" mpRegen="3.6" />
+			<speed>
+				<walk ground="56" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7.2" />
+			<height normal="28.8" />
+		</collision>
+	</npc>
+	<npc id="21915" level="85" type="Folk" name="Anakim" title="Fallen Angel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="224799" hpRegen="10.5" mp="1679" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18.6" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21916" level="85" type="Folk" name="Anakim's Royal Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="74933" hpRegen="10.5" mp="1679" mpRegen="3.6" />
+			<speed>
+				<walk ground="65" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7.2" />
+			<height normal="24.6" />
+		</collision>
+	</npc>
+	<npc id="21917" level="85" type="Folk" name="Lilith" title="Apostle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="234166" hpRegen="10.5" mp="1768" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="42.5" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="21918" level="85" type="Folk" name="Lilith's Escort">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord - Not Available / Nephilim Lord -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="78055" hpRegen="10.5" mp="1768" mpRegen="3.6" />
+			<speed>
+				<walk ground="56" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7.2" />
+			<height normal="28.8" />
+		</collision>
+	</npc>
+	<npc id="21919" level="85" type="Folk" name="Anakim" title="Fallen Angel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="234166" hpRegen="10.5" mp="1768" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="200" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18.6" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21920" level="85" type="Folk" name="Anakim's Royal Guard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="78055" hpRegen="10.5" mp="1768" mpRegen="3.6" />
+			<speed>
+				<walk ground="65" />
+				<run ground="220" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7.2" />
+			<height normal="24.6" />
+		</collision>
+	</npc>
+	<npc id="21921" level="85" type="Folk" name="Ignis" title="Apostle of Fire">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="265672" hpRegen="10.5" mp="1985" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32" />
+			<height normal="81" />
+		</collision>
+	</npc>
+	<npc id="21922" level="85" type="Folk" name="Nebula" title="Apostle of Water">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="306545" hpRegen="10.5" mp="2290" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="28" />
+			<height normal="58" />
+		</collision>
+	</npc>
+	<npc id="21923" level="85" type="Folk" name="Water Slime">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="102181" hpRegen="10.5" mp="2290" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="36" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="21924" level="85" type="Folk" name="Petram" title="Apostle of Wind">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="347417" hpRegen="10.5" mp="2595" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="61" />
+		</collision>
+	</npc>
+	<npc id="21925" level="85" type="Folk" name="Petram's Fragment">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="115805" hpRegen="10.5" mp="2595" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21926" level="85" type="Folk" name="Petram's Piece">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="115805" hpRegen="10.5" mp="2595" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21927" level="85" type="Folk" name="Procella" title="Apostle of Earth">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="408726" hpRegen="10.5" mp="3054" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32" />
+			<height normal="105.8" />
+		</collision>
+	</npc>
+	<npc id="21928" level="85" type="Folk" name="Procella's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="136242" hpRegen="10.5" mp="3054" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="65" />
+		</collision>
+	</npc>
+	<npc id="21929" level="85" type="Folk" name="Procella's Escort">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="136242" hpRegen="10.5" mp="3054" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="65" />
+		</collision>
+	</npc>
+	<npc id="21930" level="85" type="Folk" name="Ignis" title="Apostle of Fire">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="276742" hpRegen="10.5" mp="2089" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32" />
+			<height normal="81" />
+		</collision>
+	</npc>
+	<npc id="21931" level="85" type="Folk" name="Nebula" title="Apostle of Water">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="319317" hpRegen="10.5" mp="2411" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="33.6" />
+			<height normal="70.2" />
+		</collision>
+	</npc>
+	<npc id="21932" level="85" type="Folk" name="Water Slime">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="106439" hpRegen="10.5" mp="2411" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="36" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="21933" level="85" type="Folk" name="Petram" title="Apostle of Wind">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="361893" hpRegen="10.5" mp="2732" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="61" />
+		</collision>
+	</npc>
+	<npc id="21934" level="85" type="Folk" name="Petram's Fragment">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="120631" hpRegen="10.5" mp="2732" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21935" level="85" type="Folk" name="Petram's Piece">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="120631" hpRegen="10.5" mp="2732" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="24" />
+			<height normal="35.4" />
+		</collision>
+	</npc>
+	<npc id="21936" level="85" type="Folk" name="Procella" title="Apostle of Earth">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="425756" hpRegen="10.5" mp="3214" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32" />
+			<height normal="105.8" />
+		</collision>
+	</npc>
+	<npc id="21937" level="85" type="Folk" name="Procella's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="141918" hpRegen="10.5" mp="3214" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="65" />
+		</collision>
+	</npc>
+	<npc id="21938" level="85" type="Folk" name="Procella's Escort">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="141918" hpRegen="10.5" mp="3214" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="65" />
+		</collision>
+	</npc>
+	<npc id="21939" level="85" type="Folk" name="Pirate Ship Janitor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
+			<speed>
+				<walk ground="20" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="21940" level="85" type="Folk" name="Pirate Ship Soldier">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6227" hpRegen="10.5" mp="2614" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="21941" level="85" type="Folk" name="Pirate Ship Shaman">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6227" hpRegen="10.5" mp="2614" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="21942" level="85" type="Folk" name="Pirate Ship Shield Soldier">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6227" hpRegen="10.5" mp="2614" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="21943" level="85" type="Folk" name="Ruluik" title="Ancient Pirate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="19.5" />
+			<height normal="54.75" />
+		</collision>
+	</npc>
+	<npc id="21944" level="85" type="Folk" name="Eric" title="Ancient Pirate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="39719" /> <!-- Monster only_Crook Staff -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="21945" level="85" type="Folk" name="Leif" title="Ancient Pirate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="43" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16.5" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="21946" level="85" type="Folk" name="Gunhild" title="Ancient Pirate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<speed>
+				<walk ground="30" />
+				<run ground="175" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="60" />
+		</collision>
 	</npc>
 </list>

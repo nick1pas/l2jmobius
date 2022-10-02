@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20600" level="40" type="Monster" name="Karul Bugbear">
 		<parameters>
@@ -639,7 +639,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20610" level="31" type="Monster" name="Watchman Of Fire">
+	<npc id="20610" level="31" type="Monster" name="Sentinel Of Water">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1378,7 +1378,7 @@
 			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.9478818" magical="188.3122" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -1850,7 +1850,7 @@
 			<attack physical="734.253971" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="264.6823909" magical="213.05139" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="45" />
 				<run ground="174" />
 			</speed>
 			<hitTime>500</hitTime>
@@ -1878,8 +1878,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="14" />
-			<height normal="40" />
+			<radius normal="18" />
+			<height normal="41" />
 		</collision>
 	</npc>
 	<npc id="20629" level="78" type="Monster" name="Karik">
@@ -3489,7 +3489,7 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -3556,7 +3556,7 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -3691,7 +3691,7 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>

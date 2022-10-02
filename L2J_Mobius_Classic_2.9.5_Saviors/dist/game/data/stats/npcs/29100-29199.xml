@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29100" level="80" type="Monster" name="Archangel">
 		<race>DIVINE</race>
@@ -106,7 +106,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="29105" level="82" type="RaidBoss" name="King Ignis" title="Flame Spirit King">
+	<npc id="29105" level="82" type="RaidBoss" name="King Ignis">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" />
@@ -402,7 +402,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29108" level="82" type="RaidBoss" name="King Petram" title="Earth Spirit King">
+	<npc id="29108" level="82" type="RaidBoss" name="King Petram">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" />
@@ -534,8 +534,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0.001" />
-			<height normal="0.001" />
+			<radius normal="01" />
+			<height normal="01" />
 		</collision>
 	</npc>
 	<npc id="29111" level="80" type="Monster" name="Water Slime">
@@ -620,7 +620,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29115" level="80" type="Monster" name="Procella's Storm">
+	<npc id="29115" level="80" type="Monster" name="Procella's Gust">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -639,7 +639,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29116" level="80" type="Monster" name="Petram Piece">
+	<npc id="29116" level="80" type="Monster" name="Petram's Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -658,7 +658,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="29117" level="80" type="Monster" name="Petram Fragment">
+	<npc id="29117" level="80" type="Monster" name="Petram's Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -682,7 +682,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<vitals hp="355555" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="190" />
@@ -716,6 +716,272 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+	</npc>
+	<npc id="29120" level="85" type="Folk" name="King Ignis" title="Fire Spirit King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="102" />
+		</collision>
+	</npc>
+	<npc id="29121" level="85" type="Folk" name="Queen Nebula" title="Water Spirit Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="42" />
+			<height normal="88.5" />
+		</collision>
+	</npc>
+	<npc id="29122" level="85" type="Folk" name="King Procella" title="Wind Spirit King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="133" />
+		</collision>
+	</npc>
+	<npc id="29123" level="85" type="Folk" name="King Petram" title="Earth Spirit King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="300000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="80" />
+			<height normal="125" />
+		</collision>
+	</npc>
+	<npc id="29124" level="85" type="Folk" name="Freya" title="Ice Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12680" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="54" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="22" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="29125" level="85" type="Folk" name="Safe Zone">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="01" />
+			<height normal="01" />
+		</collision>
+	</npc>
+	<npc id="29126" level="85" type="Folk" name="Water Slime">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="50000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="36" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="36" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="29127" level="85" type="Folk" name="Procella's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2962962" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="133" />
+		</collision>
+	</npc>
+	<npc id="29128" level="85" type="Folk" name="Procella's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2962962" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="133" />
+		</collision>
+	</npc>
+	<npc id="29129" level="85" type="Folk" name="Procella's Guardian">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2962962" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="133" />
+		</collision>
+	</npc>
+	<npc id="29130" level="85" type="Folk" name="Procella's Gust">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2962962" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="50" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="50" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="29131" level="85" type="Folk" name="Petram's Fragment">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355555" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="61" />
+		</collision>
+	</npc>
+	<npc id="29132" level="85" type="Folk" name="Petram's Piece">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355555" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="40" />
+			<height normal="61" />
+		</collision>
+	</npc>
+	<npc id="29133" level="85" type="Folk" name="Spirit Sovereignty's Magic">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="355555" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="190" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
 	</npc>
 	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">
 		<!-- Todo: CT2.5 -->

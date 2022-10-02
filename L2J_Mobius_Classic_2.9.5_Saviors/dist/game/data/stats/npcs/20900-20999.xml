@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20919" level="20" type="Monster" name="Maille Lizardman">
 		<parameters>
@@ -581,8 +581,8 @@
 			<attack physical="74.99121" magical="51.20928" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="92.0445195" magical="79.24022" evasion="10" />
 			<speed>
-				<walk ground="72" />
-				<run ground="130" />
+				<walk ground="90" />
+				<run ground="120" />
 			</speed>
 			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -610,8 +610,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="39" />
-			<height normal="38" />
+			<radius normal="8" />
+			<height normal="24.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -3610,7 +3610,7 @@
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -3675,7 +3675,7 @@
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="50" />
+			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 		<dropLists>
@@ -4305,7 +4305,7 @@
 			<attack physical="568.1199909" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="309.707761" magical="206.02791" />
 			<speed>
-				<walk ground="37" />
+				<walk ground="60" />
 				<run ground="160" />
 			</speed>
 			<hitTime>450</hitTime>
@@ -5213,7 +5213,7 @@
 		</ai>
 		<collision>
 			<radius normal="15.6" />
-			<height normal="34.05" />
+			<height normal="345" />
 		</collision>
 	</npc>
 	<npc id="20995" level="81" type="Monster" name="Garden Guard" element="WATER">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20400" level="12" type="Monster" name="Blood Fungus">
 		<parameters>
@@ -421,8 +421,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -479,7 +479,7 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
-			<height normal="45" />
+			<height normal="26.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -666,8 +666,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="20415" level="17" type="Monster" name="Scarlet Salamander">
@@ -2388,7 +2388,7 @@
 			<attack physical="32.578601" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="66.8656" magical="53.82228" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="140" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -3799,7 +3799,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20477" level="6" type="Monster" name="Kasha Forest Wolf">
+	<npc id="20477" level="6" type="Monster" name="Kasha Timber Wolf">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4061,7 +4061,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20483" level="17" type="Monster" name="Deadman's Lamp">
+	<npc id="20483" level="17" type="Monster" name="Corpse Candle">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4076,7 +4076,7 @@
 			<attack physical="31.72536364" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.553159" magical="57.57804" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="140" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -4645,8 +4645,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="16" />
-			<height normal="40" />
+			<radius normal="21" />
+			<height normal="39" />
 		</collision>
 		<dropLists>
 			<drop>

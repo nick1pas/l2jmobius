@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21800" level="80" type="Monster" name="Kookaburra">
 		<race>BEAST</race>
@@ -1239,7 +1239,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21821" level="79" type="Monster" name="Eye of the Watchman" element="EARTH">
+	<npc id="21821" level="79" type="Monster" name="Eye of Watchman" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1348,7 +1348,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21823" level="80" type="Monster" name="Canyon Grendel Warrior" element="EARTH">
+	<npc id="21823" level="80" type="Monster" name="Valley Grendel Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -1679,7 +1679,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21829" level="81" type="Monster" name="Disciple of Punishment" element="EARTH">
+	<npc id="21829" level="81" type="Monster" name="Disciples of Punishment" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1734,7 +1734,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21830" level="82" type="Monster" name="Disciple of Conquest" element="EARTH">
+	<npc id="21830" level="82" type="Monster" name="Apostle of Conquest" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1785,7 +1785,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21831" level="82" type="Monster" name="Disciple of Power" element="EARTH">
+	<npc id="21831" level="82" type="Monster" name="Apostle of Strength" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1836,13 +1836,13 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="21832" level="82" type="Folk" name="Disciple of Authority">
+	<npc id="21832" level="82" type="Folk" name="Disciples of Authority">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6718" />
 		<acquire exp="190827" sp="5724" attributeExp="1230" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<vitals hp="3736" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="155" />
@@ -2329,7 +2329,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21839" level="82" type="Monster" name="Hot Springs Yeti" title="Ruler of Hot Springs">
+	<npc id="21839" level="82" type="Monster" name="Hot Springs Yeti" title="Hot Springs Master">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2385,7 +2385,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="21840" level="81" type="Monster" name="Hot Springs Atroxspawn">
+	<npc id="21840" level="81" type="Monster" name="Hot Springs Atrox">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -4406,7 +4406,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21869" level="80" type="Monster" name="Varka Silenos Altar Escort" title="Guardian of the Altar">
+	<npc id="21869" level="80" type="Monster" name="Varka's Altar Rear Escort" title="Guardian of the Altar">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -4770,7 +4770,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21874" level="80" type="Monster" name="Varka Silenos Altar Shaman" title="Guardian of the Altar">
+	<npc id="21874" level="80" type="Monster" name="Varka's Altar Shaman" title="Guardian of the Altar">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -6370,7 +6370,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21898" level="78" type="Monster" name="Ancient Holy Ground's Witch">
+	<npc id="21898" level="78" type="Monster" name="Ancient Holy Ground Witch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -6414,7 +6414,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21899" level="78" type="Monster" name="Ancient Holy Ground's Watchman">
+	<npc id="21899" level="78" type="Monster" name="Ancient Martyrium Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21000" level="54" type="Monster" name="Soul of Ruins">
 		<!-- L2wiki: https://l2wiki.com/classic/Soul_of_Ruins -->
@@ -2195,7 +2195,7 @@
 			<attack physical="319.490468" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.8754727" magical="143.17771" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>100</hitTime>
@@ -4342,7 +4342,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21086" level="72" type="Monster" name="Bloody Liviona">
+	<npc id="21086" level="72" type="Monster" name="Drake Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -4358,12 +4358,13 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="33396" sp="3392" /> <!-- Need confirm retail values -->
+		<equipment rhand="236" /> <!-- Soul Separator -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3572" hpRegen="42.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="89" />
 				<run ground="174" />
 			</speed>
 			<hitTime>340</hitTime>
@@ -4392,8 +4393,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="15" />
-			<height normal="28" />
+			<radius normal="18" />
+			<height normal="36" />
 		</collision>
 		<dropLists> <!-- CT2.5 -->
 			<drop>
@@ -4417,7 +4418,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21087" level="65" type="Monster" name="Bloody Knight">
+	<npc id="21087" level="65" type="Monster" name="Drake Warrior">
 		<!-- L2wiki: https://l2wiki.com/classic/Bloody_Knight -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -4436,14 +4437,14 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="84" />
+		<equipment rhand="5800" />
 		<acquire exp="12401" sp="372" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3638" hpRegen="6" mp="1442" mpRegen="3" />
 			<attack physical="1077" magical="619" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355" magical="340" />
 			<speed>
-				<walk ground="27" />
+				<walk ground="56" />
 				<run ground="174" />
 			</speed>
 			<hitTime>710</hitTime>
@@ -4492,7 +4493,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21088" level="74" type="Monster" name="Bloody Banshee">
+	<npc id="21088" level="74" type="Monster" name="Drakw Leader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4514,7 +4515,7 @@
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="43" />
 				<run ground="174" />
 			</speed>
 			<hitTime>560</hitTime>
@@ -4542,8 +4543,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="9" />
-			<height normal="23" />
+			<radius normal="29" />
+			<height normal="49.9" />
 		</collision>
 		<dropLists> <!-- CT2.5 -->
 			<drop>
@@ -4568,7 +4569,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21089" level="68" type="Monster" name="Bloody Lord">
+	<npc id="21089" level="68" type="Monster" name="Drake Mage">
 		<!-- L2wiki: https://l2wiki.com/classic/Bloody_Lord -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -4591,7 +4592,7 @@
 			<attack physical="1217.179911" magical="713.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="382.2238455" magical="365.61053" />
 			<speed>
-				<walk ground="37" />
+				<walk ground="92" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>
