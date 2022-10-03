@@ -42,7 +42,7 @@ public class Q10989_DangerousPredators extends Quest
 	// Monsters
 	private static final int LONGTAIL_KELTIR = 20533;
 	private static final int ELDER_LONGTAIL_KELTIR = 20539;
-	private static final int BLACK_WOLF = 21983;
+	private static final int BLACK_WOLF = 20317;
 	// Items
 	private static final ItemHolder SOE_TO_GERAILD = new ItemHolder(91650, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 10);
