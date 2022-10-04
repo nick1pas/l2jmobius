@@ -20,6 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
+import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants;
 import quests.Q00327_RecoverTheFarmland.Q00327_RecoverTheFarmland;
@@ -79,6 +80,7 @@ public class QuestMasterHandler
 	private static final Class<?>[] QUESTS =
 	{
 		Q00127_FishingSpecialistsRequest.class,
+		Q00255_Tutorial.class,
 		Q00300_HuntingLetoLizardman.class,
 		Q00326_VanquishRemnants.class,
 		Q00327_RecoverTheFarmland.class,
