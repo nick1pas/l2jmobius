@@ -209,7 +209,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			else
 			{
 				// set enchant value
-				player.getInventory().unEquipItemInSlotAndRecord(armorType);
+				player.getInventory().unEquipItemInSlotAndRecord(itemInstance.getEquipSlot());
 				itemInstance.setEnchantLevel(ench);
 				player.getInventory().equipItemAndRecord(itemInstance);
 				
