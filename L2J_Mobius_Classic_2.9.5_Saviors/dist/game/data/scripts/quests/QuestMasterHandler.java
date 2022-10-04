@@ -19,37 +19,6 @@ package quests;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
-import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
-import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
-import quests.Q00073_SagaOfTheDuelist.Q00073_SagaOfTheDuelist;
-import quests.Q00074_SagaOfTheDreadnought.Q00074_SagaOfTheDreadnought;
-import quests.Q00075_SagaOfTheTitan.Q00075_SagaOfTheTitan;
-import quests.Q00076_SagaOfTheGrandKhavatari.Q00076_SagaOfTheGrandKhavatari;
-import quests.Q00077_SagaOfTheDominator.Q00077_SagaOfTheDominator;
-import quests.Q00078_SagaOfTheDoomcryer.Q00078_SagaOfTheDoomcryer;
-import quests.Q00079_SagaOfTheAdventurer.Q00079_SagaOfTheAdventurer;
-import quests.Q00080_SagaOfTheWindRider.Q00080_SagaOfTheWindRider;
-import quests.Q00081_SagaOfTheGhostHunter.Q00081_SagaOfTheGhostHunter;
-import quests.Q00082_SagaOfTheSagittarius.Q00082_SagaOfTheSagittarius;
-import quests.Q00083_SagaOfTheMoonlightSentinel.Q00083_SagaOfTheMoonlightSentinel;
-import quests.Q00084_SagaOfTheGhostSentinel.Q00084_SagaOfTheGhostSentinel;
-import quests.Q00085_SagaOfTheCardinal.Q00085_SagaOfTheCardinal;
-import quests.Q00086_SagaOfTheHierophant.Q00086_SagaOfTheHierophant;
-import quests.Q00087_SagaOfEvasSaint.Q00087_SagaOfEvasSaint;
-import quests.Q00088_SagaOfTheArchmage.Q00088_SagaOfTheArchmage;
-import quests.Q00089_SagaOfTheMysticMuse.Q00089_SagaOfTheMysticMuse;
-import quests.Q00090_SagaOfTheStormScreamer.Q00090_SagaOfTheStormScreamer;
-import quests.Q00091_SagaOfTheArcanaLord.Q00091_SagaOfTheArcanaLord;
-import quests.Q00092_SagaOfTheElementalMaster.Q00092_SagaOfTheElementalMaster;
-import quests.Q00093_SagaOfTheSpectralMaster.Q00093_SagaOfTheSpectralMaster;
-import quests.Q00094_SagaOfTheSoultaker.Q00094_SagaOfTheSoultaker;
-import quests.Q00095_SagaOfTheHellKnight.Q00095_SagaOfTheHellKnight;
-import quests.Q00096_SagaOfTheSpectralDancer.Q00096_SagaOfTheSpectralDancer;
-import quests.Q00097_SagaOfTheShillienTemplar.Q00097_SagaOfTheShillienTemplar;
-import quests.Q00098_SagaOfTheShillienSaint.Q00098_SagaOfTheShillienSaint;
-import quests.Q00099_SagaOfTheFortuneSeeker.Q00099_SagaOfTheFortuneSeeker;
-import quests.Q00100_SagaOfTheMaestro.Q00100_SagaOfTheMaestro;
 import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
 import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants;
@@ -109,37 +78,6 @@ public class QuestMasterHandler
 	
 	private static final Class<?>[] QUESTS =
 	{
-		Q00070_SagaOfThePhoenixKnight.class,
-		Q00071_SagaOfEvasTemplar.class,
-		Q00072_SagaOfTheSwordMuse.class,
-		Q00073_SagaOfTheDuelist.class,
-		Q00074_SagaOfTheDreadnought.class,
-		Q00075_SagaOfTheTitan.class,
-		Q00076_SagaOfTheGrandKhavatari.class,
-		Q00077_SagaOfTheDominator.class,
-		Q00078_SagaOfTheDoomcryer.class,
-		Q00079_SagaOfTheAdventurer.class,
-		Q00080_SagaOfTheWindRider.class,
-		Q00081_SagaOfTheGhostHunter.class,
-		Q00082_SagaOfTheSagittarius.class,
-		Q00083_SagaOfTheMoonlightSentinel.class,
-		Q00084_SagaOfTheGhostSentinel.class,
-		Q00085_SagaOfTheCardinal.class,
-		Q00086_SagaOfTheHierophant.class,
-		Q00087_SagaOfEvasSaint.class,
-		Q00088_SagaOfTheArchmage.class,
-		Q00089_SagaOfTheMysticMuse.class,
-		Q00090_SagaOfTheStormScreamer.class,
-		Q00091_SagaOfTheArcanaLord.class,
-		Q00092_SagaOfTheElementalMaster.class,
-		Q00093_SagaOfTheSpectralMaster.class,
-		Q00094_SagaOfTheSoultaker.class,
-		Q00095_SagaOfTheHellKnight.class,
-		Q00096_SagaOfTheSpectralDancer.class,
-		Q00097_SagaOfTheShillienTemplar.class,
-		Q00098_SagaOfTheShillienSaint.class,
-		Q00099_SagaOfTheFortuneSeeker.class,
-		Q00100_SagaOfTheMaestro.class,
 		Q00127_FishingSpecialistsRequest.class,
 		Q00300_HuntingLetoLizardman.class,
 		Q00326_VanquishRemnants.class,
