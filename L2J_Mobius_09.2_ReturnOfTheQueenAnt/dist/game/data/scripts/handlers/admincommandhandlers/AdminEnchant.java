@@ -114,197 +114,197 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		else
 		{
-			int armorType = -1;
+			int slot = -1;
 			if (command.startsWith("admin_seteh"))
 			{
-				armorType = Inventory.PAPERDOLL_HEAD;
+				slot = Inventory.PAPERDOLL_HEAD;
 			}
 			else if (command.startsWith("admin_setec"))
 			{
-				armorType = Inventory.PAPERDOLL_CHEST;
+				slot = Inventory.PAPERDOLL_CHEST;
 			}
 			else if (command.startsWith("admin_seteg"))
 			{
-				armorType = Inventory.PAPERDOLL_GLOVES;
+				slot = Inventory.PAPERDOLL_GLOVES;
 			}
 			else if (command.startsWith("admin_seteb"))
 			{
-				armorType = Inventory.PAPERDOLL_FEET;
+				slot = Inventory.PAPERDOLL_FEET;
 			}
 			else if (command.startsWith("admin_setel"))
 			{
-				armorType = Inventory.PAPERDOLL_LEGS;
+				slot = Inventory.PAPERDOLL_LEGS;
 			}
 			else if (command.startsWith("admin_setew"))
 			{
-				armorType = Inventory.PAPERDOLL_RHAND;
+				slot = Inventory.PAPERDOLL_RHAND;
 			}
 			else if (command.startsWith("admin_setes"))
 			{
-				armorType = Inventory.PAPERDOLL_LHAND;
+				slot = Inventory.PAPERDOLL_LHAND;
 			}
 			else if (command.startsWith("admin_setle"))
 			{
-				armorType = Inventory.PAPERDOLL_LEAR;
+				slot = Inventory.PAPERDOLL_LEAR;
 			}
 			else if (command.startsWith("admin_setre"))
 			{
-				armorType = Inventory.PAPERDOLL_REAR;
+				slot = Inventory.PAPERDOLL_REAR;
 			}
 			else if (command.startsWith("admin_setlf"))
 			{
-				armorType = Inventory.PAPERDOLL_LFINGER;
+				slot = Inventory.PAPERDOLL_LFINGER;
 			}
 			else if (command.startsWith("admin_setrf"))
 			{
-				armorType = Inventory.PAPERDOLL_RFINGER;
+				slot = Inventory.PAPERDOLL_RFINGER;
 			}
 			else if (command.startsWith("admin_seten"))
 			{
-				armorType = Inventory.PAPERDOLL_NECK;
+				slot = Inventory.PAPERDOLL_NECK;
 			}
 			else if (command.startsWith("admin_setun"))
 			{
-				armorType = Inventory.PAPERDOLL_UNDER;
+				slot = Inventory.PAPERDOLL_UNDER;
 			}
 			else if (command.startsWith("admin_setba"))
 			{
-				armorType = Inventory.PAPERDOLL_CLOAK;
+				slot = Inventory.PAPERDOLL_CLOAK;
 			}
 			else if (command.startsWith("admin_setbe"))
 			{
-				armorType = Inventory.PAPERDOLL_BELT;
+				slot = Inventory.PAPERDOLL_BELT;
 			}
 			else if (command.startsWith("admin_seth1"))
 			{
-				armorType = Inventory.PAPERDOLL_HAIR;
+				slot = Inventory.PAPERDOLL_HAIR;
 			}
 			else if (command.startsWith("admin_seth2"))
 			{
-				armorType = Inventory.PAPERDOLL_HAIR2;
+				slot = Inventory.PAPERDOLL_HAIR2;
 			}
 			else if (command.startsWith("admin_setbr"))
 			{
-				armorType = Inventory.PAPERDOLL_BROOCH;
+				slot = Inventory.PAPERDOLL_BROOCH;
 			}
 			else if (command.startsWith("admin_setbt")) // bracelet
 			{
-				armorType = Inventory.PAPERDOLL_RBRACELET;
+				slot = Inventory.PAPERDOLL_RBRACELET;
 			}
 			else if (command.startsWith("admin_setsb")) // seed bracelet
 			{
-				armorType = Inventory.PAPERDOLL_LBRACELET;
+				slot = Inventory.PAPERDOLL_LBRACELET;
 			}
 			else if (command.startsWith("admin_setab"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT_BOOK;
+				slot = Inventory.PAPERDOLL_ARTIFACT_BOOK;
 			}
 			else if (command.startsWith("admin_seta1"))
 			{
-				armorType = Inventory.PAPERDOLL_AGATHION1;
+				slot = Inventory.PAPERDOLL_AGATHION1;
 			}
 			else if (command.startsWith("admin_seta2"))
 			{
-				armorType = Inventory.PAPERDOLL_AGATHION2;
+				slot = Inventory.PAPERDOLL_AGATHION2;
 			}
 			else if (command.startsWith("admin_seta3"))
 			{
-				armorType = Inventory.PAPERDOLL_AGATHION3;
+				slot = Inventory.PAPERDOLL_AGATHION3;
 			}
 			else if (command.startsWith("admin_seta4"))
 			{
-				armorType = Inventory.PAPERDOLL_AGATHION4;
+				slot = Inventory.PAPERDOLL_AGATHION4;
 			}
 			else if (command.startsWith("admin_seta5"))
 			{
-				armorType = Inventory.PAPERDOLL_AGATHION5;
+				slot = Inventory.PAPERDOLL_AGATHION5;
 			}
 			else if (command.startsWith("admin_set01"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT1;
+				slot = Inventory.PAPERDOLL_ARTIFACT1;
 			}
 			else if (command.startsWith("admin_set02"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT2;
+				slot = Inventory.PAPERDOLL_ARTIFACT2;
 			}
 			else if (command.startsWith("admin_set03"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT3;
+				slot = Inventory.PAPERDOLL_ARTIFACT3;
 			}
 			else if (command.startsWith("admin_set04"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT4;
+				slot = Inventory.PAPERDOLL_ARTIFACT4;
 			}
 			else if (command.startsWith("admin_set05"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT5;
+				slot = Inventory.PAPERDOLL_ARTIFACT5;
 			}
 			else if (command.startsWith("admin_set06"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT6;
+				slot = Inventory.PAPERDOLL_ARTIFACT6;
 			}
 			else if (command.startsWith("admin_set07"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT7;
+				slot = Inventory.PAPERDOLL_ARTIFACT7;
 			}
 			else if (command.startsWith("admin_set08"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT8;
+				slot = Inventory.PAPERDOLL_ARTIFACT8;
 			}
 			else if (command.startsWith("admin_set09"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT9;
+				slot = Inventory.PAPERDOLL_ARTIFACT9;
 			}
 			else if (command.startsWith("admin_set10"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT10;
+				slot = Inventory.PAPERDOLL_ARTIFACT10;
 			}
 			else if (command.startsWith("admin_set11"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT11;
+				slot = Inventory.PAPERDOLL_ARTIFACT11;
 			}
 			else if (command.startsWith("admin_set12"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT12;
+				slot = Inventory.PAPERDOLL_ARTIFACT12;
 			}
 			else if (command.startsWith("admin_set13"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT13;
+				slot = Inventory.PAPERDOLL_ARTIFACT13;
 			}
 			else if (command.startsWith("admin_set14"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT14;
+				slot = Inventory.PAPERDOLL_ARTIFACT14;
 			}
 			else if (command.startsWith("admin_set15"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT15;
+				slot = Inventory.PAPERDOLL_ARTIFACT15;
 			}
 			else if (command.startsWith("admin_set16"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT16;
+				slot = Inventory.PAPERDOLL_ARTIFACT16;
 			}
 			else if (command.startsWith("admin_set17"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT17;
+				slot = Inventory.PAPERDOLL_ARTIFACT17;
 			}
 			else if (command.startsWith("admin_set18"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT18;
+				slot = Inventory.PAPERDOLL_ARTIFACT18;
 			}
 			else if (command.startsWith("admin_set19"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT19;
+				slot = Inventory.PAPERDOLL_ARTIFACT19;
 			}
 			else if (command.startsWith("admin_set20"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT20;
+				slot = Inventory.PAPERDOLL_ARTIFACT20;
 			}
 			else if (command.startsWith("admin_set21"))
 			{
-				armorType = Inventory.PAPERDOLL_ARTIFACT21;
+				slot = Inventory.PAPERDOLL_ARTIFACT21;
 			}
 			
-			if (armorType != -1)
+			if (slot != -1)
 			{
 				try
 				{
@@ -318,7 +318,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					}
 					else
 					{
-						setEnchant(activeChar, ench, armorType);
+						setEnchant(activeChar, ench, slot);
 					}
 				}
 				catch (StringIndexOutOfBoundsException e)
@@ -331,7 +331,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					}
 					BuilderUtil.sendSysMessage(activeChar, "Auto-Set Enchant value to 0.");
 					
-					setEnchant(activeChar, fuse, armorType);
+					setEnchant(activeChar, fuse, slot);
 				}
 				catch (NumberFormatException e)
 				{
@@ -349,7 +349,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void setEnchant(Player activeChar, int ench, int armorType)
+	private void setEnchant(Player activeChar, int ench, int slot)
 	{
 		// get the target
 		
@@ -364,10 +364,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		final Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
-		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
+		final Item paperdollInstance = player.getInventory().getPaperdollItem(slot);
+		if ((paperdollInstance != null) && (paperdollInstance.getLocationSlot() == slot))
 		{
-			itemInstance = parmorInstance;
+			itemInstance = paperdollInstance;
 		}
 		
 		if (itemInstance != null)
