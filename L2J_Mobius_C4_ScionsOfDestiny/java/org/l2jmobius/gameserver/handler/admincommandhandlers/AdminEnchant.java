@@ -62,65 +62,65 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		else
 		{
-			int armorType = -1;
+			int slot = -1;
 			if (command.startsWith("admin_seteh"))
 			{
-				armorType = Inventory.PAPERDOLL_HEAD;
+				slot = Inventory.PAPERDOLL_HEAD;
 			}
 			else if (command.startsWith("admin_setec"))
 			{
-				armorType = Inventory.PAPERDOLL_CHEST;
+				slot = Inventory.PAPERDOLL_CHEST;
 			}
 			else if (command.startsWith("admin_seteg"))
 			{
-				armorType = Inventory.PAPERDOLL_GLOVES;
+				slot = Inventory.PAPERDOLL_GLOVES;
 			}
 			else if (command.startsWith("admin_seteb"))
 			{
-				armorType = Inventory.PAPERDOLL_FEET;
+				slot = Inventory.PAPERDOLL_FEET;
 			}
 			else if (command.startsWith("admin_setel"))
 			{
-				armorType = Inventory.PAPERDOLL_LEGS;
+				slot = Inventory.PAPERDOLL_LEGS;
 			}
 			else if (command.startsWith("admin_setew"))
 			{
-				armorType = Inventory.PAPERDOLL_RHAND;
+				slot = Inventory.PAPERDOLL_RHAND;
 			}
 			else if (command.startsWith("admin_setes"))
 			{
-				armorType = Inventory.PAPERDOLL_LHAND;
+				slot = Inventory.PAPERDOLL_LHAND;
 			}
 			else if (command.startsWith("admin_setle"))
 			{
-				armorType = Inventory.PAPERDOLL_LEAR;
+				slot = Inventory.PAPERDOLL_LEAR;
 			}
 			else if (command.startsWith("admin_setre"))
 			{
-				armorType = Inventory.PAPERDOLL_REAR;
+				slot = Inventory.PAPERDOLL_REAR;
 			}
 			else if (command.startsWith("admin_setlf"))
 			{
-				armorType = Inventory.PAPERDOLL_LFINGER;
+				slot = Inventory.PAPERDOLL_LFINGER;
 			}
 			else if (command.startsWith("admin_setrf"))
 			{
-				armorType = Inventory.PAPERDOLL_RFINGER;
+				slot = Inventory.PAPERDOLL_RFINGER;
 			}
 			else if (command.startsWith("admin_seten"))
 			{
-				armorType = Inventory.PAPERDOLL_NECK;
+				slot = Inventory.PAPERDOLL_NECK;
 			}
 			else if (command.startsWith("admin_setun"))
 			{
-				armorType = Inventory.PAPERDOLL_UNDER;
+				slot = Inventory.PAPERDOLL_UNDER;
 			}
 			else if (command.startsWith("admin_setba"))
 			{
-				armorType = Inventory.PAPERDOLL_BACK;
+				slot = Inventory.PAPERDOLL_BACK;
 			}
 			
-			if (armorType != -1)
+			if (slot != -1)
 			{
 				try
 				{
@@ -133,7 +133,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					}
 					else
 					{
-						setEnchant(activeChar, ench, armorType);
+						setEnchant(activeChar, ench, slot);
 					}
 				}
 				catch (StringIndexOutOfBoundsException e)
@@ -153,7 +153,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void setEnchant(Player activeChar, int ench, int armorType)
+	private void setEnchant(Player activeChar, int ench, int slot)
 	{
 		// get the target
 		WorldObject target = activeChar.getTarget();
@@ -178,18 +178,18 @@ public class AdminEnchant implements IAdminCommandHandler
 		Item itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		Item parmorInstance = player.getInventory().getPaperdollItem(armorType);
-		if ((parmorInstance != null) && (parmorInstance.getEquipSlot() == armorType))
+		Item paperdollInstance = player.getInventory().getPaperdollItem(slot);
+		if ((paperdollInstance != null) && (paperdollInstance.getEquipSlot() == slot))
 		{
-			itemInstance = parmorInstance;
+			itemInstance = paperdollInstance;
 		}
 		else
 		{
 			// for bows and double handed weapons
-			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
-			if ((parmorInstance != null) && (parmorInstance.getEquipSlot() == Inventory.PAPERDOLL_LRHAND))
+			paperdollInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
+			if ((paperdollInstance != null) && (paperdollInstance.getEquipSlot() == Inventory.PAPERDOLL_LRHAND))
 			{
-				itemInstance = parmorInstance;
+				itemInstance = paperdollInstance;
 			}
 		}
 		
