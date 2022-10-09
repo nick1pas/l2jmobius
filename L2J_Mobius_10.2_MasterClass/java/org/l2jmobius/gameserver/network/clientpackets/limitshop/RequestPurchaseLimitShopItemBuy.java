@@ -86,13 +86,14 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_amount < 1)
+		if (_product == null)
 		{
 			return;
 		}
 		
-		if (_product == null)
+		if ((_amount < 1) || (_amount > 10000))
 		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
 			return;
 		}
 		

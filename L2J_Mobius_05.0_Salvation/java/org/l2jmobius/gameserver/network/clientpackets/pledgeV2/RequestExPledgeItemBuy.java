@@ -43,6 +43,12 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if ((_count < 1) || (_count > 10000))
+		{
+			client.sendPacket(new ExPledgeItemBuy(1));
+			return;
+		}
+		
 		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null))
 		{
