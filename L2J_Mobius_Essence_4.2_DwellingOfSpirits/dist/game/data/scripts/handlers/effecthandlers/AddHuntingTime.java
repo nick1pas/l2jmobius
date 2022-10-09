@@ -25,8 +25,9 @@ import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneChargeResult;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneList;
 
 /**
  * @author Mobius
@@ -90,6 +91,9 @@ public class AddHuntingTime extends AbstractEffect
 			player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
 		}
 		
-		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) (remainRefill - (_time / 1000))));
+		player.sendPacket(new TimedHuntingZoneList(player));
+		
+		// TODO: TimedHuntingZoneChargeResult
+		player.sendPacket(new ExShowScreenMessage("Time of adventure in the " + holder.getZoneName() + " area is extended for " + (_time / 60 / 1000) + " min.", 10000));
 	}
 }
