@@ -17,11 +17,9 @@
 package org.l2jmobius.gameserver.model.actor;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
-import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
@@ -33,7 +31,6 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -231,28 +228,6 @@ public abstract class Playable extends Creature
 			return (war != null) && (war.getState() == ClanWarState.MUTUAL);
 		}
 		return false;
-	}
-	
-	public boolean isInTimedHuntingZone(int zoneId)
-	{
-		return isInTimedHuntingZone(zoneId, getX(), getY());
-	}
-	
-	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
-	{
-		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);
-		if (holder == null)
-		{
-			return false;
-		}
-		
-		final int instanceId = holder.getInstanceId();
-		if (instanceId > 0)
-		{
-			return isInInstance() && (instanceId == getInstanceWorld().getTemplateId());
-		}
-		
-		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
 	}
 	
 	/**

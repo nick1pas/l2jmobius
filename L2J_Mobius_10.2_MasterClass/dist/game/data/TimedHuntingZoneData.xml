@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/TimedHuntingZoneData.xsd">
 	<zone id="1" name="Storm Isle">
-		<enterLocation>194284,176597,-1888</enterLocation>
-		<exitLocation>110975,220094,-3664</exitLocation>
+		<enterLocation>194291,176604,-1888</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
-		<refillTimeMax>7200</refillTimeMax>
+		<remainRefillTime>7200</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>100</minLevel>
 		<maxLevel>130</maxLevel>
-		<soloInstance>false</soloInstance>
-		<noPvpZone>true</noPvpZone>
 	</zone>
 	<zone id="6" name="Primeval Isle">
-		<enterLocation>9365,-21407,-3584</enterLocation>
-		<exitLocation>43792,-48928,-792</exitLocation>
+		<enterLocation>9400,-21720,-3634</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
-		<refillTimeMax>7200</refillTimeMax>
+		<remainRefillTime>7200</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>105</minLevel>
 		<maxLevel>130</maxLevel>
-		<soloInstance>false</soloInstance>
 	</zone>
 	<zone id="7" name="Isle of Souls">
-		<enterLocation>-122260,73669,-2872</enterLocation>
-		<exitLocation>148353,28032,-2264</exitLocation>
+		<enterLocation>-122259,73678,-2872</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>86400</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
-		<refillTimeMax>7200</refillTimeMax>
+		<remainRefillTime>7200</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>107</minLevel>
 		<maxLevel>130</maxLevel>
@@ -39,23 +36,22 @@
 		<soloInstance>false</soloInstance>
 	</zone>
 	<zone id="11" name="Abandoned Coal Mines">
-		<enterLocation>139405,-169389,-1600</enterLocation>
-		<exitLocation>146561,28042,-2264</exitLocation>
+		<enterLocation>139411,-169382,-1600</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
-		<refillTimeMax>18000</refillTimeMax>
+		<remainRefillTime>18000</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>99</minLevel>
 		<maxLevel>105</maxLevel>
-		<soloInstance>false</soloInstance>
-		<noPvpZone>true</noPvpZone>
 	</zone>
 	<zone id="20" name="Tower of Insolence (01 - 09 flours)">
 		<enterLocation>-82014,16247,-15416</enterLocation>
 		<initialTime>36000</initialTime> <!-- 10 hours -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>54000</maxAddedTime> <!-- 15 hours -->
+		<remainRefillTime>18000</remainRefillTime> <!-- 300 mins -->
 		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>1500000</entryFee>
 		<minLevel>110</minLevel>
@@ -66,23 +62,22 @@
 		<useWorldPrefix>true</useWorldPrefix>
 	</zone>
 	<zone id="12" name="Imperial Tomb">
-		<enterLocation>181406,-78395,-2728</enterLocation>
-		<exitLocation>147714,-55409,-2728</exitLocation>
+		<enterLocation>181409,-78389,-2728</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>3600</maxAddedTime> <!-- 1 hour -->
-		<refillTimeMax>0</refillTimeMax>
+		<remainRefillTime>0</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>105</minLevel>
 		<maxLevel>130</maxLevel>
-		<soloInstance>false</soloInstance>
 	</zone>
 	<zone id="13" name="Corroded Fields">
-		<enterLocation>90359,198833,-3280</enterLocation>
-		<exitLocation>111563,220512,-3664</exitLocation>
+		<enterLocation>90327,198818,-3280</enterLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>36000</resetDelay> <!-- 10 hours -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 3 hours -->
+		<remainRefillTime>18000</remainRefillTime>
 		<refillTimeMax>36000</refillTimeMax>
 		<entryFee>150000</entryFee>
 		<minLevel>100</minLevel>
@@ -91,17 +86,15 @@
 		<soloInstance>false</soloInstance>
 	</zone>
 	<zone id="15" name="Otherworldly Atelia Refinery">
-		<enterLocation>-49020,15369,-8808</enterLocation>
-		<exitLocation>82795,53888,-1488</exitLocation>
+		<enterLocation>-49013,15351,-8808</enterLocation>
 		<initialTime>36000</initialTime> <!-- 10 hour -->
 		<resetDelay>864000</resetDelay> <!-- 10 days -->
 		<maxAddedTime>43200</maxAddedTime> <!-- 12 hours -->
-		<refillTimeMax>7200</refillTimeMax>
+		<remainRefillTime>0</remainRefillTime>
+		<refillTimeMax>3600</refillTimeMax>
 		<entryFee>1500000</entryFee>
 		<minLevel>112</minLevel>
 		<maxLevel>130</maxLevel>
-		<soloInstance>false</soloInstance>
 		<weekly>true</weekly>
-		<noPvpZone>true</noPvpZone>
 	</zone>
 </list>

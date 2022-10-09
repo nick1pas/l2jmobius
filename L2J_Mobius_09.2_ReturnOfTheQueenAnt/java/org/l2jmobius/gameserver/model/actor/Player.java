@@ -912,7 +912,6 @@ public class Player extends Playable
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 	private boolean _resumedAutoPlay = false;
 	
-	private TimedHuntingZoneHolder _lastTimeZone = null;
 	private ScheduledFuture<?> _timedHuntingZoneTask = null;
 	
 	private final HomunculusList _homunculusList = new HomunculusList(this);
@@ -4201,52 +4200,6 @@ public class Player extends Playable
 				}
 			}
 		});
-	}
-	
-	public void updateRelationsToVisiblePlayers(boolean bothWays)
-	{
-		World.getInstance().forEachVisibleObject(this, Player.class, nearby ->
-		{
-			if (!isVisibleFor(nearby))
-			{
-				return;
-			}
-			
-			updateRelation(this, nearby);
-			if (bothWays)
-			{
-				nearby.updateRelation(nearby, this);
-			}
-		});
-	}
-	
-	public void updateRelation(Player player, Player target)
-	{
-		final long relation = player.getRelation(target);
-		final boolean isAutoAttackable = player.isAutoAttackable(target);
-		final RelationCache oldrelation = player.getKnownRelations().get(target.getObjectId());
-		if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
-		{
-			final RelationChanged rc = new RelationChanged();
-			rc.addRelation(player, relation, isAutoAttackable);
-			if (player.hasSummon())
-			{
-				final Summon pet = player.getPet();
-				if (pet != null)
-				{
-					rc.addRelation(pet, relation, isAutoAttackable);
-				}
-				if (player.hasServitors())
-				{
-					player.getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable));
-				}
-			}
-			
-			// Delay by 125ms so the CharInfo packet of characters moving into field of view will arrive first,
-			// otherwise this relation packet will be ignored by the client.
-			ThreadPool.schedule(() -> target.sendPacket(rc), 125);
-			player.getKnownRelations().put(target.getObjectId(), new RelationCache(relation, isAutoAttackable));
-		}
 	}
 	
 	public void broadcastTitleInfo()
@@ -14777,23 +14730,11 @@ public class Player extends Playable
 		getVariables().setIntegerList(PlayerVariables.AUTO_USE_SHORTCUTS, positions);
 	}
 	
-	public TimedHuntingZoneHolder getLastTimeZone()
-	{
-		return _lastTimeZone;
-	}
-	
-	public void setLastTimeZone(TimedHuntingZoneHolder lastTimeZone)
-	{
-		_lastTimeZone = lastTimeZone;
-	}
-	
-	@Override
 	public boolean isInTimedHuntingZone(int zoneId)
 	{
 		return isInTimedHuntingZone(zoneId, getX(), getY());
 	}
 	
-	@Override
 	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
 	{
 		final TimedHuntingZoneHolder holder = TimedHuntingZoneData.getInstance().getHuntingZone(zoneId);

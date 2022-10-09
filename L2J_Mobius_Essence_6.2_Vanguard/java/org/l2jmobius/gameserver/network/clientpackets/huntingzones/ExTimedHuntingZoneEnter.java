@@ -84,7 +84,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			player.sendMessage("Cannot use time-limited hunting zones while waiting for the Olympiad.");
 			return;
 		}
-		if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1))
+		if (player.isOnEvent() || (player.getBlockCheckerArena() > -1))
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while registered on an event.");
 			return;

@@ -85,6 +85,7 @@ public class TimedHuntingZoneData implements IXmlReader
 							int entryFee = 10000;
 							int minLevel = 1;
 							int maxLevel = 999;
+							int remainRefillTime = 3600;
 							int refillTimeMax = 3600;
 							int instanceId = 0;
 							boolean soloInstance = true;
@@ -92,8 +93,6 @@ public class TimedHuntingZoneData implements IXmlReader
 							boolean useWorldPrefix = false;
 							Location enterLocation = null;
 							Location exitLocation = null;
-							boolean pvpZone = false;
-							boolean noPvpZone = false;
 							for (Node zoneNode = listNode.getFirstChild(); zoneNode != null; zoneNode = zoneNode.getNextSibling())
 							{
 								switch (zoneNode.getNodeName())
@@ -145,6 +144,11 @@ public class TimedHuntingZoneData implements IXmlReader
 										maxLevel = Integer.parseInt(zoneNode.getTextContent());
 										break;
 									}
+									case "remainRefillTime":
+									{
+										remainRefillTime = Integer.parseInt(zoneNode.getTextContent());
+										break;
+									}
 									case "refillTimeMax":
 									{
 										refillTimeMax = Integer.parseInt(zoneNode.getTextContent());
@@ -170,19 +174,9 @@ public class TimedHuntingZoneData implements IXmlReader
 										useWorldPrefix = Boolean.parseBoolean(zoneNode.getTextContent());
 										break;
 									}
-									case "pvpZone":
-									{
-										pvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
-										break;
-									}
-									case "noPvpZone":
-									{
-										noPvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
-										break;
-									}
 								}
 							}
-							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, refillTimeMax, instanceId, soloInstance, weekly, useWorldPrefix, enterLocation, exitLocation, pvpZone, noPvpZone));
+							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, useWorldPrefix, enterLocation, exitLocation));
 						}
 					}
 				}

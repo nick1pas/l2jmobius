@@ -27,13 +27,13 @@ public class TimedHuntingZoneExit implements IClientOutgoingPacket
 {
 	private final int _zoneId;
 	
-	public TimedHuntingZoneExit(final int zoneId)
+	public TimedHuntingZoneExit(int zoneId)
 	{
 		_zoneId = zoneId;
 	}
 	
 	@Override
-	public boolean write(final PacketWriter packet)
+	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_EXIT.writeId(packet);
 		packet.writeD(_zoneId);

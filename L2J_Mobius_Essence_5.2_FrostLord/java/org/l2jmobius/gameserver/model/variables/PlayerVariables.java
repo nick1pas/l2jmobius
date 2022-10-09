@@ -61,6 +61,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";
 	public static final String AUTO_USE_SETTINGS = "AUTO_USE_SETTINGS";
 	public static final String AUTO_USE_SHORTCUTS = "AUTO_USE_SHORTCUTS";
+	public static final String LAST_HUNTING_ZONE_ID = "LAST_HUNTING_ZONE_ID";
 	public static final String HUNTING_ZONE_ENTRY = "HUNTING_ZONE_ENTRY_";
 	public static final String HUNTING_ZONE_TIME = "HUNTING_ZONE_TIME_";
 	public static final String HUNTING_ZONE_REMAIN_REFILL = "HUNTING_ZONE_REMAIN_REFILL_";
