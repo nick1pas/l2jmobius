@@ -92,7 +92,7 @@ public class RequestCollectionRegister implements IClientIncomingPacket
 		
 		player.getCollections().add(new PlayerCollectionData(_collectionId, item.getId(), _index));
 		
-		if (player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count() == collection.getItems().size())
+		if (player.getCollections().stream().filter(it -> it.getCollectionId() == _collectionId).count() == collection.getCompleteCount())
 		{
 			player.sendPacket(new ExCollectionComplete(_collectionId));
 			
