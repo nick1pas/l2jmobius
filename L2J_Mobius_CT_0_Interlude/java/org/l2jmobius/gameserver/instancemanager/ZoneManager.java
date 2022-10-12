@@ -703,7 +703,7 @@ public class ZoneManager implements IXmlReader
 	 */
 	public NpcSpawnTerritory getSpawnTerritory(String name)
 	{
-		return _spawnTerritories.containsKey(name) ? _spawnTerritories.get(name) : null;
+		return _spawnTerritories.get(name);
 	}
 	
 	/**
@@ -721,7 +721,6 @@ public class ZoneManager implements IXmlReader
 				temp.add(territory);
 			}
 		}
-		
 		return temp;
 	}
 	
