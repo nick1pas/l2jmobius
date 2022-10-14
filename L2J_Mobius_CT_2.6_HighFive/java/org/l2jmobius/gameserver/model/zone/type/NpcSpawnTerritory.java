@@ -16,26 +16,28 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
-import java.util.List;
-
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.zone.ZoneForm;
 
 /**
  * Just dummy zone, needs only for geometry calculations
- * @author GKR
+ * @author GKR, Mobius
  */
 public class NpcSpawnTerritory
 {
 	private final String _name;
 	private final ZoneForm _territory;
-	@SuppressWarnings("unused")
-	private List<ZoneForm> _bannedTerritories; // TODO: Implement it
+	private ZoneForm _banned;
 	
 	public NpcSpawnTerritory(String name, ZoneForm territory)
 	{
 		_name = name;
 		_territory = territory;
+	}
+	
+	public void setBannedTerritory(ZoneForm banned)
+	{
+		_banned = banned;
 	}
 	
 	public String getName()
@@ -45,6 +47,19 @@ public class NpcSpawnTerritory
 	
 	public Location getRandomPoint()
 	{
+		if (_banned != null)
+		{
+			int count = 0; // Prevent infinite loop from wrongly written data.
+			Location location;
+			while (count++ < 1000)
+			{
+				location = _territory.getRandomPoint();
+				if (!_banned.isInsideZone(location.getX(), location.getY(), location.getZ()))
+				{
+					return location;
+				}
+			}
+		}
 		return _territory.getRandomPoint();
 	}
 	

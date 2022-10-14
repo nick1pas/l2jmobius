@@ -63,7 +63,7 @@ public class SpawnTable implements IXmlReader
 	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 	private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
 	private static final Map<Integer, String> _spawnTemplates = new ConcurrentHashMap<>();
-	private int _spanwCount = 0;
+	private int _spawnCount = 0;
 	
 	@Override
 	public void load()
@@ -73,7 +73,7 @@ public class SpawnTable implements IXmlReader
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
 			parseDatapackDirectory("data/spawns", true);
-			LOGGER.info(getClass().getSimpleName() + ": " + _spanwCount + " spawns have been initialized!");
+			LOGGER.info(getClass().getSimpleName() + ": " + _spawnCount + " spawns have been initialized!");
 		}
 	}
 	
@@ -273,6 +273,106 @@ public class SpawnTable implements IXmlReader
 								
 								ZoneManager.getInstance().addSpawnTerritory(territoryName, new NpcSpawnTerritory(territoryName, zoneForm));
 							}
+							// Check for NPC banned spawn territories
+							else if (npctag.getNodeName().equalsIgnoreCase("banned_territory"))
+							{
+								if (!ZoneManager.getInstance().spawnTerritoryExists(territoryName))
+								{
+									LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: banned_territory " + territoryName + " must be set after normal territory.");
+									continue;
+								}
+								
+								final int minZ = parseInteger(attrs, "minZ");
+								final int maxZ = parseInteger(attrs, "maxZ");
+								final String zoneShape = parseString(attrs, "shape", "NPoly");
+								
+								final List<int[]> rs = new ArrayList<>();
+								int[][] coords;
+								ZoneForm zoneForm = null;
+								try
+								{
+									for (Node c = npctag.getFirstChild(); c != null; c = c.getNextSibling())
+									{
+										if ("node".equalsIgnoreCase(c.getNodeName()))
+										{
+											attrs = c.getAttributes();
+											final int[] point = new int[2];
+											point[0] = parseInteger(attrs, "x");
+											point[1] = parseInteger(attrs, "y");
+											rs.add(point);
+										}
+									}
+									
+									coords = rs.toArray(new int[rs.size()][2]);
+									rs.clear();
+									
+									if ((coords == null) || (coords.length == 0))
+									{
+										LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: missing data for spawn banned_territory: " + territoryName + " XML file: " + f.getName());
+										continue;
+									}
+									
+									// Create this zone. Parsing for cuboids is a bit different than for other polygons cuboids need exactly 2 points to be defined.
+									// Other polygons need at least 3 (one per vertex)
+									if (zoneShape.equalsIgnoreCase("Cuboid"))
+									{
+										if (coords.length == 2)
+										{
+											zoneForm = new ZoneCuboid(coords[0][0], coords[1][0], coords[0][1], coords[1][1], minZ, maxZ);
+										}
+										else
+										{
+											LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: Missing cuboid vertex data for banned_territory: " + territoryName + " in file: " + f.getName());
+											continue;
+										}
+									}
+									else if (zoneShape.equalsIgnoreCase("NPoly"))
+									{
+										// nPoly needs to have at least 3 vertices
+										if (coords.length > 2)
+										{
+											final int[] aX = new int[coords.length];
+											final int[] aY = new int[coords.length];
+											for (int i = 0; i < coords.length; i++)
+											{
+												aX[i] = coords[i][0];
+												aY[i] = coords[i][1];
+											}
+											zoneForm = new ZoneNPoly(aX, aY, minZ, maxZ);
+										}
+										else
+										{
+											LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: Bad data for banned_territory: " + territoryName + " in file: " + f.getName());
+											continue;
+										}
+									}
+									else if (zoneShape.equalsIgnoreCase("Cylinder"))
+									{
+										// A Cylinder zone requires a center point at x,y and a radius
+										final int zoneRad = Integer.parseInt(attrs.getNamedItem("rad").getNodeValue());
+										if ((coords.length == 1) && (zoneRad > 0))
+										{
+											zoneForm = new ZoneCylinder(coords[0][0], coords[0][1], minZ, maxZ, zoneRad);
+										}
+										else
+										{
+											LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: Bad data for banned_territory: " + territoryName + " in file: " + f.getName());
+											continue;
+										}
+									}
+									else
+									{
+										LOGGER.warning(getClass().getSimpleName() + ": SpawnTable: Unknown shape: \"" + zoneShape + "\"  for banned_territory: " + territoryName + " in file: " + f.getName());
+										continue;
+									}
+								}
+								catch (Exception e)
+								{
+									LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": SpawnTable: Failed to load banned_territory " + territoryName + " coordinates: " + e.getMessage(), e);
+								}
+								
+								ZoneManager.getInstance().getSpawnTerritory(territoryName).setBannedTerritory(zoneForm);
+							}
 							// Check for NPC spawns
 							else if (npctag.getNodeName().equalsIgnoreCase("npc"))
 							{
@@ -351,7 +451,7 @@ public class SpawnTable implements IXmlReader
 									}
 									
 									spawnInfo.set("fileName", f.getPath());
-									_spanwCount += addSpawn(spawnInfo, map);
+									_spawnCount += addSpawn(spawnInfo, map);
 								}
 							}
 						}
