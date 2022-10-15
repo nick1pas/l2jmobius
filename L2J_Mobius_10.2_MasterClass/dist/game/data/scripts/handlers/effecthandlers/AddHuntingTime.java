@@ -85,13 +85,13 @@ public class AddHuntingTime extends AbstractEffect
 		player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime + _time);
 		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, remainRefill - (_time / 1000));
 		
+		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) ((remainTime + _time) / 1000), (int) _time / 1000));
+		player.sendPacket(new TimedHuntingZoneList(player));
+		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
 			player.startTimedHuntingZone(_zoneId, endTime);
 			player.sendPacket(new TimeRestrictFieldUserAlarm(player, _zoneId));
 		}
-		
-		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) ((remainTime + _time) / 1000), (int) _time / 1000));
-		player.sendPacket(new TimedHuntingZoneList(player));
 	}
 }
