@@ -16,6 +16,7 @@
  */
 package ai.areas.GardenOfSpirits;
 
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -26,20 +27,26 @@ import ai.AbstractNpcAI;
 /**
  * Isabella Raid Boss AI
  * @URL https://www.youtube.com/watch?v=3M73b6Kre6Y
- * @author Gigi
+ * @author Gigi, Mobius
  */
 public class Isabella extends AbstractNpcAI
 {
 	// NPC
 	private static final int ISABELLA = 26131;
-	// Minions
 	private static final int CROA = 26132;
 	private static final int AMIS = 26133;
+	private static final int CROAMIS = 23563;
+	// Doors
+	private static final int DOOR1 = 18200001;
+	private static final int DOOR2 = 18200002;
+	// Location
+	private static final Location CROAMIS_SPAWN_LOCATION = new Location(-51033, 82405, -4882, 44107);
 	
 	public Isabella()
 	{
 		addAttackId(ISABELLA);
-		addKillId(ISABELLA);
+		addSpawnId(ISABELLA, CROAMIS);
+		addKillId(ISABELLA, CROAMIS);
 	}
 	
 	@Override
@@ -59,9 +66,8 @@ public class Isabella extends AbstractNpcAI
 			addAttackPlayerDesire(minion5, player);
 			final Npc minion6 = addSpawn(AMIS, -51157, 83298, -5112, 64987, true, 300000, false);
 			addAttackPlayerDesire(minion6, player);
-			return null;
 		}
-		return event;
+		return null;
 	}
 	
 	@Override
@@ -89,15 +95,40 @@ public class Isabella extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onSpawn(Npc npc)
+	{
+		if (npc.getId() == ISABELLA)
+		{
+			addSpawn(CROAMIS, CROAMIS_SPAWN_LOCATION, false, 0);
+		}
+		else // CROAMIS
+		{
+			npc.setRandomWalking(false);
+			npc.teleToLocation(CROAMIS_SPAWN_LOCATION); // No random spawn.
+			closeDoor(DOOR1, 0);
+			closeDoor(DOOR2, 0);
+		}
+		return super.onSpawn(npc);
+	}
+	
+	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 1500, minion ->
+		if (npc.getId() == ISABELLA)
 		{
-			if ((minion != null) && !minion.isAlikeDead() && ((minion.getId() == CROA) || (minion.getId() == AMIS)))
+			World.getInstance().forEachVisibleObjectInRange(npc, Monster.class, 1500, minion ->
 			{
-				minion.deleteMe();
-			}
-		});
+				if ((minion != null) && !minion.isAlikeDead() && ((minion.getId() == CROA) || (minion.getId() == AMIS)))
+				{
+					minion.deleteMe();
+				}
+			});
+		}
+		else // CROAMIS
+		{
+			openDoor(DOOR1, 0);
+			openDoor(DOOR2, 0);
+		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
