@@ -89,7 +89,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			player.sendMessage("Cannot use time-limited hunting zones while registered on an event.");
 			return;
 		}
-		if (player.isInInstance() || player.isInTimedHuntingZone(player.getX(), player.getY()))
+		if (player.isInInstance() || player.isInTimedHuntingZone())
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while in an instance.");
 			return;

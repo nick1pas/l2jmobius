@@ -1102,7 +1102,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			sm = SystemMessageId.YOU_CANNOT_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_WHILE_FISHING;
 			canRegister = false;
 		}
-		else if (player.isInTimedHuntingZone(player.getX(), player.getY()))
+		else if (player.isInTimedHuntingZone())
 		{
 			sm = SystemMessageId.SESSION_ZONES_ARE_UNAVAILABLE_WHILE_YOU_ARE_IN_QUEUE_FOR_THE_CEREMONY_OF_CHAOS;
 			canRegister = false;

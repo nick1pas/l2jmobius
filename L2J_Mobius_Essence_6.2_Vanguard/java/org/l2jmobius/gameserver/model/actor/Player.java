@@ -5100,7 +5100,7 @@ public class Player extends Playable
 			setReputation(newRep < -20 ? newRep : 0);
 		}
 		
-		if (isInsideZone(ZoneId.TIMED_HUNTING))
+		if (isInTimedHuntingZone())
 		{
 			DecayTaskManager.getInstance().add(this);
 			sendPacket(new TimeRestrictFieldDieLimitTime());
@@ -10834,7 +10834,7 @@ public class Player extends Playable
 		}
 		
 		// Close time limited zone window.
-		if (!isInsideZone(ZoneId.TIMED_HUNTING))
+		if (!isInTimedHuntingZone())
 		{
 			stopTimedHuntingZoneTask();
 		}
@@ -11306,7 +11306,7 @@ public class Player extends Playable
 		}
 		
 		// Exit timed hunting zone.
-		if (isInTimedHuntingZone(getX(), getY()))
+		if (isInTimedHuntingZone())
 		{
 			teleToLocation(TeleportWhereType.TOWN);
 			storeCharBase();
@@ -15137,6 +15137,11 @@ public class Player extends Playable
 		}
 		
 		return (holder.getMapX() == (((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN)) && (holder.getMapY() == (((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN));
+	}
+	
+	public boolean isInTimedHuntingZone()
+	{
+		return isInTimedHuntingZone(getX(), getY());
 	}
 	
 	public boolean isInTimedHuntingZone(int x, int y)

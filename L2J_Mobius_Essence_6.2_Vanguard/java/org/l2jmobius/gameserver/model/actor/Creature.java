@@ -573,7 +573,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if (isPlayer())
 		{
-			if (isInsideZone(ZoneId.TIMED_HUNTING))
+			if (getActingPlayer().isInTimedHuntingZone())
 			{
 				getActingPlayer().stopTimedHuntingZoneTask();
 				abortCast();

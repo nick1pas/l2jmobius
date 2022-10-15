@@ -25,7 +25,6 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * @author Mobius
@@ -92,13 +91,13 @@ public class DecayTaskManager implements Runnable
 		
 		if (creature.isPlayer())
 		{
-			if (Config.DISCONNECT_AFTER_DEATH)
-			{
-				delay = 3600; // 1 hour
-			}
-			if (creature.isInsideZone(ZoneId.TIMED_HUNTING))
+			if (creature.getActingPlayer().isInTimedHuntingZone())
 			{
 				delay = 60; // 10 minutes
+			}
+			else if (Config.DISCONNECT_AFTER_DEATH)
+			{
+				delay = 3600; // 1 hour
 			}
 		}
 		

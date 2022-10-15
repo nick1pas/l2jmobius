@@ -90,7 +90,7 @@ public class TimedHuntingZone extends ZoneType
 			
 			ThreadPool.schedule(() ->
 			{
-				if (!player.isInTimedHuntingZone(player.getX(), player.getY()))
+				if (!player.isInTimedHuntingZone())
 				{
 					player.sendPacket(new TimedHuntingZoneExit(player.getVariables().getInt(PlayerVariables.LAST_HUNTING_ZONE_ID, 0)));
 				}
