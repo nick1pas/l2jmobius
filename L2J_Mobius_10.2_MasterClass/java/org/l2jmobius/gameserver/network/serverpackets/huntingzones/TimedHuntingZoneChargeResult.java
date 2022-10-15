@@ -21,19 +21,21 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author dontknowdontcare
+ * @author NasSeKa
  */
 public class TimedHuntingZoneChargeResult implements IClientOutgoingPacket
 {
 	private final int _zoneId;
-	private final int _secondsLeft;
-	private final int _newExtensionValue;
+	private final int _remainTime;
+	private final int _refillTime;
+	private final int _chargeTime;
 	
-	public TimedHuntingZoneChargeResult(int zoneId, int secondsLeft, int newExtensionValue)
+	public TimedHuntingZoneChargeResult(int zoneId, int remainTime, int refillTime, int chargeTime)
 	{
 		_zoneId = zoneId;
-		_secondsLeft = secondsLeft;
-		_newExtensionValue = newExtensionValue;
+		_remainTime = remainTime;
+		_refillTime = refillTime;
+		_chargeTime = chargeTime;
 	}
 	
 	@Override
@@ -41,8 +43,9 @@ public class TimedHuntingZoneChargeResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_CHARGE_RESULT.writeId(packet);
 		packet.writeD(_zoneId);
-		packet.writeD(_secondsLeft); // Remaining Time in zone.
-		packet.writeD(_newExtensionValue); // New Extension value.
+		packet.writeD(_remainTime);
+		packet.writeD(_refillTime);
+		packet.writeD(_chargeTime);
 		return true;
 	}
 }

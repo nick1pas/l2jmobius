@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneEnter;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimeRestrictFieldUserAlarm;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneChargeResult;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneList;
 
 /**
@@ -66,7 +66,7 @@ public class AddHuntingTime extends AbstractEffect
 		
 		final long currentTime = System.currentTimeMillis();
 		final long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
-		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= holder.getMaximumAddedTime()))
+		if ((endTime > currentTime) && (((endTime - currentTime) + _time) > holder.getMaximumAddedTime()))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
 			player.sendMessage("You cannot exceed the time zone limit.");
@@ -88,12 +88,10 @@ public class AddHuntingTime extends AbstractEffect
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
 			player.startTimedHuntingZone(_zoneId, endTime);
-			player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
+			player.sendPacket(new TimeRestrictFieldUserAlarm(player, _zoneId));
 		}
 		
+		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) ((remainTime + _time) / 1000), (int) _time / 1000));
 		player.sendPacket(new TimedHuntingZoneList(player));
-		
-		// TODO: TimedHuntingZoneChargeResult
-		player.sendPacket(new ExShowScreenMessage("Time of adventure in the " + holder.getZoneName() + " area is extended for " + (_time / 60 / 1000) + " min.", 10000));
 	}
 }

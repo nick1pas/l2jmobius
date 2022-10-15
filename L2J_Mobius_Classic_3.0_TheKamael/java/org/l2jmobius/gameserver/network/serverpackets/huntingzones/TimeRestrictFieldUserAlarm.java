@@ -17,35 +17,30 @@
 package org.l2jmobius.gameserver.network.serverpackets.huntingzones;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author NasSeKa
  */
-public class TimedHuntingZoneChargeResult implements IClientOutgoingPacket
+public class TimeRestrictFieldUserAlarm implements IClientOutgoingPacket
 {
+	private final Player _player;
 	private final int _zoneId;
-	private final int _remainTime;
-	private final int _refillTime;
-	private final int _chargeTime;
 	
-	public TimedHuntingZoneChargeResult(int zoneId, int remainTime, int refillTime, int chargeTime)
+	public TimeRestrictFieldUserAlarm(Player player, int zoneId)
 	{
+		_player = player;
 		_zoneId = zoneId;
-		_remainTime = remainTime;
-		_refillTime = refillTime;
-		_chargeTime = chargeTime;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_CHARGE_RESULT.writeId(packet);
+		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ALARM.writeId(packet);
 		packet.writeD(_zoneId);
-		packet.writeD(_remainTime);
-		packet.writeD(_refillTime);
-		packet.writeD(_chargeTime);
+		packet.writeD(_player.getTimedHuntingZoneRemainingTime(_zoneId) / 1000); // RemainTime (zone left time)
 		return true;
 	}
 }

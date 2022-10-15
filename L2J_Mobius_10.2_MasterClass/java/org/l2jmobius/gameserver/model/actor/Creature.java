@@ -570,9 +570,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void onDecay()
 	{
-		if (Config.DISCONNECT_AFTER_DEATH && isPlayer())
+		if (isPlayer())
 		{
-			Disconnection.of(getActingPlayer()).deleteMe().defaultSequence(new SystemMessage(SystemMessageId.SIXTY_MIN_HAVE_PASSED_AFTER_THE_DEATH_OF_YOUR_CHARACTER_SO_YOU_WERE_DISCONNECTED_FROM_THE_GAME));
+			if (isInsideZone(ZoneId.TIMED_HUNTING))
+			{
+				getActingPlayer().stopTimedHuntingZoneTask();
+				abortCast();
+				stopMove(null);
+				teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, TeleportWhereType.TOWN));
+				setInstance(null);
+			}
+			else if (Config.DISCONNECT_AFTER_DEATH)
+			{
+				Disconnection.of(getActingPlayer()).deleteMe().defaultSequence(new SystemMessage(SystemMessageId.SIXTY_MIN_HAVE_PASSED_AFTER_THE_DEATH_OF_YOUR_CHARACTER_SO_YOU_WERE_DISCONNECTED_FROM_THE_GAME));
+			}
 		}
 		else
 		{

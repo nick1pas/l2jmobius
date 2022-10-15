@@ -25,6 +25,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * @author Mobius
@@ -89,9 +90,16 @@ public class DecayTaskManager implements Runnable
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
-		if (Config.DISCONNECT_AFTER_DEATH && creature.isPlayer())
+		if (creature.isPlayer())
 		{
-			delay = 3600; // 1 hour
+			if (Config.DISCONNECT_AFTER_DEATH)
+			{
+				delay = 3600; // 1 hour
+			}
+			if (creature.isInsideZone(ZoneId.TIMED_HUNTING))
+			{
+				delay = 60; // 10 minutes
+			}
 		}
 		
 		// Add to decay schedules.

@@ -366,6 +366,7 @@ import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoSho
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimeRestrictFieldDieLimitTime;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMode;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -5089,7 +5090,12 @@ public class Player extends Playable
 			setReputation(newRep < -20 ? newRep : 0);
 		}
 		
-		if (Config.DISCONNECT_AFTER_DEATH)
+		if (isInsideZone(ZoneId.TIMED_HUNTING))
+		{
+			DecayTaskManager.getInstance().add(this);
+			sendPacket(new TimeRestrictFieldDieLimitTime());
+		}
+		else if (Config.DISCONNECT_AFTER_DEATH)
 		{
 			DecayTaskManager.getInstance().add(this);
 		}
