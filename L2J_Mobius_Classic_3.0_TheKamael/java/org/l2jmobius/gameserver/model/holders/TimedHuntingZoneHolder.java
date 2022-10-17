@@ -35,6 +35,8 @@ public class TimedHuntingZoneHolder
 	private final int _maxLevel;
 	private final int _remainRefillTime;
 	private final int _refillTimeMax;
+	private final boolean _pvpZone;
+	private final boolean _noPvpZone;
 	private final int _instanceId;
 	private final boolean _soloInstance;
 	private final boolean _weekly;
@@ -43,7 +45,7 @@ public class TimedHuntingZoneHolder
 	private final int _mapX;
 	private final int _mapY;
 	
-	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int remainRefillTime, int refillTimeMax, int instanceId, boolean soloInstance, boolean weekly, Location enterLocation, Location exitLocation)
+	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int remainRefillTime, int refillTimeMax, boolean pvpZone, boolean noPvpZone, int instanceId, boolean soloInstance, boolean weekly, Location enterLocation, Location exitLocation)
 	{
 		_id = id;
 		_name = name;
@@ -56,6 +58,8 @@ public class TimedHuntingZoneHolder
 		_maxLevel = maxLevel;
 		_remainRefillTime = remainRefillTime;
 		_refillTimeMax = refillTimeMax;
+		_pvpZone = pvpZone;
+		_noPvpZone = noPvpZone;
 		_instanceId = instanceId;
 		_soloInstance = soloInstance;
 		_weekly = weekly;
@@ -118,6 +122,16 @@ public class TimedHuntingZoneHolder
 	public int getRefillTimeMax()
 	{
 		return _refillTimeMax;
+	}
+	
+	public boolean isPvpZone()
+	{
+		return _pvpZone;
+	}
+	
+	public boolean isNoPvpZone()
+	{
+		return _noPvpZone;
 	}
 	
 	public int getInstanceId()

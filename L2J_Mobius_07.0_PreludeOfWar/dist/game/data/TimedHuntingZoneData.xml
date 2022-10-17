@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/TimedHuntingZoneData.xsd">
 	<zone id="1" name="Storm Isle">
-		<enterLocation>194291,176604,-1888</enterLocation>
+		<enterLocation>194284,176597,-1888</enterLocation>
+		<exitLocation>110975,220094,-3664</exitLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>36000</resetDelay> <!-- 10 hours -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
@@ -10,9 +11,12 @@
 		<entryFee>150000</entryFee>
 		<minLevel>100</minLevel>
 		<maxLevel>120</maxLevel>
+		<soloInstance>false</soloInstance>
+		<noPvpZone>true</noPvpZone>
 	</zone>
 	<zone id="6" name="Primeval Isle">
-		<enterLocation>9400,-21720,-3634</enterLocation>
+		<enterLocation>9365,-21407,-3584</enterLocation>
+		<exitLocation>43792,-48928,-792</exitLocation>
 		<initialTime>3600</initialTime> <!-- 1 hour -->
 		<resetDelay>36000</resetDelay> <!-- 10 hours -->
 		<maxAddedTime>21600</maxAddedTime> <!-- 6 hours -->
@@ -21,5 +25,6 @@
 		<entryFee>150000</entryFee>
 		<minLevel>105</minLevel>
 		<maxLevel>120</maxLevel>
+		<soloInstance>false</soloInstance>
 	</zone>
 </list>

@@ -87,6 +87,8 @@ public class TimedHuntingZoneData implements IXmlReader
 							int maxLevel = 999;
 							int remainRefillTime = 3600;
 							int refillTimeMax = 3600;
+							boolean pvpZone = false;
+							boolean noPvpZone = false;
 							int instanceId = 0;
 							boolean soloInstance = true;
 							boolean weekly = false;
@@ -153,6 +155,16 @@ public class TimedHuntingZoneData implements IXmlReader
 										refillTimeMax = Integer.parseInt(zoneNode.getTextContent());
 										break;
 									}
+									case "pvpZone":
+									{
+										pvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
+										break;
+									}
+									case "noPvpZone":
+									{
+										noPvpZone = Boolean.parseBoolean(zoneNode.getTextContent());
+										break;
+									}
 									case "instanceId":
 									{
 										instanceId = Integer.parseInt(zoneNode.getTextContent());
@@ -170,7 +182,7 @@ public class TimedHuntingZoneData implements IXmlReader
 									}
 								}
 							}
-							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, instanceId, soloInstance, weekly, enterLocation, exitLocation));
+							_timedHuntingZoneData.put(id, new TimedHuntingZoneHolder(id, name, initialTime, maxAddedTime, resetDelay, entryItemId, entryFee, minLevel, maxLevel, remainRefillTime, refillTimeMax, pvpZone, noPvpZone, instanceId, soloInstance, weekly, enterLocation, exitLocation));
 						}
 					}
 				}
