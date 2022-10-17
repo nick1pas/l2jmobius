@@ -16,10 +16,10 @@
 							<xs:element type="xs:int" name="entryFee" />
 							<xs:element type="xs:short" name="minLevel" />
 							<xs:element type="xs:short" name="maxLevel" />
-							<xs:element type="xs:boolean" name="pvpZone" minOccurs="0" />
-							<xs:element type="xs:boolean" name="noPvpZone" minOccurs="0" />
 							<xs:element type="xs:int" name="instanceId" minOccurs="0" />
 							<xs:element type="xs:boolean" name="soloInstance" minOccurs="0" />
+							<xs:element type="xs:boolean" name="pvpZone" minOccurs="0" />
+							<xs:element type="xs:boolean" name="noPvpZone" minOccurs="0" />
 							<xs:element type="xs:boolean" name="weekly" minOccurs="0" />
 						</xs:sequence>
 						<xs:attribute type="xs:byte" name="id" use="optional" />
