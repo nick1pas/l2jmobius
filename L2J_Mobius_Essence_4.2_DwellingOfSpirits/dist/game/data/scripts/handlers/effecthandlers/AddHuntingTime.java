@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimeRestrictFieldUserAlarm;
 import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneChargeResult;
-import org.l2jmobius.gameserver.network.serverpackets.huntingzones.TimedHuntingZoneList;
 
 /**
  * @author Mobius
@@ -84,9 +83,7 @@ public class AddHuntingTime extends AbstractEffect
 		final long remainTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, holder.getInitialTime());
 		player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime + _time);
 		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL + _zoneId, remainRefill - (_time / 1000));
-		
-		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) (remainTime / 1000), (int) ((remainTime + _time) / 1000), (int) _time / 1000));
-		player.sendPacket(new TimedHuntingZoneList(player));
+		player.sendPacket(new TimedHuntingZoneChargeResult(_zoneId, (int) ((remainTime + _time) / 1000), (int) (remainRefill - (_time / 1000)), (int) _time / 1000));
 		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
