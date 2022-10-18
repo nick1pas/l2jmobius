@@ -5,7 +5,7 @@ XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2
 Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/4k2pi3qa8rqt299/L2J_Mobius_C6_Interlude_Geodata.zip
 
-Client: https://gameborder.net/file/lineage-ii-interlude-client
+Client (password L2jMobius): https://drive.google.com/u/2/uc?id=1zCGzxWgkxASntc_X8L4YCEqk9hDc5VBN&export=download
 System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
 
 All provided download links are for personal use. Redistribution of these links is bannable.
