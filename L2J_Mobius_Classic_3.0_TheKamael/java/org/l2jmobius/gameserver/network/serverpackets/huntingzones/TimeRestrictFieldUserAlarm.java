@@ -40,7 +40,7 @@ public class TimeRestrictFieldUserAlarm implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ALARM.writeId(packet);
 		packet.writeD(_zoneId);
-		packet.writeD(_player.getTimedHuntingZoneRemainingTime(_zoneId) / 1000); // RemainTime (zone left time)
+		packet.writeD((_player.getTimedHuntingZoneRemainingTime(_zoneId) / 1000) + 59); // RemainTime (zone left time)
 		return true;
 	}
 }
