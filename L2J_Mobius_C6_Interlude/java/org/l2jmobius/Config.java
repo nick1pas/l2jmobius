@@ -192,6 +192,11 @@ public class Config
 	public static int MAX_MONSTER_ANIMATION;
 	public static boolean ENABLE_COMMUNITY_BOARD;
 	public static String BBS_DEFAULT;
+	public static boolean DEBUG_INCOMING_PACKETS;
+	public static boolean DEBUG_EX_INCOMING_PACKETS;
+	public static boolean DEBUG_OUTGOING_PACKETS;
+	public static boolean DEBUG_UNKNOWN_PACKETS;
+	public static Set<String> ALT_DEV_EXCLUDED_PACKETS;
 	public static boolean SHOW_NPC_LEVEL;
 	public static boolean SHOW_NPC_AGGRESSION;
 	public static boolean SHOW_NPC_CLAN_CREST;
@@ -1524,6 +1529,16 @@ public class Config
 		GLOBAL_PVP_AMOUNT = generalConfig.getInt("GlobalPvPAmount", 1500);
 		ENABLE_COMMUNITY_BOARD = generalConfig.getBoolean("EnableCommunityBoard", true);
 		BBS_DEFAULT = generalConfig.getString("BBSDefault", "_bbshome");
+		DEBUG_INCOMING_PACKETS = generalConfig.getBoolean("DebugIncomingPackets", false);
+		DEBUG_EX_INCOMING_PACKETS = generalConfig.getBoolean("DebugExIncomingPackets", false);
+		DEBUG_OUTGOING_PACKETS = generalConfig.getBoolean("DebugOutgoingPackets", false);
+		DEBUG_UNKNOWN_PACKETS = generalConfig.getBoolean("DebugUnknownPackets", true);
+		final String[] packets = generalConfig.getString("ExcludedPacketList", "").trim().split(",");
+		ALT_DEV_EXCLUDED_PACKETS = new HashSet<>(packets.length);
+		for (String packet : packets)
+		{
+			ALT_DEV_EXCLUDED_PACKETS.add(packet.trim());
+		}
 		ZONE_TOWN = generalConfig.getInt("ZoneTown", 0);
 		MAX_DRIFT_RANGE = generalConfig.getInt("MaxDriftRange", 300);
 		AGGRO_DISTANCE_CHECK_ENABLED = generalConfig.getBoolean("AggroDistanceCheckEnabled", false);

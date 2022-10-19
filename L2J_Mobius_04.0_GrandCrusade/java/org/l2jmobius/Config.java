@@ -453,6 +453,11 @@ public class Config
 	public static boolean ALT_DEV_NO_SPAWNS;
 	public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
 	public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
+	public static boolean DEBUG_INCOMING_PACKETS;
+	public static boolean DEBUG_EX_INCOMING_PACKETS;
+	public static boolean DEBUG_OUTGOING_PACKETS;
+	public static boolean DEBUG_UNKNOWN_PACKETS;
+	public static Set<String> ALT_DEV_EXCLUDED_PACKETS;
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
 	public static int INSTANT_THREAD_POOL_COUNT;
@@ -1991,6 +1996,16 @@ public class Config
 			ALT_DEV_NO_SPAWNS = generalConfig.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
 			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = generalConfig.getBoolean("AltDevShowQuestsLoadInLogs", false);
 			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = generalConfig.getBoolean("AltDevShowScriptsLoadInLogs", false);
+			DEBUG_INCOMING_PACKETS = generalConfig.getBoolean("DebugIncomingPackets", false);
+			DEBUG_EX_INCOMING_PACKETS = generalConfig.getBoolean("DebugExIncomingPackets", false);
+			DEBUG_OUTGOING_PACKETS = generalConfig.getBoolean("DebugOutgoingPackets", false);
+			DEBUG_UNKNOWN_PACKETS = generalConfig.getBoolean("DebugUnknownPackets", true);
+			final String[] packets = generalConfig.getString("ExcludedPacketList", "").trim().split(",");
+			ALT_DEV_EXCLUDED_PACKETS = new HashSet<>(packets.length);
+			for (String packet : packets)
+			{
+				ALT_DEV_EXCLUDED_PACKETS.add(packet.trim());
+			}
 			ALLOW_DISCARDITEM = generalConfig.getBoolean("AllowDiscardItem", true);
 			AUTODESTROY_ITEM_AFTER = generalConfig.getInt("AutoDestroyDroppedItemAfter", 600);
 			HERB_AUTO_DESTROY_TIME = generalConfig.getInt("AutoDestroyHerbTime", 60) * 1000;

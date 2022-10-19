@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Supplier;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.IConnectionState;
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.IIncomingPackets;
@@ -239,7 +240,23 @@ public enum IncomingPackets implements IIncomingPackets<GameClient>
 	@Override
 	public IIncomingPacket<GameClient> newIncomingPacket()
 	{
-		return _incomingPacketFactory.get();
+		final IIncomingPacket<GameClient> packet = _incomingPacketFactory.get();
+		if (Config.DEBUG_INCOMING_PACKETS)
+		{
+			if (packet != null)
+			{
+				final String name = packet.getClass().getSimpleName();
+				if (!Config.ALT_DEV_EXCLUDED_PACKETS.contains(name))
+				{
+					PacketLogger.info("[C] " + name);
+				}
+			}
+			else if (Config.DEBUG_UNKNOWN_PACKETS)
+			{
+				PacketLogger.info("[C] " + _packetId);
+			}
+		}
+		return packet;
 	}
 	
 	@Override

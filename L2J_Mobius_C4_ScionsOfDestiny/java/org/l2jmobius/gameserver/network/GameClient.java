@@ -238,6 +238,15 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return;
 		}
 		
+		if (Config.DEBUG_OUTGOING_PACKETS && (_player != null))
+		{
+			final String name = packet.getClass().getSimpleName();
+			if (!Config.ALT_DEV_EXCLUDED_PACKETS.contains(name))
+			{
+				PacketLogger.info("[S] " + name);
+			}
+		}
+		
 		// Write into the channel.
 		_channel.writeAndFlush(packet);
 		
