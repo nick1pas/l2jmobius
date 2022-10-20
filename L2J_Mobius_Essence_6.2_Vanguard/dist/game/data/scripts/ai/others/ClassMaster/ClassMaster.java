@@ -506,6 +506,11 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper026n.html";
 						break;
 					}
+					case ORC_LANCER:
+					{
+						htmltext = "test_server_helper026o.html";
+						break;
+					}
 				}
 			}
 		}
@@ -701,6 +706,11 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					case SHARPSHOOTER:
 					{
 						htmltext = "test_server_helper020i.html";
+						break;
+					}
+					case RIDER:
+					{
+						htmltext = "test_server_helper020j.html";
 						break;
 					}
 				}
