@@ -64,7 +64,10 @@ public class TeleportZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		creature.teleToLocation(new Location(_x, _y, _z));
+		if (isEnabled())
+		{
+			creature.teleToLocation(new Location(_x, _y, _z));
+		}
 	}
 	
 	@Override
