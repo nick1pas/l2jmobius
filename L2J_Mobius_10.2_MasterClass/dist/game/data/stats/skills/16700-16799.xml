@@ -9,7 +9,7 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>-418</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16701" toLevel="1" name="Warm Wind">
 		<!-- The warm wind has boosted the defensive abilities of the nearby spirits. -->
@@ -29,7 +29,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-800</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16703" toLevel="1" name="Fire Storm">
 		<!-- An explosive flame that deals magic damage to nearby enemies is generated. -->
@@ -52,7 +52,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-800</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16705" toLevel="1" name="Thunder Storm">
 		<!-- An explosion of lightning that deals magic damage to nearby enemies is generated. -->
@@ -77,7 +77,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-800</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16707" toLevel="2" name="Horn Melody - Residence">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
@@ -1107,7 +1107,7 @@
 		<castRange>1000</castRange>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1136,7 +1136,7 @@
 		<castRange>1000</castRange>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1203,7 +1203,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16762" toLevel="1" name="Berserk">
 		<!-- Continued battle has enhanced Physical Attack. -->
@@ -1406,7 +1406,7 @@
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16775" toLevel="1" name="Power Shot">
 		<operateType>A1</operateType>
@@ -1435,7 +1435,7 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16777" toLevel="1" name="Reprieve">
 		<!-- There has been a stay..of the execution... for $s1.. -->
@@ -1448,7 +1448,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16778" toLevel="1" name="Execution">
 		<!-- Unavoidable Death -->
@@ -1461,7 +1461,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16779" toLevel="3" name="Black Hearts Rage">
 		<!-- Makkum's black heart thumps. For $s1, P. Atk. and Atk. Spd. +$s2, Speed +$s3, and P./ M. Def. -$s4. -->
@@ -1474,7 +1474,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>3</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16780" toLevel="2" name="Bloody Circle">
 		<!-- Marshall creates a gust of blood, dealing damage equal to his P. Atk. +$s1 to the surrounding area. -->
@@ -1490,7 +1490,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16781" toLevel="1" name="Ring of Corruption">
 		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. All targets in the area suffer $s1 damage per sec., and their Speed -$s2. -->
@@ -1503,7 +1503,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16782" toLevel="1" name="Violent Charge">
 		<!-- Makkum suddenly charges toward the target to deal $s1 damage and inflict Stun for $s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1516,7 +1516,7 @@
 		<coolTime>100</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-687</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16783" toLevel="1" name="Sentence of Death">
 		<!-- Makkum declares death to the target to decrease Defense by $s1 and Speed by $s2. Failure to impeded this may result in an even more fearful skill. -->
@@ -1530,7 +1530,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16784" toLevel="1" name="Guillotine Chopping">
 		<!-- Makkum's barrage of attacks inflict $s1 power added to P. Atk. and inflict severe Bleed for $s2 -->
@@ -1544,7 +1544,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16785" toLevel="1" name="Void Heal">
 		<!-- Treats yourself while Makkum's not on the attack. -->
@@ -1557,7 +1557,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16786" toLevel="1" name="Revenge Will">
 		<!-- Makkum casts a spell of revenge -->
@@ -1570,7 +1570,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>3</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16787" toLevel="1" name="Double Edge Slash">
 		<!-- This skill was conceived by Makkum to attack a ranged enemy. Inflicts damage on yourself as well as on the ranged target. -->
@@ -1584,7 +1584,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-712</effectPoint>
 		<isMagic>6</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16788" toLevel="24" name="Raid Boss Lv. 101">
 		<!-- Dorgon used to be a valiant warrior of the Lizardmen, but was forced to hide in the backwoods by the Humans. His resentment of the Humans caused him to sell his soul to the Demons, a deed for which he was dismissed by the Lizardman Tribe. Since he has been banished, he has not been seen anywhere. However, when the energy of another dimension began spreading throughout the material realm, he was lured out of hiding. -->
@@ -1610,7 +1610,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16791" toLevel="1" name="Bloody Strike">
 		<!-- Deals great damage to a single target making them bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
@@ -1621,7 +1621,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16792" toLevel="1" name="Rush Assault">
 		<!-- Charges toward the target and knocks it back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
@@ -1631,7 +1631,7 @@
 		<castRange>500</castRange>
 		<hitTime>400</hitTime>
 		<effectPoint>-1</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16793" toLevel="1" name="Thirst for Blood">
 		<!-- Inflicts neutral damage on the enemy. Absorbs 40% of damage as HP. -->
@@ -1651,7 +1651,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<effectPoint>-2140</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1685,7 +1685,7 @@
 		<hitTime>3000</hitTime>
 		<effectPoint>-679</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16796" toLevel="1" name="Robe of Embryo">
 		<!-- For 10 sec., 80% of the inflicted physical damage is recovered as HP with a certain probability. -->
@@ -1731,7 +1731,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>800</coolTime>
 		<effectPoint>-700</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16799" toLevel="1" name="Curse of Blaze">
 		<!-- Deals great magic damage and burns the enemy for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
@@ -1742,6 +1742,6 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 	</skill>
 </list>

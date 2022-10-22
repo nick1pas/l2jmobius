@@ -2229,7 +2229,7 @@
 												<xs:complexType>
 													<xs:simpleContent>
 														<xs:extension base="xs:boolean">
-															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+															<xs:attribute name="level" type="xs:boolean" use="required" />
 														</xs:extension>
 													</xs:simpleContent>
 												</xs:complexType>
