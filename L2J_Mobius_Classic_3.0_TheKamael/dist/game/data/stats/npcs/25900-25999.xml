@@ -1,156 +1,327 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25901" level="80" type="Folk" name="Lilith" title="Apostle">
+	<npc id="25901" level="82" type="RaidBoss" name="Lilith" title="Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="37500000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="33431.4486" magical="10376.976" random="10" critical="4" accuracy="4.75" attackSpeed="223" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>500</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="42.5" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4897" level="1" /> <!-- Lv. 82 Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<group chance="80">
+					<item id="80" min="1" max="1" chance="4.54" /> <!-- Tallum Blade -->
+					<item id="81" min="1" max="1" chance="4.54" /> <!-- Dragon Slayer -->
+					<item id="98" min="1" max="1" chance="4.54" /> <!-- Halberd -->
+					<item id="150" min="1" max="1" chance="4.54" /> <!-- Elemental Sword -->
+					<item id="151" min="1" max="1" chance="4.54" /> <!-- Sword of Miracles -->
+					<item id="164" min="1" max="1" chance="4.54" /> <!-- Elysian -->
+					<item id="212" min="1" max="1" chance="4.54" /> <!-- Dasparion's Staff -->
+					<item id="213" min="1" max="1" chance="4.54" /> <!-- Branch of the Mother Tree -->
+					<item id="235" min="1" max="1" chance="4.54" /> <!-- Bloody Orchid -->
+					<item id="236" min="1" max="1" chance="4.54" /> <!-- Soul Separator -->
+					<item id="269" min="1" max="1" chance="4.54" /> <!-- Blood Tornado -->
+					<item id="270" min="1" max="1" chance="4.54" /> <!-- Dragon Grinder -->
+					<item id="288" min="1" max="1" chance="4.54" /> <!-- Carnage Bow -->
+					<item id="289" min="1" max="1" chance="4.54" /> <!-- Soul Bow -->
+					<item id="305" min="1" max="1" chance="4.54" /> <!-- Tallum Glaive -->
+					<item id="2500" min="1" max="1" chance="4.54" /> <!-- Dark Legion's Edge -->
+					<item id="2504" min="1" max="1" chance="4.54" /> <!-- Meteor Shower -->
+					<item id="7884" min="1" max="1" chance="4.54" /> <!-- Infernal Master -->
+					<item id="7894" min="1" max="1" chance="4.54" /> <!-- Spiritual Eye -->
+					<item id="7895" min="1" max="1" chance="4.54" /> <!-- Flaming Dragon Skull -->
+					<item id="7899" min="1" max="1" chance="4.54" /> <!-- Destroyer Hammer -->
+					<item id="7902" min="1" max="1" chance="4.66" /> <!-- Doom Crusher -->
+				</group>
+				<group chance="80">
+					<item id="8678" min="1" max="1" chance="9.09" /> <!-- Sirra's Blade -->
+					<item id="8679" min="1" max="1" chance="9.09" /> <!-- Sword of Ipos -->
+					<item id="8680" min="1" max="1" chance="9.09" /> <!-- Barakiel's Axe -->
+					<item id="8681" min="1" max="1" chance="9.09" /> <!-- Behemoth' Tuning Fork -->
+					<item id="8682" min="1" max="1" chance="9.09" /> <!-- Naga Storm -->
+					<item id="8683" min="1" max="1" chance="9.09" /> <!-- Tiphon's Spear -->
+					<item id="8684" min="1" max="1" chance="9.09" /> <!-- Shyeed's Bow -->
+					<item id="8685" min="1" max="1" chance="9.09" /> <!-- Sobekk's Hurricane -->
+					<item id="8686" min="1" max="1" chance="9.09" /> <!-- Themis' Tongue -->
+					<item id="8687" min="1" max="1" chance="9.09" /> <!-- Cabrio's Hand -->
+					<item id="8688" min="1" max="1" chance="9.1" /> <!-- Daimon Crystal -->
+				</group>
+				<group chance="80">
+					<item id="5287" min="1" max="1" chance="3" /> <!-- Sealed Dark Crystal breastplate -->
+					<item id="5288" min="1" max="1" chance="3" /> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5289" min="1" max="1" chance="5" /> <!-- Sealed Dark Crystal Helmet -->
+					<item id="5290" min="1" max="1" chance="5" /> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5291" min="1" max="1" chance="5" /> <!-- Sealed Dark Crystal Boots -->
+					<item id="5292" min="1" max="1" chance="7" /> <!-- Sealed Dark Crystal Shield -->
+					<item id="5293" min="1" max="1" chance="3" /> <!-- Sealed Tallum Plate Armor -->
+					<item id="5294" min="1" max="1" chance="5" /> <!-- Sealed Tallum Helmet -->
+					<item id="5295" min="1" max="1" chance="5" /> <!-- Sealed Tallum Gloves -->
+					<item id="5296" min="1" max="1" chance="5" /> <!-- Sealed Tallum Boots -->
+					<item id="5297" min="1" max="1" chance="3" /> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5298" min="1" max="1" chance="3" /> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5301" min="1" max="1" chance="3" /> <!-- Sealed Tallum Leather Armor -->
+					<item id="5304" min="1" max="1" chance="3" /> <!-- Sealed Tallum Tunic -->
+					<item id="5305" min="1" max="1" chance="3" /> <!-- Sealed Tallum Stockings -->
+					<item id="5308" min="1" max="1" chance="3" /> <!-- Sealed Dark Crystal Robe -->
+					<item id="5311" min="1" max="1" chance="2" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5312" min="1" max="1" chance="3" /> <!-- Sealed Helm of Nightmare -->
+					<item id="5313" min="1" max="1" chance="3" /> <!-- Sealed Gauntlets of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3" /> <!-- Sealed Boots of Nightmare -->
+					<item id="5315" min="1" max="1" chance="6" /> <!-- Sealed Shield of Nightmare -->
+					<item id="5316" min="1" max="1" chance="2" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5317" min="1" max="1" chance="3" /> <!-- Sealed Majestic Circlet -->
+					<item id="5318" min="1" max="1" chance="3" /> <!-- Sealed Majestic Gauntlets -->
+					<item id="5319" min="1" max="1" chance="3" /> <!-- Sealed Majestic Boots -->
+					<item id="5320" min="1" max="1" chance="2" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5323" min="1" max="1" chance="2" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5326" min="1" max="1" chance="2" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5329" min="1" max="1" chance="2" /> <!-- Sealed Majestic Robe -->
+				</group>
+				<group chance="100">
+					<item id="8619" min="1" max="3" chance="100" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				</group>
+				<group chance="100">
+					<item id="8620" min="1" max="1" chance="100" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				</group>
+				<group chance="100">
+					<item id="91173" min="1" max="3" chance="100" /> <!-- Lilith Rune - Stage 1 -->
+				</group>
+				<group chance="5">
+					<item id="91177" min="1" max="1" chance="100" /> <!-- Lilith Rune - Stage 5 -->
+				</group>
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25902" level="80" type="Folk" name="Lilith' Agent">
+	<npc id="25902" level="81" type="Folk" name="Lilith' Agent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="34" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25903" level="80" type="Folk" name="Lilith' Escort">
+	<npc id="25903" level="81" type="Folk" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25904" level="80" type="Folk" name="Anakim" title="Fallen Angel">
+	<npc id="25904" level="82" type="RaidBoss" name="Anakim" title="Fallen Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="37500000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="33431.4486" magical="10376.976" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>560</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20.15" />
 			<height normal="38.6" />
 		</collision>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4898" level="1" /> <!-- Lv. 82 Raid Boss -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25905" level="80" type="Folk" name="Anakim's Guardian">
+	<npc id="25905" level="81" type="Folk" name="Anakim's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="16715.7243" magical="7266.42" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="40.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25906" level="80" type="Folk" name="Anakim's Royal Guard">
+	<npc id="25906" level="81" type="Folk" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>630</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger Resistance -->
+		</skillList>
 	</npc>
-	<npc id="25907" level="80" type="Folk" name="Anakim's Executor">
+	<npc id="25907" level="81" type="Folk" name="Anakim's Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2000000" hpRegen="1" mp="18000" mpRegen="99" />
+			<attack physical="16715.7243" magical="7266.42" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2048.8" magical="1365.6" />
 			<speed>
 				<walk ground="65" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>630</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
 		</collision>
-	</npc>
-	<npc id="25908" level="85" type="Folk" name="Queen Ant Drone Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 </list>

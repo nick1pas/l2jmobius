@@ -72,12 +72,11 @@ public class MonsterArena extends AbstractInstance
 		25811, // Satur
 		25812, // Kosnak
 		25813, // Garaki
-		// TODO: 21-25 bosses
-		// 25834, // Shadai
-		// 25835, // Tyrobait
-		// 25836, // Tier
-		// 25837, // Cherkia
-		// 25838, // Spicula
+		25834, // Shadai
+		25835, // Tyrobait
+		25836, // Tier
+		25837, // Cherkia
+		25838, // Spicula
 	};
 	// Rewards
 	private static final int BATTLE_BOX_1 = 90913;

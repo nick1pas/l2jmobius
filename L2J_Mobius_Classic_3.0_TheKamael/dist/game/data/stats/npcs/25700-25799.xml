@@ -2719,251 +2719,427 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="25787" level="35" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="2652750" sp="79582" raidPoints="5" />
+	<npc id="25787" level="25" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="5305500" sp="159165" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="242295.147" hpRegen="53.11445383" mp="371251.305" mpRegen="1.8" />
-			<attack physical="162.8490599" magical="51.7199871" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="602.4666649" magical="293.9111987" />
+			<vitals hp="437200" hpRegen="424" mp="218600" mpRegen="10" />
+			<attack physical="552" magical="96" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305" magical="149" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="37.5" />
-			<height normal="72" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="37" /> <!-- Raid Boss (Lv. 35) -->
+			<skill id="50009" level="36" /> <!-- Lv. 25 Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="956" min="2" max="8" chance="45.91" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="955" min="1" max="1" chance="44.28" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="91526" min="1" max="1" chance="5.04" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="4.942" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="4.934" /> <!-- Armor Varnish (D-grade) -->
-				<item id="33812" min="1" max="1" chance="3.04" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
-				<item id="33806" min="1" max="1" chance="3.032" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
-				<item id="90012" min="1" max="1" chance="2.067" /> <!-- Common Life Stone -->
+				<group chance="90">
+					<item id="955" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+					<item id="956" min="2" max="8" chance="50" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				</group>
+				<group chance="6">
+					<item id="33806" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+					<item id="33812" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
+				</group>
+				<group chance="2">
+					<item id="90012" min="1" max="1" chance="100" /> <!-- Common Life Stone -->
+				</group>
+				<group chance="5">
+					<item id="91526" min="1" max="1" chance="100" /> <!-- Weapon Varnish (D-grade) -->
+				</group>
+				<group chance="5">
+					<item id="91533" min="1" max="1" chance="100" /> <!-- Armor Varnish (D-grade) -->
+				</group>
+				<group chance="5">
+					<item id="91540" min="1" max="1" chance="100" /> <!-- Accessory Varnish (D-grade) -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25788" level="45" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="4762800" sp="142884" raidPoints="5" />
+	<npc id="25788" level="35" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="9525600" sp="285768" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="267644.14065" hpRegen="108.3563982" mp="410092.185" mpRegen="2.1" />
-			<attack physical="599.1164226" magical="94.61867765" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="999.2457614" magical="487.4784559" />
+			<vitals hp="482940" hpRegen="431" mp="241470" mpRegen="10" />
+			<attack physical="1225" magical="269" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="410" magical="200" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="37.5" />
-			<height normal="72" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="38" /> <!-- Raid Boss (Lv. 45) -->
+			<skill id="50009" level="37" /> <!-- Lv. 35 Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="956" min="2" max="8" chance="26.09" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="955" min="1" max="1" chance="25.72" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="91526" min="1" max="1" chance="10.048" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="9.937" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="9.93" /> <!-- Armor Varnish (D-grade) -->
-				<item id="90012" min="1" max="1" chance="5.055" /> <!-- Common Life Stone -->
-				<item id="33812" min="1" max="1" chance="4.543" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
-				<item id="33806" min="1" max="1" chance="4.529" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+				<group chance="50">
+					<item id="955" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+					<item id="956" min="2" max="8" chance="50" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				</group>
+				<group chance="9">
+					<item id="33806" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (D-grade) -->
+					<item id="33812" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Armor (D-grade) -->
+				</group>
+				<group chance="5">
+					<item id="90012" min="1" max="1" chance="100" /> <!-- Common Life Stone -->
+				</group>
+				<group chance="10">
+					<item id="91526" min="1" max="1" chance="100" /> <!-- Weapon Varnish (D-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91533" min="1" max="1" chance="100" /> <!-- Armor Varnish (D-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91540" min="1" max="1" chance="100" /> <!-- Accessory Varnish (D-grade) -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25789" level="55" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="7873200" sp="236196" raidPoints="5" />
+	<npc id="25789" level="45" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="15746400" sp="472392" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="295646.13931" hpRegen="178.4276342" mp="452998.755" mpRegen="2.4" />
-			<attack physical="896.8607767" magical="141.6415533" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1495.843372" magical="729.7418166" />
+			<vitals hp="533467" hpRegen="440" mp="266734" mpRegen="10" />
+			<attack physical="2495" magical="742" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="533" magical="260" />
 			<speed>
 				<walk ground="63" />
 				<run ground="175" />
 			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="37.5" />
-			<height normal="72" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="39" /> <!-- Raid Boss (Lv. 55) -->
+			<skill id="50009" level="38" /> <!-- Lv. 45 Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="951" min="1" max="1" chance="20.68" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="952" min="2" max="8" chance="19.94" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="91526" min="1" max="1" chance="10.048" /> <!-- Weapon Varnish (D-grade) -->
-				<item id="91540" min="1" max="1" chance="9.96" /> <!-- Accessory Varnish (D-grade) -->
-				<item id="91533" min="1" max="1" chance="9.945" /> <!-- Armor Varnish (D-grade) -->
-				<item id="90013" min="1" max="1" chance="2.067" /> <!-- Mid-grade Life Stone -->
-				<item id="33813" min="1" max="1" chance="2.011" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
-				<item id="33807" min="1" max="1" chance="1.995" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+				<group chance="40">
+					<item id="951" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+					<item id="952" min="2" max="8" chance="50" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				</group>
+				<group chance="4">
+					<item id="33807" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+					<item id="33813" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
+				</group>
+				<group chance="2">
+					<item id="90013" min="1" max="1" chance="100" /> <!-- Mid-grade Life Stone -->
+				</group>
+				<group chance="10">
+					<item id="91526" min="1" max="1" chance="100" /> <!-- Weapon Varnish (D-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91533" min="1" max="1" chance="100" /> <!-- Armor Varnish (D-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91540" min="1" max="1" chance="100" /> <!-- Accessory Varnish (D-grade) -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25790" level="65" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="52925400" sp="1587762" raidPoints="5" />
+	<npc id="25790" level="55" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="23522400" sp="705672" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="420467.42646" hpRegen="294.2109061" mp="515402.76" mpRegen="2.7" />
-			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2092.259531" magical="1020.701298" />
+			<vitals hp="758696.25" hpRegen="2330" mp="303479" mpRegen="10" />
+			<attack physical="5256.65" magical="2063.82" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="670" magical="327" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
-		<collision>
-			<radius normal="23" />
-			<height normal="64" />
-		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="40" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="50009" level="39" /> <!-- Lv. 55 Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="951" min="1" max="3" chance="51.18" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="952" min="5" max="15" chance="49.87" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="91528" min="1" max="1" chance="10.053" /> <!-- Weapon Varnish (C-grade) -->
-				<item id="91535" min="1" max="1" chance="10.009" /> <!-- Armor Varnish (C-grade) -->
-				<item id="91542" min="1" max="1" chance="9.937" /> <!-- Accessory Varnish (C-grade) -->
-				<item id="33807" min="1" max="1" chance="8.032" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
-				<item id="33813" min="1" max="3" chance="7.97" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
-				<item id="90013" min="1" max="1" chance="4.99" /> <!-- Mid-grade Life Stone -->
+				<group chance="100">
+					<item id="951" min="1" max="3" chance="50" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+					<item id="952" min="5" max="15" chance="50" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				</group>
+				<group chance="16">
+					<item id="33807" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (C-grade) -->
+					<item id="33813" min="1" max="3" chance="50" /> <!-- Improved Scroll: Enchant Armor (C-grade) -->
+				</group>
+				<group chance="5">
+					<item id="90013" min="1" max="1" chance="100" /> <!-- Mid-grade Life Stone -->
+				</group>
+				<group chance="10">
+					<item id="91528" min="1" max="1" chance="100" /> <!-- Weapon Varnish (C-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91535" min="1" max="1" chance="100" /> <!-- Armor Varnish (C-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91542" min="1" max="1" chance="100" /> <!-- Accessory Varnish (C-grade) -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25791" level="75" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="98560800" sp="2956824" raidPoints="5" />
+	<npc id="25791" level="65" type="RaidBoss" name="Death Knight" title="Raid Soul Drinker">
+		<collision>
+			<radius normal="38" />
+			<height normal="72" />
+		</collision>
+		<acquire exp="32853600" sp="985608" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="639533.32367" hpRegen="310.756323" mp="653275.14" mpRegen="3" />
-			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2788.494256" magical="1360.356908" />
+			<vitals hp="1153981.5" hpRegen="5520" mp="384661" mpRegen="10" />
+			<attack physical="10166.8" magical="4218.92" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="815" magical="397" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50009" level="40" /> <!-- Lv. 65 Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
+		<ai aggroRange="0" />
+		<dropLists>
+			<drop>
+				<group chance="100">
+					<item id="947" min="1" max="3" chance="50" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+					<item id="948" min="5" max="15" chance="50" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				</group>
+				<group chance="9">
+					<item id="33808" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+					<item id="33814" min="1" max="3" chance="50" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				</group>
+				<group chance="10">
+					<item id="90014" min="1" max="1" chance="100" /> <!-- High-grade Life Stone -->
+				</group>
+				<group chance="10">
+					<item id="91528" min="1" max="1" chance="100" /> <!-- Weapon Varnish (C-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91535" min="1" max="1" chance="100" /> <!-- Armor Varnish (C-grade) -->
+				</group>
+				<group chance="10">
+					<item id="91542" min="1" max="1" chance="100" /> <!-- Accessory Varnish (C-grade) -->
+				</group>
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25792" type="RaidBoss" level="75" name="Death Knight" title="Raid Soul Drinker">
 		<collision>
 			<radius normal="23" />
 			<height normal="64" />
 		</collision>
+		<acquire exp="43740000" sp="1312200" raidPoints="0" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1674864" hpRegen="7530" mp="558288" mpRegen="10" />
+			<attack physical="16176.6" magical="6568.38" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957" magical="467" />
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>600</hitTime>
+			<abnormalResist physical="230" magical="230" />
+		</stats>
+		<status attackable="true" />
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="50009" level="41" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="50009" level="41" /> <!-- Lv. 75 Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
+		<ai aggroRange="0" />
 		<dropLists>
 			<drop>
-				<item id="947" min="1" max="3" chance="49.5" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-				<item id="948" min="5" max="15" chance="49.31" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="90014" min="1" max="1" chance="10.025" /> <!-- High-grade Life Stone -->
-				<item id="91528" min="1" max="1" chance="10.024" /> <!-- Weapon Varnish (C-grade) -->
-				<item id="91535" min="1" max="1" chance="10.016" /> <!-- Armor Varnish (C-grade) -->
-				<item id="91542" min="1" max="1" chance="9.968" /> <!-- Accessory Varnish (C-grade) -->
-				<item id="33808" min="1" max="1" chance="4.529" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
-				<item id="33814" min="1" max="3" chance="4.47" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<group chance="100">
+					<item id="729" min="1" max="3" chance="50" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+					<item id="730" min="5" max="15" chance="50" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				</group>
+				<group chance="10">
+					<item id="33809" min="1" max="1" chance="50" /> <!-- Improved Scroll: Enchant Weapon (A-grade) -->
+					<item id="33815" min="2" max="4" chance="50" /> <!-- Improved Scroll: Enchant Armor (A-grade) -->
+				</group>
+				<group chance="15">
+					<item id="90014" min="1" max="3" chance="100" /> <!-- High-grade Life Stone -->
+				</group>
+				<group chance="15">
+					<item id="91530" min="1" max="1" chance="100" /> <!-- Weapon Varnish (B-grade) -->
+				</group>
+				<group chance="15">
+					<item id="91537" min="1" max="1" chance="100" /> <!-- Armor Varnish (B-grade) -->
+				</group>
+				<group chance="15">
+					<item id="91544" min="1" max="1" chance="100" /> <!-- Accessory Varnish (B-grade) -->
+				</group>
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25792" level="80" type="Folk" name="Death Knight" title="Raid Soul Drinker">
+	<npc id="25793" level="75" type="RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1674864" hpRegen="10.5" mp="558288" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="175" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="23" />
-			<height normal="64" />
-		</collision>
-	</npc>
-	<npc id="25793" level="80" type="Folk" name="Giant Golden Pig" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="18648000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="18648000" hpRegen="718" mp="18000" mpRegen="99" />
+			<attack physical="1" magical="4400" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3300" magical="2200" />
 			<speed>
 				<walk ground="60" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hitTime>600</hitTime>
+			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" noSleepMode="true" />
 		<collision>
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="25794" level="62" type="Monster" name="Kutis" title="Kutus' Nemesis">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="77" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="390176.22266" hpRegen="294.2109061" mp="597838.74" mpRegen="2.7" />
-			<attack physical="126427.8196" magical="117773.35043478" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="270878.706" magical="451464.51" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="704038" hpRegen="1079.97583140151" mp="352019" mpRegen="5.4" />
+			<attack physical="6424" magical="3232" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="772" magical="376" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>630</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="21.0" />
+			<radius normal="21" />
 			<height normal="43.5" />
 		</collision>
 		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2975,29 +3151,36 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="160" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="430168.59212" hpRegen="294.2109061" mp="634247.64" mpRegen="2.7" />
-			<attack physical="139385.1992" magical="129844.90956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="298643.292" magical="497738.82" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="776201.895" hpRegen="1118.36289877863" mp="373457" mpRegen="5.4" />
+			<attack physical="7082.46" magical="3563.28" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="867.4192" magical="422.4736" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>390</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="37.8" />
 		</collision>
 		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -3007,41 +3190,38 @@
 	</npc>
 	<npc id="25796" level="66" type="Monster" name="Batur" title="Kelbar's Leader">
 		<!-- Source: www.l2wiki.com -->
-		<race>GIANT</race>
+		<race>HUMANOID</race>
 		<equipment rhand="75" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1149777.78" mp="684279" mpRegen="1222.2222222222" hpRegen="60000" />
-			<attack physical="31428.571428571" magical="5546.218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2444.4444444444" magical="1419.3548387097" />
-			<attribute>
-				<attack type="FIRE" value="430" />
-				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="896513.188725" hpRegen="1151.90540931605" mp="396201" mpRegen="5.4" />
+			<attack physical="7808.41215" magical="3928.5162" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="974.63221312" magical="474.69133696" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>460</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="47.0" />
+			<radius normal="24" />
+			<height normal="47" />
 		</collision>
 		<skillList>
-			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="5463" level="1" /> <!-- Water Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -3053,29 +3233,36 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<equipment rhand="76" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="601182.36405" hpRegen="294.2109061" mp="713850.735" mpRegen="2.7" />
-			<attack physical="32380.952380952" magical="5714.2857142857" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2518.5185185185" magical="1462.3655913978" />
-			<attribute>
-				<attack type="FIRE" value="430" />
-				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1084780.95835725" hpRegen="1181.28501318891" mp="420329" mpRegen="5.4" />
+			<attack physical="8608.774395375" magical="4331.1891105" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1095.09675466163" magical="533.363186208256" />
 			<speed>
 				<walk ground="27" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>710</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="18.0" />
+			<radius normal="18" />
 			<height normal="47.5" />
 		</collision>
 		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -3087,29 +3274,36 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2503" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="727430.77134" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
-			<attack physical="33333.333333333" magical="5882.3529411765" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2592.5925925926" magical="1505.376344086" />
-			<attribute>
-				<attack type="FIRE" value="430" />
-				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1312584.95961227" hpRegen="1207.39267133816" mp="445927" mpRegen="5.4" />
+			<attack physical="6643.82163963066" magical="3342.59519602838" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1230.45071353781" magical="599.286876023597" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>480</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="45.0" />
+			<radius normal="24" />
+			<height normal="45" />
 		</collision>
 		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -3121,29 +3315,37 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2502" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="880191.49441" hpRegen="299.9232164" mp="819046.26" mpRegen="3" />
-			<attack physical="34285.714285714" magical="6050.4201680672" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2666.6666666667" magical="1548.3870967742" />
-			<attribute>
-				<attack type="FIRE" value="430" />
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-			</attribute>
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1588227.80113085" hpRegen="1231.25747352404" mp="482270" mpRegen="6" />
+			<attack physical="10464.0190824183" magical="5264.58743374469" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1382.53442173108" magical="673.358733900113" />
 			<speed>
 				<walk ground="27" />
 				<run ground="170" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
+			<hitTime>390</hitTime>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15.6" />
 			<height normal="38.4" />
 		</collision>
 		<skillList>
-			<skill id="5238" level="1" /> <!-- Freezing -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5238" level="1" /> <!-- Freezing -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
