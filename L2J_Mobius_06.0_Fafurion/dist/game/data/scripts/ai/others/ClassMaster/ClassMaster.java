@@ -932,7 +932,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerBypass(OnPlayerBypass event)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		if (event.getCommand().startsWith("Quest ClassMaster "))
 		{
@@ -944,21 +944,21 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	
 	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerProfessionChange(OnPlayerProfessionChange event)
+	public void onPlayerProfessionChange(OnPlayerProfessionChange event)
 	{
 		showPopupWindow(event.getPlayer());
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		showPopupWindow(event.getPlayer());
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		showPopupWindow(event.getPlayer());
 	}

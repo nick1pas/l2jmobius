@@ -520,7 +520,7 @@ public class Q10360_CertificationOfFate extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final Player player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
@@ -533,7 +533,7 @@ public class Q10360_CertificationOfFate extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		final Player player = event.getPlayer();
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))

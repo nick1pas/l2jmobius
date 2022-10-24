@@ -334,7 +334,7 @@ public class Q00255_Tutorial extends Quest
 	@RegisterEvent(EventType.ON_PLAYER_ITEM_PICKUP)
 	@RegisterType(ListenerRegisterType.ITEM)
 	@Id(BLUE_GEM)
-	public void OnPlayerItemPickup(OnPlayerItemPickup event)
+	public void onPlayerItemPickup(OnPlayerItemPickup event)
 	{
 		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
@@ -393,7 +393,7 @@ public class Q00255_Tutorial extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerBypass(OnPlayerBypass event)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(TUTORIAL_BYPASS))
@@ -404,7 +404,7 @@ public class Q00255_Tutorial extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{

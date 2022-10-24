@@ -120,7 +120,7 @@ public class ImprovedBabyPets extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL)
-	public void OnPlayerLogout(OnPlayerLogout event)
+	public void onPlayerLogout(OnPlayerLogout event)
 	{
 		cancelQuestTimer("HEAL", null, event.getPlayer());
 		cancelQuestTimer("BUFF", null, event.getPlayer());

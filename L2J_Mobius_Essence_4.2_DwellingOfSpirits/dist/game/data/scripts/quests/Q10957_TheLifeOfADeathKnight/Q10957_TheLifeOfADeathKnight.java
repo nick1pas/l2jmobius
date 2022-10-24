@@ -196,7 +196,7 @@ public class Q10957_TheLifeOfADeathKnight extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{

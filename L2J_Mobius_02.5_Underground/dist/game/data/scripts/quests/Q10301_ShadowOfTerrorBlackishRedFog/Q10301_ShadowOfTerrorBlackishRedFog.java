@@ -235,7 +235,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{
@@ -253,7 +253,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{

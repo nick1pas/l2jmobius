@@ -78,7 +78,7 @@ public class Tutorial extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerBypass(OnPlayerBypass event)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		final Player player = event.getPlayer();
 		if (event.getCommand().equals("chat_window"))
@@ -95,7 +95,7 @@ public class Tutorial extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_CREATE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerCreate(OnPlayerCreate event)
+	public void onPlayerCreate(OnPlayerCreate event)
 	{
 		final Player player = event.getPlayer();
 		if (Config.DISABLE_TUTORIAL)

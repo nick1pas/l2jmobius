@@ -52,7 +52,7 @@ public class Nevit implements IUniqueId
 		if (Config.NEVIT_ENABLED)
 		{
 			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
-			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
+			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> onPlayerLogout(event), this));
 		}
 	}
 	
@@ -93,7 +93,7 @@ public class Nevit implements IUniqueId
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
-	private void OnPlayerLogout(OnPlayerLogout event)
+	private void onPlayerLogout(OnPlayerLogout event)
 	{
 		stopNevitEffectTask(true);
 		stopAdventTask(false);

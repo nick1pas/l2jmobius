@@ -105,7 +105,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerBypass(OnPlayerBypass event)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		final Player player = event.getPlayer();
 		if (event.getCommand().startsWith(COMMAND_BYPASS))

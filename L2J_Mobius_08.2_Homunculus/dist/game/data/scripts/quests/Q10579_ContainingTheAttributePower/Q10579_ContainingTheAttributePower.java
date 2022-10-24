@@ -63,7 +63,7 @@ public class Q10579_ContainingTheAttributePower extends Quest
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		registerQuestItems(ATTRIBUTE_PRACTICE_LONG_SWORD, ATTRIBUTE_PRACTICE_FIRE_STONE, ATTRIBUTE_PRACTICE_WATER_STONE, ATTRIBUTE_PRACTICE_EARTH_STONE, ATTRIBUTE_PRACTICE_WIND_STONE, ATTRIBUTE_PRACTICE_HOLY_STONE, ATTRIBUTE_PRACTICE_DARK_STONE);
 		addCondStartedQuest(Q10566_BestChoice.class.getSimpleName(), "30847-99.html");
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_ATTRIBUTE_ADD, (OnItemAttributeAdd event) -> OnItemAttributeAdd(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_ATTRIBUTE_ADD, (OnItemAttributeAdd event) -> onItemAttributeAdd(event), this));
 	}
 	
 	@Override
@@ -229,7 +229,7 @@ public class Q10579_ContainingTheAttributePower extends Quest
 		return htmltext;
 	}
 	
-	public void OnItemAttributeAdd(OnItemAttributeAdd event)
+	public void onItemAttributeAdd(OnItemAttributeAdd event)
 	{
 		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != ATTRIBUTE_PRACTICE_LONG_SWORD))

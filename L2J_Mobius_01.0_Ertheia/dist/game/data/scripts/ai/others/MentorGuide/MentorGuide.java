@@ -224,7 +224,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	
 	@RegisterEvent(EventType.ON_PLAYER_MENTEE_STATUS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerMenteeStatus(OnPlayerMenteeStatus event)
+	public void onPlayerMenteeStatus(OnPlayerMenteeStatus event)
 	{
 		final Player player = event.getMentee();
 		if (event.isMenteeOnline())
@@ -290,7 +290,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	
 	@RegisterEvent(EventType.ON_PLAYER_MENTOR_STATUS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerMentorStatus(OnPlayerMentorStatus event)
+	public void onPlayerMentorStatus(OnPlayerMentorStatus event)
 	{
 		final Player player = event.getMentor();
 		if (event.isMentorOnline())

@@ -59,7 +59,7 @@ public class Q10578_TheSoulOfASword extends Quest
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		registerQuestItems(PRACTICE_STORMBRINGER, PRACTICE_SOUL_CRYSTAL_STAGE1, SOUL_CRYSTAL_PRACTICE_GEMSTONE);
 		addCondStartedQuest(Q10566_BestChoice.class.getSimpleName(), "31316-99.html");
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_SOUL_CRYSTAL_ADD, (OnItemSoulCrystalAdd event) -> OnItemSoulCrystalAdd(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_SOUL_CRYSTAL_ADD, (OnItemSoulCrystalAdd event) -> onItemSoulCrystalAdd(event), this));
 	}
 	
 	@Override
@@ -164,7 +164,7 @@ public class Q10578_TheSoulOfASword extends Quest
 		return htmltext;
 	}
 	
-	public void OnItemSoulCrystalAdd(OnItemSoulCrystalAdd event)
+	public void onItemSoulCrystalAdd(OnItemSoulCrystalAdd event)
 	{
 		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != PRACTICE_STORMBRINGER))

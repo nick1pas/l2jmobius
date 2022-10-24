@@ -59,7 +59,7 @@ public class Q10577_TemperARustingBlade extends Quest
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		registerQuestItems(AUGMENTATION_PRACTICE_STORMBRINGER, AUGMENTATION_PRACTICE_SPIRIT_STONE, AUGMENTATION_PRACTICE_GEMSTONE);
 		addCondStartedQuest(Q10566_BestChoice.class.getSimpleName(), "30677-99.html");
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_AUGMENT, (OnPlayerAugment event) -> OnPlayerAugment(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_AUGMENT, (OnPlayerAugment event) -> onPlayerAugment(event), this));
 	}
 	
 	@Override
@@ -153,7 +153,7 @@ public class Q10577_TemperARustingBlade extends Quest
 		return htmltext;
 	}
 	
-	public void OnPlayerAugment(OnPlayerAugment event)
+	public void onPlayerAugment(OnPlayerAugment event)
 	{
 		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != AUGMENTATION_PRACTICE_STORMBRINGER))

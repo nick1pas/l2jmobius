@@ -464,7 +464,7 @@ public class Q10751_WindsOfFateEncounters extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerBypass(OnPlayerBypass event)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
 		final String command = event.getCommand();
 		final Player player = event.getPlayer();
@@ -516,7 +516,7 @@ public class Q10751_WindsOfFateEncounters extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{
@@ -536,7 +536,7 @@ public class Q10751_WindsOfFateEncounters extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{

@@ -68,7 +68,7 @@ public class Dinford extends AbstractNpcAI
 	@RegisterEvent(EventType.ON_NPC_MENU_SELECT)
 	@RegisterType(ListenerRegisterType.NPC)
 	@Id(DINFORD)
-	public void OnNpcMenuSelect(OnNpcMenuSelect event)
+	public void onNpcMenuSelect(OnNpcMenuSelect event)
 	{
 		final Player player = event.getTalker();
 		final Npc npc = event.getNpc();

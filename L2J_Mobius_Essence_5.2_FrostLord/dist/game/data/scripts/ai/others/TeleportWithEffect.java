@@ -38,7 +38,7 @@ public class TeleportWithEffect extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_CREATURE_SKILL_FINISH_CAST)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnCreatureSkillFinishCast(OnCreatureSkillFinishCast event)
+	public void onCreatureSkillFinishCast(OnCreatureSkillFinishCast event)
 	{
 		if (event.getSkill().getId() != CommonSkill.TELEPORT.getId())
 		{

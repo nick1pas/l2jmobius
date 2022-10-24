@@ -63,8 +63,8 @@ public class Q00502_BrothersBoundInChains extends Quest
 		addTalkId(DARK_JUDGE);
 		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
 		
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> OnPlayerSummonAgathion(event), this));
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> OnPlayerUnsummonAgathion(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> onPlayerSummonAgathion(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> onPlayerUnsummonAgathion(event), this));
 	}
 	
 	@Override
@@ -181,7 +181,7 @@ public class Q00502_BrothersBoundInChains extends Quest
 		return htmltext;
 	}
 	
-	private void OnPlayerSummonAgathion(OnPlayerSummonAgathion event)
+	private void onPlayerSummonAgathion(OnPlayerSummonAgathion event)
 	{
 		if (event.getAgathionId() != SIN_EATER)
 		{
@@ -201,7 +201,7 @@ public class Q00502_BrothersBoundInChains extends Quest
 		startQuestTimer("buff", 2500, null, player);
 	}
 	
-	private void OnPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
+	private void onPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
 	{
 		if (event.getAgathionId() != SIN_EATER)
 		{

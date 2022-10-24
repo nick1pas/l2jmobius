@@ -522,7 +522,7 @@ public class Q10472_WindsOfFateEncroachingShadows extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
@@ -536,7 +536,7 @@ public class Q10472_WindsOfFateEncroachingShadows extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		final Player player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);

@@ -112,7 +112,7 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_CREATE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerCreate(OnPlayerCreate event)
+	public void onPlayerCreate(OnPlayerCreate event)
 	{
 		final Player player = event.getPlayer();
 		if (player.getRace() != Race.ERTHEIA)

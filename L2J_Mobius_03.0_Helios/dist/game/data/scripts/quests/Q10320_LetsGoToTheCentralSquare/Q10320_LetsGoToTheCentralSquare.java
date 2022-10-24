@@ -144,7 +144,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_CREATE)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerCreate(OnPlayerCreate event)
+	public void onPlayerCreate(OnPlayerCreate event)
 	{
 		final Player player = event.getPlayer();
 		if (player.getRace() != Race.ERTHEIA)

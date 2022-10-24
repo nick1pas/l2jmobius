@@ -161,7 +161,7 @@ public class Q10825_ForVictory extends Quest
 	
 	@RegisterEvent(EventType.ON_CASTLE_SIEGE_FINISH)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void OnCastleSiegeFinish(OnCastleSiegeFinish event)
+	private void onCastleSiegeFinish(OnCastleSiegeFinish event)
 	{
 		event.getSiege().getPlayersInZone().forEach(this::manageQuestProgress);
 	}

@@ -145,7 +145,7 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_ABILITY_POINTS_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void OnPlayerAbilityPointsChanged(OnPlayerAbilityPointsChanged event)
+	private void onPlayerAbilityPointsChanged(OnPlayerAbilityPointsChanged event)
 	{
 		notifyEvent("SUBQUEST_FINISHED_NOTIFY", null, event.getPlayer());
 	}

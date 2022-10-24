@@ -259,7 +259,7 @@ public class AwakeningMaster extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_CHANGE_TO_AWAKENED_CLASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerChangeToAwakenedClass(OnPlayerChangeToAwakenedClass event)
+	public void onPlayerChangeToAwakenedClass(OnPlayerChangeToAwakenedClass event)
 	{
 		final Player player = event.getPlayer();
 		if (player.isSubClassActive() && !player.isDualClassActive())

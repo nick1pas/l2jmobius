@@ -58,7 +58,7 @@ public class Q10576_GlitteringWeapons extends Quest
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		registerQuestItems(ENHANCEMENT_PRACTICE_LONG_SWORD, PRACTICE_WEAPON_ENCHANT_SCROLL);
 		addCondStartedQuest(Q10566_BestChoice.class.getSimpleName(), "30471-99.html");
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_ENCHANT_ADD, (OnItemEnchantAdd event) -> OnItemEnchantAdd(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_ITEM_ENCHANT_ADD, (OnItemEnchantAdd event) -> onItemEnchantAdd(event), this));
 	}
 	
 	@Override
@@ -190,7 +190,7 @@ public class Q10576_GlitteringWeapons extends Quest
 		return htmltext;
 	}
 	
-	public void OnItemEnchantAdd(OnItemEnchantAdd event)
+	public void onItemEnchantAdd(OnItemEnchantAdd event)
 	{
 		final Player player = event.getPlayer();
 		if ((player == null) || (event.getItem().getId() != ENHANCEMENT_PRACTICE_LONG_SWORD))

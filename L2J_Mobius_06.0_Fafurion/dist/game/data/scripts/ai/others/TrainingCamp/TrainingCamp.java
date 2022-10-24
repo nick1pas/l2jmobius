@@ -293,7 +293,7 @@ public class TrainingCamp extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		final Player player = event.getPlayer();
 		final TrainingHolder holder = player.getTraingCampInfo();
@@ -329,7 +329,7 @@ public class TrainingCamp extends AbstractNpcAI
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL)
-	public void OnPlayerLogout(OnPlayerLogout event)
+	public void onPlayerLogout(OnPlayerLogout event)
 	{
 		final Player player = event.getPlayer();
 		final TrainingHolder holder = player.getTraingCampInfo();

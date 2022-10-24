@@ -355,7 +355,7 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	public void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final Player player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();

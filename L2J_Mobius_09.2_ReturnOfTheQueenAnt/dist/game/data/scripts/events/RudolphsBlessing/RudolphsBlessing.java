@@ -45,7 +45,7 @@ public class RudolphsBlessing extends LongTimeEvent
 	
 	private static final int RUDOLPH_PRICE = 2019; // Calendar.getInstance().get(Calendar.YEAR) can be used but need to replace htmls.
 	
-	private static final SkillHolder RUDOLPH_TRYUCK = new SkillHolder(23181, 1);
+	private static final SkillHolder RUDOLPH_TRICK = new SkillHolder(23181, 1);
 	private static final ItemHolder ITEM_REQUIREMENT = new ItemHolder(21872, 2);
 	
 	public RudolphsBlessing()
@@ -53,8 +53,8 @@ public class RudolphsBlessing extends LongTimeEvent
 		addStartNpc(SANTA_CLAUS);
 		addFirstTalkId(SANTA_CLAUS);
 		addTalkId(SANTA_CLAUS);
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> OnPlayerSummonAgathion(event), this));
-		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> OnPlayerUnsummonAgathion(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> onPlayerSummonAgathion(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> onPlayerUnsummonAgathion(event), this));
 	}
 	
 	@Override
@@ -64,7 +64,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		{
 			if (takeItems(player, ITEM_REQUIREMENT.getId(), ITEM_REQUIREMENT.getCount()))
 			{
-				SkillCaster.triggerCast(player, player, RUDOLPH_TRYUCK.getSkill());
+				SkillCaster.triggerCast(player, player, RUDOLPH_TRICK.getSkill());
 				final Skill rudolphsBlessing = SkillData.getInstance().getSkill(23297, 1);
 				rudolphsBlessing.applyEffects(player, player);
 			}
@@ -118,7 +118,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		return htmltext;
 	}
 	
-	private void OnPlayerSummonAgathion(OnPlayerSummonAgathion event)
+	private void onPlayerSummonAgathion(OnPlayerSummonAgathion event)
 	{
 		if (event.getAgathionId() != AGATHION_SEAL_BRACELET_RUDOLPH_NPC)
 		{
@@ -133,7 +133,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		startQuestTimer("rudolph_eat", 10 * 60 * 1000, null, player);
 	}
 	
-	private void OnPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
+	private void onPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
 	{
 		if (event.getAgathionId() != AGATHION_SEAL_BRACELET_RUDOLPH_NPC)
 		{
