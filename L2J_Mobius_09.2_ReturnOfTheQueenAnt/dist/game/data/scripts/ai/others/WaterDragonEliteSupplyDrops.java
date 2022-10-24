@@ -37,19 +37,23 @@ public class WaterDragonEliteSupplyDrops extends AbstractNpcAI
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		24600, // Wyrn
-		24599, // SwordMan
-		24598, // Rider
-		24603, // Pikeman
-		24605, // Krotanian
-		24604, // Swordman
+		24596, // Water Dragon's Elite Archer
+		24597, // Water Dragon's Elite Mage
+		24598, // Water Dragon's Elite Raider
+		24599, // Water Dragon's Elite Swordsman
+		24600, // Water Dragon's Elite Wyrm
+		24601, // Water Dragon's Shaman
+		24602, // Water Dragon's Mage
+		24603, // Water Dragon's Pikeman
+		24604, // Water Dragon's Swordsman
+		24605, // Weakened Krotania
 	};
 	// Item
 	private static final int WATER_DRAGON_ELITE_SUPPLIES = 81758;
 	// Misc
 	private static final String WATER_DRAGON_ELITE_SUPPLIES_COUNT_VAR = "WATER_DRAGON_SUPPLIES_DROP_COUNT";
 	private static final int PLAYER_LEVEL = 100;
-	private static final int DROP_DAILY = 1;
+	private static final int DROP_DAILY = 100;
 	private static final int DROP_MIN = 1;
 	private static final int DROP_MAX = 1;
 	private static final double CHANCE = 10;
