@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -26,9 +27,11 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skill.Skill;
+import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
+import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -92,9 +95,20 @@ public class CallPc extends AbstractEffect
 		}
 		else if (target != null)
 		{
-			final WorldObject previousTarget = target.getTarget();
-			target.teleToLocation(effector);
-			target.setTarget(previousTarget);
+			if (skill.getTargetType() == TargetType.ENEMY)
+			{
+				effected.abortCast();
+				effected.abortAttack();
+				effected.stopMove(null);
+				effected.sendPacket(new FlyToLocation(effected, effector, FlyType.DUMMY, 0, 0, 0));
+				effected.setLocation(effector.getLocation());
+			}
+			else
+			{
+				final WorldObject previousTarget = target.getTarget();
+				target.teleToLocation(effector);
+				target.setTarget(previousTarget);
+			}
 		}
 	}
 	
