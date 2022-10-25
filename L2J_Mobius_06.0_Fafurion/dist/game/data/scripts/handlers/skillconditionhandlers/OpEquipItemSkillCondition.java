@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.ISkillCondition;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
@@ -45,49 +44,15 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				for (Item item : caster.getInventory().getPaperdollItems())
-				{
-					if (item.getId() == _itemId)
-					{
-						return true;
-					}
-				}
-				return false;
+				return caster.getInventory().isItemEquipped(_itemId);
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isPlayer())
-				{
-					for (Item item : target.getActingPlayer().getInventory().getPaperdollItems())
-					{
-						if (item.getId() == _itemId)
-						{
-							return true;
-						}
-					}
-				}
-				return false;
+				return (target != null) && target.isPlayer() && target.getActingPlayer().getInventory().isItemEquipped(_itemId);
 			}
 			case BOTH:
 			{
-				if ((target != null) && target.isPlayer())
-				{
-					for (Item item : caster.getInventory().getPaperdollItems())
-					{
-						if (item.getId() == _itemId)
-						{
-							for (Item i : target.getActingPlayer().getInventory().getPaperdollItems())
-							{
-								if (i.getId() == _itemId)
-								{
-									return true;
-								}
-							}
-							return false;
-						}
-					}
-				}
-				return false;
+				return (target != null) && target.isPlayer() && target.getActingPlayer().getInventory().isItemEquipped(_itemId) && caster.getInventory().isItemEquipped(_itemId);
 			}
 		}
 		return false;
