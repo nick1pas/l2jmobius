@@ -374,6 +374,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			newlocy = loc.getY();
 			newlocz = loc.getZ();
 			setLocation(loc);
+			setHeading(-1);
 		}
 		else if ((getX() == 0) && (getY() == 0))
 		{
@@ -407,6 +408,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 				newlocx = randX;
 				newlocy = randY;
 				setXYZ(newlocx, newlocy, newlocz);
+				setHeading(-1);
 			}
 		}
 		
