@@ -566,14 +566,9 @@ public class AttackableAI extends CreatureAI
 				final double distance2 = _actor.calculateDistanceSq2D(x1, y1, z1);
 				if (distance2 > (Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE))
 				{
-					npc.setReturningToSpawnPoint(true);
 					final double delay = Math.sqrt(distance2) / Config.MAX_DRIFT_RANGE;
 					x1 = _actor.getX() + (int) ((x1 - _actor.getX()) / delay);
 					y1 = _actor.getY() + (int) ((y1 - _actor.getY()) / delay);
-				}
-				else
-				{
-					npc.setReturningToSpawnPoint(false);
 				}
 			}
 			else
@@ -609,7 +604,7 @@ public class AttackableAI extends CreatureAI
 		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && _actor.isMonster() && !(_actor instanceof NpcWalker) && !(_actor instanceof GrandBoss))
 		{
 			final Spawn spawn = ((Npc) _actor).getSpawn();
-			if ((spawn != null) && !_actor.isInsideRadius3D(spawn.getX(), spawn.getY(), spawn.getZ(), (_actor.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE)))
+			if ((spawn != null) && !_actor.isInsideRadius2D(spawn.getX(), spawn.getY(), spawn.getZ(), (_actor.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE)))
 			{
 				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !_actor.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || (_actor.getInstanceId() == 0)))
 				{

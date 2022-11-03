@@ -252,18 +252,6 @@ public class Attackable extends Npc
 		return _aggroList;
 	}
 	
-	private boolean _isReturningToSpawnPoint = false;
-	
-	public boolean isReturningToSpawnPoint()
-	{
-		return _isReturningToSpawnPoint;
-	}
-	
-	public void setReturningToSpawnPoint(boolean value)
-	{
-		_isReturningToSpawnPoint = value;
-	}
-	
 	private boolean _canReturnToSpawnPoint = true;
 	
 	public boolean canReturnToSpawnPoint()
@@ -3047,7 +3035,6 @@ public class Attackable extends Npc
 		
 		if (hasAI() && (getSpawn() != null))
 		{
-			setReturningToSpawnPoint(true);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(getSpawn().getX(), getSpawn().getY(), getSpawn().getZ()));
 		}
 	}

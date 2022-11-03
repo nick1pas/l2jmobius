@@ -96,7 +96,6 @@ public class FortCommander extends Defender
 	{
 		if (!isInsideRadius2D(getSpawn(), 200))
 		{
-			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

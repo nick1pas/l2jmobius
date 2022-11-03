@@ -115,7 +115,6 @@ public class Commander extends Attackable
 	{
 		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 40))
 		{
-			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

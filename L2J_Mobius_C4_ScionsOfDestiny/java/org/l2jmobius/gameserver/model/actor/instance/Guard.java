@@ -124,7 +124,6 @@ public class Guard extends Attackable
 		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 150))
 		{
 			clearAggroList();
-			setReturningToSpawnPoint(true);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_homeX, _homeY, _homeZ, 0));
 		}
 	}

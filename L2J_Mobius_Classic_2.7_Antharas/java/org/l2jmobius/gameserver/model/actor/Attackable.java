@@ -86,7 +86,6 @@ public class Attackable extends Npc
 	//
 	private boolean _champion = false;
 	private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
-	private boolean _isReturningToSpawnPoint = false;
 	private boolean _canReturnToSpawnPoint = true;
 	private boolean _seeThroughSilentMove = false;
 	// Manor
@@ -146,16 +145,6 @@ public class Attackable extends Npc
 	public Map<Creature, AggroInfo> getAggroList()
 	{
 		return _aggroList;
-	}
-	
-	public boolean isReturningToSpawnPoint()
-	{
-		return _isReturningToSpawnPoint;
-	}
-	
-	public void setReturningToSpawnPoint(boolean value)
-	{
-		_isReturningToSpawnPoint = value;
 	}
 	
 	public boolean canReturnToSpawnPoint()
@@ -1687,7 +1676,6 @@ public class Attackable extends Npc
 		
 		if (hasAI() && (getSpawn() != null))
 		{
-			setReturningToSpawnPoint(true);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
 		}
 	}

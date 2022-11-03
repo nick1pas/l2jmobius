@@ -687,10 +687,6 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
-		if (_actor.isAttackable())
-		{
-			((Attackable) _actor).setReturningToSpawnPoint(false);
-		}
 		clientStoppedMoving();
 		
 		if (_actor.isNpc())

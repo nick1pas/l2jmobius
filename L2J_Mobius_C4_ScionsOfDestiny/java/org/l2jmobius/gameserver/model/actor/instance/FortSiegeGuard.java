@@ -110,7 +110,6 @@ public class FortSiegeGuard extends Attackable
 		
 		if (!isInsideRadius2D(getSpawn().getX(), getSpawn().getY(), getSpawn().getZ(), 40))
 		{
-			setReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())
