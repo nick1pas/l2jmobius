@@ -216,14 +216,9 @@ public class AttackableAI extends CreatureAI
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
-				else if (npc.getSpawn() != null)
+				else if ((npc.getSpawn() != null) && !npc.isInsideRadius3D(npc.getSpawn(), Config.MAX_DRIFT_RANGE + Config.MAX_DRIFT_RANGE))
 				{
-					final Location loc = npc.getSpawn();
-					final int range = Config.MAX_DRIFT_RANGE;
-					if (!npc.isInsideRadius3D(loc, range + range))
-					{
-						intention = AI_INTENTION_ACTIVE;
-					}
+					intention = AI_INTENTION_ACTIVE;
 				}
 			}
 			
