@@ -16,7 +16,6 @@
  */
 package ai.areas.Giran.Grace;
 
-import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -29,7 +28,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skill.SkillCaster;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
-import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
 
@@ -77,7 +76,8 @@ public class Grace extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/areas/Giran/Grace/34544.html")));
+		final String htmlText = getHtm(player, "34544.html");
+		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), 0, htmlText, 1));
 		return null;
 	}
 	
