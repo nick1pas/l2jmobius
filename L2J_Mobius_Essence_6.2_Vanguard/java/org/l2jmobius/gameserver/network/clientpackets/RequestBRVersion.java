@@ -14,21 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.network.clientpackets;
 
-public enum ItemLocation
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.serverpackets.ExBRVersion;
+
+/**
+ * @author Index
+ */
+public class RequestBRVersion implements IClientIncomingPacket
 {
-	VOID,
-	INVENTORY,
-	PAPERDOLL,
-	WAREHOUSE,
-	CLANWH,
-	PET,
-	PET_EQUIP,
-	LEASE,
-	REFUND,
-	MAIL,
-	FREIGHT,
-	COMMISSION,
-	EXCHANGE
+	
+	@Override
+	public boolean read(GameClient client, PacketReader packet)
+	{
+		return true;
+	}
+	
+	@Override
+	public void run(GameClient client)
+	{
+		client.sendPacket(new ExBRVersion());
+	}
 }

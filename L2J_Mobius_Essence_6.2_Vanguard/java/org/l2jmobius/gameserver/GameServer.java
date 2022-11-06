@@ -163,6 +163,7 @@ import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
+import org.l2jmobius.gameserver.instancemanager.WorldExchangeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.instancemanager.events.EventDropManager;
 import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
@@ -316,6 +317,7 @@ public class GameServer
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
 		ItemCommissionManager.getInstance();
+		WorldExchangeManager.getInstance();
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
 		MagicLampData.getInstance();

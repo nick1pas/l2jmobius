@@ -16,19 +16,39 @@
  */
 package org.l2jmobius.gameserver.enums;
 
-public enum ItemLocation
+/**
+ * @author Index
+ */
+public enum WorldExchangeItemMainType
 {
-	VOID,
-	INVENTORY,
-	PAPERDOLL,
-	WAREHOUSE,
-	CLANWH,
-	PET,
-	PET_EQUIP,
-	LEASE,
-	REFUND,
-	MAIL,
-	FREIGHT,
-	COMMISSION,
-	EXCHANGE
+	EQUIPMENT(0),
+	ARTIFACT(1),
+	ENCHANT(8),
+	CONSUMABLE(20),
+	ETC(4),
+	COLLECTION(5);
+	
+	private final int _id;
+	
+	private WorldExchangeItemMainType(int id)
+	{
+		_id = id;
+	}
+	
+	public int getId()
+	{
+		return _id;
+	}
+	
+	public static WorldExchangeItemMainType getWorldExchangeItemMainType(int id)
+	{
+		for (WorldExchangeItemMainType type : values())
+		{
+			if (type.getId() == id)
+			{
+				return type;
+			}
+		}
+		return null;
+	}
 }

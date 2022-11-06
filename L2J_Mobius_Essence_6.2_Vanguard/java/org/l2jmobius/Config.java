@@ -116,6 +116,7 @@ public class Config
 	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 	private static final String MAGIC_LAMP_FILE = "./config/MagicLamp.ini";
 	private static final String RANDOM_CRAFT_FILE = "./config/RandomCraft.ini";
+	private static final String WORLD_EXCHANGE_FILE = "./config/WorldExchange.ini";
 	
 	// --------------------------------------------------
 	// Custom Config File Definitions
@@ -927,6 +928,19 @@ public class Config
 	public static boolean ENABLE_RANDOM_CRAFT;
 	public static int RANDOM_CRAFT_CREATE_FEE;
 	public static boolean DROP_RANDOM_CRAFT_MATERIALS;
+	
+	// World Exchange
+	public static boolean ENABLE_WORLD_EXCHANGE;
+	public static String WORLD_EXCHANGE_DEFAULT_LANG;
+	public static long WORLD_EXCHANGE_SAVE_INTERVAL;
+	public static double WORLD_EXCHANGE_LCOIN_TAX;
+	public static long WORLD_EXCHANGE_MAX_LCOIN_TAX;
+	public static double WORLD_EXCHANGE_ADENA_FEE;
+	public static long WORLD_EXCHANGE_MAX_ADENA_FEE;
+	public static boolean WORLD_EXCHANGE_LAZY_UPDATE;
+	public static int WORLD_EXCHANGE_ITEM_SELL_PERIOD;
+	public static int WORLD_EXCHANGE_ITEM_BACK_PERIOD;
+	public static int WORLD_EXCHANGE_PAYMENT_TAKE_PERIOD;
 	
 	// HuntPass
 	public static boolean ENABLE_HUNT_PASS;
@@ -2065,6 +2079,20 @@ public class Config
 			ENABLE_RANDOM_CRAFT = randomCraftconfig.getBoolean("RandomCraftEnabled", true);
 			RANDOM_CRAFT_CREATE_FEE = randomCraftconfig.getInt("RandomCraftCreateFee", 300000);
 			DROP_RANDOM_CRAFT_MATERIALS = randomCraftconfig.getBoolean("DropRandomCraftMaterials", true);
+			
+			// Load World Exchange config file (if exists)
+			final PropertiesParser worldExchangeconfig = new PropertiesParser(WORLD_EXCHANGE_FILE);
+			ENABLE_WORLD_EXCHANGE = worldExchangeconfig.getBoolean("EnableWorldExchange", true);
+			WORLD_EXCHANGE_DEFAULT_LANG = worldExchangeconfig.getString("WorldExchangeDefaultLanguage", "en");
+			WORLD_EXCHANGE_SAVE_INTERVAL = worldExchangeconfig.getLong("BidItemsIntervalStatusCheck", 30000);
+			WORLD_EXCHANGE_LCOIN_TAX = worldExchangeconfig.getDouble("LCoinFee", 0.05);
+			WORLD_EXCHANGE_MAX_LCOIN_TAX = worldExchangeconfig.getLong("MaxLCoinFee", 20000);
+			WORLD_EXCHANGE_ADENA_FEE = worldExchangeconfig.getDouble("AdenaFee", 100.0);
+			WORLD_EXCHANGE_MAX_ADENA_FEE = worldExchangeconfig.getLong("MaxAdenaFee", -1);
+			WORLD_EXCHANGE_LAZY_UPDATE = worldExchangeconfig.getBoolean("DBLazy", false);
+			WORLD_EXCHANGE_ITEM_SELL_PERIOD = worldExchangeconfig.getInt("ItemSellPeriod", 14);
+			WORLD_EXCHANGE_ITEM_BACK_PERIOD = worldExchangeconfig.getInt("ItemBackPeriod", 120);
+			WORLD_EXCHANGE_PAYMENT_TAKE_PERIOD = worldExchangeconfig.getInt("PaymentTakePeriod", 120);
 			
 			// Load Training Camp config file (if exists)
 			final PropertiesParser trainingCampConfig = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);

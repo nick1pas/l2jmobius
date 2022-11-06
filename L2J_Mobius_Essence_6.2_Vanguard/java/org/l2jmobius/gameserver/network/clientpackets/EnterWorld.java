@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
+import org.l2jmobius.gameserver.instancemanager.WorldExchangeManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -710,6 +711,9 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.getInventory().unEquipItemInBodySlot(Inventory.PAPERDOLL_LHAND);
 		}
+		
+		// World Trade.
+		WorldExchangeManager.getInstance().checkPlayerSellAlarm(player);
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
 		{

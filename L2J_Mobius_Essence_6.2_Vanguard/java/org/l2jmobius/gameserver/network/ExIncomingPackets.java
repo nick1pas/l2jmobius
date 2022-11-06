@@ -195,6 +195,11 @@ import org.l2jmobius.gameserver.network.clientpackets.variation.ExVariationOpenU
 import org.l2jmobius.gameserver.network.clientpackets.variation.RequestRefine;
 import org.l2jmobius.gameserver.network.clientpackets.vip.ExRequestVipInfo;
 import org.l2jmobius.gameserver.network.clientpackets.vip.RequestVipLuckGameInfo;
+import org.l2jmobius.gameserver.network.clientpackets.worldexchange.ExWorldExchangeBuyItem;
+import org.l2jmobius.gameserver.network.clientpackets.worldexchange.ExWorldExchangeItemList;
+import org.l2jmobius.gameserver.network.clientpackets.worldexchange.ExWorldExchangeRegisterItem;
+import org.l2jmobius.gameserver.network.clientpackets.worldexchange.ExWorldExchangeSettleList;
+import org.l2jmobius.gameserver.network.clientpackets.worldexchange.ExWorldExchangeSettleRecvResult;
 import org.l2jmobius.gameserver.network.serverpackets.enchant.RequestExRemoveEnchantSupportItem;
 import org.l2jmobius.gameserver.network.serverpackets.variation.RequestConfirmGemStone;
 
@@ -781,18 +786,18 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_BALROGWAR_SHOW_RANKING(0x23A, null, ConnectionState.IN_GAME),
 	EX_BALROGWAR_GET_REWARD(0x23B, null, ConnectionState.IN_GAME),
 	EX_USER_RESTART_LOCKER_UPDATE(0x23C, null, ConnectionState.IN_GAME),
-	EX_WORLD_EXCHANGE_ITEM_LIST(0x23D, null, ConnectionState.IN_GAME),
-	EX_WORLD_EXCHANGE_REGI_ITEM(0x23E, null, ConnectionState.IN_GAME),
-	EX_WORLD_EXCHANGE_BUY_ITEM(0x23F, null, ConnectionState.IN_GAME),
-	EX_WORLD_EXCHANGE_SETTLE_LIST(0x240, null, ConnectionState.IN_GAME),
-	EX_WORLD_EXCHANGE_SETTLE_RECV_RESULT(0x241, null, ConnectionState.IN_GAME),
+	EX_WORLD_EXCHANGE_ITEM_LIST(0x23D, ExWorldExchangeItemList::new, ConnectionState.IN_GAME),
+	EX_WORLD_EXCHANGE_REGI_ITEM(0x23E, ExWorldExchangeRegisterItem::new, ConnectionState.IN_GAME),
+	EX_WORLD_EXCHANGE_BUY_ITEM(0x23F, ExWorldExchangeBuyItem::new, ConnectionState.IN_GAME),
+	EX_WORLD_EXCHANGE_SETTLE_LIST(0x240, ExWorldExchangeSettleList::new, ConnectionState.IN_GAME),
+	EX_WORLD_EXCHANGE_SETTLE_RECV_RESULT(0x241, ExWorldExchangeSettleRecvResult::new, ConnectionState.IN_GAME),
 	EX_READY_ITEM_AUTO_PEEL(0x242, null, ConnectionState.IN_GAME),
 	EX_REQUEST_ITEM_AUTO_PEEL(0x243, null, ConnectionState.IN_GAME),
 	EX_STOP_ITEM_AUTO_PEEL(0x244, null, ConnectionState.IN_GAME),
 	EX_VARIATION_OPEN_UI(0x245, ExVariationOpenUi::new, ConnectionState.IN_GAME),
 	EX_VARIATION_CLOSE_UI(0x246, ExVariationCloseUi::new, ConnectionState.IN_GAME),
 	EX_APPLY_VARIATION_OPTION(0x247, ExApplyVariationOption::new, ConnectionState.IN_GAME),
-	EX_BR_VERSION(0x248, null, ConnectionState.IN_GAME),
+	EX_BR_VERSION(0x248, RequestBRVersion::new, ConnectionState.AUTHENTICATED, ConnectionState.CONNECTED),
 	EX_MAX(0x249, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;

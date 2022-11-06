@@ -149,6 +149,11 @@ public class DailyTaskManager
 	{
 		GlobalVariablesManager.getInstance().storeMe();
 		
+		if (Config.WORLD_EXCHANGE_LAZY_UPDATE)
+		{
+			WorldExchangeManager.getInstance().storeMe();
+		}
+		
 		if (Olympiad.getInstance().inCompPeriod())
 		{
 			Olympiad.getInstance().saveOlympiadStatus();

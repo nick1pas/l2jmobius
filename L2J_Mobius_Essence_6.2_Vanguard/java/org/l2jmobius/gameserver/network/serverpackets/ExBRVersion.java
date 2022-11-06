@@ -14,21 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.enums;
+package org.l2jmobius.gameserver.network.serverpackets;
 
-public enum ItemLocation
+import org.l2jmobius.Config;
+import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.network.OutgoingPackets;
+
+/**
+ * @author Index
+ */
+public class ExBRVersion implements IClientOutgoingPacket
 {
-	VOID,
-	INVENTORY,
-	PAPERDOLL,
-	WAREHOUSE,
-	CLANWH,
-	PET,
-	PET_EQUIP,
-	LEASE,
-	REFUND,
-	MAIL,
-	FREIGHT,
-	COMMISSION,
-	EXCHANGE
+	public ExBRVersion()
+	{
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		if (!Config.ENABLE_WORLD_EXCHANGE)
+		{
+			return false;
+		}
+		
+		OutgoingPackets.EX_BR_VERSION.writeId(packet);
+		packet.writeC(1);
+		return true;
+	}
 }

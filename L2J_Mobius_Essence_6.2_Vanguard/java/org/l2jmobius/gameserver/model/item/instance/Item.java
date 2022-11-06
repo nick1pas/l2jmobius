@@ -2502,13 +2502,18 @@ public class Item extends WorldObject
 	
 	public void setVisualId(int visualId)
 	{
+		setVisualId(visualId, true);
+	}
+	
+	public void setVisualId(int visualId, boolean announce)
+	{
 		getVariables().set(ItemVariables.VISUAL_ID, visualId);
 		
 		// When removed, cancel existing lifetime task.
 		if (visualId == 0)
 		{
 			ItemAppearanceTaskManager.getInstance().remove(this);
-			onVisualLifeTimeEnd();
+			onVisualLifeTimeEnd(announce);
 		}
 	}
 	
@@ -2536,6 +2541,11 @@ public class Item extends WorldObject
 	
 	public void onVisualLifeTimeEnd()
 	{
+		onVisualLifeTimeEnd(true);
+	}
+	
+	public void onVisualLifeTimeEnd(boolean announce)
+	{
 		final ItemVariables vars = getVariables();
 		vars.remove(ItemVariables.VISUAL_ID);
 		vars.remove(ItemVariables.VISUAL_APPEARANCE_STONE_ID);
@@ -2550,13 +2560,16 @@ public class Item extends WorldObject
 			player.broadcastUserInfo(UserInfoType.APPAREANCE);
 			player.sendInventoryUpdate(iu);
 			
-			if (isEnchanted())
+			if (announce)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(_enchantLevel).addItemName(this));
-			}
-			else
-			{
-				player.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
+				if (isEnchanted())
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(_enchantLevel).addItemName(this));
+				}
+				else
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
+				}
 			}
 		}
 	}
