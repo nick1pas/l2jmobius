@@ -2307,6 +2307,13 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="itemIds">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedInt" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="amount" type="xs:unsignedByte" />
 															<xs:element name="percentType" type="xs:string" />
 															<xs:element name="alignment" type="xs:string" />

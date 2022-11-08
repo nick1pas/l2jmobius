@@ -2386,6 +2386,13 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="itemIds">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedInt" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="amount" type="xs:unsignedByte" />
 															<xs:element name="percentType" type="xs:string" />
 															<xs:element name="alignment" type="xs:string" />
@@ -2396,7 +2403,7 @@
 															<xs:element name="skillLevel" type="xs:unsignedByte" />
 															<xs:element name="hasLearned" type="xs:boolean" />
 															<xs:element name="socialClass" type="xs:byte" />
-															<xs:element name="itemId" type="xs:unsignedShort" />
+															<xs:element name="itemId" type="xs:unsignedInt" />
 														</xs:choice>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />

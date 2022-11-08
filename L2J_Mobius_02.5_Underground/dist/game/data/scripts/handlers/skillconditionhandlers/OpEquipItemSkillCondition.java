@@ -16,6 +16,10 @@
  */
 package handlers.skillconditionhandlers;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.enums.SkillConditionAffectType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -28,12 +32,20 @@ import org.l2jmobius.gameserver.model.skill.Skill;
  */
 public class OpEquipItemSkillCondition implements ISkillCondition
 {
-	private final int _itemId;
+	private final Set<Integer> _itemIds = new HashSet<>();
 	private final SkillConditionAffectType _affectType;
 	
 	public OpEquipItemSkillCondition(StatSet params)
 	{
-		_itemId = params.getInt("itemId");
+		final List<Integer> itemIds = params.getList("itemIds", Integer.class);
+		if (itemIds != null)
+		{
+			_itemIds.addAll(itemIds);
+		}
+		else
+		{
+			_itemIds.add(params.getInt("itemId"));
+		}
 		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);
 	}
 	
@@ -44,15 +56,48 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return caster.getInventory().isItemEquipped(_itemId);
+				for (int itemId : _itemIds)
+				{
+					if (caster.getInventory().isItemEquipped(itemId))
+					{
+						return true;
+					}
+				}
+				break;
 			}
 			case TARGET:
 			{
-				return (target != null) && target.isPlayer() && target.getActingPlayer().getInventory().isItemEquipped(_itemId);
+				if ((target != null) && target.isPlayer())
+				{
+					for (int itemId : _itemIds)
+					{
+						if (target.getActingPlayer().getInventory().isItemEquipped(itemId))
+						{
+							return true;
+						}
+					}
+				}
+				break;
 			}
 			case BOTH:
 			{
-				return (target != null) && target.isPlayer() && target.getActingPlayer().getInventory().isItemEquipped(_itemId) && caster.getInventory().isItemEquipped(_itemId);
+				if ((target != null) && target.isPlayer())
+				{
+					for (int itemId : _itemIds)
+					{
+						if (target.getActingPlayer().getInventory().isItemEquipped(itemId))
+						{
+							for (int id : _itemIds)
+							{
+								if (caster.getInventory().isItemEquipped(id))
+								{
+									return true;
+								}
+							}
+						}
+					}
+				}
+				break;
 			}
 		}
 		return false;

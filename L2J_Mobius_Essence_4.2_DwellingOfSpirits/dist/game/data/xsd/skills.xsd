@@ -320,7 +320,15 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="itemIds">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedInt" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="skillId" type="xs:unsignedShort" />
+															<xs:element name="skillId" type="xs:unsignedInt" />
 															<xs:element name="affectType" type="xs:string" />
 															<xs:element name="race">
 																<xs:complexType mixed="true">

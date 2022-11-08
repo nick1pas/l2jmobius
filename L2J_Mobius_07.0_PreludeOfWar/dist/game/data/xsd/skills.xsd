@@ -2341,7 +2341,7 @@
 											<xs:element maxOccurs="unbounded" name="condition">
 												<xs:complexType>
 													<xs:sequence minOccurs="0">
-														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="itemId" type="xs:unsignedInt" />
 														<xs:element minOccurs="0" name="socialClass" type="xs:byte" />
 														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
@@ -2355,6 +2355,13 @@
 															<xs:complexType>
 																<xs:sequence>
 																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="itemIds">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedInt" />
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
