@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -40,20 +41,41 @@ public class Compelling extends AbstractEffect
 	}
 	
 	@Override
-	public boolean isInstant()
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return true;
+		if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+		{
+			return false;
+		}
+		
+		return effected.isPlayable() || effected.isAttackable();
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
+	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		// Prevent compelling raids and town NPCs.
-		if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		compellingAction(effector, effected);
+	}
+	
+	@Override
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
+	{
+		compellingAction(null, effected);
+		return false;
+	}
+	
+	@Override
+	public void onExit(Creature effector, Creature effected, Skill skill)
+	{
+		if (!effected.isPlayer())
 		{
-			return;
+			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
-		
+	}
+	
+	private void compellingAction(Creature effector, Creature effected)
+	{
 		effected.setRunning();
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effector.getLocation());
 	}
