@@ -1541,6 +1541,21 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="DUALBLUNT">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:byte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="DUALDAGGER">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -2135,7 +2150,6 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="mCritRateMode" type="xs:string" />
-															<xs:element name="DUALBLUNT" type="xs:unsignedByte" />
 															<xs:element name="percentTo" type="xs:unsignedByte" />
 															<xs:element name="zoneId">
 																<xs:complexType mixed="true">

@@ -281,6 +281,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="36156" toLevel="3" name="Kaliel's Bracelet Augmentation: CON">
+		<!-- CON +1 / +2 / +3 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -296,6 +297,7 @@
 		</effects>
 	</skill>
 	<skill id="36157" toLevel="3" name="Kaliel's Bracelet Augmentation: MEN">
+		<!-- MEN +1 / +2 / +3 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -311,6 +313,7 @@
 		</effects>
 	</skill>
 	<skill id="36158" toLevel="5" name="Kaliel's Bracelet Augmentation: P. Def.">
+		<!-- P. Def. +1% / +2% / +3% / +4% / +5% -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -328,6 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="36159" toLevel="5" name="Kaliel's Bracelet Augmentation: M. Def.">
+		<!-- M. Def. +1% / +2% / +3% / +4% / +5% -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -345,11 +349,75 @@
 		</effects>
 	</skill>
 	<skill id="36160" toLevel="5" name="Kaliel's Bracelet Augmentation: Attribute Resistance">
+		<!-- Attribute Resistance +10 -> +50 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36161" toLevel="1" name="Kaliel's Bracelet Augmentation: Received Damage Decrease">
+		<!-- Received Damage -5% -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -365,22 +433,70 @@
 		</effects>
 	</skill>
 	<skill id="36162" toLevel="10" name="Kaliel's Bracelet Augmentation: Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman">
+		<!-- When using Talisman of Longing / Talisman of Insanity / Heavenly Talisman, P./ M. Atk. +1% -> +10% -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<conditions>
-			<condition name="OpAffectedBySkill">
-				<skillId>8864</skillId> <!-- Talisman of Longing -->
-				<skillLevel>6</skillLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36163" toLevel="1" name="Kaliel's Bracelet Augmentation: Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman">
+		<!-- When using Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman, P./M. Atk. +10%; when using a Heavenly Talisman, additionally damage +3% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36164" toLevel="10" name="Kaliel's Bracelet Augmentation: Sayha's Talisman/ Enhanced Sayha's Talisman">
+		<!-- When using Sayha's Talisman Lv. 4+/ Enhanced Sayha's Talisman, P./ M. Skill Power +1% -> +10% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36165" toLevel="1" name="Kaliel's Bracelet Augmentation: Sayha's Talisman/ Enhanced Sayha's Talisman">
+		<!-- When using Sayha's Talisman Lv. 4+/ Enhanced Sayha's Talisman, P./ M. Skill Power +10%, When using Enhanced Sayha's Talisman, additionally damage +3% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36166" toLevel="10" name="Kaliel's Bracelet Augmentation: Talisman of Protection/ Enhanced Talisman of Protection">
+		<!-- When using Talisman of Protection Lv. 5+/ Enhanced Talisman of Protection, Resistance to All Weapons +1% -> +10% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36167" toLevel="1" name="Kaliel's Bracelet Augmentation: Talisman of Protection/ Enhanced Talisman of Protection">
+		<!-- When using Talisman of Protection Lv. 5+/ Enhanced Talisman of Protection, Resistance to All Weapons +10%; when using Enhanced Talisman of Protection, received damage -3% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36168" toLevel="10" name="Kaliel's Bracelet Augmentation: Venir's Talisman/ Soul Talisman">
+		<!-- When using Venir's Talisman Lv. 10+/ Soul Talisman, Attribute Attack/ Resistance +10 -> +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36169" toLevel="1" name="Kaliel's Bracelet Augmentation: Venir's Talisman/ Soul Talisman">
+		<!-- When using Venir's Talisman Lv. 10+/ Soul Talisman, Attribute Attack/ Resistance +100; when using Soul Talisman, additionally Skill Cooldown -3% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="36170" toLevel="10" name="Kaliel's Bracelet Augmentation: P./ M. Atk.">
+		<!-- When using Talisman of Longing / Talisman of Insanity / Heavenly Talisman, P./ M. Atk. +1% -> +10% -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>34989</item> <!-- Talisman of Longing -->
+					<item>81486</item> <!-- Talisman of Longing (Exalted) -->
+					<item>39572</item> <!-- Talisman of Insanity -->
+					<item>80957</item> <!-- Heavenly Talisman -->
+					<item>81873</item> <!-- Heavenly Talisman (Event) -->
+				</itemIds>
+				<affectType>CASTER</affectType>
 			</condition>
-			<condition name="OpAffectedBySkill">
-				<skillId>8864</skillId> <!-- Talisman of Longing -->
-				<skillLevel>7</skillLevel>
-			</condition>
-			<condition name="OpAffectedBySkill">
-				<skillId>8864</skillId> <!-- Talisman of Longing -->
-				<skillLevel>8</skillLevel>
-			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -397,82 +513,569 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="36163" toLevel="1" name="Kaliel's Bracelet Augmentation: Talisman of Longing/ Talisman of Insanity/ Heavenly Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36164" toLevel="10" name="Kaliel's Bracelet Augmentation: Sayha's Talisman/ Enhanced Sayha's Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36165" toLevel="1" name="Kaliel's Bracelet Augmentation: Sayha's Talisman/ Enhanced Sayha's Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36166" toLevel="10" name="Kaliel's Bracelet Augmentation: Talisman of Protection/ Enhanced Talisman of Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36167" toLevel="1" name="Kaliel's Bracelet Augmentation: Talisman of Protection/ Enhanced Talisman of Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36168" toLevel="10" name="Kaliel's Bracelet Augmentation: Venir's Talisman/ Soul Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36169" toLevel="1" name="Kaliel's Bracelet Augmentation: Venir's Talisman/ Soul Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="36170" toLevel="10" name="Kaliel's Bracelet Augmentation: P./ M. Atk.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
 	<skill id="36171" toLevel="1" name="Kaliel's Bracelet Augmentation: Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Heavenly Talisman, damage +3% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">			   
+				<itemId>80957</itemId> <!-- Heavenly Talisman -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>		
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36172" toLevel="10" name="Kaliel's Bracelet Augmentation: Skill Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Sayha's Talisman Lv. 4+/ Enhanced Sayha's Talisman, P./ M. Skill Power +1% -> 10% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>47810</item> <!-- Sayha's Talisman Lv. 4 -->
+					<item>47811</item> <!-- Sayha's Talisman Lv. 5 -->
+					<item>47812</item> <!-- Sayha's Talisman Lv. 6 -->
+					<item>47813</item> <!-- Sayha's Talisman Lv. 7 -->
+					<item>47814</item> <!-- Sayha's Talisman Lv. 8 -->
+					<item>47815</item> <!-- Sayha's Talisman Lv. 9 -->
+					<item>47816</item> <!-- Sayha's Talisman Lv. 10 -->
+					<item>81487</item> <!-- Sayha's Talisman (Exalted) -->
+					<item>82050</item> <!-- Enhanced Sayha's Talisman Lv. 1 -->
+					<item>82051</item> <!-- Enhanced Sayha's Talisman Lv. 2 -->
+					<item>82052</item> <!-- Enhanced Sayha's Talisman Lv. 3 -->
+					<item>82053</item> <!-- Enhanced Sayha's Talisman Lv. 4 -->
+					<item>82054</item> <!-- Enhanced Sayha's Talisman Lv. 5 -->
+					<item>82055</item> <!-- Enhanced Sayha's Talisman Lv. 6 -->
+					<item>82056</item> <!-- Enhanced Sayha's Talisman Lv. 7 -->
+					<item>82057</item> <!-- Enhanced Sayha's Talisman Lv. 8 -->
+					<item>82058</item> <!-- Enhanced Sayha's Talisman Lv. 9 -->
+					<item>82059</item> <!-- Enhanced Sayha's Talisman Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36173" toLevel="1" name="Kaliel's Bracelet Augmentation: Damage Increase">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Enhanced Sayha's Talisman, damage +3% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>82050</item> <!-- Enhanced Sayha's Talisman Lv. 1 -->
+					<item>82051</item> <!-- Enhanced Sayha's Talisman Lv. 2 -->
+					<item>82052</item> <!-- Enhanced Sayha's Talisman Lv. 3 -->
+					<item>82053</item> <!-- Enhanced Sayha's Talisman Lv. 4 -->
+					<item>82054</item> <!-- Enhanced Sayha's Talisman Lv. 5 -->
+					<item>82055</item> <!-- Enhanced Sayha's Talisman Lv. 6 -->
+					<item>82056</item> <!-- Enhanced Sayha's Talisman Lv. 7 -->
+					<item>82057</item> <!-- Enhanced Sayha's Talisman Lv. 8 -->
+					<item>82058</item> <!-- Enhanced Sayha's Talisman Lv. 9 -->
+					<item>82059</item> <!-- Enhanced Sayha's Talisman Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36174" toLevel="10" name="Kaliel's Bracelet Augmentation: Resistance to All Weapons">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Talisman of Protection Lv. 5+/ Enhanced Talisman of Protection, Resistance to All Weapons +1% -> 10% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>80641</item> <!-- Talisman of Protection Lv. 5 -->
+					<item>80642</item> <!-- Talisman of Protection Lv. 6 -->
+					<item>80643</item> <!-- Talisman of Protection Lv. 7 -->
+					<item>80644</item> <!-- Talisman of Protection Lv. 8 -->
+					<item>80645</item> <!-- Talisman of Protection Lv. 9 -->
+					<item>80646</item> <!-- Talisman of Protection Lv. 10 -->
+					<item>81760</item> <!-- Enhanced Talisman of Protection Lv. 1 -->
+					<item>81761</item> <!-- Enhanced Talisman of Protection Lv. 2 -->
+					<item>81762</item> <!-- Enhanced Talisman of Protection Lv. 3 -->
+					<item>81763</item> <!-- Enhanced Talisman of Protection Lv. 4 -->
+					<item>81764</item> <!-- Enhanced Talisman of Protection Lv. 5 -->
+					<item>81765</item> <!-- Enhanced Talisman of Protection Lv. 6 -->
+					<item>81766</item> <!-- Enhanced Talisman of Protection Lv. 7 -->
+					<item>81767</item> <!-- Enhanced Talisman of Protection Lv. 8 -->
+					<item>81768</item> <!-- Enhanced Talisman of Protection Lv. 9 -->
+					<item>81769</item> <!-- Enhanced Talisman of Protection Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DefenceTrait">
+				<SWORD>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</SWORD>
+				<BLUNT>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</BLUNT>
+				<DUAL>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</DUAL>
+				<DUALBLUNT>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</DUALBLUNT>
+				<DAGGER>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</DUALDAGGER>
+				<DUALFIST>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</DUALFIST>
+				<POLE>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</POLE>
+				<BOW>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</CROSSBOW>
+				<TWOHANDCROSSBOW>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</TWOHANDCROSSBOW>
+				<ANCIENTSWORD>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</ANCIENTSWORD>
+				<RAPIER>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</RAPIER>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36175" toLevel="1" name="Kaliel's Bracelet Augmentation: Received Damage Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Enhanced Talisman of Protection, received damage -3% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>81760</item> <!-- Enhanced Talisman of Protection Lv. 1 -->
+					<item>81761</item> <!-- Enhanced Talisman of Protection Lv. 2 -->
+					<item>81762</item> <!-- Enhanced Talisman of Protection Lv. 3 -->
+					<item>81763</item> <!-- Enhanced Talisman of Protection Lv. 4 -->
+					<item>81764</item> <!-- Enhanced Talisman of Protection Lv. 5 -->
+					<item>81765</item> <!-- Enhanced Talisman of Protection Lv. 6 -->
+					<item>81766</item> <!-- Enhanced Talisman of Protection Lv. 7 -->
+					<item>81767</item> <!-- Enhanced Talisman of Protection Lv. 8 -->
+					<item>81768</item> <!-- Enhanced Talisman of Protection Lv. 9 -->
+					<item>81769</item> <!-- Enhanced Talisman of Protection Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36176" toLevel="10" name="Kaliel's Bracelet Augmentation: Attribute Attack/ Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Venir's Talisman Lv. 10+/ Soul Talisman, Attribute Attack/ Resistance +10 -> +100 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>39643</item> <!-- Venir's Talisman Lv. 10 -->
+					<item>39644</item> <!-- Venir's Talisman Lv. 11 -->
+					<item>39645</item> <!-- Venir's Talisman Lv. 12 -->
+					<item>39646</item> <!-- Venir's Talisman Lv. 13 -->
+					<item>39647</item> <!-- Venir's Talisman Lv. 14 -->
+					<item>39648</item> <!-- Venir's Talisman Lv. 15 -->
+					<item>39649</item> <!-- Venir's Talisman Lv. 16 -->
+					<item>39650</item> <!-- Venir's Talisman Lv. 17 -->
+					<item>39651</item> <!-- Venir's Talisman Lv. 18 -->
+					<item>39652</item> <!-- Venir's Talisman Lv. 19 -->
+					<item>39653</item> <!-- Venir's Talisman Lv. 20 -->
+					<item>39654</item> <!-- Venir's Talisman Lv. 21 -->
+					<item>39655</item> <!-- Venir's Talisman Lv. 22 -->
+					<item>39656</item> <!-- Venir's Talisman Lv. 23 -->
+					<item>39657</item> <!-- Venir's Talisman Lv. 24 -->
+					<item>82085</item> <!-- Soul Talisman Lv. 1 -->
+					<item>82086</item> <!-- Soul Talisman Lv. 2 -->
+					<item>82087</item> <!-- Soul Talisman Lv. 3 -->
+					<item>82088</item> <!-- Soul Talisman Lv. 4 -->
+					<item>82089</item> <!-- Soul Talisman Lv. 5 -->
+					<item>82090</item> <!-- Soul Talisman Lv. 6 -->
+					<item>82091</item> <!-- Soul Talisman Lv. 7 -->
+					<item>82092</item> <!-- Soul Talisman Lv. 8 -->
+					<item>82093</item> <!-- Soul Talisman Lv. 9 -->
+					<item>82094</item> <!-- Soul Talisman Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="36177" toLevel="1" name="Kaliel's Bracelet Augmentation: Skill Cooldown Decrease">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using Soul Talisman, Skill Cooldown -3% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpEquipItem">
+				<itemIds>
+					<item>82085</item> <!-- Soul Talisman Lv. 1 -->
+					<item>82086</item> <!-- Soul Talisman Lv. 2 -->
+					<item>82087</item> <!-- Soul Talisman Lv. 3 -->
+					<item>82088</item> <!-- Soul Talisman Lv. 4 -->
+					<item>82089</item> <!-- Soul Talisman Lv. 5 -->
+					<item>82090</item> <!-- Soul Talisman Lv. 6 -->
+					<item>82091</item> <!-- Soul Talisman Lv. 7 -->
+					<item>82092</item> <!-- Soul Talisman Lv. 8 -->
+					<item>82093</item> <!-- Soul Talisman Lv. 9 -->
+					<item>82094</item> <!-- Soul Talisman Lv. 10 -->
+				</itemIds>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="36178" toLevel="1" name="Collection_7_2007">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
