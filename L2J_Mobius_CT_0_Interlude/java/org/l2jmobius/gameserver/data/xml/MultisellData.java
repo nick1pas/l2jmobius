@@ -326,9 +326,9 @@ public class MultisellData implements IXmlReader
 		{
 			case PC_CAFE_POINTS:
 			{
-				player.setPcCafePoints((player.getPcCafePoints() - amount));
+				player.setPcCafePoints(player.getPcCafePoints() - amount);
 				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), -amount, 0));
-				break;
+				return true;
 			}
 			case CLAN_REPUTATION:
 			{
