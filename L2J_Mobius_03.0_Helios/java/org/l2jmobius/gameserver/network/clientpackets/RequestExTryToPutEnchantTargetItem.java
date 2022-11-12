@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -26,6 +27,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author KenM
@@ -56,14 +58,20 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			return;
 		}
 		
-		request.setEnchantingItem(_objectId);
-		
-		final Item item = request.getEnchantingItem();
 		final Item scroll = request.getEnchantingScroll();
-		if ((item == null) || (scroll == null))
+		if (scroll == null)
 		{
 			return;
 		}
+		
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		if (item == null)
+		{
+			Util.handleIllegalPlayerAction(player, "RequestExTryToPutEnchantTargetItem: " + player + " tried to cheat using a packet manipulation tool! Ban this player!", Config.DEFAULT_PUNISH);
+			return;
+		}
+		
+		request.setEnchantingItem(_objectId);
 		
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))

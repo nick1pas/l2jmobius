@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -25,6 +26,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author KenM
@@ -54,10 +56,16 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final Item item = player.getInventory().getItemByObjectId(_objectId);
 		final Item scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
-		if ((item == null) || (scroll == null))
+		if (scroll == null)
 		{
+			return;
+		}
+		
+		final Item item = player.getInventory().getItemByObjectId(_objectId);
+		if (item == null)
+		{
+			Util.handleIllegalPlayerAction(player, "RequestExTryToPutEnchantTargetItem: " + player + " tried to cheat using a packet manipulation tool! Ban this player!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -73,6 +81,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			}
 			return;
 		}
+		
 		player.setEnchanting(true);
 		player.setActiveEnchantTimestamp(System.currentTimeMillis());
 		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
