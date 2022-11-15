@@ -405,6 +405,18 @@ public class SkillData implements IXmlReader
 									final Function<StatSet, ISkillCondition> conditionFunction = SkillConditionHandler.getInstance().getHandlerFactory(conditionName);
 									if (conditionFunction != null)
 									{
+										if (skill.isPassive())
+										{
+											if (skillConditionScope != SkillConditionScope.PASSIVE)
+											{
+												LOGGER.warning(getClass().getSimpleName() + ": Non passive condition for passive Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "]");
+											}
+										}
+										else if (skillConditionScope == SkillConditionScope.PASSIVE)
+										{
+											LOGGER.warning(getClass().getSimpleName() + ": Passive condition for non passive Skill Id[" + statSet.getInt(".id") + "] Level[" + level + "] SubLevel[" + subLevel + "]");
+										}
+										
 										skill.addCondition(skillConditionScope, conditionFunction.apply(params));
 									}
 									else

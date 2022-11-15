@@ -1947,8 +1947,8 @@
 											<xs:element name="condition">
 												<xs:complexType>
 													<xs:sequence>
-														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
+														<xs:element minOccurs="0" name="amount" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>
@@ -1966,6 +1966,7 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="minLevel" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
 														<xs:element minOccurs="0" name="weaponType">
 															<xs:complexType>
