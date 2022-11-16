@@ -1669,11 +1669,11 @@
 		<!-- There is a chance to deal damage equal to 30% of the target's HP after a standard attack. Requires a fist weapon. -->
 		<icon>icon.skill30526</icon>
 		<operateType>P</operateType>
-		<conditions>
+		<passiveConditions>
 			<condition name="OpNotAffectedBySkill">
 				<skillId>30928</skillId> <!-- Gravity Switch -->
 			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<chance>7</chance>

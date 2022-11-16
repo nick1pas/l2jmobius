@@ -1090,11 +1090,11 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<passiveConditions>
+		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>20</minLevel>
 			</condition>
-		</passiveConditions>
+		</conditions>
 		<effects>
 			<effect name="ExpModify">
 				<amount>20</amount>
