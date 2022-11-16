@@ -1062,14 +1062,6 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="1000" aggroRange="450" />
 		<dropLists>
-			<spoil>
-				<item id="36533" min="1" max="1" chance="0.0009" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0009" /> <!-- Durable Braid -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1081,6 +1073,14 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.0009" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0009" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky>
 		</dropLists>
 		<collision>
 			<radius normal="10" />
