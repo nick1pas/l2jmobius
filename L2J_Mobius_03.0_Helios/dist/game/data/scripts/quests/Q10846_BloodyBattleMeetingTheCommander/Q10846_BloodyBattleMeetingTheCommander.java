@@ -32,7 +32,7 @@ public class Q10846_BloodyBattleMeetingTheCommander extends Quest
 {
 	// NPCs
 	private static final int HURAK = 34064;
-	private static final int DEVIANNE = 34323;
+	private static final int DEVIANNE = 34089;
 	// MiniBoss
 	private static final int BURNSTEIN = 26136; // Burnstein
 	// Item
