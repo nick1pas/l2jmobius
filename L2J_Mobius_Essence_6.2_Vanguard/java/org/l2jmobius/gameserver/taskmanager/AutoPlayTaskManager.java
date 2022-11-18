@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
@@ -77,7 +78,7 @@ public class AutoPlayTaskManager implements Runnable
 				{
 					player.setTarget(null);
 				}
-				else if (monster.getTarget() == player)
+				else if ((monster.getTarget() == player) || (monster.getTarget() == null))
 				{
 					// We take granted that mage classes do not auto hit.
 					if (isMageCaster(player))
@@ -85,10 +86,23 @@ public class AutoPlayTaskManager implements Runnable
 						continue PLAY;
 					}
 					
-					// Check if actually attacking.
-					if (player.hasAI() && player.getAI().isAutoAttacking() && !player.isAttackingNow() && !player.isCastingNow() && !player.isMoving())
+					// Attack and add aggro to the monster.
+					if (player.hasAI() && !player.isAttackingNow() && !player.isCastingNow() && !player.isMoving() && !player.isDisabled())
 					{
-						player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster);
+						if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+						{
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster);
+						}
+						else
+						{
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, monster);
+						}
+						
+						// Make sure monster is engaged.
+						if (monster.hasAI() && !monster.getAI().isAutoAttacking())
+						{
+							((Attackable) monster).addDamageHate(player, 0, 100);
+						}
 					}
 					continue PLAY;
 				}
