@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.skill.targets.TargetType;
 
 /**
- * @author Manax
+ * @author Mobius
  */
 public class Pet implements ITargetTypeHandler
 {
@@ -36,7 +36,11 @@ public class Pet implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if ((creature.isPet()) || creature.hasPet())
+		if (creature.isPet())
+		{
+			return creature;
+		}
+		if (creature.hasPet())
 		{
 			return creature.getPet();
 		}
