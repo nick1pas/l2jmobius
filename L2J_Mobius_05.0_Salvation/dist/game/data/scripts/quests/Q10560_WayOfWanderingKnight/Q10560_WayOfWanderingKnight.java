@@ -268,7 +268,7 @@ public class Q10560_WayOfWanderingKnight extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "32327-1.html";
+							htmltext = "32327-01.html";
 						}
 						break;
 					}
