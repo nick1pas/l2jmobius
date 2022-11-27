@@ -1234,9 +1234,181 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35149" toLevel="3" name="Basic Supply Box">
+		<isMagic>2</isMagic>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">48254</value> <!-- Giant Trackers Basic Treasure Chest -->
+			<value level="2">48255</value> <!-- Giant Trackers Intermediate Treasure Chest -->
+			<value level="3">48256</value> <!-- Giant Trackers Advanced Treasure Chest -->
+		</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>47260</itemId> <!-- Giant Crystal -->
+				<itemCount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</itemCount>
+			</effect>
+			<effect name="RestorationRandom" level="1">
+				<items>
+					<item chance="0.4">
+						<item id="19271" count="1" /> <!-- Unidentified Helios Shaper Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19272" count="1" /> <!-- Unidentified Helios Cutter Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19273" count="1" /> <!-- Unidentified Helios Slasher Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19274" count="1" /> <!-- Unidentified Helios Avenger Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19275" count="1" /> <!-- Unidentified Helios Fighter Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19276" count="1" /> <!-- Unidentified Helios Stormer Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19277" count="1" /> <!-- Unidentified Helios Thrower Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19278" count="1" /> <!-- Unidentified Helios Shooter Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19279" count="1" /> <!-- Unidentified Helios Buster Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19280" count="1" /> <!-- Unidentified Helios Caster Fragment -->
+					</item>
+					<item chance="0.4">
+						<item id="19281" count="1" /> <!-- Unidentified Helios Retributer Fragment -->
+					</item>
+					<item chance="50">
+						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="10">
+						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+					</item>
+					<item chance="10">
+						<item id="35563" count="1" /> <!-- Giant's Energy -->
+					</item>
+					<item chance="6">
+						<item id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="2">
+				<items>
+					<item chance="1">
+						<item id="19271" count="1" /> <!-- Unidentified Helios Shaper Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19272" count="1" /> <!-- Unidentified Helios Cutter Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19273" count="1" /> <!-- Unidentified Helios Slasher Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19274" count="1" /> <!-- Unidentified Helios Avenger Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19275" count="1" /> <!-- Unidentified Helios Fighter Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19276" count="1" /> <!-- Unidentified Helios Stormer Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19277" count="1" /> <!-- Unidentified Helios Thrower Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19278" count="1" /> <!-- Unidentified Helios Shooter Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19279" count="1" /> <!-- Unidentified Helios Buster Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19280" count="1" /> <!-- Unidentified Helios Caster Fragment -->
+					</item>
+					<item chance="1">
+						<item id="19281" count="1" /> <!-- Unidentified Helios Retributer Fragment -->
+					</item>
+					<item chance="50">
+						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="29">
+						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+					</item>
+					<item chance="30">
+						<item id="35563" count="1" /> <!-- Giant's Energy -->
+					</item>
+					<item chance="25">
+						<item id="19440" count="2" /> <!-- Gemstone (R-grade) -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" level="3">
+				<items>
+					<item chance="2">
+						<item id="19271" count="1" /> <!-- Unidentified Helios Shaper Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19272" count="1" /> <!-- Unidentified Helios Cutter Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19273" count="1" /> <!-- Unidentified Helios Slasher Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19274" count="1" /> <!-- Unidentified Helios Avenger Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19275" count="1" /> <!-- Unidentified Helios Fighter Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19276" count="1" /> <!-- Unidentified Helios Stormer Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19277" count="1" /> <!-- Unidentified Helios Thrower Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19278" count="1" /> <!-- Unidentified Helios Shooter Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19279" count="1" /> <!-- Unidentified Helios Buster Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19280" count="1" /> <!-- Unidentified Helios Caster Fragment -->
+					</item>
+					<item chance="2">
+						<item id="19281" count="1" /> <!-- Unidentified Helios Retributer Fragment -->
+					</item>
+					<item chance="50">
+						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="33">
+						<item id="35563" count="1" /> <!-- Giant's Energy -->
+					</item>
+					<item chance="20">
+						<item id="19440" count="2" /> <!-- Gemstone (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35150" toLevel="2" name="Defender's Valor Chest">
 		<operateType>A1</operateType>
