@@ -34,6 +34,8 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw, NasSeKa
@@ -141,10 +143,16 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			if (reward.getId() == SpecialItemType.CLAN_REPUTATION.getClientId())
 			{
 				player.getClan().addReputationScore((int) reward.getCount());
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION_2);
+				sm.addLong((int) reward.getCount());
+				player.sendPacket(sm);
 			}
 			else if (reward.getId() == SpecialItemType.FAME.getClientId())
 			{
 				player.setFame(player.getFame() + (int) reward.getCount());
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ACQUIRED_S1_INDIVIDUAL_FAME);
+				sm.addLong((int) reward.getCount());
+				player.sendPacket(sm);
 				player.broadcastUserInfo();
 			}
 			else
