@@ -47,7 +47,7 @@ public class Q00590_ToEachTheirOwn extends Quest
 	
 	public Q00590_ToEachTheirOwn()
 	{
-		super(589);
+		super(590);
 		addStartNpc(CORZET);
 		addTalkId(CORZET);
 		addKillId(MONSTERS);
