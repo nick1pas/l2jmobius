@@ -922,7 +922,6 @@ public class Hero
 	 */
 	public void claimHero(Player player)
 	{
-		final int legendId = RankManager.getInstance().getOlyRankList().get(1).getInt("charId", 0);
 		StatSet hero = HEROES.get(player.getObjectId());
 		if (hero == null)
 		{
@@ -943,19 +942,26 @@ public class Hero
 		}
 		
 		player.setHero(true);
-		if (player.getObjectId() == legendId)
+		
+		final StatSet legendRank = RankManager.getInstance().getOlyRankList().get(1);
+		if (legendRank != null)
 		{
-			player.setLegend(true);
-			player.getVariables().set(ALLY_NAME, false);
-			if ((clan != null) && (clan.getLevel() >= 5))
+			final int legendId = legendRank.getInt("charId", 0);
+			if (player.getObjectId() == legendId)
 			{
-				clan.addReputationScore(100000);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_HAS_BECOME_THE_HERO_CLAN_REPUTATION_POINTS_S2);
-				sm.addString(CharNameTable.getInstance().getNameById(player.getObjectId()));
-				sm.addInt(Config.HERO_POINTS);
-				clan.broadcastToOnlineMembers(sm);
+				player.setLegend(true);
+				player.getVariables().set(ALLY_NAME, false);
+				if ((clan != null) && (clan.getLevel() >= 5))
+				{
+					clan.addReputationScore(100000);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_C1_HAS_BECOME_THE_HERO_CLAN_REPUTATION_POINTS_S2);
+					sm.addString(CharNameTable.getInstance().getNameById(player.getObjectId()));
+					sm.addInt(Config.HERO_POINTS);
+					clan.broadcastToOnlineMembers(sm);
+				}
 			}
 		}
+		
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20016)); // Hero Animation
 		player.sendPacket(new UserInfo(player));
 		player.broadcastUserInfo();
