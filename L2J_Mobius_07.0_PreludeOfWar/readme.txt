@@ -6,7 +6,7 @@ Eclipse: https://www.mediafire.com/file/j208qw3s7zwx7c7/eclipse-java-2021-12-R-w
 Geodata: http://www.mediafire.com/file/94ekkgj1xmr5rb1/L2J_Mobius_07.0_PreludeOfWar_Geodata.zip
 
 Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1FpOy82whmZdQacf4ZAjRsyc6sWYq14in&export=download
-System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
+System: https://mega.nz/file/cxs3DSpa#v_PXYHDULpwSP_P_l-ppgn0SP87uN4__X5gcNcZWtFk
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
