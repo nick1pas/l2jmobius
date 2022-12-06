@@ -121,7 +121,7 @@ public class Q00594_BasicMissionDimensionalRift extends Quest
 						}
 						else if (qs.getCond() == 2)
 						{
-							htmltext = "33509-05.html";
+							htmltext = "34413-05.html";
 						}
 						else if (qs.getCond() == 3)
 						{
