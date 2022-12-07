@@ -42,12 +42,30 @@ public class Q00774_DreamingOfPeace extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		22863, // Fairy Warrior
-		22871, // Fairy Rogue
-		22879, // Fairy Knight
-		22887, // Satyr Wizard
-		22895, // Satyr Summoner
-		22903 // Satyr Witch
+		22867, // Fairy Warrior-Violent
+		22868, // Fairy Warrior-Brutal
+		22869, // Fairy Warrior-Fully Enraged
+		22870, // Fairy Warrior-Slightly Enraged
+		22875, // Fairy Rogue-Violent
+		22876, // Fairy Rogue-Brutal
+		22877, // Fairy Rogue-Fully Enraged
+		22878, // Fairy Rogue-Slightly Enraged
+		22883, // Fairy Knight-Violent
+		22884, // Fairy Knight-Brutal
+		22885, // Fairy Knight-Fully Enraged
+		22886, // Fairy Knight-Slightly Enraged
+		22891, // Satyr Wizard-Violent
+		22892, // Satyr Wizard-Brutal
+		22893, // Satyr Wizard-Fully Enraged
+		22894, // Satyr Wizard-Slightly Enraged
+		22899, // Satyr Summoner-Violent
+		22900, // Satyr Summoner-Brutal
+		22901, // Satyr Summoner-Fully Enraged
+		22902, // Satyr Summoner-Slightly Enraged
+		22907, // Satyr Witch-Violent
+		22908, // Satyr Witch-Brutal
+		22909, // Satyr Witch-Fully Enraged
+		22910, // Satyr Witch-Slightly Enraged
 	};
 	// Misc
 	private static final int MIN_LEVEL = 90;
