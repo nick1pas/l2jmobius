@@ -388,7 +388,6 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			newlocy = loc.getY();
 			newlocz = loc.getZ();
 			setLocation(loc);
-			setHeading(-1);
 		}
 		else if ((getX() == 0) && (getY() == 0))
 		{

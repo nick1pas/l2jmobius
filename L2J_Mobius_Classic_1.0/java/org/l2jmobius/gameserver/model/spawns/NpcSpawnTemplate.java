@@ -289,13 +289,13 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 					return loc;
 				}
 			}
-			LOGGER.warning("Couldn't match location by chance turning first..");
+			LOGGER.warning("Couldn't match location by chance turning first...");
 			return null;
 		}
 		else if (_zone != null)
 		{
 			final Location loc = _zone.getRandomPoint();
-			loc.setHeading(Rnd.get(65535));
+			loc.setHeading(-1);
 			return loc;
 		}
 		else if (!_group.getTerritories().isEmpty())
@@ -306,6 +306,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 				final Location loc = territory.getRandomPoint();
 				if (_group.getBannedTerritories().isEmpty() || _group.getBannedTerritories().stream().allMatch(bannedTerritory -> !bannedTerritory.isInsideZone(loc.getX(), loc.getY(), loc.getZ())))
 				{
+					loc.setHeading(-1);
 					return loc;
 				}
 			}
@@ -318,6 +319,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatSet>
 				final Location loc = territory.getRandomPoint();
 				if (_spawnTemplate.getBannedTerritories().isEmpty() || _spawnTemplate.getBannedTerritories().stream().allMatch(bannedTerritory -> !bannedTerritory.isInsideZone(loc.getX(), loc.getY(), loc.getZ())))
 				{
+					loc.setHeading(-1);
 					return loc;
 				}
 			}
