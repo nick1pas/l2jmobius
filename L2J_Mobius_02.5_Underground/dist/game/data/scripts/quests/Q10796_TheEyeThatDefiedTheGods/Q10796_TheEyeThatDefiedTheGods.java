@@ -44,28 +44,31 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		addStartNpc(HERMIT);
 		addTalkId(HERMIT, EYE_OF_ARGOS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		final String htmltext = event;
+		
 		switch (event)
 		{
 			case "31616-02.htm":
 			case "31616-03.htm":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31616-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "31683-02.html":
@@ -74,6 +77,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 				giveStoryQuestReward(player, 2);
 				giveItems(player, EAA, 2);
 				qs.exitQuest(false, true);
+				htmltext = event;
 				break;
 			}
 		}

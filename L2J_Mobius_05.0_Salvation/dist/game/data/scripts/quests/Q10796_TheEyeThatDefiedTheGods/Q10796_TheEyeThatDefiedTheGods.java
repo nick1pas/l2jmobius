@@ -80,11 +80,13 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 			case "31616-02.htm":
 			case "31616-03.htm":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31616-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "31683-02.html":
