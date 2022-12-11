@@ -85,11 +85,13 @@ public class Q10797_CrossingFate extends Quest
 			case "31683-02.htm":
 			case "31683-03.htm":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31683-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "31683-07.html":

@@ -48,29 +48,32 @@ public class Q10797_CrossingFate extends Quest
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(DAIMON_THE_WHITE_EYED);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
 		addCondCompletedQuest(Q10796_TheEyeThatDefiedTheGods.class.getSimpleName(), "restriction.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
-		final String htmltext = event;
+		
 		switch (event)
 		{
 			case "31683-02.htm":
 			case "31683-03.htm":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31683-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "31683-07.html":
@@ -81,6 +84,7 @@ public class Q10797_CrossingFate extends Quest
 					giveStoryQuestReward(player, 26);
 					giveItems(player, EAA, 5);
 					qs.exitQuest(false, true);
+					htmltext = event;
 					break;
 				}
 			}
