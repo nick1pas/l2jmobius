@@ -24,13 +24,16 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlayDoMacro;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Mobius
@@ -76,7 +79,7 @@ public class AutoPlayTaskManager implements Runnable
 				{
 					player.setTarget(null);
 				}
-				else if (monster.getTarget() == player)
+				else if ((monster.getTarget() == player) || (monster.getTarget() == null))
 				{
 					// We take granted that mage classes do not auto hit.
 					if (isMageCaster(player))
@@ -85,9 +88,36 @@ public class AutoPlayTaskManager implements Runnable
 					}
 					
 					// Check if actually attacking.
-					if (player.hasAI() && player.getAI().isAutoAttacking() && !player.isAttackingNow() && !player.isCastingNow() && !player.isMoving())
+					if (player.hasAI() && !player.isAttackingNow() && !player.isCastingNow() && !player.isMoving() && !player.isDisabled())
 					{
-						player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster);
+						if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+						{
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster);
+						}
+						else if (monster.hasAI() && !monster.getAI().isAutoAttacking())
+						{
+							final Weapon weapon = player.getActiveWeaponItem();
+							if (weapon != null)
+							{
+								final boolean ranged = weapon.getItemType().isRanged();
+								final double angle = Util.calculateHeadingFrom(player, monster);
+								final double radian = Math.toRadians(angle);
+								final double course = Math.toRadians(180);
+								final double distance = (ranged ? player.getCollisionRadius() : player.getCollisionRadius() + monster.getCollisionRadius()) * 2;
+								final int x1 = (int) (Math.cos(Math.PI + radian + course) * distance);
+								final int y1 = (int) (Math.sin(Math.PI + radian + course) * distance);
+								final Location location;
+								if (ranged)
+								{
+									location = new Location(player.getX() + x1, player.getY() + y1, player.getZ());
+								}
+								else
+								{
+									location = new Location(monster.getX() + x1, monster.getY() + y1, player.getZ());
+								}
+								player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, location);
+							}
+						}
 					}
 					continue PLAY;
 				}
