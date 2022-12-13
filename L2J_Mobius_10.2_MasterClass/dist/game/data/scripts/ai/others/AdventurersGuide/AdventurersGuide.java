@@ -44,27 +44,17 @@ public class AdventurersGuide extends AbstractNpcAI
 	private static final SkillHolder FANTASIA = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder[] GROUP_BUFFS =
 	{
-		new SkillHolder(15642, 1), // Horn Melody (Adventurer)
-		new SkillHolder(15643, 1), // Drum Melody (Adventurer)
-		new SkillHolder(15644, 1), // Pipe Organ Melody (Adventurer)
-		new SkillHolder(15645, 1), // Guitar Melody (Adventurer)
-		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
-		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
-		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
+		new SkillHolder(34243, 1), // Musician's Melody (Adventurer)
+		new SkillHolder(34254, 1), // Sonate Performance (Adventurer)
 	};
 	private static final SkillHolder[] DONATE_BUFFS =
 	{
-		new SkillHolder(15642, 4), // Horn Melody (Adventurer)
-		new SkillHolder(15643, 4), // Drum Melody (Adventurer)
-		new SkillHolder(15644, 4), // Pipe Organ Melody (Adventurer)
-		new SkillHolder(15645, 4), // Guitar Melody (Adventurer)
-		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
-		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
-		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
+		new SkillHolder(34243, 3), // Musician's Melody (Adventurer)
+		new SkillHolder(34254, 1), // Sonate Performance (Adventurer)
 	};
 	// Misc
-	private static int MAX_LEVEL_BUFFS = 99;
-	private static int MIN_LEVEL_PROTECTION = 40;
+	private static final int MAX_LEVEL_BUFFS = 99;
+	private static final int MIN_LEVEL_PROTECTION = 40;
 	
 	private AdventurersGuide()
 	{

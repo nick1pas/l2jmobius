@@ -81,13 +81,8 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	// Skills
 	private static final SkillHolder[] MENTEE_BUFFS_WITHOUT_MENTOR_ONLINE =
 	{
-		new SkillHolder(9227, 1), // Horn Melody - Mentor
-		new SkillHolder(9228, 1), // Drum Melody - Mentor
-		new SkillHolder(9230, 1), // Pipe Organ Melody - Mentor
-		new SkillHolder(9231, 1), // Guitar Melody - Mentor
-		new SkillHolder(17082, 1), // Mentor's Prevailing Sonata
-		new SkillHolder(17083, 1), // Daring Sonata - Mentor
-		new SkillHolder(17084, 1), // Refreshing Sonata - Mentor
+		new SkillHolder(34237, 1), // Musician's Melody
+		new SkillHolder(34256, 1), // Sonate Performance
 		new SkillHolder(18593, 1), // Mentor's Harmony
 	};
 	protected static final SkillHolder[] MENTOR_BUFFS =

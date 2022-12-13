@@ -48,13 +48,8 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 	private static final SkillHolder FANTASIA = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder[] GROUP_BUFFS =
 	{
-		new SkillHolder(15642, 1), // Horn Melody (Adventurer)
-		new SkillHolder(15643, 1), // Drum Melody (Adventurer)
-		new SkillHolder(15644, 1), // Pipe Organ Melody (Adventurer)
-		new SkillHolder(15645, 1), // Guitar Melody (Adventurer)
-		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
-		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
-		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
+		new SkillHolder(34254, 1), // Sonate Performance (Adventurer)
+		new SkillHolder(34243, 1), // Musician's Melody (Adventurer)
 	};
 	
 	private RecieveAdventurerBuffs()

@@ -20,7 +20,6 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -59,19 +58,8 @@ public class AdventureGuildsman extends AbstractNpcAI
 	private static final SkillHolder KNIGHT = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder WARRIOR = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder WIZARD = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
-	private static final SkillHolder[] GROUP_MELODY =
-	{
-		new SkillHolder(9273, 1), // Player Commendation - Horn Melody
-		new SkillHolder(9274, 1), // Player Commendation - Drum Melody
-		new SkillHolder(9276, 1), // Player Commendation - Pipe Organ Melody
-		new SkillHolder(9277, 1), // Player Commendation - Guitar Melody
-	};
-	private static final SkillHolder[] GROUP_SONATA =
-	{
-		new SkillHolder(17291, 1), // Player Commendation - Prevailing Sonata
-		new SkillHolder(17292, 1), // Player Commendation - Daring Sonata
-		new SkillHolder(17293, 1), // Player Commendation - Refreshing Sonata
-	};
+	private static final SkillHolder MELODY = new SkillHolder(34243, 1); // Musician's Melody (Adventurer)
+	private static final SkillHolder SONATA = new SkillHolder(34254, 1); // Sonate Performance (Adventurer)
 	// Misc
 	//@formatter:off
 	private static final Map<CategoryType, Integer> R_CLASS_TALISMAN = new EnumMap<>(CategoryType.class);
@@ -420,11 +408,10 @@ public class AdventureGuildsman extends AbstractNpcAI
 		}
 		if (event.startsWith("melody"))
 		{
-			final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(' ') + 1)), 0, GROUP_MELODY.length);
 			if (player.getPcCafePoints() >= 20)
 			{
 				npc.setTarget(player);
-				npc.doCast(GROUP_MELODY[buffOffset].getSkill());
+				npc.doCast(MELODY.getSkill());
 				player.setPcCafePoints(player.getPcCafePoints() - 20);
 				htmltext = "pccafe_buff_1001.htm";
 			}
@@ -438,14 +425,8 @@ public class AdventureGuildsman extends AbstractNpcAI
 	
 	private String applyBuffs(Npc npc, Player player, Skill skill)
 	{
-		for (SkillHolder holder : GROUP_MELODY)
-		{
-			SkillCaster.triggerCast(npc, player, holder.getSkill());
-		}
-		for (SkillHolder holder : GROUP_SONATA)
-		{
-			SkillCaster.triggerCast(npc, player, holder.getSkill());
-		}
+		SkillCaster.triggerCast(npc, player, MELODY.getSkill());
+		SkillCaster.triggerCast(npc, player, SONATA.getSkill());
 		SkillCaster.triggerCast(npc, player, skill);
 		player.setPcCafePoints(player.getPcCafePoints() - 200);
 		return null;
@@ -453,10 +434,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	
 	private String applyBuffsGroup(Npc npc, Player player)
 	{
-		for (SkillHolder holder : GROUP_MELODY)
-		{
-			SkillCaster.triggerCast(npc, player, holder.getSkill());
-		}
+		SkillCaster.triggerCast(npc, player, MELODY.getSkill());
 		player.setPcCafePoints(player.getPcCafePoints() - 120);
 		return null;
 	}
