@@ -557,8 +557,25 @@
 		</conditions>
 	</skill>
 	<skill id="15677" toLevel="1" name="Bloody Attack">
+		<magicLevel>80</magicLevel>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A1</operateType>
+		<castRange>-1</castRange>
+		<effectRange>-1</effectRange>
 		<effectPoint>1</effectPoint>
+		<isMagic>0</isMagic> <!-- Physical Skill -->
+		<hitTime>0</hitTime>
+		<nextAction>NONE</nextAction>
+		<reuseDelay>0</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>-10</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15678" toLevel="1" name="Sayha's Blessing">
 		<operateType>A1</operateType>

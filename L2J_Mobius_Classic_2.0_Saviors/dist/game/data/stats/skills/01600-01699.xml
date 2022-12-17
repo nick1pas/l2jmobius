@@ -1205,12 +1205,13 @@
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
 		<!-- Throws a dagger at the enemy with 396 Power added to P. Atk., and injures their wrist. Due to the wound, for 1 minute there's a certain probability to interrupt target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalLevel>8</abnormalLevel>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>ROGUE_DEBUFF1</abnormalType>
 		<activateRate>80</activateRate>
-		<lvlBonusRate>20</lvlBonusRate>
-		<basicProperty>MAGIC</basicProperty>
-		<effectRange>900</effectRange>
+		<lvlBonusRate>30</lvlBonusRate>
+		<basicProperty>NONE</basicProperty>
+		<effectRange>1100</effectRange>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
@@ -1222,7 +1223,8 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<isDebuff>true</isDebuff>
-		<staticReuse>true</staticReuse>
+		<trait>BOSS</trait>
+		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1236,32 +1238,35 @@
 			<effect name="PhysicalAttack">
 				<power>396</power>
 			</effect>
-			<effect name="PhysicalMute" />
-			<effect name="Mute" />
+			<effect name="SkillTurningOverTime">
+				<chance>25</chance>
+				<ticks>3</ticks>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1630" toLevel="1" name="Throwing Blood Dagger">
 		<!-- Throws a dagger at an enemy with 396 Power added to P. Atk. For 20 seconds, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<abnormalLevel>8</abnormalLevel>
+		<abnormalTime>40</abnormalTime>
+		<abnormalType>ROGUE_DEBUFF1</abnormalType>
 		<activateRate>80</activateRate>
-		<lvlBonusRate>20</lvlBonusRate>
-		<basicProperty>MAGIC</basicProperty>
-		<effectRange>900</effectRange>
+		<lvlBonusRate>30</lvlBonusRate>
+		<basicProperty>NONE</basicProperty>
+		<castRange>800</castRange>
+		<effectRange>1100</effectRange>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>76</magicLevel>
 		<mpConsume>60</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>800</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-707</effectPoint>
 		<isDebuff>true</isDebuff>
-		<staticReuse>true</staticReuse>
+		<trait>BOSS</trait>
+		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1275,6 +1280,38 @@
 			<effect name="PhysicalAttack">
 				<power>396</power>
 				<overHit>true</overHit>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Bloody Attack -->
+				<magicTypes>0</magicTypes>
+				<skillId>15677</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Bloody Attack -->
+				<magicTypes>1</magicTypes>
+				<skillId>15677</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Bloody Attack -->
+				<magicTypes>2</magicTypes>
+				<skillId>15677</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillByMagicType">
+				<!-- Bloody Attack -->
+				<magicTypes>3</magicTypes>
+				<skillId>15677</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
