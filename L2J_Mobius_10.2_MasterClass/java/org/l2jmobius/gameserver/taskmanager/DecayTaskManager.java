@@ -93,7 +93,7 @@ public class DecayTaskManager implements Runnable
 		{
 			if (creature.getActingPlayer().isInTimedHuntingZone())
 			{
-				delay = 60; // 10 minutes
+				delay = 600; // 10 minutes
 			}
 			else if (Config.DISCONNECT_AFTER_DEATH)
 			{
