@@ -127,6 +127,8 @@ import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.impl.OnServerStart;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
@@ -390,6 +392,11 @@ public class GameServer
 		if (Config.CUSTOM_MAIL_MANAGER_ENABLED)
 		{
 			CustomMailManager.getInstance();
+		}
+		
+		if (EventDispatcher.getInstance().hasListener(EventType.ON_SERVER_START))
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnServerStart());
 		}
 		
 		PunishmentManager.getInstance();

@@ -173,7 +173,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 			}
 			else if (Config.DEBUG_UNKNOWN_PACKETS)
 			{
-				PacketLogger.info("[C EX] " + _packetId);
+				PacketLogger.info("[C EX] 0x" + Integer.toHexString(_packetId).toUpperCase());
 			}
 		}
 		return packet;

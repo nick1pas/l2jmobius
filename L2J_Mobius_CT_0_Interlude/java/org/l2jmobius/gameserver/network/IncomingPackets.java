@@ -243,7 +243,7 @@ public enum IncomingPackets implements IIncomingPackets<GameClient>
 			}
 			else if (Config.DEBUG_UNKNOWN_PACKETS)
 			{
-				PacketLogger.info("[C] " + _packetId);
+				PacketLogger.info("[C] 0x" + Integer.toHexString(_packetId).toUpperCase());
 			}
 		}
 		return packet;

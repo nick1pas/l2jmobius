@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.events;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2jmobius.gameserver.model.events.impl.OnServerStart;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttack;
@@ -211,7 +212,10 @@ public enum EventType
 	ON_PLAYER_TRANSFORM(OnPlayerTransform.class, void.class),
 	
 	// Trap events
-	ON_TRAP_ACTION(OnTrapAction.class, void.class);
+	ON_TRAP_ACTION(OnTrapAction.class, void.class),
+	
+	// Server events
+	ON_SERVER_START(OnServerStart.class, void.class);
 	
 	private final Class<? extends IBaseEvent> _eventClass;
 	private final Class<?>[] _returnClass;

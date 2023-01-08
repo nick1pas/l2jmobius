@@ -188,6 +188,12 @@ public class Weapon extends ItemTemplate
 		_isForceEquip = set.getBoolean("isForceEquip", false);
 		_isAttackWeapon = set.getBoolean("isAttackWeapon", true);
 		_useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
+		
+		// Check if ranged weapon reuse delay is missing.
+		if ((_reuseDelay == 0) && _type.isRanged())
+		{
+			_reuseDelay = 1500;
+		}
 	}
 	
 	/**
