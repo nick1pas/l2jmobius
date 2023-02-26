@@ -10,7 +10,7 @@ System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
 
 All provided download links are for personal use. Redistribution of these links is bannable.
 
-xxxxxx
+
 What is done
 -Removed Gludio Airship Field, Gracia, Hellbound, Isle of Souls and Kamael Guild spawns.
 -Removed Gracia tab from map.

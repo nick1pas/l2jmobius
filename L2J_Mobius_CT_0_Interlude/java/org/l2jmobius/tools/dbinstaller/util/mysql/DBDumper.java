@@ -39,14 +39,14 @@ public class DBDumper
 	DBOutputInterface _frame;
 	String _db;
 	
-	public DBDumper(DBOutputInterface frame, String db)
+	public DBDumper(DBOutputInterface frame, String db, String dir)
 	{
 		_frame = frame;
 		_db = db;
-		createDump();
+		createDump(dir);
 	}
 	
-	public void createDump()
+	public void createDump(String dir)
 	{
 		try (Formatter form = new Formatter())
 		{
@@ -54,8 +54,8 @@ public class DBDumper
 			try (Statement s = con.createStatement();
 				ResultSet rset = s.executeQuery("SHOW TABLES"))
 			{
-				final File dump = new File("dumps", form.format("%1$s_dump_%2$tY%2$tm%2$td-%2$tH%2$tM%2$tS.sql", _db, new GregorianCalendar().getTime()).toString());
-				new File("dumps").mkdir();
+				final File dump = new File(dir + "../../dumps", form.format("%1$s_dump_%2$tY%2$tm%2$td-%2$tH%2$tM%2$tS.sql", _db, new GregorianCalendar().getTime()).toString());
+				new File(dir + "../../dumps").mkdir();
 				dump.createNewFile();
 				
 				_frame.appendToProgressArea("Writing dump " + dump.getName());
